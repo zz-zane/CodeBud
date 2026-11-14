@@ -1,0 +1,3365 @@
+{
+  "id": "2022-06-1",
+  "title": "2022年06月第1套",
+  "year": 2022,
+  "month": 6,
+  "set": 1,
+  "status": "partial",
+  "issues": [
+    "严格质检：听力原文 5/7；听力译文 0/7；写作或翻译参考答案缺失或疑似占位；疑似 OCR 乱码或英文粘连待核查。",
+    "听力原文混有中文批注：已另附由录音机器转写的纯英文（asrDraft，未逐句核对，可能有误）。",
+    "听力解析：原为一句话摘要的题目，已追加依据听力原文自动定位的支持句（标注「自动匹配」，非官方解析，可能不准）；原摘要保留在 explanationOriginal。",
+    "听力解析：未经人工听核的定位已降级标注；「自动匹配」题经录音转写复核，不通过者改为「未能可靠定位」。",
+    "听力解析：原「未能定位」题已按解析摘要与原文对照选句补回（语义匹配/答案标记，未经录音核听，非官方）。",
+    "听力原文：本套原文原为混有中文批注/OCR 错误的文本，已改为录音机器转写的纯英文整理稿（界面标注「机器转写草稿」，未逐句核听）；原文本保留在 transcriptAnnotated。",
+    "长篇阅读匹配：选项范围已按材料实际段落标识校正（去掉不存在的段落、补回缺失的段落）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "标准答案按解析册与原卷修正（2026-11-09）：Q33 D→I、Q40 D→K；原值存于 answerOriginal。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "1CF3OKBICE_iRot-Ec-F1md45S764P-Lt",
+      "title": "2022年06月六级真题（全1套）.mp3",
+      "url": "https://drive.google.com/file/d/1CF3OKBICE_iRot-Ec-F1md45S764P-Lt/view?usp=drivesdk"
+    },
+    {
+      "id": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+      "title": "2022.06英语六级考试第1套解析.pdf",
+      "url": "https://drive.google.com/file/d/1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT/view?usp=drivesdk"
+    },
+    {
+      "id": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+      "title": "2022.06六级真题第1套【可复制可搜索，打印首选】.pdf",
+      "url": "https://drive.google.com/file/d/1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh/view?usp=drivesdk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “Nowadays more and more people choose to live an environmentally friendly lifestyle.99 You can make comments, cite examples, or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-prompt-block",
+          "title": "写作题目要求",
+          "text": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “Nowadays more and more people choose to live an environmentally friendly lifestyle.99 You can make comments, cite examples, or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-1-writing",
+          "number": 0,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “Nowadays more and more people choose to live an environmentally friendly lifestyle.99 You can make comments, cite examples, or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "blockId": "writing-prompt-block",
+          "options": [],
+          "answer": "Lve an Envronmentally riendly LifestyleNowadays more and more people choose to live anenvironmentally friendly lifestyle. According to a recentsurvey by CCTV,the number of people who pay attention toenvironmental protection is at a record high.Multiple factors need to be considered for thisconsiderable.progress.First and foremost,with the rapid.development of our society,increasingly growing enterprises andfactories around our city as well as the ways that people travel haveled to serious environment pollution,which,as a wake-up call,hasarisen people's awareness of protecting the environment.Purthermore, the low-carbon lifestyle has been in voguerecently,especially among young people.For all thesereasons,people have proactively taken a series of effective actionsto live an eco-friendly life.【T】 First aof all, the wide popularity ofnew energy vehicles is an outstanding example, which hascontributed a lot to the reduction of carbon emission.Besides,many people prefer to use some recyclable products in their dailylife. Tb sm up, it is our responsitility to live an environmentally-friendly life,driving a more harmonious relationship betweennature and ourselves. Such an excellent lifestyle will endow usas well as the earth with numnerous benefits.",
+          "explanation": "【审题思路】\n\n\n【全文翻译】\n\n\n【点评与要点】\nLve an Envronmentally riendly Lifestyle【1】Nowadays more and more people choose to live an environmentally friendly lifestyle.【2】 According to a recentsurvey by CCTV,the number of people who pay attention to environmental protection is at a record high.【3】Multiple factors need to be considered for this considerable.progress.【4】First and foremost,with the rapid.development of our society,increasingly growing enterprises andfactories around our city as well as the ways that people travel haveled to serious environment pollution,which,as a wake-up call,hasarisen people's awareness of protecting the environment.【5】Purthermore, the low-carbon lifestyle has been in voguerecently,especially among young people.【6】For all thesereasons,people have proactively taken a series of effective actionsto live an eco-friendly life.【T】 First aof all, the wide popularity ofnew energy vehicles is an outstanding example, which has contributed a lot to the reduction of carbon emission.【8】Besides,many people prefer to use some recyclable products in their dailylife.【9】 Tb sm up, it is our responsitility to live an environmentally-friendly life,driving a more harmonious relationship betweennature and ourselves. 【10】Such an excellent lifestyle will endow usas well as the earth with numnerous benefits.话题词汇∶plobal warming 全球变暖greenhouse effect 温室效应carbon emission 二氧化碳排放carbon footprint 碳足迹 achieve sustainable development 实现可持续发展 o20ne depletion 臭氧枯竭第2戮具体阐述人们选择环保生活的原因和采取的相应措施。精彩点评\n--..--....--.--...【1X2】引出话题∶越来越多的人选择了环保的生活方式，关注环保的人数创历史新高。【3】指出很多因素促使人们选择环保生活。4】5】分别使用\"Furst and foremost..，\"\"Furthermore...\"具体阐述人们选择环保的生活方式的原因。【6】指出人们为环保生活采取了相应的措施。【7】【8】分别使用\"First of al...\"\"Besides...\"具体阐述人们为环保生活采取的行动。【9】【10】用 to sum up 总结全文，重申环保生活的重要性和积极影响。low-carbon economy 低碳经济new energy vehicles 新能源汽车",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear long conversations, passages and recordings of talks.",
+      "audio": {
+        "src": "source-media/2022年06月第1套/2022年06月六级真题（全1套）.mp3",
+        "sourceId": "1CF3OKBICE_iRot-Ec-F1md45S764P-Lt",
+        "sharedWith": [
+          "2022-06-2",
+          "2022-06-3"
+        ]
+      },
+      "blocks": [
+        {
+          "id": "listening-conv-1",
+          "title": "Section A Conversation One",
+          "text": "",
+          "source": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1,
+              2
+            ]
+          },
+          "transcript": "",
+          "asrDraft": "Mr. David Jackson, a staff writer at the New Yorker, is known for his non-fiction books of adventure. Today we go on a different kind of adventure. Jackson's life of parenting his offspring. David, as a parent of an 11 and a 14 year old, what is the most interesting issue you are dealing with right now. It's easy to focus on the challenges, but so far I find these ages to be kind of wonderful. They are independent and they have their own curiosities and obsessions. You can talk to them about fairly sophisticated subject matter such as politics. Yes, that does sound refreshing compared with talking to younger children. Do they ask you to proofread their essays? Certainly, with writing they do. I really just try to be encouraging. I think at this age, editorial guidance is less important than encouragement. Are there books that you think are important that your children read and that all children read? My general thought is to read widely and to incorporate a love for reading. Learning to love to read, I think, is the optimal thing because it gives you a skill you can take anywhere. So you're not too concerned, like some parents with the content they're reading? I know I have some worries about that. Yeah, read what you like. If a child loves graphic novels or comic books, whatever it is that is turning them on to read and turning on their imagination. I feel that children's tastes in books change as they reach adolescence. I know that mine certainly did when I was a teenager. What do you think? I think it's especially important as they get older to read subject matter that will open their eyes to the world and people. So I think both fiction and nonfiction are really important because they give you the power to begin to perceive the world through the lives of others.",
+          "transcriptAnnotated": "W:(1)Mr.David Jackson,a staff writer at the Ne Yorkcer, is known for his non-tiction books of adventure. Today, we gp on a different kind of adventure; Jackson's lifc of parenting his offspring. David, as a parentof an 11-and a 14-year-old, what is the most interesting issue you are dealing with right now? M: It's easy to focus on the challenges, but so far,I find these ages to be kind of wanderful.(2)They are independent, and they have their own curiosities and obsessions. You can talk to them about fairly sophisticated subject matter such as8 politics.W;Yes, that does sound refreshing compared with talking to younger children. Do they ask you to proofreadtheir essays? M: Certainly, with writing they do.(3)I really just try to be encouraging.I think at this age, editorial guidance is less iruportant than encour8gement.W: Are there books that you think are important that your children read, and that all children read? M: My general thought is to read widely and to incorporate a love for reading. Learning to love to read, Ithink, is the optimal thing, because it gives you a skill you can take anywhere.W: So vou're not too concerned like some parents with the content thev're reading? I know Ihave some worries about that.M;Yeah, read what you like. If a child loves graphic novels or comic books, whatever it is, that is turningthem on to read and turning on their imagination.W:(4)I feel that children's tastes in boks change as they reach adolescence. I know that mine certainly didwhen I was a teenager. What do you think? M;I think it's especially important as they get older to read subject matter that'll open their eyes to the worldand people. So I think both fiction and non-fiction are really important because they give you the power tobegin to perceive the world through the lives of others.融料镓晓轮照吗端啉撒泳囊泓量端轮",
+          "transcriptDraft": "Mr. David Jackson, a staff writer at the New Yorker, is known for his non-fiction books of adventure. Today we go on a different kind of adventure. Jackson's life of parenting his offspring. David, as a parent of an 11 and a 14 year old, what is the most interesting issue you are dealing with right now. It's easy to focus on the challenges, but so far I find these ages to be kind of wonderful. They are independent and they have their own curiosities and obsessions. You can talk to them about fairly sophisticated subject matter such as politics. Yes, that does sound refreshing compared with talking to younger children.\nDo they ask you to proofread their essays? Certainly, with writing they do. I really just try to be encouraging. I think at this age, editorial guidance is less important than encouragement. Are there books that you think are important that your children read and that all children read? My general thought is to read widely and to incorporate a love for reading. Learning to love to read, I think, is the optimal thing because it gives you a skill you can take anywhere. So you're not too concerned, like some parents with the content they're reading? I know I have some worries about that.\nYeah, read what you like. If a child loves graphic novels or comic books, whatever it is that is turning them on to read and turning on their imagination. I feel that children's tastes in books change as they reach adolescence. I know that mine certainly did when I was a teenager. What do you think? I think it's especially important as they get older to read subject matter that will open their eyes to the world and people. So I think both fiction and nonfiction are really important because they give you the power to begin to perceive the world through the lives of others."
+        },
+        {
+          "id": "listening-conv-2",
+          "title": "Section A Conversation Two",
+          "text": "",
+          "source": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              2,
+              3
+            ]
+          },
+          "transcript": "",
+          "asrDraft": "In this episode of Money Talks, our guest is Molly Sanders, a university student and a successful young entrepreneur. Molly, tell us about your business. Well, I sell specialty clothes through a website, mainly for women who have trouble finding suitable clothes in main street shops because of their height or weight. But I do some men's clothes too. How did you get started in this business at such a young age? Are you studying fashion design? Actually, I'm majoring in finance, but I've always loved clothes, and I started making my own at 14. Did you have any sort of training in design or sewing? Or was it a natural ability? I'd have to say no to both. No one taught me to make clothes and most of the things I made at first were disasters. Why did you persevere? I think most people would give up if they kept failing, especially at that age. I kept on out of necessity. As you can see, I'm very tall and I couldn't find clothes that fit me in ordinary shops. So I kept trying and developed my skills over time. Well, my notes say you earned $50,000 in profits last year, an extraordinary amount for a 20-year-old student. How did that happen? Did you see a gap in the market and decide to fill it? No. When I started university, some classmates complemented my clothes. And when I said I made them myself, other tall women started asking if I would make theirs. And I did. And before I knew it, I was an entrepreneur. So what are your plans for the future? Do you intend to open a physical store? No, I'll keep things online to keep costs down, but I will add more clothes for children, both girls and boys, and possibly even for infants. And I hope to add to my range of designs for men.",
+          "transcriptAnnotated": "LM:(5)In this episode of Momey Talks, our guest is Molly Sanders,a university student and a successful young entrepreneur. Molly, tell us about your business,W:Well, Isell speciaity clothes through a website, mainly for women who have trouble finding suitable clothesin main street shops because of thcir height or weight. But I do some men's clothes too.M;How did you get started in this business at such a young age? Are you studying fashion design? W: Actually,I'm majoring in finance, but I've always loved clothes. And I started making my own at 14.M;Did you have any sort of training in design or sewing? Or was it a natural ability? W:I'd have to say no to both.(6)No one taught me to make clothes and most of the things Imade at first weredisasters. 3. How does the man help his kids with their essays? Listening Comprehension was a teenager? 他校对文章时，男士给出了肯定回答，并在句（3）中 十几岁的时候确实是这样的。也就是说，她十几岁 子们到了青春期，对书的品位就会改变，并提到她 提到，他只是进行鼓励。男士认为，对于这个年龄 时对书的品位有所变化。因此答案为 A）。 段的孩子们来说，编辑方面的指导不如鼓励重要。\nC）【精析】细节辨认题。当女士问男士孩子们是否请因此答案为 C）。4. What does the woman say about herself when shea）【精析】细节辨认题。句（4）中，女士说，她认为孩\n\nM: Why did you persevere? I think most people would give up if they kept failing, especially at that age.W:I kept on out of necessty.(7)As you can see,I'm very tall and I couldn't find clothes that fit me in ordinary shops. So I kept trying and developed my skills over time.M:Well, my notes say you earned $50,000 in profits last year, an extraordinary arnount for a 20-year-oldstudent. How did that happen? Did you see a gap in the market and decide to fill it? W:No. When I started university, some classmates complimented my clothes. And when I said I made themmyself, other tall women started asking ifI would make theirs. And I did. And before I knew it, Iwas an entrepreneur.M; So what are your plans for the future? Do you intend to open a physical store? W: No.I'l keep things online to keep costs down.(8)But I will add more clothes for children, both girls andboys, and possibly even for infants, AndI hope to add to my range of designs for men.料等惨襟锅轻铵蛱挑泳离需器雾销销搅釜销",
+          "transcriptDraft": "In this episode of Money Talks, our guest is Molly Sanders, a university student and a successful young entrepreneur. Molly, tell us about your business. Well, I sell specialty clothes through a website, mainly for women who have trouble finding suitable clothes in main street shops because of their height or weight. But I do some men's clothes too. How did you get started in this business at such a young age? Are you studying fashion design? Actually, I'm majoring in finance, but I've always loved clothes, and I started making my own at 14. Did you have any sort of training in design or sewing?\nOr was it a natural ability? I'd have to say no to both. No one taught me to make clothes and most of the things I made at first were disasters. Why did you persevere? I think most people would give up if they kept failing, especially at that age. I kept on out of necessity. As you can see, I'm very tall and I couldn't find clothes that fit me in ordinary shops. So I kept trying and developed my skills over time. Well, my notes say you earned $50,000 in profits last year, an extraordinary amount for a 20-year-old student. How did that happen? Did you see a gap in the market and decide to fill it?\nNo. When I started university, some classmates complemented my clothes. And when I said I made them myself, other tall women started asking if I would make theirs. And I did. And before I knew it, I was an entrepreneur. So what are your plans for the future? Do you intend to open a physical store? No, I'll keep things online to keep costs down, but I will add more clothes for children, both girls and boys, and possibly even for infants. And I hope to add to my range of designs for men."
+        },
+        {
+          "id": "listening-pass-1",
+          "title": "Section B Passage One",
+          "text": "",
+          "source": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              3,
+              4
+            ]
+          },
+          "transcript": "",
+          "asrDraft": "Number Researchers have identified a potent new antibiotic compound using artificial intelligence. The antibiotic can kill very dangerous bacteria. According to a study published in the journal Cell, the compound successfully removed deadly strains of bacteria in mice which are resistant to all known antibiotics. The researchers say this is the first time that artificial intelligence has been used to find a powerful new antibiotic molecule. Why does this matter? The answer is antibiotic resistance. This happens when bacteria develop the ability to survive the medications designed to kill them. Antibiotic resistance is a serious threat to health, and the problem is growing. This makes finding new antibiotics very important. However, in recent decades, very few have been developed, and those that have tend to be very similar to drugs already available. These searches also tend to only focus on a narrow spectrum of chemical compounds. But this is where artificial intelligence comes in. Why? To find new drugs, scientists screen molecules to predict how effective they might be. Typically, such screening is done by humans in the lab, which is both costly and slow. Artificial intelligence is different. It's fast, and it can process a high volume. It can screen hundreds of millions of compounds to identify a few interesting candidates that require experimental testing. Artificial intelligence is also able to predict if compounds are likely to be toxic. Some experts assert that this work signifies a paradigm shift in antibiotic discovery. It could change drug discovery more generally.",
+          "transcriptAnnotated": ",Researchers have identified a potent new antibiotic compound using artificial intelligence. The antibioticcan kill yery dangerous bacteria. According to a study published in the journal Cell, te compound succesfallyremoved deadly strains of bacteria in mice which are resistant to all known antibiotics.(9)The researchers say this is the first time that artificial intelligence has been used to find a powerful newantibiotic molecule. Why does this matter? The answer is antibiotic resistance. This happens when bacteriadevelop the ability to survive the medications designed to kill them.(10)Antibiotic resistance is a serious threatto health and the problem is grewing. This makes finding new antibiotics very important. However,i recentdecades, very few have been developed, and those that have tend to be very similar to drugs already available. The searches also tend to only [ocus on a narrow spectrum of chemical compounds, but this is where artificial intelligence comes in. Why? To find new drugs, scientists screen molecules to predict how effective they mightbe. Typically, such screening is done by humans in the lab, which is both costly and slow. Artificial intelligenceis different. It's fast, and it can process a high volume. It can screen hundreds of millions of compounds to identify a few interesting candidates that require experimental testing,(11)Artificial intelligence is also able to predict if compounds are likely to be toxic, Some experts assert that this work sigmifies a paradigm shift in antibiotic discovery. It could change drug discovery more generally.鄂端锑端调尊墨泳蕈锥",
+          "transcriptDraft": "Researchers have identified a potent new antibiotic compound using artificial intelligence. The antibiotic can kill very dangerous bacteria. According to a study published in the journal Cell, the compound successfully removed deadly strains of bacteria in mice which are resistant to all known antibiotics. The researchers say this is the first time that artificial intelligence has been used to find a powerful new antibiotic molecule. Why does this matter? The answer is antibiotic resistance. This happens when bacteria develop the ability to survive the medications designed to kill them.\nAntibiotic resistance is a serious threat to health, and the problem is growing. This makes finding new antibiotics very important. However, in recent decades, very few have been developed, and those that have tend to be very similar to drugs already available. These searches also tend to only focus on a narrow spectrum of chemical compounds. But this is where artificial intelligence comes in. Why? To find new drugs, scientists screen molecules to predict how effective they might be. Typically, such screening is done by humans in the lab, which is both costly and slow.\nArtificial intelligence is different. It's fast, and it can process a high volume. It can screen hundreds of millions of compounds to identify a few interesting candidates that require experimental testing. Artificial intelligence is also able to predict if compounds are likely to be toxic. Some experts assert that this work signifies a paradigm shift in antibiotic discovery. It could change drug discovery more generally."
+        },
+        {
+          "id": "listening-pass-2",
+          "title": "Section B Passage Two",
+          "text": "",
+          "source": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              4,
+              5
+            ]
+          },
+          "transcript": "",
+          "asrDraft": "A recent study overturned what we think we know about lying. Most of us have a theory about how to tell if someone is telling a lie. We may develop that theory from observations of those people we know well and see regularly. But we tend to generalize what we gather from that unscientific daily research and make it a universal theory. So we might imagine that liars have evasive eyes or the opposite. They simply stare at you. Or perhaps it is more generally nervous behavior we associate with lies. Whatever the particular theory, it's usually based on close observation of people we know. When we get lots of practice, on average, we're lied to some 200 times per day. These are mostly harmless lies, but lies nonetheless. But there's a problem with our theories, even though they're based on all this observation. The average person, you and me, tested rigorously on how well we detect lies, fails to do better than chance. well-established over many studies and lots of attempts by researchers to work out reliable ways to detect lies. It's even relatively easy to fool lie detectors. The gold standard of lie detection by training yourself in breathing techniques and symptom suppression. Is there any way to get better at detecting lies? The new research offers some surprising advice. Stop looking and listen instead. It turns out that if we're unable to see the face but rather focus on the voice of the person in question, our accuracy rate improves considerably.",
+          "transcriptAnnotated": "Questlons 12 Lo 15 are based on the passage yout have Just heard.A recent study overturned what we think we know about lying.(12-1)Most of us have a theory about howto tell if someone is telling a lie. We may develop that theory from observations of those people we know welland see regularly, but we tend to generalize what we gather from that unscientific daily research and make it auniversal theory. So we might imagine that liars have evasive eyes, or the opposite—they simply stare at you. Or perhaps itis more generally nervous behavior we associate with lies.(12-2)Whatever the particular thecry, it's usuallybased on close observation of people we know. And we get lots of practice.(13)On average, we're lied to some200 times per day. These are mostly harmless lies, but lies nonetheless, But there's a probjem with our theories, even though they're based on all these observations.(14)The averageperson一you and metested rigorously on how well we detect lies fails to do better than chance. That's wellestablished over many studies and lots of attempts by researchers to work out reliable ways to detect lies. It'seven relatively easy to fool lie detectors, the gold standard of lie detection, by training yourself in breathing techniques and symptom s0ppression, Is there any way to get better at detecting lies? The new research offers some surprising advice.(15)Stoplooking and listen instead. It turns out that if we're unable to see the face, bat rather focus on the voice of the person in question, our accuracy rate improves considerably.路端鞣淄勒端端儡噻兼菲幕奖晓凳签鞋端",
+          "transcriptDraft": "A recent study overturned what we think we know about lying. Most of us have a theory about how to tell if someone is telling a lie. We may develop that theory from observations of those people we know well and see regularly. But we tend to generalize what we gather from that unscientific daily research and make it a universal theory. So we might imagine that liars have evasive eyes or the opposite. They simply stare at you. Or perhaps it is more generally nervous behavior we associate with lies. Whatever the particular theory, it's usually based on close observation of people we know.\nWhen we get lots of practice, on average, we're lied to some 200 times per day. These are mostly harmless lies, but lies nonetheless. But there's a problem with our theories, even though they're based on all this observation. The average person, you and me, tested rigorously on how well we detect lies, fails to do better than chance. well-established over many studies and lots of attempts by researchers to work out reliable ways to detect lies. It's even relatively easy to fool lie detectors. The gold standard of lie detection by training yourself in breathing techniques and symptom suppression.\nIs there any way to get better at detecting lies? The new research offers some surprising advice. Stop looking and listen instead. It turns out that if we're unable to see the face but rather focus on the voice of the person in question, our accuracy rate improves considerably."
+        },
+        {
+          "id": "listening-rec-1",
+          "title": "Section C Recording One",
+          "text": "",
+          "source": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              5,
+              6
+            ]
+          },
+          "transcript": "",
+          "asrDraft": "Section C Directions In this section, you will hear three recordings of lectures or talks followed by three or four questions. The recordings will be played only once. After you hear a question, you must choose the best answer from the four choices marked A, B, C and D. Then mark the corresponding letter on answer sheet one with a single line through the center. Recording one appear to be submissive, humble, grateful, and undemanding. Show great pleasure when a doctor comes into your room, even if the visit is brief and useless. Don't challenge anyone with authority unless you're famous or very rich. Those are a few strategies for dealing with today's American medical establishment. What patients want is to be treated with respect and consideration. But in my experience, two few hospitals and doctors are ready to do that. In his book, A Whole New Life, novelist Reynolds Price recalls that his doctors chose a crowded hallway as the place to tell him he might have a tumor on his spinal cord. It did not occur to the two physicians that a hallway was not the most appropriate place for that particular piece of news. My surgeon, who is in his mid-30s, looks tired. He has been overwhelmed with patients who have fallen on the winter ice. He is a witty man, but sometimes his wit is unwelcome. The health insurance company Blue Cross wants me to put you out in the snow tomorrow afternoon. He tells me, after I have been in the hospital for more than a week, I'm terrified because I have no idea where to go. I cannot walk or even lift my leg a few inches. The hospital social worker strikes me as an idiot, but my complaints about her only annoy my surgeon. I have to work with these people, he tells my friend, Dr. Karen Bradney, when she mercifully intervenes on my behalf and arranges for me to be transferred to another hospital. If you say one negative thing, they get defensive, she tells me later. They have this kind of institutional loyalty. This brings an advocate, that is, any other person with you to the hospital and write down every single question and the answer, the name of every doctor and nurse, when people know you have their names they behave better. And Brutani adds, if you as a patient suggest that you might like to control even part of",
+          "transcriptAnnotated": ",Appear to be submissive, humble, grateful and undemanding; show great pleasure when a doctor comesinto your room, even if the visit is brief and useless. Don't challenge anyone with authority unless you are famous or very rich. Those are a few strategies for dealing with today's American medical establishment.(16)What patientswant is to be treated with respect and consideration, But in my experience, too few hospitals and doctors are ready to do that. In his book,A Whole New Life, novelist Reynolds Price recalls that his doctors chose acrowdcd hallway as the place to tell him he might have a tumor on his spinal cord. It did not occur to the two 14. What have many studies uncovered about the A）【精析】细节推断题。句（14）中提到，如果对像你 B）【精析】细节辨认题。在介绍人丁智能在寻找新型 average person's lie detection? regarding lie detection? 也就是说，普通人对于谎言的辨别也不过是凑巧 和我这样的普通人进行严格的辨别谎言的测试， 有一项新研究提供了一些关于辨别谎言的建议。 能的使用，可以快速地对大量化合物进行筛选，从\n抗生素过程中的作用时。短文首先说通过人工智中确定那些让人感兴趣的化合物来进行实验测试。根据句（11）可知，人工智能还可以预测化合物是否可能有毒。因此答案为 B）。我们做得不比凑巧得出的结果好多少。许多为找出可靠的谎言检测方法所做的研究和为此进行了大量尝试的研究人员都可以充分证实这一结果。而已。因此答案为A。15, What advice does the new research offerB）【精析】】细节辨认题。短文临近结尾处，明确指出根据句（15）可知，该建议就是∶不要使用视觉，而应该使用听觉。因此答案为B）。\n\nphysicians that a hallway was not the most appropriate place for that particular piece of news. My surgeon, who is in his mid-thirties, looks tired. He has been overwhelmed with patients who have fallen on the winter ice. He is a witty man, but sometimes his wit is unwelcome.\"The health insurance company Blue Cross wants me to put you out in the snow tomorrow afternoon,\"hetells me after Ihave been in the hospital for more than a week.I'm terrified becauseI have no idea where togo.I cannot walk or even lift my leg a few inches. The hospital social worker strikes me as an itiot. But mycomplaints about her only annoy my surgeon.\"I have to work with these people,\"he tells my friend, Dr.Karen Brudlney, when she mercifully intervenes on my behalf and arranges for me to be transferred to anotherhospital.\"If you say one negative thbing, they get defensive,\"she telis me later.\"They have this kind of institutional loyalty.(17)Always bring an advocate, that is, any other person with you to the hospital, and write downevery single question and the answer, the name of every doctor and nurse. When people know you have their names, they behave better. And,\"Brudney adds,\"if you, as a patient, suggest that you might like to controleven part of the situation or be consulted or informed, then you are considered difficult.(18)They want you tobe totally passive, The entire health care system, partigularly hospitals ant mursing homes, exists for reasonsthat have nothing to do with aking care of patients. Patients are incidental.\"谯料销销劣？啉粉袜离需端需探器酱",
+          "transcriptDraft": "appear to be submissive, humble, grateful, and undemanding. Show great pleasure when a doctor comes into your room, even if the visit is brief and useless. Don't challenge anyone with authority unless you're famous or very rich. Those are a few strategies for dealing with today's American medical establishment. What patients want is to be treated with respect and consideration. But in my experience, too few hospitals and doctors are ready to do that. In his book, A Whole New Life, novelist Reynolds Price recalls that his doctors chose a crowded hallway as the place to tell him he might have a tumor on his spinal cord.\nIt did not occur to the two physicians that a hallway was not the most appropriate place for that particular piece of news. My surgeon, who is in his mid-30s, looks tired. He has been overwhelmed with patients who have fallen on the winter ice. He is a witty man, but sometimes his wit is unwelcome. The health insurance company Blue Cross wants me to put you out in the snow tomorrow afternoon. He tells me, after I have been in the hospital for more than a week, I'm terrified because I have no idea where to go. I cannot walk or even lift my leg a few inches.\nThe hospital social worker strikes me as an idiot, but my complaints about her only annoy my surgeon. I have to work with these people, he tells my friend, Dr. Karen Bradney, when she mercifully intervenes on my behalf and arranges for me to be transferred to another hospital. If you say one negative thing, they get defensive, she tells me later. They have this kind of institutional loyalty. Always bring an advocate, that is, any other person with you to the hospital and write down every single question and the answer, the name of every doctor and nurse, when people know you have their names they behave better.\nAnd Brutani adds, if you as a patient suggest that you might like to control even part of the situation or be consulted or informed, Then you are considered difficult. They want you to be totally passive. The entire healthcare system, particularly hospitals and nursing homes, exists for reasons that have nothing to do with taking care of patients. Patients are incidental."
+        },
+        {
+          "id": "listening-rec-2",
+          "title": "Section C Recording Two",
+          "text": "",
+          "source": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "transcript": "",
+          "asrDraft": "Question 18. What do American doctors expect their patients to be, according to Karen and Britney. Recording There are probably teams you've worked with that you never want to work with again. But there must have also been other teams that you would prize reuniting with professionally. In other words, your team had vitality. Vitality comes about when the ties people form with their fellow team members are such that they stay connected even after the team breaks up. What characteristics of a team make its members more likely to stay in contact despite no longer working together? This question has been answered recently in a study published in a business journal. One of the two key factors the research team discovered is sameness, specifically sharing the same gender or ethnic origin. The more members of a team share similar demographics, the more inclined they'll be to remain associates long after the team has served its purpose. After ties are established, similarity strengthens them. As a result, they regard these individuals with greater trust and mutual understanding, which motivates them to seek further opportunities for collaboration. In effect, people tend to create stronger and longer lasting connections with similar others. Someone who looks and sounds different from us may have the resources we need to be more successful, yet we find them to be significantly less credible simply because they are different. If you are a fierce advocate of workplace diversity, you'll no doubt be horrified by such a revelation. The second factor identified by the researchers is the quality of the relationships among the team members. The more they trust one another, share the same goals, and depend on each other for the achievement of those goals, the stronger their chances of maintaining their connections despite no longer working as one team. Teams with quality relationships have a shared belief that it's safe to take risks with each other and that members are obliged to share the workload and help out. From personal experience, I can see both the truth and the inconsistency of such studies. The truth is some of my closest friendships were formed as a result of having worked together on teams. And I actively seek opportunities to work with them again. The inconsistency, though, is that I've never worked for a team more successful and cohesive than the one of which I'm a member right now. And yet the four of us have very little in common and are completely different demographically. So I'm unlikely to question the value of a diverse workforce.",
+          "transcriptAnnotated": "Qustlons 19 to 21 are based on the reording yon have Jut heardl. There are probably teams you've worked with but you never want to work with again. But there must havealso been other teams that you would prize reouniting with professionally. In other words, your team hadvitality.(19)Vitality comes about when the ties people form with their felow team members are such that they.stay connected even after the team breaks up. What characteristics of a team make its members more ilikely to stay in contact despite no longer warkingtogether? This question has been answered recently in a study publisbed in a business journal. One of the two key factors the research team discovered is sameness. Specifically, sharing the same genderor ethnic origin.(20)The more members of a team share similar demographics, the more inclined they will beto remain associates long after the team has served its purpose. After ties are established, similarity strengthensthem. As a result, they regard these individuals with greater trust and mutual understanding, which motivatesthem to seek further opportunities for collaboration. In effect, people tend to create stronger and longer-lasting connections with similar others, Someone who looks and sounds different from us may bave the resources weneed to be more successful. Yet, we find then to be sigrificantly less credible simply because they are different. If you are a fierce advocate of workplace diversity, you'll no doubt be horrified by such a revelation. The second factor identifiedby the researchers is the quality of the relationships among the team members. The more they trust one another, share the same goals and depend on each other for the achievement of thosegoals, the stronger their chances of maintaining their connections, despite no longer working as one team. Teams with quality relationships have a shared belief that it's safe to take risks with each ether, and their members are obliged to sare the workload and help out. 从面有更好的表现。因此答案为D）。 和护士的名字，以此来让医生和护士们有所顾忌， 应该随时记录下每个问题和答案，以及每位医生、 据句（18）可知，他们希望患者是完全被动的。因\n院的时候，身边有人陪同十分重要，这位随同人员18. What do American doctors expect their patientsto be, according to Karen Brudney? C）【精析】细节辨认题。讲话者借助凯伦.·布鲁特妮的话，表明了美国医护人员对待患者的态度。根此答案为C）。\n\nFrom personal experience,I can see both the truth and the inconsisteney of such studies. The truth is someof my closest friendships were formed as a result of having worked together on teams, and I actively seek opportunities to work with thcm again.(21)The inconsistency, though, is that IYve never worked for a teammore successful and cohesivc than the one of which I am a member right now. And yet, the four of us have verylittle in common and are completely differcnt demographically. So I am unlikely to question the value of adiverse workforce.警擦端釜望釜宅畴抛甙藏类亲轻端诧蓝",
+          "transcriptDraft": "There are probably teams you've worked with that you never want to work with again. But there must have also been other teams that you would prize reuniting with professionally. In other words, your team had vitality. Vitality comes about when the ties people form with their fellow team members are such that they stay connected even after the team breaks up. What characteristics of a team make its members more likely to stay in contact despite no longer working together? This question has been answered recently in a study published in a business journal.\nOne of the two key factors the research team discovered is sameness, specifically sharing the same gender or ethnic origin. The more members of a team share similar demographics, the more inclined they'll be to remain associates long after the team has served its purpose. After ties are established, similarity strengthens them. As a result, they regard these individuals with greater trust and mutual understanding, which motivates them to seek further opportunities for collaboration. In effect, people tend to create stronger and longer lasting connections with similar others.\nSomeone who looks and sounds different from us may have the resources we need to be more successful, yet we find them to be significantly less credible simply because they are different. If you are a fierce advocate of workplace diversity, you'll no doubt be horrified by such a revelation. The second factor identified by the researchers is the quality of the relationships among the team members. The more they trust one another, share the same goals, and depend on each other for the achievement of those goals, the stronger their chances of maintaining their connections despite no longer working as one team.\nTeams with quality relationships have a shared belief that it's safe to take risks with each other and that members are obliged to share the workload and help out. From personal experience, I can see both the truth and the inconsistency of such studies. The truth is some of my closest friendships were formed as a result of having worked together on teams. And I actively seek opportunities to work with them again. The inconsistency, though, is that I've never worked for a team more successful and cohesive than the one of which I'm a member right now. And yet the four of us have very little in common and are completely different demographically.\nSo I'm unlikely to question the value of a diverse workforce."
+        },
+        {
+          "id": "listening-rec-3",
+          "title": "Section C Recording Three",
+          "text": "",
+          "source": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "transcript": "",
+          "asrDraft": "An American researcher who studied 600 millionaires found how rich you can get comes down to six wealth factors. We found that six behaviors are related to net worth potential, regardless of age or income. These were, thriftiness, confidence, responsibility, planning, focus, and social indifference. Being thrifty comes as no great surprise. Spending above your means, spending instead of saving for retirement, spending an anticipation of becoming wealthy makes you a slave to the paycheck. Even with an astronomical level of income, she wrote. To properly build wealth, experts recommend saving 20% of your income and living off the remaining 80%. Having confidence is another key characteristic, as it helps people to be thrifty. It takes confidence to live within your means. It also takes confidence to invest properly. Instead of making investing decisions with your emotions, financial planners advise that you should leave your investments alone and focus on a long-term investment plan. But people can't invest or manage their own money without accepting responsibility for the outcomes. Many millionaires take on personal responsibility, and most also happen to be self-made, meaning they didn't acquire their wealth through luck. Millionaires don't count on anyone else to make them rich, and they don't blame anyone else if they fall short. They focus on things they can control and align their daily habits to the goals they have set for themselves. They tend to be goal-oriented and hard workers which enables them to plan financially and focus on seeing those plans through. 92% of millionaire surveyed developed a long-term plan for their money, and 97% almost always achieved the goals they set for themselves. And it is these behaviors that make it easy for them to be socially indifferent. They resist lifestyle creep, the tendency to spend more whenever one earns more. Essentially, they don't yield to pressure to buy the latest thing or to keep up with others, or what they have acquired. Instead of being focused on what might make them happy today, they're focused on their long-term wealth-building plan.",
+          "transcriptAnnotated": "An American researcher who studied 600 millionaires found how rich you can get comes down to six wealthfactors, She found that six behaviors are related to net worth potential, regardless of age or income. Thesewere thriftiness, confidence, responsibility, planning, focus and social indifference. Being thrifty comes as no great surprise. Spending above your means, spending instead of saving for retirement, spending in anticipation of becoming wealthy, makes you a slave to the paycheck. (22)\"Even withan astroomical level of income,\" she wrote,\"to properly build wealth, experts recommend saving 20ofyour income and living off the remaining 80?Having contidence is another key characteristic, as it helps people to be thrifty、(23)It takes confidence tolive within your means. It also takes confidence to invest properly. Instead of making investing decisions withyour emotions, financial planners advise that you should leave your investments alone and focus on a long terminvestment plan. But people can't invest or manage their own money without accepting responsibility for the outcomes. Many millionaires take on personal responsibility, and rost also happen to be self-made, meaning theydidn't acquire their wealth through lhuck.(24)Millionaires don't count on anyone else to make themt rich, and theydon't blame aryone else if they fall short. They focus on things they can control and align their daily habits tothe goals they have set for themselves. They tend to be goal-oriented and hard workers, which enables them toplan financially and focus on seeing those plans throuph,92of the milionaires surveyed developed a long-term plan for their money and 97\nlmost always achieved the goals they set for themselves. And it is these behaviors that make it easy for them to be socially indifferent. They resist lifestyle creep, the tendency to spend more whenever one earns more.(25)Essentially, they don't yield to pressure to buy the latest thing or to keep up with others or what they have acquired. Instead of being focused on what might makethem happy today, they're focused on their long-term wealth-building plan.到端融絮喘鞣辩噬删非幕端端端能锑",
+          "transcriptDraft": "An American researcher who studied 600 millionaires found how rich you can get comes down to six wealth factors. She found that six behaviors are related to net worth potential, regardless of age or income. These were, thriftiness, confidence, responsibility, planning, focus, and social indifference. Being thrifty comes as no great surprise. Spending above your means, spending instead of saving for retirement, spending an anticipation of becoming wealthy makes you a slave to the paycheck. Even with an astronomical level of income, she wrote. To properly build wealth, experts recommend saving 20% of your income and living off the remaining 80%.\nHaving confidence is another key characteristic, as it helps people to be thrifty. It takes confidence to live within your means. It also takes confidence to invest properly. Instead of making investing decisions with your emotions, financial planners advise that you should leave your investments alone and focus on a long-term investment plan. But people can't invest or manage their own money without accepting responsibility for the outcomes. Many millionaires take on personal responsibility, and most also happen to be self-made, meaning they didn't acquire their wealth through luck.\nMillionaires don't count on anyone else to make them rich, and they don't blame anyone else if they fall short. They focus on things they can control and align their daily habits to the goals they have set for themselves. They tend to be goal-oriented and hard workers which enables them to plan financially and focus on seeing those plans through. 92% of millionaire surveyed developed a long-term plan for their money, and 97% almost always achieved the goals they set for themselves. And it is these behaviors that make it easy for them to be socially indifferent.\nThey resist lifestyle creep, the tendency to spend more whenever one earns more. Essentially, they don't yield to pressure to buy the latest thing or to keep up with others, or what they have acquired. Instead of being focused on what might make them happy today, they're focused on their long-term wealth-building plan."
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "What do we learn about David Jackson from the con vera tion?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He is a staff writer."
+            },
+            {
+              "key": "B",
+              "text": "He is an adventurer."
+            },
+            {
+              "key": "C",
+              "text": "He is an author of fiction."
+            },
+            {
+              "key": "D",
+              "text": "He is a father of four kids."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat do we learn about David Jackson from the con vera tion?A）【【精析】】细节辨认题。句（1）中，女士在介绍男士的时候明确指出，男士是一位职业撰稿人。因此答案为A）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "What does the mant think of young teenagers?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are interested in fairy tales."
+            },
+            {
+              "key": "B",
+              "text": "They are curious and autonomous."
+            },
+            {
+              "key": "C",
+              "text": "They are a headache to their parents."
+            },
+            {
+              "key": "D",
+              "text": "They are ignorant of politics."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhat does the mant think of young teenagers?B）【精析】细节辨认题。女士提到男士有两个孩子，一个11岁，一个14岁，并问男士现在正在应对的最有趣的问题是什么。男士回答说，他发现他们的这个年龄段非常棒。根据句（2）可知，男士认为这个年岭段的孩子们很独立，有他们自己感到好奇和迷恋的事物。因此答案为B）。Questions 5 to 8 are hased on the conversation you bave Just heardLM:(5)In this episode of Momey Talks,our guest is Molly Sanders,a university student and a successful young entrepreneur. Molly, tell us about your business,W:Well",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "How does the man help his kids with their essays?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He offers them ample editorial guidance."
+            },
+            {
+              "key": "B",
+              "text": "He recommends model essays to them."
+            },
+            {
+              "key": "C",
+              "text": "He gives them encouragement."
+            },
+            {
+              "key": "D",
+              "text": "He teaches them proofreading."
+            }
+          ],
+          "answer": "C",
+          "explanation": "男士说，他主要给孩子鼓励；对这个年龄的孩子而言，鼓励比编辑方面的指导更重要。\n【原文定位·自动匹配】M: Certainly, with writing they do.(3)I really just try to be encouraging.I think at this age, editorial guidance is less iruportant than encour8gement.W: Are there books that you think are important that your children read, and that all children read?\n【正确选项】C) He gives them encouragement.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true,
+          "explanationOriginalOCR": "答案：C\nHow does the man help his kids with their essays? Listening Comprehension was a teenager? 他校对文章时，男士给出了肯定回答，并在句（3）中 十几岁的时候确实是这样的。也就是说，她十几岁 子们到了青春期，对书的品位就会改变，并提到她 提到，他只是进行鼓励。男士认为，对于这个年龄 时对书的品位有所变化。因此答案为 A）。 段的孩子们来说，编辑方面的指导不如鼓励重要。\nC）【精析】细节辨认题。当女士问男士孩子们是否请因此答案为 C）",
+          "explanationOriginal": "男士说，他主要给孩子鼓励；对这个年龄的孩子而言，鼓励比编辑方面的指导更重要。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-06-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "What does the woman say about herself when she was a teenager?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Her tastes in books changed."
+            },
+            {
+              "key": "B",
+              "text": "She realized the power of reading."
+            },
+            {
+              "key": "C",
+              "text": "Her reading opened her eyes to the world."
+            },
+            {
+              "key": "D",
+              "text": "She began to perceive the world differently."
+            }
+          ],
+          "answer": "A",
+          "explanation": "女士说，孩子进入青春期后对书籍的品位会发生变化，她自己十几岁时也是如此。\n【原文定位·自动匹配】If a child loves graphic novels or comic books, whatever it is, that is turningthem on to read and turning on their imagination.W:(4)I feel that children's tastes in boks change as they reach adolescence.\n【正确选项】A) Her tastes in books changed.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "M: Why did you persevere?",
+          "explanationOriginalOCR": "答案：A\nWhat does the woman say about herself when sheA）【精析】细节辨认题。句（4）中，女士说，她认为孩\n\nM: Why did you persevere? I think most people would give up if they kept failing,especially at that age.W:I kept on out of necessty.(7)As you can see,I'm very tall and I couldn't find clothes that fit me inordinary shops. So I kept trying and developed my skills over time.M:Well,my notes say you earned $50,000 in profits las",
+          "explanationOriginal": "女士说，孩子进入青春期后对书籍的品位会发生变化，她自己十几岁时也是如此。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-06-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "What do we Eearn about the woman?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "She is a website designer."
+            },
+            {
+              "key": "B",
+              "text": "She is a university graduate."
+            },
+            {
+              "key": "C",
+              "text": "She is a main street store owner."
+            },
+            {
+              "key": "D",
+              "text": "She is a successful entrepreneur."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat do we Eearn about the woman?D）【精析】细节辨认题。句（5）中，男士介绍女士时就明确指出，女士是一名在校大学生，也是一位成功的年轻企业家。因此答案为D）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "What does the worman say about the clothes shemade at first?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They were repeatedly rejected by shops."
+            },
+            {
+              "key": "B",
+              "text": "They were popular with her classmates."
+            },
+            {
+              "key": "C",
+              "text": "They showed her natural talent."
+            },
+            {
+              "key": "D",
+              "text": "They were mostly failures."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat does the worman say about the clothes shemade at first?D）【精析】细节辨认题。当男士同女士她是受过专业的服装设计或缝纫方面的培训，还是天生就有制作服装的才能时，女士给出了否定回答，并且在句（6）中说，没有人教她做衣服，她刚开始做的衣服大多数都是灾难。也就是说，女士刚开始做的衣服大多都是失败的。因此答案D）。7, Why did the woman persevere in making clothesfor hersel?",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "Why did the woman persevere in making clothes for herself?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "She had a strong interest in doing it."
+            },
+            {
+              "key": "B",
+              "text": "She did not like ready-made clothes."
+            },
+            {
+              "key": "C",
+              "text": "She could not find clothes of her size."
+            },
+            {
+              "key": "D",
+              "text": "She found clothes in shops unaffordable."
+            }
+          ],
+          "answer": "C",
+          "explanation": "女士个子很高，在普通商店找不到合身的衣服，因此出于需要坚持自己制作衣服。\n【原文定位·自动匹配】As you can see, I'm very tall and I couldn't find clothes that fit me in ordinary shops.\n【正确选项】C) She could not find clothes of her size.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 66%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "听力理解第 7 题",
+          "explanationOriginalOCR": "答案：C\nC）【精析】细节辨认题。男士同女士，既然经常失败， 衣服。因此答案为C）。\n为什么还要坚持制作服装。女士回答说，自己之所以能坚持下去，是因为她有这方面的需要。根据句（7））可知，女士非常高，因此，在普通商店里找不到合适的衣服。也就是说，她找不到适合自己尺码的8.What does the woman plan to do in the future?",
+          "explanationOriginal": "女士个子很高，在普通商店找不到合身的衣服，因此出于需要坚持自己制作衣服。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.67
+          }
+        },
+        {
+          "id": "2022-06-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "What does the woman plan to do in the future?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Study fashion design at college."
+            },
+            {
+              "key": "B",
+              "text": "Improve her marketing strategy."
+            },
+            {
+              "key": "C",
+              "text": "Add designs for women."
+            },
+            {
+              "key": "D",
+              "text": "Expand her business."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat does the woman plan to do in the future?D）【精析】细节推断题。男士问女士将来有什么打算，是否会开一家实体店。女士对男士说，她会继续在网上经营以降低成本，根据句（8）可知，女士会增加更多童装，包括男童疲、女童装，甚至可能会做一些婴儿服装。她还希望增加男士服装设计的系列。由此可知，女士在将来会扩展自己的业务。因此答案为D）。搅生素分子。因此答案为A）。dugs?B）【精析】细节辨认题。当讨论到为什么寻找新型抗\n\n生素十分重要时，短文握到了耐药性这一概念。根据句（10）可知，抗生素耐药性是对健康的严重威胁，而且这个问题正在日益增多。这就使得寻找新型抗生素变得非常重要。因此答案为B）。11. What does the passage say artificia】 intelligence is able to do in antibiotic r",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "What have researchers done for the first time inhistory?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Utilizing artificial intelligence to find a powerful new antibiotic."
+            },
+            {
+              "key": "B",
+              "text": "Discovering bacteria which are resistant to all known antibiotics."
+            },
+            {
+              "key": "C",
+              "text": "Identifying bacterial strains that are most harmful to human health."
+            },
+            {
+              "key": "D",
+              "text": "Removing a deadly strain of bacteria in humans with a new antibiotic."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat have researchers done for the first time inhistory?A）【精析】细节辨认题。句（9）中提到，研究人员说，这是人工智能首次被用来寻找一种强大的新型抗",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "What makes it important to find new antibiotic drugs?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ever-increasing strains of bacteria."
+            },
+            {
+              "key": "B",
+              "text": "Bacteria's resistance to antibiotics."
+            },
+            {
+              "key": "C",
+              "text": "The similarity between known drugs."
+            },
+            {
+              "key": "D",
+              "text": "The growing threat of bacteria to health."
+            }
+          ],
+          "answer": "B",
+          "explanation": "讲座指出，细菌对抗生素产生耐药性是严重且日益增长的健康威胁，因此寻找新的抗生素很重要。\n【原文定位·语义匹配】The answer is antibiotic resistance. This makes finding new antibiotics very important.\n【正确选项】B) Bacteria's resistance to antibiotics.\n【标注】依据听力原文与解析摘要对照人工选句，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "verificationNote": "已核对 G 盘本卷原题及解析；录音未逐题人工核听。",
+          "stemOriginalOCR": "为什么还要坚持制作服装。女士回答说，自己之所以能坚持下去，是因为她有这方面的需要。根据句（7））可知，女士非常高，因此，在普通商店里找不到合适的衣服。也就是说，她找不到适合自己尺码的8.What does the woman plan to do in the future?",
+          "explanationOriginalOCR": "答案：C\nWhat makes it important to find new antibiotic C）【精析】细节辨认题。男士同女士，既然经常失败， 衣服。因此答案为C）。\n为什么还要坚持制作服装。女士回答说，自己之所以能坚持下去，是因为她有这方面的需要。根据句（7））可知，女士非常高，因此，在普通商店里找不到合适的衣服。也就是说，她找不到适合自己尺码的8.What does the woman plan to do in the future?D）【精析】细节推断题。男士问女士将来有什么打算，是否会开一家实体店。女士对男士说，她会继续在网上经营以降低成本，根据句（8）可知，女士会增加更多童装，包括男童疲、女童装，甚至可能会做一些婴儿服装。她还希望增加男士服装设计的系列。由此可知，女士在将来会扩展自己的业务。因此答案为D）。搅生素分子。因此答案为A）。dugs?B）【精析】细节辨认题。当讨论到",
+          "explanationOriginal": "讲座指出，细菌对抗生素产生耐药性是严重且日益增长的健康威胁，因此寻找新的抗生素很重要。",
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 0.9
+          }
+        },
+        {
+          "id": "2022-06-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "What does the passage say artificial intelligence is able to do in antibiotic research?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dispense with experimental testing."
+            },
+            {
+              "key": "B",
+              "text": "Predict whether compounds are toxic."
+            },
+            {
+              "key": "C",
+              "text": "Foresee human reaction to antibiotics."
+            },
+            {
+              "key": "D",
+              "text": "Combat bacteria's resistance to antibiotics."
+            }
+          ],
+          "answer": "B",
+          "explanation": "讲座说，人工智能不仅能筛选大量化合物，还能预测化合物是否可能有毒。\n【原文定位·自动匹配】It can screen hundreds of millions of compounds to identify a few interesting candidates that require experimental testing,(11)Artificial intelligence is also able to predict if compounds are likely to be toxic, Some experts assert that this work sigmifies a paradigm shift in antibiotic discovery.\n【正确选项】B) Predict whether compounds are toxic.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "听力理解第 11 题",
+          "explanationOriginalOCR": "答案：B\nB）【精析】细节辨认题。在介绍人丁智能在寻找新型 average person's lie detection? regarding lie detection? 也就是说，普通人对于谎言的辨别也不过是凑巧 和我这样的普通人进行严格的辨别谎言的测试， 有一项新研究提供了一些关于辨别谎言的建议。 能的使用，可以快速地对大量化合物进行筛选，从\n抗生素过程中的作用时。短文首先说通过人工智中确定那些让人感兴趣的化合物来进行实验测试。根据句（11）可知，人工智能还可以预测化合物是否可能有毒。因此答案为 B）。我们做得不比凑巧得出的结果好多少。许多为找出可靠的谎言检测方法所做的研究和为此进行了大量尝试的研究人员都可以充分证实这一结果。而已。因此答案为A。15, What advice does the new research offer",
+          "explanationOriginal": "讲座说，人工智能不仅能筛选大量化合物，还能预测化合物是否可能有毒。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-06-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "According to the passage, how do most peopledetect lying?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "By theorization."
+            },
+            {
+              "key": "B",
+              "text": "By gen era liz a tion."
+            },
+            {
+              "key": "C",
+              "text": "By observation."
+            },
+            {
+              "key": "D",
+              "text": "By conversation."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nAccording to the passage,how do most peopledetect lying?C）【精析】细节归纳题。句（12-1）中提到，我们大多数人都有关于如何判断某人是否在说谎的理论。我们可能会通过观察那些我们熟悉并经常看到的人来逐渐形成这一理论，但我们倾向于对那些由不怎么科学的日常研究中所收集到的东西进行概括，使之成为一个普遍的理论。句（12-2）中又提到，不管具体的理论是什么，它通常是以对我们认识的人的密切观察为基础的。也就是说，大多数人是通过观察来辨别谎言的。因此答案为C>。13,What does the passage say about most lies?D）【精析】细节辨认题。句（13）中提到，平均来说，我们每天要面对200次左右的谎言。这些谎言大多是无害的，但它们贫归是谎言。因此容案为D）。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "Question 13（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are easy to detect."
+            },
+            {
+              "key": "B",
+              "text": "They are well intended."
+            },
+            {
+              "key": "C",
+              "text": "They are groundless."
+            },
+            {
+              "key": "D",
+              "text": "They are harmless."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nD）【精析】细节辨认题。句（13）中提到，平均来说，我们每天要面对200次左右的谎言。这些谎言大多是无害的，但它们贫归是谎言。因此容案为D）。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "What have many studies uncovered about the average person's lie detection?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mostly by chance."
+            },
+            {
+              "key": "B",
+              "text": "Basically objective."
+            },
+            {
+              "key": "C",
+              "text": "Subject to their mental alertness."
+            },
+            {
+              "key": "D",
+              "text": "Dependent on their analytical ability."
+            }
+          ],
+          "answer": "A",
+          "explanation": "讲话者说，许多研究发现，普通人在严格的测谎测试中，准确率并不比碰运气高多少。\n【原文定位·自动匹配】These are mostly harmless lies, but lies nonetheless, But there's a probjem with our theories, even though they're based on all these observations.(14)The averageperson一you and metested rigorously on how well we detect lies fails to do better than chance.\n【正确选项】A) Mostly by chance.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "verificationNote": "已核对 G 盘本卷原题及解析；录音未逐题人工核听。",
+          "stemOriginalOCR": "M;Did you have any sort of training in design or sewing?",
+          "explanationOriginalOCR": "答案：C\nM;Did you have any sort of training in design or sewing? Or was it a natural ability?W:I'd have to say no to both.(6)No one taught me to make clothes and most of the things Imade at first weredisasters. 3. How does the man help his kids with their essays? Listening Comprehension was a teenager? 他校对文章时，男士给出了肯定回答，并在句（3）中 十几岁的时候确实是这样的。也就是说，她十几岁 子们到了青春期，对书的品位就会改变，并提到她 提到，他只是进行鼓励。男士认为，对于这个年龄 时对书的品位有所变化",
+          "explanationOriginal": "讲话者说，许多研究发现，普通人在严格的测谎测试中，准确率并不比碰运气高多少。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-06-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "Question 15（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Looking the speaker in the eye."
+            },
+            {
+              "key": "B",
+              "text": "Listening carefully to the speaker."
+            },
+            {
+              "key": "C",
+              "text": "Measuring the speaker's breathing rate."
+            },
+            {
+              "key": "D",
+              "text": "Focusing on the speaker's facial expressions."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nB）【精析】】细节辨认题。短文临近结尾处，明确指出根据句（15）可知，该建议就是∶不要使用视觉，而应该使用听觉。因此答案为B）。\n\nphysicians that a hallway was not the most appropriate place for that particular piece of news.My surgeon,who is in his mid-thirties,looks tired. He has been overwhelmed with patients who havefallen on the winter ice. He is a witty man, but sometimes his wit is unwelcome.\"The health insurance company Blue Cross wants me to put you o",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "What does the speaker say about most american hospitals?",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They don't treat patients with due respect."
+            },
+            {
+              "key": "B",
+              "text": "They witness a lot of doctor-patient conflicts."
+            },
+            {
+              "key": "C",
+              "text": "They have to deal with social workers9 strikes."
+            },
+            {
+              "key": "D",
+              "text": "They don't care how much patients have to pay."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat does the speaker say about most american hospitals?A）【精析】细节推断题。讲话者在讲座开头提供了一些应对当今美国医疗机构的策略。在句（16）中，讲话者提到，患者希望得到尊重和体谅。但根据她的经验，很少有医院或医生愿意这样做。也就是说，在美国，大多数医院和医生都对患者不够尊重和体谅。因此答案为A）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "What does Karen Brudney suggest patients do?",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Appear submissive and grateful to doctors and nurses."
+            },
+            {
+              "key": "B",
+              "text": "Express a strong desire to be consulted or informed."
+            },
+            {
+              "key": "C",
+              "text": "Refrain from saying anything that sounds negative."
+            },
+            {
+              "key": "D",
+              "text": "Note down the names of all the doctors and nurses."
+            }
+          ],
+          "answer": "D",
+          "explanation": "布鲁特妮建议患者让人陪同就医，记下每一个问题及回答，并记录每位医生和护士的名字。\n【原文定位·语义匹配】This brings an advocate, that is, any other person with you to the hospital and write down every single question and the answer, the name of every doctor and nurse, when people know you have their names they behave better.\n【正确选项】D) Note down the names of all the doctors and nurses.\n【标注】依据听力原文与解析摘要对照人工选句；原文为机器转写草稿，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationOriginalOCR": "答案：D\nWhat does Karen Brudney suggest patients do?D）【精析】细节辨认题。讲座中，讲话者提到了凯伦·布鲁特妮对她说的话，根据句（17）可知，在医Qustlons 19 to 21 are based on the reording yon have Jut heardl.There are probably teams you've worked with but you never want to work with again. But there must havealso been other teams that you would prize reouniting with professionally. In other words,your team hadvitality.(19)Vitality comes about when t",
+          "explanationOriginal": "布鲁特妮建议患者让人陪同就医，记下每一个问题及回答，并记录每位医生和护士的名字。",
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 1.0
+          }
+        },
+        {
+          "id": "2022-06-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "What do American doctors expect their patients to be, according to Karen Brudney?",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cooperative."
+            },
+            {
+              "key": "B",
+              "text": "Appreciative."
+            },
+            {
+              "key": "C",
+              "text": "Passive."
+            },
+            {
+              "key": "D",
+              "text": "Responsive."
+            }
+          ],
+          "answer": "C",
+          "explanation": "布鲁特妮认为，医疗机构希望患者完全被动，不要试图控制或参与诊疗过程。\n【原文定位·语义匹配】And Brutani adds, if you as a patient suggest that you might like to control even part of\n【正确选项】C) Passive.\n【标注】依据听力原文与解析摘要对照人工选句；原文为机器转写草稿，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "What do American doctors expect their patientsto be, according to Karen Brudney?",
+          "explanationOriginalOCR": "答案：C\nWhat do American doctors expect their patientsto be, according to Karen Brudney?C）【精析】细节辨认题。讲话者借助凯伦.·布鲁特妮的话，表明了美国医护人员对待患者的态度。根此答案为C）。\n\nFrom personal experience,I can see both the truth and the inconsisteney of such studies. The truth is someof my closest friendships were formed as a result of having worked together on teams,and I actively seekopportunities to work with thcm again.(21)The inconsist",
+          "explanationOriginal": "布鲁特妮认为，医疗机构希望患者完全被动，不要试图控制或参与诊疗过程。",
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 1.0
+          }
+        },
+        {
+          "id": "2022-06-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "What does the speaker say about a team with vitality?",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Its members work together despite risks of failure."
+            },
+            {
+              "key": "B",
+              "text": "It prioritizes recruiting young energetic members."
+            },
+            {
+              "key": "C",
+              "text": "Its members stay in touch even after it breaks up."
+            },
+            {
+              "key": "D",
+              "text": "It grows more and more mature professionally."
+            }
+          ],
+          "answer": "C",
+          "explanation": "讲话者说，有活力的团队中，成员之间的联系能够在团队解散后继续保持。\n【原文定位·自动匹配】Vitality comes about when the ties people form with their fellow team members are such that they stay connected even after the team breaks up.\n【正确选项】C) Its members stay in touch even after it breaks up.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 83%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              3
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "verificationNote": "已核对 G 盘本卷原题及解析；录音未逐题人工核听。",
+          "stemOriginalOCR": "What does the spcaker say about a team withvitality?",
+          "explanationOriginalOCR": "答案：B\nWhat does the spcaker say about a team withvitality?CO【【精析】细节推断题。根据句（19）可知，当人们与其他团队成员形成的联系使得他们即使在团队解散后也能保持联系时，活力便会产生。也就是说，有活力的团队，其成员在团队解散后也会保持联系。因此答案为C）。20, What do the researchers find out about membersof a team?B）【精析】细节推断题。根据句（20）可知，团队中拥有相似人口统计特征的成员越多，他们就越有可能在团队实现其目标后很长一段时间内保持联系。联系形成后，相似性会将其强化。于是，他们Questions 22 to 25 are based on the tecording you have just heard.An American researcher who studi",
+          "explanationOriginal": "讲话者说，有活力的团队中，成员之间的联系能够在团队解散后继续保持。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.83
+          }
+        },
+        {
+          "id": "2022-06-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "What do the researchers find out about members of a team?",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Their differences are likely to impact productivity."
+            },
+            {
+              "key": "B",
+              "text": "Their similarity is conducive to future collaboration."
+            },
+            {
+              "key": "C",
+              "text": "Their connections strengthen with the passage of time."
+            },
+            {
+              "key": "D",
+              "text": "Their mutual understanding stems from a common goal."
+            }
+          ],
+          "answer": "B",
+          "explanation": "研究发现，团队成员的人口统计特征越相似，未来保持联系和再次合作的可能性越大。\n【原文定位·自动匹配】After ties are established, similarity strengthens them.\n【正确选项】B) Their similarity is conducive to future collaboration.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 50%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "听力理解第 20 题",
+          "explanationOriginalOCR": "答案：B\nB）【精析】细节推断题。根据句（20）可知，团队中拥有相似人口统计特征的成员越多，他们就越有可能在团队实现其目标后很长一段时间内保持联系。联系形成后，相似性会将其强化。于是，他们Questions 22 to 25 are based on the tecording you have just heard.An American researcher who studied 600 millionaires found how rich you can get cornes down to six wealthfactors,She found that six behaviors are related to net worth potential,regardless of age or income. Thesewere thriftiness,confidence,respons",
+          "explanationOriginal": "研究发现，团队成员的人口统计特征越相似，未来保持联系和再次合作的可能性越大。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.5
+          }
+        },
+        {
+          "id": "2022-06-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "What do we learn about the team the speaker is currently working in?",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is characterized by diversity."
+            },
+            {
+              "key": "B",
+              "text": "Its goals are quite inconsistent."
+            },
+            {
+              "key": "C",
+              "text": "Its members have similar backgrounds."
+            },
+            {
+              "key": "D",
+              "text": "It is connected by a unique mechanism."
+            }
+          ],
+          "answer": "A",
+          "explanation": "讲话者目前所在团队的四位成员在人口统计特征上很不相同，但团队十分成功且有凝聚力。\n【原文定位·自动匹配】If you are a fierce advocate of workplace diversity, you'll no doubt be horrified by such a revelation.\n【正确选项】A) It is characterized by diversity.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 55%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "What do we learn about the team the speaker iscurrently working in?",
+          "explanationOriginalOCR": "答案：A\nWhat do we learn about the team the speaker iscurrently working in?A）【精析】细节推断题。根据句（21）可知，讲话者所在团队中的四个成员从人口统计角度上来说各不凝聚力的团队。讲话者不会质疑员工多样性的价值。由此可见，讲话者目前所在团队的最大特点就是多样性。因此答案为 A）。23.How does confidence help people to be thrifty?节约。根据句（23）可知，量入为出需要信心，合理做出投资决策，而应该减少对投资的干扰，专注于\n\n合理的长期投资，减少甚至避免不合理的短期投资所带来的损失。因此答案为D）。24.How do millionaires react when they fail in theirinvestment?D）【精析】细节辨认题。句（24）中提到，百万富翁不会指望别人让",
+          "explanationOriginal": "讲话者目前所在团队的四位成员在人口统计特征上很不相同，但团队十分成功且有凝聚力。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.55
+          }
+        },
+        {
+          "id": "2022-06-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "What do experts recommend concerning being thrifty?",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Putting aside twenty percent of one's earnings."
+            },
+            {
+              "key": "B",
+              "text": "Spending in anticipation of becoming wealthy."
+            },
+            {
+              "key": "C",
+              "text": "Living off a small proportion of one's income."
+            },
+            {
+              "key": "D",
+              "text": "Saving as much as one can possibly manage."
+            }
+          ],
+          "answer": "A",
+          "explanation": "专家建议将收入的 20% 储蓄起来，用其余的 80% 维持生活。\n【原文定位·自动匹配】(22)\"Even withan astroomical level of income,\" she wrote,\"to properly build wealth, experts recommend saving 20ofyour income and living off the remaining 80?Having contidence is another key characteristic, as it helps people to be thrifty、(23)It takes confidence tolive within your means.\n【正确选项】A) Putting aside twenty percent of one's earnings.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "What do experts recommend concerning bcingthrifty?",
+          "explanationOriginalOCR": "答案：A\nWhat do experts recommend concerning bcingthrifty?A）【精析】细节辨认题。讲座提到节俭时，提到了专家的建议。根据句22）可知，该建议是∶将收入的20??起来;将剩下的 80??于生活。因此答案为A）。 D）【精析】细节推断题。讲座中说，信心有助于人们 他们寻求进一步的合作机会。简而言之，团队成 投资也需要信心。理财规划师建议，不要凭感情 相同，但这个团队却是他所经历过的最成功、最有 长期投资计划。也就是说，信心会让人们专注于\n会对这些人有更多的信任和相互理解，这会促使员之间的相似性有助于在未来形成合作关系。因此答案为B）。21.What do we learn about the team the speaker iscurrently working in?A）【精析】细节推断题。根据句（21）可知，讲话者所在团队中的四个成员从人口统计角",
+          "explanationOriginal": "专家建议将收入的 20% 储蓄起来，用其余的 80% 维持生活。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-06-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "How does confidence help people to be thrifty?",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "It empowers them to cope with irrational emotions."
+            },
+            {
+              "key": "B",
+              "text": "It will guarantee the profits from their investments."
+            },
+            {
+              "key": "C",
+              "text": "It will turn them into successful financial planners."
+            },
+            {
+              "key": "D",
+              "text": "It enables them to focus on long-term investments."
+            }
+          ],
+          "answer": "D",
+          "explanation": "讲座认为，信心有助于人们量入为出，并坚持长期投资计划，而不是凭情绪频繁改变投资。\n【原文定位·自动匹配】(22)\"Even withan astroomical level of income,\" she wrote,\"to properly build wealth, experts recommend saving 20ofyour income and living off the remaining 80?Having contidence is another key characteristic, as it helps people to be thrifty、(23)It takes confidence tolive within your means.\n【正确选项】D) It enables them to focus on long-term investments.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "explanationOriginalOCR": "答案：D\nHow does confidence help people to be thrifty?节约。根据句（23）可知，量入为出需要信心，合理做出投资决策，而应该减少对投资的干扰，专注于\n\n合理的长期投资，减少甚至避免不合理的短期投资所带来的损失。因此答案为D）",
+          "explanationOriginal": "讲座认为，信心有助于人们量入为出，并坚持长期投资计划，而不是凭情绪频繁改变投资。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-06-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "How do millionaires react when they fail in their investment?",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They count on others to take the responsibility."
+            },
+            {
+              "key": "B",
+              "text": "They change their investment strategy in time."
+            },
+            {
+              "key": "C",
+              "text": "They think they themselves are to blame."
+            },
+            {
+              "key": "D",
+              "text": "They persist rather than get discouraged."
+            }
+          ],
+          "answer": "D",
+          "explanation": "讲话者说，百万富翁在未能达到目标时不责怪别人，而是专注于自己能控制的事情并继续努力。\n【原文定位·语义匹配】They focus on things they can control and align their daily habits tothe goals they have set for themselves. They tend to be goal-oriented and hard workers, which enables them toplan financially and focus on seeing those plans throuph,92of the milionaires surveyed developed a long-term plan for their money and 97 lmost always achieved the goals they set for themselves.\n【正确选项】D) They persist rather than get discouraged.\n【标注】依据听力原文与解析摘要对照人工选句，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "How do millionaires react when they fail in theirinvestment?",
+          "explanationOriginalOCR": "答案：D\nHow do millionaires react when they fail in theirinvestment?D）【精析】细节辨认题。句（24）中提到，百万富翁不会指望别人让他们富有，如果他们自己做不到，也不会责怪任何人。他们专注于自己可以控制的事惰，并将日常习惯与自己设定的目标保持一致。他们往往以目标为导向，努力工作，这使得他们能够制订财务计划，并专注于完成这些计划。也就",
+          "explanationOriginal": "讲话者说，百万富翁在未能达到目标时不责怪别人，而是专注于自己能控制的事情并继续努力。",
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 0.84,
+            "tri": 0.75
+          }
+        },
+        {
+          "id": "2022-06-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "Why does the speaker say millionaires are socially indifferent?",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They do not resist novel lifestyles."
+            },
+            {
+              "key": "B",
+              "text": "They do not try to keep up with others."
+            },
+            {
+              "key": "C",
+              "text": "They do not care what they have acquired."
+            },
+            {
+              "key": "D",
+              "text": "They do not pressure themselves to get rich."
+            }
+          ],
+          "answer": "B",
+          "explanation": "讲座说，他们不会屈服于购买最新物品的压力，也不会试图跟别人攀比，而是专注于长期财富计划。\n【原文定位·自动匹配】They resist lifestyle creep, the tendency to spend more whenever one earns more.(25)Essentially, they don't yield to pressure to buy the latest thing or to keep up with others or what they have acquired.\n【正确选项】B) They do not try to keep up with others.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "听力理解第 25 题",
+          "explanationOriginalOCR": "25. Why does the speaker say millionaires are B）【精析】细节辨认题。根据句（25）可知，百万富翁 K）【语法判断】空格前为主语Bath和be动词is，空",
+          "explanationOriginal": "讲座说，他们不会屈服于购买最新物品的压力，也不会试图跟别人攀比，而是专注于长期财富计划。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空短文",
+          "text": "The city of Bath was founded by the Romans almost two thousand years ago. It has been famous for its __(26)__ pleasing architecture and healing thermal springs ever since.\nThere are three hot springs in Bath; one is the King's Spring, upon which the Roman\nBaths and a temple were __(27)__. The other two are the Cross Spring and the Hetling\nSpring, close to each other in Hot Bath Street. Although Bath is __(28)__ known as a\nRoman and Georgian city, many people came in the intervening centuries to make use of the __(29)__ waters.\nWhile the Georgians made \"taking the waters' or bathing particularly fashionable, it was __(30)__ generations who paved the way, creating greater interest in Bath and its springs. Charles II, desperate for an heir and unable to produce a __(31)__ son, came to\nBath to take the waters in the hope that their magical powers would do something to __(32)__\nthe situation. Craving for a male heir, James and Mary both came to Bath and soon after produced a son, which bred many conspiracy theories about who was the real father of their\n__(33)__. Regardless, the \"miracle9 created something of a boom in tourism for Bath and once Queen Anne had paid a visit in 1702, sealing it as the place to be, the whole nation __(34)__ to the city.\nAfterwards, the spas (矿泉疗养浴场)in Bath continued to go in and out of fashion for more than 150 years until they closed completely. The new Bath Spa, which opened in 2006,\n__(35)__ modem architecture with the ancient spring, now the New Royal Bath.",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读短文",
+          "text": "A) Fazila is a young woman that has been dealing with eczema (湿疹), a common skin condition, for the past five years, but never got it treated. The nearest hospital is an hour away, by boat and bus, and her skin condition didn't seem serious enough to make the trek, so she ignored it- until a new technology brought the doctor to her. Fazila lives on one of the remote river islands in northern Bangladesh. These islands are low-lying, temporary sand islands that are continuously formed and destroyed through sand buildup and erosion. They are home to over six million people, who face repeated displacement from flooding and erosion- which may be getting worse because of climate change-and a range of health risks, including poor nutrition, malaria (疟疾)and other water-borne diseases.\n\nB) The most dangerous thing for these remote island dwellers is land erosion. The second is lack of access to medical supplies and doctors. There are no doctors within miles, and while child mortality and maternal death have gone down in the rest of the country, this is not the case for the islands. The medical situation is so bad that it really takes away from the quality of their life. Yet for many island inhabitants— —some of Bangladesh's poorest- paying for health care is a costly ordeal. Victims of erosion lose their houses, agricultural land and jobs as farmers, fishermen and day laborers. Though government hospitals are free, many people hesitate to go, citing long commutes, endless lines and questionable diagnoses. For convenience's sake, one-third of rural households visit unqualified village doctors, who rely on unscientific methods of treatment, according to a 2016 study in the peer-reviewed journal Global Health Action.\n\nC) On the islands, there9s even a colloquial (口头的)expression for the idea of making medical care your lowest priority: It's known as “rog pushai rakha^^ in Bengali, which roughly translates to \"stockpiling their diseases”- waiting to seek medical attention until a condition becomes extremely serious. Now, a new virtual medical service called\nTeledaktar (TD) is trying to make health care more easily accessible. Every week, TD's medical operators travel to the islands by boat, carrying a laptop, a portable printer for prescriptions and tools to run basic medical screenings such as blood pressure, blood sugar, body temperature and weight. They choose an area of the island with the best\nInternet reception and set up a makeshift (临时凑合的)medical center which consists of plastic stools and small tables borrowed from the locals' homes, a tent in case of rain and a sheet that is strung up to give the patients privacy during their session.\n\nD) Launched in October 2018, TD has eight centers in towns and villages across rural\nBangladesh and on three islands. It is funded by a nonprofit organization founded by\nBangladeshi entrepreneurs, finance and technology professionals. Inside the center, the laptop screen lights up to reveal Dr. Tina Mustahid, TD's head physician, live-streamed (网络直播)from the capital city of Dhaka for free remote medical consultations.\nAffectionately called Doctor Apa一 \"older sister\" in Bengali- by her patients, she is one of three volunteer doctors at TD.\n\nE) “I diagnose them through conversation, says Dr. Mustahid. '\"Sometimes it's really obvious things that local doctors don't have the patience to talk through with their patients. For example, a common complaint mothers come in with is that their children refuse to eat their meals. The mothers are concerned they are dealing with indigestion, but it's because they are feeding the children packaged chips which are cheap and convenient. I tell them it is ruining their appetite and ask them to cut back on unhealthy snacks.\" Dr. Mustahid says building awareness about health and nutrition is important for island patients who are cut off from mainland resources.\n\nF) Even off the islands, Bangladesh faces a critical deficit of health services. The country has half the doctors-per-person ratio recommended by the World Health Organization:\nroughly one doctor per 2,000 people, instead of one doctor per 1,000 people. And of those physicians, many are concentrated in cities: 70% of the country's population live in rural areas, yet less than 20% of health workers practice there. Over 70% of TD's\n3,000 patients are female, in part because many are not comfortable speaking with local doctors who tend to be male. The rural women are mostly not literate or confident enough to travel on their own to the nearest town to visit medical facilities. Many have spent their entire lives rebuilding their homes when the islands flood. Early marriage and young motherhood, which are prevalent in these parts of Bangladesh, also contribute to the early onset of health problems.\n\nG) For most TD patients on the islands, Dr. Mustahid is the first big-city doctor that they've ever consulted. TD doctors are not meant to treat serious illnesses or conditions that require a doctor to be physically present, such as pregnancy. But they can write prescriptions, diagnose common ailments一including digestive issues, joint pain, skin diseases, fever and the common cold— —and refer patients to doctors at local hospitals.\nThe visit is also an opportunity for the patients, especially women, to air their concerns about aging, motherhood and reproductive health according to Dr. Mustahid. The doctors also offer health, dietary and lifestyle advice where necessary, including insight on everything from recognizing postnatal (产后的)depression to daily exercise. Dr.\nMustahid regularly recommends her patients to take a daily thirty-minute morning walk before the sun gets too intense.\n\nH) After a few sessions about general health issues Fazila finally opened up about something else that was bothering her: her persistent skin condition. It can get expensive to travel to the doctor, so usually the women living on the islands describe their illness to their husbands. The husbands then go to the pharmacy, try to describe the issue and return home with some random medicines. Nothing worked for Fazila until she started seeing Dr. Apa.\n\nI) Other nonprofits are also starting to provide health services on the islands. A local non-governmental organization called Friendship operates floating boat hospitals that provide health services to islands all over Bangladesh, docking at each for two months at a time. Friendship also runs satellite clinics in which one doctor and one clinic aide who are residents of the community disperse health and hygiene information.\n\nJ) TD still has a few major challenges. Many residents complain the medicines they are prescribed are sometimes unaffordable, but the government isn't doing enough for them.\nPatients often ask why the medicine isn't free along with the consultation from the doctors. The organizations are linked to local pharmacies and offer discounts to the patients and make sure to prescribe the most cost-effective brands, but still many residents can't afford even that.\n\nK) Nevertheless, TD's remote consultations seem to be popular: Of 3,000 patients, at least 200 have returned for follow-ups, according to TD. The reason, explains one resident, might be the simple gesture of treating the island inhabitants with respect. “Dr. Apa is patient,” he says, “At government hospitals, the doctors treat us very badly, but here they listen to us, I can repeat myself many times and no one gets annoyed.^^",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Selective colleges and universities in the U.S. are under fire for being too elite and too expensive, and for not training graduates for the world of work. Such charges ignore the fact that these institutions continue to prepare students for success in their work, for thoughtful engagement in civic life, for lifelong learning, and for understanding the world and those with whom they live.\nThese colleges and universities must be doing something right. Applications are at record highs, and their financial aid programs make them more accessible than ever. This model of education has long played a central role in creating opportunity, driving economic growth, and spurring innovation.\nYet, there is growing skepticism about the value of this model. The recent tax reform bill is a wake-up call that our strongest colleges and universities are under assault by some in government. The initial proposals would have made education unaffordable for many by taxing tuition waivers for graduate students and ending deductions for student loan interest.\nThankfully, these provisions were ultimately stripped from the bill, but lawmakers let stand a new tax on the investment income of some colleges and universities.\nWhile these attacks are motivated by misguided ideas, we need to do a better job of explaining why these claims are false and why what we do is valuable. We cannot take for granted that any of this is obvious.\nIt is often said that elite colleges and universities do not train students, particularly those who study the liberal arts, for the workforce. But this can be refuted by scholarly research. The data are clear: a liberal arts education is great career preparation, both for excellent lifetime earnings and for satisfaction with the work. This education develops the skills of critical thinking, rigorous analysis of data and facts, communication with the written and spoken word, understanding of cultural differences and issues, and the ability to keep learning. In fact, liberal arts graduates do extremely well in every imaginable field.\nAccess to an education at selective colleges and universities is now more available than ever to low-and middle-income families. We have built endowments from donations by alumni (校友)and parents who understand and appreciate our mission to provide access and opportunity, and a significant portion of the returns from these endowments is used to fund financial aid.\nIronically, the new tax on endowments drains financial aid funds from the very schools most able to offer opportunity to those who have earned a spot but cannot otherwise afford this education. Beyond the virtue of access to those who have earned a place at these schools, the diversity of economic backgrounds enhances the education and experience of all of our students.",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "When a group of Australians was asked why they believed climate change was not happening, about 36% said it was “common sense”, according to a report published last year by the Commonwealth Scientific and Industrial Research Organization. This was the most popular reason fbr their opinion, with only 11% saying their belief that climate change was not happening was based on scientific research.\nBut what do we mean by an appeal to common sense? Presumably it's an appeal to rationality of some sort that forms the basis of more complex reasoning. The appeal to common sense, however, is usually nothing more than an appeal to thinking that just feels right, but what feels right to one person may not feel right to another. Whether it feels right is usually a reflection of the world view and ideologies we have internalised, and that frames how we interact with new ideas. When new ideas are in accord with what we already believe, they are more readily accepted. When they are not, they, and the arguments that lead to them, are more readily rejected.\nWe often mistake this automatic compatibility testing of new ideas with existing beliefs as an application of common sense, but, in reality, it is more about judging than thinking.\nAs Nobelist Daniel Kahneman notes in Thinking, Fast and Slow, when we arrive at conclusions in this way, the outcomes also feel true, regardless of whether they are. We are not psychologically well equipped to judge our own thinking.\nWe are also highly susceptible to a range of cognitive biases such as giving preference to the first things that come to mind when making decisions or giving weight to evidence.\nOne way we can check our internal biases and inconsistencies is through the social verification of knowledge, in which we test our ideas in a rigorous and systematic way to see if they make sense not just to us, but to other people. The outstanding example of this socially shared cognition is science.\nThat does not mean that individuals are not capable of excellent thinking, nor does it mean no individual is rational. But the extent to which individuals can do this on their own is a function of how well integrated they are with communities of systematic inquiry in the first place. You can't learn to think well by yourself.\nIn matters of science at least, those who value their common sense over methodological, collaborative investigation imagine themselves to be more free in their thinking, unbound by involvement with the group, but in reality they are tightly bound by their capabilities and perspectives. We are smarter together than we are individually, and perhaps that's just common sense.",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              9
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "选词填空第 26 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【考点】副词辨析题。A）【语法判断】空格前面是形容词性物主代词its，空格后是名词词组pleasing architecture，因此，空格处需要填入一个有褒义色彩的副词来修饰形容词pleasing,【语义判断】空格所在句大意是巴斯以美观的建筑和有疗养效果的温泉而闻名，由此确定副词A）aesthetically为答案",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "选词填空第 27 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【考点】动词辨析题。B）【语法判断】空格所在句为限制性定语从句，空格前为主语和be动词were，因此可以推测空格处应填动词的分词形式。【语义判断】此处意思是“在国王温泉之上修建了罗马浴场和神庙”。construct意为“建造，构造”，第3段讲述了巴斯浴场的一些神奇的传说。 --- -vvw.-=.wv-.当.w..-...* ......-.-. 25. Why does the speaker say millionaires are B）【精析】细节辨认题。根据句（25）可知，百万富翁 K）【语法判断】空格前为主语Bath和be动词is，空 Reading Comprehension waters，可见此处的三个单词应构成一个名词短语，【语义判断】空格所在句大意为∶\"尽管巴斯主要作们从不试图与别人保持一致。因此答案为B）。在中间的几个世纪里，有很多人为了泡温泉来到是说，",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "选词填空第 28 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【考点】副词辨析题。格后为过去分词known，be known as有\"以……known的程度。为一座古罗马风和乔治王时代风城市而出名，但这里。\"principally意为\"主要地\"，符合语境。由此确定K）为答案",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "选词填空第 29 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【考点】形容词辨析题。H）【语法判断】空格前面为定冠词the，后面为名词\n\n因此空格处应填入形容词，用来修饰名词 waters。【语义判断】空格所在句大意为\"在中间的几个世纪里，有很多人为了泡温泉来到这里\"。natural\"天然的，非人为的\"符合句意，故答案为H）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "选词填空第 30 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【考点】形容词辨析题。J）【语法判断】空格所在句结构完整，空格前是主语it和 be 动词was，空格后是名词 generations，可知空格处应填人形容词或名词。【语义判断】此处意为\"虽然乔治王朝时期的人证'泡温泉'或沐浴变成了一件很时髦的事，但这是因为前几代人为此铺了路\"。previous 表示\"以前的，先前的\"，符合语境，故答案为J）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "选词填空第 31 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【考点】形容词辨析题。G）【语法判断】空格前面为不定冠词 a，后面为名词son，可见此处的三个单词应构成一个名词短语，因此空格处应填入形容词，用来修饰 son。【语义判断】空格所在句提到查理二世急需一位继承人，但却没有儿子。legitimate\"（小孩）合法婚烟所生的\"符合句意，故答案为G）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "选词填空第 32 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "L",
+          "explanation": "【考点】动词辨析题。L）【语法判断】空格前面是不定式符号 to，后面有名词短语 the situation，因此空格处需要填人动词原形，且该动词应是及物动词。【【语义判断】前文提到，查理二世没有儿子。空格所在句的意思是查理二世来到巴斯沐浴，希望温泉的魔力能挽救现状。remedy\"补救，纠正\"符合语境，故L）为答案。骂鞭端霉瞥啉菲徉端端端器将憾靠壁概露理覆直社生黛;营茎3手田理量巴斯于大约两千年前由罗马人建立而成。从那时起，这座城市就以其美观的建筑和有疗养效果的温泉丽闻名。巴斯有三处温泉;一处是国王温泉，上面修建了罗马浴场和神庙。另外两处是十字浴池温泉和热浴温桌，均位于巴斯街上，相距不远。尽管巴斯主要作为一座古罗马风和乔治王时代风城市而出名，但在中间的几个世纪里，有很多人为了泡温泉来到这里。虽然乔治王朝时期的人让\"泡温泉\"或沐浴变成了一件很时髦的事，但这是因为前几代人为此铺了路，让人们对巴斯",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "选词填空第 33 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【考点】名词辨析题。D【语法判断】空格前为名词所有格 their，可推断出空格处应填入名词。【语义判断】空格所在句讲的是詹姆斯和玛丽同样极其需要一位男性继承人，他们也因此来到了巴斯，不久之后就生下了一个儿子，这引发了许多关于谁才是这个孩子真正父亲的阴谋论。offspring\"后代，子女\"符合语境，由此确定I为答案",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "D"
+        },
+        {
+          "id": "2022-06-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "选词填空第 34 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【考点】动词辨析题。E）【语法判断】空格前面是主语 the whole nation，后面是不定式，因此空格处需要填入动词，同时因为这件事发生在过去，所以此处应填动词的过去式形式。【语义判断】空格所在句的意思是;\"安妮女王在1702年曾到访巴斯，确立了其地位，于是全国人这座城市。\"flock作动词有\"涌人;聚集\"之意，符合句意，故E）为答案",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "选词填空第 35 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetically"
+            },
+            {
+              "key": "B",
+              "text": "constructed"
+            },
+            {
+              "key": "C",
+              "text": "designates"
+            },
+            {
+              "key": "D",
+              "text": "extract"
+            },
+            {
+              "key": "E",
+              "text": "flocked"
+            },
+            {
+              "key": "F",
+              "text": "incorporates"
+            },
+            {
+              "key": "G",
+              "text": "legitimate"
+            },
+            {
+              "key": "H",
+              "text": "natural"
+            },
+            {
+              "key": "I",
+              "text": "offspring"
+            },
+            {
+              "key": "J",
+              "text": "previous"
+            },
+            {
+              "key": "K",
+              "text": "principally"
+            },
+            {
+              "key": "L",
+              "text": "remedy"
+            },
+            {
+              "key": "M",
+              "text": "rhetorically"
+            },
+            {
+              "key": "N",
+              "text": "sneaked"
+            },
+            {
+              "key": "O",
+              "text": "versatile"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【考点】动词辨析题。F）【语法判断】空格所在句结构完整，主语为 thenew Bath Spa，两个逗号之间是一个定语从句，空格后是名词 modern architecture，可知空格处应填一个及物动词作谓语，动词应用一般现在时。的新皇家浴场。\"incorporate 与with搭配，构成\n\n【结构框图】A）、B）段介绍背景，引用实例介绍孟加拉国一些河中岛民就医困难与气本文介绍了孟加救国非警管利汽子组织为解决该国偏远岛民就医困难问题而提供远程医疗咨询服务的TD项目。司;J）段说明TD项目面临的问题。K）段总结全文，指出 TD项目的医生尊重患者并且很有耐心，受剑C.岛民的欢迎。。话端紫链挥融绑啉挑泳霸睹端端端部我",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "Some children on the remote islands won't eat their meals because they are fed cheap junk food.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【定位】由题干中的 children 和 won't eat theirmeals 定位到文章 E）段第三句。E）【精析】细节辨认题。E）段第三句提到，一些岛上的母亲们抱怨孩子们拒绝进食。第四句说明了TD医生的判断，指出孩子们不肯吃饭的原因是母亲们给他们吃一些廉价方便的包装薯条，影响了孩子的食欲。题干是对E）段第三、四句信息的同义转述。题干中的 they are fed cheap jumk food 对应原文中的 they are feeding the children packaged chipswhich are cheap and convenient，故答案为E）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "Unlike other parts of Bangladesh, the number of women who die from giving birth remains high on the river islands.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 women who die from givingbirth 定位到B）段第三句。B）【精析】细节推断题。B）段第三句提到，尽管孟加拉国其他地区的儿童死亡率和孕产妇死亡率有所下降，但这些岛屿上的情况并非如此。由此可以推知，在这些岛屿上，产妇死亡率仍然较高。题干中的 other parts of Bangladesh 对应原文中的 therest of the country，题干中的 remains high 可根据原文中maternal death have gone down in therest of the country 和 this is not the case for theislands推知，故答案为 B）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "One big problem many islanders have is that they can't afford the prescribed medicines, even with discounts offered.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【定位】由题干中的 can't afford 和 discounts offered 定位到文章J）段最后一句。J【精析】细节归纳题。J）段定位句提到，尽管 TD等组织与当地药店有联系，可以向患者提供折扣，并确保使用最具性价比的品牌，但仍然有许多居民负担不起。本段开头第一句提到TD还面临一些挑战，可知这是一个大问题。题干中的 one bigproblem many islanders have 照应J）段首句\"TDstill has a few major challenges.\"、题干的剩余部分对应最后一句的主要信息，题干是对两处信息的归纳，故答案为J）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "TD is a virtual medical service financially supported by one of the nation's nonprofit organizations.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 virtual medical service、financially supportcd by 和 nonprofit organizations定位到D））殴第二句和第三句后半部分。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "TD doctors are welcome to the islanders because they treat the sick with respect and patience.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【定位】由题干中的 with respect 定位到文章 K） C）、D 段引入并介绍 TD 远程医疗咨询项目的基本情况。 D一H）段重点介绍 TD 项目帮助岛民们解决的实际问题及其成效。 D段简要介绍其他类似的医疗服务项目。 D）【精析】细节归纳题。D）段第二句指出，TD项目 K）【精析】细节归纳题。K）段定位句以岛上居民的 funded的同义转述，故答案为D）。 give birth early 是对原文中 early marriage and health prcblems early 是对原句中 early onset of health problems 的同义转述，故答案为 F）。 streamed 和 rermote medical consultations 的概 virtual medical service是对定位段第三句中 live- 中的 patient，welco",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "D"
+        },
+        {
+          "id": "2022-06-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "Women islanders tend to have health problems early partly because they get married and give birth early.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【定位】由题干中的 health problems和 get marriedand give birth early定位到 F段最后一句。F）【精析】同义转述题。F）段定位句提到，早婚和早致健康问题较早出现。题干中的 get married andyoung motherhood 的同义转述，题干中的 hav",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "TD doctors make weekly visits to the remote islands to provide services at a temporary medical center.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 weekly visits to the remoteislands 和 temporary medical center定位到文章C）段第三句和第四句。C）【精析】细节归纳题。C）段第三句指出，每周，TD临时医疗中心。题干中的 make weekly visits tothe remote islands 是对第三句中 every week，\n\nTD's medical operators travel to the islands 的同义转述，题干中的temporary medical center 对应第四句中的 makeshift medical center，故答案为 C）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "TD doctors provide the islanders with online diagnoses and treatments for common diseases.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【定位】由题干中的 common diseases定位到文章G）段第三句。G）【精析】细节推断题。G）段第三句指出，TD项目的医生可以开处方，诊断常见疾病，并将患者转诊给当地医院的医生。结合第二句的内容\"TD项目的医生并不打算治疗需要医生亲自到场的严重疾病或状况\"可知，该项目主要提供远程在线诊断和治疗。题干中的 common diseases 对应第三句中的 common ailments，题干中的 orline diagnosesand treatraents可由第二句推知，故答案为 G）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              10
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "The residents of the river islands have to keep moving their homes because of floods and land erosions.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 floods and land erosions定位到文章 A）段最后一句的前半部分。A）【精析】同义转述题。A）段定位句提到，它们（（they 指代前文中提到的 the remote river毂端端儡键操谬瞥融蘸净室据察荐滤端医生要与你语音道话A）法齐拉是一位患有湿疹（一种常见的皮肤病）的年轻女性，但过去五年来她的病一直没有得到治疗。到最近的医院需要一个小时，既要乘船又要坐公交车，而她的皮肤状况似乎还没有严重到值得她为此长途跋涉，所以她没有理会这件事 ——直到一项新技术把医生带到她身边。法齐拉居住在孟加拉国北部一个偏远的河心滩上。这些岛屿是地势很低的临时沙岛，河沙的堆积和侵蚀不断形成，同时也在破坏着这些岛屿。（44）它们是 600 多万人的家园，由于洪水和侵蚀，这些人面临着反复的流离失所-—而由于气候变化的原因，情况可能会变得更糖——他们也面临着一系列的健康风险，包",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              10
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Women islanders usually rely on their husbands to get some medicines for them without diagnoses and prescriptions.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【定位】由题干中的 women islanders 和 their describe their illness to their husbands 和第三句 husbands to get some medicines 是对第二句 husbands定位到文章 H）段第二、三句。 random medicines 的隐含之意，故答案为 H）。 return home with some random medicines.\"的总在岛上的女性通常会向丈夫描述自己的病情，然\nislands）是600多万人的家园，由于洪水和侵蚀，这些人面临着反复的流离失所。题干中的 keepmoving their homes 是对原文中 repeated dis placement 的同义转述，故答案为A）。H）【精析】细节推断题。H）段第二、三句指出，生活后丈夫们去药房，试着描述病情;然后带着一些随便开出的",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              10
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What fact does the author emphasize concerning selective colleges and universities?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They have been ignoring the training of graduates for the world of work."
+            },
+            {
+              "key": "B",
+              "text": "They have been doing well in ensuring their students a successful future."
+            },
+            {
+              "key": "C",
+              "text": "They have been constantly attacked for being too elite and too expensive."
+            },
+            {
+              "key": "D",
+              "text": "They have been actively engaged in civic life beyond the school campus."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的selective colleges and universities定位到第一段。B）【精析】事实细节题。文章第一段第二句提到，对这些择优录取学生的大学的指责忽视了这样一个事实∶它们一直在为学生取得事业成功、积极参与公民生活、终身学习、了解世界以及周边人做好准备，由此看出，它们在确保学生未来取得成功方面表现良好。故答案为B）。【避错】第一段第一句提到，美国择优录取学生的各大学被指责太过精英化和太过昂贵，而且培养的毕业生没有为进入职场做好准备。但这是人们对美国这种教育模式的批评，而非作者想要强调的事实，与题干不符，故排除A）项和C）项；本段第二句提到，这些大学一直在为学生积极参与公民生活做准备，而非这些机构自身参与公民生活，D）项不符合文义，故排除",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              8
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What does the author say in arguing for the model of education in the U.S.?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It has contributed substantially to the nation's overall development."
+            },
+            {
+              "key": "B",
+              "text": "It has succeeded in maintaining sustainable financial aid programs."
+            },
+            {
+              "key": "C",
+              "text": "It has given priority to innovative programs for graduate studies."
+            },
+            {
+              "key": "D",
+              "text": "It has played a central role in attracting international applicants."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 the model of education in theU.S.定位到第二段。A）【精析】事实细节题。文章第二段第三句提到，长期以来，美国这种教育模式在创造机会、推动经济增长和激励创新方面发挥了重要作用，由此看出，它对国家全面发展做出了巨大贡献。故答案为A)。【避错】最后两段提到，校友和家长们给这些名校捐赠资金，这些捐赠的很大一部分收益被用于经济资助计划，但是新的捐赠税却令它们的经济资助资金枯竭，说明在新税收政策下这种教育模式并不能继续有效推进经济资助计划，B）项不符合文章意思，故排除；第二段提到，这种模式在激励创新方面发挥了重要作用，但并未明确指出将用于研究生学习的创新项目放在首要地位，C）项不符合文义，故排除；第二段的确提到大学的申请人数达到历史新高，但并未明确指出是留学生，故排除D）项",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              8
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What do we learn about the initial proposals concerning the recent tax reform bill?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They would have stripped many students of life's chances."
+            },
+            {
+              "key": "B",
+              "text": "They would have deducted graduate student loan interest."
+            },
+            {
+              "key": "C",
+              "text": "They would have added to many students5 financial burden."
+            },
+            {
+              "key": "D",
+              "text": "They would have increased the number of tuition waivers."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 initial proposals concerningthe recent tax reform bill定位到第三段第三句。C）【精析】事实细节题。文章第三段第三句指出，根据最初的提案，将对研究生学费减免征税，并取消扣减学生贷款利息，这样一来，许多学生将负担不起教育开支。故答案为C）。【避错】第三段指出，最初的提案内容会加重学生!产结居超盗制路性资理.制斜到智品似论验漏陷策参考译文等洲热随共志《品配器情健管景视域新啶餐实证美国择优录取学生的各大学被指责太过精英化和太过昂贵，而且培养的毕业生没有为进入职场做好准备。（46）这些指责忽视了这样一个事实∶这些大学一直在为学生事业成功、积极参与公民生活、终身学习、了解世界以及周边人做好准备。这些大学一定是做对了一些事。申请人数创下历史新高，经济资助计划使学生入学比以往更容易。（47）长期以来，这种教育模式在创造机会、推动",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              8
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What do the data show about elite colleges and universities?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Their graduates lack the rigor required for doing statistical analysis."
+            },
+            {
+              "key": "B",
+              "text": "Their students prove to be inadequately prepared for their future careers."
+            },
+            {
+              "key": "C",
+              "text": "Their focus on research is conducive to developing students9 critical thinking."
+            },
+            {
+              "key": "D",
+              "text": "Their liberal arts education enables graduates to excel in whatever field they are in."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 data 和 elite colleges and universities定位到第五段。非常好。故答案为D）。【避错】文章第五段第四句提到，这种教育培养了学生的批判性思维能力，对数据和事实的严谨分析能力，书面和口头交流能力，对文化差异和问题容，A）项不符合文章意思，故排除；本段第三句提到，文科教育提供了很好的职业准备，学生既能终身获得丰厚收入，对工作满意度也很高，B）项不符合文章意思，故排除；本段第四句中提到，\"美国教育模式”而非“它们对研究的重视”有利于培养学位到最后一段。B）【精析】推理判断题。最后一段指出，除了让已经在这些学校获得一席之地的学生有机会接受到这种教育外，经济背景的多样化也提高了所有学生的受教育水平，丰富了他们的经验。由第六段可金使中低收人家庭的学生能够更容易进入择优录取学生的大学。由此可知，这种教育模式使学生多元化，所有学生都能从中受益。故答案为B）",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What is an advantage of providing financial aid for students?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Every student can choose the institution they wish to attend."
+            },
+            {
+              "key": "B",
+              "text": "All students can benefit from a diversified student population."
+            },
+            {
+              "key": "C",
+              "text": "All students will be able to earn a place on university campus."
+            },
+            {
+              "key": "D",
+              "text": "Less privileged students will be more competitive at elite schools."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 advantage和 financial aid定 D）【精析】事实细节题。第五段最后一句提到，事实上，文科毕业生在任何可以想象到的领域都做得句可知，此次提案指出要对研究生学费减免征税，生的批判性思维，C）项偷换主语，故排除。的理解能力，以及持续学习的能力。根据该句内知，在当前教育模式下，来自校友和家长的捐赠基\n在教育方面的经济负担，但并未提到剥夺学生的机会，A）项不符合文章意思，故排除；曰本段第三并取消扣减学生贷款利息，B）项和D）项均不符合文义，故排除。49.【定位】由题干中的 data 和 elite colleges and universities定位到第五段。非常好。故答案为D）。【避错】文章第五段第四句提到，这种教育培养了学生的批判性思维能力，对数据和事实的严谨分析能力，书面和口头交流能力，对文化差异和问题容，A）项不符合文章意思，故排除；本段第三",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What does the author intend to show by citing the findings from the report published last year?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "People seldom appeal to rationality in their thinking."
+            },
+            {
+              "key": "B",
+              "text": "It is often the case that truth lies in the hands of a few."
+            },
+            {
+              "key": "C",
+              "text": "Common sense and science are the two sides of a coin."
+            },
+            {
+              "key": "D",
+              "text": "Few people know if climate change is really happening."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 the report published last year定位到第一段。A）【精析】推理判断题。文章第一段指出，当一组澳大利亚人被问及为什么相信气候变化没有发生时，大约36??人称这是“常识”，而只有11??人认为这是基于科学研究得出的结论，由此可知只有少数人会将一些现象和问题用科学来解释；同时结合第二段前两句话可知，诉诸常识其实是在呼吁某种理性，这恰恰说明实际上人们是缺乏理性思考的。故答案为A）。【避错】文章第一段引用的报告只提到极少数人相信气候变化未发生是科学研究得出的结论，但未说明这种观点就是真理，也并未将常识和科学置于对立面，故排除B）项和C）项；报告内容指出，这第5——6段指出要通过科学方法建立社会共享认知，这样有助于检查自己内\n组澳大利亚人中大约36??人相信气候变化没有发生，但对于其他人是否了解并未提及，D）项不符合文章意思，故排除",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              8
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              13
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What is the appeal to common sense according to the author?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is the basis for the internal isa tion of individuals9 ideologies."
+            },
+            {
+              "key": "B",
+              "text": "It is a series of conceptions formulated from complex reasoning."
+            },
+            {
+              "key": "C",
+              "text": "It is collective wisdom that helps people interact with new ideas."
+            },
+            {
+              "key": "D",
+              "text": "It is something subjective based on what one perceives to be right."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 the appeal to common sense定位到第二段第三句。D）【精析】事实细节题。文章第二段第三句提到，通常来讲，诉诸常识不过是诉诸那些感觉上认为正确的想法，但一个人感觉正确的想法在另一个人眼中可能并非如此，说明这种诉诸常识的做法其实是带有主观色彩的，它基于一个人自己所认为正确的想法。故答案为D）。【避猎】文章第二段第四句指出，感觉是否正确通常反映了我们已经内化的世界观和意识形态，说明意识形态内化应该先于这种对某个想法正确与\n\n否的感觉（即常识），A）项逻辑颠倒，不符合文章意思，故排除;该段第二句指出，诉诸常识就是对某种形式的理性的呼吁，而这种理性形成了更复杂的推理的基础，也即诉诸常识需要理性的思考;进而才有更复杂的推理，并未提及常识是由复杂推理形成的一系列概念，B）项无中生有，故排除;该段最后两句指出，这种常识与新思想如果一致，则新思想易于被接受，反之则",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              13
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What does Daniel Kahneman think is the problem of testing new ideas with existing beliefs?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It may lead to incorrect judgment."
+            },
+            {
+              "key": "B",
+              "text": "It makes no use of common sense."
+            },
+            {
+              "key": "C",
+              "text": "It fails to correct mistakes through serious reasoning."
+            },
+            {
+              "key": "D",
+              "text": "It can produce psychologically unacceptable outcomes."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 Daniel Kahneman和 testingnew ideas with existing beliefs 定位到第三段第一、二句。A）【精析】推理判断题。文章第三段第一句指出，我们经常误以为这种将新想祛与现有信念自动兼容的测试是对常识的应用，但实际上这更多的是判断而非思考。第二句接着说，丹尼尔·卡尼曼在其著作中表示，当我们以这种方式得出结论时，不管它们是否的确真实，我们心里也会感觉是真实的，由此可知，这种方式有可能会导致不正确的判断。故答案为A）。【避错】文章第三段第一句提到我们以为这种测试方法是对常识的应用，实际上这种方法更多的是一种判断，但这并非丹尼尔·卡尼曼的观点，B）项与题干不符，故排除;该段也并未提及推理的相关内容，故排除C）项;第三段最后一句提到，我们在心理上不具备判断自己思维的能力，并未表示这种方法会产生什么心理上的后果，D）项不符合文章意思，故排除",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              14
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What can we do to be less susceptible to cognitive biases?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Give equal weight to evidence of both sides in a conflict."
+            },
+            {
+              "key": "B",
+              "text": "Provide convincing examples in developing an argument."
+            },
+            {
+              "key": "C",
+              "text": "Establish socially shared cognition via scientific methods."
+            },
+            {
+              "key": "D",
+              "text": "Avoid inconsistencies when addressing controversial issues."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 snsceptible 和 cognitive biases定位到第四段并读至第五段。C）【精析】事实细节题。文章第五段提到，对知识进陀鞣接罐能调罐镶淤瞒谦净浇啶等总（51-1）根据联邦科学和工业研究组织去年发布的一份报告，当一组澳大利亚人被间及为什么相信气候变化没有发生时，大约36??人称这是\"常识\"。这是他们得出观点时最常使用的理由，只有11??人表示，他们相信气候变化没有发生是基于科学研究得出的结论。（51-2）但我们所说的诉诸常识是什么意思呢?这大概是对某种形式的理性的呼吁，这种理性形成了更复杂的推理的基础。（52）然而;通常来说，诉诸常识不过是诉诸那些感觉上正确的想法，但一个人感觉正确的想法在另一个人眼中可能并非如此。感觉是否正确通常反映了我们已经内化的世界观和意识形态，这也决定了我们如何与新的思想互动。当新思想与我们已经相信的东西—致时，它们更容易被接受。当",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              14
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What message does the author try to convey at the end of the passage?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Multiple perspectives stimulate people's interest in exploring the unknown."
+            },
+            {
+              "key": "B",
+              "text": "Individuals can enhance their overall capabilities by interacting with others."
+            },
+            {
+              "key": "C",
+              "text": "Individuals should think freely to break from the restrictions of common sense."
+            },
+            {
+              "key": "D",
+              "text": "Collaborative efforts can overcome individuals limitations in scientific inquiry."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的at the end of the passage定位到最后一段。D）【精析】事实细节题。文章最后一段指出，至少在科学问题上，那些把常识看得比有方法的合作调查更重要的人以为自己在思考上更加自由，但实合作会比个人行动更聪明，可以看出协作能够克服个人在科学探索巾可能存在的不足。故答案为D）。【避错】文章最后一段并未提及人们探索未知的兴趣，故排除 A）项;原文只在第二段提到 interact一词，但指的是我们与新思想的互动，最后两段也只提到个人与社区的融合或个人鑫与到集体中，其已在思考上更加自由，并未建议个人自由思考，C）\n\n（54）知识的社会验证是我们可以检查自己内在偏见和不一致的一个方法，在这个过程中，我们以一种严密且系统化的方式测试我们的想法，看看它们是否不仅对我们有意义，而且对其他人有意义。科学就是这种社会共享认知的范例。这并不意味着个人没有能力进行出色的思考，也不意味",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              14
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "卢沟桥位于天安门广场西南15公里处. 横跨永定河. 是北京现存最古老的多拱石桥。\n卢沟桥最初建成于1192年. 1698年重建. 由281根柱子支撑。每根柱子上都有一头石狮。\n这些石狮的头. 背. 腹部或爪子上都藏着更多的狮子。这些石狮生动逼真. 千姿百态. 是卢沟桥石刻艺术的精品。桥上的石狮不计其数. 因而北京地区流传着“卢沟桥上的石狮子— —\n数不清”的说法。\n卢沟桥不仅以其美学特征闻名于世. 还被公认为石桥建筑史上的一座丰碑。",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              10
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-1-translation",
+          "number": 56,
+          "kind": "translation",
+          "stem": "卢沟桥位于天安门广场西南15公里处. 横跨永定河. 是北京现存最古老的多拱石桥。\n卢沟桥最初建成于1192年. 1698年重建. 由281根柱子支撑。每根柱子上都有一头石狮。\n这些石狮的头. 背. 腹部或爪子上都藏着更多的狮子。这些石狮生动逼真. 千姿百态. 是卢沟桥石刻艺术的精品。桥上的石狮不计其数. 因而北京地区流传着“卢沟桥上的石狮子— —\n数不清”的说法。\n卢沟桥不仅以其美学特征闻名于世. 还被公认为石桥建筑史上的一座丰碑。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "Located 15 km southwest of Tian'anmen Square, Lugou Bridge stretches over the Yongding River and is the oldest existing multi-arched stone bridge in Beijing. The original construction of the bridge was completed in 1192 and then in 1698 the bridge was reconstructed. The bridge is supported by 281 pillars, and on each pillar stands a stone lion. More lions hide themselves on the head and back, under the belly or on the paws of each lion. The lions are vivid with various postures and different expressions, and they are known as the fine works of stone carving art. As there are innumerable stone lions on the bridge, there is a saying in Beijing echoing, \"The lions on the Lugou Bridge are too numerous to count.\"\nLugou Bridge is not only well-known in the world for its aesthetic features but also well recognized as a monument in the architectural history of stone bridges.",
+          "explanation": "【参考译文】\n那样，and is the oldest existing multi-将\"位于…\"译为地点状语，将后面两个分句翻译为并列句。arched s1one bridge in Beijitg.The2.第二句介绍卢沟桥的建成时间及建筑样式。由于\"由281根柱子支撑\"original construction of the bridge与第三句\"每根柱子上都有一头石狮\"逻辑关系紧密，因此，翻译时可was completed in 1192 and then in以将前面两个分句翻译为一句话，将第三个分句与第三句合译为一1698 the bridge was reconstructed.句。\"最初建成\"除了像参考译文那样翻译外，也可以翻译为动词结The bridge is supported by 281构，即 was first cnmpleted。pillars,and on each pillar stands a3.第三句与第二句中的\"由 281根柱子支撑\"合译为一句。stone lion. More lions hide themselves on the head and back,4.第四句介绍其他狮子的存在地点。\"某地有某物\"可以使用\"There be句型\"，也可以将\"更多的狮子\"作为主语，表达它们将自已藏起来的意under the belly or on the paws of义，具有拟人效果。此外，本句中出现了几个表示身体部位的名词，翻each lion. The lions are vivid with译时要注意与这类名词搭配的介词。various postures and different5.第五句介绍石狮的特点和艺术地位。本句较短，前后两个分句间可以expressions, and they are known asthe fine works of stone carving art用 and连接。6.第六句介绍石狮的数量。句中的\"因而\"提示本句宜翻译为原因状语As there are innumerable stone lions从句或结果状语从句。本句中的\"不计其数\"和\"数不清\"意义相当，为on the bridge,there is a saying in避免重复，最好采用不同的表达方式。翻译\"石狮不计其数\"时还可以Beijing echoing,\"The lions on the以\"数量\"作主语，译为 the numbcr of the stone lions is out of count;Lugou Bridige are ton numerous to\"流传着……·说法\"可以翻译为 there is a saying echoing/going 或 aCount.saying echoes/goes 等。Lugou Bridge is not only weli-7.第七句介绍卢沟桥的世界地位。\"不仅……还……\"可翻译为\"notknown in the world for its aesthetic features but also well recognized as ain the world for...;\"石桥建筑史\"可以翻译为 the architecturalmonutnent in the architectural history of stone bridges 或 the history of stone bridge architecture;history of stone bridges,\"丰碑\"常译为monument。吟骂艳端蠕书琳酯迪详等号字毕arched bridge 拱桥stone columns石柱transportation channel 运输通道namne after 以……命名brilliant achievements 辉煌的成就 Translation only...but also...\"结构;\"以……闻名于世\"可以译为 be well-known trigger 引发，激发”吨歇归”需“户、“更\nrestore修复Lugou Bridge Incident 卢沟桥事变the War of Resistance against Japan 抗日战争\n\n【难点解析】",
+          "source": {
+            "fileId": "1PI7s_nTYvkeIHgk_HCqvUEvzfH0oCPOh",
+            "pages": [
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Ak6aewmlKgLBWL6uSuK_XS2yenrq71UT",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "那样，and is the oldest existing multi-将\"位于…\"译为地点状语，将后面两个分句翻译为并列句。arched s1one bridge in Beijitg.The2.第二句介绍卢沟桥的建成时间及建筑样式。由于\"由281根柱子支撑\"original construction of the bridge与第三句\"每根柱子上都有一头石狮\"逻辑关系紧密，因此，翻译时可was completed in 1192 and then in以将前面两个分句翻译为一句话，将第三个分句与第三句合译为一1698 the bridge was reconstructed.句。\"最初建成\"除了像参考译文那样翻译外，也可以翻译为动词结The bridge is supported by 281构，即 was first cnmpleted。pillars,and on each pillar stands a3.第三句与第二句中的\"由 281根柱子支撑\"合译为一句。stone lion. More lions hidethemselves on the head and back,4.第四句介绍其他狮子的存在地点。\"某地有某物\"可以使用\"There be句型\"，也可以将\"更多的狮子\"作为主语，表达它们将自已藏起来的意under the belly or on the paws of义，具有拟人效果。此外，本句中出现了几个表示身体部位的名词，翻each lion. The lions are vivid with译时要注意与这类名词搭配的介词。various postures and different5.第五句介绍石狮的特点和艺术地位。本句较短，前后两个分句间可以expressions, and they are known asthe fine works of stone carving art用 and连接。6.第六句介绍石狮的数量。句中的\"因而\"提示本句宜翻译为原因状语As there are innumerable stone lions从句或结果状语从句。本句中的\"不计其数\"和\"数不清\"意义相当，为on the bridge,there is a saying in避免重复，最好采用不同的表达方式。翻译\"石狮不计其数\"时还可以Beijing echoing,\"The lions on the以\"数量\"作主语，译为 the numbcr of the stone lions is out of count;Lugou Bridige are ton numerous to\"流传着……·说法\"可以翻译为 there is a saying echoing/going 或 aCount.saying echoes/goes 等。Lugou Bridge is not only weli-7.第七句介绍卢沟桥的世界地位。\"不仅……还……\"可翻译为\"notknown in the world for its aestheticfeatures but also well recognized as ain the world for...;\"石桥建筑史\"可以翻译为 the architecturalmonutnent in the architecturalhistory of stone bridges 或 the history of stone bridge architecture;history of stone bridges,\"丰碑\"常译为monument。吟骂艳端蠕书琳酯迪详等号字毕arched bridge 拱桥stone columns石柱transportation channel 运输通道namne after 以……命名brilliant achievements 辉煌的成就 Translation only...but also...\"结构;\"以……闻名于世\"可以译为 be well-known trigger 引发，激发 ”吨歇归”需“户、“更\nrestore修复Lugou Bridge Incident 卢沟桥事变the War of Resistance against Japan 抗日战争"
+        }
+      ]
+    }
+  ]
+}

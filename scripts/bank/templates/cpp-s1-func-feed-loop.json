@@ -1,0 +1,36 @@
+{
+  "templateId": "cpp-s1-func-feed-loop",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-09",
+  "type": "codewrite",
+  "concept": [
+    "函数里带跑圈",
+    "两份料都用上",
+    "写函数的顺序"
+  ],
+  "instances": 6,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "计算机",
+        "小黄鱼"
+      ]
+    },
+    "count": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{name} {count}\n",
+    "sampleText": "带鱼 5\n"
+  },
+  "stemTemplate": "我们要自己写一个方法管发货，名字叫 `feed`：**收两份料** —— 一根字符串（领鱼的对象）、一个数（领几条）。收齐了就**一条一行**地印，印够那个数为止，每行都是 `X 领到一条数据`。\n\n输入接口会**先给一根字符串、再给一个数**（中间用空格隔开；名字是英文字母或中文都行）。请你写个程序：把这两样读进来、调用一次这一个方法，让它自己印。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外两份**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n\nint main() {\n    string name;\n    int count = 0;\n    cin >> name >> count;\n\n    feed(name, count);\n    return 0;\n}\n",
+  "explanationTemplate": "这一题把「写函数」和「跑圈」合在一起了。函数的身子是一个跑圈：\n\n```\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n```\n\n三个细节：\n\n1. **脑袋上的 `void`**：这一个方法**只干活、不返回东西回来** —— 它把活干在屏幕上，称呼它的人不需要拿什么。这一题印东西的活全在函数的圈里，主程序只管读两份料、调用一次。\n2. **两份料都用上了**：`count` 管**印几行**（跑圈的圈数），`name` 管**每行印谁**。收进来的料要真的用上 —— 摆着不用的元素等于白收。\n3. **跑圈从 0 起到 `i < count`**：正好 `count` 圈。写 `i <= count` 就会多印一行（这是本课之前那个坑的老面孔）。\n\n写这一类函数的顺序建议照抄：**先想脑袋（收什么料、要不要返回）→ 再想身子（几行活、要不要跑圈）→ 最后看主程序有没有把料传入够。**\n\n⚠️ 函数摆在主程序**上面** —— 写在下面编译器念不到。"
+}

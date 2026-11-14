@@ -1,0 +1,3789 @@
+{
+  "id": "2024-12-1",
+  "title": "2024年12月 第1套",
+  "year": 2024,
+  "month": 12,
+  "set": 1,
+  "status": "partial",
+  "issues": [
+    "严格质检：听力译文 0/7；疑似 OCR 乱码或英文粘连待核查。",
+    "写作题干已清理（2026-11-08）：去除版面残片、补齐指令。",
+    "翻译题干已清理（2026-11-08）：去除指令残片、答案速查、版权页脚等外洩文字。",
+    "听力解析：原为一句话摘要的题目，已追加依据听力原文自动定位的支持句（标注「自动匹配」，非官方解析，可能不准）；原摘要保留在 explanationOriginal。",
+    "听力解析：未经人工听核的定位已降级标注；「自动匹配」题经录音转写复核，不通过者改为「未能可靠定位」。",
+    "听力解析：原「未能定位」题已按解析摘要与原文对照选句补回（语义匹配/答案标记，未经录音核听，非官方）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "1EPJRLvvnLjyDlajCvWotSeVlVdkwD266",
+      "title": "2024年12月六级听力音频第1套.mp3",
+      "url": "https://drive.google.com/file/d/1EPJRLvvnLjyDlajCvWotSeVlVdkwD266/view?usp=drivesdk"
+    },
+    {
+      "id": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+      "title": "2024.12英语六级解析第1套.pdf",
+      "url": "https://drive.google.com/file/d/1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB/view?usp=drivesdk"
+    },
+    {
+      "id": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+      "title": "2024.12六级真题第1套.pdf",
+      "url": "https://drive.google.com/file/d/15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6/view?usp=drivesdk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “To increase the likelihood of success, one should set realistic goals and work persistently towards them.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “To increase the likelihood of success, one should set realistic goals and work persistently towards them.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              1
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2024-12-1-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “To increase the likelihood of success, one should set realistic goals and work persistently towards them.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "To increase the likelihood of success, one should set\nrealistic goals and work persistently towards them · Setting\nrealistic goals ensures that our aspirations are attainable, while\npersistence helps us stay on track despite inevitable challenges\nFo r one thing, realistic goals are crucial because they\nare grounded in our current abilities, resources and\ncircumstances · For instance, when a student decides tO\nlmprove hlS grades, setting a goal Of ten points increase on\naverage in the next semester iS more feasible than an aim Of\nstraight A's. A goal that is too ambitious might lead to\ndiscouragement if it is unmet, while one that is realistic offers a\nsense of accomplishment and progress · For another, persistence iS key tO overcoming setbacks and\nmotivation. Th e path tO success is often not a smooth one ；\nthere will be obstacles and moments of doubt · Take the\nstory of Thomas Edison for example · He failed thousands of\ntimes before lnventing the light bulb, but his persistence\neventually bore the fruit of groundbreaking success\nIn conclusion, setting realistic goals and persistence\nform the backbone of success · By achieving our goals step by\nstep and working persistently, we can build confidence In\novercoming obstacles and eventually achieve greater success.",
+          "explanation": "【参考范文】\n第一段引出话题：为了增加成功的可能性，一个人应该设定现实：：的目标，并坚持不懈地为之努力。：第二段具体阐述设定现实的目标和坚持不懈在实现成功中所起的：作用。 · 0：第三段总结全文，重申观 The RoIes of Realistic Goals and Persistence in Achieving Success 〖1〗 To increase the likelihood of success， one should set realistic goals and work persistently towards them · 〖2〗 Setting realistic goals ensures that our aspirations are attainable， while persistence helps us stay on track despite inevitable challenges · 〖3〗 For one thing， realistic goals are crucial because they are grounded in our current abilities， resources and clrcumstances · 〖4〗 For instance， when a student decides to lmprove hlS grades， setting a goal of ten points increase on average in the next semester is more feasible than an aim of straight A's. A goal that is too ambitious might lead to discourage ment if it is unmet， while one that is realistic offers a sense of accomplishment and progress · 〖5〗 For another， persistence is key to overcommg setbacks and motivation. The path to success is often not a smooth one； there will be obstacles and moments of doubt · 〖6〗 Take the story of Thomas Edison for example · He failed thousands of times before lnventing the light bulb， but his persistence eventually bore the fruit of ground breaking success · 〖7〗 ln conclusion， setting realistic goals and persistence form the backbone of success · By achieving our goals step by step and working persistently， we can build confidence ln overcommg obstacles and eventually achieve greater success. 话题词汇： break down 分解 manageable tasks 能应对的任务 learn from failures 从失败中学习 frustration 氵且 ． 丧 unwavering perseverance 坚定的毅力精彩点评〖1〗引出话题：为了增加成功的可能性，一个人应该设定现实的目标，并坚持不懈地为之努力。〖2〗进一步指出设定现实的目标确保我们的愿望是可实现的，而坚持不懈帮助我们在不可避免的挑战中不偏离正确轨道。 ·”指出现实的目〖3〗使用 \"For one thing，标至关重要，因为它们的设定是以我们当前的能力、资源和所处环境为依据。〖4〗使用 \"For instance，一 ·”举例说明设定现实目标的重要性。”指出坚持不懈〖5〗使用 \"For another，是战胜挫折和保持动力的关键。〖6〗用爱迪生的故事进行举例说明。 \" 总结全文，再次〖7〗用 \"ln conclusion，强调设定现实的目标与坚持不懈是成功的支柱。通过一步步实现目标并持之以恒，我们可以建立起克服困难的信心并最终取得更大的成功。 encounter 遇到，遭遇 be paved with 用 · · · · · · 铺就，充满 Genius IS one percent inspiratlon and ninety-mne percent perspiration. 天才是百分之一的灵感加上百分之九十九的汗水。解析册 ． 2024 年 12 月六级真题（一） 1",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear long conversations, passages and talks.",
+      "audio": {
+        "src": "source-media/2024年12月第1套/2024年12月六级听力音频第1套.mp3",
+        "sourceId": "1EPJRLvvnLjyDlajCvWotSeVlVdkwD266",
+        "sharedWith": [],
+        "note": "原音频开头重复了考前说明，第一段对话约从 2 分 11 秒开始。"
+      },
+      "blocks": [
+        {
+          "id": "listening-part-1",
+          "title": "Conversation One",
+          "text": "",
+          "transcript": "M ： OK then, (l-l)this here is your yearly performance review. You've been with the company for 3 years and\nunder my direct superusion for the past 12 months. Your report is mostly good · But there are a couple Of\nissues we must discuss · The report is yours to take with you · （ 1 · 2 ） We 卫 go through the main points together\nnow · And you can come through it in greater detail later. DO you have any questions before we start?\nNO, Slr.\n、 1 ： I ll get straight to it then. It is evident that you are a hard worker · You are punctual and industrious\nFurthermore, you have strong analytical skills and attention to detail. The company, myself included, are\nhappy with your productivity and overall performance\nW ： Thank you · (2)1 appreciate the recognition\nM ： DO you agree, then, with this depletion SO far?\nW ： Yeah, it's a little simplistic perhaps · But that's to be expected from this kind of evaluation\nM ： Sure · Would you want to add anything? Your comments can be added to the report if you wish\nW ： Oh, there's no need · It's a flattering portrayal really · Thank you, though\nM ： OK · This leads me to the not-so-good part · This mostly centers around one behavioral aspect¯your ability\nto work with others\nI see\nM ： Yes. 小 you already know ， over the last several months ， （ 3 ） there have been some complaints raised about\nyour communication style\nW ： Of course, we already had like three meetings about this. Look, all I m going to say is that it was never my\nintention to offend anyone · Simply put, （ 4 ） I don't like to write long emails, because, frankly, I think\nthey re a waste of time · Conciseness is efficiency. I feel that writing long emails hurts that same\nproductivity you praised me for Just a minute ago · And I already apologized if anyone was offended · But to\nbe perfectly honest, I think anyone who was offended was being a little too sensitive",
+          "translation": "",
+          "source": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "listening-part-2",
+          "title": "Conversation Two",
+          "text": "",
+          "transcript": "M ： So tell me, why do you wish to study medicine?\nW ： I ve always wanted to be a doctor · I come from a small town where healthcare was never the best · And I\nthink that had a profound effect on me · （ 5 ） 小 a child ， I remember thinking how great it would be to serve\nthe community and cure people ！\nM ： What other people or events in your life have shaped your interest in becoming a doctor?\nW ： WelI, that's hard to say. I would certainly say my parents have been a key factor. （ 6 ） They always pushed\nme to study hard. And I certainly wouldn't be here without their support · I guess I was also immensely\nfortunate to have good teachers and friends around me. At the end of the day, I ve always been surrounded\nby a positive envlronment conducive to my working hard and pursumg my dreams.\nM ： Is there any medical branch that you would like to specialize in?\nW ： I haven't decided yet · It's still early days · However, if I had to say, internal medicine\nM: Why internal medicine?\nW ： I know it's no picnic · （ 7 ） But I find it the most intriguing, because it covers SO much and ties together SO\nmany other specialties\nM ： Thank you · Now I'd like to address your academic history and projected grades. We like to think of\nourselves as a prestigious institution with a highly competitive and pronusing student body · 小 you know ， to\nget into our programmes, you need at least 85 ％ score in the entrance exam · DO you think you can attain\nthis?\nW ： I think so · Yes.\nM ： I'm looking at your school grades now and I'II be honest · (8)It's a bit of a mixed bag · You do get top grades\nShall we say “ consistent ”? I see no problem in making you a\nhere and there, but you are not very\nconditional Offer, but consider yourself warned, our entrance exam IS, to use your own words, no mcmc",
+          "translation": "",
+          "source": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "id": "listening-part-3",
+          "title": "Passage One",
+          "text": "",
+          "transcript": "Logging into your email account can sometimes feel like trying to hack into the Pentagon. If you follow all\nOf the guidelines, you need to use a different password for every one of your accounts ； use an lncomprehensible\nvariety of letters, numbers, and symbols ； sign up for two-step verification ； and change every password every\ntime one of them is compromised · （ 9 ） More Often than not, you then have to choose photos that include a street\nSlgn, as this apparently provides solid evidence to your computer that you are, in fact, a human being.\nIt's no small wonder most of us forget our passwords more Often than our keys · （ 10 ） NOW a new peer-\nreviewed study by researchers at Aalto University in Finland is attempting to figure out why we forget our\npasswords in order to help put an end to this frustrating phenomenon · Their findings suggest that how likely you\nare to remember your password has less to do with the intricacy of the password itself and more to do with how\nOften you anticipate using it. Which is to say ： you are far more likely to remember a complicated password if\nyou know you ll frequently be using it to log into an account than you are to remember a simple password for an\naccount that you don't expect to log into very often. (11)The researchers advise websites to include more of an\nincentive for users to log in more Often in order to help them remember their secret codes\n0 《 、 的能0曛華@洇吓老果\" 《 ' 、 ， 》 ． 《 `《》《0000奪、@的恶艹》0、生00、0。· 00 《 《 0 ' 《 毳",
+          "translation": "",
+          "source": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "listening-part-4",
+          "title": "Passage Two",
+          "text": "",
+          "transcript": "(12)Four years ago, Jenny Weiner was in a fitness slump · She wanted to improve her physical and mental\nhealth · However, her workouts lacked intensity without a proper training programme to follow · When she\nwent to the gym, her daily ritual predominantly involved easy exercise options like jogging ； she avoided more\nformidable exercises like lifting weights. A personal trainer who might push her was out of the question · The\nextravagant cost was Just unaffordable · She then discovered the fitness phone app Slimmeretics · (13)To use the\napp, you first input your profile about your previous training expenences and preferences, as well as your\ndesired goals · A virtual coach then uses that informatlon to suggest a personalised training regime · After the\nworkout, the app's artificial intelligence software system uses feedback from Ms · Weiner and its other 53\nmillion users around the world to adjust future training sessions · （ 14 ） Now Ms · Weiner finds the workouts\nexciting · This is because no two are ever the same · AS a result, the app has helped her to lose more than 25\nkilograms · The apps mathematical approach can arrange a more meticulous workout schedule · This has led to\noptimal results · However, (15)some experts think that apps cannot replace human personal trainers. An app\ncannot understand human behavior · It will not comprehend that there are competing interests outside of health\nand fitness. Additionally, a human trainer can add compassion to the workout · He can also make exercise fun\nand sustainable · Trainers can monitor whether a person is doing exercises correctly. ThiS can safeguard against\ninjuries · An app cannot perceive such subtleties",
+          "translation": "",
+          "source": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "listening-part-5",
+          "title": "Recording One",
+          "text": "",
+          "transcript": "（ 16 ） 川 1 societies are held together by seven umversal moral rules ， which include deferring to superiors and\nrespecting the property of others, Oxford University has concluded · Although many cultures are moving\ntowards more liberal, less hierarchical organizations, the new research suggests that traditional power\nstructures and basic values of charity and brotherhood are the cornerstones of successful societies\nThe huge study of 60 different cultures around the world found that all communities operate under seven\nbasic moral codes · Those umversal rules are ： help your family, help your group, return favors, be brave, defer\nto superiors, divide resources fairly, and respect the property of others. The character traits held for every\nkind of community, be they traditional hunter gatherers or advanced civilizations, helping to uphold civilized\nSociety and foster social cooperation, researchers found · \"Everyone everywhere shares a common moral COde,\nsaid Dr. Oliver Scott Curry, lead author and senior researcher at Oxford · \"These seven moral rules appear to be\numversal across cultures, because people face the same social problems · Even if some of these traits look right-\nwing or conservative, for example, deferring to authority, left-wing people will still have a group loyalty and\ndeference to someone or something. This shows there really is more that unites us than divides us\n(17)The study published in Current 九 ro 四 / 0 is the largest and most comprehensive and widespread\nsurvey of morals ever conducted and aimed to find out whether different societies had different versions Of\nmorality · The team accessed the world's best archives to analyze accounts from more than 600 sources Of 60\nsocieties around the world · They found that the seven rules were considered morally good in all societies and\nwere observed across all continents, religions and politics. However, some communities valued certain rules\nmore highly than others · Dr. Curry hopes that this research helps to promote mutual understanding\nbetween people of different cultures and appreciation of what we have in common and how and why we differ.\n（ 18 · 1) Co-author professor Harvey Whitehouse said social scientists should now set about testing the theory in\nthe field, rather than relying on old data. \"This study was based on historical descriptions of cultures around the\nworld, ” he said. “ These descriptions were made independent of and prior to the theory we re testing. （ 18 · 2 ） ln\nfuture, if social scientists are senous about testing theories of morality, they will need to gather new data, more\nsystematically, out in the field",
+          "translation": "",
+          "source": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              4,
+              5
+            ]
+          }
+        },
+        {
+          "id": "listening-part-6",
+          "title": "Recording Two",
+          "text": "",
+          "transcript": "When it comes to food, color is money · FOOd companies know that better color gives better prices, SO they\nensure that their products are attractive in color to bolster earnings · Oranges, for example, have to meet\nspecific color standards · And oranges are Just the beginning · There are color standards for foods including\nFrench fries, tomatoes, pumpkins, olives, honey and cherries\nThe attention to color is for good reason · (19)For all the talk of the tongue, our eyes really might be the\nmost important part of the eating expenence · A great number of our brain functions are dedicated to processing\nVISIOII ， while only a percent or two is given over to taste faculties ， and the result is that （ 20 ） 一\nchanges how we taste food\nScientists have demonstrated many times the importance of color to taste · In a 1980S study, for example,\ntest participants were asked to name the flavor of the beverage they were drinking without being able to see that\nbeverage · Only one in five was able to identify it as orange. But when they were allowed to see what they were\ndrinking which was orange in color, each of them identified the orange flavor · And when a drink that was lime\nflavor was colored orange, nearly half of respondents identified the flavor of the beverage as orange · None\nmade that mistake when the beverage was green in color · What's happening when someone fails to identify the\nflavor of a beverage they can't see or that has an abnormal color? Is it that participants can't discern what the\nflavor IS, and SO rely on visual cues? Or does color actually change the expenence of taste? The key to these\nquestions is the effect of color on expectation · (21)The brain makes predictions using color · These predictions\nrely on expectations that come from experience · Research shows that we re all born liking sweet things and\ndesire to eat them, but we aren't born knowing what the sweet things we crave look like. SO we need to learn\nthis over time · The brain gets information from the envlronment · And we learn, for example, that fruits go\nfrom green and sour to red and ripe and sweet · Thus, if we see a green berry, we equate its color with a sour\ntaste, and Just looking at a red fruit will activate our expectations that it will taste sweet and delicious",
+          "translation": "",
+          "source": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              5,
+              6
+            ]
+          }
+        },
+        {
+          "id": "listening-part-7",
+          "title": "Recording Three",
+          "text": "",
+          "transcript": "（ 22 ） Searching for meamng IS something many of us expenence throughout our lives · For some, this\nmeaning is religious, some political and some interpersonal. And having a sense of meaning can bring I-IS\nhappiness\nA new study looks at the relationship between meaning and happiness in the context of financial resources\n(23)Rhia Catapano from the University of Toronto and colleagues find meaning is a far weaker predictor of\nhappiness for rich people than poorer people, suggesting economic resources can impact how we expenence\nmeaning. The team analysed data from over 500, 000 people across 123 countries · The first study used data\nfrom a daily poll of US residents collected between 2013 and 2015 · WeII-being was tracked using measures of\npositive affect—whether, during the day before they were surveyed, participants had smiled or laughed a lot or\nexperienced a lot of happiness · Meaning was measured through a daily purpose index ”, which explored the\nextent to which participants felt that they like what they do every day and are motivated to achieve their goals\nFinally, income levels were assessed · The results showed that the correlation between meaning and happiness\nwas strongest among those in lower income brackets. But as income levels increased, the correlation became\nweaker. (24)The second study looked at worldwide data. Happiness was measured using the same questions as\nin the first study, while meaning was measured using the single question ： “ DO you feel your life has an\nlmportant purpose or meaning? \" · Again, the strength of the relationship between meamng and happiness\ndepended on participants' income ： meaning had a greater influence on happiness for those on lower incomes\ncompared to those in higher brackets · In the final study, French participants indicated the extent to which they\nfelt they led a purposeful and meaningful life and how much they considered themselves a happy person\nFinally, rather than usmg specific income brackets, they placed themselves on a social ladder ”, representing\nwhere they stand in society with regard to wealth, education, and career. The results from the study duplicated\nthose of the first two\nSO overall, meaning and happiness had a stronger relationship in those with fewer resources than those\nwith more · （ 25 ） This might be the case because rich individuals have more access to Other sources Of\nhappiness¯many of which will be external, like lack of stress or community · Thus, a focus on an internal sense\nOf satisfaction, purpose or meamng is less important",
+          "translation": "",
+          "source": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              6
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2024-12-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "Question 1 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Preparing for a job interview."
+            },
+            {
+              "key": "B",
+              "text": "Writing a work report together."
+            },
+            {
+              "key": "C",
+              "text": "Going through a couple of issues the company faces."
+            },
+            {
+              "key": "D",
+              "text": "Discussing the woman's annual performance review."
+            }
+          ],
+          "answer": "D",
+          "explanation": "男士开场说明双方正在讨论女士的年度绩效评价，并准备一起查看主要内容。\n【原文定位·自动匹配】M ： OK then, (l-l)this here is your yearly performance review.\n【正确选项】D) Discussing the woman's annual performance review.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 40%，匹配度较低，定位仅供参考），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.4
+          },
+          "explanationOriginal": "男士开场说明双方正在讨论女士的年度绩效评价，并准备一起查看主要内容。",
+          "explanationSourceOriginal": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "Question 2 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "The overall culture of the company."
+            },
+            {
+              "key": "B",
+              "text": "The instruction from her supervisor."
+            },
+            {
+              "key": "C",
+              "text": "The honesty of the manager."
+            },
+            {
+              "key": "D",
+              "text": "The recognition of her merits."
+            }
+          ],
+          "answer": "D",
+          "explanation": "细节归纳题。男士总结了女士的表现，包\n括工作努力、守时、勤奋、有很强的分析能力和关注\n细节，并提到，公司，包括他自己在内，都对女士的\n工作效率和整体表现很满意。句（2）中，女士回应\n说自己很感谢这一认可。 D）项中的 recognition 属\n于原词复现； merits 是对男士关于女士总体表现的\n描述的总结。因此答案为 D)O\nWhat has given rise to some complaints about the",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "Question 3 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Her inadequate language proficiency."
+            },
+            {
+              "key": "B",
+              "text": "Her inability to interact with colleagues properly."
+            },
+            {
+              "key": "C",
+              "text": "Her inappropriate behavior at company meetings."
+            },
+            {
+              "key": "D",
+              "text": "Her simplistic approach to dealing with others."
+            }
+          ],
+          "answer": "B",
+          "explanation": "细节推断题。句（3）中，男士提到，有人对\n女士的沟通方式提出了抱怨。也就是说，她没能做\n到用合适的方式与同事互动，从而引起了同事的抱\n怨。因此答案为 B)。\nWhy doesn't the woman like to write long emails?",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "Question 4 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "To avoid offending the recipients."
+            },
+            {
+              "key": "B",
+              "text": "To show her unique writing style."
+            },
+            {
+              "key": "C",
+              "text": "To save time."
+            },
+            {
+              "key": "D",
+              "text": "To be frank."
+            }
+          ],
+          "answer": "C",
+          "explanation": "细节推断题。句（4）中，女士说，她不喜欢\n写冗长的电子邮件是因为她觉得这是浪费时间。\n也就是说，她不写冗长的电子邮件是为了节省时\n间。因此答案为 C)。\nQuest i ons 5 to 8 are based on the conversation you have just heard.\nM： So tell me, why do you wish to study medicine?\nW： I ve always wanted to be a doctor · I come from a small town where healthcare was never the best · And I\nthink that had a profound effect on me · （5）小 a child， I remember thinking how great it would be to serve\nthe community and cure people！\nM： What other people or events in your life have shaped your interest in becoming a doctor?\nW： WelI, that's hard to say. I would certainly say my parents have been a key factor. （6） They always pushed",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "Question 5 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Provide medical service to the community."
+            },
+            {
+              "key": "B",
+              "text": "Make healthcare in her hometown the best."
+            },
+            {
+              "key": "C",
+              "text": "Obtain a doctoral degree in internal medicine."
+            },
+            {
+              "key": "D",
+              "text": "Have a profound impact on people around her."
+            }
+          ],
+          "answer": "A",
+          "explanation": "细节辨认题。句（5）中，女士提到，她还是\n个孩子的时候就在想，如果能服务社区，治愈病人，\n那该有多好啊！也就是说，女士从小就希望能为社\n区提供医疗服务。因此答案为 A)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "Question 6 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They have constantly urged her to study hard."
+            },
+            {
+              "key": "B",
+              "text": "They have worked hard to finance her education."
+            },
+            {
+              "key": "C",
+              "text": "They have tried to create a positive learning environment."
+            },
+            {
+              "key": "D",
+              "text": "They have pursued the family's dreams together with her."
+            }
+          ],
+          "answer": "A",
+          "explanation": "细节辨认题。根据句（6）可知，女士的父母\n总是督促她努力学习。 A）项中的 constantly urged\n是录音中 always pushed 的同义转述； study hard\n属于原词复现。因此答案为 A)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "Question 7 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is a key medical branch conducive to realizing her dreams."
+            },
+            {
+              "key": "B",
+              "text": "It connects many other specialties with its broad coverage."
+            },
+            {
+              "key": "C",
+              "text": "It has a long history in the man's prestigious institution."
+            },
+            {
+              "key": "D",
+              "text": "It is a medical branch both of her parents specialize in."
+            }
+          ],
+          "answer": "B",
+          "explanation": "细节辨认题。男士问女士为什么想专攻内\n科，女士在句（7）中回答说，她觉得内科是最有趣\n的，因为它涵盖很多内容，而且把许多其他专业联\n系在一起。 B) 项中的 connects 和 broad coverage\n分别是录音中 ties together 和 covers so much 的\n同义转述。因此答案为 B)。\nHOw does the man describe the woman's school",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "Question 8 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Problematic."
+            },
+            {
+              "key": "B",
+              "text": "Competitive."
+            },
+            {
+              "key": "C",
+              "text": "Inconsistent."
+            },
+            {
+              "key": "D",
+              "text": "Trustworthy."
+            }
+          ],
+          "answer": "C",
+          "explanation": "细节辨认题。句（8）中，男士说，女士的学\n习成绩参差不齐。她确实时不时得高分，但并不是\n特别稳定。因此答案为 C)。\n【原文定位·自动匹配】M ： I'm looking at your school grades now and I'II be honest · (8)It's a bit of a mixed bag · You do get top grades Shall we say “ consistent ”?\n【正确选项】C) Inconsistent.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationOriginal": "细节辨认题。句（8）中，男士说，女士的学\n习成绩参差不齐。她确实时不时得高分，但并不是\n特别稳定。因此答案为 C)。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2024-12-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "Question 9 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "To prevent hackers from cracking our secret codes."
+            },
+            {
+              "key": "B",
+              "text": "To show that all the guidelines are being followed."
+            },
+            {
+              "key": "C",
+              "text": "To provide evidence that passwords are forgotten."
+            },
+            {
+              "key": "D",
+              "text": "To convince our computer that we are human."
+            }
+          ],
+          "answer": "D",
+          "explanation": "细节辨认题。句（9）中提到，通常情况下，\n你必须选择包含路牌的照片，因为这显然向你的电\n脑提供了确凿的证据，证明你实际上是一个人。\n【原文定位·自动匹配】If you follow all of the guidelines, you need to use a different password for every one of your accounts ； use an lncomprehensible variety of letters, numbers, and symbols ； sign up for two-step verification ； and change every password every time one of them is compromised · （ 9 ） More Often than not, you then have to \n【正确选项】D) To convince our computer that we are human.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationOriginal": "细节辨认题。句（9）中提到，通常情况下，\n你必须选择包含路牌的照片，因为这显然向你的电\n脑提供了确凿的证据，证明你实际上是一个人。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2024-12-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "Question 10 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Put an end to the hacking phenomenon."
+            },
+            {
+              "key": "B",
+              "text": "Help people remember their passwords."
+            },
+            {
+              "key": "C",
+              "text": "Reduce the intricacy of the password itself."
+            },
+            {
+              "key": "D",
+              "text": "Explain the need for different email accounts."
+            }
+          ],
+          "answer": "B",
+          "explanation": "细节推断题。句（10）中提到，芬兰阿尔托\n大学的研究人员进行了一项新的同行评议研究，试\n图找出我们忘记密码的原因，以帮助结束这一令人\n沮丧的现象。也就是说，这些研究人员进行研究的\n目的是帮助人们记住自己的密码。因此答案为",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "Question 11 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Innovate technologies to ensure the safety of users' accounts."
+            },
+            {
+              "key": "B",
+              "text": "Provide incentives for the application of creative passwords."
+            },
+            {
+              "key": "C",
+              "text": "Explore the possibility of using simpler secret codes."
+            },
+            {
+              "key": "D",
+              "text": "Take steps to encourage users to log in more often."
+            }
+          ],
+          "answer": "D",
+          "explanation": "细节辨认题。句（11）中提到，研究人员建\n议网站提供更多的激励让用户频繁地登录，以帮助\n他们记住自己的密码。因此答案为 D)。\n【原文定位·自动匹配】(11)The researchers advise websites to include more of an incentive for users to log in more Often in order to help them remember their secret codes 0 《 、 的能0曛華@洇吓老果\" 《 ' 、 ， 》 ． 《 `《》《0000奪、@的恶艹》0、生00、0。· 00 《 《 0 ' 《 毳\n【正确选项】D) Take steps to encourage users to log in more often.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationOriginal": "细节辨认题。句（11）中提到，研究人员建\n议网站提供更多的激励让用户频繁地登录，以帮助\n他们记住自己的密码。因此答案为 D)。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2024-12-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "Question 12 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "Her work no longer interested her."
+            },
+            {
+              "key": "B",
+              "text": "Her training app did not fit her."
+            },
+            {
+              "key": "C",
+              "text": "Her fitness fell into a slump."
+            },
+            {
+              "key": "D",
+              "text": "Her business deteriorated."
+            }
+          ],
+          "answer": "C",
+          "explanation": "细节辨认题。句（12）中提到， 4 年前，珍\n妮 ． 韦纳陷人了健康低谷。 c）项中的 fitness 和\nslump 属于原词复现。因此答案为 C)O",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "Question 13 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "Help users keep track of their fitness levels."
+            },
+            {
+              "key": "B",
+              "text": "Design personalised training programmes."
+            },
+            {
+              "key": "C",
+              "text": "Strengthen ties among users worldwide."
+            },
+            {
+              "key": "D",
+              "text": "Select well-qualified human coaches."
+            }
+          ],
+          "answer": "B",
+          "explanation": "细节辨认题。句（13）中提到，为了使用该\n应用程序，你首先输人你的个人资料，包括你以前\n的锻炼经历和偏好，以及你的预期目标。然后一\n个虚拟教练使用这些信息来提出一个个性化的锻\n炼方案。因此答案为 B)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "Question 14 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are never repeated."
+            },
+            {
+              "key": "B",
+              "text": "They help enrich her life."
+            },
+            {
+              "key": "C",
+              "text": "They are of no extreme intensity."
+            },
+            {
+              "key": "D",
+              "text": "They keep her focused on her goal."
+            }
+          ],
+          "answer": "A",
+          "explanation": "细节辨认题。句（14）中提到，韦纳女士现\n在发现这些锻炼很令人兴奋，这是因为没有两个\n锻炼方案是完全相同的。 A）项中的 never\nrepeated 是录音中 no two are ever the same 的同\n义转述。因此答案为 A)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "Question 15 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "They will not be able to take the place of human personal trainers."
+            },
+            {
+              "key": "B",
+              "text": "They will not be able to comprehend some of the profiles users put in."
+            },
+            {
+              "key": "C",
+              "text": "They cannot lead to optimal results with their mathematical approach."
+            },
+            {
+              "key": "D",
+              "text": "They cannot match humans in arranging meticulous workout schedules."
+            }
+          ],
+          "answer": "A",
+          "explanation": "细节辨认题。句（15）中提到，一些专家认\n为应用程序不能取代人类私人教练。 A) 项中的\nnot be able to take the place of 是录音中 cannot\nreplace 的同义转述； human personal trainers 属\n于原词复现。因此答案为 A)。\nQuest i ons 16 to 18 are based on the recording YOu have just heard.\n（16）川 1 societies are held together by seven umversal moral rules， which include deferring to superiors and\nrespecting the property of others, Oxford University has concluded · Although many cultures are moving\ntowards more liberal, less hierarchical organizations, the new research suggests that traditional power\nstructures and basic values of charity and brotherhood are the cornerstones of successful societies\nThe huge study of 60 different cultures around the world found that all communities operate under seven\nbasic moral codes · Those umversal rules are： help your family, help your group, return favors, be brave, defer\nto superiors, divide resources fairly, and respect the property of others. The character traits held for every",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "Question 16 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-5",
+          "options": [
+            {
+              "key": "A",
+              "text": "All societies are built upon the cornerstones of basic values."
+            },
+            {
+              "key": "B",
+              "text": "Everyone everywhere demonstrates seven character traits."
+            },
+            {
+              "key": "C",
+              "text": "All societies are kept together by seven basic moral rules."
+            },
+            {
+              "key": "D",
+              "text": "Everyone everywhere shares a universal moral standard."
+            }
+          ],
+          "answer": "C",
+          "explanation": "细节辨认题。句（16）中提到，牛津大学得\n出结论称，所有社会都是由 7 条普遍的道德准则\n维系在一起的，其中包括服从上级和尊重他人的\n财产。 C) 项中的 kept together 是录音中 held\ntogether 的同义转述。因此答案为 C)O",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "Question 17 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-5",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ascertain whether deferring to authority was confined to right-wing people."
+            },
+            {
+              "key": "B",
+              "text": "Find out whether different societies had different versions of morality."
+            },
+            {
+              "key": "C",
+              "text": "Make clear whether all societies faced the same moral issues."
+            },
+            {
+              "key": "D",
+              "text": "Find out whether left-wing people still had a group loyalty."
+            }
+          ],
+          "answer": "B",
+          "explanation": "细节辨认题。句（17）中提到，发表在《当代\n人类学》上的这项研究是迄今为止规模最大、最全\n面、最广泛的道德调查，其目的是找出不同的社会\n是否有不同版本的道德观。因此答案为 B)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "Question 18 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-5",
+          "options": [
+            {
+              "key": "A",
+              "text": "Make independent descriptions of cultures around the world."
+            },
+            {
+              "key": "B",
+              "text": "Strive to understand the basic differences between peoples."
+            },
+            {
+              "key": "C",
+              "text": "Appreciate the foundational value of the existing data."
+            },
+            {
+              "key": "D",
+              "text": "Carry out systematic field studies to gather new data."
+            }
+          ],
+          "answer": "D",
+          "explanation": "说话者建议社会科学家到实地更系统地收集新数据，以检验道德理论。\n【原文定位·自动匹配】“ These descriptions were made independent of and prior to the theory we re testing. （ 18 · 2 ） ln future, if social scientists are senous about testing theories of morality, they will need to gather new data, more systematically, out in the field\n【正确选项】D) Carry out systematic field studies to gather new data.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 57%，匹配度较低，定位仅供参考），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "verified": true,
+          "verificationNote": "对照 G 盘原试题与解析册修正；原记录的答案与原解析不符。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.57
+          },
+          "explanationOriginal": "说话者建议社会科学家到实地更系统地收集新数据，以检验道德理论。",
+          "explanationSourceOriginal": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "Question 19 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-6",
+          "options": [
+            {
+              "key": "A",
+              "text": "They might be the most important part of our eating experience."
+            },
+            {
+              "key": "B",
+              "text": "They can activate our brain functions in a most direct fashion."
+            },
+            {
+              "key": "C",
+              "text": "They can be viewed as the windows to our soul."
+            },
+            {
+              "key": "D",
+              "text": "They could mislead us in more ways than one."
+            }
+          ],
+          "answer": "A",
+          "explanation": "细节辨认题。句（19）中提到，尽管我们都\n在谈论舌头，但我们的眼睛确实可能是饮食体验\n中最重要的部分。因此答案为 A)。\n【原文定位·自动匹配】When it comes to food, color is money · FOOd companies know that better color gives better prices, SO they ensure that their products are attractive in color to bolster earmngs · Oranges, for example, have to meet specific color standards · And oranges are Just the beginning · There are color standards for foods inclu\n【正确选项】A) They might be the most important part of our eating experience.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "explanationOriginal": "细节辨认题。句（19）中提到，尽管我们都\n在谈论舌头，但我们的眼睛确实可能是饮食体验\n中最重要的部分。因此答案为 A)。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2024-12-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "Question 20 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-6",
+          "options": [
+            {
+              "key": "A",
+              "text": "It attracts food companies' growing attention."
+            },
+            {
+              "key": "B",
+              "text": "It adversely impacts one's eating experience."
+            },
+            {
+              "key": "C",
+              "text": "It invariably determines how food sells."
+            },
+            {
+              "key": "D",
+              "text": "It changes the way people taste food."
+            }
+          ],
+          "answer": "D",
+          "explanation": "细节辨认题。句（20）中提到，颜色实际上\n改变了我们品尝食物的方式。因此答案为 D)O\n【原文定位·自动匹配】When it comes to food, color is money · FOOd companies know that better color gives better prices, SO they ensure that their products are attractive in color to bolster earmngs · Oranges, for example, have to meet specific color standards · And oranges are Just the beginning · There are color standards for foods inclu\n【正确选项】D) It changes the way people taste food.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "explanationOriginal": "细节辨认题。句（20）中提到，颜色实际上\n改变了我们品尝食物的方式。因此答案为 D)O",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2024-12-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "Question 21 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-6",
+          "options": [
+            {
+              "key": "A",
+              "text": "Enhance the taste."
+            },
+            {
+              "key": "B",
+              "text": "Make predictions."
+            },
+            {
+              "key": "C",
+              "text": "Identify distinct flavors."
+            },
+            {
+              "key": "D",
+              "text": "Enrich the eating experience."
+            }
+          ],
+          "answer": "B",
+          "explanation": "细节辨认题。句（21）中提到，大脑通过颜\n色进行预测。因此答案为 B)。\n【原文定位·自动匹配】The key to these questions is the effect of color on expectation · (21)The brain makes predictions using color · These predictions rely on expectations that come from experience · Research shows that we re all born liking sweet things and desire to eat them, but we aren't born knowing what the sweet things we crave lOO\n【正确选项】B) Make predictions.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "explanationOriginal": "细节辨认题。句（21）中提到，大脑通过颜\n色进行预测。因此答案为 B)。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2024-12-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "Question 22 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "Social status."
+            },
+            {
+              "key": "B",
+              "text": "Financial resources."
+            },
+            {
+              "key": "C",
+              "text": "Meaning."
+            },
+            {
+              "key": "D",
+              "text": "Happiness."
+            }
+          ],
+          "answer": "C",
+          "explanation": "细节辨认题。句（22）中提到，寻找意义是我\n们许多人一生都在经历的事情。因此答案为 C)。\n【原文定位·答案标记】Searching for meaning is something many of us experience throughout our lives. For some, this meaning is religious, some political and some interpersonal.\n【正确选项】C) Meaning.\n【标注】按答案标记定位；原文为扫描文本，已人工修正明显识别错误（部分句子依上下文还原），未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "explanationOriginal": "细节辨认题。句（22）中提到，寻找意义是我\n们许多人一生都在经历的事情。因此答案为 C)。",
+          "explanationSource": {
+            "type": "marker-ocr",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 0.73,
+            "tri": 0.29
+          }
+        },
+        {
+          "id": "2024-12-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "Question 23 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "Their effect on people's happiness has long been overstated."
+            },
+            {
+              "key": "B",
+              "text": "Their influence on people's life varies with social contexts."
+            },
+            {
+              "key": "C",
+              "text": "They can affect people's experience of meaning."
+            },
+            {
+              "key": "D",
+              "text": "They can ensure people's overall well-being."
+            }
+          ],
+          "answer": "C",
+          "explanation": "细节辨认题。句（23）中提到，多伦多大学\n的瑞亚 ． 卡塔帕诺及其同事发现，意义对富人幸\n福感的预测作用远远弱于穷人，这表明经济资源\n会影响我们对意义的体验。因此答案为 C)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "Question 24 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "It used questions totally different from those in their first study."
+            },
+            {
+              "key": "B",
+              "text": "It focused on the sense of meaning of French participants."
+            },
+            {
+              "key": "C",
+              "text": "It analysed cases from a daily poll of US residents."
+            },
+            {
+              "key": "D",
+              "text": "It examined data collected from multiple countries."
+            }
+          ],
+          "answer": "D",
+          "explanation": "细节辨认题。句（24）中提到，第二项研究\n着眼于全球数据。也就是说，它研究了从多个国\n家收集到的数据。因此答案为 D)。\n【原文定位·自动匹配】(24)The second study looked at worldwide data. Happiness was measured using the same questions as in the first study, while meaning was measured using the single question ： “ DO you feel your life has an lmportant purpose or meaning?\n【正确选项】D) It examined data collected from multiple countries.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "explanationOriginal": "细节辨认题。句（24）中提到，第二项研究\n着眼于全球数据。也就是说，它研究了从多个国\n家收集到的数据。因此答案为 D)。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2024-12-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "Question 25 (请根据录音选择最佳答案)",
+          "blockId": "listening-part-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "They might have more access to external sources of happiness."
+            },
+            {
+              "key": "B",
+              "text": "They might focus on an individual sense of satisfaction or meaning."
+            },
+            {
+              "key": "C",
+              "text": "They might be less easily affected by a community's overall feeling."
+            },
+            {
+              "key": "D",
+              "text": "They might be less adversely impacted by failure to achieve a purpose."
+            }
+          ],
+          "answer": "A",
+          "explanation": "细节辨认题。 3 项研究都证明，意义和幸\n福感之间的关系在资源较少的人中比在资源较多\n的人中更强。根据句（25）可知，这可能是因为富\n有的人有更多的机会获得其他的幸福来源。因此\n答案为。\n解析册。 2024 年 12 月六级真题（一） 6",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "With the rapid progress in the economy, it is natural that people's ideology is bound for change. Being __(26)__ is no longer a virtue to some people, and they are not alone in holding this view. Each might have different viewpoints on how to lead one's lifestyle: some prefer simplicity, some love luxuries, some spend __(27)__, some accumulate as much as they can like a country mouse. As I was born poor and in the countryside, the simple rural life seldom loses its __(28)__ to me, but as my station changes, I have an opportunity to __(29)__ with the newly rich, an experience which has revolutionized my view of lifestyle.\nIt is evil or sinful to spend little and to save much, an idea only recently being revealed to me. Actually the whole world is in a __(30)__ to borrow and to spend, with the USA leading the trend. The USA is still the richest and most powerful country in the world, but the __(31)__ is that they borrow money from us. Though a __(32)__ of economics, at least I know that investing with borrowed money will turn the borrower into the __(33)__ rather than the decent and kind lender. An apparent case is real estate. Those who are __(34)__ and have got loans from the bank become relatively rich by selling their purchased home at a price several folds higher. Even education is not immune from this theory. Many of those poor parents who have the vision to send their children to college have benefited from this investment, even though they have to __(35)__ a living. It is reasonable to conclude that spending is praiseworthy. supposing it is not beyond your means.",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇匹配文章",
+          "text": "A) On a small fruit farm near the Straits of Malacca, Lim Kok Ann is down to just one tree growing kedondong, a crunchy, sour berry that Malaysians mostly use in pickles (腌菜) and salads. \"It's not very well-known,\" says the 45-year-old, who is instead focusing on longan (龙眼) berries and pineapples, which have bigger markets. \"We have to grow what is profitable,\" he says.\nB) But less than an hour away in the Malaysian countryside, inside three giant, silver domes, scientists are trying to change the future of food. They're pushing the boundaries of what humans eat by growing and processing so-called \"alternative\" crops-such as kedondong. At the headquarters of global research centre\nCrops For the Future (CFF) this particular under-used fruit has been turned into a sugar-free juice, high in vitamin C and getting top marks in sensory evaluations. \"Anything you see here is a forgotten crop,\" says\nSayed Azam-Ali of the abundant plants weaving through the gardens of CFF outside Malaysia's capital\nKuala Lumpur.\n\nC) Prof Azam-Ali explains that just four crops-wheat, maize, rice and soybean-provide two-thirds of the world's food supply. \"We're dependent on these four.\" he says. \"But actually there're 7,000 crops we've been farming for thousands of years. We ignore all of those.\" Researchers are trying to unlock the potential of these ignored crops— plants they describe as forgotten, under-used or \"alternative\" as they are displaced by increasingly uniform diets fuelled by processed ingredients from the major crops.\nD) It's a timely quest. The food sector is already responsible for nearly a third of global greenhouse gas emissions. By 2050 it estimates the world must produce 50% more food to feed the projected global population of 10 billion. Meeting this demand without contributing to climate change calls for urgent solutions.\n\nE) Forgotten crops hold key answers. By investing in neglected local plants, countries can reduce their reliance on imported crops and their carbon-heavy supply chains. Bringing back the variety of crops humans once ate also boosts food security at a time warming climates threaten existing crops. On top of that forgotten crops are among the most climate-resilient (具有气候韧性的) and nutritious, argues Azam-Ali. His summary is plain: \"Dietary diversification is critical to the future of humanity.\"\n\nF) Food security experts agree. \"There is no food insecurity in the world, there is food ignorance,\" says Cecilia\nTortajada, a senior research fellow at the Institute of Water Policy at the National University of Singapore.\n\"Whenever we have native crops we tend to disregard them as if they were not valuable but they are,\" she adds.\n\nG) Azam-Ali knows that scepticism firsthand. He came across alternative crops in the 1980s through the work of women farmers he met in Niger. The then-PhD student remembers marvelling at the crops they grew in their backyards, without the benefits of technology, to feed their families when the big crops failed. He saw a tremendous opportunity to build alternative food systems. But \"the resistance was enormous,\" he recalls.\n\nH) Undeterred, he ploughed on. Project after project helped prove these crops were viable in different environments as alternatives to the staple ones. But the question of whether these crops would be marketable remained. \"That's the critical thing,\" he says. In one of the centre's domes, food technologist Tan\nXinlin uses powdered moringa (辣木) leaves in place of some wheat flour to bake a cake lower in gluten (谷胶) and higher in nutrients. Tan's job is to create recipes with these still-unfamiliar ingredients that will appeal to both local and international tastes. In recent years she has used some of the forgotten crops grown at CFF, such as moringa and bambara groundnut, to make everything from instant soup to Indian snacks. \"I try to modernise forgotten crops instead of using old recipes.\" says Tan, who is also a trained chef. It's a strategy to appeal to the world's growing middle classes who are increasingly turning to the fast and processed food industries. It's also a way to help counter perceptions of local crops as \"old or poor people's food\" or as inferior \"women's crops\", adds Tan.\n\nI) The roots of these connotations about local foods can run deep. The bambara groundnut, a protein-rich native crop of sub-Saharan Africa that is also grown in parts of southeast Asia, can trace its marginal isa tion to colonial rule. \"African women who grew bambara groundnut were actually punished for growing it,\" says\nAzam-Ali. \"Colonial powers said you can't grow that because there's no oil. We can't get a market for it.\"\nBut today the bambara murukku is one of CFF's best reviewed foods and they are aiming to get it into grocery stores, pointing to the success of crops like quinoa to potential investors. Some 30 years ago, quinoa was virtually unheard of outside its native mountains in Bolivia and Peru. Today the nutritious grain is found on the menus of lavish restaurants across the world.\n\nJ) Measuring crops by nutrition instead of yield is at the heart of the forgotten foods enterprise. Ever since the\n\"green revolution\" of the 1960s, high-yielding crops have dominated modern agriculture. That was in part a crucial response to devastating famines at a time when the world needed to increase its food supply. Today\n\"nutrition is becoming a time bomb\", says Azam-Ali, as growing carbon dioxide levels strip crops of their minerals. Instead of bio-fortifying major crops we should be investing in those forgotten crops that are already more nutritious, he asserts.\nK) In the bowels of CFF's third dome, lab manager Gomathy Sethuraman opens a window into the centre's\n\"crown jewels\", revealing vines of winged beans growing under a bright yellow light. It's one of multiple chambers where scientists are studying the impact of higher temperatures and carbon dioxide levels on the nutritional make-up of alternative crops. This research is \"the game changer\", says Azam-Ali, ensuring that\n\"future crops\" are also the healthiest ones in warmer climates.\n\nL) There is a growing global momentum around forgotten foods, says Danielle Nierenberg, president of Food\nTank, a US-based think tank. Other than CFF, which bills itself as the world's first research centre dedicated solely to under-utilised crops, there are other key groups championing agricultural diversity including Crop\nTrust, Slow Food, Icrisat and Bioversity International. Add to that more middle-income consumers searching for nutritious foods and others eager to try the unprocessed foods their grandparents once ate, she says.\n\nM) But the rising interest in forgotten foods in some quarters is overtaken by the global spread of\nWestern-style diets heavy in sugar, fat and processed foods in others.\n\nN) A key obstacle to promoting fading local crops in Malaysia, for example, is \"the obsession with imported products\", says Jenifer Kuah, co-founder of a restaurant that champions locally-sourced food in an affluent suburb of Kuala Lumpur. Customers at Sitka, regarded as a pioneer in the country's small farm-to-table dining scene, still seek foreign ingredients as a \"status symbol\", she says.\n\nO) The argument for forgotten foods feels intuitive. Some analysts say it is in fact inevitable. \"Climate change is going to mean almost certainly tastes are going to be forced to change,\" says Tim Lang, professor of food policy at City, University of London. We \"have to get used to eating other crops\" as yields of staple crops fall, he says.",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Imagine you're an alien sent to Earth to document the behaviour of the mammals inhabiting the planet. You stumble into a movie theatre that's showing the latest Hollywood horror film. Several dozen humans are gathered together in a dark, undecorated room. They're all staring at a rectangular area on which patterns of light change rapidly. They are clearly in a state of high arousal. Their heart rate is elevated, they occasionally glance around nervously, and they sometimes jump collectively in their seats, and emit high-pitched warning calls. Eventually, the lights come up and the rectangular screen goes black. The humans stand up and leave the room, chatting and laughing, and showing signs of pleasure. Why do these humans voluntarily expose themselves to what appears to be a deeply unpleasant experience? And why do they react so strongly to those patterns of light on a screen? I am fascinated with the paradox of horror-the strange fact that many people seek out scary entertainment. I think the answer to the puzzle lies in human nature. My research suggests that we humans evolved to find pleasure in situations that allow us to experience negative emotions in a safe context. You can see these elements of horror in children's games. Take hide-and-seek for example, which is a simulation of a predator-prey interaction. The kid hides and the adult pretends to be a predator, searching for the child while howling like a dangerous beast. This simulation gives the child crucial information about how to avoid becoming prey, and children tend to find that kind of activity deeply satisfying, presumably because it gives them a safe experience of a potentially catastrophic scenario. They find it pleasurable, and pleasure is evolution's way of motivating us toward adaptive behaviour. Horror is pleasurable to many people because it lets us play with negative emotions and develop coping strategies. We learn what it feels like to be truly afraid, and we learn how to handle negative emotion. How, then, does horror work? My research suggests that horror works by exploiting an ancient set of biological defence mechanisms-an evolved fear system, which we share with other animals. But humans are uniquely imaginative, and we use our evolved imagination to travel into virtual worlds that are full of danger. There are good reasons for watching a horror film, even if you're not a loyal horror fan. If you make it through the film in one piece, you'll probably experience a strong sense of mastery, a sense that you were able to make it through an appalling experience. Anyway, watching a horror film makes you better at handling your own fear, and who knows when that will become critically relevant?",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              8
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "An awakening has been taking place in the physical world against the beauty model that has been dictated to us for years. But in the digital arena, social media determines what is considered beautiful.\nThe two opposing struggles are taking place in parallel. In the physical world, the struggle goes against the underlying pressure exerted on women to conform to an unrealistic beauty ideal. As part of the struggle, various media outlets have presented women whose bodies don't correspond to the so-called ideal. All those women who had previously been excluded from the covers of magazines, television series and the public agenda, have become \"legitimate\". At the same time, a group of influencers have begun to upload to social media photos of themselves without makeup, and even photos in which they highlight supposed flaws.\nTechnology has reshaped our beauty ideal and is doing a great job communicating that message to the masses. One of the bizarre legacies of the past decade is the popularity of the \"cyborg look\", which illustrates what Americans will look like in 2050.\nThe cyborg look spread rapidly. Today, however, the Instagram face has become the new beauty ideal.\nThe intern a liz a tion of accepted beauty norms is much more effective when there is active involvement in the learning process. The active involvement of users is reflected in the gamified (游戏化的) interaction offered by the social media platforms-the ability to like, write a comment, compare, share.\nOnce the desired beauty ideal has been internalized, users are given tools or features to change their appearance to suit the accepted beauty ideal such as editing the image, choosing the ideal filter, the right background.\nA survey conducted in the United States revealed that more than 50% filter the images before posting them. And you will not be surprised to hear that the majority of them are women. One of the significant consequences of obsessive filtering is the emerging tendency to treat oneself as an object to be observed and valued, in the same way another person observes and judges from the side.\nThe effect of the filters is already far beyond amiable amusement. The filters and the entire game played on the networks affect the mental health of the users. According to a study, apps like Instagram, Snapchat and FaceTune allow users to achieve a level of perfection that was previously only observed in beauty magazines.\nEven though humanity has always cherished beauty, in the last decade our obsession with looks has reached an unprecedented peak. The time spent on social media creates an urge to achieve an impossible beauty ideal so powerful that the only thing that can fix it is not cosmetic intervention, but mental health care.",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              9
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2024-12-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "O",
+          "explanation": "being 后需要表状态的形容词；thrifty 表示节俭，与上下文少花多存相呼应。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "B",
+          "explanation": "空格修饰 spend，需用副词；extravagantly 表示奢侈地花钱，与节俭形成对照。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "A",
+          "explanation": "lose its appeal 表示失去吸引力，符合乡村生活仍令作者向往的语境。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "J",
+          "explanation": "opportunity to 后接动词原形，mingle with 表示与人交往或混在一起。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "L",
+          "explanation": "in a rage to borrow and spend 表示热衷于借钱消费，符合后文的趋势描述。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "D",
+          "explanation": "美国富强却仍向他人借钱，作者认为这一现象具有讽刺意味，故选 irony。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "E",
+          "explanation": "作者自称不是经济学专家，layman 表示外行，与后文的有限认识相衔接。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "K",
+          "explanation": "句子对比借款投资者与善良的贷方，predator 表示获取利益的一方。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "N",
+          "explanation": "空格描述能借款买房并获利的人，shrewd 表示精明的，符合语境。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "appeal"
+            },
+            {
+              "key": "B",
+              "text": "extravagantly"
+            },
+            {
+              "key": "C",
+              "text": "intrinsically"
+            },
+            {
+              "key": "D",
+              "text": "irony"
+            },
+            {
+              "key": "E",
+              "text": "layman"
+            },
+            {
+              "key": "F",
+              "text": "literally"
+            },
+            {
+              "key": "G",
+              "text": "majestic"
+            },
+            {
+              "key": "H",
+              "text": "malicious"
+            },
+            {
+              "key": "I",
+              "text": "meadow"
+            },
+            {
+              "key": "J",
+              "text": "mingle"
+            },
+            {
+              "key": "K",
+              "text": "predator"
+            },
+            {
+              "key": "L",
+              "text": "rage"
+            },
+            {
+              "key": "M",
+              "text": "scrape"
+            },
+            {
+              "key": "N",
+              "text": "shrewd"
+            },
+            {
+              "key": "O",
+              "text": "thrifty"
+            }
+          ],
+          "answer": "M",
+          "explanation": "scrape a living 表示勉强维持生计，符合贫困父母供子女上大学的语境。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "According to a senior researcher, we will have secure food supply if we rid ourselves of ignorance about native crops.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "F 段高级研究员认为，人们忽视有价值的本土作物是粮食安全问题的重要原因。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "Most of the world's food supply comes from a tiny number out of thousands of crops that have been grown for centuries.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "C",
+          "explanation": "细节归纳题。 c）段第一句提到，世界粮食\n供应的三分之二是仅由 4 种作物提供，而第三句\n则指出，实际上，有 7 000 种作物人类已经种植了\n数千年。题干是对上述两处信息的归纳，其中的\nmost of 对应原文中的 two-thirds of， thousands of\ncrops that have been grown for centuries 是只寸原\n文中 7， 000 crops we ve been farmng for thousands\nof years 的转述，故答案为 C)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "To provide their family with food when the staple crops failed, some African women farmers grew local crops in their backyards.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "G",
+          "explanation": "G 段回忆尼日尔女农民在主要作物歉收时种植后院作物养家。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "High-yielding crops have occupied a dominant position in modern agriculture since the green revolution in the last century.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "J",
+          "explanation": "J 段指出，20 世纪 60 年代绿色革命以来高产作物一直主导现代农业。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Growing alternative crops proved feasible in a variety of environments, but the critical question was whether they would be marketable.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "H",
+          "explanation": "H 段说多个项目证明替代作物能在不同环境中生长，但能否进入市场仍是关键。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "According to a professor, when the yields of staple crops fall, we will have to adapt to eating foods from alternative crops.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "O",
+          "explanation": "O 段教授认为，气候变化导致主要作物减产后，人们需要习惯食用其他作物。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "Urgent measures have to be taken to provide food for the projected world population without aggravating the climate.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "细节归纳题。 D）段定位部分提到，到 2050\n年，世界必须多生产 50 ％ 的粮食来养活预计 100\n亿全球人口，想要满足这一需求而又不加剧气候\n变化，就需要紧急解决方案。题干是对这两处信\n息的归纳。题干中的 urgent measures have to be\ntaken 对应原文中的 calls for urgent solutions，题\n干中的 without aggravating the climate 对应原文\n中的 without contributing to climate change，故答\n案为 D)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "Colonial rule marginalised local crops by punishing Africans who grew them.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "I",
+          "explanation": "I 段解释，殖民当局曾处罚种植本巴拉花生等当地作物的非洲妇女。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "As existing crops are endangered by global warming, we can increase food security by bringing back the many forgotten food crops.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "E",
+          "explanation": "E 段称恢复作物多样性能够应对气候变暖对粮食安全的威胁。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              9,
+              10,
+              11
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Researchers are trying to find out how higher temperatures and CO2 levels affect the nutritional composition of alternative crops.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            }
+          ],
+          "answer": "K",
+          "explanation": "K 段介绍研究人员在实验室考察升温和二氧化碳变化对替代作物营养成分的影响。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "verified": true,
+          "verificationNote": "对照 G 盘原试题与解析册修正；原记录的答案与原解析不符。",
+          "explanationSource": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              6,
+              7
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "The alien finds the audience in the movie theatre clearly in a state of ______.",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "total mindfulness"
+            },
+            {
+              "key": "B",
+              "text": "extreme excitement"
+            },
+            {
+              "key": "C",
+              "text": "spiritual elevation"
+            },
+            {
+              "key": "D",
+              "text": "intense curiosity"
+            }
+          ],
+          "answer": "B",
+          "explanation": "同义转述题。文章第一、二段设置了一个\n情境：想象自己是一个外星人，看到地球上的人类\n看恐怖片的场景。而第三段开头指出“They are\nclearly in a state of high arousal.”，其中的 they",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              11
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "Why do many people seek out scary entertainment, according to the author's research?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They gain experience in overcoming horror in real life."
+            },
+            {
+              "key": "B",
+              "text": "They find joy in going through simulated horrible experiences."
+            },
+            {
+              "key": "C",
+              "text": "They have learned from hide-and-seek as kids the thrill involved."
+            },
+            {
+              "key": "D",
+              "text": "They have evolved to gain pleasure in escaping life-threatening situations."
+            }
+          ],
+          "answer": "B",
+          "explanation": "细节归纳题。文章第六段提到了作者对于\n为什么人类会寻求恐怖娱乐很感兴趣，第七段提\n到作者对于这个问题的答案，随后在第八段中，作\n者详细阐释了自己的答案，并提到了自己的研究\n结果：人类在进化过程中，愿意在安全的环境中去\n感受负面情绪，并从中寻求乐趣。而根据前 5 段\n中恐怖电影的例子以及第八段后面捉迷藏的例子\n可知，“安全的环境 \" 都是一些模拟的恐怖情形。\n总结可得，人们能够在模拟的恐怖经历中寻求快\n乐，故答案为 B)O\n〖避错〗第十一段中提到了恐怖能够让我们与负面\n情绪共处，并发展出应对负面情绪的策略，但 A)\n“他们从克服现实生活中的恐惧中获得经验”并非\n人类寻求恐怖娱乐的原因，故排除；第九段指出孩\n子们能够通过捉迷藏学会如何避免成为猎物，并\n没有提到他们感受到了刺激，故排除 C)；第八段\n作者指出人们愿意在安全的环境中去感受负面情\n绪，并从中寻找乐趣，而非在真正遇到生命威胁的\n情况下，故排除 D)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What do children learn from hide-and-seek?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "How to avoid falling prey to an attacker."
+            },
+            {
+              "key": "B",
+              "text": "How to simulate a predator-prey interaction."
+            },
+            {
+              "key": "C",
+              "text": "How to keep themselves from catastrophic errors."
+            },
+            {
+              "key": "D",
+              "text": "How to turn a dangerous scenario into a safe one."
+            }
+          ],
+          "answer": "A",
+          "explanation": "细节辨认题。文章第八段第三句开始以儿\n童游戏中的捉迷藏为例支撑自己的观点。而第九\n段开头提到了 yves the child crucial information，\n即为孩子们提供了重要信息，可知本句讲述孩子们\n能够从捉迷藏游戏中学到的知识，即 how to avoid\nbeco 皿 ng prey “如何避免成为猎物 \"，故答案为 A)。\n〖避错〗第八段提到了捉迷藏是对捕食者和猎物互\n动的一种模拟，但这并非孩子们从中学到的东西，\n故排除 B)；第九段后半部分提到，孩子们喜欢玩\n捉迷藏类似的活动是因为这类游戏给了他们一种\n安全地体验潜在灾难性场景的经历，与 c）选项所\n述“避免犯下灾难性错误”以及 D) 选项所述“把危\n险的情况变安全”不同，故排除 C)、 D)。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "Why is horror gratifying to many people?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It reminds them of an ancient set of biological defence mechanisms."
+            },
+            {
+              "key": "B",
+              "text": "It triggers their imagination to travel into dangerous virtual worlds."
+            },
+            {
+              "key": "C",
+              "text": "It allows them to learn what fear feels like and how to tackle it."
+            },
+            {
+              "key": "D",
+              "text": "It activates their evolved fear system and their unique fantasy."
+            }
+          ],
+          "answer": "C",
+          "explanation": "文章认为恐怖体验让人在安全环境中感受恐惧，并学习应对负面情绪的方法。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              12,
+              13,
+              14
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              12,
+              13,
+              14
+            ]
+          }
+        },
+        {
+          "id": "2024-12-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What will one experience if they watch a horror film through without being hurt?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "A strong sense of clear relevance."
+            },
+            {
+              "key": "B",
+              "text": "A profound sense of good fortune."
+            },
+            {
+              "key": "C",
+              "text": "A profound sense of intense relief."
+            },
+            {
+              "key": "D",
+              "text": "A strong sense of being in control."
+            }
+          ],
+          "answer": "D",
+          "explanation": "细节辨认题。最后一段第二句提到“If\nyou make it through the film in one piece. · ·”，原\n文中的 make it through 和 in one piece 分别与题\n干中的 \"watch. · · through \" 和 without being hurt\n为同义词组。因此后半句便是看完整部电影且未\n受到伤害的人的感受，即你会体验到 a strong\nsense of mastery\"— 种强烈的掌控感 \"，与 D）选项\n为同义词组，故答案为 D)O\n〖避错〗文章最后一段在讲述看完恐怖电影后的感\n受时只提到了掌控感，并未提到 a strong sense of\nclear relevance\" 强烈的明确相关性”、 a profound\nsense of good fortune “强烈的好运感”和 a\nprofound sense of intense relief\" 如释重负感”，因\n此排除 A)、 B)、。\n参考译文\n想象一下，你是一个外星人，被派到地球上记录居住在这个星球上的哺乳动物的行为。你无意中走进\n一家正在放映最新好莱坞恐怖电影的电影院。\n（电影院里）几十个人聚集在一个黑暗、未加装饰的房间里。他们都盯着一个长方形区域，在这个区\n域，光影的图案变化迅速。\n（46）他们显然处于高度兴奋的状态。他们心跳加快，偶尔会紧张地环顾四周，有时会集体从座位上跳\n起来，并发出尖锐的警告声。\n最后，灯光亮起，长方形的屏幕变黑。人们站起来离开房间，谈笑风生，并表现出高兴的样子。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              8
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What do we learn about beauty in the digital arena?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It dictates the taste of digital media."
+            },
+            {
+              "key": "B",
+              "text": "It has been in the making for years."
+            },
+            {
+              "key": "C",
+              "text": "It has ushered in a new awakening."
+            },
+            {
+              "key": "D",
+              "text": "It is defined by social media."
+            }
+          ],
+          "answer": "D",
+          "explanation": "事实细节题。第一段第二句指出，在数字\n领域，社交媒体决定了什么是美。故答案为 D)。\n〖避错〗 A) 项是针对第一段第一句中的 dictated\n和第二句中的 social media 设置的干扰项，文章并\n未讨论决定数字媒体的品位的因素，故排除 A)\n项；第一段第一句指出，在现实世界中，人们正在\n觉醒，反抗多年以来强加给我们的美丽标准。存\n在多年的是旧的、传统的美丽标准，而现实世界对\n这种标准的反抗以及数字世界对美丽标准的塑造\n都是近期的新趋势，故排除 B）项；第一段和第二\n段指出，在现实世界中，人们正在觉醒，反对传统\n的美丽标准，但并未提及这种觉醒的来源，而数字\n领域对美的标准的塑造是与现实世界的觉醒并行\n的，不是这种觉醒的诱因，故排除 C) 项。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              13
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What does the passage say about beauty in the physical world?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Women are under constant pressure to keep up with beauty models."
+            },
+            {
+              "key": "B",
+              "text": "Women are encouraged to pursue a beauty ideal that has never existed."
+            },
+            {
+              "key": "C",
+              "text": "A fight is going on to remove pressure on women to conform to an absurd beauty ideal."
+            },
+            {
+              "key": "D",
+              "text": "Media outlets have begun to present as beauty models trendy women without any makeup."
+            }
+          ],
+          "answer": "C",
+          "explanation": "事实细节题。定位句指出，在现实世界中，\n这场斗争反对向女性施加潜在压力，要求她们符\n合不切实际的美丽标准。故答案选 C)。\n〖避错〗由第二段可知，在现实世界中，女性要承受\n要求她们符合不切实际的美丽标准的潜在压力，\n而非跟上美女模特步伐的压力，故排除 A) 项；原",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              13
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What do we learn from the passage about the Instagram face?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is now regarded as the new beauty ideal."
+            },
+            {
+              "key": "B",
+              "text": "It is what most women will go after in 2050."
+            },
+            {
+              "key": "C",
+              "text": "It is being much talked about on social media."
+            },
+            {
+              "key": "D",
+              "text": "It is a perfect illustration of the ultimate beauty."
+            }
+          ],
+          "answer": "A",
+          "explanation": "事实细节题。第四段第二句指出，如今，\n“lnstagram 脸”已成为新的美丽标准。故答案\n〖避错〗第三段第二句指出， 2050 年的美国人可能\n拥有“半机械人外表”， B）项与此意思不符，故排\n除； c）项未在文中明确提到，虽然“脸”\n是社交媒体上的热门趋势，但文章的重点是它成\n了美丽标准，而不是讨论的热点，故排除 C) 项；文\n章并没有说 \"lnstagram 脸 \" 准确诠释了什么是终\n极的美丽，只是指出它是当前流行的美丽标准，故\n排除 D）项。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              14
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What has obsessive filtering resulted in?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "A good many women striving to reach an impossible level of perfection."
+            },
+            {
+              "key": "B",
+              "text": "An urge to turn the entire game played on the network to one's advantage."
+            },
+            {
+              "key": "C",
+              "text": "A tendency to regard one's body as an object of observation and judgment."
+            },
+            {
+              "key": "D",
+              "text": "An increasing number of women filtering their images before uploading them."
+            }
+          ],
+          "answer": "C",
+          "explanation": "事实细节题。第七段第三句说明了过度使\n用滤镜的消极影响：用户有把自己当作被观察和\n评价的对象的趋势。故答案为 C)。\n〖避错〗第七段第一、二句指出现在许多女性在发\n布照片前使用滤镜美化，其目的是追求不可能达\n到的完美外貌，但这不是过度使用滤镜美化的结\n果，故排除 A）项；第五段指出，社交媒体用户对美\n的追求体现在社交媒体平台上的游戏化互动，并\n非指过度使用滤镜导致人们渴望把网络上的整个\n游戏变得对自己有利，故排除 B)； D）项同样也是\n女性在社交媒体上追求美的一种体现，不是过度\n使用滤镜的结果，故排除 D)O",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              14
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2024-12-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What does the author want to emphasize at the end of the passage regarding Americans' obsession with looks?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cosmetic surgery should be made more accessible to the masses."
+            },
+            {
+              "key": "B",
+              "text": "Psychological intervention should be introduced to alleviate it."
+            },
+            {
+              "key": "C",
+              "text": "Their time spent on social media should be strictly controlled."
+            },
+            {
+              "key": "D",
+              "text": "Its root cause should be meticulously examined and analyzed."
+            }
+          ],
+          "answer": "B",
+          "explanation": "文章结尾指出，社交媒体强化的不切实际的外貌理想需要心理健康方面的帮助。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              12,
+              13,
+              14
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              12,
+              13,
+              14
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "北斗（Beidou）卫星导航系统的成功研制是中国自改革开放以来取得的一项重大科技成就。研发人员经过不懈努力，攻克了一系列技术难题，北斗系统最终实现了全球覆盖和高精度定位，使中国成为世界上少数几个独立拥有全球卫星导航系统的国家之一。北斗系统已广泛应用于交通运输、灾害救援、天气预报、公共安全等诸多领域。北斗系统现在已经在国际上得到广泛认可，开始为越来越多的国家和地区提供优质服务。",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              9
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2024-12-1-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "北斗（Beidou）卫星导航系统的成功研制是中国自改革开放以来取得的一项重大科技成就。研发人员经过不懈努力，攻克了一系列技术难题，北斗系统最终实现了全球覆盖和高精度定位，使中国成为世界上少数几个独立拥有全球卫星导航系统的国家之一。北斗系统已广泛应用于交通运输、灾害救援、天气预报、公共安全等诸多领域。北斗系统现在已经在国际上得到广泛认可，开始为越来越多的国家和地区提供优质服务。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "The successful research & development of the Beidou Navigation Satellite System is a significant scientific and technological achievement that China has made since the reform and opening-up. Through relentless efforts, the researchers successfully overcame a series of technical challenges and developed the Beidou system which has ultimately achieved global coverage and high-precision positioning, making China one of the few countries in the world with an independent global satellite navigation system. The Beidou system has now been widely applied to various fields, including transportation, disaster relief, weather forecasting, and public safety. Today, the Beidou system has gained worldwide recognition and begins to provide high-quality services for an increasing number of countries and regions.",
+          "explanation": "【参考译文】\n与难点注释第一句可处理为主系表结构，将“成功研制 \" 译为主语，“北斗卫星导航系统的 \" 为主语的修饰成分，可翻译为 of 介词短语作后置定语；将“一项重大科技成就 \" 译为表语，“中国自改革开放以来取得的”译为定语从句，修饰“科技成就” 2 · 第二句中不考虑状语“经过不懈努力 \"，句子主干部分包含 3 个攻克了一系列技术难题”，分句：第一个分句为“研发人员第二个分句为“北斗系统最终实现了““定位 \"，第三个分句为“使中国成为 · · · · · · 之一”。前两个分句主语不同，但如果单独成句的话，似乎又无法体现出两个分句之间的语义联系，因此翻译时我们可以将第二个分句的主语转换成第一个分句的主语“研究人员”，将两个分句合并，即“研究人员攻克了一系列技术难题，开发了北斗系统 · “·”，将“最终实现了““定位”处理为“北斗系统 \" 的定语从句，从而确保两个分句之间的语义衔接顺畅。第三个分句为前面的成果带来的结果，可处理为现在分词短语作结果状语。“经过不懈努力”可译为 through relentless efforts，作方式状语；“最终实现”可译为 ultimately achieve 或 finally achieve。结果状语部分，“使中国成为世界上少数几个 · · · · “国家之一”可译为 malqng China one of the few countries in the world；“独立拥有全球卫星导航系统的 \" 可译为定语从句 that own an independent global satellite navigation system，也可以像参考译文那样翻译为 with 结构。 3 · 第三句句子主干为“北斗系统已广泛应用于““诸多领域”，“交通运输、灾害救援、天气预报、公共安全等”作为列举成分，可用 including 或 such as 引出。句子主干应使用现在完成时。 4 · 第四句可分为两个并列分句，翻译时用 and 连接。“在国际上得到广泛认可”可以直译为 receive wide recognition internationally，也可以意译为“得到世界范围内的认可 \"，即 gain worldwide recognition；“为 · · · · 提供优质服务”可译为 provide high-quality services for. ． ．”；“越来越多的”可译为 an lncreasmg number Of 或 more and more。话题词汇技术突破 technological breakthrough 地理信息系统 Geographic lnformation System (GIS) 系统可靠性 system reliability 信号覆盖范围 signal coverage area 太空基础设施 space infrastructure 全天候的 all-weather 解析册 ． 2024 年 12 月六级真题（一） 15",
+          "source": {
+            "fileId": "15DHlnu_kT2N_nq5SK0sRfsrToHfwYDT6",
+            "pages": [
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1Cmb6nQjQ3LquDVvwOWwt5-fB7YmMUQDB",
+            "pages": [
+              15
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "Th e successful research & development 1.\nof the Beidou Navigation Satellite System is\na significant scientific and technological\nachievement that China has made since the\nreform and opening-up · Through relentless\nefforts, the researchers successfully overcame\na series of technical challenges and\ndeveloped the Beidou system which has\nultimately achieved global coverage and\nhigh-precision positioning, making China\none Of the few countries in the world with\nan independent global satellite navigation\nsystem · The Beidou system has now been\nwidely applied to various fields, including\ntransportation, disaster relief, weather\nforecasting, and public safety · Today, the\nBeidou system has gained worldwide\nrecognition and begins\ntO provide\nhigh-quality services for an increasing\nnumber Of countnes and regions\n卫星轨道 satellite orbit\n空间信号 space signal\n全球定位 global positioning\n数据分析 data analysis\n通信技术 communication technology\n遥感技术 remote sensing technology\nTranslation\n参考译文与难点注释\n第一句可处理为主系表结构 ， 将 “ 成功研制 \" 译为主语 ， “ 北斗卫\n星导航系统的 \" 为主语的修饰成分 ， 可翻译为 of 介词短语作后\n置定语 ； 将 “ 一项重大科技成就 \" 译为表语 ， “ 中国自改革开放以\n来取得的 ” 译为定语从句 ， 修饰 “ 科技成就 ”\n2 · 第二句中不考虑状语 “ 经过不懈努力 \" ， 句子主干部分包含 3 个\n攻克了一系列技术难题 ” ，\n分句 ： 第一个分句为 “ 研发人员\n第二个分句为 “ 北斗系统最终实现了 “ “ 定位 \" ， 第三个分句为\n“ 使中国成为 · · · · · · 之一 ” 。 前两个分句主语不同 ， 但如果单独成\n句的话 ， 似乎又无法体现出两个分句之间的语义联系 ， 因此翻\n译时我们可以将第二个分句的主语转换成第一个分句的主语\n“ 研究人员 ” ， 将两个分句合并 ， 即 “ 研究人员攻克了一系列技术\n难题 ， 开发了北斗系统 · “ · ” ， 将 “ 最终实现了 “ “ 定位 ” 处理为\n“ 北斗系统 \" 的定语从句 ， 从而确保两个分句之间的语义衔接顺\n畅 。 第三个分句为前面的成果带来的结果 ， 可处理为现在分词\n短语作结果状语 。 “ 经过不懈努力 ” 可译为 through relentless\nefforts ， 作方式状语 ； “ 最终实现 ” 可译为 ultimately achieve 或\nfinally achieve 。 结果状语部分 ， “ 使中国成为世界上少数几\n个 · · · · “ 国家之一 ” 可译为 malqng Ch1na one of the few countries\nin the world ； “ 独立拥有全球卫星导航系统的 \" 可译为定语从句\nthat own an independent glObal satellite navigation system ， 也\n可以像参考译文那样翻译为 with 结构 。\n3 · 第三句句子主干为 “ 北斗系统已广泛应用于 “ “ 诸多领域 ” ，\n“ 交通运输 、 灾害救援 、 天气预报 、 公共安全等 ” 作为列举成分 ，\n可用 including 或 such as 引出 。 句子主干应使用现在完成时 。\n4 · 第四句可分为两个并列分句 ， 翻译时用 and 连接 。 “ 在国际上\n得到广泛认可 ” 可以直译为 receive wide recognition\ninternationally ， 也可以意译为 “ 得到世界范围内的认可 \" ， 即\ngain worldwide recognition ； “ 为 · · · · 提供优质服务 ” 可译为\nprovide high-quality services for. ． ． ” ； “ 越来越多的 ” 可译为\nan lncreasmg number Of 或 more and more 。"
+        }
+      ]
+    }
+  ]
+}

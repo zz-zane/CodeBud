@@ -1,0 +1,468 @@
+{
+  "lessonId": "java-stage2-01",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s2-cap-guard-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们给数据盒开了个**进货口**，规矩是：**一次最多只添 3 条**。\n\n家当还是那两样（名字、账上的数据数），全盖上盖子，只开小窗进出。\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数，每一笔都从进货口递进去。进货口收到一笔时：\n\n- 这笔**超过 3** → 不收，只印一句 `一次最多只添 3 条`，账上**一点都不动**\n- 否则 → 把这一笔**添到账上**（在原来那个数上加上去，不是改写）\n\n所有笔过完，最后印一行：**名字**、` 账上 `、**账上的数**、` 条数据`，拼起来。\n\n比如程序的输入是\n\n3\n1\n9\n3\n\n程序就要返回\n\n一次最多只添 3 条\n张三 账上 4 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        if (more > 3) {\n            System.out.println(\"一次最多只添 3 条\");\n            return;\n        }\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"张三\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "一次最多只添 3 条\n张三 账上 2 条数据",
+      "stdin": "3\n9\n1\n1\n",
+      "explanation": "这题和上一题只差**名称上的那句话**，可要看清两处不同。\n\n**不同之一：名称拦的是「太大」的一笔。** 上一题拦负数，这一题拦超过 3 的数 —— 名称的形状一模一样，只是眼色反了个方向：`if (more > 3)`。\n\n**不同之二：这一笔是「添上去」不是「改写」。** 记账那行写的是 `fish = fish + more;`：先读账上原来的数，加上这一笔，再写回去。写 `fish = more;` 就变成「账上只剩最后一笔」，前面收过的全丢了 —— 而且程序**一次不吭**，只有数对不上。\n\n（顺带说一句这题的判分输入：每一组里都**必定**有一笔超过 3 的、也**必定**有两笔收得下的 —— 所以「拦坏账」和「算总账」这两件事在**每一道**里都真被考到，漏了哪一件都会露馅。）\n\n还有那个 `return;` 别忘了：名称印完就收工，账上一个数都不动。\n\n`main` 那边和上一题同款：读第一个数当笔数，圈子里一趟递一笔，最后拼一行印出来。\n\n顺手记：**「拦坏账」和「算总账」是两件事，可以写在同一个方法里**，但顺序别弄反 —— 先看眼色、再动账我们。",
+      "templateId": "java-s2-cap-guard",
+      "params": {
+        "name": "张三",
+        "cap": "3",
+        "s1": "1",
+        "s2": "1",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "984b51531e743a5c"
+      }
+    },
+    {
+      "id": "bank-java-s2-cap-guard-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们给数据盒开了个**进货口**，规矩是：**一次最多只添 5 条**。\n\n家当还是那两样（名字、账上的数据数），全盖上盖子，只开小窗进出。\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数，每一笔都从进货口递进去。进货口收到一笔时：\n\n- 这笔**超过 5** → 不收，只印一句 `一次最多只添 5 条`，账上**一点都不动**\n- 否则 → 把这一笔**添到账上**（在原来那个数上加上去，不是改写）\n\n所有笔过完，最后印一行：**名字**、` 账上 `、**账上的数**、` 条数据`，拼起来。\n\n比如程序的输入是\n\n3\n2\n9\n3\n\n程序就要返回\n\n一次最多只添 5 条\n张三 账上 5 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        if (more > 5) {\n            System.out.println(\"一次最多只添 5 条\");\n            return;\n        }\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"张三\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "一次最多只添 5 条\n张三 账上 3 条数据",
+      "stdin": "3\n9\n1\n2\n",
+      "explanation": "这题和上一题只差**名称上的那句话**，可要看清两处不同。\n\n**不同之一：名称拦的是「太大」的一笔。** 上一题拦负数，这一题拦超过 5 的数 —— 名称的形状一模一样，只是眼色反了个方向：`if (more > 5)`。\n\n**不同之二：这一笔是「添上去」不是「改写」。** 记账那行写的是 `fish = fish + more;`：先读账上原来的数，加上这一笔，再写回去。写 `fish = more;` 就变成「账上只剩最后一笔」，前面收过的全丢了 —— 而且程序**一次不吭**，只有数对不上。\n\n（顺带说一句这题的判分输入：每一组里都**必定**有一笔超过 5 的、也**必定**有两笔收得下的 —— 所以「拦坏账」和「算总账」这两件事在**每一道**里都真被考到，漏了哪一件都会露馅。）\n\n还有那个 `return;` 别忘了：名称印完就收工，账上一个数都不动。\n\n`main` 那边和上一题同款：读第一个数当笔数，圈子里一趟递一笔，最后拼一行印出来。\n\n顺手记：**「拦坏账」和「算总账」是两件事，可以写在同一个方法里**，但顺序别弄反 —— 先看眼色、再动账我们。",
+      "templateId": "java-s2-cap-guard",
+      "params": {
+        "name": "张三",
+        "cap": "5",
+        "s1": "1",
+        "s2": "2",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "a5b84da75094e31c"
+      }
+    },
+    {
+      "id": "bank-java-s2-cap-guard-014",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们给数据盒开了个**进货口**，规矩是：**一次最多只添 8 条**。\n\n家当还是那两样（名字、账上的数据数），全盖上盖子，只开小窗进出。\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数，每一笔都从进货口递进去。进货口收到一笔时：\n\n- 这笔**超过 8** → 不收，只印一句 `一次最多只添 8 条`，账上**一点都不动**\n- 否则 → 把这一笔**添到账上**（在原来那个数上加上去，不是改写）\n\n所有笔过完，最后印一行：**名字**、` 账上 `、**账上的数**、` 条数据`，拼起来。\n\n比如程序的输入是\n\n3\n3\n9\n3\n\n程序就要返回\n\n一次最多只添 8 条\n张三 账上 6 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        if (more > 8) {\n            System.out.println(\"一次最多只添 8 条\");\n            return;\n        }\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"张三\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "一次最多只添 8 条\n张三 账上 4 条数据",
+      "stdin": "3\n9\n1\n3\n",
+      "explanation": "这题和上一题只差**名称上的那句话**，可要看清两处不同。\n\n**不同之一：名称拦的是「太大」的一笔。** 上一题拦负数，这一题拦超过 8 的数 —— 名称的形状一模一样，只是眼色反了个方向：`if (more > 8)`。\n\n**不同之二：这一笔是「添上去」不是「改写」。** 记账那行写的是 `fish = fish + more;`：先读账上原来的数，加上这一笔，再写回去。写 `fish = more;` 就变成「账上只剩最后一笔」，前面收过的全丢了 —— 而且程序**一次不吭**，只有数对不上。\n\n（顺带说一句这题的判分输入：每一组里都**必定**有一笔超过 8 的、也**必定**有两笔收得下的 —— 所以「拦坏账」和「算总账」这两件事在**每一道**里都真被考到，漏了哪一件都会露馅。）\n\n还有那个 `return;` 别忘了：名称印完就收工，账上一个数都不动。\n\n`main` 那边和上一题同款：读第一个数当笔数，圈子里一趟递一笔，最后拼一行印出来。\n\n顺手记：**「拦坏账」和「算总账」是两件事，可以写在同一个方法里**，但顺序别弄反 —— 先看眼色、再动账我们。",
+      "templateId": "java-s2-cap-guard",
+      "params": {
+        "name": "张三",
+        "cap": "8",
+        "s1": "1",
+        "s2": "3",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "0f4f7bf399f091a7"
+      }
+    },
+    {
+      "id": "bank-java-s2-cap-guard-021",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们给数据盒开了个**进货口**，规矩是：**一次最多只添 3 条**。\n\n家当还是那两样（名字、账上的数据数），全盖上盖子，只开小窗进出。\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数，每一笔都从进货口递进去。进货口收到一笔时：\n\n- 这笔**超过 3** → 不收，只印一句 `一次最多只添 3 条`，账上**一点都不动**\n- 否则 → 把这一笔**添到账上**（在原来那个数上加上去，不是改写）\n\n所有笔过完，最后印一行：**名字**、` 账上 `、**账上的数**、` 条数据`，拼起来。\n\n比如程序的输入是\n\n3\n1\n9\n3\n\n程序就要返回\n\n一次最多只添 3 条\n李四 账上 4 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        if (more > 3) {\n            System.out.println(\"一次最多只添 3 条\");\n            return;\n        }\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"李四\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "一次最多只添 3 条\n李四 账上 3 条数据",
+      "stdin": "3\n9\n2\n1\n",
+      "explanation": "这题和上一题只差**名称上的那句话**，可要看清两处不同。\n\n**不同之一：名称拦的是「太大」的一笔。** 上一题拦负数，这一题拦超过 3 的数 —— 名称的形状一模一样，只是眼色反了个方向：`if (more > 3)`。\n\n**不同之二：这一笔是「添上去」不是「改写」。** 记账那行写的是 `fish = fish + more;`：先读账上原来的数，加上这一笔，再写回去。写 `fish = more;` 就变成「账上只剩最后一笔」，前面收过的全丢了 —— 而且程序**一次不吭**，只有数对不上。\n\n（顺带说一句这题的判分输入：每一组里都**必定**有一笔超过 3 的、也**必定**有两笔收得下的 —— 所以「拦坏账」和「算总账」这两件事在**每一道**里都真被考到，漏了哪一件都会露馅。）\n\n还有那个 `return;` 别忘了：名称印完就收工，账上一个数都不动。\n\n`main` 那边和上一题同款：读第一个数当笔数，圈子里一趟递一笔，最后拼一行印出来。\n\n顺手记：**「拦坏账」和「算总账」是两件事，可以写在同一个方法里**，但顺序别弄反 —— 先看眼色、再动账我们。",
+      "templateId": "java-s2-cap-guard",
+      "params": {
+        "name": "李四",
+        "cap": "3",
+        "s1": "2",
+        "s2": "1",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "af06c64125fce509"
+      }
+    },
+    {
+      "id": "bank-java-s2-cap-guard-028",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们给数据盒开了个**进货口**，规矩是：**一次最多只添 5 条**。\n\n家当还是那两样（名字、账上的数据数），全盖上盖子，只开小窗进出。\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数，每一笔都从进货口递进去。进货口收到一笔时：\n\n- 这笔**超过 5** → 不收，只印一句 `一次最多只添 5 条`，账上**一点都不动**\n- 否则 → 把这一笔**添到账上**（在原来那个数上加上去，不是改写）\n\n所有笔过完，最后印一行：**名字**、` 账上 `、**账上的数**、` 条数据`，拼起来。\n\n比如程序的输入是\n\n3\n2\n9\n3\n\n程序就要返回\n\n一次最多只添 5 条\n李四 账上 5 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        if (more > 5) {\n            System.out.println(\"一次最多只添 5 条\");\n            return;\n        }\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"李四\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "一次最多只添 5 条\n李四 账上 4 条数据",
+      "stdin": "3\n9\n2\n2\n",
+      "explanation": "这题和上一题只差**名称上的那句话**，可要看清两处不同。\n\n**不同之一：名称拦的是「太大」的一笔。** 上一题拦负数，这一题拦超过 5 的数 —— 名称的形状一模一样，只是眼色反了个方向：`if (more > 5)`。\n\n**不同之二：这一笔是「添上去」不是「改写」。** 记账那行写的是 `fish = fish + more;`：先读账上原来的数，加上这一笔，再写回去。写 `fish = more;` 就变成「账上只剩最后一笔」，前面收过的全丢了 —— 而且程序**一次不吭**，只有数对不上。\n\n（顺带说一句这题的判分输入：每一组里都**必定**有一笔超过 5 的、也**必定**有两笔收得下的 —— 所以「拦坏账」和「算总账」这两件事在**每一道**里都真被考到，漏了哪一件都会露馅。）\n\n还有那个 `return;` 别忘了：名称印完就收工，账上一个数都不动。\n\n`main` 那边和上一题同款：读第一个数当笔数，圈子里一趟递一笔，最后拼一行印出来。\n\n顺手记：**「拦坏账」和「算总账」是两件事，可以写在同一个方法里**，但顺序别弄反 —— 先看眼色、再动账我们。",
+      "templateId": "java-s2-cap-guard",
+      "params": {
+        "name": "李四",
+        "cap": "5",
+        "s1": "2",
+        "s2": "2",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "9a763418585dc7bb"
+      }
+    },
+    {
+      "id": "bank-java-s2-cap-guard-035",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们给数据盒开了个**进货口**，规矩是：**一次最多只添 8 条**。\n\n家当还是那两样（名字、账上的数据数），全盖上盖子，只开小窗进出。\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数，每一笔都从进货口递进去。进货口收到一笔时：\n\n- 这笔**超过 8** → 不收，只印一句 `一次最多只添 8 条`，账上**一点都不动**\n- 否则 → 把这一笔**添到账上**（在原来那个数上加上去，不是改写）\n\n所有笔过完，最后印一行：**名字**、` 账上 `、**账上的数**、` 条数据`，拼起来。\n\n比如程序的输入是\n\n3\n3\n9\n3\n\n程序就要返回\n\n一次最多只添 8 条\n李四 账上 6 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        if (more > 8) {\n            System.out.println(\"一次最多只添 8 条\");\n            return;\n        }\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"李四\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "一次最多只添 8 条\n李四 账上 5 条数据",
+      "stdin": "3\n9\n2\n3\n",
+      "explanation": "这题和上一题只差**名称上的那句话**，可要看清两处不同。\n\n**不同之一：名称拦的是「太大」的一笔。** 上一题拦负数，这一题拦超过 8 的数 —— 名称的形状一模一样，只是眼色反了个方向：`if (more > 8)`。\n\n**不同之二：这一笔是「添上去」不是「改写」。** 记账那行写的是 `fish = fish + more;`：先读账上原来的数，加上这一笔，再写回去。写 `fish = more;` 就变成「账上只剩最后一笔」，前面收过的全丢了 —— 而且程序**一次不吭**，只有数对不上。\n\n（顺带说一句这题的判分输入：每一组里都**必定**有一笔超过 8 的、也**必定**有两笔收得下的 —— 所以「拦坏账」和「算总账」这两件事在**每一道**里都真被考到，漏了哪一件都会露馅。）\n\n还有那个 `return;` 别忘了：名称印完就收工，账上一个数都不动。\n\n`main` 那边和上一题同款：读第一个数当笔数，圈子里一趟递一笔，最后拼一行印出来。\n\n顺手记：**「拦坏账」和「算总账」是两件事，可以写在同一个方法里**，但顺序别弄反 —— 先看眼色、再动账我们。",
+      "templateId": "java-s2-cap-guard",
+      "params": {
+        "name": "李四",
+        "cap": "8",
+        "s1": "2",
+        "s2": "3",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "16b3bc54caabc9cf"
+      }
+    },
+    {
+      "id": "bank-java-s2-guarded-ledger-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要一张**带盖子的数据盒类定义**。家当只留两样：名字、账上的数据数。\n\n盖子扣好，只开两扇小窗：一扇读名字，一扇读账上的数。**另有一扇写的小窗**，规矩写死在窗口：\n\n- 递进来的数**小于 0** → 不收，只印一句 `数据数不能是负的`，账本上**一个数都不许动**\n- 别的数 → 照收\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数。每一笔都从写的那扇小窗递进去。\n\n所有笔都过完，最后印一行账：**名字**、` 有 `、**账上最后记着的那个数**、` 条数据`，拼起来。\n\n家当一定要**盖上盖子**，里面那两个数只许小窗进、只许小窗出。\n\n比如程序的输入是\n\n3\n-4\n-2\n-2\n\n程序就要返回\n\n数据数不能是负的\n数据数不能是负的\n数据数不能是负的\n张三 有 0 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        if (fish < 0) {\n            System.out.println(\"数据数不能是负的\");\n            return;\n        }\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"张三\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.setFish(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "数据数不能是负的\n张三 有 9 条数据",
+      "stdin": "3\n1\n-1\n9\n",
+      "explanation": "这题考的就是本课那句话：**外面碰不到里面的数，一切走小窗**。\n\n类定义分三段：\n\n1. **家当**：`private String name;` 和 `private int fish;` —— 两个都盖着盖子。盖子的意思是「只有这张类定义里的方法伸得进手」，`main` 在外面，它碰不到。\n2. **初始化那一手**：把名字记下来，账上的数自己不写，天然就是 0。\n3. **三扇小窗**：读名字的 `getName`、读账的 `getFish`、记账的 `setFish`。前两扇只管把数递出去，第三扇才是关键 —— 它既是「入口」也是「关口」。\n\n`setFish` 里那三步是本题的关节：\n\n- `if (fish < 0)` 先看一眼递进来的数；\n- 撞上负数就印名称、然后 `return;` —— **这个 `return` 让这条方法当场收工**，下面那行记账的话根本轮不到执行；少写它，名称印了、坏账照样进来，等于白立名称；\n- 剩下的数才轮到 `this.fish = fish;`。\n\n`main` 那边就三件事：先读第一个数当笔数，再让圈子跑那么多趟、每趟读一个数从小窗递进去，最后把名字和账拼起来印一行。\n\n顺手记：**账本上最后记着的是「最后一笔收下的数」** —— 这扇小窗是「改写成新的数」，不是往上面添。想添的话，得在方法里写 `fish = fish + n;` 那样的话。",
+      "templateId": "java-s2-guarded-ledger",
+      "params": {
+        "name": "张三",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "6bacc39007ead53a"
+      }
+    },
+    {
+      "id": "bank-java-s2-guarded-ledger-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要一张**带盖子的数据盒类定义**。家当只留两样：名字、账上的数据数。\n\n盖子扣好，只开两扇小窗：一扇读名字，一扇读账上的数。**另有一扇写的小窗**，规矩写死在窗口：\n\n- 递进来的数**小于 0** → 不收，只印一句 `数据数不能是负的`，账本上**一个数都不许动**\n- 别的数 → 照收\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数。每一笔都从写的那扇小窗递进去。\n\n所有笔都过完，最后印一行账：**名字**、` 有 `、**账上最后记着的那个数**、` 条数据`，拼起来。\n\n家当一定要**盖上盖子**，里面那两个数只许小窗进、只许小窗出。\n\n比如程序的输入是\n\n4\n-2\n4\n7\n3\n\n程序就要返回\n\n数据数不能是负的\n张三 有 3 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        if (fish < 0) {\n            System.out.println(\"数据数不能是负的\");\n            return;\n        }\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"张三\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.setFish(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "数据数不能是负的\n张三 有 9 条数据",
+      "stdin": "4\n7\n-4\n0\n9\n",
+      "explanation": "这题考的就是本课那句话：**外面碰不到里面的数，一切走小窗**。\n\n类定义分三段：\n\n1. **家当**：`private String name;` 和 `private int fish;` —— 两个都盖着盖子。盖子的意思是「只有这张类定义里的方法伸得进手」，`main` 在外面，它碰不到。\n2. **初始化那一手**：把名字记下来，账上的数自己不写，天然就是 0。\n3. **三扇小窗**：读名字的 `getName`、读账的 `getFish`、记账的 `setFish`。前两扇只管把数递出去，第三扇才是关键 —— 它既是「入口」也是「关口」。\n\n`setFish` 里那三步是本题的关节：\n\n- `if (fish < 0)` 先看一眼递进来的数；\n- 撞上负数就印名称、然后 `return;` —— **这个 `return` 让这条方法当场收工**，下面那行记账的话根本轮不到执行；少写它，名称印了、坏账照样进来，等于白立名称；\n- 剩下的数才轮到 `this.fish = fish;`。\n\n`main` 那边就三件事：先读第一个数当笔数，再让圈子跑那么多趟、每趟读一个数从小窗递进去，最后把名字和账拼起来印一行。\n\n顺手记：**账本上最后记着的是「最后一笔收下的数」** —— 这扇小窗是「改写成新的数」，不是往上面添。想添的话，得在方法里写 `fish = fish + n;` 那样的话。",
+      "templateId": "java-s2-guarded-ledger",
+      "params": {
+        "name": "张三",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "ed3b8bdaa10a1a47"
+      }
+    },
+    {
+      "id": "bank-java-s2-guarded-ledger-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要一张**带盖子的数据盒类定义**。家当只留两样：名字、账上的数据数。\n\n盖子扣好，只开两扇小窗：一扇读名字，一扇读账上的数。**另有一扇写的小窗**，规矩写死在窗口：\n\n- 递进来的数**小于 0** → 不收，只印一句 `数据数不能是负的`，账本上**一个数都不许动**\n- 别的数 → 照收\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数。每一笔都从写的那扇小窗递进去。\n\n所有笔都过完，最后印一行账：**名字**、` 有 `、**账上最后记着的那个数**、` 条数据`，拼起来。\n\n家当一定要**盖上盖子**，里面那两个数只许小窗进、只许小窗出。\n\n比如程序的输入是\n\n5\n-1\n8\n0\n1\n-2\n\n程序就要返回\n\n数据数不能是负的\n数据数不能是负的\n张三 有 1 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        if (fish < 0) {\n            System.out.println(\"数据数不能是负的\");\n            return;\n        }\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"张三\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.setFish(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "数据数不能是负的\n数据数不能是负的\n张三 有 2 条数据",
+      "stdin": "5\n7\n-2\n-3\n2\n2\n",
+      "explanation": "这题考的就是本课那句话：**外面碰不到里面的数，一切走小窗**。\n\n类定义分三段：\n\n1. **家当**：`private String name;` 和 `private int fish;` —— 两个都盖着盖子。盖子的意思是「只有这张类定义里的方法伸得进手」，`main` 在外面，它碰不到。\n2. **初始化那一手**：把名字记下来，账上的数自己不写，天然就是 0。\n3. **三扇小窗**：读名字的 `getName`、读账的 `getFish`、记账的 `setFish`。前两扇只管把数递出去，第三扇才是关键 —— 它既是「入口」也是「关口」。\n\n`setFish` 里那三步是本题的关节：\n\n- `if (fish < 0)` 先看一眼递进来的数；\n- 撞上负数就印名称、然后 `return;` —— **这个 `return` 让这条方法当场收工**，下面那行记账的话根本轮不到执行；少写它，名称印了、坏账照样进来，等于白立名称；\n- 剩下的数才轮到 `this.fish = fish;`。\n\n`main` 那边就三件事：先读第一个数当笔数，再让圈子跑那么多趟、每趟读一个数从小窗递进去，最后把名字和账拼起来印一行。\n\n顺手记：**账本上最后记着的是「最后一笔收下的数」** —— 这扇小窗是「改写成新的数」，不是往上面添。想添的话，得在方法里写 `fish = fish + n;` 那样的话。",
+      "templateId": "java-s2-guarded-ledger",
+      "params": {
+        "name": "张三",
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "e838b31eeb8792ff"
+      }
+    },
+    {
+      "id": "bank-java-s2-guarded-ledger-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要一张**带盖子的数据盒类定义**。家当只留两样：名字、账上的数据数。\n\n盖子扣好，只开两扇小窗：一扇读名字，一扇读账上的数。**另有一扇写的小窗**，规矩写死在窗口：\n\n- 递进来的数**小于 0** → 不收，只印一句 `数据数不能是负的`，账本上**一个数都不许动**\n- 别的数 → 照收\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数。每一笔都从写的那扇小窗递进去。\n\n所有笔都过完，最后印一行账：**名字**、` 有 `、**账上最后记着的那个数**、` 条数据`，拼起来。\n\n家当一定要**盖上盖子**，里面那两个数只许小窗进、只许小窗出。\n\n比如程序的输入是\n\n3\n2\n5\n5\n\n程序就要返回\n\n李四 有 5 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        if (fish < 0) {\n            System.out.println(\"数据数不能是负的\");\n            return;\n        }\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"李四\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.setFish(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "李四 有 4 条数据",
+      "stdin": "3\n9\n6\n4\n",
+      "explanation": "这题考的就是本课那句话：**外面碰不到里面的数，一切走小窗**。\n\n类定义分三段：\n\n1. **家当**：`private String name;` 和 `private int fish;` —— 两个都盖着盖子。盖子的意思是「只有这张类定义里的方法伸得进手」，`main` 在外面，它碰不到。\n2. **初始化那一手**：把名字记下来，账上的数自己不写，天然就是 0。\n3. **三扇小窗**：读名字的 `getName`、读账的 `getFish`、记账的 `setFish`。前两扇只管把数递出去，第三扇才是关键 —— 它既是「入口」也是「关口」。\n\n`setFish` 里那三步是本题的关节：\n\n- `if (fish < 0)` 先看一眼递进来的数；\n- 撞上负数就印名称、然后 `return;` —— **这个 `return` 让这条方法当场收工**，下面那行记账的话根本轮不到执行；少写它，名称印了、坏账照样进来，等于白立名称；\n- 剩下的数才轮到 `this.fish = fish;`。\n\n`main` 那边就三件事：先读第一个数当笔数，再让圈子跑那么多趟、每趟读一个数从小窗递进去，最后把名字和账拼起来印一行。\n\n顺手记：**账本上最后记着的是「最后一笔收下的数」** —— 这扇小窗是「改写成新的数」，不是往上面添。想添的话，得在方法里写 `fish = fish + n;` 那样的话。",
+      "templateId": "java-s2-guarded-ledger",
+      "params": {
+        "name": "李四",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "f46897b6cb7e9abe"
+      }
+    },
+    {
+      "id": "bank-java-s2-guarded-ledger-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要一张**带盖子的数据盒类定义**。家当只留两样：名字、账上的数据数。\n\n盖子扣好，只开两扇小窗：一扇读名字，一扇读账上的数。**另有一扇写的小窗**，规矩写死在窗口：\n\n- 递进来的数**小于 0** → 不收，只印一句 `数据数不能是负的`，账本上**一个数都不许动**\n- 别的数 → 照收\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数。每一笔都从写的那扇小窗递进去。\n\n所有笔都过完，最后印一行账：**名字**、` 有 `、**账上最后记着的那个数**、` 条数据`，拼起来。\n\n家当一定要**盖上盖子**，里面那两个数只许小窗进、只许小窗出。\n\n比如程序的输入是\n\n4\n9\n6\n9\n-1\n\n程序就要返回\n\n数据数不能是负的\n李四 有 9 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        if (fish < 0) {\n            System.out.println(\"数据数不能是负的\");\n            return;\n        }\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"李四\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.setFish(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "李四 有 1 条数据",
+      "stdin": "4\n5\n8\n5\n1\n",
+      "explanation": "这题考的就是本课那句话：**外面碰不到里面的数，一切走小窗**。\n\n类定义分三段：\n\n1. **家当**：`private String name;` 和 `private int fish;` —— 两个都盖着盖子。盖子的意思是「只有这张类定义里的方法伸得进手」，`main` 在外面，它碰不到。\n2. **初始化那一手**：把名字记下来，账上的数自己不写，天然就是 0。\n3. **三扇小窗**：读名字的 `getName`、读账的 `getFish`、记账的 `setFish`。前两扇只管把数递出去，第三扇才是关键 —— 它既是「入口」也是「关口」。\n\n`setFish` 里那三步是本题的关节：\n\n- `if (fish < 0)` 先看一眼递进来的数；\n- 撞上负数就印名称、然后 `return;` —— **这个 `return` 让这条方法当场收工**，下面那行记账的话根本轮不到执行；少写它，名称印了、坏账照样进来，等于白立名称；\n- 剩下的数才轮到 `this.fish = fish;`。\n\n`main` 那边就三件事：先读第一个数当笔数，再让圈子跑那么多趟、每趟读一个数从小窗递进去，最后把名字和账拼起来印一行。\n\n顺手记：**账本上最后记着的是「最后一笔收下的数」** —— 这扇小窗是「改写成新的数」，不是往上面添。想添的话，得在方法里写 `fish = fish + n;` 那样的话。",
+      "templateId": "java-s2-guarded-ledger",
+      "params": {
+        "name": "李四",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "33c15d3e83b15f72"
+      }
+    },
+    {
+      "id": "bank-java-s2-guarded-ledger-005",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要一张**带盖子的数据盒类定义**。家当只留两样：名字、账上的数据数。\n\n盖子扣好，只开两扇小窗：一扇读名字，一扇读账上的数。**另有一扇写的小窗**，规矩写死在窗口：\n\n- 递进来的数**小于 0** → 不收，只印一句 `数据数不能是负的`，账本上**一个数都不许动**\n- 别的数 → 照收\n\n程序输入中：**第一个数是「后面还有几笔」**，接着正好那么多行，一行一个数。每一笔都从写的那扇小窗递进去。\n\n所有笔都过完，最后印一行账：**名字**、` 有 `、**账上最后记着的那个数**、` 条数据`，拼起来。\n\n家当一定要**盖上盖子**，里面那两个数只许小窗进、只许小窗出。\n\n比如程序的输入是\n\n5\n0\n2\n6\n-4\n1\n\n程序就要返回\n\n数据数不能是负的\n李四 有 1 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        if (fish < 0) {\n            System.out.println(\"数据数不能是负的\");\n            return;\n        }\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"李四\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.setFish(sc.nextInt());\n        }\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "数据数不能是负的\n数据数不能是负的\n李四 有 7 条数据",
+      "stdin": "5\n-3\n8\n8\n7\n-2\n",
+      "explanation": "这题考的就是本课那句话：**外面碰不到里面的数，一切走小窗**。\n\n类定义分三段：\n\n1. **家当**：`private String name;` 和 `private int fish;` —— 两个都盖着盖子。盖子的意思是「只有这张类定义里的方法伸得进手」，`main` 在外面，它碰不到。\n2. **初始化那一手**：把名字记下来，账上的数自己不写，天然就是 0。\n3. **三扇小窗**：读名字的 `getName`、读账的 `getFish`、记账的 `setFish`。前两扇只管把数递出去，第三扇才是关键 —— 它既是「入口」也是「关口」。\n\n`setFish` 里那三步是本题的关节：\n\n- `if (fish < 0)` 先看一眼递进来的数；\n- 撞上负数就印名称、然后 `return;` —— **这个 `return` 让这条方法当场收工**，下面那行记账的话根本轮不到执行；少写它，名称印了、坏账照样进来，等于白立名称；\n- 剩下的数才轮到 `this.fish = fish;`。\n\n`main` 那边就三件事：先读第一个数当笔数，再让圈子跑那么多趟、每趟读一个数从小窗递进去，最后把名字和账拼起来印一行。\n\n顺手记：**账本上最后记着的是「最后一笔收下的数」** —— 这扇小窗是「改写成新的数」，不是往上面添。想添的话，得在方法里写 `fish = fish + n;` 那样的话。",
+      "templateId": "java-s2-guarded-ledger",
+      "params": {
+        "name": "李四",
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "fb862ddd393d899b"
+      }
+    },
+    {
+      "id": "bank-java-s2-private-field-touch-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们在 `main` 里伸手**直接去改**对象的数据数，编译器当场把变量拍下来 —— 程序**一趟都没跑起来**。\n\n请你帮我们把它改好。改好之后，程序该印出这一行：\n\n```text\n张三 有 3 条数据\n```\n\n类定义上那些家当和方法我们都写好了，缺的只是**外面那一步走错了门**。",
+      "brokenCode": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.fish = 3;\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "referenceFix": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.setFish(3);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "张三 有 3 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话念起来是：**「`fish` 是 `Cat` 自己扣上盖子的家当，外面的人不许直接碰。」**\n\n有一件事要记牢：这颗钉子是**编译的时候**就钉下来的 —— 你会先看到那句原话，然后才发现程序压根没跑起来，和「跑到一半才翻车」完全不一样。\n\n`private` 盖的是「**出了这张类定义谁都伸不进手**」：类定义里的方法、初始化那一手伸手拿它照样合法。可 `main` 写在类定义**外面**，它伸手就是越界。\n\n正路是走我们留的那扇小窗 —— `c.setFish(3);`。小窗的身子写在类定义里面，所以它伸得进手；外面只管把数递到窗口。\n\n（顺一句：这四档盖子没有「更安全」的默认值 —— 什么都不写不是 `private`，是「同一个外卖箱里的邻居也能伸手」。）",
+      "templateId": "java-s2-private-field-touch",
+      "params": {
+        "name": "张三",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "8e94491c1aace59f"
+      }
+    },
+    {
+      "id": "bank-java-s2-private-field-touch-007",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们在 `main` 里伸手**直接去改**对象的数据数，编译器当场把变量拍下来 —— 程序**一趟都没跑起来**。\n\n请你帮我们把它改好。改好之后，程序该印出这一行：\n\n```text\n李四 有 6 条数据\n```\n\n类定义上那些家当和方法我们都写好了，缺的只是**外面那一步走错了门**。",
+      "brokenCode": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.fish = 6;\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "referenceFix": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.setFish(6);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "李四 有 6 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话念起来是：**「`fish` 是 `Cat` 自己扣上盖子的家当，外面的人不许直接碰。」**\n\n有一件事要记牢：这颗钉子是**编译的时候**就钉下来的 —— 你会先看到那句原话，然后才发现程序压根没跑起来，和「跑到一半才翻车」完全不一样。\n\n`private` 盖的是「**出了这张类定义谁都伸不进手**」：类定义里的方法、初始化那一手伸手拿它照样合法。可 `main` 写在类定义**外面**，它伸手就是越界。\n\n正路是走我们留的那扇小窗 —— `c.setFish(6);`。小窗的身子写在类定义里面，所以它伸得进手；外面只管把数递到窗口。\n\n（顺一句：这四档盖子没有「更安全」的默认值 —— 什么都不写不是 `private`，是「同一个外卖箱里的邻居也能伸手」。）",
+      "templateId": "java-s2-private-field-touch",
+      "params": {
+        "name": "李四",
+        "n": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "028f782a2e1eebd5"
+      }
+    },
+    {
+      "id": "bank-java-s2-private-method-call-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这个对象有一条**给自己添数据**的方法、和一扇读数据数的小窗。外面调用了两次那条方法，想把 2 条和 3 条都添进去 —— 可编译器又是那句话：碰不得，程序**一趟都没跑起来**。\n\n请你帮我们把它改好。改好之后，程序该印出这一行：`张三 有 N 条数据` —— 那个 N 就是外面那两次递进去的数**加起来**。\n\n类定义里那条方法本身干的事**一点没错**，别去改它的身子。",
+      "brokenCode": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    private void feed(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.feed(2);\n        c.feed(3);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "referenceFix": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.feed(2);\n        c.feed(3);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "张三 有 5 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`feed(int) has private access in Cat`**。\n\n这次它还把**每一处伸手**都点了名：外面调用了两次，它就报两条一模一样的原话，指着那两行各说一遍。以后看到同一条原话连着出现好几遍，就知道是「同一个盖子被伸了好几个手」，不是好几个毛病。\n\n症结在于：**盖子是扣在方法上的，不只是家当上。** `private void feed(int n)` 的意思是「这条方法只有这张类定义自己调用得动」—— 可我们是在 `main` 里引用的，`main` 在类定义外面。\n\n改法就是把那一个词换成 `public`：这条方法本来就是留给外面用的入口，盖着盖子等于把门砌死了。\n\n顺手记：家当盖盖子、方法分两种 —— **只给里面用的盖 `private`，留给外面的开 `public`**。这次错在把一扇本来要开给外面的门也盖上了。",
+      "templateId": "java-s2-private-method-call",
+      "params": {
+        "name": "张三",
+        "a": 2,
+        "b": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "cabd6a4a5f4a8f78"
+      }
+    },
+    {
+      "id": "bank-java-s2-private-method-call-007",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这个对象有一条**给自己添数据**的方法、和一扇读数据数的小窗。外面调用了两次那条方法，想把 3 条和 4 条都添进去 —— 可编译器又是那句话：碰不得，程序**一趟都没跑起来**。\n\n请你帮我们把它改好。改好之后，程序该印出这一行：`李四 有 N 条数据` —— 那个 N 就是外面那两次递进去的数**加起来**。\n\n类定义里那条方法本身干的事**一点没错**，别去改它的身子。",
+      "brokenCode": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    private void feed(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.feed(3);\n        c.feed(4);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "referenceFix": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.feed(3);\n        c.feed(4);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "李四 有 7 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`feed(int) has private access in Cat`**。\n\n这次它还把**每一处伸手**都点了名：外面调用了两次，它就报两条一模一样的原话，指着那两行各说一遍。以后看到同一条原话连着出现好几遍，就知道是「同一个盖子被伸了好几个手」，不是好几个毛病。\n\n症结在于：**盖子是扣在方法上的，不只是家当上。** `private void feed(int n)` 的意思是「这条方法只有这张类定义自己调用得动」—— 可我们是在 `main` 里引用的，`main` 在类定义外面。\n\n改法就是把那一个词换成 `public`：这条方法本来就是留给外面用的入口，盖着盖子等于把门砌死了。\n\n顺手记：家当盖盖子、方法分两种 —— **只给里面用的盖 `private`，留给外面的开 `public`**。这次错在把一扇本来要开给外面的门也盖上了。",
+      "templateId": "java-s2-private-method-call",
+      "params": {
+        "name": "李四",
+        "a": 3,
+        "b": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "c312a01a1fbe2fc7"
+      }
+    },
+    {
+      "id": "bank-java-s2-readonly-window-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们这个对象的数据盒，**盖子扣得死死的**：账上那个数，外面**只能读、不能直接改**。外面想添数据，只有一个方法 —— 调用一次「添这么多」，让盒子里自己动手。\n\n要给外面开的东西：\n\n- 两扇**只读**的小窗：一扇读名字，一扇读账上的数\n- 一个方法 `feed(int more)`：把递进来的这一笔**添到账上**\n\n程序输入中：**第一个数是「后面还要喂几笔」**，接着正好那么多行，一行一个数。**每喂完一笔**，程序就印一行当下的账，念作：**名字**、` 账上 `、**账上的数**、` 条数据`。\n\n这一课的新东西是：账上那个数外头**一次都没被直接碰过**，全靠方法和两扇小窗。\n\n比如程序的输入是\n\n3\n5\n3\n7\n\n程序就要返回\n\n张三 账上 5 条数据\n张三 账上 8 条数据\n张三 账上 15 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"张三\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n            System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n        }\n    }\n}\n",
+      "expectedOutput": "张三 账上 9 条数据\n张三 账上 18 条数据\n张三 账上 23 条数据",
+      "stdin": "3\n9\n9\n5\n",
+      "explanation": "这题的重点是**「只读」和「可写」分开摆在门口**。\n\n- `getName` / `getFish` 是两扇**只读**的小窗：它们只把里面的数**递出来**给外面看一眼，外面拿到的是个副本，改不动盒子里那个真的。\n- `feed(int more)` 是唯一的写入口，而且它**不把盒子里那个数交出去**：外面只能递一个数进来，改多少、怎么改，全是盒子里自己说了算。\n\n记账那行 `fish = fish + more;` 是「先读、再加、再写回」：右边先算出新值，再写回左边。**每喂一笔就印一行**，印的是当下的账，所以印出来的数是一趟一趟往上涨的。\n\n`main` 那边三件事：读第一个数当笔数，圈子里一趟递一笔、递完就印一行。\n\n顺手记一句本课的老话：**让别人能读，不等于让别人能改** —— 这两件事在门口是两扇不同的窗户。",
+      "templateId": "java-s2-readonly-window",
+      "params": {
+        "name": "张三",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "a3cce7ac14647cd0"
+      }
+    },
+    {
+      "id": "bank-java-s2-readonly-window-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们这个对象的数据盒，**盖子扣得死死的**：账上那个数，外面**只能读、不能直接改**。外面想添数据，只有一个方法 —— 调用一次「添这么多」，让盒子里自己动手。\n\n要给外面开的东西：\n\n- 两扇**只读**的小窗：一扇读名字，一扇读账上的数\n- 一个方法 `feed(int more)`：把递进来的这一笔**添到账上**\n\n程序输入中：**第一个数是「后面还要喂几笔」**，接着正好那么多行，一行一个数。**每喂完一笔**，程序就印一行当下的账，念作：**名字**、` 账上 `、**账上的数**、` 条数据`。\n\n这一课的新东西是：账上那个数外头**一次都没被直接碰过**，全靠方法和两扇小窗。\n\n比如程序的输入是\n\n4\n5\n8\n5\n7\n\n程序就要返回\n\n张三 账上 5 条数据\n张三 账上 13 条数据\n张三 账上 18 条数据\n张三 账上 25 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"张三\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n            System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n        }\n    }\n}\n",
+      "expectedOutput": "张三 账上 4 条数据\n张三 账上 7 条数据\n张三 账上 14 条数据\n张三 账上 17 条数据",
+      "stdin": "4\n4\n3\n7\n3\n",
+      "explanation": "这题的重点是**「只读」和「可写」分开摆在门口**。\n\n- `getName` / `getFish` 是两扇**只读**的小窗：它们只把里面的数**递出来**给外面看一眼，外面拿到的是个副本，改不动盒子里那个真的。\n- `feed(int more)` 是唯一的写入口，而且它**不把盒子里那个数交出去**：外面只能递一个数进来，改多少、怎么改，全是盒子里自己说了算。\n\n记账那行 `fish = fish + more;` 是「先读、再加、再写回」：右边先算出新值，再写回左边。**每喂一笔就印一行**，印的是当下的账，所以印出来的数是一趟一趟往上涨的。\n\n`main` 那边三件事：读第一个数当笔数，圈子里一趟递一笔、递完就印一行。\n\n顺手记一句本课的老话：**让别人能读，不等于让别人能改** —— 这两件事在门口是两扇不同的窗户。",
+      "templateId": "java-s2-readonly-window",
+      "params": {
+        "name": "张三",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "edaf02ca592e2145"
+      }
+    },
+    {
+      "id": "bank-java-s2-readonly-window-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们这个对象的数据盒，**盖子扣得死死的**：账上那个数，外面**只能读、不能直接改**。外面想添数据，只有一个方法 —— 调用一次「添这么多」，让盒子里自己动手。\n\n要给外面开的东西：\n\n- 两扇**只读**的小窗：一扇读名字，一扇读账上的数\n- 一个方法 `feed(int more)`：把递进来的这一笔**添到账上**\n\n程序输入中：**第一个数是「后面还要喂几笔」**，接着正好那么多行，一行一个数。**每喂完一笔**，程序就印一行当下的账，念作：**名字**、` 账上 `、**账上的数**、` 条数据`。\n\n这一课的新东西是：账上那个数外头**一次都没被直接碰过**，全靠方法和两扇小窗。\n\n比如程序的输入是\n\n3\n4\n8\n7\n\n程序就要返回\n\n李四 账上 4 条数据\n李四 账上 12 条数据\n李四 账上 19 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"李四\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n            System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n        }\n    }\n}\n",
+      "expectedOutput": "李四 账上 6 条数据\n李四 账上 11 条数据\n李四 账上 20 条数据",
+      "stdin": "3\n6\n5\n9\n",
+      "explanation": "这题的重点是**「只读」和「可写」分开摆在门口**。\n\n- `getName` / `getFish` 是两扇**只读**的小窗：它们只把里面的数**递出来**给外面看一眼，外面拿到的是个副本，改不动盒子里那个真的。\n- `feed(int more)` 是唯一的写入口，而且它**不把盒子里那个数交出去**：外面只能递一个数进来，改多少、怎么改，全是盒子里自己说了算。\n\n记账那行 `fish = fish + more;` 是「先读、再加、再写回」：右边先算出新值，再写回左边。**每喂一笔就印一行**，印的是当下的账，所以印出来的数是一趟一趟往上涨的。\n\n`main` 那边三件事：读第一个数当笔数，圈子里一趟递一笔、递完就印一行。\n\n顺手记一句本课的老话：**让别人能读，不等于让别人能改** —— 这两件事在门口是两扇不同的窗户。",
+      "templateId": "java-s2-readonly-window",
+      "params": {
+        "name": "李四",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "65e06bac4077459b"
+      }
+    },
+    {
+      "id": "bank-java-s2-readonly-window-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们这个对象的数据盒，**盖子扣得死死的**：账上那个数，外面**只能读、不能直接改**。外面想添数据，只有一个方法 —— 调用一次「添这么多」，让盒子里自己动手。\n\n要给外面开的东西：\n\n- 两扇**只读**的小窗：一扇读名字，一扇读账上的数\n- 一个方法 `feed(int more)`：把递进来的这一笔**添到账上**\n\n程序输入中：**第一个数是「后面还要喂几笔」**，接着正好那么多行，一行一个数。**每喂完一笔**，程序就印一行当下的账，念作：**名字**、` 账上 `、**账上的数**、` 条数据`。\n\n这一课的新东西是：账上那个数外头**一次都没被直接碰过**，全靠方法和两扇小窗。\n\n比如程序的输入是\n\n4\n7\n8\n6\n7\n\n程序就要返回\n\n李四 账上 7 条数据\n李四 账上 15 条数据\n李四 账上 21 条数据\n李四 账上 28 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void feed(int more) {\n        fish = fish + more;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat(\"李四\");\n        int n = sc.nextInt();\n        for (int i = 0; i < n; i++) {\n            c.feed(sc.nextInt());\n            System.out.println(c.getName() + \" 账上 \" + c.getFish() + \" 条数据\");\n        }\n    }\n}\n",
+      "expectedOutput": "李四 账上 1 条数据\n李四 账上 6 条数据\n李四 账上 15 条数据\n李四 账上 21 条数据",
+      "stdin": "4\n1\n5\n9\n6\n",
+      "explanation": "这题的重点是**「只读」和「可写」分开摆在门口**。\n\n- `getName` / `getFish` 是两扇**只读**的小窗：它们只把里面的数**递出来**给外面看一眼，外面拿到的是个副本，改不动盒子里那个真的。\n- `feed(int more)` 是唯一的写入口，而且它**不把盒子里那个数交出去**：外面只能递一个数进来，改多少、怎么改，全是盒子里自己说了算。\n\n记账那行 `fish = fish + more;` 是「先读、再加、再写回」：右边先算出新值，再写回左边。**每喂一笔就印一行**，印的是当下的账，所以印出来的数是一趟一趟往上涨的。\n\n`main` 那边三件事：读第一个数当笔数，圈子里一趟递一笔、递完就印一行。\n\n顺手记一句本课的老话：**让别人能读，不等于让别人能改** —— 这两件事在门口是两扇不同的窗户。",
+      "templateId": "java-s2-readonly-window",
+      "params": {
+        "name": "李四",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "a6f309eab7755da3"
+      }
+    },
+    {
+      "id": "bank-java-s2-setter-guard-missing-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们给数据数开了一扇写的小窗，本来是想在窗口立块名称：**负数一律不收**。\n\n可这段代码**编译过得了、跑起来也没错误信息** —— 只是账本被改成了负数，我们看着心里发毛。\n\n请你把窗口那块名称补上。规矩是：\n\n- 递进来的数**小于 0** → 不收，只印一句 `数据数不能是负的`，账本上**一个数都不许动**\n- 别的数照收\n\n改好之后，程序该印出这两行：\n\n```text\n数据数不能是负的\n张三 有 3 条数据\n```",
+      "brokenCode": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.setFish(-2);\n        c.setFish(3);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "referenceFix": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        if (fish < 0) {\n            System.out.println(\"数据数不能是负的\");\n            return;\n        }\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.setFish(-2);\n        c.setFish(3);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "数据数不能是负的\n张三 有 3 条数据",
+      "stdin": null,
+      "explanation": "这题是本课最值钱的一道：**它不报错。** 编译器一个字都不说，程序照样跑完（我们量过：`javac` 的 stderr **0 字节**、跑起来退出码 0）。坏账也确实**进过账本** —— 只是那一下紧跟着就被第二笔盖住了：`c.setFish(-2)` 把账本改成了负数，下一句 `c.setFish(3)` 又把它写了回去，所以最后印出来的是 `3` 。**「印出来是对的」和「坏账没进来」是两件事** —— 谁绕过那扇窗都能伸手，这正是我们要立名称的理由。\n\n所以我们要的「规矩」必须**写进类定义里**，而不是指望外面每一个对象自觉。规矩写在小窗里，就成了一道谁都得过的关；写在外面，谁绕过那扇窗都能伸手。\n\n名称就两步：\n\n- `if (fish < 0)` —— 先把递进来的数看一眼。\n- 撞上负数就印一句提示、然后 `return;` —— **这个 `return` 是重点**：它让这条方法当场收工，下面那行 `this.fish = fish;` 根本轮不到执行，所以账本上一个数都没动。\n\n最容易漏的就是那个 `return`：不写它，程序印完提示照样往下把负数记进去 —— **提示印了，坏账也进来了**，我们还是白立名称。",
+      "templateId": "java-s2-setter-guard-missing",
+      "params": {
+        "name": "张三",
+        "n": 2,
+        "m": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "ef844f1edfed5520"
+      }
+    },
+    {
+      "id": "bank-java-s2-setter-guard-missing-041",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们给数据数开了一扇写的小窗，本来是想在窗口立块名称：**负数一律不收**。\n\n可这段代码**编译过得了、跑起来也没错误信息** —— 只是账本被改成了负数，我们看着心里发毛。\n\n请你把窗口那块名称补上。规矩是：\n\n- 递进来的数**小于 0** → 不收，只印一句 `数据数不能是负的`，账本上**一个数都不许动**\n- 别的数照收\n\n改好之后，程序该印出这两行：\n\n```text\n数据数不能是负的\n李四 有 9 条数据\n```",
+      "brokenCode": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.setFish(-4);\n        c.setFish(9);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "referenceFix": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n\n    public void setFish(int fish) {\n        if (fish < 0) {\n            System.out.println(\"数据数不能是负的\");\n            return;\n        }\n        this.fish = fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.setFish(-4);\n        c.setFish(9);\n        System.out.println(c.getName() + \" 有 \" + c.getFish() + \" 条数据\");\n    }\n}\n",
+      "expectedOutput": "数据数不能是负的\n李四 有 9 条数据",
+      "stdin": null,
+      "explanation": "这题是本课最值钱的一道：**它不报错。** 编译器一个字都不说，程序照样跑完（我们量过：`javac` 的 stderr **0 字节**、跑起来退出码 0）。坏账也确实**进过账本** —— 只是那一下紧跟着就被第二笔盖住了：`c.setFish(-4)` 把账本改成了负数，下一句 `c.setFish(9)` 又把它写了回去，所以最后印出来的是 `9` 。**「印出来是对的」和「坏账没进来」是两件事** —— 谁绕过那扇窗都能伸手，这正是我们要立名称的理由。\n\n所以我们要的「规矩」必须**写进类定义里**，而不是指望外面每一个对象自觉。规矩写在小窗里，就成了一道谁都得过的关；写在外面，谁绕过那扇窗都能伸手。\n\n名称就两步：\n\n- `if (fish < 0)` —— 先把递进来的数看一眼。\n- 撞上负数就印一句提示、然后 `return;` —— **这个 `return` 是重点**：它让这条方法当场收工，下面那行 `this.fish = fish;` 根本轮不到执行，所以账本上一个数都没动。\n\n最容易漏的就是那个 `return`：不写它，程序印完提示照样往下把负数记进去 —— **提示印了，坏账也进来了**，我们还是白立名称。",
+      "templateId": "java-s2-setter-guard-missing",
+      "params": {
+        "name": "李四",
+        "n": 4,
+        "m": 9
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.531Z",
+        "hash": "9cdae5db6d73e70f"
+      }
+    }
+  ]
+}

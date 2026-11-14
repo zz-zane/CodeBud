@@ -1,0 +1,30 @@
+{
+  "templateId": "py-s2-dunder-sum-bowls",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-08",
+  "type": "codewrite",
+  "concept": [
+    "__add__",
+    "接住新元素",
+    "循环累加"
+  ],
+  "instances": 6,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "head": "{n}\n",
+    "count": "{n}",
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们有一堆元素，想把它们一个只**并成一个大元素**。\n\n请你画一张元素的类定义：`print(元素)` 印出来长这样 —— `保存了 12 条数据`（「保存了」后面一个空格，数字和「条」之间一个空格）；两个元素用 `+` 加起来得一个**新元素**，里面保存两个元素**合起来**的数。\n\n然后写主程序：**先读一行整数 `n`**，接着**再读 n 行**（每行是一个元素里装的数据数）。每读到一个元素，就把它**加到已经并起来的那个元素上**；最后把并成的那个元素印出来。\n\n比如输入是\n\n{sampleInput}\n\n就要输出\n\n{sampleOutput}\n\n（判分用的是**另外一组数** —— `n` 和每一行的数都会变，所以别把答案写死）",
+  "referenceSolutionTemplate": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\nn = int(input())\ntotal = Bowl(int(input()))\nfor _ in range(n - 1):\n    total = total + Bowl(int(input()))\nprint(total)\n",
+  "explanationTemplate": "这题考的不是加法的算术，而是**「谁把结果接住」**这件事。\n\n⚠️ **`__add__` 返回的是一个新元素，原来那两个一点没变。** 所以这一行必须是\n\n```text\ntotal = total + Bowl(int(input()))\n```\n\n**等号是必须的**：`+` 造出来的那个新元素得**重新塞回 `total` 手里**。只写 `total + Bowl(...)` 的话，那个新元素就掉在地上没人接，`total` 手里还是原来那个 —— **程序不报错**，只是最后印出来的数少加了好几个元素。这是这一课最容易栽的坑。\n\n⚠️ **开头那个元素别拿数字 0 去凑**。要是写 `total = 0` 再往上加，第一回就是 `0 + 元素`：`+` 的左边是数字 0，Python 会去调用**数字那一套加法**，它不认识元素，直接翻脸。所以我们先读进来的**第一个元素**就当了开头。\n\n⚠️ **最后 `print(total)` 能印出话，靠的是 `__str__`。** 要是这一个方法忘了写，`print(元素)` 印出来的会是「这个元素住在哪儿」那种没人看得懂的记号 —— 不报错，但不是我们要的样子。\n\n⚠️ 数几个元素的时候别数错：`n` 只元素里第一个已经读了，所以圈圈只转 `n - 1` 趟。"
+}

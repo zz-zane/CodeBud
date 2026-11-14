@@ -1,0 +1,94 @@
+{
+  "lessonId": "cpp-stage1-03",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们要盖一个变量，装「今天喂了几条数据」这个整数。门上该挂哪张类型？",
+      "options": [
+        "`int`",
+        "`double`",
+        "`char`",
+        "`string`"
+      ],
+      "answer": 0,
+      "explanation": "`int` 是装整数的那张类型。`double` 装小数、`char` 装单个字符、`string` 装一串字，三张都不对路。名称上写错了，编译器会在翻的时候就拦下来——它不给你「先跑起来再说」的机会。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们先写 `int fish = 3;`，接着再写一句 `fish = fish + 1;`。这会儿屋里保存几条？",
+      "options": [
+        "3 条",
+        "4 条",
+        "报错，因为两边不相等",
+        "1 条"
+      ],
+      "answer": 1,
+      "explanation": "`=` 是**搬运**，不是数学上那个等号：把右边的货搬进左边该变量。右边那句读作「把屋里现有的货拿出来、加一条、再搬回去」，所以从 3 变成了 4。正是「动作」和「相等」的差别，才让 `fish = fish + 1` 这种在数学里说不通的句子，在这里天经地义。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "一间 `bool` 屋保存的是「真」。把它念到屏幕上，会出现什么？",
+      "options": [
+        "`1`",
+        "`true`",
+        "`真`",
+        "它不印东西，只点头"
+      ],
+      "answer": 0,
+      "explanation": "C++ 把「真」当 1 印、「假」当 0 印。屋里装的那个值本身是 `true` 和 `false` 这一对（**全小写**），只是念到屏幕上的时候变成了 1 和 0。所以屏幕上冒出一个孤零零的 `1` 时，先想想是不是哪间 `bool` 屋被输出了。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "想让一个变量贴上「装好就不许再换」的封条，开头的类型前面要加上哪个词？",
+      "answer": "const",
+      "explanation": "`const` 就是那道封条：`const int maxFish = 10;`。贴上它以后，谁再想往里搬一次货，编译器会当场拦住，说这是一间「只读」的屋，连是哪间屋都替你点出来。"
+    },
+    {
+      "id": "q5",
+      "type": "codefill",
+      "stem": "下面这份源代码缺了两张类型，补齐之后它应该能输出三行。横线上的空按顺序填。",
+      "lang": "cpp",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    ____ fish = 3;\n    double price = 2.5;\n    ____ hungry = true;\n    cout << fish << endl;\n    cout << price << endl;\n    cout << hungry << endl;\n    return 0;\n}\n",
+      "blanks": [
+        {
+          "answer": "int",
+          "accept": []
+        },
+        {
+          "answer": "bool",
+          "accept": []
+        }
+      ],
+      "explanation": "第一个空是装整数的 `int`，第二个空是只会点头摇头的 `bool`。三行输出会是 `3`、`2.5`、`1`——最后那个 `1` 就是 `bool` 的脾气：它把「真」印成 1。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 3;\n    double price = 2.5;\n    fish = fish + 2;\n    cout << fish << endl;\n    cout << price << endl;\n    return 0;\n}\n",
+      "stem": "这段代码会输出什么？把它输出的内容原样写下来（每句一行）。",
+      "answer": "5\n2.5",
+      "accept": [
+        "5\n2.5\n"
+      ],
+      "explanation": "先把 3 搬进 `fish` 该变量，再照着 `fish = fish + 2;` 把屋里的货拿出来、加上 2、搬回去，于是变成 5 。`price` 该变量从没被动过，还是 2.5——它是装小数的屋，输出就带着小数点。"
+    },
+    {
+      "id": "q7",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    bool hungry = false;\n    string name = \"计算机\";\n    cout << name << endl;\n    cout << hungry << endl;\n    return 0;\n}\n",
+      "stem": "这段代码会输出什么？把它输出的内容原样写下来（每句一行）。",
+      "answer": "计算机\n0",
+      "accept": [
+        "计算机\n0\n"
+      ],
+      "explanation": "`string` 该变量保存一串字，输出就是「计算机」；`hungry` 保存的是「假」，而 C++ 把「假」印成 `0` 。装一整串字的那张名称要先请 `string` 的管理员出场（`#include <string>`），这一点和别家不太一样。"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+ 
+
+
+:root {
+  --mi-canvas: var(--cds-surface-1);
+  --mi-card: var(--cds-surface-2);
+  --mi-bg: var(--cds-surface-3);
+  --mi-text: var(--cds-text-primary);
+  --mi-text-2: var(--cds-text-secondary);
+  --mi-text-3: var(--cds-gray-500);
+  --mi-border: var(--cds-border);
+  --mi-border-control: var(--cds-gray-450);
+  --mi-blue: var(--cds-fill-ghost-selected);
+  --mi-blue-light: var(--cds-fill-ghost-hover);
+  --mi-blue-deep: var(--cds-orange-500);
+  --mi-blue-ink: var(--cds-orange-550);
+  --mi-btn-primary-text: var(--cds-gray-0);
+  --mi-zebra: var(--cds-surface-0);
+  --mi-code-bg: var(--cds-surface-0);
+  --mi-scroll: var(--cds-gray-300);
+   
+  --mi-radius-sm: 6px;
+  --mi-radius: 8px;
+  --mi-radius-lg: 12px;
+  --mi-shadow: none;
+  --mi-shadow-sm: var(--cds-shadow-sm);
+  --mi-shadow-lg: var(--cds-shadow-popover);
+  --mi-dur-fast: var(--cds-dur-snap);
+  --mi-dur: var(--cds-dur-base);
+  --mi-dur-slow: var(--cds-dur-sheet);
+  --mi-ease: var(--cds-ease-swift);
+  --mi-ease-out: var(--cds-ease-out);
+  --mi-font-family: 'Segoe UI', 'Microsoft YaHei UI', 'Microsoft YaHei', system-ui, sans-serif;
+  --mi-font-serif: Georgia, 'Times New Roman', 'SimSun', 'Songti SC', serif;
+  --mi-font-title: var(--mi-font-family);
+  --mi-code: 'Consolas', 'Cascadia Code', ui-monospace, monospace;
+  --mi-font: var(--mi-fs-body)/var(--mi-lh-body) var(--mi-font-family);
+}
+body { font: var(--mi-font); color: var(--mi-text); background: var(--mi-canvas); }
+button, input, select, textarea { font-family: var(--mi-font-family); }
+button, input, select, textarea, a { -webkit-app-region: no-drag; }
+button:not(:disabled):focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, a:focus-visible {
+  outline: 2px solid var(--cds-clay);
+  outline-offset: 2px;
+}
+input, select, textarea { accent-color: var(--mi-blue-deep); }
+#app .claude-app-container :is(h1,h2,h3,h4) { font-weight: 500; letter-spacing: -.02em; }
+#app .claude-app-container :is(.page-title,.learn-header h1) { font-size: var(--mi-fs-title); line-height: var(--mi-lh-title); margin: 0 0 var(--mi-sp-6); }
+#app .claude-app-container :is(.page-intro,.hero-sub) { color: var(--mi-text-2); font-size: var(--mi-fs-body); line-height: var(--mi-lh-body); }
+#app .claude-app-container :is(.stat-num,.learning-count,.stage-count,.out-meta,.zoom-pct,.lesson-number) { font-variant-numeric: tabular-nums; }
+
+/* Reading typography is kept separate from control typography. */
+#app .claude-app-container .lesson-page { max-width: 736px; }
+#app .claude-app-container .lesson-page > .mi-card { padding: 0; border: 0; background: transparent; }
+#app .claude-app-container .lesson-page .lesson-title { font-family: var(--mi-font-serif); font-size: var(--mi-fs-title); font-weight: 500; line-height: 1.3; }
+#app .claude-app-container .markdown-body { font-family: var(--mi-font-serif); font-size: var(--mi-fs-read); line-height: 1.75; }
+#app .claude-app-container .markdown-body :is(h1,h2,h3,h4) { font-family: var(--mi-font-serif); font-weight: 500; }
+#app .claude-app-container .markdown-body h2 { margin-top: var(--mi-sp-8); font-size: calc(var(--mi-fs-read) * 1.25); border-bottom: 0; }
+#app .claude-app-container .markdown-body h3 { margin-top: var(--mi-sp-6); font-size: var(--mi-fs-read); }
+#app .claude-app-container .markdown-body strong { font-weight: var(--mi-fw-medium); }
+#app .claude-app-container .markdown-body .code-block { border-radius: var(--cds-radius-code); }
+#app .claude-app-container .markdown-body .code-copy:not(.code-run) { width: 32px; height: 32px; border: 0; border-radius: var(--radius-md); background: transparent; color: var(--mi-text-2); }
+#app .claude-app-container .markdown-body .code-copy:not(.code-run):hover { background: var(--cds-fill-ghost-hover); color: var(--mi-text); }
+#app .claude-app-container .markdown-body code { font-family: var(--mi-code); }
+/* 吸底操作栏要自己的实色底：它浮在正文上，透明会让下面的字透过来。
+   :not(.fixed-bar) 把 P1-1 那一条让出来，其余 .lesson-actions 维持无边框原状。 */
+#app .claude-app-container .lesson-actions:not(.fixed-bar) { padding: var(--mi-sp-3) 0; background: transparent; border: 0; border-top: 1px solid var(--mi-border); border-radius: 0; gap: var(--mi-sp-2); }
+#app .claude-app-container .prereq-bar { font-size: var(--mi-fs-caption); }
+
+/* Page shells, compact rows and unframed secondary controls. */
+#app .claude-app-container :is(.practice-page,.overview,.memo-page,.favorites-page) { max-width: 960px; margin-inline: auto; }
+#app .claude-app-container .practice-tabs { margin: 0 0 var(--mi-sp-6); }
+#app .claude-app-container .page { max-width: 800px; margin-inline: auto; }
+#app .claude-app-container .card { border: 1px solid var(--mi-border); box-shadow: none; border-radius: var(--mi-radius-box); background: var(--mi-card); }
+#app .claude-app-container .card.center { padding: var(--mi-sp-8) var(--mi-sp-4); }
+#app .claude-app-container :is(.chip,.memo-chip,.folder-chip) { border: 0; background: var(--cds-fill-ghost-hover); border-radius: var(--mi-radius-ctl); }
+#app .claude-app-container :is(.chip,.memo-chip,.folder-chip).active { background: var(--cds-fill-ghost-selected); color: var(--mi-text); }
+#app .claude-app-container .wrongbook-quick-card { padding: var(--mi-sp-4); background: var(--cds-surface-2); border: 1px solid var(--cds-border); border-radius: var(--mi-radius-box); margin-bottom: var(--mi-sp-6); }
+#app .claude-app-container .wrongbook-quick-title { font-size: var(--mi-fs-body); font-weight: 500; }
+#app .claude-app-container .wrongbook-quick-desc { font-size: var(--mi-fs-label); }
+#app .claude-app-container .overview-subnav { width: min(400px,100%); margin-bottom: var(--mi-sp-6); }
+#app .claude-app-container .summary-card { padding: var(--mi-sp-4); }
+#app .claude-app-container .summary-main { gap: var(--mi-sp-6); }
+#app .claude-app-container .summary-stats { gap: var(--mi-sp-6); }
+#app .claude-app-container .stat-num { font-size: var(--mi-fs-title); font-weight: var(--mi-fw-medium); }
+#app .claude-app-container .hero { margin-bottom: var(--mi-sp-6); }
+#app .claude-app-container .lang-grid { gap: var(--mi-sp-3); grid-template-columns: repeat(2,minmax(0,1fr)); }
+#app .claude-app-container .chart-grid { gap: var(--mi-sp-3); margin-top: var(--mi-sp-3); }
+#app .claude-app-container .memo-grid { grid-template-columns: minmax(200px,240px) minmax(0,1fr); gap: var(--mi-sp-4); }
+#app .claude-app-container .memo-main { min-width: 0; }
+#app .claude-app-container .memo-edit .mi-input { box-sizing: border-box; min-width: 0; }
+#app .claude-app-container .memo-edit textarea { font-family: var(--mi-font-family); white-space: pre-wrap; }
+#app .claude-app-container .memo-edit-head { gap: var(--mi-sp-2); flex-wrap: wrap; }
+#app .claude-app-container .memo-row { border: 0; border-radius: var(--mi-radius-ctl); }
+#app .claude-app-container .settings-view { max-width: var(--mi-page-read-max); }
+#app .claude-app-container .settings-tabs { width: min(520px,100%); margin: 0 0 var(--mi-sp-6); }
+#app .claude-app-container .settings-panel > .card { padding: var(--mi-sp-1) var(--mi-sp-4); }
+#app .claude-app-container .settings-panel .row { padding-block: var(--mi-sp-4); gap: var(--mi-sp-4); }
+#app .claude-app-container .settings-panel .row-label { font-weight: var(--mi-fw-medium); font-size: var(--mi-fs-body); }
+#app .claude-app-container .settings-panel .hint { font-size: var(--mi-fs-caption); line-height: var(--mi-lh-caption); max-width: 54ch; }
+#app .claude-app-container .settings-panel .num-input { height: var(--mi-ctl); padding: var(--mi-sp-1) var(--mi-sp-2); border: 1px solid var(--mi-border-control); border-radius: var(--mi-radius-ctl); font-variant-numeric: tabular-nums; }
+
+/* Editor is a work surface, with a single boundary around each pane. */
+#app .claude-app-container .playground-page { max-width: var(--mi-page-max); }
+#app .claude-app-container .playground-page .page-title { font-family: var(--mi-font-serif); font-size: var(--mi-fs-title); font-weight: var(--mi-fw-medium); line-height: var(--mi-lh-title); margin-bottom: var(--mi-sp-6); }
+#app .claude-app-container .samples { display: flex; align-items: center; gap: var(--mi-sp-4); padding: var(--mi-sp-2) 0; background: transparent; margin: 0 0 var(--mi-sp-4); }
+#app .claude-app-container .samples-title { margin: 0; white-space: nowrap; }
+#app .claude-app-container .sample-btns { gap: var(--mi-sp-2); }
+#app .claude-app-container .toolbar { padding: 0 0 var(--mi-sp-3); background: transparent; border: 0; }
+#app .claude-app-container .tb-row { gap: var(--mi-sp-2); flex-wrap: wrap; }
+#app .claude-app-container .code-area { border: 1px solid var(--mi-border); border-radius: var(--cds-radius-code); overflow: hidden; }
+#app .claude-app-container :is(.code-bar,.out-head) { padding: var(--mi-sp-2) var(--mi-sp-3); background: var(--cds-surface-0); border-bottom: 1px solid var(--mi-border); }
+#app .claude-app-container .bar-btn { border: 0; border-radius: var(--radius-md); background: transparent; }
+#app .claude-app-container .output { border: 1px solid var(--mi-border); border-radius: var(--cds-radius-code); overflow: hidden; background: var(--cds-surface-2); }
+#app .claude-app-container .out-status { font-size: var(--mi-fs-caption); font-variant-numeric: tabular-nums; }
+#app .claude-app-container .hint-main { font-size: var(--mi-fs-body); }
+#app .claude-app-container .hint-sub { font-size: var(--mi-fs-caption); }
+#app .claude-app-container .right-panel { background: transparent; padding: var(--mi-sp-4); }
+#app .claude-app-container .panel-card { padding: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+#app .claude-app-container .panel-section { margin-bottom: var(--mi-sp-6); }
+#app .claude-app-container .ref-item { border: 0; background: transparent; padding: var(--mi-sp-2) 0; }
+body .mi-modal { border-radius: var(--cds-radius-dialog); box-shadow: var(--cds-shadow-popover); }
+
+@media (max-width: 1100px) {
+  #app .claude-app-container .memo-grid { grid-template-columns: minmax(180px,210px) minmax(0,1fr); }
+  #app .claude-app-container .summary-stats { gap: var(--mi-sp-4); flex-wrap: wrap; }
+  #app .claude-app-container .chart-grid { grid-template-columns: 1fr; }
+  #app .claude-app-container .samples { align-items: flex-start; flex-direction: column; gap: var(--mi-sp-2); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
+
+#app .mi-tag:is(.blue,.purple,.gray) { background: var(--cds-fill-ghost-hover); color: var(--mi-text-2); border-radius: var(--radius-md); }
+
+body .search-panel { border: 1px solid var(--cds-border); border-radius: var(--cds-radius-dialog); box-shadow: var(--cds-shadow-popover); }
+body .search-panel .search-input:focus-visible { outline: 2px solid var(--cds-clay); outline-offset: -2px; }
+
+/* Minimal navigation pages: regular UI type and lighter grouping. */
+#app .claude-app-container .brand-name { font-size: var(--mi-fs-body); font-weight: 500; }
+#app .claude-app-container .nav-tab-btn { height: var(--mi-nav-row-h); min-height: 0; font-size: var(--mi-fs-body); font-weight: 400; }
+#app .claude-app-container .nav-tab-btn.active { font-weight: 500; }
+#app .claude-app-container .lesson-row { font-size: var(--mi-fs-body); font-weight: 400; }
+#app .claude-app-container .lesson-row.active { font-weight: 500; }
+#app .claude-app-container :is(.module-heading,.section-title) { font-size: var(--mi-fs-caption); font-weight: 400; letter-spacing: 0; }
+#app .claude-app-container .minimal-home h1 { font-family: var(--mi-font-serif); font-size: var(--mi-fs-title); font-weight: var(--mi-fw-medium); line-height: var(--mi-lh-title); }
+#app .claude-app-container .catalog-header h1 { font-size: var(--mi-fs-title); font-weight: 500; }
+#app .claude-app-container .sidebar-brand { border-bottom: 0; padding-bottom: var(--mi-sp-1); }
+#app .claude-app-container .primary-nav { border-bottom: 0; }
+#app .claude-app-container .sidebar-search { font-size: var(--mi-fs-body); }
+
+/* Functional pages retain readable type and normal geometry at every reading setting. */
+#app .claude-app-container main.content { font-size: var(--mi-fs-body); }
+#app .claude-app-container :is(.settings-view,.practice-page,.overview,.favorites-page,.memo-page,.page) { width: 100%; max-width: var(--mi-page-max); margin: 0 auto; }
+#app .claude-app-container main.content .page-title { font-family: var(--mi-font-serif); font-size: var(--mi-fs-title); font-weight: var(--mi-fw-medium); line-height: var(--mi-lh-title); margin: 0 0 var(--mi-sp-6); }
+#app .claude-app-container :is(.settings-tabs,.practice-tabs,.overview-subnav) { margin-top: 0; margin-bottom: var(--mi-sp-6); }
+#app .claude-app-container :is(.settings-view,.practice-page,.overview,.favorites-page,.memo-page,.page) .mi-card { padding: var(--mi-sp-4); }
+#app .claude-app-container .mi-card-title { font-size: var(--mi-fs-read); font-weight: 500; }
+#app .claude-app-container :is(.card-desc,.card-hint,.page-intro,.wrongbook-quick-desc,.wrongbook-note,.memo-row-sub) { font-size: var(--mi-fs-body); line-height: var(--mi-lh-body); }
+#app .claude-app-container .settings-panel > .card { padding: var(--mi-sp-1) var(--mi-sp-4); }
+#app .claude-app-container .settings-panel .row { padding: var(--mi-sp-4) 0; }
+#app .claude-app-container .settings-panel .row-label { font-size: var(--mi-fs-body); font-weight: var(--mi-fw-medium); }
+#app .claude-app-container .settings-panel .hint { font-size: var(--mi-fs-label); max-width: 64ch; }
+#app .claude-app-container .settings-panel .divider { margin: 0; }
+#app .claude-app-container .practice-container { display: flex; flex-direction: column; gap: var(--mi-sp-6); }
+#app .claude-app-container main.content :is(.mi-tab,.mi-btn.sm,.chip,.memo-chip,.folder-chip) { font-size: var(--mi-fs-body); }
+#app .claude-app-container main.content .mi-btn.sm { height: var(--mi-ctl); }
+#app .claude-app-container :is(.wrongbook-quick-title,.wrongbook-title,.card-title) { font-size: var(--mi-fs-read); font-weight: 500; }
+#app .claude-app-container :is(.memo-row-title,.row-label,.fav-title) { font-size: var(--mi-fs-body); font-weight: var(--mi-fw-medium); }
+#app .claude-app-container .memo-edit textarea { font-size: var(--mi-fs-body); line-height: var(--mi-lh-read); }
+#app .claude-app-container :is(.mi-select,.mi-input) { font-size: var(--mi-fs-body); }
+@media (max-width: 1100px) {
+  #app .claude-app-container .practice-grid { grid-template-columns: 1fr; }
+}
+
+#app .claude-app-container .compare-col-actions button { font-size: var(--mi-fs-body); padding: var(--mi-sp-1) var(--mi-sp-2); }
+body .quiz-panel .quiz-head { font-size: var(--mi-fs-body); }
+
+/* Host shell palette; upstream surfaces and reading/code panels stay unchanged. */
+/* 外壳三层：画布略暗，侧栏卡片略亮（靠 1px 环 + 极淡投影浮起，不是靠大色差） */
+/*
+ * 侧栏取 #fcfcfb（gray-10，比原来的 bg-1 再淡一档）；主页面用 #f9f9f7（gray-20）。
+ * 两者仍只差一个明度台阶 —— 侧栏反而比画布更亮，靠侧栏右缘那条 1px 竖线分界。
+ */
+:root { --mi-shell-sidebar: #fcfcfb; --mi-shell-canvas: #f9f9f7; }
+
+/*
+ * 画布换成 shell-canvas。写成 `:root:root`（特异性 0-2-0）是为了和文件开头那条
+ * `:root { --mi-canvas: var(--cds-surface-1) }` 以及 tokens.css 的 `:root` 分出高下，
+ * 与移除暗色主题前的 `:root:not(...)` 写法同一特异性，层叠结果不变。
+ * theme.ts 的 WINDOW_BG 必须跟这个实际值对齐（theme.test.ts 钉着）。
+ */
+:root:root { --mi-canvas: var(--mi-shell-canvas); }
+#app .claude-app-container :is(.claude-sidebar,.sidebar-footer) { background: var(--mi-shell-sidebar); }
+#app .claude-app-container :is(main.content,.zoom-ctl,.right-tool-column) { background: var(--mi-shell-canvas); }
+
+/*
+ * 顶栏。**不要再改回实色** —— 这条早先是 `var(--mi-shell-canvas)`，
+ * 会把 TopBar.vue 自己的雾化背景整个盖掉（adapter 特异性更高）。
+ *
+ * 【alpha 必须和 TopBar.vue 同步，别在这里另写死一个数】
+ * 用 --mi-topbar-alpha 这个变量，值在 tokens.css 里定义一次。
+ * 上一版这里写死 78%，而 TopBar 改成 95% 之后，这一条仍按 78% 生效 ——
+ * 改了半天雾化，实际渲染的还是旧值（这就是"改了没变化"的原因）。
+ */
+:root:root #app .claude-app-container .topbar {
+  /* --mi-canvas 就是 --mi-shell-canvas，取谁都一样；统一写 --mi-canvas，
+     和 TopBar.vue 保持一致，免得以后有人改一个忘了另一个 */
+  background: color-mix(in srgb, var(--mi-canvas) var(--mi-topbar-alpha), transparent);
+}

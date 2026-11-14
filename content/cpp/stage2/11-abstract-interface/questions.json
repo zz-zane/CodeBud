@@ -1,0 +1,109 @@
+{
+  "lessonId": "cpp-stage2-11",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们在类定义 `Animal` 上写了 `virtual void speak() const = 0;`，然后想直接照它创建一个（`Animal a(\"谁\");`）。会发生什么？",
+      "options": [
+        "编译器当场拦下：这类型生不出真身 —— 那个方法只有声明、没有动作，创建后我们也不知道它该怎么叫",
+        "能创建后，只是叫的时候什么都不印",
+        "能创建后，编译器会随便挑一个动作给它",
+        "能创建后，但要我们在生的时候顺便把动作传入"
+      ],
+      "answer": 0,
+      "explanation": "挂着「只挂招牌、不写动作」那一手的类定义，**压根不许被直接照出来**。编译器的原话是 `error: cannot declare variable 'a' to be of abstract type 'Animal'` —— 它说的正是「`a` 这一格要的是一个真动物，可你这张是抽象类定义」。道理也简单：那一手没有动作，真要创建真身来，我们调用一次它该叫成什么？**没有答案。** 所以我们只能**指着**它用（`Animal& r = c;`），不能照它生。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "子类定义照 `Animal` 画了下来，可**漏掉了**招牌上那一手没补。编译器会怎样？",
+      "options": [
+        "在翻译阶段就拦下，并且把我们漏掉的那一手名字输出",
+        "一次不吭地放过，跑起来叫的时候什么都不印",
+        "一次不吭地放过，跑起来会自动用老类定义那一版的动作",
+        "跑得起来，但每次叫都会慢一点"
+      ],
+      "answer": 0,
+      "explanation": "这正是约定最值钱的地方：我们不用记得「我还欠着一手没写」——**编译器替我们记着**。它报的是 `error: cannot declare variable 'c' to be of abstract type 'Cat'`，后面还跟一句 `note`，把我们漏掉的那一手名字原样输出，我们照着补上就好了。反过来说，要是老类定义那一手当初**忘了写 `= 0`**（给了一个动作），那漏写就**谁也不会提醒** —— 程序照样跑，只是叫出来的不是子对象自己的声音。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "「抽象类定义」和「接口约定」这两张类定义，最要紧的分别是什么？",
+      "options": [
+        "接口里**只有**那几个方法声明，一点数据和现成函数都没有；抽象类身上还有实打实的数据和函数",
+        "约定那张类定义不能被指着用，抽象类定义可以",
+        "约定那张类定义上不许挂 `virtual`，抽象类定义上必须挂",
+        "两者一模一样，只是我们给它们起了两个名字"
+      ],
+      "answer": 0,
+      "explanation": "两张类定义都「不能被直接照出来」，这是它们一样的地方。分别在于**身上还有什么**：抽象类定义是「**约定 + 白送的数据和函数**」—— 照学生甲画一张，白得基类那一栏名字和构造函数；而约定类定义是**干干净净的一份约定**，没有一栏数据、没有构造函数，照它画下来**什么都白得不着，只有一份要还的约定**。所以抽象类定义问的是「你是谁家的孩子」，约定问的是「**你会不会这几手**」。第四节那张表就是把这件事钉住的。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const ____;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const ____ {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"张三\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}",
+      "stem": "这段代码里有两处被我们挖空了（用 `____` 标出）。补上之后，子对象就能初始化、叫出自己的声音；只补一处都过不了编译器那一关。",
+      "blanks": [
+        {
+          "answer": "= 0",
+          "accept": [
+            "=0"
+          ]
+        },
+        {
+          "answer": "override",
+          "accept": []
+        }
+      ],
+      "explanation": "第一处补 `= 0` —— 老类定义那一手上只立招牌、不写动作。**不写它，这个空就白挖了**：老类定义那一手就有动作了，子对象漏写也没人提醒，而我们这一课要的正是「子对象必须补上」这句话。第二处补 `override` —— 子对象这一手是来补招牌上的活的，挂上它编译器就替我们核对名字、料、`const` 有没有一字不差。两处补全：子对象能初始化（`= 0` 逼它把活干完），叫出来的是它自己的声音。"
+    },
+    {
+      "id": "q5",
+      "type": "codefill",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    ____ void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Fish : ____ {\n    string name;\npublic:\n    Fish(string n) : name(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Fish f(\"计算机\");\n    Speaker& r = f;\n    r.speak();\n    return 0;\n}",
+      "stem": "这是「接口约定」那张类定义和照它画下来的一条数据，两处被我们挖空了。补上之后，这条鱼就算跟这份约定说定了。",
+      "blanks": [
+        {
+          "answer": "virtual",
+          "accept": []
+        },
+        {
+          "answer": "public Speaker",
+          "accept": [
+            "public Speaker "
+          ]
+        }
+      ],
+      "explanation": "第一处补 `virtual` —— 约定那一手要能被改写（照它画下来的都得按约定补上自己那一版），所以这一手得挂上那个三字母的招牌。⚠️ 两个记号缺一不可：我们真跑过，只写 `= 0` 而漏掉 `virtual`，编译器**当场拦下**，原话是 `error: initializer specified for non-virtual method 'void Speaker::speak() const'` —— 光有 `= 0`，它不认这一手是约定。第二处补 `public Speaker` —— 照约定画下来的那一段要写在类定义名后面、用 `:` 接上，那条鱼才算答应了这份约定；只写 `Speaker` 漏了那个 `public` 同样编不过，原话是 `error: 'Speaker' is an inaccessible base of 'Fish'` —— 那等于这条鱼压根没答应这份约定，名称上写着 `Speaker` 也指不着它。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\npublic:\n    Cat(string n) : name(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\npublic:\n    Fish(string n) : name(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"张三\");\n    Fish f(\"计算机\");\n    Speaker* roster[2] = { &c, &f };\n    for (int i = 0; i < 2; i++) {\n        roster[i]->speak();\n    }\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "张三：\n计算机：",
+      "accept": [
+        "张三：\n计算机：\n"
+      ],
+      "explanation": "我们手上只有一排写着 `Speaker` 的名称 —— **名称上写的是「提供输出方法的」，不是「对象」也不是「鱼」**。学生甲和计算机没有半点血缘关系，可它们都照这份约定把该还的那一手补上了，所以两个都能站进这排名称里。`roster[i]->speak()` 挨个继续调用，调用到谁就看一眼屋里住的是谁：第一格是学生甲，印它自己那一版；第二格是计算机，印吐泡泡那一版。这就是这一课最值钱的效果：**同一句话继续调用，各对象各样**。"
+    },
+    {
+      "id": "q7",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n    void showName() const {\n        cout << \"我们叫 \" << name << endl;\n    }\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"煤球\");\n    Animal& r = c;\n    r.showName();\n    r.speak();\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "我们叫 煤球\n煤球：",
+      "accept": [
+        "我们叫 煤球\n煤球：\n"
+      ],
+      "explanation": "我们手上那张名称上写的是 `Animal`（抽象类定义），屋里住的是一个叫煤球的子对象。第一行调用 `showName()` —— 这一手是**动作写全了的正常函数**，不是只挂招牌那一手，所以它照名称上写的那一版跑，印出「我们叫 煤球」。第二行调用 `speak()` —— 这一手是**只挂招牌那一手**（挂着 `= 0`），名称上写的是谁不重要，继续调用的那一刻会看屋里住的是谁，所以跑的是煤球自己那一版。**这两行的分别，正好就是「抽象类定义身上还能有正常东西」那句话的实测**。"
+    }
+  ]
+}

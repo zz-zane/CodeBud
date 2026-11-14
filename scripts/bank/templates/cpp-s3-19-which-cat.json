@@ -1,0 +1,39 @@
+{
+  "templateId": "cpp-s3-19-which-cat",
+  "lang": "cpp",
+  "stage": 3,
+  "lessonId": "cpp-stage3-19",
+  "type": "codewrite",
+  "concept": [
+    "先照光再动手",
+    "照不到会递空名称",
+    "照光不改手上那张名称"
+  ],
+  "instances": 6,
+  "params": {
+    "who": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "小P"
+      ]
+    },
+    "other": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "小灰"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 1,
+    "min": 1,
+    "max": 2
+  },
+  "stemTemplate": "输入接口会给**一个数**：`1` 就是学生甲，别的数是学生乙（骨架里已经照着这个数把名称指好了）。\n\n两个对象都搭好了，名称 `p` 也已经指着其中一个，缺的就是**照光那一手**。你要补的就是它，然后分两条路印字：\n\n- 照到了：印 `是学生甲：` 接上它的名字；\n- 照不到：印 `不是学生甲：` 接上它的名字。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另一个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    Cat(const string& n) : name(n) {}\n    virtual ~Cat() {}\n};\n\nclass OrangeCat : public Cat {\npublic:\n    OrangeCat(const string& n) : Cat(n) {}\n};\n\nclass TabbyCat : public Cat {\npublic:\n    TabbyCat(const string& n) : Cat(n) {}\n};\n\nint main() {\n    int kind = 0;\n    cin >> kind;\n\n    OrangeCat o(\"{who}\");\n    TabbyCat t(\"{other}\");\n    Cat* p = &t;\n    if (kind == 1) p = &o;\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    Cat(const string& n) : name(n) {}\n    virtual ~Cat() {}\n};\n\nclass OrangeCat : public Cat {\npublic:\n    OrangeCat(const string& n) : Cat(n) {}\n};\n\nclass TabbyCat : public Cat {\npublic:\n    TabbyCat(const string& n) : Cat(n) {}\n};\n\nint main() {\n    int kind = 0;\n    cin >> kind;\n\n    OrangeCat o(\"{who}\");\n    TabbyCat t(\"{other}\");\n    Cat* p = &t;\n    if (kind == 1) p = &o;\n\n    OrangeCat* a = dynamic_cast<OrangeCat*>(p);\n    cout << (a == nullptr ? \"不是学生甲：\" : \"是学生甲：\") << p->name << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一题的姿势是**先照、先查空，再动手**：\n\n- `dynamic_cast<OrangeCat*>(p)` 拿手上那张「对象」名称去照学生甲：照到了递一张新名称 `a`，照不到递**空名称**；\n- 所以下一句必须先问 `a == nullptr`：是空名称就说明屋里住的不是学生甲，两条路印不同的字。\n\n顺序不能反：**照完不查就顺手去读**，等于把「万一不是」这一半赌掉了。还有个细节：照光**不改手上那张名称** —— `p` 从头到尾都还是「对象」，从头到尾都够得着 `p->name`，所以两支里印名字都用它。"
+}

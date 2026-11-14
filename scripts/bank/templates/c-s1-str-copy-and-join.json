@@ -1,0 +1,35 @@
+{
+  "templateId": "c-s1-str-copy-and-join",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-11",
+  "type": "codewrite",
+  "concept": [
+    "strcpy",
+    "strcat",
+    "strlen",
+    "string.h"
+  ],
+  "instances": 6,
+  "params": {
+    "x": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "三花"
+      ]
+    },
+    "y": {
+      "kind": "pick",
+      "values": [
+        "",
+        "和数据"
+      ]
+    }
+  },
+  "stemTemplate": "我们想干这三件事：**先抄一条、再接一截、最后数一数**。\n\n请你写个程序：\n\n1. 先摆一条字符串，上面写着 `{x}`；\n2. 用**抄**的那一个方法，把它连暗号一起抄进另一排元素里（那排元素要够宽）；\n3. 用**接**的那一个方法，往**抄件**的末尾上接一截 `{y}`；\n4. 把抄件上的字印成一行，再另起一行印它**真字符**的颗数。\n\n（抄、接、数这三个方法都住在 `string.h` 家，用之前记得先在最上面把它请出场。）",
+  "starterTemplate": "#include <stdio.h>\n\nint main(void) {\n    char word[] = \"{x}\";\n\n    // 第二步：抄进另一排够宽的元素里\n\n    // 第三步：往抄件末尾上接一截\n\n    // 第四步：印抄件，再印真珠子的颗数\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n#include <string.h>\n\nint main(void) {\n    char word[] = \"{x}\";\n    char copy[30];\n\n    strcpy(copy, word);\n    strcat(copy, \"{y}\");\n\n    printf(\"%s\\n\", copy);\n    printf(\"%d\\n\", (int)strlen(copy));\n    return 0;\n}\n",
+  "explanationTemplate": "**抄**的那一个方法是 `strcpy(抄到哪儿, 从哪儿抄)`  —— **接水的元素写前面、水源写后面**。写成 `strcpy(word, copy)` 就反了，等于拿清水去浇脏元素。\n\n它连**暗号一起**抄过去，所以在抄件上接着干活是安全的。要是抄完忘了带暗号，那条字符串就没头没尾了。\n\n**接**的那一个方法是 `strcat(a, b)`：把 `b` 那条字符串的字符接到 `a` 的末尾上，**并且自动把暗号挪到新的末尾**去，所以接完还能照常数、照常印。\n\n补一句最实在的：接的时候 `a` 那排元素得**装得下**接完的结果 —— `{x}` 加上 `{y}` 才几颗字符，我们摆了 30 只元素，宽宽裕裕。\n\n**数**要用 `strlen`：它数的是**真字符**，末尾那颗暗号不算数。中文的话心里还得记着：一个汉字占 **3** 格。"
+}

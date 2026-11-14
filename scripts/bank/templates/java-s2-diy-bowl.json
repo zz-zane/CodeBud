@@ -1,0 +1,32 @@
+{
+  "templateId": "java-s2-diy-bowl",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-10",
+  "type": "codewrite",
+  "concept": [
+    "量体裁衣的类定义",
+    "空着的尺码",
+    "同一个类定义量好几个",
+    "不用自己贴标签"
+  ],
+  "instances": 6,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "小黄鱼"
+      ]
+    },
+    "v": {
+      "kind": "int",
+      "min": 6,
+      "max": 7
+    }
+  },
+  "stemTemplate": "我们要**自己画一张泛型**，再拿它量出两个尺码不同的柜子。\n\n第一件事，定义类：\n\n1. 类定义叫 `Bowl`，名字后面挂一对尖括号、里面写个 `T`；\n2. 类定义里有一个**装东西的地方**，用 `T` 当它的名分；\n3. 类定义上挂两招：一个方法 `put` 收一件东西**存进去**，一个方法 `take` 把存着的那件**返回**；函数的名分也都跟着 `T` 走。\n\n第二件事，`main` 里用这张类定义量两个柜子：\n\n1. 一个尺码填成**字符串**，塞进 `{word}`，印一行 `项链那个是 ` 接上返回的那件；\n2. 另一个尺码填成**装数字的那张类定义**，塞进 `{v}`，印一行 `数字那个是 ` 接上返回的那件、再接上逗号加「加一是」、再接上**加一之后**的结果，格式照 `数字那个是 6，加一是 7` 这样来。\n\n那个数字柜子返回的东西**直接就能做加法**，我们不用自己贴标签。\n\n这一题**不需要输入**，程序自己就能跑。",
+  "starterTemplate": "class Bowl<T> {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+  "referenceSolutionTemplate": "class Bowl<T> {\n    private T thing;\n\n    void put(T thing) {\n        this.thing = thing;\n    }\n\n    T take() {\n        return thing;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Bowl<String> fish = new Bowl<>();\n        fish.put(\"{word}\");\n        System.out.println(\"项链那个是 \" + fish.take());\n\n        Bowl<Integer> num = new Bowl<>();\n        num.put({v});\n        System.out.println(\"数字那个是 \" + num.take() + \"，加一是 \" + (num.take() + 1));\n    }\n}\n",
+  "explanationTemplate": "这题是本课的**正身**：类定义上留一块空尺码，用的时候再填。\n\n**一、类定义上那几个 `T` 是什么。** `class Bowl<T>` 里那个 `T` 就是**空着的尺码**。类定义上凡是写 `T` 的地方 —— 存东西那一处、`put` 收什么、`take` 返回什么 —— 都读作「**用的时候填什么，这里就是什么**」。它自己**不是**某种具体的东西，只是「这里会有一块尺码」的记号。\n\n**二、尺码怎么填。** `Bowl<String> fish = new Bowl<>();` 就是把尺码填成了字符串：这个柜子只装字符串。另一个填成 `Integer`（**装数字的那张类定义**，不是光溜溜的 `int`），于是：\n\n- `num.put({v})` 塞进去的光溜溜的数字，编译器会顺手根据类创建实例口袋赋值（上一课的装箱）；\n- **`num.take() + 1` 可以直接做加法** —— 因为 `take` 返回的时候，Java 已经知道它是数字，**不用我们再贴标签**。\n\n这一条正是本课最值钱的地方：不填尺码的那种**万能口袋**，取出来的时候我们得自己写一笔 `(Integer)` 去作保，作保落空就跑到那一步炸；填了尺码，作保的活儿编译器替我们干了。\n\n**三、为什么两招的名分都跟着 `T`。** 因为它们处理的就是**这个柜子里装的那种东西**。尺码一填，两招的名分当场跟着定下来：填字符串，`put` 就只收字符串；填数字，`take` 返回就是数字。\n\n**四、一对空尖括号是省事写法。** `new Bowl<>()` 里那对空尖括号的意思是「**跟左边一样**」—— 左边填的是什么尺码，新量的这个就是什么尺码，不用再抄一遍。\n\n同一个类定义，我们量了一个字符串的、一个数字的 —— 往后装别的尺码，还是这张类定义，一次都不用重画。"
+}

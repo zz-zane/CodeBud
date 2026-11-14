@@ -1,0 +1,25 @@
+{
+  "templateId": "c-s1-ptr-type-mismatch",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-14",
+  "type": "codefix",
+  "concept": [
+    "名称",
+    "指针类型",
+    "incompatible pointer type",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "v": {
+      "kind": "int",
+      "min": 3,
+      "max": 7
+    }
+  },
+  "stemTemplate": "我们想给一个**装整数的元素**插一块名称，然后用名称把元素里的数拿出来印掉。\n\n可编译器说**名称和元素对不上号**……\n\n你帮我们看看是哪儿写岔了，把它改好。改好之后，程序应该印出 `{v}`。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nint main(void) {\n    int fish = {v};\n    double *p = &fish;\n\n    printf(\"%d\\n\", *p);\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint main(void) {\n    int fish = {v};\n    int *p = &fish;\n\n    printf(\"%d\\n\", *p);\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: initialization of 'double *' from incompatible pointer type 'int *' [-Wincompatible-pointer-types]`  —— `incompatible pointer type` 就是「**名称说的和元素里装的不是一回事**」。\n\n`double *p;` 这行字要**分两半读**：\n\n- 前面的 `double` —— 说的是「**它指的那个元素里保存的是小数**」；\n- 后面那颗 `*` —— 说的是「**这是一块名称**」。\n\n所以元素里装什么类型，名称前头就得写什么类型：元素里装整数就写 `int *`，元素里装小数就写 `double *`。\n\n写成 `double *p = &fish;`，编译器一看：名称上说这元素装小数，可 `fish` 明明是一个整数元素 —— 两边对不上，当场拦下。\n\n改成 `int *p = &fish;` 就好啦。这一条也是 C「什么都要你自己管」的一部分：**名称指的是什么元素，你得亲口说清楚。**"
+}

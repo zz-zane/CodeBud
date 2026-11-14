@@ -1,0 +1,516 @@
+{
+  "lessonId": "java-stage3-13",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s3-anno-deprecated-count-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `父对象`），类定义上画了三个方法，其中两招头上贴着编译器本来就认得的 `@Deprecated`（意思是「过时了」）。\n\n要列一张**过时清单**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟 `已过时` 或 `还在用`（贴了 `@Deprecated` 的写 `已过时`）；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 最后再印一行 `过时的一共 N 招`（N 是贴了 `@Deprecated` 的那几个方法的个数）。\n\n填 `main` 里空着的那一段就行，**类定义一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 老招呼() {\n        }\n\n        @Deprecated\n        void 老舔毛() {\n        }\n\n        void 新招呼() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 老招呼() {\n        }\n\n        @Deprecated\n        void 老舔毛() {\n        }\n\n        void 新招呼() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        int 过时的 = 0;\n        for (Method 一个方法 : 父对象.class.getDeclaredMethods()) {\n            if (一个方法.isAnnotationPresent(Deprecated.class)) {\n                过时的 = 过时的 + 1;\n                表.add(一个方法.getName() + \"：已过时\");\n            } else {\n                表.add(一个方法.getName() + \"：还在用\");\n            }\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n        System.out.println(\"过时的一共 \" + 过时的 + \" 招\");\n    }\n}\n",
+      "expectedOutput": "新招呼：还在用\n老招呼：已过时\n老舔毛：已过时\n过时的一共 2 招",
+      "stdin": null,
+      "explanation": "这一题读的是**编译器本来就认得**的那种纸条。\n\n**一、问「贴了没」用 `isAnnotationPresent`。** 课文第三节那张 `@Deprecated` 就是这么读出来的：`一个方法.isAnnotationPresent(Deprecated.class)` 给的是 `true` 或 `false` —— 只要问「贴了没」，这一手比 `getAnnotation(...)` 省事（后者交回来的是一张纸条，没贴的时候给的是 `null`，还得自己判）。\n\n**二、它留到跑的时候。** 跑起来读得到，说明 `@Deprecated` 那一档是 `RUNTIME`：不像我们自己画的纸条，不写说明书就默认只留到翻译那一步。\n\n**三、数数得自己数。** 最后那行 `过时的一共 N 招` 里的 N 是我们一边读一边自己加的，纸条不会替我们数。\n\n**四、顺序照旧自己造。** 光片上的方法顺序说了不算，所以三行要先排再印，不排就印、先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-deprecated-count",
+      "params": {
+        "d1": "老招呼",
+        "d2": "老舔毛",
+        "n1": "新招呼"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "e9d197c48e804804"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-deprecated-count-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `父对象`），类定义上画了三个方法，其中两招头上贴着编译器本来就认得的 `@Deprecated`（意思是「过时了」）。\n\n要列一张**过时清单**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟 `已过时` 或 `还在用`（贴了 `@Deprecated` 的写 `已过时`）；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 最后再印一行 `过时的一共 N 招`（N 是贴了 `@Deprecated` 的那几个方法的个数）。\n\n填 `main` 里空着的那一段就行，**类定义一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 老招呼() {\n        }\n\n        @Deprecated\n        void 老舔毛() {\n        }\n\n        void 新招手() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 老招呼() {\n        }\n\n        @Deprecated\n        void 老舔毛() {\n        }\n\n        void 新招手() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        int 过时的 = 0;\n        for (Method 一个方法 : 父对象.class.getDeclaredMethods()) {\n            if (一个方法.isAnnotationPresent(Deprecated.class)) {\n                过时的 = 过时的 + 1;\n                表.add(一个方法.getName() + \"：已过时\");\n            } else {\n                表.add(一个方法.getName() + \"：还在用\");\n            }\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n        System.out.println(\"过时的一共 \" + 过时的 + \" 招\");\n    }\n}\n",
+      "expectedOutput": "新招手：还在用\n老招呼：已过时\n老舔毛：已过时\n过时的一共 2 招",
+      "stdin": null,
+      "explanation": "这一题读的是**编译器本来就认得**的那种纸条。\n\n**一、问「贴了没」用 `isAnnotationPresent`。** 课文第三节那张 `@Deprecated` 就是这么读出来的：`一个方法.isAnnotationPresent(Deprecated.class)` 给的是 `true` 或 `false` —— 只要问「贴了没」，这一手比 `getAnnotation(...)` 省事（后者交回来的是一张纸条，没贴的时候给的是 `null`，还得自己判）。\n\n**二、它留到跑的时候。** 跑起来读得到，说明 `@Deprecated` 那一档是 `RUNTIME`：不像我们自己画的纸条，不写说明书就默认只留到翻译那一步。\n\n**三、数数得自己数。** 最后那行 `过时的一共 N 招` 里的 N 是我们一边读一边自己加的，纸条不会替我们数。\n\n**四、顺序照旧自己造。** 光片上的方法顺序说了不算，所以三行要先排再印，不排就印、先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-deprecated-count",
+      "params": {
+        "d1": "老招呼",
+        "d2": "老舔毛",
+        "n1": "新招手"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "b7c23484077d7c67"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-deprecated-count-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `父对象`），类定义上画了三个方法，其中两招头上贴着编译器本来就认得的 `@Deprecated`（意思是「过时了」）。\n\n要列一张**过时清单**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟 `已过时` 或 `还在用`（贴了 `@Deprecated` 的写 `已过时`）；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 最后再印一行 `过时的一共 N 招`（N 是贴了 `@Deprecated` 的那几个方法的个数）。\n\n填 `main` 里空着的那一段就行，**类定义一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 老招呼() {\n        }\n\n        @Deprecated\n        void 旧舔毛() {\n        }\n\n        void 新招手() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 老招呼() {\n        }\n\n        @Deprecated\n        void 旧舔毛() {\n        }\n\n        void 新招手() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        int 过时的 = 0;\n        for (Method 一个方法 : 父对象.class.getDeclaredMethods()) {\n            if (一个方法.isAnnotationPresent(Deprecated.class)) {\n                过时的 = 过时的 + 1;\n                表.add(一个方法.getName() + \"：已过时\");\n            } else {\n                表.add(一个方法.getName() + \"：还在用\");\n            }\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n        System.out.println(\"过时的一共 \" + 过时的 + \" 招\");\n    }\n}\n",
+      "expectedOutput": "新招手：还在用\n旧舔毛：已过时\n老招呼：已过时\n过时的一共 2 招",
+      "stdin": null,
+      "explanation": "这一题读的是**编译器本来就认得**的那种纸条。\n\n**一、问「贴了没」用 `isAnnotationPresent`。** 课文第三节那张 `@Deprecated` 就是这么读出来的：`一个方法.isAnnotationPresent(Deprecated.class)` 给的是 `true` 或 `false` —— 只要问「贴了没」，这一手比 `getAnnotation(...)` 省事（后者交回来的是一张纸条，没贴的时候给的是 `null`，还得自己判）。\n\n**二、它留到跑的时候。** 跑起来读得到，说明 `@Deprecated` 那一档是 `RUNTIME`：不像我们自己画的纸条，不写说明书就默认只留到翻译那一步。\n\n**三、数数得自己数。** 最后那行 `过时的一共 N 招` 里的 N 是我们一边读一边自己加的，纸条不会替我们数。\n\n**四、顺序照旧自己造。** 光片上的方法顺序说了不算，所以三行要先排再印，不排就印、先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-deprecated-count",
+      "params": {
+        "d1": "老招呼",
+        "d2": "旧舔毛",
+        "n1": "新招手"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "0d230d1634f09da6"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-deprecated-count-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `父对象`），类定义上画了三个方法，其中两招头上贴着编译器本来就认得的 `@Deprecated`（意思是「过时了」）。\n\n要列一张**过时清单**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟 `已过时` 或 `还在用`（贴了 `@Deprecated` 的写 `已过时`）；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 最后再印一行 `过时的一共 N 招`（N 是贴了 `@Deprecated` 的那几个方法的个数）。\n\n填 `main` 里空着的那一段就行，**类定义一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 旧招呼() {\n        }\n\n        @Deprecated\n        void 老舔毛() {\n        }\n\n        void 新招呼() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 旧招呼() {\n        }\n\n        @Deprecated\n        void 老舔毛() {\n        }\n\n        void 新招呼() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        int 过时的 = 0;\n        for (Method 一个方法 : 父对象.class.getDeclaredMethods()) {\n            if (一个方法.isAnnotationPresent(Deprecated.class)) {\n                过时的 = 过时的 + 1;\n                表.add(一个方法.getName() + \"：已过时\");\n            } else {\n                表.add(一个方法.getName() + \"：还在用\");\n            }\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n        System.out.println(\"过时的一共 \" + 过时的 + \" 招\");\n    }\n}\n",
+      "expectedOutput": "新招呼：还在用\n旧招呼：已过时\n老舔毛：已过时\n过时的一共 2 招",
+      "stdin": null,
+      "explanation": "这一题读的是**编译器本来就认得**的那种纸条。\n\n**一、问「贴了没」用 `isAnnotationPresent`。** 课文第三节那张 `@Deprecated` 就是这么读出来的：`一个方法.isAnnotationPresent(Deprecated.class)` 给的是 `true` 或 `false` —— 只要问「贴了没」，这一手比 `getAnnotation(...)` 省事（后者交回来的是一张纸条，没贴的时候给的是 `null`，还得自己判）。\n\n**二、它留到跑的时候。** 跑起来读得到，说明 `@Deprecated` 那一档是 `RUNTIME`：不像我们自己画的纸条，不写说明书就默认只留到翻译那一步。\n\n**三、数数得自己数。** 最后那行 `过时的一共 N 招` 里的 N 是我们一边读一边自己加的，纸条不会替我们数。\n\n**四、顺序照旧自己造。** 光片上的方法顺序说了不算，所以三行要先排再印，不排就印、先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-deprecated-count",
+      "params": {
+        "d1": "旧招呼",
+        "d2": "老舔毛",
+        "n1": "新招呼"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "023ff9993ef2ac9a"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-deprecated-count-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `父对象`），类定义上画了三个方法，其中两招头上贴着编译器本来就认得的 `@Deprecated`（意思是「过时了」）。\n\n要列一张**过时清单**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟 `已过时` 或 `还在用`（贴了 `@Deprecated` 的写 `已过时`）；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 最后再印一行 `过时的一共 N 招`（N 是贴了 `@Deprecated` 的那几个方法的个数）。\n\n填 `main` 里空着的那一段就行，**类定义一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 旧招呼() {\n        }\n\n        @Deprecated\n        void 旧舔毛() {\n        }\n\n        void 新招呼() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 旧招呼() {\n        }\n\n        @Deprecated\n        void 旧舔毛() {\n        }\n\n        void 新招呼() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        int 过时的 = 0;\n        for (Method 一个方法 : 父对象.class.getDeclaredMethods()) {\n            if (一个方法.isAnnotationPresent(Deprecated.class)) {\n                过时的 = 过时的 + 1;\n                表.add(一个方法.getName() + \"：已过时\");\n            } else {\n                表.add(一个方法.getName() + \"：还在用\");\n            }\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n        System.out.println(\"过时的一共 \" + 过时的 + \" 招\");\n    }\n}\n",
+      "expectedOutput": "新招呼：还在用\n旧招呼：已过时\n旧舔毛：已过时\n过时的一共 2 招",
+      "stdin": null,
+      "explanation": "这一题读的是**编译器本来就认得**的那种纸条。\n\n**一、问「贴了没」用 `isAnnotationPresent`。** 课文第三节那张 `@Deprecated` 就是这么读出来的：`一个方法.isAnnotationPresent(Deprecated.class)` 给的是 `true` 或 `false` —— 只要问「贴了没」，这一手比 `getAnnotation(...)` 省事（后者交回来的是一张纸条，没贴的时候给的是 `null`，还得自己判）。\n\n**二、它留到跑的时候。** 跑起来读得到，说明 `@Deprecated` 那一档是 `RUNTIME`：不像我们自己画的纸条，不写说明书就默认只留到翻译那一步。\n\n**三、数数得自己数。** 最后那行 `过时的一共 N 招` 里的 N 是我们一边读一边自己加的，纸条不会替我们数。\n\n**四、顺序照旧自己造。** 光片上的方法顺序说了不算，所以三行要先排再印，不排就印、先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-deprecated-count",
+      "params": {
+        "d1": "旧招呼",
+        "d2": "旧舔毛",
+        "n1": "新招呼"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "d172e95b948ff3e7"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-deprecated-count-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `父对象`），类定义上画了三个方法，其中两招头上贴着编译器本来就认得的 `@Deprecated`（意思是「过时了」）。\n\n要列一张**过时清单**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟 `已过时` 或 `还在用`（贴了 `@Deprecated` 的写 `已过时`）；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 最后再印一行 `过时的一共 N 招`（N 是贴了 `@Deprecated` 的那几个方法的个数）。\n\n填 `main` 里空着的那一段就行，**类定义一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 旧招呼() {\n        }\n\n        @Deprecated\n        void 旧舔毛() {\n        }\n\n        void 新招手() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 父对象 {\n        @Deprecated\n        void 旧招呼() {\n        }\n\n        @Deprecated\n        void 旧舔毛() {\n        }\n\n        void 新招手() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        int 过时的 = 0;\n        for (Method 一个方法 : 父对象.class.getDeclaredMethods()) {\n            if (一个方法.isAnnotationPresent(Deprecated.class)) {\n                过时的 = 过时的 + 1;\n                表.add(一个方法.getName() + \"：已过时\");\n            } else {\n                表.add(一个方法.getName() + \"：还在用\");\n            }\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n        System.out.println(\"过时的一共 \" + 过时的 + \" 招\");\n    }\n}\n",
+      "expectedOutput": "新招手：还在用\n旧招呼：已过时\n旧舔毛：已过时\n过时的一共 2 招",
+      "stdin": null,
+      "explanation": "这一题读的是**编译器本来就认得**的那种纸条。\n\n**一、问「贴了没」用 `isAnnotationPresent`。** 课文第三节那张 `@Deprecated` 就是这么读出来的：`一个方法.isAnnotationPresent(Deprecated.class)` 给的是 `true` 或 `false` —— 只要问「贴了没」，这一手比 `getAnnotation(...)` 省事（后者交回来的是一张纸条，没贴的时候给的是 `null`，还得自己判）。\n\n**二、它留到跑的时候。** 跑起来读得到，说明 `@Deprecated` 那一档是 `RUNTIME`：不像我们自己画的纸条，不写说明书就默认只留到翻译那一步。\n\n**三、数数得自己数。** 最后那行 `过时的一共 N 招` 里的 N 是我们一边读一边自己加的，纸条不会替我们数。\n\n**四、顺序照旧自己造。** 光片上的方法顺序说了不算，所以三行要先排再印，不排就印、先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-deprecated-count",
+      "params": {
+        "d1": "旧招呼",
+        "d2": "旧舔毛",
+        "n1": "新招手"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "d846a8834f3c8462"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-field-hints-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上有三根骨头，其中两根贴了纸条：一根两栏都写了，一根只写了 `value` 一栏。\n\n要列一张**骨头表**：\n\n1. 三根骨头按 `名字`、`数据`、`体重` 这个顺序，一根一行；\n2. 贴了纸条的那两根写 `骨头名：备注 根数 根`（备注和根数都从纸条上读，中间各留一个空格）；\n3. **没贴纸条的那一根**写 `骨头名：没贴纸条`。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"私房\", 根数 = 3)\n        String 名字 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 数据 = 5;\n\n        int 体重 = 4;\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"私房\", 根数 = 3)\n        String 名字 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 数据 = 5;\n\n        int 体重 = 4;\n    }\n\n    public static void main(String[] args) throws Exception {\n        for (String 骨头名 : new String[]{\"名字\", \"数据\", \"体重\"}) {\n            Field 骨头 = 子对象.class.getDeclaredField(骨头名);\n            记录 小纸条 = 骨头.getAnnotation(记录.class);\n            if (小纸条 == null) {\n                System.out.println(骨头名 + \"：没贴纸条\");\n            } else {\n                System.out.println(骨头名 + \"：\" + 小纸条.value() + \" \" + 小纸条.根数() + \" 根\");\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "名字：私房 3 根\n数据：存粮 1 根\n体重：没贴纸条",
+      "stdin": null,
+      "explanation": "这一题把纸条贴到**骨头**上读了一遍。\n\n**一、骨头上照样读得到。** `子对象.class.getDeclaredField(骨头名)` 先把那根骨头找出来，再 `骨头.getAnnotation(记录.class)` 把贴在上面的纸条拿回来 —— 跟方法上那一套一模一样。读纸条是读**贴在上面的那行字**，不是读骨头里的值，所以骨头是不是「只给我们看」都一样读得到。\n\n**二、顺序是我们自己写死的。** 三根骨头的先后是在那对小括号里写定的（`名字`、`数据`、`体重`），不是光片说了算 —— 光片上的骨头顺序不可靠，这跟第 12 课那张骨头表是同一条规矩。\n\n**三、贴上写的盖过默认值。** 纸条上 `int 根数() default 1;` 留了默认值：只写了 `value` 一栏的那一处照样立得住，读出来就是那根默认的 `1`；两栏都写了的（写的是 `根数 = 3`）读出来是 `3`，默认值根本用不上。\n\n**四、没贴纸条的那根要自己算。** 没贴纸条的时候 `getAnnotation(...)` 给的是 `null`，直接往下读就会当场翻脸 —— 所以先判一下是不是 `null`，是就印 `没贴纸条`。",
+      "templateId": "java-s3-anno-field-hints",
+      "params": {
+        "f1": "名字",
+        "f2": "数据",
+        "f3": "体重",
+        "a1": "私房"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "fbd78dd684c5cdb5"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-field-hints-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上有三根骨头，其中两根贴了纸条：一根两栏都写了，一根只写了 `value` 一栏。\n\n要列一张**骨头表**：\n\n1. 三根骨头按 `名字`、`数据`、`年龄` 这个顺序，一根一行；\n2. 贴了纸条的那两根写 `骨头名：备注 根数 根`（备注和根数都从纸条上读，中间各留一个空格）；\n3. **没贴纸条的那一根**写 `骨头名：没贴纸条`。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"贴身\", 根数 = 3)\n        String 名字 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 数据 = 5;\n\n        int 年龄 = 4;\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"贴身\", 根数 = 3)\n        String 名字 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 数据 = 5;\n\n        int 年龄 = 4;\n    }\n\n    public static void main(String[] args) throws Exception {\n        for (String 骨头名 : new String[]{\"名字\", \"数据\", \"年龄\"}) {\n            Field 骨头 = 子对象.class.getDeclaredField(骨头名);\n            记录 小纸条 = 骨头.getAnnotation(记录.class);\n            if (小纸条 == null) {\n                System.out.println(骨头名 + \"：没贴纸条\");\n            } else {\n                System.out.println(骨头名 + \"：\" + 小纸条.value() + \" \" + 小纸条.根数() + \" 根\");\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "名字：贴身 3 根\n数据：存粮 1 根\n年龄：没贴纸条",
+      "stdin": null,
+      "explanation": "这一题把纸条贴到**骨头**上读了一遍。\n\n**一、骨头上照样读得到。** `子对象.class.getDeclaredField(骨头名)` 先把那根骨头找出来，再 `骨头.getAnnotation(记录.class)` 把贴在上面的纸条拿回来 —— 跟方法上那一套一模一样。读纸条是读**贴在上面的那行字**，不是读骨头里的值，所以骨头是不是「只给我们看」都一样读得到。\n\n**二、顺序是我们自己写死的。** 三根骨头的先后是在那对小括号里写定的（`名字`、`数据`、`年龄`），不是光片说了算 —— 光片上的骨头顺序不可靠，这跟第 12 课那张骨头表是同一条规矩。\n\n**三、贴上写的盖过默认值。** 纸条上 `int 根数() default 1;` 留了默认值：只写了 `value` 一栏的那一处照样立得住，读出来就是那根默认的 `1`；两栏都写了的（写的是 `根数 = 3`）读出来是 `3`，默认值根本用不上。\n\n**四、没贴纸条的那根要自己算。** 没贴纸条的时候 `getAnnotation(...)` 给的是 `null`，直接往下读就会当场翻脸 —— 所以先判一下是不是 `null`，是就印 `没贴纸条`。",
+      "templateId": "java-s3-anno-field-hints",
+      "params": {
+        "f1": "名字",
+        "f2": "数据",
+        "f3": "年龄",
+        "a1": "贴身"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "130ebb469b5f4862"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-field-hints-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上有三根骨头，其中两根贴了纸条：一根两栏都写了，一根只写了 `value` 一栏。\n\n要列一张**骨头表**：\n\n1. 三根骨头按 `名字`、`商品数`、`年龄` 这个顺序，一根一行；\n2. 贴了纸条的那两根写 `骨头名：备注 根数 根`（备注和根数都从纸条上读，中间各留一个空格）；\n3. **没贴纸条的那一根**写 `骨头名：没贴纸条`。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"私房\", 根数 = 3)\n        String 名字 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 商品数 = 5;\n\n        int 年龄 = 4;\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"私房\", 根数 = 3)\n        String 名字 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 商品数 = 5;\n\n        int 年龄 = 4;\n    }\n\n    public static void main(String[] args) throws Exception {\n        for (String 骨头名 : new String[]{\"名字\", \"商品数\", \"年龄\"}) {\n            Field 骨头 = 子对象.class.getDeclaredField(骨头名);\n            记录 小纸条 = 骨头.getAnnotation(记录.class);\n            if (小纸条 == null) {\n                System.out.println(骨头名 + \"：没贴纸条\");\n            } else {\n                System.out.println(骨头名 + \"：\" + 小纸条.value() + \" \" + 小纸条.根数() + \" 根\");\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "名字：私房 3 根\n商品数：存粮 1 根\n年龄：没贴纸条",
+      "stdin": null,
+      "explanation": "这一题把纸条贴到**骨头**上读了一遍。\n\n**一、骨头上照样读得到。** `子对象.class.getDeclaredField(骨头名)` 先把那根骨头找出来，再 `骨头.getAnnotation(记录.class)` 把贴在上面的纸条拿回来 —— 跟方法上那一套一模一样。读纸条是读**贴在上面的那行字**，不是读骨头里的值，所以骨头是不是「只给我们看」都一样读得到。\n\n**二、顺序是我们自己写死的。** 三根骨头的先后是在那对小括号里写定的（`名字`、`商品数`、`年龄`），不是光片说了算 —— 光片上的骨头顺序不可靠，这跟第 12 课那张骨头表是同一条规矩。\n\n**三、贴上写的盖过默认值。** 纸条上 `int 根数() default 1;` 留了默认值：只写了 `value` 一栏的那一处照样立得住，读出来就是那根默认的 `1`；两栏都写了的（写的是 `根数 = 3`）读出来是 `3`，默认值根本用不上。\n\n**四、没贴纸条的那根要自己算。** 没贴纸条的时候 `getAnnotation(...)` 给的是 `null`，直接往下读就会当场翻脸 —— 所以先判一下是不是 `null`，是就印 `没贴纸条`。",
+      "templateId": "java-s3-anno-field-hints",
+      "params": {
+        "f1": "名字",
+        "f2": "商品数",
+        "f3": "年龄",
+        "a1": "私房"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "47b0d98d9b2210f6"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-field-hints-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上有三根骨头，其中两根贴了纸条：一根两栏都写了，一根只写了 `value` 一栏。\n\n要列一张**骨头表**：\n\n1. 三根骨头按 `绰号`、`数据`、`体重` 这个顺序，一根一行；\n2. 贴了纸条的那两根写 `骨头名：备注 根数 根`（备注和根数都从纸条上读，中间各留一个空格）；\n3. **没贴纸条的那一根**写 `骨头名：没贴纸条`。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"贴身\", 根数 = 3)\n        String 绰号 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 数据 = 5;\n\n        int 体重 = 4;\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"贴身\", 根数 = 3)\n        String 绰号 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 数据 = 5;\n\n        int 体重 = 4;\n    }\n\n    public static void main(String[] args) throws Exception {\n        for (String 骨头名 : new String[]{\"绰号\", \"数据\", \"体重\"}) {\n            Field 骨头 = 子对象.class.getDeclaredField(骨头名);\n            记录 小纸条 = 骨头.getAnnotation(记录.class);\n            if (小纸条 == null) {\n                System.out.println(骨头名 + \"：没贴纸条\");\n            } else {\n                System.out.println(骨头名 + \"：\" + 小纸条.value() + \" \" + 小纸条.根数() + \" 根\");\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "绰号：贴身 3 根\n数据：存粮 1 根\n体重：没贴纸条",
+      "stdin": null,
+      "explanation": "这一题把纸条贴到**骨头**上读了一遍。\n\n**一、骨头上照样读得到。** `子对象.class.getDeclaredField(骨头名)` 先把那根骨头找出来，再 `骨头.getAnnotation(记录.class)` 把贴在上面的纸条拿回来 —— 跟方法上那一套一模一样。读纸条是读**贴在上面的那行字**，不是读骨头里的值，所以骨头是不是「只给我们看」都一样读得到。\n\n**二、顺序是我们自己写死的。** 三根骨头的先后是在那对小括号里写定的（`绰号`、`数据`、`体重`），不是光片说了算 —— 光片上的骨头顺序不可靠，这跟第 12 课那张骨头表是同一条规矩。\n\n**三、贴上写的盖过默认值。** 纸条上 `int 根数() default 1;` 留了默认值：只写了 `value` 一栏的那一处照样立得住，读出来就是那根默认的 `1`；两栏都写了的（写的是 `根数 = 3`）读出来是 `3`，默认值根本用不上。\n\n**四、没贴纸条的那根要自己算。** 没贴纸条的时候 `getAnnotation(...)` 给的是 `null`，直接往下读就会当场翻脸 —— 所以先判一下是不是 `null`，是就印 `没贴纸条`。",
+      "templateId": "java-s3-anno-field-hints",
+      "params": {
+        "f1": "绰号",
+        "f2": "数据",
+        "f3": "体重",
+        "a1": "贴身"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "300737b7b4ae7fc4"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-field-hints-012",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上有三根骨头，其中两根贴了纸条：一根两栏都写了，一根只写了 `value` 一栏。\n\n要列一张**骨头表**：\n\n1. 三根骨头按 `绰号`、`商品数`、`体重` 这个顺序，一根一行；\n2. 贴了纸条的那两根写 `骨头名：备注 根数 根`（备注和根数都从纸条上读，中间各留一个空格）；\n3. **没贴纸条的那一根**写 `骨头名：没贴纸条`。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"私房\", 根数 = 3)\n        String 绰号 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 商品数 = 5;\n\n        int 体重 = 4;\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"私房\", 根数 = 3)\n        String 绰号 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 商品数 = 5;\n\n        int 体重 = 4;\n    }\n\n    public static void main(String[] args) throws Exception {\n        for (String 骨头名 : new String[]{\"绰号\", \"商品数\", \"体重\"}) {\n            Field 骨头 = 子对象.class.getDeclaredField(骨头名);\n            记录 小纸条 = 骨头.getAnnotation(记录.class);\n            if (小纸条 == null) {\n                System.out.println(骨头名 + \"：没贴纸条\");\n            } else {\n                System.out.println(骨头名 + \"：\" + 小纸条.value() + \" \" + 小纸条.根数() + \" 根\");\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "绰号：私房 3 根\n商品数：存粮 1 根\n体重：没贴纸条",
+      "stdin": null,
+      "explanation": "这一题把纸条贴到**骨头**上读了一遍。\n\n**一、骨头上照样读得到。** `子对象.class.getDeclaredField(骨头名)` 先把那根骨头找出来，再 `骨头.getAnnotation(记录.class)` 把贴在上面的纸条拿回来 —— 跟方法上那一套一模一样。读纸条是读**贴在上面的那行字**，不是读骨头里的值，所以骨头是不是「只给我们看」都一样读得到。\n\n**二、顺序是我们自己写死的。** 三根骨头的先后是在那对小括号里写定的（`绰号`、`商品数`、`体重`），不是光片说了算 —— 光片上的骨头顺序不可靠，这跟第 12 课那张骨头表是同一条规矩。\n\n**三、贴上写的盖过默认值。** 纸条上 `int 根数() default 1;` 留了默认值：只写了 `value` 一栏的那一处照样立得住，读出来就是那根默认的 `1`；两栏都写了的（写的是 `根数 = 3`）读出来是 `3`，默认值根本用不上。\n\n**四、没贴纸条的那根要自己算。** 没贴纸条的时候 `getAnnotation(...)` 给的是 `null`，直接往下读就会当场翻脸 —— 所以先判一下是不是 `null`，是就印 `没贴纸条`。",
+      "templateId": "java-s3-anno-field-hints",
+      "params": {
+        "f1": "绰号",
+        "f2": "商品数",
+        "f3": "体重",
+        "a1": "私房"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "ffac1523b7f1cc02"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-field-hints-015",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上有三根骨头，其中两根贴了纸条：一根两栏都写了，一根只写了 `value` 一栏。\n\n要列一张**骨头表**：\n\n1. 三根骨头按 `绰号`、`商品数`、`年龄` 这个顺序，一根一行；\n2. 贴了纸条的那两根写 `骨头名：备注 根数 根`（备注和根数都从纸条上读，中间各留一个空格）；\n3. **没贴纸条的那一根**写 `骨头名：没贴纸条`。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"贴身\", 根数 = 3)\n        String 绰号 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 商品数 = 5;\n\n        int 年龄 = 4;\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Field;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 记录 {\n        String value();\n        int 根数() default 1;\n    }\n\n    static class 子对象 {\n        @记录(value = \"贴身\", 根数 = 3)\n        String 绰号 = \"张三\";\n\n        @记录(value = \"存粮\")\n        int 商品数 = 5;\n\n        int 年龄 = 4;\n    }\n\n    public static void main(String[] args) throws Exception {\n        for (String 骨头名 : new String[]{\"绰号\", \"商品数\", \"年龄\"}) {\n            Field 骨头 = 子对象.class.getDeclaredField(骨头名);\n            记录 小纸条 = 骨头.getAnnotation(记录.class);\n            if (小纸条 == null) {\n                System.out.println(骨头名 + \"：没贴纸条\");\n            } else {\n                System.out.println(骨头名 + \"：\" + 小纸条.value() + \" \" + 小纸条.根数() + \" 根\");\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "绰号：贴身 3 根\n商品数：存粮 1 根\n年龄：没贴纸条",
+      "stdin": null,
+      "explanation": "这一题把纸条贴到**骨头**上读了一遍。\n\n**一、骨头上照样读得到。** `子对象.class.getDeclaredField(骨头名)` 先把那根骨头找出来，再 `骨头.getAnnotation(记录.class)` 把贴在上面的纸条拿回来 —— 跟方法上那一套一模一样。读纸条是读**贴在上面的那行字**，不是读骨头里的值，所以骨头是不是「只给我们看」都一样读得到。\n\n**二、顺序是我们自己写死的。** 三根骨头的先后是在那对小括号里写定的（`绰号`、`商品数`、`年龄`），不是光片说了算 —— 光片上的骨头顺序不可靠，这跟第 12 课那张骨头表是同一条规矩。\n\n**三、贴上写的盖过默认值。** 纸条上 `int 根数() default 1;` 留了默认值：只写了 `value` 一栏的那一处照样立得住，读出来就是那根默认的 `1`；两栏都写了的（写的是 `根数 = 3`）读出来是 `3`，默认值根本用不上。\n\n**四、没贴纸条的那根要自己算。** 没贴纸条的时候 `getAnnotation(...)` 给的是 `null`，直接往下读就会当场翻脸 —— 所以先判一下是不是 `null`，是就印 `没贴纸条`。",
+      "templateId": "java-s3-anno-field-hints",
+      "params": {
+        "f1": "绰号",
+        "f2": "商品数",
+        "f3": "年龄",
+        "a1": "贴身"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "b383b07b4794e3dd"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-method-table-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上画了三个方法，其中两招头上贴了纸条。\n\n要列一张**纸条表**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟着纸条上写的那串字；**没贴纸条的那一个方法**写 `方法名：没贴纸条`；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 三行印完就结束，不要再印别的东西。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"处理了\")\n        void 打招呼() {\n        }\n\n        @纸条(\"别烦我\")\n        void 睡觉() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"处理了\")\n        void 打招呼() {\n        }\n\n        @纸条(\"别烦我\")\n        void 睡觉() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        for (Method 一个方法 : 子对象.class.getDeclaredMethods()) {\n            纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n            表.add(一个方法.getName() + \"：\" + (小纸条 == null ? \"没贴纸条\" : 小纸条.value()));\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n    }\n}\n",
+      "expectedOutput": "打招呼：处理了\n洗脸：没贴纸条\n睡觉：别烦我",
+      "stdin": null,
+      "explanation": "这一题把课文第五节那张表原样走了一遍。\n\n**一、纸条是照着类定义自己画的。** `@Retention(RetentionPolicy.RUNTIME)` 是「留到跑的时候」—— 少了这一句（或者写成 `CLASS`），照 X 光读到的就是一片空白，三行全变成 `没贴纸条`。\n\n**二、读纸条两步走。** 先 `子对象.class.getDeclaredMethods()` 把方法一个方法一个方法拿出来，再 `一个方法.getAnnotation(纸条.class)` 把贴在这一个方法上的纸条拿回来。**它给的是纸条本身，不是 `true`/`false`** —— 没贴的时候给 `null`。\n\n**三、没贴的也得有一行。** 拿回来的东西可能是 `null`，所以得先判一下：是 `null` 就写 `没贴纸条`。漏了这一步，读没贴纸条的那一个方法时就会当场翻脸。\n\n**四、顺序自己造。** 光片上的方法顺序**说了不算**（跟第 12 课那张骨头表同一条规矩），所以要把整行塞进柜子、整行交给 `Collections.sort` 排一遍再印；不排就印，三行的先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-method-table",
+      "params": {
+        "m1": "打招呼",
+        "m2": "睡觉",
+        "a1": "处理了",
+        "a2": "别烦我"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "3a8c4c4806c29758"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-method-table-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上画了三个方法，其中两招头上贴了纸条。\n\n要列一张**纸条表**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟着纸条上写的那串字；**没贴纸条的那一个方法**写 `方法名：没贴纸条`；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 三行印完就结束，不要再印别的东西。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"应当开始处理\")\n        void 打招呼() {\n        }\n\n        @纸条(\"困了\")\n        void 睡觉() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"应当开始处理\")\n        void 打招呼() {\n        }\n\n        @纸条(\"困了\")\n        void 睡觉() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        for (Method 一个方法 : 子对象.class.getDeclaredMethods()) {\n            纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n            表.add(一个方法.getName() + \"：\" + (小纸条 == null ? \"没贴纸条\" : 小纸条.value()));\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n    }\n}\n",
+      "expectedOutput": "打招呼：应当开始处理\n洗脸：没贴纸条\n睡觉：困了",
+      "stdin": null,
+      "explanation": "这一题把课文第五节那张表原样走了一遍。\n\n**一、纸条是照着类定义自己画的。** `@Retention(RetentionPolicy.RUNTIME)` 是「留到跑的时候」—— 少了这一句（或者写成 `CLASS`），照 X 光读到的就是一片空白，三行全变成 `没贴纸条`。\n\n**二、读纸条两步走。** 先 `子对象.class.getDeclaredMethods()` 把方法一个方法一个方法拿出来，再 `一个方法.getAnnotation(纸条.class)` 把贴在这一个方法上的纸条拿回来。**它给的是纸条本身，不是 `true`/`false`** —— 没贴的时候给 `null`。\n\n**三、没贴的也得有一行。** 拿回来的东西可能是 `null`，所以得先判一下：是 `null` 就写 `没贴纸条`。漏了这一步，读没贴纸条的那一个方法时就会当场翻脸。\n\n**四、顺序自己造。** 光片上的方法顺序**说了不算**（跟第 12 课那张骨头表同一条规矩），所以要把整行塞进柜子、整行交给 `Collections.sort` 排一遍再印；不排就印，三行的先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-method-table",
+      "params": {
+        "m1": "打招呼",
+        "m2": "睡觉",
+        "a1": "应当开始处理",
+        "a2": "困了"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "a020b40e5d597ee1"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-method-table-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上画了三个方法，其中两招头上贴了纸条。\n\n要列一张**纸条表**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟着纸条上写的那串字；**没贴纸条的那一个方法**写 `方法名：没贴纸条`；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 三行印完就结束，不要再印别的东西。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"应当开始处理\")\n        void 打招呼() {\n        }\n\n        @纸条(\"别烦我\")\n        void 暂停() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"应当开始处理\")\n        void 打招呼() {\n        }\n\n        @纸条(\"别烦我\")\n        void 暂停() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        for (Method 一个方法 : 子对象.class.getDeclaredMethods()) {\n            纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n            表.add(一个方法.getName() + \"：\" + (小纸条 == null ? \"没贴纸条\" : 小纸条.value()));\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n    }\n}\n",
+      "expectedOutput": "打招呼：应当开始处理\n暂停：别烦我\n洗脸：没贴纸条",
+      "stdin": null,
+      "explanation": "这一题把课文第五节那张表原样走了一遍。\n\n**一、纸条是照着类定义自己画的。** `@Retention(RetentionPolicy.RUNTIME)` 是「留到跑的时候」—— 少了这一句（或者写成 `CLASS`），照 X 光读到的就是一片空白，三行全变成 `没贴纸条`。\n\n**二、读纸条两步走。** 先 `子对象.class.getDeclaredMethods()` 把方法一个方法一个方法拿出来，再 `一个方法.getAnnotation(纸条.class)` 把贴在这一个方法上的纸条拿回来。**它给的是纸条本身，不是 `true`/`false`** —— 没贴的时候给 `null`。\n\n**三、没贴的也得有一行。** 拿回来的东西可能是 `null`，所以得先判一下：是 `null` 就写 `没贴纸条`。漏了这一步，读没贴纸条的那一个方法时就会当场翻脸。\n\n**四、顺序自己造。** 光片上的方法顺序**说了不算**（跟第 12 课那张骨头表同一条规矩），所以要把整行塞进柜子、整行交给 `Collections.sort` 排一遍再印；不排就印，三行的先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-method-table",
+      "params": {
+        "m1": "打招呼",
+        "m2": "暂停",
+        "a1": "应当开始处理",
+        "a2": "别烦我"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "e2d94fa2c65d0dea"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-method-table-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上画了三个方法，其中两招头上贴了纸条。\n\n要列一张**纸条表**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟着纸条上写的那串字；**没贴纸条的那一个方法**写 `方法名：没贴纸条`；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 三行印完就结束，不要再印别的东西。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"处理了\")\n        void 招手() {\n        }\n\n        @纸条(\"困了\")\n        void 睡觉() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"处理了\")\n        void 招手() {\n        }\n\n        @纸条(\"困了\")\n        void 睡觉() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        for (Method 一个方法 : 子对象.class.getDeclaredMethods()) {\n            纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n            表.add(一个方法.getName() + \"：\" + (小纸条 == null ? \"没贴纸条\" : 小纸条.value()));\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n    }\n}\n",
+      "expectedOutput": "招手：处理了\n洗脸：没贴纸条\n睡觉：困了",
+      "stdin": null,
+      "explanation": "这一题把课文第五节那张表原样走了一遍。\n\n**一、纸条是照着类定义自己画的。** `@Retention(RetentionPolicy.RUNTIME)` 是「留到跑的时候」—— 少了这一句（或者写成 `CLASS`），照 X 光读到的就是一片空白，三行全变成 `没贴纸条`。\n\n**二、读纸条两步走。** 先 `子对象.class.getDeclaredMethods()` 把方法一个方法一个方法拿出来，再 `一个方法.getAnnotation(纸条.class)` 把贴在这一个方法上的纸条拿回来。**它给的是纸条本身，不是 `true`/`false`** —— 没贴的时候给 `null`。\n\n**三、没贴的也得有一行。** 拿回来的东西可能是 `null`，所以得先判一下：是 `null` 就写 `没贴纸条`。漏了这一步，读没贴纸条的那一个方法时就会当场翻脸。\n\n**四、顺序自己造。** 光片上的方法顺序**说了不算**（跟第 12 课那张骨头表同一条规矩），所以要把整行塞进柜子、整行交给 `Collections.sort` 排一遍再印；不排就印，三行的先后说不准，判分那边也对不上。",
+      "templateId": "java-s3-anno-method-table",
+      "params": {
+        "m1": "招手",
+        "m2": "睡觉",
+        "a1": "处理了",
+        "a2": "困了"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "cf506a7c68f92472"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-method-table-012",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上画了三个方法，其中两招头上贴了纸条。\n\n要列一张**纸条表**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟着纸条上写的那串字；**没贴纸条的那一个方法**写 `方法名：没贴纸条`；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 三行印完就结束，不要再印别的东西。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"处理了\")\n        void 招手() {\n        }\n\n        @纸条(\"别烦我\")\n        void 暂停() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"处理了\")\n        void 招手() {\n        }\n\n        @纸条(\"别烦我\")\n        void 暂停() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        for (Method 一个方法 : 子对象.class.getDeclaredMethods()) {\n            纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n            表.add(一个方法.getName() + \"：\" + (小纸条 == null ? \"没贴纸条\" : 小纸条.value()));\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n    }\n}\n",
+      "expectedOutput": "招手：处理了\n暂停：别烦我\n洗脸：没贴纸条",
+      "stdin": null,
+      "explanation": "反射取得的方法集合不保证原始枚举顺序。按题目指定的方法名规则排序后，再读取注解并输出；没有注解的方法按约定输出默认信息。改名会影响排序，但不应改变注解读取规则。",
+      "templateId": "java-s3-anno-method-table",
+      "params": {
+        "m1": "招手",
+        "m2": "暂停",
+        "a1": "处理了",
+        "a2": "别烦我"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.879Z",
+        "hash": "7e8c775401a09c4c"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-method-table-015",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手上有一个类定义（代码里那张 `子对象`），类定义上画了三个方法，其中两招头上贴了纸条。\n\n要列一张**纸条表**：\n\n1. 三个方法一个方法不落，每行写 `方法名：` 后面跟着纸条上写的那串字；**没贴纸条的那一个方法**写 `方法名：没贴纸条`；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 三行印完就结束，不要再印别的东西。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"应当开始处理\")\n        void 招手() {\n        }\n\n        @纸条(\"困了\")\n        void 暂停() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"应当开始处理\")\n        void 招手() {\n        }\n\n        @纸条(\"困了\")\n        void 暂停() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        for (Method 一个方法 : 子对象.class.getDeclaredMethods()) {\n            纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n            表.add(一个方法.getName() + \"：\" + (小纸条 == null ? \"没贴纸条\" : 小纸条.value()));\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n    }\n}\n",
+      "expectedOutput": "招手：应当开始处理\n暂停：困了\n洗脸：没贴纸条",
+      "stdin": null,
+      "explanation": "反射取得的方法集合不保证原始枚举顺序。按题目指定的方法名规则排序后，再读取注解并输出；没有注解的方法按约定输出默认信息。改名会影响排序，但不应改变注解读取规则。",
+      "templateId": "java-s3-anno-method-table",
+      "params": {
+        "m1": "招手",
+        "m2": "暂停",
+        "a1": "应当开始处理",
+        "a2": "困了"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.879Z",
+        "hash": "da171f22fd39a8e4"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-missing-runtime-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们画了一张纸条、贴到方法上，又照 X 光想把纸条读出来 —— 程序**跑起来了**，可读到的是一片空白。\n\n纸条上少写了一句话。你帮我们把**纸条上那一句**补对 —— 别的都别动。改好之后，程序该印出**一行**：`读到的备注：` 后面跟着纸条上写的那串字。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "import java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.CLASS)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"别烦我\")\n        void 招手() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"招手\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + (小纸条 == null ? \"空的\" : 小纸条.value()));\n    }\n}\n",
+      "referenceFix": "import java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"别烦我\")\n        void 招手() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"招手\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + (小纸条 == null ? \"空的\" : 小纸条.value()));\n    }\n}\n",
+      "expectedOutput": "读到的备注：别烦我",
+      "stdin": null,
+      "explanation": "这一摔**不是翻译那一关拦的** —— 程序照样跑起来了，只是光片上空着，印出来的是 `读到的备注：空的`。\n\n原因就在纸条上那一句：\n\n```java\n@Retention(RetentionPolicy.CLASS)\n```\n\n`CLASS` 那一档的意思是「**留到翻译那一步**」：编译器编译的时候看得见它，翻完就不跟着上路了。照 X 光是在**跑起来之后**才读的 —— 这时候纸条早就不在光片上了，`getAnnotation(...)` 交回来的是 `null`，所以走的是「空的」那一支。\n\n要让它留到跑的时候，那一档得换成：\n\n```java\n@Retention(RetentionPolicy.RUNTIME)\n```\n\n顺带记一句：**这一句不写的时候，就停在 `CLASS` 那一档** —— 所以「忘了写这句」和「写了 `CLASS`」是同一个结果，照 X 光都读不到。\n\n改完再跑，就印出 `读到的备注：` 后面跟着纸条上写的那串字。",
+      "templateId": "java-s3-anno-missing-runtime",
+      "params": {
+        "a": "别烦我",
+        "m": "招手"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "4b9de5c58ac4ae8c"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-missing-runtime-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们画了一张纸条、贴到方法上，又照 X 光想把纸条读出来 —— 程序**跑起来了**，可读到的是一片空白。\n\n纸条上少写了一句话。你帮我们把**纸条上那一句**补对 —— 别的都别动。改好之后，程序该印出**一行**：`读到的备注：` 后面跟着纸条上写的那串字。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "import java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.CLASS)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"困了\")\n        void 暂停() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"暂停\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + (小纸条 == null ? \"空的\" : 小纸条.value()));\n    }\n}\n",
+      "referenceFix": "import java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"困了\")\n        void 暂停() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"暂停\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + (小纸条 == null ? \"空的\" : 小纸条.value()));\n    }\n}\n",
+      "expectedOutput": "读到的备注：困了",
+      "stdin": null,
+      "explanation": "这一摔**不是翻译那一关拦的** —— 程序照样跑起来了，只是光片上空着，印出来的是 `读到的备注：空的`。\n\n原因就在纸条上那一句：\n\n```java\n@Retention(RetentionPolicy.CLASS)\n```\n\n`CLASS` 那一档的意思是「**留到翻译那一步**」：编译器编译的时候看得见它，翻完就不跟着上路了。照 X 光是在**跑起来之后**才读的 —— 这时候纸条早就不在光片上了，`getAnnotation(...)` 交回来的是 `null`，所以走的是「空的」那一支。\n\n要让它留到跑的时候，那一档得换成：\n\n```java\n@Retention(RetentionPolicy.RUNTIME)\n```\n\n顺带记一句：**这一句不写的时候，就停在 `CLASS` 那一档** —— 所以「忘了写这句」和「写了 `CLASS`」是同一个结果，照 X 光都读不到。\n\n改完再跑，就印出 `读到的备注：` 后面跟着纸条上写的那串字。",
+      "templateId": "java-s3-anno-missing-runtime",
+      "params": {
+        "a": "困了",
+        "m": "暂停"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "d45d478f6ec33459"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-value-name-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们对函数贴纸条的时候图省事：括号里只写了那串字、连栏名都没写。结果编译器**两条一起报**，连翻译那一关都没过。\n\n你帮我们把**贴纸条那一行**改对 —— 别的都别动，纸条上那一栏的名字也别动（它就叫「值」）。改好之后，程序该印出**一行**：`读到的备注：` 后面跟着纸条上写的那串字。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "import java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @interface 纸条 {\n        String 值();\n    }\n\n    static class 子对象 {\n        @纸条(\"处理了\")\n        void 打招呼() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"打招呼\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + 小纸条.值());\n    }\n}\n",
+      "referenceFix": "import java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @interface 纸条 {\n        String 值();\n    }\n\n    static class 子对象 {\n        @纸条(值 = \"处理了\")\n        void 打招呼() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"打招呼\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + 小纸条.值());\n    }\n}\n",
+      "expectedOutput": "读到的备注：处理了",
+      "stdin": null,
+      "explanation": "编译器两条一起报，原话是这样：\n\n```text\nMain.java:12: error: cannot find symbol\nsymbol:   method value()\nMain.java:12: error: annotation @纸条 is missing a default value for the element '值'\n```\n\n两句连起来读，就是它的心思：\n\n- 第一句「**找不到叫 `value` 的东西**」—— 我们用的是**省事写法**（括号里只写一样东西、连栏名都不写），而省事写法只认一个栏名：`value`。纸条上那一栏叫「值」，它当然找不到。\n- 第二句「**`值` 这一栏没给东西**」—— 它把括号里那串字当成「连栏名都没写」，于是按「一样都没填」算；可 `值` 这一栏又没留默认值，两头对不上，只好一起报出来。\n\n修法两条都立得住：把栏名改回 `value`；或者**老老实实把栏名写上**，改成 `@纸条(值 = \"处理了\")` 这个样子。\n\n这一题的修法是**后一条**（题目说了纸条上那一栏的名字别动）—— 改的是**贴纸条那一行**。改完再跑，就印出 `读到的备注：` 后面跟着那串字。",
+      "templateId": "java-s3-anno-value-name",
+      "params": {
+        "a": "处理了",
+        "m": "打招呼"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "b1d31bf5213335cd"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-value-name-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们对函数贴纸条的时候图省事：括号里只写了那串字、连栏名都没写。结果编译器**两条一起报**，连翻译那一关都没过。\n\n你帮我们把**贴纸条那一行**改对 —— 别的都别动，纸条上那一栏的名字也别动（它就叫「值」）。改好之后，程序该印出**一行**：`读到的备注：` 后面跟着纸条上写的那串字。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "import java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @interface 纸条 {\n        String 值();\n    }\n\n    static class 子对象 {\n        @纸条(\"应当开始处理\")\n        void 招手() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"招手\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + 小纸条.值());\n    }\n}\n",
+      "referenceFix": "import java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @interface 纸条 {\n        String 值();\n    }\n\n    static class 子对象 {\n        @纸条(值 = \"应当开始处理\")\n        void 招手() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"招手\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + 小纸条.值());\n    }\n}\n",
+      "expectedOutput": "读到的备注：应当开始处理",
+      "stdin": null,
+      "explanation": "编译器两条一起报，原话是这样：\n\n```text\nMain.java:12: error: cannot find symbol\nsymbol:   method value()\nMain.java:12: error: annotation @纸条 is missing a default value for the element '值'\n```\n\n两句连起来读，就是它的心思：\n\n- 第一句「**找不到叫 `value` 的东西**」—— 我们用的是**省事写法**（括号里只写一样东西、连栏名都不写），而省事写法只认一个栏名：`value`。纸条上那一栏叫「值」，它当然找不到。\n- 第二句「**`值` 这一栏没给东西**」—— 它把括号里那串字当成「连栏名都没写」，于是按「一样都没填」算；可 `值` 这一栏又没留默认值，两头对不上，只好一起报出来。\n\n修法两条都立得住：把栏名改回 `value`；或者**老老实实把栏名写上**，改成 `@纸条(值 = \"处理了\")` 这个样子。\n\n这一题的修法是**后一条**（题目说了纸条上那一栏的名字别动）—— 改的是**贴纸条那一行**。改完再跑，就印出 `读到的备注：` 后面跟着那串字。",
+      "templateId": "java-s3-anno-value-name",
+      "params": {
+        "a": "应当开始处理",
+        "m": "招手"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "7f299dabe5b774a3"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-wrong-target-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们画了一张纸条想贴在方法上，编译器却把我们拦在了翻译那一关。\n\n纸条上那张说明书和我们想贴的地方对不上。你帮我们把**说明书那一行**改对 —— 贴纸条的那一行和 `main` 里都别动。改好之后，程序该印出**一行**：`读到的备注：` 后面跟着纸条上写的那串字。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"处理了\")\n        void 招手() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"招手\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + (小纸条 == null ? \"空的\" : 小纸条.value()));\n    }\n}\n",
+      "referenceFix": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"处理了\")\n        void 招手() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"招手\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + (小纸条 == null ? \"空的\" : 小纸条.value()));\n    }\n}\n",
+      "expectedOutput": "读到的备注：处理了",
+      "stdin": null,
+      "explanation": "编译器的原话是这一句：\n\n```text\nMain.java:15: error: annotation interface not applicable to this kind of declaration\n```\n\n念法是：「**这张纸条不适用于这种声明。**」\n\n纸条上那张说明书 `@Target(ElementType.FIELD)` 定的是「**只许贴骨头**」，我们却把它贴到了方法上 —— 贴的地方和说明书对不上，它在翻译那一关就拦下了。\n\n想贴的地方不一样，说明书上写的名字就不一样：方法上是 `ElementType.METHOD`，骨头上是 `ElementType.FIELD`，类定义本身是 `ElementType.TYPE`，产房是 `ElementType.CONSTRUCTOR`，传入的那样东西是 `ElementType.PARAMETER`。这一题要贴的是方法，所以把 `FIELD` 改成 `METHOD` 就对上了。\n\n改完再跑，就印出 `读到的备注：` 后面跟着纸条上写的那串字。",
+      "templateId": "java-s3-anno-wrong-target",
+      "params": {
+        "a": "处理了",
+        "m": "招手"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "7810ec2cbdf13544"
+      }
+    },
+    {
+      "id": "bank-java-s3-anno-wrong-target-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们画了一张纸条想贴在方法上，编译器却把我们拦在了翻译那一关。\n\n纸条上那张说明书和我们想贴的地方对不上。你帮我们把**说明书那一行**改对 —— 贴纸条的那一行和 `main` 里都别动。改好之后，程序该印出**一行**：`读到的备注：` 后面跟着纸条上写的那串字。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"应当开始处理\")\n        void 打招呼() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"打招呼\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + (小纸条 == null ? \"空的\" : 小纸条.value()));\n    }\n}\n",
+      "referenceFix": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"应当开始处理\")\n        void 打招呼() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        Method 一个方法 = 子对象.class.getDeclaredMethod(\"打招呼\");\n        纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n        System.out.println(\"读到的备注：\" + (小纸条 == null ? \"空的\" : 小纸条.value()));\n    }\n}\n",
+      "expectedOutput": "读到的备注：应当开始处理",
+      "stdin": null,
+      "explanation": "编译器的原话是这一句：\n\n```text\nMain.java:15: error: annotation interface not applicable to this kind of declaration\n```\n\n念法是：「**这张纸条不适用于这种声明。**」\n\n纸条上那张说明书 `@Target(ElementType.FIELD)` 定的是「**只许贴骨头**」，我们却把它贴到了方法上 —— 贴的地方和说明书对不上，它在翻译那一关就拦下了。\n\n想贴的地方不一样，说明书上写的名字就不一样：方法上是 `ElementType.METHOD`，骨头上是 `ElementType.FIELD`，类定义本身是 `ElementType.TYPE`，产房是 `ElementType.CONSTRUCTOR`，传入的那样东西是 `ElementType.PARAMETER`。这一题要贴的是方法，所以把 `FIELD` 改成 `METHOD` 就对上了。\n\n改完再跑，就印出 `读到的备注：` 后面跟着纸条上写的那串字。",
+      "templateId": "java-s3-anno-wrong-target",
+      "params": {
+        "a": "应当开始处理",
+        "m": "打招呼"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.565Z",
+        "hash": "51e14dca759585d0"
+      }
+    }
+  ]
+}

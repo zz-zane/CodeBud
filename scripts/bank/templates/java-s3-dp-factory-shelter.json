@@ -1,0 +1,47 @@
+{
+  "templateId": "java-s3-dp-factory-shelter",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-14",
+  "type": "codewrite",
+  "concept": [
+    "报一句花色就领到一个对象",
+    "领养处里按名字挑、别的走兜底",
+    "来领对象的地方不知道品种是怎么造的"
+  ],
+  "instances": 6,
+  "params": {
+    "v1": {
+      "kind": "pick",
+      "values": [
+        "",
+        "咪"
+      ]
+    },
+    "v2": {
+      "kind": "pick",
+      "values": [
+        "嗷",
+        "嗷呜"
+      ]
+    },
+    "v3": {
+      "kind": "pick",
+      "values": [
+        "呜",
+        "呜"
+      ]
+    },
+    "f": {
+      "kind": "pick",
+      "values": [
+        "花",
+        "杂毛"
+      ]
+    }
+  },
+  "stemTemplate": "我们要开一间**领养处**。来领对象的只报一句花色，剩下的领养处自己掂量。\n\n三张品类型定义（学生甲、学生乙、学生丙）和上一代那张都画好了，你只写两处：\n\n1. **`领养一个(花色)` 的身体**：报「橘」就递一个学生甲、报「李四」就递一个学生乙，**别的花色都走兜底**、递一个学生丙；\n2. **`main` 的身体**：按 `橘`、`李四`、`{f}` 这个顺序各领一次，每领一次印一行 `花色 -> 输出结果`（中间是空格、减号、大于号）。\n\n类定义和品种一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+  "starterTemplate": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"{v1}\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"{v2}\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"{v3}\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+  "referenceSolutionTemplate": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"{v1}\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"{v2}\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"{v3}\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生甲();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"{f}\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+  "explanationTemplate": "这一题把课文第二节那间领养处自己开了一遍。\n\n**一、领养处只干一件事：按报的名字挑。** 「橘」递学生甲、「李四」递学生乙，**别的都走最后那条兜底的路**（递学生丙）—— 所以报「{f}」的那位领到的是学生丙，输出结果是 `{v3}`。兜底给谁是你说了算的：想让没报上号的都领学生甲，把最后那一句换成学生甲就行。\n\n**二、递回来的东西写在上一代那张类定义的名字上。** `static 子对象 领养一个(String 花色)` 这个写法，意思是「递出来的东西是照上一代那张类定义生的」—— 三个品种都是它的后辈，所以哪一个都装得下。\n\n**三、来领对象的地方不知道品种是怎么造的。** `main` 里只有「报花色」和「输出信息」两件事，一个字都没提品种的名字。将来窝里添一个品种，改动只发生在**领养处这一处** —— 这就是这一课那个「改一处」的好处。\n\n**四、输出结果是各品种自己类定义上的事。** 领养处递出去的对象，输出结果由那张品类型定义说了算：学生甲 `{v1}`、学生乙 `{v2}`、学生丙 `{v3}` —— 领养处自己不发声。"
+}

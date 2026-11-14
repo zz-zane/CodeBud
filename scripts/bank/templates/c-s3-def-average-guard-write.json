@@ -1,0 +1,40 @@
+{
+  "templateId": "c-s3-def-average-guard-write",
+  "lang": "c",
+  "stage": 3,
+  "lessonId": "c-stage3-14",
+  "type": "codewrite",
+  "concept": [
+    "进门先验货：传入不合格就返回暗号",
+    "除法的分母不能是 0",
+    "函数返回暗号、门口负责说话"
+  ],
+  "instances": 6,
+  "params": {
+    "a": {
+      "kind": "pick",
+      "values": [
+        "2",
+        "5"
+      ]
+    },
+    "b": {
+      "kind": "pick",
+      "values": [
+        "3",
+        "6"
+      ]
+    },
+    "c": {
+      "kind": "pick",
+      "values": [
+        "4",
+        "7"
+      ]
+    }
+  },
+  "stemTemplate": "请把这招写完：处理进来的是**合计** `total` 和**元素数** `count`，要把「平均一元素多少条」返回。\n\n要留神两件事：\n\n1. **进门先验货**：`count` 不合格（小于等于 `0`）就返回 `-1` 回去（我们的暗号 —— 条数不可能是负数），压根别做除法；\n2. 验过货了，才做那个除法。\n\n门口那几行我们已经写好了，别动它们。改好之后该印两行：第一行是这一排元素的平均数，第二行是门口看见暗号之后说的那句话。",
+  "starterTemplate": "#include <stdio.h>\n\nint average(int total, int count) {\n    /* ↓ 在这儿写：进门先验货 —— count 不合格就返回 -1 回去；合格才做除法 */\n\n    return 0;\n}\n\nint main(void) {\n    int fish[3] = { {a}, {b}, {c} };\n    int total = fish[0] + fish[1] + fish[2];\n    int avg = average(total, 3);\n    printf(\"平均一元素 %d 条\\n\", avg);\n    avg = average(total, 0);\n    if (avg < 0) {\n        printf(\"这组数不对，我们算不出来\\n\");\n    }\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nint average(int total, int count) {\n    if (count <= 0) {\n        return -1;\n    }\n    return total / count;\n}\n\nint main(void) {\n    int fish[3] = { {a}, {b}, {c} };\n    int total = fish[0] + fish[1] + fish[2];\n    int avg = average(total, 3);\n    printf(\"平均一元素 %d 条\\n\", avg);\n    avg = average(total, 0);\n    if (avg < 0) {\n        printf(\"这组数不对，我们算不出来\\n\");\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "守卫摆在**刚进门的地方**，一眼能看见：要数的元素数小于等于 `0` 的时候，就一句 `return -1;` 把暗号返回，压根不做后面那个除法。`0` 只元素也算不合格 —— 分母是 `0` 的除法在这台机器上会直接把源代码打断（我们不试那个，把门守住就压根走不到那儿）。\n\n暗号为什么挑 `-1`：**条数不可能是负数**，所以这个值不会跟真的平均数撞上。\n\n分工也要看清：函数干不了就**返回暗号**回去，不自作主张印东西；真正开口跟主人说话的是门口那位 —— 它拿到小于 `0` 的数，才印出那句「这组数不对，我们算不出来」。"
+}

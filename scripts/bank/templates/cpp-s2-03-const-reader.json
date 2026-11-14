@@ -1,0 +1,39 @@
+{
+  "templateId": "cpp-s2-03-const-reader",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-03",
+  "type": "codewrite",
+  "concept": [
+    "只读函数末尾上的 const",
+    "带封印的对象",
+    "能动的函数和只看的函数"
+  ],
+  "instances": 6,
+  "params": {
+    "nameA": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    },
+    "nameB": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 2,
+    "min": 1,
+    "max": 5
+  },
+  "stemTemplate": "我们想看清楚**只看看的函数**和**要动格子的函数**有什么区别。输入接口会递进来**两个数**（一行一个）：第一个对象的条数、第二个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；写一个**构造函数**，用初始化列表把两样装好；\n2. 图上写**两招**：\n   - `show`：印一行 `XX 有 N 条`，末尾上带 `const`（它只看看，一格都不碰）；\n   - `eat`：把条数加一，并印一行 `XX 消耗了一条`，末尾上**不带** `const`；\n3. `main` 里的顺序是：\n   - 创建一个**普通的**对象叫 `{nameA}`，条数用**第一个数**；调用 `show`、再调用 `eat`、再调用 `show`；\n   - 再创建一个**带封印的**对象叫 `{nameB}`，条数用**第二个数**；只调用一次 `show`。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外两个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n\n    void eat() {\n        fish = fish + 1;\n        cout << name << \" 消耗了一条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"{nameA}\", a);\n    c1.show();\n    c1.eat();\n    c1.show();\n\n    const Cat c2(\"{nameB}\", b);\n    c2.show();\n    return 0;\n}\n",
+  "explanationTemplate": "带封印的对象（`const Cat`）身上**每一格都不许改**，所以它只调用得动**末尾上带 `const` 的函数**。\n\n- `show` 的末尾上有 `const`，等于立了张字据「我们只看看，一格不动」—— 带封印的对象递得出一个「不打算改你」的自己，这一个方法就接得了这活。\n- `eat` 的末尾上没有 `const`，它要往格子里写东西 —— 带封印的对象接不了。**这一步不用试**：编译器在你看不到的那道关上就把它拦下了（它会说 `discards qualifiers`）。\n\n另外注意 `show` 调用了**两次**：第一次是处理之前，第二次是处理之后。第二次印出来的条数比第一次多一 —— 因为 `eat` 真的把格子改掉了。\n\n⚠️ 别给 `eat` 也补上 `const`：它要动格子，补了当场编不过。`const` 是**承诺**，不是装饰。"
+}

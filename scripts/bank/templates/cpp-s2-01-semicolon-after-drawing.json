@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s2-01-semicolon-after-drawing",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-01",
+  "type": "codefix",
+  "concept": [
+    "类定义末尾的分号",
+    "定义类",
+    "报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "fish": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    },
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们画好了一张类，又照它创建了一个实例、把名字和数据数都填好了——可信封递进去，编译器**不收**：它说这一页过不了。\n\n你帮我们把漏掉的东西补上，让它跑起来、把那一行账输出。**类定义里那两栏、还有最后那几句账，一个字都不用动。**\n\n（跑不起来的原话我们抄在解析里了，别提前偷看）",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n}\n\nint main() {\n    Cat c1;\n    c1.name = \"{name}\";\n    c1.fish = {fish};\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"{name}\";\n    c1.fish = {fish};\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:9:2: error: expected ';' after class definition`\n\n用自然语言解释：**「类定义画到这儿该收尾了，我们在等一个分号。」**\n\n它连程序都没让跑起来——这是翻译阶段就拦下的错。\n\n这一跤的教训只有一句：**类定义的大括号闭合以后，还得补一个分号。** 这是类定义和函数最不一样的一点：函数的大括号闭合就完事了，类定义不行。\n\n所以看到 `expected ';' after class definition`，别去怀疑类定义里的哪一栏 —— **直接看类定义收尾那一个字符**。补上它，类定义才算画完。"
+}

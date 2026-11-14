@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodeBud</title>
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <!--
+      渲染层 CSP。script-src 不含 'unsafe-eval'（原先只为壁纸引擎的 new Function 编译
+      场景脚本放宽；引擎退役后，构建产物里没有任何 new Function / eval 调用）。
+      协议同样已退役，所有源里都不再出现。
+      media-src/font-src/frame-src/worker-src 的 blob: 原是壁纸管线的 worker / 帧读回
+      所需；退役后未逐项审计是否仍有他用，先保留（要收紧时先查 blob: 的使用点）。
+      media-src/connect-src/frame-src 显式写出来时都带上原有的 'self'。
+      P10.1 §7.1-12 加固（末尾净增三项，不动上面任何一项）：
+      · form-action 'none'：禁一切表单提交 —— 页面被注入 <form> 也不许把
+        数据外发（本应用没有任何表单外发需求）。
+      · object-src 'none'：禁 <object>/<embed> 插件对象面（整类老式攻击面）。
+      · base-uri 'none'：禁 <base> 改文档基准地址，防相对路径被劫持解析。
+      （CDP 测不出页面 CSP —— DevTools 对它豁免；真实挂载成功即实证。）
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: miai-cet6:; media-src 'self' blob: miai-cet6:; font-src 'self' data: blob:; connect-src 'self' miai-cet6:; frame-src 'self' blob: miai-study:; worker-src 'self' blob:; form-action 'none'; object-src 'none'; base-uri 'none'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-visual" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

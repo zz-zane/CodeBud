@@ -1,0 +1,2479 @@
+{
+  "id": "2020-09-3",
+  "title": "2020年09月第3套",
+  "year": 2020,
+  "month": 9,
+  "set": 3,
+  "status": "partial",
+  "totalQuestions": 57,
+  "answeredQuestions": 52,
+  "sources": [
+    {
+      "id": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+      "title": "2020.09英语六级考试第2、3套解析.pdf",
+      "url": "https://drive.google.com/file/d/1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c/view?usp=drivesdk"
+    },
+    {
+      "id": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+      "title": "2020.09六级真题第2、3套【可复制可搜索，打印首选】.pdf",
+      "url": "https://drive.google.com/file/d/1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC/view?usp=drivesdk"
+    },
+    {
+      "id": "local:2020-09-3-note",
+      "title": "听力说明.txt",
+      "url": null
+    },
+    {
+      "id": "14SvRO9AJ8qnDTcAVuuP3deRVpsvg1pdy",
+      "title": "2020年09月六级听力第1套.mp3",
+      "url": "https://drive.google.com/file/d/14SvRO9AJ8qnDTcAVuuP3deRVpsvg1pdy/view?usp=drivesdk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay on the saying “Wealth of the mind is the only true wealth.” You should write at least 150 words but no more than 200 words.",
+      "blocks": [
+        {
+          "id": "writing-prompt-block",
+          "title": "Writing Task",
+          "text": "For this part, you are allowed 30 minutes to write an essay on the saying “Wealth of the mind is the only true wealth.” You should write at least 150 words but no more than 200 words.",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2020-09-3-q0",
+          "number": 0,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay on the saying “Wealth of the mind is the only true wealth.” You should write at least 150 words but no more than 200 words.",
+          "blockId": "writing-prompt-block",
+          "options": [],
+          "answer": "In our current social context, economic wealth is regarded as the primary sign of success. It is high time we changed that and shifted our focus to wealth of the mind, realizing the timeless wisdom of the proverb: \"The only wealth is the wealth of the soul.\" Material possessions, though indispensable for meeting our basic physical needs, can neither guarantee happiness nor define who we truly are. On the contrary, excessive pursuit of material riches often leads to anxiety, moral degradation, and psychological burnout. By contrast, spiritual wealth—encompassing knowledge, wisdom, empathy, and integrity—provides us with lasting inner tranquility and intellectual vitality that no external calamity can deprive us of. In conclusion, life is more than mere material accumulation. Let us cultivate our minds through reading, reflection, and noble deeds, for true wealth lies not in our bank accounts, but in the depths of our souls.",
+          "explanation": "In our current social context, economic wealth is regarded as the primary sign of success. It is high time we changed that and shifted our focus to wealth of the mind, realizing the timeless wisdom of the proverb: \"The only wealth is the wealth of the soul.\"\n\nMaterial possessions, though indispensable for meeting our basic physical needs, can neither guarantee happiness nor define who we truly are. On the contrary, excessive pursuit of material riches often leads to anxiety, moral degradation, and psychological burnout. By contrast, spiritual wealth—encompassing knowledge, wisdom, empathy, and integrity—provides us with lasting inner tranquility and intellectual vitality that no external calamity can deprive us of.\n\nIn conclusion, life is more than mere material accumulation. Let us cultivate our minds through reading, reflection, and noble deeds, for true wealth lies not in our bank accounts, but in the depths of our souls.",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              1
+            ]
+          },
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2020-09-1",
+      "sharedWithTitle": "2020年09月第1套",
+      "sharedNote": "本套听力与 2020年09月第1套 共用，题目、解析和听力材料集中在 2020-09-1 练习；本套不再重复展示。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading Comprehension (阅读理解)",
+      "directions": "In this section, you will read several passages and answer questions based on them.",
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A Banked Cloze",
+          "text": "It was perhaps when my parents—who also happen to be my housemates—left to go travelling for a couple of months recently that it __(26)__ on me why I had not yet left the family home. It wasn't that I relied on them for __(27)__ reasons, or to keep my life in order, or to ease the chaos of the home. These days, I rely on them for their company. I missed coming home and talking about my day at work, and I missed being able to read their faces and sense how their day was. I missed having unique __(28)__ into tiny details that make a life. While the conversation about young adults staying longer at home is __(29)__ by talk of laziness, of dependence, of an inability for young people to pull themselves together, __(30)__ do we talk of the way, in my case at least, my relationship with my parents has __(31)__ strengthened the longer we have lived together. Over the years the power dynamic has changed and is no longer defined by one being the giver and another, the taker. So, what does this say for our relationships within the family home? According to psychologist Sabina Read, there are \"some very positive possible __(32)__ when adult children share the family home\", noting the \"parent-child relationship may indeed strengthen and mature\" in the process. But, she notes, a strong __(33)__ doesn't simply come with time. \"The many changing factors of the relationship need to be acknowledged\", rather than hoping that the mere passage of time will __(34)__ connect parents to their adult children. It's important to acknowledge that the relationship parameters have changed to avoid falling back into __(35)__ from the teen years.",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B Long Reading",
+          "text": "A) After years of big promises, telemedicine is finally living up to its potential. Driven by faster internet connections, ubiquitous (无处不在的) smartphones and changing insurance standards, more health providers are turning to electronic communications to do their jobs and it's dramatically changing the delivery of healthcare. B) Doctors are linking up with patients by phone, email and webcam. They're also consulting with each other electronically sometimes to make split-second decisions on heart attacks and strokes. Patients, meanwhile, are using new devices to relay their blood pressure, heart rate and other vital signs to their doctors so they can manage chronic conditions at home. Telemedicine also allows for better care in places where medical expertise is hard to come by. Five to 10 times a day, Doctors Without Borders relays questions about tough cases from its physicians in Niger, South Sudan and elsewhere to its network of 280 experts around the world, and back again via internet. C) As a measure of how rapidly telemedicine is spreading, consider: More than 15 million Americans received some kind of medical care remotely last year, according to the American Telemedicine\nAssociation, a trade group, which expects those numbers to grow by 30% this year. D) None of this is to say that telemedicine has found its way into all corners of medicine. A recent survey of 500 tech-savvy consumers found that 39% hadn't heard of telemedicine, and of those who haven't used it, 42% said they preferred in-person doctor visits. In a poll of\n1, 500 family physicians, only 15% had used it in their practices but 90% said they would if it were appropriately reimbursed (补偿). E) What's more, for all the rapid growth, significant questions and challenges remain. Rules defining and regulating telemedicine differ widely from state to state. Physicians groups are issuing different guidelines about what care they consider appropriate to deliver and in what form. F) Some critics also question whether the quality of care is keeping up with the rapid expansion of telemedicine. And there's the question of what services physicians should be paid for: Insurance coverage varies from health plan to health plan, and a big federal plan covers only a narrow range of services. Telemedicine's future will depend on how and whether regulators, providers, payers and patients can address these challenges. Here's a closer look at some of these issues:\nG) Do patients trade quality for convenience? The fastest-growing services in telemedicine connect consumers with clinicians they've never met for a phone, video or email visit on-demand, 24/7.\nTypically, these are for nonemergency issues such as colds, flu, ear-aches and skin rashes, and they cost around $4 5, compared with approximately $1 00 at a doctor's office, $1 60 at an urgent-care clinic or $ 750 and up at an emergency room. H) Many health plans and employers have rushed to offer the services and promote them as a convenient way for plan members to get medical care without leaving home or work. Nearly three-quarters of large employers will offer virtual doctor visits as a benefit to employees this year, up from 48% last year. Web companies such as Teladoc and American Well are expected to host some 1. 2 million such virtual doctor visits this year, up 20% from last year, according to the\nAmerican Telemedicine Association. I) But critics worry that such services may be sacrificing quality for convenience. Consulting a random doctor patients will never meet, they say, further fragments the health-care system, and even minor issues such as upper respiratory infections can't be thoroughly evaluated by a doctor who can't listen to your heart or feel your swollen glands. In a recent study, researchers posing as patients with skin problems sought help from 16 telemedicine sites with unsettling results. In 62 encounters, fewer than one-third disclosed clinicians' credential or let patients choose; only 32% discussed potential side effects of prescribed medications. Several sites misdiagnosed serious conditions, largely because they failed to ask basic follow-up questions, the researchers said. \"T elemedicine holds enormous promise, but these sites are just not ready for prime time,\"\nsays Jack Resneck, the study's lead author. J) The American Telemedicine Association and other organizations have started accreditation programs to identify top-quality telemedicine sites. The American Medical Association this month approved new ethical guidelines for telemedicine, calling for participating doctors to recognize the limitations of such services and ensure that they have sufficient information to make clinical recommendations. K) Who pays for the services? While employers and health plans have been eager to cover virtual urgent­\ncare visits, insurers have been far less willing to pay for telemedicine when doctors use phone, email or video to consult with existing patients about continuing issues. \"I t's very hard to get paid unless you physically see the patient,\" says Peter Rasmussen, medical director of distance health at the\nCleveland Clinic. Some 32 states have passed \"parity\" laws requiring private insurers to reimburse doctors for services delivered remotely if the same service would be covered in person, though not necessarily at the same rate or frequency. Medicare lags further behind. The federal health plan for the elderly covers a small number of telemedicine services only for beneficiaries in rural areas and only when the services are received in a hospital, doctor's office or clinic. L) Bills to expand Medicare coverage of telemedicine have bipartisan support in Congress.\nOpponents worry that such expansion would be costly for taxpayers, but advocates say it would save money in the long run. M) Experts say more hospitals are likely to invest in telemedicine systems as they move away from fee-for-service payments and into managed-care-type contracts that give them a set fee to provide care for patients and allow them to keep any savings they achieve. N) Is the state-by-state regulatory system outdated? Historically, regulation of medicine has been left to individual states. But some industry members contend that having 50 different sets of rules, licensing fees and even definitions of \" medical practice \" makes less sense in the era of telemedicine and is hampering its growth. Currently, doctors must have a valid license in the state where the patient is located to provide medical care, which means virtual-visit companies can match users only with locally licensed clinicians. It also causes administrative hassles for world-class medical centers that attract patients from across the country. At the Mayo Clinic, doctors who treat out-of-state patients can follow up with them via phone, email or web chats when they return home, but they can only discuss the conditions they treated in person. \" If the patient wants to talk about a new problem, the doctor has to be licensed in that state to discuss it. If not, the patient should talk to his primary-care physician about it,\" says Steve Ommen, who runs Mayo's Connected Care program. O) To date, 17 states have joined a compact that will allow a doctor licensed in one member state to quickly obtain a license in another. While welcoming the move, some telemedicine advocates would prefer states to automatically honor one another's licenses, as they do with drivers' licenses.\nBut states aren't likely to surrender control of medical practice, and most are considering new regulations. This year, more than 200 telemedicine-related bills have been introduced in 42 states, many regarding what services Medicaid will cover and whether payers should reimburse for remote patient monitoring. \"A lot of states are still trying to define telemedicine, \" says Lisa\nRobbin, chief advocacy officer for the Federation of State Medical Boards.",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-c-passage-1",
+          "title": "Section C Passage One",
+          "text": "Danielle Steel, the 71 -year-old romance novelist is notoriously productive, having published 17 9\nbooks at a rate of up to seven a year. But a passing reference in a recent profile by Glamour magazine to her 20-hour workdays prompted an outpouring of admiration. Steel has given that 20-hour figure when describing her \"e xhausting\" process in the past: \"I start the book and don't leave my desk until the first draft is finished.\" She goes from bed, to desk, to bath, to bed, avoiding all contact aside from phone calls with her nine children. \"I don't comb my hair for weeks,\" she says. Meals are brought to her desk, where she types until her fingers swell and her nails bleed. The business news website Quartz held Steel up as an inspiration, writing that if only we all followed her \"actually extremely liberating\" example of industrious sleeplessness, we would be quick to see results. Well, indeed. With research results showing the cumulative effects of sleep loss and its impact on productivity, doubt has been voiced about the accuracy of Steel's self-assess ment. Her output may be undeniable, but sceptics have suggested that she is guilty of erasing the role of ghostwriters (代笔人) at worst, gross exaggeration at best. Steel says working 20 hours a day is \"pretty brutal physically. \" But is it even possible? \"No,\" says Maryanne Taylor of the Sleep Works. While you could work that long, the impact on productivity would make it hardly worthwhile. If Steel was routinely sleeping for four hours a night, she would be drastically under estimating the negative impact, says Alison Gardiner, founder of the sleep improvement programme Sleepstation. \"I t's akin to being drunk.\" It's possible that Steel is exaggerating the demands of her schedule. Self-imposed sleeplessness has \"become a bit of a status symbol\", says Taylor, a misguided measure to prove how powerful and productive you are. Margaret Thatcher was also said to get by on four hours a night, while the 13 0- hour work weeks endured by tech heads has been held up as key to their success. That is starting to change with increased awareness of the importance of sleep for mental health. \"People are starting to realise that sleep should not be something that you fit in between everything else,\" says Taylor. But it is possible if statistically extremely unlikely that Steel could be born a \"short sleeper\" with an unusual body clock, says sleep expert Dr. Sophie Bostock. \" It's probably present in fewer than 1 % of the population.\" Even if Steel does happen to be among that tiny minority, says Bostock, it's \" pretty irresponsible\" to suggest that 20-hour days are simply a question of discipline for the rest of us.",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-c-passage-2",
+          "title": "Section C Passage Two",
+          "text": "Organic agriculture is a relatively untapped resource for feeding the Earth's population, especially in the face of climate change and other global challenges. That's the conclusion I reached in reviewing 40 years of science comparing the long-term prospects of organic and conventional farming. The review study, \"Organic Agriculture in the 21 st Century,\" is featured as the cover story for the February issue of the journal Nature Plants. It is the first to compare organic and conventional agriculture across the main goals of sustainability identified by the National Academy of Sciences: productivity, economics and environment. Critics have long argued that organic agriculture is inefficient, requiring more land to yield the same amount of food. It's true that organic farming produces lower yields, averaging 10 to 20 percent less than conventional. Advocates contend that the environmental advantages of organic agriculture far outweigh the lower yields, and that increasing research and breeding resources for organic systems would reduce the yield gap. Sometimes excluded from these arguments is the fact that we already produce enough food to more than feed the world's 7. 4 billion people but do not provide adequate access to all individuals. In some cases, organic yields can be higher than conventional. For example, in severe drought conditions, which are expected to increase with climate change in many areas, organic farms can produce as good, if not better, yields because of the higher water-holding capacity of organically farmed soils. What science does tell us is that mainstream conventional farming systems have provided growing supplies of food and other products but often at the expense of other sustainability goals. Conventional agriculture may produce more food, but it often comes at a cost to the environment. Biodiversity loss, environmental degradation, and severe impacts on ecosystem services have not only accompanied conventional farming systems but have often extended well beyond their field boundaries. With organic agriculture, environmental costs tend to be lower and the benefits greater. Overall, organic farms tend to store more soil carbon, have better soil quality and reduce soil erosion compared to their conventional counterparts. Organic agriculture also creates less soil and water pollution and lower greenhouse gas emissions. And it's more energy-efficient because it doesn't rely on synthetic fertilizers or pesticides. Organic agriculture is also associated with greater biodiversity of plants, animals, insects and microorganisms as well as genetic diversity. Biodiversity increases the services that nature provides and improves the ability of farming systems to adapt to changing conditions. Despite lower yields, organic agriculture is more profitable for farmers because consumers are willing to pay more. Higher prices, called price premiums, can be justified as a way to compensate farmers for providing ecosystem services and avoiding environmental damage or external costs.",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              6
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2020-09-3-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "选词填空第 26 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案∶C）dawned 27.答案∶H）logistical\n【确定词性】空 26 位于It was...that...强调句式的 that 后，空格前 it 为形式主语，why...home 为真正\n主语，句子语序可还原为;why.。home（主语）十 26on（谓语）＋ me（宾语），空26作谓语动词，结合谓语结\n构可知，空 26 为不及物动词的过去式，且能与 on 搭配。空 27 位于介词 for 与名词 reasons 间，可能为形容词、\n名词、-ing分词、-ed 分词修饰 reasons。\n【锁定答案】空 26 所在句指出，或许是在跟我同住的父母外出旅行的这几个月里，这/它 26 我为何我\n还没有离开家。空 27 所在句及下句指出，我依赖他们并不是出于 27 原因，或帮我打点生活使之井然有\n序，或帮我收拾家中狼藉，我依赖的是他们的陪伴。联系可知，三句构成\"引出原因—否定错误原因—说明真\n实原因\"的逻辑链，空 26 应表\"启示/使明白/使思考\"等，dawn on sb 为固定表达，意为\"使开始明白;使渐渐领\n悟\"，通常见于it dawns on sb that 句型，C 正确。\" 27 reasons\"应与其后所列举的错误原因\"或打点生活，\n或收拾家里\"的语义同向（指向日常生活需求方面的原因），与下句所述的真实原因\"获得陪伴（指向情感需求\n方面的原因）\"语义对立，表\"物质的/外在的/日常起居的（原因）\"等，H 符合文意。B）contemplated 对空 26 有\n一定干扰，但该词为及物动词，其后通常不跟介词，且其主语应为人，不为物，即\"我思量某事\"而非\"某事思量\n我\"，故排除。\nⅢ④I missed coming home and talking about my 我怀念回到家后谈论我一天的工作，\n我怀念能观察他们的脸来辨识他们这一day at work, and I missed being able to read their faces\n天过得如何。我怀念对构成生活的微小and sense\" how their day was. ②I missed having unique\n细节有独特的了解。28 into tiny details that make a life.\n。词汇注释与难句分析·\n$ ②unique Ljuni∶k】a. 独特的①sense Isens】 v.感觉到\n解题思路\n28。答案∶E）insight\n【确定词性】空格位于 miss doing sth 结构中，空格前为形容词 unique，后为介宾短语 into tiny details..\n空格词应为名词（作 unique 的修饰对象，having 的宾语），且可与 into 搭配。\n【锁定答案】空格句与前一句采用复现句式Imissed doing sth 列举\"我\"怀念的与父母相处的诸多细节，\n以具体展现前文所述\"我依赖父母的陪伴\"。\"拥有对构成生活的微小细节的独特\"应与\"跟父母谈论我\n4\n一天的工作\"\"感受父母这一天过得如何\"等语义同向，体现\"我与父母的相互陪伴、对彼此生活细节的深入了\n解\"，故空格词应表\"了解/认知/感悟\"等，insight into sth为固定搭配，意为\"对某事的深入了解/深刻见解，洞\n悉某事\"，E 正确。\nⅣ While the conversation about young adults staying 围绕年轻人久居家中的谈话总是充\n斥着\"年轻人太懒惰、不独立、不振作\"这longer at home is 29 by talk of laziness, of\n样的论调，而我们很少谈论（年轻人跟父dependence2, of an inability for young people to pull\n母同住）这一生活方式的好处∶至少就我themselves together\", 30 do we talk of the way, in my\n而言，我和父母住在一起的时间越长，我case at least, my relationship with my parents has 31\n们的关系无疑就越牢固。strengthened the longer we have lived together.\n。词汇注释与难句分析。\n①laziness 'lelzinos】力.懒惰 ④pull oneself together 振作起来;恢复镇定\n⑤strengthen 【'strenθn】 v.加强，巩固②dependence 【d'pend?ns】 n. 依赖;依靠\n③inability 【un?'bloti】 n.无能力\nWhile the conversation about young adults staying longer at home is saturated by talk of laziness,of\ndependence,of an inability for young people to pull themselves together,rarely do we talk of the way,in my case\nat least,my relationship with my parents has undoubtedly strengthened the longer we have lived together.\nin my case at least\n插人语状语 dorarelyWhile the conversation..at home is saturated by talk of..together. 从句 we talk of the way |\n引导词主语】状语（引导倒装句）助动词主语宾语谓语被动态谓语\n定语从句修饰ithe way\nthat)my relationship with my parents has undoubtedly strengthened he longer we havelived togetherl\n谓语主语状语\n 解题思路\n29.答案∶M）saturated 30.答案∶L）rarely 31.答案∶O）undoubtedly\n【确定词性】空 29 所在状语从句结构为\"While（引导词）＋ the conversation..at home（主语）＋ is 29 by\ntalk of...together（谓语）\"，空 29 应为-ed分词（构成被动态谓语）。空 30所在主句 do we talk of the way 为\n成分完整的倒装句，空 30 应为表否定意义的副词。空 31 位于现在完成时谓语 has strengthened之间，其所\n在主句主干成分完整∶my relationship with my parents（主语）＋ has 31 strengthened（谓语），空 31 应为\n副词。\n【锁定答案】空格句指出，关于年轻人久居家中的谈话被\"年轻人太懒惰、不独立、不振作\"的论调所 29\n30__我们讨论这一生活方式的好处∶至少就我而言，我和父母住在一起的时间越长，我们的关系 31 就越\n牢固。While 提示主从句间存在语义对比，结合常识\"年轻人与父母同住，常被指责缺乏独立性、懒惰无斗志\"\n及下文语义指向\"年轻人与父母同住这一生活方式的好处\"，可知空格句意在说明\"有关'年轻人与父母同住'\n的话题通常指向对年轻人的批评，而较少指向这一生活方式的好处（巩固亲子关系）\"。空 29 应表\"充满/过\n多\"，M正确;空 30 应表\"很少\"，L 正确。空 31 可能体现\"关系变牢固\"的程度，表示\"很大/一定程度上\"，也可\n能强调这一事实的准确性，表示\"实际上/确实/无疑\"，O 符合文意。I）magically 对空 31有较强干扰。但该词\n隐含了预设条件\"没有料想到效果如此神奇\"，但文中作者非但没有质疑\"成年子女与父母同住会对亲子关系\n产生积极影响\"，相反有提请读者关注到这一优势之意，故排除。\n【点拨技巧】空 29、30、31也可采用反推法解题。考生若熟悉倒装句式的特点，可快速确定空 30 应为表否\n定意义的副词，备选项中只有L 符合要求。再借由 While 所提示的主从句间对比，可反推知空 29 应与 rarely\n语义相反，空 31 强调与父母同住的好处，从而确定两项答案。这也提示考生解答选词填空时应灵活变通，借\n助词性分析、句子结构分析等缩小选词范围，并从简单的环节入手。\n5\n随着时间的推移，权力格局发生了变V  Over the years the power dynamic has\nchanged and is no longer defined by one being the giver 化，不再由\"一方是给予者，另一方是接受\n者\"定义。那么，这对我们与家人的关系and another,the taker. ②So,what does this say for our\n有何意义呢?relationships within the family home?\n④According to psychologist Sabina Read,there 根据心理学家萨宾娜·里德的说法，\n\"当成年子女与家人同住时，可能会有一are\"some very positive possible 32 when adult\n些非常积极的结果\"，她指出，在这一过程children sharethe family home\",noting the\"parent-child\n中\"亲子关系可能确实会得到巩固、变得relationship may indeed strengthen and mature\"in the\n成熟\"process.\n.词汇注释与难句分析 .《\n§ ②mature 【motJuo】v。成熟①dynamic 【dal'nemnk】n.动态\nAccording to psychologist Sabina Read,there are\"some very positive possible outcomes when adult children\nshare the family home\",noting the\"parent-child relationship may indeed strengthen and mature\"in the process.\nAccording to psychologist Sabine Read,l, there are\"some very positive possible outcomes\n状语 here be结构\n现在分词结构作伴随状语时间状语从句\nwhen adult children share the family home\",noting the.. n the process.\n引导词谓语宾语主语\n解题思路\n32，答案∶J）outcomes\n【确定词性】some very positive possible实际充当 there be句式中的主语，系动词 are 为复数形式，\n空格词应为名词复数。\n【锁定答案】空格句间接援引心理学家之言指出\"成年子女与父母同住的好处\";当成年子女与家人同住\n时，可能会产生一些非常积极的，亲子关系可能确实会得到巩固、变得成熟。可见，空格词应该是\"得到\n巩固、变得成熟\"的上义词，应表\"结果/变化/影响\"等，J正确。\n但她特别提到，牢固的关系并非单M ①But, she notes, a strong 33 doesn't simply\n纯随时间而来。\"我们需要承认，亲子关come with time. ②\"The many changing factors of the\n系存在诸多变数，而不是寄希望于仅靠relationship need to be acknowledged\", rather than hoping\nthat the mere2 passage of time will _34 connect 时间的推移就能魔法般地将父母和成，年\n子女联结在一起。关键是要承认亲子关parents to their adult children. ③ It's important to\n系的决定因素已经发生了变化，以避免acknowledge that the relationship parameters have\n退回到青少年时期的（相处）模式。\"changed to avoid faling back into° _35 from the teen\nyears.\" [287 words]\n。词汇注释与难句分析 ·\n①acknowledge 【ok'nolid3】 v. 承认 ④parameter 【p?'r?emito】 n.参数，决定因素\n②mere 【mio】a.仅仅的.只不过 ⑤fall back into 重回到.重新陷入\n③passage【'pesid3】 n.（时间的）流逝，推移\n6\n解题思路\n33．答案∶A）bond 34.答案∶I）magically\n【确定词性】a strong 33 为全句主语，空 33 由冠词 a 限定，应为可数名词单数。空 34 所在 that 从句\n成分完整∶the mere passage of time（主语）＋ will _34__ connect（谓语）＋ parents（宾语）＋ to their adult\nchildren（宾补），故空 34 应为副词。\n【锁定答案】末段首两句大意为∶强大/牢固的 33 并非单纯随时间而来，我们得承认亲子关系存在诸\n多变数，而不能寄希望于仅靠时间就能 34 将父母和成年子女联结在一起。结合上段\"成年子女与父母久\n居可能有益于亲子关系\"及 But 体现出的段际转折逻辑可推知，本句语义应指向\"子女与父母同住的时间并非\n影响亲子关系的单一因素\"，故空 33 应与 relationship 近义，呼应 connect parents to their adult children，表示\n\"（亲子）关系/联系/纽带\"，A 正确;空 34 则应侧面体现出\"单靠时间推移即可强化亲子关系\"这一主观意愿\n（hoping）的不切实际，I 符合文意。\n35.答案∶K）patterns\n【确定词性】空格前为介词 into，后为另一介词短语 from the teen years，空格词应为名词，作 into 的宾语。\n【锁定答案】空格句前半部分提出建议\"要承认亲子关系的决定因素发生了变化\"，后半部分明确目的\"以\n避免退回到从青少年时期开始的\"。其中，\"亲子关系的决定因素发生了变化\"指向Ⅴ段\"随着时间的推\n移，子女和父母不再是接受者和给予者的关系\"，结合本段①句\"亲子关系不会单纯随时间推移变牢固\"可推断\n出末句的隐含信息;青少年子女与父母为\"接受者—给予者\"关系，两者同住时的相处方式多有缺陷;随着青少\n年子女长大成人，其与父母的关系发生变化，同住时的相处方式也相应改变。即，认识到亲子关系的变化是避\n免采取（青少年时期）错误相处模式/角色定位的关键，K 符合文意。N）stereotypes 干扰性较强，但该词表示\n\"（对某一群体的）刻板印象，成见\"，侧重于抽象观念，而文章探讨\"成年子女与父母同住的方式\"，侧重于具体\n行为，相较之下，K 为更优选。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              4
+            ]
+          },
+          "verified": false
+        },
+        {
+          "id": "2020-09-3-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "选词填空第 27 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "H",
+          "explanation": "答案：H\n（arguments），第四段着重探讨特殊情况（some cases），故本题应指向第三段;再由题干关键信息 should be\ntaken into account（应当被考虑在内）恰好反义呼应第三段④句原文 excluded（被排除在外），故可判断该句为\n定位句。2.理解所定位的长难句∶fact 后的 that 同位语从句引出作者认为应当考虑的因素，全句以 but 形成\n转折，其后 not provide adequate access to all individuals（未能给每个人提供充分机会）实为句意重点，对比各\n选项后可发现 C\"分配不均\"与之契合。\n在有些情况下，有机农作物的产量可以Ⅳ ①In some cases, organic yields can be higher\n比传统农作物的产量高。例如，在严重干旱than conventional. ②For example, in severe drought①\n条件下（由于气候变化，这种情形在许多地conditions, which are expected to increase with climate\n区还会加重），有机农场的产量（就算不能更change in many areas, organic farms can produce as\n好，也）至少与传统农场的一样好，这归因于good, if not better,yields because of the higher water-\n有机耕种的土壤具有更强的储水能力。holding capacity\" of organically farmed soils.\n。词汇注释与难句分析·\n ②capacity 【ko pesti】 n. 能力①drought 【draot】 n. 久旱\n 语篇分析·\n第四段进而肯定指出有机农业在特殊条件下的产量优势。两句借由In some cases...For example...形\n成\"总说→例证\"语义逻辑。其中higher than、as good, if not better 一反上段\"有机农业产量少于传统农业\"的\n论述，指出在特殊情况下（如严重干旱）有机农业的产量甚至可胜过传统农业。are expected to increase补充指\n出未来的极端天气情况会越来越多，侧面表明在恶劣环境下产量表现优异的有机耕种方式才更加面向未来，\n更具前景。\n科学告诉我们，主流的传统农耕V What science does tell us is that mainstream\n制度提供了越来越多的食品以及其conventional farming systems have provided growing supplies\n他产品，但往往以其他可持续目标为of food and other products but often at the expense of other\n代价。sustainability goals.\n传统农业可能产出更多粮食，但Ⅵ ① Conventional agriculture may produce more food, \n往往以损害环境为代价。生物多样but it often comes at a cost to the environment.\n性的丧失、环境的恶化以及对生态系②biodiversity loss,environmental degradation,and severe\nimpacts on ecosystem services have not only accompanied\" 统服务的严重影响不仅因随传统农\n耕方式而来，而且还往往远远超越了conventional farming systems but have often extended\" well\n田间界限。对有机农业而言，其环境beyond their field boundaries5. ③ With organic agriculture,\n成本往往更低，收益更大。environmental costs tend to be lower and the benefits greater.\n·词汇注释与难句分析\n④extend 【k'stend】 v.延伸，伸出①biodiversity 【baroodal'v3soti】 n. 生物多样性\n⑤boundary Dbaundri】 n.边界②degradation 【idegr?'deljn】 n. 毁坏，恶化\n③accompany 【?'kAmponi】 v，陪同，伴随\n·语篇分析-\n第五至八段为第二个小部分，阐释有机农业在环境方面的优势（更环保）。\n第五、六段先批评传统农业对生态环境的损害。第五段（独句段）指出传统农业的高产往往以其他可持续\n目标为代价，第六段首句进而明确\"其他可持续目标\"的所指\"环境\"∶两句均采用转折句式（havc provided...\nbut..、may...but...），强调传统农业的负面影响和危害（at theexpense of...、comes at a cost to...）。第六\n段②③句则借并列结构 not only...but（also）...、比较表达 costs...lower...benefits greater 明示传统农耕的劣\n势\"不仅污染土地本身，且影响到这片土地之外的区域\"以及有机农耕的优势\"对环境损害更低，收益却更大\"。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              4
+            ]
+          },
+          "verified": false
+        },
+        {
+          "id": "2020-09-3-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "选词填空第 28 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "E",
+          "explanation": "答案：E\n答案∶E）insight\n【确定词性】空格位于 miss doing sth 结构中，空格前为形容词 unique，后为介宾短语 into tiny details..\n空格词应为名词（作 unique 的修饰对象，having 的宾语），且可与 into 搭配。\n【锁定答案】空格句与前一句采用复现句式Imissed doing sth 列举\"我\"怀念的与父母相处的诸多细节，\n以具体展现前文所述\"我依赖父母的陪伴\"。\"拥有对构成生活的微小细节的独特\"应与\"跟父母谈论我\n4\n\n一天的工作\"\"感受父母这一天过得如何\"等语义同向，体现\"我与父母的相互陪伴、对彼此生活细节的深入了\n解\"，故空格词应表\"",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "选词填空第 29 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "M",
+          "explanation": "答案：M\n答案∶M）saturated 30.答案∶L）rarely 31.答案∶O）undoubtedly\n【确定词性】空 29 所在状语从句结构为\"While（引导词）＋ the conversation..at home（主语）＋ is 29 by\ntalk of...together（谓语）\"，空 29 应为-ed分词（构成被动态谓语）。空 30所在主句 do we talk of the way 为\n成分完整的倒装句，空 30 应为表否定意义的副词。空 31 位于现在完成时谓语 has strengthened之间，其所\n在主句主干成分完整∶my relationship with my pa",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "选词填空第 30 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "L",
+          "explanation": "答案：L\n__我们讨论这一生活方式的好处∶至少就我而言，我和父母住在一起的时间越长，我们的关系 31 就越\n牢固。While 提示主从句间存在语义对比，结合常识\"年轻人与父母同住，常被指责缺乏独立性、懒惰无斗志\"\n及下文语义指向\"年轻人与父母同住这一生活方式的好处\"，可知空格句意在说明\"有关'年轻人与父母同住'\n的话题通常指向对年轻人的批评，而较少指向这一生活方式的好处（巩固亲子关系）\"。空 29 应表\"充满/过\n多\"，M正确;空 30 应表\"很少\"，L 正确。空 31 可能体现\"关系变牢固\"的程度，表示\"很大/一定程度上\"，也可\n能强调这一事实的准确性，表示\"实际上/确实/无疑\"，O 符合文意。I）m",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              5
+            ]
+          },
+          "verified": false
+        },
+        {
+          "id": "2020-09-3-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "选词填空第 31 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "O",
+          "explanation": "答案：O\n31.答案∶O）undoubtedly\n【确定词性】空 29 所在状语从句结构为\"While（引导词）＋ the conversation..at home（主语）＋ is 29 by\ntalk of...together（谓语）\"，空 29 应为-ed分词（构成被动态谓语）。空 30所在主句 do we talk of the way 为\n成分完整的倒装句，空 30 应为表否定意义的副词。空 31 位于现在完成时谓语 has strengthened之间，其所\n在主句主干成分完整∶my relationship with my parents（主语）＋ has 31 strengthened（谓语），空 31 应为\n副词。\n【锁定答案】空格句指出，关于年轻人久居家中的谈话被\"年轻人太懒惰、不独立、不振作\"的论调所 29\n30__我们讨论这一生活方式的好处∶至少就我而言，我和父母住在一起的时间越长，我们的关系 31 就越\n牢固。While 提示主从句间存在语义对比，结合常识\"年轻人与父母同住，常被指责缺乏独立性、懒惰无斗志\"\n及下文语义指向\"年轻人与父母同住这一生活方式的好处\"，可知空格句意在说明\"有关'年轻人与父母同住'\n的话题通常指向对年轻人的批评，而较少指向这一生活方式的好处（巩固亲子关系）\"。空 29 应表\"充满/过\n多\"，M正确;空 30 应表\"很少\"，L 正确。空 31 可能体现\"关系变牢固\"的程度，表示\"很大/一定程度上\"，也可\n能强调这一事实的准确性，表示\"实际上/确实/无疑\"，O 符合文意。I）magically 对空 31有较强干扰。但该词\n隐含了预设条件\"没有料想到效果如此神奇\"，但文中作者非但没有质疑\"成年子女与父母同住会对亲子关系\n产生积极影响\"，相反有提请读者关注到这一优势之意，故排除。\n【点拨技巧】空 29、30、31也可采用反推法解题。考生若熟悉倒装句式的特点，可快速确定空 30 应为表否\n定意义的副词，备选项中只有L 符合要求。再借由 While 所提示的主从句间对比，可反推知空 29 应与 rarely\n语义相反，空 31 强调与父母同住的好处，从而确定两项答案。这也提示考生解答选词填空时应灵活变通，借\n助词性分析、句子结构分析等缩小选词范围，并从简单的环节入手。\n5\n随着时间的推移，权力格局发生了变V  Over the years the power dynamic has\nchanged and is no longer defined by one being the giver 化，不再由\"一方是给予者，另一方是接受\n者\"定义。那么，这对我们与家人的关系and another,the taker. ②So,what does this say for our\n有何意义呢?relationships within the family home?\n④According to psychologist Sabina Read,there 根据心理学家萨宾娜·里德的说法，\n\"当成年子女与家人同住时，可能会有一are\"some very positive possible",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "选词填空第 32 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "J",
+          "explanation": "答案：J\n答案∶J）outcomes\n【确定词性】some very positive possible实际充当 there be句式中的主语，系动词 are 为复数形式，\n空格词应为名词复数。\n【锁定答案】空格句间接援引心理学家之言指出\"成年子女与父母同住的好处\";当成年子女与家人同住\n时，可能会产生一些非常积极的，亲子关系可能确实会得到巩固、变得成熟。可见，空格词应该是\"得到\n巩固、变得成熟\"的上义词，应表\"结果/变化/影响\"等，J正确。\n但她特别提到，牢固的关系并非单M ①But, she notes, a strong 33 doesn't simply\n纯随时间而来。\"我们需要承认，亲",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              1
+            ]
+          },
+          "verified": false
+        },
+        {
+          "id": "2020-09-3-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "选词填空第 33 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案∶A）bond 34.答案∶I）magically\n【确定词性】a strong 33 为全句主语，空 33 由冠词 a 限定，应为可数名词单数。空 34 所在 that 从句\n成分完整∶the mere passage of time（主语）＋ will _34__ connect（谓语）＋ parents（宾语）＋ to their adult\nchildren（宾补），故空 34 应为副词。\n【锁定答案】末段首两句大意为∶强大/牢固的 33 并非单纯随时间而来，我们得承认亲子关系存在诸\n多变数，而不能寄希望于仅靠时间就能 34 将父母和成年子女联结在一起。结合上段\"成年子女与父母久\n居可能有益于亲子关系\"及 But 体现出的段际转折逻辑可推知，本句语义应指向\"子女与父母同住的时间并非\n影响亲子关系的单一因素\"，故空 33 应与 relationship 近义，呼应 connect parents to their adult children，表示\n\"（亲子）关系/联系/纽带\"，A 正确;空 34 则应侧面体现出\"单靠时间推移即可强化亲子关系\"这一主观意愿\n（hoping）的不切实际，I 符合文意。\n35.答案∶K）patterns\n【确定词性】空格前为介词 into，后为另一介词短语 from the teen years，空格词应为名词，作 into 的宾语。\n【锁定答案】空格句前半部分提出建议\"要承认亲子关系的决定因素发生了变化\"，后半部分明确目的\"以\n避免退回到从青少年时期开始的\"。其中，\"亲子关系的决定因素发生了变化\"指向Ⅴ段\"随着时间的推\n移，子女和父母不再是接受者和给予者的关系\"，结合本段①句\"亲子关系不会单纯随时间推移变牢固\"可推断\n出末句的隐含信息;青少年子女与父母为\"接受者—给予者\"关系，两者同住时的相处方式多有缺陷;随着青少\n年子女长大成人，其与父母的关系发生变化，同住时的相处方式也相应改变。即，认识到亲子关系的变化是避\n免采取（青少年时期）错误相处模式/角色定位的关键，K 符合文意。N）stereotypes 干扰性较强，但该词表示\n\"（对某一群体的）刻板印象，成见\"，侧重于抽象观念，而文章探讨\"成年子女与父母同住的方式\"，侧重于具体\n行为，相较之下，K 为更优选。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "选词填空第 34 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "I",
+          "explanation": "答案：I\nPart IV Translation\n《水浒传》\n一、参考译文\nWater Margin is one of the four great classic novels of Chinese literature. Based on the stories of the\nhistorical figure Song Jiang and his companions,who rebelled against the feudal emperor,this novel has been\npopular among the Chinese readers for hundreds of years.\nIt is no exaggeration to say that almost every Chinese is familiar with some of the main characters in the\nnovel. Its highlights are repeatedly told in teahouses,on theatrical stages,on radio and television,on movie\nscreens,and in numerous homes. In fact,its influence has extended far beyond national boundaries as more\nand more foreign readers are also stirred and intrigued by the stories of the novel.\n二、精析精译\n1.《水浒传》（Water Margin）是中国文学四大经典小说之一。\n【词汇准备】中国文学 Chinese literature 经典小说 classic novel\n【句子解析】本句可直译为主系表结构，表语包含多重定语，\"四大经典小说\"可按原语序译为 the four\ngreat classic novels，\"中国文学\"对其进一步限定，明确其所属范畴，可译为后置定语 of Chinese literature;\n\"……之一\"可采用\"among/one of+复数名词\"结构。由于本句比较简短，还可将本句与下句合译∶将下句主\n语替换为 Water Margin，本句所述信息则处理为 Water Margin 的同位语，即 Waler Margin, one of the four\nclassic novels of Chinese literature, is...。\n2.这部小说基于历史人物宋江及其伙伴反抗封建帝王的故事，数百年来一直深受中国读者的喜爱。\n【词汇准备】基于（be）based on 历史人物 historical figure伙伴 partner;companion;fellow 反抗\nrebel/revolt（against）封建帝王 feudalemperor 数百年来for hundreds of years 深受……喜爱 be popular\namong; be well-loved by\n【句子解析】本句逗号前后两部分均是对小说基本情况的介绍，可译为以 and 连接的并列谓语句，也可把\n逗号前\"基于……故事\"处理为状语 Based on...，逗号后译为主干。\"历史人物\"和\"宋江\"为同位语，译为 the\nhistorical figure Song Jiang 即可。\"历史人物宋江及其伙伴反抗封建帝王的故事\"有几种处理方式∶一是把\"反\n抗封建帝王\"以定语从句 who...带出，即 stories of the historical figure Song Jiang...who rebelled against the\nfeudal emperor;二是把\"反抗\"灵活处理为名词 rebellion，即 stories of the historical figure Song Jiang and his\ncompanions'rebellion against the feudal emperor;三是把\"历史人物宋江及其伙伴反抗封建帝王\"整体处理为\n一个从句，考虑到小说所讲述的实际是他们反抗的过程，故可用 how引出，即 stories of how the historical\nfigure Song Jiang...rebelled against the feudal emperor。后半句\"一直深受……喜爱\"提示应使用现在完成\n时，即has been popular among...。\n3.毫不夸张地说，几乎每个中国人都熟悉小说中的一些主要人物。\n【词汇准备】毫不夸张地说It is no exaggeration to say...;It can be said without exaggeration... 熟悉\nbe familiar with;know well 主要人物 main/major figure/character\n【句子解析】本句转换成英语思维即\"说……毫不夸张\"（To say...is no exaggeration），此时由于主语太\n长，故可使用It 作形式主语，梳理为It is no exaggeration to say...，而后\"几乎每个中国人都熟悉……\"可译为\nsay 的宾语，以 that 引出，即 that almost every Chinese is familiar with...。\n4.这部小说中的精彩故事在茶馆、戏剧舞台、广播电视、电影屏幕和无数家庭中反复讲述。\n【词汇准备】精彩故事 highlights;wonderful/amazing stories 茶馆 teahouse 戏剧舞台 theatrical stage\n广播 radio 电视 television 电影屏幕 movie screen 无数 countless; innumerable;numerous 反复\nrepeatedly 讲述tell;narrate\n【句子解析】\"精彩故事\"可译为 highlights，简洁、自然又地道。\"在茶馆\"等一系列并列短语凸显小说广受\n欢迎、在各个地方都能看到，均可用介词引出，英语中表示地点/场合的状语常位于句首或句尾，但本句地点状\n语很长，为避免头重脚轻，可将其置于句末。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              7
+            ]
+          },
+          "verified": false
+        },
+        {
+          "id": "2020-09-3-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "选词填空第 35 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bond"
+            },
+            {
+              "key": "B",
+              "text": "contemplated"
+            },
+            {
+              "key": "C",
+              "text": "dawned"
+            },
+            {
+              "key": "D",
+              "text": "hierarchy"
+            },
+            {
+              "key": "E",
+              "text": "insight"
+            },
+            {
+              "key": "F",
+              "text": "legislative"
+            },
+            {
+              "key": "G",
+              "text": "leverage"
+            },
+            {
+              "key": "H",
+              "text": "logistical"
+            },
+            {
+              "key": "I",
+              "text": "magically"
+            },
+            {
+              "key": "J",
+              "text": "outcomes"
+            },
+            {
+              "key": "K",
+              "text": "patterns"
+            },
+            {
+              "key": "L",
+              "text": "rarely"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "stereotypes"
+            },
+            {
+              "key": "O",
+              "text": "undoubtedly"
+            }
+          ],
+          "answer": "K",
+          "explanation": "答案：K\n答案∶K）patterns\n【确定词性】空格前为介词 into，后为另一介词短语 from the teen years，空格词应为名词，作 into 的宾语。\n【锁定答案】空格句前半部分提出建议\"要承认亲子关系的决定因素发生了变化\"，后半部分明确目的\"以\n避免退回到从青少年时期开始的\"。其中，\"亲子关系的决定因素发生了变化\"指向Ⅴ段\"随着时间的推\n移，子女和父母不再是接受者和给予者的关系\"，结合本段①句\"亲子关系不会单纯随时间推移变牢固\"可推断\n出末句的隐含信息;青少年子女与父母为\"接受者—给予者\"关系，两者同住时的相处方式多有缺陷;随着青少\n年子女长大成人，其与父母的关系发生变化，同住时的",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "An overwhelming majority of family physicians are willing to use telemedicine if they are duly paid.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\n如果能够获得适当报酬，绝大多数家庭医生愿意使用远程医疗。\n【答案】D 【精解】末句借调查数据说明家庭医生对远程医疗的态度;如果能够得到适当补偿.90??家庭\n医生都愿意使用。试题是对该句的同义改写，其中 An overwhelming majority 对应 90??",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "Many employers are eager to provide telemedicine service as a benefit to their employees because of its convenience.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "H",
+          "explanation": "答案：H\n由于远程医疗的便利性，许多雇主热衷于将其作为一种福利提供给雇员。\n【答案】H 【精解】首句介绍雇主对远程医疗的态度\"宣传其便利性，并争相为员工提供这种服务\"，②句\n则指出近四分之三的大雇主今年会将虚拟医生诊疗作为福利提供给雇员。试题是对两句内容的归纳概括，其\n中eager 传递出了rushed\"匆忙.仓促\"所展示的急切之情.because of its convenience传递出了 promote them\nas a convenient way\"宣扬其便利性\"所展示的因果关联。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "Different states have markedly different regulations for telemedicine.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "E",
+          "explanation": "答案：E\n不同的州对远程医疗的规定迥然相异。\n【答案】E 【精解】 ②句指出\"各州管理远程医疗的规则存在巨大差异\"。试题是对该句的同义转述，其中\nDifferent states 对应 from state to state。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "With telemedicine, patients in regions short of professional medical service are able to receive better medical care.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\n借助远程医疗，专业医疗服务匮乏地区的患者能够得到更好的医疗服务。\n【答案】 B 【精解】 ④句介绍远程医疗的益处\"为那些很难获得医疗专业知识的地方提供更优质的医疗\"，\n意即，借助远程医疗，那些医疗欠发达地区的患者也能得到更好的医疗服务。试题是对该句的同义转述，其中\nWith telemedicine\"借助远程医疗\"传递出了 Telemedicine also allows for\"远程医疗考虑到……的可能性/使\n得……成为可能\"所展示的因果逻辑。\n40。与雇主和健康医疗计划不同，保险公司不愿意为一些远程医疗服务买单。\n【答案】 K 【精解】 ②句对比指出\"尽管雇主和健康医疗计划一直急于为紧急虚拟医疗服务上险，但保险\n16\n公司却不太愿意为远程医疗买单\"。试题是对该内容的正确概括，其中 Unlike 正确概括 While、eager to vs.\nfar less willing to 所传达的对比之意。\n41.一些远程医疗的支持者希望各州能够互认行医执照的有效性。\n【答案】O 「精解】②句介绍远程医疗倡导者的希冀\"各州自动承认彼此行医执照的有效性\"。试题是对\n该句的同义转述，其中 accept...as valid\"将……视为有效的\"明示了honor 这一熟词所传递出的僻意\"承认\n（文件等）有效\"。\n42.远程医疗服务发展最迅猛的领域针对的是较轻微的健康问题。\n【答案】 G 【精解】②③句介绍远程医疗发展最迅猛的服务的特点∶将用户和医生通过电话、视频或电邮\n诊疗的形式连接起来，按需随选、随时随刻;通常针对感冒、流感、耳痛和皮疹等非紧急问题。试题是对此两句\n的归纳提炼，其中 lesser（较小的，次要的）health problems 准确概括了 nonemergency issues 及所举例证\ncolds, flu, ear-aches and skin rashes 的含义∶不严重/不紧急的健康问题。\n43.随着远程医疗的快速发展，一些反对者质疑其服务质量能否得到保证。\n【答案】F 【精解】首句指出一些批评人士的质疑\"远程医疗的质量是否能跟上其迅速发展的速度\"。试\n题是对该句的概括改写，其中 As telemedicine spreads quickly...whether...can be guaranteed 正确概括反对\n者质疑 whether...is keeping up with the rapid expansion of telemedicine的核心∶如何调节数量（远程医疗扩\n张）和质量之间的矛盾关系。\n44.研究人员扮作病人向远程医疗提供者寻求帮助，得到的结果令人不安。\n【答案】I 【精解】 ③句介绍研究人员扮作皮肤病患者向远程医疗平台寻求帮助的结果\"令人不安\"，试题\n是对该句的同义转述。\n45.一些人认为，\"不同的州对医疗服务有不同的规定\"这一现实阻碍了远程医疗的发展。\n【答案】N 【精解】③句介绍一些业内人士的看法\"50 个州有 50 套医疗服务规则'正在阻碍远程医疗的\n发展\"，试题是该句的同义转述，其中different states have different regulations 是对 having 50 different sets of\nrules...\"medical practice\"及首句中 state-by-state regulatory system 的同义概述。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Unlike employers and health plans, insurers have been rather reluctant to pay for some telemedicine services.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "K",
+          "explanation": "答案：K\n。与雇主和健康医疗计划不同，保险公司不愿意为一些远程医疗服务买单。\n【答案】 K 【精解】 ②句对比指出\"尽管雇主和健康医疗计划一直急于为紧急虚拟医疗服务上险，但保险\n16\n\n公司却不太愿意为远程医疗买单\"。试题是对该内容的正确概括，其中 Unlike 正确概括 While、eager to vs.\nfar less willing to 所传达的对比之意。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "Some supporters of telemedicine hope states will accept each other's medical practice licenses as valid.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "O",
+          "explanation": "答案：O\n一些远程医疗的支持者希望各州能够互认行医执照的有效性。\n【答案】O 「精解】②句介绍远程医疗倡导者的希冀\"各州自动承认彼此行医执照的有效性\"。试题是对\n该句的同义转述，其中 accept...as valid\"将……视为有效的\"明示了honor 这一熟词所传递出的僻意\"承认\n（文件等）有效\"。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "The fastest growing area for telemedicine services is for lesser health problems.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "G",
+          "explanation": "答案：G\n远程医疗服务发展最迅猛的领域针对的是较轻微的健康问题。\n【答案】 G 【精解】②③句介绍远程医疗发展最迅猛的服务的特点∶将用户和医生通过电话、视频或电邮\n诊疗的形式连接起来，按需随选、随时随刻;通常针对感冒、流感、耳痛和皮疹等非紧急问题。试题是对此两句\n的归纳提炼，其中 lesser（较小的，次要的）health problems 准确概括了 nonemergency issues 及所举例证\ncolds，flu，ear-aches and skin rashes 的含义∶不严重/不紧急的健康问题。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "As telemedicine spreads quickly, some of its opponents doubt whether its service quality can be guaranteed.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "F",
+          "explanation": "答案：F\n随着远程医疗的快速发展，一些反对者质疑其服务质量能否得到保证。\n【答案】F 【精解】首句指出一些批评人士的质疑\"远程医疗的质量是否能跟上其迅速发展的速度\"。试\n题是对该句的概括改写，其中 As telemedicine spreads quickly...whether...can be guaranteed 正确概括反对\n者质疑 whether...is keeping up with the rapid expansion of telemedicine的核心∶如何调节数量（远程医疗扩\n张）和质量之间的矛盾关系。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "The results obtained by researchers who pretended to be patients seeking help from telemedicine providers are disturbing.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "I",
+          "explanation": "答案：I\n研究人员扮作病人向远程医疗提供者寻求帮助，得到的结果令人不安。\n【答案】I 【精解】 ③句介绍研究人员扮作皮肤病患者向远程医疗平台寻求帮助的结果\"令人不安\"，试题\n是对该句的同义转述。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Some people argue that the fact that different states have different regulations concerning medical services hinders the development of telemedicine.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "N",
+          "explanation": "答案：N\n一些人认为，\"不同的州对医疗服务有不同的规定\"这一现实阻碍了远程医疗的发展。\n【答案】N 【精解】③句介绍一些业内人士的看法\"50 个州有 50 套医疗服务规则'正在阻碍远程医疗的\n发展\"，试题是该句的同义转述，其中different states have different regulations 是对 having 50 different sets of\nrules...\"medical practice\"及首句中 state-by-state regulatory system 的同义概述。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What do we learn from the passage about Glamour magazine readers?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are intrigued by the exotic romance in Danielle Steel's novels."
+            },
+            {
+              "key": "B",
+              "text": "They are amazed by the number of books written by Danielle Steel."
+            },
+            {
+              "key": "C",
+              "text": "They are deeply impressed by Danielle Steel's daily work schedule."
+            },
+            {
+              "key": "D",
+              "text": "They are highly motivated by Danielle Steel's unusual productivity."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat do we learn from the passage about Glamour 46.关于《魅力》杂志的读者，我们从文中了解\n到什么?magazine readers?\nA) They are intrigued by the exotic romance in Danielle A）他们着迷于丹妮尔·斯蒂尔小说中奇异的\n浪漫爱情故事。Steel's novels.\nB) They are amazed by the number of books written by B）他们惊诧于丹妮尔·斯蒂尔的著作数量。DanelleSecl.\nC) They are deeply impressd by Daniclle Steel's daily C）他们对丹妮尔·斯蒂尔每天的工作日程深\n感佩服.works schedule.\nD) They are highly motivated by Danelle Steel's unusual D）他们受到丹妮尔·斯蒂尔非凡工作效率的\n极大激励。productivity。\n【精准定位】本题考查与《魅力》杂志相关的事实。根据 Glamour magazine 定位至首段②句（a passing\nreference...by Glamour magazine to...)。\n【锁定答案】 C。②句指出《魅力》杂志的一篇简介提到斯蒂尔每天工作 20 个小时.这激起了一片赞赏之\n声，即读者折服于这一工作时长惊人的日程安排。C是对②句语义的准确概括，为正确项。\n【排除干扰】A 从①句\"斯蒂尔写了很多浪漫爱情小说\"过度推导出人们对其所写故事感到着迷，且这不\n属于《魅力》杂志读者的反应。B利用①句 179 books 混淆视线，原文只是叙述事实\"斯蒂尔著作多\"，并未提及\n\"杂志读者对此感到惊奇\"。D将②句 admiration（赞赏）过度解读为 motivated（被激励）。\n【提炼思路】本题看似考查事实细节.实则考查对文章话题的把握。因为题干的专有名词（Glamour\nmagazine）限定范围窄，所以可以用正反面结合的方法解题。1．正向解题。根据 Glamour magazine 迅速定位\n至首段②句，然后根据 20-hour workdays 和admiration 选出符合文义的C。2.反向排除。定位至②句后排除\n该句未提及、源自①句的 A和B，再根据语义排除 D。而且这三项的中心词（exotic romance、the number of\nbooks、unusual productivity）均非文章讨论的话题，因此不是命题人的用意所在。\n斯蒂尔在描述过去\"令人疲惫不堪Ⅱ ①Steel has given that 20-hour figure when\n的\"写作过程时给出了 20 个小时这一数describing her\"exhausting\"process in the past:\"I start\n字∶\"我开始动笔之后就不会离开书桌，直the book and don't leave my desk until the first draftis\n到完成初稿。\"她从床到书桌，到浴室，再finished.\"② She goes from bed,to desk,to bath,to\n到床，避免除与九个子女通电话以外的一bed,avoiding all contact aside from phone calls with her\n切外界联络。\"我好几个星期都不梳头nine children.③\"I don't comb my hair for weeks,\"she\n发。\"她说道。餐食会端到书桌上，她在桌says. ④Meals are brought to her desk,where she types\n前打字打到手指肿胀、指甲出血。until her fingers swell and her nails bleed.\n.\"词汇注释与难句分析 ;/\n①fiure 【'igo】n. 数字  ③aside from 除……外\n$④swel 【swel】 v.肿胀②draft【draf】n.草稿\n18\n语篇分析\n第二段细述斯蒂尔工作超长时间的状态。\n①句总起，概述工作时间之长。本段 that 20-hour figure 回指上一段 20-hour workdays，关键词\nexhausting 将这种工作状态概括为\"令人疲惫不堪的\"，20-hour 表现每天的工作时间之长，until thefirst draft\nis finished 表现整个工作周期之长∶不完成初稿不停笔。\n②③④句详述细节。②③句和④句前半句用动作描写（goes from bed to...、avoiding all contact aside\nfrom...、don't comb my hair for weeks、Meals arebrought to her desk）凸显斯蒂尔心无旁骜，（除最基本的需\n求外）只埋头工作的状态，强调其 20 个小时的工作时长不含一点水分。④句后半句描述这种工作模式的后\n果。until后两个并列短语（fingers swell、nails bleed）说明工作超长时间对身体健康的影响∶手指肿胀、指甲出\n血。该句揭示每天工作 20 个小时对斯蒂尔而言也并非易事，为后文对这种工作模式的质疑作铺垫。\n商业新闻网站\"石英财经网\"把斯蒂尔Ⅲ The business news website Quartx held Steel up\n树为催人奋进的人物，它写道，我们要是都as an inspiration\",writing that if only we al ollowed her\n能效仿她那\"实际上极具解放意义的\"勤奋\"actually extremely liberating\"example of industrious\n的不眠行为，我们很快就能看到成果。sleeplessness, we would be quick to see results.\n。词汇注释与难句分析。\n《③liberating 【'liboret!】 a.解脱的，解放的①hold sb up 举出（例子），提出（作为榜样）\n ④industrious 【in'dAstri?s】a.勤奋的②inspiration 【μInspo'rei【n】 n.鼓舞人心的人\nThe business news website Quartz held Steel up as an inspiration,writing that if only we all followed her\n\"actually extremely liberating\"example of industrious sleeplessness,we would be quick to see results.\n现在分词作状语cThe business news website Ouaztz held Steel up as an inspiration, writing thalt主谱宾语补足语谓语+宾语\n宾语从句的主干宾语从句的条件状语从句\nwe wouldbe quickifonly all followed her\"actually extremely liberating\"example of industrious sleeplessness,we\n宾语引导词主语同位语谓语 to see results.\n语篇分析\n第三段转述赞赏言论。inspiration 概括石英财经网对斯蒂尔的评价∶激励人奋进的人物。liberating 和\nindustrious两个褒义词表现对这种工作模式的赞赏。i条件句指出工作超长时间是获得成功的条件，以此来\n激励人们效仿斯蒂尔的做法。该句实际是树靶，后文将对这种观点进行质疑和批判。\n真题精解",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              18
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What did the business news website Quartz say about Danielle Steel?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "She could serve as an example of industriousness."
+            },
+            {
+              "key": "B",
+              "text": "She proved we could liberate ourselves from sleep."
+            },
+            {
+              "key": "C",
+              "text": "She could be an inspiration to novelists all over the world."
+            },
+            {
+              "key": "D",
+              "text": "She showed we could get all our work done without sleep."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\n关于丹妮尔·斯蒂尔，商业新闻网站石47. What did the business news website Quartz say about\n英财经网说了什么?DanielleSeel?\nA) She could serve as an example of industriousness. A）她可以起到勤奋刻苦的榜样作用。\nB）她证明我们可以把自己从睡眠中解放B) She proved we could liberate ourselves from sleep. 出来。\n C）她可以成为鼓舞全世界小说家的人。C) She could be an inspiration to novelists all over the world.\nD)She showed we could get all our work done without D）她表明我们可以在不睡觉的情况下完成\nSsep. 所有工作。\n工精准定位】本题考查对石英财经网观点的理解。根据 businessnews website Quartx定位至第三段（The\nbusiness news website Quartz held Steel up as an inspiration...))。\n【锁定答案】A。该段后半句指出，如果我们都能效仿斯蒂尔勤奋的不眠行为（follow her...example of\nindustrious sleeplessness），我们很快就能看到成果。可见石英财经网认为，斯蒂尔的超短睡眠是勤奋刻苦的\n表现，而且是可以为人们效仿的，A 是对原文的正确理解。\n19\n【排除干扰】B对 extremely liberating 和 sleeplessness 进行过度引申，原文指斯蒂尔的超短睡眠是有解放\n意义的.但并未明确表明人们可以从睡眠中解放出来，做到不睡觉。C 把\"常人（we）\"缩窄为文章并未提及的\n\"小说家（novelists）\"。D 属过度引申，原文指效仿斯蒂尔的超短睡眠可以让人很快看到成果/取得成就，并未\n提及可以让人完成所有工作，而且斯蒂尔并非完全不睡觉，只是睡的时间极短。\n【提炼思路】本题考查石英财经网对斯蒂尔的评价，人物观点句加长难句是常见的出题点，关键要根据语\n义对选项进行细节辨析。解题时首先根据题干的专有名词 Quar1z 迅速定位至第三段，然后分析句义。句子\n主干是概括，从句具体解释 inspiration，核心信息是 example of industrious sleeplessness，由此锁定复现了\nexample 和 industrious的 A。此外，由于题干考查评价，因此可以将选项分类并进行排除。B 和 D的句式结\n构一致，为 She proved/showed we could...，这种句式是对事实的陈述，而非对人物的评价，不是观点句的中\n心语义.因此可排除。A 和C句式结构一致，为 She could serve as/be sth，中心词是动词后的名词，an example\nof industriousness和an inspiration 都是对人物的评价且符合句义，但 C中的 novelists...大大缩窄了 we 代表\n的范围，因此可果断排除 C，最终锁定 A。\nV ① Well, indeed\". ② With research results 唔，不见得吧。随着一些研究结果表\n明睡眠缺失的累积效应及其对工作效率showing the cumulative effects of sleep loss and its\n的影响，质疑斯蒂尔自我评估准确性的声impact on productivity, doubt has been voiced about the\n音也出现了。她的产出或许不可否认，但accuracy of Steel's self-assessment. ③ Her output\" may\n持怀疑态度的人认为，往最坏处说是斯蒂be undeniable, but sceptics have suggested that she is\n尔抹去了代笔人的角色，往最好处说是她guilty of erasing2 the role of ghostvuriters（代笔人） at\n严重夸大了事实。worst, gross exaggeration at best.\n·词汇注释与难句分析·\n ⑤guiltyof sth 有罪责的①indeed 【In di∶d】 ad.（表示惊讶或觉得荒谬）\n⑤erase 【1 rerz】v. 清除，抹掉②cumulative 【'kju∶mjolotiv】a. 累积的，聚积的\n⑦gross grous】a.严-重的③output 【'aotput】 n. 产量，输出量\n⑧exaggeration 【igiz?d3olrei【n】 n.夸张，言过其实④sceptic 【'skeptik】 n.持怀疑态度的人\n语篇分析\n第四段质疑斯蒂尔工作时长的真实性。\n①句两个词标志语气的转变。indeed表示作者认为石英财经网的言论很荒谬，从本段开始，文章从叙述\n其他人的赞赏态度转入对斯蒂尔工作时长的质疑。\n②句从科学层面提出质疑。With 表示弱因果，前半句科学研究发现（research results）是后半句质疑\n（doubt）的依据，根据睡眠缺失的负面影响（cumulative effects、itsimpact on）推断斯蒂尔所说的工作时间不切\n实际（doubt...about the accuracy of Steel's self-assessment）。第三段石英财经网把斯蒂尔每天工作 20个小\n时称为 industrious sleeplessness（勤奋的不眠行为），本段则将之定义为 sleep loss（睡眠缺失），可见作者对这\n种行为的否定态度。\n③句猜测真实情况。语义重心落在 but 之后，sceptics 承接②句 doubt, that 从句进一步解释怀疑的内容。\n在斯蒂尔的产出无可置疑（undeniable）的前提下，持怀疑态度的人推测了两种情况∶有代笔人存在\n（ghostwriters）或斯蒂尔夸大了事实（exaggeration）。总之，人们不相信斯蒂尔真能每天工作 20 个小时。\n真题精解",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              19
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What do sceptics think of Danielle Steel's work schedule claims?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are questionable."
+            },
+            {
+              "key": "B",
+              "text": "They are alterable."
+            },
+            {
+              "key": "C",
+              "text": "They are irresistible."
+            },
+            {
+              "key": "D",
+              "text": "They are verifiable."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat do sceptics think of Danille Stee's work 48.持怀疑态度的人怎样看待丹妮尔·斯蒂尔对\n工作日程的说法?schedule claims?\nA They are questionable. A）说法是可疑的。\nB) They are alterable. B）说法是可改变的。\nC) They areirresistible. C）说法是不容反驳的。\nD) They are vrifiale. D）说法是可证实的。\n【精准定位】本题考查持怀疑态度的人的看法。根据 sceptics定位至第四段③句（sceptics have sugested\n20\nthat...)。\n【锁定答案】A。第四段③句指出，持怀疑态度的人认为，斯蒂尔可能严重夸大了事实，或者可能干脆抹去\n了代笔人的角色。可见持怀疑态度的人认为斯蒂尔隐瞒了真实情况，她的说法是值得怀疑的，A 是对原句的\n准确概括，为正确项。\n【排除干扰】B是对 at best和at worst 的误解，原文其实是通过两种极端说法（夸大事实或干脆请人代\n笔）来表达怀疑的态度，并非指斯蒂尔的说法可以有两种解释/是可以改变的。C、D均反向干扰，将文中\"斯蒂\n尔的产出不可否认\"窜改为\"其对工作日程的说法不容反驳/可证实\"。\n【提炼思路】本题是人物观点题，特殊之处在于题干对人物本身已有限定（持怀疑态度的人），因此可以直\n接排除态度模糊的 B，以及与\"怀疑\"方向相反的C和 D，并锁定与之同义的 A（questionable）。若通过分析文\n义解题，则可根据 sceptics 定位至第四段③句，又发现③句是对②句 doubt 的具体解释。②句后半句 Steel's\nself-assessment 同义改写题干 Danielle Steel's work schedule claims.doubt 概括了 sceptics的看法，由此锁定\n与doubt同义的 A。\nV ●Stecl says working 20 hours a day is \"pretty 斯蒂尔说每天工作 20 个小时\"对身体是\n非常残酷的\"。但工作这么长时间怎么可能brutal physically.\" ② But is it even possible?\n呢?\"这不可能。\"来自\"睡眠有用\"公司的玛③\"No,\"says Maryanne Taylor of the Sleep Works.\n④ While you could work that long, the impact on 丽安· 泰勒说道。尽管你可以工作那么长时\n间，但这对工作效率的影响会让这种做法变productivity would make it hardly worthwhile. ⑤ If\n得几乎没有意义。睡眠促进项目\"睡眠站\"的Steel was routine lys lee ping for four hours a night,\n创始人艾莉森·加德纳表示，如果斯蒂尔平she would be drastically\" under estimating the\n常总是每晚睡四个小时，那么她可能严重低negative impact, says Alison Gardiner, founder of the\n估了这种做法的负面影响。\"这就像喝醉了。\"sleep improvement programme Sleepstation. O\"It's\nakin to° being drunk.\"\n·词汇注释与难句分析· \n①brutal 【'bru∶t】 a.残暴的，残酷的  ③drastically 【'drestkli】 ad. 严重地，急剧地\n④akin to相似的，类似的②routinely 【ru'i∶nli】 ad.日常地，平常地\n语篇分析\n第五段引用两位专家的言论继续提出质疑。\n①②句通过疑问句提出全段论证的问题\"每天工作 20 个小时是否可能\"。pretty brutal physicall 是斯蒂\n尔自己的评价;虽然会对身体造成巨大压力，但还是可以做到的。But 转折词引出作者的怀疑.这种行为直的\n可能吗? even 加强质疑语气。\n③④句阐述泰勒的观点。③句直截了当地给出泰勒的回答∶不可能。没有其他解释和让步，态度十分坚\n决。④句进一步解释，While引导让步状语从句∶虽然表面上可以工作这么长时间;后半句下结论∶但实际上\n极低的工作效率会使这种做法得不偿失（hardly worthwhile）。④句一退一进地论述，依然表明斯蒂尔的工作\n模式不可行。\n⑤⑥句阐述加德纳的观点。⑤句 If和虚拟语气已表明加德纳对斯蒂尔睡眠时长的怀疑，under estimating\nthe negative impact 呼应①句 pretty brutal physically，言下之意是斯蒂尔不可能工作超长时间而不受影响。\n⑥句将每晚睡 4 个小时的状态比喻为醉酒.说明在睡眠不足的状态下不可能正常工作。\nV ① It's possible that Steel is exaggerating the 有可能斯蒂尔在夸大她的日程之繁\ndemands\" of her schedule. ② Self-imposed2sleeplessness 忙。泰勒称，自我强加的不眠行为已经\nhas \" become a bit of a status symbol\",says Taylor,a \"有点变成一种地位的象征\"，一种证明\nmisguided\" measure to prove how powerful and productive 你有多么强大和多么高效率的错误的衡\n量标准。据说玛格丽特 · 撒切尔也是每you are. ③Margaret Thatcher was also said to get by on①\nfour hours a night, while the 130-hour work weeks 晚只睡四个小时，而科技领袖们每周 130\n个小时的工作时长也被标榜为他们取得endured\"by tech heads has been held up as key to their\n成功的要诀。success,\n21\n。词汇注释与难句分析\n错的①demand 【di'ma∶nd】 n.（尤指困难的）要求\n④get by on sth 靠……设法过活，勉强应付②self-imposed Liself Im'povzd】 a.自己强加的，自愿负\n担的 ⑤endure 【n'djuo】 v.忍耐，忍受\n③misguided 【imis'gatdid】 a.（因理解或判断失误）搞\n·语篇分析\n第六段揭示斯蒂尔声称只睡四个小时的原因。\n①句表明作者看法∶斯蒂尔可能夸大了自己的工作时长。讨论的层面从四小时睡眠的客观可行性，转为\n宣扬睡眠时间少的主观行为。demands 此处指\"困难、累人之事\"。\n②句引用泰勒的话指出夸大行为的原因。status symbol 点明大众对这一行为的看法∶某种程度上等同于\n地位、成就，同位语 a misguided measure...进一步解释 status symbol∶睡得少可以证明你有多么强大和高效。\nmisguided 明确泰勒看法∶把\"多干少睡\"等同于\"强大、高效\"是误导人的、错误的。\n③句用撒切尔夫人和科技巨头的事例进一步证明②句中\"不眠工作象征地位\"。get by on（仅靠……维\n持）表明睡眠时间短，endure（忍耐）表明保持这种作息并非易事。while 连接两类代表性人物;传统政治家撒\n切尔夫人和新兴科技领袖，可见长久以来超短睡眠都被视为成功人士的必备素养。key to their success 直接\n把睡眠时间和个人成就挂钩。\n\"真题精解",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              20
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What does Maryanne Taylor think of self-imposed sleeplessness?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It may turn out to be key to a successful career."
+            },
+            {
+              "key": "B",
+              "text": "It may be practiced only by certain tech heads."
+            },
+            {
+              "key": "C",
+              "text": "It may symbolise one's importance and success."
+            },
+            {
+              "key": "D",
+              "text": "It may well serve as a measure of self-discipline."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\n玛丽安 ·泰勒怎样看待自我强加的不眠49. What does Maryanne Taylor think of self-imposed\n行为?sleeplessness?\nA）这种行为可能会是事业成功的关键。A) It may turn out to be key to a successful career.\nB）这种行为可能只被某几位科技领袖践行。B)It may be practiced only by certain tech heads.\nC）这种行为可能象征一个人的重要性和成就。C)It may symbolise one's importance and sccess.\nD) It may well erve as a measure of self-discipline. D）这种行为完全可以用来衡量自律程度。\n【精准定位】本题考查人物观点。根据 Maryanne Taylor和sel-imposed sleeplessness定位至第六段②句\n(Self-imposed sleeplessness has...says Taylor...)。\n【锁定答案】C。第六段②句指出\"自我强加的不眠行为已经有点变成一种地位的象征（status symbol）\"，\nC 项 importance and success 同义改写 status，为正确项。\n【排除干扰】A利用③句 been held up as key to their sucess 进行干扰，但这不是泰勒的观点，而是作者陈\n述人们的看法。B与③句语义不符.撒切尔夫人等人也践行自我强加的不眠行为，而且这也不属于泰勒的观\n点。D 与②句\"错误的衡量标准（a misguided measure）\"语义相反。\n【提炼思路】人物观点题中\"偷换非题干人物的观点\"属于常见的干扰方式，第六段作者观点、人们的普遍\n看法和人物观点夹杂，重点在于辨别哪些是题目考查的人物观点。第六段中只有②句是泰勒的观点，解题时\n根据③句的key to their successtech heads可以排除 A 和B，再根据②句的 misguided 可排除与文义相反的\nD，最终根据 status symbol 和 powerful and productive 锁定 C。\n随着人们日益意识到睡眠对心理Ⅶ ● That is starting to change with increased\n健康的重要性，这种情况也在开始改awareness of the importance of sleep for mental health.\n变。\"人们开始认识到睡眠，不应该是你②\"People are starting to realise that sleep should not be\nsomething that you fit in2between everything else，\"says 在其他事情之余抽时间做的事。\"泰勒\nTaylor. 说道。\n·词汇注释与难句分析·\n$ ②fit sth in 找到时间做某事①awareness 【o'weonos】 n.意识，认识\n22\n语篇分析-\n第七段介绍人们对睡眠看法的转变。\n①句指出人们开始意识到睡眠的重要性。That 回指第六段宣扬超短睡眠的情况。with 表示弱因果关\n系∶因为人们日益意识到睡眠的重要性，因此宣扬超短睡眠的情况有所改变。\n②句引用泰勒的观点进一步阐述人们看法的转变。直接引语解释①句的 awareness, fit in between\neverything else表明之前人们把睡眠的重要性排在其他所有事情之后，should not 表明现在人们开始认真对\n待睡眠。\n睡眠专家苏菲·博斯托克博士表示，Ⅶ ④ But it is possible—if statistically extremely\n但是有可能——虽然在统计学意义上是unlikely—that Steel could be born a\"short sleeper\" with\n极其不可能的——斯蒂尔天生就是生物an unusual body clock②, says sleep expert Dr. Sophie\n钟异于常人的\"短睡眠者\"。\"大概不到Bostock. ②\"It's probably present in fewer than 1of\nthe population. \" 1??人是这种情况。\"\n博斯托克表示，即使斯蒂尔恰好是这Ⅸ Even if Steel does happen to be among that tiny\n极少数人中的一个，但向我们其余人说每minority, says Bostock, it's\" pretty irresponsible\" to\n天工作 20个小时不过是自律问题也是\"非suggest that 20-hour days are simply a question of\n常不负责任的\"。discipline for the rest of us. [447 words]\n。词汇注释与难句分析\n$ ③present 【'preznt】a. 存在的①statistically 【st?'tstikli】 ad.统计学地，统计学意\n义上  ①happen to 恰好，碰巧\n②body clock 生物钟 ⑤discipline 【'disoplin】 n7. 纪律，自制力\n语篇分析-\n第八、九两段引用专家观点表明对宣扬超短睡眠的否定态度。\n第八段退而介绍特例\"短睡眠者\"。\n①句简单介绍\"短睡眠者\"。But it is possible 引出另一种可能的情况，插入语 statistically extremely\nunlikely 补充这种情况极其特殊∶概率小到几乎不可能出现。be born...with an unusual body clock 说明出现\n这种情况是先天的∶生物钟与常人不同。\n②句介绍出现概率。fewer than 1??明\"短睡眠者\"极其罕见，大多数人不属于这种情况。\n第九段进而表明总体否定态度。\nthat tiny minority 回指第八段的 short sleeper.happen to 和 tiny minority均表明斯蒂尔是\"短睡眠者\"的\n概率极低。Even if表示让步∶假定斯蒂尔是\"短睡眠者\"这一极小概率事件为真。pretty irresponsible表明强\n烈否定态度∶告诉人们靠后天努力（自律）就可以和天生的短睡眠者一样不眠工作是极不负责任的（误导人们\n损害健康）。两类人的对比（tiny minority VS the rest of us）再次凸显斯蒂尔工作时长的不同寻常.也明确表\n示这种行为不适用于普通人。\n.真题精解",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              22
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "How does Dr. Sophie Bostock look at the 20-hour daily work schedule?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "One should not adopt it without consulting a sleep expert."
+            },
+            {
+              "key": "B",
+              "text": "The general public should not be encouraged to follow it."
+            },
+            {
+              "key": "C",
+              "text": "One must be duly self-disciplined to adhere to it."
+            },
+            {
+              "key": "D",
+              "text": "The majority must adjust their body clock for it."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nHow does Dr. Sophie Bostock look at the 20-hour daily 50.苏菲·博斯托克博士怎样看待每天工作\n20 个小时的日程安排?work schedule?\nA) One should not adopt it without consulting a sleep A）不能在未咨询睡眠专家的情况下采取这\n种日程。expert.\nB) The general public should not be encouraged to B）不应该鼓励普通大众效仿这种行为。folowit\nC) One must be duly sel-disciplined to adhere to it. C）必须足够自律才能坚持这种日程。\nD）大多数人必须为此调整自己的生物钟。D The majority must adjust their body clock for it.\n23\n【精准定位】本题考查人物观点。根据 Dr.Sophie Bostock 和 20-hour daily work schedule 定位至末段\n(says Bostock...that 20-hour days are...)。\n【锁定答案】 B。末段指出\"对大部分并非短睡眠者的人说每天工作 20 个小时不过是自律问题，这是非常\n不负责任的\"，换言之，不应该向人们传达\"只要自律就能每天工作 20 个小时\"的思想，simply a question of\ndiscipline 是鼓励人们效仿这种做法的说辞，The general public 同义改写 the rest of us（与 that tiny minority\n相对），B 是对未段的正确解读。\n【排除干扰】 A 利用第八段①句 sleep expert 设置干扰，但原文并未提及向睡眠专家咨询该日程安排。C\n与末段 irresponsible 表达的观点（并非仅靠自律就可以做到每天工作 20 个小时）相反。D利用第八段①句\nunusual body clock 设置干扰，但adjust 与原文的 be born...with an unusual body clock 语义不符，这种特殊的\n生物钟是天生的，不是靠后天调节的。\n【提炼思路】本题难点在于选项并未复现观点句中的词，仅靠字面意思难以直接锁定答案，因此需要联系\n上下文，理解观点句的深层含义，并巧用排除法解题。1．理解文义。根据 Dr.Sophie Bostock 定位至末段，再\n结合第八段对超短睡眠者的介绍，可知末段讨论了两类人的情况（that tiny minority 和 the rest of us）∶超短睡\n眠者因先天生物钟异于常人，可以做到每天工作 20 个小时;而对于普通人而言，保持这种作息时间并不是仅\n靠后天努力（自律）就可以达到。睡眠时间很大程度上是一种生理设定，善通人无法效仿这种工作模式，从而\n锁定与末段语义一致的 B。2.排除错误项。对选项分类可发现，A、C、D都是实现每天 20 个小时工作时间的\n条件（咨询睡眠专家、自律、调整生物钟），言下之意是满足了这些条件，普通人就可以做到每天工作 20 个小\n时。只有 B 完全否定了这种做法，博斯托克的批判态度（irresponsible）说明她也是否定这种做法的，因此锁\n定 B。\nPassage Two 有机农业是帮助养活全世界人民的关键\n一、总体分析\n来源∶blog.ususa.org（忧思科学家联盟博客）2016.02 文章Organic is Key to Helping Feed the World\nSustainably（有机农业是帮助养活全世界人民的关键）。主题∶有机农业有待被充分利用.因为它比传统农业\n产量更高、更可持续、更具经济价值。脉络∶借研究结论引入全文主题∶从产量、环保、利润三个角度而言，有机\n农业比传统农业更具发展前景（第一、二段）——阐释说明主题∶特殊条件下，有机农业产量更高（第三、四\n段）——有机农业更环保（第五至八段）——有机农产品利润更高（末段）。\n二、语篇分析及试题精解\n就养活地球人口而言，有机农业这I① Organic agriculture is a relatively untapped°\n种农耕方式相对有待挖掘利用，尤其是resource for feeding the Earth's population, especially in\nthe face of climate change and other global challenges. 在面临气候变化及其他全球挑战之际。\n这是我在回顾了 40）年来的科学研究、比②That's the conclusion I reached in reviewing 40 years of\n较了有机耕种和传统耕种的长期前景后science comparing the long-term prospects  of organic and\n得出的结论。conventional farming\n。词汇注释与难句分析。\n①prospect 【'prDspekt】 n.前景，展望①organic 【D! g?nk】a.有机的\n⑤conventional 【kon'ven【onl】 a.传统的，习惯的②untapped 【ian't?pt】 a.未利用的，未开发的\n③feed fitd】 v.提供食物，喂养\n语篇分析\n第一、二段为第一部分，借助作者所开展的某项研究引出全文主题∶有机农业具有良好前景，有待进一步\n挖掘利用。\n第一段直接以作者研究结论点题;有机农业具有长期前景。两句通过 That's the conclusion I reached.，.\n回指衔接，提示首句内容实为一项研究结论，句中 a relatively untapped resource 点明有机农业（相较传统农业\n24\n而言）欠发达、欠利用，暗示该农耕方式亟待开发利用，深藏对有机农业潜力的褒奖;especially 引出当前特殊\n情景，并借此凸显开发利用有机农耕方式对养活全世界人口的重要性。第二句中 comparing the long-term\nprospects在点明研究内容之时，实则结合首句肯定有机农业的长期发展前景∶在当前面临严峻气候变化及其\n他挑战之际，全球粮食问题有待依赖有机农业来解决。\n真题精解",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What do we learn from the conclusion of the author's review study?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "More resources should be tapped for feeding the world's population."
+            },
+            {
+              "key": "B",
+              "text": "Organic farming may be exploited to solve the global food problem."
+            },
+            {
+              "key": "C",
+              "text": "The long-term prospects of organic farming are yet to be explored."
+            },
+            {
+              "key": "D",
+              "text": "Organic farming is at least as promising as conventional farming."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\n根据作者回顾性研究的结论，我们可以获51. What do we learn from the conclusion of the author's\n知什么信息?reviewstudy?\nA) More resources should be tapped for feeding the A）应开发挖掘更多资源以养活世界人口。world's population.\nB)Organic farming may be exploited to solve the global B）有机农业可用以解决全球粮食问题。\nfood problem.\nC) The long-term prospects of organic farming are yet to C）有机农业的长期前景还有待考察。be explored.\nD) Organic farming is at least as promising as D）有机农业至少与传统农业一样有前景。conventional farming.\n【精准定位】本题考查研究结论。由 the conclusion of the author's review study 定位至首段②句（...\nThat's the conclusion I...），再由②句指代词精准定位至其所回指的①句。\n【锁定答案】 B。文首句直陈指出∶就养活地球人口而言，有机农业这种农耕方式还有待开发利用，尤其是\n在面临气候变化及其他全球挑战之际。言外之意即为，可以考虑利用有机农业这种耕种方式来解决当前全球\n人口粮食问题。故 B正确。\n【排除干扰】A 与研究结论形似，但核心信息错误∶原文强调开发\"有机农业\"这一农耕方式，而非\"其他更\n多资源\"。C\"有待考察\"体现的不确定性与研究结论\"有机农业是种相对未被利用的农耕方式\"所传达的肯定\n结果\"有机农业的前景十分良好\"不符。D曲解文意∶文意\"对比有机农耕与传统农耕的长期前景后，得出有机\n农耕有待开发利用以解决全球粮食问题这一结论\"实质上表明\"传统农耕的前景不如有机农耕\"，由后文\"有机\n农耕相较传统农耕更环保、更经济、更可持续\"亦可佐证。\n【提炼思路】本题考查对研究结论的推理引申，关键在于根据定位句（首段①句）的表面信息抓住其主旨、\n理解其言外之意。解题时可∶1．借句子主干锁定主要论述对象及对其总体评价;Organic agriculture is...说\n明本句论述核心为\"有机农业\"，untapped\"蕴藏的、尚未被利用的\"暗含对有机农业潜力的褒奖，especially..\nchange and...challenges 以当前的严峻形势进一步凸显开发有机农业的重要性。由此可锁定对有机农业进\n行正面评价的 B、D，排除未体现主要论述对象的 A 以及对有机农业态度模糊的C。2.仔细阅读定位句，对比\n备选项 B、D，发现 B 契合研究结论体现的\"有机农业对养活人口的重要性\"，而 D 项描述找不到原文依据。\n这项名为\"21 世纪的有机农业\"Ⅱ①The review study,\"Organic Agriculture in the 21st\nCentury,\" is featured as the cover story for the February 的回顾性研究被刊登为《自然—植物》\n2 月刊的封面故事。它首次根据美国issue of the journal Nature Plants. ② It is the first to\n国家科学院确定的可持续发展主要目compare organic and conventional agriculture across the main\n标\"生产力、经济和环境\"对有机农业goals of sustainability identified by the National Academy of\n和传统农业进行了对比。Sciences: productivity,economics and environment.\n。词汇注释与难句分析。\n§ ②productivity 【prodaktvoti】 n.生产力，生产率①sustainability 【sosteno'bnloti】 n.可持续性\n 语篇分析·\n第二段以研究价值明确有机农业具有长期前景的三大方向∶生产力、经济及环境。两句借由 The review\nstudy...is featured as the cover story...It is the first...实现段内衔接，明确段内核心要义;介绍作者回顾性\n25\n研究的重要性\"被刊登为封面故事、极具开拓性\"。to compare.across.identified by...依次明示研究中的\n\"比较对象→比较参数→参数来源\"，其中参数来源的权威性（美国国家科学院）体现了该研究的可参考价值;\n冒号后内容 productivity, economics and environment 补充说明比较参数\"可持续性的三个主要目标∶生产力、\n经济及环境\"。结合文首句研究结论可推断∶在全球面临气候变化及其他挑战之际，有机农业在这三方面的优\n势要胜过传统农业。\n批评者一直都称，有机农业效率低Ⅲ Critics have long argued that organic agriculture is\n下，需要更多的土地才能产出同等数量inefficient,requiring more land to yield\" the same amount of\n的食物。有机农业的产量的确比传统农food. ②It's true that organic farming produces lower yields°,\n业低，平均低 10?? 20??支持者则认averaging 10 to 20 percent less than conventional. ③Advocates\n为，有机农业的环境优势远胜过其低产contend\" that the environmental advantages of organic\n缺陷，有关有机耕种体系日益增多的研agriculture far outweigh\" the lower yields, and that increasing\n究和育种资源也将会缩减这一产量差research and breeding\" resources for organic systems would\n距。有时候，这些观点忽略了这么一个reduce the yield gap@. ④ Sometimes excluded from2 these\n事实∶我们己经生产出了够多的粮食，arguments is the fact that we already produce enough food\n足以养活全世界 74 亿人口，但并没有to more than feed the world's 7.4 billion people but do not\n为每个人提供够多的机会来获取粮食。provide adequate access\" to all individuals.\n。词汇注释与难句分析·\n⑥breeding 【'bridi】 n.培育，育种①yield 【Lji∶ld】 v.出产（作物）\n②yield 【ji1d】 n. 产量，产出 ⑦gap 【gep】n.差距\n⑧exclude sth from sth 不包括，不放在考虑之列③advocate 【'edvokot】n.提倡者，支持者\n⑨acces 【'?kses】 n.通道 ;机会①contend 【kon'tend】 v. 声称，主张\n⑤outweigh 【iaut'wer】 7.重于，胜过\nSometimes excluded from these arguments is the fact that we already produce enough food to more than fee\nthe world's7.4 billion people but do not provide adequate access to all individuals.\nSometimes excluded from these arguments is the fact\n主语，被动结构状语\n同位语从句说明fact\nalready produce enough food to..ed..people do not provide.access to all individuals.butthat we 连词主语谓语2谓语工引导词\n语篇分析\n第三至末段为第二部分，阐释全文主题，其中可细分为三个小部分，分别从三个维度（即三个比较参数）说\n明有机农业的长期前景。\n第三、四段为第一个小部分，阐释有机农业在生产力上的优势。\n第三段先破后立，指出有机农业\"相对低产\"这一缺陷并非全球粮食问题的根本。\n①②句介绍批评者的观点∶有机农业产量低。两句借由Critics have long argued that...It's true that...\n表明句间\"批评者观点→作者认同\"语义逻辑。inefficient、requiring more land to yield the same amount of\nfood、produces lower yields、averaging 10 to 20 percent less 以或概述、或具说、或比较、或列数据的方式，形成\n强语义场\"有机农业产量着实更低\"。\n③句说明支持者的观点∶有机农业产量虽低，但环境优势强劲，而且其产量还有望提高。Advocates\ncontend that...and that...结构分述支持者的两项辩护∶far outweigh 以有机农业的巨大环境优势反衬其产量\n缺陷的微不足道，...would reduce the yield gap 则以事实依据进一步明确改善这一缺陷的可能。\n④句明确作者的观点∶正反两方都遗漏一个重要事实，即全球粮食总量足够，但粮食分配存在不均（暗示\n批评者的指责本末倒置∶全球粮食问题不在于粮食产量低，而在于粮食分配不均）。produce enough food to\nmore than feed the world's7.4 billion people强调全球粮食总量之充足;not...adequate 明确真正不足之处;\n26\n每个人获取食物的机会（access），即不是每个人都能获取到食物。作者借\"总量充足但并非人人都有\"这一事\n实矛盾揭示全球饥饿问题的真正原因\"分配不均\"，借此说明批评者们对有机农业\"产量低\"的指责纯属错置。\n注∶主语 the fact 后置，目的是为强调上述正反方争论所忽略的事实，正常语序为 thefact that...is excluded\nfrom these arguments\"某一事实被排除在上述争论之外了\"。\n 真题精解",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              25
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What is the critics' argument against organic farming?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It cannot meet the need for food."
+            },
+            {
+              "key": "B",
+              "text": "It cannot increase farm yields."
+            },
+            {
+              "key": "C",
+              "text": "It is not really practical."
+            },
+            {
+              "key": "D",
+              "text": "It is not that productive."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat is the critics'argument against organic farming? 52.批评者反对有机农耕的理由是什么?\nA) It cannot meet the need for food. A）它不能满足对粮食的需求。\nB)It cannot incrase farm yields. B）它不能提高农业产量。\nC）它不那么切实可行。C It is ot really practical.\nD）它不那么高产。DIt is not that productive.\n【精准定位】本题考查批评者反对有机农业的理由。由 critics'argument 定位至第三段①句（Critics have\nlong argued that...)。\n【锁定答案】D。第三段①句介绍批评者的观点∶有机农业效率低下，需要更多的土地才能产出同等数量\n的粮食。可见，批评者认为有机农业\"不够高产\"，D 项 not...productive 是对此缺陷的恰当概括。\n【排除干扰】A在②句 lower yields与末句 enough food to...feed the world's...people 之间强加联系.推\n测\"批评者认为产量较低的有机农业无法养活世界人口/满足对粮食的需求\"，但批评者仅指出有机农业\"效率\n低、产量低\"，并未批评其\"不能满足对粮食的需求\"，而且末句明确指出当前\"粮食总产量充足\"。B 杂糅③句\n碎片字词 increasing、the yield，但原文此处实际指\"越来越多的科研投入（研究及育种资源）\"而非\"提高产量\"，\n而且此句为支持者（Advocates）对有机农业的看法，而非批评者反对的理由。C夸大事实∶\"需要更多的土地\n才能产出同等数量的粮食\"仅说明有机农业较之传统农业，效率较低，并非可行性低。\n【提炼思路】本题考查事实细节，易于定位，难点在于选项间的差异较小，此时可用排除法。将选项与原\n文作逐一对比可发现，A、B虽复现原文的个别字词，但均扭曲了原文含义（解题时对此类选项应格外小心，切\n勿被其表面字词蒙蔽）。C仅给出一个较为模糊宽泛的描述，实际并无原文支撑。D 项与定位句含义高度契\n合，综合判断可知D正确。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              27
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What does the author think should be taken into account in arguing about organic farming?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Growth in world population."
+            },
+            {
+              "key": "B",
+              "text": "Deterioration in soil fertility."
+            },
+            {
+              "key": "C",
+              "text": "Inequality in food distribution."
+            },
+            {
+              "key": "D",
+              "text": "Advance in farming technology."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\n围绕有机农业争辩时，作者认为应把什53. What does the author think should be taken into account in\n么考虑在内?arguing about organic farming?\nA）世界人口的增长。A)Growth in world population.\nB）土壤肥力的恶化。B)Deterioration in sol etility.\nC）粮食分配的不均。C)Inequaliy in fo distribution.\nD) Advance in farming technology. D）农业技术的进步。\n【精准定位】本题考查作者的观点。由 should be taken into account in arguing 定位至第三段末句\n(Sometimes excluded from these arguments is...)。\n【锁定答案】C。第三段末句指出作者的看法∶关于有机农业的争论有时会忽略这样一个事实，那就是，如\n今生产的粮食已足够养活全世界人口，而（之所以有饥饿现象是因为）没有提供足够的机会让每个人都能获取\n到这些粮食。\"总量足够但并非每个人都有\"这一矛盾体现出\"粮食的分配不均\"，此为作者认为应当考虑的因\n素。Inequality 是对 do not provide adequate access to all individuals的合理概括。\n【排除干扰】其余三项均利用原文个别字词制造干扰∶A 由第三段末句 world's7.4 billion people捏造出\n\"世界人口增长\"，B 杂糅第六、七段 degradation、soil、fertilizers.D由第三段末二句 increasing research and\nbreeding resources、already produce enough food推测\"农业技术取得了进步\"，.但均非作者认为讨论有机农业\n时应考虑的因素。\n【提炼思路】本题考查作者观点，解答难点有二。1.要结合试题命制顺序及题干关键词进行准确定位;上\n一题考查第三段 ① 句批评者的看法，下一题考查第五段的科学事实，而第三段着重探讨各类观点\n27\n（arguments），第四段着重探讨特殊情况（some cases），故本题应指向第三段;再由题干关键信息 should be\ntaken into account（应当被考虑在内）恰好反义呼应第三段④句原文 excluded（被排除在外），故可判断该句为\n定位句。2.理解所定位的长难句∶fact 后的 that 同位语从句引出作者认为应当考虑的因素，全句以 but 形成\n转折，其后 not provide adequate access to all individuals（未能给每个人提供充分机会）实为句意重点，对比各\n选项后可发现 C\"分配不均\"与之契合。\n在有些情况下，有机农作物的产量可以Ⅳ ①In some cases, organic yields can be higher\n比传统农作物的产量高。例如，在严重干旱than conventional. ②For example, in severe drought①\n条件下（由于气候变化，这种情形在许多地conditions, which are expected to increase with climate\n区还会加重），有机农场的产量（就算不能更change in many areas, organic farms can produce as\n好，也）至少与传统农场的一样好，这归因于good, if not better,yields because of the higher water-\n有机耕种的土壤具有更强的储水能力。holding capacity\" of organically farmed soils.\n。词汇注释与难句分析·\n ②capacity 【ko pesti】 n. 能力①drought 【draot】 n. 久旱\n 语篇分析·\n第四段进而肯定指出有机农业在特殊条件下的产量优势。两句借由In some cases...For example...形\n成\"总说→例证\"语义逻辑。其中higher than、as good, if not better 一反上段\"有机农业产量少于传统农业\"的\n论述，指出在特殊情况下（如严重干旱）有机农业的产量甚至可胜过传统农业。are expected to increase补充指\n出未来的极端天气情况会越来越多，侧面表明在恶劣环境下产量表现优异的有机耕种方式才更加面向未来，\n更具前景。\n科学告诉我们，主流的传统农耕V What science does tell us is that mainstream\n制度提供了越来越多的食品以及其conventional farming systems have provided growing supplies\n他产品，但往往以其他可持续目标为of food and other products but often at the expense of other\n代价。sustainability goals.\n传统农业可能产出更多粮食，但Ⅵ ① Conventional agriculture may produce more food, \n往往以损害环境为代价。生物多样but it often comes at a cost to the environment.\n性的丧失、环境的恶化以及对生态系②biodiversity loss,environmental degradation,and severe\nimpacts on ecosystem services have not only accompanied\" 统服务的严重影响不仅因随传统农\n耕方式而来，而且还往往远远超越了conventional farming systems but have often extended\" well\n田间界限。对有机农业而言，其环境beyond their field boundaries5. ③ With organic agriculture,\n成本往往更低，收益更大。environmental costs tend to be lower and the benefits greater.\n·词汇注释与难句分析\n④extend 【k'stend】 v.延伸，伸出①biodiversity 【baroodal'v3soti】 n. 生物多样性\n⑤boundary Dbaundri】 n.边界②degradation 【idegr?'deljn】 n. 毁坏，恶化\n③accompany 【?'kAmponi】 v，陪同，伴随\n·语篇分析-\n第五至八段为第二个小部分，阐释有机农业在环境方面的优势（更环保）。\n第五、六段先批评传统农业对生态环境的损害。第五段（独句段）指出传统农业的高产往往以其他可持续\n目标为代价，第六段首句进而明确\"其他可持续目标\"的所指\"环境\"∶两句均采用转折句式（havc provided...\nbut..、may...but...），强调传统农业的负面影响和危害（at theexpense of...、comes at a cost to...）。第六\n段②③句则借并列结构 not only...but（also）...、比较表达 costs...lower...benefits greater 明示传统农耕的劣\n势\"不仅污染土地本身，且影响到这片土地之外的区域\"以及有机农耕的优势\"对环境损害更低，收益却更大\"。\n28\n真题精解",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              27
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What does science tell us about conventional farming?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It will not be able to meet global food demand."
+            },
+            {
+              "key": "B",
+              "text": "It is not conducive to sustainable development."
+            },
+            {
+              "key": "C",
+              "text": "It will eventually give way to organic farming."
+            },
+            {
+              "key": "D",
+              "text": "It is going mainstream throughout the world."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\n关于传统农业，科学告诉了我们什么54. What does science tell us about conventional farming? 信息?\nA)It wil not be able to meet global fod demand. A）它无法满足全球粮食需求。\nB）它不利于可持续发展。B)It is not conducive to sustainable development.\nC）它最终将被有机农业替代。C) It will eventully give way to organic farming.\nD）它将在全世界成为主流。DIt is going mainstream throughout the world.\n【精准定位】本题考查对传统农业的评价。由 What..science tell us、conventional farming 定位至第五段\n(What science does tell us is... conventional farming...)。\n【锁定答案】B。第五段指出，科学告诉我们，传统耕种方式尽管高产，但却往往以其他可持续目标为代价，\n故 B正确，其中not conducive to（对……不利）同义转述 at the expense of（以……为代价.给……带来伤害）。\n【排除干扰】A与句中\"传统农业提供的粮食越来越多\"以及第三段末句\"现在（用传统农耕方式）能够生\n产出足够养活全球人口的粮食\"相悖。C过度推断∶科学仅指出传统农业妨碍可持续发展，并未指出它将被有\n机农业完全替代、消失。原文 mainstream conventional farming 表明\"传统农业是当前的主流耕作方式\"为既\n有事实，并非科学预测的内容，因此 D 错误。\n【提炼思路】本题为事实细节题，关键在于理解定位句主旨。首先根据定位句结构把握对传统农业的评\n价倾向∶have provided..but often at the expense of...呈递让步一转折逻辑，强调传统农业的缺陷，初步锁定\n体现其负面评价的前三项。其次细读该定位句，发现其强调重点为\"可持续性\"，A 项关注点错误，且与原文事\n实相悖，C项夸大其缺陷，B恰好契合原文表述。\n总体而言，较之传统农场，有机农M ① Overall, organic farms tend to store more soil\n场往往能存储更多的土壤碳，具备更好carbon, have better soil quality and reduce soil erosion\n的土壤质量，并且能减轻土壤侵蚀。有compared to their conventional counterparts\". ② Organic\nagriculture also creates less soil and water pollution and 机农业还能减少土壤和水污染，降低温\n室气体排放。而且有机农业更节能，因lower greenhouse gas emissions. ③ And it's more energy-\n为它不依赖合成肥料，也不依赖杀efficient because it doesn't rely on synthetic fertilizers or\n虫剂。Dpesticides.\n有机农业还与植物、动物、昆虫与Ⅶ ① Organic agriculture is also associated⑥ with\n微生物更丰富的生物多样性以及基因greater biodiversity of plants, animals, insects and\n多样性相关。生物多样性既能增加大自microorganisms\"as well as genetic diversity. ② Biodiversity\n然提供的服务，又能提升农耕系统对不increases the services that nature provides and improves the\n断变化的环境的适应能力。ability of farming systems to adapt? to changing conditions.\n。词汇注释与难句分析\n⑤pesticide 【'pestisaud】 n.杀虫剂①erosion 【E!'ro3n】 n.侵蚀，腐蚀\n⑤be associated with与…·关②counterpart 【'kaont?pa∶1】 n.对应的事物\n⑦microorganism 【maikroo 'o∶gonizom】n.微生物③synthetic 【sin'letik】 a.合成的\n①fertilizer 【'=atolazo】n. 肥料 ⑧adapt to适应\n语篇分析·\n第七、八段再称赞有机农业对生态环境的益处。两段以 organic farms tend to...Organic agriculture is\nalso...形成并列，从\"低环境成本、高环境收益\"两大角度说明有机农业的环保优势。两段均运用大量比较表\n达（better soil quality、less soil and water pollution、more energy-efficient、greater biodiversity）凸显有机农业的\n土质好、污染小、节能、生物多样性高;第八段末句 improves the ability of farming systems指出有机农业带来\n的环境收益又会反哺这一耕作体系，提高其适应力，二者形成良性互动，更具可持续性。\n29\n有机农业尽管产量较低，但对农民而X ① Despite lower yields, organic agriculture is\n言，其利润更高，因为消费者愿意付更多钱more prolitable for farmers because consumers are\n（购买有机农产品）。高出（基准价格的）部willing to pay more. ② Higher prices,called price\n分（称为价格溢价）合情合理，可视作对\"农premiums\"，can be justified2 as a way to compensate\n民提供生态系统服务并且避免环境污染或farmers for providing ecosystem services and avoiding\n外部成本\"的补偿。environmental damage or external costs. [462 words]\n镉汇注释与难句分析 · \n ③compensate 【'kompenset】 v.补偿，弥补①price premium 【pras 'pri∶miom】n.价格溢价\n ④external 【ik'sta∶nl】 a.外部的②justify 【'd3Astfai】 v.证明…·正当、合理\nHigher prices,called price premiums,can be justified as a way to compensate farmers for providing\necosystem services and avoiding environmental damage or external costs.\nHigher pricescan be justifiedd as a waycalled price premiums 谓语状语主语说明主语\n不定式作定语修饰iwas\nto compensate farmers for providing ecosystem services and avoiding environmental damage or external costs.\n固定搭配compensate sb for A and B （为A和B补偿某人）\n·语篇分析。\n第九段为第三个小部分，阐释有机农业在经济方面的优势（利润更高）。两句借 Despite lower yields...is\nmore profitable....because...Higher prices...can be justified as a way to...形成\"（产量低→）利润高/价\n高→价高的原因/合理解释\"语义逻辑，转入对经济可持续性的探讨;一方面，消费者愿意高价购买，另一方面\n（愿意高价购买/可以高价售卖）是因为采用有机农耕的农民\"提供生态系统服务、避免环境污染或外部成本\";\n换言之.采用有机耕作的农民其实为环境做了额外贡献，其获得的额外利润相当于是这部分环境效益的报酬，\n因而合情合理。\n真题精解",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              29
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2020-09-3-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "Why does the author think higher prices of organic farm produce are justifiable?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They give farmers going organic a big competitive edge."
+            },
+            {
+              "key": "B",
+              "text": "They motivate farmers to upgrade farming technology."
+            },
+            {
+              "key": "C",
+              "text": "Organic farming costs more than conventional farming."
+            },
+            {
+              "key": "D",
+              "text": "Organic farming does long-term good to the ecosystem."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\n为什么作者认为有机农产品的高价是55. Why does the author think higher prices of organic farm\n合理的?produce are justifiable?\nA）它们赋予采用有机耕作的农民很大的A) They give farmers going organic a big competitive edge. 竞争优势。\nB）它们激励农民升级农业技术。B) They motivate farmers to upgrade farming technology.\nC)Organic farming costs more than conventional farming. C）有机农耕的成本比传统农耕更高。\nD Organic farming does long-term good to the ecosystem. D）有机农耕对生态系统有长期益处。\n【精准定位】本题考查作者认为有机农产品高价合理的原因。由 higher prices、justifiable 定位至末段末\n句（Higher prices...can be justified...）。\n厂锁定答案】D。末段末句指出，有机农产品价高合乎情理，其溢价部分其实是对采用有机耕种的农民的\n一种补偿，他们为我们的生态系统提供了服务，而且规避了环境污染、外部成本等问题。言外之意为，实行有\n机耕种的农民对环境作出了许多无法量化的长远贡献，那么其农产品的溢价就算是对此环境效益的合理补\n偿。does long-term good to the ecosystem 是对 providing ecosystem services and avoiding environmental\ndamage or external costs 的合理概括。\n【排除干扰】 A、B均对原文个别表达进行主观臆测∶A由 more profitable for farmers 臆测出\"高价成为有\n机耕作的农民的竞争优势、使其获利更多\".但不符合常识\"高价乃市场竞争的劣势\"。B 由 avoiding...\nexternal costs 臆测出\"高价/高成本会促使农民升级技术以降低成本\"，但原文此处实为描述采用有机耕种的\n30\n农民\"减少了环境治理等外部成本\"，与农业技术无关。C 项本身虽符合常识，但并非作者对高价合理性的\n解释。\n【提炼思路】本题考查因果细节，易于定位，难点在于理解所定位的长难句（末段末句）。can be justified\n后引出对高价合理的解释∶as a way to compensate farmers for doing sth（对农民某行为的补偿方式），文意重\n点在农民行为的具体内容/sth的具体所指\"providing ecosystem services and avoiding environmental damage\nor external costs（提供生态系统服务、避免伤害环境或外部成本）\"。该行为指向对环境的益处，即有机农产品\n的高价与其环境益处相匹配，因而合理。A、B均错将重点置于\"对农民的益处\".C说明的是\"高价\"的原因，而\n非\"高价合理\"的原因。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              30
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "blocks": [
+        {
+          "id": "translation-task-block",
+          "title": "Translation Passage",
+          "text": "《水浒传》（Water Margin）是中国文学四大经典小说之一。这部小说基于历史人物宋江及其伙伴反抗封建帝王的故事，数百年来一直深受中国读者的喜爱。毫不夸张地说，几乎每个中国人都熟悉小说中的一些主要人物。这部小说中的精彩故事在茶馆、戏剧舞台、广播电视、电影屏幕和无数家庭中反复讲述。事实上，这部小说的影响已经远远超出了国界。越来越多的外国读者也感到这部小说里的故事生动感人、趣味盎然。",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              8
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2020-09-3-q56",
+          "number": 56,
+          "kind": "translation",
+          "stem": "《水浒传》（Water Margin）是中国文学四大经典小说之一。这部小说基于历史人物宋江及其伙伴反抗封建帝王的故事，数百年来一直深受中国读者的喜爱。毫不夸张地说，几乎每个中国人都熟悉小说中的一些主要人物。这部小说中的精彩故事在茶馆、戏剧舞台、广播电视、电影屏幕和无数家庭中反复讲述。事实上，这部小说的影响已经远远超出了国界。越来越多的外国读者也感到这部小说里的故事生动感人、趣味盎然。",
+          "blockId": "translation-task-block",
+          "options": [],
+          "answer": "Water Margin is one of the four great classic novels of Chinese literature. Based on the stories of the historical figure Song Jiang and his companions, who rebelled against the feudal emperor, this novel has been popular among the Chinese readers for hundreds of years. It is no exaggeration to say that almost every Chinese is familiar with some of the main characters in the novel. Its highlights are repeatedly told in teahouses, on theatrical stages, on radio and television, on movie screens, and in numerous homes. In fact, its influence has extended far beyond national boundaries as more and more foreign readers are also stirred and intrigued by the stories of the novel.",
+          "explanation": "本句主干为\"《红楼梦》是一部小说\".可直译为主系表句型。\"小说\"与其修饰语\"曹雪芹创作\n的\"暗含逻辑上的主谓宾关系，可处理为\"中心词＋定语从句或分词短语（作后置定语）\"结构，译为（which/that\nwas）written by Cao Xueqin。\"18 世纪\"既可处理为修饰\"曹雪芹创作\"的时间状语（written）in the 18th\ncentury，也可处理为修饰\"小说\"的前置定语 18th-century（novel）。\n2.曹雪芹基于自己痛苦的个人经历，讲述了贾宝玉和林黛玉之间的悲剧性爱情故事。\n【词汇准备】基于 be based on;on the basis of 痛苦的 bitter;miserable;painful 个人经历 personal\ncexperiences 讲述 tell;describe 悲剧性爱情故事 tragic/ill-fated love story;love tragedv\n【句子解析】本句主干为\"曹雪芹讲述了……故事\"，可译为 He tells a...story（人称代词 He 回指上句的\nCao Xueqin）;修饰语\"贾宝玉和林黛玉之间的\"可译为介词短语 between...and....作 story 的后置定语。\"基\n于自己痛苦的个人经历\"补充说明故事创作的灵感来源，可译为方式状语 on the basis of...或 based on...。\n3.书中有大约 30 个主要人物和 400 多个次要人物，每个人物都刻画得栩栩如生，具有鲜明的个性。\n「词汇准备】主要人物 major/main character 次要人物 minor/secondary character 刻画 depict;portray\n栩栩如生 vivid;lifelike 鲜明的 distinct;vivid 个性 personality;character\n「句子解析】本句在语义上可划分为两部分，分别聚焦人物的数量和特点，两部分可译为由 and 连接的并\n列结构.也可把后者视为对前者的进一步补充说明，译为从属结构。第一部分\"书中有……人物\"为存现句，可\n译为 there be 句式，其中\"书中\"译为 in the book 置于句末或以逗号隔开置于句首作状语，\"次要人物\"中的\"人\n物\"可以 ones 代替，避免重复。第二部分的主语\"每个人物\"呼应前述的众多人物，故可把该部分译为以\"人物\n（character）\"为中心词的非限制性定语从句 each of whom，，.（whom 回指 characters）.其中两组动作\"刻画\n得……\"和\"具有……\"可合译为 be depicted with...（刻画成具有……的特点）。\n4.小说详尽地描述了四个贵族世家兴衰的历程，反映了封建社会隐藏的种种危机和错综复杂的社会\n冲突。\n【词汇准备】详尽地描述 detail;describe in detail 贵族世家 aristocratic family 兴衰 rise and fall/decline\n封建社会feudal society 危机 crisis 错综复杂的intricate;complex;complicated 社会冲突 social conflict\n3>\n\n【句子解析】本句逗号前介绍小说描述的内容，逗号后指出小说反映的深层时代内涵，\"描述了……\"和\n\"反映了……\"是同时发生的动作，因此可将前者译为主干，后者译为伴随状语（reflecting...）或定语从句\n（which reflects...）。\"详尽地描述\"可直译为动词 detail 或动词短语 describe in detail，也可转译为 gives a\ndetailed description of;\"兴衰\"即\"兴盛和衰败\"，可译为名词短语 therise and fal;\"四个贵族世家\"是对\"兴衰\"\n的限定说明，可译为 of 引导的后置定语;\"历程\"为常见的汉语范畴词用法，英语中鲜少使用，由于 rise、fall 已\n涵盖\"（兴盛/衰亡的）过程/趋势\"之意，故\"历程\"可省译。\"封建社会隐藏的\"可译为 the hidden...in the leudal\nsociety（hidden 为形容词\"隐藏的，隐秘的\"），也可译为定语从句或分词短语形式...（which are）hidden in the\nfeudal society（hidden 为动词\"被隐藏\"）。\n5.《红楼梦》融合了现实主义和浪漫主义，具有很强的艺术感染力。\n【词汇准备】融合 blend;combine;be a blend of 现实主义 realism 浪漫主义 romanticism 艺术感染力\nartistic ppeal/ charm\n【句子解析】本句主语后跟两组动词短语\"融合了……\"和\"具有……\"，是同时发生的动作，可译为由 and\n连接的并列谓语结构 blends/combines...and has..，前一动词短语 blends/combines..也可转化为系表结构\nis a blend of...，此时后一动词短语也可处理为表语中心词 blend（融合体）的后置定语，译为介词短语 with\nstrong artistic appeal（with 意为\"带有/具有\"）。\n6.它被普遍认为是中国最伟大的小说，也是世界上最伟大的文学创作之一。\n【词汇准备】被认为是 be considered（to be）;be regarded as 普遍 generally 文学创作 works of\nliterature; literary work\n【句子解析】本句框架为\"它被普遍认为是……，也是……\"，可译为由 and 连接的并列系表结构 It is\ngenerally considered to be...and...（为避免重复，第二个 be 可省略），第一个表语\"中国最伟大的小说\"可译为\nthe greatest novel in China，也可转化为 the greatest of all Chinese novels（greatest 后省略 novel），第二个表语\n中的\"世界上最伟大的文学创作\"与上述最高级表达译法相似，\"……之一\"可采用\"among/one of+复数名词\"\n结构翻译，\"创作\"在本句中实指\"作品\"，可译为 works。\n高分翻译低分翻译重难点词汇短语\n创作 write, create make\nsad loving storytrai love stry, love ragedy悲剧性爱情故事\n鲜明的个性 a distinctive personality a different kind of personality; ifferent personality\n错综复杂的社会冲突 confusing/disordered social conflietsintricate/ complex social conflicts\n艺术感染力 the infectious power of artartistic appeal/charm\n三、知识补充\n调整语序以增强句群连贯。在句群的翻译当中，不仅要保证原文信息得以被忠实而准确地译出，在信息\n的编排上还要尽量契合新旧信息交替的规则，即在每个句群的话题中，基于上文的旧信息，增加话题相关的新\n信息。在翻译时，可以通过适当的语序调整来实现新旧信息交替，以保证句群乃至段落各句层层推进。比如\n本文首二句中，①句的已知信息为\"《红楼梦》\"，新信息为\"18世纪\"\"曹雪芹\"小说\"，②句以\"曹雪芹\"为已知信\n息，并在此基础上增加\"其讲述的爱情故事\"这一新信息。鉴于\"曹雪芹\"同为上文的新信息和下文的已知信\n息，因此翻译时通过语序调整将\"曹雪芹/他\"置于①句末、②）句首，实现新旧信息交替，增强句群的连贯性。再\n如本文③句，将状语 In the book前置，同样是为了使上半句新信息和下半句已知信息（\"人物\"）的交替更加流\n畅连贯。\n32\n\n附∶ 第三套作文及翻译答案与详解\nPart I Writing\n唯独心灵的财富才是真正的财富\n一、审题引导\n（与 2020年7月审题引导同理，故略）\n谈二、词汇准备\n\"心灵财富\"相关的词汇及表达 \"物质财富\"相关的词汇及表达\nmental/psychological health/wel-being 心理健康 materialistic a.物质的，拜金的\ncreativity n.创造力 basic necessities 基本生活必需品\nconsolation n.慰藉 economic ambition 经济野心\ncarer oriented 以职业为导向的cognitive breakthrough 认知突破\nmass production 批量生产mental tranquility 心灵的平静\nefficiency is thekey to success效率是成功的关键relieve pressure/anxiety/anguish缓解压力/焦虑/悲痛\n三、写作提纲\n第一段∶结合现实情形引入格言。\n第二段∶由反例引入对格言合理性的论证。\n第三段∶发出呼吁。\n四、下笔成文\n满分范文参考译文\n① Modern life is characterized by packed agendas. ①\"议程紧凑\"是现代生活的标志性\n②While it is true that high efficiency is important in 特征。②高效率对于创造经济财富固然\n重要，但其对人们心理健康的损害却越generating economic wealth, its damage to people's\n来越令人担忱。③在职业过劳、抑郁症psychological well-being is increasingly worrying. ③In a\ntime when mental health problems such as burnout and 等心理健康问题越来越普遍的今天，我\ndepression become more and more common,we need to 们需要提醒自己那句老生常谈却又令人\nremind ourselves of that cliched yet compelling saying: 折服的话∶唯独心灵的财富才是真正的\n财富。wealth of the mind is the only true wealth.\n①Admittedly,having adequate economic wealth is a ①诚然，拥有足够的经济财富是生\nprerequisite for a carefreelife.②But an overemphasis on it 活无忧的前提。②）但是，如果过分强调\nhas opposite effects. ③It exhausts our mental energy and 它，就会适得其反。③它耗尽了我们的\ndistracts us from pursuing what makes us truly happy. 精力，分散了我们的注意力，使我们无法\n④Tolivea genuinely fulfilling life,we should instead focus 追求真正使自己快乐的东西。④要想过\non building wealth of the mind.⑤This does not mean we 上真正充实的生活，我们则应该注重心\nall should dedicate ourselves to creating cultural wealth as 灵财富的积累。⑤这并不意味着我们都\nartists do.⑥Instead,all activities that contribute to our 应该像艺术家那样致力于创造文化财\n富。⑥而是，所有助益于我们心理健康mental well-being add to wealth of the mind. ⑦Following\nthis logic,even taking a walk in the garden,which helps 的活动都会增添心灵财富。⑦按照这一\n逻辑，即便是在花园中散步也可以增添心relieve stress and anxiety,can increase wealth of the\nmind. 灵财富，因为这有助于缓解压力和焦虑。\n33\n\n①In our current social context,economic wealth is ①在我们当前的社会环境中，经济\n财富被视作成功的首要标志。②现在是regarded as the primary sign of success,②It is high time\n时候改变这一情况并把重点转移到心灵we changed that and shifted our focus to wealth of the\n财富上了。mind.\n词汇注释\npacked 【pe?kt】 a.挤满的，紧凑的 oppositefect 反作用，相反的效果\nburnout 【'b3∶naot】n.职业过劳 genuinely 【'd3enjunli】ad.真正地\nfulfilling 【folflin】a.让人感觉有意义的，令人满足的depression 【di'pre【n】 n.抑郁症，精神忧郁\ncliched 【'klijerd】 a.陈词滥调的，老生常谈的 dedicate oneself to doing sth 致力于做某事\ncontribute to sth 对……有贡献，增加，增进compelling 【kom'peln】 a.令人信服的\ncontext 【'kontekst】n.背景，环境carefree【'keofri∶】 a.无忧无虑的\noveremphasis 【iouvor'emfosis】n.过分强调\n。进阶表达\n普通表达高级替换表达\nreflect the trai of be characterized by表现出…….特征，以……为特征\n是……的前提 be a prerequsite forbe necessary for\n现在是时候做……了 It is high time (that)we did...Now we should.\n五、写作储备\nYou might be poor,your shoes might be broken,but your mindisa palace.(Frank McCourt)\n你可能贫穷，履不裹足，但你的心灵是一座宫殿。（弗兰克·麦考特）\nHuman happiness is a disposition of mind and not a condition of circumstance.(John Locke)\n人的幸福是一种心态，而不是环境的一种状况。（约翰·洛克）\n·It is the mark of an educated mind to be able to entertain a thought without accepting it.\n(Aristol)\n能够容纳一种思想而不认同它.，这是一个有教养的头脑的标志。（亚里士多德）\n●As a single footstep will not make a path on the earth,so a single thought will not make a\npathway in the mind.To make a deep physical path,we walk again and again.To makea deep mental\npath,we must think over and over the kind of thoughts we wish to dominate our lives.(Henry David\nThoreau)\n正如一个脚步不会在大地上开出一条路，一个念头也不会在心中开出一条路。要想开出一条深邃\n的路，我们就要反复地走。而为了使心灵的道路深邃，我们必须反复思考我们希望主导自身生活的那种\n思想。（亨利·戴维·梭罗）\n六、高分模板\n（参见 2020 年 7月高分模板）\n34\n\nPart IV Translation\n《水浒传》\n一、参考译文\nWater Margin is one of the four great classic novels of Chinese literature. Based on the stories of the\nhistorical figure Song Jiang and his companions,who rebelled against the feudal emperor,this novel has been\npopular among the Chinese readers for hundreds of years.\nIt is no exaggeration to say that almost every Chinese is familiar with some of the main characters in the\nnovel. Its highlights are repeatedly told in teahouses,on theatrical stages,on radio and television,on movie\nscreens,and in numerous homes. In fact,its influence has extended far beyond national boundaries as more\nand more foreign readers are also stirred and intrigued by the stories of the novel.\n二、精析精译\n1.《水浒传》（Water Margin）是中国文学四大经典小说之一。\n【词汇准备】中国文学 Chinese literature 经典小说 classic novel\n【句子解析】本句可直译为主系表结构，表语包含多重定语，\"四大经典小说\"可按原语序译为 the four\ngreat classic novels，\"中国文学\"对其进一步限定，明确其所属范畴，可译为后置定语 of Chinese literature;\n\"……之一\"可采用\"among/one of+复数名词\"结构。由于本句比较简短，还可将本句与下句合译∶将下句主\n语替换为 Water Margin，本句所述信息则处理为 Water Margin 的同位语，即 Waler Margin，one of the four\nclassic novels of Chinese literature, is...。\n2.这部小说基于历史人物宋江及其伙伴反抗封建帝王的故事，数百年来一直深受中国读者的喜爱。\n【词汇准备】基于（be）based on 历史人物 historical figure伙伴 partner;companion;fellow 反抗\nrebel/revolt（against）封建帝王 feudalemperor 数百年来for hundreds of years 深受……喜爱 be popular\namong; be well-loved by\n【句子解析】本句逗号前后两部分均是对小说基本情况的介绍，可译为以 and 连接的并列谓语句，也可把\n逗号前\"基于……故事\"处理为状语 Based on...，逗号后译为主干。\"历史人物\"和\"宋江\"为同位语，译为 the\nhistorical figure Song Jiang 即可。\"历史人物宋江及其伙伴反抗封建帝王的故事\"有几种处理方式∶一是把\"反\n抗封建帝王\"以定语从句 who...带出，即 stories of the historical figure Song Jiang...who rebelled against the\nfeudal emperor;二是把\"反抗\"灵活处理为名词 rebellion，即 stories of the historical figure Song Jiang and his\ncompanions'rebellion against the feudal emperor;三是把\"历史人物宋江及其伙伴反抗封建帝王\"整体处理为\n一个从句，考虑到小说所讲述的实际是他们反抗的过程，故可用 how引出，即 stories of how the historical\nfigure Song Jiang...rebelled against the feudal emperor。后半句\"一直深受……喜爱\"提示应使用现在完成\n时，即has been popular among...。\n3.毫不夸张地说，几乎每个中国人都熟悉小说中的一些主要人物。\n【词汇准备】毫不夸张地说It is no exaggeration to say...;It can be said without exaggeration... 熟悉\nbe familiar with;know well 主要人物 main/major figure/character\n【句子解析】本句转换成英语思维即\"说……毫不夸张\"（To say...is no exaggeration），此时由于主语太\n长，故可使用It 作形式主语，梳理为It is no exaggeration to say...，而后\"几乎每个中国人都熟悉……\"可译为\nsay 的宾语，以 that 引出，即 that almost every Chinese is familiar with...。\n4.这部小说中的精彩故事在茶馆、戏剧舞台、广播电视、电影屏幕和无数家庭中反复讲述。\n【词汇准备】精彩故事 highlights;wonderful/amazing stories 茶馆 teahouse 戏剧舞台 theatrical stage\n广播 radio 电视 television 电影屏幕 movie screen 无数 countless; innumerable;numerous 反复\nrepeatedly 讲述tell;narrate\n【句子解析】\"精彩故事\"可译为 highlights，简洁、自然又地道。\"在茶馆\"等一系列并列短语凸显小说广受\n欢迎、在各个地方都能看到，均可用介词引出，英语中表示地点/场合的状语常位于句首或句尾，但本句地点状\n语很长，为避免头重脚轻，可将其置于句末。\n35. 事实上，这部小说的影响已经远远超出了国界。\n【词汇准备】远远超出（be/go/extend）far beyond 国界 national boundaries;borders of countries\n【句子解析】\"已经\"提示本句时态为现在完成时。\"影响已经远远超出了国界\"可译为 its influence has\nbeen/gone/extended far beyond national boundaries/borders。\n6.越来越多的外国读者也感到这部小说里的故事生动感人、趣味盎然。\n【词汇准备】生动 vivid 感人 touching;moving;stirring 趣味盎然 interesting;intriguing\n【句子解析】本句的逻辑词\"也\"承接第二句\"这部小说深受中国读者喜爱\"，强调该小说也受到外国读者\n的喜爱。\"生动感人、趣味盎然\"在语义上可一分为二∶生动（感动人心）、有趣，可分别译为 touching/stirring、\ninteresting/intriguing。本句语义框架\"外国读者觉得故事生动有趣\"直接对应 sb find sth adj.（某人觉得某物\n如何）句式，可直译为 foreign readers find the stories stirring and intriguing，也可将其转化为\"故事打动、吸引\n外国读者\"，译为 the stories stir and intrigue foreign readers或 foreign readers are stirred and intrigued by the\nstories。另外，与上一句连起来看.本句也是对上句\"影响远超国界\"的原因或伴随状态的补充说明.故可以将\n两句合译为由 as（表示\"因为/随着\"）连接的主从句，即...as more and more foreign readers..。\n低分翻译高分翻译重难点词汇短语\n经典 classie typieal\n历史人物 historial figure person in history\nhighlights精彩故事 great stories\n超出了国界 go to other countries extend beyond national boundaries\n趣味盎然 funy fun:playful interesting; intriguing\n三、知识补充\n中文少用代词、不怕重复，但英文中常常以代词指代重复出现的概念。本文段里，\"这部小说\"数次被提\n及.不宜全部译为 this novel，适当时可用 it或 its 指代，以减少重复、实现上下文更好的衔接。由于中文逻辑\n内隐，英文逻辑外显，为了突出句与句之间的逻辑关系，有时可将两句中文合译（比如将其中一句处理为另一\n句的从属成分），适当增添连接词，使逻辑显化。\n36",
+          "source": {
+            "fileId": "1IuMD25YRC9VHT49Unm8fkg3T_KR-cEwC",
+            "pages": [
+              8
+            ]
+          },
+          "answerSource": {
+            "fileId": "1qI9aIpEe4BCIuNspPG_RKN-f0DnXN--c",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "Water Margin is one of the four great classic novels of Chinese literature. Based on the stories of the historical figure Song Jiang and his companions, who rebelled against the feudal emperor, this novel has been popular among the Chinese readers for hundreds of years.\nIt is no exaggeration to say that almost every Chinese is familiar with some of the main characters in the novel. Its highlights are repeatedly told in teahouses, on theatrical stages, on radio and television, on movie screens, and in numerous homes. In fact, its influence has extended far beyond national boundaries as more and more foreign readers are also stirred and intrigued by the stories of the novel."
+        }
+      ]
+    }
+  ],
+  "issues": [
+    "官方听力与第1套相同（见听力说明.txt），听力音频及试题复用第1套。",
+    "试卷题目结构已完整提取（57题），答案已录入52题，其余答案待进一步核对校正。",
+    "严格质检：所指向的共用听力仍有缺失或待核实内容；5 题答案未核实；匹配段落标签或答案待核查。",
+    "翻译：中文段落取自原卷文字层；参考译文取自解析册第 35 页，已替换此前误放的《红楼梦》参考译文。",
+    "写作题干：已对照原卷页面图像核对（2026-11-08）。",
+    "阅读：长篇阅读匹配语句与仔细阅读题干/选项已对照原卷重新录入（此前缺失或与原卷不符）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ]
+}

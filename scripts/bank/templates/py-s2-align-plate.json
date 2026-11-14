@@ -1,0 +1,37 @@
+{
+  "templateId": "py-s2-align-plate",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-01",
+  "type": "codewrite",
+  "concept": [
+    "对齐",
+    "占几格往哪靠",
+    "split 取格",
+    "价目牌"
+  ],
+  "instances": 6,
+  "params": {
+    "dish": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品",
+        "鱼丸"
+      ]
+    },
+    "price": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{dish} {price}\n",
+    "sampleText": "商品 12\n"
+  },
+  "stemTemplate": "我们的价目牌要挂出去了，一行写一样货。名称上的规矩是：**货名占 8 格、往左边靠**；接着**价格占 4 格、往右边靠**；最后再跟一个空格和「元」字 —— 全靠空格把位子垫齐。\n\n请你写个程序：读入**一行**，里面是货名和价格（价格是整数），中间拿空格隔开。\n\n比如输入是\n\n{sampleInput}\n\n就要输出\n\n{sampleOutput}\n\n（判分用的是**另一样货**，名字和价格都不一样，所以别把答案写死）",
+  "referenceSolutionTemplate": "line = input()\nparts = line.split()\nname = parts[0]\nprice = int(parts[1])\nprint(f\"{name:<8}{price:>4} 元\")\n",
+  "explanationTemplate": "格式化的字段宽度控制最小显示宽度，不足时补空格，通常不会截断过长内容。对齐结果取决于当前字符串长度，数值格式与字符串对齐应分别检查。"
+}

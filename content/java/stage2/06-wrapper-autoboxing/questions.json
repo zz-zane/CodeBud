@@ -1,0 +1,87 @@
+{
+  "lessonId": "java-stage2-06",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们要把光溜溜的数字塞进一个**只收实例**的储物柜，`int` 配的那张装数字的类定义叫什么名字？",
+      "options": [
+        "`Integer`",
+        "`Int`",
+        "`int`",
+        "`Character`"
+      ],
+      "answer": 0,
+      "explanation": "`int` 那张类定义叫 `Integer`，名字**首字母大写了**，而且是个全名 —— 写成 `Int` 编译器不认识。`int` 是光溜溜的家当本身，不是类定义；`Character` 配的是 `char`，只管单个字符不管数字。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们写下一句 `Integer boxed = 3;`，编译器在这句里干了什么？",
+      "options": [
+        "自动根据类创建一个实例，把光溜溜的 `3` 装进它的口袋里",
+        "把 `3` 变成字符串",
+        "把类定义复印一份存起来，数字还是光溜溜的",
+        "什么都没干，这句根本通不过"
+      ],
+      "answer": 0,
+      "explanation": "右边是光溜溜的家当、左边要一个实例，编译器看见两边对不上，就自己根据类创建实例、把数字赋值 —— 这个动作叫**装箱**。它不会把数字变成字符串（那是 `toString` 干的活），也不是复印类定义；这句完全合法，程序照跑不误。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们写下 `Integer a = 127;` 和 `Integer b = 127;`，再问一句 `System.out.println(a == b);`，会印出什么？",
+      "options": [
+        "`true` —— 两个都在那批提前备好的小实例范围内，拿到的是**同一个**",
+        "`false` —— 两次装箱创建后的永远是两个不同的对象",
+        "`127` —— 这一问会把口袋里的数字印出来",
+        "编译就过不去，会当场报错"
+      ],
+      "answer": 0,
+      "explanation": "`==` 问的是「**是不是同一个对象**」，不是「口袋里的数字一不一样」。Java 把 -128 到 127 这些常用小数字提前画好了一批实例放着，谁要装箱就发同一个给它用 —— 所以 `a` 和 `b` 是同一个，答 `true`。出了这个范围才会每次现画新的，那时同样的写法就会变 `false` 。这一问不会印数字，也不会报错。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "java",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Integer boxed = 3;\n        int raw = ____;\n        System.out.println(raw + Integer.____(\"39\"));\n    }\n}",
+      "stem": "我们要把实例口袋里的数字掏出来给光溜溜的 `raw`，再把纸条上的 `\"39\"` 变成数字跟它相加 —— 两个空白处各填什么？",
+      "blanks": [
+        {
+          "answer": "boxed",
+          "accept": []
+        },
+        {
+          "answer": "parseInt",
+          "accept": []
+        }
+      ],
+      "explanation": "第一处填 `boxed`：光溜溜的家当接一个实例，Java 会自动**拆箱**，把口袋里的 `3` 掏出来。第二处填 `parseInt`：`Integer.parseInt(\"39\")` 是把一串字符串变成数字的那一个方法，字符串里面得是干干净净的数字才变得成功。两处都对上之后印出来是 `42`。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "java",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Integer boxed = 5;\n        int raw = boxed;\n        System.out.println(raw * 2);\n        System.out.println(boxed.equals(5));\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "10\ntrue",
+      "accept": [
+        "10\ntrue\n"
+      ],
+      "explanation": "`int raw = boxed;` 先自动拆箱，把 `5` 掏出来给 `raw`，所以 `raw * 2` 是 `10` 。第二行问的是 `boxed` 口袋里的数字**是不是等于** `5` —— 比数字一不一样要用 `equals`，答案是 `true` 。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "java",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Integer x = Integer.valueOf(127);\n        Integer y = 127;\n        System.out.println(x == y);\n        System.out.println(x + y);\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "true\n254",
+      "accept": [
+        "true\n254\n"
+      ],
+      "explanation": "`Integer.valueOf(127)` 和自动装箱做的是同一件事，两个 `127` 都在那批提前备好的小实例里，所以拿到的是**同一个**，`x == y` 是 `true` 。`x + y` 是算式，两边先各自拆箱再相加，`127 + 127` 得 `254` 。"
+    }
+  ]
+}

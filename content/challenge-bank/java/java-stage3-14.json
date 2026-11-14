@@ -1,0 +1,470 @@
+{
+  "lessonId": "java-stage3-14",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s3-dp-factory-mixed-up-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们开了间领养处，可发出来的对象不对：报「橘」的那位，领到的是一个学生乙。\n\n毛病在**领养处那一段**，你看一眼就明白了。别的都别动（各品种自己的类定义一个字都别碰）。改好之后，程序该印出**三行**，每行写 `花色 -> 输出结果`。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生乙();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"花\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "referenceFix": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生甲();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"花\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "expectedOutput": "橘 -> \n李四 -> 嗷\n花 -> 呜",
+      "stdin": null,
+      "explanation": "坏版本印出来是这样三行：\n\n```text\n橘 -> 嗷\n李四 -> 嗷\n花 -> 呜\n```\n\n毛病只有一处：**「橘」那一支递出来的是学生乙**（`return new 学生乙();`）—— 分支报的名字和递出去的品种对不上。所以报「橘」的领到的是学生乙，输出结果跟第二行一模一样；只有报「花」的那位走了兜底，才是学生丙。\n\n改法就是把那一支换成对得上的：`return new 学生甲();`。\n\n这里把领养处的好处也顺带看一眼：**来领对象的地方一个字都没改**（`main` 里那句还是照花色报，它不知道品种是怎么造的，也不该知道）。这一课的摆法就是这样 —— 要改，只改领养处这一处。",
+      "templateId": "java-s3-dp-factory-mixed-up",
+      "params": {
+        "v1": "",
+        "v2": "嗷",
+        "v3": "呜",
+        "f": "花"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "fc29684146ef3c98"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-factory-mixed-up-015",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们开了间领养处，可发出来的对象不对：报「橘」的那位，领到的是一个学生乙。\n\n毛病在**领养处那一段**，你看一眼就明白了。别的都别动（各品种自己的类定义一个字都别碰）。改好之后，程序该印出**三行**，每行写 `花色 -> 输出结果`。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"咪\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷呜\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生乙();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"杂毛\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "referenceFix": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"咪\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷呜\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生甲();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"杂毛\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "expectedOutput": "橘 -> 咪\n李四 -> 嗷呜\n杂毛 -> 呜",
+      "stdin": null,
+      "explanation": "坏版本印出来是这样三行：\n\n```text\n橘 -> 嗷呜\n李四 -> 嗷呜\n杂毛 -> 呜\n```\n\n毛病只有一处：**「橘」那一支递出来的是学生乙**（`return new 学生乙();`）—— 分支报的名字和递出去的品种对不上。所以报「橘」的领到的是学生乙，输出结果跟第二行一模一样；只有报「杂毛」的那位走了兜底，才是学生丙。\n\n改法就是把那一支换成对得上的：`return new 学生甲();`。\n\n这里把领养处的好处也顺带看一眼：**来领对象的地方一个字都没改**（`main` 里那句还是照花色报，它不知道品种是怎么造的，也不该知道）。这一课的摆法就是这样 —— 要改，只改领养处这一处。",
+      "templateId": "java-s3-dp-factory-mixed-up",
+      "params": {
+        "v1": "咪",
+        "v2": "嗷呜",
+        "v3": "呜",
+        "f": "杂毛"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "f1cf624d2e631d3e"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-factory-shelter-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要开一间**领养处**。来领对象的只报一句花色，剩下的领养处自己掂量。\n\n三张品类型定义（学生甲、学生乙、学生丙）和上一代那张都画好了，你只写两处：\n\n1. **`领养一个(花色)` 的身体**：报「橘」就递一个学生甲、报「李四」就递一个学生乙，**别的花色都走兜底**、递一个学生丙；\n2. **`main` 的身体**：按 `橘`、`李四`、`花` 这个顺序各领一次，每领一次印一行 `花色 -> 输出结果`（中间是空格、减号、大于号）。\n\n类定义和品种一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生甲();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"花\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "expectedOutput": "橘 -> \n李四 -> 嗷\n花 -> 呜",
+      "stdin": null,
+      "explanation": "这一题把课文第二节那间领养处自己开了一遍。\n\n**一、领养处只干一件事：按报的名字挑。** 「橘」递学生甲、「李四」递学生乙，**别的都走最后那条兜底的路**（递学生丙）—— 所以报「花」的那位领到的是学生丙，输出结果是 `呜`。兜底给谁是你说了算的：想让没报上号的都领学生甲，把最后那一句换成学生甲就行。\n\n**二、递回来的东西写在上一代那张类定义的名字上。** `static 子对象 领养一个(String 花色)` 这个写法，意思是「递出来的东西是照上一代那张类定义生的」—— 三个品种都是它的后辈，所以哪一个都装得下。\n\n**三、来领对象的地方不知道品种是怎么造的。** `main` 里只有「报花色」和「输出信息」两件事，一个字都没提品种的名字。将来窝里添一个品种，改动只发生在**领养处这一处** —— 这就是这一课那个「改一处」的好处。\n\n**四、输出结果是各品种自己类定义上的事。** 领养处递出去的对象，输出结果由那张品类型定义说了算：学生甲 ``、学生乙 `嗷`、学生丙 `呜` —— 领养处自己不发声。",
+      "templateId": "java-s3-dp-factory-shelter",
+      "params": {
+        "v1": "",
+        "v2": "嗷",
+        "v3": "呜",
+        "f": "花"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "2e7318e1c1ea76d4"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-factory-shelter-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要开一间**领养处**。来领对象的只报一句花色，剩下的领养处自己掂量。\n\n三张品类型定义（学生甲、学生乙、学生丙）和上一代那张都画好了，你只写两处：\n\n1. **`领养一个(花色)` 的身体**：报「橘」就递一个学生甲、报「李四」就递一个学生乙，**别的花色都走兜底**、递一个学生丙；\n2. **`main` 的身体**：按 `橘`、`李四`、`杂毛` 这个顺序各领一次，每领一次印一行 `花色 -> 输出结果`（中间是空格、减号、大于号）。\n\n类定义和品种一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生甲();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"杂毛\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "expectedOutput": "橘 -> \n李四 -> 嗷\n杂毛 -> 呜",
+      "stdin": null,
+      "explanation": "这一题把课文第二节那间领养处自己开了一遍。\n\n**一、领养处只干一件事：按报的名字挑。** 「橘」递学生甲、「李四」递学生乙，**别的都走最后那条兜底的路**（递学生丙）—— 所以报「杂毛」的那位领到的是学生丙，输出结果是 `呜`。兜底给谁是你说了算的：想让没报上号的都领学生甲，把最后那一句换成学生甲就行。\n\n**二、递回来的东西写在上一代那张类定义的名字上。** `static 子对象 领养一个(String 花色)` 这个写法，意思是「递出来的东西是照上一代那张类定义生的」—— 三个品种都是它的后辈，所以哪一个都装得下。\n\n**三、来领对象的地方不知道品种是怎么造的。** `main` 里只有「报花色」和「输出信息」两件事，一个字都没提品种的名字。将来窝里添一个品种，改动只发生在**领养处这一处** —— 这就是这一课那个「改一处」的好处。\n\n**四、输出结果是各品种自己类定义上的事。** 领养处递出去的对象，输出结果由那张品类型定义说了算：学生甲 ``、学生乙 `嗷`、学生丙 `呜` —— 领养处自己不发声。",
+      "templateId": "java-s3-dp-factory-shelter",
+      "params": {
+        "v1": "",
+        "v2": "嗷",
+        "v3": "呜",
+        "f": "杂毛"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "d8ba317a4a9229fd"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-factory-shelter-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要开一间**领养处**。来领对象的只报一句花色，剩下的领养处自己掂量。\n\n三张品类型定义（学生甲、学生乙、学生丙）和上一代那张都画好了，你只写两处：\n\n1. **`领养一个(花色)` 的身体**：报「橘」就递一个学生甲、报「李四」就递一个学生乙，**别的花色都走兜底**、递一个学生丙；\n2. **`main` 的身体**：按 `橘`、`李四`、`花` 这个顺序各领一次，每领一次印一行 `花色 -> 输出结果`（中间是空格、减号、大于号）。\n\n类定义和品种一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷呜\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷呜\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生甲();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"花\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "expectedOutput": "橘 -> \n李四 -> 嗷呜\n花 -> 呜",
+      "stdin": null,
+      "explanation": "这一题把课文第二节那间领养处自己开了一遍。\n\n**一、领养处只干一件事：按报的名字挑。** 「橘」递学生甲、「李四」递学生乙，**别的都走最后那条兜底的路**（递学生丙）—— 所以报「花」的那位领到的是学生丙，输出结果是 `呜`。兜底给谁是你说了算的：想让没报上号的都领学生甲，把最后那一句换成学生甲就行。\n\n**二、递回来的东西写在上一代那张类定义的名字上。** `static 子对象 领养一个(String 花色)` 这个写法，意思是「递出来的东西是照上一代那张类定义生的」—— 三个品种都是它的后辈，所以哪一个都装得下。\n\n**三、来领对象的地方不知道品种是怎么造的。** `main` 里只有「报花色」和「输出信息」两件事，一个字都没提品种的名字。将来窝里添一个品种，改动只发生在**领养处这一处** —— 这就是这一课那个「改一处」的好处。\n\n**四、输出结果是各品种自己类定义上的事。** 领养处递出去的对象，输出结果由那张品类型定义说了算：学生甲 ``、学生乙 `嗷呜`、学生丙 `呜` —— 领养处自己不发声。",
+      "templateId": "java-s3-dp-factory-shelter",
+      "params": {
+        "v1": "",
+        "v2": "嗷呜",
+        "v3": "呜",
+        "f": "花"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "74d998b764dda91e"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-factory-shelter-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要开一间**领养处**。来领对象的只报一句花色，剩下的领养处自己掂量。\n\n三张品类型定义（学生甲、学生乙、学生丙）和上一代那张都画好了，你只写两处：\n\n1. **`领养一个(花色)` 的身体**：报「橘」就递一个学生甲、报「李四」就递一个学生乙，**别的花色都走兜底**、递一个学生丙；\n2. **`main` 的身体**：按 `橘`、`李四`、`杂毛` 这个顺序各领一次，每领一次印一行 `花色 -> 输出结果`（中间是空格、减号、大于号）。\n\n类定义和品种一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"咪\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"咪\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生甲();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"杂毛\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "expectedOutput": "橘 -> 咪\n李四 -> 嗷\n杂毛 -> 呜",
+      "stdin": null,
+      "explanation": "这一题把课文第二节那间领养处自己开了一遍。\n\n**一、领养处只干一件事：按报的名字挑。** 「橘」递学生甲、「李四」递学生乙，**别的都走最后那条兜底的路**（递学生丙）—— 所以报「杂毛」的那位领到的是学生丙，输出结果是 `呜`。兜底给谁是你说了算的：想让没报上号的都领学生甲，把最后那一句换成学生甲就行。\n\n**二、递回来的东西写在上一代那张类定义的名字上。** `static 子对象 领养一个(String 花色)` 这个写法，意思是「递出来的东西是照上一代那张类定义生的」—— 三个品种都是它的后辈，所以哪一个都装得下。\n\n**三、来领对象的地方不知道品种是怎么造的。** `main` 里只有「报花色」和「输出信息」两件事，一个字都没提品种的名字。将来窝里添一个品种，改动只发生在**领养处这一处** —— 这就是这一课那个「改一处」的好处。\n\n**四、输出结果是各品种自己类定义上的事。** 领养处递出去的对象，输出结果由那张品类型定义说了算：学生甲 `咪`、学生乙 `嗷`、学生丙 `呜` —— 领养处自己不发声。",
+      "templateId": "java-s3-dp-factory-shelter",
+      "params": {
+        "v1": "咪",
+        "v2": "嗷",
+        "v3": "呜",
+        "f": "杂毛"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "388c70a584c4b4d4"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-factory-shelter-012",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要开一间**领养处**。来领对象的只报一句花色，剩下的领养处自己掂量。\n\n三张品类型定义（学生甲、学生乙、学生丙）和上一代那张都画好了，你只写两处：\n\n1. **`领养一个(花色)` 的身体**：报「橘」就递一个学生甲、报「李四」就递一个学生乙，**别的花色都走兜底**、递一个学生丙；\n2. **`main` 的身体**：按 `橘`、`李四`、`花` 这个顺序各领一次，每领一次印一行 `花色 -> 输出结果`（中间是空格、减号、大于号）。\n\n类定义和品种一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"咪\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷呜\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"咪\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷呜\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生甲();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"花\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "expectedOutput": "橘 -> 咪\n李四 -> 嗷呜\n花 -> 呜",
+      "stdin": null,
+      "explanation": "这一题把课文第二节那间领养处自己开了一遍。\n\n**一、领养处只干一件事：按报的名字挑。** 「橘」递学生甲、「李四」递学生乙，**别的都走最后那条兜底的路**（递学生丙）—— 所以报「花」的那位领到的是学生丙，输出结果是 `呜`。兜底给谁是你说了算的：想让没报上号的都领学生甲，把最后那一句换成学生甲就行。\n\n**二、递回来的东西写在上一代那张类定义的名字上。** `static 子对象 领养一个(String 花色)` 这个写法，意思是「递出来的东西是照上一代那张类定义生的」—— 三个品种都是它的后辈，所以哪一个都装得下。\n\n**三、来领对象的地方不知道品种是怎么造的。** `main` 里只有「报花色」和「输出信息」两件事，一个字都没提品种的名字。将来窝里添一个品种，改动只发生在**领养处这一处** —— 这就是这一课那个「改一处」的好处。\n\n**四、输出结果是各品种自己类定义上的事。** 领养处递出去的对象，输出结果由那张品类型定义说了算：学生甲 `咪`、学生乙 `嗷呜`、学生丙 `呜` —— 领养处自己不发声。",
+      "templateId": "java-s3-dp-factory-shelter",
+      "params": {
+        "v1": "咪",
+        "v2": "嗷呜",
+        "v3": "呜",
+        "f": "花"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "dc4b2ce6a22af428"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-factory-shelter-015",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要开一间**领养处**。来领对象的只报一句花色，剩下的领养处自己掂量。\n\n三张品类型定义（学生甲、学生乙、学生丙）和上一代那张都画好了，你只写两处：\n\n1. **`领养一个(花色)` 的身体**：报「橘」就递一个学生甲、报「李四」就递一个学生乙，**别的花色都走兜底**、递一个学生丙；\n2. **`main` 的身体**：按 `橘`、`李四`、`杂毛` 这个顺序各领一次，每领一次印一行 `花色 -> 输出结果`（中间是空格、减号、大于号）。\n\n类定义和品种一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"咪\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷呜\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static abstract class 子对象 {\n        abstract String 输出结果();\n    }\n\n    static class 学生甲 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"咪\";\n        }\n    }\n\n    static class 学生乙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"嗷呜\";\n        }\n    }\n\n    static class 学生丙 extends 子对象 {\n        @Override\n        String 输出结果() {\n            return \"呜\";\n        }\n    }\n\n    static 子对象 领养一个(String 花色) {\n        if (花色.equals(\"橘\")) {\n            return new 学生甲();\n        }\n        if (花色.equals(\"李四\")) {\n            return new 学生乙();\n        }\n        return new 学生丙();\n    }\n\n    public static void main(String[] args) {\n        for (String 花色 : new String[]{\"橘\", \"李四\", \"杂毛\"}) {\n            System.out.println(花色 + \" -> \" + 领养一个(花色).输出结果());\n        }\n    }\n}\n",
+      "expectedOutput": "橘 -> 咪\n李四 -> 嗷呜\n杂毛 -> 呜",
+      "stdin": null,
+      "explanation": "这一题把课文第二节那间领养处自己开了一遍。\n\n**一、领养处只干一件事：按报的名字挑。** 「橘」递学生甲、「李四」递学生乙，**别的都走最后那条兜底的路**（递学生丙）—— 所以报「杂毛」的那位领到的是学生丙，输出结果是 `呜`。兜底给谁是你说了算的：想让没报上号的都领学生甲，把最后那一句换成学生甲就行。\n\n**二、递回来的东西写在上一代那张类定义的名字上。** `static 子对象 领养一个(String 花色)` 这个写法，意思是「递出来的东西是照上一代那张类定义生的」—— 三个品种都是它的后辈，所以哪一个都装得下。\n\n**三、来领对象的地方不知道品种是怎么造的。** `main` 里只有「报花色」和「输出信息」两件事，一个字都没提品种的名字。将来窝里添一个品种，改动只发生在**领养处这一处** —— 这就是这一课那个「改一处」的好处。\n\n**四、输出结果是各品种自己类定义上的事。** 领养处递出去的对象，输出结果由那张品类型定义说了算：学生甲 `咪`、学生乙 `嗷呜`、学生丙 `呜` —— 领养处自己不发声。",
+      "templateId": "java-s3-dp-factory-shelter",
+      "params": {
+        "v1": "咪",
+        "v2": "嗷呜",
+        "v3": "呜",
+        "f": "杂毛"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "85bb6b4f5a37fafc"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-observer-bell-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要摆一套**摇铃与听众**：铃只管摇，谁要听谁自己订上来。\n\n那份约定、铃的类定义（含那个柜子）、两个对象各自的类定义都画好了，你只写三处：\n\n1. **`订上(听众 一位)` 的身体**：把这位塞进名单；\n2. **`摇铃(String 菜名)` 的身体**：挨个调用一句 `听见了`，把菜名递过去；\n3. **`main` 的身体**：造一个铃，先订上 `对象`（名字叫 `张三`）、再订上 `延迟执行`（名字叫 `煤球`），然后摇两次铃 —— 先 `数据`、再 `商品`。\n\n类定义和约定一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n\n        }\n\n        void 摇铃(String 菜名) {\n\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            for (听众 一位 : 名单) {\n                一位.听见了(菜名);\n            }\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"张三\"));\n        铃.订上(new 延迟执行(\"煤球\"));\n        铃.摇铃(\"数据\");\n        铃.摇铃(\"商品\");\n    }\n}\n",
+      "expectedOutput": "张三 冲向 数据\n煤球 翻了个身，继续睡\n张三 冲向 商品\n煤球 翻了个身，继续睡",
+      "stdin": null,
+      "explanation": "这一题把课文第三节那套摆法自己搭了一遍。\n\n**一、谁要听谁自己订上来。** `订上()` 只做一件事：把这位塞进名单（`名单.add(一位)`）。铃那边**不知道**来的是对象还是延迟执行 —— 名单里收的是「会这一个方法的对象」（那份约定），谁都能赋值。\n\n**二、摇铃的只管挨个调用。** `摇铃()` 里绕圈绕一遍名单，每一位调用一句 `听见了`，菜名原样递过去。**每位听见了会做什么，是它们自己类定义上的事** —— 对象冲过去、延迟执行翻个身继续睡，铃一个字都没提过。\n\n**三、先后就是订上来的顺序。** 名单是个会自己长大的柜子：先订上来的排在前面。所以 `张三` 那一行在前、`煤球` 那一行在后；摇两次铃，就是这两行按同样的先后各来一遍。\n\n**四、好处落在「改一处」。** 明天要加一个学生丙，**铃那张类定义一个字都不用改**，她自己 `订上` 就行 —— 这就是已有实现对象那句「多态调用」。",
+      "templateId": "java-s3-dp-observer-bell",
+      "params": {
+        "c1": "张三",
+        "c2": "煤球",
+        "r1": "数据",
+        "r2": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "d93099d997f97ebf"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-observer-bell-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要摆一套**摇铃与听众**：铃只管摇，谁要听谁自己订上来。\n\n那份约定、铃的类定义（含那个柜子）、两个对象各自的类定义都画好了，你只写三处：\n\n1. **`订上(听众 一位)` 的身体**：把这位塞进名单；\n2. **`摇铃(String 菜名)` 的身体**：挨个调用一句 `听见了`，把菜名递过去；\n3. **`main` 的身体**：造一个铃，先订上 `对象`（名字叫 `张三`）、再订上 `延迟执行`（名字叫 `煤球`），然后摇两次铃 —— 先 `商品C`、再 `鸡肉`。\n\n类定义和约定一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n\n        }\n\n        void 摇铃(String 菜名) {\n\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            for (听众 一位 : 名单) {\n                一位.听见了(菜名);\n            }\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"张三\"));\n        铃.订上(new 延迟执行(\"煤球\"));\n        铃.摇铃(\"商品C\");\n        铃.摇铃(\"鸡肉\");\n    }\n}\n",
+      "expectedOutput": "张三 冲向 商品C\n煤球 翻了个身，继续睡\n张三 冲向 鸡肉\n煤球 翻了个身，继续睡",
+      "stdin": null,
+      "explanation": "这一题把课文第三节那套摆法自己搭了一遍。\n\n**一、谁要听谁自己订上来。** `订上()` 只做一件事：把这位塞进名单（`名单.add(一位)`）。铃那边**不知道**来的是对象还是延迟执行 —— 名单里收的是「会这一个方法的对象」（那份约定），谁都能赋值。\n\n**二、摇铃的只管挨个调用。** `摇铃()` 里绕圈绕一遍名单，每一位调用一句 `听见了`，菜名原样递过去。**每位听见了会做什么，是它们自己类定义上的事** —— 对象冲过去、延迟执行翻个身继续睡，铃一个字都没提过。\n\n**三、先后就是订上来的顺序。** 名单是个会自己长大的柜子：先订上来的排在前面。所以 `张三` 那一行在前、`煤球` 那一行在后；摇两次铃，就是这两行按同样的先后各来一遍。\n\n**四、好处落在「改一处」。** 明天要加一个学生丙，**铃那张类定义一个字都不用改**，她自己 `订上` 就行 —— 这就是已有实现对象那句「多态调用」。",
+      "templateId": "java-s3-dp-observer-bell",
+      "params": {
+        "c1": "张三",
+        "c2": "煤球",
+        "r1": "商品C",
+        "r2": "鸡肉"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "c5b575d6185ccdab"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-observer-bell-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要摆一套**摇铃与听众**：铃只管摇，谁要听谁自己订上来。\n\n那份约定、铃的类定义（含那个柜子）、两个对象各自的类定义都画好了，你只写三处：\n\n1. **`订上(听众 一位)` 的身体**：把这位塞进名单；\n2. **`摇铃(String 菜名)` 的身体**：挨个调用一句 `听见了`，把菜名递过去；\n3. **`main` 的身体**：造一个铃，先订上 `对象`（名字叫 `张三`）、再订上 `延迟执行`（名字叫 `黑豆`），然后摇两次铃 —— 先 `商品C`、再 `商品`。\n\n类定义和约定一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n\n        }\n\n        void 摇铃(String 菜名) {\n\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            for (听众 一位 : 名单) {\n                一位.听见了(菜名);\n            }\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"张三\"));\n        铃.订上(new 延迟执行(\"黑豆\"));\n        铃.摇铃(\"商品C\");\n        铃.摇铃(\"商品\");\n    }\n}\n",
+      "expectedOutput": "张三 冲向 商品C\n黑豆 翻了个身，继续睡\n张三 冲向 商品\n黑豆 翻了个身，继续睡",
+      "stdin": null,
+      "explanation": "这一题把课文第三节那套摆法自己搭了一遍。\n\n**一、谁要听谁自己订上来。** `订上()` 只做一件事：把这位塞进名单（`名单.add(一位)`）。铃那边**不知道**来的是对象还是延迟执行 —— 名单里收的是「会这一个方法的对象」（那份约定），谁都能赋值。\n\n**二、摇铃的只管挨个调用。** `摇铃()` 里绕圈绕一遍名单，每一位调用一句 `听见了`，菜名原样递过去。**每位听见了会做什么，是它们自己类定义上的事** —— 对象冲过去、延迟执行翻个身继续睡，铃一个字都没提过。\n\n**三、先后就是订上来的顺序。** 名单是个会自己长大的柜子：先订上来的排在前面。所以 `张三` 那一行在前、`黑豆` 那一行在后；摇两次铃，就是这两行按同样的先后各来一遍。\n\n**四、好处落在「改一处」。** 明天要加一个学生丙，**铃那张类定义一个字都不用改**，她自己 `订上` 就行 —— 这就是已有实现对象那句「多态调用」。",
+      "templateId": "java-s3-dp-observer-bell",
+      "params": {
+        "c1": "张三",
+        "c2": "黑豆",
+        "r1": "商品C",
+        "r2": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "f2a0bb62081c9a3f"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-observer-bell-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要摆一套**摇铃与听众**：铃只管摇，谁要听谁自己订上来。\n\n那份约定、铃的类定义（含那个柜子）、两个对象各自的类定义都画好了，你只写三处：\n\n1. **`订上(听众 一位)` 的身体**：把这位塞进名单；\n2. **`摇铃(String 菜名)` 的身体**：挨个调用一句 `听见了`，把菜名递过去；\n3. **`main` 的身体**：造一个铃，先订上 `对象`（名字叫 `橘子`）、再订上 `延迟执行`（名字叫 `煤球`），然后摇两次铃 —— 先 `数据`、再 `鸡肉`。\n\n类定义和约定一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n\n        }\n\n        void 摇铃(String 菜名) {\n\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            for (听众 一位 : 名单) {\n                一位.听见了(菜名);\n            }\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"橘子\"));\n        铃.订上(new 延迟执行(\"煤球\"));\n        铃.摇铃(\"数据\");\n        铃.摇铃(\"鸡肉\");\n    }\n}\n",
+      "expectedOutput": "橘子 冲向 数据\n煤球 翻了个身，继续睡\n橘子 冲向 鸡肉\n煤球 翻了个身，继续睡",
+      "stdin": null,
+      "explanation": "这一题把课文第三节那套摆法自己搭了一遍。\n\n**一、谁要听谁自己订上来。** `订上()` 只做一件事：把这位塞进名单（`名单.add(一位)`）。铃那边**不知道**来的是对象还是延迟执行 —— 名单里收的是「会这一个方法的对象」（那份约定），谁都能赋值。\n\n**二、摇铃的只管挨个调用。** `摇铃()` 里绕圈绕一遍名单，每一位调用一句 `听见了`，菜名原样递过去。**每位听见了会做什么，是它们自己类定义上的事** —— 对象冲过去、延迟执行翻个身继续睡，铃一个字都没提过。\n\n**三、先后就是订上来的顺序。** 名单是个会自己长大的柜子：先订上来的排在前面。所以 `橘子` 那一行在前、`煤球` 那一行在后；摇两次铃，就是这两行按同样的先后各来一遍。\n\n**四、好处落在「改一处」。** 明天要加一个学生丙，**铃那张类定义一个字都不用改**，她自己 `订上` 就行 —— 这就是已有实现对象那句「多态调用」。",
+      "templateId": "java-s3-dp-observer-bell",
+      "params": {
+        "c1": "橘子",
+        "c2": "煤球",
+        "r1": "数据",
+        "r2": "鸡肉"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "dee0eea9018a98d6"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-observer-bell-012",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要摆一套**摇铃与听众**：铃只管摇，谁要听谁自己订上来。\n\n那份约定、铃的类定义（含那个柜子）、两个对象各自的类定义都画好了，你只写三处：\n\n1. **`订上(听众 一位)` 的身体**：把这位塞进名单；\n2. **`摇铃(String 菜名)` 的身体**：挨个调用一句 `听见了`，把菜名递过去；\n3. **`main` 的身体**：造一个铃，先订上 `对象`（名字叫 `橘子`）、再订上 `延迟执行`（名字叫 `黑豆`），然后摇两次铃 —— 先 `数据`、再 `商品`。\n\n类定义和约定一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n\n        }\n\n        void 摇铃(String 菜名) {\n\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            for (听众 一位 : 名单) {\n                一位.听见了(菜名);\n            }\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"橘子\"));\n        铃.订上(new 延迟执行(\"黑豆\"));\n        铃.摇铃(\"数据\");\n        铃.摇铃(\"商品\");\n    }\n}\n",
+      "expectedOutput": "橘子 冲向 数据\n黑豆 翻了个身，继续睡\n橘子 冲向 商品\n黑豆 翻了个身，继续睡",
+      "stdin": null,
+      "explanation": "这一题把课文第三节那套摆法自己搭了一遍。\n\n**一、谁要听谁自己订上来。** `订上()` 只做一件事：把这位塞进名单（`名单.add(一位)`）。铃那边**不知道**来的是对象还是延迟执行 —— 名单里收的是「会这一个方法的对象」（那份约定），谁都能赋值。\n\n**二、摇铃的只管挨个调用。** `摇铃()` 里绕圈绕一遍名单，每一位调用一句 `听见了`，菜名原样递过去。**每位听见了会做什么，是它们自己类定义上的事** —— 对象冲过去、延迟执行翻个身继续睡，铃一个字都没提过。\n\n**三、先后就是订上来的顺序。** 名单是个会自己长大的柜子：先订上来的排在前面。所以 `橘子` 那一行在前、`黑豆` 那一行在后；摇两次铃，就是这两行按同样的先后各来一遍。\n\n**四、好处落在「改一处」。** 明天要加一个学生丙，**铃那张类定义一个字都不用改**，她自己 `订上` 就行 —— 这就是已有实现对象那句「多态调用」。",
+      "templateId": "java-s3-dp-observer-bell",
+      "params": {
+        "c1": "橘子",
+        "c2": "黑豆",
+        "r1": "数据",
+        "r2": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "19090cf4c477134e"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-observer-bell-015",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要摆一套**摇铃与听众**：铃只管摇，谁要听谁自己订上来。\n\n那份约定、铃的类定义（含那个柜子）、两个对象各自的类定义都画好了，你只写三处：\n\n1. **`订上(听众 一位)` 的身体**：把这位塞进名单；\n2. **`摇铃(String 菜名)` 的身体**：挨个调用一句 `听见了`，把菜名递过去；\n3. **`main` 的身体**：造一个铃，先订上 `对象`（名字叫 `橘子`）、再订上 `延迟执行`（名字叫 `黑豆`），然后摇两次铃 —— 先 `商品C`、再 `鸡肉`。\n\n类定义和约定一个都别改。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n\n        }\n\n        void 摇铃(String 菜名) {\n\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            for (听众 一位 : 名单) {\n                一位.听见了(菜名);\n            }\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"橘子\"));\n        铃.订上(new 延迟执行(\"黑豆\"));\n        铃.摇铃(\"商品C\");\n        铃.摇铃(\"鸡肉\");\n    }\n}\n",
+      "expectedOutput": "橘子 冲向 商品C\n黑豆 翻了个身，继续睡\n橘子 冲向 鸡肉\n黑豆 翻了个身，继续睡",
+      "stdin": null,
+      "explanation": "这一题把课文第三节那套摆法自己搭了一遍。\n\n**一、谁要听谁自己订上来。** `订上()` 只做一件事：把这位塞进名单（`名单.add(一位)`）。铃那边**不知道**来的是对象还是延迟执行 —— 名单里收的是「会这一个方法的对象」（那份约定），谁都能赋值。\n\n**二、摇铃的只管挨个调用。** `摇铃()` 里绕圈绕一遍名单，每一位调用一句 `听见了`，菜名原样递过去。**每位听见了会做什么，是它们自己类定义上的事** —— 对象冲过去、延迟执行翻个身继续睡，铃一个字都没提过。\n\n**三、先后就是订上来的顺序。** 名单是个会自己长大的柜子：先订上来的排在前面。所以 `橘子` 那一行在前、`黑豆` 那一行在后；摇两次铃，就是这两行按同样的先后各来一遍。\n\n**四、好处落在「改一处」。** 明天要加一个学生丙，**铃那张类定义一个字都不用改**，她自己 `订上` 就行 —— 这就是已有实现对象那句「多态调用」。",
+      "templateId": "java-s3-dp-observer-bell",
+      "params": {
+        "c1": "橘子",
+        "c2": "黑豆",
+        "r1": "商品C",
+        "r2": "鸡肉"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "703085a540e9d99c"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-observer-last-only-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们摇了一次铃，结果**只有一个对象听见了** —— 订上来的明明有两位。\n\n毛病在 `摇铃()` 里，你看一眼就明白了。别的都别动（那份约定、两个对象自己的类定义、`订上()` 都别碰）。改好之后，程序该印出**两行**：订上的两位各一行，**先后按订上来的顺序**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            名单.get(0).听见了(菜名);\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"张三\"));\n        铃.订上(new 延迟执行(\"煤球\"));\n        铃.摇铃(\"数据\");\n    }\n}\n",
+      "referenceFix": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            for (听众 一位 : 名单) {\n                一位.听见了(菜名);\n            }\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"张三\"));\n        铃.订上(new 延迟执行(\"煤球\"));\n        铃.摇铃(\"数据\");\n    }\n}\n",
+      "expectedOutput": "张三 冲向 数据\n煤球 翻了个身，继续睡",
+      "stdin": null,
+      "explanation": "坏版本只印出来一行：\n\n```text\n张三 冲向 数据\n```\n\n毛病只有一处：`摇铃()` 里写的是 `名单.get(0)` —— 名单里**第一位**那一位听见了，第二位**根本没人调用**。所以第二行（`煤球` 那一行）整个不见了。\n\n改法就是把「挨个通知」这一手补回来：\n\n```java\nfor (听众 一位 : 名单) {\n    一位.听见了(菜名);\n}\n```\n\n名单是个会自己长大的柜子，绕圈绕一遍就是名单上每一位都调用到；**先后就是订上来的顺序**，所以补上之后是 `张三` 那一行在前、`煤球` 那一行在后。\n\n再回头看摇铃那位对象手里的东西：她只知道名单上坐着「会这一个方法的对象」，**不知道**每一位听见了会做什么 —— 对象冲过去、延迟执行翻个身，全是它们自己类定义上的事。",
+      "templateId": "java-s3-dp-observer-last-only",
+      "params": {
+        "c1": "张三",
+        "c2": "煤球",
+        "r1": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "4c8c601a31054f99"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-observer-last-only-007",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们摇了一次铃，结果**只有一个对象听见了** —— 订上来的明明有两位。\n\n毛病在 `摇铃()` 里，你看一眼就明白了。别的都别动（那份约定、两个对象自己的类定义、`订上()` 都别碰）。改好之后，程序该印出**两行**：订上的两位各一行，**先后按订上来的顺序**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            名单.get(0).听见了(菜名);\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"橘子\"));\n        铃.订上(new 延迟执行(\"黑豆\"));\n        铃.摇铃(\"商品C\");\n    }\n}\n",
+      "referenceFix": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    interface 听众 {\n        void 听见了(String 菜名);\n    }\n\n    static class 处理铃 {\n        List<听众> 名单 = new ArrayList<>();\n\n        void 订上(听众 一位) {\n            名单.add(一位);\n        }\n\n        void 摇铃(String 菜名) {\n            for (听众 一位 : 名单) {\n                一位.听见了(菜名);\n            }\n        }\n    }\n\n    static class 对象 implements 听众 {\n        String 名字;\n\n        对象(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 冲向 \" + 菜名);\n        }\n    }\n\n    static class 延迟执行 implements 听众 {\n        String 名字;\n\n        延迟执行(String 名字) {\n            this.名字 = 名字;\n        }\n\n        public void 听见了(String 菜名) {\n            System.out.println(名字 + \" 翻了个身，继续睡\");\n        }\n    }\n\n    public static void main(String[] args) {\n        处理铃 铃 = new 处理铃();\n        铃.订上(new 对象(\"橘子\"));\n        铃.订上(new 延迟执行(\"黑豆\"));\n        铃.摇铃(\"商品C\");\n    }\n}\n",
+      "expectedOutput": "橘子 冲向 商品C\n黑豆 翻了个身，继续睡",
+      "stdin": null,
+      "explanation": "坏版本只印出来一行：\n\n```text\n橘子 冲向 商品C\n```\n\n毛病只有一处：`摇铃()` 里写的是 `名单.get(0)` —— 名单里**第一位**那一位听见了，第二位**根本没人调用**。所以第二行（`黑豆` 那一行）整个不见了。\n\n改法就是把「挨个通知」这一手补回来：\n\n```java\nfor (听众 一位 : 名单) {\n    一位.听见了(菜名);\n}\n```\n\n名单是个会自己长大的柜子，绕圈绕一遍就是名单上每一位都调用到；**先后就是订上来的顺序**，所以补上之后是 `橘子` 那一行在前、`黑豆` 那一行在后。\n\n再回头看摇铃那位对象手里的东西：她只知道名单上坐着「会这一个方法的对象」，**不知道**每一位听见了会做什么 —— 对象冲过去、延迟执行翻个身，全是它们自己类定义上的事。",
+      "templateId": "java-s3-dp-observer-last-only",
+      "params": {
+        "c1": "橘子",
+        "c2": "黑豆",
+        "r1": "商品C"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.566Z",
+        "hash": "1238f14b91d50c31"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-singleton-account-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要把单例这手摆法自己写一遍：全窝只有**一本**账本，谁记账都记到同一本上。\n\n类定义上那一格（`唯一的一本`）和锁上的产房都已经画好了，你只写两处：\n\n1. **`拿本()` 的身体**：那一格还空着，就造一本、顺手记进那一格；已经记着了，就直接把那一本递出去；\n2. **`main` 的身体**：从两处各拿一次（`甲`、`乙`），给 `甲` 添上 `2` 条，然后印两行 —— 第一行 `是同一本吗：` 后面跟着「是不是同一本」，第二行 `乙 里看到的条数：` 后面跟着从 `乙` 那边看到的条数。\n\n改不了的东西一个都别碰（那一格、产房、`添()` 都别动）。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n\nclass 账本 {\n    private static 账本 唯一的一本;\n\n    int 条数;\n\n    private 账本() {\n    }\n\n    static 账本 拿本() {\n\n    }\n\n    void 添(int 几条) {\n        条数 = 条数 + 几条;\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        账本 甲 = 账本.拿本();\n        账本 乙 = 账本.拿本();\n        甲.添(2);\n        System.out.println(\"是同一本吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的条数：\" + 乙.条数);\n    }\n}\n\nclass 账本 {\n    private static 账本 唯一的一本;\n\n    int 条数;\n\n    private 账本() {\n    }\n\n    static 账本 拿本() {\n        if (唯一的一本 == null) {\n            唯一的一本 = new 账本();\n        }\n        return 唯一的一本;\n    }\n\n    void 添(int 几条) {\n        条数 = 条数 + 几条;\n    }\n}\n",
+      "expectedOutput": "是同一本吗：true\n乙 里看到的条数：2",
+      "stdin": null,
+      "explanation": "这一题就是课文第一节那三样东西，一个不少：\n\n**一、类定义上留一格。** `private static 账本 唯一的一本;` 那一格归类定义自己、不归哪个实例 —— 全窝共用。\n\n**二、产房锁着。** `private 账本()` 已经画好了：别人想自己 `new` 一本，编译器那一关就过不去（原话是 `账本() has private access in 账本`），只能走 `拿本()` 这个口子。\n\n**三、门口那一手的心思。** 先看那一格**空着没有**（`== null`）：空着才造一本、造完顺手记进去；已经记着了就直接把那一本递出去。**判空这一句是整个套路的命门** —— 少了它，每调用一次都造一本新的，`甲` 和 `乙` 拿到的就不是同一本了（第一行会印 `false`，第二行 `乙` 那边看到的是 `0`）。\n\n**四、两处拿到的是同一本。** 所以我们给 `甲` 添的那 `2` 条，从 `乙` 那边也看得见 —— 第二行印的就是那个数。",
+      "templateId": "java-s3-dp-singleton-account",
+      "params": {
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.567Z",
+        "hash": "0fc2619187b47839"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-singleton-account-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要把单例这手摆法自己写一遍：全窝只有**一本**账本，谁记账都记到同一本上。\n\n类定义上那一格（`唯一的一本`）和锁上的产房都已经画好了，你只写两处：\n\n1. **`拿本()` 的身体**：那一格还空着，就造一本、顺手记进那一格；已经记着了，就直接把那一本递出去；\n2. **`main` 的身体**：从两处各拿一次（`甲`、`乙`），给 `甲` 添上 `3` 条，然后印两行 —— 第一行 `是同一本吗：` 后面跟着「是不是同一本」，第二行 `乙 里看到的条数：` 后面跟着从 `乙` 那边看到的条数。\n\n改不了的东西一个都别碰（那一格、产房、`添()` 都别动）。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n\nclass 账本 {\n    private static 账本 唯一的一本;\n\n    int 条数;\n\n    private 账本() {\n    }\n\n    static 账本 拿本() {\n\n    }\n\n    void 添(int 几条) {\n        条数 = 条数 + 几条;\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        账本 甲 = 账本.拿本();\n        账本 乙 = 账本.拿本();\n        甲.添(3);\n        System.out.println(\"是同一本吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的条数：\" + 乙.条数);\n    }\n}\n\nclass 账本 {\n    private static 账本 唯一的一本;\n\n    int 条数;\n\n    private 账本() {\n    }\n\n    static 账本 拿本() {\n        if (唯一的一本 == null) {\n            唯一的一本 = new 账本();\n        }\n        return 唯一的一本;\n    }\n\n    void 添(int 几条) {\n        条数 = 条数 + 几条;\n    }\n}\n",
+      "expectedOutput": "是同一本吗：true\n乙 里看到的条数：3",
+      "stdin": null,
+      "explanation": "这一题就是课文第一节那三样东西，一个不少：\n\n**一、类定义上留一格。** `private static 账本 唯一的一本;` 那一格归类定义自己、不归哪个实例 —— 全窝共用。\n\n**二、产房锁着。** `private 账本()` 已经画好了：别人想自己 `new` 一本，编译器那一关就过不去（原话是 `账本() has private access in 账本`），只能走 `拿本()` 这个口子。\n\n**三、门口那一手的心思。** 先看那一格**空着没有**（`== null`）：空着才造一本、造完顺手记进去；已经记着了就直接把那一本递出去。**判空这一句是整个套路的命门** —— 少了它，每调用一次都造一本新的，`甲` 和 `乙` 拿到的就不是同一本了（第一行会印 `false`，第二行 `乙` 那边看到的是 `0`）。\n\n**四、两处拿到的是同一本。** 所以我们给 `甲` 添的那 `3` 条，从 `乙` 那边也看得见 —— 第二行印的就是那个数。",
+      "templateId": "java-s3-dp-singleton-account",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.567Z",
+        "hash": "0506fd5c6cc1d283"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-singleton-account-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要把单例这手摆法自己写一遍：全窝只有**一本**账本，谁记账都记到同一本上。\n\n类定义上那一格（`唯一的一本`）和锁上的产房都已经画好了，你只写两处：\n\n1. **`拿本()` 的身体**：那一格还空着，就造一本、顺手记进那一格；已经记着了，就直接把那一本递出去；\n2. **`main` 的身体**：从两处各拿一次（`甲`、`乙`），给 `甲` 添上 `4` 条，然后印两行 —— 第一行 `是同一本吗：` 后面跟着「是不是同一本」，第二行 `乙 里看到的条数：` 后面跟着从 `乙` 那边看到的条数。\n\n改不了的东西一个都别碰（那一格、产房、`添()` 都别动）。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n\nclass 账本 {\n    private static 账本 唯一的一本;\n\n    int 条数;\n\n    private 账本() {\n    }\n\n    static 账本 拿本() {\n\n    }\n\n    void 添(int 几条) {\n        条数 = 条数 + 几条;\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        账本 甲 = 账本.拿本();\n        账本 乙 = 账本.拿本();\n        甲.添(4);\n        System.out.println(\"是同一本吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的条数：\" + 乙.条数);\n    }\n}\n\nclass 账本 {\n    private static 账本 唯一的一本;\n\n    int 条数;\n\n    private 账本() {\n    }\n\n    static 账本 拿本() {\n        if (唯一的一本 == null) {\n            唯一的一本 = new 账本();\n        }\n        return 唯一的一本;\n    }\n\n    void 添(int 几条) {\n        条数 = 条数 + 几条;\n    }\n}\n",
+      "expectedOutput": "是同一本吗：true\n乙 里看到的条数：4",
+      "stdin": null,
+      "explanation": "这一题就是课文第一节那三样东西，一个不少：\n\n**一、类定义上留一格。** `private static 账本 唯一的一本;` 那一格归类定义自己、不归哪个实例 —— 全窝共用。\n\n**二、产房锁着。** `private 账本()` 已经画好了：别人想自己 `new` 一本，编译器那一关就过不去（原话是 `账本() has private access in 账本`），只能走 `拿本()` 这个口子。\n\n**三、门口那一手的心思。** 先看那一格**空着没有**（`== null`）：空着才造一本、造完顺手记进去；已经记着了就直接把那一本递出去。**判空这一句是整个套路的命门** —— 少了它，每调用一次都造一本新的，`甲` 和 `乙` 拿到的就不是同一本了（第一行会印 `false`，第二行 `乙` 那边看到的是 `0`）。\n\n**四、两处拿到的是同一本。** 所以我们给 `甲` 添的那 `4` 条，从 `乙` 那边也看得见 —— 第二行印的就是那个数。",
+      "templateId": "java-s3-dp-singleton-account",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.567Z",
+        "hash": "36d3889ae0778975"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-singleton-account-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要把单例这手摆法自己写一遍：全窝只有**一本**账本，谁记账都记到同一本上。\n\n类定义上那一格（`唯一的一本`）和锁上的产房都已经画好了，你只写两处：\n\n1. **`拿本()` 的身体**：那一格还空着，就造一本、顺手记进那一格；已经记着了，就直接把那一本递出去；\n2. **`main` 的身体**：从两处各拿一次（`甲`、`乙`），给 `甲` 添上 `5` 条，然后印两行 —— 第一行 `是同一本吗：` 后面跟着「是不是同一本」，第二行 `乙 里看到的条数：` 后面跟着从 `乙` 那边看到的条数。\n\n改不了的东西一个都别碰（那一格、产房、`添()` 都别动）。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n\nclass 账本 {\n    private static 账本 唯一的一本;\n\n    int 条数;\n\n    private 账本() {\n    }\n\n    static 账本 拿本() {\n\n    }\n\n    void 添(int 几条) {\n        条数 = 条数 + 几条;\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        账本 甲 = 账本.拿本();\n        账本 乙 = 账本.拿本();\n        甲.添(5);\n        System.out.println(\"是同一本吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的条数：\" + 乙.条数);\n    }\n}\n\nclass 账本 {\n    private static 账本 唯一的一本;\n\n    int 条数;\n\n    private 账本() {\n    }\n\n    static 账本 拿本() {\n        if (唯一的一本 == null) {\n            唯一的一本 = new 账本();\n        }\n        return 唯一的一本;\n    }\n\n    void 添(int 几条) {\n        条数 = 条数 + 几条;\n    }\n}\n",
+      "expectedOutput": "是同一本吗：true\n乙 里看到的条数：5",
+      "stdin": null,
+      "explanation": "这一题就是课文第一节那三样东西，一个不少：\n\n**一、类定义上留一格。** `private static 账本 唯一的一本;` 那一格归类定义自己、不归哪个实例 —— 全窝共用。\n\n**二、产房锁着。** `private 账本()` 已经画好了：别人想自己 `new` 一本，编译器那一关就过不去（原话是 `账本() has private access in 账本`），只能走 `拿本()` 这个口子。\n\n**三、门口那一手的心思。** 先看那一格**空着没有**（`== null`）：空着才造一本、造完顺手记进去；已经记着了就直接把那一本递出去。**判空这一句是整个套路的命门** —— 少了它，每调用一次都造一本新的，`甲` 和 `乙` 拿到的就不是同一本了（第一行会印 `false`，第二行 `乙` 那边看到的是 `0`）。\n\n**四、两处拿到的是同一本。** 所以我们给 `甲` 添的那 `5` 条，从 `乙` 那边也看得见 —— 第二行印的就是那个数。",
+      "templateId": "java-s3-dp-singleton-account",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.567Z",
+        "hash": "29d60e323cee032d"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-singleton-no-guard-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这段单例跑起来，两处拿到的居然**不是同一个元素**。\n\n毛病在 `拿元素()` 里 —— 你看一眼就明白了。别的都别动，类定义那一格和锁上的产房都别碰。改好之后，程序该印出**两行**：第一行 `是同一个元素吗：true`，第二行 `乙 里看到的存量：` 后面跟着我们添进去的那个数。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        数组元素 甲 = 数组元素.拿元素();\n        数组元素 乙 = 数组元素.拿元素();\n        甲.存量 = 甲.存量 + 2;\n        System.out.println(\"是同一个元素吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的存量：\" + 乙.存量);\n    }\n}\n\nclass 数组元素 {\n    private static 数组元素 唯一的一个;\n\n    int 存量;\n\n    private 数组元素() {\n    }\n\n    static 数组元素 拿元素() {\n        唯一的一个 = new 数组元素();\n        return 唯一的一个;\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        数组元素 甲 = 数组元素.拿元素();\n        数组元素 乙 = 数组元素.拿元素();\n        甲.存量 = 甲.存量 + 2;\n        System.out.println(\"是同一个元素吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的存量：\" + 乙.存量);\n    }\n}\n\nclass 数组元素 {\n    private static 数组元素 唯一的一个;\n\n    int 存量;\n\n    private 数组元素() {\n    }\n\n    static 数组元素 拿元素() {\n        if (唯一的一个 == null) {\n            唯一的一个 = new 数组元素();\n        }\n        return 唯一的一个;\n    }\n}\n",
+      "expectedOutput": "是同一个元素吗：true\n乙 里看到的存量：2",
+      "stdin": null,
+      "explanation": "坏版本印出来的是这样两行：\n\n```text\n是同一个元素吗：false\n乙 里看到的存量：0\n```\n\n毛病只有一处：`拿元素()` 里**没有先看类定义那一格**，每调用一次就当场造一个新的、再把那一格盖掉。于是 `甲` 拿到一个、`乙` 拿到另一个 —— 问「是不是同一个」答 `false`；我们往 `甲` 里添的那些数据，`乙` 那边当然看不到，所以第二行是 `0`。\n\n改法就是把单例那句心思补回去：\n\n```java\nif (唯一的一个 == null) {\n    唯一的一个 = new 数组元素();\n}\nreturn 唯一的一个;\n```\n\n先看那一格**空着没有**：空着才动手造、造完顺手记进去；已经记着了就直接把那一个递出去。补上之后 `甲` 和 `乙` 拿到的是同一个，第二行才跟着我们添的数变。\n\n顺带记一句：**这一摔不是翻译那一关拦的** —— 坏版本照样跑得起来，只是答案错了。单例这种摆法，编译器帮不上忙，得靠你自己盯着「拿到的是不是同一个」。",
+      "templateId": "java-s3-dp-singleton-no-guard",
+      "params": {
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.567Z",
+        "hash": "5a4ab3d968a06efc"
+      }
+    },
+    {
+      "id": "bank-java-s3-dp-singleton-no-guard-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这段单例跑起来，两处拿到的居然**不是同一个元素**。\n\n毛病在 `拿元素()` 里 —— 你看一眼就明白了。别的都别动，类定义那一格和锁上的产房都别碰。改好之后，程序该印出**两行**：第一行 `是同一个元素吗：true`，第二行 `乙 里看到的存量：` 后面跟着我们添进去的那个数。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        数组元素 甲 = 数组元素.拿元素();\n        数组元素 乙 = 数组元素.拿元素();\n        甲.存量 = 甲.存量 + 5;\n        System.out.println(\"是同一个元素吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的存量：\" + 乙.存量);\n    }\n}\n\nclass 数组元素 {\n    private static 数组元素 唯一的一个;\n\n    int 存量;\n\n    private 数组元素() {\n    }\n\n    static 数组元素 拿元素() {\n        唯一的一个 = new 数组元素();\n        return 唯一的一个;\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        数组元素 甲 = 数组元素.拿元素();\n        数组元素 乙 = 数组元素.拿元素();\n        甲.存量 = 甲.存量 + 5;\n        System.out.println(\"是同一个元素吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的存量：\" + 乙.存量);\n    }\n}\n\nclass 数组元素 {\n    private static 数组元素 唯一的一个;\n\n    int 存量;\n\n    private 数组元素() {\n    }\n\n    static 数组元素 拿元素() {\n        if (唯一的一个 == null) {\n            唯一的一个 = new 数组元素();\n        }\n        return 唯一的一个;\n    }\n}\n",
+      "expectedOutput": "是同一个元素吗：true\n乙 里看到的存量：5",
+      "stdin": null,
+      "explanation": "坏版本印出来的是这样两行：\n\n```text\n是同一个元素吗：false\n乙 里看到的存量：0\n```\n\n毛病只有一处：`拿元素()` 里**没有先看类定义那一格**，每调用一次就当场造一个新的、再把那一格盖掉。于是 `甲` 拿到一个、`乙` 拿到另一个 —— 问「是不是同一个」答 `false`；我们往 `甲` 里添的那些数据，`乙` 那边当然看不到，所以第二行是 `0`。\n\n改法就是把单例那句心思补回去：\n\n```java\nif (唯一的一个 == null) {\n    唯一的一个 = new 数组元素();\n}\nreturn 唯一的一个;\n```\n\n先看那一格**空着没有**：空着才动手造、造完顺手记进去；已经记着了就直接把那一个递出去。补上之后 `甲` 和 `乙` 拿到的是同一个，第二行才跟着我们添的数变。\n\n顺带记一句：**这一摔不是翻译那一关拦的** —— 坏版本照样跑得起来，只是答案错了。单例这种摆法，编译器帮不上忙，得靠你自己盯着「拿到的是不是同一个」。",
+      "templateId": "java-s3-dp-singleton-no-guard",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.567Z",
+        "hash": "3e6a75b3b30070b4"
+      }
+    }
+  ]
+}

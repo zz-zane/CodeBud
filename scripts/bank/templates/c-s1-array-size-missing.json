@@ -1,0 +1,34 @@
+{
+  "templateId": "c-s1-array-size-missing",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-09",
+  "type": "codefix",
+  "concept": [
+    "摆一排元素",
+    "方括号里要写元素数",
+    "array size missing"
+  ],
+  "instances": 2,
+  "params": {
+    "a": {
+      "kind": "int",
+      "min": 6,
+      "max": 8
+    },
+    "b": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    },
+    "c": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    }
+  },
+  "stemTemplate": "我们想摆一排元素，往三个元素里各放一条数据，再把它们输出。\n\n可这段代码编译器不肯收 —— 它指着摆元素那一行说，这一排缺了个数。你帮我们看看它为什么不肯收，把它改好。改好之后，程序应该按 {a}、{b}、{c} 的顺序把三个元素里的东西输出（中间用一个空格隔开）。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[];\n\n    bowls[0] = {a};\n    bowls[1] = {b};\n    bowls[2] = {c};\n    printf(\"%d %d %d\\n\", bowls[0], bowls[1], bowls[2]);\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[3];\n\n    bowls[0] = {a};\n    bowls[1] = {b};\n    bowls[2] = {c};\n    printf(\"%d %d %d\\n\", bowls[0], bowls[1], bowls[2]);\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：`main.c:4:9: error: array size missing in 'bowls'`。\n\n翻过来就是：**`bowls` 这一排缺一个元素数。**\n\n方括号里空着是**有条件的**：只有你**同时用花括号把每个元素里的东西写出来**的时候，编译器才会替你数你写了几个、照那个数划地方（就像「方括号空着、值都写在花括号里」那种写法）。这一题里我们是先把「一排元素」摆好、再一个一个往里放的 —— 值还没露面，它就**不知道该划几个格**，只好拦下你。\n\n修法：在方括号里把元素数写出来（三个元素就写 `3`）。\n\n顺带记住这一条：**C 的这一排元素，元素数在写代码的时候就钉死了** —— 它不像 Python 那种列表，想多一个就回去改代码、再让编译器翻一遍。"
+}

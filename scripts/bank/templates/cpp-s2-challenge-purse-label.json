@@ -1,0 +1,20 @@
+{
+  "templateId": "cpp-s2-challenge-purse-label",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-15",
+  "type": "codefix",
+  "difficulty": "challenge",
+  "concept": [
+    "继承",
+    "透过名称问候",
+    "认错了对象",
+    "临时再决定"
+  ],
+  "instances": 1,
+  "params": {},
+  "stemTemplate": "我们的钱袋有两位：一位是**普通钱袋**，一位是**攒钱袋** —— 它是照着普通钱袋的类定义**套着画**出来的，只把名字改成了「攒钱袋」。\n\n程序里拿**两把名称**分别指了指这两位（名称本身的类型写的都是「指向普通钱袋」），然后挨个问名字。按理说，名称上指到谁，就该问出谁的名字 —— 可它**两个都报「普通钱袋」**，攒钱袋被当成普通钱袋了。\n\n程序不读输入接口，直接印：\n\n```\n第 1 只是 普通钱袋 \n第 2 只是 普通钱袋 \n```\n\n（上面第二行本来该报出「攒钱袋」。）你帮我们把这位攒钱袋认回来。",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Purse {\npublic:\n    string label() {\n        return \"普通钱袋\";\n    }\n};\n\nclass SavingPurse : public Purse {\npublic:\n    string label() {\n        return \"攒钱袋\";\n    }\n};\n\nint main() {\n    Purse plain;\n    SavingPurse saving;\n\n    Purse *shown[2];\n    shown[0] = &plain;\n    shown[1] = &saving;\n\n    for (int i = 0; i < 2; i++) {\n        cout << \"第 \" << i + 1 << \" 只是 \" << shown[i]->label() << \" \" << endl;\n    }\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Purse {\npublic:\n    virtual string label() {\n        return \"普通钱袋\";\n    }\n};\n\nclass SavingPurse : public Purse {\npublic:\n    string label() {\n        return \"攒钱袋\";\n    }\n};\n\nint main() {\n    Purse plain;\n    SavingPurse saving;\n\n    Purse *shown[2];\n    shown[0] = &plain;\n    shown[1] = &saving;\n\n    for (int i = 0; i < 2; i++) {\n        cout << \"第 \" << i + 1 << \" 只是 \" << shown[i]->label() << \" \" << endl;\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "两个钱袋被问成了同一个答案 —— 病根在**这声问候是啥时候定下来的**。\n\n两把名称的类型写的都是「指向普通钱袋」（`Purse *`）。调用 `shown[i]->label()` 的时候，编译器翻到这里会看一眼**名称本身的类型**，然后**当场**把「问名字」定成「问普通钱袋的名字」。它定完就翻过去了，根本不关心跑起来时名称上指的到底是哪一个 —— 所以攒钱袋被问了也白问，答的还是普通钱袋那份话。\n\n要让这声问候**拖到跑起来再决定**，就在母类定义的名字前面加一个魔法词：\n\n```cpp\nvirtual string label()\n```\n\n`virtual` 的意思是：「**这一次先后续课程将进一步说明。着定** —— 等真跑起来，看名称上实际指着谁，就问谁的那一份。」加上它之后，第 1 只照旧答「普通钱袋」，第 2 只就会答自己的「攒钱袋」。\n\n两个小规矩：\n\n1. 光在套着画的类定义上改名字**没用** —— 魔法词要加在**母类定义**那一份上；\n2. 一句话记法：**「只要以后可能透过名称问它，就在母类定义上写 `virtual`。」**"
+}

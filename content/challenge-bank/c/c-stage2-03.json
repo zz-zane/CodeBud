@@ -1,0 +1,498 @@
+{
+  "lessonId": "c-stage2-03",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-c-s2-ptrstr-bead-bowl-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一条字符串，是 `cat` 这几个字母串起来的。\n\n程序要把整条字符串**原样印出来**（一行）。可编译器一瞧见就不干了，把整段代码退了回来。你帮我们看看它为什么不高兴，把它改好。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    char s = \"cat\";\n    printf(\"%s\\n\", s);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    char *s = \"cat\";\n    printf(\"%s\\n\", s);\n    return 0;\n}\n",
+      "expectedOutput": "cat",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: initialization of 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]` —— 翻过来是「**你想把一条字符串塞进一个只装一颗字符的元素，我们不认**」。\n\n看那行 `char s = \"cat\";`：左边是 `char`，那是**一个元素，一次只装一颗字符**；右边是 `\"cat\"`，那是**一整条字符串**。字符串在 C 里不是字符，它是一种**地址** —— 说的是「这几颗字符从哪儿开始排」。想把地址当成一颗字符塞进元素里，编译器当场拦下。\n\n装字符串要用**名称**：`char *s = \"cat\";` —— 「那条字符串住在哪儿」。\n\n紧跟着还有一句 `warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]`，它说的是同一件事的另一面：`%s` 要的是**一条字符串**（也就是名称），不是一颗字符。\n\n收下这条对照：**一个元素装一颗字符（`char`），一块名称指一整条字符串（`char *`）。** 差的就是那颗星。",
+      "templateId": "c-s2-ptrstr-bead-bowl",
+      "params": {
+        "word": "cat"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "6289292bac9f286b"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-bead-bowl-003",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一条字符串，是 `moon` 这几个字母串起来的。\n\n程序要把整条字符串**原样印出来**（一行）。可编译器一瞧见就不干了，把整段代码退了回来。你帮我们看看它为什么不高兴，把它改好。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    char s = \"moon\";\n    printf(\"%s\\n\", s);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    char *s = \"moon\";\n    printf(\"%s\\n\", s);\n    return 0;\n}\n",
+      "expectedOutput": "moon",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: initialization of 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]` —— 翻过来是「**你想把一条字符串塞进一个只装一颗字符的元素，我们不认**」。\n\n看那行 `char s = \"moon\";`：左边是 `char`，那是**一个元素，一次只装一颗字符**；右边是 `\"moon\"`，那是**一整条字符串**。字符串在 C 里不是字符，它是一种**地址** —— 说的是「这几颗字符从哪儿开始排」。想把地址当成一颗字符塞进元素里，编译器当场拦下。\n\n装字符串要用**名称**：`char *s = \"moon\";` —— 「那条字符串住在哪儿」。\n\n紧跟着还有一句 `warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]`，它说的是同一件事的另一面：`%s` 要的是**一条字符串**（也就是名称），不是一颗字符。\n\n收下这条对照：**一个元素装一颗字符（`char`），一块名称指一整条字符串（`char *`）。** 差的就是那颗星。",
+      "templateId": "c-s2-ptrstr-bead-bowl",
+      "params": {
+        "word": "moon"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "a09c1788497ff289"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-own-bowl-edit-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报两个数。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行，就是**要换第几颗字符**，编号从 0 数起）。\n\n然后**把第 k 颗字符换成 `X`**，报两行：\n\n1. 第一行照写 `改之前：`，后面紧跟原来那条字符串；\n2. 第二行照写 `改之后：`，后面紧跟换过字符以后的那条字符串。\n\n比如程序的输入是\n\nmoon\n0\n\n程序就要返回\n\n改之前：moon\n改之后：Xoon\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"改之前：%s\\n\", word);\n    word[k] = 'X';\n    printf(\"改之后：%s\\n\", word);\n    return 0;\n}\n",
+      "expectedOutput": "改之前：cat\n改之后：Xat",
+      "stdin": "cat\n0\n",
+      "explanation": "这道题练的是「**要动字，就得自己摆元素**」。\n\n**① 先摆一排自己的元素。** `char word[64];` 是我们自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去。**这排元素是我们自己的** —— 这一点决定了能不能往下刻。\n\n**② 方括号挑元素、放字符。** `word[k] = 'X';` 读作「先挑出第 k 只元素，再把 `X` 那颗字符放进去」。写成 `*(word + k) = 'X';` 一模一样，一个方括号正好换一颗星加一对括号。\n\n**③ 为什么这条字符串能刻？** 因为 `word` 指的是**我们自己摆的那排元素**。对照着想一想上一题的坑：`char *s = \"cat\";` 那种名称指的是**写死在程序里的字**，往那儿刻字会当场断气。所以判断标准不是「用名称还是用元素名」，而是「**那块地方是不是我们自己的**」。\n\n顺带一个容易绊人的地方：`word` 这个名字本身**挪不动**（`word++` 编译器会拦），想往后走要另起一块名称。不过这道题不需要挪 —— **刻字只靠编号就行**，`word[k]` 直接够到第 k 只元素，名字不动也没什么关系。",
+      "templateId": "c-s2-ptrstr-own-bowl-edit",
+      "params": {
+        "word": "cat",
+        "word2": "moon",
+        "k": 0,
+        "up": "X"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "9e92826a2d0b2af9"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-own-bowl-edit-016",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报两个数。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行，就是**要换第几颗字符**，编号从 0 数起）。\n\n然后**把第 k 颗字符换成 `Z`**，报两行：\n\n1. 第一行照写 `改之前：`，后面紧跟原来那条字符串；\n2. 第二行照写 `改之后：`，后面紧跟换过字符以后的那条字符串。\n\n比如程序的输入是\n\nstar\n2\n\n程序就要返回\n\n改之前：star\n改之后：stZr\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"改之前：%s\\n\", word);\n    word[k] = 'Z';\n    printf(\"改之后：%s\\n\", word);\n    return 0;\n}\n",
+      "expectedOutput": "改之前：cat\n改之后：caZ",
+      "stdin": "cat\n2\n",
+      "explanation": "这道题练的是「**要动字，就得自己摆元素**」。\n\n**① 先摆一排自己的元素。** `char word[64];` 是我们自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去。**这排元素是我们自己的** —— 这一点决定了能不能往下刻。\n\n**② 方括号挑元素、放字符。** `word[k] = 'Z';` 读作「先挑出第 k 只元素，再把 `Z` 那颗字符放进去」。写成 `*(word + k) = 'Z';` 一模一样，一个方括号正好换一颗星加一对括号。\n\n**③ 为什么这条字符串能刻？** 因为 `word` 指的是**我们自己摆的那排元素**。对照着想一想上一题的坑：`char *s = \"cat\";` 那种名称指的是**写死在程序里的字**，往那儿刻字会当场断气。所以判断标准不是「用名称还是用元素名」，而是「**那块地方是不是我们自己的**」。\n\n顺带一个容易绊人的地方：`word` 这个名字本身**挪不动**（`word++` 编译器会拦），想往后走要另起一块名称。不过这道题不需要挪 —— **刻字只靠编号就行**，`word[k]` 直接够到第 k 只元素，名字不动也没什么关系。",
+      "templateId": "c-s2-ptrstr-own-bowl-edit",
+      "params": {
+        "word": "cat",
+        "word2": "star",
+        "k": 2,
+        "up": "Z"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "c0f8d6bfecb7770c"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-own-bowl-edit-032",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报两个数。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行，就是**要换第几颗字符**，编号从 0 数起）。\n\n然后**把第 k 颗字符换成 `Q`**，报两行：\n\n1. 第一行照写 `改之前：`，后面紧跟原来那条字符串；\n2. 第二行照写 `改之后：`，后面紧跟换过字符以后的那条字符串。\n\n比如程序的输入是\n\nmoon\n1\n\n程序就要返回\n\n改之前：moon\n改之后：mQon\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"改之前：%s\\n\", word);\n    word[k] = 'Q';\n    printf(\"改之后：%s\\n\", word);\n    return 0;\n}\n",
+      "expectedOutput": "改之前：fish\n改之后：fQsh",
+      "stdin": "fish\n1\n",
+      "explanation": "这道题练的是「**要动字，就得自己摆元素**」。\n\n**① 先摆一排自己的元素。** `char word[64];` 是我们自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去。**这排元素是我们自己的** —— 这一点决定了能不能往下刻。\n\n**② 方括号挑元素、放字符。** `word[k] = 'Q';` 读作「先挑出第 k 只元素，再把 `Q` 那颗字符放进去」。写成 `*(word + k) = 'Q';` 一模一样，一个方括号正好换一颗星加一对括号。\n\n**③ 为什么这条字符串能刻？** 因为 `word` 指的是**我们自己摆的那排元素**。对照着想一想上一题的坑：`char *s = \"cat\";` 那种名称指的是**写死在程序里的字**，往那儿刻字会当场断气。所以判断标准不是「用名称还是用元素名」，而是「**那块地方是不是我们自己的**」。\n\n顺带一个容易绊人的地方：`word` 这个名字本身**挪不动**（`word++` 编译器会拦），想往后走要另起一块名称。不过这道题不需要挪 —— **刻字只靠编号就行**，`word[k]` 直接够到第 k 只元素，名字不动也没什么关系。",
+      "templateId": "c-s2-ptrstr-own-bowl-edit",
+      "params": {
+        "word": "fish",
+        "word2": "moon",
+        "k": 1,
+        "up": "Q"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "7d22eaf14dd9bbe7"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-own-bowl-edit-048",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报两个数。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行，就是**要换第几颗字符**，编号从 0 数起）。\n\n然后**把第 k 颗字符换成 `X`**，报两行：\n\n1. 第一行照写 `改之前：`，后面紧跟原来那条字符串；\n2. 第二行照写 `改之后：`，后面紧跟换过字符以后的那条字符串。\n\n比如程序的输入是\n\nleaf\n1\n\n程序就要返回\n\n改之前：leaf\n改之后：lXaf\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"改之前：%s\\n\", word);\n    word[k] = 'X';\n    printf(\"改之后：%s\\n\", word);\n    return 0;\n}\n",
+      "expectedOutput": "改之前：fish\n改之后：fXsh",
+      "stdin": "fish\n1\n",
+      "explanation": "这道题练的是「**要动字，就得自己摆元素**」。\n\n**① 先摆一排自己的元素。** `char word[64];` 是我们自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去。**这排元素是我们自己的** —— 这一点决定了能不能往下刻。\n\n**② 方括号挑元素、放字符。** `word[k] = 'X';` 读作「先挑出第 k 只元素，再把 `X` 那颗字符放进去」。写成 `*(word + k) = 'X';` 一模一样，一个方括号正好换一颗星加一对括号。\n\n**③ 为什么这条字符串能刻？** 因为 `word` 指的是**我们自己摆的那排元素**。对照着想一想上一题的坑：`char *s = \"cat\";` 那种名称指的是**写死在程序里的字**，往那儿刻字会当场断气。所以判断标准不是「用名称还是用元素名」，而是「**那块地方是不是我们自己的**」。\n\n顺带一个容易绊人的地方：`word` 这个名字本身**挪不动**（`word++` 编译器会拦），想往后走要另起一块名称。不过这道题不需要挪 —— **刻字只靠编号就行**，`word[k]` 直接够到第 k 只元素，名字不动也没什么关系。",
+      "templateId": "c-s2-ptrstr-own-bowl-edit",
+      "params": {
+        "word": "fish",
+        "word2": "leaf",
+        "k": 1,
+        "up": "X"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "3516e1c919d142e0"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-own-bowl-edit-064",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报两个数。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行，就是**要换第几颗字符**，编号从 0 数起）。\n\n然后**把第 k 颗字符换成 `Z`**，报两行：\n\n1. 第一行照写 `改之前：`，后面紧跟原来那条字符串；\n2. 第二行照写 `改之后：`，后面紧跟换过字符以后的那条字符串。\n\n比如程序的输入是\n\nstar\n0\n\n程序就要返回\n\n改之前：star\n改之后：Ztar\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"改之前：%s\\n\", word);\n    word[k] = 'Z';\n    printf(\"改之后：%s\\n\", word);\n    return 0;\n}\n",
+      "expectedOutput": "改之前：bird\n改之后：Zird",
+      "stdin": "bird\n0\n",
+      "explanation": "这道题练的是「**要动字，就得自己摆元素**」。\n\n**① 先摆一排自己的元素。** `char word[64];` 是我们自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去。**这排元素是我们自己的** —— 这一点决定了能不能往下刻。\n\n**② 方括号挑元素、放字符。** `word[k] = 'Z';` 读作「先挑出第 k 只元素，再把 `Z` 那颗字符放进去」。写成 `*(word + k) = 'Z';` 一模一样，一个方括号正好换一颗星加一对括号。\n\n**③ 为什么这条字符串能刻？** 因为 `word` 指的是**我们自己摆的那排元素**。对照着想一想上一题的坑：`char *s = \"cat\";` 那种名称指的是**写死在程序里的字**，往那儿刻字会当场断气。所以判断标准不是「用名称还是用元素名」，而是「**那块地方是不是我们自己的**」。\n\n顺带一个容易绊人的地方：`word` 这个名字本身**挪不动**（`word++` 编译器会拦），想往后走要另起一块名称。不过这道题不需要挪 —— **刻字只靠编号就行**，`word[k]` 直接够到第 k 只元素，名字不动也没什么关系。",
+      "templateId": "c-s2-ptrstr-own-bowl-edit",
+      "params": {
+        "word": "bird",
+        "word2": "star",
+        "k": 0,
+        "up": "Z"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "bee4147e5eeb0cf1"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-own-bowl-edit-080",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报两个数。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行，就是**要换第几颗字符**，编号从 0 数起）。\n\n然后**把第 k 颗字符换成 `Q`**，报两行：\n\n1. 第一行照写 `改之前：`，后面紧跟原来那条字符串；\n2. 第二行照写 `改之后：`，后面紧跟换过字符以后的那条字符串。\n\n比如程序的输入是\n\nleaf\n2\n\n程序就要返回\n\n改之前：leaf\n改之后：leQf\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"改之前：%s\\n\", word);\n    word[k] = 'Q';\n    printf(\"改之后：%s\\n\", word);\n    return 0;\n}\n",
+      "expectedOutput": "改之前：bird\n改之后：biQd",
+      "stdin": "bird\n2\n",
+      "explanation": "这道题练的是「**要动字，就得自己摆元素**」。\n\n**① 先摆一排自己的元素。** `char word[64];` 是我们自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去。**这排元素是我们自己的** —— 这一点决定了能不能往下刻。\n\n**② 方括号挑元素、放字符。** `word[k] = 'Q';` 读作「先挑出第 k 只元素，再把 `Q` 那颗字符放进去」。写成 `*(word + k) = 'Q';` 一模一样，一个方括号正好换一颗星加一对括号。\n\n**③ 为什么这条字符串能刻？** 因为 `word` 指的是**我们自己摆的那排元素**。对照着想一想上一题的坑：`char *s = \"cat\";` 那种名称指的是**写死在程序里的字**，往那儿刻字会当场断气。所以判断标准不是「用名称还是用元素名」，而是「**那块地方是不是我们自己的**」。\n\n顺带一个容易绊人的地方：`word` 这个名字本身**挪不动**（`word++` 编译器会拦），想往后走要另起一块名称。不过这道题不需要挪 —— **刻字只靠编号就行**，`word[k]` 直接够到第 k 只元素，名字不动也没什么关系。",
+      "templateId": "c-s2-ptrstr-own-bowl-edit",
+      "params": {
+        "word": "bird",
+        "word2": "leaf",
+        "k": 2,
+        "up": "Q"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "50078ff7ec9870e5"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-star-in-walk-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一条字符串，是 `cat` 这几个字母串起来的。\n\n程序想用一块名称从第一颗字符走起，**一颗一颗**地把整条字符串输出，最后再换一行收尾。\n\n可它跑起来什么都没印就断气了 —— 编译器这回**出了声**，但没把我们拦下，代码照样编了出来。你帮我们看看它说的是什么意思，把程序改好。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    char *s = \"cat\";\n\n    for (char *p = s; *p != '\\0'; p++) {\n        printf(\"%s\", *p);\n    }\n    printf(\"\\n\");\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    char *s = \"cat\";\n\n    for (char *p = s; *p != '\\0'; p++) {\n        printf(\"%c\", *p);\n    }\n    printf(\"\\n\");\n    return 0;\n}\n",
+      "expectedOutput": "cat",
+      "stdin": null,
+      "explanation": "编译器的原话是 `warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]` —— 翻过来就是「**`%s` 要的是一整条字符串（名称），你传入的是一颗字符**」。\n\n毛病在那颗星上。走这一趟的 `p` 是**一块名称**，`*p` 是**当前这颗字符** —— 一个字符。`%s` 的脾气是「把从这块名称开始的一整条字符串印出来」，而走一颗印一颗要的是 `%c`。\n\n⚠️ 这里最贵的一点是：**它只出声，不拦人。** 我们真跑过这一版 —— 警告归警告，程序照样被编了出来、交到了我们手里。然后一跑起来，`%s` 拿着「一颗字符的字码」当地址，顺着这个奇怪的地址去找字符串，当场断气：**一个字都没印出来。**\n\n把这一对收进兜里：**`%c` 印一颗字符，`%s` 印一整条字符串；一个收字符，一个收名称。** 走一圈一颗一颗印的场合，永远配 `%c` 。",
+      "templateId": "c-s2-ptrstr-star-in-walk",
+      "params": {
+        "word": "cat"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "af18136357c2bb58"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-star-in-walk-003",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一条字符串，是 `moon` 这几个字母串起来的。\n\n程序想用一块名称从第一颗字符走起，**一颗一颗**地把整条字符串输出，最后再换一行收尾。\n\n可它跑起来什么都没印就断气了 —— 编译器这回**出了声**，但没把我们拦下，代码照样编了出来。你帮我们看看它说的是什么意思，把程序改好。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    char *s = \"moon\";\n\n    for (char *p = s; *p != '\\0'; p++) {\n        printf(\"%s\", *p);\n    }\n    printf(\"\\n\");\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    char *s = \"moon\";\n\n    for (char *p = s; *p != '\\0'; p++) {\n        printf(\"%c\", *p);\n    }\n    printf(\"\\n\");\n    return 0;\n}\n",
+      "expectedOutput": "moon",
+      "stdin": null,
+      "explanation": "编译器的原话是 `warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]` —— 翻过来就是「**`%s` 要的是一整条字符串（名称），你传入的是一颗字符**」。\n\n毛病在那颗星上。走这一趟的 `p` 是**一块名称**，`*p` 是**当前这颗字符** —— 一个字符。`%s` 的脾气是「把从这块名称开始的一整条字符串印出来」，而走一颗印一颗要的是 `%c`。\n\n⚠️ 这里最贵的一点是：**它只出声，不拦人。** 我们真跑过这一版 —— 警告归警告，程序照样被编了出来、交到了我们手里。然后一跑起来，`%s` 拿着「一颗字符的字码」当地址，顺着这个奇怪的地址去找字符串，当场断气：**一个字都没印出来。**\n\n把这一对收进兜里：**`%c` 印一颗字符，`%s` 印一整条字符串；一个收字符，一个收名称。** 走一圈一颗一颗印的场合，永远配 `%c` 。",
+      "templateId": "c-s2-ptrstr-star-in-walk",
+      "params": {
+        "word": "moon"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "320d6c068f31ed1f"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-tail-from-k-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报一个数，那是「**从第几颗字符起**」。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行）。然后报两行：\n\n1. `整条：` 后面紧跟着整条字符串**原样**；\n2. 第二行开头照写 `从第 k 颗起：`（把 `k` 换成你读进来的那个数），后面紧跟**从第 k 颗起一直到最后**的那一截末尾（含第 k 颗自己）。\n\n字符的编号从 0 数起。\n\n比如程序的输入是\n\nmoon\n1\n\n程序就要返回\n\n整条：moon\n从第 1 颗起：oon\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"整条：%s\\n\", word);\n    printf(\"从第 %d 颗起：%s\\n\", k, word + k);\n    return 0;\n}\n",
+      "expectedOutput": "整条：cat\n从第 1 颗起：at",
+      "stdin": "cat\n1\n",
+      "explanation": "这道题只有一个「啊哈」的地方：**一截末尾，照样是一整条字符串。**\n\n- 「一整条字符串」在 C 里不是「那一串字符全都在这儿」，而是「**从哪一颗开始**」这个地址。所以把地址往后挪 k 颗，剩下的那一截**自己就是一条完整的字符串** —— 末尾那颗看不见的收尾字符还在，`%s` 照样认。\n- 地址怎么往后挪？第一课就学过了：一排元素的名字加 k，就是第 k 颗的地址。这里写成 `word + k` 一行就够了。\n\n不用另摆一排元素，也不用绕圈，一行就印出末尾 —— 这就是「名称加一加，字符串往后挪」的省事之处。\n\n两条对照顺手收下：\n\n- 想印**一截末尾**：`word + k`，配 `%s`；\n- 想印**第 k 颗那一颗字符**：`word[k]`（和 `*(word + k)` 是一回事），配 `%c`。\n\n⚠️ 还有一件小事值得想一想：`k` **是从键盘读进来的**，写程序的时候我们压根不知道它会是几，所以**不能**把它写死在代码里 —— 这也是为什么参考解要先读一遍、再拿读到的那个数去用。往后凡是从外面进来的东西，都得先接住、再使用，跟字符串多长是一个道理。",
+      "templateId": "c-s2-ptrstr-tail-from-k",
+      "params": {
+        "word": "cat",
+        "word2": "moon",
+        "k": 1
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "c42c0c919c961295"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-tail-from-k-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报一个数，那是「**从第几颗字符起**」。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行）。然后报两行：\n\n1. `整条：` 后面紧跟着整条字符串**原样**；\n2. 第二行开头照写 `从第 k 颗起：`（把 `k` 换成你读进来的那个数），后面紧跟**从第 k 颗起一直到最后**的那一截末尾（含第 k 颗自己）。\n\n字符的编号从 0 数起。\n\n比如程序的输入是\n\nstar\n2\n\n程序就要返回\n\n整条：star\n从第 2 颗起：ar\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"整条：%s\\n\", word);\n    printf(\"从第 %d 颗起：%s\\n\", k, word + k);\n    return 0;\n}\n",
+      "expectedOutput": "整条：cat\n从第 2 颗起：t",
+      "stdin": "cat\n2\n",
+      "explanation": "这道题只有一个「啊哈」的地方：**一截末尾，照样是一整条字符串。**\n\n- 「一整条字符串」在 C 里不是「那一串字符全都在这儿」，而是「**从哪一颗开始**」这个地址。所以把地址往后挪 k 颗，剩下的那一截**自己就是一条完整的字符串** —— 末尾那颗看不见的收尾字符还在，`%s` 照样认。\n- 地址怎么往后挪？第一课就学过了：一排元素的名字加 k，就是第 k 颗的地址。这里写成 `word + k` 一行就够了。\n\n不用另摆一排元素，也不用绕圈，一行就印出末尾 —— 这就是「名称加一加，字符串往后挪」的省事之处。\n\n两条对照顺手收下：\n\n- 想印**一截末尾**：`word + k`，配 `%s`；\n- 想印**第 k 颗那一颗字符**：`word[k]`（和 `*(word + k)` 是一回事），配 `%c`。\n\n⚠️ 还有一件小事值得想一想：`k` **是从键盘读进来的**，写程序的时候我们压根不知道它会是几，所以**不能**把它写死在代码里 —— 这也是为什么参考解要先读一遍、再拿读到的那个数去用。往后凡是从外面进来的东西，都得先接住、再使用，跟字符串多长是一个道理。",
+      "templateId": "c-s2-ptrstr-tail-from-k",
+      "params": {
+        "word": "cat",
+        "word2": "star",
+        "k": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "fe4717a42f6488e3"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-tail-from-k-007",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报一个数，那是「**从第几颗字符起**」。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行）。然后报两行：\n\n1. `整条：` 后面紧跟着整条字符串**原样**；\n2. 第二行开头照写 `从第 k 颗起：`（把 `k` 换成你读进来的那个数），后面紧跟**从第 k 颗起一直到最后**的那一截末尾（含第 k 颗自己）。\n\n字符的编号从 0 数起。\n\n比如程序的输入是\n\nmoon\n2\n\n程序就要返回\n\n整条：moon\n从第 2 颗起：on\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"整条：%s\\n\", word);\n    printf(\"从第 %d 颗起：%s\\n\", k, word + k);\n    return 0;\n}\n",
+      "expectedOutput": "整条：fish\n从第 2 颗起：sh",
+      "stdin": "fish\n2\n",
+      "explanation": "这道题只有一个「啊哈」的地方：**一截末尾，照样是一整条字符串。**\n\n- 「一整条字符串」在 C 里不是「那一串字符全都在这儿」，而是「**从哪一颗开始**」这个地址。所以把地址往后挪 k 颗，剩下的那一截**自己就是一条完整的字符串** —— 末尾那颗看不见的收尾字符还在，`%s` 照样认。\n- 地址怎么往后挪？第一课就学过了：一排元素的名字加 k，就是第 k 颗的地址。这里写成 `word + k` 一行就够了。\n\n不用另摆一排元素，也不用绕圈，一行就印出末尾 —— 这就是「名称加一加，字符串往后挪」的省事之处。\n\n两条对照顺手收下：\n\n- 想印**一截末尾**：`word + k`，配 `%s`；\n- 想印**第 k 颗那一颗字符**：`word[k]`（和 `*(word + k)` 是一回事），配 `%c`。\n\n⚠️ 还有一件小事值得想一想：`k` **是从键盘读进来的**，写程序的时候我们压根不知道它会是几，所以**不能**把它写死在代码里 —— 这也是为什么参考解要先读一遍、再拿读到的那个数去用。往后凡是从外面进来的东西，都得先接住、再使用，跟字符串多长是一个道理。",
+      "templateId": "c-s2-ptrstr-tail-from-k",
+      "params": {
+        "word": "fish",
+        "word2": "moon",
+        "k": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "a01625b2589f5589"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-tail-from-k-010",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报一个数，那是「**从第几颗字符起**」。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行）。然后报两行：\n\n1. `整条：` 后面紧跟着整条字符串**原样**；\n2. 第二行开头照写 `从第 k 颗起：`（把 `k` 换成你读进来的那个数），后面紧跟**从第 k 颗起一直到最后**的那一截末尾（含第 k 颗自己）。\n\n字符的编号从 0 数起。\n\n比如程序的输入是\n\nleaf\n1\n\n程序就要返回\n\n整条：leaf\n从第 1 颗起：eaf\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"整条：%s\\n\", word);\n    printf(\"从第 %d 颗起：%s\\n\", k, word + k);\n    return 0;\n}\n",
+      "expectedOutput": "整条：fish\n从第 1 颗起：ish",
+      "stdin": "fish\n1\n",
+      "explanation": "这道题只有一个「啊哈」的地方：**一截末尾，照样是一整条字符串。**\n\n- 「一整条字符串」在 C 里不是「那一串字符全都在这儿」，而是「**从哪一颗开始**」这个地址。所以把地址往后挪 k 颗，剩下的那一截**自己就是一条完整的字符串** —— 末尾那颗看不见的收尾字符还在，`%s` 照样认。\n- 地址怎么往后挪？第一课就学过了：一排元素的名字加 k，就是第 k 颗的地址。这里写成 `word + k` 一行就够了。\n\n不用另摆一排元素，也不用绕圈，一行就印出末尾 —— 这就是「名称加一加，字符串往后挪」的省事之处。\n\n两条对照顺手收下：\n\n- 想印**一截末尾**：`word + k`，配 `%s`；\n- 想印**第 k 颗那一颗字符**：`word[k]`（和 `*(word + k)` 是一回事），配 `%c`。\n\n⚠️ 还有一件小事值得想一想：`k` **是从键盘读进来的**，写程序的时候我们压根不知道它会是几，所以**不能**把它写死在代码里 —— 这也是为什么参考解要先读一遍、再拿读到的那个数去用。往后凡是从外面进来的东西，都得先接住、再使用，跟字符串多长是一个道理。",
+      "templateId": "c-s2-ptrstr-tail-from-k",
+      "params": {
+        "word": "fish",
+        "word2": "leaf",
+        "k": 1
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "32d8a36ccfa10b3d"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-tail-from-k-014",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报一个数，那是「**从第几颗字符起**」。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行）。然后报两行：\n\n1. `整条：` 后面紧跟着整条字符串**原样**；\n2. 第二行开头照写 `从第 k 颗起：`（把 `k` 换成你读进来的那个数），后面紧跟**从第 k 颗起一直到最后**的那一截末尾（含第 k 颗自己）。\n\n字符的编号从 0 数起。\n\n比如程序的输入是\n\nstar\n1\n\n程序就要返回\n\n整条：star\n从第 1 颗起：tar\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"整条：%s\\n\", word);\n    printf(\"从第 %d 颗起：%s\\n\", k, word + k);\n    return 0;\n}\n",
+      "expectedOutput": "整条：bird\n从第 1 颗起：ird",
+      "stdin": "bird\n1\n",
+      "explanation": "这道题只有一个「啊哈」的地方：**一截末尾，照样是一整条字符串。**\n\n- 「一整条字符串」在 C 里不是「那一串字符全都在这儿」，而是「**从哪一颗开始**」这个地址。所以把地址往后挪 k 颗，剩下的那一截**自己就是一条完整的字符串** —— 末尾那颗看不见的收尾字符还在，`%s` 照样认。\n- 地址怎么往后挪？第一课就学过了：一排元素的名字加 k，就是第 k 颗的地址。这里写成 `word + k` 一行就够了。\n\n不用另摆一排元素，也不用绕圈，一行就印出末尾 —— 这就是「名称加一加，字符串往后挪」的省事之处。\n\n两条对照顺手收下：\n\n- 想印**一截末尾**：`word + k`，配 `%s`；\n- 想印**第 k 颗那一颗字符**：`word[k]`（和 `*(word + k)` 是一回事），配 `%c`。\n\n⚠️ 还有一件小事值得想一想：`k` **是从键盘读进来的**，写程序的时候我们压根不知道它会是几，所以**不能**把它写死在代码里 —— 这也是为什么参考解要先读一遍、再拿读到的那个数去用。往后凡是从外面进来的东西，都得先接住、再使用，跟字符串多长是一个道理。",
+      "templateId": "c-s2-ptrstr-tail-from-k",
+      "params": {
+        "word": "bird",
+        "word2": "star",
+        "k": 1
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "a9aa7c90d5d77f73"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-tail-from-k-017",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的。另外我们还会报一个数，那是「**从第几颗字符起**」。\n\n请你写个程序：先读进来这条字符串（一行，不带空格），再读进来那个数（一行）。然后报两行：\n\n1. `整条：` 后面紧跟着整条字符串**原样**；\n2. 第二行开头照写 `从第 k 颗起：`（把 `k` 换成你读进来的那个数），后面紧跟**从第 k 颗起一直到最后**的那一截末尾（含第 k 颗自己）。\n\n字符的编号从 0 数起。\n\n比如程序的输入是\n\nleaf\n2\n\n程序就要返回\n\n整条：leaf\n从第 2 颗起：af\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n    int k;\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n    if (scanf(\"%d\", &k) != 1) {\n        return 1;\n    }\n\n    printf(\"整条：%s\\n\", word);\n    printf(\"从第 %d 颗起：%s\\n\", k, word + k);\n    return 0;\n}\n",
+      "expectedOutput": "整条：bird\n从第 2 颗起：rd",
+      "stdin": "bird\n2\n",
+      "explanation": "这道题只有一个「啊哈」的地方：**一截末尾，照样是一整条字符串。**\n\n- 「一整条字符串」在 C 里不是「那一串字符全都在这儿」，而是「**从哪一颗开始**」这个地址。所以把地址往后挪 k 颗，剩下的那一截**自己就是一条完整的字符串** —— 末尾那颗看不见的收尾字符还在，`%s` 照样认。\n- 地址怎么往后挪？第一课就学过了：一排元素的名字加 k，就是第 k 颗的地址。这里写成 `word + k` 一行就够了。\n\n不用另摆一排元素，也不用绕圈，一行就印出末尾 —— 这就是「名称加一加，字符串往后挪」的省事之处。\n\n两条对照顺手收下：\n\n- 想印**一截末尾**：`word + k`，配 `%s`；\n- 想印**第 k 颗那一颗字符**：`word[k]`（和 `*(word + k)` 是一回事），配 `%c`。\n\n⚠️ 还有一件小事值得想一想：`k` **是从键盘读进来的**，写程序的时候我们压根不知道它会是几，所以**不能**把它写死在代码里 —— 这也是为什么参考解要先读一遍、再拿读到的那个数去用。往后凡是从外面进来的东西，都得先接住、再使用，跟字符串多长是一个道理。",
+      "templateId": "c-s2-ptrstr-tail-from-k",
+      "params": {
+        "word": "bird",
+        "word2": "leaf",
+        "k": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "24209e1641509d77"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-walk-beads-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的，程序要从键盘上把它读进来。\n\n请你写个程序：先把这条字符串读进来，然后**拿一块名称从第一颗字符走起，一颗一颗往下走**，每走一颗就把那颗字符单独印一行；走完以后，再报一行：`一共 n 颗珠子`（`n` 是这条字符串真正有几颗字符，末尾那颗看不见的收尾字符**不算**）。\n\n比如程序的输入是\n\nmoon\n\n程序就要返回\n\nm\no\no\nn\n一共 4 颗字符\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n\n    int n = 0;\n    for (char *p = word; *p != '\\0'; p++) {\n        printf(\"%c\\n\", *p);\n        n = n + 1;\n    }\n    printf(\"一共 %d 颗珠子\\n\", n);\n    return 0;\n}\n",
+      "expectedOutput": "c\na\nt\n一共 3 颗珠子",
+      "stdin": "cat\n",
+      "explanation": "这道题是「走字符串」的标准样子，四件事一件件来：\n\n**① 接住字符串。** `char word[64];` 是自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去 —— 末尾系统会自动补上一颗看不见的**收尾字符**（写出来是 `'\\0'`）。\n\n**② 名称从第一颗走起。** `char *p = word;` —— 一排元素的名字交出来，就是第 0 颗的地址。\n\n**③ 走到收尾字符就停。** 条件写 `*p != '\\0'`：意思是「当前这颗**不是**那颗看不见的收尾字符」。这句话比「走固定那么多趟」稳得多 —— 字符串有多长，我们压根不用先知道。\n\n**④ 每走一颗印一颗。** 名称上是**一颗字符**，所以要用 `%c`，不是 `%s`。（上一题那个坑就是这么来的：`%s` 要的是名称，`*p` 是一颗字符。）\n\n数字符那件事顺路就做了：每走一步 `n` 加一，走完就是真字符的颗数。**末尾那颗收尾字符不算** —— 因为绕圈一碰见它就停了，它压根没被数进去，这正是它该有的样子。",
+      "templateId": "c-s2-ptrstr-walk-beads",
+      "params": {
+        "word": "cat",
+        "word2": "moon"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "c057f93d83b55a52"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-walk-beads-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的，程序要从键盘上把它读进来。\n\n请你写个程序：先把这条字符串读进来，然后**拿一块名称从第一颗字符走起，一颗一颗往下走**，每走一颗就把那颗字符单独印一行；走完以后，再报一行：`一共 n 颗珠子`（`n` 是这条字符串真正有几颗字符，末尾那颗看不见的收尾字符**不算**）。\n\n比如程序的输入是\n\nleaf\n\n程序就要返回\n\nl\ne\na\nf\n一共 4 颗字符\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n\n    int n = 0;\n    for (char *p = word; *p != '\\0'; p++) {\n        printf(\"%c\\n\", *p);\n        n = n + 1;\n    }\n    printf(\"一共 %d 颗珠子\\n\", n);\n    return 0;\n}\n",
+      "expectedOutput": "c\na\nt\n一共 3 颗珠子",
+      "stdin": "cat\n",
+      "explanation": "这道题是「走字符串」的标准样子，四件事一件件来：\n\n**① 接住字符串。** `char word[64];` 是自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去 —— 末尾系统会自动补上一颗看不见的**收尾字符**（写出来是 `'\\0'`）。\n\n**② 名称从第一颗走起。** `char *p = word;` —— 一排元素的名字交出来，就是第 0 颗的地址。\n\n**③ 走到收尾字符就停。** 条件写 `*p != '\\0'`：意思是「当前这颗**不是**那颗看不见的收尾字符」。这句话比「走固定那么多趟」稳得多 —— 字符串有多长，我们压根不用先知道。\n\n**④ 每走一颗印一颗。** 名称上是**一颗字符**，所以要用 `%c`，不是 `%s`。（上一题那个坑就是这么来的：`%s` 要的是名称，`*p` 是一颗字符。）\n\n数字符那件事顺路就做了：每走一步 `n` 加一，走完就是真字符的颗数。**末尾那颗收尾字符不算** —— 因为绕圈一碰见它就停了，它压根没被数进去，这正是它该有的样子。",
+      "templateId": "c-s2-ptrstr-walk-beads",
+      "params": {
+        "word": "cat",
+        "word2": "leaf"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "94f31ea3c1842076"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-walk-beads-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的，程序要从键盘上把它读进来。\n\n请你写个程序：先把这条字符串读进来，然后**拿一块名称从第一颗字符走起，一颗一颗往下走**，每走一颗就把那颗字符单独印一行；走完以后，再报一行：`一共 n 颗珠子`（`n` 是这条字符串真正有几颗字符，末尾那颗看不见的收尾字符**不算**）。\n\n比如程序的输入是\n\nmoon\n\n程序就要返回\n\nm\no\no\nn\n一共 4 颗字符\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n\n    int n = 0;\n    for (char *p = word; *p != '\\0'; p++) {\n        printf(\"%c\\n\", *p);\n        n = n + 1;\n    }\n    printf(\"一共 %d 颗珠子\\n\", n);\n    return 0;\n}\n",
+      "expectedOutput": "f\ni\ns\nh\n一共 4 颗珠子",
+      "stdin": "fish\n",
+      "explanation": "这道题是「走字符串」的标准样子，四件事一件件来：\n\n**① 接住字符串。** `char word[64];` 是自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去 —— 末尾系统会自动补上一颗看不见的**收尾字符**（写出来是 `'\\0'`）。\n\n**② 名称从第一颗走起。** `char *p = word;` —— 一排元素的名字交出来，就是第 0 颗的地址。\n\n**③ 走到收尾字符就停。** 条件写 `*p != '\\0'`：意思是「当前这颗**不是**那颗看不见的收尾字符」。这句话比「走固定那么多趟」稳得多 —— 字符串有多长，我们压根不用先知道。\n\n**④ 每走一颗印一颗。** 名称上是**一颗字符**，所以要用 `%c`，不是 `%s`。（上一题那个坑就是这么来的：`%s` 要的是名称，`*p` 是一颗字符。）\n\n数字符那件事顺路就做了：每走一步 `n` 加一，走完就是真字符的颗数。**末尾那颗收尾字符不算** —— 因为绕圈一碰见它就停了，它压根没被数进去，这正是它该有的样子。",
+      "templateId": "c-s2-ptrstr-walk-beads",
+      "params": {
+        "word": "fish",
+        "word2": "moon"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "bbd49dcbc6397e0b"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-walk-beads-005",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的，程序要从键盘上把它读进来。\n\n请你写个程序：先把这条字符串读进来，然后**拿一块名称从第一颗字符走起，一颗一颗往下走**，每走一颗就把那颗字符单独印一行；走完以后，再报一行：`一共 n 颗珠子`（`n` 是这条字符串真正有几颗字符，末尾那颗看不见的收尾字符**不算**）。\n\n比如程序的输入是\n\nleaf\n\n程序就要返回\n\nl\ne\na\nf\n一共 4 颗字符\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n\n    int n = 0;\n    for (char *p = word; *p != '\\0'; p++) {\n        printf(\"%c\\n\", *p);\n        n = n + 1;\n    }\n    printf(\"一共 %d 颗珠子\\n\", n);\n    return 0;\n}\n",
+      "expectedOutput": "f\ni\ns\nh\n一共 4 颗珠子",
+      "stdin": "fish\n",
+      "explanation": "这道题是「走字符串」的标准样子，四件事一件件来：\n\n**① 接住字符串。** `char word[64];` 是自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去 —— 末尾系统会自动补上一颗看不见的**收尾字符**（写出来是 `'\\0'`）。\n\n**② 名称从第一颗走起。** `char *p = word;` —— 一排元素的名字交出来，就是第 0 颗的地址。\n\n**③ 走到收尾字符就停。** 条件写 `*p != '\\0'`：意思是「当前这颗**不是**那颗看不见的收尾字符」。这句话比「走固定那么多趟」稳得多 —— 字符串有多长，我们压根不用先知道。\n\n**④ 每走一颗印一颗。** 名称上是**一颗字符**，所以要用 `%c`，不是 `%s`。（上一题那个坑就是这么来的：`%s` 要的是名称，`*p` 是一颗字符。）\n\n数字符那件事顺路就做了：每走一步 `n` 加一，走完就是真字符的颗数。**末尾那颗收尾字符不算** —— 因为绕圈一碰见它就停了，它压根没被数进去，这正是它该有的样子。",
+      "templateId": "c-s2-ptrstr-walk-beads",
+      "params": {
+        "word": "fish",
+        "word2": "leaf"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "755edf128081c31b"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-walk-beads-006",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的，程序要从键盘上把它读进来。\n\n请你写个程序：先把这条字符串读进来，然后**拿一块名称从第一颗字符走起，一颗一颗往下走**，每走一颗就把那颗字符单独印一行；走完以后，再报一行：`一共 n 颗珠子`（`n` 是这条字符串真正有几颗字符，末尾那颗看不见的收尾字符**不算**）。\n\n比如程序的输入是\n\nmoon\n\n程序就要返回\n\nm\no\no\nn\n一共 4 颗字符\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n\n    int n = 0;\n    for (char *p = word; *p != '\\0'; p++) {\n        printf(\"%c\\n\", *p);\n        n = n + 1;\n    }\n    printf(\"一共 %d 颗珠子\\n\", n);\n    return 0;\n}\n",
+      "expectedOutput": "b\ni\nr\nd\n一共 4 颗珠子",
+      "stdin": "bird\n",
+      "explanation": "这道题是「走字符串」的标准样子，四件事一件件来：\n\n**① 接住字符串。** `char word[64];` 是自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去 —— 末尾系统会自动补上一颗看不见的**收尾字符**（写出来是 `'\\0'`）。\n\n**② 名称从第一颗走起。** `char *p = word;` —— 一排元素的名字交出来，就是第 0 颗的地址。\n\n**③ 走到收尾字符就停。** 条件写 `*p != '\\0'`：意思是「当前这颗**不是**那颗看不见的收尾字符」。这句话比「走固定那么多趟」稳得多 —— 字符串有多长，我们压根不用先知道。\n\n**④ 每走一颗印一颗。** 名称上是**一颗字符**，所以要用 `%c`，不是 `%s`。（上一题那个坑就是这么来的：`%s` 要的是名称，`*p` 是一颗字符。）\n\n数字符那件事顺路就做了：每走一步 `n` 加一，走完就是真字符的颗数。**末尾那颗收尾字符不算** —— 因为绕圈一碰见它就停了，它压根没被数进去，这正是它该有的样子。",
+      "templateId": "c-s2-ptrstr-walk-beads",
+      "params": {
+        "word": "bird",
+        "word2": "moon"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "1f3056cce09a00ab"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-walk-beads-008",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们递给你一条字符串：是几个**不带空格**的字母串起来的，程序要从键盘上把它读进来。\n\n请你写个程序：先把这条字符串读进来，然后**拿一块名称从第一颗字符走起，一颗一颗往下走**，每走一颗就把那颗字符单独印一行；走完以后，再报一行：`一共 n 颗珠子`（`n` 是这条字符串真正有几颗字符，末尾那颗看不见的收尾字符**不算**）。\n\n比如程序的输入是\n\nleaf\n\n程序就要返回\n\nl\ne\na\nf\n一共 4 颗字符\n\n（判分用的是**另外一条字符串**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    char word[64];\n\n    if (scanf(\"%s\", word) != 1) {\n        return 1;\n    }\n\n    int n = 0;\n    for (char *p = word; *p != '\\0'; p++) {\n        printf(\"%c\\n\", *p);\n        n = n + 1;\n    }\n    printf(\"一共 %d 颗珠子\\n\", n);\n    return 0;\n}\n",
+      "expectedOutput": "b\ni\nr\nd\n一共 4 颗珠子",
+      "stdin": "bird\n",
+      "explanation": "这道题是「走字符串」的标准样子，四件事一件件来：\n\n**① 接住字符串。** `char word[64];` 是自己摆的一排元素，`scanf(\"%s\", word)` 把键盘上那条字符串一颗一颗接进去 —— 末尾系统会自动补上一颗看不见的**收尾字符**（写出来是 `'\\0'`）。\n\n**② 名称从第一颗走起。** `char *p = word;` —— 一排元素的名字交出来，就是第 0 颗的地址。\n\n**③ 走到收尾字符就停。** 条件写 `*p != '\\0'`：意思是「当前这颗**不是**那颗看不见的收尾字符」。这句话比「走固定那么多趟」稳得多 —— 字符串有多长，我们压根不用先知道。\n\n**④ 每走一颗印一颗。** 名称上是**一颗字符**，所以要用 `%c`，不是 `%s`。（上一题那个坑就是这么来的：`%s` 要的是名称，`*p` 是一颗字符。）\n\n数字符那件事顺路就做了：每走一步 `n` 加一，走完就是真字符的颗数。**末尾那颗收尾字符不算** —— 因为绕圈一碰见它就停了，它压根没被数进去，这正是它该有的样子。",
+      "templateId": "c-s2-ptrstr-walk-beads",
+      "params": {
+        "word": "bird",
+        "word2": "leaf"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "a1ca68e8a26a614a"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-write-literal-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一条字符串，是 `cat` 这几个字母串起来的。\n\n程序想把**第 0 颗字符**换成 `X`，然后把改过的字符串印出来（一行）。\n\n可它跑起来什么都没印就断气了 —— 编译器**一次都没吭**，代码照样编了出来。你帮我们看看是哪儿写歪了。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    char *s = \"cat\";\n    s[0] = 'X';\n    printf(\"%s\\n\", s);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    char word[] = \"cat\";\n    word[0] = 'X';\n    printf(\"%s\\n\", word);\n    return 0;\n}\n",
+      "expectedOutput": "Xat",
+      "stdin": null,
+      "explanation": "这一题的坑就藏在上一题那个「正确写法」里。\n\n`char *s = \"cat\";` 里的 `\"cat\"` 是一串**写死在程序里的字**。它住在程序一个**只给念、不给刻**的地方 —— C 里管这个叫字面量。你拿 `s[0] = 'X';` 去刻它，等于往一块「不许刻字」的木牌上下刀。\n\n⚠️ 最难看的是它的报错方式：**编译器一个字都没说。** 我们真跑过这一版，`-Wall` 开着，它安安静静地把程序编了出来 —— 因为这一行**语法上完全合法**，它管不了「那块地方能不能刻」。真正拦你的是跑起来之后那一下：屏幕上一片空白，一个字都没印出来，程序当场断气。\n\n想改，就得**自己摆一排元素把字符串接住**：\n\n- `char word[] = \"cat\";` —— 这句的意思是「照着那几个字母，我们自己摆一排元素，一颗一颗接住」。摆出来的这排元素是**我们自己的**，想刻第几颗刻第几颗。\n\n一句话收下：**念的用名称，改的用自己摆的元素。** 下一题（还有往后每一课）只要看见「要往字符串里写字」，先想想这一排元素是不是自己的。",
+      "templateId": "c-s2-ptrstr-write-literal",
+      "params": {
+        "word": "cat"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "eb97f76926b84597"
+      }
+    },
+    {
+      "id": "bank-c-s2-ptrstr-write-literal-003",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一条字符串，是 `moon` 这几个字母串起来的。\n\n程序想把**第 0 颗字符**换成 `X`，然后把改过的字符串印出来（一行）。\n\n可它跑起来什么都没印就断气了 —— 编译器**一次都没吭**，代码照样编了出来。你帮我们看看是哪儿写歪了。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    char *s = \"moon\";\n    s[0] = 'X';\n    printf(\"%s\\n\", s);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    char word[] = \"moon\";\n    word[0] = 'X';\n    printf(\"%s\\n\", word);\n    return 0;\n}\n",
+      "expectedOutput": "Xoon",
+      "stdin": null,
+      "explanation": "这一题的坑就藏在上一题那个「正确写法」里。\n\n`char *s = \"moon\";` 里的 `\"moon\"` 是一串**写死在程序里的字**。它住在程序一个**只给念、不给刻**的地方 —— C 里管这个叫字面量。你拿 `s[0] = 'X';` 去刻它，等于往一块「不许刻字」的木牌上下刀。\n\n⚠️ 最难看的是它的报错方式：**编译器一个字都没说。** 我们真跑过这一版，`-Wall` 开着，它安安静静地把程序编了出来 —— 因为这一行**语法上完全合法**，它管不了「那块地方能不能刻」。真正拦你的是跑起来之后那一下：屏幕上一片空白，一个字都没印出来，程序当场断气。\n\n想改，就得**自己摆一排元素把字符串接住**：\n\n- `char word[] = \"moon\";` —— 这句的意思是「照着那几个字母，我们自己摆一排元素，一颗一颗接住」。摆出来的这排元素是**我们自己的**，想刻第几颗刻第几颗。\n\n一句话收下：**念的用名称，改的用自己摆的元素。** 下一题（还有往后每一课）只要看见「要往字符串里写字」，先想想这一排元素是不是自己的。",
+      "templateId": "c-s2-ptrstr-write-literal",
+      "params": {
+        "word": "moon"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.333Z",
+        "hash": "0d2c6a2cc5ad71b2"
+      }
+    }
+  ]
+}

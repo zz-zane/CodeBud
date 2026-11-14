@@ -1,0 +1,502 @@
+{
+  "lessonId": "cpp-stage1-01",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s1-forgot-endl-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给新来的子对象写了三条处理口诀，**一条占一行**，好念好记。\n\n可这份源代码跑起来，屏幕上只出来了**两行**——三条口诀里有两条挤到一块儿去了。它一个错都不报，安安静静就这么念完了。你帮我们改好，让三条口诀各自站一行。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"第一条：拿起数据\" << endl;\n    cout << \"第二条：放进元素里\";\n    cout << \"第三条：等它处理\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"第一条：拿起数据\" << endl;\n    cout << \"第二条：放进元素里\" << endl;\n    cout << \"第三条：等它处理\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "第一条：拿起数据\n第二条：放进元素里\n第三条：等它处理",
+      "stdin": null,
+      "explanation": "是 `endl` 的活儿少干了一次。\n\n你可以把那根管子想成一支笔：`cout << \"...\"` 只负责**把字写上去**，写完了笔尖还停在原处。`endl` 才是「**换一行**」那一下——没有它，下一句就接着这句话的末尾往下写，于是两条口诀黏成了一行。\n\n这道题最阴的地方在于：**它不报错**。三行里少写一次 `endl`，编译器一个字都不会说，程序眼睁睁就念错了。\n\n往后跑出来不对劲，先别急着怀疑句子写错了，回头数一数：**每一句末尾那个 `endl` 还在不在**。我们当年就是这么丢的",
+      "templateId": "cpp-s1-forgot-endl",
+      "params": {
+        "a": "拿起数据",
+        "b": "放进元素里",
+        "c": "等它处理"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.271Z",
+        "hash": "d5828d43bd5cc109"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-forgot-endl-026",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给新来的子对象写了三条处理口诀，**一条占一行**，好念好记。\n\n可这份源代码跑起来，屏幕上只出来了**两行**——三条口诀里有两条挤到一块儿去了。它一个错都不报，安安静静就这么念完了。你帮我们改好，让三条口诀各自站一行。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"第一条：把元素摆好\" << endl;\n    cout << \"第二条：撒点对象草\";\n    cout << \"第三条：说声\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"第一条：把元素摆好\" << endl;\n    cout << \"第二条：撒点对象草\" << endl;\n    cout << \"第三条：说声\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "第一条：把元素摆好\n第二条：撒点对象草\n第三条：说声",
+      "stdin": null,
+      "explanation": "是 `endl` 的活儿少干了一次。\n\n你可以把那根管子想成一支笔：`cout << \"...\"` 只负责**把字写上去**，写完了笔尖还停在原处。`endl` 才是「**换一行**」那一下——没有它，下一句就接着这句话的末尾往下写，于是两条口诀黏成了一行。\n\n这道题最阴的地方在于：**它不报错**。三行里少写一次 `endl`，编译器一个字都不会说，程序眼睁睁就念错了。\n\n往后跑出来不对劲，先别急着怀疑句子写错了，回头数一数：**每一句末尾那个 `endl` 还在不在**。我们当年就是这么丢的",
+      "templateId": "cpp-s1-forgot-endl",
+      "params": {
+        "a": "把元素摆好",
+        "b": "撒点对象草",
+        "c": "说声"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "b13ee77534ac1be4"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-missing-iostream-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们写了一份新源代码，想让点单机念一句「你好，！」给计算机听。\n\n可它又双叒叕跑不起来：编译器说 `cout` 这个名字它压根没听说过，屏幕上连一个字都没输出。你帮我们把这份源代码改好，让它把这句输出。",
+      "brokenCode": "using namespace std;\n\nint main() {\n    cout << \"你好，！\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"你好，！\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "你好，！",
+      "stdin": null,
+      "explanation": "编译器的抱怨原话是：\n\n`error: 'cout' was not declared in this scope`\n\n`declared` 是「登记过、报备过」的意思，整句话是在说：**`cout` 这个名字我们没听说过**。\n\n可源代码里明明有那句 `using namespace std;`（柜门开着的呀）？问题在于：柜门是开了，可**柜子里的东西压根没搬进来**。`cout` 这件家伙的来历写在第一行请来的那位管理员家里，管理员没请，柜子是空的。\n\n最贴心的是，编译器还会跟着补一句 `this is probably fixable by adding`——「**加上那一样东西，大概就修好了**」。它连该请哪位管理员都替你写出来了，就是报错最后被单引号夹着的那半句。\n\n所以往后记住这条链子：**先请管理员，再开柜门，最后才能调用短名字**。少哪一步都不行",
+      "templateId": "cpp-s1-missing-iostream",
+      "params": {
+        "word": "你好，！"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "3c80b58349a2a9bc"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-missing-iostream-002",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们写了一份新源代码，想让点单机念一句「我们回来啦」给计算机听。\n\n可它又双叒叕跑不起来：编译器说 `cout` 这个名字它压根没听说过，屏幕上连一个字都没输出。你帮我们把这份源代码改好，让它把这句输出。",
+      "brokenCode": "using namespace std;\n\nint main() {\n    cout << \"我们回来啦\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"我们回来啦\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "我们回来啦",
+      "stdin": null,
+      "explanation": "编译器的抱怨原话是：\n\n`error: 'cout' was not declared in this scope`\n\n`declared` 是「登记过、报备过」的意思，整句话是在说：**`cout` 这个名字我们没听说过**。\n\n可源代码里明明有那句 `using namespace std;`（柜门开着的呀）？问题在于：柜门是开了，可**柜子里的东西压根没搬进来**。`cout` 这件家伙的来历写在第一行请来的那位管理员家里，管理员没请，柜子是空的。\n\n最贴心的是，编译器还会跟着补一句 `this is probably fixable by adding`——「**加上那一样东西，大概就修好了**」。它连该请哪位管理员都替你写出来了，就是报错最后被单引号夹着的那半句。\n\n所以往后记住这条链子：**先请管理员，再开柜门，最后才能调用短名字**。少哪一步都不行",
+      "templateId": "cpp-s1-missing-iostream",
+      "params": {
+        "word": "我们回来啦"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "50131e2706c3c7ea"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-missing-using-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们这份源代码请了管理员，可编译器还是不高兴：它说 `cout` 这个名字没听说过，屏幕上什么都没有。\n\n奇怪的是，管理员明明请了呀。你帮我们把它改好，让程序把「门口有人」输出。",
+      "brokenCode": "#include <iostream>\n\nint main() {\n    cout << \"门口有人\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"门口有人\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "门口有人",
+      "stdin": null,
+      "explanation": "这一回编译器说的是：\n\n`error: 'cout' was not declared in this scope; did you mean 'std::cout'?`\n\n`did you mean` 就是「**你是不是想写这个**」。编译器知道 `std::cout` 在哪，也知道 `cout` 这个名字没登记过——它就差把答案说出口了，只是不能替你动手。\n\n上一道题里，编译器还多送一句 `this is probably fixable by adding`，帮我们把该补的那一行也写出来了；这一回它只肯给 `did you mean`，剩下的得自己接。\n\n两件事要分清楚：\n\n- **请管理员**（`#include`）＝ 把东西搬进屋里；\n- **开柜门**（`using namespace std;`）＝ 允许调用短名字。\n\n请了管理员却不开柜门，东西在屋里，但你调用 `cout` 它就当没听见。要么开柜门，要么老老实实连门牌一起调用 `std::cout`——**两条路都通**，看你喜欢哪条。",
+      "templateId": "cpp-s1-missing-using",
+      "params": {
+        "word": "门口有人"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "84e4858a44a7cc2d"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-missing-using-002",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们这份源代码请了管理员，可编译器还是不高兴：它说 `cout` 这个名字没听说过，屏幕上什么都没有。\n\n奇怪的是，管理员明明请了呀。你帮我们把它改好，让程序把「计算机回来啦」输出。",
+      "brokenCode": "#include <iostream>\n\nint main() {\n    cout << \"计算机回来啦\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"计算机回来啦\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "计算机回来啦",
+      "stdin": null,
+      "explanation": "这一回编译器说的是：\n\n`error: 'cout' was not declared in this scope; did you mean 'std::cout'?`\n\n`did you mean` 就是「**你是不是想写这个**」。编译器知道 `std::cout` 在哪，也知道 `cout` 这个名字没登记过——它就差把答案说出口了，只是不能替你动手。\n\n上一道题里，编译器还多送一句 `this is probably fixable by adding`，帮我们把该补的那一行也写出来了；这一回它只肯给 `did you mean`，剩下的得自己接。\n\n两件事要分清楚：\n\n- **请管理员**（`#include`）＝ 把东西搬进屋里；\n- **开柜门**（`using namespace std;`）＝ 允许调用短名字。\n\n请了管理员却不开柜门，东西在屋里，但你调用 `cout` 它就当没听见。要么开柜门，要么老老实实连门牌一起调用 `std::cout`——**两条路都通**，看你喜欢哪条。",
+      "templateId": "cpp-s1-missing-using",
+      "params": {
+        "word": "计算机回来啦"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "322fd5ff723191d8"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-string-necklace-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们有一条会自己长大的**字符串**（就是课文里那串字的脾气）。请你帮我们写一份源代码：\n\n盖一间装字符串的屋（我们那间叫 `bowl`，你想叫什么都行），先把 `数组元素` 赋值，再把 `里的数据` 接在它后面，最后把整条字符串输出——执行一行就够。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string bowl = \"数组元素\";\n    bowl = bowl + \"里的数据\";\n    cout << bowl << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数组元素里的数据",
+      "stdin": null,
+      "explanation": "字符串的脾气是：**你只管往里放，够不够是它的事**。开一间装字符串的屋，只用把第一个戒指圈写上（`string bowl = \"数组元素\";`），压根不用说它能装几个字。\n\n要接一截，用的是加号 `+`：`bowl + \"里的数据\"` 就是把两截串成一条。参考解里写的是 `bowl = bowl + \"里的数据\";` —— 念一遍就明白：**右边串好一条新的，再搬回左边该变量**。\n\n有一件事现在就要记住：字符串屋只能装字符串。想往里塞一个数（比如 `bowl = 3;`），编译器是不收的。往后学到数字和字打交道的地方，这道坎还会再见一次。",
+      "templateId": "cpp-s1-string-necklace",
+      "params": {
+        "a": "数组元素",
+        "b": "里的数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "1a6c5782c3aa993c"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-string-necklace-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们有一条会自己长大的**字符串**（就是课文里那串字的脾气）。请你帮我们写一份源代码：\n\n盖一间装字符串的屋（我们那间叫 `bowl`，你想叫什么都行），先把 `数组元素` 赋值，再把 `擦得最亮的那个` 接在它后面，最后把整条字符串输出——执行一行就够。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string bowl = \"数组元素\";\n    bowl = bowl + \"擦得最亮的那个\";\n    cout << bowl << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数组元素擦得最亮的那个",
+      "stdin": null,
+      "explanation": "字符串的脾气是：**你只管往里放，够不够是它的事**。开一间装字符串的屋，只用把第一个戒指圈写上（`string bowl = \"数组元素\";`），压根不用说它能装几个字。\n\n要接一截，用的是加号 `+`：`bowl + \"擦得最亮的那个\"` 就是把两截串成一条。参考解里写的是 `bowl = bowl + \"擦得最亮的那个\";` —— 念一遍就明白：**右边串好一条新的，再搬回左边该变量**。\n\n有一件事现在就要记住：字符串屋只能装字符串。想往里塞一个数（比如 `bowl = 3;`），编译器是不收的。往后学到数字和字打交道的地方，这道坎还会再见一次。",
+      "templateId": "cpp-s1-string-necklace",
+      "params": {
+        "a": "数组元素",
+        "b": "擦得最亮的那个"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "be8d24c327db12d3"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-string-necklace-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们有一条会自己长大的**字符串**（就是课文里那串字的脾气）。请你帮我们写一份源代码：\n\n盖一间装字符串的屋（我们那间叫 `bowl`，你想叫什么都行），先把 `数据罐` 赋值，再把 `见底啦` 接在它后面，最后把整条字符串输出——执行一行就够。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string bowl = \"数据罐\";\n    bowl = bowl + \"见底啦\";\n    cout << bowl << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数据罐见底啦",
+      "stdin": null,
+      "explanation": "字符串的脾气是：**你只管往里放，够不够是它的事**。开一间装字符串的屋，只用把第一个戒指圈写上（`string bowl = \"数据罐\";`），压根不用说它能装几个字。\n\n要接一截，用的是加号 `+`：`bowl + \"见底啦\"` 就是把两截串成一条。参考解里写的是 `bowl = bowl + \"见底啦\";` —— 念一遍就明白：**右边串好一条新的，再搬回左边该变量**。\n\n有一件事现在就要记住：字符串屋只能装字符串。想往里塞一个数（比如 `bowl = 3;`），编译器是不收的。往后学到数字和字打交道的地方，这道坎还会再见一次。",
+      "templateId": "cpp-s1-string-necklace",
+      "params": {
+        "a": "数据罐",
+        "b": "见底啦"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "0ebe120801d131d7"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-string-necklace-007",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们有一条会自己长大的**字符串**（就是课文里那串字的脾气）。请你帮我们写一份源代码：\n\n盖一间装字符串的屋（我们那间叫 `bowl`，你想叫什么都行），先把 `水元素` 赋值，再把 `见底啦` 接在它后面，最后把整条字符串输出——执行一行就够。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string bowl = \"水元素\";\n    bowl = bowl + \"见底啦\";\n    cout << bowl << endl;\n    return 0;\n}\n",
+      "expectedOutput": "水元素见底啦",
+      "stdin": null,
+      "explanation": "字符串的脾气是：**你只管往里放，够不够是它的事**。开一间装字符串的屋，只用把第一个戒指圈写上（`string bowl = \"水元素\";`），压根不用说它能装几个字。\n\n要接一截，用的是加号 `+`：`bowl + \"见底啦\"` 就是把两截串成一条。参考解里写的是 `bowl = bowl + \"见底啦\";` —— 念一遍就明白：**右边串好一条新的，再搬回左边该变量**。\n\n有一件事现在就要记住：字符串屋只能装字符串。想往里塞一个数（比如 `bowl = 3;`），编译器是不收的。往后学到数字和字打交道的地方，这道坎还会再见一次。",
+      "templateId": "cpp-s1-string-necklace",
+      "params": {
+        "a": "水元素",
+        "b": "见底啦"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "dc29ada09f167865"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-string-necklace-009",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们有一条会自己长大的**字符串**（就是课文里那串字的脾气）。请你帮我们写一份源代码：\n\n盖一间装字符串的屋（我们那间叫 `bowl`，你想叫什么都行），先把 `对象草盒` 赋值，再把 `里的数据` 接在它后面，最后把整条字符串输出——执行一行就够。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string bowl = \"对象草盒\";\n    bowl = bowl + \"里的数据\";\n    cout << bowl << endl;\n    return 0;\n}\n",
+      "expectedOutput": "对象草盒里的数据",
+      "stdin": null,
+      "explanation": "字符串的脾气是：**你只管往里放，够不够是它的事**。开一间装字符串的屋，只用把第一个戒指圈写上（`string bowl = \"对象草盒\";`），压根不用说它能装几个字。\n\n要接一截，用的是加号 `+`：`bowl + \"里的数据\"` 就是把两截串成一条。参考解里写的是 `bowl = bowl + \"里的数据\";` —— 念一遍就明白：**右边串好一条新的，再搬回左边该变量**。\n\n有一件事现在就要记住：字符串屋只能装字符串。想往里塞一个数（比如 `bowl = 3;`），编译器是不收的。往后学到数字和字打交道的地方，这道坎还会再见一次。",
+      "templateId": "cpp-s1-string-necklace",
+      "params": {
+        "a": "对象草盒",
+        "b": "里的数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "2031bd3915bc5380"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-string-necklace-011",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们有一条会自己长大的**字符串**（就是课文里那串字的脾气）。请你帮我们写一份源代码：\n\n盖一间装字符串的屋（我们那间叫 `bowl`，你想叫什么都行），先把 `对象草盒` 赋值，再把 `擦得最亮的那个` 接在它后面，最后把整条字符串输出——执行一行就够。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string bowl = \"对象草盒\";\n    bowl = bowl + \"擦得最亮的那个\";\n    cout << bowl << endl;\n    return 0;\n}\n",
+      "expectedOutput": "对象草盒擦得最亮的那个",
+      "stdin": null,
+      "explanation": "字符串的脾气是：**你只管往里放，够不够是它的事**。开一间装字符串的屋，只用把第一个戒指圈写上（`string bowl = \"对象草盒\";`），压根不用说它能装几个字。\n\n要接一截，用的是加号 `+`：`bowl + \"擦得最亮的那个\"` 就是把两截串成一条。参考解里写的是 `bowl = bowl + \"擦得最亮的那个\";` —— 念一遍就明白：**右边串好一条新的，再搬回左边该变量**。\n\n有一件事现在就要记住：字符串屋只能装字符串。想往里塞一个数（比如 `bowl = 3;`），编译器是不收的。往后学到数字和字打交道的地方，这道坎还会再见一次。",
+      "templateId": "cpp-s1-string-necklace",
+      "params": {
+        "a": "对象草盒",
+        "b": "擦得最亮的那个"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "8c75e1aee68a7860"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-two-lines-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们的点单铺明天开门，门口那块名称要写两行话：\n\n第一行念 `我们的点单铺开门啦`。\n\n第二行先念 `张三`，紧跟着**一个空格**，然后是 `当前记录了 3 条数据`。\n\n⚠️ 我们这根管子很老实，**不会自己替你垫空格**——那一格空白得你亲手写进引号里。两行各占一行，一个字都别多、别少。",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"我们的点单铺开门啦\" << endl;\n    cout << \"张三\" << \" 当前记录了 3 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "我们的点单铺开门啦\n张三 当前记录了 3 条数据",
+      "stdin": null,
+      "explanation": "**引号里的字，它会原样输出**——这是这一课最要紧的一条：`\"我们\"` 输出就是「我们」两个字，跟屋名、函数名都没关系。\n\n两句要各站一行，靠的是每句末尾那一下 `endl`。`cout << \"...\" << endl;` 这个形状，往后你会写上千遍。\n\n第二行的空格是这道题的小坑：`\"张三\"` 和 `\" 当前记录了\"` 中间那格空白，管子不会替你补。要么像参考解那样把空格写在后半句引号的开头，要么单独写一句 `cout << \" \"`——两种都行。\n\n顺带一提：连着念几样东西**不必写好几句话**，`cout << \"甲\" << \"乙\" << endl;` 一串串下去，它会挨个念完再换行。",
+      "templateId": "cpp-s1-two-lines",
+      "params": {
+        "a": "我们的点单铺开门啦",
+        "name": "张三",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "6f999bc08ea26f0e"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-two-lines-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们的点单铺明天开门，门口那块名称要写两行话：\n\n第一行念 `我们的点单铺开门啦`。\n\n第二行先念 `计算机`，紧跟着**一个空格**，然后是 `当前记录了 4 条数据`。\n\n⚠️ 我们这根管子很老实，**不会自己替你垫空格**——那一格空白得你亲手写进引号里。两行各占一行，一个字都别多、别少。",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"我们的点单铺开门啦\" << endl;\n    cout << \"计算机\" << \" 当前记录了 4 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "我们的点单铺开门啦\n计算机 当前记录了 4 条数据",
+      "stdin": null,
+      "explanation": "**引号里的字，它会原样输出**——这是这一课最要紧的一条：`\"我们\"` 输出就是「我们」两个字，跟屋名、函数名都没关系。\n\n两句要各站一行，靠的是每句末尾那一下 `endl`。`cout << \"...\" << endl;` 这个形状，往后你会写上千遍。\n\n第二行的空格是这道题的小坑：`\"计算机\"` 和 `\" 当前记录了\"` 中间那格空白，管子不会替你补。要么像参考解那样把空格写在后半句引号的开头，要么单独写一句 `cout << \" \"`——两种都行。\n\n顺带一提：连着念几样东西**不必写好几句话**，`cout << \"甲\" << \"乙\" << endl;` 一串串下去，它会挨个念完再换行。",
+      "templateId": "cpp-s1-two-lines",
+      "params": {
+        "a": "我们的点单铺开门啦",
+        "name": "计算机",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "7f07e3da9266dc92"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-two-lines-007",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们的点单铺明天开门，门口那块名称要写两行话：\n\n第一行念 `点单铺开张`。\n\n第二行先念 `张三`，紧跟着**一个空格**，然后是 `当前记录了 4 条数据`。\n\n⚠️ 我们这根管子很老实，**不会自己替你垫空格**——那一格空白得你亲手写进引号里。两行各占一行，一个字都别多、别少。",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"点单铺开张\" << endl;\n    cout << \"张三\" << \" 当前记录了 4 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "点单铺开张\n张三 当前记录了 4 条数据",
+      "stdin": null,
+      "explanation": "**引号里的字，它会原样输出**——这是这一课最要紧的一条：`\"我们\"` 输出就是「我们」两个字，跟屋名、函数名都没关系。\n\n两句要各站一行，靠的是每句末尾那一下 `endl`。`cout << \"...\" << endl;` 这个形状，往后你会写上千遍。\n\n第二行的空格是这道题的小坑：`\"张三\"` 和 `\" 当前记录了\"` 中间那格空白，管子不会替你补。要么像参考解那样把空格写在后半句引号的开头，要么单独写一句 `cout << \" \"`——两种都行。\n\n顺带一提：连着念几样东西**不必写好几句话**，`cout << \"甲\" << \"乙\" << endl;` 一串串下去，它会挨个念完再换行。",
+      "templateId": "cpp-s1-two-lines",
+      "params": {
+        "a": "点单铺开张",
+        "name": "张三",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "900dda7bc0240424"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-two-lines-010",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们的点单铺明天开门，门口那块名称要写两行话：\n\n第一行念 `点单铺开张`。\n\n第二行先念 `三花`，紧跟着**一个空格**，然后是 `当前记录了 3 条数据`。\n\n⚠️ 我们这根管子很老实，**不会自己替你垫空格**——那一格空白得你亲手写进引号里。两行各占一行，一个字都别多、别少。",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"点单铺开张\" << endl;\n    cout << \"三花\" << \" 当前记录了 3 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "点单铺开张\n三花 当前记录了 3 条数据",
+      "stdin": null,
+      "explanation": "**引号里的字，它会原样输出**——这是这一课最要紧的一条：`\"我们\"` 输出就是「我们」两个字，跟屋名、函数名都没关系。\n\n两句要各站一行，靠的是每句末尾那一下 `endl`。`cout << \"...\" << endl;` 这个形状，往后你会写上千遍。\n\n第二行的空格是这道题的小坑：`\"三花\"` 和 `\" 当前记录了\"` 中间那格空白，管子不会替你补。要么像参考解那样把空格写在后半句引号的开头，要么单独写一句 `cout << \" \"`——两种都行。\n\n顺带一提：连着念几样东西**不必写好几句话**，`cout << \"甲\" << \"乙\" << endl;` 一串串下去，它会挨个念完再换行。",
+      "templateId": "cpp-s1-two-lines",
+      "params": {
+        "a": "点单铺开张",
+        "name": "三花",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "f4f4361c7931faee"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-two-lines-014",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们的点单铺明天开门，门口那块名称要写两行话：\n\n第一行念 `欢迎来到点单铺`。\n\n第二行先念 `计算机`，紧跟着**一个空格**，然后是 `当前记录了 3 条数据`。\n\n⚠️ 我们这根管子很老实，**不会自己替你垫空格**——那一格空白得你亲手写进引号里。两行各占一行，一个字都别多、别少。",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"欢迎来到点单铺\" << endl;\n    cout << \"计算机\" << \" 当前记录了 3 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "欢迎来到点单铺\n计算机 当前记录了 3 条数据",
+      "stdin": null,
+      "explanation": "**引号里的字，它会原样输出**——这是这一课最要紧的一条：`\"我们\"` 输出就是「我们」两个字，跟屋名、函数名都没关系。\n\n两句要各站一行，靠的是每句末尾那一下 `endl`。`cout << \"...\" << endl;` 这个形状，往后你会写上千遍。\n\n第二行的空格是这道题的小坑：`\"计算机\"` 和 `\" 当前记录了\"` 中间那格空白，管子不会替你补。要么像参考解那样把空格写在后半句引号的开头，要么单独写一句 `cout << \" \"`——两种都行。\n\n顺带一提：连着念几样东西**不必写好几句话**，`cout << \"甲\" << \"乙\" << endl;` 一串串下去，它会挨个念完再换行。",
+      "templateId": "cpp-s1-two-lines",
+      "params": {
+        "a": "欢迎来到点单铺",
+        "name": "计算机",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "0485174a04f26bfa"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-two-lines-017",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们的点单铺明天开门，门口那块名称要写两行话：\n\n第一行念 `欢迎来到点单铺`。\n\n第二行先念 `三花`，紧跟着**一个空格**，然后是 `当前记录了 4 条数据`。\n\n⚠️ 我们这根管子很老实，**不会自己替你垫空格**——那一格空白得你亲手写进引号里。两行各占一行，一个字都别多、别少。",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"欢迎来到点单铺\" << endl;\n    cout << \"三花\" << \" 当前记录了 4 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "欢迎来到点单铺\n三花 当前记录了 4 条数据",
+      "stdin": null,
+      "explanation": "**引号里的字，它会原样输出**——这是这一课最要紧的一条：`\"我们\"` 输出就是「我们」两个字，跟屋名、函数名都没关系。\n\n两句要各站一行，靠的是每句末尾那一下 `endl`。`cout << \"...\" << endl;` 这个形状，往后你会写上千遍。\n\n第二行的空格是这道题的小坑：`\"三花\"` 和 `\" 当前记录了\"` 中间那格空白，管子不会替你补。要么像参考解那样把空格写在后半句引号的开头，要么单独写一句 `cout << \" \"`——两种都行。\n\n顺带一提：连着念几样东西**不必写好几句话**，`cout << \"甲\" << \"乙\" << endl;` 一串串下去，它会挨个念完再换行。",
+      "templateId": "cpp-s1-two-lines",
+      "params": {
+        "a": "欢迎来到点单铺",
+        "name": "三花",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "9f942560b7b97104"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-vector-grow-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要用一个会自己长大的**柜子**装今天的收成。\n\n先摆一个**空柜子**，再从后面一条一条推进去：先推 `2`，再推 `5`，最后推 `8`。推完念两行：\n\n第一行是 `柜子里有 `、现在柜子里有几条、` 条数据`。\n\n第二行是 `头一条是 `、头一条的那个数。\n\n⚠️ 留神：柜子里的东西是**从 0 开始报编号**的——头一条的编号可不是 1 。",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> box;\n    box.push_back(2);\n    box.push_back(5);\n    box.push_back(8);\n    cout << \"柜子里有 \" << box.size() << \" 条数据\" << endl;\n    cout << \"头一条是 \" << box[0] << endl;\n    return 0;\n}\n",
+      "expectedOutput": "柜子里有 3 条数据\n头一条是 2",
+      "stdin": null,
+      "explanation": "柜子的第一件本事：**不用提前说它能装几条**。摆的时候只写 `vector<int> box;`（尖括号里那一位是「这一柜子保存的是整数」），空着就行。\n\n往里放，用 `push_back` ——「**从后面推一条进去**」。推一条它自己撑大一格，推三条就有三格，从来不问你够不够。\n\n问它「现在有几条」，用 `.size()`。注意 `size()` 后面那对小括号别丢，它是**问一句**，不是柜子上的一个格子。\n\n取东西用方括号：`box[0]` 是头一条。这里最容易摔的是编号：**柜子的编号从 0 起**，所以示例文本的编号是 0、1、2 —— 头一条是 `box[0]`，最后一条是 `box[2]`。`box[3]` 不在柜子里，伸手去摸会摸到不该摸的地方。至于「它拦不拦你」—— 我们真跑过，而且**同一份源代码跑出了两个结果**：按我们平时编译的那套开关（不带 `-O`），它**当场断气**，屏幕上甩出一句 `Assertion '__n < this->size()' failed.`，一个数都没印出来；可我们把同一份源代码**加上 `-O2` 再编一遍**，它就一次不吭了 —— 照样跑完，印出来一个**错的数**。所以「它没拦我」当不了证据：拦不拦是**编译时加不加那个开关**说了算，不是柜子说了算。规矩只剩一条：编号从 0 起，示例文本的编号是 0、1、2，别去摸 `box[3]`。",
+      "templateId": "cpp-s1-vector-grow",
+      "params": {
+        "x": 2,
+        "y": 5,
+        "z": 8,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "65fa683e818a254b"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-vector-grow-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要用一个会自己长大的**柜子**装今天的收成。\n\n先摆一个**空柜子**，再从后面一条一条推进去：先推 `2`，再推 `5`，最后推 `9`。推完念两行：\n\n第一行是 `柜子里有 `、现在柜子里有几条、` 条商品`。\n\n第二行是 `头一条是 `、头一条的那个数。\n\n⚠️ 留神：柜子里的东西是**从 0 开始报编号**的——头一条的编号可不是 1 。",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> box;\n    box.push_back(2);\n    box.push_back(5);\n    box.push_back(9);\n    cout << \"柜子里有 \" << box.size() << \" 条商品\" << endl;\n    cout << \"头一条是 \" << box[0] << endl;\n    return 0;\n}\n",
+      "expectedOutput": "柜子里有 3 条商品\n头一条是 2",
+      "stdin": null,
+      "explanation": "柜子的第一件本事：**不用提前说它能装几条**。摆的时候只写 `vector<int> box;`（尖括号里那一位是「这一柜子保存的是整数」），空着就行。\n\n往里放，用 `push_back` ——「**从后面推一条进去**」。推一条它自己撑大一格，推三条就有三格，从来不问你够不够。\n\n问它「现在有几条」，用 `.size()`。注意 `size()` 后面那对小括号别丢，它是**问一句**，不是柜子上的一个格子。\n\n取东西用方括号：`box[0]` 是头一条。这里最容易摔的是编号：**柜子的编号从 0 起**，所以示例文本的编号是 0、1、2 —— 头一条是 `box[0]`，最后一条是 `box[2]`。`box[3]` 不在柜子里，伸手去摸会摸到不该摸的地方。至于「它拦不拦你」—— 我们真跑过，而且**同一份源代码跑出了两个结果**：按我们平时编译的那套开关（不带 `-O`），它**当场断气**，屏幕上甩出一句 `Assertion '__n < this->size()' failed.`，一个数都没印出来；可我们把同一份源代码**加上 `-O2` 再编一遍**，它就一次不吭了 —— 照样跑完，印出来一个**错的数**。所以「它没拦我」当不了证据：拦不拦是**编译时加不加那个开关**说了算，不是柜子说了算。规矩只剩一条：编号从 0 起，示例文本的编号是 0、1、2，别去摸 `box[3]`。",
+      "templateId": "cpp-s1-vector-grow",
+      "params": {
+        "x": 2,
+        "y": 5,
+        "z": 9,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "fe5e2959d056b8f6"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-vector-grow-006",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要用一个会自己长大的**柜子**装今天的收成。\n\n先摆一个**空柜子**，再从后面一条一条推进去：先推 `2`，再推 `6`，最后推 `9`。推完念两行：\n\n第一行是 `柜子里有 `、现在柜子里有几条、` 条数据`。\n\n第二行是 `头一条是 `、头一条的那个数。\n\n⚠️ 留神：柜子里的东西是**从 0 开始报编号**的——头一条的编号可不是 1 。",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> box;\n    box.push_back(2);\n    box.push_back(6);\n    box.push_back(9);\n    cout << \"柜子里有 \" << box.size() << \" 条数据\" << endl;\n    cout << \"头一条是 \" << box[0] << endl;\n    return 0;\n}\n",
+      "expectedOutput": "柜子里有 3 条数据\n头一条是 2",
+      "stdin": null,
+      "explanation": "柜子的第一件本事：**不用提前说它能装几条**。摆的时候只写 `vector<int> box;`（尖括号里那一位是「这一柜子保存的是整数」），空着就行。\n\n往里放，用 `push_back` ——「**从后面推一条进去**」。推一条它自己撑大一格，推三条就有三格，从来不问你够不够。\n\n问它「现在有几条」，用 `.size()`。注意 `size()` 后面那对小括号别丢，它是**问一句**，不是柜子上的一个格子。\n\n取东西用方括号：`box[0]` 是头一条。这里最容易摔的是编号：**柜子的编号从 0 起**，所以示例文本的编号是 0、1、2 —— 头一条是 `box[0]`，最后一条是 `box[2]`。`box[3]` 不在柜子里，伸手去摸会摸到不该摸的地方。至于「它拦不拦你」—— 我们真跑过，而且**同一份源代码跑出了两个结果**：按我们平时编译的那套开关（不带 `-O`），它**当场断气**，屏幕上甩出一句 `Assertion '__n < this->size()' failed.`，一个数都没印出来；可我们把同一份源代码**加上 `-O2` 再编一遍**，它就一次不吭了 —— 照样跑完，印出来一个**错的数**。所以「它没拦我」当不了证据：拦不拦是**编译时加不加那个开关**说了算，不是柜子说了算。规矩只剩一条：编号从 0 起，示例文本的编号是 0、1、2，别去摸 `box[3]`。",
+      "templateId": "cpp-s1-vector-grow",
+      "params": {
+        "x": 2,
+        "y": 6,
+        "z": 9,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "055a927a30cf8e2d"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-vector-grow-009",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要用一个会自己长大的**柜子**装今天的收成。\n\n先摆一个**空柜子**，再从后面一条一条推进去：先推 `3`，再推 `5`，最后推 `8`。推完念两行：\n\n第一行是 `柜子里有 `、现在柜子里有几条、` 条商品`。\n\n第二行是 `头一条是 `、头一条的那个数。\n\n⚠️ 留神：柜子里的东西是**从 0 开始报编号**的——头一条的编号可不是 1 。",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> box;\n    box.push_back(3);\n    box.push_back(5);\n    box.push_back(8);\n    cout << \"柜子里有 \" << box.size() << \" 条商品\" << endl;\n    cout << \"头一条是 \" << box[0] << endl;\n    return 0;\n}\n",
+      "expectedOutput": "柜子里有 3 条商品\n头一条是 3",
+      "stdin": null,
+      "explanation": "柜子的第一件本事：**不用提前说它能装几条**。摆的时候只写 `vector<int> box;`（尖括号里那一位是「这一柜子保存的是整数」），空着就行。\n\n往里放，用 `push_back` ——「**从后面推一条进去**」。推一条它自己撑大一格，推三条就有三格，从来不问你够不够。\n\n问它「现在有几条」，用 `.size()`。注意 `size()` 后面那对小括号别丢，它是**问一句**，不是柜子上的一个格子。\n\n取东西用方括号：`box[0]` 是头一条。这里最容易摔的是编号：**柜子的编号从 0 起**，所以示例文本的编号是 0、1、2 —— 头一条是 `box[0]`，最后一条是 `box[2]`。`box[3]` 不在柜子里，伸手去摸会摸到不该摸的地方。至于「它拦不拦你」—— 我们真跑过，而且**同一份源代码跑出了两个结果**：按我们平时编译的那套开关（不带 `-O`），它**当场断气**，屏幕上甩出一句 `Assertion '__n < this->size()' failed.`，一个数都没印出来；可我们把同一份源代码**加上 `-O2` 再编一遍**，它就一次不吭了 —— 照样跑完，印出来一个**错的数**。所以「它没拦我」当不了证据：拦不拦是**编译时加不加那个开关**说了算，不是柜子说了算。规矩只剩一条：编号从 0 起，示例文本的编号是 0、1、2，别去摸 `box[3]`。",
+      "templateId": "cpp-s1-vector-grow",
+      "params": {
+        "x": 3,
+        "y": 5,
+        "z": 8,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "4dc393ed8f68c83d"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-vector-grow-012",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要用一个会自己长大的**柜子**装今天的收成。\n\n先摆一个**空柜子**，再从后面一条一条推进去：先推 `3`，再推 `6`，最后推 `8`。推完念两行：\n\n第一行是 `柜子里有 `、现在柜子里有几条、` 条数据`。\n\n第二行是 `头一条是 `、头一条的那个数。\n\n⚠️ 留神：柜子里的东西是**从 0 开始报编号**的——头一条的编号可不是 1 。",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> box;\n    box.push_back(3);\n    box.push_back(6);\n    box.push_back(8);\n    cout << \"柜子里有 \" << box.size() << \" 条数据\" << endl;\n    cout << \"头一条是 \" << box[0] << endl;\n    return 0;\n}\n",
+      "expectedOutput": "柜子里有 3 条数据\n头一条是 3",
+      "stdin": null,
+      "explanation": "柜子的第一件本事：**不用提前说它能装几条**。摆的时候只写 `vector<int> box;`（尖括号里那一位是「这一柜子保存的是整数」），空着就行。\n\n往里放，用 `push_back` ——「**从后面推一条进去**」。推一条它自己撑大一格，推三条就有三格，从来不问你够不够。\n\n问它「现在有几条」，用 `.size()`。注意 `size()` 后面那对小括号别丢，它是**问一句**，不是柜子上的一个格子。\n\n取东西用方括号：`box[0]` 是头一条。这里最容易摔的是编号：**柜子的编号从 0 起**，所以示例文本的编号是 0、1、2 —— 头一条是 `box[0]`，最后一条是 `box[2]`。`box[3]` 不在柜子里，伸手去摸会摸到不该摸的地方。至于「它拦不拦你」—— 我们真跑过，而且**同一份源代码跑出了两个结果**：按我们平时编译的那套开关（不带 `-O`），它**当场断气**，屏幕上甩出一句 `Assertion '__n < this->size()' failed.`，一个数都没印出来；可我们把同一份源代码**加上 `-O2` 再编一遍**，它就一次不吭了 —— 照样跑完，印出来一个**错的数**。所以「它没拦我」当不了证据：拦不拦是**编译时加不加那个开关**说了算，不是柜子说了算。规矩只剩一条：编号从 0 起，示例文本的编号是 0、1、2，别去摸 `box[3]`。",
+      "templateId": "cpp-s1-vector-grow",
+      "params": {
+        "x": 3,
+        "y": 6,
+        "z": 8,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "16d364c8a734388f"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-vector-grow-015",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要用一个会自己长大的**柜子**装今天的收成。\n\n先摆一个**空柜子**，再从后面一条一条推进去：先推 `3`，再推 `6`，最后推 `9`。推完念两行：\n\n第一行是 `柜子里有 `、现在柜子里有几条、` 条商品`。\n\n第二行是 `头一条是 `、头一条的那个数。\n\n⚠️ 留神：柜子里的东西是**从 0 开始报编号**的——头一条的编号可不是 1 。",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> box;\n    box.push_back(3);\n    box.push_back(6);\n    box.push_back(9);\n    cout << \"柜子里有 \" << box.size() << \" 条商品\" << endl;\n    cout << \"头一条是 \" << box[0] << endl;\n    return 0;\n}\n",
+      "expectedOutput": "柜子里有 3 条商品\n头一条是 3",
+      "stdin": null,
+      "explanation": "柜子的第一件本事：**不用提前说它能装几条**。摆的时候只写 `vector<int> box;`（尖括号里那一位是「这一柜子保存的是整数」），空着就行。\n\n往里放，用 `push_back` ——「**从后面推一条进去**」。推一条它自己撑大一格，推三条就有三格，从来不问你够不够。\n\n问它「现在有几条」，用 `.size()`。注意 `size()` 后面那对小括号别丢，它是**问一句**，不是柜子上的一个格子。\n\n取东西用方括号：`box[0]` 是头一条。这里最容易摔的是编号：**柜子的编号从 0 起**，所以示例文本的编号是 0、1、2 —— 头一条是 `box[0]`，最后一条是 `box[2]`。`box[3]` 不在柜子里，伸手去摸会摸到不该摸的地方。至于「它拦不拦你」—— 我们真跑过，而且**同一份源代码跑出了两个结果**：按我们平时编译的那套开关（不带 `-O`），它**当场断气**，屏幕上甩出一句 `Assertion '__n < this->size()' failed.`，一个数都没印出来；可我们把同一份源代码**加上 `-O2` 再编一遍**，它就一次不吭了 —— 照样跑完，印出来一个**错的数**。所以「它没拦我」当不了证据：拦不拦是**编译时加不加那个开关**说了算，不是柜子说了算。规矩只剩一条：编号从 0 起，示例文本的编号是 0、1、2，别去摸 `box[3]`。",
+      "templateId": "cpp-s1-vector-grow",
+      "params": {
+        "x": 3,
+        "y": 6,
+        "z": 9,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.273Z",
+        "hash": "37c4327509ff48bf"
+      }
+    }
+  ]
+}

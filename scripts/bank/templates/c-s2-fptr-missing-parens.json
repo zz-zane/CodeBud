@@ -1,0 +1,29 @@
+{
+  "templateId": "c-s2-fptr-missing-parens",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-12",
+  "type": "codefix",
+  "concept": [
+    "函数指针",
+    "括号不能丢",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "a": {
+      "kind": "int",
+      "min": 1,
+      "max": 4
+    },
+    "b": {
+      "kind": "int",
+      "min": 5,
+      "max": 9
+    }
+  },
+  "stemTemplate": "我们有一个方法「加」（传入两个整数、返回一个整数）。现在想摆**一个元素**，里面装这张「加」的名称，然后照名称上写的把 {a} 和 {b} 加起来印出来。\n\n可编译器把整段代码退了回来，第一句话就是「函数怎么可以像一个元素那样给初值」。你帮我们看看是哪儿让它读岔了，把它改好。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint main(void) {\n    int *p(int, int) = add;\n    printf(\"%d\\n\", p({a}, {b}));\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint main(void) {\n    int (*p)(int, int) = add;\n    printf(\"%d\\n\", p({a}, {b}));\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: function 'p' is initialized like a variable` —— 翻过来就是「**函数 `p` 怎么可以像一个元素那样给初值**」（底下还会跟着一串抱怨，都是从这一句牵出来的）。\n\n少的就是**包着 `*p` 的那对小括号**。看一下它把这行字读成了什么：\n\n- 我们想写的：`int (*p)(int, int)` —— 「**一个元素**叫 `p`，里面装一张名称，名称上写的是『收两个整数、返回一个整数』」。\n- 少了括号以后：`int *p(int, int)` —— 「**一个方法**名叫 `p`，传入两个整数、**返回一张指向整数的名称**」。\n\n看出来了吗？少了那对括号，编译器认为我们在**定义一个方法**（名字叫 `p`、身体待会儿再写）。可后面又跟了个等号加初值 —— **函数是不能这样赋值的**，于是它当场翻脸。\n\n补上括号就完事。**这对括号是「这是一个元素」和「这是一个方法」的分界线**，一个都不能省。\n\n念法也顺手收下，**从里往外念**：\n\n1. 最右边那两个 `(int, int)`：这招要传入什么 —— 两个整数；\n2. 最左边那个 `int`：它返回什么 —— 一个整数；\n3. 中间那包 `(*p)`：这个元素叫 `p`，保存的是名称。\n\n补好之后再调用：`p({a}, {b})` 照着名称上写的走，得到 {a} 加 {b} 的和。"
+}

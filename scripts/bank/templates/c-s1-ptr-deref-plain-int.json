@@ -1,0 +1,25 @@
+{
+  "templateId": "c-s1-ptr-deref-plain-int",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-14",
+  "type": "codefix",
+  "concept": [
+    "解引用",
+    "*",
+    "名称",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "v": {
+      "kind": "int",
+      "min": 3,
+      "max": 7
+    }
+  },
+  "stemTemplate": "我们听说顺着名称能把元素里的东西**拿出来**，就在一个普通的元素上试了试。\n\n可编译器一看见那颗星就不干了……\n\n你帮我们看看这颗星用错在哪儿了，把它改好。改好之后，程序应该印出 `{v}`。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nint main(void) {\n    int fish = {v};\n\n    printf(\"%d\\n\", *fish);\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint main(void) {\n    int fish = {v};\n\n    printf(\"%d\\n\", fish);\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: invalid type argument of unary '*' (have 'int')`，翻过来就是 **「这颗星放的地方不对。」**\n\n「顺着走」的前提是**它得是一块名称**。`fish` 是一个装整数的元素，`*fish` 等于拿一个**数字**当地址去敲门 —— 编译器当然要拦下来。\n\n想顺着走，得先有名称：\n\n1. `int *p = &fish;` —— `&` 是去问 `fish` 那个元素**地址**，把名称稳稳插在它门口；\n2. `*p` 才是「**走到它指的那个元素前面**」，`%d` 一打就是元素里的数。\n\n这一题我们压根不需要名称 —— 直接写 `fish`，元素里的数就到手了。\n\n⚠️ 顺带记一条：**`&` 和 `*` 是一对反义词。** `&fish` 是「元素 → 地址」，`*p` 是「地址 → 元素里的东西」。"
+}

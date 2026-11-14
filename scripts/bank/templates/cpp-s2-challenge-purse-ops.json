@@ -1,0 +1,35 @@
+{
+  "templateId": "cpp-s2-challenge-purse-ops",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-15",
+  "type": "codewrite",
+  "difficulty": "challenge",
+  "concept": [
+    "类定义",
+    "存钱罐",
+    "取不动要说不",
+    "只看不动的本事"
+  ],
+  "instances": 6,
+  "params": {
+    "n": {
+      "kind": "pick",
+      "values": [
+        "4",
+        "6"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "head": "{n}\n",
+    "count": "{n}",
+    "min": 1,
+    "max": 3
+  },
+  "stemTemplate": "我们的对象银行开张了，第一件家当是**一个存钱罐**（画成一个类定义）。业务一对一对地来：每对的第一个数是**暗号**，第二个数是**几条**。\n\n- 暗号是 `1`：**存**。变量收下，印 `存进 X 条，现在有 Y 条`（Y 是存完之后变量里的数）；\n- 暗号是别的数：**取**。变量里够，就印 `取出 X 条，还剩 Y 条`；不够，取不出来，印 `取不出来，只有 Y 条`（Y 是变量里现有的数）。\n\n全办完，打烊时补最后一行：`打烊啦，变量里有 Y 条`。\n\n类定义的要求：变量**刚造出来时是 0 条**；变量要有三个本事 —— **存**、**取**（取不动要如实说「不行」）、**报数**。输入接口先给一个数（这一串一共几个数），再一个一个给。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外一组数**。本事不用偷懒，一步一步写清楚就好。）",
+  "starterTemplate": "#include <iostream>\nusing namespace std;\n\nclass Purse {\npublic:\n    // 变量：存、取、报数三个本事待补；刚造出来时是 0 条\n};\n\nint main() {\n    int n = 0;\n    if (!(cin >> n)) {\n        return 1;\n    }\n\n    for (int i = 0; i < n / 2; i++) {\n        int code = 0;\n        int amount = 0;\n        cin >> code >> amount;\n        // 按暗号办事：1 是存，其余是取\n    }\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\nusing namespace std;\n\nclass Purse {\npublic:\n    Purse() {\n        coins = 0;\n    }\n\n    void put(int k) {\n        coins = coins + k;\n    }\n\n    bool take(int k) {\n        if (k > coins) {\n            return false;\n        }\n        coins = coins - k;\n        return true;\n    }\n\n    int total() const {\n        return coins;\n    }\n\nprivate:\n    int coins;\n};\n\nint main() {\n    int n = 0;\n    if (!(cin >> n)) {\n        return 1;\n    }\n\n    Purse purse;\n    for (int i = 0; i < n / 2; i++) {\n        int code = 0;\n        int amount = 0;\n        cin >> code >> amount;\n        if (code == 1) {\n            purse.put(amount);\n            cout << \"存进 \" << amount << \" 条，现在有 \" << purse.total() << \" 条\" << endl;\n        } else {\n            if (purse.take(amount)) {\n                cout << \"取出 \" << amount << \" 条，还剩 \" << purse.total() << \" 条\" << endl;\n            } else {\n                cout << \"取不出来，只有 \" << purse.total() << \" 条\" << endl;\n            }\n        }\n    }\n\n    cout << \"打烊啦，变量里有 \" << purse.total() << \" 条\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一题练的是**把变量和变量的本事画进同一个类定义**。三处关键：\n\n**一、刚造出来先清零。** 类定义上要有一个「**一造出来就自动跑一次**」的起手式（名字和类定义一模一样、什么都不报的那种），在里面把格子放成 0。少了它，变量里一开始装的就是**上一场留下的旧货**，数字会离谱到看不懂。\n\n**二、取不动要如实说不行。** 「取」这个本事要有**两种结局**：成了、没成。所以它递回来的不是条数，而是一个「行 / 不行」的答案（`bool`）：够就减掉、答「行」；不够就**一条都别动**、答「不行」。称呼它的那一头看这个答案，决定印哪句话。\n\n**三、只看不动的本事加 `const`。** 「报数」只读格子、不写格子，名字末尾标一个 `const`，是在跟编译器打招呼：「**这一次保证不动变量**。」打了这个招呼，遇到「不许改的变量」也能称呼它。\n\n顺带一句：本事的名字随你起，判分只看印出来的话 —— **行数、顺序、数字**一个都不能差。"
+}

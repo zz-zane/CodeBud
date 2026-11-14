@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s2-01-needs-public",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-01",
+  "type": "codefix",
+  "concept": [
+    "public 那一行",
+    "类定义外面够不着",
+    "报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "fish": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    },
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们照课文画好了一个类定义，两栏家常都写在上面了；照它生对象、往格子里放东西的那几句也写好了。\n\n可信封递进去编译器就是不收，说**类定义外面够不着里面的格子**。\n\n你帮我们补上一行，让它跑起来、把那行账输出。**类定义上已有的那两栏和那几句账，一个字都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"{name}\";\n    c1.fish = {fish};\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"{name}\";\n    c1.fish = {fish};\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:12:8: error: 'std::string Cat::name' is private within this context`\n\n（下面还会跟着一条 `note: declared private here`，指回类定义上画着那一栏的地方。）\n\n用自然语言解释：**「`Cat` 这张类定义上的 `name` 那一格现在是私有的，你站的这个地方够不着。」** 它也是翻译阶段就拦下的，程序根本没跑。\n\n为什么会「私有」？因为类定义里那些格子**得站在某一行标签底下才算数**。我们一行标签都没写，编译器就按最严的那一档算：类定义自己关起门来用，外面谁也别碰。\n\n补法就是那一行 `public:` —— 意思是「下面这几样，类定义外面也够得着」。它像一个分水岭：**写在它下面的格子，外面才够得到。**\n\n记住这个手感：类定义里面**没有标签 = 外面够不着**。以后写类定义，第一件事就是先摆上那一行。"
+}

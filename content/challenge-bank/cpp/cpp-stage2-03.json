@@ -1,0 +1,341 @@
+{
+  "lessonId": "cpp-stage2-03",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s2-03-const-object-call-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画了一张叫 `Cat` 的类定义，上面那一个方法只是印一行字，一个格子都没碰。`main` 里我们创建了一个**带封印的对象**，称呼它印那行字 —— 可信封递进去，编译器当场拦下。\n\n你帮我们改一处，让它跑起来、把那行字印出来。**`main` 里那两句一个都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void show() {\n        cout << name << \" 蹲在这儿\" << endl;\n    }\n};\n\nint main() {\n    const Cat c1(\"张三\");\n    c1.show();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void show() const {\n        cout << name << \" 蹲在这儿\" << endl;\n    }\n};\n\nint main() {\n    const Cat c1(\"张三\");\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "张三 蹲在这儿",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:18:12: error: passing 'const Cat' as 'this' argument discards qualifiers [-fpermissive]`\n\n用自然语言解释：**「你递进来的是一个带封印的对象，可这一个方法没说自己只看看 —— 封印不能丢，所以这活它接不了。」**\n\n这句话里有个熟面孔：`this`。每调用一次函数，编译器都会悄悄把**称呼它的那个对象**递进去；可带封印的对象递不出一个「随便你改」的自己，而这一个方法（末尾上没写 `const`）又没承诺过不动手，两边谈不拢，它就当场拦下。\n\n改法是在这一个方法的末尾上补一颗 `const`：`void show() const`。\n\n⚠️ 补之前先想清楚：**这一个方法真的只是看看吗？** 要是它本来就要往格子里写东西，那该拿掉的就不是这颗 `const`，而是那个对象身上的封印。",
+      "templateId": "cpp-s2-03-const-object-call",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "1a5edb9d3be3443d"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-const-object-call-002",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画了一张叫 `Cat` 的类定义，上面那一个方法只是印一行字，一个格子都没碰。`main` 里我们创建了一个**带封印的对象**，称呼它印那行字 —— 可信封递进去，编译器当场拦下。\n\n你帮我们改一处，让它跑起来、把那行字印出来。**`main` 里那两句一个都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void show() {\n        cout << name << \" 蹲在这儿\" << endl;\n    }\n};\n\nint main() {\n    const Cat c1(\"三花\");\n    c1.show();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void show() const {\n        cout << name << \" 蹲在这儿\" << endl;\n    }\n};\n\nint main() {\n    const Cat c1(\"三花\");\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "三花 蹲在这儿",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:18:12: error: passing 'const Cat' as 'this' argument discards qualifiers [-fpermissive]`\n\n用自然语言解释：**「你递进来的是一个带封印的对象，可这一个方法没说自己只看看 —— 封印不能丢，所以这活它接不了。」**\n\n这句话里有个熟面孔：`this`。每调用一次函数，编译器都会悄悄把**称呼它的那个对象**递进去；可带封印的对象递不出一个「随便你改」的自己，而这一个方法（末尾上没写 `const`）又没承诺过不动手，两边谈不拢，它就当场拦下。\n\n改法是在这一个方法的末尾上补一颗 `const`：`void show() const`。\n\n⚠️ 补之前先想清楚：**这一个方法真的只是看看吗？** 要是它本来就要往格子里写东西，那该拿掉的就不是这颗 `const`，而是那个对象身上的封印。",
+      "templateId": "cpp-s2-03-const-object-call",
+      "params": {
+        "name": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "d42b08fa4ebf4eda"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-const-reader-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想看清楚**只看看的函数**和**要动格子的函数**有什么区别。输入接口会递进来**两个数**（一行一个）：第一个对象的条数、第二个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；写一个**构造函数**，用初始化列表把两样装好；\n2. 图上写**两招**：\n   - `show`：印一行 `XX 有 N 条`，末尾上带 `const`（它只看看，一格都不碰）；\n   - `eat`：把条数加一，并印一行 `XX 消耗了一条`，末尾上**不带** `const`；\n3. `main` 里的顺序是：\n   - 创建一个**普通的**对象叫 `张三`，条数用**第一个数**；调用 `show`、再调用 `eat`、再调用 `show`；\n   - 再创建一个**带封印的**对象叫 `李四`，条数用**第二个数**；只调用一次 `show`。\n\n比如程序的输入是\n\n5\n2\n\n程序就要返回\n\n张三 有 5 条\n张三 消耗了一条\n张三 有 6 条\n李四 有 2 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n\n    void eat() {\n        fish = fish + 1;\n        cout << name << \" 消耗了一条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"张三\", a);\n    c1.show();\n    c1.eat();\n    c1.show();\n\n    const Cat c2(\"李四\", b);\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 3 条\n张三 消耗了一条\n张三 有 4 条\n李四 有 4 条",
+      "stdin": "3\n4\n",
+      "explanation": "带封印的对象（`const Cat`）身上**每一格都不许改**，所以它只调用得动**末尾上带 `const` 的函数**。\n\n- `show` 的末尾上有 `const`，等于立了张字据「我们只看看，一格不动」—— 带封印的对象递得出一个「不打算改你」的自己，这一个方法就接得了这活。\n- `eat` 的末尾上没有 `const`，它要往格子里写东西 —— 带封印的对象接不了。**这一步不用试**：编译器在你看不到的那道关上就把它拦下了（它会说 `discards qualifiers`）。\n\n另外注意 `show` 调用了**两次**：第一次是处理之前，第二次是处理之后。第二次印出来的条数比第一次多一 —— 因为 `eat` 真的把格子改掉了。\n\n⚠️ 别给 `eat` 也补上 `const`：它要动格子，补了当场编不过。`const` 是**承诺**，不是装饰。",
+      "templateId": "cpp-s2-03-const-reader",
+      "params": {
+        "nameA": "张三",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "0cf1c04dabe18168"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-const-reader-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想看清楚**只看看的函数**和**要动格子的函数**有什么区别。输入接口会递进来**两个数**（一行一个）：第一个对象的条数、第二个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；写一个**构造函数**，用初始化列表把两样装好；\n2. 图上写**两招**：\n   - `show`：印一行 `XX 有 N 条`，末尾上带 `const`（它只看看，一格都不碰）；\n   - `eat`：把条数加一，并印一行 `XX 消耗了一条`，末尾上**不带** `const`；\n3. `main` 里的顺序是：\n   - 创建一个**普通的**对象叫 `张三`，条数用**第一个数**；调用 `show`、再调用 `eat`、再调用 `show`；\n   - 再创建一个**带封印的**对象叫 `三花`，条数用**第二个数**；只调用一次 `show`。\n\n比如程序的输入是\n\n4\n3\n\n程序就要返回\n\n张三 有 4 条\n张三 消耗了一条\n张三 有 5 条\n三花 有 3 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n\n    void eat() {\n        fish = fish + 1;\n        cout << name << \" 消耗了一条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"张三\", a);\n    c1.show();\n    c1.eat();\n    c1.show();\n\n    const Cat c2(\"三花\", b);\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 1 条\n张三 消耗了一条\n张三 有 2 条\n三花 有 3 条",
+      "stdin": "1\n3\n",
+      "explanation": "带封印的对象（`const Cat`）身上**每一格都不许改**，所以它只调用得动**末尾上带 `const` 的函数**。\n\n- `show` 的末尾上有 `const`，等于立了张字据「我们只看看，一格不动」—— 带封印的对象递得出一个「不打算改你」的自己，这一个方法就接得了这活。\n- `eat` 的末尾上没有 `const`，它要往格子里写东西 —— 带封印的对象接不了。**这一步不用试**：编译器在你看不到的那道关上就把它拦下了（它会说 `discards qualifiers`）。\n\n另外注意 `show` 调用了**两次**：第一次是处理之前，第二次是处理之后。第二次印出来的条数比第一次多一 —— 因为 `eat` 真的把格子改掉了。\n\n⚠️ 别给 `eat` 也补上 `const`：它要动格子，补了当场编不过。`const` 是**承诺**，不是装饰。",
+      "templateId": "cpp-s2-03-const-reader",
+      "params": {
+        "nameA": "张三",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "7c567b21b179d955"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-const-reader-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想看清楚**只看看的函数**和**要动格子的函数**有什么区别。输入接口会递进来**两个数**（一行一个）：第一个对象的条数、第二个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；写一个**构造函数**，用初始化列表把两样装好；\n2. 图上写**两招**：\n   - `show`：印一行 `XX 有 N 条`，末尾上带 `const`（它只看看，一格都不碰）；\n   - `eat`：把条数加一，并印一行 `XX 消耗了一条`，末尾上**不带** `const`；\n3. `main` 里的顺序是：\n   - 创建一个**普通的**对象叫 `王五`，条数用**第一个数**；调用 `show`、再调用 `eat`、再调用 `show`；\n   - 再创建一个**带封印的**对象叫 `李四`，条数用**第二个数**；只调用一次 `show`。\n\n比如程序的输入是\n\n5\n5\n\n程序就要返回\n\n王五 有 5 条\n王五 消耗了一条\n王五 有 6 条\n李四 有 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n\n    void eat() {\n        fish = fish + 1;\n        cout << name << \" 消耗了一条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"王五\", a);\n    c1.show();\n    c1.eat();\n    c1.show();\n\n    const Cat c2(\"李四\", b);\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "王五 有 3 条\n王五 消耗了一条\n王五 有 4 条\n李四 有 2 条",
+      "stdin": "3\n2\n",
+      "explanation": "带封印的对象（`const Cat`）身上**每一格都不许改**，所以它只调用得动**末尾上带 `const` 的函数**。\n\n- `show` 的末尾上有 `const`，等于立了张字据「我们只看看，一格不动」—— 带封印的对象递得出一个「不打算改你」的自己，这一个方法就接得了这活。\n- `eat` 的末尾上没有 `const`，它要往格子里写东西 —— 带封印的对象接不了。**这一步不用试**：编译器在你看不到的那道关上就把它拦下了（它会说 `discards qualifiers`）。\n\n另外注意 `show` 调用了**两次**：第一次是处理之前，第二次是处理之后。第二次印出来的条数比第一次多一 —— 因为 `eat` 真的把格子改掉了。\n\n⚠️ 别给 `eat` 也补上 `const`：它要动格子，补了当场编不过。`const` 是**承诺**，不是装饰。",
+      "templateId": "cpp-s2-03-const-reader",
+      "params": {
+        "nameA": "王五",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "94c52e45baf78ef5"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-const-reader-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想看清楚**只看看的函数**和**要动格子的函数**有什么区别。输入接口会递进来**两个数**（一行一个）：第一个对象的条数、第二个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；写一个**构造函数**，用初始化列表把两样装好；\n2. 图上写**两招**：\n   - `show`：印一行 `XX 有 N 条`，末尾上带 `const`（它只看看，一格都不碰）；\n   - `eat`：把条数加一，并印一行 `XX 消耗了一条`，末尾上**不带** `const`；\n3. `main` 里的顺序是：\n   - 创建一个**普通的**对象叫 `王五`，条数用**第一个数**；调用 `show`、再调用 `eat`、再调用 `show`；\n   - 再创建一个**带封印的**对象叫 `三花`，条数用**第二个数**；只调用一次 `show`。\n\n比如程序的输入是\n\n2\n3\n\n程序就要返回\n\n王五 有 2 条\n王五 消耗了一条\n王五 有 3 条\n三花 有 3 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n\n    void eat() {\n        fish = fish + 1;\n        cout << name << \" 消耗了一条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"王五\", a);\n    c1.show();\n    c1.eat();\n    c1.show();\n\n    const Cat c2(\"三花\", b);\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "王五 有 1 条\n王五 消耗了一条\n王五 有 2 条\n三花 有 5 条",
+      "stdin": "1\n5\n",
+      "explanation": "带封印的对象（`const Cat`）身上**每一格都不许改**，所以它只调用得动**末尾上带 `const` 的函数**。\n\n- `show` 的末尾上有 `const`，等于立了张字据「我们只看看，一格不动」—— 带封印的对象递得出一个「不打算改你」的自己，这一个方法就接得了这活。\n- `eat` 的末尾上没有 `const`，它要往格子里写东西 —— 带封印的对象接不了。**这一步不用试**：编译器在你看不到的那道关上就把它拦下了（它会说 `discards qualifiers`）。\n\n另外注意 `show` 调用了**两次**：第一次是处理之前，第二次是处理之后。第二次印出来的条数比第一次多一 —— 因为 `eat` 真的把格子改掉了。\n\n⚠️ 别给 `eat` 也补上 `const`：它要动格子，补了当场编不过。`const` 是**承诺**，不是装饰。",
+      "templateId": "cpp-s2-03-const-reader",
+      "params": {
+        "nameA": "王五",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "7ec89e4dcb380a6f"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-missing-class-scope-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想把函数 `show` 的状态写在类定义外面，省得类定义太长 —— 类定义里也留好了只报名字的那一行。\n\n可信封递进去，编译器当场拦下，一行都不让跑。\n\n你帮我们改一处，让它跑起来、把那一行印对。**状态里那几行和 `main` 里那几句一个都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void show() const;\n};\n\nvoid show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    Cat c1(\"张三\", 3);\n    c1.show();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void show() const;\n};\n\nvoid Cat::show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    Cat c1(\"张三\", 3);\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 3 条",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:14:13: error: non-member function 'void show()' cannot have cv-qualifier`\n\n用自然语言解释：**「这不是哪张类定义上的函数，它凭什么叫自己只读？」** 底下还会跟着两句，说 `name`、`fish` 这两个名字「没见过」—— 因为离开类定义之后，编译器压根不知道进哪张类定义去找那几格。\n\n根子在这儿：**状态写在类定义外面时，函数名前面必须挂上「这是哪张类定义上的」那一小段** —— 在本课里就是 `Cat::`。挂上它，编译器才把外面这一个方法认回类定义里去；没挂，它就只当门口来了个谁也不认识的野函数。\n\n改法就是那一小段：`void Cat::show() const`。\n\n以后看到 `non-member function`，第一件事就是检查函数名前面是不是漏了它。",
+      "templateId": "cpp-s2-03-missing-class-scope",
+      "params": {
+        "name": "张三",
+        "fish": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "2fa608072a314aa1"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-missing-class-scope-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想把函数 `show` 的状态写在类定义外面，省得类定义太长 —— 类定义里也留好了只报名字的那一行。\n\n可信封递进去，编译器当场拦下，一行都不让跑。\n\n你帮我们改一处，让它跑起来、把那一行印对。**状态里那几行和 `main` 里那几句一个都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void show() const;\n};\n\nvoid show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    Cat c1(\"王五\", 4);\n    c1.show();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void show() const;\n};\n\nvoid Cat::show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    Cat c1(\"王五\", 4);\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "王五 有 4 条",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:14:13: error: non-member function 'void show()' cannot have cv-qualifier`\n\n用自然语言解释：**「这不是哪张类定义上的函数，它凭什么叫自己只读？」** 底下还会跟着两句，说 `name`、`fish` 这两个名字「没见过」—— 因为离开类定义之后，编译器压根不知道进哪张类定义去找那几格。\n\n根子在这儿：**状态写在类定义外面时，函数名前面必须挂上「这是哪张类定义上的」那一小段** —— 在本课里就是 `Cat::`。挂上它，编译器才把外面这一个方法认回类定义里去；没挂，它就只当门口来了个谁也不认识的野函数。\n\n改法就是那一小段：`void Cat::show() const`。\n\n以后看到 `non-member function`，第一件事就是检查函数名前面是不是漏了它。",
+      "templateId": "cpp-s2-03-missing-class-scope",
+      "params": {
+        "name": "王五",
+        "fish": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "3b53a647fe5c6bd3"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-outside-rename-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想把两招的**状态都写在类定义外面**，省得类定义长得没边。输入接口会递进来**一个数**（一行）：这个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样都收，用初始化列表装好）；\n2. 类定义里**只报名字**地写下两招（末尾带上分号）：一个方法 `rename`，收一串字；一个方法 `show`，末尾上带 `const`；\n3. 这两招的**状态都写在类定义外面** —— 名字前面记得挂上「这是哪张类定义上的」那一小段。`rename` 的状态里要**指名道姓**地把格子改成传入进来的那个名字；\n4. `main` 里创建一个叫 `张三` 的对象，条数用输入接口递进来的那个数；把它**改名**成 `李四`；\n5. 最后调用一次 `show`，印**一行**：`XX 有 N 条`。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n李四 有 2 条\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void rename(string name);\n    void show() const;\n};\n\nvoid Cat::rename(string name) {\n    this->name = name;\n}\n\nvoid Cat::show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1(\"张三\", a);\n    c1.rename(\"李四\");\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "李四 有 5 条",
+      "stdin": "5\n",
+      "explanation": "这一题的重点是**函数住在哪儿**。\n\n类定义里那两行 `void rename(string name);` 和 `void show() const;` **只报名字、不带状态**，末尾的分号也别丢 —— 它是在跟编译器打个招呼：「有这么两招，状态回头再写。」\n\n真正的状态写在类定义外面，**函数名前面必须挂上 `Cat::`**，念作「这是 `Cat` 这张类定义上的」。少了它，编译器就不认识这两招了（它会说 `non-member function`）。\n\n改名那一个方法还有个小机关：输入接口也叫 `name`，和格子同名，所以碰格子必须**指名道姓**写 `this->name` —— 光写 `name` 改的只是输入接口自己，名字一点都不会变，而且**不会报错**。\n\n⚠️ 印那一行的时候，`name` 那两格里保存的是**改过之后**的新名字。",
+      "templateId": "cpp-s2-03-outside-rename",
+      "params": {
+        "oldName": "张三",
+        "newName": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "d0f103b2a3416913"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-outside-rename-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想把两招的**状态都写在类定义外面**，省得类定义长得没边。输入接口会递进来**一个数**（一行）：这个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样都收，用初始化列表装好）；\n2. 类定义里**只报名字**地写下两招（末尾带上分号）：一个方法 `rename`，收一串字；一个方法 `show`，末尾上带 `const`；\n3. 这两招的**状态都写在类定义外面** —— 名字前面记得挂上「这是哪张类定义上的」那一小段。`rename` 的状态里要**指名道姓**地把格子改成传入进来的那个名字；\n4. `main` 里创建一个叫 `张三` 的对象，条数用输入接口递进来的那个数；把它**改名**成 `三花`；\n5. 最后调用一次 `show`，印**一行**：`XX 有 N 条`。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n三花 有 3 条\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void rename(string name);\n    void show() const;\n};\n\nvoid Cat::rename(string name) {\n    this->name = name;\n}\n\nvoid Cat::show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1(\"张三\", a);\n    c1.rename(\"三花\");\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "三花 有 6 条",
+      "stdin": "6\n",
+      "explanation": "这一题的重点是**函数住在哪儿**。\n\n类定义里那两行 `void rename(string name);` 和 `void show() const;` **只报名字、不带状态**，末尾的分号也别丢 —— 它是在跟编译器打个招呼：「有这么两招，状态回头再写。」\n\n真正的状态写在类定义外面，**函数名前面必须挂上 `Cat::`**，念作「这是 `Cat` 这张类定义上的」。少了它，编译器就不认识这两招了（它会说 `non-member function`）。\n\n改名那一个方法还有个小机关：输入接口也叫 `name`，和格子同名，所以碰格子必须**指名道姓**写 `this->name` —— 光写 `name` 改的只是输入接口自己，名字一点都不会变，而且**不会报错**。\n\n⚠️ 印那一行的时候，`name` 那两格里保存的是**改过之后**的新名字。",
+      "templateId": "cpp-s2-03-outside-rename",
+      "params": {
+        "oldName": "张三",
+        "newName": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "15ce7912586dddb6"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-outside-rename-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想把两招的**状态都写在类定义外面**，省得类定义长得没边。输入接口会递进来**一个数**（一行）：这个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样都收，用初始化列表装好）；\n2. 类定义里**只报名字**地写下两招（末尾带上分号）：一个方法 `rename`，收一串字；一个方法 `show`，末尾上带 `const`；\n3. 这两招的**状态都写在类定义外面** —— 名字前面记得挂上「这是哪张类定义上的」那一小段。`rename` 的状态里要**指名道姓**地把格子改成传入进来的那个名字；\n4. `main` 里创建一个叫 `王五` 的对象，条数用输入接口递进来的那个数；把它**改名**成 `李四`；\n5. 最后调用一次 `show`，印**一行**：`XX 有 N 条`。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n李四 有 2 条\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void rename(string name);\n    void show() const;\n};\n\nvoid Cat::rename(string name) {\n    this->name = name;\n}\n\nvoid Cat::show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1(\"王五\", a);\n    c1.rename(\"李四\");\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "李四 有 9 条",
+      "stdin": "9\n",
+      "explanation": "这一题的重点是**函数住在哪儿**。\n\n类定义里那两行 `void rename(string name);` 和 `void show() const;` **只报名字、不带状态**，末尾的分号也别丢 —— 它是在跟编译器打个招呼：「有这么两招，状态回头再写。」\n\n真正的状态写在类定义外面，**函数名前面必须挂上 `Cat::`**，念作「这是 `Cat` 这张类定义上的」。少了它，编译器就不认识这两招了（它会说 `non-member function`）。\n\n改名那一个方法还有个小机关：输入接口也叫 `name`，和格子同名，所以碰格子必须**指名道姓**写 `this->name` —— 光写 `name` 改的只是输入接口自己，名字一点都不会变，而且**不会报错**。\n\n⚠️ 印那一行的时候，`name` 那两格里保存的是**改过之后**的新名字。",
+      "templateId": "cpp-s2-03-outside-rename",
+      "params": {
+        "oldName": "王五",
+        "newName": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "1f239fb3cd8d4da7"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-outside-rename-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想把两招的**状态都写在类定义外面**，省得类定义长得没边。输入接口会递进来**一个数**（一行）：这个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样都收，用初始化列表装好）；\n2. 类定义里**只报名字**地写下两招（末尾带上分号）：一个方法 `rename`，收一串字；一个方法 `show`，末尾上带 `const`；\n3. 这两招的**状态都写在类定义外面** —— 名字前面记得挂上「这是哪张类定义上的」那一小段。`rename` 的状态里要**指名道姓**地把格子改成传入进来的那个名字；\n4. `main` 里创建一个叫 `王五` 的对象，条数用输入接口递进来的那个数；把它**改名**成 `三花`；\n5. 最后调用一次 `show`，印**一行**：`XX 有 N 条`。\n\n比如程序的输入是\n\n6\n\n程序就要返回\n\n三花 有 6 条\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void rename(string name);\n    void show() const;\n};\n\nvoid Cat::rename(string name) {\n    this->name = name;\n}\n\nvoid Cat::show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1(\"王五\", a);\n    c1.rename(\"三花\");\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "三花 有 9 条",
+      "stdin": "9\n",
+      "explanation": "这一题的重点是**函数住在哪儿**。\n\n类定义里那两行 `void rename(string name);` 和 `void show() const;` **只报名字、不带状态**，末尾的分号也别丢 —— 它是在跟编译器打个招呼：「有这么两招，状态回头再写。」\n\n真正的状态写在类定义外面，**函数名前面必须挂上 `Cat::`**，念作「这是 `Cat` 这张类定义上的」。少了它，编译器就不认识这两招了（它会说 `non-member function`）。\n\n改名那一个方法还有个小机关：输入接口也叫 `name`，和格子同名，所以碰格子必须**指名道姓**写 `this->name` —— 光写 `name` 改的只是输入接口自己，名字一点都不会变，而且**不会报错**。\n\n⚠️ 印那一行的时候，`name` 那两格里保存的是**改过之后**的新名字。",
+      "templateId": "cpp-s2-03-outside-rename",
+      "params": {
+        "oldName": "王五",
+        "newName": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "be4bdf7da31381bf"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-this-namesake-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想给类定义添一个方法 `eat`，让对象处理一顿、条数往上加。输入接口会递进来**两个数**（一行一个）：这个对象一初始化带的条数、这一顿消耗的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；写一个**构造函数** `Cat(string n, int f)`，用初始化列表把两样装好；\n2. 再写一个方法 `void eat(int fish)` —— 它的输入接口**也叫 `fish`**（我们就是要练这个同名的情形）：把**格子**里的条数加上传入进来的那个数；\n3. `main` 里创建一个叫 `张三` 的对象，条数用**第一个数**；调用一次 `eat`（消耗的量是**第二个数**）；\n4. 最后印**一行**：`XX 现在有 N 条`。\n\n比如程序的输入是\n\n4\n2\n\n程序就要返回\n\n张三 现在有 6 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void eat(int fish) {\n        this->fish = this->fish + fish;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"张三\", a);\n    c1.eat(b);\n    cout << c1.name << \" 现在有 \" << c1.fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 现在有 4 条",
+      "stdin": "3\n1\n",
+      "explanation": "这一题专门练**同名**：函数 `eat` 的状态里站着两个 `fish` —— 一个是输入接口，一个是格子。\n\n规矩是「**近的那个赢**」：光写 `fish` 指的是输入接口。所以碰格子必须指名道姓：\n\n`this->fish = this->fish + fish;`\n\n念作「**我们自己那一格 `fish`，加上输入接口那个 `fish`，再赋给我们自己那一格**」。\n\n要是漏掉 `this->`，写成 `fish = fish + fish;`（或者 `fish = fish + 1;`），改的只是输入接口自己 —— **格子纹丝不动**，而且这套写法**不会报错、不会警告**，只是印出来的数悄悄不对。这正是本课最该带走的手感。\n\n⚠️ 印那一行的时候，用的是**加过之后**的条数。另外那两个数是从输入接口递进来的，判分喂的量和题面示例不一样，别写死。",
+      "templateId": "cpp-s2-03-this-namesake",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "4ef75bd1e6c2da55"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-this-namesake-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想给类定义添一个方法 `eat`，让对象处理一顿、条数往上加。输入接口会递进来**两个数**（一行一个）：这个对象一初始化带的条数、这一顿消耗的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；写一个**构造函数** `Cat(string n, int f)`，用初始化列表把两样装好；\n2. 再写一个方法 `void eat(int fish)` —— 它的输入接口**也叫 `fish`**（我们就是要练这个同名的情形）：把**格子**里的条数加上传入进来的那个数；\n3. `main` 里创建一个叫 `李四` 的对象，条数用**第一个数**；调用一次 `eat`（消耗的量是**第二个数**）；\n4. 最后印**一行**：`XX 现在有 N 条`。\n\n比如程序的输入是\n\n1\n4\n\n程序就要返回\n\n李四 现在有 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void eat(int fish) {\n        this->fish = this->fish + fish;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"李四\", a);\n    c1.eat(b);\n    cout << c1.name << \" 现在有 \" << c1.fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "李四 现在有 4 条",
+      "stdin": "1\n3\n",
+      "explanation": "这一题专门练**同名**：函数 `eat` 的状态里站着两个 `fish` —— 一个是输入接口，一个是格子。\n\n规矩是「**近的那个赢**」：光写 `fish` 指的是输入接口。所以碰格子必须指名道姓：\n\n`this->fish = this->fish + fish;`\n\n念作「**我们自己那一格 `fish`，加上输入接口那个 `fish`，再赋给我们自己那一格**」。\n\n要是漏掉 `this->`，写成 `fish = fish + fish;`（或者 `fish = fish + 1;`），改的只是输入接口自己 —— **格子纹丝不动**，而且这套写法**不会报错、不会警告**，只是印出来的数悄悄不对。这正是本课最该带走的手感。\n\n⚠️ 印那一行的时候，用的是**加过之后**的条数。另外那两个数是从输入接口递进来的，判分喂的量和题面示例不一样，别写死。",
+      "templateId": "cpp-s2-03-this-namesake",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "2505dace29a09d6b"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-this-namesake-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想给类定义添一个方法 `eat`，让对象处理一顿、条数往上加。输入接口会递进来**两个数**（一行一个）：这个对象一初始化带的条数、这一顿消耗的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；写一个**构造函数** `Cat(string n, int f)`，用初始化列表把两样装好；\n2. 再写一个方法 `void eat(int fish)` —— 它的输入接口**也叫 `fish`**（我们就是要练这个同名的情形）：把**格子**里的条数加上传入进来的那个数；\n3. `main` 里创建一个叫 `王五` 的对象，条数用**第一个数**；调用一次 `eat`（消耗的量是**第二个数**）；\n4. 最后印**一行**：`XX 现在有 N 条`。\n\n比如程序的输入是\n\n3\n2\n\n程序就要返回\n\n王五 现在有 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void eat(int fish) {\n        this->fish = this->fish + fish;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"王五\", a);\n    c1.eat(b);\n    cout << c1.name << \" 现在有 \" << c1.fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 现在有 6 条",
+      "stdin": "4\n2\n",
+      "explanation": "这一题专门练**同名**：函数 `eat` 的状态里站着两个 `fish` —— 一个是输入接口，一个是格子。\n\n规矩是「**近的那个赢**」：光写 `fish` 指的是输入接口。所以碰格子必须指名道姓：\n\n`this->fish = this->fish + fish;`\n\n念作「**我们自己那一格 `fish`，加上输入接口那个 `fish`，再赋给我们自己那一格**」。\n\n要是漏掉 `this->`，写成 `fish = fish + fish;`（或者 `fish = fish + 1;`），改的只是输入接口自己 —— **格子纹丝不动**，而且这套写法**不会报错、不会警告**，只是印出来的数悄悄不对。这正是本课最该带走的手感。\n\n⚠️ 印那一行的时候，用的是**加过之后**的条数。另外那两个数是从输入接口递进来的，判分喂的量和题面示例不一样，别写死。",
+      "templateId": "cpp-s2-03-this-namesake",
+      "params": {
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "e896446feec0c3fe"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-this-shadow-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画了一张叫 `Cat` 的类定义，上面有一个方法 `rename`，用来给对象改名字 —— 输入接口我们图省事也叫 `name`。\n\n`main` 里引用的是「改名」，可印出来还是老名字：**它跑得成功、也没报错，就是活干歪了。**\n\n你帮我们改一处，让它真的把名字改掉。**`main` 里那几句和类定义上别的地方都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void rename(string name) {\n        name = name;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\");\n    c1.rename(\"王五\");\n    cout << \"现在叫 \" << c1.name << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void rename(string name) {\n        this->name = name;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\");\n    c1.rename(\"王五\");\n    cout << \"现在叫 \" << c1.name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "现在叫 王五",
+      "stdin": null,
+      "explanation": "这一题**没有报错** —— 编译器放它一路跑到底，屏幕上安安静静（我们拿最啰嗦的那档念叨真跑过，它一个字都没说）。\n\n问题在状态里那一句 `name = name;`：函数里站着**两个 `name`**，一个是输入接口，一个是格子，而规矩是「**近的那个赢**」—— 所以这一句念作「把输入接口装进输入接口里」，格子从头到尾没被碰过。调用「改名叫王五」，名字格里保存的还是原来那个。\n\n改法是指名道姓：\n\n`this->name = name;`\n\n`this` 是每调用一次函数时悄悄递进来的**那个对象**，`this->name` 就是「我们自己那一格 `name`」。\n\n⚠️ 这一类错最值得记住的不是怎么改，而是它**不吵不闹**：没有报错、没有警告，只有印出来的结果悄悄不对。所以自己写函数时，只要输入接口和格子同名，格子那一侧就必须写 `this->`。",
+      "templateId": "cpp-s2-03-this-shadow",
+      "params": {
+        "name": "张三",
+        "newName": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "d74e1b615fa85dde"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-03-this-shadow-003",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画了一张叫 `Cat` 的类定义，上面有一个方法 `rename`，用来给对象改名字 —— 输入接口我们图省事也叫 `name`。\n\n`main` 里引用的是「改名」，可印出来还是老名字：**它跑得成功、也没报错，就是活干歪了。**\n\n你帮我们改一处，让它真的把名字改掉。**`main` 里那几句和类定义上别的地方都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void rename(string name) {\n        name = name;\n    }\n};\n\nint main() {\n    Cat c1(\"三花\");\n    c1.rename(\"李四\");\n    cout << \"现在叫 \" << c1.name << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void rename(string name) {\n        this->name = name;\n    }\n};\n\nint main() {\n    Cat c1(\"三花\");\n    c1.rename(\"李四\");\n    cout << \"现在叫 \" << c1.name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "现在叫 李四",
+      "stdin": null,
+      "explanation": "这一题**没有报错** —— 编译器放它一路跑到底，屏幕上安安静静（我们拿最啰嗦的那档念叨真跑过，它一个字都没说）。\n\n问题在状态里那一句 `name = name;`：函数里站着**两个 `name`**，一个是输入接口，一个是格子，而规矩是「**近的那个赢**」—— 所以这一句念作「把输入接口装进输入接口里」，格子从头到尾没被碰过。调用「改名叫王五」，名字格里保存的还是原来那个。\n\n改法是指名道姓：\n\n`this->name = name;`\n\n`this` 是每调用一次函数时悄悄递进来的**那个对象**，`this->name` 就是「我们自己那一格 `name`」。\n\n⚠️ 这一类错最值得记住的不是怎么改，而是它**不吵不闹**：没有报错、没有警告，只有印出来的结果悄悄不对。所以自己写函数时，只要输入接口和格子同名，格子那一侧就必须写 `this->`。",
+      "templateId": "cpp-s2-03-this-shadow",
+      "params": {
+        "name": "三花",
+        "newName": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "52a6f5b81417debf"
+      }
+    }
+  ]
+}

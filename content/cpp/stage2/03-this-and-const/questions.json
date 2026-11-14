@@ -1,0 +1,87 @@
+{
+  "lessonId": "cpp-stage2-03",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们把 `show` 的状态写在类定义外面，函数名**前面空着**（只写了 `void show() const`，没说它属于哪张类定义）。编译器当场拦下，报的原话里有 `non-member function`。该动手改哪儿？",
+      "options": [
+        "在函数名 `show` 前面补上 `Cat::`，告诉编译器它是哪张类上的",
+        "把末尾上那颗 `const` 删掉 —— 少了它就不算类上的函数了",
+        "回到类定义里，把只报名字的那一行 `void show() const;` 删掉",
+        "在 `main` 里把 `c1.show();` 改成把 `c1` 递进去的写法"
+      ],
+      "answer": 0,
+      "explanation": "报错里那个 `non-member function` 说的是「这不是哪张类定义上的函数」—— 既然不在类定义上，它自然也没资格说自己是只读的（`cv-qualifier` 那句说的就是这个）。`Cat::` 那一小段就是认领暗号：挂上它，编译器才知道要进哪张类定义里去找 `name`、`fish` 那几格。删掉类定义里那行「先打个招呼」只会更糟（函数的名字就没人认了），改 `main` 里那一句更是没道理。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "一个方法 `rename(string name)` 的状态里只有一句：`name = name;`。我们在 `main` 里调用了 `c1.rename(\"王五\");` —— 跑完之后这个对象叫什么？",
+      "options": [
+        "还是它原来的名字 —— 那一句只改了输入接口自己，格子纹丝不动，而且**不报错**",
+        "改成了「王五」—— 两个 `name` 里近的那个是格子",
+        "名字那一格变成空的 —— 两个字互相抵消了",
+        "根本跑不起来 —— 编译器会拦下这种重名的写法"
+      ],
+      "answer": 0,
+      "explanation": "函数状态里站着两个 `name`：一个是输入接口，一个是格子。近的那个赢，所以光写 `name` 指的是**输入接口**——于是这一句念作「把输入接口装进输入接口里」，什么都没发生，格子里的名字一动不动。我们真跑过，`-Wall` 那档最啰嗦的念叨也没说一个字、程序照跑 —— 这正是它最坑的地方：不吵不闹，只是活干歪了。要碰格子必须指名道姓写 `this->name`。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "类定义上有一个方法 `void show()`，末尾上**没有** `const`；它的状态里其实只印了一行字，一个格子都没碰。现在我们创建了一个**带封印的对象**（`const Cat c1(\"张三\");`）去称呼它 —— 会怎样？",
+      "options": [
+        "编译器拦下 —— 带 `const` 的函数只认同样带 `const` 的函数",
+        "顺利跑起来 —— 反正状态里确实没碰格子",
+        "跑得起来，但那一行字印不出来",
+        "跑得起来，只是这个对象身上的封印会被摘掉"
+      ],
+      "answer": 0,
+      "explanation": "编译器判断这一个方法会不会动格子，**只看末尾上有没有那颗 `const`，不看状态**。所以哪怕你状态里真的一个字都没碰，只要末尾上空着，它就按「这一个方法要动格子」算 —— 而带封印的对象不允许自己被随便改，两边谈不拢，当场拦下。想让它跑起来，给 `show` 的末尾补一颗 `const` 就行。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n    void rename(string name);\n};\n\nvoid ____rename(string name) {\n    ____->name = name;\n}\n\nint main() {\n    Cat c1(\"张三\");\n    c1.rename(\"王五\");\n    cout << c1.name << endl;\n    return 0;\n}",
+      "stem": "这段代码里有两处被我们挖空了（用 `____` 标出），补上之后它会印出「王五」。",
+      "blanks": [
+        {
+          "answer": "Cat::",
+          "accept": []
+        },
+        {
+          "answer": "this",
+          "accept": []
+        }
+      ],
+      "explanation": "第一处是函数定义写在类定义外面必须挂的认领暗号：`Cat::`，念作「`Cat` 这张类定义上的」—— 少了它，编译器就不知道进哪张类定义去找格子。第二处是输入接口和格子同名时的写法：`this->name` 念作「我们自己那一格 `name`」，光写 `name` 只会碰到输入接口，名字就改不掉了。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void rename(string name) {\n        name = name;\n    }\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 3);\n    c1.rename(\"王五\");\n    c1.show();\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "张三 有 3 条",
+      "accept": [
+        "张三 有 3 条\n"
+      ],
+      "explanation": "这一个方法想改名，可状态里写的是 `name = name;` —— 两个 `name` 指的都是**输入接口**，格子压根没被碰过。所以调用结束 `rename(\"王五\")` 之后，名字那一格里保存的还是「张三」，印出来自然也是张三。这段代码能编过、能跑完、也没有任何念叨，只是活干歪了 —— 想改对，得写 `this->name = name;`。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void rename(string name) {\n        this->name = name;\n    }\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 3);\n    Cat c2(\"李四\", 1);\n    c1.rename(\"王五\");\n    c1.show();\n    c2.show();\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "王五 有 3 条\n李四 有 1 条",
+      "accept": [
+        "王五 有 3 条\n李四 有 1 条\n"
+      ],
+      "explanation": "`this` 是每次调用函数时悄悄递进来的**那个对象**。`c1.rename(\"王五\");` 递进去的是 `c1`，所以 `this->name` 改的是 `c1` 那一格；`c2` 从头到尾没人碰过，名字和条数一点没变。函数只有一份，可每次称呼它，`this` 指的都可能换一个对象 —— 这就是「函数被哪个对象调用，就替哪个对象干活」。"
+    }
+  ]
+}

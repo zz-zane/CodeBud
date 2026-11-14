@@ -1,0 +1,27 @@
+{
+  "templateId": "py-s1-missing-paren",
+  "lang": "python",
+  "stage": 1,
+  "lessonId": "python-stage1-01",
+  "type": "codefix",
+  "concept": [
+    "print",
+    "括号配对",
+    "语法错误"
+  ],
+  "instances": 2,
+  "params": {
+    "thing": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品A",
+        "毛线球"
+      ]
+    }
+  },
+  "stemTemplate": "我们照着课文敲下了第一个程序，编译器立刻就生气了……\n\n可我们盯着看了半天，`print` 明明写对了呀？你帮我们找找哪里不对 —— 改好之后它应该打印出 `我最喜欢{thing}！`。",
+  "brokenCodeTemplate": "print(\"我最喜欢{thing}！\"\n",
+  "referenceFixTemplate": "print(\"我最喜欢{thing}！\")\n",
+  "explanationTemplate": "是**右括号**！`print(` 开了个头，后面少了 `)` 来收尾。\n\n括号和引号都得**成对**出现：开一个就要关一个，而且不能交叉。少了右边那个，编译器读到这行末尾也没等到闭合，只好不高兴地报 `SyntaxError`。\n\n（这种错叫**语法错误**：程序连第一步都没迈出去。它的报错里会写着 `line 1`，那就是它摔倒在第几行。）"
+}

@@ -1,0 +1,26 @@
+{
+  "templateId": "cpp-s2-15-take-no-virtual",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-15",
+  "type": "codefix",
+  "concept": [
+    "老类定义那一手要挂 virtual",
+    "顺着名称调用才看名称后面站的是谁",
+    "漏挂招牌编译器当场拦下"
+  ],
+  "instances": 2,
+  "params": {
+    "amount": {
+      "kind": "pick",
+      "values": [
+        30,
+        60
+      ]
+    }
+  },
+  "stemTemplate": "我们这台机器里保存了两个账户：普通账户（卡号 `A1`，余额 50 条）和信用账户（卡号 `C1`，余额 10 条、额度 100）。名册里保存的是名称，我们挨着调用一句「取 **{amount}** 条」，接不住的那一笔就把说明印出来，最后再把两个账户各自的余额报一遍。\n\n可我们手一滑：**老类定义上「取钱」那一手忘了挂 `virtual`**，新类定义那一手却还老老实实挂着 `override` —— 编译器当场拦下，整台机器一个字都跑不出来。你帮我们把漏掉的那一处补上（**别的行一行都别动**），让它跑起来、两个账户各按自己的规矩办。",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\n#include <vector>\n#include <stdexcept>\nusing namespace std;\n\nclass Account {\nprotected:\n    string id;\n    int balance;\npublic:\n    Account(string i, int b) : id(i), balance(b) {}\n    virtual ~Account() {}\n\n    string getId() { return id; }\n    int getBalance() { return balance; }\n\n    void save(int amount) {\n        balance = balance + amount;\n        cout << id << \" 存进 \" << amount << \" 条，现在 \" << balance << \" 条\" << endl;\n    }\n\n    void take(int amount) {\n        if (amount > balance) {\n            throw runtime_error(\"余额不够\");\n        }\n        balance = balance - amount;\n        cout << id << \" 取走 \" << amount << \" 条，现在 \" << balance << \" 条\" << endl;\n    }\n};\n\nclass CreditAccount : public Account {\nprotected:\n    int limit;\npublic:\n    CreditAccount(string i, int b, int l) : Account(i, b), limit(l) {}\n\n    void take(int amount) override {\n        if (amount > balance + limit) {\n            throw runtime_error(\"额度也不够\");\n        }\n        balance = balance - amount;\n        cout << id << \" 取走 \" << amount << \" 条（能透支），现在 \" << balance << \" 条\" << endl;\n    }\n};\n\nint main() {\n    vector<Account*> roster;\n    roster.push_back(new Account(\"A1\", 50));\n    roster.push_back(new CreditAccount(\"C1\", 10, 100));\n\n    for (Account* p : roster) {\n        try {\n            p->take({amount});\n        } catch (const runtime_error& e) {\n            cout << p->getId() << \" 这一笔没办成：\" << e.what() << endl;\n        }\n    }\n\n    for (Account* p : roster) {\n        cout << p->getId() << \" 还剩 \" << p->getBalance() << \" 条\" << endl;\n        delete p;\n    }\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\n#include <vector>\n#include <stdexcept>\nusing namespace std;\n\nclass Account {\nprotected:\n    string id;\n    int balance;\npublic:\n    Account(string i, int b) : id(i), balance(b) {}\n    virtual ~Account() {}\n\n    string getId() { return id; }\n    int getBalance() { return balance; }\n\n    void save(int amount) {\n        balance = balance + amount;\n        cout << id << \" 存进 \" << amount << \" 条，现在 \" << balance << \" 条\" << endl;\n    }\n\n    virtual void take(int amount) {\n        if (amount > balance) {\n            throw runtime_error(\"余额不够\");\n        }\n        balance = balance - amount;\n        cout << id << \" 取走 \" << amount << \" 条，现在 \" << balance << \" 条\" << endl;\n    }\n};\n\nclass CreditAccount : public Account {\nprotected:\n    int limit;\npublic:\n    CreditAccount(string i, int b, int l) : Account(i, b), limit(l) {}\n\n    void take(int amount) override {\n        if (amount > balance + limit) {\n            throw runtime_error(\"额度也不够\");\n        }\n        balance = balance - amount;\n        cout << id << \" 取走 \" << amount << \" 条（能透支），现在 \" << balance << \" 条\" << endl;\n    }\n};\n\nint main() {\n    vector<Account*> roster;\n    roster.push_back(new Account(\"A1\", 50));\n    roster.push_back(new CreditAccount(\"C1\", 10, 100));\n\n    for (Account* p : roster) {\n        try {\n            p->take({amount});\n        } catch (const runtime_error& e) {\n            cout << p->getId() << \" 这一笔没办成：\" << e.what() << endl;\n        }\n    }\n\n    for (Account* p : roster) {\n        cout << p->getId() << \" 还剩 \" << p->getBalance() << \" 条\" << endl;\n        delete p;\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "我们在本机真跑过没补的版本，编译器的原话是这一句：\n\n```text\nmain.cpp:38:10: error: 'void CreditAccount::take(int)' marked 'override', but does not override\n```\n\n念作：「**新类定义说我们要改写这一手，可老类定义上根本没有人挂过招牌。**」\n\n修法只有一处：老类定义那一手开头补上 `virtual`。补完之后我们真跑过：\n\n- **取 30 条**（两个账户都够）：普通账户印「A1 取走 30 条，现在 20 条」，信用账户印「C1 取走 30 条（能透支），现在 -20 条」，再报两行余额；\n- **取 60 条**（普通账户只有 50，不够）：普通账户那一笔被异常处理分支接住，印「A1 这一笔没办成：余额不够」；信用账户有 10 条加 100 的额度，照样办成 —— 那一行里带着「（能透支）」三个字。\n\n两种情况下**信用账户那一行都该办成**，这正是「老类定义那一手挂着招牌、新类定义改写的那一份才算数」的样子。\n\n⚠️ 三条钉住：\n\n1. **招牌挂在老类定义那一手开头**，不是挂在新类定义那一份上。挂错地方的话，顺着名称调用还是跑老类定义那一版，你补的招牌根本轮不到上场。\n2. **别用「把新类定义那两个字删掉」来过关。** 删掉 `override` 确实编得过，但那是另一跤：程序跑得欢，信用账户却按老类定义的规矩被打回来 —— 答案悄悄错，屏幕上一句抱怨都没有。\n3. **名字和料都要对得上**（`take`、一个整数）。名字打错、料对不上，编译器也会拦下，报的是「没有可以改写的」那一类话。"
+}

@@ -1,0 +1,484 @@
+{
+  "lessonId": "java-stage1-04",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s1-nextline-after-nextint-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们递给 Scanner 一根纸条：第一行是一个数，第二行是一个对象的名字。想把两样都读出来 —— 数读对了，**名字却是空的**！\n\n程序不报错，也不翻脸，就是安安静静地给了我们一个空名字……你帮我们看看那个名字躲哪儿去了，把它改好。\n\n改好之后，屏幕上应该是两行：第一行报数字，第二行报名字（那两对方括号也得在）。",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"2\\n张三\");\n        int num = sc.nextInt();\n        String name = sc.nextLine();\n        System.out.println(\"数字是 \" + num);\n        System.out.println(\"名字是[\" + name + \"]\");\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"2\\n张三\");\n        int num = sc.nextInt();\n        sc.nextLine();\n        String name = sc.nextLine();\n        System.out.println(\"数字是 \" + num);\n        System.out.println(\"名字是[\" + name + \"]\");\n    }\n}\n",
+      "expectedOutput": "数字是 2\n名字是[张三]",
+      "stdin": null,
+      "explanation": "那个名字哪儿也没去，它**还留在纸条上** —— 是中间那个换行挡了路。\n\n`nextInt()` 读数字的时候，只把 2 取走，**后面那个换行还留在原地**。轮到 `nextLine()` 伸手一摸，摸到的正是那个剩下的换行，于是它老老实实汇报：「这一行读完了，里面什么都没有。」\n\n办法只有四个字：**先把空行消耗** —— 在两句之间补上一句没有名字的 `sc.nextLine();`，它的任务就是把那个剩下的换行处理干净。这样下一句 `nextLine()` 才够得着真正的名字。\n\n那两对方括号就是干这个用的：把读到的东西团团围住，一眼就能看出「里面是空的，还是有东西」。\n\n⚠️ 这个坑最阴的地方是：**它不报错**。程序跑得好好的，只是给你一个看起来挺正常的结果 —— 往后凡是「先读数字、再读一整行」，中间那句消耗空行的 `nextLine()` 几乎都是必备的。",
+      "templateId": "java-s1-nextline-after-nextint",
+      "params": {
+        "n": 2,
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "74d4c084002b5219"
+      }
+    },
+    {
+      "id": "bank-java-s1-nextline-after-nextint-011",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们递给 Scanner 一根纸条：第一行是一个数，第二行是一个对象的名字。想把两样都读出来 —— 数读对了，**名字却是空的**！\n\n程序不报错，也不翻脸，就是安安静静地给了我们一个空名字……你帮我们看看那个名字躲哪儿去了，把它改好。\n\n改好之后，屏幕上应该是两行：第一行报数字，第二行报名字（那两对方括号也得在）。",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"5\\n李四\");\n        int num = sc.nextInt();\n        String name = sc.nextLine();\n        System.out.println(\"数字是 \" + num);\n        System.out.println(\"名字是[\" + name + \"]\");\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"5\\n李四\");\n        int num = sc.nextInt();\n        sc.nextLine();\n        String name = sc.nextLine();\n        System.out.println(\"数字是 \" + num);\n        System.out.println(\"名字是[\" + name + \"]\");\n    }\n}\n",
+      "expectedOutput": "数字是 5\n名字是[李四]",
+      "stdin": null,
+      "explanation": "那个名字哪儿也没去，它**还留在纸条上** —— 是中间那个换行挡了路。\n\n`nextInt()` 读数字的时候，只把 5 取走，**后面那个换行还留在原地**。轮到 `nextLine()` 伸手一摸，摸到的正是那个剩下的换行，于是它老老实实汇报：「这一行读完了，里面什么都没有。」\n\n办法只有四个字：**先把空行消耗** —— 在两句之间补上一句没有名字的 `sc.nextLine();`，它的任务就是把那个剩下的换行处理干净。这样下一句 `nextLine()` 才够得着真正的名字。\n\n那两对方括号就是干这个用的：把读到的东西团团围住，一眼就能看出「里面是空的，还是有东西」。\n\n⚠️ 这个坑最阴的地方是：**它不报错**。程序跑得好好的，只是给你一个看起来挺正常的结果 —— 往后凡是「先读数字、再读一整行」，中间那句消耗空行的 `nextLine()` 几乎都是必备的。",
+      "templateId": "java-s1-nextline-after-nextint",
+      "params": {
+        "n": 5,
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "8055b7c35fafec9f"
+      }
+    },
+    {
+      "id": "bank-java-s1-printf-missing-newline-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们让程序报一笔账：纸条上写着条数和单价，算完一共多少钱之后，要印成**三行** —— 第一行报条数，第二行报花了多少钱（**两位小数**），第三行是那句客套话。\n\n可它印出来的东西全挤在一块儿了……你帮我们看看问题出在哪儿，把它改好。\n\n（纸条上是 2 条，单价 2.5 元。）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"2 2.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条\", fish);\n        System.out.printf(\"花了 %.2f 元%n\", fish * price);\n        System.out.println(\"谢谢惠顾\");\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"2 2.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条%n\", fish);\n        System.out.printf(\"花了 %.2f 元%n\", fish * price);\n        System.out.println(\"谢谢惠顾\");\n    }\n}\n",
+      "expectedOutput": "一共 2 条\n花了 5.00 元\n谢谢惠顾",
+      "stdin": null,
+      "explanation": "问题在第一句身上：**`printf` 念完不会自己换行**。\n\n这是它和 `println` 的分工：`println` 念完顺手换一行；`printf` 只管把话输出去，要换行得**自己写**。那个记号是 `%n`（是百分号加 n，不是反斜杠加 n）—— 我们第一句漏了它，第二句就原样紧贴上来，两句话挤成一行了。\n\n改法：给第一句**末尾补上 `%n`**。（把那一句改成 `println`、自己把话拼好，也是一样的效果，照样能过。）\n\n顺带看一眼中间那句 `%.2f`：那个 `.2` 的意思是「小数只留两位」，所以 2.5 那种一位小数的钱数，会被整整齐齐地印成两位。",
+      "templateId": "java-s1-printf-missing-newline",
+      "params": {
+        "n": 2,
+        "p": "2.5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "edda799a7af06c48"
+      }
+    },
+    {
+      "id": "bank-java-s1-printf-missing-newline-014",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们让程序报一笔账：纸条上写着条数和单价，算完一共多少钱之后，要印成**三行** —— 第一行报条数，第二行报花了多少钱（**两位小数**），第三行是那句客套话。\n\n可它印出来的东西全挤在一块儿了……你帮我们看看问题出在哪儿，把它改好。\n\n（纸条上是 6 条，单价 4.5 元。）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"6 4.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条\", fish);\n        System.out.printf(\"花了 %.2f 元%n\", fish * price);\n        System.out.println(\"谢谢惠顾\");\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"6 4.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条%n\", fish);\n        System.out.printf(\"花了 %.2f 元%n\", fish * price);\n        System.out.println(\"谢谢惠顾\");\n    }\n}\n",
+      "expectedOutput": "一共 6 条\n花了 27.00 元\n谢谢惠顾",
+      "stdin": null,
+      "explanation": "问题在第一句身上：**`printf` 念完不会自己换行**。\n\n这是它和 `println` 的分工：`println` 念完顺手换一行；`printf` 只管把话输出去，要换行得**自己写**。那个记号是 `%n`（是百分号加 n，不是反斜杠加 n）—— 我们第一句漏了它，第二句就原样紧贴上来，两句话挤成一行了。\n\n改法：给第一句**末尾补上 `%n`**。（把那一句改成 `println`、自己把话拼好，也是一样的效果，照样能过。）\n\n顺带看一眼中间那句 `%.2f`：那个 `.2` 的意思是「小数只留两位」，所以 4.5 那种一位小数的钱数，会被整整齐齐地印成两位。",
+      "templateId": "java-s1-printf-missing-newline",
+      "params": {
+        "n": 6,
+        "p": "4.5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "3bf942f84f2ea6ae"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-missing-new-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们照课文请 Scanner 出来听纸条，可编译器说它 `cannot find symbol`（找不到这个符号）……\n\n你帮我们看看它到底找不到什么，把它改好 —— 改好之后，程序应该把纸条上那个数输出。",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = Scanner(\"2\");\n        int num = sc.nextInt();\n        System.out.println(num);\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"2\");\n        int num = sc.nextInt();\n        System.out.println(num);\n    }\n}\n",
+      "expectedOutput": "2",
+      "stdin": null,
+      "explanation": "这次它找不到的不是哪一位小帮手，而是一个**方法**。\n\n请 Scanner 出场的写法里，`new` 这个词是**不能省的**：它的意思是「**新请一位**」。少了它，Java 看到的就是 `Scanner` 这个名字后面直接跟了一对括号 —— 在它眼里那是一个**方法调用**（调用谁干活），可我们的类定义里压根没有叫 `Scanner` 的方法，于是它报 `cannot find symbol`，这回还说得更细：`symbol: method Scanner(String)`（它找的是「能塞一串字进去」的那个方法）。\n\n改法：在括号前面把 `new` 补回去 —— `Scanner sc = new Scanner(\"2\");`。\n\n（顺带记一句：请一次就够。同一位小帮手连请两回，编译器也会拦你 —— 它会说这个名字已经用过了。）",
+      "templateId": "java-s1-scanner-missing-new",
+      "params": {
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "b817668545494959"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-missing-new-007",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们照课文请 Scanner 出来听纸条，可编译器说它 `cannot find symbol`（找不到这个符号）……\n\n你帮我们看看它到底找不到什么，把它改好 —— 改好之后，程序应该把纸条上那个数输出。",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = Scanner(\"9\");\n        int num = sc.nextInt();\n        System.out.println(num);\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"9\");\n        int num = sc.nextInt();\n        System.out.println(num);\n    }\n}\n",
+      "expectedOutput": "9",
+      "stdin": null,
+      "explanation": "这次它找不到的不是哪一位小帮手，而是一个**方法**。\n\n请 Scanner 出场的写法里，`new` 这个词是**不能省的**：它的意思是「**新请一位**」。少了它，Java 看到的就是 `Scanner` 这个名字后面直接跟了一对括号 —— 在它眼里那是一个**方法调用**（调用谁干活），可我们的类定义里压根没有叫 `Scanner` 的方法，于是它报 `cannot find symbol`，这回还说得更细：`symbol: method Scanner(String)`（它找的是「能塞一串字进去」的那个方法）。\n\n改法：在括号前面把 `new` 补回去 —— `Scanner sc = new Scanner(\"9\");`。\n\n（顺带记一句：请一次就够。同一位小帮手连请两回，编译器也会拦你 —— 它会说这个名字已经用过了。）",
+      "templateId": "java-s1-scanner-missing-new",
+      "params": {
+        "n": 9
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "1075561b8ae85719"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-price-total-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "主人要买数据。纸条上写着两样东西：先是一个**整数**（要几条），再是一个**小数**（单价多少）。\n\n这次纸条上是：2 和 2.5。\n\n请你把两样都读出来，算出**一共多少钱**（条数 × 单价），然后印成**一行**，长这样：\n\n一共 XX 条，花了 YY 元\n\nXX 就是纸条上那个整数；YY 那个钱数要用 `printf` 印成**两位小数**（像 `7.00` 那样的写法，小数点后两位都留着）。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"2 2.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条，花了 %.2f 元%n\", fish, fish * price);\n    }\n}\n",
+      "expectedOutput": "一共 2 条，花了 5.00 元",
+      "stdin": null,
+      "explanation": "两样东西读法不同：**整数**用 `nextInt()`，**小数**用 `nextDouble()` —— 纸条上它们中间隔着一个空格，Scanner 自己会跳过去，不用你操心。\n\n钱数是 `fish * price` 算出来的（乘号那台小机器后头课细讲，今天会敲就行）。印的时候用 `printf` **先在话里留好空位**：`%d` 是整数的空位，`%.2f` 是小数的空位；那个 `.2` 管「只留两位小数」—— 所以不论算出来是多少位，屏幕上都是整整齐齐的两位。\n\n最后别忘了 `%n`：**`printf` 念完不会自己换行**，要换行得自己把这个记号写上去。\n\n（要是把整句话交给 `println` 去念，那些空位记号就会被当成普通文字原样印出来 —— `printf` 的本事正在这里：它会照着记号把数填进去。）",
+      "templateId": "java-s1-scanner-price-total",
+      "params": {
+        "n": 2,
+        "p": "2.5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "d6d0a5fbde071ed3"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-price-total-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "主人要买数据。纸条上写着两样东西：先是一个**整数**（要几条），再是一个**小数**（单价多少）。\n\n这次纸条上是：3 和 2.5。\n\n请你把两样都读出来，算出**一共多少钱**（条数 × 单价），然后印成**一行**，长这样：\n\n一共 XX 条，花了 YY 元\n\nXX 就是纸条上那个整数；YY 那个钱数要用 `printf` 印成**两位小数**（像 `7.00` 那样的写法，小数点后两位都留着）。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"3 2.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条，花了 %.2f 元%n\", fish, fish * price);\n    }\n}\n",
+      "expectedOutput": "一共 3 条，花了 7.50 元",
+      "stdin": null,
+      "explanation": "两样东西读法不同：**整数**用 `nextInt()`，**小数**用 `nextDouble()` —— 纸条上它们中间隔着一个空格，Scanner 自己会跳过去，不用你操心。\n\n钱数是 `fish * price` 算出来的（乘号那台小机器后头课细讲，今天会敲就行）。印的时候用 `printf` **先在话里留好空位**：`%d` 是整数的空位，`%.2f` 是小数的空位；那个 `.2` 管「只留两位小数」—— 所以不论算出来是多少位，屏幕上都是整整齐齐的两位。\n\n最后别忘了 `%n`：**`printf` 念完不会自己换行**，要换行得自己把这个记号写上去。\n\n（要是把整句话交给 `println` 去念，那些空位记号就会被当成普通文字原样印出来 —— `printf` 的本事正在这里：它会照着记号把数填进去。）",
+      "templateId": "java-s1-scanner-price-total",
+      "params": {
+        "n": 3,
+        "p": "2.5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "8896ee7111ef942e"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-price-total-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "主人要买数据。纸条上写着两样东西：先是一个**整数**（要几条），再是一个**小数**（单价多少）。\n\n这次纸条上是：4 和 2.5。\n\n请你把两样都读出来，算出**一共多少钱**（条数 × 单价），然后印成**一行**，长这样：\n\n一共 XX 条，花了 YY 元\n\nXX 就是纸条上那个整数；YY 那个钱数要用 `printf` 印成**两位小数**（像 `7.00` 那样的写法，小数点后两位都留着）。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"4 2.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条，花了 %.2f 元%n\", fish, fish * price);\n    }\n}\n",
+      "expectedOutput": "一共 4 条，花了 10.00 元",
+      "stdin": null,
+      "explanation": "两样东西读法不同：**整数**用 `nextInt()`，**小数**用 `nextDouble()` —— 纸条上它们中间隔着一个空格，Scanner 自己会跳过去，不用你操心。\n\n钱数是 `fish * price` 算出来的（乘号那台小机器后头课细讲，今天会敲就行）。印的时候用 `printf` **先在话里留好空位**：`%d` 是整数的空位，`%.2f` 是小数的空位；那个 `.2` 管「只留两位小数」—— 所以不论算出来是多少位，屏幕上都是整整齐齐的两位。\n\n最后别忘了 `%n`：**`printf` 念完不会自己换行**，要换行得自己把这个记号写上去。\n\n（要是把整句话交给 `println` 去念，那些空位记号就会被当成普通文字原样印出来 —— `printf` 的本事正在这里：它会照着记号把数填进去。）",
+      "templateId": "java-s1-scanner-price-total",
+      "params": {
+        "n": 4,
+        "p": "2.5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "f0801386f4ca6d2d"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-price-total-008",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "主人要买数据。纸条上写着两样东西：先是一个**整数**（要几条），再是一个**小数**（单价多少）。\n\n这次纸条上是：4 和 6.5。\n\n请你把两样都读出来，算出**一共多少钱**（条数 × 单价），然后印成**一行**，长这样：\n\n一共 XX 条，花了 YY 元\n\nXX 就是纸条上那个整数；YY 那个钱数要用 `printf` 印成**两位小数**（像 `7.00` 那样的写法，小数点后两位都留着）。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"4 6.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条，花了 %.2f 元%n\", fish, fish * price);\n    }\n}\n",
+      "expectedOutput": "一共 4 条，花了 26.00 元",
+      "stdin": null,
+      "explanation": "两样东西读法不同：**整数**用 `nextInt()`，**小数**用 `nextDouble()` —— 纸条上它们中间隔着一个空格，Scanner 自己会跳过去，不用你操心。\n\n钱数是 `fish * price` 算出来的（乘号那台小机器后头课细讲，今天会敲就行）。印的时候用 `printf` **先在话里留好空位**：`%d` 是整数的空位，`%.2f` 是小数的空位；那个 `.2` 管「只留两位小数」—— 所以不论算出来是多少位，屏幕上都是整整齐齐的两位。\n\n最后别忘了 `%n`：**`printf` 念完不会自己换行**，要换行得自己把这个记号写上去。\n\n（要是把整句话交给 `println` 去念，那些空位记号就会被当成普通文字原样印出来 —— `printf` 的本事正在这里：它会照着记号把数填进去。）",
+      "templateId": "java-s1-scanner-price-total",
+      "params": {
+        "n": 4,
+        "p": "6.5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "d3575044d4f189ad"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-price-total-011",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "主人要买数据。纸条上写着两样东西：先是一个**整数**（要几条），再是一个**小数**（单价多少）。\n\n这次纸条上是：5 和 6.5。\n\n请你把两样都读出来，算出**一共多少钱**（条数 × 单价），然后印成**一行**，长这样：\n\n一共 XX 条，花了 YY 元\n\nXX 就是纸条上那个整数；YY 那个钱数要用 `printf` 印成**两位小数**（像 `7.00` 那样的写法，小数点后两位都留着）。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"5 6.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条，花了 %.2f 元%n\", fish, fish * price);\n    }\n}\n",
+      "expectedOutput": "一共 5 条，花了 32.50 元",
+      "stdin": null,
+      "explanation": "两样东西读法不同：**整数**用 `nextInt()`，**小数**用 `nextDouble()` —— 纸条上它们中间隔着一个空格，Scanner 自己会跳过去，不用你操心。\n\n钱数是 `fish * price` 算出来的（乘号那台小机器后头课细讲，今天会敲就行）。印的时候用 `printf` **先在话里留好空位**：`%d` 是整数的空位，`%.2f` 是小数的空位；那个 `.2` 管「只留两位小数」—— 所以不论算出来是多少位，屏幕上都是整整齐齐的两位。\n\n最后别忘了 `%n`：**`printf` 念完不会自己换行**，要换行得自己把这个记号写上去。\n\n（要是把整句话交给 `println` 去念，那些空位记号就会被当成普通文字原样印出来 —— `printf` 的本事正在这里：它会照着记号把数填进去。）",
+      "templateId": "java-s1-scanner-price-total",
+      "params": {
+        "n": 5,
+        "p": "6.5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "040dba652eef1793"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-price-total-014",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "主人要买数据。纸条上写着两样东西：先是一个**整数**（要几条），再是一个**小数**（单价多少）。\n\n这次纸条上是：6 和 6.5。\n\n请你把两样都读出来，算出**一共多少钱**（条数 × 单价），然后印成**一行**，长这样：\n\n一共 XX 条，花了 YY 元\n\nXX 就是纸条上那个整数；YY 那个钱数要用 `printf` 印成**两位小数**（像 `7.00` 那样的写法，小数点后两位都留着）。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"6 6.5\");\n        int fish = sc.nextInt();\n        double price = sc.nextDouble();\n        System.out.printf(\"一共 %d 条，花了 %.2f 元%n\", fish, fish * price);\n    }\n}\n",
+      "expectedOutput": "一共 6 条，花了 39.00 元",
+      "stdin": null,
+      "explanation": "两样东西读法不同：**整数**用 `nextInt()`，**小数**用 `nextDouble()` —— 纸条上它们中间隔着一个空格，Scanner 自己会跳过去，不用你操心。\n\n钱数是 `fish * price` 算出来的（乘号那台小机器后头课细讲，今天会敲就行）。印的时候用 `printf` **先在话里留好空位**：`%d` 是整数的空位，`%.2f` 是小数的空位；那个 `.2` 管「只留两位小数」—— 所以不论算出来是多少位，屏幕上都是整整齐齐的两位。\n\n最后别忘了 `%n`：**`printf` 念完不会自己换行**，要换行得自己把这个记号写上去。\n\n（要是把整句话交给 `println` 去念，那些空位记号就会被当成普通文字原样印出来 —— `printf` 的本事正在这里：它会照着记号把数填进去。）",
+      "templateId": "java-s1-scanner-price-total",
+      "params": {
+        "n": 6,
+        "p": "6.5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "462994f10e1e8b99"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-read-and-add-one-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "练习台里没有键盘给我们敲，所以我们改用**递纸条**的写法。\n\n这次纸条上写着这么一个数：30\n\n请你请一位 Scanner 出来听这根纸条，把那个数读出来，**再加上 1**，然后输出（就一行）。\n\n（递纸条的做法：把内容用引号圈起来，放进请它出场的那对括号里 —— 课文里就是这么递的；请它出场还得先在最上面 `import` 一行，别忘了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"30\");\n        int num = sc.nextInt();\n        System.out.println(num + 1);\n    }\n}\n",
+      "expectedOutput": "31",
+      "stdin": null,
+      "explanation": "`nextInt()` 这一个方法的意思是「**从纸上读一个整数回来**」；读出来的数装进一间整数小变量，`num + 1` 自然就是「多一个」的样子。\n\n（课文里我们一直用**递纸条**的写法：练习台里没有键盘给你敲，递一根写好内容的纸条，程序每次跑出来的结果才一样、才好对答案。等你回到自己电脑上，把纸条换成 `System.in`，它就开始听键盘了。）",
+      "templateId": "java-s1-scanner-read-and-add-one",
+      "params": {
+        "n": 30
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "a4421047328e3bf0"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-read-and-add-one-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "练习台里没有键盘给我们敲，所以我们改用**递纸条**的写法。\n\n这次纸条上写着这么一个数：32\n\n请你请一位 Scanner 出来听这根纸条，把那个数读出来，**再加上 1**，然后输出（就一行）。\n\n（递纸条的做法：把内容用引号圈起来，放进请它出场的那对括号里 —— 课文里就是这么递的；请它出场还得先在最上面 `import` 一行，别忘了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"32\");\n        int num = sc.nextInt();\n        System.out.println(num + 1);\n    }\n}\n",
+      "expectedOutput": "33",
+      "stdin": null,
+      "explanation": "`nextInt()` 这一个方法的意思是「**从纸上读一个整数回来**」；读出来的数装进一间整数小变量，`num + 1` 自然就是「多一个」的样子。\n\n（课文里我们一直用**递纸条**的写法：练习台里没有键盘给你敲，递一根写好内容的纸条，程序每次跑出来的结果才一样、才好对答案。等你回到自己电脑上，把纸条换成 `System.in`，它就开始听键盘了。）",
+      "templateId": "java-s1-scanner-read-and-add-one",
+      "params": {
+        "n": 32
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "bde26911ff522826"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-read-and-add-one-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "练习台里没有键盘给我们敲，所以我们改用**递纸条**的写法。\n\n这次纸条上写着这么一个数：34\n\n请你请一位 Scanner 出来听这根纸条，把那个数读出来，**再加上 1**，然后输出（就一行）。\n\n（递纸条的做法：把内容用引号圈起来，放进请它出场的那对括号里 —— 课文里就是这么递的；请它出场还得先在最上面 `import` 一行，别忘了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"34\");\n        int num = sc.nextInt();\n        System.out.println(num + 1);\n    }\n}\n",
+      "expectedOutput": "35",
+      "stdin": null,
+      "explanation": "`nextInt()` 这一个方法的意思是「**从纸上读一个整数回来**」；读出来的数装进一间整数小变量，`num + 1` 自然就是「多一个」的样子。\n\n（课文里我们一直用**递纸条**的写法：练习台里没有键盘给你敲，递一根写好内容的纸条，程序每次跑出来的结果才一样、才好对答案。等你回到自己电脑上，把纸条换成 `System.in`，它就开始听键盘了。）",
+      "templateId": "java-s1-scanner-read-and-add-one",
+      "params": {
+        "n": 34
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "4399300071b73532"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-read-and-add-one-005",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "练习台里没有键盘给我们敲，所以我们改用**递纸条**的写法。\n\n这次纸条上写着这么一个数：35\n\n请你请一位 Scanner 出来听这根纸条，把那个数读出来，**再加上 1**，然后输出（就一行）。\n\n（递纸条的做法：把内容用引号圈起来，放进请它出场的那对括号里 —— 课文里就是这么递的；请它出场还得先在最上面 `import` 一行，别忘了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"35\");\n        int num = sc.nextInt();\n        System.out.println(num + 1);\n    }\n}\n",
+      "expectedOutput": "36",
+      "stdin": null,
+      "explanation": "`nextInt()` 这一个方法的意思是「**从纸上读一个整数回来**」；读出来的数装进一间整数小变量，`num + 1` 自然就是「多一个」的样子。\n\n（课文里我们一直用**递纸条**的写法：练习台里没有键盘给你敲，递一根写好内容的纸条，程序每次跑出来的结果才一样、才好对答案。等你回到自己电脑上，把纸条换成 `System.in`，它就开始听键盘了。）",
+      "templateId": "java-s1-scanner-read-and-add-one",
+      "params": {
+        "n": 35
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "1b826221a2a4da47"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-read-and-add-one-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "练习台里没有键盘给我们敲，所以我们改用**递纸条**的写法。\n\n这次纸条上写着这么一个数：37\n\n请你请一位 Scanner 出来听这根纸条，把那个数读出来，**再加上 1**，然后输出（就一行）。\n\n（递纸条的做法：把内容用引号圈起来，放进请它出场的那对括号里 —— 课文里就是这么递的；请它出场还得先在最上面 `import` 一行，别忘了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"37\");\n        int num = sc.nextInt();\n        System.out.println(num + 1);\n    }\n}\n",
+      "expectedOutput": "38",
+      "stdin": null,
+      "explanation": "`nextInt()` 这一个方法的意思是「**从纸上读一个整数回来**」；读出来的数装进一间整数小变量，`num + 1` 自然就是「多一个」的样子。\n\n（课文里我们一直用**递纸条**的写法：练习台里没有键盘给你敲，递一根写好内容的纸条，程序每次跑出来的结果才一样、才好对答案。等你回到自己电脑上，把纸条换成 `System.in`，它就开始听键盘了。）",
+      "templateId": "java-s1-scanner-read-and-add-one",
+      "params": {
+        "n": 37
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "7e56e1e5214f7926"
+      }
+    },
+    {
+      "id": "bank-java-s1-scanner-read-and-add-one-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "练习台里没有键盘给我们敲，所以我们改用**递纸条**的写法。\n\n这次纸条上写着这么一个数：39\n\n请你请一位 Scanner 出来听这根纸条，把那个数读出来，**再加上 1**，然后输出（就一行）。\n\n（递纸条的做法：把内容用引号圈起来，放进请它出场的那对括号里 —— 课文里就是这么递的；请它出场还得先在最上面 `import` 一行，别忘了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"39\");\n        int num = sc.nextInt();\n        System.out.println(num + 1);\n    }\n}\n",
+      "expectedOutput": "40",
+      "stdin": null,
+      "explanation": "`nextInt()` 这一个方法的意思是「**从纸上读一个整数回来**」；读出来的数装进一间整数小变量，`num + 1` 自然就是「多一个」的样子。\n\n（课文里我们一直用**递纸条**的写法：练习台里没有键盘给你敲，递一根写好内容的纸条，程序每次跑出来的结果才一样、才好对答案。等你回到自己电脑上，把纸条换成 `System.in`，它就开始听键盘了。）",
+      "templateId": "java-s1-scanner-read-and-add-one",
+      "params": {
+        "n": 39
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "70442bcc46fdbe31"
+      }
+    },
+    {
+      "id": "bank-java-s1-three-mouths-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要让程序印出**三行**：\n\n- **第一行**：先念 我们，紧接着念 在等你，两截拼成**一整行**，中间不许有空格；\n- **第二行**：什么都不印，就是空着的一整行（屏幕上看上去，第三行前面隔着一行空气）；\n- **第三行**：念 换行了。\n\n（提示：第一行念完，要**连着换两次行**，屏幕上才会真的空出一行来。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.print(\"我们\");\n        System.out.print(\"在等你\");\n        System.out.println();\n        System.out.println();\n        System.out.println(\"换行了\");\n    }\n}\n",
+      "expectedOutput": "我们在等你\n\n换行了",
+      "stdin": null,
+      "explanation": "这道题把几张「嘴」的分工摆出来了：\n\n- `println(\"...\")` —— 念完**换行**；\n- `print(\"...\")` —— 念完**不换行**，下一句紧跟着往后面挤；\n- `println()` —— 括号空着，就是**单纯换一行**。\n\n所以第一行那两截话，就是用两个 `print` 挨着输出的：谁也不换行，两截自然拼成一行。而**空出一整行**要连着换两次：先把第一行收尾，再空走一行。\n\n（两截话写进同一对引号里，屏幕上也一样；不过那就体会不到 `print` 的本事了 —— 这道题想让你亲手把它们分开念一次。）",
+      "templateId": "java-s1-three-mouths",
+      "params": {
+        "a": "我们",
+        "b": "在等你",
+        "c": "换行了"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "eb8d173905c068f3"
+      }
+    },
+    {
+      "id": "bank-java-s1-three-mouths-005",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要让程序印出**三行**：\n\n- **第一行**：先念 我们，紧接着念 在啃数据，两截拼成**一整行**，中间不许有空格；\n- **第二行**：什么都不印，就是空着的一整行（屏幕上看上去，第三行前面隔着一行空气）；\n- **第三行**：念 又一行。\n\n（提示：第一行念完，要**连着换两次行**，屏幕上才会真的空出一行来。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.print(\"我们\");\n        System.out.print(\"在啃数据\");\n        System.out.println();\n        System.out.println();\n        System.out.println(\"又一行\");\n    }\n}\n",
+      "expectedOutput": "我们在啃数据\n\n又一行",
+      "stdin": null,
+      "explanation": "这道题把几张「嘴」的分工摆出来了：\n\n- `println(\"...\")` —— 念完**换行**；\n- `print(\"...\")` —— 念完**不换行**，下一句紧跟着往后面挤；\n- `println()` —— 括号空着，就是**单纯换一行**。\n\n所以第一行那两截话，就是用两个 `print` 挨着输出的：谁也不换行，两截自然拼成一行。而**空出一整行**要连着换两次：先把第一行收尾，再空走一行。\n\n（两截话写进同一对引号里，屏幕上也一样；不过那就体会不到 `print` 的本事了 —— 这道题想让你亲手把它们分开念一次。）",
+      "templateId": "java-s1-three-mouths",
+      "params": {
+        "a": "我们",
+        "b": "在啃数据",
+        "c": "又一行"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "31ee07187346f874"
+      }
+    },
+    {
+      "id": "bank-java-s1-three-mouths-010",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要让程序印出**三行**：\n\n- **第一行**：先念 张三，紧接着念 在等你，两截拼成**一整行**，中间不许有空格；\n- **第二行**：什么都不印，就是空着的一整行（屏幕上看上去，第三行前面隔着一行空气）；\n- **第三行**：念 处理完成。\n\n（提示：第一行念完，要**连着换两次行**，屏幕上才会真的空出一行来。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.print(\"张三\");\n        System.out.print(\"在等你\");\n        System.out.println();\n        System.out.println();\n        System.out.println(\"处理完成\");\n    }\n}\n",
+      "expectedOutput": "张三在等你\n\n处理完成",
+      "stdin": null,
+      "explanation": "这道题把几张「嘴」的分工摆出来了：\n\n- `println(\"...\")` —— 念完**换行**；\n- `print(\"...\")` —— 念完**不换行**，下一句紧跟着往后面挤；\n- `println()` —— 括号空着，就是**单纯换一行**。\n\n所以第一行那两截话，就是用两个 `print` 挨着输出的：谁也不换行，两截自然拼成一行。而**空出一整行**要连着换两次：先把第一行收尾，再空走一行。\n\n（两截话写进同一对引号里，屏幕上也一样；不过那就体会不到 `print` 的本事了 —— 这道题想让你亲手把它们分开念一次。）",
+      "templateId": "java-s1-three-mouths",
+      "params": {
+        "a": "张三",
+        "b": "在等你",
+        "c": "处理完成"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "e991133d6dc12542"
+      }
+    },
+    {
+      "id": "bank-java-s1-three-mouths-016",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要让程序印出**三行**：\n\n- **第一行**：先念 张三，紧接着念 在等待执行，两截拼成**一整行**，中间不许有空格；\n- **第二行**：什么都不印，就是空着的一整行（屏幕上看上去，第三行前面隔着一行空气）；\n- **第三行**：念 处理完成。\n\n（提示：第一行念完，要**连着换两次行**，屏幕上才会真的空出一行来。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.print(\"张三\");\n        System.out.print(\"在等待执行\");\n        System.out.println();\n        System.out.println();\n        System.out.println(\"处理完成\");\n    }\n}\n",
+      "expectedOutput": "张三在等待执行\n\n处理完成",
+      "stdin": null,
+      "explanation": "这道题把几张「嘴」的分工摆出来了：\n\n- `println(\"...\")` —— 念完**换行**；\n- `print(\"...\")` —— 念完**不换行**，下一句紧跟着往后面挤；\n- `println()` —— 括号空着，就是**单纯换一行**。\n\n所以第一行那两截话，就是用两个 `print` 挨着输出的：谁也不换行，两截自然拼成一行。而**空出一整行**要连着换两次：先把第一行收尾，再空走一行。\n\n（两截话写进同一对引号里，屏幕上也一样；不过那就体会不到 `print` 的本事了 —— 这道题想让你亲手把它们分开念一次。）",
+      "templateId": "java-s1-three-mouths",
+      "params": {
+        "a": "张三",
+        "b": "在等待执行",
+        "c": "处理完成"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "1c909582a5cd3440"
+      }
+    },
+    {
+      "id": "bank-java-s1-three-mouths-021",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要让程序印出**三行**：\n\n- **第一行**：先念 计算机，紧接着念 在啃数据，两截拼成**一整行**，中间不许有空格；\n- **第二行**：什么都不印，就是空着的一整行（屏幕上看上去，第三行前面隔着一行空气）；\n- **第三行**：念 换行了。\n\n（提示：第一行念完，要**连着换两次行**，屏幕上才会真的空出一行来。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.print(\"计算机\");\n        System.out.print(\"在啃数据\");\n        System.out.println();\n        System.out.println();\n        System.out.println(\"换行了\");\n    }\n}\n",
+      "expectedOutput": "计算机在啃数据\n\n换行了",
+      "stdin": null,
+      "explanation": "这道题把几张「嘴」的分工摆出来了：\n\n- `println(\"...\")` —— 念完**换行**；\n- `print(\"...\")` —— 念完**不换行**，下一句紧跟着往后面挤；\n- `println()` —— 括号空着，就是**单纯换一行**。\n\n所以第一行那两截话，就是用两个 `print` 挨着输出的：谁也不换行，两截自然拼成一行。而**空出一整行**要连着换两次：先把第一行收尾，再空走一行。\n\n（两截话写进同一对引号里，屏幕上也一样；不过那就体会不到 `print` 的本事了 —— 这道题想让你亲手把它们分开念一次。）",
+      "templateId": "java-s1-three-mouths",
+      "params": {
+        "a": "计算机",
+        "b": "在啃数据",
+        "c": "换行了"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "b2bcada0b16a8352"
+      }
+    },
+    {
+      "id": "bank-java-s1-three-mouths-026",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要让程序印出**三行**：\n\n- **第一行**：先念 计算机，紧接着念 在等待执行，两截拼成**一整行**，中间不许有空格；\n- **第二行**：什么都不印，就是空着的一整行（屏幕上看上去，第三行前面隔着一行空气）；\n- **第三行**：念 又一行。\n\n（提示：第一行念完，要**连着换两次行**，屏幕上才会真的空出一行来。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.print(\"计算机\");\n        System.out.print(\"在等待执行\");\n        System.out.println();\n        System.out.println();\n        System.out.println(\"又一行\");\n    }\n}\n",
+      "expectedOutput": "计算机在等待执行\n\n又一行",
+      "stdin": null,
+      "explanation": "这道题把几张「嘴」的分工摆出来了：\n\n- `println(\"...\")` —— 念完**换行**；\n- `print(\"...\")` —— 念完**不换行**，下一句紧跟着往后面挤；\n- `println()` —— 括号空着，就是**单纯换一行**。\n\n所以第一行那两截话，就是用两个 `print` 挨着输出的：谁也不换行，两截自然拼成一行。而**空出一整行**要连着换两次：先把第一行收尾，再空走一行。\n\n（两截话写进同一对引号里，屏幕上也一样；不过那就体会不到 `print` 的本事了 —— 这道题想让你亲手把它们分开念一次。）",
+      "templateId": "java-s1-three-mouths",
+      "params": {
+        "a": "计算机",
+        "b": "在等待执行",
+        "c": "又一行"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.517Z",
+        "hash": "c9de72a07c0ce257"
+      }
+    }
+  ]
+}

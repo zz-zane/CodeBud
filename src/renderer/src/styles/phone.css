@@ -1,0 +1,629 @@
+/*
+ * 手机版面（docs/29 §4 第二期）。
+ *
+ * 【铁律】本文件里每一条规则都必须在 `@media (max-width: 768px)` 里 —— 桌面窗口最小宽 1000px，
+ * 永远命不中，所以 ≥1000px 的桌面渲染与本文件无关（tests: phone-layout.test.ts 守这一条）。
+ * 改页面的手机表现一律写这里，不要在各组件的 scoped 样式里无条件改。
+ *
+ * 【特异性】组件样式是 scoped（.x[data-v] = 0,2,0）。这里统一用 `:root:root` 前缀（+0,2,0）压过它，
+ * 不用 !important。颜色一律读令牌，深色主题自动跟随。
+ */
+
+@media (max-width: 768px) {
+  :root {
+    --mi-topbar-h: 48px;
+    --mi-nav-row-h: 44px;
+    /* 同一套刻度：只改页面边距与标题档（docs/30 §2.4） */
+    --mi-page-pad-x: var(--mi-sp-4);
+    --mi-page-pad-top: var(--mi-sp-4);
+    --mi-fs-title: 20px;
+    --mi-row-h: 48px;
+    --mi-icon-btn: 44px;
+    /* 键盘不改布局：壳层恒为 100dvh。键盘盖住多少由 App 写进 --mi-kb-inset（根元素行内样式），关闭时为 0 */
+    --mi-kb-inset: 0px;
+    /* 只有「正在被输入的浮层」（弹窗 / 抽屉 / 设置 / 答题层）读这个：高度让到键盘上方 */
+    --mi-vh-avail: calc(100dvh - var(--mi-kb-inset));
+    --mi-dur-slide: 220ms;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    overscroll-behavior: none;
+  }
+
+  /* ── 外壳：稳定的 100dvh，不跟软键盘变 ── */
+  :root:root .claude-app-container {
+    height: 100dvh;
+    --mi-topbar-inset: 0px;
+    /* 底部标签栏占位（有标签栏的页面才非 0）与输入区抬升量：键盘高度扣掉标签栏占位 */
+    --mi-tabbar-h: 0px;
+    --mi-kb-lift: max(0px, calc(var(--mi-kb-inset) - var(--mi-tabbar-h)));
+  }
+  :root:root .claude-app-container.has-tabbar {
+    --mi-tabbar-h: calc(56px + env(safe-area-inset-bottom));
+  }
+  /* 页面区整体让出标签栏：正文、悬浮球、课文底栏都在它里面，自然不会被盖住 */
+  :root:root .claude-app-container.has-tabbar .claude-body-layout {
+    margin-bottom: var(--mi-tabbar-h);
+  }
+
+  /* 顶栏：不再避让 Windows 窗口按钮，也不是拖拽区（拖拽区会吃掉点击） */
+  :root:root .topbar {
+    left: 0;
+    -webkit-app-region: no-drag;
+  }
+
+  :root:root .topbar-nav-cluster {
+    width: 88px;
+    z-index: 70;
+  }
+  :root:root .nav-cluster-btn {
+    width: 44px;
+    height: 44px;
+    margin-top: 2px;
+  }
+  /* 手机没有「前进」的需求：触屏用系统返回手势，省出标题空间 */
+  :root:root .nav-forward-btn {
+    display: none;
+  }
+  :root:root .nav-cluster-btn:not(:disabled):hover {
+    background: transparent;
+  }
+  :root:root .nav-cluster-btn:not(:disabled):active,
+  :root:root .topbar-right-btn:active {
+    background: var(--cds-fill-ghost-hover);
+  }
+  :root:root .nav-cluster-icon,
+  :root:root .topbar-right-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  :root:root .topbar-right-actions {
+    right: 0;
+    z-index: 70;
+  }
+  :root:root .topbar-right-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  :root:root .phone-title {
+    position: fixed;
+    top: 0;
+    left: 88px;
+    right: 52px;
+    height: var(--mi-topbar-h);
+    z-index: 65;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--mi-fs-read);
+    font-weight: 500;
+    color: var(--mi-text);
+    pointer-events: none;
+  }
+
+  /* ── 侧栏：抽屉 ── */
+  :root:root .phone-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: color-mix(in srgb, var(--mi-text) 40%, transparent);
+  }
+  :root:root .sidebar-wrapper.is-phone {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 95;
+    width: min(84vw, 320px);
+    height: 100dvh;
+    background: var(--mi-canvas);
+    transform: translateX(-104%);
+    visibility: hidden;
+    transition:
+      transform var(--mi-dur-slow) var(--mi-ease),
+      visibility 0s linear var(--mi-dur-slow);
+    box-shadow: none;
+  }
+  :root:root .sidebar-wrapper.is-phone.phone-open {
+    transform: none;
+    visibility: visible;
+    transition: transform var(--mi-dur-slow) var(--mi-ease);
+    box-shadow: var(--mi-shadow-lg);
+  }
+  :root:root .sidebar-wrapper.is-phone .claude-sidebar {
+    width: 100%;
+  }
+
+  /* ── 正文区 ── */
+  :root:root .content {
+    padding: calc(var(--mi-topbar-h) + 12px) 16px 24px;
+  }
+  :root:root .content.is-full-bleed {
+    padding: 0;
+  }
+  :root:root .main-pane {
+    width: 100%;
+  }
+  :root:root .ai-floating-ball {
+    right: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+  }
+
+  /* ── 右侧 AI 面板：全屏层 ── */
+  :root:root .right-tool-column.ai-expanded {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    padding: 0;
+    z-index: 96;
+    box-shadow: none;
+    background: var(--cds-surface-1);
+    animation: none;
+  }
+  :root:root .right-tool-column.ai-expanded .right-panel-container {
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+/* ── 通用控件：触控尺寸 ≥ 40px，输入框 16px 防 iOS 聚焦缩放 ── */
+@media (max-width: 768px) {
+  :root:root #app .icon-btn { width: 40px; height: 40px; }
+  :root:root #app .pg-chip { height: 40px; padding: 0 var(--mi-sp-3); }
+  :root:root #app .mi-btn.sm,
+  :root:root #app .mi-btn.md { height: 40px; min-width: 40px; }
+  :root:root #app .mi-btn.icon-only,
+  :root:root #app .mi-btn.icon-only.sm { width: 40px; }
+  :root:root #app button.mi-btn-primary,
+  :root:root #app button.mi-btn-secondary { height: 40px; }
+  :root:root #app .mi-input,
+  :root:root #app .mi-select,
+  :root:root #app .pg-search > input { height: 40px; font-size: var(--mi-fs-read); }
+  :root:root #app textarea.mi-input { font-size: var(--mi-fs-read); }
+  :root:root #app .mi-tabs { height: 40px; }
+  :root:root #app .mi-switch,
+  :root:root #app .mi-checkbox { min-height: 40px; }
+  :root:root #app .pg-head { gap: var(--mi-sp-2); }
+  :root:root #app .pg-title { font-size: var(--mi-fs-title); }
+
+  /* 弹窗 / 抽屉（Teleport 到 body，不在 #app 内）：贴满视口，内部滚动 */
+  :root:root .mi-modal {
+    width: calc(100vw - 16px) !important; /* 组件用内联 px 宽度，只能 !important */
+    max-width: calc(100vw - 16px);
+    max-height: calc(var(--mi-vh-avail) - 16px);
+  }
+  /* 弹窗居中于键盘上方的可见区 */
+  :root:root .mi-modal-mask { padding-bottom: var(--mi-kb-inset); box-sizing: border-box; }
+  :root:root .mi-modal-body { overscroll-behavior: contain; }
+  :root:root .mi-modal-foot { flex-wrap: wrap; }
+  :root:root .mi-modal-close,
+  :root:root .mi-drawer-close { min-width: 40px; min-height: 40px; font-size: var(--mi-fs-read); }
+  :root:root .mi-drawer {
+    width: 100vw !important; /* 同上：内联宽度 */
+    max-width: 100vw;
+    height: var(--mi-vh-avail);
+  }
+  :root:root .mi-drawer-body { overscroll-behavior: contain; padding: var(--mi-sp-3) var(--mi-sp-4); }
+}
+
+/* ── AI 面板 / AI 工作区 ── */
+@media (max-width: 768px) {
+  :root:root #app .ai-panel .ai-textarea { font-size: var(--mi-fs-read); }
+  :root:root #app .ai-panel .lead-chip,
+  :root:root #app .ai-panel .lead-select,
+  :root:root #app .ai-panel .model-chip { min-height: 40px; }
+  :root:root #app .ai-panel .icon-btn { width: 40px; height: 40px; }
+  :root:root #app .ai-panel .history-item-del { width: 40px; height: 40px; }
+  :root:root #app .ai-panel.is-main .ai-footer { padding: 0 12px calc(12px + env(safe-area-inset-bottom)); }
+  :root:root #app .ai-panel:not(.is-main) .ai-header { padding-top: env(safe-area-inset-top); }
+  :root:root #app .ai-panel { border: 0; border-radius: 0; }
+  :root:root #app .msg-content pre,
+  :root:root #app .msg-content table { max-width: 100%; overflow-x: auto; }
+  /* 学习上下文栏：全屏层 */
+  :root:root #app .ws-rail.floating {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+    z-index: 96;
+    padding-top: var(--mi-topbar-h);
+    background: var(--mi-shell-canvas);
+  }
+}
+
+/* ── 课文页 ── */
+@media (max-width: 768px) {
+  :root:root #app .markdown-body { font-size: var(--mi-fs-read); }
+  :root:root #app .markdown-body img,
+  :root:root #app .markdown-body svg,
+  :root:root #app .markdown-body video { max-width: 100%; height: auto; }
+  :root:root #app .markdown-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  :root:root #app .markdown-body pre { max-width: 100%; overflow-x: auto; }
+  /* 复制 / 运行按钮在手机上排到代码上方，不再占右侧 110–180px */
+  :root:root #app .markdown-body .code-block code.hljs,
+  :root:root #app .markdown-body .code-block:has(.code-run) code.hljs { padding: 44px var(--mi-sp-4) var(--mi-sp-3); }
+  :root:root #app .markdown-body .code-copy { width: 40px; height: 40px; }
+  :root:root #app .markdown-body .code-copy.code-run { min-height: 40px; }
+  :root:root #app .markdown-body .code-actions { top: 2px; right: 2px; }
+
+  /* 底部操作栏：压成两行（学习/练习一行，图标 + 下一课一行），不显示课名（顶栏已有） */
+  :root:root #app .lesson-actions.fixed-bar {
+    bottom: 8px;
+    gap: var(--mi-sp-2);
+    padding: var(--mi-sp-2);
+    margin: var(--mi-sp-6) 0 var(--mi-sp-2);
+  }
+  :root:root #app .lesson-tools-row,
+  :root:root #app .lesson-nav-row { display: contents; }
+  :root:root #app .lesson-actions.fixed-bar > .lesson-tools-row > .mi-btn:not(.icon-only) { flex: 1 1 auto; min-width: max-content; padding: 0 var(--mi-sp-3); white-space: nowrap; }
+  /* 任何按钮都不许缩到比内容还窄（会与邻居叠在一起）：放不下就整个换行 */
+  :root:root #app .lesson-actions .mi-btn { flex-shrink: 0; }
+  :root:root #app .lesson-current-title { display: none; }
+  :root:root #app .lesson-nav-buttons { margin-left: auto; }
+  :root:root #app .lesson-actions .mi-btn::after { top: 0; bottom: 0; }
+  :root:root #app .ai-floating-ball.is-lesson { bottom: 204px; } /* 浮在两行操作栏上方，不盖住按钮 */
+  :root:root #app .lesson-actions .mi-btn { height: 40px; }
+
+  /* 随堂批注 / 问 AI 浮条：触控下加大命中区 */
+  :root:root #app .annotation-float-btn { min-height: 40px; padding: var(--mi-sp-2) var(--mi-sp-4); }
+}
+
+/* ── 课程目录 / 六级目录 ── */
+@media (max-width: 768px) {
+  :root:root #app .language-tabs { width: 100%; }
+  :root:root #app .language-tabs .mi-tab { padding: 0 var(--mi-sp-2); }
+  :root:root #app .curriculum-lesson-card { min-height: 48px; }
+  :root:root #app .cet6-row { flex-wrap: wrap; gap: var(--mi-sp-1) var(--mi-sp-3); }
+  :root:root #app .cet6-date { flex-basis: 100%; }
+  :root:root #app .cet6-row .pg-chip { min-width: 64px; justify-content: center; background: var(--cds-fill-secondary); }
+}
+
+@media (max-width: 768px) {
+  :root:root #app .ai-context-menu .menu-item { min-height: 44px; font-size: var(--mi-fs-body); }
+}
+
+/* ── 六级 ── */
+@media (max-width: 768px) {
+  :root:root #app .cet6-exam { padding: calc(var(--mi-topbar-h) + 2px) 12px 0; }
+  :root:root #app .cet6-top { gap: var(--mi-sp-1) var(--mi-sp-2); padding-bottom: var(--mi-sp-2); }
+  :root:root #app .cet6-exam-title { flex: 1 1 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  :root:root #app .cet6-top .pg-chips { flex: 1 1 100%; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
+  :root:root #app .cet6-spacer { display: none; }
+  :root:root #app .cet6-top .cet6-timer { margin-left: auto; }
+  :root:root #app .cet6-vocab-btn { min-width: 40px; }
+  :root:root #app .cet6-strip-no { min-width: 40px; height: 40px; }
+  :root:root #app .cet6-strip { gap: var(--mi-sp-2); }
+  :root:root #app .cet6-hint { display: none; }
+
+  /* 上下分屏：--split-a / --split-b 由页面脚本写入；分隔条可拖也可轻点切换 */
+  :root:root #app .cet6-body:not(.full) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, var(--split-a, 1fr)) 24px minmax(0, var(--split-b, 1fr));
+    padding-top: var(--mi-sp-1);
+  }
+  :root:root #app .cet6-divider {
+    display: block;
+    position: relative;
+    cursor: row-resize;
+    background: transparent;
+    border-radius: 0;
+  }
+  :root:root #app .cet6-divider::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 56px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    background: var(--mi-border-control);
+  }
+  :root:root #app .cet6-divider:focus-visible { outline: 2px solid var(--mi-blue-deep); outline-offset: -2px; }
+  :root:root #app .cet6-left { padding: var(--mi-sp-1) 0 var(--mi-sp-4); border-bottom: 0; }
+  :root:root #app .cet6-right { padding-left: 0; }
+  :root:root #app .cet6-right-scroll { padding-bottom: var(--mi-sp-6); }
+  :root:root #app .cet6-body.full .cet6-left { padding-bottom: var(--mi-sp-6); }
+
+  /* 选词条：卡片展开后限宽、可滚 */
+  :root:root #app .cet6-sel.expanded { width: calc(100vw - 16px); max-height: 45vh; }
+  :root:root #app .cet6-sel .mi-btn { height: 40px; }
+}
+
+@media (max-width: 768px) {
+  :root:root #app .cet6-seek { height: 40px; min-width: 100px; }
+  :root:root #app .cet6-audio { min-height: 40px; }
+  :root:root #app .cet6-option { min-height: 44px; align-items: center; }
+  :root:root #app .cet6-bank-word,
+  :root:root #app .cet6-letter,
+  :root:root #app .cet6-stmt { min-height: 40px; min-width: 40px; }
+  /* 选词库两列、词可折行；选项单列、长词折行：窗格内不出现横向滚动 */
+  :root:root #app .cet6-bank { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  :root:root #app .cet6-bank-word,
+  :root:root #app .cet6-option,
+  :root:root #app .cet6-stmt { min-width: 0; }
+  :root:root #app .cet6-bank-word > span:last-child,
+  :root:root #app .cet6-option > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+  :root:root #app .cet6-options.two-up { grid-template-columns: minmax(0, 1fr); }
+  /* 字母键最小 40px（触控目标），轨道也得 ≥ 40px，否则整排比窗格宽 */
+  :root:root #app .cet6-pad { grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); }
+  :root:root #app .cet6-right-scroll textarea,
+  :root:root #app .cet6-left textarea { font-size: var(--mi-fs-read); }
+}
+
+/* AI 面板是全屏层时自带标题栏与「收起」按钮：整条手机顶栏让位 */
+@media (max-width: 768px) {
+  :root:root .claude-app-container.phone-panel-open .topbar,
+  :root:root .claude-app-container.phone-panel-open .topbar-nav-cluster,
+  :root:root .claude-app-container.phone-panel-open .phone-title,
+  :root:root .claude-app-container.phone-panel-open .topbar-right-actions { display: none; }
+}
+
+/* ── 设置对话框：全屏，分组标签横向可滚 ── */
+@media (max-width: 768px) {
+  :root:root .mi-modal:has(.settings-dialog) {
+    width: 100vw !important; /* 同 MiModal：内联宽度 */
+    max-width: 100vw;
+    height: var(--mi-vh-avail);
+    max-height: var(--mi-vh-avail);
+    border-radius: 0;
+  }
+  :root:root .settings-dialog { flex-direction: column; height: auto; flex: 1; }
+  :root:root .settings-nav {
+    width: 100%;
+    flex-direction: column;
+    gap: var(--mi-sp-2);
+    padding: var(--mi-sp-2) var(--mi-sp-3);
+    border-right: 0;
+    border-bottom: 1px solid var(--mi-border);
+    overflow: visible;
+  }
+  :root:root .settings-search { height: 40px; font-size: var(--mi-fs-read); }
+  :root:root .settings-cards {
+    flex-direction: row;
+    gap: var(--mi-sp-1);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  :root:root .settings-nav-item { flex: 0 0 auto; white-space: nowrap; min-height: 40px; }
+  :root:root .settings-content { flex: 1; min-height: 0; overflow-y: auto; min-width: 0; }
+}
+
+/* ── 答题浮层 ── */
+@media (max-width: 768px) {
+  :root:root .quiz-panel {
+    width: 100vw;
+    max-width: 100vw;
+    max-height: var(--mi-vh-avail);
+    height: var(--mi-vh-avail);
+    border-radius: 0;
+  }
+  :root:root .quiz-body { overflow-y: auto; overscroll-behavior: contain; }
+  :root:root .quiz-close { width: 40px; height: 40px; }
+  :root:root .quiz-panel .mi-btn { min-height: 40px; }
+  :root:root .quiz-panel input,
+  :root:root .quiz-panel textarea { font-size: var(--mi-fs-read); }
+  :root:root .quiz-panel pre { max-width: 100%; overflow-x: auto; }
+}
+
+/* ── 练习 / 复习 / 备忘 / 总览 / 学习空间 / 词汇 ── */
+@media (max-width: 768px) {
+  :root:root #app .stage-panel { grid-template-columns: minmax(0, 1fr); gap: var(--mi-sp-4); }
+  :root:root #app .memo-grid { gap: var(--mi-sp-4); }
+  :root:root #app .memo-list { max-height: 240px; }
+  :root:root #app .page { max-width: 100%; }
+  :root:root #app .course-row { grid-template-columns: 88px minmax(0, 1fr) 52px; gap: var(--mi-sp-3); }
+  :root:root #app .hero-text { min-width: 0; }
+  :root:root #app .hero-continue { max-width: 100%; white-space: normal; height: auto; min-height: 40px; }
+  :root:root #app canvas,
+  :root:root #app .echarts,
+  :root:root #app .chart-box { max-width: 100%; }
+  :root:root #app table { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  :root:root #app .wrong-item { flex-wrap: wrap; }
+  :root:root #app .wrong-item .wrong-actions { flex: 1 1 100%; justify-content: flex-end; }
+}
+
+/* cds-adapter 里的两列规则（#app .claude-app-container .x）特异性更高，要在这里单独压回单列 */
+@media (max-width: 768px) {
+  :root:root #app .claude-app-container .memo-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ── 底部标签栏（PhoneTabBar.vue）：与侧栏主导航同源，拇指可达 ── */
+@media (max-width: 768px) {
+  :root:root .phone-tabbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    box-sizing: border-box;
+    height: calc(56px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    background: var(--mi-canvas);
+    border-top: 1px solid var(--mi-border);
+  }
+  :root:root .phone-tab {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 0 2px;
+    border: 0;
+    background: transparent;
+    color: var(--mi-text-2);
+    font: inherit;
+    font-size: var(--mi-fs-caption);
+    cursor: pointer;
+  }
+  :root:root .phone-tab.active { color: var(--mi-text); font-weight: 500; }
+  :root:root .phone-tab:active { background: var(--cds-fill-ghost-hover); }
+  :root:root .phone-tab { position: relative; }
+  :root:root .phone-tab-icon { width: 22px; height: 22px; }
+  /* 复习标签的到期数：图标右上角（docs/31 §1.2；11px 不在字号刻度上，取 12） */
+  :root:root .phone-tab-pip {
+    position: absolute;
+    top: 6px;
+    left: calc(50% + 6px);
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: var(--mi-blue-deep);
+    color: var(--mi-btn-primary-text);
+    font-size: var(--mi-fs-caption);
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+  :root:root .phone-tab-label { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+
+/* ── 页面切换：进入详情从右滑入、返回反向；标签 ↔ 标签由 App.vue 直接不动画 ── */
+@media (max-width: 768px) {
+  :root:root .mi-slide-fwd-enter-active,
+  :root:root .mi-slide-fwd-leave-active,
+  :root:root .mi-slide-back-enter-active,
+  :root:root .mi-slide-back-leave-active {
+    transition: transform var(--mi-dur-slide) var(--mi-ease-out);
+    background: var(--mi-canvas);
+  }
+  :root:root .mi-slide-fwd-enter-active,
+  :root:root .mi-slide-back-enter-active { position: relative; }
+  :root:root .mi-slide-fwd-enter-active { z-index: 2; }
+  :root:root .mi-slide-fwd-leave-active { z-index: 1; }
+  :root:root .mi-slide-back-enter-active { z-index: 1; }
+  :root:root .mi-slide-back-leave-active { z-index: 3; }
+  :root:root .mi-slide-fwd-enter-from { transform: translateX(100%); }
+  :root:root .mi-slide-fwd-leave-to { transform: translateX(-25%); }
+  :root:root .mi-slide-back-enter-from { transform: translateX(-25%); }
+  :root:root .mi-slide-back-leave-to { transform: translateX(100%); }
+}
+
+/* ── 软键盘：布局不动，只有被输入的那一块让位 ── */
+@media (max-width: 768px) {
+  /* 键盘开着时：标签栏、悬浮球、课文底栏收起（关闭后回来；占位不变，所以页面不跳） */
+  :root:root.kb-open .phone-tabbar,
+  :root:root.kb-open #app .ai-floating-ball,
+  :root:root.kb-open #app .lesson-actions.fixed-bar { visibility: hidden; }
+
+  /* AI 输入框：整体抬到键盘上方；对话列表同样加底部内距，最新消息仍可见 */
+  :root:root #app .ai-panel .ai-footer { transform: translateY(calc(-1 * var(--mi-kb-lift))); }
+  :root:root #app .ai-panel .ai-messages { padding-bottom: calc(20px + var(--mi-kb-lift)); }
+  :root:root #app .ai-panel.is-main .ai-messages { padding-bottom: calc(16px + var(--mi-kb-lift)); }
+  /* 底部安全区已由标签栏消化；键盘开着时也不需要 */
+  :root:root #app .claude-app-container.has-tabbar .ai-panel.is-main .ai-footer,
+  :root:root.kb-open #app .ai-panel.is-main .ai-footer { padding-bottom: var(--mi-sp-3); }
+
+  /* 普通页（备忘 / 研学笔记 / 搜索框等）：滚动容器底部留出键盘高度，露出由 phone-focus.ts 做 */
+  :root:root #app .content,
+  :root:root .mi-modal-body,
+  :root:root .mi-drawer-body,
+  :root:root .settings-content,
+  :root:root .quiz-body { scroll-padding-bottom: var(--mi-kb-inset); }
+  :root:root.kb-open #app .content:not(.is-full-bleed) { padding-bottom: calc(24px + var(--mi-kb-lift)); }
+
+  /* 输入控件 ≥ 16px，iOS 聚焦时不缩放页面 */
+  :root:root :is(#app, .mi-modal, .mi-drawer, .quiz-panel) :is(input:not([type=checkbox]):not([type=radio]):not([type=range]), textarea, select, [contenteditable]) { font-size: var(--mi-fs-read); }
+}
+
+/* ── 六级写作 / 翻译：专注作答（键盘开着且作答框聚焦） ── */
+@media (max-width: 768px) {
+  :root:root #app .cet6-exam:has(.cet6-body.writing) .cet6-top,
+  :root:root #app .cet6-body.writing .cet6-right .cet6-strip-row { display: none; }
+  :root:root #app .cet6-body.writing:not(.full) {
+    grid-template-rows: 44px minmax(0, 1fr);
+    padding-top: 0;
+  }
+  :root:root #app .cet6-body.writing .cet6-divider { display: none; }
+  :root:root #app .cet6-body.writing .cet6-left { grid-row: 1; overflow: hidden; padding: 0; }
+  :root:root #app .cet6-body.writing .cet6-right { grid-row: 2; padding-bottom: var(--mi-kb-inset); }
+  :root:root #app .cet6-body.writing .cet6-right-scroll { display: flex; flex-direction: column; overflow: hidden; padding-bottom: 0; }
+  :root:root #app .cet6-body.writing .cet6-panel { flex: 1; min-height: 0; }
+  :root:root #app .cet6-body.writing .cet6-area { flex: 1 1 auto; min-height: 0; }
+  :root:root #app .cet6-body.writing .cet6-ruled { min-height: 0; }
+  :root:root #app .cet6-prompt-bar {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    z-index: 85;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--mi-sp-2);
+    min-height: 44px;
+    background: var(--mi-canvas);
+    border-bottom: 1px solid var(--mi-border);
+  }
+  :root:root #app .cet6-prompt-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--mi-text-2); font-size: var(--mi-fs-body); }
+  /* 题目浮层：盖住作答区上半部分，下沿贴键盘；收起即回到原分屏，原文滚动位置不变 */
+  :root:root #app .cet6-body.prompt-open .cet6-left {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--prompt-top, 0px);
+    bottom: var(--mi-kb-inset);
+    z-index: 80;
+    overflow-y: auto;
+    padding: var(--mi-sp-3) var(--mi-sp-4);
+    background: var(--mi-canvas);
+    box-shadow: var(--mi-shadow-md);
+  }
+}
+
+/* ── 触摸手感：去掉系统点按高亮，用令牌做按下态；不等双击缩放；内部滚动不拖动整页 ── */
+@media (max-width: 768px) {
+  :root:root html,
+  :root:root body { touch-action: manipulation; }
+  :root:root #app,
+  :root:root #app *,
+  :root:root .mi-modal *,
+  :root:root .mi-drawer *,
+  :root:root .quiz-panel * { -webkit-tap-highlight-color: transparent; }
+  :root:root #app :is(.mi-btn, .pg-chip, .icon-btn, .nav-tab-btn, .footer-settings-btn, .ai-sidebar-item, .ai-sidebar-new, .ai-sidebar-main-entry, .mi-tab, .curriculum-lesson-card, .course-row, .cet6-row, .wrong-item, .cet6-option, .cet6-bank-word, .cet6-letter, .cet6-stmt, .menu-item, .settings-nav-item, .model-chip, .lead-chip):not(.mi-btn-primary):active,
+  :root:root .mi-modal :is(.mi-btn, .mi-modal-close):not(.mi-btn-primary):active,
+  :root:root .mi-drawer :is(.mi-btn, .mi-drawer-close):active { background: var(--cds-fill-ghost-selected); }
+  :root:root #app .mi-btn-primary:active { filter: brightness(0.9); }
+  :root:root #app :is(.content, .ai-messages, .cet6-left, .cet6-right-scroll, .settings-content, .ai-sidebar-scroll, .memo-list, .quiz-body, .ws-rail, .sidebar-wrapper),
+  :root:root .mi-modal-body,
+  :root:root .mi-drawer-body { overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+}
+
+/* ── 「今天」页（docs/31 §2.7）：内容区左右 16、区块间距 20；页头一行；继续学习卡纵排、按钮通栏 44；待办行高 60 ── */
+@media (max-width: 768px) {
+  :root:root .today { gap: 20px; }
+  :root:root .today .t-head { align-items: flex-end; }
+  :root:root .today .t-head-left { display: flex; flex-direction: column; gap: var(--mi-sp-1); }
+  :root:root .today .t-cont { flex-direction: column; align-items: stretch; gap: var(--mi-sp-3); padding: var(--mi-sp-4); }
+  :root:root .today .t-cont .mi-btn { width: 100%; height: 44px; }
+  :root:root .today .t-cols { grid-template-columns: minmax(0, 1fr); }
+  :root:root .today .t-row { height: 60px; }
+}

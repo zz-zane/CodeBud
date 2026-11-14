@@ -1,0 +1,50 @@
+{
+  "templateId": "py-s3-time-sleep",
+  "lang": "python",
+  "stage": 3,
+  "lessonId": "python-stage3-05",
+  "type": "codefix",
+  "concept": [
+    "time.sleep 占着变量死等",
+    "await asyncio.sleep 把变量让出去",
+    "谁先到点谁先回来"
+  ],
+  "instances": 2,
+  "params": {
+    "cat1": {
+      "kind": "pick",
+      "values": [
+        "赵六",
+        "三花",
+        "奶牛"
+      ]
+    },
+    "cat2": {
+      "kind": "pick",
+      "values": [
+        "小黑",
+        "李四",
+        "布偶"
+      ]
+    },
+    "t1": {
+      "kind": "pick",
+      "values": [
+        0.4,
+        0.5,
+        0.6
+      ]
+    },
+    "t2": {
+      "kind": "pick",
+      "values": [
+        0.1,
+        0.2
+      ]
+    }
+  },
+  "brokenCodeTemplate": "import asyncio\nimport time\n\n\nasync def 抓鱼(名字, 等多久):\n    time.sleep(等多久)\n    print(名字 + \" 抓完了\")\n\n\nasync def 主函数():\n    await asyncio.gather(抓鱼(\"{cat1}\", {t1}), 抓鱼(\"{cat2}\", {t2}))\n    print(\"都收工了\")\n\n\nasyncio.run(主函数())\n",
+  "referenceFixTemplate": "import asyncio\nimport time\n\n\nasync def 抓鱼(名字, 等多久):\n    await asyncio.sleep(等多久)\n    print(名字 + \" 抓完了\")\n\n\nasync def 主函数():\n    await asyncio.gather(抓鱼(\"{cat1}\", {t1}), 抓鱼(\"{cat2}\", {t2}))\n    print(\"都收工了\")\n\n\nasyncio.run(主函数())\n",
+  "stemTemplate": "我们把两个对象**一起**派出去抓鱼，要的是「**谁先抓完谁先调用**」。\n\n这段代码跑得起来、也不报错，可是顺序**总是反的**：要忙得久的那个先调用，一会儿就能回来的那个反倒排在后头。\n\n请你把它修好：让等得短的那个**先**调用、等得久的那个**后**调用，两个都调用结束了再印 `都收工了`。\n\n⚠️ 只改**一处**。",
+  "explanationTemplate": "问题出在 `time.sleep(等多久)` 这一句 —— 它是「**抱着变量死等**」。\n\n抱着变量死等的意思是：这段时间里这个对象**占着灶台哪儿也不去**，事件循环只能干瞪眼。灶台只有一处，一个异步任务架上去，其他任务就得**排队** —— 于是本来「一起派出去」的两件事，变成了一前一后：代码里排前面的先调用、排后面的后调用，**跟等多久一点关系都没有**。\n\n`await asyncio.sleep(等多久)` 才是**不占变量的等**：这个对象把变量让出来，去旁边待着，事件循环转头就能去照看其他任务；谁的时辰先到，谁就先被调用回来。所以「谁快谁先调用」这件事，靠的全是「等的时候把变量让出去」。\n\n⚠️ 这种错最阴的地方是**它不报错**：程序照样跑完、字照样印出来，只是顺序不对。要发现它，得盯着**顺序**看。\n\n⚠️ 记一条大规矩：凡是「架上去、等结果」的活儿（等定时器到点、等远处的对象回话、等文件读完），等的这口气都得**让出去**；只有「抱着铲子拼命翻炒」那种变量一直占着的活，才轮不到事件循环帮忙。\n\n（改完 `import time` 就没人用了 —— 留着不报错，顺手删掉也行。）"
+}

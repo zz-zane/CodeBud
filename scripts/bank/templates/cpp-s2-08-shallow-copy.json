@@ -1,0 +1,31 @@
+{
+  "templateId": "cpp-s2-08-shallow-copy",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-08",
+  "type": "codefix",
+  "concept": [
+    "没写照抄函数",
+    "编译器偷偷补的那一份只抄名称",
+    "改一个牵动另一个"
+  ],
+  "instances": 2,
+  "params": {
+    "v": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    },
+    "k": {
+      "kind": "pick",
+      "values": [
+        88,
+        99
+      ]
+    }
+  },
+  "stemTemplate": "这个盒子会租变量（构造函数里 `new`）、会还变量（析构函数里 `delete`），也有一个改内容的函数。可我们**漏了一件大事**：没给它自己写照抄函数。\n\n现在照抄一个、只改**抄出来那个**的条数，结果**原来那个也跟着变了**；而且程序收尾的时候会出事。\n\n你帮我们把漏掉的那一手补上，让改抄出来的那个**不牵动原件**：盒子里装 {v} 条，抄出来那个改成 {k} 条，两行分别印自己那一格。**已有的三手和 `main` 都不用改，只添这一手。**",
+  "brokenCodeTemplate": "#include <iostream>\nusing namespace std;\n\nclass FishBox {\n    int* p;\npublic:\n    FishBox(int v) { p = new int(v); }\n    ~FishBox() { delete p; }\n    int get() const { return *p; }\n    void set(int v) { *p = v; }\n};\n\nint main() {\n    FishBox a({v});\n    FishBox b = a;\n    b.set({k});\n    cout << \"a 那一格现在是 \" << a.get() << \" 条\" << endl;\n    cout << \"b 那一格现在是 \" << b.get() << \" 条\" << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\nusing namespace std;\n\nclass FishBox {\n    int* p;\npublic:\n    FishBox(int v) { p = new int(v); }\n\n    FishBox(const FishBox& other) {\n        p = new int(*other.p);\n    }\n\n    ~FishBox() { delete p; }\n    int get() const { return *p; }\n    void set(int v) { *p = v; }\n};\n\nint main() {\n    FishBox a({v});\n    FishBox b = a;\n    b.set({k});\n    cout << \"a 那一格现在是 \" << a.get() << \" 条\" << endl;\n    cout << \"b 那一格现在是 \" << b.get() << \" 条\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一题**一个报错都没有** —— 我们在本机跑过这一段：中间那两行输出**照印不误**（而且两行印出来是**同一个数**，光看屏幕还以为是我们看花了眼），真正的崩在**收尾那一刻**：两个盒子都去归还同一名称，第一个交回去之后，第二只拿着早就交掉的名称又交了一遍，进程当场倒下，**一个字都没留给我们**。\n\n根子在「盒子里的那一格保存的是什么」：这一格装的**不是条数，是一张写着地址的名称**（`int* p`）。我们没写照抄函数，编译器就**偷偷替我们补了一份**，而它补的那一份做的是最直白的事 —— **把对方那一格里的东西原样抄过来**，也就是**只抄名称**。于是两个盒子里保存两张写着同一名称的名称：改一个 = 改那间共用变量，另一个当然跟着变。\n\n所以补的那一手必须自己写，写法就一句关键:\n\n```text\nFishBox(const FishBox& other) {\n    p = new int(*other.p);\n}\n```\n\n**另租一间、把内容搬过去**（`*other.p` 是屋里的东西），这就是**深拷贝**；抄一间新屋的地址给自己，从此两个盒子各有各的变量，改一个不牵动另一个，收尾时也各还各的、谁也不撞谁。\n\n⚠️ 这一课的重点不是「记住这一手」，而是记住**这两句结论**：\n\n1. **盒子里保存名称的时候，照抄函数必须自己写** —— 不写，编译器替你补的那份一定是「只抄名称」。\n2. **这种错不会给你报错。** 程序前半段跑得好好的、输出也全对，然后在你说不定已经离开电脑的时候才倒下。哪天撞上「跑着挺好、一结束就崩」，回来翻翻这一课。"
+}

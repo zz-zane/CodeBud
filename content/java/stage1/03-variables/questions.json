@@ -1,0 +1,82 @@
+{
+  "lessonId": "java-stage1-03",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们要开一间装数据数量的小变量，名字叫 `fish`，里面装 `3` 条。哪一行写法是对的？",
+      "options": [
+        "`int fish = 3;`",
+        "`fish = int 3;`",
+        "`int fish = 3`（末尾不写分号）",
+        "`int = fish 3;`"
+      ],
+      "answer": 0,
+      "explanation": "开变量的顺序是**先挂名称、再起名字、最后装东西**：`int` 是名称，`fish` 是名字，`= 3` 是赋值，末尾的分号是老规矩的句号。顺序倒了、分号漏了，编译器都不会收。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们写 `int fish = \"3\";`，编译器会怎么办？",
+      "options": [
+        "翻稿子那一步就报错，说带双引号的变不成 `int`",
+        "照翻不误，跑起来才报错",
+        "默默把引号去掉，当成 `3` 收下",
+        "自动把 `int` 换成装字符串的名称"
+      ],
+      "answer": 0,
+      "explanation": "Java 的名称**开张就钉死**了，往后只收这种名称的东西。带双引号的是**字符串**，塞不进整数变量——这种错**编译那一步就拦下来**，报的是 `incompatible types`（名称和东西对不上），程序根本没创建后。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "`fish = fish + 1;` 这一句，Java 到底干了什么？",
+      "options": [
+        "先把右边算出来，再把结果赋给 `fish` 那间变量",
+        "先问一句「`fish` 和 `fish + 1` 一样吗」",
+        "重新开一间叫 `fish` 的变量，名称还是 `int`",
+        "报错：`fish` 不许出现在右边"
+      ],
+      "answer": 0,
+      "explanation": "这里的 `=` 是「**赋值**」，不是数学里的「等于」：右边先算（`3 + 1` 得 `4`），再赋给左边那间 `fish` 变量中，所以印出来是 `4`。要问「两边一样吗」，写的是 `==`——那是比较，不是装东西。"
+    },
+    {
+      "id": "q4",
+      "type": "code",
+      "lang": "java",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int fish = 5;\n        double price = 3.5;\n        System.out.println(fish);\n        System.out.println(price);\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "5\n3.5",
+      "accept": [
+        "5\n3.5\n"
+      ],
+      "explanation": "`println` 念的是**变量中装的东西**，不是变量名：第一间保存的是整数 `5`，第二间保存的是小数 `3.5`，各执行一行。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "java",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        char grade = 'B';\n        boolean happy = false;\n        System.out.println(grade);\n        System.out.println(happy);\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "B\nfalse",
+      "accept": [
+        "B\nfalse\n"
+      ],
+      "explanation": "装**单个字**的变量写法是**单引号** `'B'`，输出就是 `B`；装两面名称的变量只认 `true` 和 `false`，这里是 `false`——它也是原样输出，不会念成「假」。"
+    },
+    {
+      "id": "q6",
+      "type": "codefill",
+      "lang": "java",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        ____ grade = 'A';\n        System.out.println(grade);\n    }\n}",
+      "stem": "这段程序要装下**单个字** `'A'`（单引号圈起来的），`____` 里该填哪个名称？",
+      "blanks": [
+        {
+          "answer": "char"
+        }
+      ],
+      "explanation": "装单个字的是 `char` 这块名称，写的时候用**单引号** `'A'` 。填成装字符串的那块名称（双引号那种）可不行——一颗字符装不下一整串，编译器编译时就会报「变不成 `char`」。"
+    }
+  ]
+}

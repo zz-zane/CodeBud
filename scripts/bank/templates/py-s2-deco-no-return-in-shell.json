@@ -1,0 +1,24 @@
+{
+  "templateId": "py-s2-deco-no-return-in-shell",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-09",
+  "type": "codefix",
+  "concept": [
+    "壳",
+    "结果",
+    "return"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 8
+    }
+  },
+  "stemTemplate": "我们给 `double` 这一个方法套了一层特效：壳里先印一句 `开演啦`，再调用里面那一个方法。\n\n可这一段**一次不吭地算错了** —— 它不报错，只是印出来的第二行是个「空」。我们要的第二行是 `{n}` 的两倍。\n\n你帮我们改对。\n\n⚠️ 壳里那句 `print(\"开演啦\")`、外面最后那行 `print(double({n}))`，都**不许改成别的写法**。",
+  "brokenCodeTemplate": "import functools\n\n\ndef 记一笔(fn):\n    @functools.wraps(fn)\n    def 包装(*args, **kwargs):\n        print(\"开演啦\")\n        fn(*args, **kwargs)\n\n    return 包装\n\n\n@记一笔\ndef double(n):\n    return n * 2\n\n\nprint(double({n}))\n",
+  "referenceFixTemplate": "import functools\n\n\ndef 记一笔(fn):\n    @functools.wraps(fn)\n    def 包装(*args, **kwargs):\n        print(\"开演啦\")\n        return fn(*args, **kwargs)\n\n    return 包装\n\n\n@记一笔\ndef double(n):\n    return n * 2\n\n\nprint(double({n}))\n",
+  "explanationTemplate": "这是这一课**最阴的一个坑**：它不报错。\n\n壳里那一句 `fn(*args, **kwargs)` 其实**真的把里面那一个方法调用**了 —— `double({n})` 规规矩矩算出 `{n}` 的两倍，一点没错。错的是**算完之后**：结果没人接。\n\n壳的形状是「**开演前做点什么 → 把里面那招调用 → 把结果返回**」。返回那一步靠的是 `return`：\n\n- 有 `return fn(*args, **kwargs)`：外面拿到的就是里面那一个方法返回值。\n- 只有 `fn(*args, **kwargs)`：结果掉在地上没人接，壳自己**什么都没返回** —— 外面收到的是个空（`None`）。\n\n所以 `print(double({n}))` 印出来的才是那个「空」。\n\n⚠️ 这种毛病**最难抓**：程序不翻脸，输出看着也「有东西」，只是数字不见了。以后自己写壳的时候，第一件事就是低头看一眼这一句有没有 `return`。\n\n⚠️ 顺带记牢 `@functools.wraps(fn)` 的作用：套上壳之后，`double` 这个名字底下其实已经是 `包装` 了，是这张标签把原来的名字抄了过来，`double.__name__` 才印得出 `double`。"
+}

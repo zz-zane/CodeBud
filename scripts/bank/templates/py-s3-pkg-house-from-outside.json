@@ -1,0 +1,40 @@
+{
+  "templateId": "py-s3-pkg-house-from-outside",
+  "lang": "python",
+  "stage": 3,
+  "lessonId": "python-stage3-12",
+  "type": "codewrite",
+  "concept": [
+    "造屋",
+    "迎宾那一页",
+    "屋外连着屋名调用"
+  ],
+  "instances": 6,
+  "params": {
+    "house": {
+      "kind": "pick",
+      "values": [
+        "miaow",
+        "kitty"
+      ]
+    },
+    "a": {
+      "kind": "pick",
+      "values": [
+        6,
+        9
+      ]
+    },
+    "b": {
+      "kind": "pick",
+      "values": [
+        2,
+        3
+      ]
+    }
+  },
+  "stemTemplate": "我们要你把一个变量从零搭起来，再站到屋外称呼它一次。\n\n程序开头已经把变量和屋文件夹造好了：\n\n```text\n变量 = tempfile.mkdtemp()\n屋 = os.path.join(变量, \"{house}\")\nos.makedirs(屋)\n```\n\n接下来四件事交给你（照这个顺序做）：\n\n1. **在屋门口摆上迎宾的那一页** —— 那一页的文件名就是 `__init__.py`，里面一个字都不用写。（我们真跑过：**不摆它，屋外也调用得应**；摆上它是为了让这屋被整间请进来时**先跑这一页**。）\n2. **把本子写进屋里** —— 本子叫 `分数据.py`，内容就一个函数：\n\n```text\ndef 平分(总数, 对象数):\n    return 总数 // 对象数\n```\n\n   （写文件那套照上一题的写法来：`open(..., \"w\", encoding=\"utf-8\")`，内容先放进一串字里，本子里要换行的地方就在那串字里换行。）\n3. **告诉编译器去变量中找屋**。\n4. **站到屋外，连着屋名把 `平分` 请进来**，然后用它算一次。\n\n最后印**一行**：\n\n```text\n{a} 条数据分给 {b} 个对象，每个 3 条\n```\n\n最后那个数不许直接写死，得是 `平分({a}, {b})` 算出来的。",
+  "starterTemplate": "import os, sys, tempfile\n\n变量 = tempfile.mkdtemp()\n屋 = os.path.join(变量, \"{house}\")\nos.makedirs(屋)\n\n# ① 摆上迎宾的那一页：一个空的 __init__.py\n\n# ② 把本子 分数据.py 写进屋里\n\n# ③ 告诉编译器去变量中找屋\n\n# ④ 站到屋外，连着屋名把 平分 请进来，然后印那一行\n",
+  "referenceSolutionTemplate": "import os, sys, tempfile\n\n变量 = tempfile.mkdtemp()\n屋 = os.path.join(变量, \"{house}\")\nos.makedirs(屋)\n\nopen(os.path.join(屋, \"__init__.py\"), \"w\").close()\n\n本子内容 = '''def 平分(总数, 对象数):\n    return 总数 // 对象数\n'''\nwith open(os.path.join(屋, \"分数据.py\"), \"w\", encoding=\"utf-8\") as f:\n    f.write(本子内容)\n\nsys.path.insert(0, 变量)\nfrom {house}.分数据 import 平分\n\nprint(\"{a} 条数据分给 {b} 个对象，每个\", 平分({a}, {b}), \"条\")\n",
+  "explanationTemplate": "四件事，一件比一件多知道一点。\n\n**① 迎宾那一页 `__init__.py` 是空的。** 摆完就撒手 —— 这一行念作「造个空文件，立刻关掉」。它**不是入场券**：我们真跑过，没有这一页，屋外照样调用得应（编译器管这种「只有文件夹、没有那一页」的屋叫**命名空间包**）。它管的是另一件事 —— 这屋被整间请进来的时候，**先跑的就是这一页**；空着，就等于迎宾的时候什么也不做。\n\n**② 本子的内容也是先放进一串字，再整个写进文件里。** 那串字里的换行就是文件里的换行，缩进（函数里那四个空格）也一并写进去 —— 所以写那串字的时候手下要留神，缩进少了编译器会翻脸。\n\n**③ `sys.path.insert(0, 变量)` 是给编译器递话**：「去这个变量中找屋」。默认它只看正门所在的那一层，屋住在临时变量中，不递这句话它找不着。\n\n**④ 屋外引用名称，必须连着屋名调用。** 写全的这句里，`{house}` 是屋、`分数据` 是本子、`平分` 是你真正要的那个函数 —— 中间那些点念作「里面的」。\n\n回头看，工程结构这一课真正变的就是**调用方式**：函数不再跟正门挤在一张桌上，而是住进屋、从屋外连着屋名调用；你每次用它，都在名字里写明它住在哪儿。"
+}

@@ -1,0 +1,33 @@
+{
+  "templateId": "cpp-s2-05-touch-own",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-05",
+  "type": "codefix",
+  "concept": [
+    "挂在类定义上的函数",
+    "称呼它的时候没有对象",
+    "自己的格子碰不得"
+  ],
+  "instances": 2,
+  "params": {
+    "nameA": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    },
+    "nameB": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stemTemplate": "我们写了一个**挂在类定义上**的函数 `static int howMany()` —— 它的活只是报一报「一共初始化了几个」，可它状态里我们顺手多碰了一样东西，编译器当场拦下。\n\n你帮我们改**一处**，让它跑起来、印出这两行：先一行 `一共初始化了 2 只`，再一行 `第一个叫 XX`（`XX` 是第一个对象的名字）。**`main` 里那几句和类定义上别的地方都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    static int count;\n    string name;\n\n    Cat(string n) : name(n) {\n        count = count + 1;\n    }\n\n    static int howMany() {\n        return count + name.size();\n    }\n};\n\nint Cat::count = 0;\n\nint main() {\n    Cat a(\"{nameA}\");\n    Cat b(\"{nameB}\");\n    cout << \"一共初始化了 \" << Cat::howMany() << \" 只\" << endl;\n    cout << \"第一个叫 \" << a.name << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    static int count;\n    string name;\n\n    Cat(string n) : name(n) {\n        count = count + 1;\n    }\n\n    static int howMany() {\n        return count;\n    }\n};\n\nint Cat::count = 0;\n\nint main() {\n    Cat a(\"{nameA}\");\n    Cat b(\"{nameB}\");\n    cout << \"一共初始化了 \" << Cat::howMany() << \" 只\" << endl;\n    cout << \"第一个叫 \" << a.name << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:15:24: error: invalid use of member 'Cat::name' in static member function`\n`main.cpp:8:12: note: declared here`\n\n念作：**「`name` 是每个对象自己的一份，可你现在站的是挂在类定义上的函数 —— 称呼它的时候没有对象站在旁边，你要用的是哪个对象的 `name`？」**\n\n道理上一课就埋好了：函数被哪个对象调用，就替哪个对象干活。而这个函数是**挂在类定义上**的 —— 称呼它的时候根本不需要先有一个对象，所以它手里没有「哪个对象」这个信息，每个对象自己那一格就取不出来。\n\n改法很简单：把它碰不到的那半截拿掉，状态里只留 `return count;`。共用的那一格谁都能碰，挂在类定义上的函数碰它一点问题都没有。\n\n⚠️ 顺带记住：看到 `invalid use of member` 这一句，先看这一个方法前面是不是带着那个「挂在类定义上」的标记 —— 带了，它状态里就只能碰共用的东西。"
+}

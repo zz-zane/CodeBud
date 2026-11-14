@@ -1,0 +1,29 @@
+{
+  "templateId": "py-s2-re-search-none-group",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-12",
+  "type": "codefix",
+  "concept": [
+    "re.search",
+    "None",
+    "group"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    },
+    "d": {
+      "kind": "int",
+      "min": 12,
+      "max": 34
+    }
+  },
+  "stemTemplate": "先搜索文本“数据{n}条，商品{d}袋”中的商品编号，再搜索不存在的记录编号。保留第一次搜索；第二次未匹配时输出“没有匹配记录”，不得对 None 调用 group。",
+  "brokenCodeTemplate": "import re\n\n项链 = \"数据{n}条，商品{d}袋\"\nprint(re.search(r\"商品\\d+\", 项链).group())\nprint(re.search(r\"记录\\d+\", 项链).group())\n",
+  "referenceFixTemplate": "import re\n\n项链 = \"数据{n}条，商品{d}袋\"\nprint(re.search(r\"商品\\d+\", 项链).group())\n\n结果 = re.search(r\"记录\\d+\", 项链)\nif 结果 is None:\n    print(\"没有匹配记录\")\nelse:\n    print(结果.group())\n",
+  "explanationTemplate": "re.search 找到匹配时返回匹配对象，未找到时返回 None。调用 group 前必须检查结果；否则对 None 调用 group 会触发 AttributeError。参考修复保留第一次成功搜索，并对第二次不存在的匹配输出明确的无结果信息。"
+}

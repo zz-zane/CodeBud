@@ -1,0 +1,318 @@
+{
+  "lessonId": "cpp-stage1-13",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s1-catch-wrong-tag-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们要把一串**根本不是数字**的字 `` 读成整数。我们知道 `stoi` 会为这件事扔一个异常，就在地上铺了一张异常处理分支，接住之后印出 `接住了：` 接上车上那句说明。\n\n这一回编译器**收下了源代码**（开演前一点没错），可一跑起来程序当场就停了，连一个字都没印出来。\n\n你帮我们把出问题的那一处改好：改完要能印出 `接住了：` 接上车上那句说明。那串字、要印的那句话，都不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    try {\n        int n = stoi(\"\");\n        cout << n << endl;\n    } catch (const out_of_range& e) {\n        cout << \"接住了：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    try {\n        int n = stoi(\"\");\n        cout << n << endl;\n    } catch (const invalid_argument& e) {\n        cout << \"接住了：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "接住了：stoi",
+      "stdin": null,
+      "explanation": "这一题难在**屏幕上什么都不说**：程序不是编不过，是**跑起来之后当场停了**，最后丢下两行这样的话：\n\n`terminate called after throwing an instance of 'std::invalid_argument'`\n\n`  what():  stoi`\n\n翻成人话：**有人扔了一辆挂着 `std::invalid_argument` 名称的车，可地上那张异常处理分支只接 `out_of_range`，接不住 —— 机器只好就地停下。**\n\n看明白了吗：**`stoi` 扔出来的车，挂的是 `invalid_argument` 这块名称**（意思是「你给的料根本不对」），而 `out_of_range` 是**越界**那块名称（比如从只有 4 颗的串上拿第 10 颗）。名称对不上，车就从你手边过去了。\n\n改法只有一处：把异常处理分支括号里的名称换成 `const invalid_argument&` —— 本课第二节那张标准写法，照抄即可。改完它就能安稳落地，印出 `接住了：` 接上 `e.what()`。",
+      "templateId": "cpp-s1-catch-wrong-tag",
+      "params": {
+        "word": ""
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "4cb773e8cc63001a"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-catch-wrong-tag-001",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们要把一串**根本不是数字**的字 `呜` 读成整数。我们知道 `stoi` 会为这件事扔一个异常，就在地上铺了一张异常处理分支，接住之后印出 `接住了：` 接上车上那句说明。\n\n这一回编译器**收下了源代码**（开演前一点没错），可一跑起来程序当场就停了，连一个字都没印出来。\n\n你帮我们把出问题的那一处改好：改完要能印出 `接住了：` 接上车上那句说明。那串字、要印的那句话，都不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    try {\n        int n = stoi(\"呜\");\n        cout << n << endl;\n    } catch (const out_of_range& e) {\n        cout << \"接住了：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    try {\n        int n = stoi(\"呜\");\n        cout << n << endl;\n    } catch (const invalid_argument& e) {\n        cout << \"接住了：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "接住了：stoi",
+      "stdin": null,
+      "explanation": "这一题难在**屏幕上什么都不说**：程序不是编不过，是**跑起来之后当场停了**，最后丢下两行这样的话：\n\n`terminate called after throwing an instance of 'std::invalid_argument'`\n\n`  what():  stoi`\n\n翻成人话：**有人扔了一辆挂着 `std::invalid_argument` 名称的车，可地上那张异常处理分支只接 `out_of_range`，接不住 —— 机器只好就地停下。**\n\n看明白了吗：**`stoi` 扔出来的车，挂的是 `invalid_argument` 这块名称**（意思是「你给的料根本不对」），而 `out_of_range` 是**越界**那块名称（比如从只有 4 颗的串上拿第 10 颗）。名称对不上，车就从你手边过去了。\n\n改法只有一处：把异常处理分支括号里的名称换成 `const invalid_argument&` —— 本课第二节那张标准写法，照抄即可。改完它就能安稳落地，印出 `接住了：` 接上 `e.what()`。",
+      "templateId": "cpp-s1-catch-wrong-tag",
+      "params": {
+        "word": "呜"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "7d3450fbe77a8139"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-catchall-not-last-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们往上一扔了一串字 `数组元素打翻了`，地上铺了**两张**异常处理分支：一张专门接一串字，一张什么都接的兜底。\n\n我们想让**专门那张**接到车，印出 `接到一串字：` 后面接上异常携带的信息。\n\n可编译器当场就把源代码退回来了，屏幕上连一个字都没有。\n\n你帮我们把它改好：改完要能印出 `接到一串字：` 接上那串字。扔出去的那串字，不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    try {\n        throw string(\"数组元素打翻了\");\n    } catch (...) {\n        cout << \"不管是什么，先接住再说\" << endl;\n    } catch (const string& e) {\n        cout << \"接到一串字：\" << e << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    try {\n        throw string(\"数组元素打翻了\");\n    } catch (const string& e) {\n        cout << \"接到一串字：\" << e << endl;\n    } catch (...) {\n        cout << \"不管是什么，先接住再说\" << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "接到一串字：数组元素打翻了",
+      "stdin": null,
+      "explanation": "编译器这一回的原话是：\n\n`error: '...' handler must be the last handler for its try block [-fpermissive]`\n\n`handler` 就是「接车的那一张异常处理分支」，`must be the last` 是「**必须排在最后一个**」—— 兜底那张排到前面去了。\n\n为什么这么定规矩？因为 `catch` 是**从上往下挑第一个对得上的**：兜底那张什么都接，它要是排在最前面，**第一眼就被它挑走了，后面的异常处理分支一辈子轮不到**。所以那张 `catch (...)` 只能排在队尾 —— 前面的先挑，挑剩下的才轮到它。\n\n改法：把两个 `catch` 的顺序**掉个个儿**，专门接一串字的那张先挑，兜底那张守在最后。\n\n（对照着记：这是「**先挑具体、后挑兜底**」。和它成对的一句是：一个车只会被一张异常处理分支接走 —— 接走之后别的异常处理分支就不管了。）",
+      "templateId": "cpp-s1-catchall-not-last",
+      "params": {
+        "msg": "数组元素打翻了"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "d37fc0f9dae643aa"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-catchall-not-last-001",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们往上一扔了一串字 `数据不够了`，地上铺了**两张**异常处理分支：一张专门接一串字，一张什么都接的兜底。\n\n我们想让**专门那张**接到车，印出 `接到一串字：` 后面接上异常携带的信息。\n\n可编译器当场就把源代码退回来了，屏幕上连一个字都没有。\n\n你帮我们把它改好：改完要能印出 `接到一串字：` 接上那串字。扔出去的那串字，不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    try {\n        throw string(\"数据不够了\");\n    } catch (...) {\n        cout << \"不管是什么，先接住再说\" << endl;\n    } catch (const string& e) {\n        cout << \"接到一串字：\" << e << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    try {\n        throw string(\"数据不够了\");\n    } catch (const string& e) {\n        cout << \"接到一串字：\" << e << endl;\n    } catch (...) {\n        cout << \"不管是什么，先接住再说\" << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "接到一串字：数据不够了",
+      "stdin": null,
+      "explanation": "编译器这一回的原话是：\n\n`error: '...' handler must be the last handler for its try block [-fpermissive]`\n\n`handler` 就是「接车的那一张异常处理分支」，`must be the last` 是「**必须排在最后一个**」—— 兜底那张排到前面去了。\n\n为什么这么定规矩？因为 `catch` 是**从上往下挑第一个对得上的**：兜底那张什么都接，它要是排在最前面，**第一眼就被它挑走了，后面的异常处理分支一辈子轮不到**。所以那张 `catch (...)` 只能排在队尾 —— 前面的先挑，挑剩下的才轮到它。\n\n改法：把两个 `catch` 的顺序**掉个个儿**，专门接一串字的那张先挑，兜底那张守在最后。\n\n（对照着记：这是「**先挑具体、后挑兜底**」。和它成对的一句是：一个车只会被一张异常处理分支接走 —— 接走之后别的异常处理分支就不管了。）",
+      "templateId": "cpp-s1-catchall-not-last",
+      "params": {
+        "msg": "数据不够了"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "68a269a182e04978"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-softpad-misplaced-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们拿到的料是这串字 `` —— 它**根本不是数字**，所以 `stoi` 一定会抛出异常。我们在地上铺了一张接 `invalid_argument` 的异常处理分支，打算接住之后印**一行**：先是那串字本身，接着 ` 这串字不是数字：`，再接上车上那句说明（`e.what()`）。\n\n这一回编译器**收下了源代码**（这一句在开演时一点错都没有），可一跑起来程序当场就停了。\n\n你帮我们把出问题的那一处改好：改完那一行要能印出来。那串字、要印的那句话，都不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string word = \"\";\n    int n = stoi(word);\n    try {\n        cout << \"挖到的数字是 \" << n << \" \" << endl;\n    } catch (const invalid_argument& e) {\n        cout << word << \" 这串字不是数字：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string word = \"\";\n    try {\n        int n = stoi(word);\n        cout << \"挖到的数字是 \" << n << \" \" << endl;\n    } catch (const invalid_argument& e) {\n        cout << word << \" 这串字不是数字：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": " 这串字不是数字：stoi",
+      "stdin": null,
+      "explanation": "这一题错的地方**特别隐身**：异常处理分支铺了、名称也写对了，可它圈错了地方 —— 那句真会翻车的话（`stoi(word)`）**站在异常处理分支外面**。\n\n站在异常处理分支外面的句子不归它管：车是从异常处理分支外面扔出去的，地上那张垫子张着嘴也接不着，机器只好丢下一句 `terminate called after throwing an instance of 'std::invalid_argument'` 就地停下。\n\n改法：把 `stoi` 那一句（还有接它结果的那一个元素）**搬进 `try` 里面** —— 要盯着跑的，是**真会翻的那几句**：\n\n- 搬进去之后，`int n = stoi(word);` 翻车时，`catch` 就在同一个异常处理分支上等着接；\n- 接住之后印出 `那串字 这串字不是数字：` 接上 `e.what()`。\n\n（顺带记一条：这就是为什么本课那条提醒说「**别把一大段活全塞进一个 `try`**，也别把该管的句子漏在外头」—— 异常处理分支要铺在你真会翻的那几句**周围**。）",
+      "templateId": "cpp-s1-softpad-misplaced",
+      "params": {
+        "word": ""
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "d67a1c6a49ccc6fd"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-softpad-misplaced-001",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们拿到的料是这串字 `呜` —— 它**根本不是数字**，所以 `stoi` 一定会抛出异常。我们在地上铺了一张接 `invalid_argument` 的异常处理分支，打算接住之后印**一行**：先是那串字本身，接着 ` 这串字不是数字：`，再接上车上那句说明（`e.what()`）。\n\n这一回编译器**收下了源代码**（这一句在开演时一点错都没有），可一跑起来程序当场就停了。\n\n你帮我们把出问题的那一处改好：改完那一行要能印出来。那串字、要印的那句话，都不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string word = \"呜\";\n    int n = stoi(word);\n    try {\n        cout << \"挖到的数字是 \" << n << \" \" << endl;\n    } catch (const invalid_argument& e) {\n        cout << word << \" 这串字不是数字：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string word = \"呜\";\n    try {\n        int n = stoi(word);\n        cout << \"挖到的数字是 \" << n << \" \" << endl;\n    } catch (const invalid_argument& e) {\n        cout << word << \" 这串字不是数字：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "呜 这串字不是数字：stoi",
+      "stdin": null,
+      "explanation": "这一题错的地方**特别隐身**：异常处理分支铺了、名称也写对了，可它圈错了地方 —— 那句真会翻车的话（`stoi(word)`）**站在异常处理分支外面**。\n\n站在异常处理分支外面的句子不归它管：车是从异常处理分支外面扔出去的，地上那张垫子张着嘴也接不着，机器只好丢下一句 `terminate called after throwing an instance of 'std::invalid_argument'` 就地停下。\n\n改法：把 `stoi` 那一句（还有接它结果的那一个元素）**搬进 `try` 里面** —— 要盯着跑的，是**真会翻的那几句**：\n\n- 搬进去之后，`int n = stoi(word);` 翻车时，`catch` 就在同一个异常处理分支上等着接；\n- 接住之后印出 `那串字 这串字不是数字：` 接上 `e.what()`。\n\n（顺带记一条：这就是为什么本课那条提醒说「**别把一大段活全塞进一个 `try`**，也别把该管的句子漏在外头」—— 异常处理分支要铺在你真会翻的那几句**周围**。）",
+      "templateId": "cpp-s1-softpad-misplaced",
+      "params": {
+        "word": "呜"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "0e386ac72c68203e"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-throw-own-car-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个整数**（一行一个），我们叫它们 `a` 和 `b`。\n\n请你写**一个方法**叫 `divide`：接两个整数，**`b` 是 0 的时候**就扔一个异常 —— 车上挂 `runtime_error` 那块名称，贴的说明是 `除数不能是 0 `；`b` 不是 0 就把 `a` 除以 `b` 的结果交回来（整数除法，跟第五课一样）。\n\n然后在函数里（称呼它的那一层）把两条路都接好：\n\n```text\n顺利：答案是 X \n翻车：接住了：除数不能是 0 \n```\n\n（`X` 是算出来的数；翻车那行的后一半，就是车上贴的那句说明。）\n\n比如程序的输入是\n\n8\n2\n\n程序就要返回\n\n答案是 4 \n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint divide(int a, int b) {\n    if (b == 0) {\n        throw runtime_error(\"除数不能是 0 \");\n    }\n    return a / b;\n}\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    try {\n        int result = divide(a, b);\n        cout << \"答案是 \" << result << \" \" << endl;\n    } catch (const runtime_error& e) {\n        cout << \"接住了：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "答案是 3 ",
+      "stdin": "10\n3\n",
+      "explanation": "这一题有**两件**值得记住的事。\n\n**第一件：自己造车怎么造。** `throw runtime_error(\"除数不能是 0 \");` —— 自己造一个异常、车上贴一句话给接车的人看。`runtime_error` 是「**跑起来以后出的错**」这种名称；用它得在开头先写一句 `#include <stdexcept>`，把 `stdexcept` 借出来（`stoi` 那种名称则跟着 `string` 一起进来）。\n\n**第二件：抛出异常的和接车的不用是同一层。** 你看函数 `divide` 里**一个 `try` 都没有** —— 它只管「这事不对，我们扔上去」；接车的是称呼它的那一层（`main` 里那对 `try` / `catch`）。谁接它，是称呼它那位的事。\n\n最后一件事特别要紧：为什么我们要**在动手之前**先看一眼 `b` 是不是 0？因为**整数除以 0 不是异常** —— 那是机器自己烧了保险丝，直接停机，铺多少层 `catch` 都接不住。所以这种翻车**只能提前防**：动手之前先看一眼除数。（`stoi` 料不对、`at` 越界这两种是有对象抛出异常的，才接得住。）",
+      "templateId": "cpp-s1-throw-own-car",
+      "params": {
+        "a": "10",
+        "b": "3"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "28485357c63c6411"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-throw-own-car-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个整数**（一行一个），我们叫它们 `a` 和 `b`。\n\n请你写**一个方法**叫 `divide`：接两个整数，**`b` 是 0 的时候**就扔一个异常 —— 车上挂 `runtime_error` 那块名称，贴的说明是 `除数不能是 0 `；`b` 不是 0 就把 `a` 除以 `b` 的结果交回来（整数除法，跟第五课一样）。\n\n然后在函数里（称呼它的那一层）把两条路都接好：\n\n```text\n顺利：答案是 X \n翻车：接住了：除数不能是 0 \n```\n\n（`X` 是算出来的数；翻车那行的后一半，就是车上贴的那句说明。）\n\n比如程序的输入是\n\n8\n2\n\n程序就要返回\n\n答案是 4 \n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint divide(int a, int b) {\n    if (b == 0) {\n        throw runtime_error(\"除数不能是 0 \");\n    }\n    return a / b;\n}\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    try {\n        int result = divide(a, b);\n        cout << \"答案是 \" << result << \" \" << endl;\n    } catch (const runtime_error& e) {\n        cout << \"接住了：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "接住了：除数不能是 0 ",
+      "stdin": "10\n0\n",
+      "explanation": "这一题有**两件**值得记住的事。\n\n**第一件：自己造车怎么造。** `throw runtime_error(\"除数不能是 0 \");` —— 自己造一个异常、车上贴一句话给接车的人看。`runtime_error` 是「**跑起来以后出的错**」这种名称；用它得在开头先写一句 `#include <stdexcept>`，把 `stdexcept` 借出来（`stoi` 那种名称则跟着 `string` 一起进来）。\n\n**第二件：抛出异常的和接车的不用是同一层。** 你看函数 `divide` 里**一个 `try` 都没有** —— 它只管「这事不对，我们扔上去」；接车的是称呼它的那一层（`main` 里那对 `try` / `catch`）。谁接它，是称呼它那位的事。\n\n最后一件事特别要紧：为什么我们要**在动手之前**先看一眼 `b` 是不是 0？因为**整数除以 0 不是异常** —— 那是机器自己烧了保险丝，直接停机，铺多少层 `catch` 都接不住。所以这种翻车**只能提前防**：动手之前先看一眼除数。（`stoi` 料不对、`at` 越界这两种是有对象抛出异常的，才接得住。）",
+      "templateId": "cpp-s1-throw-own-car",
+      "params": {
+        "a": "10",
+        "b": "0"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "f96fd71b52ad24d5"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-throw-own-car-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个整数**（一行一个），我们叫它们 `a` 和 `b`。\n\n请你写**一个方法**叫 `divide`：接两个整数，**`b` 是 0 的时候**就扔一个异常 —— 车上挂 `runtime_error` 那块名称，贴的说明是 `除数不能是 0 `；`b` 不是 0 就把 `a` 除以 `b` 的结果交回来（整数除法，跟第五课一样）。\n\n然后在函数里（称呼它的那一层）把两条路都接好：\n\n```text\n顺利：答案是 X \n翻车：接住了：除数不能是 0 \n```\n\n（`X` 是算出来的数；翻车那行的后一半，就是车上贴的那句说明。）\n\n比如程序的输入是\n\n8\n2\n\n程序就要返回\n\n答案是 4 \n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint divide(int a, int b) {\n    if (b == 0) {\n        throw runtime_error(\"除数不能是 0 \");\n    }\n    return a / b;\n}\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    try {\n        int result = divide(a, b);\n        cout << \"答案是 \" << result << \" \" << endl;\n    } catch (const runtime_error& e) {\n        cout << \"接住了：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "答案是 3 ",
+      "stdin": "9\n3\n",
+      "explanation": "这一题有**两件**值得记住的事。\n\n**第一件：自己造车怎么造。** `throw runtime_error(\"除数不能是 0 \");` —— 自己造一个异常、车上贴一句话给接车的人看。`runtime_error` 是「**跑起来以后出的错**」这种名称；用它得在开头先写一句 `#include <stdexcept>`，把 `stdexcept` 借出来（`stoi` 那种名称则跟着 `string` 一起进来）。\n\n**第二件：抛出异常的和接车的不用是同一层。** 你看函数 `divide` 里**一个 `try` 都没有** —— 它只管「这事不对，我们扔上去」；接车的是称呼它的那一层（`main` 里那对 `try` / `catch`）。谁接它，是称呼它那位的事。\n\n最后一件事特别要紧：为什么我们要**在动手之前**先看一眼 `b` 是不是 0？因为**整数除以 0 不是异常** —— 那是机器自己烧了保险丝，直接停机，铺多少层 `catch` 都接不住。所以这种翻车**只能提前防**：动手之前先看一眼除数。（`stoi` 料不对、`at` 越界这两种是有对象抛出异常的，才接得住。）",
+      "templateId": "cpp-s1-throw-own-car",
+      "params": {
+        "a": "9",
+        "b": "3"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "b1f8a89ebf79af94"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-throw-own-car-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个整数**（一行一个），我们叫它们 `a` 和 `b`。\n\n请你写**一个方法**叫 `divide`：接两个整数，**`b` 是 0 的时候**就扔一个异常 —— 车上挂 `runtime_error` 那块名称，贴的说明是 `除数不能是 0 `；`b` 不是 0 就把 `a` 除以 `b` 的结果交回来（整数除法，跟第五课一样）。\n\n然后在函数里（称呼它的那一层）把两条路都接好：\n\n```text\n顺利：答案是 X \n翻车：接住了：除数不能是 0 \n```\n\n（`X` 是算出来的数；翻车那行的后一半，就是车上贴的那句说明。）\n\n比如程序的输入是\n\n8\n2\n\n程序就要返回\n\n答案是 4 \n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint divide(int a, int b) {\n    if (b == 0) {\n        throw runtime_error(\"除数不能是 0 \");\n    }\n    return a / b;\n}\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    try {\n        int result = divide(a, b);\n        cout << \"答案是 \" << result << \" \" << endl;\n    } catch (const runtime_error& e) {\n        cout << \"接住了：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "接住了：除数不能是 0 ",
+      "stdin": "9\n0\n",
+      "explanation": "这一题有**两件**值得记住的事。\n\n**第一件：自己造车怎么造。** `throw runtime_error(\"除数不能是 0 \");` —— 自己造一个异常、车上贴一句话给接车的人看。`runtime_error` 是「**跑起来以后出的错**」这种名称；用它得在开头先写一句 `#include <stdexcept>`，把 `stdexcept` 借出来（`stoi` 那种名称则跟着 `string` 一起进来）。\n\n**第二件：抛出异常的和接车的不用是同一层。** 你看函数 `divide` 里**一个 `try` 都没有** —— 它只管「这事不对，我们扔上去」；接车的是称呼它的那一层（`main` 里那对 `try` / `catch`）。谁接它，是称呼它那位的事。\n\n最后一件事特别要紧：为什么我们要**在动手之前**先看一眼 `b` 是不是 0？因为**整数除以 0 不是异常** —— 那是机器自己烧了保险丝，直接停机，铺多少层 `catch` 都接不住。所以这种翻车**只能提前防**：动手之前先看一眼除数。（`stoi` 料不对、`at` 越界这两种是有对象抛出异常的，才接得住。）",
+      "templateId": "cpp-s1-throw-own-car",
+      "params": {
+        "a": "9",
+        "b": "0"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "7dae46632b006f07"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-try-at-out-of-range-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "读取一行字符串与整数下标 K。在 try 中使用 string::at 访问对应字节。有效时输出“第 K 号位是 X ”；捕获 std::out_of_range 时输出固定“越界：索引超出范围”。不使用标准库 what() 的实现相关详细文字。\n\n比如程序的输入是\n\ncat\n2\n\n程序就要返回\n\n第 2 号位是 t \n\n（判分喂的是**另外一串字和另一个位置**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string word;\n    int pos = 0;\n    getline(cin, word);\n    cin >> pos;\n\n    try {\n        char c = word.at(pos);\n        cout << \"第 \" << pos << \" 号位是 \" << c << \" \" << endl;\n    } catch (const out_of_range& e) {\n        cout << \"越界：\" << \"索引超出范围\" << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 1 号位是 i",
+      "stdin": "miai\n1\n",
+      "explanation": "string::at 会检查字节下标，越界时抛出 std::out_of_range。按异常类型捕获后输出固定中性消息，因此题目不依赖特定 libstdc++ 或运行库的 what() 文案。std::string 的此处下标按字节计算。",
+      "templateId": "cpp-s1-try-at-out-of-range",
+      "params": {
+        "word": "miai",
+        "pos": "1"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "4bc66d9df6d571f1"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-try-at-out-of-range-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "读取一行字符串与整数下标 K。在 try 中使用 string::at 访问对应字节。有效时输出“第 K 号位是 X ”；捕获 std::out_of_range 时输出固定“越界：索引超出范围”。不使用标准库 what() 的实现相关详细文字。\n\n比如程序的输入是\n\ncat\n2\n\n程序就要返回\n\n第 2 号位是 t \n\n（判分喂的是**另外一串字和另一个位置**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string word;\n    int pos = 0;\n    getline(cin, word);\n    cin >> pos;\n\n    try {\n        char c = word.at(pos);\n        cout << \"第 \" << pos << \" 号位是 \" << c << \" \" << endl;\n    } catch (const out_of_range& e) {\n        cout << \"越界：\" << \"索引超出范围\" << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "越界：索引超出范围",
+      "stdin": "miai\n10\n",
+      "explanation": "string::at 会检查字节下标，越界时抛出 std::out_of_range。按异常类型捕获后输出固定中性消息，因此题目不依赖特定 libstdc++ 或运行库的 what() 文案。std::string 的此处下标按字节计算。",
+      "templateId": "cpp-s1-try-at-out-of-range",
+      "params": {
+        "word": "miai",
+        "pos": "10"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.871Z",
+        "hash": "92b80a9c728b9b93"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-try-at-out-of-range-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "读取一行字符串与整数下标 K。在 try 中使用 string::at 访问对应字节。有效时输出“第 K 号位是 X ”；捕获 std::out_of_range 时输出固定“越界：索引超出范围”。不使用标准库 what() 的实现相关详细文字。\n\n比如程序的输入是\n\ncat\n2\n\n程序就要返回\n\n第 2 号位是 t \n\n（判分喂的是**另外一串字和另一个位置**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string word;\n    int pos = 0;\n    getline(cin, word);\n    cin >> pos;\n\n    try {\n        char c = word.at(pos);\n        cout << \"第 \" << pos << \" 号位是 \" << c << \" \" << endl;\n    } catch (const out_of_range& e) {\n        cout << \"越界：\" << \"索引超出范围\" << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 1 号位是 i",
+      "stdin": "fish\n1\n",
+      "explanation": "string::at 会检查字节下标，越界时抛出 std::out_of_range。按异常类型捕获后输出固定中性消息，因此题目不依赖特定 libstdc++ 或运行库的 what() 文案。std::string 的此处下标按字节计算。",
+      "templateId": "cpp-s1-try-at-out-of-range",
+      "params": {
+        "word": "fish",
+        "pos": "1"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "22f7b88069bd8eb3"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-try-at-out-of-range-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "读取一行字符串与整数下标 K。在 try 中使用 string::at 访问对应字节。有效时输出“第 K 号位是 X ”；捕获 std::out_of_range 时输出固定“越界：索引超出范围”。不使用标准库 what() 的实现相关详细文字。\n\n比如程序的输入是\n\ncat\n2\n\n程序就要返回\n\n第 2 号位是 t \n\n（判分喂的是**另外一串字和另一个位置**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string word;\n    int pos = 0;\n    getline(cin, word);\n    cin >> pos;\n\n    try {\n        char c = word.at(pos);\n        cout << \"第 \" << pos << \" 号位是 \" << c << \" \" << endl;\n    } catch (const out_of_range& e) {\n        cout << \"越界：\" << \"索引超出范围\" << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "越界：索引超出范围",
+      "stdin": "fish\n10\n",
+      "explanation": "string::at 会检查字节下标，越界时抛出 std::out_of_range。按异常类型捕获后输出固定中性消息，因此题目不依赖特定 libstdc++ 或运行库的 what() 文案。std::string 的此处下标按字节计算。",
+      "templateId": "cpp-s1-try-at-out-of-range",
+      "params": {
+        "word": "fish",
+        "pos": "10"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.871Z",
+        "hash": "218a0e18ee7db8c4"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-try-stoi-catch-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**一行字**。我们**不知道**这行字里保存的是不是一个数字 —— 所以要么稳稳读出数字，要么稳稳接住车，两条路都得走得下来。\n\n请这样办：\n\n1. 先把这一行整行读下来（读一整行用哪一个方法，第四课讲过）；\n2. 用 `stoi` 把它读成整数；\n3. **顺利**的话，印一行：`数字是 X `（X 就是读出来的那个整数）；\n4. **翻车**的话（料不是数字），用 `catch (const invalid_argument& e)` 接住，印一行：`这不是数字：` 后面接上 `e.what()`。\n\n比如程序的输入是\n\n7\n\n程序就要返回\n\n数字是 7 \n\n（判分喂的是**另外一行字** —— 它可能是数字，也可能不是，所以两条路都得写好）",
+      "starter": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string line;\n    getline(cin, line);\n\n    try {\n        int n = stoi(line);\n        cout << \"数字是 \" << n << \" \" << endl;\n    } catch (const invalid_argument& e) {\n        cout << \"这不是数字：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "数字是 42 ",
+      "stdin": "42\n",
+      "explanation": "这一题练的是「**异常处理分支铺在真会翻的那几句周围**」。\n\n- **顺路**：`stoi(line)` 把那串字读成整数，`cout` 印出来。\n- **翻车路**：那串东西不是数字时，`stoi` 自己就扔出一辆挂着 `invalid_argument` 名称的车（意思是「你给的料不对」），`try` 里剩下的话全部作废，直接跳到接车的 `catch` 里 —— 所以印出来的是车上那句说明 `e.what()`，而不是数字。\n\n`catch (const invalid_argument& e)` 这串照抄就行：括号里写的正是「我们接那种挂着 `invalid_argument` 名称的车」，`const` 和 `&` 是它的标准写法（那个 `&` 就是第十一课那块名称 —— 别复印，我们要接住**原车**）。\n\n还有一件事：异常处理分支只是备着，**不用最好**。顺利的时候，`catch` 里那句一个字都不会印 —— 它不花你一分钱，所以可以放心给整段活铺上。",
+      "templateId": "cpp-s1-try-stoi-catch",
+      "params": {
+        "word": "42"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "26ef01cdeb62da17"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-try-stoi-catch-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**一行字**。我们**不知道**这行字里保存的是不是一个数字 —— 所以要么稳稳读出数字，要么稳稳接住车，两条路都得走得下来。\n\n请这样办：\n\n1. 先把这一行整行读下来（读一整行用哪一个方法，第四课讲过）；\n2. 用 `stoi` 把它读成整数；\n3. **顺利**的话，印一行：`数字是 X `（X 就是读出来的那个整数）；\n4. **翻车**的话（料不是数字），用 `catch (const invalid_argument& e)` 接住，印一行：`这不是数字：` 后面接上 `e.what()`。\n\n比如程序的输入是\n\n7\n\n程序就要返回\n\n数字是 7 \n\n（判分喂的是**另外一行字** —— 它可能是数字，也可能不是，所以两条路都得写好）",
+      "starter": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    string line;\n    getline(cin, line);\n\n    try {\n        int n = stoi(line);\n        cout << \"数字是 \" << n << \" \" << endl;\n    } catch (const invalid_argument& e) {\n        cout << \"这不是数字：\" << e.what() << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "这不是数字：stoi",
+      "stdin": "\n",
+      "explanation": "这一题练的是「**异常处理分支铺在真会翻的那几句周围**」。\n\n- **顺路**：`stoi(line)` 把那串字读成整数，`cout` 印出来。\n- **翻车路**：那串东西不是数字时，`stoi` 自己就扔出一辆挂着 `invalid_argument` 名称的车（意思是「你给的料不对」），`try` 里剩下的话全部作废，直接跳到接车的 `catch` 里 —— 所以印出来的是车上那句说明 `e.what()`，而不是数字。\n\n`catch (const invalid_argument& e)` 这串照抄就行：括号里写的正是「我们接那种挂着 `invalid_argument` 名称的车」，`const` 和 `&` 是它的标准写法（那个 `&` 就是第十一课那块名称 —— 别复印，我们要接住**原车**）。\n\n还有一件事：异常处理分支只是备着，**不用最好**。顺利的时候，`catch` 里那句一个字都不会印 —— 它不花你一分钱，所以可以放心给整段活铺上。",
+      "templateId": "cpp-s1-try-stoi-catch",
+      "params": {
+        "word": ""
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.283Z",
+        "hash": "4e2e1e6093b45b07"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3397 @@
+{
+  "id": "2023-06-1",
+  "title": "2023年06月第1套",
+  "year": 2023,
+  "month": 6,
+  "set": 1,
+  "status": "partial",
+  "issues": [
+    "严格质检：听力译文 0/7。",
+    "翻译题干已据原卷文字层补回（2026-11-08）。",
+    "写作题干：已对照原卷页面图像核对（2026-11-08）。",
+    "听力解析：原为一句话摘要的题目，已追加依据听力原文自动定位的支持句（标注「自动匹配」，非官方解析，可能不准）；原摘要保留在 explanationOriginal。",
+    "听力解析：原「未能定位」题已按解析摘要与原文对照选句补回（语义匹配/答案标记，未经录音核听，非官方）。",
+    "阅读：长篇阅读匹配语句与仔细阅读题干/选项已对照原卷重新录入（此前缺失或与原卷不符）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "标准答案按解析册与原卷修正（2026-11-09）：Q28 C→O；原值存于 answerOriginal。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+      "title": "2023.06六级真题第1套详解. pdf",
+      "url": "https://drive. google. com/file/d/1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q/view? usp=drivesdk"
+    },
+    {
+      "id": "1sdD7eeWeNq10SUG8wsmvZUvX1qpKMucQ",
+      "title": "2023.06六级真题第1套听力音频.mp3",
+      "url": "https://drive. google. com/file/d/1sdD7eeWeNq10SUG8wsmvZUvX1qpKMucQ/view? usp=drivesdk"
+    },
+    {
+      "id": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+      "title": "2023.06六级真题第1套. pdf",
+      "url": "https://drive. google. com/file/d/1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr/view? usp=drivesdk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “Today there is a growing awareness that mental well-being needs to be given as much attention as physical health.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-prompt-block",
+          "title": "写作题目要求",
+          "text": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “Today there is a growing awareness that mental well-being needs to be given as much attention as physical health.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-06-1-writing",
+          "number": 0,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “Today there is a growing awareness that mental well-being needs to be given as much attention as physical health.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "blockId": "writing-prompt-block",
+          "options": [],
+          "answer": "importance of Mental Wellness\n【 1 】 Today there is a growmg awareness that mental well-being\nneeds to be given as much attention as physical health. Mental\nhealth is critical to overall health and well-being. yet it has often\nbeen neglected. 【 2 】 Mental health issues can lmpact anyone at any\ntime. regardless of age. gender. or background.\n【 3 】 First. mental well-being affects our happiness. When we\nhave good mental well-being. we can experience positive emotions\nsuch as JOY. gratitude. and satisfaction. These emotions can\nadversity. 【 4 】 Second. mental well-being has a great impact on our\nproductivity. When we have good mental well-being. we can be\nmore motivated. creative. and efficient in our and studies. We can also cope better with challenges and difficulties.\n【 5 】 Third. mental well-being also has a great influence on our\nrelationships. Mentally healthy people are not only more\nempathetic. compassionate. and cooperative with others. but alSO\ncommunicate better and resolve the conflict more effectively. 【 6 】 Therefore. we should all pay more attention to our mental\nwell-being and seek help when needed. Mental well-being is as\nimportant as physical health for our overall well-being.\n【 6 】 用 “ Therefore. 强调我们应该更加关注心理健康. 并在需要的时候寻求帮助. 心理健康和身体健康同样重要 。\nPart ll\nSection A",
+          "explanation": "【审题思路】\n\n\n【全文翻译】\n\n\n【点评与要点】\nlmprove our 1 月 00d. and make us more resilient to stress and\n精彩点评\n【1】引出话题: 如今，人们越来越意识到心理健康需要像身体健康一样得到重视。\n【2】进一步指出心理健康问题可以在任何时候影响任何人。\n【3】【4】【5】分别使用“First. \"Second. 一.”和 \"Third. 一.”逐条阐述心理健康影响我们的快乐，生产力和人际关系。\n.”总结全文，再次\n话题词汇: positive emotions 积极的情绪\nas important as 和“““一样重要\nresilient 适应力强的；对困境有承受力的\noverall well-being 整体幸福感\nempathetic 移情作用的；同感的\nregardless of 不管\ncompassionate 富有同情心的\nadversity 逆境\ngratitude 感激\nhave a great impact on 对“““有很大的影响",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear long conversations, passages and recordings of talks.",
+      "audio": {
+        "src": "source-media/2023年06月第1套/2023.06六级真题第1套听力音频.mp3",
+        "sourceId": "1sdD7eeWeNq10SUG8wsmvZUvX1qpKMucQ",
+        "sharedWith": []
+      },
+      "blocks": [
+        {
+          "id": "listening-conv-1",
+          "title": "Section A Conversation One",
+          "text": "M: Hi. Lily. how's the new apartment?\nW: It's Okay. M: What? How can it be just Okay when last week you were thrilled about the place and kept posting photos of\nit online?\nW: Well. (l)last week when I moved in. the apartment seemed cozy. Just the right size for one person. But\nnow it Just seems tiny. shabby and solitary.\nM: Ah. that's the problem. You miss your roommates from umversity. don't you?\n／: (2)I'm going to sound like an idiot. because I used to complain to you all the time about how crowded our\ndormitory room was. and about all the things they did to irritate me. like watching movies late at night\nwithout headphones. or talking loudly early in the morning. But now I miss them terribly.\nM: Of course you do. That's perfectly normal. ( 3 ) When I got my first place I remember thinking I couldn't\nwalt to live by myself and get away from my juvenile roommates and all their annoying habits. But then I\nbegan missing them and feeling lonely and thinking that our dormitory was like paradise. even though there\nwere six of us guys in one small room. ／: I thought it was just me who felt like that. M: Look. you hved at home with us. and then you had three roommates. and this is your first time living\nalone. SO it's hard. But your first apartment is a milestone in your life. and you should celebrate it. Tell me\nabout the apartment.\n／: Actually. it's not bad. In fact. it s pretty adorable. now that I have decorated it and it has everything I\nneed. I have a kitchen to cook in and a bathroom all to myself. and then another room with my bed at one\nend. and a sofa. a small table and chairs at the other end.\nM: (4)That does sound adorable and I can't wait to see it. and neither can mom and dad.",
+          "source": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1,
+              2
+            ]
+          },
+          "transcript": "M: Hi. Lily. how's the new apartment?\nW: It's Okay. M: What? How can it be just Okay when last week you were thrilled about the place and kept posting photos of\nit online?\nW: Well. (l)last week when I moved in. the apartment seemed cozy. Just the right size for one person. But\nnow it Just seems tiny. shabby and solitary.\nM: Ah. that's the problem. You miss your roommates from umversity. don't you?\n／: (2)I'm going to sound like an idiot. because I used to complain to you all the time about how crowded our\ndormitory room was. and about all the things they did to irritate me. like watching movies late at night\nwithout headphones. or talking loudly early in the morning. But now I miss them terribly.\nM: Of course you do. That's perfectly normal. ( 3 ) When I got my first place I remember thinking I couldn't\nwalt to live by myself and get away from my juvenile roommates and all their annoying habits. But then I\nbegan missing them and feeling lonely and thinking that our dormitory was like paradise. even though there\nwere six of us guys in one small room. ／: I thought it was just me who felt like that. M: Look. you hved at home with us. and then you had three roommates. and this is your first time living\nalone. SO it's hard. But your first apartment is a milestone in your life. and you should celebrate it. Tell me\nabout the apartment.\n／: Actually. it's not bad. In fact. it's pretty adorable. now that I have decorated it and it has everything I\nneed. I have a kitchen to cook in and a bathroom all to myself. and then another room with my bed at one\nend. and a sofa. a small table and chairs at the other end.\nM: (4)That does sound adorable and I can't wait to see it. and neither can mom and dad.",
+          "translation": ""
+        },
+        {
+          "id": "listening-conv-2",
+          "title": "Section A Conversation Two",
+          "text": "W:. Welcome to our program Book Talk. Our guest today is Frank Jones. (5)a critic of our education system. and the author of a new book. How Reform 0 况 ／ U 淝历. M: He110. Susan. W: Frank. you support radically changing universities in America ？\nM: Yes. (6)1 believe that the puyp_e_}e of higher education is to prepare young people to enter the workforce.\n\nand that our current system fails to dO this. We're allocating too many resources to disciplines that don't\nmatch the needs Of employers. W: I think your attitude to education is a bit cymcal. Frank. Surely the purpose of university is to prepare\nyoung people to parucipate fully in civic life. rather than just to find well-pald jobs.\nM: Susan. many young graduates struggle to find any job. let alone a good one. The job market is gnm\nparticularly for students who study the arts. W: I agree that it isn't easy for young people to find work. but you propose closing down all departments that\naren't directly related to science and technology. Is that really the solution?\nM: You're overstating my point. (7)My arbument is that we need to use more of our budget on areas like\nscience and engineering. To dO that. we need to take money from subjects like literature and music.\nW: But the arts have value. They're an important part Of our culture. Studying literature or music or sculpture\nmight not result in a job in that area. (8)but it helps young people to think about the world in a deeper\nwa. which makes them better citizens and makes for a better societ\nM: I agree that the arts are valuable to society. but it's naive to think that not only the most talented. but all\nstudents should study them at university level. The artS are very competitive. and most graduates will end\nup with a great deal of debt. obtaining a degree that has little value on the job market.",
+          "source": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              2,
+              3
+            ]
+          },
+          "transcript": "W:. Welcome to our program Book Talk. Our guest today is Frank Jones. (5)a critic of our education system. and the author of a new book. How Reform 0 况 ／ U 淝历. M: Hello. Susan. W: Frank. you support radically changing universities in America ？\nM: Yes. (6)1 believe that the puyp_e_}e of higher education is to prepare young people to enter the workforce.\n\nand that our current system fails to do this. We're allocating too many resources to disciplines that don't\nmatch the needs of employers. W: I think your attitude to education is a bit cynical. Frank. Surely the purpose of university is to prepare\nyoung people to participate fully in civic life. rather than just to find well-pald jobs.\nM: Susan. many young graduates struggle to find any job. let alone a good one. The job market is gnm\nparticularly for students who study the arts. W: I agree that it isn't easy for young people to find work. but you propose closing down all departments that\naren't directly related to science and technology. Is that really the solution?\nM: You're overstating my point. (7)My arbument is that we need to use more of our budget on areas like\nscience and engineering. To do that. we need to take money from subjects like literature and music.\nW: But the arts have value. They're an important part of our culture. Studying literature or music or sculpture\nmight not result in a job in that area. (8)but it helps young people to think about the world in a deeper\nwa. which makes them better citizens and makes for a better societ\nM: I agree that the arts are valuable to society. but it's naive to think that not only the most talented. but all\nstudents should study them at university level. The arts are very competitive. and most graduates will end\nup with a great deal of debt. obtaining a degree that has little value on the job market.",
+          "translation": ""
+        },
+        {
+          "id": "listening-pass-1",
+          "title": "Section B Passage One",
+          "text": "Questions 9 to 11 are b on the passage you have just heard.\n( 9 ) Do you ever have the annoying feeling that you don't have time to really think anymore? You re not\nalone. A variety of factors have conspired to rob us of time for reflection about ourselves and our lives. Today. our preoccupied minds are rarely silent. The average person receives hundreds Of texts and VOice messages a\nday. and holidays for many Of us are action-packed weeks. more likely full Of family activities than\nopportunities for tranquility and contemplatron.\n(10)Regular reflection. however. underlies all great professionals. It's a prerequisite for you to recharge\nyour mental batteries. see things in a new light and tap into your creativity. Almost all Of the great advisors that\nI have studied have found ways to get away from it all and contemplate their life and work. ( (1) Some\nresearchers in the field Of creativity. in fact. believe that insight occurs during the reflection and relaxation\nthat follows a period of intense activity. Schedule time for reflection about your work. or a particular project\nyou're engaged in. I usually block out half an hour. Don. t answer the phone ； push your papers to the side ；\nsketch ； make lists ； draw mind maps of ideas that come to you. At the end. write down any emerging ideas\nWhen you're alone. Stop worrying and think. A lot Of our down time is spent worrying about troublesome things\nin our lives or fantasizing about hOW we'd like our lives to be. Revisit things during moments Of relaxation. after a periOd Of intense work. This is when we are the most creative.",
+          "source": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              3,
+              4
+            ]
+          },
+          "transcript": "Questions 9 to 11 are b on the passage you have just heard.\n( 9 ) Do you ever have the annoying feeling that you don't have time to really think anymore? You re not\nalone. A variety of factors have conspired to rob us of time for reflection about ourselves and our lives. Today. our preoccupied minds are rarely silent. The average person receives hundreds of texts and VOice messages a\nday. and holidays for many of us are action-packed weeks. more likely full of family activities than\nopportunities for tranquility and contemplatron.\n(10)Regular reflection. however. underlies all great professionals. It's a prerequisite for you to recharge\nyour mental batteries. see things in a new light and tap into your creativity. Almost all of the great advisors that\nI have studied have found ways to get away from it all and contemplate their life and work. ( (1) Some\nresearchers in the field of creativity. in fact. believe that insight occurs during the reflection and relaxation\nthat follows a period of intense activity. Schedule time for reflection about your work. or a particular project\nyou're engaged in. I usually block out half an hour. Don. t answer the phone ； push your papers to the side ；\nsketch ； make lists ； draw mind maps of ideas that come to you. At the end. write down any emerging ideas\nWhen you're alone. Stop worrying and think. A lot of our down time is spent worrying about troublesome things\nin our lives or fantasizing about how we'd like our lives to be. Revisit things during moments of relaxation. after a period of intense work. This is when we are the most creative.",
+          "translation": ""
+        },
+        {
+          "id": "listening-pass-2",
+          "title": "Section B Passage Two",
+          "text": "(12)Even before Colorado was a state. it had post offices. The first opened in 1859 in a settlement founded\nby migrants searching for gold. Life could unpredictable at West—gold failed to appear. drought ruined\nfarmers and settlers clashed with Native Americans. On the settlement's location. now stands a sprawling\nuniversity campus. Amid all the changes. one feature remained constant—the postal service. The maps tracing\nAmerica's westward expansion are telling. ln 1864. there were few postal branches on land controlled by Native\nAmericans. which still accounted for most Of the West. Over the next 25 years. post offices grew qurckly.\nColonization of the West could regarded as a result of big government rather than pioneers. (13)As federal\nsubsidies and land grants tempted people into the deserts and plains. the post kept them connected. (14)In the\nmid-19th century. the post office department was far from a centralized bureaucracy. To keep up with\nmigration patterns. postal services were added to existing businesses. The federal government commissioned\nprivate wagons to carry the mail. Short-term contracts were granted to local businessmen to act as postmasters. These partnerships enabled the mail to quickly follow migrants. helping knit together remote parts of the\ncountry.\n(15)Mr. Blevins, a digital historian. wrote a book on the history of the US postal service. he used data\nscrence to analyze historical trends. Most strikingly. he built an accompanying website. complete with\ninteractive maps. They shOW readers hOW. within a generation. the postal service helped colonize a continent.\nThese online interactive maps illustrate the formative power Of snail mail.",
+          "source": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              4,
+              5
+            ]
+          },
+          "transcript": "(12)Even before Colorado was a state. it had post offices. The first opened in 1859 in a settlement founded\nby migrants searching for gold. Life could unpredictable at West—gold failed to appear. drought ruined\nfarmers and settlers clashed with Native Americans. On the settlement's location. now stands a sprawling\nuniversity campus. Amid all the changes. one feature remained constant—the postal service. The maps tracing\nAmerica's westward expansion are telling. ln 1864. there were few postal branches on land controlled by Native\nAmericans. which still accounted for most of the West. Over the next 25 years. post offices grew qurckly.\nColonization of the West could regarded as a result of big government rather than pioneers. (13)As federal\nsubsidies and land grants tempted people into the deserts and plains. the post kept them connected. (14)In the\nmid-19th century. the post office department was far from a centralized bureaucracy. To keep up with\nmigration patterns. postal services were added to existing businesses. The federal government commissioned\nprivate wagons to carry the mail. Short-term contracts were granted to local businessmen to act as postmasters. These partnerships enabled the mail to quickly follow migrants. helping knit together remote parts of the\ncountry.\n(15)Mr. Blevins, a digital historian. wrote a book on the history of the US postal service. he used data\nscrence to analyze historical trends. Most strikingly. he built an accompanying website. complete with\ninteractive maps. They show readers how. within a generation. the postal service helped colonize a continent.\nThese online interactive maps illustrate the formative power of snail mail.",
+          "translation": ""
+        },
+        {
+          "id": "listening-rec-1",
+          "title": "Section C Recording One",
+          "text": "In last week's lecture. we discussed reasons why people forget things. This week. we will discuss a\nsurpnsing reason why we might remember some things—anxiety.\nThink about something as srmple as buying a coffee. That may not seem like an expenence that would\nmake a deep impression on your memory. but anxiety could change that. In fact. ( 16 ) a new study suggests that\n0 le with hi her anxiet levels mi ht remember certain information better than le with lower anxiet\nlevels. That's because higher levels of anxiety may make people more susceptible to negative feelings. putting\nthem in a more negative state Of mind. That in turn may make them able to better remember some events.\nLet's take a closer look at that new study now. (17)In this study. the researchers started by giving 80\nundergraduate students an anxiety test. The test measured the oarticipants' anxiety levels over the preceding two weeks. Then. to test memory. the participants were shown a series Of neutral words. one at a time. Some\nOf the words were printed on to phOtOS of negative scenes. meaning rmages that could affect their emouons\nnegatively. such as a photo of a car accident or a cemetery. The rest of the words were printed on to photos of\nneutral scenes. such as a photo Of a lake or trees. Neutral words included words like “ table ” or \"desk ” that\ndon't elicit emotion. Later. the participants were asked to think back to the words they were shown earlier. which caused them to reenter either a negative or a neutral mindset. The participants were then presented with\nanother set Of neutral words. and their memory Of these new words was tested. The researchers found that the\nnew words presented to people in a negative mindset were better remembered by people with higher levels of\nanxiety than those with lower levels of anxiety. In other words. when highly anxious individuals took in\notherwise emotionally neutral information that was presented to them. it became colored by their negative\nmindset. making them remember the information better. But these same effects were not seen in people with\nlow levels of anxiety. (18)Previous studies have found that extreme levels of anxiety. such as those expenenced\nby people diagnosed with an anxiety disorder. can quite detrimental to memory and cognitive performance.\nBut the highly anxious people in this study represent individuals who are managing their anxiety and for whom\nannety is not a senous problem.",
+          "source": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              5,
+              6
+            ]
+          },
+          "transcript": "In last week's lecture. we discussed reasons why people forget things. This week. we will discuss a\nsurpnsing reason why we might remember some things—anxiety.\nThink about something as srmple as buying a coffee. That may not seem like an expenence that would\nmake a deep impression on your memory. but anxiety could change that. In fact. ( 16 ) a new study suggests that\n0 le with hi her anxiet levels mi ht remember certain information better than le with lower anxiet\nlevels. That's because higher levels of anxiety may make people more susceptible to negative feelings. putting\nthem in a more negative state of mind. That in turn may make them able to better remember some events.\nLet's take a closer look at that new study now. (17)In this study. the researchers started by giving 80\nundergraduate students an anxiety test. The test measured the oarticipants' anxiety levels over the preceding two weeks. Then. to test memory. the participants were shown a series of neutral words. one at a time. Some\nOf the words were printed on to photos of negative scenes. meaning rmages that could affect their emotions\nnegatively. such as a photo of a car accident or a cemetery. The rest of the words were printed on to photos of\nneutral scenes. such as a photo of a lake or trees. Neutral words included words like “ table ” or \"desk ” that\ndon't elicit emotion. Later. the participants were asked to think back to the words they were shown earlier. which caused them to reenter either a negative or a neutral mindset. The participants were then presented with\nanother set of neutral words. and their memory of these new words was tested. The researchers found that the\nnew words presented to people in a negative mindset were better remembered by people with higher levels of\nanxiety than those with lower levels of anxiety. In other words. when highly anxious individuals took in\notherwise emotionally neutral information that was presented to them. it became colored by their negative\nmindset. making them remember the information better. But these same effects were not seen in people with\nlow levels of anxiety. (18)Previous studies have found that extreme levels of anxiety. such as those expenenced\nby people diagnosed with an anxiety disorder. can quite detrimental to memory and cognitive performance.\nBut the highly anxious people in this study represent individuals who are managing their anxiety and for whom\nannety is not a senous problem.",
+          "translation": ""
+        },
+        {
+          "id": "listening-rec-2",
+          "title": "Section C Recording Two",
+          "text": "Over the past 20 years. the internet has gradually become a dominant feature of our lives. It has changed\nhow we commumcate with each Other. and it has definitely transformed the way we do business with each\nother. Marketing has also changed in a number Of ways. For instance. in the past consumers had to a phone\nnumber and patiently walt on hold. in order to get the information they wanted. (19)Today. they want the\ninformation immediately. They. 11 go to the company s social media page and POSt comments and questions. expecting to receive an immediate response. If they don't get their questions answered soon. they'll move on to\nanother company that will answer them quickly. Marketing departments today need to follow technoloycal development. For example. this year s\nsmartphone iS smarter than last year S ； self-driving cars are now on the road. Marketers have to dO research on\nwhich technologies are coming into being. Otherwise they risk being left behind in the virtual dust. Marketing\nhas al changed due to the importance of video. PeopIe don't just want to read text ； they want to watch things\nhappening. Companies now have to explore hOW they can use video on a consistent basis to share information\nabout their businesses. Fortunately. it's extremely easy to shoot something these days. AII you need is a\nsmartphone. But what's the result of all this? Shorter attention spans.. Me are the same people that we were 20\nyears ago. NOt only have we grown accustomed to getting the information we want instantaneously. our\nattention spans are much shorter. If something doesn't capture our attention within a few seconds. we're on to\nthe next piece Of content. ( 20 ) Marketers need to figure out ways to speak directly to the customer S emotions\nand they need to figure out how to do that as quickly as possible. Once people are emotionally engaged. they'll\nstick with you.\nIf marketing has changed this much in the past 20 years. lmagine what the next 20 years will bring. In a\nrecent survey. only 9 ％ of marketers could say with confidence that their marketing efforts were actually\nworking. Their confidence is being shaken. because the rules of the game change every year. (21) 巨些. §. y\nit. S important for marketers to pay attention to the latest technological developments and consider collaborating\nwith technological mnovators. That way. they'll moving at the same pace as the tech industry.",
+          "source": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "transcript": "Over the past 20 years. the internet has gradually become a dominant feature of our lives. It has changed\nhow we communicate with each Other. and it has definitely transformed the way we do business with each\nother. Marketing has also changed in a number of ways. For instance. in the past consumers had to a phone\nnumber and patiently walt on hold. in order to get the information they wanted. (19)Today. they want the\ninformation immediately. They. 11 go to the company s social media page and POSt comments and questions. expecting to receive an immediate response. If they don't get their questions answered soon. they'll move on to\nanother company that will answer them quickly. Marketing departments today need to follow technoloycal development. For example. this years\nsmartphone is smarter than last years ； self-driving cars are now on the road. Marketers have to do research on\nwhich technologies are coming into being. Otherwise they risk being left behind in the virtual dust. Marketing\nhas al changed due to the importance of video. PeopIe don't just want to read text ； they want to watch things\nhappening. Companies now have to explore how they can use video on a consistent basis to share information\nabout their businesses. Fortunately. it's extremely easy to shoot something these days. AII you need is a\nsmartphone. But what's the result of all this? Shorter attention spans.. Me are the same people that we were 20\nyears ago. NOt only have we grown accustomed to getting the information we want instantaneously. our\nattention spans are much shorter. If something doesn't capture our attention within a few seconds. we're on to\nthe next piece of content. ( 20 ) Marketers need to figure out ways to speak directly to the customers emotions\nand they need to figure out how to do that as quickly as possible. Once people are emotionally engaged. they'll\nstick with you.\nIf marketing has changed this much in the past 20 years. lmagine what the next 20 years will bring. In a\nrecent survey. only 9 ％ of marketers could say with confidence that their marketing efforts were actually\nworking. Their confidence is being shaken. because the rules of the game change every year. (21) 巨些. §. y\nit. S important for marketers to pay attention to the latest technological developments and consider collaborating\nwith technological mnovators. That way. they'll moving at the same pace as the tech industry.",
+          "translation": ""
+        },
+        {
+          "id": "listening-rec-3",
+          "title": "Section C Recording Three",
+          "text": "( 22 ) You might be surprised to learn that the benefits of friendships extend beyond people's social life and\ninto their work. which is interesting when considering the extent to which pgpple sacrifice friendships. or at\nleast the time they spend with friends. because of the extended hours they're devoting to work. Just last week. I was remarking to a colleague that I'm content with only one social engagement per week. But according to\nrecent research. that's evidently not enough\n(23)In an imtial study of more than 700 respondents. scholars from an American umversity analyzed the\nlmpact that friends. as opposed to family. have on self-esteem and well-being. Friends came out substantially\non top. That's because to someone s mate is a voluntary act. unlike family who people rarely get to choose. The researchers found that when people choose to cultivate and maintain supportive friendships with an\nindividual. it means that the person is valued and worthy of their hmited time. Such sentments of value and\nworthiness bOOSt our self-esteem. The second study comprised more than 300 parucipants. It proved that the better we feel about ourselves. the more likely we'll perform our job confidently and competently. (24)This follow-up study found that non-\nwork friends even lmprove pgeple's job satisfaction. They have as much of an impact on how much they love\ntheir jobs as do the friends they have at work. despite not actually being at our place of work. These types of\nfriends tend to be our preferred outlet for venting about work-related matters · This is an avenue that may not\nbe available at the office.\nSO even though friendships can be easy to neglect when confronted by pressures at work. or even pressures\nat home. neglecting our friends can turn out to harmful and counterproductive. That. s why. when determimng\nhow to create a better work-life balance. we need to consider not only how to balance work and family\ndemands. but also how to cultivate and sustain supportive friendships. (25)It's for this reason that managers\nshould never discriminate when it comes to requests from employees for flexible work arrangements. It's\nirrelevant whether their need for a desired schedule is due to. say. parenting responsibilities. or a cravmg to\nhang out with the best mate. What matters is the opportunity to engage in a nourishing activity outside Of work.\nThat will definitely have a follow-on effect at work.",
+          "source": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "transcript": "( 22 ) You might be surprised to learn that the benefits of friendships extend beyond people's social life and\ninto their work. which is interesting when considering the extent to which pgpple sacrifice friendships. or at\nleast the time they spend with friends. because of the extended hours they're devoting to work. Just last week. I was remarking to a colleague that I'm content with only one social engagement per week. But according to\nrecent research. that's evidently not enough\n(23)In an initial study of more than 700 respondents. scholars from an American umversity analyzed the\nlmpact that friends. as opposed to family. have on self-esteem and well-being. Friends came out substantially\non top. That's because to someone s mate is a voluntary act. unlike family who people rarely get to choose. The researchers found that when people choose to cultivate and maintain supportive friendships with an\nindividual. it means that the person is valued and worthy of their hmited time. Such sentments of value and\nworthiness boost our self-esteem. The second study comprised more than 300 participants. It proved that the better we feel about ourselves. the more likely we'll perform our job confidently and competently. (24)This follow-up study found that non-\nwork friends even lmprove pgeple's job satisfaction. They have as much of an impact on how much they love\ntheir jobs as do the friends they have at work. despite not actually being at our place of work. These types of\nfriends tend to be our preferred outlet for venting about work-related matters · This is an avenue that may not\nbe available at the office.\nSO even though friendships can be easy to neglect when confronted by pressures at work. or even pressures\nat home. neglecting our friends can turn out to harmful and counterproductive. That. s why. when determimng\nhow to create a better work-life balance. we need to consider not only how to balance work and family\ndemands. but also how to cultivate and sustain supportive friendships. (25)It's for this reason that managers\nshould never discriminate when it comes to requests from employees for flexible work arrangements. It's\nirrelevant whether their need for a desired schedule is due to. say. parenting responsibilities. or a cravmg to\nhang out with the best mate. What matters is the opportunity to engage in a nourishing activity outside of work.\nThat will definitely have a follow-on effect at work.",
+          "translation": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-06-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "Question 1（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It was spacious and tranquil"
+            },
+            {
+              "key": "B",
+              "text": "It was warm and comfortable."
+            },
+            {
+              "key": "C",
+              "text": "It was shabby and solitary."
+            },
+            {
+              "key": "D",
+              "text": "It was tiny and noisy."
+            }
+          ],
+          "answer": "B",
+          "explanation": "女士说，她刚搬进公寓时觉得公寓很温暖舒适，大小正适合一个人。\n【原文定位·答案标记】Well, last week when I moved in, the apartment seemed cozy. Just the right size for one person.\n【正确选项】B) It was warm and comfortable.\n【标注】按答案标记定位；原文为扫描文本，已人工修正明显识别错误（部分句子依上下文还原），未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true,
+          "explanationOriginalOCR": "答案：B\n／: I thought it was just me who felt like that. M: Look. you hved at home with us. and then you had three roommates. and this is your first time living\nalone. SO it. s hard. But your first apartment is a milestone in your life. and you should celebrate it. Tell me\nabout the apartment.\n／: ActuaIIy. it. s not bad. ln fact. it s pretty adorable. now that I have decorated it and it has e",
+          "verificationNote": "已对照 G 盘听力、原题选项和解析册的首段内容。",
+          "explanationOriginal": "女士说，她刚搬进公寓时觉得公寓很温暖舒适，大小正适合一个人。",
+          "explanationSource": {
+            "type": "marker-ocr",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 0.89
+          }
+        },
+        {
+          "id": "2023-06-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "Question 2（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "She no longer hates people talking loudly in the dorm."
+            },
+            {
+              "key": "B",
+              "text": "She misses her roommates she used to complain about."
+            },
+            {
+              "key": "C",
+              "text": "She begins to enjoy the movies she once found irritating."
+            },
+            {
+              "key": "D",
+              "text": "She finds the crowded dorm as cozy as her new apartment."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhy does the woman say she is going to sound\nlike an idiot?\nB) 【精析】细节推断题。女士在句 ( 2 ) 中提到，她自己听起来像个白痴，因为她过去总是向男士抱怨宿舍有多拥挤，抱怨室友所做的所有让她恼火的事情，比如深夜看电影不戴耳机，或者一大早就大声说话。但现在她非常想念室友。由此可知，女士认为自己像一个白痴是因为她现在非常想念她曾经大为抱怨的室友。因此答案为",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "Question 3（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He found the apartment perfectly furnished."
+            },
+            {
+              "key": "B",
+              "text": "He had a feeling of despair and frustration."
+            },
+            {
+              "key": "C",
+              "text": "He had a similar feeling to the woman's."
+            },
+            {
+              "key": "D",
+              "text": "He felt the new place was like paradise."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\n. Mhat do we learn about the man when he left the\ndormitory to live on his own?\n0 【精析】细节推断题。根据句 ( 3 ) 可知，当男士第一次有了自己的地方时，他迫不及待地想自己生活，摆脱幼稚的室友和室友那些烦人的习惯。但后来，男士开始想念他们，他感到孤独，认为尽管六个人挤在一个小房间里，但宿舍就像天堂一样。由此可知，男士离开宿舍独居之后经历了和女士相似的心路历程。因此答案为 0。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "Question 4（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Go to see the woman's apartment."
+            },
+            {
+              "key": "B",
+              "text": "Make a phone call to his parents."
+            },
+            {
+              "key": "C",
+              "text": "Buy some furniture for the woman."
+            },
+            {
+              "key": "D",
+              "text": "Decorate the woman's apartment."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat does the man say he can't wait to do?\nA) 【精析】细节辨认题。男士开导了女士之后，让女士描述一下她的公寓。听过女士对公寓的正面描述后，男士在句 ( 4 ) 中说: “确实听起来讨人喜欢，我迫不及待要去看一下了“·\n.。因此，男士迫不及待想做的事情是去看一下女士的公寓，答案为 A)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "Question 5（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "He works as a literary critic."
+            },
+            {
+              "key": "B",
+              "text": "He hosts an educational program."
+            },
+            {
+              "key": "C",
+              "text": "He has initiated a university reform."
+            },
+            {
+              "key": "D",
+              "text": "He has published a book recently."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat do we learn from the conversation about the\nD) 【精析】细节推断题。句 ( 5 ) 中，女士介绍说男士是\n“我们”教育体系的批评者，同时也是新书《如何改革我们的大学》的作者。由此可知，男士最近刚出版了一本书。因此答案为 D)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "Question 6（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It fails to keep up with the radical changes of society."
+            },
+            {
+              "key": "B",
+              "text": "It fails to ensure universities get sufficient resources."
+            },
+            {
+              "key": "C",
+              "text": "It has not prepared young people for the job market."
+            },
+            {
+              "key": "D",
+              "text": "It has not fostered the growth of the arts disciplines."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat does the man believe is the problem with\nthe current American system of higher education?\n0 【精析】细节辨认题。根据句 ( 6 ) 可知，男士认为高等教育的目的是让年轻人做好参加工作的准备，而当前的高等教育体系并没有做到这一点。因此答",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "How should the education budget be allocated according to the man?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "More of the budget should go to science and technology."
+            },
+            {
+              "key": "B",
+              "text": "The underfunded music discipline should prioritized."
+            },
+            {
+              "key": "C",
+              "text": "Sub disciplines like sculpture should get more funding."
+            },
+            {
+              "key": "D",
+              "text": "Literature should get as much funding as engineering"
+            }
+          ],
+          "answer": "A",
+          "explanation": "男士认为，应当将更多的教育预算投入科学和工程等领域。\n【原文定位·自动匹配】(7)My arbument is that we need to use more of our budget on areas like science and engineering.\n【正确选项】A) More of the budget should go to science and technology.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "explanationOriginalOCR": "答案：A\nHOW should the education budget be allocated\naccording to the man ？\nA) 【 精析 】 细节辨认题 。 根据句 ( 7 ) 可知. 男士认为应该将更多的预算用到像科学和工程这样的领域 。\n因此答案为\n& What does the woman say the arts can do ？\nD) 【 精析 】 细节辨认题 。 女士认为艺术有其价值所在 。 句 ( 8 ) 中. 女士提到. 它有助于年轻人用更深刻的方式来思考世界. 这会让他们成为更好的公民. 构建一个更好的社会 。 因此答案为 D) 。\nQuestions 9 to 11 are b on the passage you have just heard.\n( 9 ) Do you ever have the annoymg feeling that y",
+          "stemOriginalOCR": "creative ideas?",
+          "explanationOriginal": "男士认为，应当将更多的教育预算投入科学和工程等领域。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2023-06-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "Question 8（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Build a prosperous nation."
+            },
+            {
+              "key": "B",
+              "text": "Make skilled professionals."
+            },
+            {
+              "key": "C",
+              "text": "Create ingenious artists."
+            },
+            {
+              "key": "D",
+              "text": "Cultivate better citizens."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nD) 【精析】细节辨认题。女士认为艺术有其价值所在。句 ( 8 ) 中，女士提到，它有助于年轻人用更深刻的方式来思考世界，这会让他们成为更好的公民，构建一个更好的社会。因此答案为 D)。\nQuestions 9 to 11 are b on the passage you have just heard.\n( 9 ) Do you ever have the annoying feeling that you don't have time to really think anymore? You re not\nalone. A variety of factors have conspired to rob us of time for reflection about ourselves and our lives. Today. our pr",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "Question 9（请根据录音作答）",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is quite common."
+            },
+            {
+              "key": "B",
+              "text": "It is rarely noticed."
+            },
+            {
+              "key": "C",
+              "text": "It seldom annoys people."
+            },
+            {
+              "key": "D",
+              "text": "It occurs when one is alone."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat do we learn about the feeling that\none\ndoesn't have time to think anymore?\nA) 【精析】细节推断题。句 ( 9 ) 中，讲话者先提出一个问题: 你是否曾有过一种再也没时间去认真思考的烦人感觉？然后指出，你并不孤单。也就是说，很多人都感觉没时间去认真思考，即这是很常见的。\n\n因此答案为 A )。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "What trait do all great professionals share?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Seeing things in black and white."
+            },
+            {
+              "key": "B",
+              "text": "Engaging in regular contemplation."
+            },
+            {
+              "key": "C",
+              "text": "Having a special understanding of creativity."
+            },
+            {
+              "key": "D",
+              "text": "Knowing how to make their mental batteries work."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhat trait do all great professionals share?\nB) 【精析】细节辨认题。根据句 ( 10 ) 可知，所有伟大的专业人士都会定期反思。因此答案为 B)。选项中的 contemplation 是录音中 reflection 的同义转述。\nII. What do some researchers believe is conducive to\ncreative ideas?\nD) 【精析】细节辨认题。句 ( (1) 中提到，创造力领域的一些研究人员认为，洞察力实际上产生于一段时间紧锣密鼓的活动后的反思和放松中。因此答案为 D)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "creative ideas?"
+        },
+        {
+          "id": "2023-06-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "Question 11（请根据录音作答）",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Engaging in intense activity."
+            },
+            {
+              "key": "B",
+              "text": "Fantasizing In one. S down time."
+            },
+            {
+              "key": "C",
+              "text": "Working on a particular project."
+            },
+            {
+              "key": "D",
+              "text": "Reflecting during one's relaxation."
+            }
+          ],
+          "answer": "D",
+          "explanation": "11. What do some researchers believe is conducive to\ncreative ideas?\nD) 〖精析〗细节辨认题。句 ( (1) 中提到，创造力领域的一些研究人员认为，洞察力实际上产生于一段时间紧锣密鼓的活动后的反思和放松中。因此答案为 D)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "Question 12（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Farmers helped Native Americans grow crops."
+            },
+            {
+              "key": "B",
+              "text": "There were expansive university campuses."
+            },
+            {
+              "key": "C",
+              "text": "There existed post offices."
+            },
+            {
+              "key": "D",
+              "text": "Migrants found gold there."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat does the passage say about Colorado before\nit became a state?\n0 【精析】细节辨认题。句 ( 12 ) 中，讲话者提到，科罗拉多在成为一个州之前就有邮局。因此答案为 0。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "Question 13（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It helped to boost the economy in the American West."
+            },
+            {
+              "key": "B",
+              "text": "It provided JOb opportunities for many gold seekers."
+            },
+            {
+              "key": "C",
+              "text": "It extended the influence of the federal government."
+            },
+            {
+              "key": "D",
+              "text": "It kept people in the deserts and plains connected."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nHow did the postal service contribute to\nAmericas. vestward expansion?\nD) 【精析】细节辨认题。句 ( 13 ) 中，讲话者提到，联邦政府的补贴和土地补助诱使人们进人沙漠和平原地区，而邮政使他们保持联系。因此答案为 D)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "Question 14（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It employed Native Americans to work as postmen."
+            },
+            {
+              "key": "B",
+              "text": "It commissioned private wagons to carry the mail."
+            },
+            {
+              "key": "C",
+              "text": "It subsidized the 1 als who acted as postmasters."
+            },
+            {
+              "key": "D",
+              "text": "It centralized postal services in its remote areas."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nB) 【精析】细节推断题。句 ( 14 ) 中，讲话者提到. 19\n世纪中期，邮政部门远不是中央集权的官僚机构。\n为了跟上移民模式，在现有业务中增加了邮政服务。联邦政府委托私人运货车来运送邮件。也就是说，西部地区对邮政服务的需求增大，联邦政府委托私人运货车来满足这一需求。因此答案\n15. What did Mr. BIevins do to study the history of\nthe US postal service?\n0 【精析】细节辨认题。根据句 ( 15 ) 可知. Blevins 先生是一位数字历史学家，他写了一本关于美国邮政服务历史的书，使用数据科学来分析历史趋势。\n因此答案为 0。\nQuestions 16 to 18 are b on the recording you have just h",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "Question 15（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "He analyzed interactive maps of mail routes."
+            },
+            {
+              "key": "B",
+              "text": "He read a large collection of books on the topic."
+            },
+            {
+              "key": "C",
+              "text": "He examined its historical trends with data science."
+            },
+            {
+              "key": "D",
+              "text": "He collected data about its impact on local business."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat did Mr. BIevins do to study the history of\nthe US postal service?\n0 【精析】细节辨认题。根据句 ( 15 ) 可知. Blevins 先生是一位数字历史学家，他写了一本关于美国邮政服务历史的书，使用数据科学来分析历史趋势。\n因此答案为 0。\nQuestions 16 to 18 are b on the recording you have just heard.\nIn last week's lecture. we discussed reasons why people forget things. This week. we will discuss a\nsurpnsing reason why we might remember some things—anxiety.",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "Question 16（请根据录音作答）",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Higher levels of anxiety may improve people's memory."
+            },
+            {
+              "key": "B",
+              "text": "Some expenences are easier to remember than others."
+            },
+            {
+              "key": "C",
+              "text": "MOSt people tend to remember things selectively."
+            },
+            {
+              "key": "D",
+              "text": "Simple things may leave a deep rmpression on ones memory."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat does the speaker say the new study\nsuggests?\nA) 【精析】细节推断题。句 ( 16 ) 中，讲话者提到，一项新的研究表明，焦虑程度较高的人可能比焦虑程度较低的人更能记住某些信息。也就是说，较高的焦虑水平可能会提高人们的记忆力。因此答案为 A)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "Question 17（请根据录音作答）",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They classified the participants' mindset."
+            },
+            {
+              "key": "B",
+              "text": "They showed some photos to the participants."
+            },
+            {
+              "key": "C",
+              "text": "They measured the participants. anxiety levels."
+            },
+            {
+              "key": "D",
+              "text": "They tested the size of the participants' vocabulary."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat did researchers do first in the new study?\n0 【精析】细节辨认题。讲话者讲述了新研究的细节。根据句 ( 17 ) 可知，研究人员以对 80 名本科生进行焦虑测试开始了这项研究。因此答案为 0。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "Question 18（请根据录音作答）",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Anxiety has become a serious problem for an increasing number of people."
+            },
+            {
+              "key": "B",
+              "text": "Extreme levels of anxiety can adversely affect cognitive performance."
+            },
+            {
+              "key": "C",
+              "text": "People diagnosed with anxiety disorder may forget things selectively."
+            },
+            {
+              "key": "D",
+              "text": "There is no direct correlation between memory and levels of anxiety."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\n. Mhat do we learn from previous studies about\nanxiety?\nB) 【精析】细节辨认题。句 ( 18 ) 中，讲话者提到，先前的研究发现，像被诊断为患有焦虑症的人所经历的那种极度焦虑对记忆力和认知表现损害相当大。也就是说，极度焦虑会对认知表现产生负面影响。因此答案为 B)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "Question 19（请根据录音作答）",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They compare products from different companies before making a choice."
+            },
+            {
+              "key": "B",
+              "text": "They get information from other consumers. postings and comments."
+            },
+            {
+              "key": "C",
+              "text": "They lose patience when their phone call is no promptly answered."
+            },
+            {
+              "key": "D",
+              "text": "They expect to get instantaneous responses to their inqmry."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat does the say about today's consumers?\nD) 【精析】细节辨认题。讲话者先提到了过去的消费者: 必须要拨打电话号码并且耐心等待才能获得他们想要的信息。接着在句 ( 19 ) 中描述了如今的消费者: 他们想要立即得到信息。因此答案为 D)O",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "Question 20（请根据录音作答）",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Giving them rewards on the spot."
+            },
+            {
+              "key": "B",
+              "text": "Broadening their scope of interest."
+            },
+            {
+              "key": "C",
+              "text": "Speaking directly to their emotions."
+            },
+            {
+              "key": "D",
+              "text": "Focusing on the details of the product."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nHOW do marketers capture consumers attention\nas qmckly as ble?\n0 【精析】细节辨认题。讲话者提到，我们的注意力持续时间变短，如果不能在几秒钟内吸引我们的注意力，我们就会转向下一条内容。根据句 ( 20 )\n可知，营销人员需要找到直接与消费者的情感进行对话的方法，而且需要尽快弄清楚要怎么做到这一点。也就是说，要快速吸引消费者的注意力就要直接与他们的情感对话。因此答案为 O。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "Question 21（请根据录音作答）",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Change the rules of the game in the market every year."
+            },
+            {
+              "key": "B",
+              "text": "Keep up with the latest technological developments."
+            },
+            {
+              "key": "C",
+              "text": "Learn from technological innovators to do business."
+            },
+            {
+              "key": "D",
+              "text": "Make greater efforts to build up consumers' confidence."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhat does the speaker suggest marketers do to\nmeet future challenges?\nB) 【精析】细节推断题。讲话者最后提到了变化的影响，触发营销人员对未来的思考。因为游戏规则每年都在变化，营销人员对自己营销努力的信心正在动摇。之后，讲话者在句 ( 21 ) 中说，这就是营销人员关注最新的技术发展并考虑与技术创新人员合作很重要的原因。这样他们就会与技术行业齐头并进。也就是说，营销人员要应对未来的挑战就要跟上技术的新发展。因此答案为 B)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "Question 22（请根据录音作答）",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "People have only one social engagement per week."
+            },
+            {
+              "key": "B",
+              "text": "Working together enhances friendship."
+            },
+            {
+              "key": "C",
+              "text": "Few people have devoted friends."
+            },
+            {
+              "key": "D",
+              "text": "Friendships benefit work."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat does the speaker say is interesting?\nD) 【精析】细节辨认题。句 ( 22 ) 中提到，你可能惊讶地发现，友谊的好处超越了人们的社交生活，进人到工作中，当考虑到人们因为投人到工作中的时间延长而到了牺牲友谊或至少牺牲与朋友在一起的时间的程度时，这是非常有趣的。也就是说，人们常常因为工作而牺牲友谊，但事实上友谊对工作有益处，这非常有趣。因此答案为 D )。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "Question 23（请根据录音作答）",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "The impact of friends on people's self-esteem."
+            },
+            {
+              "key": "B",
+              "text": "How supportive friends can be in the workplace."
+            },
+            {
+              "key": "C",
+              "text": "How to boost ones sense of value and worthiness."
+            },
+            {
+              "key": "D",
+              "text": "The role of family ties in people's mental well-being."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat did researchers from an American\nuniversity analyze in their initial study?\nA) 【精析】细节辨认题。句 ( 23 ) 中提到，在一项针对\n700 多名受访者的初步研究中，美国一所大学的学者分析了朋友而非家人对自尊和幸福感的影响。\n因此答案为 A)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "Question 24（请根据录音作答）",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They show little interest in their friends. work."
+            },
+            {
+              "key": "B",
+              "text": "They tend to be much more difficult to make."
+            },
+            {
+              "key": "C",
+              "text": "They are more trustworthy and reliable."
+            },
+            {
+              "key": "D",
+              "text": "They increase people's job satisfaction."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat did the second study find about non-work\nfriends?\nD) 【精析】细节辨认题。句 ( 24 ) 中提到，追踪研究发现，工作之外的朋友甚至会提升人们的工作满意\n\n度。因此答案为 D)O",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "Question 25（请根据录音作答）",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Allow employees to have a flexible work schedule."
+            },
+            {
+              "key": "B",
+              "text": "Encourage employees to be friends with colleagues."
+            },
+            {
+              "key": "C",
+              "text": "Help employees balance work and family responsibilities."
+            },
+            {
+              "key": "D",
+              "text": "Organize activities to nourish friendships outside of work."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat does the speaker suggest managers do?\nA) 【精析】细节辨认题。句 ( 25 ) 中提到，当员工要求灵活安排工作时，管理者不应该歧视他们。无论他们需要一个理想的安排是出于养育责任，还是渴望和最好的伙伴一起出去玩，这都是无关紧要的。重要的是从事工作之外的有益活动的机会。\n这肯定会在工作中产生后续影响。也就是说，讲话者建议管理者同意员工拥有灵活的工作安排。\n因此答案为 A)O",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空短文",
+          "text": "Scientists recently examined studies on dog intelligence and compared them with research into the minds of other intelligent animals. The researchers found that dogs are among the more intelligent carnivores (食肉动物), social hunters and domestic animals, but that their intelligence does not __(26)__ other intelligent animals in any of those categories. Though a significant b 0 dy of research has examined dog cognition __(27)__ the authors of this new study found little to warrant the __(28)__ of work that has been devoted to the topic.\nStephen Lea, lead author of the new study, argues that many researchers seem to have designed their studies to __(29)__ how clever dogs are, rather than smply to study dogs brains. Lea and a colleague examined more than 300 studies of dog cognition, comparing the studies, results with those from research into Other animals. The researchers made specific comparisons between the different species in different categories of intelligence. These comparisons __(30)__ that dogs are intelligent, but their intelligence is not as __(31)__ as some researchers might have believed.\nIn many areas, though, comparisons were not possible. For example, the researchers noted that both dogs and cats are known to able to recognize and __(32)__ human voices. But the investigators could not find any data to indicate which species can remember a greater number Of __(33)__ human voices, SO it was impossible to compare the two on that front. However, not a 11 researchers agree __(34)__ with the findings\nOf this study. Zachary Silver, an American researcher, believes the authors of the new study __(35)__ the idea that an excesswe amount of research has been devoted to dogs, as the field of dog cognition is young,\nand there is much to learned about how dogs think,",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读短文",
+          "text": "The lifesaving power of gratitude\n\n[A] Gratitude may be more beneficial than we commonly suppose. One recent study asked participants to write a note of thanks to someone and then estimate how surprised and happy the recipient would feel—an rmpact that they consistently underestimated, Another study assessed the health benefits of writing thank-you notes. The researchers found that writing as few as three weekly thank-you notes over the course of three weeks improved life satisfaction, increased happy feelings and reduced symptoms of depression.\n\n[B] While this research into gratitude is relatively new, the principles involved are anythmg but. Students of mine in a political philosophy course at lndiana University are reading Daniel Defoe, s 300-year-old RO 历 0 Crusoe, often regarded as the first novel published in English Left alone on an unknown island with no apparent prospect of rescue or escape, Crusoe has much to lament (悲叹). But instead of in to despair, he makes a list of things for which he is grateful, including the fact that he is the sole survivor from the shipwreck (海难) and has been able to salvage many useful items from the wreckage.\n\n[C] Defoe's masterpiece, which is often ranked as one of the world's greatest novels, provides a portrait of gratitude in action that is as timely and relevant today as it has ever been. It is al one with which contemporary psychology and medicine are just beginning to catch up 、 Simply put, for most of us, it is far more helpful to focus on the things in life for which we can express gratitude than those that incline us toward resentment and lamentation.\n\n[D] When we focus on the things we regret, such as failed relationships, family disputes, and setbacks in career and finance, we tend to become more regretful. Conversely, when we focus on the things we are grateful for, a greater sense of happiness tends to spread through our lives. And while no one would argue for cultivating a false sense of blessedness, there is mounting evidence that counting our blessings is one of the best habits we can develop to promote mental and physical health.\n\n[E] Gratitude has long enjoyed a privileged position in many of the world's cultural traditions. For example, some ancient Western philosophers counsel gratitude that is both enduring and complete, and some Eastern thinkers portray it as not merely an attitude but a virtue to be put rnto practice.\n\n[F] Recent scientific studies support these ancient teachings. Individuals who regularly engage in gratitude exercrses, such as counting their blessings or expressing gratitude to others, exhibit increased satisfaction with relationships and fewer symptoms of physical illness. And the benefits are not only psychological and physical. They may also be moral—those who practice gratitude also view their lives less materialistically and suffer from less envy.\n\n[G] There are multiple explanations for such benefits of gratefulness. One is the fact that expressmg gratitude encourages others to continue being generous, thus promoting a urtuous cycle of goodness in relationships. Similarly, grateful people may more likely to c r e (回报) with acts of kindness of their own. Broadly speaking, a community in which people feel grateful to one another is likely to a more pleasant place to live than one characterized by mutual suspicion and resentment. The beneficial effects of gratitude may extend even further. For example, when many people feel good about what someone else has done for them, they experience a sense of being lifted up, with a corresponding enhancement of their regard for humanity. Some are inspired to attempt to become better people themselves, doing more to help bring out the best in others and bringmg more goodness into the world around them.\n\n[H] Gratitude also tends to strengthen a sense of connection with others. When people want to do good things that inspire gratitude, the level of dedication in relationships tends to grow and relationships seem to last longer. And when people feel more connected, they are more likely to choose to spend their time with one another and demonstrate their feelings of affection in daily acts.\n\n[I] Of course, acts of kindness can also foster discomfort. For example, if people feel they are not worthy of kindness or suspect that some “ (别有用心的) motive lies behind it, the benefits of gratitude will not realized. Likewise, receivmg a kindness can rise to a sense of indebtedness, leaving beneficiaries feeling that they must now pay back whatever good they have received. Gratitude can flourish only if people are secure enough in themselves and sufficiently trusting to allow it to do so. Another obstacle to gratitude is often called a sense of entitlement. Instead of expenencrng a 和 c “ (善行) as a good turn, people sometimes regard it as a mere payment of what they are owed, for which no one deserves any moral credit.\n\n[J] There are a number of practical Steps anyone can take to promote a sense of gratitude. One is simply spending time on a regular basis thinking about someone who has made a difference, or perhaps writing a thank-you note or expressing such gratitude in person. Others are found in ancient religious disciplines, such as reflecting on benefactions received from another person or actually praying for the health and happiness of a benefactor. In addition to benefactions received, it is also possible to focus on opportunities to do good oneself, whether those acted on in the past or hoped for in the future. Some people are most grateful not for what others have done for them but for chances they enjoyed to help others. In regularly reflecting on the things in his life he is grateful for, Defoe, s Crusoe believes that he becomes a far better person than he would have been had he remained in the society from which he originally set out on his voyage.\n\n[K] Reflecting on generosity and gratitude, the great basketball coach John Wooden once offered two counsels to his players and students. First, he said, “ It is impossible to have a perfect day unless you have done something for someone who will never able to repay you. ” In saying this, 、 Mooden sought to promote purely generous acts, as opposed to those performed with an expectation of reward. Second, he said, \"Give thanks for your blessings every day.\n\n[L] Some faith traditions incorporate such practices into the rhythm of daily life. For example, adherents of some reliyons offer prayers of thanksyvrng every morning before rising and every night before lying down to sleep. Others offer thanks throughout the day, such as before meals, Other less frequent special events, such as births, deaths and marriages, may also be heralded by such prayers.\n\n[M] When Defoe depicted Robinson Crusoe making thanksyving a daily part of his island life, he was anticipatmg findings in social science and medicine that would not appear for hundreds of years. Yet he was also reflecting the wisdom of religious and philosophical traditions that extend back thousands of years. Gratitude is one of the healthiest and most nourishing of all states of mmd, and those who adopt it as a habit are enriching not only their own lives but also the lives of those around them.",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Technology is never a neutral tool for achieving human ends. Technological innovations reshape people as they use these innovations to control their environment. Artificial intelligence. for example. is altering humanity. While the term AI conjures up anxieties about killer robots or catastrophic levels of unemployment. there are other. deeper implications. As AI increasingly shapes the human experience. how does this change what it means to human? Central to the problem is a persons capacity to make choices. particularly judgments that have moral mplications.\nAristotle argued that the capacity for making practical judgments depends on regularly making them—on habit and practice. We see the emergence of machines as substitute judges in a variety of everyday contexts as a potential threat to people learning how to effectively exercise judgment themselves. In the workplace. managers routinely make decisions about who to hire or fire and which loan to approve'\nto name a few. These are areas where go 疱 m 记 (算法的) prescription is replacing human judgment. and so people who might have had the chance to develop practical judgment in these areas no longer will.\nRecommendation engines. which are increasingly prevalent inter me diaries in people's consumption of culture. may serve to constrain choice and minimize luck. By presenting consumers with algonthmically selected choices of what to watch. read. stream and VISit next. confranies are replacing human taste with machine taste. In one sense. this is helpful. After all. machines can survey a wider range of choices than any individual is likely to have the time or energy to do on their own.\nAt the same time. though. this selection is optimizing for what people are likely to prefer based on what they've preferred in the past.. Me think there is some risk that people's options will be constrained by their past in a new and unantrcipated way.\n\nAS machine learning algorithms improve and as they train on more extensive data sets. larger parts of everyday life are likely to become utterly predictable. The predictions are going to get better and better. and they will ultimately make common expenences more efficient and pleasant. Algorithms could soon—if they don't already—have a better idea about which show you d like to watch next and which job candidate you should hire than you do. One day. humans may even find a way for machines to make these decisions without some of the biases that humans typically display. But to the extent that unpredictability is part of how people understand themselves and part of what people like about themselves. humanity is In the process of losing something significant. As they become more and more predictable. the creatures inhabiting the increasingly AI-mediated world will become less and less like us.",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "Phomcs. which involves sounding out words ／ b (音节) by syllable. is the best way to teach children to read. But in many classrooms. this can be a dirty word. SO much SO that some teachers have had to sneak phonics teaching materials into the classroom. MOSt American children are taught to read in a way that study after study has found to be wrong.\nThe consequences of this are striking. Less than half of all American adults were proficient readers in\n2017. American fourth graders rank 15th on the Progress in International Literacy Study. an international exam.\nAmerica is stuck in a debate about teaching children to read that has been going on for decades. Some advocate teaching symbol-sound relationships (the sound k can spelled as c. k, ck. or (h). known as phonics. Others support an immersive approach (using pictures of a cat to learn the word cat). known as\n'whole language ”. Most teachers today. almost three out of four according to a survey by the EdWeek Research\nCentre in 2019. use a mix called \"balanced literacy ”. This combination of methods is ineffective. \"You can't sprinkle in a little phomcs.. says Tenette Smith. executive director of elementary education and reading at\nMississippi's education department. \"It has to be systematic and explicitly taught. Mississippi. often behind in social policy. has set an example here. In a state once notorious for its IOW reading scores. the Mississippi state legislature passed new literacy standards in 2013. Since then Mississippi has\n\nseen remarkable gains. lts fourth graders have moved from 49th (out of 50 states) to 29th on the National\nAssessment Of Educational Progress. a nationwide exam. In 2019 it was the only state to rmprove its scores. For the first time since measurement began. Mississippi S pupils are now average readers. a remarkable achievement in such a poor state. Mississippi s success is attributed to implementing reading methods supported by a body of research known as the science of reading. In 1997 Congress requested the National lnstitute of Child Health and Human\nDevelopment and the Department of Education to convene a National Reading Panel to end the \"reading wars and synthesize the evidence. The panel found that phomcs. along With explicit instruction in p 伊 m 记 (音位的) awareness. fluency and comprehension. worked best. Yet over two decades on. \"balanced literacy ” is still being taught in classrooms. But advances in statistics and brain lmaging have disproved the whole-language method. To the teacher who is a proficient reader. literacy seems like a natural process that reqmres educated guessing. rather than the deliberate process emphasized by phonics. Teachers can imagine that they learned to read through osmosis (氵替移尺亻匕) when they were children.. Mithout proper training. they bring this to classrooms.",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              7
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-06-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "选词填空第 26 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "N",
+          "explanation": "【考点】动词辨析题。\nN) 【语法判断】空格前是助动词的否定结构 does\nnot. 空格后是一个名词结构 other intelligent\nanim 小，是宾语，说明空格处缺少的是本句的谓语动词，该谓语动词为动词原形，且为及物动词。\n【语义判断】空格前一句提到研究者们发现，在智商较高的食肉动物，群居捕猎兽以及家畜当中，狗都位列其中，说明狗的智商较高，空格所在句却用\nbut 将话锋一转，表示与前文相反的意思，指代前文提到的 dogs. 可见这里是说狗的智力没有高于同类的其他动物，选项中的动词里只有 N)\nsurpass “超过，胜过”符合句意，故为答案。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "选词填空第 27 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【考点】副词辨析题。\nK) 【语法判断】浏览空格所在句，是一个由 though 引导的让步状语从句，该从句主谓宾成分齐全，空格在从句的末尾，可以判断空格处应该是一个表示修饰的副词。\n【语义判断】由 though 可知，空格所在的从句与主句在意思上表示转折，从句提到已经有大量研究探讨了狗的认知能力，其中的 has examined 说明是过去的事了，空格后的主句中却提到 new study\n“新的研究”. 着眼的是现在，可以推测空格所在处的副词意思上也应该表示过去，才能与主句形成对比，因此 K) previously “先前地”符合句意，故为答案。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "选词填空第 28 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "O",
+          "explanation": "【考点】名词辨析题。\n0 ) 【语法判断】空格前是及物动词 warrant 及定冠词\nthe. 其后缺少名词性的宾语成分，空格后是表所属的介词 of. 因此推断空格处是一个名词，与 the\n和 of 一起修饰后面的名词 work. 作 warrant 的宾语。\n【语义判断】空格所在句的 topic 指的是前一句提到的狗的认知，空格后的 work 是对前一句提到的\nresearch 的回指，前一句用 a significant body 表明这种研究很多，因此空格处也应是表示大量的一个词，浏览各名词选项，只有 O) volume\" 量，额”\n符合句意. the volume of 是固定短语，表示“. ( 巨大的或正在增加的 ) 量”. 故为答案。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "C"
+        },
+        {
+          "id": "2023-06-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "选词填空第 29 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "M",
+          "explanation": "【考点】动词辨析题。\nM) 【语法判断】空格所在处是一个动词不定式结构作\ndesigned 的目的状语，因此空格处应为一个动词原形。\n\n【语义判断】空格所在句提到很多研究者设计研究的目的，与狗多聪明有关，空格后面半句更是进一步指出研究的目的不是单纯地研究狗的头脑，可以推测空格所填词意义与 study 相近，且有“研究证实”之意，浏览各动词原形. M ) prove\" 证明，证实”符合句意，故为答案。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "选词填空第 30 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【考点】动词辨析题。\nA) 【语法判断】空格前是句子主语 these comparisons. 空格后是 that 引导的宾语从句，可知空格处应是句子的谓语动词。\n【语义判断】空格前两句提到 Lea 和同事对研究做了很多具体的比较，空格所在句是关于这些比较与狗很聪明这一结论之间的关系，根据前文可知研究者在设计研究的时候就想证明狗很聪明，因此，这些研究的比较也是能证明狗很聪明这一结论的. A ) affirmed “证实”符合句意，故为答案。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "选词填空第 31 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【考点】形容词辨析题。\nG) 【语法判断】空格所在句是由 but 引导的转折分句，其中主语是 their intelligence. 谓语部分只有系动词的否定结构 is not, 因此空格所在处为表语，应为名词或形容词，又根据“. 一 as.. ·”这一比较结构可进一步确定空格处应为形容词。\n【语义判断】空格所在处填人的形容词表示的是一些研究者们对狗的智商的看法，根据前文可知这些研究者设计研究方案的目的都是为了证明狗有多聪明，可见这些研究者认为狗非常聪明，浏览各形容词，只有 G) formidable\" 令人惊叹的”符合句意，表达了研究者们对狗的智商的过度高估。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "选词填空第 32 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【考点】动词辨析题。\nD) 【语法判断】空格所在处为 to 引导的动词不定式结构，由 and 可知空格处单词与 recognize 并列，也是一个动词原形。\n【语义判断】空格所在句提到狗和猫能够识别人的声音，空格所在处是比“识别”更进一步的意思，因此 D) differentiate\" 区分”符合句意，故为答案。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "选词填空第 33 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【考点】形容词辨析题。\nE) 【语法判断】空格前是介词 of. 其宾语是空格后的\nhuman voices. 可知空格处应为形容词，修饰\nhuman voiceso\n【语义判断】空格所在句提到没有数据表明哪种动物能够记住更多的““声音，根据常识可知人跟人的声音是各不相同的，因此 E) distinct\" 截然不同的”符合句意，故为答案。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "选词填空第 34 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【考点】副词辨析题。\nC) 【语法判断】空格所填词位于动词短语 agree with\n的中间，可以推断空格处应该是一个副词，用来修饰 agreeo\n【语义判断】空格所在处表明的是其他研究者对这项新研究发现的认同程度，空格后一句中扎卡里 · 西尔福的例子证明其他研究者认为新研究的有些观点言过其实，因此可以推测他们对新研究并不完全认同，因此 C) completely\" 完全地”符合句意，故为答案。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "选词填空第 35 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affirmed"
+            },
+            {
+              "key": "B",
+              "text": "approximately"
+            },
+            {
+              "key": "C",
+              "text": "completely"
+            },
+            {
+              "key": "D",
+              "text": "differentiate"
+            },
+            {
+              "key": "E",
+              "text": "distinct"
+            },
+            {
+              "key": "F",
+              "text": "domain"
+            },
+            {
+              "key": "G",
+              "text": "formidable"
+            },
+            {
+              "key": "H",
+              "text": "outperformed"
+            },
+            {
+              "key": "I",
+              "text": "overstated"
+            },
+            {
+              "key": "J",
+              "text": "pledge"
+            },
+            {
+              "key": "K",
+              "text": "previously"
+            },
+            {
+              "key": "L",
+              "text": "prospective"
+            },
+            {
+              "key": "M",
+              "text": "prove"
+            },
+            {
+              "key": "N",
+              "text": "surpass"
+            },
+            {
+              "key": "O",
+              "text": "volume"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【考点】动词辨析题。\n【语法判断】空格位于 believes 引出的宾语从句中，该从句的主语为 the authors of the new\nstudy. 宾语为 idea. 因此空格处应为从句的谓语动词。\n【语义判断】空格所在句中 as 引导的原因状语从句中提到，扎卡里 · 西尔福认为狗的认知这一领域是一个新兴领域，还有很多可以研究的地方，由此可知，扎卡里。西尔福并不认同“对狗的研究有些太多了”这个观点，认为新研究的作者们过分夸大了这一观点. I) overstated\" 夸大”符合句意，故为答案。\n参考译文科学家们最近调查了关于狗的智力的一些研究，并将这些研究与针对其他智力动物的头脑的研究进行了对比。研究者们发现，在智商较高的食肉动物，群居捕猎兽以及家畜当中，狗都位列其中，但是，在以上",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "It does us far more good to focus on things we can be grateful for than what makes us sad and resentful.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 focus on 定位到文章 C ) 段最\n0 【精析】同义转述题。 C ) 段最后一句指出，专注于生活中我们可以表达感激之情的事情比专注于让我们产生怨恨和悲伤的事情更为有益，由此可知，题干是对定位句的同义转述。题干中的 good 对应原文中的 helpful. 题干中的 be grateful 对应原文中的 express gratitude. 题干中的 what makes us\nsad and resentful 是对原文中 those that incline us\ntoward resentment and lamentation 的同义转述，故答案为 0。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "The beneficial impacts of gratitude can extend from individuals to their community and to the wider society.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【定位】由题干中的 beneficial impacts of gratitude. extend 和 commumty 定位到 G ) 段第四，五句。\nG) 【精析】细节归纳题。定位句提到，人们互存感激之心的社区更加宜居，而感恩的有益影响甚至可能会进一步扩大。随后两句则指出，心怀感恩的人会给周围的世界带来更多的善意，可知这是说感恩的益处可辐射至整个社会，结合上一段提到的感恩给个人带来的益处，可知感恩的益处可从个人延伸到他们的社区乃至更广泛的社会，题干是对 G ) 段相关信息的归纳概括，故答案为 G)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "The participants in a recent study repeatedly underestimated the positive effect on those who received thank-you notes.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 the participants 和 recent\nstudy 定位到文章 A ) 段第二句。\nA) 【精析】同义转述题。 A ) 段定位句提到，最近的一项研究要求参与者给人写一封感谢信，然后预估收信人会有多么惊讶和高兴一一一而参与者们一直都低估了这种影响。题干中的 repeatedly\nunderestimated 对应原文中的 consistently\nunderestimated. 题干中的 positive 是对原文中\nsurprised and happy 的转述，题干中的 effect 对应原文中的 impact, 故答案为 A)O",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Good deeds can sometimes make people feel uncomfortable.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【定位】由题干中的 uncomfortable 定位到 I) 段第\n【精析】同义转述题。 I) 段定位句指出，善意的行为也可能导致不适。题干中的 good deeds 是对原文中 acts of kindness 的同义转述，题干中的 make\npeople feel uncomfortable 是对原文中 foster\ndiscomfort 的同义转述，故答案为 I)O",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "People who regularly express gratitude can benefit in moral terms.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【定位】由题干中的 express gratitude. benefit 和\nmoral 定位到文章 F ) 段第二至四句。\nF) 【精析】细节归纳题。 F ) 段定位句提到，向他人表达感激之情能够提高人际关系满意度，身体疾病的症状也会减少，进而指出，其益处还不仅仅是心理上和身体上的，也可能是道德方面的。题干中的 express gratitude 对应原文中的 expressing\ngratitude. 而题干中的 benefit in moral terms 是对本段第三，四句信息的归纳概括，故答案为 F)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "A basketball coach advocated performing generous acts without expecting anything in return.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【定位】由题干中的 basketball coach 和 generous\nacts 定位到 K ) 段第一句和第三句。\nK) 【精析】细节归纳题。 K ) 段第一句提到一位篮球教练向学员提出两条建议，而其后的第三句提到，他的第一条建议旨在促进纯粹的慷慨行为，而不是那些以期获得回报为动机的善举。题干中的\nadvocated performing generous acts 对应原文中\n\n的 promote purely generous acts.. 题干中的\nwithout expecting anything in return 是原文中 as\nopposed to those performed with an expectation\nof reward 的同义转述，故答案为 K)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "More and more evidence shows it makes us mentally and physically healthier to routinely count our blessings.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 evidence 和 count our blessings\n定位到文章 D ) 段最后一句。\nD) 【精析】同义转述题。 D ) 段定位句指出，越来越多的证据表明，历数幸事是我们可以养成的促进身心健康的最佳习惯之一。题干中的 more and\nmore 是原文中 mounting 的同义表达，题干中的\nmakes us mentally and physically healthier 是原文中 promote mental and physical health 的同义表达，故答案为",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "Of all states of mind, feeling grateful is considered one of the most healthy and beneficial.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "M",
+          "explanation": "【定位】由题干中的 of all states of mind 定位到文章 M) 段最后一句的前半部分。\nM) 【精析】同义转述题。 M) 段定位句指出，在所有的心态中，感恩是最健康，最滋养的。题干中的\nfeeling grateful 对应原文中的 gratitude. 题干中的 the most healthy and beneficial 则是对原文中\nthe healthiest and most nourishing 的同义转述，故答案为 M)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "The principles underlying the research into gratitude are nothing new at all.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 principles 和 research 定位到文章 B) 段第一句。\nB) 【精析】同义转述题。 B ) 段第一句提到，虽然这项关于感恩的研究相对较新，但其所涉及的原理绝非如此。而“绝非如此”指的就是感恩研究的原理并不像研究本身那么新，题干中的 nothing new at\nall 是对原文中 relatively new 和 are anything but\n两处信息的同义转述，故答案为 B)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Gratitude is likely to enhance one's sense of being connected with other people.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【定位】由题干中的 gratitude 和 connected 定位到文章 H) 段第一句。\nH) 【精析】同义转述题。 H ) 段定位句指出，感恩也有助于加强与他人的联系。题干中的 is likely to\nenhance 对应原文中的 tends to strengthen. 题干中的 one's sense of being connected with other\npeople 是原文中 a sense of connection with\nothers 的同义表达，故答案为 H)。\n参考译文感恩之心的救生力量\nA) 感恩可能比我们通常认为的更加有益。 ( 38 ) 最近的一项研究要求参与者给他人写一封感谢信，然后预估收信人会有多么惊讶和高兴一一而参与者们一直都低估了这种影响。另一项研究评估了写感谢信对健康的益处。研究人员发现，在三",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What do we learn about the deeper implications of AI?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is causing catastrophic levels of unemployment."
+            },
+            {
+              "key": "B",
+              "text": "It is doing physical harm to human operators."
+            },
+            {
+              "key": "C",
+              "text": "It is altering moral judgments."
+            },
+            {
+              "key": "D",
+              "text": "It is reshaping humanity."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 deeper implications 定位到第二段第一句。\nD) 【精析】推理判断题。文章第二段第一句指出虽然人工智能这个词唤起人们对机器人杀手或大规模失业的焦虑，但它还有其他更深层次的含义，由此可知深层含义的内容在后面有所提及。接下来一句提到人工智能越来越多地影响人类体验，并提出问题: 这会如何改变人类的意义呢？这与 D)\n“它正在重塑人类”语义相同，故答案为 D) 项。\n【避错】第二段第一句提到人工智能这个词唤起人们对大规模失业的焦虑，这虽然是 implication ( 影响 ). 但并非 deeper implication. 因此排除 A) 项；\n文中提到 killer ro ts ( 机器人杀手 ). 但是提到它只是为了说明的可能影响，而并没有提到对\nhuman operator(",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What is the consequence of algorithmic prescription replacing human judgment?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "People lose the chance to cultivate the ability to make practical judgments."
+            },
+            {
+              "key": "B",
+              "text": "People are prevented from participating in making major decisions in the workplace."
+            },
+            {
+              "key": "C",
+              "text": "Managers no longer have the chance to decide which loan to approve."
+            },
+            {
+              "key": "D",
+              "text": "Managers do not need to take the trouble to determine who to hire or fire."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 algorithmic prescription\nreplacing human judgment 定位到第四段第二句。\nA) 【精析】事实细节题。第四段第二句中提到在有些领域，算法正在取代人类的判断，因此，原本有机会在这些领域培养实际判断力的人将不再有机会，选项 A) 正是文中内容的同义转换，文中的\ndevelop practical judgment 与选项 A ) 中的\ncultivate the ability to make practical judgments\n意思一致，故答案为 A) 项。该题的难点是读懂定位句，首先，定位句中 people 后面的 who 引导的是定语从句，修饰 people. no longer will 后省略了\nhave the chance to develop pra",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What may result from increasing application of recommendation engines in our consumption of culture?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Consumers will have much limited choice."
+            },
+            {
+              "key": "B",
+              "text": "Consumers will actually enjoy better luck."
+            },
+            {
+              "key": "C",
+              "text": "It will be easier to decide on what to enjoy."
+            },
+            {
+              "key": "D",
+              "text": "Humans will develop tastes similar to machines'."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 recommendation engines 以及 consumption of culture 定位到第五段第一句。\nA) 【精析】事实细节题。文章第五段第一句指出，在人们的文化消费中，推荐引擎成为越来越普遍的中介，可能会限制选择并最大限度地减少运气成分。推荐引擎成为越来越普遍的中介，与题干中的 increasing application of recommendation\nengines 语义相同，而推荐引擎具体做的事情就是\nmay serve to constrain choice and minimize luck\n( 可能会限制选择并最大限度地减少运气成分 ). 推荐引擎限制了选择，也就是消费者会有很有限的选择，定位句中的 constrain 对应选项 A) 中的\nlimited. 因此答案为 A) 项",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What is likely to happen to larger parts of our daily life as machine learning algorithms improve?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They will turn out to be more pleasant."
+            },
+            {
+              "key": "B",
+              "text": "They will repeat our past experience."
+            },
+            {
+              "key": "C",
+              "text": "They can be completely anticipated."
+            },
+            {
+              "key": "D",
+              "text": "They may become better and better."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 larger parts of our daily life\n和 machine learning algorithms improve 定位到第七段第一句。\n0 【精析】事实细节题。第七段第一句提到机器学习算法在改进，它们的计算也在基于更广泛的数据集，在这种情况下，日常生活的大部分可能变得完全可预测，这与 C) 项语义相同，定位句中的\nutterly predictable 正好对应选项中的 completely\nanticipated. 因此答案为 0 项。\n【避错】第七段第二句提到日常经历变得更加高效和愉快，而不是题干中的 larger parts of our daily\nlife. A ) 项属于偷换概念，故排除；文中关于 past\nex rience 在第六段中有提及，指出这种选择正在基于人们",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "Why does the author say the creatures living in the more and more AI-mediated world will become increasingly unlike us?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They will have lost the most significant human element of being intelligent."
+            },
+            {
+              "key": "B",
+              "text": "They will no longer possess the human characteristic of being unpredictable."
+            },
+            {
+              "key": "C",
+              "text": "They will not be able to understand themselves as we can do today."
+            },
+            {
+              "key": "D",
+              "text": "They will be deprived of what their predecessors were proud of about themselves."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 AI-mediated world 定位到最后一段。\nB) 【精析】推理判断题。最后一段第二句提到随着事情变得越来越可预测，居住在日益以人工智能为媒介的世界中，我们会越来越不像自己了，也就是说人类需要不可预测性，所以人类不再拥有不可预测性就会让我们越来越不像自己，因此答案为\nB) 项。\n【避错】最后一段第一句提到人类正在失去一些重要的东西 ( something im 凶 rtant ). 但指的是不可预测性，而不是 being intelligent. 因此排除 A) 项；\n文中提到不可预测性是人们理解自己的方式的一部分 (part). 只是一部分，而不是说人类没有了不可预测性就不能理解自己了，因此排除 C) 项；文中提到人类正在失去不可预测性，并未提及先辈们认为不可预测性是他们引以为傲的.",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What do we learn about phonics in many American classrooms?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is ill reputed."
+            },
+            {
+              "key": "B",
+              "text": "It is mostly misapplied."
+            },
+            {
+              "key": "C",
+              "text": "It is arbitrarily excluded."
+            },
+            {
+              "key": "D",
+              "text": "It is misrepresented."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 phonics in many American\nclassrooms 定位到第一段第二句。\nA) 【精析】推理判断题。第一段第二句指出，在许多教室里，语音教学法 ( this 指代 phonics) 可能是一个肮脏的词。此处 dirty 对应的就是选项中的 ill\nreputedo 第三句指出一些老师不得不把语音教学法的教材偷偷带进教室。由此可推测出语音教学法在美国声誉不好，要不然老师就大大方方地采用语音教学法了，故答案为 A)O\n【避错】 B ) 将原文内容“语音教学法没有被采用”\n曲解为“该方法被误用了”. 故排除选项 B)；选项\nc ) 容易产生混淆，第二句中的 a dirty word 意在说明语音教学法在美国因为名声不好而不受待见，但个别老师会偷偷地将其教材带进教室，所以该教学法是个",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              8
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              13
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What has America been witnessing for decades?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "An obsession with innovating teaching methodologies of reading."
+            },
+            {
+              "key": "B",
+              "text": "An enduring debate over the approach to teaching children to read."
+            },
+            {
+              "key": "C",
+              "text": "An increasing concern with many children's inadequacy in literacy."
+            },
+            {
+              "key": "D",
+              "text": "An ever-forceful advocacy of a combined method for teaching reading."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 for decades 定位到第三段第\nB) 【精析】事实细节题。文章第三段第一句提到，近几十年来，美国对如何教孩子阅读一直争论不休。\n故答案为 B)。\n【避错】第三段第四句提到，现在大多数教师用“均衡阅读教学法”. 原文没有提及对创新方法的痴迷，排除选项 A )；美国学生的阅读水平在国际上排名不佳，这可能会使美国越来越关注阅读能力. \n\n但文章没有明确指出，这也不是作者想要强调的事情，故排除 0；“均衡阅读教学法”是目前大多数教师采取的方式，这是目前的情况，并非几十年来美国所发生的，故排除 D)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "Why does Tenette Smith think a combination of teaching methods is ineffective?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Elementary school children will be frustrated when taught with several methods combined."
+            },
+            {
+              "key": "B",
+              "text": "Phonics has to be systematically applied and clearly taught to achieve the desired effect."
+            },
+            {
+              "key": "C",
+              "text": "Sprinkling in a little phonics deters the progress of even adequately motivated children."
+            },
+            {
+              "key": "D",
+              "text": "Balanced literacy fails to sustain children's interest in developing a good reading habit."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 a combination of teaching\nmethods is ineffective 定位到第三段第五句。\nB) 【精析】推理判断题。第三段第五句指出，这种组合的方法是无效的。第六句和第七句接着阐述了原因: 你不能在课堂上穿插一些语音教学法。它必须是系统的，明确的教学。综合可知，答案为 B)O\n【避错】几种方法相结合的教学方法是否会让小学生感到沮丧，这一点在文中并未提及，故排除选项\nA )；原文中并未提及在课堂中穿插使用语音教学法是否会阻碍有充分动力的孩子的进步，故排除\n0；原文没有提及“均衡阅读教学法”是否能维持孩子培养良好阅读习惯的兴趣，故排除选项 D)。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What does the author say Mississippi's success is attributed to?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Convening a National Reading Panel to synthesize research evidence."
+            },
+            {
+              "key": "B",
+              "text": "Placing sufficient emphasis upon both fluency and comprehension."
+            },
+            {
+              "key": "C",
+              "text": "Adopting scientifically grounded approaches to teaching reading."
+            },
+            {
+              "key": "D",
+              "text": "Obtaining support from Congress to upgrade teaching methods."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 Mississippi's success is attributed\nto 定位到第五段第一句。\n0 【精析】事实细节题。第五段第一句指出，密西西比州的成功要归功于它实施的阅读方法，该方法得到了一系列被称为“阅读的科学”研究的支持，即该方法有科学依据。选项 C ) 与文章意思相符，故为本题答案。\n【避错】召集全国阅读专家组来综合研究证据不是密西西比州政府的行为，是国会要求国家儿童健康与人类发展研究所和教育部实施的，目的是结束关于阅读教学法的争论，这不是密西西比州阅读教学成功的原因，排除选项 A)；第五段最后一句提到 fluency and comprehension. 但这是国家阅读专家组提出的有效教学方法的一部分，而不是密西西比州成功的原因，故排除选项 B )；原文中没有提到密西",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What have advances in statistics and brain imaging proved ineffective?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The teaching of symbol-sound relationships."
+            },
+            {
+              "key": "B",
+              "text": "Explicit instruction in phonemic awareness."
+            },
+            {
+              "key": "C",
+              "text": "Efforts to end the reading wars."
+            },
+            {
+              "key": "D",
+              "text": "The immersive approach."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 advances in statistics and brain\nimaging 定位到文章最后一段第二句。\nD) 【精析】事实细节题。最后一段第二句提到，统计学和脑成像的进步已经否定了全语言教学法。关于全语言教学法，在第三段第三句有提及: 全语言教学 ( whole language ) 是一种沉浸式教学方法 ( an\nimmersive approach)。综合可知答案为 D)。\n【避错】强调符号和发音关系的教学法是语音教学法，文章是提倡这种教学方法的，故排除 A )；“音位意识的明确指导”是国家阅读专家组提出的，与统计学和脑成像的进步无关，故排除 B)；结束“阅读方法战”是国会的目的，而不是统计学和脑成像进步所证明的事实，故排除 0。\n参考译文语音教学法，即一个音节一个",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "近年来，越来越多的中国文化产品走向全球市场，日益受到海外消费者的青睐。随着中国对外文化贸易的快速发展，中国文化产品出口额已持续多年位居世界前列，形成了一批具有国际影响力的文化企业、产品和品牌。数据显示，中国的出版物、影视作品、网络文学与动漫作品等在海外的销售量连年攀升。中国政府出台了一系列政策鼓励和支持更多具有中国元素的优秀文化产品走出国门，扩大海外市场份额，进一步提升中国文化的世界影响力。",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-06-1-translation",
+          "number": 56,
+          "kind": "translation",
+          "stem": "近年来，越来越多的中国文化产品走向全球市场，日益受到海外消费者的青睐。随着中国对外文化贸易的快速发展，中国文化产品出口额已持续多年位居世界前列，形成了一批具有国际影响力的文化企业、产品和品牌。数据显示，中国的出版物、影视作品、网络文学与动漫作品等在海外的销售量连年攀升。中国政府出台了一系列政策鼓励和支持更多具有中国元素的优秀文化产品走出国门，扩大海外市场份额，进一步提升中国文化的世界影响力。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "In recent years, an increasing number of Chinese cultural products have entered the global market, gaining growing popularity among overseas consumers. Propelled by the rapid growth of China's foreign cultural trade, the export volume of Chinese cultural products has maintained a high rank globally for many years, and a group of cultural enterprises, products and brands with international influence have been established. Statistical data reveals that the sales volume of Chinese publications, films and television programs, online literature, and animation products overseas has increased year after year. The Chinese government has introduced a series of policies to encourage and support more outstanding cultural products with Chinese elements to go abroad and expand market share in overseas markets so as to further enhance the influence of Chinese culture in the world.",
+          "explanation": "【参考译文】\n与难点注释\nIn recent years. an lncreasrng number Of\nChinese cultural products have entered the global\nmarket. gaining growmg popularity among\noverseas consumers. Propelled by the rapid growth\nof China's foreign cultural trade. the export\nvolume of Chinese cultural products has\nmaintained a high rank globally for many years. and a group of cultural enterprises. products and\nbrands with international influence have been\nestablished. Statistical data reveals that the sales\nvolume of Chinese publications. films and\ntelevision programs. online literature. and\nanimation products overseas has increased year\nafter year. The Chinese government has\nintroduced a series of policies to encourage and\nsupport more outstanding cultural products with\nChinese elements to go abroad and expand market\nshare in overseas markets SO as to further enhance\nthe influence of Chinese culture in the world. 1. 第一句中时间状语为“近年来”. 可译为 in recent years\n或 the past few years. 是现在完成时的标志，故本句采用现在完成时。翻译时可以像参考译文那样，将第二个分句译为主句，将“日益受到海外消费者的青睐”译为伴随状语，也可以选择用 and 连接这两个分句。\n2. 第二句中的“随着中国对外文化贸易的快速发展”可以像参考译文那样译为 propelled by the rapid growth of\nChina. s foreign cultural trade. 强调因果关系，也可以简单处理为 with the rapid development of China. s\nforeign cultural tradeo 翻译后两个分句时，可以像参考译文那样，用 and 连接，也可以将“中国文化产品出口额已持续多年位居世界前列”译为主句，将“形成了一批具有国际影响力的文化企业，产品和品牌”译为分词结构作状语。\n3. 第三句中的“数据显示”可以表达为 statistical data\nreveals 或 data shows. 也可以译为 according to the\ndatao\n4. 翻译第四句时可以采用现在完成时态。“具有中国元素的”除了像参考译文那样，译为 with 引导的介词短语结构，还可译为定语从句修饰“优秀文化产品”. 即 that\nshowcase Chinese elementso 本句较长，翻译时还可以将句子进行拆分，将最后一个分句单独翻译，增加 these\npolicies 作为主语。\n文化创新 cultural mnovation\n文化保护 cultural preservation\n文化产业发展 development of cultural industries\n文化振兴 cultural rev it a liz a tion\n传媒产业 media industry\n文化激励 cultural incentives\n话题词汇文化认知 cultural awareness\n文化产业链 cultural industry chain\n文化创作 cultural creation\n文化软实力 cultural soft power\n文化产业园区 cultural industry park\n\n【难点解析】\nIn recent years. an lncreasrng number Of\nChinese cultural products have entered the global\nmarket. gaining growmg popularity among\noverseas consumers. Propelled by the rapid growth\nof China's foreign cultural trade. the export\nvolume of Chinese cultural products has\nmaintained a high rank globally for many years. and a group of cultural enterprises. products and\nbrands with international influence have been\nestablished. Statistical data reveals that the sales\nvolume of Chinese publications. films and\ntelevision programs. online literature. and\nanimation products overseas has increased year\nafter year. The Chinese government has\nintroduced a series of policies to encourage and\nsupport more outstanding cultural products with\nChinese elements to go abroad and expand market\nshare in overseas markets SO as to further enhance\nthe influence of Chinese culture in the world. 1. 第一句中时间状语为“近年来”. 可译为 in recent years\n或 the past few years. 是现在完成时的标志，故本句采用现在完成时。翻译时可以像参考译文那样，将第二个分句译为主句，将“日益受到海外消费者的青睐”译为伴随状语，也可以选择用 and 连接这两个分句。\n2. 第二句中的“随着中国对外文化贸易的快速发展”可以像参考译文那样译为 propelled by the rapid growth of\nChina. s foreign cultural trade. 强调因果关系，也可以简单处理为 with the rapid development of China. s\nforeign cultural tradeo 翻译后两个分句时，可以像参考译文那样，用 and 连接，也可以将“中国文化产品出口额已持续多年位居世界前列”译为主句，将“形成了一批具有国际影响力的文化企业，产品和品牌”译为分词结构作状语。\n3. 第三句中的“数据显示”可以表达为 statistical data\nreveals 或 data shows. 也可以译为 according to the\ndatao\n4. 翻译第四句时可以采用现在完成时态。“具有中国元素的”除了像参考译文那样，译为 with 引导的介词短语结构，还可译为定语从句修饰“优秀文化产品”. 即 that\nshowcase Chinese elementso 本句较长，翻译时还可以将句子进行拆分，将最后一个分句单独翻译，增加 these\npolicies 作为主语。\n文化创新 cultural mnovation\n文化保护 cultural preservation\n文化产业发展 development of cultural industries\n文化振兴 cultural rev it a liz a tion\n传媒产业 media industry\n文化激励 cultural incentives\n话题词汇文化认知 cultural awareness\n文化产业链 cultural industry chain\n文化创作 cultural creation\n文化软实力 cultural soft power\n文化产业园区 cultural industry park",
+          "source": {
+            "fileId": "1gv8bmUKejq2zEf3C2XZ4gzIA7sRjLaXr",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1sIbKWprxBc_aYwHe9rWf87SdodG1nl7Q",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "与难点注释\nIn recent years. an lncreasrng number Of\nChinese cultural products have entered the global\nmarket. gaining growmg popularity among\noverseas consumers. Propelled by the rapid growth\nof China's foreign cultural trade. the export\nvolume of Chinese cultural products has\nmaintained a high rank globally for many years. and a group of cultural enterprises. products and\nbrands with international influence have been\nestablished. Statistical data reveals that the sales\nvolume of Chinese publications. films and\ntelevision programs. online literature. and\nanimation products overseas has increased year\nafter year. The Chinese government has\nintroduced a series Of policies to encourage and\nsupport more outstanding cultural products with\nChinese elements to go abroad and expand market\nshare in overseas markets SO as to further enhance\nthe influence of Chinese culture in the world. 1. 第一句中时间状语为 “ 近年来 ”. 可译为 in recent years\n或 the past few years. 是现在完成时的标志. 故本句采用现在完成时 。 翻译时可以像参考译文那样. 将第二个分句译为主句. 将 “ 日益受到海外消费者的青睐 ” 译为伴随状语. 也可以选择用 and 连接这两个分句 。\n2. 第二句中的 “ 随着中国对外文化贸易的快速发展 ” 可以像参考译文那样译为 propelled by the rapid growth of\nChina. s foreign cultural trade. 强调因果关系. 也可以简单处理为 with the rapid development of China. s\nforeign cultural tradeo 翻译后两个分句时. 可以像参考译文那样. 用 and 连接. 也可以将 “ 中国文化产品出口额已持续多年位居世界前列 ” 译为主句. 将 “ 形成了一批具有国际影响力的文化企业. 产品和品牌 ” 译为分词结构作状语 。\n3. 第三句中的 “ 数据显示 ” 可以表达为 statistical data\nreveals 或 data shows. 也可以译为 according to the\ndatao\n4. 翻译第四句时可以采用现在完成时态 。 “ 具有中国元素的 ” 除了像参考译文那样. 译为 with 引导的介词短语结构. 还可译为定语从句修饰 “ 优秀文化产品 ”. 即 that\nshowcase Chinese elementso 本句较长. 翻译时还可以将句子进行拆分. 将最后一个分句单独翻译. 增加 these\npolicies 作为主语 。\n文化创新 cultural mnovation\n文化保护 cultural preservation\n文化产业发展 development of cultural industries\n文化振兴 cultural revitalization\n传媒产业 media industry\n文化激励 cultural incentives\n话题词汇文化认知 cultural awareness\n文化产业链 cultural industry chain\n文化创作 cultural creation\n文化软实力 cultural soft power\n文化产业园区 cultural industry park"
+        }
+      ]
+    }
+  ]
+}

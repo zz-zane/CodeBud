@@ -1,0 +1,414 @@
+{
+  "lessonId": "java-stage2-05",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s2-const-report-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边立了条规矩：一顿最多处理几条。这个数是**全院子共用、又谁都改不了**的，我们要把它写成一格**常量**。\n\n要画的东西：\n\n- 类定义 `Cat`：一格常量 `static final int MAX_FISH = 4;`（两个词各管一半：共用、钉死），一盒自己名字的家当，初始化那一手把名字记下来。\n- 一手 `void eat(int fish)`：**越过规矩**（比上限大）就印一行 **名字 + `：太多啦，最多 ` + 上限 + ` 条`**；没越过就印 **名字 + `：处理了 ` + 条数 + ` 条`**。判断里那个上限，一律**念 `MAX_FISH`**，不许把 `4` 这个数直接写死在判断里。\n\n`main` 里这么走：读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；创建一个对象叫 `张三`；每一顿让它处理一次；最后印一行 **`规矩是 ` + 上限 + ` 条`** —— 念那一格常量的时候要挂上类定义名。\n\n比如程序的输入是\n\n2\n5\n3\n\n程序就要返回\n\n张三：太多啦，最多 4 条\n张三：处理了 3 条\n规矩是 4 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static final int MAX_FISH = 4;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        if (fish > MAX_FISH) {\n            System.out.println(name + \"：太多啦，最多 \" + MAX_FISH + \" 条\");\n        } else {\n            System.out.println(name + \"：处理了 \" + fish + \" 条\");\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"张三\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n        }\n        System.out.println(\"规矩是 \" + Cat.MAX_FISH + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三：处理了 3 条\n张三：处理了 2 条\n规矩是 4 条",
+      "stdin": "2\n3\n2\n",
+      "explanation": "本题练的是**常量**：`static final` 就是把今天学的两个词合起来用。\n\n**一、`static` 管「只有一份」。** 这条规矩不属于任何一个对象 —— 它是工作区边的规矩，全院子共用。所以它念起来是 `Cat.MAX_FISH`（挂类定义名），不是 `a.MAX_FISH`。\n\n**二、`final` 管「只填一次」。** 钉死的那一格，起步的数就在声明那一行填好，往后谁都不许再动它（你要是在哪只手底下写 `MAX_FISH = 3;`，撞的就是 `cannot assign a value to static final variable MAX_FISH`）。\n\n**三、规矩只写一处，用处却有好几处。** 判断里的 `fish > MAX_FISH` 和最后那行「规矩是……条」念的是**同一条规矩** —— 这就是常量最值钱的地方：往后要把上限改成别的数，**只改声明那一行这一处**，全院子立刻都按新规矩来。反过来说，要是你在判断里写死一个 `4`、最后那行又写死一个 `4`，全院子就散成了好几份规矩，改一处忘一处，早晚对不上。\n\n**四、名字的写法。** 常量的名字照我们的习惯**全用大写、词间加小下划线**（`MAX_FISH`）—— 一眼就看得出「这不是哪个对象的格子，是全院子钉死的规矩」。",
+      "templateId": "java-s2-const-report",
+      "params": {
+        "cat": "张三",
+        "max": 4,
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "2df3cf377a4d5530"
+      }
+    },
+    {
+      "id": "bank-java-s2-const-report-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边立了条规矩：一顿最多处理几条。这个数是**全院子共用、又谁都改不了**的，我们要把它写成一格**常量**。\n\n要画的东西：\n\n- 类定义 `Cat`：一格常量 `static final int MAX_FISH = 5;`（两个词各管一半：共用、钉死），一盒自己名字的家当，初始化那一手把名字记下来。\n- 一手 `void eat(int fish)`：**越过规矩**（比上限大）就印一行 **名字 + `：太多啦，最多 ` + 上限 + ` 条`**；没越过就印 **名字 + `：处理了 ` + 条数 + ` 条`**。判断里那个上限，一律**念 `MAX_FISH`**，不许把 `5` 这个数直接写死在判断里。\n\n`main` 里这么走：读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；创建一个对象叫 `张三`；每一顿让它处理一次；最后印一行 **`规矩是 ` + 上限 + ` 条`** —— 念那一格常量的时候要挂上类定义名。\n\n比如程序的输入是\n\n2\n8\n8\n\n程序就要返回\n\n张三：太多啦，最多 5 条\n张三：太多啦，最多 5 条\n规矩是 5 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static final int MAX_FISH = 5;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        if (fish > MAX_FISH) {\n            System.out.println(name + \"：太多啦，最多 \" + MAX_FISH + \" 条\");\n        } else {\n            System.out.println(name + \"：处理了 \" + fish + \" 条\");\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"张三\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n        }\n        System.out.println(\"规矩是 \" + Cat.MAX_FISH + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三：处理了 2 条\n张三：太多啦，最多 5 条\n规矩是 5 条",
+      "stdin": "2\n2\n7\n",
+      "explanation": "本题练的是**常量**：`static final` 就是把今天学的两个词合起来用。\n\n**一、`static` 管「只有一份」。** 这条规矩不属于任何一个对象 —— 它是工作区边的规矩，全院子共用。所以它念起来是 `Cat.MAX_FISH`（挂类定义名），不是 `a.MAX_FISH`。\n\n**二、`final` 管「只填一次」。** 钉死的那一格，起步的数就在声明那一行填好，往后谁都不许再动它（你要是在哪只手底下写 `MAX_FISH = 3;`，撞的就是 `cannot assign a value to static final variable MAX_FISH`）。\n\n**三、规矩只写一处，用处却有好几处。** 判断里的 `fish > MAX_FISH` 和最后那行「规矩是……条」念的是**同一条规矩** —— 这就是常量最值钱的地方：往后要把上限改成别的数，**只改声明那一行这一处**，全院子立刻都按新规矩来。反过来说，要是你在判断里写死一个 `5`、最后那行又写死一个 `5`，全院子就散成了好几份规矩，改一处忘一处，早晚对不上。\n\n**四、名字的写法。** 常量的名字照我们的习惯**全用大写、词间加小下划线**（`MAX_FISH`）—— 一眼就看得出「这不是哪个对象的格子，是全院子钉死的规矩」。",
+      "templateId": "java-s2-const-report",
+      "params": {
+        "cat": "张三",
+        "max": 5,
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "3a6bbcd81eaa27a9"
+      }
+    },
+    {
+      "id": "bank-java-s2-const-report-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边立了条规矩：一顿最多处理几条。这个数是**全院子共用、又谁都改不了**的，我们要把它写成一格**常量**。\n\n要画的东西：\n\n- 类定义 `Cat`：一格常量 `static final int MAX_FISH = 6;`（两个词各管一半：共用、钉死），一盒自己名字的家当，初始化那一手把名字记下来。\n- 一手 `void eat(int fish)`：**越过规矩**（比上限大）就印一行 **名字 + `：太多啦，最多 ` + 上限 + ` 条`**；没越过就印 **名字 + `：处理了 ` + 条数 + ` 条`**。判断里那个上限，一律**念 `MAX_FISH`**，不许把 `6` 这个数直接写死在判断里。\n\n`main` 里这么走：读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；创建一个对象叫 `张三`；每一顿让它处理一次；最后印一行 **`规矩是 ` + 上限 + ` 条`** —— 念那一格常量的时候要挂上类定义名。\n\n比如程序的输入是\n\n2\n6\n5\n\n程序就要返回\n\n张三：处理了 6 条\n张三：处理了 5 条\n规矩是 6 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static final int MAX_FISH = 6;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        if (fish > MAX_FISH) {\n            System.out.println(name + \"：太多啦，最多 \" + MAX_FISH + \" 条\");\n        } else {\n            System.out.println(name + \"：处理了 \" + fish + \" 条\");\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"张三\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n        }\n        System.out.println(\"规矩是 \" + Cat.MAX_FISH + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三：太多啦，最多 6 条\n张三：太多啦，最多 6 条\n规矩是 6 条",
+      "stdin": "2\n7\n8\n",
+      "explanation": "本题练的是**常量**：`static final` 就是把今天学的两个词合起来用。\n\n**一、`static` 管「只有一份」。** 这条规矩不属于任何一个对象 —— 它是工作区边的规矩，全院子共用。所以它念起来是 `Cat.MAX_FISH`（挂类定义名），不是 `a.MAX_FISH`。\n\n**二、`final` 管「只填一次」。** 钉死的那一格，起步的数就在声明那一行填好，往后谁都不许再动它（你要是在哪只手底下写 `MAX_FISH = 3;`，撞的就是 `cannot assign a value to static final variable MAX_FISH`）。\n\n**三、规矩只写一处，用处却有好几处。** 判断里的 `fish > MAX_FISH` 和最后那行「规矩是……条」念的是**同一条规矩** —— 这就是常量最值钱的地方：往后要把上限改成别的数，**只改声明那一行这一处**，全院子立刻都按新规矩来。反过来说，要是你在判断里写死一个 `6`、最后那行又写死一个 `6`，全院子就散成了好几份规矩，改一处忘一处，早晚对不上。\n\n**四、名字的写法。** 常量的名字照我们的习惯**全用大写、词间加小下划线**（`MAX_FISH`）—— 一眼就看得出「这不是哪个对象的格子，是全院子钉死的规矩」。",
+      "templateId": "java-s2-const-report",
+      "params": {
+        "cat": "张三",
+        "max": 6,
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "7f23f0c5d2578b6d"
+      }
+    },
+    {
+      "id": "bank-java-s2-const-report-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边立了条规矩：一顿最多处理几条。这个数是**全院子共用、又谁都改不了**的，我们要把它写成一格**常量**。\n\n要画的东西：\n\n- 类定义 `Cat`：一格常量 `static final int MAX_FISH = 4;`（两个词各管一半：共用、钉死），一盒自己名字的家当，初始化那一手把名字记下来。\n- 一手 `void eat(int fish)`：**越过规矩**（比上限大）就印一行 **名字 + `：太多啦，最多 ` + 上限 + ` 条`**；没越过就印 **名字 + `：处理了 ` + 条数 + ` 条`**。判断里那个上限，一律**念 `MAX_FISH`**，不许把 `4` 这个数直接写死在判断里。\n\n`main` 里这么走：读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；创建一个对象叫 `李四`；每一顿让它处理一次；最后印一行 **`规矩是 ` + 上限 + ` 条`** —— 念那一格常量的时候要挂上类定义名。\n\n比如程序的输入是\n\n3\n4\n8\n6\n\n程序就要返回\n\n李四：处理了 4 条\n李四：太多啦，最多 4 条\n李四：太多啦，最多 4 条\n规矩是 4 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static final int MAX_FISH = 4;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        if (fish > MAX_FISH) {\n            System.out.println(name + \"：太多啦，最多 \" + MAX_FISH + \" 条\");\n        } else {\n            System.out.println(name + \"：处理了 \" + fish + \" 条\");\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"李四\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n        }\n        System.out.println(\"规矩是 \" + Cat.MAX_FISH + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四：太多啦，最多 4 条\n李四：太多啦，最多 4 条\n李四：太多啦，最多 4 条\n规矩是 4 条",
+      "stdin": "3\n9\n6\n9\n",
+      "explanation": "本题练的是**常量**：`static final` 就是把今天学的两个词合起来用。\n\n**一、`static` 管「只有一份」。** 这条规矩不属于任何一个对象 —— 它是工作区边的规矩，全院子共用。所以它念起来是 `Cat.MAX_FISH`（挂类定义名），不是 `a.MAX_FISH`。\n\n**二、`final` 管「只填一次」。** 钉死的那一格，起步的数就在声明那一行填好，往后谁都不许再动它（你要是在哪只手底下写 `MAX_FISH = 3;`，撞的就是 `cannot assign a value to static final variable MAX_FISH`）。\n\n**三、规矩只写一处，用处却有好几处。** 判断里的 `fish > MAX_FISH` 和最后那行「规矩是……条」念的是**同一条规矩** —— 这就是常量最值钱的地方：往后要把上限改成别的数，**只改声明那一行这一处**，全院子立刻都按新规矩来。反过来说，要是你在判断里写死一个 `4`、最后那行又写死一个 `4`，全院子就散成了好几份规矩，改一处忘一处，早晚对不上。\n\n**四、名字的写法。** 常量的名字照我们的习惯**全用大写、词间加小下划线**（`MAX_FISH`）—— 一眼就看得出「这不是哪个对象的格子，是全院子钉死的规矩」。",
+      "templateId": "java-s2-const-report",
+      "params": {
+        "cat": "李四",
+        "max": 4,
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "ad1d20a4a7deee46"
+      }
+    },
+    {
+      "id": "bank-java-s2-const-report-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边立了条规矩：一顿最多处理几条。这个数是**全院子共用、又谁都改不了**的，我们要把它写成一格**常量**。\n\n要画的东西：\n\n- 类定义 `Cat`：一格常量 `static final int MAX_FISH = 5;`（两个词各管一半：共用、钉死），一盒自己名字的家当，初始化那一手把名字记下来。\n- 一手 `void eat(int fish)`：**越过规矩**（比上限大）就印一行 **名字 + `：太多啦，最多 ` + 上限 + ` 条`**；没越过就印 **名字 + `：处理了 ` + 条数 + ` 条`**。判断里那个上限，一律**念 `MAX_FISH`**，不许把 `5` 这个数直接写死在判断里。\n\n`main` 里这么走：读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；创建一个对象叫 `李四`；每一顿让它处理一次；最后印一行 **`规矩是 ` + 上限 + ` 条`** —— 念那一格常量的时候要挂上类定义名。\n\n比如程序的输入是\n\n3\n9\n5\n3\n\n程序就要返回\n\n李四：太多啦，最多 5 条\n李四：处理了 5 条\n李四：处理了 3 条\n规矩是 5 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static final int MAX_FISH = 5;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        if (fish > MAX_FISH) {\n            System.out.println(name + \"：太多啦，最多 \" + MAX_FISH + \" 条\");\n        } else {\n            System.out.println(name + \"：处理了 \" + fish + \" 条\");\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"李四\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n        }\n        System.out.println(\"规矩是 \" + Cat.MAX_FISH + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四：处理了 4 条\n李四：处理了 2 条\n李四：太多啦，最多 5 条\n规矩是 5 条",
+      "stdin": "3\n4\n2\n7\n",
+      "explanation": "本题练的是**常量**：`static final` 就是把今天学的两个词合起来用。\n\n**一、`static` 管「只有一份」。** 这条规矩不属于任何一个对象 —— 它是工作区边的规矩，全院子共用。所以它念起来是 `Cat.MAX_FISH`（挂类定义名），不是 `a.MAX_FISH`。\n\n**二、`final` 管「只填一次」。** 钉死的那一格，起步的数就在声明那一行填好，往后谁都不许再动它（你要是在哪只手底下写 `MAX_FISH = 3;`，撞的就是 `cannot assign a value to static final variable MAX_FISH`）。\n\n**三、规矩只写一处，用处却有好几处。** 判断里的 `fish > MAX_FISH` 和最后那行「规矩是……条」念的是**同一条规矩** —— 这就是常量最值钱的地方：往后要把上限改成别的数，**只改声明那一行这一处**，全院子立刻都按新规矩来。反过来说，要是你在判断里写死一个 `5`、最后那行又写死一个 `5`，全院子就散成了好几份规矩，改一处忘一处，早晚对不上。\n\n**四、名字的写法。** 常量的名字照我们的习惯**全用大写、词间加小下划线**（`MAX_FISH`）—— 一眼就看得出「这不是哪个对象的格子，是全院子钉死的规矩」。",
+      "templateId": "java-s2-const-report",
+      "params": {
+        "cat": "李四",
+        "max": 5,
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "45e59680070de225"
+      }
+    },
+    {
+      "id": "bank-java-s2-const-report-011",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边立了条规矩：一顿最多处理几条。这个数是**全院子共用、又谁都改不了**的，我们要把它写成一格**常量**。\n\n要画的东西：\n\n- 类定义 `Cat`：一格常量 `static final int MAX_FISH = 6;`（两个词各管一半：共用、钉死），一盒自己名字的家当，初始化那一手把名字记下来。\n- 一手 `void eat(int fish)`：**越过规矩**（比上限大）就印一行 **名字 + `：太多啦，最多 ` + 上限 + ` 条`**；没越过就印 **名字 + `：处理了 ` + 条数 + ` 条`**。判断里那个上限，一律**念 `MAX_FISH`**，不许把 `6` 这个数直接写死在判断里。\n\n`main` 里这么走：读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；创建一个对象叫 `李四`；每一顿让它处理一次；最后印一行 **`规矩是 ` + 上限 + ` 条`** —— 念那一格常量的时候要挂上类定义名。\n\n比如程序的输入是\n\n3\n7\n4\n2\n\n程序就要返回\n\n李四：太多啦，最多 6 条\n李四：处理了 4 条\n李四：处理了 2 条\n规矩是 6 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static final int MAX_FISH = 6;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        if (fish > MAX_FISH) {\n            System.out.println(name + \"：太多啦，最多 \" + MAX_FISH + \" 条\");\n        } else {\n            System.out.println(name + \"：处理了 \" + fish + \" 条\");\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"李四\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n        }\n        System.out.println(\"规矩是 \" + Cat.MAX_FISH + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四：处理了 4 条\n李四：太多啦，最多 6 条\n李四：太多啦，最多 6 条\n规矩是 6 条",
+      "stdin": "3\n4\n9\n8\n",
+      "explanation": "本题练的是**常量**：`static final` 就是把今天学的两个词合起来用。\n\n**一、`static` 管「只有一份」。** 这条规矩不属于任何一个对象 —— 它是工作区边的规矩，全院子共用。所以它念起来是 `Cat.MAX_FISH`（挂类定义名），不是 `a.MAX_FISH`。\n\n**二、`final` 管「只填一次」。** 钉死的那一格，起步的数就在声明那一行填好，往后谁都不许再动它（你要是在哪只手底下写 `MAX_FISH = 3;`，撞的就是 `cannot assign a value to static final variable MAX_FISH`）。\n\n**三、规矩只写一处，用处却有好几处。** 判断里的 `fish > MAX_FISH` 和最后那行「规矩是……条」念的是**同一条规矩** —— 这就是常量最值钱的地方：往后要把上限改成别的数，**只改声明那一行这一处**，全院子立刻都按新规矩来。反过来说，要是你在判断里写死一个 `6`、最后那行又写死一个 `6`，全院子就散成了好几份规矩，改一处忘一处，早晚对不上。\n\n**四、名字的写法。** 常量的名字照我们的习惯**全用大写、词间加小下划线**（`MAX_FISH`）—— 一眼就看得出「这不是哪个对象的格子，是全院子钉死的规矩」。",
+      "templateId": "java-s2-const-report",
+      "params": {
+        "cat": "李四",
+        "max": 6,
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "085c879994181901"
+      }
+    },
+    {
+      "id": "bank-java-s2-final-not-filled-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们把名字那一格钉死了（`final`），想让它一初始化就定好、往后谁都不许改 —— 可编译器连门都没放它过。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n张三：\n```\n\n那一格钉死的写法我们不想动，缺的是**谁在什么时候把它填上**。",
+      "brokenCode": "class Cat {\n    final String name;\n\n    Cat() {\n        System.out.println(\"一个子对象初始化了\");\n    }\n\n    void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat();\n        a.greet();\n    }\n}\n",
+      "referenceFix": "class Cat {\n    final String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat(\"张三\");\n        a.greet();\n    }\n}\n",
+      "expectedOutput": "张三：",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`variable name might not have been initialized`** —— 注意它指着的地方：不是那一行 `final String name;`，而是**初始化那一手末尾那个花括号**。它在说：「这一格你说好要钉死，可我们等到初始化那一手整个写完，也没见你往里填过东西。」\n\n`final` 的规矩得记清楚：**钉死的格子必须填，而且只填一次。** 两条路任选一条 ——\n\n- **在初始化那一手里填**（我们这版）：给初始化那一手开一个输入接口 `Cat(String name)`，第一句就写 `this.name = name;`。往后每个对象初始化的时候把自己的名字交进去，填完就锁死。\n- **在声明那一行就填**：`final String name = \"张三\";`。名字天生定好、创建几个都一个样的时候才这么写。\n\n两条都不占，就是刚才那句原话。顺手记一个反向的坑：填过之后再想改（比如写个 `rename()` 里去 `name = \"王五\";`），撞的是 **`cannot assign a value to final variable name`** —— 那才是「钉死」本来的意思。",
+      "templateId": "java-s2-final-not-filled",
+      "params": {
+        "cat": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "3852f0de7b3b80b7"
+      }
+    },
+    {
+      "id": "bank-java-s2-final-not-filled-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们把名字那一格钉死了（`final`），想让它一初始化就定好、往后谁都不许改 —— 可编译器连门都没放它过。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n李四：\n```\n\n那一格钉死的写法我们不想动，缺的是**谁在什么时候把它填上**。",
+      "brokenCode": "class Cat {\n    final String name;\n\n    Cat() {\n        System.out.println(\"一个子对象初始化了\");\n    }\n\n    void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat();\n        a.greet();\n    }\n}\n",
+      "referenceFix": "class Cat {\n    final String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat(\"李四\");\n        a.greet();\n    }\n}\n",
+      "expectedOutput": "李四：",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`variable name might not have been initialized`** —— 注意它指着的地方：不是那一行 `final String name;`，而是**初始化那一手末尾那个花括号**。它在说：「这一格你说好要钉死，可我们等到初始化那一手整个写完，也没见你往里填过东西。」\n\n`final` 的规矩得记清楚：**钉死的格子必须填，而且只填一次。** 两条路任选一条 ——\n\n- **在初始化那一手里填**（我们这版）：给初始化那一手开一个输入接口 `Cat(String name)`，第一句就写 `this.name = name;`。往后每个对象初始化的时候把自己的名字交进去，填完就锁死。\n- **在声明那一行就填**：`final String name = \"李四\";`。名字天生定好、创建几个都一个样的时候才这么写。\n\n两条都不占，就是刚才那句原话。顺手记一个反向的坑：填过之后再想改（比如写个 `rename()` 里去 `name = \"王五\";`），撞的是 **`cannot assign a value to final variable name`** —— 那才是「钉死」本来的意思。",
+      "templateId": "java-s2-final-not-filled",
+      "params": {
+        "cat": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "cd49594a6044a4a6"
+      }
+    },
+    {
+      "id": "bank-java-s2-frozen-const-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "工作区边立了条规矩：一顿最多处理几条，我们把它写成了一格**全院子共用、又钉死**的数。后来我们又想让这条规矩每出创建一个对象就往上长一点 —— 编译器当场把变量拍在我的手背上。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n上限 3 条，一共有 2 只\n```\n\n那一格钉死的写法我们不想动，「一共几个」也得照数，问题出在**初始化那一手多写的那一行**。",
+      "brokenCode": "class Cat {\n    static final int MAX_FISH = 3;\n    static int count = 0;\n\n    Cat() {\n        count = count + 1;\n        MAX_FISH = MAX_FISH + 1;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 2; i++) {\n            new Cat();\n        }\n        System.out.println(\"上限 \" + Cat.MAX_FISH + \" 条，一共有 \" + Cat.count + \" 只\");\n    }\n}\n",
+      "referenceFix": "class Cat {\n    static final int MAX_FISH = 3;\n    static int count = 0;\n\n    Cat() {\n        count = count + 1;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 2; i++) {\n            new Cat();\n        }\n        System.out.println(\"上限 \" + Cat.MAX_FISH + \" 条，一共有 \" + Cat.count + \" 只\");\n    }\n}\n",
+      "expectedOutput": "上限 3 条，一共有 2 只",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`cannot assign a value to static final variable MAX_FISH`** —— 「这一格是**全院子共用、又钉死**的：共用是说它不归哪个对象，钉死是说它只填过一次、谁都不许再往里头塞东西。你这一行是在改它。」\n\n这一处最容易混的是两个词的分工，我们把它摆开说：\n\n- **`static`** 管「只有一份」：全院子共用，谁念都是 `Cat.MAX_FISH`。\n- **`final`** 管「只填一次」：填过就锁死，谁都不许改。\n\n我们原来那句 `MAX_FISH = MAX_FISH + 1;` 想干的事其实是「一边初始化一边往上加」—— 那是**记账**的活，不是**规矩**的活。规矩就该钉死不动；要数别的东西，就**另开一格共用的**：这段里本来就有一格 `static int count = 0;`，初始化那一手在它上面加一，正好把「一共几个」数得清清楚楚。所以改法就是**把那一行删掉**：规矩留在原处不动，数交给专管数的格子。\n\n顺带认一认两个词的合体：`static final` 就是**常量** —— 「全院子共用、又谁都改不了」的那一份。名字照我们的写法全用大写、词间加下划线（`MAX_FISH`），要改就只改这一处，全院子立刻都按新规矩来。",
+      "templateId": "java-s2-frozen-const",
+      "params": {
+        "max": 3,
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "616c228e9be3a66f"
+      }
+    },
+    {
+      "id": "bank-java-s2-frozen-const-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "工作区边立了条规矩：一顿最多处理几条，我们把它写成了一格**全院子共用、又钉死**的数。后来我们又想让这条规矩每出创建一个对象就往上长一点 —— 编译器当场把变量拍在我的手背上。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n上限 4 条，一共有 3 只\n```\n\n那一格钉死的写法我们不想动，「一共几个」也得照数，问题出在**初始化那一手多写的那一行**。",
+      "brokenCode": "class Cat {\n    static final int MAX_FISH = 4;\n    static int count = 0;\n\n    Cat() {\n        count = count + 1;\n        MAX_FISH = MAX_FISH + 1;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 3; i++) {\n            new Cat();\n        }\n        System.out.println(\"上限 \" + Cat.MAX_FISH + \" 条，一共有 \" + Cat.count + \" 只\");\n    }\n}\n",
+      "referenceFix": "class Cat {\n    static final int MAX_FISH = 4;\n    static int count = 0;\n\n    Cat() {\n        count = count + 1;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 3; i++) {\n            new Cat();\n        }\n        System.out.println(\"上限 \" + Cat.MAX_FISH + \" 条，一共有 \" + Cat.count + \" 只\");\n    }\n}\n",
+      "expectedOutput": "上限 4 条，一共有 3 只",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`cannot assign a value to static final variable MAX_FISH`** —— 「这一格是**全院子共用、又钉死**的：共用是说它不归哪个对象，钉死是说它只填过一次、谁都不许再往里头塞东西。你这一行是在改它。」\n\n这一处最容易混的是两个词的分工，我们把它摆开说：\n\n- **`static`** 管「只有一份」：全院子共用，谁念都是 `Cat.MAX_FISH`。\n- **`final`** 管「只填一次」：填过就锁死，谁都不许改。\n\n我们原来那句 `MAX_FISH = MAX_FISH + 1;` 想干的事其实是「一边初始化一边往上加」—— 那是**记账**的活，不是**规矩**的活。规矩就该钉死不动；要数别的东西，就**另开一格共用的**：这段里本来就有一格 `static int count = 0;`，初始化那一手在它上面加一，正好把「一共几个」数得清清楚楚。所以改法就是**把那一行删掉**：规矩留在原处不动，数交给专管数的格子。\n\n顺带认一认两个词的合体：`static final` 就是**常量** —— 「全院子共用、又谁都改不了」的那一份。名字照我们的写法全用大写、词间加下划线（`MAX_FISH`），要改就只改这一处，全院子立刻都按新规矩来。",
+      "templateId": "java-s2-frozen-const",
+      "params": {
+        "max": 4,
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "d6020fb16b0d1100"
+      }
+    },
+    {
+      "id": "bank-java-s2-pond-tally-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边坐着两个对象，我们要让它们**共用一个记录表**：谁记录了几条，都往**同一格**上记。\n\n要画的东西：\n\n- 类定义 `Cat`：一盒自己名字的家当 `String name;`，初始化那一手把名字记下来；**再开一格整张类定义共用的**、起步的数是 `0` 的那种格子（前面得加 `static`）。\n- 一手 `void eat(int fish)`：先把这一顿的条数**加进那一格共用的**里，再印一行 **名字 + `：这一顿 ` + 条数 + ` 条`**。\n\n`main` 里这么走：先读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；生两个对象，第一个叫 `张三`、第二只叫 `王五`；每一顿里让**两个都处理**那个数（各印一行）；最后印一行 **`一共有 ` + 那格共用的 + ` 条`** —— 念它的时候要挂上类定义名。\n\n比如程序的输入是\n\n1\n5\n\n程序就要返回\n\n张三：这一顿 5 条\n王五：这一顿 5 条\n一共有 10 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static int total = 0;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        total = total + fish;\n        System.out.println(name + \"：这一顿 \" + fish + \" 条\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"张三\");\n        Cat b = new Cat(\"王五\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n            b.eat(fish);\n        }\n        System.out.println(\"一共有 \" + Cat.total + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三：这一顿 4 条\n王五：这一顿 4 条\n一共有 8 条",
+      "stdin": "1\n4\n",
+      "explanation": "本题的关节就是「**共用**」两个字。\n\n**一、那一格写在类定义里。** `static int total = 0;` 与其他格子排在一起 —— 前面那个 `static` 是宣告「整张类定义共用一份」，后面 `= 0` 是它起步的数。跟别的语言不一样的地方顺带记一句：Java 的起步的数**就写在类定义里这一行**，不用在类定义外面再补一行。\n\n**二、两个对象改的是同一格。** `eat` 里那句 `total = total + fish;` 里没有 `this.` —— 因为 `total` 压根不是 `this` 的东西。两个对象各调用各的 `eat`，可加的是**同一格**：所以最后那句「一共有」才会是两个对象的总和。\n\n**三、念它要挂类定义名。** 我们最后写的是 `Cat.total`，不是 `a.total`。两种写法的确是同一格（你真写 `a.total` 编译器也放行），可读代码的人会以为「这是 `a` 自己那份」—— 共用的东西一律念全名，这条规矩能省下很多想不明白的工夫。\n\n**四、格子是两处一起改的。** 招牌上那样写，状态里也就那样碰：`total = total + fish;` 每调用一次加一次，记的是**从开机到现在所有对象处理过的总数**。要是我们把它写成 `total = fish;`，那这一格就只剩最后一次的数了 —— 共用的格子也是这样「一改全改」的。",
+      "templateId": "java-s2-pond-tally",
+      "params": {
+        "cat": "张三",
+        "cat2": "王五",
+        "n": 1
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "9e4937f63192b840"
+      }
+    },
+    {
+      "id": "bank-java-s2-pond-tally-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边坐着两个对象，我们要让它们**共用一个记录表**：谁记录了几条，都往**同一格**上记。\n\n要画的东西：\n\n- 类定义 `Cat`：一盒自己名字的家当 `String name;`，初始化那一手把名字记下来；**再开一格整张类定义共用的**、起步的数是 `0` 的那种格子（前面得加 `static`）。\n- 一手 `void eat(int fish)`：先把这一顿的条数**加进那一格共用的**里，再印一行 **名字 + `：这一顿 ` + 条数 + ` 条`**。\n\n`main` 里这么走：先读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；生两个对象，第一个叫 `张三`、第二只叫 `王五`；每一顿里让**两个都处理**那个数（各印一行）；最后印一行 **`一共有 ` + 那格共用的 + ` 条`** —— 念它的时候要挂上类定义名。\n\n比如程序的输入是\n\n3\n2\n1\n1\n\n程序就要返回\n\n张三：这一顿 2 条\n王五：这一顿 2 条\n张三：这一顿 1 条\n王五：这一顿 1 条\n张三：这一顿 1 条\n王五：这一顿 1 条\n一共有 8 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static int total = 0;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        total = total + fish;\n        System.out.println(name + \"：这一顿 \" + fish + \" 条\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"张三\");\n        Cat b = new Cat(\"王五\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n            b.eat(fish);\n        }\n        System.out.println(\"一共有 \" + Cat.total + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三：这一顿 1 条\n王五：这一顿 1 条\n张三：这一顿 3 条\n王五：这一顿 3 条\n张三：这一顿 5 条\n王五：这一顿 5 条\n一共有 18 条",
+      "stdin": "3\n1\n3\n5\n",
+      "explanation": "本题的关节就是「**共用**」两个字。\n\n**一、那一格写在类定义里。** `static int total = 0;` 与其他格子排在一起 —— 前面那个 `static` 是宣告「整张类定义共用一份」，后面 `= 0` 是它起步的数。跟别的语言不一样的地方顺带记一句：Java 的起步的数**就写在类定义里这一行**，不用在类定义外面再补一行。\n\n**二、两个对象改的是同一格。** `eat` 里那句 `total = total + fish;` 里没有 `this.` —— 因为 `total` 压根不是 `this` 的东西。两个对象各调用各的 `eat`，可加的是**同一格**：所以最后那句「一共有」才会是两个对象的总和。\n\n**三、念它要挂类定义名。** 我们最后写的是 `Cat.total`，不是 `a.total`。两种写法的确是同一格（你真写 `a.total` 编译器也放行），可读代码的人会以为「这是 `a` 自己那份」—— 共用的东西一律念全名，这条规矩能省下很多想不明白的工夫。\n\n**四、格子是两处一起改的。** 招牌上那样写，状态里也就那样碰：`total = total + fish;` 每调用一次加一次，记的是**从开机到现在所有对象处理过的总数**。要是我们把它写成 `total = fish;`，那这一格就只剩最后一次的数了 —— 共用的格子也是这样「一改全改」的。",
+      "templateId": "java-s2-pond-tally",
+      "params": {
+        "cat": "张三",
+        "cat2": "王五",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "6cad58ceb5fd4dda"
+      }
+    },
+    {
+      "id": "bank-java-s2-pond-tally-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边坐着两个对象，我们要让它们**共用一个记录表**：谁记录了几条，都往**同一格**上记。\n\n要画的东西：\n\n- 类定义 `Cat`：一盒自己名字的家当 `String name;`，初始化那一手把名字记下来；**再开一格整张类定义共用的**、起步的数是 `0` 的那种格子（前面得加 `static`）。\n- 一手 `void eat(int fish)`：先把这一顿的条数**加进那一格共用的**里，再印一行 **名字 + `：这一顿 ` + 条数 + ` 条`**。\n\n`main` 里这么走：先读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；生两个对象，第一个叫 `张三`、第二只叫 `黑豆`；每一顿里让**两个都处理**那个数（各印一行）；最后印一行 **`一共有 ` + 那格共用的 + ` 条`** —— 念它的时候要挂上类定义名。\n\n比如程序的输入是\n\n2\n7\n8\n\n程序就要返回\n\n张三：这一顿 7 条\n黑豆：这一顿 7 条\n张三：这一顿 8 条\n黑豆：这一顿 8 条\n一共有 30 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static int total = 0;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        total = total + fish;\n        System.out.println(name + \"：这一顿 \" + fish + \" 条\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"张三\");\n        Cat b = new Cat(\"黑豆\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n            b.eat(fish);\n        }\n        System.out.println(\"一共有 \" + Cat.total + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三：这一顿 1 条\n黑豆：这一顿 1 条\n张三：这一顿 1 条\n黑豆：这一顿 1 条\n一共有 4 条",
+      "stdin": "2\n1\n1\n",
+      "explanation": "本题的关节就是「**共用**」两个字。\n\n**一、那一格写在类定义里。** `static int total = 0;` 与其他格子排在一起 —— 前面那个 `static` 是宣告「整张类定义共用一份」，后面 `= 0` 是它起步的数。跟别的语言不一样的地方顺带记一句：Java 的起步的数**就写在类定义里这一行**，不用在类定义外面再补一行。\n\n**二、两个对象改的是同一格。** `eat` 里那句 `total = total + fish;` 里没有 `this.` —— 因为 `total` 压根不是 `this` 的东西。两个对象各调用各的 `eat`，可加的是**同一格**：所以最后那句「一共有」才会是两个对象的总和。\n\n**三、念它要挂类定义名。** 我们最后写的是 `Cat.total`，不是 `a.total`。两种写法的确是同一格（你真写 `a.total` 编译器也放行），可读代码的人会以为「这是 `a` 自己那份」—— 共用的东西一律念全名，这条规矩能省下很多想不明白的工夫。\n\n**四、格子是两处一起改的。** 招牌上那样写，状态里也就那样碰：`total = total + fish;` 每调用一次加一次，记的是**从开机到现在所有对象处理过的总数**。要是我们把它写成 `total = fish;`，那这一格就只剩最后一次的数了 —— 共用的格子也是这样「一改全改」的。",
+      "templateId": "java-s2-pond-tally",
+      "params": {
+        "cat": "张三",
+        "cat2": "黑豆",
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "70732e3cc29b48d1"
+      }
+    },
+    {
+      "id": "bank-java-s2-pond-tally-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边坐着两个对象，我们要让它们**共用一个记录表**：谁记录了几条，都往**同一格**上记。\n\n要画的东西：\n\n- 类定义 `Cat`：一盒自己名字的家当 `String name;`，初始化那一手把名字记下来；**再开一格整张类定义共用的**、起步的数是 `0` 的那种格子（前面得加 `static`）。\n- 一手 `void eat(int fish)`：先把这一顿的条数**加进那一格共用的**里，再印一行 **名字 + `：这一顿 ` + 条数 + ` 条`**。\n\n`main` 里这么走：先读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；生两个对象，第一个叫 `李四`、第二只叫 `王五`；每一顿里让**两个都处理**那个数（各印一行）；最后印一行 **`一共有 ` + 那格共用的 + ` 条`** —— 念它的时候要挂上类定义名。\n\n比如程序的输入是\n\n2\n5\n7\n\n程序就要返回\n\n李四：这一顿 5 条\n王五：这一顿 5 条\n李四：这一顿 7 条\n王五：这一顿 7 条\n一共有 24 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static int total = 0;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        total = total + fish;\n        System.out.println(name + \"：这一顿 \" + fish + \" 条\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"李四\");\n        Cat b = new Cat(\"王五\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n            b.eat(fish);\n        }\n        System.out.println(\"一共有 \" + Cat.total + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四：这一顿 8 条\n王五：这一顿 8 条\n李四：这一顿 8 条\n王五：这一顿 8 条\n一共有 32 条",
+      "stdin": "2\n8\n8\n",
+      "explanation": "本题的关节就是「**共用**」两个字。\n\n**一、那一格写在类定义里。** `static int total = 0;` 与其他格子排在一起 —— 前面那个 `static` 是宣告「整张类定义共用一份」，后面 `= 0` 是它起步的数。跟别的语言不一样的地方顺带记一句：Java 的起步的数**就写在类定义里这一行**，不用在类定义外面再补一行。\n\n**二、两个对象改的是同一格。** `eat` 里那句 `total = total + fish;` 里没有 `this.` —— 因为 `total` 压根不是 `this` 的东西。两个对象各调用各的 `eat`，可加的是**同一格**：所以最后那句「一共有」才会是两个对象的总和。\n\n**三、念它要挂类定义名。** 我们最后写的是 `Cat.total`，不是 `a.total`。两种写法的确是同一格（你真写 `a.total` 编译器也放行），可读代码的人会以为「这是 `a` 自己那份」—— 共用的东西一律念全名，这条规矩能省下很多想不明白的工夫。\n\n**四、格子是两处一起改的。** 招牌上那样写，状态里也就那样碰：`total = total + fish;` 每调用一次加一次，记的是**从开机到现在所有对象处理过的总数**。要是我们把它写成 `total = fish;`，那这一格就只剩最后一次的数了 —— 共用的格子也是这样「一改全改」的。",
+      "templateId": "java-s2-pond-tally",
+      "params": {
+        "cat": "李四",
+        "cat2": "王五",
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "a5090a3bcd762329"
+      }
+    },
+    {
+      "id": "bank-java-s2-pond-tally-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边坐着两个对象，我们要让它们**共用一个记录表**：谁记录了几条，都往**同一格**上记。\n\n要画的东西：\n\n- 类定义 `Cat`：一盒自己名字的家当 `String name;`，初始化那一手把名字记下来；**再开一格整张类定义共用的**、起步的数是 `0` 的那种格子（前面得加 `static`）。\n- 一手 `void eat(int fish)`：先把这一顿的条数**加进那一格共用的**里，再印一行 **名字 + `：这一顿 ` + 条数 + ` 条`**。\n\n`main` 里这么走：先读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；生两个对象，第一个叫 `李四`、第二只叫 `黑豆`；每一顿里让**两个都处理**那个数（各印一行）；最后印一行 **`一共有 ` + 那格共用的 + ` 条`** —— 念它的时候要挂上类定义名。\n\n比如程序的输入是\n\n1\n1\n\n程序就要返回\n\n李四：这一顿 1 条\n黑豆：这一顿 1 条\n一共有 2 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static int total = 0;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        total = total + fish;\n        System.out.println(name + \"：这一顿 \" + fish + \" 条\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"李四\");\n        Cat b = new Cat(\"黑豆\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n            b.eat(fish);\n        }\n        System.out.println(\"一共有 \" + Cat.total + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四：这一顿 2 条\n黑豆：这一顿 2 条\n一共有 4 条",
+      "stdin": "1\n2\n",
+      "explanation": "本题的关节就是「**共用**」两个字。\n\n**一、那一格写在类定义里。** `static int total = 0;` 与其他格子排在一起 —— 前面那个 `static` 是宣告「整张类定义共用一份」，后面 `= 0` 是它起步的数。跟别的语言不一样的地方顺带记一句：Java 的起步的数**就写在类定义里这一行**，不用在类定义外面再补一行。\n\n**二、两个对象改的是同一格。** `eat` 里那句 `total = total + fish;` 里没有 `this.` —— 因为 `total` 压根不是 `this` 的东西。两个对象各调用各的 `eat`，可加的是**同一格**：所以最后那句「一共有」才会是两个对象的总和。\n\n**三、念它要挂类定义名。** 我们最后写的是 `Cat.total`，不是 `a.total`。两种写法的确是同一格（你真写 `a.total` 编译器也放行），可读代码的人会以为「这是 `a` 自己那份」—— 共用的东西一律念全名，这条规矩能省下很多想不明白的工夫。\n\n**四、格子是两处一起改的。** 招牌上那样写，状态里也就那样碰：`total = total + fish;` 每调用一次加一次，记的是**从开机到现在所有对象处理过的总数**。要是我们把它写成 `total = fish;`，那这一格就只剩最后一次的数了 —— 共用的格子也是这样「一改全改」的。",
+      "templateId": "java-s2-pond-tally",
+      "params": {
+        "cat": "李四",
+        "cat2": "黑豆",
+        "n": 1
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "9fa94f3432c64721"
+      }
+    },
+    {
+      "id": "bank-java-s2-pond-tally-011",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "工作区边坐着两个对象，我们要让它们**共用一个记录表**：谁记录了几条，都往**同一格**上记。\n\n要画的东西：\n\n- 类定义 `Cat`：一盒自己名字的家当 `String name;`，初始化那一手把名字记下来；**再开一格整张类定义共用的**、起步的数是 `0` 的那种格子（前面得加 `static`）。\n- 一手 `void eat(int fish)`：先把这一顿的条数**加进那一格共用的**里，再印一行 **名字 + `：这一顿 ` + 条数 + ` 条`**。\n\n`main` 里这么走：先读一个数 `n`，接着**再读 n 个数**（每一顿记录了几条）；生两个对象，第一个叫 `李四`、第二只叫 `黑豆`；每一顿里让**两个都处理**那个数（各印一行）；最后印一行 **`一共有 ` + 那格共用的 + ` 条`** —— 念它的时候要挂上类定义名。\n\n比如程序的输入是\n\n3\n4\n7\n3\n\n程序就要返回\n\n李四：这一顿 4 条\n黑豆：这一顿 4 条\n李四：这一顿 7 条\n黑豆：这一顿 7 条\n李四：这一顿 3 条\n黑豆：这一顿 3 条\n一共有 28 条\n\n（判分喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static int total = 0;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    void eat(int fish) {\n        total = total + fish;\n        System.out.println(name + \"：这一顿 \" + fish + \" 条\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat a = new Cat(\"李四\");\n        Cat b = new Cat(\"黑豆\");\n        for (int i = 0; i < n; i++) {\n            int fish = sc.nextInt();\n            a.eat(fish);\n            b.eat(fish);\n        }\n        System.out.println(\"一共有 \" + Cat.total + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四：这一顿 6 条\n黑豆：这一顿 6 条\n李四：这一顿 4 条\n黑豆：这一顿 4 条\n李四：这一顿 2 条\n黑豆：这一顿 2 条\n一共有 24 条",
+      "stdin": "3\n6\n4\n2\n",
+      "explanation": "本题的关节就是「**共用**」两个字。\n\n**一、那一格写在类定义里。** `static int total = 0;` 与其他格子排在一起 —— 前面那个 `static` 是宣告「整张类定义共用一份」，后面 `= 0` 是它起步的数。跟别的语言不一样的地方顺带记一句：Java 的起步的数**就写在类定义里这一行**，不用在类定义外面再补一行。\n\n**二、两个对象改的是同一格。** `eat` 里那句 `total = total + fish;` 里没有 `this.` —— 因为 `total` 压根不是 `this` 的东西。两个对象各调用各的 `eat`，可加的是**同一格**：所以最后那句「一共有」才会是两个对象的总和。\n\n**三、念它要挂类定义名。** 我们最后写的是 `Cat.total`，不是 `a.total`。两种写法的确是同一格（你真写 `a.total` 编译器也放行），可读代码的人会以为「这是 `a` 自己那份」—— 共用的东西一律念全名，这条规矩能省下很多想不明白的工夫。\n\n**四、格子是两处一起改的。** 招牌上那样写，状态里也就那样碰：`total = total + fish;` 每调用一次加一次，记的是**从开机到现在所有对象处理过的总数**。要是我们把它写成 `total = fish;`，那这一格就只剩最后一次的数了 —— 共用的格子也是这样「一改全改」的。",
+      "templateId": "java-s2-pond-tally",
+      "params": {
+        "cat": "李四",
+        "cat2": "黑豆",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "b89f6e370581fc15"
+      }
+    },
+    {
+      "id": "bank-java-s2-shared-counter-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "这回我们要数的是「**一共初始化过几个对象**」—— 这个数不属于任何一个对象，得开一格**整张类定义共用**的。\n\n要画的东西：\n\n- 类定义 `Cat`：一格共用的计数格（前面加 `static`，起步的数 `0` 就写在类定义里那一行），一盒自己名字的家当；初始化那一手里把名字记下来，**再在那一格共用的上`+ 1`**。\n\n`main` 里这么走：读一个数 `n`（要创建几个），按编号生 `n` 只，**名字的规矩是「`张三` 后面跟上编号」**（第一个叫 `张三1`，第二只叫 `张三2`，一路数下去）—— 我们用数组把它们装起来。\n\n生完之后印两行：\n\n1. **`一共初始化了 ` + 那一格共用的 + ` 只`** —— 念它要挂类定义名；\n2. **`第一个叫 ` + 第一个的名字** —— 从那一排数组元素里按编号取第一个。\n\n比如程序的输入是\n\n5\n\n程序就要返回\n\n一共初始化了 5 只\n第一个叫 张三1\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static int count = 0;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n        count = count + 1;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat[] cats = new Cat[n];\n        for (int i = 0; i < n; i++) {\n            cats[i] = new Cat(\"张三\" + (i + 1));\n        }\n        System.out.println(\"一共初始化了 \" + Cat.count + \" 只\");\n        System.out.println(\"第一个叫 \" + cats[0].name);\n    }\n}\n",
+      "expectedOutput": "一共初始化了 3 只\n第一个叫 张三1",
+      "stdin": "3\n",
+      "explanation": "本题练的是「**这个数记在哪个对象头上都不对**」这件事。\n\n**一、为什么不能记在某个对象身上。** 要是把计数写在每个对象自己那一格里，每创建一个新对象，它那一格都从 `0` 起步 —— 数出来的永远是 `1`。这个数**不属于任何一个对象**，它属于整张类定义：所以它前面加 `static`，全院子一共就这一格。\n\n**二、谁去加一。** 加的那一手在**初始化那一手**里：`count = count + 1;`。每创建一个对象走一遍，走 `n` 遍就是 `n` —— 这跟「几个对象初始化过」正好对上。\n\n**三、念法。** 印的时候我们写 `Cat.count`：挂类定义名，读代码的人一眼就知道「这不是某个对象的一格，是全院共用的那格」。同理，那一格如果拿某个对象去念（`a.count`），编译器也认，可它印出来还是**全体共用的**那个数，只会让人误会。\n\n**四、它是盖房子式的累加。** `count = count + 1;` 是「在原来那个数上再添一」，不是「把它改成 1」—— 这两句看着像，结果差得远：改成一那种写法，创建一百只也只数得出 `1`。共用的格子最怕这一手，因为一处写错，全院子的数全跟着错。",
+      "templateId": "java-s2-shared-counter",
+      "params": {
+        "cat": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "26720d6640ce3192"
+      }
+    },
+    {
+      "id": "bank-java-s2-shared-counter-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "这回我们要数的是「**一共初始化过几个对象**」—— 这个数不属于任何一个对象，得开一格**整张类定义共用**的。\n\n要画的东西：\n\n- 类定义 `Cat`：一格共用的计数格（前面加 `static`，起步的数 `0` 就写在类定义里那一行），一盒自己名字的家当；初始化那一手里把名字记下来，**再在那一格共用的上`+ 1`**。\n\n`main` 里这么走：读一个数 `n`（要创建几个），按编号生 `n` 只，**名字的规矩是「`李四` 后面跟上编号」**（第一个叫 `李四1`，第二只叫 `李四2`，一路数下去）—— 我们用数组把它们装起来。\n\n生完之后印两行：\n\n1. **`一共初始化了 ` + 那一格共用的 + ` 只`** —— 念它要挂类定义名；\n2. **`第一个叫 ` + 第一个的名字** —— 从那一排数组元素里按编号取第一个。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n一共初始化了 4 只\n第一个叫 李四1\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Cat {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    static int count = 0;\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n        count = count + 1;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Cat[] cats = new Cat[n];\n        for (int i = 0; i < n; i++) {\n            cats[i] = new Cat(\"李四\" + (i + 1));\n        }\n        System.out.println(\"一共初始化了 \" + Cat.count + \" 只\");\n        System.out.println(\"第一个叫 \" + cats[0].name);\n    }\n}\n",
+      "expectedOutput": "一共初始化了 2 只\n第一个叫 李四1",
+      "stdin": "2\n",
+      "explanation": "本题练的是「**这个数记在哪个对象头上都不对**」这件事。\n\n**一、为什么不能记在某个对象身上。** 要是把计数写在每个对象自己那一格里，每创建一个新对象，它那一格都从 `0` 起步 —— 数出来的永远是 `1`。这个数**不属于任何一个对象**，它属于整张类定义：所以它前面加 `static`，全院子一共就这一格。\n\n**二、谁去加一。** 加的那一手在**初始化那一手**里：`count = count + 1;`。每创建一个对象走一遍，走 `n` 遍就是 `n` —— 这跟「几个对象初始化过」正好对上。\n\n**三、念法。** 印的时候我们写 `Cat.count`：挂类定义名，读代码的人一眼就知道「这不是某个对象的一格，是全院共用的那格」。同理，那一格如果拿某个对象去念（`a.count`），编译器也认，可它印出来还是**全体共用的**那个数，只会让人误会。\n\n**四、它是盖房子式的累加。** `count = count + 1;` 是「在原来那个数上再添一」，不是「把它改成 1」—— 这两句看着像，结果差得远：改成一那种写法，创建一百只也只数得出 `1`。共用的格子最怕这一手，因为一处写错，全院子的数全跟着错。",
+      "templateId": "java-s2-shared-counter",
+      "params": {
+        "cat": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "93d9865b3895c6c0"
+      }
+    },
+    {
+      "id": "bank-java-s2-static-touches-own-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们想让 `Cat` 这张类定义也会报自己的名号 —— 就把那一手挂到了类定义上。可编译器把变量拍下来了。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n我是 张三，输出结果是 嘀嘀\n```\n\n对象的家当那两行我们一个字都不想动，问题出在**挂到类定义上那一手**。",
+      "brokenCode": "class Cat {\n    String name;\n    String cry;\n\n    Cat(String name, String cry) {\n        this.name = name;\n        this.cry = cry;\n    }\n\n    static String whoAmI() {\n        return \"我是 \" + name + \"，输出结果是 \" + cry;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat(\"张三\", \"嘀嘀\");\n        System.out.println(Cat.whoAmI());\n    }\n}\n",
+      "referenceFix": "class Cat {\n    String name;\n    String cry;\n\n    Cat(String name, String cry) {\n        this.name = name;\n        this.cry = cry;\n    }\n\n    static String whoAmI(String name, String cry) {\n        return \"我是 \" + name + \"，输出结果是 \" + cry;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat(\"张三\", \"嘀嘀\");\n        System.out.println(Cat.whoAmI(a.name, a.cry));\n    }\n}\n",
+      "expectedOutput": "我是 张三，输出结果是 嘀嘀",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`non-static variable name cannot be referenced from a static context`** —— 「`name` 是每个对象自己的一份，可你现在站的是 `static` 方法，称呼它的时候压根没有对象站在旁边，你要用的是哪个对象的 `name`？」\n\n这句话要念两遍才够味：**问题不是名字写错了，是位置站错了。** `whoAmI` 前面的 `static` 把它挂到类定义上；挂在类定义上的方法，称呼它的时候**没有哪个对象**在场 —— 那它嘴里那些「每个对象自己才有一份」的格子（`name`、`cry`）就全成了没着落的话。改完 `name` 还会轮到 `cry`，两个都得安排。\n\n两条路都走得通：\n\n1. **把要用的东西递进去**（我们这版）：`whoAmI(String name, String cry)` —— 方法里不碰任何人的格子，谁调用谁把值交到手上。引用的时候写 `Cat.whoAmI(a.name, a.cry);`：对象照样生，只是它的格子**被递了过去**。\n2. **干脆别挂到类定义上**：把 `static` 去掉，它就成了每个对象自己的一手，拿对象去调用 `a.whoAmI()`。\n\n头一条路是本课的重点：**`static` 方法里，共用的格子随便碰，每个对象自己的格子一个都碰不得** —— 真要用，只能等别人递进来。",
+      "templateId": "java-s2-static-touches-own",
+      "params": {
+        "cat": "张三",
+        "cry": "嘀嘀"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "3832c71c22ca2d14"
+      }
+    },
+    {
+      "id": "bank-java-s2-static-touches-own-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们想让 `Cat` 这张类定义也会报自己的名号 —— 就把那一手挂到了类定义上。可编译器把变量拍下来了。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n我是 李四，输出结果是 哔啵\n```\n\n对象的家当那两行我们一个字都不想动，问题出在**挂到类定义上那一手**。",
+      "brokenCode": "class Cat {\n    String name;\n    String cry;\n\n    Cat(String name, String cry) {\n        this.name = name;\n        this.cry = cry;\n    }\n\n    static String whoAmI() {\n        return \"我是 \" + name + \"，输出结果是 \" + cry;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat(\"李四\", \"哔啵\");\n        System.out.println(Cat.whoAmI());\n    }\n}\n",
+      "referenceFix": "class Cat {\n    String name;\n    String cry;\n\n    Cat(String name, String cry) {\n        this.name = name;\n        this.cry = cry;\n    }\n\n    static String whoAmI(String name, String cry) {\n        return \"我是 \" + name + \"，输出结果是 \" + cry;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat(\"李四\", \"哔啵\");\n        System.out.println(Cat.whoAmI(a.name, a.cry));\n    }\n}\n",
+      "expectedOutput": "我是 李四，输出结果是 哔啵",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`non-static variable name cannot be referenced from a static context`** —— 「`name` 是每个对象自己的一份，可你现在站的是 `static` 方法，称呼它的时候压根没有对象站在旁边，你要用的是哪个对象的 `name`？」\n\n这句话要念两遍才够味：**问题不是名字写错了，是位置站错了。** `whoAmI` 前面的 `static` 把它挂到类定义上；挂在类定义上的方法，称呼它的时候**没有哪个对象**在场 —— 那它嘴里那些「每个对象自己才有一份」的格子（`name`、`cry`）就全成了没着落的话。改完 `name` 还会轮到 `cry`，两个都得安排。\n\n两条路都走得通：\n\n1. **把要用的东西递进去**（我们这版）：`whoAmI(String name, String cry)` —— 方法里不碰任何人的格子，谁调用谁把值交到手上。引用的时候写 `Cat.whoAmI(a.name, a.cry);`：对象照样生，只是它的格子**被递了过去**。\n2. **干脆别挂到类定义上**：把 `static` 去掉，它就成了每个对象自己的一手，拿对象去调用 `a.whoAmI()`。\n\n头一条路是本课的重点：**`static` 方法里，共用的格子随便碰，每个对象自己的格子一个都碰不得** —— 真要用，只能等别人递进来。",
+      "templateId": "java-s2-static-touches-own",
+      "params": {
+        "cat": "李四",
+        "cry": "哔啵"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.536Z",
+        "hash": "918284c437a8edd3"
+      }
+    }
+  ]
+}

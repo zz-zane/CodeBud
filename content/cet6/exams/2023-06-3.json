@@ -1,0 +1,2277 @@
+{
+  "id": "2023-06-3",
+  "title": "2023年06月第3套",
+  "year": 2023,
+  "month": 6,
+  "set": 3,
+  "status": "partial",
+  "issues": [
+    "听力与第2套共用音频（见听力说明），已准确关联共用资源。",
+    "严格质检：所指向的共用听力仍有缺失或待核实内容；匹配段落标签或答案待核查。",
+    "翻译题干已据原卷文字层补回（2026-11-08）。",
+    "写作题干：已对照原卷页面图像核对（2026-11-08）。",
+    "阅读：长篇阅读匹配语句与仔细阅读题干/选项已对照原卷重新录入（此前缺失或与原卷不符）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "标准答案按解析册与原卷修正（2026-11-09）：Q31 A→C、Q42 O→C；原值存于 answerOriginal。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "1UCKXfCjByO9-6oyIhSDf1ZcjlzQPhOPM",
+      "title": "听力说明. txt",
+      "url": "https://drive. google. com/file/d/1UCKXfCjByO9-6oyIhSDf1ZcjlzQPhOPM/view? usp=drivesdk"
+    },
+    {
+      "id": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+      "title": "2023.06六级真题第3套详解. pdf",
+      "url": "https://drive. google. com/file/d/1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK/view? usp=drivesdk"
+    },
+    {
+      "id": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+      "title": "2023.06六级真题第3套. pdf",
+      "url": "https://drive. google. com/file/d/1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j/view? usp=drivesdk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “It is widely accepted that an important goal of education is to help students learn how to learn.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-prompt-block",
+          "title": "写作题目要求",
+          "text": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “It is widely accepted that an important goal of education is to help students learn how to learn.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-06-3-writing",
+          "number": 0,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “It is widely accepted that an important goal of education is to help students learn how to learn.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "blockId": "writing-prompt-block",
+          "options": [],
+          "answer": "e importance of Learning How to Learn\n【 1 】 It is widely accepted that an important goal of\neducation is to help students learn how to learn. 【 2 】 Learning\nhow to learn IS a skill that can lmprove our learning abilities\nand outcomes and apply the best methods for our goals.\n【 3 】 One key benefit of learning how to learn for students\nis that it can help them master tough subjects and achieve their\nacadenuc goals. By learning how to learn, students can\nimprove their comprehension and application Of new\ninformation. 【 4 】 Furthermore, cultivating learmng skills\nallows for continuous personal and professional growth. By\nconstantly honing our learmng abilities. we can adapt to new\nchallenges and opportunities as they arise. 【 5 】 Besides. learning hOW to learn helps foster a sense Of resilience.. Mhen\nwe encounter setbacks or obstacles. we are better able to\npersevere and find alternative ways to reach our goals.\n【 6 】 In conclusion. learning hOW to learn IS an essential\nskill in today's fast-paced world. By developing our own\nlearmng abilities and adopting effective strategies. we can\ncontinue to grow. adapt. and thrive throughout our lives.\n【 3 】 【 4 】 【 5 】 分别使用 “ One key benefit of. Furthermore, 一 ” 和 \"Besides. 一. ” 貝. 体阐述学会如何学习能帮助学生实现学术目标. 促进个人和职业的持续成长. 且有助于培养适应力 。\nPart\nSection A\nReading Comprehension\nWhen They. re Being Jerks ” ( 《 人们犯浑时不自知 》 ) 的文章 。\naccurateo\nD)",
+          "explanation": "【审题思路】\n\n\n【全文翻译】\n\n\n【点评与要点】\n第 1 段引出话题: 人们普遍认为教育的一个重要目标是帮助学生学: 会如何学习。\n第 2 段具体阐述学会如何学习能帮助学生实现学术目标，促进个人: 和职业的持续成长，且有助于培养适应力第 3 段总结全文，重申观点。\n精彩点评\n【1】引出话题: 人们普遍认为教育的一个重要目标是帮助学生学会如何学习。\n【2】进一步指出学会如何学习是一种对我们很有帮助的技能。\n【6】用 \"ln conclusion..”总结全文，再次强调在当今快节奏的世界里，学会如何学习是一项基本技能。\n话题词汇: comprehension 理解\nretention 亻呆留\nadapt to 适，应\napplication 应用\nhone 磨炼\nfast-paced 快节奏的\nresilience 适应力\nsetback 挫折，阻碍\npersevere 坚持不懈\nobstacle 障碍，阻碍\n【文章来源】本文选自 2018 年 9 月 14 日刊登在石 & ( 《生活科学》 ) 上一篇标题为“Pe。 ple Don. t Know\n【结构框图】\n本文主要介绍了一项关于人对自身某一时刻即时行为了解程度的研究。\n【词性分析】\n: 第 1 段介绍了这一研究的创新点并详细描述了研究人员是如何收集\n《数据的。\n0. 第 2 段描述了实验员对数据进行的分析处理过程以及研究结果。\n名词: 0 assessment 评估，评价； E) cues 提示；暗示； G) discrepancy 差异，不符； I) probes 详尽调查；探针；\n宇宙探测器； J) random 随意，随机； K) recall 回想，回忆；记忆； N) symptoms ( 医 ) 症状； ( 大问题的 ) 迹象，征兆，征候动词: A) activated 使激活；使活动起来； B) articulates 明确表达，口齿清楚地说； F) deny 否认，拒绝承认；\nI) probes 调查；探究；探测； K) recall 回想，回忆； M) saturated 使湿透；使充满；使 ( 化学溶液 ) 饱和；\nO) terminate 使终止，使结束形容词: A) activated 活性化的；活泼的； D) consecutive 连续的，不间断的； J) random 任意的，随机的；\nM) saturated 湿透的；饱和的副词: H) probably 大概，或许； L) relatively 相对地，相当地答案详解\n26. 【考点】副词辨析题。\nL) 【语法判断】空格所在句中. people 作主语. are 为系动词. accurate judges of only some of their\nbehaviors 作表语，句子成分完整。而空格后面\naccurate 为形容词，因此空格处应填人副词，修饰\n【语义判断】空格前一句提到，你可能不像你认为的那么了解自己，说明人们对于自己行为的判断并不总是准确的，即对一些行为的判断可能并不准确。而空格处填人的词用于修饰后面的形容词\naccurate\" 准确的”. 因此，空格所在句表示人们只对自己的部分行为有相对准确的判断。由此确定\nL) relatively 为答案。\n27. 【考点】动词辨析题。\nI) 【语法判断】空格前面为名词短语 new study. 分析句子成分可知. this new study 在句中作主语，而空格后为 how 引导的宾语从句，句中缺少谓语，因此空格处应填人动词。\n【语义判断】空格所在句中前半句为 while 引导的让步状语从句，句意为“虽然之前大多数关于人们对自己了解程度的研究都是针对长期性格特征\n。而空格处的主句在介绍这项新研究，此处是指这项新研究的具体内容，空格应填人表示\n“探究”的词。由此确定 I) pro 沅 s 为答案。\n28. 【考点】动词辨析题。\nA) 【语法判断】空格位于 that 引导的定语从句中，用于修饰前面的 audio recorderso 且此处 that 为关系代词，指代 audio recorders. 在从句中作主语，副词 automatically 可用于修饰动词，副词，形容词，可知从句中缺少谓语动词，因此空格处应当填动词。\n【语义判断】空格前的主句意为“研究人员要求参与者佩戴音频录音机”. 定语从句补充说明音频录音机的特性。由空格前 automatically\" 自动地”以及空格后“每 9. 5 分钟”可以判断，此处指音频录音机每 9. 5 分钟自动激活。由此确定 A)\nactivated 为答案。\n29. 【考点】动词辨析题。\nK) 【语法判断】空格前为 askmg them to. 说明此处为\nask sb. to do sth. 结构，因此空格处应当填动词原形。\n【语义判断】根据前文可知，这项研究想要调查人们对自己每时每刻行为的了解程度，空格处前一句告诉我们，研究者收集了参与者早上 7 点到凌晨 2 点之间每 9. 5 分钟的 30 秒录音数据，结合这两点信息可知研究者让参与者填写的调查内容应当是回忆自己的行为。由此确定 K) recall 为答案。\n30. 【考点】形容词辨析题。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2023-06-2",
+      "sharedWithTitle": "2023年06月第2套",
+      "sharedNote": "本套听力与 2023年06月第2套 共用，题目、解析和听力材料集中在 2023-06-2 练习；本套不再重复展示。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空短文",
+          "text": "You might not know yourself as well as you think, According to a new study, people are __(26)__ accurate Judges of only some of their behaviors. While most preuous studies on how well people know themselves have been done on long-term personality traits, this new study __(27)__ how well people understand how they are acting from one moment to the next. Researchers asked participants to wear audio recorders that automatically __(28)__ every 9. 5 minutes between 7 a'm. and 2 a'm. to record\n30 seconds of audio. These participants were then emailed surveys four times a day asking them to __(29)__ how outgoing, agreeable, or conscientious they were dunng a particular hour of the day. The study used data from 248 participants, a 11 Of whom answered questions about their behavior for two __(30)__ weeks and wore the audio device for one of those weeks.\nSix laboratory assistants rated each participant's audio clips to see how their observations compared with people's __(31)__ Of themselves. The six assistants were generally in agreement with one another about how the people they were observing acted. Further, participants ratings of their own behaviors agreed with observers, for how outgoing and how conscientious they were being. But the agreement between participants and outside observers was much smaller for agreeableness. Some of this __(32)__ could be because the observers used only audio clips, and could not read __(33)__ like body language, but there are __(34)__ other explanations, as should able to hear when a participant is being kind versus being rude. The weak agreement between how participants thought they were acting and what observers heard could because people would rather __(35)__ rude behavior.",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读短文",
+          "text": "Why we need tiny colleges\n\n[A] We re expenencing the rebirth of smallness. Farmers markets, tiny homes, and brew pubs all exemplify our love of smallness. SO do charter schools, coffee shops, and local bookstores. Small is often (but not always) more affordable, healthier, and sustainable, but its finest characteristic, the one that turns charm into love, is that going small allows us to be more fully who we are\n\n[B] In higher education the trend is mostly in the opposite direction: Universities with 20, 000 or 30, 000 students are considered ' mid-sized ”, The nation's largest university, Arizona State University, has 80, 000 students on campus and aims to enroll another 100, 000 students online. At the Other end of the spectrum is a handful of colleges that have fewer than a hundred students on campus and no online courses: colleges such as Sterling College, Thomas More College of Liberal Arts, and Deep Sprmgs College. These colleges are SO small that they can only be called \"tiny.\n\n[C] Tiny colleges focus not just on a young person's intellect, but on the young person as a whole. Equally important, tiny colleges ask, HOW can education contribute to human flourishing and the well-being of the world? ” And they shape a college experience to address that question. They replace concerns about institutional growth with attention to the growth of students as fully developed participants in communities.\n\n[D] I've had the privilege of teaching at three different institutions of higher learning during my career—a small liberal arts college and two mid-sized public universities. I've also been profoundly disappointed in each of these institutions, and in many of my colleagues, especially when it comes to helping students and preparing them for the many responsibilities of adulthood. Admimstrators focus on the business of running a university, and most faculty focus on their scholarship and teaching their discipline. Little deliberate attention is given to how students mature as individuals and social beings,\n\n[E] Having Just retired from teaching at a public university, I m now returning to my hometown Of Flagstaff, Arizona, to establish a tiny college—Flagstaff College. I, m convinced there's a need for another type of education, one devoted to helping students come into their own and into this beautiful and troubled world. Young people need an education that will provide them with meaning, hope, courage, and passion, as well as information and skills. Large institutions, I believe, are particularly ill-suited to this type of education.\n\n[F] There's no \"best of ” list when it comes to tiny colleges, at least not yet. But around the country people are creating new colleges that provide an alternative to small liberal arts colleges, large public universities, and education.\n\n[G] With only 26 students, Deep Springs is the smallest college in the country and, quite likely, the most 00 声 c (非典型的). Located on a working cattle ranch on the CaIifornia-Nevada border, Deep Springs is a private, resldential, two-year college for men, committed to educating students for \"a life of service to humanity. ” Founded by the electricity tycoon (大亨) L. L. Nunn in 1917, Deep Sprmgs curriculum ” revolves around academics, labor, and self-governance. In addition to their courses, students are charged with running the 155-acre ranch and overseeing the functioning of the college. Students chair both the admissions and the curriculum committees.\n\n[H] \"Living in close community with one's teachers and fellow students, and being forced to take on adult responsibilities, makes for ones growth as a person, says William Hunt, who graduated last year. To exist for very long In a community like that, you have to get over the question of whether you re sufficiently talented or principled and get started worrying about how you can stretch yourself and your peers, how much you can manage to learn with them.\n\n[I] Sterling College, in Craftsbury Common, Vermont, is also very small—fewer than 100 students, Unlike Deep Sprmgs, Sterling focuses its curriculum on environmental and social justice issues, but like Deep Springs it places a high value on personal responsibility and manual labor. According to its catalog, a college education at Sterling combines rigorous academics, roll-up-your-sleeves challenges, and good old hard work. ,\n\n[J] The average tuition at small liberal-arts college is $ 30, 000 to $ 40, 000 a year, not including the cost of living on campus, as compared to $ 8, 000 to $ 10, 000 a year for tuition alone at a public university. Of the tiny colleges, only Deep Springs doesn't charge tuition or room and board; students pay only for books and the cost of traveling to and from college. If tiny schools are to become a player on the higher education scene, they WIII need to find a way to truly affordable.\n\n[K] DOing SO may not that difficult SO long as they do not pattern themselves too closely on existing norms. We've come to believe that a good college should have many academic programs and excellent facilities, 九 (豪华的) dorms, an array of athletic programs, and a world-class student activity center. Imagine a good college without a climbing wall! We also have accepted the idea that college presidents, and their many vice-presidents, should be paid like their counterparts in the business world and that higher education requrres an elaborate, up-to-date technology infrastructure, AII of this drives up the cost of education.\n\n[L] The \"trick ” to making tiny colleges affordable, if that's the right word, is simplicity. At its core, education is a human-to-human interaction. Reflecting on his own college education, President Garfield once commented that an ideal college would consist of nothing more than the legendary teacher Mark Hopkins on one end of a log and a student on the other. The economics of a tiny college, in other words, might similar to that of a tiny house. Because it is small, a tiny house costs less to build and less to furnish, insure, and maintain, But the economic benefits of a small house don't end there. Tiny homes discourage homeowners from buying stuff that they really don't need, because there's no place to put it.\n\n[M] I'm a late convert to the idea of tiny colleges, and I fully understand the need for many diverse types of educational institutions. Academic research and job training are rmportant, but tiny colleges aren't suited for either. The educational needs of a complex society are themselves complex, and no Single model can meet all of these needs. But I'm now convinced there's an educational need that's now going almost completely unmet: namely, the need to help young people transition into adulthood. Tiny colleges can do this better than any other type of educational institution.\n\n[N] The ultimate justification for a tiny college is the conviction that each of us comes into our full humanity by close interaction with those who know and care for us, and that one of the basic purposes of higher education is social. Although we lip service to the idea that a college education will make us better people, when all's said and done, we think of higher education primarily in econonuc terms. We've come to think of higher education as a means to make a living rather than make a life. We've al come to see higher education as a private good rather than a public one. Tiny colleges are not the answer to all of our educational requirements, but they're an answer to one of our most basic educational necessities: the need to produce thoughtful, engaged, and compassionate human beings.",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "If you're someone who has turned to snackmg on junk food more in the pandemic (大流行病). you re not alone. lnvestlgative reporter MichaeI Moss says processed food is engineered to hook you. not unlike alcohol. cigarettes. or other harmful substances. His 2013 book. Sugar Fat. explored food companies aggressive marketing of those products and their impact on our health. In his new book. Hooked. MOSS updates the food gants. efforts to keep eating what they serve. and how they. re responding to complaints from consumers and health advocates.\nProcessed food is mexpensive. it. s legal. and it. s everywhere. Companies. advertising is cueing us to remember those products and we want those products constantly. SO the food environment is one of those key things that makes food even more problematic for SO many people. Memory. 倜 ／ g (怀旧) in particular. plays a big role in the foods we crave. Soda companies discovered that if they put a soda in the hands of a child when they. re at a ball game with their parents. that soda will forever be associated with that joyous moment. Later in life. when that child wants to expenence a joyous moment. they. re going to think of soda. Many people seek comfort in the snacks they remember from childhood.\nMOSS examines the way companies capitalize on our memones. cravmgs and brmn chemistry to keep us snacking.\nOne of the reasons I came to think that some of these food products are even more powerful. more troublesome than drugs can is memory. What we eat is all about memory. And we begin forming memories for food at a really early age. And we keep those memories for a lifetime. Knowing this. the food industry spends lots of time trying to shape the memories that we have for their products. One of the features of addiction that scientists studying drug addiction discovered back in the 1990s was that the faster a substance hits the brain. the more apt we are as a result to act lmpulsively. There's nothing faster than food in its ability to hit the brain. For Moss. this puts the notion of \"fast food ” in an entirely new light as this isn't limited to fast food\n\nchains—almost 90 ％ of food products in grocery stores are processed foods Everything in the industry is about speed. from manufacturing to packayng.\nOverall. Moss outlines the industry's dependence on making their products inexpensive. super delicious. and incredibly convenient for consumers. Now that more and more people care about what they put rn their bodies and are wanting to eat healthier. these companies are finding it really difficult to meet that new demand because of their own addiction to making these convenience foods.",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "Chimpanzees (黑猩猩). human beings' closest animal relatives. share up to 98 ％ of our genes. Yet humans and chimpanzees lead very different lives. Fewer than 300. 000 wild chimpanzees live in a few forested corners of Africa today. while humans have colonized every corner of the globe. At more than 7 billion. human population dwarfs that of nearly all other mammals—despite our physical weaknesses.\n. Mhat could account for our species incredible evolutionary successes?\nOne obvious answer is our big brains. It could be that our raw intelligence gave us an unprecedented ability to think outside the box. innovating solutions to thorny problems as people migrated across the globe.\nBut a growing number of cognitive scientists and anthropologists (人类学家) are rejecting that explanation. They think that. rather than making our livmg as mnovators. we survive and thrive precisely because we don't think for ourselves. Instead. people cope with challengmg climates and ecological contexts by carefully copyrng others. In a famous study. psychologists Victoria Horner and Andrew. Mhiten showed two groups of test subjects—\nchildren and chrmpanzees—a mechanical box with a treat inside. In one condition. the 1 刃 x was opaque. while in the other it was transparent. The experimenters demonstrated how to open the box to retrieve the treat. but they also included the irrelevant step of tapping on the box with a stick.\nOddIy. the children carefully copied all the steps to open the x. even when they could see that the stick had no practical effect. That is. they copied irrationally: instead of doing only what was necessary to get their reward. children slaushly imitated every action they'd witnessed. Of course. that study only included three- and four-year-olds. But additional research has shown that older\n\nchildren and adults are even more likely to mindlessly copy others. actions. and infants are less likely to over- lmitate—that is. to precisely COPY even lmpractical actions.\nBy contrast. chimpanzees in the study only over-lmitated in the opaque condition. In the transparent condition—where they saw that the stick was mechanically useless—they ignored that step entirely. Other research has since supported these findings. When it comes to copying. chrmpanzees are more rational than human children or adults.\nWhere does the seenungly irrational human preference for over-imitation come from? Anthropologist\nJoseph Henrich points out that people around the world rely on technologres that are often SO complex that no one can learn them rationally. Instead. people must learn them step by step. trusting in the wisdom of more experienced elders and peers.\nSo the next tlme you hear someone arguing passlonately that everyone should embrace nonconformity and avoid imitatmg others. you might laugh a little bit. We're not chimpanzees. after all.",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-06-3-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "选词填空第 26 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "L",
+          "explanation": "【考点】副词辨析题。\nL) 【语法判断】空格所在句中. people 作主语. are 为系动词. accurate judges of only some of their\nbehaviors 作表语，句子成分完整。而空格后面\naccurate 为形容词，因此空格处应填人副词，修饰\naccurateo\n【语义判断】空格前一句提到，你可能不像你认为的那么了解自己，说明人们对于自己行为的判断并不总是准确的，即对一些行为的判断可能并不准确。而空格处填人的词用于修饰后面的形容词\naccurate\" 准确的”. 因此，空格所在句表示人们只对自己的部分行为有相对准确的判断。由此确定\nL) relatively 为答案。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "选词填空第 27 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【考点】动词辨析题。\nI) 【语法判断】空格前面为名词短语 new study. 分析句子成分可知. this new study 在句中作主语，而空格后为 how 引导的宾语从句，句中缺少谓语，因此空格处应填人动词。\n【语义判断】空格所在句中前半句为 while 引导的让步状语从句，句意为“虽然之前大多数关于人们对自己了解程度的研究都是针对长期性格特征\n。而空格处的主句在介绍这项新研究，此处是指这项新研究的具体内容，空格应填人表示\n“探究”的词。由此确定 I) pro 沅 s 为答案。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "选词填空第 28 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【考点】动词辨析题。\nA) 【语法判断】空格位于 that 引导的定语从句中，用于修饰前面的 audio recorderso 且此处 that 为关系代词，指代 audio recorders. 在从句中作主语，副词 automatically 可用于修饰动词，副词，形容词，可知从句中缺少谓语动词，因此空格处应当填动词。\n【语义判断】空格前的主句意为“研究人员要求参与者佩戴音频录音机”. 定语从句补充说明音频录音机的特性。由空格前 automatically\" 自动地”以及空格后“每 9. 5 分钟”可以判断，此处指音频录音机每 9. 5 分钟自动激活。由此确定 A)\nactivated 为答案。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "选词填空第 29 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【考点】动词辨析题。\nK) 【语法判断】空格前为 askmg them to. 说明此处为\nask sb. to do sth. 结构，因此空格处应当填动词原形。\n【语义判断】根据前文可知，这项研究想要调查人们对自己每时每刻行为的了解程度，空格处前一句告诉我们，研究者收集了参与者早上 7 点到凌晨 2 点之间每 9. 5 分钟的 30 秒录音数据，结合这两点信息可知研究者让参与者填写的调查内容应当是回忆自己的行为。由此确定 K) recall 为答案。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "选词填空第 30 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【考点】形容词辨析题。\nD) 【语法判断】空格前为数词 tw。. 其后一般接名词，而空格后已有名词 weeks. 由此可判断空格处应当填形容词修饰 weekso\n【语义判断】空格位于所在句的定语从句中，主句表示这项研究使用的数据来自 248 名参与者，而定语从句用于具体说明这 248 名参与者，对他们加以介绍和限定。根据上下文意思可以推测空格处指这些参与者连续两周回答有关自己行为的问题。由此确定 D) consecutive 为答案。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "选词填空第 31 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【考点】名词辨析题。\n0 【语法判断】空格前为名词所有格 ople. s. 因此空格处应当填名词。\n【语义判断】空格所在句指该研究将六名实验员听音频后的打分与参与者自己的什么进行对比，可以推测是将外人与本人对行为的评价进行对比；同样根据上一段针对研究方法的介绍可知，参与者每天\n\n会被要求回忆自己在某一时刻有多外向，有多讨人喜欢以及有多负责，这些都是参与者对自己的评价和评估，可知空格处应填人与 rated “评价”意义相近的词。由此确定 0 assessment 为答案。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "A"
+        },
+        {
+          "id": "2023-06-3-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "选词填空第 32 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【考点】名词辨析题。\nG) 【语法判断】空格前为 some of this. 后面需要接名词，因此空格处应当填名词。\n【语义判断】空格前 this 指代前文内容，空格前一句告诉我们参与者和外部观察者在有多讨人喜欢方面的一致性低很多；而空格后给出了原因，空格所填词应当是对前一句内容的概括和总结，即两者的结果不一致。由此确定 G) discrepancy 为答案。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "选词填空第 33 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【考点】名词辨析题。\nE) 【语法判断】空格前为动词 read. 作为及物动词其后可跟名词或宾语从句作宾语，作为不及物动词其后可跟副词或介词；而空格后 like 表示举例，因此空格处应当与 body language 为同一词性，故空格处应当填名词。\n【语义判断】空格所在句说明了观察者只能通过音频片段来评判参与者的行为，说明他们无法通过其他渠道或提示来获知参与者的行为；且所举例子 body language\" 身体语言”是一种通过无声方式传达情感和意图的非言语表达，能够提示参与者的情感。结合句意及选项可确定 E) cues 为答案。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "选词填空第 34 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【考点】副词辨析题。\nH) 【语法判断】空格所在句为 there be 句型，而空格后为名词，句子成分完整，可推测空格处应填人副词修饰句子。\n【语义判断】空格所在句 but 之前提出了一种可能导致参与者和外部观察者在判断参与者有多讨人喜欢方面产生差异的原因. but 表转折，指出还有其他原因。但由于这些都是研究者的推测，并不确定哪一个才是真正的原因。由此确定\nH) probably 为答案。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "选词填空第 35 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "activated"
+            },
+            {
+              "key": "B",
+              "text": "articulates"
+            },
+            {
+              "key": "C",
+              "text": "assessment"
+            },
+            {
+              "key": "D",
+              "text": "consecutive"
+            },
+            {
+              "key": "E",
+              "text": "cues"
+            },
+            {
+              "key": "F",
+              "text": "deny"
+            },
+            {
+              "key": "G",
+              "text": "discrepancy"
+            },
+            {
+              "key": "H",
+              "text": "probably"
+            },
+            {
+              "key": "I",
+              "text": "probes"
+            },
+            {
+              "key": "J",
+              "text": "random"
+            },
+            {
+              "key": "K",
+              "text": "recall"
+            },
+            {
+              "key": "L",
+              "text": "relatively"
+            },
+            {
+              "key": "M",
+              "text": "saturated"
+            },
+            {
+              "key": "N",
+              "text": "symptoms"
+            },
+            {
+              "key": "O",
+              "text": "terminate"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【考点】动词辨析题。\n【语法判断】分析句子成分可知，连词 because 引\nF)\n导原因状语从句，该从句缺少谓语动词，且空格前\nwould rather 为助动词，因此空格处应当填人动词原形。\n【语义判断】空格所在句提出了另一种解释参与者和外部观察者在判断参与者有多讨人喜欢方面不一致的原因，结合上下文意思可推测人们往往倾向于否认自己做出了粗鲁行为。由此确定 F )\ndeny 为答案。\n参考译文你可能不像你认为的那么了解自己。根据一项新研究，人们只对自己的部分行为有相对准确的判断。\n虽然之前大多数关于人们对自己了解程度的研究都是针对长期性格特征的，这项新研究调查的则是人们对自己从某一时刻到下一时刻的行为的了解程度。研究人员要求参与者佩戴音频录音机，这些设备在早上 7 点到凌晨 2 点之间每 9. 5 分钟自动激活并记录",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "One tiny American college situated on a cattle farm is devoted to educating students to serve mankind throughout their lives.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【定位】由题干中的 situated on a cattle farm 和\neducating students to serve mankind throughout\ntheir lives 可以定位到文章 G) 段第二句。\nG) 【精析】细节归纳题。 G ) 段第二句提到深泉学院位于加利福尼亚州和内华达州边界的一个养牛牧场，是一所两年制私立寄宿制男子学院，致力于培养学生“终生为人类服务”。题干中 one tiny\nAmerican college situated on a cattle farm 对应原文中的 located on a working cattle ranch；题干中的 devoted to educaung students to serve\nmankind throughout their lives 是对原文中\ncommit",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "Much to the author's disappointment, the three institutions of higher learning where she taught largely ignore students' growth as social beings.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 much to the author. s\ndisappointment 和 ignore students. growth as\nsocial beings 定位到文章 D) 段。\nD) 【精析】同义转述题。 D ) 段提到作者曾在三所不同的高等学府任教，她对这些机构和许多同事深感失望，因为很少有人有意识地关注学生如何成长为个体和社会人。题干中的 much to the\nauthor. s disappointment 是原文中 I. ve also been\nprofoundly disappointed 的同义表达；题干中的\nignore students. growth as social beings 是对原文中 little deliberate attention is gwen to how\nstudents m",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "Tiny colleges must be made affordable in order to play a role in higher education.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【定位】由题干中的 must made affordable 和\nplay a role in higher education 可以定位到文章\nJ ) 段第三句。\nJ) 【精析】同义转述题。 J ) 段第三句指出如果微型学院想要成为高等教育领域的一员，它们就需要找到方法，真正能让学生负担得起。题干中的 must\nmade affordable 对应原文中的 to № truly\naffordable；题干中的 play a role in higher\neducation 是对原文中的 to become a player on the\nhigher education 的同义转述，故答案为 J)O",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "According to a recent graduate from a tiny college, living together with faculty and fellow students is conducive to a student's growth as a person.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【定位】由题干中的 a recent graduate 和 living\ntogether with faculty and fellow students is\nconducive to a student. s growth as a person 可以定位到文章 H ) 段第一句。\nH) 【精析】同义转述题。 H ) 段第一句提到去年毕业的威廉 · 亨特说: “与老师和同学生活在紧密的团体中，承担起成年人的责任，有助于一个人的成长。”题干中的 a recent graduate 对应原文中的\nWiIIiam Hunt. who graduated last year；题干中的\nliving together with faculty and fellow students is\nconducive to a student's growt",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Rather than going small, most American universities are trying to go big.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 most American universities\nare trying to go big 可以定位到文章 B ) 段的第一\nB) 【精析】细节归纳题。 B ) 段第一，二句提到在高等教育中，趋势大多相反: 拥有 2 万或 3 万名学生的大学被认为是“中等规模”。美国最大的大学亚利桑那州立大学有 8 万名在校学生，还计划再招收\n10 万名在线学生。题干中的 rather than going\nsmall 是原文中 the trend is mostly in the opposite\ndirection 的同义表达；题干中的 most American\nuniversities are trying to go big 是对这两句列出的数据的归纳总结，故答案为 B)。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "In a certain tiny college, rigorous academic work and traditional manual labor are integrated.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【定位】由题干中的 rigorous æademic work and\ntraditional manual labor are integrated 定位到文章 I) 段第二，三句。\n【精析】细节归纳题。 I) 段第二，三句提到斯特林学校高度重视个人责任和体力劳动。根据其目录，斯特林学院的教育融“严谨的学术，撸起袖子应对挑战以及努力工作的传统”于一体。题干中的 traditional manual labor 对应原文中的 manual\nlabor；题干中的 rigorous æademic work and\ntraditional manual labor are integrated 是对原文弓 1 combines rigorous academics. roll-up-your-\nsleeves challenges. an",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              4
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "Tiny colleges focus on educating students to become well-rounded citizens instead of seeking their own expansion.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 educating students to become\nwell-rounded citizens 和 seeking their own\nexpansion 定位到文章 0 段最后一句。\nO 【精析】同义转述题。 C ) 段最后一句指出微型学院不再关注机构的发展，而是关注学生作为充分发展的社会参与者的成长。题干中的 instead of\nseeking their own expansion 对应原文中的\ninstitutional growth；题干中的 educating students\nto become well-rounded citizens 对应原文中的\nthe growth of students as fully developed\nparticipants in their communities；题干是对原文中",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "O"
+        },
+        {
+          "id": "2023-06-3-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "The essence of education lies in the interaction between people.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "L",
+          "explanation": "【定位】由题干中的 the essence of education 和\nthe interaction between people 定位到文章 L) 段第二句。\nL) 【精析】同义转述题。 L ) 段第二句提到教育的核心是人与人之间的互动。题干中的 the essence of\neducation 对应原文中的 at its core；题干中的 the\ninteraction between people 对应原文中的 a\nhuman-to-human interaction; 题干是对这句话的同义转述，故答案为 L)。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "After her retirement, the author has decided to set up a tiny college in her hometown.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【定位】由题干中的 retirement 和 set up a tiny\ncollege in her hometown 定位到 E ) 段第一句。\nE) 【精析】同义转述题。 E ) 段第一句指出作者刚从一所公立大学退休，现在回到家乡亚利桑那州的弗拉格斯塔夫，建立一所微型学院一一一弗拉格斯塔夫学院。题干中的 after her retirement 是原文中 having just retired from teaching at a public\nuniversity 的同义表达；题干中的 set up a tiny\ncollege 是原文中 establish a tiny college 的同义表达，故答案为 E)。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Tiny colleges are justified as it is believed that our growth into full humanity comes through interaction with people near and dear to us.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "N",
+          "explanation": "【定位】由题干中的 our growth into full humanity\n和 interaction with people near and dear to us 定位到 N ) 段第一句。\nN) 【精析】同义转述题。 N ) 段第一句提到设立微型学院的最重要的理由是基于这样一种想法: 我们每个人都是通过与那些了解和关心我们的人的密\n\n切互动来充分发挥我们的潜力的。题干中的 tiny\ncolleges are justified 是原文中 the ultlmate\njustification for a tiny college 的同义表达；题干中的 it is believed 是原文中 conviction 的同义表达；题干中的 interaction with people near and\ndear to us 是原文中 close inter",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "In what way does Michael Moss think processed food is comparable to alcohol and cigarettes?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are all addictive."
+            },
+            {
+              "key": "B",
+              "text": "They are all necessary evils."
+            },
+            {
+              "key": "C",
+              "text": "They are all engineered to be enjoyed."
+            },
+            {
+              "key": "D",
+              "text": "They are all in increasingly great demand."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 processed food is comparable\nto alcohol and cigarettes 定位到第一段第二句。\nA) 【精析】事实细节题。第一段第二句指出，加工食品的设计就是为了“吸引”你，就像酒精，香烟或其他有害物质一样。这里 hook 表示吸引，使别人上钩. not unlike 双重否定表示肯定，即这些有害物质都是让人上瘾的，故答案为 A)。\n【避错】选项 B ) “它们都是必要的有害物质”在原文没有对应的信息；选项 C ) 容易误选. processed\nfood is engmeered to hook you 说的是加工食品就像酒精，香烟一样是为了让你上瘾，而不是供人享受的，因此排除 0；选项 D ) 的内容在原文中没有提及，故排除。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What does the author say plays a key role in the foods we crave?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "The food environment."
+            },
+            {
+              "key": "B",
+              "text": "Aggressive marketing."
+            },
+            {
+              "key": "C",
+              "text": "Convenience."
+            },
+            {
+              "key": "D",
+              "text": "Memory."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 plays a key role in the foods\nwe crave 定位到第二段第四句。\nD) 【精析】事实细节题。文章第二段第四句提到，记忆，尤其是怀旧，在我们对食物的渴望中扮演着重要角色。故答案为 D)。\n【避错】第二段第三句提到，吃食物时所处的环境是让食物问题放大的关键因素之一，并非在对食物的渴望中起关键作用的因素，排除选项 A )；积极营销是食品公司采取的措施，食品公司利用的是我们对食物的记忆，排除选项 B)；方便是速食的一个特征，但不是我们渴望食物的关键因素，排除 0 选项。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What do food companies do to capitalize on consumers' association with their food products?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They strive to influence how consumers remember their products."
+            },
+            {
+              "key": "B",
+              "text": "They attempt to use consumers' long-term memories to promote addiction."
+            },
+            {
+              "key": "C",
+              "text": "They try to exploit consumers' memories for their products as early as possible."
+            },
+            {
+              "key": "D",
+              "text": "They endeavor to find what consumers remember about their products."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 association with their food\nproducts 定位到第二段第五句。\nA) 【精析】推理判断题。第二段第五句举例指出，苏打水公司发现，如果他们在孩子和父母一起看球赛的时候，把苏打水放在孩子手里，那苏打水就会永远和那个欢乐的时刻联系在一起。公司把消费者对于欢乐的记忆和食品联系起来，第四段第五句也指出食品工业花了很多时间试图塑造我们对产品的记忆。综合可知，答案为 A)。\n【避错】 B ) 选项将原文所述的“人们对于快乐时刻的记忆”和“人们童年时对食物的记忆”窜改为“长期记忆”；第四段第三句指出我们在很小的时候就开始形成对食物的记忆，这里 early 是指消费者很小的时候，不是指食品公司尽早利用消费者对食物的记忆，排除 C ) 选项；原文中没有寻找消费者",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "How does the food industry operate from manufacturing to packaging, according to Moss?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Placing the idea of fast food in an entirely new light."
+            },
+            {
+              "key": "B",
+              "text": "Setting no limit to the number of fast food chains."
+            },
+            {
+              "key": "C",
+              "text": "Focusing on how quickly the work is done."
+            },
+            {
+              "key": "D",
+              "text": "Prioritizing the quality of their products."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 manufacturing to packaging\n定位到第四段最后一句。\n0 【精析】事实细节题。第四段末句指出，这个行业\n( 即食品行业 ) 的一切都与速度有关，从制造到包装。选项 C ) 符合题意，为本题答案。\n【避错】“快餐概念的全新角度”指“不仅快餐是加工食品，绝大多数包装食品都是”这一新想法，这和食品工业如何运作无关，排除 A)； B ) 选项“不限制快餐连锁店的数量”在原文中没有此类表述，原文 as this isn't limited to fast food chains 中的\nlimited 是“局限”的意思，不是不限制快餐连锁的数量，故排除该项； D ) “优先考虑他们产品的质量”\n和作者想表达的意思相反，食品公司不关注食品是否健康.",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "Why are companies finding it difficult to satisfy consumers' demand for healthier food products?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They think speed of production outweighs consumers' health."
+            },
+            {
+              "key": "B",
+              "text": "They believe their industry would perish without fast foods."
+            },
+            {
+              "key": "C",
+              "text": "They have to strike a balance between taste and nutrition."
+            },
+            {
+              "key": "D",
+              "text": "They are hooked on manufacturing convenience foods."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 finding it difficult to satisfy\n\nconsumers. demand for healthier food products\n定位到全文最后一句。\nD) 【精析】事实细节题。最后一句提到，食品公司发现很难满足消费者的新需求，因为他们自己沉迷于制造这些方便食品。故答案为 D)。\n【避错】食品公司认为生产速度比消费者的健康更重要，这点不是食品公司很难满足消费者对健康食品的需求的原因，排除选项 A)；选项 B) 和选项\n0 在原文中没有相关信息支撑。\n参考译文如果你在疫情期间变得更喜欢吃垃圾食品，那么你并不孤单。 ( 46 ) 调查记者迈克尔 · 莫斯称，加工食品的设计就是为了“吸引 \" 你，就像酒精，香烟或其他有害物质一样。他在 2013 年出版的《盐，糖",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What might explain humans' having the largest population of almost all mammals?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are equipped with raw strength for solving the most challenging problems."
+            },
+            {
+              "key": "B",
+              "text": "They cope with the outside world more effectively than their animal relatives."
+            },
+            {
+              "key": "C",
+              "text": "They possess the most outstanding ability to think."
+            },
+            {
+              "key": "D",
+              "text": "They know how to survive everywhere on earth."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 largest population 首先定位到第一段最后一句。\n0 【精析】事实细节题。定位句提到，人口数量还是超过了 70 亿，令几乎所有其他哺乳动物相形见绌，可知人类的数量是最多的，随后一段对这种进化成功的原因提出问题，而回答这一问题的则是第三段第二句，该句说，进化成功的原因是我们的原始智慧赋予了我们前所未有的创造性思维能力，由此可知，人类之所以数量最多，是因为具有超出其他哺乳动物的思考能力，故答案为 0。\n【避错】选项 A) 与定位句结尾处相悖，该句明确提到人类的体质并不强壮； B ) 是利用第四段末句设置的干扰，根据该句句意“是模仿让人类有效应对外部挑战”. 可知 B ) 并不是人类进化成功的根本原因，而是人类区别于动物的思维特征所带来的结果，故 B ) 答非所问",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What accounts for humans' evolutionary successes according to a growing number of cognitive scientists and anthropologists?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are better at innovating solutions."
+            },
+            {
+              "key": "B",
+              "text": "They thrive through creative strategies."
+            },
+            {
+              "key": "C",
+              "text": "They are naturally adaptive to ecological contexts."
+            },
+            {
+              "key": "D",
+              "text": "They meet challenges by imitating others carefully."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 growing number of cognitive\nscientists and anthropologists 定位到第四段首句。\nD) 【精析】事实细节题。定位句指出，越来越多的认知科学家和人类学家拒绝接受这种传统的解释，而本段第三句则明确提出，人是通过仔细模仿其他人来应对具有挑战性的气候和生态环境的，故答案为 D)。\n\n【避错】第四段第二句驳斥了创造性思维成就人类进化成功的看法，据此可排除选项 A) 和 B)； C ) 项说法在文中完全没有依据，故也排除。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What does the author think is odd about the findings of the study by Victoria Horner and Andrew Whiten?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Children irrationally imitated every action of the experimenters."
+            },
+            {
+              "key": "B",
+              "text": "Chimpanzees could tell the transparent box from the opaque one."
+            },
+            {
+              "key": "C",
+              "text": "Chimpanzees could retrieve the treat more quickly than children did."
+            },
+            {
+              "key": "D",
+              "text": "Children omitted the step of tapping on the box with a stick to open it."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 odd 和人名关键词定位到第\n/ 丶段。\nA) 【精析】事实细节题。定位段提到相关的研究过程，指出在该研究中，孩子们即使能够看出某些步骤没有实际的作用，但他们还是无理性地对实验人员演示的步骤进行模仿，故答案为\n【避错】 B ) 是对第八段相关信息的曲解，原文说的是黑猩猩在盒子透明和不透明两种不同的情况下，会做出不同的模仿举动，而不是他们可以区别不同的盒子，故排除；原文未对黑猩猩和儿童取回零食的速度加以比较，故排除 C )；根据定位段，孩子们模仿每一个实验步骤，包括用棍子敲击盒子，并非“忽略”这一步骤. D ) 与原文相悖。\n54 【定位】由题干中的人名 Joseph Henrich 定位到第十段第二，三句。\nB) 【精析】事实细节题。该段第一句对人类为何会过度",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What is anthropologist Joseph Henrich's explanation for the human preference for copying?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It originates in the rationality of people around the world."
+            },
+            {
+              "key": "B",
+              "text": "It stems from the way people learn complex technologies."
+            },
+            {
+              "key": "C",
+              "text": "It results from people distrusting their own wisdom."
+            },
+            {
+              "key": "D",
+              "text": "It derives from the desire to acquire knowledge step by step."
+            }
+          ],
+          "answer": "B",
+          "explanation": "54. B) 〖精析〗事实细节题。该段第一句对人类为何会过度模仿提出探究，定位句引用人类学家约瑟夫 · 亨里克的观点予以解释，人们无法理性地掌握其所依赖的复杂技术，必须一步一步地向长辈和同龄人学习，即完全模仿他人，可知选项 B ) 是人类无法实现理性模仿的根本原因，故为答案。\n〖避错〗根据定位部分信息，人类信任长辈和同龄人的智慧以及进行模仿都是因为其无法理性地掌握复杂的技术，故 A ) 表达的不是原因，而是表象；根据原文表述，人类信任他人的智慧是事实需要，而非主动质疑自己的智慧，故 C ) 不符合原文； D ) 项信息在原文中并未提及，故排除。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-06-3-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What point does the author want to emphasize when he says \"We're not chimpanzees\"?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is arguable whether everyone should avoid imitation."
+            },
+            {
+              "key": "B",
+              "text": "It is characteristic of human beings to copy others."
+            },
+            {
+              "key": "C",
+              "text": "It is desirable to trust in more knowledgeable peers."
+            },
+            {
+              "key": "D",
+              "text": "It is naïve to laugh at someone embracing nonconformity."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中引用的“We. re not chimpanzees”\n定位到文章最后一段最后一句。\nB) 【精析】推理判断题。要推断作者这句话的言外之意，需结合本段前半部分以及全文。本段第一句说，当你听到有人提出每个人都应该接受非常规思维，避免模仿别人时，你可以笑一笑，结合前文内容，模仿而非创新思维恰恰是人类成功的关键，而且是区别于诸如黑猩猩这类动物近亲的特征，由此可以推断，作者在此强调的是模仿才是人类的重要特征，故答案为 B)。\n【避错】是对最后一段首句的曲解，原句的意思是有人会争论，认为人们应该避免模仿，故排除；虽然上一段说到人类之所以模仿是因为其必须信任他们的智慧，但文章谈论的核心仍是模仿，而非对其做出的解释. c ) 虽有干扰性，但未直击主题，故排除； D ) 是根据",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "近年来，中国城市加快发展，城市人居环境得到显著改善。许多城市努力探索中国特色的城市高质量发展之路，城市功能不断完善，治理水平明显提高。中国持续开展城市生态修复和功能修补，全面实施城镇老旧小区改造，大力推进城市园林绿化，消除污染；同时大力推进城市基础设施体系化建设，开展房屋建筑和市政设施普查以及安全隐患排查整治，努力为市民创造高品质的生活环境，让城市更美丽、更安全、更宜居。",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-06-3-translation",
+          "number": 56,
+          "kind": "translation",
+          "stem": "近年来，中国城市加快发展，城市人居环境得到显著改善。许多城市努力探索中国特色的城市高质量发展之路，城市功能不断完善，治理水平明显提高。中国持续开展城市生态修复和功能修补，全面实施城镇老旧小区改造，大力推进城市园林绿化，消除污染；同时大力推进城市基础设施体系化建设，开展房屋建筑和市政设施普查以及安全隐患排查整治，努力为市民创造高品质的生活环境，让城市更美丽、更安全、更宜居。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "In recent years, China's cities have accelerated their development and the urban living environment has been significantly improved. Many cities have been making great efforts to explore the path of high-quality urban development with Chinese characteristics, resulting in continuous improvement of urban functions and a noticeable increase in the level of governance. China continues to carry out urban ecological restoration and functional repair, fully implement the renovation of old urban neighborhoods, and vigorously promote urban landscaping to eliminate pollution. At the same time, China vigorously promotes the systematic construction of urban infrastructure, carries out surveys of housing buildings and municipal facilities as well as the investigation and rectification of potential safety hazards, and strives to create a high-quality living environment for citizens and make the city more beautiful, safer and more livable.",
+          "explanation": "【参考译文】\n与难点注释\nIn recent years. China's cities have accelerated\ntheir development and the urban living enuronment\nhas been significantly improved. Many cities have been\nmaking great efforts to explore the path of high-quality\nurban development with Chinese characteristics. resulting in continuous improvement of urban functions\nand a noticeable increase in the level of governance. China continues to carry out urban ecological\nrestoration and functional repair. fully implement the\nrenovation of old urban neighborhoods. and vigorously\npromote urban landscaping to eliminate pollution. At\nthe same time. China vigorously promotes the\nsystematic construction of urban infrastructure. carries\nout surveys of housing buildings and municipal facilities\nas well as the investigation and rectification of potential\nsafety hazards. and strives to create a high-quality\nliving environment for citizens and make the city more\n1. 翻译第一句时需要注意本句应采用现在完成时。\n除了像参考译文那样，按顺序翻译外，本句还可以采用“时间，地点作主语 + witness/see”的表达方式，即本句还可译为“ln recent years. China's cities\nhave witnessed accelerated development and\nsigmficant improvements in the urban living\nenvrronment.\n2. 翻译第二句时，可以像参考译文那样，将第一个分句译为主句，将“城市功能不断完善，治理水平明显提高”处理为现在分词作伴随状语，注意需增加\nresulting in 或者 leading to；也可以将这两个分句译为 with 引导的伴随结构，或者也可以将本句拆分翻译，把后两个分句译为一句。\n3. 第三句非常长，翻译时要根据意群和句子间的逻辑将其进行拆分翻译。本句可以采用一般现在时或现在完成进行时。翻译时可以像参考译文那样，在原文分号位置将句子拆分来翻译，也可以选择将每两个分句译为一句，使译文更加简洁。一遇到此类长难句时，可以将其拆分，翻译时注意时态，单复数，单词拼写等。\nbeautiful. safer and more livable. 城市建设 urban construction\n城市管理 urban management\n绿色发展 green development\n城市更新 urban renewal\n城市设计 urban design\n城市资源 urban resources\n话题词汇城市服务 urban services\n城市经济 urban economy\n城市可持续性 urban sustainability\n城市发展战略 urban development strategy\n城市承载力 urban carrying capacity\n城市公共空间 urban public space\n\n【难点解析】\nIn recent years. China's cities have accelerated\ntheir development and the urban living enuronment\nhas been significantly improved. Many cities have been\nmaking great efforts to explore the path of high-quality\nurban development with Chinese characteristics. resulting in continuous improvement of urban functions\nand a noticeable increase in the level of governance. China continues to carry out urban ecological\nrestoration and functional repair. fully implement the\nrenovation of old urban neighborhoods. and vigorously\npromote urban landscaping to eliminate pollution. At\nthe same time. China vigorously promotes the\nsystematic construction of urban infrastructure. carries\nout surveys of housing buildings and municipal facilities\nas well as the investigation and rectification of potential\nsafety hazards. and strives to create a high-quality\nliving environment for citizens and make the city more\n1. 翻译第一句时需要注意本句应采用现在完成时。\n除了像参考译文那样，按顺序翻译外，本句还可以采用“时间，地点作主语 + witness/see”的表达方式，即本句还可译为“ln recent years. China's cities\nhave witnessed accelerated development and\nsigmficant improvements in the urban living\nenvrronment.\n2. 翻译第二句时，可以像参考译文那样，将第一个分句译为主句，将“城市功能不断完善，治理水平明显提高”处理为现在分词作伴随状语，注意需增加\nresulting in 或者 leading to；也可以将这两个分句译为 with 引导的伴随结构，或者也可以将本句拆分翻译，把后两个分句译为一句。\n3. 第三句非常长，翻译时要根据意群和句子间的逻辑将其进行拆分翻译。本句可以采用一般现在时或现在完成进行时。翻译时可以像参考译文那样，在原文分号位置将句子拆分来翻译，也可以选择将每两个分句译为一句，使译文更加简洁。一遇到此类长难句时，可以将其拆分，翻译时注意时态，单复数，单词拼写等。\nbeautiful. safer and more livable. 城市建设 urban construction\n城市管理 urban management\n绿色发展 green development\n城市更新 urban renewal\n城市设计 urban design\n城市资源 urban resources\n话题词汇城市服务 urban services\n城市经济 urban economy\n城市可持续性 urban sustainability\n城市发展战略 urban development strategy\n城市承载力 urban carrying capacity\n城市公共空间 urban public space",
+          "source": {
+            "fileId": "1AzUr3uTT_m8PtYnTHG3iH1QeGDHH6a-j",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1mKS3upCiTblvBdB2rVUDsvdGf_noGHCK",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "与难点注释\nIn recent years. China's cities have accelerated\ntheir development and the urban living enuronment\nhas been significantly improved. Many cities have been\nmaking great efforts to explore the path of high-quality\nurban development with Chinese characteristics. resulting in continuous improvement Of urban functions\nand a noticeable increase in the level Of governance. China continues to carry out urban ecological\nrestoration and functional repair. fully implement the\nrenovation of old urban neighborhoods. and vigorously\npromote urban landscaping to eliminate pollution. At\nthe same time. China vigorously promotes the\nsystematic construction Of urban infrastructure. carries\nout surveys of housing buildings and municipal facilities\nas well as the investigation and rectification Of potential\nsafety hazards. and strives to create a high-quality\nliving environment for citizens and make the city more\n1. 翻译第一句时需要注意本句应采用现在完成时 。\n除了像参考译文那样. 按顺序翻译外. 本句还可以采用 “ 时间. 地点作主语 + witness/see ” 的表达方式. 即本句还可译为 “ ln recent years. China's cities\nhave witnessed accelerated development and\nsigmficant improvements in the urban living\nenvrronment.\n2. 翻译第二句时. 可以像参考译文那样. 将第一个分句译为主句. 将 “ 城市功能不断完善. 治理水平明显提高 ” 处理为现在分词作伴随状语. 注意需增加\nresulting in 或者 leading to ； 也可以将这两个分句译为 with 引导的伴随结构. 或者也可以将本句拆分翻译. 把后两个分句译为一句 。\n3. 第三句非常长. 翻译时要根据意群和句子间的逻辑将其进行拆分翻译 。 本句可以采用一般现在时或现在完成进行时 。 翻译时可以像参考译文那样. 在原文分号位置将句子拆分来翻译. 也可以选择将每两个分句译为一句. 使译文更加简洁 。 一遇到此类长难句时. 可以将其拆分. 翻译时注意时态. 单复数. 单词拼写等 。\nbeautiful. safer and more livable. 城市建设 urban construction\n城市管理 urban management\n绿色发展 green development\n城市更新 urban renewal\n城市设计 urban design\n城市资源 urban resources\n话题词汇城市服务 urban services\n城市经济 urban economy\n城市可持续性 urban sustainability\n城市发展战略 urban development strategy\n城市承载力 urban carrying capacity\n城市公共空间 urban public space"
+        }
+      ]
+    }
+  ]
+}

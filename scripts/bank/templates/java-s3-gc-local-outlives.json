@@ -1,0 +1,26 @@
+{
+  "templateId": "java-s3-gc-local-outlives",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-18",
+  "type": "codefix",
+  "concept": [
+    "函数里生的对象出不了门",
+    "想让盒子活着出去就得把它返回",
+    "外面那个手要接得住"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "煤球"
+      ]
+    }
+  },
+  "stemTemplate": "我们想让函数里生的那个对象**活着出来**：函数里创建一个对象，外面那一句要报得出它的名字。\n\n可这段代码**当场没编过** —— 编译器指着错误信息说：有个名字在它那一段里找不到。\n\n你帮我们改到它顺顺当当跑完、印出**一行**：\n\n```text\n外面拿着的：...\n```\n\n- 这一行报的是**函数里那个对象的名字**；\n- 对象的名字、还有这一行末尾那个后缀，都别去改；\n- 要动的地方在**函数那一头**：它得把那个对象**返回**；外面那个手也得**接住**它，才报得出名字。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+  "brokenCodeTemplate": "class Cat {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n}\n\npublic class Main {\n    static void 养一个对象() {\n        Cat 屋里那个 = new Cat(\"{n}\");\n    }\n\n    public static void main(String[] args) {\n        养一个对象();\n        System.out.println(\"外面拿着的：\" + 屋里那个.name);\n    }\n}\n",
+  "referenceFixTemplate": "class Cat {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n}\n\npublic class Main {\n    static Cat 养一个对象() {\n        Cat 屋里那个 = new Cat(\"{n}\");\n        return 屋里那个;\n    }\n\n    public static void main(String[] args) {\n        Cat 外面拿着的 = 养一个对象();\n        System.out.println(\"外面拿着的：\" + 外面拿着的.name);\n    }\n}\n",
+  "explanationTemplate": "**一、错误信息怎么念。** 编译器说的那个名字，就是函数里那个对象的名字。它住在**函数自己的那个元素**里 —— 而元素跟函数是一体的：函数一收工，元素就端走了，元素里的名字跟着一起没。外面那一段根本看不见它，所以连编都编不过。\n\n**二、为什么不是「改个名字」能解决。** 名字不是写错了，是**从外面压根够不着**。真正要改的是一条活路：得让那个对象**出了函数也还在**。\n\n**三、改法：函数把对象返回，外面接住。** 函数那一头：把「什么都不返回」改成**返回一个对象回来**，末尾把那句放行的话（`return 屋里那个;`）补上。外面那一头：别再调用结束就算，要伸一个手**接住**它，再用接住的这个去报名字。\n\n**四、跟课文对上。** 课文第二节讲过：函数收工、元素端走了，**盒子活不活只看还有没有名称指着它**。函数里那个盒子想活着出去，就得把名称**复制到外面**来 —— 这一改，正是在给它留一条活路。"
+}

@@ -1,0 +1,30 @@
+{
+  "templateId": "java-s1-scope-two-bowls",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-10",
+  "type": "codefix",
+  "concept": [
+    "地盘",
+    "作用域",
+    "already defined",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "a": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    },
+    "b": {
+      "kind": "int",
+      "min": 7,
+      "max": 9
+    }
+  },
+  "stemTemplate": "我们一大早先摆了一个元素，记下 **{a}** 条数据；到了下午账要改成 **{b}** 条 —— 我们就照着上午那一行原样又抄了一遍，只把数换了。\n\n编译器当场翻脸，说这句话它读不懂。你帮我们把「改账」写对：**上午那个元素还是那个元素，别再摆一个新的。**\n\n改好之后印出来该是：\n\n```text\n账上有 {b} 条数据\n```",
+  "brokenCodeTemplate": "public class Main {\n    public static void main(String[] args) {\n        int fish = {a};\n        int fish = {b};\n        System.out.println(\"账上有 \" + fish + \" 条数据\");\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void main(String[] args) {\n        int fish = {a};\n        fish = {b};\n        System.out.println(\"账上有 \" + fish + \" 条数据\");\n    }\n}\n",
+  "explanationTemplate": "编译器的原话是 `variable fish is already defined in method main(String[])` —— 「`fish` 这个名字，在 `main` 这块地盘上已经挂过号了。」\n\n上午那句 `int fish = {a};` 干的是**两件事**：摆一个新元素、给它起名叫 `fish`。下午要是照抄一遍，它就想**再摆一个同名的元素** —— 同一个地盘里躺着两个都叫 `fish` 的元素，我们自己都分不清引用的是哪一个，编译器索性不许。\n\n改账根本不用摆新元素，把数**倒进原来那个**就行：写成 `fish = {b};`，前面那个 `int` 去掉。打头不写类型，意思就从「再摆一个」变成了「往原来那个里装」—— 这一句跟上午那个，是同一个元素。\n\n这正是这一课下半场那句话：**一块地盘里，同名的元素只能有一个**；多摆一次不叫改账，叫撞车。"
+}

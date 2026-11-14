@@ -1,0 +1,29 @@
+{
+  "templateId": "cpp-s1-const-sealed",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-03",
+  "type": "codefix",
+  "concept": [
+    "const",
+    "封条",
+    "read-only"
+  ],
+  "instances": 2,
+  "params": {
+    "max": {
+      "kind": "int",
+      "min": 5,
+      "max": 6
+    },
+    "next": {
+      "kind": "int",
+      "min": 8,
+      "max": 9
+    }
+  },
+  "stemTemplate": "我们盖了一个变量，保存「元素最多能装几条」这个数，顺手还贴了一张封条。\n\n可后来我们发现贴错了屋——这个数其实**是要换的**，我们想把它换成 {next} 条。结果源代码翻不过去，编译器不让我们动该变量。\n\n你帮我们改好，让它输出 `元素里最多装 {next} 条`。",
+  "brokenCodeTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    const int maxFish = {max};\n    maxFish = {next};\n    cout << \"元素里最多装 \" << maxFish << \" 条\" << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int maxFish = {max};\n    maxFish = {next};\n    cout << \"元素里最多装 \" << maxFish << \" 条\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`error: assignment of read-only variable 'maxFish'`\n\n`read-only` 就是「**只读**」：能看，不能改。它还毫不客气地点了名——`'maxFish'`，就是我们那间贴了封条的屋。\n\n开头的 `const` 是那张封条，意思是「**这屋的货，装好就不许再换了**」。贴了封条还去搬货，编译器当场就拦下来，绝不让程序跑到一半按错的数算下去。\n\n那这道题怎么改？先问自己一句：**这个数到底该不该封？**\n\n真要一直不变（比如「元素最多装十条」这种事），就该留着封条，把那个数**一开始就写对**，后面那句搬货的话删掉；要是它本来就要换，那就把封条撕了——去掉开头的 `const`，后面照常搬。\n\n两条路都通，区别只在**你到底要不要它变**。我们这道题要它变，所以撕封条。"
+}

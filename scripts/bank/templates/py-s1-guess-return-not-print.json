@@ -1,0 +1,30 @@
+{
+  "templateId": "py-s1-guess-return-not-print",
+  "lang": "python",
+  "stage": 1,
+  "lessonId": "python-stage1-15",
+  "type": "codefix",
+  "concept": [
+    "return",
+    "print",
+    "函数拆分",
+    "综合"
+  ],
+  "instances": 3,
+  "params": {
+    "secret": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    },
+    "g": {
+      "kind": "int",
+      "min": 1,
+      "max": 7
+    }
+  },
+  "stemTemplate": "我们把「判断大小」这一步单独拆成了一个函数，主流程就清爽多了。\n\n可每跑一次都**多出一行 `None`**……你帮我们改对，让它只打印判断结果那一行。",
+  "brokenCodeTemplate": "def judge(secret, g):\n    if g > secret:\n        print(\"大了\")\n    elif g < secret:\n        print(\"小了\")\n    else:\n        print(\"猜对啦\")\n\nprint(judge({secret}, {g}))\n",
+  "referenceFixTemplate": "def judge(secret, g):\n    if g > secret:\n        return \"大了\"\n    elif g < secret:\n        return \"小了\"\n    else:\n        return \"猜对啦\"\n\nprint(judge({secret}, {g}))\n",
+  "explanationTemplate": "这个错法很值得记住：**函数里面确实打印了，但它没有「交出」任何东西**。\n\n`print` 和 `return` 是两件事：\n\n- `print` = 输出给**人**看，调用结束就没了\n- `return` = 递给**调用它的那行代码**\n\n所以外面那句 `print(judge(...))` 收到的是「什么都没有」（`None`），又把它打印了一遍 —— 屏幕上于是变成两行：函数自己引用的那句，加上一个 `None`。\n\n要拆成函数、又要让外面拿到结果，那一支支的 `print` 就得全换成 `return`。**一个函数要么负责算并交出来，要么负责打印；两件事混在一起，第一次想复用它就会绊倒自己。**"
+}

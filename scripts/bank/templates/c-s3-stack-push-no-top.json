@@ -1,0 +1,41 @@
+{
+  "templateId": "c-s3-stack-push-no-top",
+  "lang": "c",
+  "stage": 3,
+  "lessonId": "c-stage3-04",
+  "type": "codefix",
+  "concept": [
+    "一摞元素",
+    "top",
+    "摞上去要往上抬",
+    "编译不吭声"
+  ],
+  "instances": 2,
+  "params": {
+    "a": {
+      "kind": "pick",
+      "values": [
+        "1",
+        "4"
+      ]
+    },
+    "b": {
+      "kind": "pick",
+      "values": [
+        "2",
+        "6"
+      ]
+    },
+    "c": {
+      "kind": "pick",
+      "values": [
+        "3",
+        "7"
+      ]
+    }
+  },
+  "stemTemplate": "我们往元素摞上摞了三个元素，然后一个一个往下拿。可程序只印了一行：\n\n```text\n摞了 0 只元素\n```\n\n三个元素**一个都没摞上去**，后头那几行「取到」全没了。编译器一次没吭，编译跑得好好的。\n\n请你把缺的那一句补上。改好之后该印**四行**：先报摞了几个，再把三个元素**从最上面那个开始**一个一个读取：\n\n```text\n摞了 3 只元素\n取到 {c}\n取到 {b}\n取到 {a}\n```",
+  "brokenCodeTemplate": "#include <stdio.h>\n\n#define MAX_BOWLS 5\n\nint bowls[MAX_BOWLS];\nint top = 0;\n\nint is_full(void) { return top == MAX_BOWLS; }\nint is_empty(void) { return top == 0; }\n\nint push(int value) {\n    if (is_full()) {\n        return 0;\n    }\n    bowls[top] = value;\n    return 1;\n}\n\nint pop(int *value) {\n    if (is_empty()) {\n        return 0;\n    }\n    top--;\n    *value = bowls[top];\n    return 1;\n}\n\nint main(void) {\n    push({a});\n    push({b});\n    push({c});\n    printf(\"摞了 %d 只元素\\n\", top);\n    int v = 0;\n    while (pop(&v)) {\n        printf(\"取到 %d\\n\", v);\n    }\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\n#define MAX_BOWLS 5\n\nint bowls[MAX_BOWLS];\nint top = 0;\n\nint is_full(void) { return top == MAX_BOWLS; }\nint is_empty(void) { return top == 0; }\n\nint push(int value) {\n    if (is_full()) {\n        return 0;\n    }\n    bowls[top] = value;\n    top++;\n    return 1;\n}\n\nint pop(int *value) {\n    if (is_empty()) {\n        return 0;\n    }\n    top--;\n    *value = bowls[top];\n    return 1;\n}\n\nint main(void) {\n    push({a});\n    push({b});\n    push({c});\n    printf(\"摞了 %d 只元素\\n\", top);\n    int v = 0;\n    while (pop(&v)) {\n        printf(\"取到 %d\\n\", v);\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "缺的是**放完那个元素之后把 `top` 往上抬一格**：\n\n```text\ntop++;\n```\n\n`top` 在这个元素摞里是**一个数管两件事**：它既是「已经摞了几个」，也正好是「下一个元素该放在哪儿」。\n\n- 放一个元素：先放在 `bowls[top]` 这个位子上，放好之后 `top++` —— 元素摞长高一层，`top` 也顺势指向了下一个空位。\n- 拿一个元素：先 `top--` 退到「最上面那个」的位子上，再把它读取。\n\n我们这一版**只做了前半步**：元素放到第 0 格了，可 `top` 还停在 0，所以它以为元素摞是空的 —— 报「摞了 0 只元素」，`pop` 一进门就问「空了吗」，答「空了」，于是元素一个也拿不出来。\n\n⚠️ 更坑的是：**这个错编译器一个字都不会说**。我们拿 `-Wall` 真编了一遍，不报错、不警告，跑起来也不摔 —— 它只是**答错**。因为从编译器眼里看，`bowls[top] = value;` 写得完全合法，它不知道你心里那句「这个元素摞上去了」还没落地。"
+}

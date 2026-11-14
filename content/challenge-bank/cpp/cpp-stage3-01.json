@@ -1,0 +1,366 @@
+{
+  "lessonId": "cpp-stage3-01",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s3-01-bump-with-ref-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给柜子里的货**每一格都加上 3** 。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 3 个数**。\n\n请你写个程序：\n\n1. 把这 3 个数**一格一个**塞进柜子；\n2. 再走一圈，**给每一格都加上 3** —— 走完这一圈，柜子里的货就该变了（不是只把加出来的数印一下）；\n3. 最后走一圈，**一格印一行**（印的是加完之后柜子里的货）。\n\n比如程序的输入是\n\n3\n1\n3\n9\n\n程序就要返回\n\n4\n6\n12\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    for (int &x : v) {\n        x = x + 3;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "12\n10\n11",
+      "stdin": "3\n9\n7\n8\n",
+      "explanation": "这一题的重点是**要改柜子，就得拿到那一格本人**。\n\n改货那一圈里，那个名字前面必须有一个 `&`：\n\n`for (int &x : v)`\n\n那个 `&` 的意思是「**这个名字就是柜子里那一格本人**」。少了它（写成 `for (int x : v)`），拿到的是**从柜子里捞出来的一份副本** —— 改副本地上的货，柜子里那一份纹丝不动，而**编译器一个字都不说**：编得过、跑得完，只是白改一圈。\n\n⚠️ 这一题要求**改和印分两趟**：先把每一格都改完，再从头走一圈印出来。要是边改边印，印出来的虽然也对得上，但那是「改到哪印到哪」的写法 —— 题目要的是「全改完之后柜子里的样子」，两趟写最稳，也最好读。\n\n⚠️ 加的是 **3**，别多加也别少加；判分喂的那组数跟样例不一样。",
+      "templateId": "cpp-s3-01-bump-with-ref",
+      "params": {
+        "n": 3,
+        "k": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "85a404d81aad51fd"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-bump-with-ref-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给柜子里的货**每一格都加上 5** 。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 3 个数**。\n\n请你写个程序：\n\n1. 把这 3 个数**一格一个**塞进柜子；\n2. 再走一圈，**给每一格都加上 5** —— 走完这一圈，柜子里的货就该变了（不是只把加出来的数印一下）；\n3. 最后走一圈，**一格印一行**（印的是加完之后柜子里的货）。\n\n比如程序的输入是\n\n3\n5\n8\n5\n\n程序就要返回\n\n10\n13\n10\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    for (int &x : v) {\n        x = x + 5;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "14\n11\n10",
+      "stdin": "3\n9\n6\n5\n",
+      "explanation": "这一题的重点是**要改柜子，就得拿到那一格本人**。\n\n改货那一圈里，那个名字前面必须有一个 `&`：\n\n`for (int &x : v)`\n\n那个 `&` 的意思是「**这个名字就是柜子里那一格本人**」。少了它（写成 `for (int x : v)`），拿到的是**从柜子里捞出来的一份副本** —— 改副本地上的货，柜子里那一份纹丝不动，而**编译器一个字都不说**：编得过、跑得完，只是白改一圈。\n\n⚠️ 这一题要求**改和印分两趟**：先把每一格都改完，再从头走一圈印出来。要是边改边印，印出来的虽然也对得上，但那是「改到哪印到哪」的写法 —— 题目要的是「全改完之后柜子里的样子」，两趟写最稳，也最好读。\n\n⚠️ 加的是 **5**，别多加也别少加；判分喂的那组数跟样例不一样。",
+      "templateId": "cpp-s3-01-bump-with-ref",
+      "params": {
+        "n": 3,
+        "k": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "37450fcdc47644cd"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-bump-with-ref-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给柜子里的货**每一格都加上 3** 。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 4 个数**。\n\n请你写个程序：\n\n1. 把这 4 个数**一格一个**塞进柜子；\n2. 再走一圈，**给每一格都加上 3** —— 走完这一圈，柜子里的货就该变了（不是只把加出来的数印一下）；\n3. 最后走一圈，**一格印一行**（印的是加完之后柜子里的货）。\n\n比如程序的输入是\n\n4\n9\n5\n5\n7\n\n程序就要返回\n\n12\n8\n8\n10\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    for (int &x : v) {\n        x = x + 3;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "11\n11\n6\n4",
+      "stdin": "4\n8\n8\n3\n1\n",
+      "explanation": "这一题的重点是**要改柜子，就得拿到那一格本人**。\n\n改货那一圈里，那个名字前面必须有一个 `&`：\n\n`for (int &x : v)`\n\n那个 `&` 的意思是「**这个名字就是柜子里那一格本人**」。少了它（写成 `for (int x : v)`），拿到的是**从柜子里捞出来的一份副本** —— 改副本地上的货，柜子里那一份纹丝不动，而**编译器一个字都不说**：编得过、跑得完，只是白改一圈。\n\n⚠️ 这一题要求**改和印分两趟**：先把每一格都改完，再从头走一圈印出来。要是边改边印，印出来的虽然也对得上，但那是「改到哪印到哪」的写法 —— 题目要的是「全改完之后柜子里的样子」，两趟写最稳，也最好读。\n\n⚠️ 加的是 **3**，别多加也别少加；判分喂的那组数跟样例不一样。",
+      "templateId": "cpp-s3-01-bump-with-ref",
+      "params": {
+        "n": 4,
+        "k": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "80ac59b91020c044"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-bump-with-ref-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给柜子里的货**每一格都加上 5** 。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 4 个数**。\n\n请你写个程序：\n\n1. 把这 4 个数**一格一个**塞进柜子；\n2. 再走一圈，**给每一格都加上 5** —— 走完这一圈，柜子里的货就该变了（不是只把加出来的数印一下）；\n3. 最后走一圈，**一格印一行**（印的是加完之后柜子里的货）。\n\n比如程序的输入是\n\n4\n1\n7\n8\n4\n\n程序就要返回\n\n6\n12\n13\n9\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    for (int &x : v) {\n        x = x + 5;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "8\n13\n14\n7",
+      "stdin": "4\n3\n8\n9\n2\n",
+      "explanation": "这一题的重点是**要改柜子，就得拿到那一格本人**。\n\n改货那一圈里，那个名字前面必须有一个 `&`：\n\n`for (int &x : v)`\n\n那个 `&` 的意思是「**这个名字就是柜子里那一格本人**」。少了它（写成 `for (int x : v)`），拿到的是**从柜子里捞出来的一份副本** —— 改副本地上的货，柜子里那一份纹丝不动，而**编译器一个字都不说**：编得过、跑得完，只是白改一圈。\n\n⚠️ 这一题要求**改和印分两趟**：先把每一格都改完，再从头走一圈印出来。要是边改边印，印出来的虽然也对得上，但那是「改到哪印到哪」的写法 —— 题目要的是「全改完之后柜子里的样子」，两趟写最稳，也最好读。\n\n⚠️ 加的是 **5**，别多加也别少加；判分喂的那组数跟样例不一样。",
+      "templateId": "cpp-s3-01-bump-with-ref",
+      "params": {
+        "n": 4,
+        "k": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "bf82d234400250f0"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-bump-with-ref-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给柜子里的货**每一格都加上 3** 。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 5 个数**。\n\n请你写个程序：\n\n1. 把这 5 个数**一格一个**塞进柜子；\n2. 再走一圈，**给每一格都加上 3** —— 走完这一圈，柜子里的货就该变了（不是只把加出来的数印一下）；\n3. 最后走一圈，**一格印一行**（印的是加完之后柜子里的货）。\n\n比如程序的输入是\n\n5\n5\n3\n1\n8\n8\n\n程序就要返回\n\n8\n6\n4\n11\n11\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    for (int &x : v) {\n        x = x + 3;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "12\n7\n10\n10\n9",
+      "stdin": "5\n9\n4\n7\n7\n6\n",
+      "explanation": "这一题的重点是**要改柜子，就得拿到那一格本人**。\n\n改货那一圈里，那个名字前面必须有一个 `&`：\n\n`for (int &x : v)`\n\n那个 `&` 的意思是「**这个名字就是柜子里那一格本人**」。少了它（写成 `for (int x : v)`），拿到的是**从柜子里捞出来的一份副本** —— 改副本地上的货，柜子里那一份纹丝不动，而**编译器一个字都不说**：编得过、跑得完，只是白改一圈。\n\n⚠️ 这一题要求**改和印分两趟**：先把每一格都改完，再从头走一圈印出来。要是边改边印，印出来的虽然也对得上，但那是「改到哪印到哪」的写法 —— 题目要的是「全改完之后柜子里的样子」，两趟写最稳，也最好读。\n\n⚠️ 加的是 **3**，别多加也别少加；判分喂的那组数跟样例不一样。",
+      "templateId": "cpp-s3-01-bump-with-ref",
+      "params": {
+        "n": 5,
+        "k": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "03362e945a3a8bc1"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-bump-with-ref-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给柜子里的货**每一格都加上 5** 。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 5 个数**。\n\n请你写个程序：\n\n1. 把这 5 个数**一格一个**塞进柜子；\n2. 再走一圈，**给每一格都加上 5** —— 走完这一圈，柜子里的货就该变了（不是只把加出来的数印一下）；\n3. 最后走一圈，**一格印一行**（印的是加完之后柜子里的货）。\n\n比如程序的输入是\n\n5\n7\n2\n8\n8\n1\n\n程序就要返回\n\n12\n7\n13\n13\n6\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    for (int &x : v) {\n        x = x + 5;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "13\n14\n8\n8\n9",
+      "stdin": "5\n8\n9\n3\n3\n4\n",
+      "explanation": "这一题的重点是**要改柜子，就得拿到那一格本人**。\n\n改货那一圈里，那个名字前面必须有一个 `&`：\n\n`for (int &x : v)`\n\n那个 `&` 的意思是「**这个名字就是柜子里那一格本人**」。少了它（写成 `for (int x : v)`），拿到的是**从柜子里捞出来的一份副本** —— 改副本地上的货，柜子里那一份纹丝不动，而**编译器一个字都不说**：编得过、跑得完，只是白改一圈。\n\n⚠️ 这一题要求**改和印分两趟**：先把每一格都改完，再从头走一圈印出来。要是边改边印，印出来的虽然也对得上，但那是「改到哪印到哪」的写法 —— 题目要的是「全改完之后柜子里的样子」，两趟写最稳，也最好读。\n\n⚠️ 加的是 **5**，别多加也别少加；判分喂的那组数跟样例不一样。",
+      "templateId": "cpp-s3-01-bump-with-ref",
+      "params": {
+        "n": 5,
+        "k": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "de23db0471da3513"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-copy-not-ref-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想给柜子里的货**每一格都翻一倍**，于是写了个跑圈去改。可跑完一看，柜子里的货**一点没变**。\n\n你帮我们把它改对：**要让改动真的落回柜子里**（每一格都变成原来的两倍）。塞货和印货那几句都不用动。",
+      "brokenCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(1);\n    v.push_back(2);\n    v.push_back(3);\n\n    for (int x : v) {\n        x = x * 2;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(1);\n    v.push_back(2);\n    v.push_back(3);\n\n    for (int &x : v) {\n        x = x * 2;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "2\n4\n6",
+      "stdin": null,
+      "explanation": "这一题里编译器**一个字都不说** —— 编得过、跑得完，只是结果悄悄不对（我们拿最啰嗦的那档念叨 `-Wall` 真跑过一遍，才敢这么写）。\n\n问题出在那一圈里那个名字：它拿到的是**那一格货的一份副本** —— 像我们把数据从柜子里捞出来放在旁边看。改副本，柜子里那一份纹丝不动。\n\n要让改动落回柜子里，名字前面得加一个 `&`，写成\n\n`for (int &x : v)`\n\n那个 `&` 的意思是「**这个名字就是柜子里那一格本人**」，不是副本。加完以后，同一句 `x = x * 2;` 才是真的在动柜子。\n\n⚠️ 只加 `&` 就够了，别顺手把 `int` 改成别的东西 —— `&` 加上原来那个类型名，就是「这一格的本人」的写法。",
+      "templateId": "cpp-s3-01-copy-not-ref",
+      "params": {
+        "a": 1,
+        "b": 2,
+        "c": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "889f1b708cd5c846"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-copy-not-ref-007",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想给柜子里的货**每一格都翻一倍**，于是写了个跑圈去改。可跑完一看，柜子里的货**一点没变**。\n\n你帮我们把它改对：**要让改动真的落回柜子里**（每一格都变成原来的两倍）。塞货和印货那几句都不用动。",
+      "brokenCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(4);\n    v.push_back(6);\n    v.push_back(7);\n\n    for (int x : v) {\n        x = x * 2;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(4);\n    v.push_back(6);\n    v.push_back(7);\n\n    for (int &x : v) {\n        x = x * 2;\n    }\n\n    for (int x : v) {\n        cout << x << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "8\n12\n14",
+      "stdin": null,
+      "explanation": "这一题里编译器**一个字都不说** —— 编得过、跑得完，只是结果悄悄不对（我们拿最啰嗦的那档念叨 `-Wall` 真跑过一遍，才敢这么写）。\n\n问题出在那一圈里那个名字：它拿到的是**那一格货的一份副本** —— 像我们把数据从柜子里捞出来放在旁边看。改副本，柜子里那一份纹丝不动。\n\n要让改动落回柜子里，名字前面得加一个 `&`，写成\n\n`for (int &x : v)`\n\n那个 `&` 的意思是「**这个名字就是柜子里那一格本人**」，不是副本。加完以后，同一句 `x = x * 2;` 才是真的在动柜子。\n\n⚠️ 只加 `&` 就够了，别顺手把 `int` 改成别的东西 —— `&` 加上原来那个类型名，就是「这一格的本人」的写法。",
+      "templateId": "cpp-s3-01-copy-not-ref",
+      "params": {
+        "a": 4,
+        "b": 6,
+        "c": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "94881ea5c9e274bd"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-drop-last-cell-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想让柜子里的货**一格印一行**，可跑完一看**少了一行** —— 最后那一格没印出来。\n\n你帮我们把它改对：**每一格都要印，包括最后那一格**。塞货那几句不用动。",
+      "brokenCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(3);\n    v.push_back(8);\n    v.push_back(5);\n    for (auto it = v.begin(); it != v.end() - 1; ++it) {\n        cout << *it << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(3);\n    v.push_back(8);\n    v.push_back(5);\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        cout << *it << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "3\n8\n5",
+      "stdin": null,
+      "explanation": "走柜子的路标是 `v.end()`  —— 它站在柜子尽头（**最后一格的后面一格**），位置本身就是「到此为止」那句话。\n\n写成 `v.end() - 1` 就等于把路标往前挪了一格：变量走到最后一格就停下来了，最后那一格永远轮不到印。**这一回编译器也一个字都没说**（我们真跑过 —— 编得过、跑得完，只是少印一行）。\n\n正确写法就是别减：\n\n`for (auto it = v.begin(); it != v.end(); ++it)`\n\n第二个路标要的是**走完**，不是**最后一格**。",
+      "templateId": "cpp-s3-01-drop-last-cell",
+      "params": {
+        "a": 3,
+        "b": 8,
+        "c": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "15ad6e0edf84458a"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-drop-last-cell-007",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想让柜子里的货**一格印一行**，可跑完一看**少了一行** —— 最后那一格没印出来。\n\n你帮我们把它改对：**每一格都要印，包括最后那一格**。塞货那几句不用动。",
+      "brokenCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(6);\n    v.push_back(1);\n    v.push_back(9);\n    for (auto it = v.begin(); it != v.end() - 1; ++it) {\n        cout << *it << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(6);\n    v.push_back(1);\n    v.push_back(9);\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        cout << *it << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "6\n1\n9",
+      "stdin": null,
+      "explanation": "走柜子的路标是 `v.end()`  —— 它站在柜子尽头（**最后一格的后面一格**），位置本身就是「到此为止」那句话。\n\n写成 `v.end() - 1` 就等于把路标往前挪了一格：变量走到最后一格就停下来了，最后那一格永远轮不到印。**这一回编译器也一个字都没说**（我们真跑过 —— 编得过、跑得完，只是少印一行）。\n\n正确写法就是别减：\n\n`for (auto it = v.begin(); it != v.end(); ++it)`\n\n第二个路标要的是**走完**，不是**最后一格**。",
+      "templateId": "cpp-s3-01-drop-last-cell",
+      "params": {
+        "a": 6,
+        "b": 1,
+        "c": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "a38ec650518d0d8f"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-print-with-index-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给柜子里的货**贴上编号报出来**。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 3 个数**。\n\n请你写个程序：\n\n1. 把这 3 个数**一格一个**塞进柜子；\n2. 拿变量从柜子头上走到尽头的后面一格，**一边走一边报**，一格一行：`第 X 格有 Y 条`（`X` 是这一格的编号，**从 0 数起**；`Y` 是这一格里的货）。\n\n比如程序的输入是\n\n3\n5\n6\n6\n\n程序就要返回\n\n第 0 格有 5 条\n第 1 格有 6 条\n第 2 格有 6 条\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    int i = 0;\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        cout << \"第 \" << i << \" 格有 \" << *it << \" 条\" << endl;\n        i++;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 格有 8 条\n第 1 格有 6 条\n第 2 格有 1 条",
+      "stdin": "3\n8\n6\n1\n",
+      "explanation": "这一题最值得记的一句话是：**变量只认「哪一格」，不认「第几格」**。\n\n变量是一张指着某格的名称 —— 它能告诉你**那一格里有什么货**，但它身上**没有编号**这个字。所以想让 `X` 从 0 一路数下去，得自己另备一个数：进圈之前先把它开成 0，每报完一行再 `i++`。\n\n于是这一题里两件事在**同一轮**里发生：\n\n- `*it` 是**货**（这一格保存的是什么）；\n- `i` 是**编号**（这一格排第几）。\n\n⚠️ 两个常见坑：**① 编号从 0 数起**，第一行是 `第 0 格`，不是 `第 1 格`；**② 印的是货不是名称** —— `cout` 那一句里只能是 `*it`，漏了星星编译器当场拦下。",
+      "templateId": "cpp-s3-01-print-with-index",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "46679269ec510bd5"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-print-with-index-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给柜子里的货**贴上编号报出来**。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 4 个数**。\n\n请你写个程序：\n\n1. 把这 4 个数**一格一个**塞进柜子；\n2. 拿变量从柜子头上走到尽头的后面一格，**一边走一边报**，一格一行：`第 X 格有 Y 条`（`X` 是这一格的编号，**从 0 数起**；`Y` 是这一格里的货）。\n\n比如程序的输入是\n\n4\n9\n3\n9\n1\n\n程序就要返回\n\n第 0 格有 9 条\n第 1 格有 3 条\n第 2 格有 9 条\n第 3 格有 1 条\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    int i = 0;\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        cout << \"第 \" << i << \" 格有 \" << *it << \" 条\" << endl;\n        i++;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 格有 2 条\n第 1 格有 9 条\n第 2 格有 4 条\n第 3 格有 7 条",
+      "stdin": "4\n2\n9\n4\n7\n",
+      "explanation": "这一题最值得记的一句话是：**变量只认「哪一格」，不认「第几格」**。\n\n变量是一张指着某格的名称 —— 它能告诉你**那一格里有什么货**，但它身上**没有编号**这个字。所以想让 `X` 从 0 一路数下去，得自己另备一个数：进圈之前先把它开成 0，每报完一行再 `i++`。\n\n于是这一题里两件事在**同一轮**里发生：\n\n- `*it` 是**货**（这一格保存的是什么）；\n- `i` 是**编号**（这一格排第几）。\n\n⚠️ 两个常见坑：**① 编号从 0 数起**，第一行是 `第 0 格`，不是 `第 1 格`；**② 印的是货不是名称** —— `cout` 那一句里只能是 `*it`，漏了星星编译器当场拦下。",
+      "templateId": "cpp-s3-01-print-with-index",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "676c47bc8e7fdefb"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-print-with-index-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给柜子里的货**贴上编号报出来**。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 5 个数**。\n\n请你写个程序：\n\n1. 把这 5 个数**一格一个**塞进柜子；\n2. 拿变量从柜子头上走到尽头的后面一格，**一边走一边报**，一格一行：`第 X 格有 Y 条`（`X` 是这一格的编号，**从 0 数起**；`Y` 是这一格里的货）。\n\n比如程序的输入是\n\n5\n7\n6\n8\n8\n3\n\n程序就要返回\n\n第 0 格有 7 条\n第 1 格有 6 条\n第 2 格有 8 条\n第 3 格有 8 条\n第 4 格有 3 条\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    int i = 0;\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        cout << \"第 \" << i << \" 格有 \" << *it << \" 条\" << endl;\n        i++;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 格有 5 条\n第 1 格有 8 条\n第 2 格有 5 条\n第 3 格有 6 条\n第 4 格有 3 条",
+      "stdin": "5\n5\n8\n5\n6\n3\n",
+      "explanation": "这一题最值得记的一句话是：**变量只认「哪一格」，不认「第几格」**。\n\n变量是一张指着某格的名称 —— 它能告诉你**那一格里有什么货**，但它身上**没有编号**这个字。所以想让 `X` 从 0 一路数下去，得自己另备一个数：进圈之前先把它开成 0，每报完一行再 `i++`。\n\n于是这一题里两件事在**同一轮**里发生：\n\n- `*it` 是**货**（这一格保存的是什么）；\n- `i` 是**编号**（这一格排第几）。\n\n⚠️ 两个常见坑：**① 编号从 0 数起**，第一行是 `第 0 格`，不是 `第 1 格`；**② 印的是货不是名称** —— `cout` 那一句里只能是 `*it`，漏了星星编译器当场拦下。",
+      "templateId": "cpp-s3-01-print-with-index",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "17e0814e5ec0a470"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-star-missing-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们写了一段走柜子的代码，想让柜子里的货**一格印一行**。可它**编不过** —— 编译器拦在了印货那一句上。\n\n你帮我们把它改对：**每一轮印出来的都该是那一格里的货**。往柜子里塞货那几句不用动。",
+      "brokenCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(3);\n    v.push_back(8);\n    v.push_back(5);\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        cout << it << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(3);\n    v.push_back(8);\n    v.push_back(5);\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        cout << *it << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "3\n8\n5",
+      "stdin": null,
+      "explanation": "这一题错在取货那一句。\n\n那一圈里有两个记号，差一个字符、意思差一整格货：\n\n- `it` 是**变量本身**（一张指着哪一格的名称）；\n- `*it` 才是「指着的那一格**里的货**」。\n\n往 `<<` 的右半边递一张名称，编译器认不出这是什么、也印不出来 —— 它的原话里有 `no match for 'operator<<'`，下面还会点出右边那一坨的本名 `__gnu_cxx::__normal_iterator`（就是我们说的「变量」）。这句原话里那句 `no match` 念作「**没找着能这么用的招**」，所以看到它，先低头看 `<<` 右边：**该有的星星是不是漏了。**\n\n⚠️ 改完以后每一轮印出来的应该是**那一格**的货（第一轮是塞进去的第一个数），不是每一轮都印同一个数。",
+      "templateId": "cpp-s3-01-star-missing",
+      "params": {
+        "a": 3,
+        "b": 8,
+        "c": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "9474f32b25505ac9"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-star-missing-007",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们写了一段走柜子的代码，想让柜子里的货**一格印一行**。可它**编不过** —— 编译器拦在了印货那一句上。\n\n你帮我们把它改对：**每一轮印出来的都该是那一格里的货**。往柜子里塞货那几句不用动。",
+      "brokenCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(6);\n    v.push_back(1);\n    v.push_back(9);\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        cout << it << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n    v.push_back(6);\n    v.push_back(1);\n    v.push_back(9);\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        cout << *it << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "6\n1\n9",
+      "stdin": null,
+      "explanation": "这一题错在取货那一句。\n\n那一圈里有两个记号，差一个字符、意思差一整格货：\n\n- `it` 是**变量本身**（一张指着哪一格的名称）；\n- `*it` 才是「指着的那一格**里的货**」。\n\n往 `<<` 的右半边递一张名称，编译器认不出这是什么、也印不出来 —— 它的原话里有 `no match for 'operator<<'`，下面还会点出右边那一坨的本名 `__gnu_cxx::__normal_iterator`（就是我们说的「变量」）。这句原话里那句 `no match` 念作「**没找着能这么用的招**」，所以看到它，先低头看 `<<` 右边：**该有的星星是不是漏了。**\n\n⚠️ 改完以后每一轮印出来的应该是**那一格**的货（第一轮是塞进去的第一个数），不是每一轮都印同一个数。",
+      "templateId": "cpp-s3-01-star-missing",
+      "params": {
+        "a": 6,
+        "b": 1,
+        "c": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "bde56cade52b76c2"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-sum-with-iterator-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想把传入进来的数**全加起来**。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 3 个数**。\n\n请你写个程序：\n\n1. 把这 3 个数**一格一个**塞进柜子（每塞一个都用那个「从柜子后面塞进去」的函数）；\n2. 拿一把**变量**从柜子头上出发，一路走到尽头的**后面一格**；每走一步，就把变量上那一格的货加进一个叫 `total` 的格子里（`total` 从 0 起）；\n3. 最后印**一行**：加出来的那个和。\n\n比如程序的输入是\n\n3\n3\n3\n2\n\n程序就要返回\n\n8\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    int total = 0;\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        total += *it;\n    }\n    cout << total << endl;\n    return 0;\n}\n",
+      "expectedOutput": "17",
+      "stdin": "3\n9\n7\n1\n",
+      "explanation": "这一题的重点是**用变量走柜子** —— 它和「报编号取货」是同一件事的两种写法。\n\n变量的两个路标：起点写 `v.begin()`；走到哪儿写 `it != v.end()`。`v.end()` 站的不是最后一格，是**最后一格的后面一格** —— 它本身就是「到此为止」那句话，所以一轮都不会少、也不会多走。\n\n跑圈里那一句 `total += *it;` 有两个必须写对的地方：\n\n- 星星不能少 —— `*it` 才是「变量上指着的**那一格里的货**」；少了星星就是拿着名称去做加法，编译器当场拦下；\n- 加的是**那一格的货**，不是位置 —— 别拿 `it` 去参与加法。\n\n⚠️ 「柜子里有几格」和「加起来是多少」是两回事：这一题要的是**和**，不是个数。判分传入的那组数跟样例不一样，别把样例的答案写死。",
+      "templateId": "cpp-s3-01-sum-with-iterator",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "99af78d8bd7f311b"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-sum-with-iterator-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想把传入进来的数**全加起来**。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 4 个数**。\n\n请你写个程序：\n\n1. 把这 4 个数**一格一个**塞进柜子（每塞一个都用那个「从柜子后面塞进去」的函数）；\n2. 拿一把**变量**从柜子头上出发，一路走到尽头的**后面一格**；每走一步，就把变量上那一格的货加进一个叫 `total` 的格子里（`total` 从 0 起）；\n3. 最后印**一行**：加出来的那个和。\n\n比如程序的输入是\n\n4\n5\n7\n1\n6\n\n程序就要返回\n\n19\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    int total = 0;\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        total += *it;\n    }\n    cout << total << endl;\n    return 0;\n}\n",
+      "expectedOutput": "22",
+      "stdin": "4\n6\n6\n6\n4\n",
+      "explanation": "这一题的重点是**用变量走柜子** —— 它和「报编号取货」是同一件事的两种写法。\n\n变量的两个路标：起点写 `v.begin()`；走到哪儿写 `it != v.end()`。`v.end()` 站的不是最后一格，是**最后一格的后面一格** —— 它本身就是「到此为止」那句话，所以一轮都不会少、也不会多走。\n\n跑圈里那一句 `total += *it;` 有两个必须写对的地方：\n\n- 星星不能少 —— `*it` 才是「变量上指着的**那一格里的货**」；少了星星就是拿着名称去做加法，编译器当场拦下；\n- 加的是**那一格的货**，不是位置 —— 别拿 `it` 去参与加法。\n\n⚠️ 「柜子里有几格」和「加起来是多少」是两回事：这一题要的是**和**，不是个数。判分传入的那组数跟样例不一样，别把样例的答案写死。",
+      "templateId": "cpp-s3-01-sum-with-iterator",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "9ced79eaf8dc3c19"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-01-sum-with-iterator-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想把传入进来的数**全加起来**。输入接口会**先给一个数**（要跟着几个数），**再一个一个给 5 个数**。\n\n请你写个程序：\n\n1. 把这 5 个数**一格一个**塞进柜子（每塞一个都用那个「从柜子后面塞进去」的函数）；\n2. 拿一把**变量**从柜子头上出发，一路走到尽头的**后面一格**；每走一步，就把变量上那一格的货加进一个叫 `total` 的格子里（`total` 从 0 起）；\n3. 最后印**一行**：加出来的那个和。\n\n比如程序的输入是\n\n5\n5\n4\n8\n7\n6\n\n程序就要返回\n\n30\n\n（判分喂的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    vector<int> v;\n    for (int i = 0; i < n; i++) {\n        int x = 0;\n        cin >> x;\n        v.push_back(x);\n    }\n\n    int total = 0;\n    for (auto it = v.begin(); it != v.end(); ++it) {\n        total += *it;\n    }\n    cout << total << endl;\n    return 0;\n}\n",
+      "expectedOutput": "20",
+      "stdin": "5\n4\n1\n4\n5\n6\n",
+      "explanation": "这一题的重点是**用变量走柜子** —— 它和「报编号取货」是同一件事的两种写法。\n\n变量的两个路标：起点写 `v.begin()`；走到哪儿写 `it != v.end()`。`v.end()` 站的不是最后一格，是**最后一格的后面一格** —— 它本身就是「到此为止」那句话，所以一轮都不会少、也不会多走。\n\n跑圈里那一句 `total += *it;` 有两个必须写对的地方：\n\n- 星星不能少 —— `*it` 才是「变量上指着的**那一格里的货**」；少了星星就是拿着名称去做加法，编译器当场拦下；\n- 加的是**那一格的货**，不是位置 —— 别拿 `it` 去参与加法。\n\n⚠️ 「柜子里有几格」和「加起来是多少」是两回事：这一题要的是**和**，不是个数。判分传入的那组数跟样例不一样，别把样例的答案写死。",
+      "templateId": "cpp-s3-01-sum-with-iterator",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.300Z",
+        "hash": "f20b1cb2c912c82e"
+      }
+    }
+  ]
+}

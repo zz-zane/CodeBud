@@ -1,0 +1,532 @@
+{
+  "lessonId": "java-stage1-11",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s1-charat-length-oob-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们想印出一串字的**最后一颗字符**。这串字每次从纸条上来，长短都不一样，所以我们偷了个懒：不写死编号，拿「有几颗」这个数去报编号。\n\n结果这程序**一跑就断气** —— 屏幕上错误信息一长串，该印的那行一个字都没有。\n\n你帮我们把编号改对，让它把这串字的最后一颗印出来。\n\n比如程序的输入是\n\n李四的毛线球\n\n程序就要返回\n\n最后一颗是 球\n\n（判分用的是**另外一串字**，长短也不一样。）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        System.out.println(\"最后一颗是 \" + s.charAt(s.length()));\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        System.out.println(\"最后一颗是 \" + s.charAt(s.length() - 1));\n    }\n}\n",
+      "expectedOutput": "最后一颗是 手",
+      "stdin": "数据到手\n",
+      "explanation": "Java String 下标从 0 开始，有效范围小于 length()。charAt(length()) 越界，最后一个 UTF-16 代码单元位于 length()-1；length() 不是任意 Unicode 字符串的用户感知字符数。",
+      "templateId": "java-s1-charat-length-oob",
+      "params": {
+        "word": "数据到手",
+        "word2": "李四的毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.877Z",
+        "hash": "f24ea5d86835c7d5"
+      }
+    },
+    {
+      "id": "bank-java-s1-charat-length-oob-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们想印出一串字的**最后一颗字符**。这串字每次从纸条上来，长短都不一样，所以我们偷了个懒：不写死编号，拿「有几颗」这个数去报编号。\n\n结果这程序**一跑就断气** —— 屏幕上错误信息一长串，该印的那行一个字都没有。\n\n你帮我们把编号改对，让它把这串字的最后一颗印出来。\n\n比如程序的输入是\n\n张三的数据容器\n\n程序就要返回\n\n最后一颗是 器\n\n（判分用的是**另外一串字**，长短也不一样。）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        System.out.println(\"最后一颗是 \" + s.charAt(s.length()));\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        System.out.println(\"最后一颗是 \" + s.charAt(s.length() - 1));\n    }\n}\n",
+      "expectedOutput": "最后一颗是 区",
+      "stdin": "计算机的工作区\n",
+      "explanation": "Java String 下标从 0 开始，有效范围小于 length()。charAt(length()) 越界，最后一个 UTF-16 代码单元位于 length()-1；length() 不是任意 Unicode 字符串的用户感知字符数。",
+      "templateId": "java-s1-charat-length-oob",
+      "params": {
+        "word": "计算机的工作区",
+        "word2": "张三的数据容器"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.877Z",
+        "hash": "b7ac4aa0009306d5"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-tail-slice-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和一个数 `n` 。我们要的是这串字**末尾上那 `n` 颗**（最后一段），掏出来印一行就行。\n\n纸条上的 `n` 保准不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n李四的毛线球 4\n\n程序就要返回\n\n的毛线球\n\n（判分用的是**另外一串字、另外一个 `n`** 。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(s.length() - n, s.length()));\n    }\n}\n",
+      "expectedOutput": "到手",
+      "stdin": "数据到手 2\n",
+      "explanation": "substring(a,b) 包含起点而不包含终点。用 length() 计算末尾位置时要区分有效下标与排他终点，避免少取或越界。",
+      "templateId": "java-s1-string-tail-slice",
+      "params": {
+        "word": "数据到手",
+        "n": 2,
+        "word2": "李四的毛线球",
+        "n2": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.877Z",
+        "hash": "75754bfabe3b2176"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-tail-slice-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和一个数 `n` 。我们要的是这串字**末尾上那 `n` 颗**（最后一段），掏出来印一行就行。\n\n纸条上的 `n` 保准不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n张三的数据容器 5\n\n程序就要返回\n\n的数据容器\n\n（判分用的是**另外一串字、另外一个 `n`** 。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(s.length() - n, s.length()));\n    }\n}\n",
+      "expectedOutput": "到手",
+      "stdin": "数据到手 2\n",
+      "explanation": "substring(a,b) 包含起点而不包含终点。用 length() 计算末尾位置时要区分有效下标与排他终点，避免少取或越界。",
+      "templateId": "java-s1-string-tail-slice",
+      "params": {
+        "word": "数据到手",
+        "n": 2,
+        "word2": "张三的数据容器",
+        "n2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.877Z",
+        "hash": "eadd457ed2e55e0b"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-tail-slice-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和一个数 `n` 。我们要的是这串字**末尾上那 `n` 颗**（最后一段），掏出来印一行就行。\n\n纸条上的 `n` 保准不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n张三的数据容器 4\n\n程序就要返回\n\n数据容器\n\n（判分用的是**另外一串字、另外一个 `n`** 。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(s.length() - n, s.length()));\n    }\n}\n",
+      "expectedOutput": "据到手",
+      "stdin": "数据到手 3\n",
+      "explanation": "substring(a,b) 包含起点而不包含终点。用 length() 计算末尾位置时要区分有效下标与排他终点，避免少取或越界。",
+      "templateId": "java-s1-string-tail-slice",
+      "params": {
+        "word": "数据到手",
+        "n": 3,
+        "word2": "张三的数据容器",
+        "n2": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "3535e85ddd8e7939"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-tail-slice-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和一个数 `n` 。我们要的是这串字**末尾上那 `n` 颗**（最后一段），掏出来印一行就行。\n\n纸条上的 `n` 保准不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n李四的毛线球 5\n\n程序就要返回\n\n四的毛线球\n\n（判分用的是**另外一串字、另外一个 `n`** 。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(s.length() - n, s.length()));\n    }\n}\n",
+      "expectedOutput": "作区",
+      "stdin": "计算机的工作区 2\n",
+      "explanation": "substring(a,b) 包含起点而不包含终点。用 length() 计算末尾位置时要区分有效下标与排他终点，避免少取或越界。",
+      "templateId": "java-s1-string-tail-slice",
+      "params": {
+        "word": "计算机的工作区",
+        "n": 2,
+        "word2": "李四的毛线球",
+        "n2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "20ee8ed21305a0e8"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-tail-slice-012",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和一个数 `n` 。我们要的是这串字**末尾上那 `n` 颗**（最后一段），掏出来印一行就行。\n\n纸条上的 `n` 保准不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n李四的毛线球 4\n\n程序就要返回\n\n的毛线球\n\n（判分用的是**另外一串字、另外一个 `n`** 。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(s.length() - n, s.length()));\n    }\n}\n",
+      "expectedOutput": "工作区",
+      "stdin": "计算机的工作区 3\n",
+      "explanation": "substring(a,b) 包含起点而不包含终点。用 length() 计算末尾位置时要区分有效下标与排他终点，避免少取或越界。",
+      "templateId": "java-s1-string-tail-slice",
+      "params": {
+        "word": "计算机的工作区",
+        "n": 3,
+        "word2": "李四的毛线球",
+        "n2": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "f0502daa26071992"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-tail-slice-015",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和一个数 `n` 。我们要的是这串字**末尾上那 `n` 颗**（最后一段），掏出来印一行就行。\n\n纸条上的 `n` 保准不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n张三的数据容器 5\n\n程序就要返回\n\n的数据容器\n\n（判分用的是**另外一串字、另外一个 `n`** 。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(s.length() - n, s.length()));\n    }\n}\n",
+      "expectedOutput": "工作区",
+      "stdin": "计算机的工作区 3\n",
+      "explanation": "substring(a,b) 包含起点而不包含终点。用 length() 计算末尾位置时要区分有效下标与排他终点，避免少取或越界。",
+      "templateId": "java-s1-string-tail-slice",
+      "params": {
+        "word": "计算机的工作区",
+        "n": 3,
+        "word2": "张三的数据容器",
+        "n2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "c626fd55ca1e4cf4"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-walk-chars-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要**一颗一颗**看过去，每颗单独占一行，最后再报一句「一共有几颗」。\n\n提示：字符数得**现场问**（`length()`），别把数字写死 —— 判分那串字跟这边的长短不一样。\n\n比如程序的输入是\n\n李四的毛线球\n\n程序就要返回\n\n李\n四\n的\n毛\n线\n球\n一共 6 颗\n\n（判分用的是**另外一串字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        for (int i = 0; i < s.length(); i++) {\n            System.out.println(s.charAt(i));\n        }\n        System.out.println(\"一共 \" + s.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "数\n据\n到\n手\n一共 4 颗",
+      "stdin": "数据到手\n",
+      "explanation": "按下标遍历 String 时条件应为 i < s.length()。charAt 返回 UTF-16 代码单元；对本例的 BMP 字符可以逐个读取，但补充字符可能占两个代码单元。",
+      "templateId": "java-s1-string-walk-chars",
+      "params": {
+        "word": "数据到手",
+        "word2": "李四的毛线球",
+        "tail": "一共"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "b7a1d0da58f040a5"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-walk-chars-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要**一颗一颗**看过去，每颗单独占一行，最后再报一句「一共有几颗」。\n\n提示：字符数得**现场问**（`length()`），别把数字写死 —— 判分那串字跟这边的长短不一样。\n\n比如程序的输入是\n\n李四的毛线球\n\n程序就要返回\n\n李\n四\n的\n毛\n线\n球\n总共有 6 颗\n\n（判分用的是**另外一串字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        for (int i = 0; i < s.length(); i++) {\n            System.out.println(s.charAt(i));\n        }\n        System.out.println(\"总共有 \" + s.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "数\n据\n到\n手\n总共有 4 颗",
+      "stdin": "数据到手\n",
+      "explanation": "按下标遍历 String 时条件应为 i < s.length()。charAt 返回 UTF-16 代码单元；对本例的 BMP 字符可以逐个读取，但补充字符可能占两个代码单元。",
+      "templateId": "java-s1-string-walk-chars",
+      "params": {
+        "word": "数据到手",
+        "word2": "李四的毛线球",
+        "tail": "总共有"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "056dc3c9bbd5dc39"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-walk-chars-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要**一颗一颗**看过去，每颗单独占一行，最后再报一句「一共有几颗」。\n\n提示：字符数得**现场问**（`length()`），别把数字写死 —— 判分那串字跟这边的长短不一样。\n\n比如程序的输入是\n\n张三的数据容器\n\n程序就要返回\n\n张\n三\n的\n数\n据\n容\n器\n总共有 7 颗\n\n（判分用的是**另外一串字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        for (int i = 0; i < s.length(); i++) {\n            System.out.println(s.charAt(i));\n        }\n        System.out.println(\"总共有 \" + s.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "数\n据\n到\n手\n总共有 4 颗",
+      "stdin": "数据到手\n",
+      "explanation": "按下标遍历 String 时条件应为 i < s.length()。charAt 返回 UTF-16 代码单元；对本例的 BMP 字符可以逐个读取，但补充字符可能占两个代码单元。",
+      "templateId": "java-s1-string-walk-chars",
+      "params": {
+        "word": "数据到手",
+        "word2": "张三的数据容器",
+        "tail": "总共有"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "aa0a332b93a17187"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-walk-chars-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要**一颗一颗**看过去，每颗单独占一行，最后再报一句「一共有几颗」。\n\n提示：字符数得**现场问**（`length()`），别把数字写死 —— 判分那串字跟这边的长短不一样。\n\n比如程序的输入是\n\n李四的毛线球\n\n程序就要返回\n\n李\n四\n的\n毛\n线\n球\n一共 6 颗\n\n（判分用的是**另外一串字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        for (int i = 0; i < s.length(); i++) {\n            System.out.println(s.charAt(i));\n        }\n        System.out.println(\"一共 \" + s.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "计\n算\n机\n的\n工\n作\n区\n一共 7 颗",
+      "stdin": "计算机的工作区\n",
+      "explanation": "按下标遍历 String 时条件应为 i < s.length()。charAt 返回 UTF-16 代码单元；对本例的 BMP 字符可以逐个读取，但补充字符可能占两个代码单元。",
+      "templateId": "java-s1-string-walk-chars",
+      "params": {
+        "word": "计算机的工作区",
+        "word2": "李四的毛线球",
+        "tail": "一共"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "757bb4fafba4c297"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-walk-chars-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要**一颗一颗**看过去，每颗单独占一行，最后再报一句「一共有几颗」。\n\n提示：字符数得**现场问**（`length()`），别把数字写死 —— 判分那串字跟这边的长短不一样。\n\n比如程序的输入是\n\n张三的数据容器\n\n程序就要返回\n\n张\n三\n的\n数\n据\n容\n器\n一共 7 颗\n\n（判分用的是**另外一串字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        for (int i = 0; i < s.length(); i++) {\n            System.out.println(s.charAt(i));\n        }\n        System.out.println(\"一共 \" + s.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "计\n算\n机\n的\n工\n作\n区\n一共 7 颗",
+      "stdin": "计算机的工作区\n",
+      "explanation": "按下标遍历 String 时条件应为 i < s.length()。charAt 返回 UTF-16 代码单元；对本例的 BMP 字符可以逐个读取，但补充字符可能占两个代码单元。",
+      "templateId": "java-s1-string-walk-chars",
+      "params": {
+        "word": "计算机的工作区",
+        "word2": "张三的数据容器",
+        "tail": "一共"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "1f802eedf693da74"
+      }
+    },
+    {
+      "id": "bank-java-s1-string-walk-chars-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要**一颗一颗**看过去，每颗单独占一行，最后再报一句「一共有几颗」。\n\n提示：字符数得**现场问**（`length()`），别把数字写死 —— 判分那串字跟这边的长短不一样。\n\n比如程序的输入是\n\n张三的数据容器\n\n程序就要返回\n\n张\n三\n的\n数\n据\n容\n器\n总共有 7 颗\n\n（判分用的是**另外一串字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        for (int i = 0; i < s.length(); i++) {\n            System.out.println(s.charAt(i));\n        }\n        System.out.println(\"总共有 \" + s.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "计\n算\n机\n的\n工\n作\n区\n总共有 7 颗",
+      "stdin": "计算机的工作区\n",
+      "explanation": "按下标遍历 String 时条件应为 i < s.length()。charAt 返回 UTF-16 代码单元；对本例的 BMP 字符可以逐个读取，但补充字符可能占两个代码单元。",
+      "templateId": "java-s1-string-walk-chars",
+      "params": {
+        "word": "计算机的工作区",
+        "word2": "张三的数据容器",
+        "tail": "总共有"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "0dea5091fc01edc7"
+      }
+    },
+    {
+      "id": "bank-java-s1-substring-off-by-one-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和一个数 `n` 。我们想掏出这串字**最前面那 `n` 颗**字符印出来 —— 掏是掏出来了，可**每次都多一颗**。\n\n你帮我们把多出来的那颗找回来，留着原来的样子别动（读纸条、掏字符这两步都不用改）。\n\n比如程序的输入是\n\n李四的毛线球 4\n\n程序就要返回\n\n李四的毛\n\n（判分用的是**另外一串字**，所以别把答案写死）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(0, n + 1));\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(0, n));\n    }\n}\n",
+      "expectedOutput": "数据",
+      "stdin": "数据到手 2\n",
+      "explanation": "substring 的终点是排他边界。修复时按目标片段确定起止位置，不把“最后一个下标”直接等同于“substring 的终点”。",
+      "templateId": "java-s1-substring-off-by-one",
+      "params": {
+        "word": "数据到手",
+        "n": 2,
+        "word2": "李四的毛线球",
+        "n2": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "19e51af0020c54b0"
+      }
+    },
+    {
+      "id": "bank-java-s1-substring-off-by-one-015",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和一个数 `n` 。我们想掏出这串字**最前面那 `n` 颗**字符印出来 —— 掏是掏出来了，可**每次都多一颗**。\n\n你帮我们把多出来的那颗找回来，留着原来的样子别动（读纸条、掏字符这两步都不用改）。\n\n比如程序的输入是\n\n张三的数据容器 5\n\n程序就要返回\n\n张三的数据\n\n（判分用的是**另外一串字**，所以别把答案写死）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(0, n + 1));\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(0, n));\n    }\n}\n",
+      "expectedOutput": "计算机",
+      "stdin": "计算机的工作区 3\n",
+      "explanation": "`substring(a, b)` 掏的是 **`a` 号到「`b` 号之前」**那颗字符：`b` 号本身**不算**。想掏**最前面 `n` 颗**，就是 `0`、`1`……一直到 `n - 1` 号 —— 所以后面那个数该写 `n`，不是 `n + 1`。\n\n我们这次写的是 `substring(0, n + 1)`：多算了一位，掏出来自然多一颗（`n = 2` 时掏出的是 `0`、`1`、`2` 三颗，而不是 `0`、`1` 两颗）。\n\n这一条是本课最好摔的地方 —— **「到它之前为止」，永远差一个**。改法就是把那个 `+ 1` 拿掉：`s.substring(0, n)`。\n\n（还有一处要留心：后面那个数要是**超过字符总数**，就不是多一颗的问题了，`StringIndexOutOfBoundsException` 会当场打断气。我们这次只是在缸里多掏一颗，所以没炸，只是印错了。）",
+      "templateId": "java-s1-substring-off-by-one",
+      "params": {
+        "word": "计算机的工作区",
+        "n": 3,
+        "word2": "张三的数据容器",
+        "n2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.522Z",
+        "hash": "d5eeb9a46a6e7fe9"
+      }
+    },
+    {
+      "id": "bank-java-s1-substring-slice-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和**两个编号** `a`、`b` 。我们要掏出从 `a` 号到 `b` 号**之前**的那一段，印两行：先印切出来的一段，再印这段有几颗。\n\n纸条上的两个编号是保准合法的：`a` 比 `b` 小，`b` 不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n李四的毛线球 2 5\n\n程序就要返回\n\n切出来的是 的毛线\n这段有 3 颗\n\n（判分用的是**另外一串字、另外两个编号**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String piece = s.substring(a, b);\n        System.out.println(\"切出来的是 \" + piece);\n        System.out.println(\"这段有 \" + piece.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "切出来的是 据到手\n这段有 3 颗",
+      "stdin": "数据到手 1 4\n",
+      "explanation": "substring(a,b) 返回 [a,b) 范围内的新字符串。题目保证下标合法，修订测试文本时也必须保持 0 <= a < b <= s.length()；结果长度为 b-a。",
+      "templateId": "java-s1-substring-slice",
+      "params": {
+        "word": "数据到手",
+        "a": 1,
+        "b": 4,
+        "word2": "李四的毛线球",
+        "a2": 2,
+        "b2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "8b488bb71fa7a839"
+      }
+    },
+    {
+      "id": "bank-java-s1-substring-slice-013",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和**两个编号** `a`、`b` 。我们要掏出从 `a` 号到 `b` 号**之前**的那一段，印两行：先印切出来的一段，再印这段有几颗。\n\n纸条上的两个编号是保准合法的：`a` 比 `b` 小，`b` 不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n张三的数据容器 2 6\n\n程序就要返回\n\n切出来的是 的数据容\n这段有 4 颗\n\n（判分用的是**另外一串字、另外两个编号**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String piece = s.substring(a, b);\n        System.out.println(\"切出来的是 \" + piece);\n        System.out.println(\"这段有 \" + piece.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "切出来的是 例文本集\n这段有 4 颗",
+      "stdin": "示例文本集 1 5\n",
+      "explanation": "substring(a,b) 返回 [a,b) 范围内的新字符串。题目保证下标合法，修订测试文本时也必须保持 0 <= a < b <= s.length()；结果长度为 b-a。",
+      "templateId": "java-s1-substring-slice",
+      "params": {
+        "word": "数据到手",
+        "a": 1,
+        "b": 5,
+        "word2": "张三的数据容器",
+        "a2": 2,
+        "b2": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "0ce6e9e46b7f62f9"
+      }
+    },
+    {
+      "id": "bank-java-s1-substring-slice-025",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和**两个编号** `a`、`b` 。我们要掏出从 `a` 号到 `b` 号**之前**的那一段，印两行：先印切出来的一段，再印这段有几颗。\n\n纸条上的两个编号是保准合法的：`a` 比 `b` 小，`b` 不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n李四的毛线球 2 6\n\n程序就要返回\n\n切出来的是 的毛线球\n这段有 4 颗\n\n（判分用的是**另外一串字、另外两个编号**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String piece = s.substring(a, b);\n        System.out.println(\"切出来的是 \" + piece);\n        System.out.println(\"这段有 \" + piece.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "切出来的是 文本集\n这段有 3 颗",
+      "stdin": "示例文本集 2 5\n",
+      "explanation": "substring(a,b) 返回 [a,b) 范围内的新字符串。题目保证下标合法，修订测试文本时也必须保持 0 <= a < b <= s.length()；结果长度为 b-a。",
+      "templateId": "java-s1-substring-slice",
+      "params": {
+        "word": "数据到手",
+        "a": 2,
+        "b": 5,
+        "word2": "李四的毛线球",
+        "a2": 2,
+        "b2": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "38ad01eaaa11b02c"
+      }
+    },
+    {
+      "id": "bank-java-s1-substring-slice-038",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和**两个编号** `a`、`b` 。我们要掏出从 `a` 号到 `b` 号**之前**的那一段，印两行：先印切出来的一段，再印这段有几颗。\n\n纸条上的两个编号是保准合法的：`a` 比 `b` 小，`b` 不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n张三的数据容器 3 5\n\n程序就要返回\n\n切出来的是 数据\n这段有 2 颗\n\n（判分用的是**另外一串字、另外两个编号**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String piece = s.substring(a, b);\n        System.out.println(\"切出来的是 \" + piece);\n        System.out.println(\"这段有 \" + piece.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "切出来的是 算机的\n这段有 3 颗",
+      "stdin": "计算机的工作区 1 4\n",
+      "explanation": "substring(a,b) 返回 [a,b) 范围内的新字符串。题目保证下标合法，修订测试文本时也必须保持 0 <= a < b <= s.length()；结果长度为 b-a。",
+      "templateId": "java-s1-substring-slice",
+      "params": {
+        "word": "计算机的工作区",
+        "a": 1,
+        "b": 4,
+        "word2": "张三的数据容器",
+        "a2": 3,
+        "b2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "52d3bb1324c4038f"
+      }
+    },
+    {
+      "id": "bank-java-s1-substring-slice-050",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和**两个编号** `a`、`b` 。我们要掏出从 `a` 号到 `b` 号**之前**的那一段，印两行：先印切出来的一段，再印这段有几颗。\n\n纸条上的两个编号是保准合法的：`a` 比 `b` 小，`b` 不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n李四的毛线球 3 5\n\n程序就要返回\n\n切出来的是 毛线\n这段有 2 颗\n\n（判分用的是**另外一串字、另外两个编号**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String piece = s.substring(a, b);\n        System.out.println(\"切出来的是 \" + piece);\n        System.out.println(\"这段有 \" + piece.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "切出来的是 机的\n这段有 2 颗",
+      "stdin": "计算机的工作区 2 4\n",
+      "explanation": "substring(a,b) 返回 [a,b) 范围内的新字符串。题目保证下标合法，修订测试文本时也必须保持 0 <= a < b <= s.length()；结果长度为 b-a。",
+      "templateId": "java-s1-substring-slice",
+      "params": {
+        "word": "计算机的工作区",
+        "a": 2,
+        "b": 4,
+        "word2": "李四的毛线球",
+        "a2": 3,
+        "b2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "8c6c2bec620826d4"
+      }
+    },
+    {
+      "id": "bank-java-s1-substring-slice-063",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**和**两个编号** `a`、`b` 。我们要掏出从 `a` 号到 `b` 号**之前**的那一段，印两行：先印切出来的一段，再印这段有几颗。\n\n纸条上的两个编号是保准合法的：`a` 比 `b` 小，`b` 不超过字符数，不用我们自己防。\n\n比如程序的输入是\n\n张三的数据容器 3 6\n\n程序就要返回\n\n切出来的是 数据容\n这段有 3 颗\n\n（判分用的是**另外一串字、另外两个编号**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String piece = s.substring(a, b);\n        System.out.println(\"切出来的是 \" + piece);\n        System.out.println(\"这段有 \" + piece.length() + \" 颗\");\n    }\n}\n",
+      "expectedOutput": "切出来的是 机的工\n这段有 3 颗",
+      "stdin": "计算机的工作区 2 5\n",
+      "explanation": "substring(a,b) 返回 [a,b) 范围内的新字符串。题目保证下标合法，修订测试文本时也必须保持 0 <= a < b <= s.length()；结果长度为 b-a。",
+      "templateId": "java-s1-substring-slice",
+      "params": {
+        "word": "计算机的工作区",
+        "a": 2,
+        "b": 5,
+        "word2": "张三的数据容器",
+        "a2": 3,
+        "b2": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "07a11185fc0b5a06"
+      }
+    },
+    {
+      "id": "bank-java-s1-trim-not-caught-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "递纸条的家伙手抖了 —— 名字**两头各带了两个空格**。我们想把它掐干净再印出来，掐空白那一个方法也调用过了，可印出来两边还是空空的。\n\n你帮我们把两头的空白掐掉，印成 `[名字]` 的样子（两边那对方括号要留着，那是我们看空格用的）。\n\n比如纸条上递来的是（两头的空格也算纸条的一部分）：\n\n  王五\n\n程序就要返回\n\n[王五]\n\n（判分用的是**另外一个名字**。）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.nextLine();\n        s.trim();\n        System.out.println(\"[\" + s + \"]\");\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.nextLine();\n        System.out.println(\"[\" + s.trim() + \"]\");\n    }\n}\n",
+      "expectedOutput": "[张三]",
+      "stdin": "  张三  \n",
+      "explanation": "**缸是焊住的**：`trim()` 从来不改原来那个缸，它只是**另做一个掐干净的新缸**返回。我们调用结束那一句**没接住**这个结果 —— 新缸飘走了，`s` 还是原来那个带空格的，当然印出来一颗空格不少。\n\n正路两条，意思一样：\n\n- 用名称把新缸接住：先 `s = s.trim();` 再印 `s`（这是把名称从旧缸上摘下来、挂到新缸上）；\n- 或者当场用掉结果：`System.out.println(\"[\" + s.trim() + \"]\");`\n\n这种错**不报错、不提醒**，屏幕上安安静静，编译器一个字都不说 —— 只能靠自己记住那一句：**这串东西的方法不改原件、只返回新的**。所以调用结束要么**接住它**，要么**当场用掉它**，调用一次丢一次等于白调用。",
+      "templateId": "java-s1-trim-not-caught",
+      "params": {
+        "name": "张三",
+        "name2": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.522Z",
+        "hash": "236ba8d21d8ef38b"
+      }
+    },
+    {
+      "id": "bank-java-s1-trim-not-caught-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "递纸条的家伙手抖了 —— 名字**两头各带了两个空格**。我们想把它掐干净再印出来，掐空白那一个方法也调用过了，可印出来两边还是空空的。\n\n你帮我们把两头的空白掐掉，印成 `[名字]` 的样子（两边那对方括号要留着，那是我们看空格用的）。\n\n比如纸条上递来的是（两头的空格也算纸条的一部分）：\n\n  雪球\n\n程序就要返回\n\n[雪球]\n\n（判分用的是**另外一个名字**。）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.nextLine();\n        s.trim();\n        System.out.println(\"[\" + s + \"]\");\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.nextLine();\n        System.out.println(\"[\" + s.trim() + \"]\");\n    }\n}\n",
+      "expectedOutput": "[李四]",
+      "stdin": "  李四  \n",
+      "explanation": "**缸是焊住的**：`trim()` 从来不改原来那个缸，它只是**另做一个掐干净的新缸**返回。我们调用结束那一句**没接住**这个结果 —— 新缸飘走了，`s` 还是原来那个带空格的，当然印出来一颗空格不少。\n\n正路两条，意思一样：\n\n- 用名称把新缸接住：先 `s = s.trim();` 再印 `s`（这是把名称从旧缸上摘下来、挂到新缸上）；\n- 或者当场用掉结果：`System.out.println(\"[\" + s.trim() + \"]\");`\n\n这种错**不报错、不提醒**，屏幕上安安静静，编译器一个字都不说 —— 只能靠自己记住那一句：**这串东西的方法不改原件、只返回新的**。所以调用结束要么**接住它**，要么**当场用掉它**，调用一次丢一次等于白调用。",
+      "templateId": "java-s1-trim-not-caught",
+      "params": {
+        "name": "李四",
+        "name2": "雪球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.522Z",
+        "hash": "240ef1823034d0ea"
+      }
+    }
+  ]
+}

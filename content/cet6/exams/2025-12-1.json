@@ -1,0 +1,4151 @@
+{
+  "id": "2025-12-1",
+  "title": "2025年12月 第1套",
+  "year": 2025,
+  "month": 12,
+  "set": 1,
+  "status": "partial",
+  "issues": [
+    "G 盘解析册缺少 Q16–25 标准答案；现根据 G 盘录音抽样及公开非官方材料核对录入，非官方正式答案。Q1–15 仍需逐题核实。",
+    "听力文本含 7 段 G 盘音频机器转写草稿，尚未逐句核验，可能有识别错误；不计入完整原文统计。",
+    "2025-12-1 听力第 16–25 题：原解析缺页，保留音频转写和非官方资料得到的参考答案，未核实且不计分。",
+    "严格质检：听力原文 0/7；听力译文 0/7；25 题答案未核实。",
+    "写作题干已清理（2026-11-08）：去除版面残片、补齐指令。",
+    "翻译题干已清理（2026-11-08）：去除指令残片、答案速查、版权页脚等外洩文字。",
+    "听力解析：原为一句话摘要的题目，已追加依据听力原文自动定位的支持句（标注「自动匹配」，非官方解析，可能不准）；原摘要保留在 explanationOriginal。",
+    "听力解析：原「未能定位」题已按解析摘要与原文对照选句补回（语义匹配/答案标记，未经录音核听，非官方）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+      "title": "cet6_2025_12_1_ans.pdf",
+      "url": "https://drive.google.com/file/d/1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4/view?usp=drivesdk"
+    },
+    {
+      "id": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+      "title": "cet6_2025_12_1.pdf",
+      "url": "https://drive.google.com/file/d/1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58/view?usp=drivesdk"
+    },
+    {
+      "id": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+      "title": "2025年12月六级听力第1套.mp3",
+      "url": "https://drive.google.com/file/d/1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5/view?usp=drivesdk"
+    },
+    {
+      "id": "github-cet-listening-2025-12-1",
+      "title": "2025-12 第一套听力逐句稿（非官方，固定版本）",
+      "url": "https://github.com/3056810551/cet-listening/blob/18765366049d446df897d373f303677ba40c96fd/transcripts/cet6/2025-12-1.md",
+      "type": "external-reference"
+    },
+    {
+      "id": "reference-2025-12-answer-pdf",
+      "title": "2025年12月六级参考答案汇总（非官方）",
+      "url": "https://cdn.zizzs.com/zixunzhan/2025%E5%B9%B412%E6%9C%886%E7%BA%A7%E7%AD%94%E6%A1%881765706372113.pdf",
+      "type": "external-reference"
+    },
+    {
+      "id": "reference-2025-12-listening-1",
+      "title": "2025年12月第一套听力参考解析（非官方）",
+      "url": "https://english-exam.lazynote.cn/cet6/sections/listening/2025-12-1/",
+      "type": "external-reference"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “Living in an increasingly competitive world, college students should better prepare themselves to confront various challenges.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. You should copy the sentence given in quotes at the beginning of your essay.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “Living in an increasingly competitive world, college students should better prepare themselves to confront various challenges.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. You should copy the sentence given in quotes at the beginning of your essay.",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              1
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-12-1-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “Living in an increasingly competitive world, college students should better prepare themselves to confront various challenges.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. You should copy the sentence given in quotes at the beginning of your essay.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "Living in an increasingly competitive world, college students should better prepare themselves to confront various challenges. In today's job market, graduates are expected to possess not only solid professional knowledge but also strong interpersonal skills and resilience. To meet these expectations, students can start by actively participating in internships and extracurricular activities, which provide valuable hands-on experience and help build a network of contacts. Additionally, developing time management and stress-coping strategies is crucial for maintaining both academic performance and mental well-being. For instance, I have found that setting daily goals and engaging in regular physical exercise significantly boosts my productivity and reduces anxiety. Moreover, cultivating a growth mindset—viewing setbacks as learning opportunities— enables us to adapt to rapidly changing circumstances. In conclusion, proactive preparation in academic, professional, and psychological aspects is essential for college students to thrive in an increasingly competitive world.",
+          "explanation": "【写作思路】\n开篇：直接抄写给定句子，点明当代大学生面临激烈的竞争环境。主体：可从技能提升（专业技能、软技能如沟通、团队协作）、心理准备（抗压能力、积极心态）、实习实践（积累经验、了解行业）、时间管理（高效利用时间）等方面展开，结合个人经历或社会现象。结尾：重申准备的重要性，呼吁大学生积极行动。\n\n【参考范文】\nLiving in an increasingly competitive world, college students should better prepare themselves to confront various challenges. In today's job market, graduates are expected to possess not only solid professional knowledge but also strong interpersonal skills and resilience. To meet these expectations, students can start by actively participating in internships and extra curricular activities, which provide valuable hands-on experience and help build a network of contacts. Additionally, developing time management and stress-coping strategies is crucial for maintaining both academic performance and mental well-being. For instance, I have found that setting daily goals and engaging in regular physical exercise significantly boosts my productivity and reduces anxiety. Moreover, cultivating a growth mindset—viewing setbacks as learning opportunities— enables us to adapt to rapidly changing circumstances. In conclusion, proactive preparation in academic, professional, and psychological aspects is essential for college students to thrive in an increasingly competitive world.",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear long conversations, passages and talks.",
+      "audio": {
+        "src": "source-media/2025年12月第1套/2025年12月六级听力第1套.mp3",
+        "sourceId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+        "sharedWith": []
+      },
+      "blocks": [
+        {
+          "id": "listening-draft-1",
+          "title": "Conversation One",
+          "text": "",
+          "transcript": "",
+          "transcriptDraft": "Today's special guest is Lord Blackwell, one of our country's most experienced and distinguished career diplomats. Welcome. It's my pleasure. Our audience will be most interested in learning about a career in the foreign service. However, before we talk about that, I'd like to ask you about the current developments hitting the news today, regarding the Republic of Winopia. What can you tell us? I'm afraid I don't know much beyond what we've all seen on the news. It looks like the government of Winopia seems to be undergoing some sort of crisis of legitimacy, and an interim administration has been transitionally established until ahead of state's agreed on. My career work has mostly focused around the continental spheres of Europe and the Americas, and thus I've never been involved with Winopian relations. It's for this reason that I don't know anything on this matter, beyond what we can all read in the newspapers. Oh, I see. Nevertheless, be rest assured that our export on-voys at our consulate there will be closely monitoring the situation, and I expect our bilateral relations with that country will not be affected. So how does one get a career in foreign relations? There are many different paths one can take. All diplomats have their own story. But in my case, I got a degree in electrical engineering followed by six years service in the Air Force. Then I went to law school and upon obtaining a degree in international law, I joined the diplomatic corps where I've been for 22 years. What would you say are the key skills one needs for the job? There are so many. Being a hard worker and good students is important. You never stop learning. In addition, a diplomat needs to be very articulate in their discourse and rhetoric. Whether it is diffusing attention or enacting policy, people and communication skills are vital.",
+          "translation": "",
+          "source": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "pages": []
+          },
+          "transcriptDraftSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 37.51,
+            "endSeconds": 156.87,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-draft-2",
+          "title": "Conversation Two",
+          "text": "",
+          "transcript": "",
+          "transcriptDraft": "It's getting late, and we're both displaying signs of weariness. I think we should call it today, and meet again tomorrow morning. Oh, come on, Jeff, we are so close. Don't you think we are almost done? Let's do two more hours, please. One hour, then I'm going home. Okay fine. I think we are making good progress, and, that with a few more amendments, we will be all done. I'm sure looking forward to it. I'm so tired of this project. Don't get me wrong. It's a great professional opportunity for me and a milestone for the company, but it's just been so long. Yeah, two months working on nothing but the same contract is a little tough. Nevertheless, I think that with a bit of luck, we'll be done by next week. Ha, you must be delusional. You don't think so? No chance. Sections 4, 5, 8, and 9 still have to be aligned to the new framework. Then we need to proofread the whole thing, and make sure all selling points are watertight. But that will all take no more than a couple of days. I wasn't finished. When we are done with it and send it upstairs, what do you think will happen? What? They'll argue about it for like a month? There's always going to be the odd board member who intervenes and demands rectifications be made. They might think they're being helpful, but in reality, they're being obstructive and hampering progress. Ho, Jeff, you're too preoccupied and cynical. It won't be anywhere as bad as that, you'll see. The entire managerial hierarchy wants to see this project implemented as soon as possible. And the board, too, is virtually unanimous in its support. Go on then, let's stop there and meet up again same time tomorrow.",
+          "translation": "",
+          "source": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "pages": []
+          },
+          "transcriptDraftSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 235.36,
+            "endSeconds": 344.4,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-draft-3",
+          "title": "Passage One",
+          "text": "",
+          "transcript": "",
+          "transcriptDraft": "One thing I've learned in a quarter century of management is that there are ample grey areas in human behaviour, and that there may not always be clear right or wrong solutions to employ disputes. When two people have different versions of the same event, it can be hard to know whom to believe. One such circumstance always comes back to me, It happened years ago, and it's a measure of the forgettable nature of the conflict that I no longer even recall what the dispute was about, but I definitely recall the resolution. Two talented young executives, one of whom I was managing, had vastly different accounts of the same event, and it seemed likely we'd never get to the truth. We reached a deadlock, and the manager of the other individual said, Here's something I learned from an excellent manager I once worked for. He used to say, when in doubt, assume positive intent. And just like that, we had a path forward. My counterpart and I agreed we might never ascertain the actual facts of the matter. Quite likely, there were elements of truth in both employees' stories. We agreed to monitor their actions and relationship going forward, but to intervene no further. We assumed the best about both of them and moved on. The result was that we were able to put the conflict behind us. In fact, their problems didn't recur. Over the years, this general approach has proved useful. Whenever the truth is obscure, assuming positive intent and agreeing to move on can be a constructive decision.",
+          "translation": "",
+          "source": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "pages": []
+          },
+          "transcriptDraftSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 449.89,
+            "endSeconds": 549.81,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-draft-4",
+          "title": "Passage Two",
+          "text": "",
+          "transcript": "",
+          "transcriptDraft": "For some Americans, going out to dinner is a treat, planned and budgeted for. others, it's just a daily occurrence. And that second group of people is becoming the majority, as the number of Americans who enjoy cooking is declining. In the early 2000s, researcher Eddie Yoon conducted a survey to ascertain Americans attitudes to cooking. The survey found that 15% of Americans loved to cook. 50% said they hated to cook, and 35% reported mixed feelings. When Yun conducted the same survey 15 years later, only 10% of respondents reported a love of cooking. 45% said they hated it, and 45% had mixed feelings. Yun asserts cooking is akin to sewing. As recently as the early 20th century, Many Americans sewed their own clothing. Today, the vast majority of Americans buy clothing, only a tiny minority still sew, and they do it mainly as a hobby. Yoon believes the number of home cooks will diminish in a similar fashion. Currently, the average American household spends over $3,000 per year on dining out. However, what people save in convenience, they lose in cash. take buying lunch on work days, for example. People spend on average $10 per meal when they buy lunch. Making your own lunch, meanwhile, will cost less. One survey found people only spend on average $6.30 when they bring lunch prepared at home. Americans growing a version of spending time in the kitchen signifies a host of challenges for the grocery industry. It's likely to detrimentally impact family finances as well.",
+          "translation": "",
+          "source": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "pages": []
+          },
+          "transcriptDraftSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 611.79,
+            "endSeconds": 731.61,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-draft-5",
+          "title": "Recording One",
+          "text": "",
+          "transcript": "",
+          "transcriptDraft": "Every year of the more than 2.5 billion bags checked onto Flight's worldwide, 26 million go missing, and of that 26 million, 1 million never make it back to their original owner. Bad weather and flight delays, mis-coded destination tags, and some people simply forgetting to pick up one of their bags are a few of the reasons. But the number one reason a bag ends up lost is that it has no ID tag and airlines don't know to whom it belongs. Transferring baggage from check-in to departure gates to arrival gates to baggage claim is a delicate piece of timing. If the system moves too slowly, the bags won't make connecting flights. If it's too fast, the bags may make the connection, but the passengers might miss the flight. Each airport has its own way of allotting how much time a bag needs to move in transit. Some airports have sophisticated automated systems, including scanners that read baggage labels, destination coded vehicles that load and unload the bags without stopping, and sorting machines that route baggage to the appropriate gate. Even so, all that technology may not save your baggage tag from being torn off on the conveyor belt, making you the owner of a bag with no name. Once a bag goes missing and the passenger files are claimed, the bag is declared mishandled by the carrier. Mishandled refers to bags that have been delayed, lost, stolen or damaged. Most delayed bags are only one flight behind their owners and can be delivered within 24 hours. bags are examined by airline employees for clues to their ownership and destination. If the mystery is solved, those bags are returned to their owners within four or five days. Bags with no destination code or identification tag are shipped to a central warehouse and undergo a comprehensive baggage tracing process over the next 90 days. Airlines inventory their mishandled baggage and many use a database to match the contents with owners' descriptions. It takes about three months to go from missing in action to irretrievably lost. Once that happens, the bags are donated to charity, sold at auction, or purchased by a company which sells them to the public. So never pack anything of real value in your checked baggage, and make sure your name is on the bag, along with your phone number so an agent can contact you.",
+          "translation": "",
+          "source": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "pages": []
+          },
+          "transcriptDraftSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 836.44,
+            "endSeconds": 992.72,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-draft-6",
+          "title": "Recording Two",
+          "text": "",
+          "transcript": "",
+          "transcriptDraft": "You've probably been with someone who ignored you while interacting with his or her smartphone, and you've probably engaged in this behavior yourself. In a recent survey, nine out of ten respondents said they'd used their smartphone during their most recent social activity. There's also evidence that this behavior is socially harmful. It can leave people less satisfied with their face-to-face interactions, and it can generate feelings of resentment and jealousy. Now, the Journal of Applied Social Psychology has published a new study exploring the reasons for these effects. The study included 128 mostly female student participants. The participants watched a three-minute animation, in which two cartoon figures interacted and engaged in a conversation. The conversation couldn't be heard, but could be detected through mouth movements. Participants had to imagine themselves as the closest figure in the video, and then make judgments about the conversations, and how they felt about their conversation partners. In one version of the experiment, the phone of the participant's conversation partner remained unused on the table throughout the conversation. In another version, their partner's attention was quickly drawn to something on their phone, and they spent the rest of the time interacting with their phone. A third version involved the participants' partner alternating between periods of interaction with their phone and periods where they ignored their phone. If you've experienced a similar situation, you probably won't be surprised by the results of the experiments. The participants had a negative view of phone use during social interactions. The more it was present, the worse they considered, both the quality of the interaction and the quality of the relationship. The researchers believe that focusing on one's phone instead of the person one is with, has this effect because it's seen as a form of social exclusion. They assert that the behavior is analogous to when people have no choice but to eat alone in the school cafeteria. The twist is that this exclusion occurs while sharing a physical encounter and having a conversation. found that the behavior had adverse effects on participants' sense of belonging, need for meaning, and self-esteem. These negative effects are similar to those caused by traditional forms of social exclusion. The new findings are important because they elaborate our understanding of a subtle but common aspect of our daily experience. This common behavior can create vicious cycles of detachment, even as we try to connect with others.",
+          "translation": "",
+          "source": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "pages": []
+          },
+          "transcriptDraftSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1056.21,
+            "endSeconds": 1230.41,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-draft-7",
+          "title": "Recording Three",
+          "text": "",
+          "transcript": "",
+          "transcriptDraft": "More and more people travel for a variety of reasons. Many are tourists, but many venture forth on personal or professional business. Whatever the reason for travelling, a common complaint of travellers is the impersonal accommodations they find. After spending five consecutive nights in five similar hotels, the business traveller may find it difficult to remember what happened from day to day, or even what towns were visited. And the tourists may get the mistaken impression that all cities are pretty much the same, at least as far as decoration, food and service are concerned. To combat this sense of impersonal sameness, travelers are taking advantage of in-home hospitality, or bed and breakfast arrangements. B&B's, I mean bed and breakfast arrangements, are private homes which offer lodging and breakfast in a very personalised, friendly setting. For decades, B&B's have been the classic ways of visit Europe, especially the British Isles, and in fact, they are not really a new idea in America. The tradition dates back to colonial times when inns were few and far between, and the weary traveller had to depend on the kindness of strangers for a meal and a bed. But the revival of B&B's as desirable accommodations is a fairly recent phenomenon. If the idea of operating a B&B arouses your interest, there are several factors to consider before plunging into this business. The first consideration is your property, not only the building itself but the location. If you live near a famous historical site, or in a popular destination, such as New York city or Washington DC, your home can be fairly simple, yet still do well as a BNB. On the other hand, if your home is architecturally unique, or has facilities for the traveller, such as a private entrance, private bath, or swimming pool, people may be willing to go some distance to reach you. Another important factor is the lifestyle of you and your family. We must take into account whether all members of the family truly enjoy visitors, want to repeatedly discuss local sites and activities, and have the time and energy to handle the additional cooking, cleaning, laundry and the bookkeeping involved. The final consideration is a financial one. Potential B and B hosts must be realistic about opportunities for income. While B and Bs usually have low initial costs, experts estimate it would take at least five rooms rented regularly for the host to earn a living from B&B.",
+          "translation": "",
+          "source": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "pages": []
+          },
+          "transcriptDraftSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1298.49,
+            "endSeconds": 1457.01,
+            "verified": false
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-12-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "Question 1 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He has distinguished himself in foreign service."
+            },
+            {
+              "key": "B",
+              "text": "He is his country's ambassador to Winopia."
+            },
+            {
+              "key": "C",
+              "text": "He is currently an electrical engineer."
+            },
+            {
+              "key": "D",
+              "text": "He craves attention from the media."
+            }
+          ],
+          "answer": "A",
+          "explanation": "主持人在开场介绍嘉宾时，说明他是经验丰富且成就突出的职业外交官。\n【原文定位·自动匹配】Our audience will be most interested in learning about a career in the foreign service.\n【正确选项】A) He has distinguished himself in foreign service.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 50%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.5
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "主持人在开场介绍嘉宾时，说明他是经验丰富且成就突出的职业外交官。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "Question 2 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "A government reshuffle."
+            },
+            {
+              "key": "B",
+              "text": "A fundamental reform."
+            },
+            {
+              "key": "C",
+              "text": "Some sort of political reorientation."
+            },
+            {
+              "key": "D",
+              "text": "Some sort of crisis of legitimacy."
+            }
+          ],
+          "answer": "D",
+          "explanation": "男士根据公开新闻判断，相关国家政府可能正面临合法性方面的危机。\n【原文定位·自动匹配】It looks like the government of Winopia seems to be undergoing some sort of crisis of legitimacy, and an interim administration has been transitionally established until ahead of state's agreed on.\n【正确选项】D) Some sort of crisis of legitimacy.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 105%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 1.05
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "男士根据公开新闻判断，相关国家政府可能正面临合法性方面的危机。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "Question 3 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "All diplomats have more or less similar stories to tell."
+            },
+            {
+              "key": "B",
+              "text": "It is a prerequisite to get some practice in diplomacy."
+            },
+            {
+              "key": "C",
+              "text": "Different people can take different paths."
+            },
+            {
+              "key": "D",
+              "text": "It is a must to first obtain a law degree."
+            }
+          ],
+          "answer": "C",
+          "explanation": "男士说从事外交工作有多种不同路径，并以自己的跨专业经历为例。\n【原文定位·自动匹配】There are many different paths one can take.\n【正确选项】C) Different people can take different paths.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 80%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.8
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "男士说从事外交工作有多种不同路径，并以自己的跨专业经历为例。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "Question 4 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Key skills required of a diplomat."
+            },
+            {
+              "key": "B",
+              "text": "The making of an expert diplomat."
+            },
+            {
+              "key": "C",
+              "text": "Diplomatic discourse and rhetoric."
+            },
+            {
+              "key": "D",
+              "text": "Contributions by diplomatic envoys."
+            }
+          ],
+          "answer": "A",
+          "explanation": "对话最后转向外交工作需要的能力，包括持续学习与沟通表达能力。\n【原文定位·自动匹配】What would you say are the key skills one needs for the job?\n【正确选项】A) Key skills required of a diplomat.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 55%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.55
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "对话最后转向外交工作需要的能力，包括持续学习与沟通表达能力。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "Question 5 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They have got their work done."
+            },
+            {
+              "key": "B",
+              "text": "They both look tired."
+            },
+            {
+              "key": "C",
+              "text": "They can meet again tomorrow anyway."
+            },
+            {
+              "key": "D",
+              "text": "They are both anxious to go home."
+            }
+          ],
+          "answer": "B",
+          "explanation": "男士提出先结束工作，是因为时间已晚而两人都显露出疲态。\n【原文定位·自动匹配】I'm so tired of this project.\n【正确选项】B) They both look tired.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 50%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.5
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "男士提出先结束工作，是因为时间已晚而两人都显露出疲态。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "Question 6 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The board members' insufficient support."
+            },
+            {
+              "key": "B",
+              "text": "Two months devoted to the same contract."
+            },
+            {
+              "key": "C",
+              "text": "Working two months without any progress."
+            },
+            {
+              "key": "D",
+              "text": "The man's long concentration on the project."
+            }
+          ],
+          "answer": "B",
+          "explanation": "女士觉得连续两个月只处理同一份合同有些难熬。\n【原文定位·自动匹配】Yeah, two months working on nothing but the same contract is a little tough.\n【正确选项】B) Two months devoted to the same contract.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 85%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.85
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "女士觉得连续两个月只处理同一份合同有些难熬。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "Question 7 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Unprofessional."
+            },
+            {
+              "key": "B",
+              "text": "Inspirational."
+            },
+            {
+              "key": "C",
+              "text": "Exceptional."
+            },
+            {
+              "key": "D",
+              "text": "Delusional."
+            }
+          ],
+          "answer": "D",
+          "explanation": "听到女士乐观估计下周能够完成时，男士认为她的想法不切实际。\n【原文定位·语义匹配】Ha, you must be delusional.\n【正确选项】D) Delusional.\n【标注】依据听力原文与解析摘要对照人工选句；原文为机器转写草稿，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 1.0
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "听到女士乐观估计下周能够完成时，男士认为她的想法不切实际。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "Question 8 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Fewer rectifications of the contract."
+            },
+            {
+              "key": "B",
+              "text": "More support from the board members."
+            },
+            {
+              "key": "C",
+              "text": "The early implementation of the project."
+            },
+            {
+              "key": "D",
+              "text": "The alignment of all sections of the contract."
+            }
+          ],
+          "answer": "C",
+          "explanation": "女士表示管理层和董事会都希望项目尽早实施。\n【原文定位·自动匹配】The entire managerial hierarchy wants to see this project implemented as soon as possible.\n【正确选项】C) The early implementation of the project.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 38%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.38
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "女士表示管理层和董事会都希望项目尽早实施。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "Question 9 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "When two employees propose contrary solutions to their dispute."
+            },
+            {
+              "key": "B",
+              "text": "When two employees are directed by their respective manager."
+            },
+            {
+              "key": "C",
+              "text": "When two people behave in an apparently clashing manner."
+            },
+            {
+              "key": "D",
+              "text": "When two people tell different stories of the same event."
+            }
+          ],
+          "answer": "D",
+          "explanation": "说话者指出，当两人对同一事件各执一词时，很难判断该相信谁。\n【原文定位·自动匹配】When two people have different versions of the same event, it can be hard to know whom to believe.\n【正确选项】D) When two people tell different stories of the same event.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 71%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.71
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "说话者指出，当两人对同一事件各执一词时，很难判断该相信谁。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "Question 10 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "How it got resolved."
+            },
+            {
+              "key": "B",
+              "text": "How it happened."
+            },
+            {
+              "key": "C",
+              "text": "What it was about."
+            },
+            {
+              "key": "D",
+              "text": "When it was settled."
+            }
+          ],
+          "answer": "A",
+          "explanation": "说话者已忘记多年前争议的内容，却清楚记得争议是如何得到解决的。\n【原文定位·语义匹配】One such circumstance always comes back to me, It happened years ago, and it's a measure of the forgettable nature of the conflict that I no longer even recall what the dispute was about, but I definitely recall the resolution.\n【正确选项】A) How it got resolved.\n【标注】依据听力原文与解析摘要对照人工选句；原文为机器转写草稿，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 1.0
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "说话者已忘记多年前争议的内容，却清楚记得争议是如何得到解决的。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "Question 11 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They intervened promptly lest their dispute escalate."
+            },
+            {
+              "key": "B",
+              "text": "They tried to ascertain the actual facts of the matter."
+            },
+            {
+              "key": "C",
+              "text": "They assumed the best about them and moved on."
+            },
+            {
+              "key": "D",
+              "text": "They persuaded them to put their conflict aside."
+            }
+          ],
+          "answer": "C",
+          "explanation": "两位管理者决定继续留意双方表现，但不再深入介入，并对两人都作善意假设。\n【原文定位·自动匹配】We assumed the best about both of them and moved on.\n【正确选项】C) They assumed the best about them and moved on.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 105%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 1.05
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "两位管理者决定继续留意双方表现，但不再深入介入，并对两人都作善意假设。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "Question 12 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dine out daily."
+            },
+            {
+              "key": "B",
+              "text": "Budget sensibly."
+            },
+            {
+              "key": "C",
+              "text": "Enjoy cooking."
+            },
+            {
+              "key": "D",
+              "text": "Shop at groceries."
+            }
+          ],
+          "answer": "A",
+          "explanation": "短文提到，随着喜欢做饭的人减少，越来越多美国人将每天外出就餐当作日常。\n【原文定位·自动匹配】For some Americans, going out to dinner is a treat, planned and budgeted for. others, it's just a daily occurrence.\n【正确选项】A) Dine out daily.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 50%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.5
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "短文提到，随着喜欢做饭的人减少，越来越多美国人将每天外出就餐当作日常。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "Question 13 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "Shopping."
+            },
+            {
+              "key": "B",
+              "text": "Sewing."
+            },
+            {
+              "key": "C",
+              "text": "Entertaining oneself."
+            },
+            {
+              "key": "D",
+              "text": "Fashion designing."
+            }
+          ],
+          "answer": "B",
+          "explanation": "评论者把做饭类比为缝纫：过去很多人自己缝衣，如今多数人已不再这样做。\n【原文定位·语义匹配】Yun asserts cooking is akin to sewing. As recently as the early 20th century, Many Americans sewed their own clothing. Today, the vast majority of Americans buy clothing, only a tiny minority still sew, and they do it mainly as a hobby.\n【正确选项】B) Sewing.\n【标注】依据听力原文与解析摘要对照人工选句；原文为机器转写草稿，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 0.96,
+            "tri": 0.93
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "评论者把做饭类比为缝纫：过去很多人自己缝衣，如今多数人已不再这样做。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "Question 14 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "Satisfy their taste."
+            },
+            {
+              "key": "B",
+              "text": "Cut down expenses."
+            },
+            {
+              "key": "C",
+              "text": "Eat more healthily."
+            },
+            {
+              "key": "D",
+              "text": "Cultivate new hobbies."
+            }
+          ],
+          "answer": "B",
+          "explanation": "短文比较了购买午餐与自带午餐的平均花费，说明自己做午餐能够省钱。\n【原文定位·语义匹配】People spend on average $10 per meal when they buy lunch. Making your own lunch, meanwhile, will cost less. One survey found people only spend on average $6.30 when they bring lunch prepared at home.\n【正确选项】B) Cut down expenses.\n【标注】依据听力原文与解析摘要对照人工选句；原文为机器转写草稿，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 1.0
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "短文比较了购买午餐与自带午餐的平均花费，说明自己做午餐能够省钱。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "Question 15 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "People's intense focus on convenience."
+            },
+            {
+              "key": "B",
+              "text": "People's deteriorating family finances."
+            },
+            {
+              "key": "C",
+              "text": "People's strong aversion to junk foods."
+            },
+            {
+              "key": "D",
+              "text": "People's increasing dislike of cooking."
+            }
+          ],
+          "answer": "D",
+          "explanation": "短文以越来越多人不喜欢做饭为现象，讨论它给杂货行业带来的挑战。\n【原文定位·自动匹配】And that second group of people is becoming the majority, as the number of Americans who enjoy cooking is declining.\n【正确选项】D) People's increasing dislike of cooking.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 55%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "reference-2025-12-listening-1"
+          },
+          "verified": false,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.55
+          },
+          "verificationNote": "与非官方公开逐题解析及本卷选项核对；尚未逐题核听 G 盘音频。",
+          "explanationOriginal": "短文以越来越多人不喜欢做饭为现象，讨论它给杂货行业带来的挑战。",
+          "explanationSourceOriginal": {
+            "fileId": "reference-2025-12-listening-1"
+          }
+        },
+        {
+          "id": "2025-12-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "Question 16 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-5",
+          "options": [
+            {
+              "key": "A",
+              "text": "Its owner's flight is delayed because of bad weather."
+            },
+            {
+              "key": "B",
+              "text": "Airlines cannot find its owner without an ID tag on it."
+            },
+            {
+              "key": "C",
+              "text": "Airline staff have not correctly coded its destination tag."
+            },
+            {
+              "key": "D",
+              "text": "Its owner has forgot to pick it up from the baggage claim."
+            }
+          ],
+          "answer": "B",
+          "explanation": "讲座指出，行李遗失的首要原因是没有身份标签，航空公司因此无法知道行李属于谁，所以选 B。\n【原文定位·自动匹配】Some airports have sophisticated automated systems, including scanners that read baggage labels, destination coded vehicles that load and unload the bags without stopping, and sorting machines that route baggage to the appropriate gate.\n【正确选项】B) Airlines cannot find its owner without an ID tag on it.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 45%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 850,
+            "endSeconds": 885,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-answer-pdf"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.45
+          },
+          "explanationOriginal": "讲座指出，行李遗失的首要原因是没有身份标签，航空公司因此无法知道行李属于谁，所以选 B。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 850,
+            "endSeconds": 885
+          }
+        },
+        {
+          "id": "2025-12-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "Question 17 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-5",
+          "options": [
+            {
+              "key": "A",
+              "text": "Its tag may get torn off on the conveyor belt."
+            },
+            {
+              "key": "B",
+              "text": "Its tag may get stuck in the sorting machine."
+            },
+            {
+              "key": "C",
+              "text": "It may be sent to a wrong destination."
+            },
+            {
+              "key": "D",
+              "text": "It may be picked up by someone else."
+            }
+          ],
+          "answer": "A",
+          "explanation": "讲座说即使机场采用自动分拣系统，行李标签仍可能在传送带上被扯掉，因此选 A。\n【原文定位·自动匹配】Even so, all that technology may not save your baggage tag from being torn off on the conveyor belt, making you the owner of a bag with no name.\n【正确选项】A) Its tag may get torn off on the conveyor belt.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 88%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 901,
+            "endSeconds": 936,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-answer-pdf"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.88
+          },
+          "explanationOriginal": "讲座说即使机场采用自动分拣系统，行李标签仍可能在传送带上被扯掉，因此选 A。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 901,
+            "endSeconds": 936
+          }
+        },
+        {
+          "id": "2025-12-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "Question 18 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-5",
+          "options": [
+            {
+              "key": "A",
+              "text": "Purchase irretrievably lost things at auction."
+            },
+            {
+              "key": "B",
+              "text": "Contact the airport staff to find our missing bag."
+            },
+            {
+              "key": "C",
+              "text": "Get the airline agent's phone number before boarding."
+            },
+            {
+              "key": "D",
+              "text": "Avoid packing valuable items in our checked baggage."
+            }
+          ],
+          "answer": "D",
+          "explanation": "说话者提醒听众不要将真正贵重的物品放入托运行李，故选 D。\n【原文定位·自动匹配】So never pack anything of real value in your checked baggage, and make sure your name is on the bag, along with your phone number so an agent can contact you.\n【正确选项】D) Avoid packing valuable items in our checked baggage.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 38%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 978,
+            "endSeconds": 1013,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-answer-pdf"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.38
+          },
+          "explanationOriginal": "说话者提醒听众不要将真正贵重的物品放入托运行李，故选 D。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 978,
+            "endSeconds": 1013
+          }
+        },
+        {
+          "id": "2025-12-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "Question 19 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-6",
+          "options": [
+            {
+              "key": "A",
+              "text": "It can be behaviorally hazardous."
+            },
+            {
+              "key": "B",
+              "text": "It can be especially disappointing."
+            },
+            {
+              "key": "C",
+              "text": "It can be socially harmful."
+            },
+            {
+              "key": "D",
+              "text": "It can be really embarrassing."
+            }
+          ],
+          "answer": "C",
+          "explanation": "说话者指出，面对面交谈时使用手机、忽视身边的人会损害社交互动，因此选 C。\n【原文定位·自动匹配】There's also evidence that this behavior is socially harmful.\n【正确选项】C) It can be socially harmful.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 100%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1055,
+            "endSeconds": 1090,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-answer-pdf"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 1.0
+          },
+          "explanationOriginal": "说话者指出，面对面交谈时使用手机、忽视身边的人会损害社交互动，因此选 C。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1055,
+            "endSeconds": 1090
+          }
+        },
+        {
+          "id": "2025-12-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "Question 20 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-6",
+          "options": [
+            {
+              "key": "A",
+              "text": "They considered it inevitable."
+            },
+            {
+              "key": "B",
+              "text": "They held a negative view towards it."
+            },
+            {
+              "key": "C",
+              "text": "They were concerned with its effects."
+            },
+            {
+              "key": "D",
+              "text": "They saw it as a sign of social evolution."
+            }
+          ],
+          "answer": "B",
+          "explanation": "实验参与者对社交互动中使用手机持负面看法，手机使用越多，他们对互动及关系质量的评价越低，故选 B。\n【原文定位·自动匹配】The participants had a negative view of phone use during social interactions.\n【正确选项】B) They held a negative view towards it.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 55%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1155,
+            "endSeconds": 1190,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-answer-pdf"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.55
+          },
+          "explanationOriginal": "实验参与者对社交互动中使用手机持负面看法，手机使用越多，他们对互动及关系质量的评价越低，故选 B。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1155,
+            "endSeconds": 1190
+          }
+        },
+        {
+          "id": "2025-12-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "Question 21 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-6",
+          "options": [
+            {
+              "key": "A",
+              "text": "Elaborate forms of social contact."
+            },
+            {
+              "key": "B",
+              "text": "Ill effects on one's sense of pride."
+            },
+            {
+              "key": "C",
+              "text": "Poor relationships with others."
+            },
+            {
+              "key": "D",
+              "text": "Vicious cycles of detachment."
+            }
+          ],
+          "answer": "D",
+          "explanation": "说话者指出，交谈时使用手机可能造成不断加剧的疏离恶性循环，因此选 D。\n【原文定位·自动匹配】This common behavior can create vicious cycles of detachment, even as we try to connect with others.\n【正确选项】D) Vicious cycles of detachment.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 105%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1215,
+            "endSeconds": 1250,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-answer-pdf"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 1.05
+          },
+          "explanationOriginal": "说话者指出，交谈时使用手机可能造成不断加剧的疏离恶性循环，因此选 D。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1215,
+            "endSeconds": 1250
+          }
+        },
+        {
+          "id": "2025-12-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "Question 22 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "The ill treatment they get as tourists."
+            },
+            {
+              "key": "B",
+              "text": "The non professional business they see."
+            },
+            {
+              "key": "C",
+              "text": "The impersonal accommodations."
+            },
+            {
+              "key": "D",
+              "text": "The many adventures on their way."
+            }
+          ],
+          "answer": "C",
+          "explanation": "讲座说旅行者经常抱怨住宿缺少人情味，所以选 C。\n【原文定位·自动匹配】Whatever the reason for travelling, a common complaint of travellers is the impersonal accommodations they find.\n【正确选项】C) The impersonal accommodations.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 100%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1303,
+            "endSeconds": 1338,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-answer-pdf"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 1.0
+          },
+          "explanationOriginal": "讲座说旅行者经常抱怨住宿缺少人情味，所以选 C。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1303,
+            "endSeconds": 1338
+          }
+        },
+        {
+          "id": "2025-12-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "Question 23 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "They have been the classic way to visit Europe."
+            },
+            {
+              "key": "B",
+              "text": "They attract tourists with location and decoration."
+            },
+            {
+              "key": "C",
+              "text": "They have long been competing with chain hotels."
+            },
+            {
+              "key": "D",
+              "text": "They are in fact a completely new idea in America."
+            }
+          ],
+          "answer": "A",
+          "explanation": "说话者指出，几十年来，家庭旅馆一直是游览欧洲特别是不列颠群岛的经典住宿方式，故选 A。\n【原文定位·自动匹配】For decades, B&B's have been the classic ways of visit Europe, especially the British Isles, and in fact, they are not really a new idea in America.\n【正确选项】A) They have been the classic way to visit Europe.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 80%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1350,
+            "endSeconds": 1385,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-answer-pdf"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.8
+          },
+          "explanationOriginal": "说话者指出，几十年来，家庭旅馆一直是游览欧洲特别是不列颠群岛的经典住宿方式，故选 A。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1350,
+            "endSeconds": 1385
+          }
+        },
+        {
+          "id": "2025-12-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "Question 24 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "Your financial status."
+            },
+            {
+              "key": "B",
+              "text": "Your family's consent."
+            },
+            {
+              "key": "C",
+              "text": "Your property."
+            },
+            {
+              "key": "D",
+              "text": "Your personality."
+            }
+          ],
+          "answer": "C",
+          "explanation": "经营家庭旅馆时首先要考虑房产本身及其位置，因此选 C。\n【原文定位·语义匹配】The first consideration is your property, not only the building itself but the location.\n【正确选项】C) Your property.\n【标注】依据听力原文与解析摘要对照人工选句；原文为机器转写草稿，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1383,
+            "endSeconds": 1418,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-listening-1"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 1.0
+          },
+          "explanationOriginal": "经营家庭旅馆时首先要考虑房产本身及其位置，因此选 C。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1383,
+            "endSeconds": 1418
+          }
+        },
+        {
+          "id": "2025-12-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "Question 25 (请根据录音选择最佳答案)",
+          "blockId": "listening-draft-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "Costs for starting the business."
+            },
+            {
+              "key": "B",
+              "text": "The number of guests to receive."
+            },
+            {
+              "key": "C",
+              "text": "The facilities to provide."
+            },
+            {
+              "key": "D",
+              "text": "Opportunities for income."
+            }
+          ],
+          "answer": "D",
+          "explanation": "说话者最后谈到财务因素，提醒准经营者应现实地看待收入机会，因此选 D。\n【原文定位·自动匹配】Potential B and B hosts must be realistic about opportunities for income.\n【正确选项】D) Opportunities for income.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 105%）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1434,
+            "endSeconds": 1469,
+            "referenceIds": [
+              "github-cet-listening-2025-12-1",
+              "reference-2025-12-listening-1"
+            ]
+          },
+          "verified": false,
+          "unanswerable": true,
+          "verificationNote": "原解析缺页；现有答案依据录音机器转写与非官方资料整理，仅供参考，未核实，不计分。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 1.05
+          },
+          "explanationOriginal": "说话者最后谈到财务因素，提醒准经营者应现实地看待收入机会，因此选 D。",
+          "explanationSourceOriginal": {
+            "fileId": "1_cTwCx7fnOoOTTQ1oLwIpMuA3C_ADeL5",
+            "startSeconds": 1434,
+            "endSeconds": 1469
+          }
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "By now, it is generally accepted that regular exercise comes with an assortment of health benefits for people who maintain the habit over time. But is it __(26)__ too late to start?\nNew research looked at people who increased their exercise levels after their 40s beyond levels they had when they were younger and those individuals showed declines in their risk of early __(27)__, which were similar to those of people who exercised consistently throughout their lives. This was a __(28)__ of 32% to 35% compared to people who did not exercise. Those who began exercising in middle age also saw reductions in their incidence of __(29)__ diseases, such as heart disease and cancer, which were similar to the steady exercisers.\nSo why bother exercising consistently throughout your life? The authors of the study\n__(30)__ that some might interpret the study's findings to mean that they can delay starting an exercise program but this would be a mistake. There are other benefits, both mental and physical, to staying consistently active that we should not __(31)__. These real health benefits include better __(32)__ functioning and lowered risk of gaining weight. The latter is __(33)__ important given the global obesity epidemic. In addition, experts assert that starting younger is better because, if you make a habit of exercising when you are young, you are more likely to keep up those __(34)__ later in life.\nIt is ideal, then, for people to start exercising when they are children or __(35)__, and it is good to maintain an active lifestyle at all times regardless of your age. However, this study does indicate that, if you have not been active, you can still benefit if you start becoming active in your 40s and 50s.",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇匹配文章",
+          "text": "A) Like most chefs, Flippy is not afraid of hard work. Since last summer, that has meant liam until 7pm shifts at Caliburger in Pasadena, California, as well as short assignments at Chick-N-Tots at Dodger Stadium in Los Angeles.\nThese are long hours of repetitive work, where the boss demands absolute consistency. But you won't hear Flippy complain or say anything, in fact. For\nFlippy is a robot—a cloud-connected mechanical arm with 3D thermal scanners for eyes—that can flip burgers or fry 80 baskets of food an hour, monitor that food and even clean up afterwards. B) Flippy was created by Miso Robotics, part of the Cali Group, which is described by its CEO, John Miller, as: “A technology company that happens to sell cheeseburgers.” Cali creates new machines that it road-tests in its\nCaliburger restaurants across the world, into which Flippy will be deployed this year. And Flippy is not alone. Also in California, Bear Robotics has developed a self-guiding robot, Penny, which has so far served 40,000 diners. C) Ten years ago, robot-chefs and waiters were pure science fiction. Today, they are a reality, and at prices that make them a plausible investment. From\nMay, Penny will be shipped on a subscription basis that offers “an immediate return”, says Bear Robotics' chief operating officer, Juan Higueros. Flippy will cost a reported $60,000 to $100,000. Fully automated burger restaurants managed with minimal human oversight—where customers order at screens, pay electronically and eat food cooked and delivered by robots—are now a possibility. D) The technology exists, it just needs knitting together cost-effectively and in a way diners buy into. In an industry keen to slash labour costs and increase profits, further automation seems inevitable. After an eight-month test at Kang Nam Tofu House in California, Bear Robotics credited Penny with driving a 28% increase in sales. Meanwhile, in US trials, the self-ordering screens that McDonald's is currently installing at its 1,300 UK restaurants yielded a reported 30% rise in order values. E) Personal isa tion is seen as key to the appeal of this technology, alongside its ability to reliably push so-called “upsells” (meal deals, extras, larger drinks)\nto customers. Soon when you log into a restaurant app, it will be able to use your data and purchasing history to recommend dishes to you—factoring in everything from the weather to, if you are ordering at a screen that can read your face, your mood. F) \"Right now people compromise on choice. We're presented with a one- size-fits-all menu. Ultimately, technology can allow us to make personal choices. You love spicy food and chicken? Here's the dish people like you mostly order,\" says Tom Weaver, CEO at the hospitality tech company Flyt.\nHe talks enthusiastically about the Helsinki pop-up Take-In, a full-service restaurant where diners ordered dishes in from various delivery services. \"For the first time in a few hundred years, digital is allowing us to create new versions of restaurants.\" G) If high-street fast food is automation-ready, its impact on high-end restaurants is likely to be subtler and slower. \"It'll probably be a very long time before we see a five-star robot-chef,\" says Noel Sharkey, professor of AI and robotics at the University of Sheffield. \"Apart from the AI creativity gap, great cooking involves a subtle understanding of ingredients and delicate cooking that would be enormously challenging for robots. Placing fragile foods on plates would be incredibly slow.\" H) Currently, robots have limited functionality. A human needs to load Penny with plates that diners lift off themselves. At the robot-powered US pizza- delivery company Zume, the more difficult jobs, such as topping pizzas, are still done by humans. But Moley, which will launch soon, offers an idea of the sophistication to come. Modelled on the movements of a MasterChef contest winner, Tim Anderson, its robotic arms are fixed over a stove and programmed to prepare dishes from raw ingredients. It is designed for domestic use, but a commercial version is planned that opens up the possibility of restaurant kitchens automating even highly technically challenging tasks. I) For now, the kitchen technology that QSR Automations supplies to\nMitchells & Butlers' pubs or KFC is less glamorous. Rather than having a chef shouting out diners' orders, the QSR system automatically distributes those orders across screens. The kitchen screens then tell chefs when to start cooking each dish, so that your plate of fish, chips and peas comes together at the right time. J) The restaurant industry is currently suffering a severe shortage of skilled chefs—a deficit of 11,000, according to the skills agency People 1st.\n\"Automation systems designed to make the process more idiot-proof are trying to bridge that gap,\" says Stefan Chomka, the editor of Restaurant magazine. K) In terms of simplifying or enhancing the customer experience, online restaurant booking has been the easily-won success of the internet age.\nAutomated at-table ordering and payment is seen as the next landmark.\nUntil then, early adopters, such as the Manchester bar owner Andy Smith, who uses the Ordoo app at his venue 33 Oldham Street, may well experience growing but \"lower than expected\" acceptance. L) Embarrassing failures in restaurant tech frequently hit the headlines. The\nTGI Fridays drone that injured a Brooklyn Daily photographer; US burger chain Shake Shack having to retreat from plans for entirely cashless ordering sites. But, says Chomka, such technology could miss the mark if it only offers\n\"solutions to problems that don't really exist\". \"Payments being automatic\"\ncould be useful, he adds. But, in an expensive restaurant, \"how quick do you need dinner to be?\" M) That attachment to the human art of hospitality will be heartening for staff who see automation as a threat to jobs. \"Unite is concerned that without safeguards, any benefits will bypass workers in low-paying jobs, such as waiters,\" says the union's London regional officer, Dave Turnbull. \"We're urging Members of Parliament to ensure automation does not just benefit a wealthy few like previous industrial revolutions.\" N) The industry principle is that automation will allow it to redeploy staff more effectively. Jobs will change, if not immediately decrease in number.\n\"Self-order screens mean more demand for people front-of-house. Last year, we recruited 1,000 new managers,\" says McDonald's COo, Jason Clark.\nCaliburger has a programme to retrain staff as robot engineers or \"chef techs\". O) But ultimately the chance to reduce overheads by employing fewer people or at lower rates will be what attracts big brands to technology.\nInvariably, over the next 10 years, jobs will go in conventional bricks-built restaurants, not least because automation will boost their rapidly growing rival: delivery. Companies such as Domino and Just Eat have both experimented with robot and drone delivery, which is already legal in\nReykjavik, Iceland. \"Robot food deliveries are the future,\" says Noel Sharkey.\n\"Small, 4mph ground robots are safe and will work 24 hours a day.\"\nP) Combined with machine learning of anticipated order volumes and the minute-by-minute cooking data generated by systems such as QSR, that robot fleet could deliver almost instantly. \"Restaurants will prepare food ahead of orders coming in,\" predicts Just Eat's director of engineering, Daniel\nRichardson. \"I'll be able to say 'Let's have pizza' to my family, my intelligent assistant will hear and 10 minutes later the food will be at my door.\" No one is putting an exact date on it yet. But in the dining room and on your doorstep, the robots are coming.",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Many see friendships as a comfort blanket: a shoulder to cry on, a reliable soul to confide in. However, more often than not, in our eagerness to seek individual success, we lose friends along the way and that has become part of the process.\nThe chaos and never-ending turmoil that accompanies everyday life is an aggressive obstacle in the pursuit of stable friendships. As students, we use this excuse to shrug off losing people who we once thought to be loved ones.\nInstead of viewing our lives as a race, where everyone is on their own path to some form of success, we must relearn to value the connections we make along the track.\nWe must reevaluate the harm of radical, individual freedom.\nRadical individualism elevates the freedom of the individual over the collective. It argues, for instance, that universal healthcare, an example of collectivism, threatened the dream of many Americans.\nMany of us have fallen victim to an individualistic culture. Society tends to celebrate personal achievement and commend it based on the assumption that winning or succeeding is a consequence of working harder than the next person.\nAs a society, we idolize the concept of \"losing friends on the road to success.\" I remember hearing in high school, \"Don't worry about losing friendships, just focus on study and getting into college. That's all that will matter in the long run,\" a sentiment that is not unique to my experience. It's preached in many success stories, and it's embedded in the way we see growth. Motivational speakers will push their audience to be complacent to the inevitable end of losing friends. Spend too much time with friends? You're losing time better utilized on your achievements. Invest time in your relationships? Invest time in your work instead.\nThis constant need to succeed has blinded us from seeing through the whirlwind of change that accompanies our everyday lives. We are expected to tangibly succeed, earn awards, get higher positions, earn better grades. In order to succeed, we lose friends, and that has sadly become normalized.\nWe cannot be complacent with losing friendships because they are our anchors.\nYes, pursue success. Challenge yourself. Push limits. But contrary to all the self- proclaimed success experts, doing it alone does not make you more successful or any better than someone who achieved it with the help of others.\nPut effort into fostering healthy relationships, and maintaining them through your busy schedule that seems like it leaves no time for anyone else. Although we may be living in a society that treasures the independent pursuit of achievement, having people to support and love you on the way is far more important than any end result.",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "During his acceptance speech for the Nobel Peace Prize, Martin Luther King Jr. said,\n\"I believe that unarmed truth and unconditional love will have the final word in reality.\"\nMore than five decades later, our society is still struggling to separate truth from fantasy, fact from fiction. From disputes over climate change to debates about how slavery is taught, America is at a crossroads. And the battle for equity is at the heart of these vital conversations.\nStudy after study shows that inequity has had appalling consequences. A 2020\nreport by Citi indicated that \"Black students could have increased their lifetime incomes $90-$113 billion\" if equity issues related to higher education had been adequately addressed over the past two decades.\nThis statistic represents a flood of issues we've failed to confront as a nation. It also highlights one truth: We're missing out on valuable opportunities to bridge the differences that divide us. However, by honoring King's legacy, we can get our country back on the path toward true equity.\nStudents—and adults for that matter—simply cannot understand the conflicts we have today without understanding what caused them in the first place. That means we have a responsibility to help them make connections between U.S. history and current events. It also means giving them the tools they need to address inequity and bias in their own lives. Adherence to these principles, along with a commitment to truthful dialogue, can help every student better appreciate how far we've come and more clearly see the roads we have yet to travel.\nWith more truthful analysis of the need for more qualified, diverse educators, we can improve our recruiting, training, and retention strategies for schools across the country.\nUnfortunately, our deeply rooted divisions are delaying these advancements. A recent survey found that 77 percent of Americans believe the nation is \"more divided than ever before\". But reports of increased polarization shouldn't persuade us to look away from one another. Instead, they should compel us to address our shared issues head-on.\nWe are not, as some would suggest, living in a \"post-racial society\". We simply cannot afford to keep our heads buried in the sand when it comes to racial inequity.\nUnless we get honest about intolerance, bias, and how these social diseases impact the ways we treat one another, injustice will continue to haunt us. But our children and our grandchildren deserve better.\nOn this Martin Luther King Day and beyond, let's commit to working together to disrupt the status quo. Let's continue to build a better, more inclusive nation; and in the words of Martin Luther King Jr., \"A society at peace with itself, a society that can live with its conscience.\"",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              13,
+              14
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-12-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "H",
+          "explanation": "句意：“但开始锻炼是否永远太晚？”空格修饰“too late”，需副词， H 项\n（如“ever”）表示“在任何时候”，符合疑问句语气。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "J",
+          "explanation": "研究比较了过早死亡的风险；mortality 与 risk of early 搭配，指死亡率或死亡风险。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "G",
+          "explanation": "前文说风险下降，drop 作名词表示下降幅度，后面的百分比说明降幅大小。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "C",
+          "explanation": "“慢性疾病的发病率”，空格需形容词， C 项（如“chronic”）表示“慢性\n的”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "E",
+          "explanation": "作者承认有人可能误读研究结果，但随后指出推迟锻炼是错误的；concede 表示承认。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "F",
+          "explanation": "持续锻炼还有其他身心益处，不应被忽视；disregard 表示忽视。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "D",
+          "explanation": "“更好的认知功能”，空格需形容词， D 项（如“cognitive”）表示“认知\n的”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "K",
+          "explanation": "“后者尤其重要”，空格需副词， K 项（如“particularly”）表示“尤其”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "L",
+          "explanation": "前文说年轻时养成锻炼习惯，patterns 指代这些行为习惯，后文说明应保持下去。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adolescents"
+            },
+            {
+              "key": "B",
+              "text": "arbitrarily"
+            },
+            {
+              "key": "C",
+              "text": "chronic"
+            },
+            {
+              "key": "D",
+              "text": "cognitive"
+            },
+            {
+              "key": "E",
+              "text": "concede"
+            },
+            {
+              "key": "F",
+              "text": "disregard"
+            },
+            {
+              "key": "G",
+              "text": "drop"
+            },
+            {
+              "key": "H",
+              "text": "ever"
+            },
+            {
+              "key": "I",
+              "text": "maneuver"
+            },
+            {
+              "key": "J",
+              "text": "mortality"
+            },
+            {
+              "key": "K",
+              "text": "particularly"
+            },
+            {
+              "key": "L",
+              "text": "patterns"
+            },
+            {
+              "key": "M",
+              "text": "refute"
+            },
+            {
+              "key": "N",
+              "text": "stereotype"
+            },
+            {
+              "key": "O",
+              "text": "vocal"
+            }
+          ],
+          "answer": "A",
+          "explanation": "“儿童或青少年时期”，空格需名词， A 项（如“adolescents”）表示“青少\n年”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "It is now possible to fully automate a burger restaurant with little human supervision.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "C",
+          "explanation": "C 段提到“Fully automated burger restaurants managed with minimal\nhuman oversight…are now a possibility”，与题干“完全自动化汉堡餐厅”对应。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "At a robot-powered US company, complicated tasks still have to be performed by humans.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "H",
+          "explanation": "H 段指出“the more difficult jobs, such as topping pizzas, are still done by\nhumans”，对应“复杂任务仍由人类完成”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "More automation appears to be a certainty in industries eager to cut labour costs and raise profits.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "D 段提到“in an industry keen to slash labour costs and increase profits,\nfurther automation seems inevitable”，对应“更多自动化似乎不可避免”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "There are often front-page reports of failures in technological innovation of the restaurant industry.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "L",
+          "explanation": "L 段首句“Embarrassing failures in restaurant tech frequently hit the\nheadlines”对应“头版报道失败”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Robot-chef Flippy does not fear laborious work, nor does it make any complaints.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "A",
+          "explanation": "A 段描述 Flippy 机器人“does not fear hard work…won't complain”，对应\n“不怕辛苦、不抱怨”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "Digital technology makes it possible for businesses to innovate restaurant models.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "F 段末句“digital is allowing us to create new versions of restaurants”，对\n应“数字技术使创新成为可能”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "Fondness for human warmth in catering to customers will give hope to employees who are afraid of losing jobs to robots.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "M",
+          "explanation": "M 段提到“attachment to the human art of hospitality will be heartening\nfor staff who see automation as a threat”，对应“对人情的喜爱给员工希望”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "There is an acute shortage of experienced chefs in the catering industry and automated cooking is expected to fill the gap.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "J",
+          "explanation": "J 段提到“severe shortage of skilled chefs”和“automation systems…trying\nto bridge that gap”，对应“熟练厨师短缺，自动化填补空缺”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "Over the coming decade, many jobs in traditional restaurants will disappear due to robot delivery.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "O",
+          "explanation": "O 段末句“jobs will go in conventional bricks-built restaurants, not least\nbecause automation will boost…delivery”，对应“传统餐厅岗位因配送而消失”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "According to an expert in AI and robotics, it may be quite some time before a master robot-chef appears.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "G",
+          "explanation": "G 段提到“it'll probably be a very long time before we see a five-star\nrobot-chef”，对应“大师级机器人厨师还需时日”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What often happens when people are eager to pursue individual success?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They lack a shoulder to cry on."
+            },
+            {
+              "key": "B",
+              "text": "They have no soul to confide in."
+            },
+            {
+              "key": "C",
+              "text": "They cannot find reliable friends."
+            },
+            {
+              "key": "D",
+              "text": "They ignore their ties with friends."
+            }
+          ],
+          "answer": "D",
+          "explanation": "第一段：“in our eagerness to seek individual success, we lose friends\nalong the way”即忽视与朋友的联系。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What does the author advise people to do in their pursuit of radical individualism?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Reexamine its detrimental effects."
+            },
+            {
+              "key": "B",
+              "text": "Shrug off the loss of their loved ones."
+            },
+            {
+              "key": "C",
+              "text": "Avoid the chaos and turmoil involved."
+            },
+            {
+              "key": "D",
+              "text": "Remove aggressive obstacles in the way."
+            }
+          ],
+          "answer": "A",
+          "explanation": "第三段：“We must reevaluate the harm of radical, individual freedom.”\n即重新审视其有害影响。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What is American society's assumption of personal achievement?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is to be duly celebrated and highly commended."
+            },
+            {
+              "key": "B",
+              "text": "It is a sure way to fulfill a person's dream."
+            },
+            {
+              "key": "C",
+              "text": "It revolves around an individualistic culture."
+            },
+            {
+              "key": "D",
+              "text": "It reflects a person's exceptional endeavor."
+            }
+          ],
+          "answer": "D",
+          "explanation": "第五段：“winning or succeeding is a consequence of working harder\nthan the next person”即反映了个人的非凡努力。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What is preached in many success stories?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Attaching importance to academic gains on the road to success."
+            },
+            {
+              "key": "B",
+              "text": "Investing one's time in work instead of connecting with friends."
+            },
+            {
+              "key": "C",
+              "text": "Trying to strengthen friendships in one's pursuit of personal success."
+            },
+            {
+              "key": "D",
+              "text": "Excelling in academic performance to get into a prestigious college."
+            }
+          ],
+          "answer": "B",
+          "explanation": "第六段：“Invest time in your relationships? Invest time in your work\ninstead.”即将时间投入工作而非与朋友交往。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What can we infer from the passage regarding the pursuit of success?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "No one can succeed without pushing limits."
+            },
+            {
+              "key": "B",
+              "text": "No one can afford to neglect close friends."
+            },
+            {
+              "key": "C",
+              "text": "Collectivism is superior to individualism."
+            },
+            {
+              "key": "D",
+              "text": "Success experts often lead people to ruin."
+            }
+          ],
+          "answer": "B",
+          "explanation": "末段：“having people to support and love you on the way is far more\nimportant than any end result.”即没有人能忽视亲密朋友。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What does the author think about today's America?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is struggling to transform fiction into reality."
+            },
+            {
+              "key": "B",
+              "text": "It has been the focus of many vital conversations."
+            },
+            {
+              "key": "C",
+              "text": "It still has a long way to go before equity can be truly realized."
+            },
+            {
+              "key": "D",
+              "text": "It has got to a point where people disagree on nearly every issue."
+            }
+          ],
+          "answer": "C",
+          "explanation": "第三段：“America is at a crossroads…equity is at the heart”，结合全文，\n作者认为真正实现平等还有很长的路要走。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What do we learn from the passage about black students in the past 20 years?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They have been unfairly treated regarding higher education."
+            },
+            {
+              "key": "B",
+              "text": "They have been battling hard to address equity issues."
+            },
+            {
+              "key": "C",
+              "text": "They have boosted their lifetime incomes by billions of dollars."
+            },
+            {
+              "key": "D",
+              "text": "They have come to see the consequences of racial discrimination."
+            }
+          ],
+          "answer": "A",
+          "explanation": "第四段： Citi 报告指出若过去 20 年高等教育公平问题得到解决，黑人学生\n收入可增加，说明他们在高等教育方面受到不公平对待。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "How can Americans bridge the differences that divide them?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "By dealing with the thorny issues confronting them."
+            },
+            {
+              "key": "B",
+              "text": "By seizing every chance to enhance racial harmony."
+            },
+            {
+              "key": "C",
+              "text": "By continuing to pursue Martin Luther King Jr.'s cause."
+            },
+            {
+              "key": "D",
+              "text": "By striving to identify exceedingly valuable opportunities."
+            }
+          ],
+          "answer": "C",
+          "explanation": "第六段：“by honoring King's legacy, we can get our country back on the\npath toward true equity”即继续追求马丁 · 路德 · 金的事业。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "How do most Americans view America as a nation according to a recent survey?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is compelled to address its historical social issues."
+            },
+            {
+              "key": "B",
+              "text": "It is delaying advancements toward racial equality."
+            },
+            {
+              "key": "C",
+              "text": "It has kept itself from polarization."
+            },
+            {
+              "key": "D",
+              "text": "It has become increasingly split."
+            }
+          ],
+          "answer": "D",
+          "explanation": "第八段：“77 percent of Americans believe the nation is 'more divided\nthan ever before'”即国家变得更加分裂。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2025-12-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What does the author suggest Americans do?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Ensure the wellbeing of their children and grandchildren."
+            },
+            {
+              "key": "B",
+              "text": "Make joint efforts to tackle the nation's equity issues."
+            },
+            {
+              "key": "C",
+              "text": "Restrain their intolerance and discrimination."
+            },
+            {
+              "key": "D",
+              "text": "Restore social order for a harmonious nation."
+            }
+          ],
+          "answer": "B",
+          "explanation": "末段：“let's commit to working together to disrupt the status quo…build\na better, more inclusive nation”即共同努力解决国家的公平问题。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "尊老是中华民族的传统美德，深深植根于中国人的思想和行为中，是人们普遍遵守的行为规范和社会准则。在当今的中国，这种美德得到广泛传承。社会各界积极营造敬老助老的社会氛围。为老年人提供便利服务已成为社会共识，例如社区专门开设长者食堂，公共场所配置优先座位。政府还出台了一系列政策，为老年人的权益提供有力保障。尊老是社会和谐与发展的重要基石，有助于培育良好的社会氛围，推动整个社会文明进步。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              14
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-12-1-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "尊老是中华民族的传统美德，深深植根于中国人的思想和行为中，是人们普遍遵守的行为规范和社会准则。在当今的中国，这种美德得到广泛传承。社会各界积极营造敬老助老的社会氛围。为老年人提供便利服务已成为社会共识，例如社区专门开设长者食堂，公共场所配置优先座位。政府还出台了一系列政策，为老年人的权益提供有力保障。尊老是社会和谐与发展的重要基石，有助于培育良好的社会氛围，推动整个社会文明进步。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "Respecting the elderly is a traditional virtue of the Chinese nation, deeply rooted in the thoughts and behaviors of Chinese people, and it serves as a code of conduct and social norm widely observed. In today's China, this virtue has been widely inherited. All sectors of society are actively fostering a social atmosphere of respect and care for the elderly. It has become a social consensus to provide convenient services for the elderly, such as setting up special dining halls for seniors in communities and offering priority seating in public places. The government has also introduced a series of policies to provide strong protection for the rights and interests of the elderly. Respecting the elderly is a crucial cornerstone of social harmony and development, helping to cultivate a favorable social atmosphere and promote the progress of civilization throughout society.",
+          "explanation": "【参考译文】\nRespecting the elderly is a traditional virtue of the Chinese nation, deeply rooted in the thoughts and behaviors of Chinese people, and it serves as a code of conduct and social norm widely observed. In today's China, this virtue has been widely inherited. All sectors of society are actively fostering a social atmosphere of respect and care for the elderly. It has become a social consensus to provide convenient services for the elderly, such as setting up special dining halls for seniors in communities and offering priority seating in public places. The government has also introduced a series of policies to provide strong protection for the rights and interests of the elderly. Respecting the elderly is a crucial cornerstone of social harmony and development, helping to cultivate a favorable social atmosphere and promote the progress of civilization throughout society. 翻译要点：尊老“Respecting the elderly”；深深植根于“deeply rooted in”；行为规范和社会准则“code of conduct and social norm”；敬老助老“respect and care for the elderly”；长者食堂“dining halls for seniors”；优先座位“priority seating”；权益“rights and interests”；重要基石“crucial cornerstone”。",
+          "source": {
+            "fileId": "1-9l8diKcXj_KuHGZYybgdSpEWX4rAc58",
+            "pages": [
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1-RDNpIAqkGMFabWcoB4B4ZnRf8wHXCk4",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "Respecting the elderly is a traditional virtue of the Chinese nation, deeply rooted in the thoughts and behaviors of Chinese people, and it serves as a code of conduct and social norm widely observed. In today's China, this virtue has been widely inherited. All sectors of society are actively fostering a social atmosphere of respect and care for the elderly. It has become a social consensus to provide convenient services for the elderly, such as setting up special dining halls for seniors in communities and offering priority seating in public places. The government has also introduced a series of policies to provide strong protection for the rights and interests of the elderly. Respecting the elderly is a crucial cornerstone of social harmony and development, helping to cultivate a favorable social atmosphere and promote the progress of civilization throughout society. 翻译要点： 尊老 “Respecting the elderly” ；深深植根于 “deeply rooted in” ；行为 规范和社会准则 “code of conduct and social norm” ；敬老助老 “respect and care for the elderly” ；长者食堂 “dining halls for seniors” ；优先座位 “priority seating” ；权益 “rights and interests” ；重要基石 “crucial cornerstone” 。"
+        }
+      ]
+    }
+  ]
+}

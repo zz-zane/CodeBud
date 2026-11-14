@@ -1,0 +1,442 @@
+{
+  "lessonId": "cpp-stage1-10",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s1-ref-add-extra-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法，名字叫 `addFish`：**把外面那个元素里的数加上另一个数**。\n\n输入接口会传入两个数（一行一个）：第一个是元素里原来有几条，第二个是要加几条。\n\n请你写个程序：\n\n1. 把两个数读进来；\n2. 写一个方法 `addFish`，**调用结束它之后，外面那个元素里的数要真的变成加上去的那个数**（这一个方法就是要动外面的元素，别只动自己手边那份）；\n3. 把加完之后的元素印成一行 `元素里现在有 Y 条`。\n\n比如程序的输入是\n\n8\n9\n\n程序就要返回\n\n元素里现在有 17 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid addFish(int& bowl, int extra) {\n    bowl = bowl + extra;\n}\n\nint main() {\n    int bowl = 0;\n    int extra = 0;\n    cin >> bowl >> extra;\n\n    addFish(bowl, extra);\n    cout << \"元素里现在有 \" << bowl << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "元素里现在有 5 条",
+      "stdin": "3\n2\n",
+      "explanation": "这一个方法的脑袋上摆了两个元素，**一个带记号、一个不带** —— 这不是随便挑的：\n\n```\nvoid addFish(int& bowl, int extra)\n```\n\n- `int& bowl` 前面那个 `&` 说：**这一份料别抄，就用外面那个元素本身**。所以函数里 `bowl = bowl + extra;` 改的是**外面那个**。\n- `int extra` 前面没有记号：**要加几条**这个数只是拿来用一下，抄一份进来就够了 —— 外面没有哪只元素需要跟着变。\n\n一句话：**哪只元素要动，哪只元素前面加记号。** 两个都要动就两个都加（下一题对调两个元素就是这个样子）。\n\n⚠️ 少写了那个记号会怎样？函数改的就是一张抄件，调用结束外面那个元素**一点没变** —— 而且它**不报错、不吭声**，只是印出来的数不对。这个坑在本课里已经出现过一次（另一道题正是它）。\n\n最后：函数得摆在主程序**上面**，称呼它的时候按脑袋上的顺序喂两份料（先给元素、再给要加的数）。",
+      "templateId": "cpp-s1-ref-add-extra",
+      "params": {
+        "a": 3,
+        "b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "2709ede5380f9929"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-add-extra-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法，名字叫 `addFish`：**把外面那个元素里的数加上另一个数**。\n\n输入接口会传入两个数（一行一个）：第一个是元素里原来有几条，第二个是要加几条。\n\n请你写个程序：\n\n1. 把两个数读进来；\n2. 写一个方法 `addFish`，**调用结束它之后，外面那个元素里的数要真的变成加上去的那个数**（这一个方法就是要动外面的元素，别只动自己手边那份）；\n3. 把加完之后的元素印成一行 `元素里现在有 Y 条`。\n\n比如程序的输入是\n\n8\n9\n\n程序就要返回\n\n元素里现在有 17 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid addFish(int& bowl, int extra) {\n    bowl = bowl + extra;\n}\n\nint main() {\n    int bowl = 0;\n    int extra = 0;\n    cin >> bowl >> extra;\n\n    addFish(bowl, extra);\n    cout << \"元素里现在有 \" << bowl << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "元素里现在有 6 条",
+      "stdin": "3\n3\n",
+      "explanation": "这一个方法的脑袋上摆了两个元素，**一个带记号、一个不带** —— 这不是随便挑的：\n\n```\nvoid addFish(int& bowl, int extra)\n```\n\n- `int& bowl` 前面那个 `&` 说：**这一份料别抄，就用外面那个元素本身**。所以函数里 `bowl = bowl + extra;` 改的是**外面那个**。\n- `int extra` 前面没有记号：**要加几条**这个数只是拿来用一下，抄一份进来就够了 —— 外面没有哪只元素需要跟着变。\n\n一句话：**哪只元素要动，哪只元素前面加记号。** 两个都要动就两个都加（下一题对调两个元素就是这个样子）。\n\n⚠️ 少写了那个记号会怎样？函数改的就是一张抄件，调用结束外面那个元素**一点没变** —— 而且它**不报错、不吭声**，只是印出来的数不对。这个坑在本课里已经出现过一次（另一道题正是它）。\n\n最后：函数得摆在主程序**上面**，称呼它的时候按脑袋上的顺序喂两份料（先给元素、再给要加的数）。",
+      "templateId": "cpp-s1-ref-add-extra",
+      "params": {
+        "a": 3,
+        "b": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "f3cc0cfe420136aa"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-add-extra-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法，名字叫 `addFish`：**把外面那个元素里的数加上另一个数**。\n\n输入接口会传入两个数（一行一个）：第一个是元素里原来有几条，第二个是要加几条。\n\n请你写个程序：\n\n1. 把两个数读进来；\n2. 写一个方法 `addFish`，**调用结束它之后，外面那个元素里的数要真的变成加上去的那个数**（这一个方法就是要动外面的元素，别只动自己手边那份）；\n3. 把加完之后的元素印成一行 `元素里现在有 Y 条`。\n\n比如程序的输入是\n\n8\n9\n\n程序就要返回\n\n元素里现在有 17 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid addFish(int& bowl, int extra) {\n    bowl = bowl + extra;\n}\n\nint main() {\n    int bowl = 0;\n    int extra = 0;\n    cin >> bowl >> extra;\n\n    addFish(bowl, extra);\n    cout << \"元素里现在有 \" << bowl << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "元素里现在有 6 条",
+      "stdin": "4\n2\n",
+      "explanation": "这一个方法的脑袋上摆了两个元素，**一个带记号、一个不带** —— 这不是随便挑的：\n\n```\nvoid addFish(int& bowl, int extra)\n```\n\n- `int& bowl` 前面那个 `&` 说：**这一份料别抄，就用外面那个元素本身**。所以函数里 `bowl = bowl + extra;` 改的是**外面那个**。\n- `int extra` 前面没有记号：**要加几条**这个数只是拿来用一下，抄一份进来就够了 —— 外面没有哪只元素需要跟着变。\n\n一句话：**哪只元素要动，哪只元素前面加记号。** 两个都要动就两个都加（下一题对调两个元素就是这个样子）。\n\n⚠️ 少写了那个记号会怎样？函数改的就是一张抄件，调用结束外面那个元素**一点没变** —— 而且它**不报错、不吭声**，只是印出来的数不对。这个坑在本课里已经出现过一次（另一道题正是它）。\n\n最后：函数得摆在主程序**上面**，称呼它的时候按脑袋上的顺序喂两份料（先给元素、再给要加的数）。",
+      "templateId": "cpp-s1-ref-add-extra",
+      "params": {
+        "a": 4,
+        "b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "7d2209a32f00543f"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-add-extra-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法，名字叫 `addFish`：**把外面那个元素里的数加上另一个数**。\n\n输入接口会传入两个数（一行一个）：第一个是元素里原来有几条，第二个是要加几条。\n\n请你写个程序：\n\n1. 把两个数读进来；\n2. 写一个方法 `addFish`，**调用结束它之后，外面那个元素里的数要真的变成加上去的那个数**（这一个方法就是要动外面的元素，别只动自己手边那份）；\n3. 把加完之后的元素印成一行 `元素里现在有 Y 条`。\n\n比如程序的输入是\n\n8\n9\n\n程序就要返回\n\n元素里现在有 17 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid addFish(int& bowl, int extra) {\n    bowl = bowl + extra;\n}\n\nint main() {\n    int bowl = 0;\n    int extra = 0;\n    cin >> bowl >> extra;\n\n    addFish(bowl, extra);\n    cout << \"元素里现在有 \" << bowl << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "元素里现在有 7 条",
+      "stdin": "4\n3\n",
+      "explanation": "这一个方法的脑袋上摆了两个元素，**一个带记号、一个不带** —— 这不是随便挑的：\n\n```\nvoid addFish(int& bowl, int extra)\n```\n\n- `int& bowl` 前面那个 `&` 说：**这一份料别抄，就用外面那个元素本身**。所以函数里 `bowl = bowl + extra;` 改的是**外面那个**。\n- `int extra` 前面没有记号：**要加几条**这个数只是拿来用一下，抄一份进来就够了 —— 外面没有哪只元素需要跟着变。\n\n一句话：**哪只元素要动，哪只元素前面加记号。** 两个都要动就两个都加（下一题对调两个元素就是这个样子）。\n\n⚠️ 少写了那个记号会怎样？函数改的就是一张抄件，调用结束外面那个元素**一点没变** —— 而且它**不报错、不吭声**，只是印出来的数不对。这个坑在本课里已经出现过一次（另一道题正是它）。\n\n最后：函数得摆在主程序**上面**，称呼它的时候按脑袋上的顺序喂两份料（先给元素、再给要加的数）。",
+      "templateId": "cpp-s1-ref-add-extra",
+      "params": {
+        "a": 4,
+        "b": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "82f516f267952735"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-add-extra-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法，名字叫 `addFish`：**把外面那个元素里的数加上另一个数**。\n\n输入接口会传入两个数（一行一个）：第一个是元素里原来有几条，第二个是要加几条。\n\n请你写个程序：\n\n1. 把两个数读进来；\n2. 写一个方法 `addFish`，**调用结束它之后，外面那个元素里的数要真的变成加上去的那个数**（这一个方法就是要动外面的元素，别只动自己手边那份）；\n3. 把加完之后的元素印成一行 `元素里现在有 Y 条`。\n\n比如程序的输入是\n\n8\n9\n\n程序就要返回\n\n元素里现在有 17 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid addFish(int& bowl, int extra) {\n    bowl = bowl + extra;\n}\n\nint main() {\n    int bowl = 0;\n    int extra = 0;\n    cin >> bowl >> extra;\n\n    addFish(bowl, extra);\n    cout << \"元素里现在有 \" << bowl << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "元素里现在有 7 条",
+      "stdin": "5\n2\n",
+      "explanation": "这一个方法的脑袋上摆了两个元素，**一个带记号、一个不带** —— 这不是随便挑的：\n\n```\nvoid addFish(int& bowl, int extra)\n```\n\n- `int& bowl` 前面那个 `&` 说：**这一份料别抄，就用外面那个元素本身**。所以函数里 `bowl = bowl + extra;` 改的是**外面那个**。\n- `int extra` 前面没有记号：**要加几条**这个数只是拿来用一下，抄一份进来就够了 —— 外面没有哪只元素需要跟着变。\n\n一句话：**哪只元素要动，哪只元素前面加记号。** 两个都要动就两个都加（下一题对调两个元素就是这个样子）。\n\n⚠️ 少写了那个记号会怎样？函数改的就是一张抄件，调用结束外面那个元素**一点没变** —— 而且它**不报错、不吭声**，只是印出来的数不对。这个坑在本课里已经出现过一次（另一道题正是它）。\n\n最后：函数得摆在主程序**上面**，称呼它的时候按脑袋上的顺序喂两份料（先给元素、再给要加的数）。",
+      "templateId": "cpp-s1-ref-add-extra",
+      "params": {
+        "a": 5,
+        "b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "d1690a2cf61ab88b"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-add-extra-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法，名字叫 `addFish`：**把外面那个元素里的数加上另一个数**。\n\n输入接口会传入两个数（一行一个）：第一个是元素里原来有几条，第二个是要加几条。\n\n请你写个程序：\n\n1. 把两个数读进来；\n2. 写一个方法 `addFish`，**调用结束它之后，外面那个元素里的数要真的变成加上去的那个数**（这一个方法就是要动外面的元素，别只动自己手边那份）；\n3. 把加完之后的元素印成一行 `元素里现在有 Y 条`。\n\n比如程序的输入是\n\n8\n9\n\n程序就要返回\n\n元素里现在有 17 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid addFish(int& bowl, int extra) {\n    bowl = bowl + extra;\n}\n\nint main() {\n    int bowl = 0;\n    int extra = 0;\n    cin >> bowl >> extra;\n\n    addFish(bowl, extra);\n    cout << \"元素里现在有 \" << bowl << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "元素里现在有 8 条",
+      "stdin": "5\n3\n",
+      "explanation": "这一个方法的脑袋上摆了两个元素，**一个带记号、一个不带** —— 这不是随便挑的：\n\n```\nvoid addFish(int& bowl, int extra)\n```\n\n- `int& bowl` 前面那个 `&` 说：**这一份料别抄，就用外面那个元素本身**。所以函数里 `bowl = bowl + extra;` 改的是**外面那个**。\n- `int extra` 前面没有记号：**要加几条**这个数只是拿来用一下，抄一份进来就够了 —— 外面没有哪只元素需要跟着变。\n\n一句话：**哪只元素要动，哪只元素前面加记号。** 两个都要动就两个都加（下一题对调两个元素就是这个样子）。\n\n⚠️ 少写了那个记号会怎样？函数改的就是一张抄件，调用结束外面那个元素**一点没变** —— 而且它**不报错、不吭声**，只是印出来的数不对。这个坑在本课里已经出现过一次（另一道题正是它）。\n\n最后：函数得摆在主程序**上面**，称呼它的时候按脑袋上的顺序喂两份料（先给元素、再给要加的数）。",
+      "templateId": "cpp-s1-ref-add-extra",
+      "params": {
+        "a": 5,
+        "b": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "f61a05f6e83f1e93"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-alias-missing-amp-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想让 `other` 当 `fish` 那个元素的**第二个名字** —— 从此改 `other` 就等于改 `fish`，它俩永远是同一个数。\n\n元素里本来有 3；把 `other` 改成 7 之后，两行**都该印出 7**。\n\n可这段代码跑出来是两行不一样：`fish` 还停在 3。它跑得起来，编译器一句原话都没有，就是两个名字没绑在一起。\n\n你帮我们改对：改完 `other` 之后，两行都印 7。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 3;\n    int other = fish;\n\n    other = 7;\n    cout << fish << endl;\n    cout << other << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 3;\n    int& other = fish;\n\n    other = 7;\n    cout << fish << endl;\n    cout << other << endl;\n    return 0;\n}\n",
+      "expectedOutput": "7\n7",
+      "stdin": null,
+      "explanation": "`int other = fish;` 读出来是：**照着 `fish` 里的数，另摆一个元素**（`other` 是**另一个元素**，只是里面的数正好一样）。从那以后它俩各过各的：改 `other`，`fish` 当然不动。\n\n想让 `other` 真的变成**第二个名字**（同一个元素的别名），要写成：\n\n```\nint& other = fish;\n```\n\n那个 `&` 的意思是：**不新摆元素，只借外面那个元素的名字来用**。\n\n从此 `other` 和 `fish` 就是**同一个元素**：`other = 7;` 赋值的是那个元素，所以两行印出来都是 7 —— 不是巧合，是它俩本来就是一个东西。\n\n⚠️ 又是一次不吭的一题：抄一份是完全合规矩的写法，编译器不会拦你。**只有「改了一个名字、另一个没跟着变」这一个迹象**能让你发现它。\n\n顺着这一条记住别名最要紧的脾气：**它不是一个新元素，只是同一个元素的另一个称呼** —— 所以改它、印它、拿去当料，动的、看的、递出去的都是**同一个元素**。",
+      "templateId": "cpp-s1-ref-alias-missing-amp",
+      "params": {
+        "p": 3,
+        "q": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "a5935d9811f19e91"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-alias-missing-amp-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想让 `other` 当 `fish` 那个元素的**第二个名字** —— 从此改 `other` 就等于改 `fish`，它俩永远是同一个数。\n\n元素里本来有 4；把 `other` 改成 9 之后，两行**都该印出 9**。\n\n可这段代码跑出来是两行不一样：`fish` 还停在 4。它跑得起来，编译器一句原话都没有，就是两个名字没绑在一起。\n\n你帮我们改对：改完 `other` 之后，两行都印 9。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 4;\n    int other = fish;\n\n    other = 9;\n    cout << fish << endl;\n    cout << other << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 4;\n    int& other = fish;\n\n    other = 9;\n    cout << fish << endl;\n    cout << other << endl;\n    return 0;\n}\n",
+      "expectedOutput": "9\n9",
+      "stdin": null,
+      "explanation": "`int other = fish;` 读出来是：**照着 `fish` 里的数，另摆一个元素**（`other` 是**另一个元素**，只是里面的数正好一样）。从那以后它俩各过各的：改 `other`，`fish` 当然不动。\n\n想让 `other` 真的变成**第二个名字**（同一个元素的别名），要写成：\n\n```\nint& other = fish;\n```\n\n那个 `&` 的意思是：**不新摆元素，只借外面那个元素的名字来用**。\n\n从此 `other` 和 `fish` 就是**同一个元素**：`other = 9;` 赋值的是那个元素，所以两行印出来都是 9 —— 不是巧合，是它俩本来就是一个东西。\n\n⚠️ 又是一次不吭的一题：抄一份是完全合规矩的写法，编译器不会拦你。**只有「改了一个名字、另一个没跟着变」这一个迹象**能让你发现它。\n\n顺着这一条记住别名最要紧的脾气：**它不是一个新元素，只是同一个元素的另一个称呼** —— 所以改它、印它、拿去当料，动的、看的、递出去的都是**同一个元素**。",
+      "templateId": "cpp-s1-ref-alias-missing-amp",
+      "params": {
+        "p": 4,
+        "q": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "d301df806994df9d"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-not-initialized-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们要让 `r` 当 `fish` 那个元素的**第二个名字**，然后印两行 —— 两行都该是 3（同一个数）。\n\n可这段代码**翻不过去** —— 编译器在这一行把它拦下了，一行都没跑。\n\n你帮我们把缺的那一小截补上，让它翻得过去、跑起来，印出来正好两行 3。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 3;\n    int& r;\n\n    cout << r << endl;\n    cout << fish << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 3;\n    int& r = fish;\n\n    cout << r << endl;\n    cout << fish << endl;\n    return 0;\n}\n",
+      "expectedOutput": "3\n3",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: 'r' declared as reference but not initialized`，用自然语言解释：**「`r` 名字是挂了，可它是哪只元素的名字，你没写。」**\n\n关键就在这儿：**别名从一初始化就得绑好** —— `int& r = fish;` 是一口气写完的：挂名字**和**指元素是同一步。只写 `int& r;`，等于举着一块名称站着，名称上**什么都没写**，编译器当然不知道该怎么办。\n\n为什么它这么严？因为别名**不是一个独立的元素**，它一初始化就得指着某只元素。不能「先摆着，待会儿再说」。\n\n⚠️ 对照着记这两个（很容易混）：\n\n- **普通的元素**可以先摆好、以后再装：`int x;` 然后 `x = 3;` 完全没问题。\n- **挂了名字的元素**不行：`int& r;` 会当场被拦下 —— 它必须写成 `int& r = fish;`。\n\n顺带一句：`r` 绑上 `fish` 之后，**再改 `r` 不会改绑到别的元素上** —— 它一辈子就认 `fish` 那一个。写 `r = other;` 的意思是「**把 `other` 里的数装进 `fish`**」，不是让 `r` 改认 `other` 。",
+      "templateId": "cpp-s1-ref-not-initialized",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "7d36b4a8b8400d1f"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-not-initialized-002",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们要让 `r` 当 `fish` 那个元素的**第二个名字**，然后印两行 —— 两行都该是 5（同一个数）。\n\n可这段代码**翻不过去** —— 编译器在这一行把它拦下了，一行都没跑。\n\n你帮我们把缺的那一小截补上，让它翻得过去、跑起来，印出来正好两行 5。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 5;\n    int& r;\n\n    cout << r << endl;\n    cout << fish << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 5;\n    int& r = fish;\n\n    cout << r << endl;\n    cout << fish << endl;\n    return 0;\n}\n",
+      "expectedOutput": "5\n5",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: 'r' declared as reference but not initialized`，用自然语言解释：**「`r` 名字是挂了，可它是哪只元素的名字，你没写。」**\n\n关键就在这儿：**别名从一初始化就得绑好** —— `int& r = fish;` 是一口气写完的：挂名字**和**指元素是同一步。只写 `int& r;`，等于举着一块名称站着，名称上**什么都没写**，编译器当然不知道该怎么办。\n\n为什么它这么严？因为别名**不是一个独立的元素**，它一初始化就得指着某只元素。不能「先摆着，待会儿再说」。\n\n⚠️ 对照着记这两个（很容易混）：\n\n- **普通的元素**可以先摆好、以后再装：`int x;` 然后 `x = 3;` 完全没问题。\n- **挂了名字的元素**不行：`int& r;` 会当场被拦下 —— 它必须写成 `int& r = fish;`。\n\n顺带一句：`r` 绑上 `fish` 之后，**再改 `r` 不会改绑到别的元素上** —— 它一辈子就认 `fish` 那一个。写 `r = other;` 的意思是「**把 `other` 里的数装进 `fish`**」，不是让 `r` 改认 `other` 。",
+      "templateId": "cpp-s1-ref-not-initialized",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "1c0fde7c9f91708e"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-param-missing-amp-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们这一个方法想给**外面那个元素**加上 1：元素里本来有 3 条，调用结束这一个方法，元素里该有 3 加 1 条。\n\n可调用结束一看，元素里的数**一点没动**，印出来还是 3。它跑得起来，编译器一句原话都没有，就是外面的元素没被改到。\n\n你帮我们把这一个方法改对：调用结束之后，外面那个元素里的数要**真的多 1**。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nvoid addOne(int n) {\n    n = n + 1;\n}\n\nint main() {\n    int fish = 3;\n\n    addOne(fish);\n    cout << fish << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nvoid addOne(int& n) {\n    n = n + 1;\n}\n\nint main() {\n    int fish = 3;\n\n    addOne(fish);\n    cout << fish << endl;\n    return 0;\n}\n",
+      "expectedOutput": "4",
+      "stdin": null,
+      "explanation": "函数收料有两种收法，差别只在脑袋上那个**小记号**：\n\n- **不带记号**（我们原来那样：`void addOne(int n)`）—— 引用的时候，把外面那个元素里的数**照抄一份**递对函数。函数改的是**那张抄件**，改完抄件就扔了 —— 外面那个元素**一根毛都没动**。\n- **带上记号**（`void addOne(int& n)`）—— 那个 `&` 的意思是「**别抄了，就用外面那个元素本身**」。函数里写的 `n = n + 1;` 改的就是外面那个元素。\n\n一句话记牢：**想让函数改到外面的元素，脑袋上那个元素前面就得加 `&`。**\n\n⚠️ 这一题还是**一次不吭**：抄一份完全合规矩，编译器不觉得有任何问题 —— 它照常编译、照常跑，只是外面的元素没动。露馅的地方只有一个：**调用结束再看那个元素，数没变**。\n\n什么时候该抄、什么时候该用温柔版？想想你要的是什么：**只要数、不管外面那个元素**（比如求个和、算个平方）—— 抄一份更省事；**就是要改外面那个元素**（加一条、换个位）—— 脑袋上必须加 `&` 。",
+      "templateId": "cpp-s1-ref-param-missing-amp",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "04e056f34a082c34"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-param-missing-amp-002",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们这一个方法想给**外面那个元素**加上 1：元素里本来有 5 条，调用结束这一个方法，元素里该有 5 加 1 条。\n\n可调用结束一看，元素里的数**一点没动**，印出来还是 5。它跑得起来，编译器一句原话都没有，就是外面的元素没被改到。\n\n你帮我们把这一个方法改对：调用结束之后，外面那个元素里的数要**真的多 1**。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nvoid addOne(int n) {\n    n = n + 1;\n}\n\nint main() {\n    int fish = 5;\n\n    addOne(fish);\n    cout << fish << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nvoid addOne(int& n) {\n    n = n + 1;\n}\n\nint main() {\n    int fish = 5;\n\n    addOne(fish);\n    cout << fish << endl;\n    return 0;\n}\n",
+      "expectedOutput": "6",
+      "stdin": null,
+      "explanation": "函数收料有两种收法，差别只在脑袋上那个**小记号**：\n\n- **不带记号**（我们原来那样：`void addOne(int n)`）—— 引用的时候，把外面那个元素里的数**照抄一份**递对函数。函数改的是**那张抄件**，改完抄件就扔了 —— 外面那个元素**一根毛都没动**。\n- **带上记号**（`void addOne(int& n)`）—— 那个 `&` 的意思是「**别抄了，就用外面那个元素本身**」。函数里写的 `n = n + 1;` 改的就是外面那个元素。\n\n一句话记牢：**想让函数改到外面的元素，脑袋上那个元素前面就得加 `&`。**\n\n⚠️ 这一题还是**一次不吭**：抄一份完全合规矩，编译器不觉得有任何问题 —— 它照常编译、照常跑，只是外面的元素没动。露馅的地方只有一个：**调用结束再看那个元素，数没变**。\n\n什么时候该抄、什么时候该用温柔版？想想你要的是什么：**只要数、不管外面那个元素**（比如求个和、算个平方）—— 抄一份更省事；**就是要改外面那个元素**（加一条、换个位）—— 脑袋上必须加 `&` 。",
+      "templateId": "cpp-s1-ref-param-missing-amp",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "1f0ffe746ac2c43e"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-second-name-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会传入两个数（一行一个）。\n\n请你写个程序：\n\n1. 备一个元素装**第一个**数；\n2. 给这个元素**再挂一个名字**（另起一个跟它不同的名字）；\n3. 把**新名字**改成**第二个**数；\n4. 印两行：先印 `原名儿是 X`，再印 `新名儿是 X`。\n\n两行都该是**第二个**数 —— 因为改新名字就等于改那个元素。\n\n比如程序的输入是\n\n5\n6\n\n程序就要返回\n\n原名儿是 6\n新名儿是 6\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    int next = 0;\n    cin >> fish >> next;\n\n    int& other = fish;\n    other = next;\n\n    cout << \"原名儿是 \" << fish << endl;\n    cout << \"新名儿是 \" << other << endl;\n    return 0;\n}\n",
+      "expectedOutput": "原名儿是 7\n新名儿是 7",
+      "stdin": "3\n7\n",
+      "explanation": "给一个元素挂第二个名字，写法是**在小记号上收**：\n\n```\nint& other = fish;\n```\n\n那个 `&` 说的就是「**这不是一个新元素，是上面那个元素的另一个称呼**」。所以后面那句 `other = next;` 赋值的是**同一个元素** —— 印 `fish` 和印 `other` 出来当然是同一个数。\n\n要是把记号漏了、写成 `int other = fish;`，那就是**另摆了一个元素、照着抄了一份** —— 之后改 `other`，`fish` 一动不动，两行印出来就不一样了（本课另一道题正是这个坑）。\n\n⚠️ 两条最容易栽的规矩：\n\n- **挂名字和指元素要一口气写完**（`int& other = fish;`）—— 不能先写 `int& other;` 待会儿再说，那样编译器当场就把你拦下。\n- **挂上之后就不会改认别人了**：再写 `other = another;` 不是「改认 another 那个元素」，而是「**把 another 里的数装进 `fish`**」—— 名字一辈子认准那一个元素。\n\n一句话：**别名不是新元素，是同一个元素的另一个称呼** —— 心里记着这句，这一课就不会乱。",
+      "templateId": "cpp-s1-ref-second-name",
+      "params": {
+        "p": 3,
+        "q": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "8fd18e37074b6833"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-second-name-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会传入两个数（一行一个）。\n\n请你写个程序：\n\n1. 备一个元素装**第一个**数；\n2. 给这个元素**再挂一个名字**（另起一个跟它不同的名字）；\n3. 把**新名字**改成**第二个**数；\n4. 印两行：先印 `原名儿是 X`，再印 `新名儿是 X`。\n\n两行都该是**第二个**数 —— 因为改新名字就等于改那个元素。\n\n比如程序的输入是\n\n5\n6\n\n程序就要返回\n\n原名儿是 6\n新名儿是 6\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    int next = 0;\n    cin >> fish >> next;\n\n    int& other = fish;\n    other = next;\n\n    cout << \"原名儿是 \" << fish << endl;\n    cout << \"新名儿是 \" << other << endl;\n    return 0;\n}\n",
+      "expectedOutput": "原名儿是 8\n新名儿是 8",
+      "stdin": "3\n8\n",
+      "explanation": "给一个元素挂第二个名字，写法是**在小记号上收**：\n\n```\nint& other = fish;\n```\n\n那个 `&` 说的就是「**这不是一个新元素，是上面那个元素的另一个称呼**」。所以后面那句 `other = next;` 赋值的是**同一个元素** —— 印 `fish` 和印 `other` 出来当然是同一个数。\n\n要是把记号漏了、写成 `int other = fish;`，那就是**另摆了一个元素、照着抄了一份** —— 之后改 `other`，`fish` 一动不动，两行印出来就不一样了（本课另一道题正是这个坑）。\n\n⚠️ 两条最容易栽的规矩：\n\n- **挂名字和指元素要一口气写完**（`int& other = fish;`）—— 不能先写 `int& other;` 待会儿再说，那样编译器当场就把你拦下。\n- **挂上之后就不会改认别人了**：再写 `other = another;` 不是「改认 another 那个元素」，而是「**把 another 里的数装进 `fish`**」—— 名字一辈子认准那一个元素。\n\n一句话：**别名不是新元素，是同一个元素的另一个称呼** —— 心里记着这句，这一课就不会乱。",
+      "templateId": "cpp-s1-ref-second-name",
+      "params": {
+        "p": 3,
+        "q": 8
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "7565ca966bb850f1"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-second-name-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会传入两个数（一行一个）。\n\n请你写个程序：\n\n1. 备一个元素装**第一个**数；\n2. 给这个元素**再挂一个名字**（另起一个跟它不同的名字）；\n3. 把**新名字**改成**第二个**数；\n4. 印两行：先印 `原名儿是 X`，再印 `新名儿是 X`。\n\n两行都该是**第二个**数 —— 因为改新名字就等于改那个元素。\n\n比如程序的输入是\n\n5\n6\n\n程序就要返回\n\n原名儿是 6\n新名儿是 6\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    int next = 0;\n    cin >> fish >> next;\n\n    int& other = fish;\n    other = next;\n\n    cout << \"原名儿是 \" << fish << endl;\n    cout << \"新名儿是 \" << other << endl;\n    return 0;\n}\n",
+      "expectedOutput": "原名儿是 9\n新名儿是 9",
+      "stdin": "3\n9\n",
+      "explanation": "给一个元素挂第二个名字，写法是**在小记号上收**：\n\n```\nint& other = fish;\n```\n\n那个 `&` 说的就是「**这不是一个新元素，是上面那个元素的另一个称呼**」。所以后面那句 `other = next;` 赋值的是**同一个元素** —— 印 `fish` 和印 `other` 出来当然是同一个数。\n\n要是把记号漏了、写成 `int other = fish;`，那就是**另摆了一个元素、照着抄了一份** —— 之后改 `other`，`fish` 一动不动，两行印出来就不一样了（本课另一道题正是这个坑）。\n\n⚠️ 两条最容易栽的规矩：\n\n- **挂名字和指元素要一口气写完**（`int& other = fish;`）—— 不能先写 `int& other;` 待会儿再说，那样编译器当场就把你拦下。\n- **挂上之后就不会改认别人了**：再写 `other = another;` 不是「改认 another 那个元素」，而是「**把 another 里的数装进 `fish`**」—— 名字一辈子认准那一个元素。\n\n一句话：**别名不是新元素，是同一个元素的另一个称呼** —— 心里记着这句，这一课就不会乱。",
+      "templateId": "cpp-s1-ref-second-name",
+      "params": {
+        "p": 3,
+        "q": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "1b69241d5fd707eb"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-second-name-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会传入两个数（一行一个）。\n\n请你写个程序：\n\n1. 备一个元素装**第一个**数；\n2. 给这个元素**再挂一个名字**（另起一个跟它不同的名字）；\n3. 把**新名字**改成**第二个**数；\n4. 印两行：先印 `原名儿是 X`，再印 `新名儿是 X`。\n\n两行都该是**第二个**数 —— 因为改新名字就等于改那个元素。\n\n比如程序的输入是\n\n5\n6\n\n程序就要返回\n\n原名儿是 6\n新名儿是 6\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    int next = 0;\n    cin >> fish >> next;\n\n    int& other = fish;\n    other = next;\n\n    cout << \"原名儿是 \" << fish << endl;\n    cout << \"新名儿是 \" << other << endl;\n    return 0;\n}\n",
+      "expectedOutput": "原名儿是 7\n新名儿是 7",
+      "stdin": "4\n7\n",
+      "explanation": "给一个元素挂第二个名字，写法是**在小记号上收**：\n\n```\nint& other = fish;\n```\n\n那个 `&` 说的就是「**这不是一个新元素，是上面那个元素的另一个称呼**」。所以后面那句 `other = next;` 赋值的是**同一个元素** —— 印 `fish` 和印 `other` 出来当然是同一个数。\n\n要是把记号漏了、写成 `int other = fish;`，那就是**另摆了一个元素、照着抄了一份** —— 之后改 `other`，`fish` 一动不动，两行印出来就不一样了（本课另一道题正是这个坑）。\n\n⚠️ 两条最容易栽的规矩：\n\n- **挂名字和指元素要一口气写完**（`int& other = fish;`）—— 不能先写 `int& other;` 待会儿再说，那样编译器当场就把你拦下。\n- **挂上之后就不会改认别人了**：再写 `other = another;` 不是「改认 another 那个元素」，而是「**把 another 里的数装进 `fish`**」—— 名字一辈子认准那一个元素。\n\n一句话：**别名不是新元素，是同一个元素的另一个称呼** —— 心里记着这句，这一课就不会乱。",
+      "templateId": "cpp-s1-ref-second-name",
+      "params": {
+        "p": 4,
+        "q": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "648ac241edea7036"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-second-name-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会传入两个数（一行一个）。\n\n请你写个程序：\n\n1. 备一个元素装**第一个**数；\n2. 给这个元素**再挂一个名字**（另起一个跟它不同的名字）；\n3. 把**新名字**改成**第二个**数；\n4. 印两行：先印 `原名儿是 X`，再印 `新名儿是 X`。\n\n两行都该是**第二个**数 —— 因为改新名字就等于改那个元素。\n\n比如程序的输入是\n\n5\n6\n\n程序就要返回\n\n原名儿是 6\n新名儿是 6\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    int next = 0;\n    cin >> fish >> next;\n\n    int& other = fish;\n    other = next;\n\n    cout << \"原名儿是 \" << fish << endl;\n    cout << \"新名儿是 \" << other << endl;\n    return 0;\n}\n",
+      "expectedOutput": "原名儿是 8\n新名儿是 8",
+      "stdin": "4\n8\n",
+      "explanation": "给一个元素挂第二个名字，写法是**在小记号上收**：\n\n```\nint& other = fish;\n```\n\n那个 `&` 说的就是「**这不是一个新元素，是上面那个元素的另一个称呼**」。所以后面那句 `other = next;` 赋值的是**同一个元素** —— 印 `fish` 和印 `other` 出来当然是同一个数。\n\n要是把记号漏了、写成 `int other = fish;`，那就是**另摆了一个元素、照着抄了一份** —— 之后改 `other`，`fish` 一动不动，两行印出来就不一样了（本课另一道题正是这个坑）。\n\n⚠️ 两条最容易栽的规矩：\n\n- **挂名字和指元素要一口气写完**（`int& other = fish;`）—— 不能先写 `int& other;` 待会儿再说，那样编译器当场就把你拦下。\n- **挂上之后就不会改认别人了**：再写 `other = another;` 不是「改认 another 那个元素」，而是「**把 another 里的数装进 `fish`**」—— 名字一辈子认准那一个元素。\n\n一句话：**别名不是新元素，是同一个元素的另一个称呼** —— 心里记着这句，这一课就不会乱。",
+      "templateId": "cpp-s1-ref-second-name",
+      "params": {
+        "p": 4,
+        "q": 8
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "1fdfbe9ee2cf28e8"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-second-name-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会传入两个数（一行一个）。\n\n请你写个程序：\n\n1. 备一个元素装**第一个**数；\n2. 给这个元素**再挂一个名字**（另起一个跟它不同的名字）；\n3. 把**新名字**改成**第二个**数；\n4. 印两行：先印 `原名儿是 X`，再印 `新名儿是 X`。\n\n两行都该是**第二个**数 —— 因为改新名字就等于改那个元素。\n\n比如程序的输入是\n\n5\n6\n\n程序就要返回\n\n原名儿是 6\n新名儿是 6\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    int next = 0;\n    cin >> fish >> next;\n\n    int& other = fish;\n    other = next;\n\n    cout << \"原名儿是 \" << fish << endl;\n    cout << \"新名儿是 \" << other << endl;\n    return 0;\n}\n",
+      "expectedOutput": "原名儿是 9\n新名儿是 9",
+      "stdin": "4\n9\n",
+      "explanation": "给一个元素挂第二个名字，写法是**在小记号上收**：\n\n```\nint& other = fish;\n```\n\n那个 `&` 说的就是「**这不是一个新元素，是上面那个元素的另一个称呼**」。所以后面那句 `other = next;` 赋值的是**同一个元素** —— 印 `fish` 和印 `other` 出来当然是同一个数。\n\n要是把记号漏了、写成 `int other = fish;`，那就是**另摆了一个元素、照着抄了一份** —— 之后改 `other`，`fish` 一动不动，两行印出来就不一样了（本课另一道题正是这个坑）。\n\n⚠️ 两条最容易栽的规矩：\n\n- **挂名字和指元素要一口气写完**（`int& other = fish;`）—— 不能先写 `int& other;` 待会儿再说，那样编译器当场就把你拦下。\n- **挂上之后就不会改认别人了**：再写 `other = another;` 不是「改认 another 那个元素」，而是「**把 another 里的数装进 `fish`**」—— 名字一辈子认准那一个元素。\n\n一句话：**别名不是新元素，是同一个元素的另一个称呼** —— 心里记着这句，这一课就不会乱。",
+      "templateId": "cpp-s1-ref-second-name",
+      "params": {
+        "p": 4,
+        "q": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "c6ab2db72d0551c6"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-swap-two-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要把**两个元素里的数对调**：第一个元素本来保存 3，第二只保存 7，对调之后第一个该是 7、第二只该是 3。\n\n输入接口会传入两个数（一行一个，就是这两个元素里的数）。\n\n请你写个程序：\n\n1. 把两个数读进两个元素里；\n2. 写一个方法 `swapTwo`，**收两个元素、把里面的数对调**（调用结束它，外面那两个元素要真的换过来）；\n3. 印一行 `先 A 后 B `（A 是换完之后第一个元素里的数，B 是第二只元素里的数）。\n\n比如程序的输入是\n\n5\n9\n\n程序就要返回\n\n先 9 后 5 \n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid swapTwo(int& a, int& b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}\n\nint main() {\n    int x = 0;\n    int y = 0;\n    cin >> x >> y;\n\n    swapTwo(x, y);\n    cout << \"先 \" << x << \" 后 \" << y << \" \" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "先 7 后 3 ",
+      "stdin": "3\n7\n",
+      "explanation": "对调两个元素里的东西，脑袋里要有**三步**，而且中间得**借一个临时元素**：\n\n```\nint temp = a;   // 先把 a 里的数倒进临时元素\n a = b;         // 再把 b 里的数倒进 a（a 原来那份已经安全了）\n b = temp;      // 最后把临时元素里那份倒进 b\n```\n\n⚠️ 为什么非要借一个？要是写成 `a = b; b = a;` —— 第一句已经把 `a` 原来的数盖掉了，第二句倒回来的其实是**刚盖进去的那个数**，两个元素会变成一样的。**「先盖掉、再想找回来」是倒数的老毛病。**\n\n另一头要点同样要紧：**两个元素前面都得加那个小记号** —— `void swapTwo(int& a, int& b)`。只有记号才能让函数动到**外面**那两个元素；漏一个，那个元素就只在抄件上换来换去，外面一点没变（本课另一道题就是这个坑）。\n\n一句话总结：**要动外面的元素 → 脑袋上加记号；要倒腾元素里的数 → 借一个临时的。** 这两条凑起来，才是这一题。",
+      "templateId": "cpp-s1-ref-swap-two",
+      "params": {
+        "x": 3,
+        "y": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "fa88f5a945e9218e"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-swap-two-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要把**两个元素里的数对调**：第一个元素本来保存 3，第二只保存 8，对调之后第一个该是 8、第二只该是 3。\n\n输入接口会传入两个数（一行一个，就是这两个元素里的数）。\n\n请你写个程序：\n\n1. 把两个数读进两个元素里；\n2. 写一个方法 `swapTwo`，**收两个元素、把里面的数对调**（调用结束它，外面那两个元素要真的换过来）；\n3. 印一行 `先 A 后 B `（A 是换完之后第一个元素里的数，B 是第二只元素里的数）。\n\n比如程序的输入是\n\n5\n9\n\n程序就要返回\n\n先 9 后 5 \n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid swapTwo(int& a, int& b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}\n\nint main() {\n    int x = 0;\n    int y = 0;\n    cin >> x >> y;\n\n    swapTwo(x, y);\n    cout << \"先 \" << x << \" 后 \" << y << \" \" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "先 8 后 3 ",
+      "stdin": "3\n8\n",
+      "explanation": "对调两个元素里的东西，脑袋里要有**三步**，而且中间得**借一个临时元素**：\n\n```\nint temp = a;   // 先把 a 里的数倒进临时元素\n a = b;         // 再把 b 里的数倒进 a（a 原来那份已经安全了）\n b = temp;      // 最后把临时元素里那份倒进 b\n```\n\n⚠️ 为什么非要借一个？要是写成 `a = b; b = a;` —— 第一句已经把 `a` 原来的数盖掉了，第二句倒回来的其实是**刚盖进去的那个数**，两个元素会变成一样的。**「先盖掉、再想找回来」是倒数的老毛病。**\n\n另一头要点同样要紧：**两个元素前面都得加那个小记号** —— `void swapTwo(int& a, int& b)`。只有记号才能让函数动到**外面**那两个元素；漏一个，那个元素就只在抄件上换来换去，外面一点没变（本课另一道题就是这个坑）。\n\n一句话总结：**要动外面的元素 → 脑袋上加记号；要倒腾元素里的数 → 借一个临时的。** 这两条凑起来，才是这一题。",
+      "templateId": "cpp-s1-ref-swap-two",
+      "params": {
+        "x": 3,
+        "y": 8
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "5b6738d52372c2bd"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-swap-two-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要把**两个元素里的数对调**：第一个元素本来保存 4，第二只保存 7，对调之后第一个该是 7、第二只该是 4。\n\n输入接口会传入两个数（一行一个，就是这两个元素里的数）。\n\n请你写个程序：\n\n1. 把两个数读进两个元素里；\n2. 写一个方法 `swapTwo`，**收两个元素、把里面的数对调**（调用结束它，外面那两个元素要真的换过来）；\n3. 印一行 `先 A 后 B `（A 是换完之后第一个元素里的数，B 是第二只元素里的数）。\n\n比如程序的输入是\n\n5\n9\n\n程序就要返回\n\n先 9 后 5 \n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid swapTwo(int& a, int& b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}\n\nint main() {\n    int x = 0;\n    int y = 0;\n    cin >> x >> y;\n\n    swapTwo(x, y);\n    cout << \"先 \" << x << \" 后 \" << y << \" \" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "先 7 后 4 ",
+      "stdin": "4\n7\n",
+      "explanation": "对调两个元素里的东西，脑袋里要有**三步**，而且中间得**借一个临时元素**：\n\n```\nint temp = a;   // 先把 a 里的数倒进临时元素\n a = b;         // 再把 b 里的数倒进 a（a 原来那份已经安全了）\n b = temp;      // 最后把临时元素里那份倒进 b\n```\n\n⚠️ 为什么非要借一个？要是写成 `a = b; b = a;` —— 第一句已经把 `a` 原来的数盖掉了，第二句倒回来的其实是**刚盖进去的那个数**，两个元素会变成一样的。**「先盖掉、再想找回来」是倒数的老毛病。**\n\n另一头要点同样要紧：**两个元素前面都得加那个小记号** —— `void swapTwo(int& a, int& b)`。只有记号才能让函数动到**外面**那两个元素；漏一个，那个元素就只在抄件上换来换去，外面一点没变（本课另一道题就是这个坑）。\n\n一句话总结：**要动外面的元素 → 脑袋上加记号；要倒腾元素里的数 → 借一个临时的。** 这两条凑起来，才是这一题。",
+      "templateId": "cpp-s1-ref-swap-two",
+      "params": {
+        "x": 4,
+        "y": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "aff81d18802c4d90"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-ref-swap-two-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要把**两个元素里的数对调**：第一个元素本来保存 4，第二只保存 8，对调之后第一个该是 8、第二只该是 4。\n\n输入接口会传入两个数（一行一个，就是这两个元素里的数）。\n\n请你写个程序：\n\n1. 把两个数读进两个元素里；\n2. 写一个方法 `swapTwo`，**收两个元素、把里面的数对调**（调用结束它，外面那两个元素要真的换过来）；\n3. 印一行 `先 A 后 B `（A 是换完之后第一个元素里的数，B 是第二只元素里的数）。\n\n比如程序的输入是\n\n5\n9\n\n程序就要返回\n\n先 9 后 5 \n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nvoid swapTwo(int& a, int& b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}\n\nint main() {\n    int x = 0;\n    int y = 0;\n    cin >> x >> y;\n\n    swapTwo(x, y);\n    cout << \"先 \" << x << \" 后 \" << y << \" \" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "先 8 后 4 ",
+      "stdin": "4\n8\n",
+      "explanation": "对调两个元素里的东西，脑袋里要有**三步**，而且中间得**借一个临时元素**：\n\n```\nint temp = a;   // 先把 a 里的数倒进临时元素\n a = b;         // 再把 b 里的数倒进 a（a 原来那份已经安全了）\n b = temp;      // 最后把临时元素里那份倒进 b\n```\n\n⚠️ 为什么非要借一个？要是写成 `a = b; b = a;` —— 第一句已经把 `a` 原来的数盖掉了，第二句倒回来的其实是**刚盖进去的那个数**，两个元素会变成一样的。**「先盖掉、再想找回来」是倒数的老毛病。**\n\n另一头要点同样要紧：**两个元素前面都得加那个小记号** —— `void swapTwo(int& a, int& b)`。只有记号才能让函数动到**外面**那两个元素；漏一个，那个元素就只在抄件上换来换去，外面一点没变（本课另一道题就是这个坑）。\n\n一句话总结：**要动外面的元素 → 脑袋上加记号；要倒腾元素里的数 → 借一个临时的。** 这两条凑起来，才是这一题。",
+      "templateId": "cpp-s1-ref-swap-two",
+      "params": {
+        "x": 4,
+        "y": 8
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.282Z",
+        "hash": "9c04293c9e963d5f"
+      }
+    }
+  ]
+}

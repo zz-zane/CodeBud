@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s2-07-bag-equal",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-07",
+  "type": "codewrite",
+  "concept": [
+    "定制等号这一手",
+    "返回一句是或不是",
+    "同一个跟自己比"
+  ],
+  "instances": 6,
+  "params": {
+    "label": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 2,
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们想让两个袋子能**比一比条数**。输入接口会递进来**两个数**（一行一个）：第一个、第二只的条数。\n\n请你这么办：\n\n1. **定义类** `FishBag`：一栏带盖的 `count`（一个整数）+ 一个构造函数。\n2. **在类定义里定制等号**（写在类定义大括号里面）：两个袋子里的数一样多就返回「是」，不一样就返回「不是」。行尾照样挂上 `const`。\n3. 在 `main` 里读进两个数、生两个袋子，印**两行**：\n\n```text\n两袋{label}一样多吗？一样（或 不一样）\n同一袋跟自己比呢？一样\n```\n\n第一行拿 `a` 和 `b` 比，第二行拿 `a` 和 `a` 比；比较的结果请用上课那种写法当场翻成人话印出来：`(比较) ? \"一样\" : \"不一样\"`。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外两个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\nusing namespace std;\n\nclass FishBag {\n    int count;\npublic:\n    FishBag(int c) : count(c) {}\n\n    bool operator==(const FishBag& other) const {\n        return count == other.count;\n    }\n};\n\nint main() {\n    int x = 0;\n    int y = 0;\n    cin >> x >> y;\n\n    FishBag a(x);\n    FishBag b(y);\n    cout << \"两袋{label}一样多吗？\" << ((a == b) ? \"一样\" : \"不一样\") << endl;\n    cout << \"同一袋跟自己比呢？\" << ((a == a) ? \"一样\" : \"不一样\") << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一手和加号那一手是同一个路子，只有返回的东西不一样：\n\n- **加号那一手返回的是一个新袋子**（`FishBag`），因为 `a + b` 还能接着往下用。\n- **等号这一手返回的是一句「是 / 不是」**（`bool`）：`count == other.count` 算出来的是 `true` 或者 `false`。\n\n所以写的时候，名字前面那个东西要写对：`bool operator==(const FishBag& other) const`。\n\n里面 `count == other.count` 那两个 `count` 也要分清：**不带前缀的是自己那一格，带 `other.` 的是对方那一格**（和加号那一手一模一样）。\n\n⚠️ 别被这一行里的两个符号绕晕：`operator==` 里的 `==` 是**我们要定制的那个符号**，`return` 里那个 `==` 是**比较两个整数用的、语言本来就有的那一手**。写在类定义里面，我们只是给「两个袋子之间」换了一套动作，整数之间怎么比，一个字都没改。\n\n最后那两行印出来的时候，`a == a` 永远是「一样」——**同一个袋子的条数当然等于它自己**。这一行是用来验我们写的那一手：连自己跟自己比都说不像，那一定是里面写反了。"
+}

@@ -1,0 +1,552 @@
+{
+  "lessonId": "java-stage1-12",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s1-blueprint-first-drawing-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**第一次动笔定义类**了。这张类定义叫 `Cat`，上面画两样实例字段：`String name`（名字）和 `int fish`（当前记录了几条），再画一个方法 `void report()` —— 调用一次，它就印一行账。\n\n`main` 里纸条上给了一个名字（独占一行）和一个数（独占一行）：照类定义**创建一个实例**，把名字和数据数挂到**这一个**身上，再让它自己报账。类定义上那一个方法前面**不挂 `static`** 。\n\n比如程序的输入是\n\n王五\n3\n\n程序就要返回\n\n王五 当前记录了 3 条数据\n\n（判分用的是**另外一个名字、另外一个数**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 当前记录了 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n        Cat c = new Cat();\n        c.name = who;\n        c.fish = n;\n        c.report();\n    }\n}\n",
+      "expectedOutput": "张三 当前记录了 2 条数据",
+      "stdin": "张三\n2\n",
+      "explanation": "类定义和 `main` 写在同一个文件里没问题（`public class` 的名字跟存盘文件名对不上才出事，那条练习场替你办）。三处要盯：\n\n- **类定义上那两样后面没有小括号**：`String name;` / `int fish;` 是「摆东西的名称」的写法，**不是方法** —— 带上小括号就变成方法了。\n- **`void report()` 前面没有 `static`**：它跟着每一个实例走，身子里那句 `name` 动的是「**这一个**」的名字。\n- **先 `new` 再使唤**：`Cat c = new Cat();` 创建对象 → `c.name = who;` 挂名字 → `c.fish = n;` 挂数据数 → `c.report();` 让它自己报。少了 `new` 那一口，后面两句全是 `variable c might not have been initialized`。\n\n`main` 里读纸条用的还是老手艺：`sc.next()` 读一串字、`sc.nextInt()` 读一个数。类只需定义一次，可它想创建几个对象就创建几个 —— 今天一个，明天一组。",
+      "templateId": "java-s1-blueprint-first-drawing",
+      "params": {
+        "name": "张三",
+        "name2": "王五",
+        "n": 2,
+        "n2": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "0d8d17413e42a1ae"
+      }
+    },
+    {
+      "id": "bank-java-s1-blueprint-first-drawing-038",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**第一次动笔定义类**了。这张类定义叫 `Cat`，上面画两样实例字段：`String name`（名字）和 `int fish`（当前记录了几条），再画一个方法 `void report()` —— 调用一次，它就印一行账。\n\n`main` 里纸条上给了一个名字（独占一行）和一个数（独占一行）：照类定义**创建一个实例**，把名字和数据数挂到**这一个**身上，再让它自己报账。类定义上那一个方法前面**不挂 `static`** 。\n\n比如程序的输入是\n\n王五\n5\n\n程序就要返回\n\n王五 当前记录了 5 条数据\n\n（判分用的是**另外一个名字、另外一个数**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 当前记录了 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n        Cat c = new Cat();\n        c.name = who;\n        c.fish = n;\n        c.report();\n    }\n}\n",
+      "expectedOutput": "张三 当前记录了 8 条数据",
+      "stdin": "张三\n8\n",
+      "explanation": "类定义和 `main` 写在同一个文件里没问题（`public class` 的名字跟存盘文件名对不上才出事，那条练习场替你办）。三处要盯：\n\n- **类定义上那两样后面没有小括号**：`String name;` / `int fish;` 是「摆东西的名称」的写法，**不是方法** —— 带上小括号就变成方法了。\n- **`void report()` 前面没有 `static`**：它跟着每一个实例走，身子里那句 `name` 动的是「**这一个**」的名字。\n- **先 `new` 再使唤**：`Cat c = new Cat();` 创建对象 → `c.name = who;` 挂名字 → `c.fish = n;` 挂数据数 → `c.report();` 让它自己报。少了 `new` 那一口，后面两句全是 `variable c might not have been initialized`。\n\n`main` 里读纸条用的还是老手艺：`sc.next()` 读一串字、`sc.nextInt()` 读一个数。类只需定义一次，可它想创建几个对象就创建几个 —— 今天一个，明天一组。",
+      "templateId": "java-s1-blueprint-first-drawing",
+      "params": {
+        "name": "张三",
+        "name2": "王五",
+        "n": 8,
+        "n2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "c38647dfdbf432bc"
+      }
+    },
+    {
+      "id": "bank-java-s1-blueprint-first-drawing-076",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**第一次动笔定义类**了。这张类定义叫 `Cat`，上面画两样实例字段：`String name`（名字）和 `int fish`（当前记录了几条），再画一个方法 `void report()` —— 调用一次，它就印一行账。\n\n`main` 里纸条上给了一个名字（独占一行）和一个数（独占一行）：照类定义**创建一个实例**，把名字和数据数挂到**这一个**身上，再让它自己报账。类定义上那一个方法前面**不挂 `static`** 。\n\n比如程序的输入是\n\n雪球\n7\n\n程序就要返回\n\n雪球 当前记录了 7 条数据\n\n（判分用的是**另外一个名字、另外一个数**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 当前记录了 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n        Cat c = new Cat();\n        c.name = who;\n        c.fish = n;\n        c.report();\n    }\n}\n",
+      "expectedOutput": "张三 当前记录了 6 条数据",
+      "stdin": "张三\n6\n",
+      "explanation": "类定义和 `main` 写在同一个文件里没问题（`public class` 的名字跟存盘文件名对不上才出事，那条练习场替你办）。三处要盯：\n\n- **类定义上那两样后面没有小括号**：`String name;` / `int fish;` 是「摆东西的名称」的写法，**不是方法** —— 带上小括号就变成方法了。\n- **`void report()` 前面没有 `static`**：它跟着每一个实例走，身子里那句 `name` 动的是「**这一个**」的名字。\n- **先 `new` 再使唤**：`Cat c = new Cat();` 创建对象 → `c.name = who;` 挂名字 → `c.fish = n;` 挂数据数 → `c.report();` 让它自己报。少了 `new` 那一口，后面两句全是 `variable c might not have been initialized`。\n\n`main` 里读纸条用的还是老手艺：`sc.next()` 读一串字、`sc.nextInt()` 读一个数。类只需定义一次，可它想创建几个对象就创建几个 —— 今天一个，明天一组。",
+      "templateId": "java-s1-blueprint-first-drawing",
+      "params": {
+        "name": "张三",
+        "name2": "雪球",
+        "n": 6,
+        "n2": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "f33d7030999e28a0"
+      }
+    },
+    {
+      "id": "bank-java-s1-blueprint-first-drawing-115",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**第一次动笔定义类**了。这张类定义叫 `Cat`，上面画两样实例字段：`String name`（名字）和 `int fish`（当前记录了几条），再画一个方法 `void report()` —— 调用一次，它就印一行账。\n\n`main` 里纸条上给了一个名字（独占一行）和一个数（独占一行）：照类定义**创建一个实例**，把名字和数据数挂到**这一个**身上，再让它自己报账。类定义上那一个方法前面**不挂 `static`** 。\n\n比如程序的输入是\n\n王五\n4\n\n程序就要返回\n\n王五 当前记录了 4 条数据\n\n（判分用的是**另外一个名字、另外一个数**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 当前记录了 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n        Cat c = new Cat();\n        c.name = who;\n        c.fish = n;\n        c.report();\n    }\n}\n",
+      "expectedOutput": "李四 当前记录了 5 条数据",
+      "stdin": "李四\n5\n",
+      "explanation": "类定义和 `main` 写在同一个文件里没问题（`public class` 的名字跟存盘文件名对不上才出事，那条练习场替你办）。三处要盯：\n\n- **类定义上那两样后面没有小括号**：`String name;` / `int fish;` 是「摆东西的名称」的写法，**不是方法** —— 带上小括号就变成方法了。\n- **`void report()` 前面没有 `static`**：它跟着每一个实例走，身子里那句 `name` 动的是「**这一个**」的名字。\n- **先 `new` 再使唤**：`Cat c = new Cat();` 创建对象 → `c.name = who;` 挂名字 → `c.fish = n;` 挂数据数 → `c.report();` 让它自己报。少了 `new` 那一口，后面两句全是 `variable c might not have been initialized`。\n\n`main` 里读纸条用的还是老手艺：`sc.next()` 读一串字、`sc.nextInt()` 读一个数。类只需定义一次，可它想创建几个对象就创建几个 —— 今天一个，明天一组。",
+      "templateId": "java-s1-blueprint-first-drawing",
+      "params": {
+        "name": "李四",
+        "name2": "王五",
+        "n": 5,
+        "n2": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "c8f8b97555116966"
+      }
+    },
+    {
+      "id": "bank-java-s1-blueprint-first-drawing-153",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**第一次动笔定义类**了。这张类定义叫 `Cat`，上面画两样实例字段：`String name`（名字）和 `int fish`（当前记录了几条），再画一个方法 `void report()` —— 调用一次，它就印一行账。\n\n`main` 里纸条上给了一个名字（独占一行）和一个数（独占一行）：照类定义**创建一个实例**，把名字和数据数挂到**这一个**身上，再让它自己报账。类定义上那一个方法前面**不挂 `static`** 。\n\n比如程序的输入是\n\n雪球\n6\n\n程序就要返回\n\n雪球 当前记录了 6 条数据\n\n（判分用的是**另外一个名字、另外一个数**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 当前记录了 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n        Cat c = new Cat();\n        c.name = who;\n        c.fish = n;\n        c.report();\n    }\n}\n",
+      "expectedOutput": "李四 当前记录了 3 条数据",
+      "stdin": "李四\n3\n",
+      "explanation": "类定义和 `main` 写在同一个文件里没问题（`public class` 的名字跟存盘文件名对不上才出事，那条练习场替你办）。三处要盯：\n\n- **类定义上那两样后面没有小括号**：`String name;` / `int fish;` 是「摆东西的名称」的写法，**不是方法** —— 带上小括号就变成方法了。\n- **`void report()` 前面没有 `static`**：它跟着每一个实例走，身子里那句 `name` 动的是「**这一个**」的名字。\n- **先 `new` 再使唤**：`Cat c = new Cat();` 创建对象 → `c.name = who;` 挂名字 → `c.fish = n;` 挂数据数 → `c.report();` 让它自己报。少了 `new` 那一口，后面两句全是 `variable c might not have been initialized`。\n\n`main` 里读纸条用的还是老手艺：`sc.next()` 读一串字、`sc.nextInt()` 读一个数。类只需定义一次，可它想创建几个对象就创建几个 —— 今天一个，明天一组。",
+      "templateId": "java-s1-blueprint-first-drawing",
+      "params": {
+        "name": "李四",
+        "name2": "雪球",
+        "n": 3,
+        "n2": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "2b405570ed047b91"
+      }
+    },
+    {
+      "id": "bank-java-s1-blueprint-first-drawing-191",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**第一次动笔定义类**了。这张类定义叫 `Cat`，上面画两样实例字段：`String name`（名字）和 `int fish`（当前记录了几条），再画一个方法 `void report()` —— 调用一次，它就印一行账。\n\n`main` 里纸条上给了一个名字（独占一行）和一个数（独占一行）：照类定义**创建一个实例**，把名字和数据数挂到**这一个**身上，再让它自己报账。类定义上那一个方法前面**不挂 `static`** 。\n\n比如程序的输入是\n\n雪球\n8\n\n程序就要返回\n\n雪球 当前记录了 8 条数据\n\n（判分用的是**另外一个名字、另外一个数**，别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 当前记录了 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who = sc.next();\n        int n = sc.nextInt();\n\n        Cat c = new Cat();\n        c.name = who;\n        c.fish = n;\n        c.report();\n    }\n}\n",
+      "expectedOutput": "李四 当前记录了 9 条数据",
+      "stdin": "李四\n9\n",
+      "explanation": "类定义和 `main` 写在同一个文件里没问题（`public class` 的名字跟存盘文件名对不上才出事，那条练习场替你办）。三处要盯：\n\n- **类定义上那两样后面没有小括号**：`String name;` / `int fish;` 是「摆东西的名称」的写法，**不是方法** —— 带上小括号就变成方法了。\n- **`void report()` 前面没有 `static`**：它跟着每一个实例走，身子里那句 `name` 动的是「**这一个**」的名字。\n- **先 `new` 再使唤**：`Cat c = new Cat();` 创建对象 → `c.name = who;` 挂名字 → `c.fish = n;` 挂数据数 → `c.report();` 让它自己报。少了 `new` 那一口，后面两句全是 `variable c might not have been initialized`。\n\n`main` 里读纸条用的还是老手艺：`sc.next()` 读一串字、`sc.nextInt()` 读一个数。类只需定义一次，可它想创建几个对象就创建几个 —— 今天一个，明天一组。",
+      "templateId": "java-s1-blueprint-first-drawing",
+      "params": {
+        "name": "李四",
+        "name2": "雪球",
+        "n": 9,
+        "n2": 8
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "6c909e193c9a3044"
+      }
+    },
+    {
+      "id": "bank-java-s1-blueprint-not-newed-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们在 `main` 里写好了「要一个对象」的打算，也给它挂了名字、让它叫了一次 —— 可编译器一张口就是那句 `variable c might not have been initialized`，说什么都不肯往下走。\n\n你帮我们把**缺的那一步**补上。改好之后，屏幕上该是这一行：\n\n```text\n张三：\n```\n\n（挂名字、调用那一输出方法那两句本身没毛病，别去动它们。）",
+      "brokenCode": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c;\n        c.name = \"张三\";\n        c.meow();\n    }\n}\n",
+      "referenceFix": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat();\n        c.name = \"张三\";\n        c.meow();\n    }\n}\n",
+      "expectedOutput": "张三：",
+      "stdin": null,
+      "explanation": "原话念起来是「**名称 `c` 可能还没装东西**」—— 它拦的是**第一次用到 `c` 的那一行**（`c.name = ...`）：到那一刻为止，`c` 这块名称还是空的。\n\n`Cat c;` 只是「我们打算要一个 `Cat`」这个念头，**实例还没创建后**。创建对象的动作是 `new Cat()` —— 少了它，名称一直空着，编译器一眼看出来，不让程序带着这个窟窿往下跑。\n\n**规矩：名称和 `new`，一口气写完** —— `Cat c = new Cat();`。\n\n顺一句：要是我们写成 `Cat c = null;`，编译器就**不拦**了 —— 它以为我们心里有数，结果一跑起来照样在 `c.name` 那一行断气。这种「编译不管、跑起来才炸」的空名称，比刚才那句报错更难查。",
+      "templateId": "java-s1-blueprint-not-newed",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "01ee55c201f049b1"
+      }
+    },
+    {
+      "id": "bank-java-s1-blueprint-not-newed-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们在 `main` 里写好了「要一个对象」的打算，也给它挂了名字、让它叫了一次 —— 可编译器一张口就是那句 `variable c might not have been initialized`，说什么都不肯往下走。\n\n你帮我们把**缺的那一步**补上。改好之后，屏幕上该是这一行：\n\n```text\n李四：\n```\n\n（挂名字、调用那一输出方法那两句本身没毛病，别去动它们。）",
+      "brokenCode": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c;\n        c.name = \"李四\";\n        c.meow();\n    }\n}\n",
+      "referenceFix": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat();\n        c.name = \"李四\";\n        c.meow();\n    }\n}\n",
+      "expectedOutput": "李四：",
+      "stdin": null,
+      "explanation": "原话念起来是「**名称 `c` 可能还没装东西**」—— 它拦的是**第一次用到 `c` 的那一行**（`c.name = ...`）：到那一刻为止，`c` 这块名称还是空的。\n\n`Cat c;` 只是「我们打算要一个 `Cat`」这个念头，**实例还没创建后**。创建对象的动作是 `new Cat()` —— 少了它，名称一直空着，编译器一眼看出来，不让程序带着这个窟窿往下跑。\n\n**规矩：名称和 `new`，一口气写完** —— `Cat c = new Cat();`。\n\n顺一句：要是我们写成 `Cat c = null;`，编译器就**不拦**了 —— 它以为我们心里有数，结果一跑起来照样在 `c.name` 那一行断气。这种「编译不管、跑起来才炸」的空名称，比刚才那句报错更难查。",
+      "templateId": "java-s1-blueprint-not-newed",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "89a5a40d28e902e3"
+      }
+    },
+    {
+      "id": "bank-java-s1-blueprint-static-call-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们照着类定义调用了一次 `meow()`，编译器压根不认：原话里有一句 `cannot be referenced from a static context`，说这一个方法**站在 `main` 里调用不动**。\n\n你帮我们按类定义的正路改好：先根据类创建一个实例、给它挂上名字 `张三`，再让**这一个**自己调用。\n\n改好之后，屏幕上该是这一行：\n\n```text\n张三：\n```",
+      "brokenCode": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat.meow();\n    }\n}\n",
+      "referenceFix": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat();\n        c.name = \"张三\";\n        c.meow();\n    }\n}\n",
+      "expectedOutput": "张三：",
+      "stdin": null,
+      "explanation": "原话是 `non-static method meow() cannot be referenced from a static context` —— 「`meow()` 这一个方法不是 `static` 的，站在 `static` 的地方调用不动它。」\n\n两边各有各的道理，凑一块儿就撞：\n\n- `meow()` 画在类定义上、**跟着每一个实例走** —— 它身子里那句 `name`，动的是「**这一个**对象」的家当。可 `Cat.meow()` 这么调用，连对象都还没创建后，编译器不知道它要动谁的名字。\n- `main` 前面那个 `static` 是另一层意思：它**不跟着任何一个实例走**，电脑一开演就从它开始。我们站的这块地方是 `static` 的，所以调用不动「一个还不存在的对象」的方法。\n\n正路只有一条：**先创建一个实例，再让这个对象自己调用** —— `Cat c = new Cat();` 创建对象、`c.name = \"张三\";` 挂名字、`c.meow();` 让它自己叫。\n\n`c.meow()` 和 `Cat.meow()` 只差一个字，意思差得远：前者是「**张三**，叫一次」，后者是「**对象这个类型**，叫一次」—— 后者连是谁都没说清。",
+      "templateId": "java-s1-blueprint-static-call",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "f4b2796b1f7b990e"
+      }
+    },
+    {
+      "id": "bank-java-s1-blueprint-static-call-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们照着类定义调用了一次 `meow()`，编译器压根不认：原话里有一句 `cannot be referenced from a static context`，说这一个方法**站在 `main` 里调用不动**。\n\n你帮我们按类定义的正路改好：先根据类创建一个实例、给它挂上名字 `李四`，再让**这一个**自己调用。\n\n改好之后，屏幕上该是这一行：\n\n```text\n李四：\n```",
+      "brokenCode": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat.meow();\n    }\n}\n",
+      "referenceFix": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat();\n        c.name = \"李四\";\n        c.meow();\n    }\n}\n",
+      "expectedOutput": "李四：",
+      "stdin": null,
+      "explanation": "原话是 `non-static method meow() cannot be referenced from a static context` —— 「`meow()` 这一个方法不是 `static` 的，站在 `static` 的地方调用不动它。」\n\n两边各有各的道理，凑一块儿就撞：\n\n- `meow()` 画在类定义上、**跟着每一个实例走** —— 它身子里那句 `name`，动的是「**这一个**对象」的家当。可 `Cat.meow()` 这么调用，连对象都还没创建后，编译器不知道它要动谁的名字。\n- `main` 前面那个 `static` 是另一层意思：它**不跟着任何一个实例走**，电脑一开演就从它开始。我们站的这块地方是 `static` 的，所以调用不动「一个还不存在的对象」的方法。\n\n正路只有一条：**先创建一个实例，再让这个对象自己调用** —— `Cat c = new Cat();` 创建对象、`c.name = \"李四\";` 挂名字、`c.meow();` 让它自己叫。\n\n`c.meow()` 和 `Cat.meow()` 只差一个字，意思差得远：前者是「**李四**，叫一次」，后者是「**对象这个类型**，叫一次」—— 后者连是谁都没说清。",
+      "templateId": "java-s1-blueprint-static-call",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "211d59fb0ed89f09"
+      }
+    },
+    {
+      "id": "bank-java-s1-field-never-set-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这个对象**创建后的时候没来得及挂名字** —— `new Cat()` 之后，直接就去挂纸条上那个数据数了。结果报账那一次输出，名字那一格空空的，屏幕上印着 `null`，我们看着怪别扭的。\n\n我们的名字该是 `张三`，请你帮我们把它挂上。\n\n比如程序的输入是\n\n7\n\n程序就要返回\n\n张三 有 7 条数据\n\n（判分用的是**另外一个数**。）",
+      "brokenCode": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat();\n        c.fish = sc.nextInt();\n        c.report();\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat();\n        c.name = \"张三\";\n        c.fish = sc.nextInt();\n        c.report();\n    }\n}\n",
+      "expectedOutput": "张三 有 6 条数据",
+      "stdin": "6\n",
+      "explanation": "`null` 念「呐儿」，意思是**「里面什么都没有」**。它是**一串字的家常默认值**：一个刚创建后、什么都没挂的对象，装一串字的那格默认就是 `null`（装数码的那格默认是 `0`）。\n\n我们这次只挂了一半：`c.fish` 挂上了纸条上的数，`c.name` 从头到尾没人碰过 —— 所以 `report()` 里那句 `name` 拿出来就是 `null`，屏幕上结结实实印了四个字母。\n\n**它不是「空着不印」**：没挂名字的对象，印出来就是 `null` 这四个字母；我们要是不管它、后面还拿它去接别的东西，它还会一路传下去（下一课翻车那一课就见）。\n\n补的那一句就是 `c.name = \"张三\";` —— 挂家当的写法是 `名称.家当 = 值;`，跟挂数据数那一行一模一样。",
+      "templateId": "java-s1-field-never-set",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "010ea36d4ffbe506"
+      }
+    },
+    {
+      "id": "bank-java-s1-field-never-set-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这个对象**创建后的时候没来得及挂名字** —— `new Cat()` 之后，直接就去挂纸条上那个数据数了。结果报账那一次输出，名字那一格空空的，屏幕上印着 `null`，我们看着怪别扭的。\n\n我们的名字该是 `李四`，请你帮我们把它挂上。\n\n比如程序的输入是\n\n9\n\n程序就要返回\n\n李四 有 9 条数据\n\n（判分用的是**另外一个数**。）",
+      "brokenCode": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat();\n        c.fish = sc.nextInt();\n        c.report();\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void report() {\n        System.out.println(name + \" 有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        Cat c = new Cat();\n        c.name = \"李四\";\n        c.fish = sc.nextInt();\n        c.report();\n    }\n}\n",
+      "expectedOutput": "李四 有 5 条数据",
+      "stdin": "5\n",
+      "explanation": "`null` 念「呐儿」，意思是**「里面什么都没有」**。它是**一串字的家常默认值**：一个刚创建后、什么都没挂的对象，装一串字的那格默认就是 `null`（装数码的那格默认是 `0`）。\n\n我们这次只挂了一半：`c.fish` 挂上了纸条上的数，`c.name` 从头到尾没人碰过 —— 所以 `report()` 里那句 `name` 拿出来就是 `null`，屏幕上结结实实印了四个字母。\n\n**它不是「空着不印」**：没挂名字的对象，印出来就是 `null` 这四个字母；我们要是不管它、后面还拿它去接别的东西，它还会一路传下去（下一课翻车那一课就见）。\n\n补的那一句就是 `c.name = \"李四\";` —— 挂家当的写法是 `名称.家当 = 值;`，跟挂数据数那一行一模一样。",
+      "templateId": "java-s1-field-never-set",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "25a92a8b41f8ee09"
+      }
+    },
+    {
+      "id": "bank-java-s1-third-cat-null-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上只画**一样**实例字段：`String name;`（一个方法都不用画）。\n\n纸条上给**两个名字**，各占一行。我们要照这张类定义生**三个**实例：\n\n- 头一个挂纸条上第一个名字\n- 第二只挂纸条上第二个名字\n- 第三个**什么都不挂**（创建后就完事）\n\n然后三个各印一行自己的名字。第三个印出来是什么，就是什么，照实印。\n\n比如程序的输入是\n\n糯米\n花卷\n\n程序就要返回\n\n糯米\n花卷\nnull\n\n（判分用的是**另外两个名字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n        Cat c3 = new Cat();\n\n        System.out.println(c1.name);\n        System.out.println(c2.name);\n        System.out.println(c3.name);\n    }\n}\n",
+      "expectedOutput": "张三\n王五\nnull",
+      "stdin": "张三\n王五\n",
+      "explanation": "第三个印出来的是 `null`（念「呐儿」），意思是**「里面什么都没有」**。\n\n一个刚创建后、什么都没挂的对象，家当**不是空的**，各有各的默认值：\n\n- 装一串字的那格（`String`）默认是 `null`；\n- 装数码的那格（`int`）默认是 `0`。\n\n所以第三个的名字不是「一个字也没有」，而是**四个字母的 `null`** —— 屏幕上真真切切印这四个字母。这也是本课那句提醒：`null` 会一路传下去，下一课翻车那一课还要拿它撞一次。\n\n顺一句：想让名字**一初始化就有个默认的**（比如「无名氏」），不用每次都在 `main` 里挂 —— 下一课学的「初始化那一手」就能办。",
+      "templateId": "java-s1-third-cat-null",
+      "params": {
+        "name1": "张三",
+        "name2": "王五",
+        "name3": "糯米",
+        "name4": "花卷"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "99eb7abb15ab6f2e"
+      }
+    },
+    {
+      "id": "bank-java-s1-third-cat-null-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上只画**一样**实例字段：`String name;`（一个方法都不用画）。\n\n纸条上给**两个名字**，各占一行。我们要照这张类定义生**三个**实例：\n\n- 头一个挂纸条上第一个名字\n- 第二只挂纸条上第二个名字\n- 第三个**什么都不挂**（创建后就完事）\n\n然后三个各印一行自己的名字。第三个印出来是什么，就是什么，照实印。\n\n比如程序的输入是\n\n团子\n汤圆\n\n程序就要返回\n\n团子\n汤圆\nnull\n\n（判分用的是**另外两个名字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n        Cat c3 = new Cat();\n\n        System.out.println(c1.name);\n        System.out.println(c2.name);\n        System.out.println(c3.name);\n    }\n}\n",
+      "expectedOutput": "张三\n王五\nnull",
+      "stdin": "张三\n王五\n",
+      "explanation": "第三个印出来的是 `null`（念「呐儿」），意思是**「里面什么都没有」**。\n\n一个刚创建后、什么都没挂的对象，家当**不是空的**，各有各的默认值：\n\n- 装一串字的那格（`String`）默认是 `null`；\n- 装数码的那格（`int`）默认是 `0`。\n\n所以第三个的名字不是「一个字也没有」，而是**四个字母的 `null`** —— 屏幕上真真切切印这四个字母。这也是本课那句提醒：`null` 会一路传下去，下一课翻车那一课还要拿它撞一次。\n\n顺一句：想让名字**一初始化就有个默认的**（比如「无名氏」），不用每次都在 `main` 里挂 —— 下一课学的「初始化那一手」就能办。",
+      "templateId": "java-s1-third-cat-null",
+      "params": {
+        "name1": "张三",
+        "name2": "王五",
+        "name3": "团子",
+        "name4": "汤圆"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "996473122fcc5306"
+      }
+    },
+    {
+      "id": "bank-java-s1-third-cat-null-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上只画**一样**实例字段：`String name;`（一个方法都不用画）。\n\n纸条上给**两个名字**，各占一行。我们要照这张类定义生**三个**实例：\n\n- 头一个挂纸条上第一个名字\n- 第二只挂纸条上第二个名字\n- 第三个**什么都不挂**（创建后就完事）\n\n然后三个各印一行自己的名字。第三个印出来是什么，就是什么，照实印。\n\n比如程序的输入是\n\n团子\n花卷\n\n程序就要返回\n\n团子\n花卷\nnull\n\n（判分用的是**另外两个名字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n        Cat c3 = new Cat();\n\n        System.out.println(c1.name);\n        System.out.println(c2.name);\n        System.out.println(c3.name);\n    }\n}\n",
+      "expectedOutput": "张三\n雪球\nnull",
+      "stdin": "张三\n雪球\n",
+      "explanation": "第三个印出来的是 `null`（念「呐儿」），意思是**「里面什么都没有」**。\n\n一个刚创建后、什么都没挂的对象，家当**不是空的**，各有各的默认值：\n\n- 装一串字的那格（`String`）默认是 `null`；\n- 装数码的那格（`int`）默认是 `0`。\n\n所以第三个的名字不是「一个字也没有」，而是**四个字母的 `null`** —— 屏幕上真真切切印这四个字母。这也是本课那句提醒：`null` 会一路传下去，下一课翻车那一课还要拿它撞一次。\n\n顺一句：想让名字**一初始化就有个默认的**（比如「无名氏」），不用每次都在 `main` 里挂 —— 下一课学的「初始化那一手」就能办。",
+      "templateId": "java-s1-third-cat-null",
+      "params": {
+        "name1": "张三",
+        "name2": "雪球",
+        "name3": "团子",
+        "name4": "花卷"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "2fc1f71cd4e9a02d"
+      }
+    },
+    {
+      "id": "bank-java-s1-third-cat-null-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上只画**一样**实例字段：`String name;`（一个方法都不用画）。\n\n纸条上给**两个名字**，各占一行。我们要照这张类定义生**三个**实例：\n\n- 头一个挂纸条上第一个名字\n- 第二只挂纸条上第二个名字\n- 第三个**什么都不挂**（创建后就完事）\n\n然后三个各印一行自己的名字。第三个印出来是什么，就是什么，照实印。\n\n比如程序的输入是\n\n糯米\n汤圆\n\n程序就要返回\n\n糯米\n汤圆\nnull\n\n（判分用的是**另外两个名字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n        Cat c3 = new Cat();\n\n        System.out.println(c1.name);\n        System.out.println(c2.name);\n        System.out.println(c3.name);\n    }\n}\n",
+      "expectedOutput": "李四\n王五\nnull",
+      "stdin": "李四\n王五\n",
+      "explanation": "第三个印出来的是 `null`（念「呐儿」），意思是**「里面什么都没有」**。\n\n一个刚创建后、什么都没挂的对象，家当**不是空的**，各有各的默认值：\n\n- 装一串字的那格（`String`）默认是 `null`；\n- 装数码的那格（`int`）默认是 `0`。\n\n所以第三个的名字不是「一个字也没有」，而是**四个字母的 `null`** —— 屏幕上真真切切印这四个字母。这也是本课那句提醒：`null` 会一路传下去，下一课翻车那一课还要拿它撞一次。\n\n顺一句：想让名字**一初始化就有个默认的**（比如「无名氏」），不用每次都在 `main` 里挂 —— 下一课学的「初始化那一手」就能办。",
+      "templateId": "java-s1-third-cat-null",
+      "params": {
+        "name1": "李四",
+        "name2": "王五",
+        "name3": "糯米",
+        "name4": "汤圆"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "49a797a14e97d360"
+      }
+    },
+    {
+      "id": "bank-java-s1-third-cat-null-012",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上只画**一样**实例字段：`String name;`（一个方法都不用画）。\n\n纸条上给**两个名字**，各占一行。我们要照这张类定义生**三个**实例：\n\n- 头一个挂纸条上第一个名字\n- 第二只挂纸条上第二个名字\n- 第三个**什么都不挂**（创建后就完事）\n\n然后三个各印一行自己的名字。第三个印出来是什么，就是什么，照实印。\n\n比如程序的输入是\n\n糯米\n花卷\n\n程序就要返回\n\n糯米\n花卷\nnull\n\n（判分用的是**另外两个名字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n        Cat c3 = new Cat();\n\n        System.out.println(c1.name);\n        System.out.println(c2.name);\n        System.out.println(c3.name);\n    }\n}\n",
+      "expectedOutput": "李四\n雪球\nnull",
+      "stdin": "李四\n雪球\n",
+      "explanation": "第三个印出来的是 `null`（念「呐儿」），意思是**「里面什么都没有」**。\n\n一个刚创建后、什么都没挂的对象，家当**不是空的**，各有各的默认值：\n\n- 装一串字的那格（`String`）默认是 `null`；\n- 装数码的那格（`int`）默认是 `0`。\n\n所以第三个的名字不是「一个字也没有」，而是**四个字母的 `null`** —— 屏幕上真真切切印这四个字母。这也是本课那句提醒：`null` 会一路传下去，下一课翻车那一课还要拿它撞一次。\n\n顺一句：想让名字**一初始化就有个默认的**（比如「无名氏」），不用每次都在 `main` 里挂 —— 下一课学的「初始化那一手」就能办。",
+      "templateId": "java-s1-third-cat-null",
+      "params": {
+        "name1": "李四",
+        "name2": "雪球",
+        "name3": "糯米",
+        "name4": "花卷"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "e7dbb62da23f4323"
+      }
+    },
+    {
+      "id": "bank-java-s1-third-cat-null-015",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上只画**一样**实例字段：`String name;`（一个方法都不用画）。\n\n纸条上给**两个名字**，各占一行。我们要照这张类定义生**三个**实例：\n\n- 头一个挂纸条上第一个名字\n- 第二只挂纸条上第二个名字\n- 第三个**什么都不挂**（创建后就完事）\n\n然后三个各印一行自己的名字。第三个印出来是什么，就是什么，照实印。\n\n比如程序的输入是\n\n团子\n汤圆\n\n程序就要返回\n\n团子\n汤圆\nnull\n\n（判分用的是**另外两个名字**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        String who2 = sc.next();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n        Cat c3 = new Cat();\n\n        System.out.println(c1.name);\n        System.out.println(c2.name);\n        System.out.println(c3.name);\n    }\n}\n",
+      "expectedOutput": "李四\n雪球\nnull",
+      "stdin": "李四\n雪球\n",
+      "explanation": "第三个印出来的是 `null`（念「呐儿」），意思是**「里面什么都没有」**。\n\n一个刚创建后、什么都没挂的对象，家当**不是空的**，各有各的默认值：\n\n- 装一串字的那格（`String`）默认是 `null`；\n- 装数码的那格（`int`）默认是 `0`。\n\n所以第三个的名字不是「一个字也没有」，而是**四个字母的 `null`** —— 屏幕上真真切切印这四个字母。这也是本课那句提醒：`null` 会一路传下去，下一课翻车那一课还要拿它撞一次。\n\n顺一句：想让名字**一初始化就有个默认的**（比如「无名氏」），不用每次都在 `main` 里挂 —— 下一课学的「初始化那一手」就能办。",
+      "templateId": "java-s1-third-cat-null",
+      "params": {
+        "name1": "李四",
+        "name2": "雪球",
+        "name3": "团子",
+        "name4": "汤圆"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "2b9766647bf1063d"
+      }
+    },
+    {
+      "id": "bank-java-s1-two-cats-two-ledgers-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上要画这么一个方法：`void eat(int n)` —— 把 `n` 条加进**这一个**对象自己的账上（动的是 `fish` 那样家当）。\n\n纸条上是**用空格隔开的一整行**，共五样：第一个名字、这个对象两顿的条数、第二个名字、第二个对象一顿的条数。读的时候一样一样来：名字用 `sc.next()`，条数用 `sc.nextInt()`。\n\n`main` 里要生**两个**实例：头一个先处理一顿、再处理一顿；第二只只处理一顿。最后各印一行账 —— 判分盯的是「**各记各的**」，别把两个对象的账串到一块儿。\n\n比如程序的输入是\n\n糯米 5 2 花卷 1\n\n程序就要返回\n\n糯米 一共处理了 7 条\n花卷 一共处理了 1 条\n\n（判分用的是**另外两个名字、另外几组条数**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void eat(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n\n        c1.eat(a);\n        c1.eat(b);\n        c2.eat(n);\n\n        System.out.println(c1.name + \" 一共处理了 \" + c1.fish + \" 条\");\n        System.out.println(c2.name + \" 一共处理了 \" + c2.fish + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三 一共处理了 3 条\n王五 一共处理了 2 条",
+      "stdin": "张三 2 1 王五 2\n",
+      "explanation": "这一题的魂是**「谁调用就动谁」**：`c1.eat(a)` 动的是 `c1` 这个对象的家当，`c2.eat(n)` 动的是 `c2` 的 —— 类定义只画了一张，**家当是每个各带一套**。\n\n- **两个对象得生两个**：`Cat c1 = new Cat();`、`Cat c2 = new Cat();` 各创建一个。要是只创建一个、拿两块名称指着同一个对象，两笔账就全算到同一个头上了 —— 这是这一课最容易摔的地方。\n- **方法里那句 `fish = fish + n;` 不用写名称**：`eat` 前面没有 `static`，它跟着称呼它的那一个走，所以这句动的永远是「这一个」的账。\n- **从外面看账要写 `c1.name`、`c1.fish`**：名称点一下，指的就是**那个对象自己的家当**。\n\n类定义一次、实例一组，账各算各的 —— 这就是定义类最值钱的地方。",
+      "templateId": "java-s1-two-cats-two-ledgers",
+      "params": {
+        "name1": "张三",
+        "name2": "王五",
+        "name3": "糯米",
+        "name4": "花卷",
+        "a": 2,
+        "b": 1,
+        "n2": 2,
+        "a2": 5,
+        "b2": 2,
+        "n2b": 1
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "a7093def5aff6939"
+      }
+    },
+    {
+      "id": "bank-java-s1-two-cats-two-ledgers-1843",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上要画这么一个方法：`void eat(int n)` —— 把 `n` 条加进**这一个**对象自己的账上（动的是 `fish` 那样家当）。\n\n纸条上是**用空格隔开的一整行**，共五样：第一个名字、这个对象两顿的条数、第二个名字、第二个对象一顿的条数。读的时候一样一样来：名字用 `sc.next()`，条数用 `sc.nextInt()`。\n\n`main` 里要生**两个**实例：头一个先处理一顿、再处理一顿；第二只只处理一顿。最后各印一行账 —— 判分盯的是「**各记各的**」，别把两个对象的账串到一块儿。\n\n比如程序的输入是\n\n团子 5 3 花卷 2\n\n程序就要返回\n\n团子 一共处理了 8 条\n花卷 一共处理了 2 条\n\n（判分用的是**另外两个名字、另外几组条数**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void eat(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n\n        c1.eat(a);\n        c1.eat(b);\n        c2.eat(n);\n\n        System.out.println(c1.name + \" 一共处理了 \" + c1.fish + \" 条\");\n        System.out.println(c2.name + \" 一共处理了 \" + c2.fish + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三 一共处理了 4 条\n雪球 一共处理了 4 条",
+      "stdin": "张三 3 1 雪球 4\n",
+      "explanation": "这一题的魂是**「谁调用就动谁」**：`c1.eat(a)` 动的是 `c1` 这个对象的家当，`c2.eat(n)` 动的是 `c2` 的 —— 类定义只画了一张，**家当是每个各带一套**。\n\n- **两个对象得生两个**：`Cat c1 = new Cat();`、`Cat c2 = new Cat();` 各创建一个。要是只创建一个、拿两块名称指着同一个对象，两笔账就全算到同一个头上了 —— 这是这一课最容易摔的地方。\n- **方法里那句 `fish = fish + n;` 不用写名称**：`eat` 前面没有 `static`，它跟着称呼它的那一个走，所以这句动的永远是「这一个」的账。\n- **从外面看账要写 `c1.name`、`c1.fish`**：名称点一下，指的就是**那个对象自己的家当**。\n\n类定义一次、实例一组，账各算各的 —— 这就是定义类最值钱的地方。",
+      "templateId": "java-s1-two-cats-two-ledgers",
+      "params": {
+        "name1": "张三",
+        "name2": "雪球",
+        "name3": "团子",
+        "name4": "花卷",
+        "a": 3,
+        "b": 1,
+        "n2": 4,
+        "a2": 5,
+        "b2": 3,
+        "n2b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "00d2b09a992e66f4"
+      }
+    },
+    {
+      "id": "bank-java-s1-two-cats-two-ledgers-2764",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上要画这么一个方法：`void eat(int n)` —— 把 `n` 条加进**这一个**对象自己的账上（动的是 `fish` 那样家当）。\n\n纸条上是**用空格隔开的一整行**，共五样：第一个名字、这个对象两顿的条数、第二个名字、第二个对象一顿的条数。读的时候一样一样来：名字用 `sc.next()`，条数用 `sc.nextInt()`。\n\n`main` 里要生**两个**实例：头一个先处理一顿、再处理一顿；第二只只处理一顿。最后各印一行账 —— 判分盯的是「**各记各的**」，别把两个对象的账串到一块儿。\n\n比如程序的输入是\n\n糯米 6 2 汤圆 1\n\n程序就要返回\n\n糯米 一共处理了 8 条\n汤圆 一共处理了 1 条\n\n（判分用的是**另外两个名字、另外几组条数**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void eat(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n\n        c1.eat(a);\n        c1.eat(b);\n        c2.eat(n);\n\n        System.out.println(c1.name + \" 一共处理了 \" + c1.fish + \" 条\");\n        System.out.println(c2.name + \" 一共处理了 \" + c2.fish + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四 一共处理了 6 条\n王五 一共处理了 3 条",
+      "stdin": "李四 3 3 王五 3\n",
+      "explanation": "这一题的魂是**「谁调用就动谁」**：`c1.eat(a)` 动的是 `c1` 这个对象的家当，`c2.eat(n)` 动的是 `c2` 的 —— 类定义只画了一张，**家当是每个各带一套**。\n\n- **两个对象得生两个**：`Cat c1 = new Cat();`、`Cat c2 = new Cat();` 各创建一个。要是只创建一个、拿两块名称指着同一个对象，两笔账就全算到同一个头上了 —— 这是这一课最容易摔的地方。\n- **方法里那句 `fish = fish + n;` 不用写名称**：`eat` 前面没有 `static`，它跟着称呼它的那一个走，所以这句动的永远是「这一个」的账。\n- **从外面看账要写 `c1.name`、`c1.fish`**：名称点一下，指的就是**那个对象自己的家当**。\n\n类定义一次、实例一组，账各算各的 —— 这就是定义类最值钱的地方。",
+      "templateId": "java-s1-two-cats-two-ledgers",
+      "params": {
+        "name1": "李四",
+        "name2": "王五",
+        "name3": "糯米",
+        "name4": "汤圆",
+        "a": 3,
+        "b": 3,
+        "n2": 3,
+        "a2": 6,
+        "b2": 2,
+        "n2b": 1
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "ead93ddbf9c3fc46"
+      }
+    },
+    {
+      "id": "bank-java-s1-two-cats-two-ledgers-3686",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上要画这么一个方法：`void eat(int n)` —— 把 `n` 条加进**这一个**对象自己的账上（动的是 `fish` 那样家当）。\n\n纸条上是**用空格隔开的一整行**，共五样：第一个名字、这个对象两顿的条数、第二个名字、第二个对象一顿的条数。读的时候一样一样来：名字用 `sc.next()`，条数用 `sc.nextInt()`。\n\n`main` 里要生**两个**实例：头一个先处理一顿、再处理一顿；第二只只处理一顿。最后各印一行账 —— 判分盯的是「**各记各的**」，别把两个对象的账串到一块儿。\n\n比如程序的输入是\n\n糯米 6 3 花卷 1\n\n程序就要返回\n\n糯米 一共处理了 9 条\n花卷 一共处理了 1 条\n\n（判分用的是**另外两个名字、另外几组条数**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void eat(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n\n        c1.eat(a);\n        c1.eat(b);\n        c2.eat(n);\n\n        System.out.println(c1.name + \" 一共处理了 \" + c1.fish + \" 条\");\n        System.out.println(c2.name + \" 一共处理了 \" + c2.fish + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四 一共处理了 6 条\n雪球 一共处理了 2 条",
+      "stdin": "李四 4 2 雪球 2\n",
+      "explanation": "这一题的魂是**「谁调用就动谁」**：`c1.eat(a)` 动的是 `c1` 这个对象的家当，`c2.eat(n)` 动的是 `c2` 的 —— 类定义只画了一张，**家当是每个各带一套**。\n\n- **两个对象得生两个**：`Cat c1 = new Cat();`、`Cat c2 = new Cat();` 各创建一个。要是只创建一个、拿两块名称指着同一个对象，两笔账就全算到同一个头上了 —— 这是这一课最容易摔的地方。\n- **方法里那句 `fish = fish + n;` 不用写名称**：`eat` 前面没有 `static`，它跟着称呼它的那一个走，所以这句动的永远是「这一个」的账。\n- **从外面看账要写 `c1.name`、`c1.fish`**：名称点一下，指的就是**那个对象自己的家当**。\n\n类定义一次、实例一组，账各算各的 —— 这就是定义类最值钱的地方。",
+      "templateId": "java-s1-two-cats-two-ledgers",
+      "params": {
+        "name1": "李四",
+        "name2": "雪球",
+        "name3": "糯米",
+        "name4": "花卷",
+        "a": 4,
+        "b": 2,
+        "n2": 2,
+        "a2": 6,
+        "b2": 3,
+        "n2b": 1
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "c34801d6ff5858f3"
+      }
+    },
+    {
+      "id": "bank-java-s1-two-cats-two-ledgers-4607",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上要画这么一个方法：`void eat(int n)` —— 把 `n` 条加进**这一个**对象自己的账上（动的是 `fish` 那样家当）。\n\n纸条上是**用空格隔开的一整行**，共五样：第一个名字、这个对象两顿的条数、第二个名字、第二个对象一顿的条数。读的时候一样一样来：名字用 `sc.next()`，条数用 `sc.nextInt()`。\n\n`main` 里要生**两个**实例：头一个先处理一顿、再处理一顿；第二只只处理一顿。最后各印一行账 —— 判分盯的是「**各记各的**」，别把两个对象的账串到一块儿。\n\n比如程序的输入是\n\n团子 6 3 汤圆 2\n\n程序就要返回\n\n团子 一共处理了 9 条\n汤圆 一共处理了 2 条\n\n（判分用的是**另外两个名字、另外几组条数**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void eat(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n\n        c1.eat(a);\n        c1.eat(b);\n        c2.eat(n);\n\n        System.out.println(c1.name + \" 一共处理了 \" + c1.fish + \" 条\");\n        System.out.println(c2.name + \" 一共处理了 \" + c2.fish + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四 一共处理了 7 条\n雪球 一共处理了 5 条",
+      "stdin": "李四 4 3 雪球 5\n",
+      "explanation": "这一题的魂是**「谁调用就动谁」**：`c1.eat(a)` 动的是 `c1` 这个对象的家当，`c2.eat(n)` 动的是 `c2` 的 —— 类定义只画了一张，**家当是每个各带一套**。\n\n- **两个对象得生两个**：`Cat c1 = new Cat();`、`Cat c2 = new Cat();` 各创建一个。要是只创建一个、拿两块名称指着同一个对象，两笔账就全算到同一个头上了 —— 这是这一课最容易摔的地方。\n- **方法里那句 `fish = fish + n;` 不用写名称**：`eat` 前面没有 `static`，它跟着称呼它的那一个走，所以这句动的永远是「这一个」的账。\n- **从外面看账要写 `c1.name`、`c1.fish`**：名称点一下，指的就是**那个对象自己的家当**。\n\n类定义一次、实例一组，账各算各的 —— 这就是定义类最值钱的地方。",
+      "templateId": "java-s1-two-cats-two-ledgers",
+      "params": {
+        "name1": "李四",
+        "name2": "雪球",
+        "name3": "团子",
+        "name4": "汤圆",
+        "a": 4,
+        "b": 3,
+        "n2": 5,
+        "a2": 6,
+        "b2": 3,
+        "n2b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "35a7c748091dcd31"
+      }
+    },
+    {
+      "id": "bank-java-s1-two-cats-two-ledgers-921",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义上要画这么一个方法：`void eat(int n)` —— 把 `n` 条加进**这一个**对象自己的账上（动的是 `fish` 那样家当）。\n\n纸条上是**用空格隔开的一整行**，共五样：第一个名字、这个对象两顿的条数、第二个名字、第二个对象一顿的条数。读的时候一样一样来：名字用 `sc.next()`，条数用 `sc.nextInt()`。\n\n`main` 里要生**两个**实例：头一个先处理一顿、再处理一顿；第二只只处理一顿。最后各印一行账 —— 判分盯的是「**各记各的**」，别把两个对象的账串到一块儿。\n\n比如程序的输入是\n\n团子 5 2 汤圆 2\n\n程序就要返回\n\n团子 一共处理了 7 条\n汤圆 一共处理了 2 条\n\n（判分用的是**另外两个名字、另外几组条数**。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Cat {\n    String name;\n    int fish;\n\n    void eat(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String who1 = sc.next();\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        String who2 = sc.next();\n        int n = sc.nextInt();\n\n        Cat c1 = new Cat();\n        c1.name = who1;\n        Cat c2 = new Cat();\n        c2.name = who2;\n\n        c1.eat(a);\n        c1.eat(b);\n        c2.eat(n);\n\n        System.out.println(c1.name + \" 一共处理了 \" + c1.fish + \" 条\");\n        System.out.println(c2.name + \" 一共处理了 \" + c2.fish + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三 一共处理了 4 条\n王五 一共处理了 5 条",
+      "stdin": "张三 2 2 王五 5\n",
+      "explanation": "这一题的魂是**「谁调用就动谁」**：`c1.eat(a)` 动的是 `c1` 这个对象的家当，`c2.eat(n)` 动的是 `c2` 的 —— 类定义只画了一张，**家当是每个各带一套**。\n\n- **两个对象得生两个**：`Cat c1 = new Cat();`、`Cat c2 = new Cat();` 各创建一个。要是只创建一个、拿两块名称指着同一个对象，两笔账就全算到同一个头上了 —— 这是这一课最容易摔的地方。\n- **方法里那句 `fish = fish + n;` 不用写名称**：`eat` 前面没有 `static`，它跟着称呼它的那一个走，所以这句动的永远是「这一个」的账。\n- **从外面看账要写 `c1.name`、`c1.fish`**：名称点一下，指的就是**那个对象自己的家当**。\n\n类定义一次、实例一组，账各算各的 —— 这就是定义类最值钱的地方。",
+      "templateId": "java-s1-two-cats-two-ledgers",
+      "params": {
+        "name1": "张三",
+        "name2": "王五",
+        "name3": "团子",
+        "name4": "汤圆",
+        "a": 2,
+        "b": 2,
+        "n2": 5,
+        "a2": 5,
+        "b2": 2,
+        "n2b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.523Z",
+        "hash": "4c9a32dd953edb7a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2651 @@
+{
+  "id": "2025-12-3",
+  "title": "2025年12月 第3套",
+  "year": 2025,
+  "month": 12,
+  "set": 3,
+  "status": "partial",
+  "issues": [
+    "G 盘听力说明指向第二套；本卷入口依据本卷真题更正为第一套。",
+    "严格质检：所指向的共用听力仍有缺失或待核实内容。",
+    "写作题干已清理（2026-11-08）：去除版面残片、补齐指令。",
+    "翻译题干已清理（2026-11-08）：去除指令残片、答案速查、版权页脚等外洩文字。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "1bXskPcOTmyM6nqtRuGVCo--4EJ7aoqbA",
+      "title": "听力说明.txt",
+      "url": "https://drive.google.com/file/d/1bXskPcOTmyM6nqtRuGVCo--4EJ7aoqbA/view?usp=drivesdk"
+    },
+    {
+      "id": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+      "title": "cet6_2025_12_3_ans.pdf",
+      "url": "https://drive.google.com/file/d/1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR/view?usp=drivesdk"
+    },
+    {
+      "id": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+      "title": "cet6_2025_12_3.pdf",
+      "url": "https://drive.google.com/file/d/1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-/view?usp=drivesdk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “It is believed that teachers can exert a profound influence on their students’ academic pursuit and personal development.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. You should copy the sentence given in quotes at the beginning of your essay.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “It is believed that teachers can exert a profound influence on their students’ academic pursuit and personal development.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. You should copy the sentence given in quotes at the beginning of your essay.",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              1
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-12-3-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “It is believed that teachers can exert a profound influence on their students’ academic pursuit and personal development.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. You should copy the sentence given in quotes at the beginning of your essay.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "It is believed that teachers can exert a profound influence on their students' academic pursuit and personal development. Indeed, a great teacher does more than transmit knowledge; they inspire curiosity, foster critical thinking, and shape character. For instance, my high school English teacher not only improved our language skills but also encouraged us to read widely and think independently, which has benefited me throughout my college studies. Moreover, teachers often serve as role models, demonstrating integrity, diligence, and compassion. When I faced difficulties in choosing a career path, my mentor listened patiently and offered valuable advice, helping me find direction. Additionally, teachers create a supportive environment where students feel safe to express themselves and learn from mistakes. This nurturing atmosphere is crucial for building self-confidence and resilience. In conclusion, the influence of teachers extends far beyond the classroom. Their guidance leaves a lasting imprint on students' lives, shaping not only their academic achievements but also their values and aspirations. Therefore, both students and society should recognize and appreciate the pivotal role teachers play.",
+          "explanation": "【写作思路】\n开篇：直接抄写给定句子，点明教师在学生学业和人格发展中的深远影响。主体：可从榜样作用（言传身教）、学术指导（知识传授、方法引导）、品德培养（价值观塑造、责任感）、人生引路（职业规划、心理支持）等角度展开，结合具体例子或个人经历。结尾：总结教师的影响，呼吁学生珍惜师生关系，同时也强调教师自身应不断提升素养。\n\n【参考范文】\nIt is believed that teachers can exert a profound influence on their students' academic pursuit and personal development. Indeed, a great teacher does more than transmit knowledge; they inspire curiosity, foster critical thinking, and shape character. For instance, my high school English teacher not only improved our language skills but also encouraged us to read widely and think independently, which has benefited me throughout my college studies. Moreover, teachers often serve as role models, demonstrating integrity, diligence, and compassion. When I faced difficulties in choosing a career path, my mentor listened patiently and offered valuable advice, helping me find direction. Additionally, teachers create a supportive environment where students feel safe to express themselves and learn from mistakes. This nurturing atmosphere is crucial for building self-confidence and resilience. In conclusion, the influence of teachers extends far beyond the classroom. Their guidance leaves a lasting imprint on students' lives, shaping not only their academic achievements but also their values and aspirations. Therefore, both students and society should recognize and appreciate the pivotal role teachers play.",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2025-12-1",
+      "sharedWithTitle": "2025年12月 第1套",
+      "sharedNote": "本套真题说明听力内容与 2025年12月 第1套 相同，但答案选项顺序不同。请跳转第一套练习，使用第一套的选项顺序；第一套 Q16–25 已依据录音及非官方参考材料补录。G 盘听力说明指向第二套，与本套真题不一致。 所跳转的第一套第 16—25 题因原解析缺页，仅提供待核实参考答案，不计分。",
+      "sharedUncertain": false
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "It's best to think of an accent as a distinct, systematic and rule-governed way of speaking. Accent is not a __(26)__ for dialect, but it's related. Dialect is an umbrella term for the way a community pronounces words, creates words, and orders words; accent refers to that first part only.\nMany __(27)__ presume that there is a single standard way of speaking in each country, with one single standard accent, and that this perceived standard is __(28)__ the best form of speech, but linguists often point out that the concept of a standard accent is better understood as an ideal rather than a __(29)__. In other words, no one speaks\n“standard English”; rather, it is an imagined way of using language that exists only in grammar and style books.\nOne reason linguists agree there is no one true standard is that, through the years, there have been __(30)__ supposed standards, depending on time and place. The standard for English in British newsreels from the 1950s, for example, differs greatly from the standard found on American national news broadcasts today. In fact, there has never been a single standard that's been fully agreed upon—and broadcast outlets across the __(31)__ have never consistently held to those standards anyway.\nEven so, this idea of a standard accent is __(32)__ and many workplace and educational environments perpetuate the idea that accents that __(33)__ from the current standard are less appropriate, or even inappropriate. Scholars have found that southern U.S.\naccent features are more accepted in __(34)__ such as government, law and service- oriented workplaces, but less accepted in the technology sector. The acceptability of nonstandard accents may __(35)__ with differences in class and culture, with newer or higher prestige industries expecting more standard speech in the workplace.",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇匹配文章",
+          "text": "A) Timed traffic lights are set according to schedules that are supposed to coordinate with peak traffic hours. Cities need to monitor and update signal light time schedules at least every two years to keep these systems effective. In Los\nAngeles, California, an ambitious project to go a step further and synchronize every red light in Los Angeles cost over 400 million dollars. Ask a resident of the city and they are likely to agree that saving time on the road is well worth it. If implemented nationwide, synchronization could shave 10% off traffic congestion and 20% off air pollution. Congestion costs time, money, and lives. Big data can help improve how millions of people safely share the road. However, none of this would be possible without the traffic light!\nB) The first traffic light was invented in London in the 1860's, but it was hardly recognizable—or effective. It had been adapted from the railroad signal system by a railway manager, John Peak Knight, in 1868. The railroads used red gas lights at night to signal stops and green gas lights during the daytime. Knight installed a similar gas light, semaphore system near London's Westminster Bridge in December of 1868.\nC) The life of the first traffic light signal was short-lived. A gas leak caused one of the signal lights to explode on its police officer operator within a month of being installed.\nD) Automating traffic signals stalled after the London incident. Forty years passed before cars crowding city streets urged the development of traffic lights in the\nUnited States. London would not see another traffic light until 1929.\nE) The United States is a car culture like no other country. Unlike most European cities that started urban planning when horses were high-tech, many cities in the\nUnited States were designed around urban sprawl, suburban tracts, and motor cars.\nF) As traffic and cities grew, so did the race to solve growing traffic problems. The first traffic signals were semaphores. Semaphores are towers with moving arms signaling for traffic to stop or go. They could be manual or automatic. There was no consistent design. Various models were invented and put into place in cities as the need arose.\nG) In 1912, Lester Wire was a police officer exhausted by traffic at Main Street and\n200 South. He developed a manually switched stop light. The four-sided box, raised on a ten-foot pole, looked like a birdhouse and was operated manually by an officer.\nThe officer would flip a switch to change between the dipped red and green lights.\nH) Like the 1910 semaphore, the first electric signal used words. However, the words were no longer written on arms that raised and fell. The words “stop” or “move”\nwere on lights. The posts lit up on each of four corner-posts around an intersection.\nIt was not automated, though. A booth with an operator was required to flip the switches.\nI) The system allowed police officers to move from the middle of the street to a corner. From that vantage, an officer could oversee the crowd. If an emergency vehicle came, the officer could flip a switch and clear the intersection by triggering all red lights. The emergency vehicle could now pass effortlessly. Finally, in San\nFrancisco the first red and green electric light system that could be operated automatically (or manually) was introduced in 1917.\nJ) In 1920, the first three-color light system was introduced in Detroit—also known as Motor City, USA. The evolution of traffic light signals could not have a more appropriate context than Motor City. Ford Motor Company was founded in Detroit in 1903 (and other motor companies followed). Ford made cars affordable for more common people, rather than the wealthy, by creating larger scale factory production.\nK) Stop and go were insufficient for the new volumes of cars zooming through intersections. Streets were full of new numbers of cars in addition to delivery wagons, bustling crowds, bicycles, horse-drawn carriages, and street cars. The introduction of the cautionary yellow light helped increase driver safety, decreasing accidents that come from running red lights.\nL) Stop lights were incredibly important in chaotic city streets. Crosswalks weren't even introduced until 1951. The first pedestrian fatality in the United States was in\n1899.\nM) The development of the modern traffic light may have started in London, but it grew up in the United States. In Cleveland, an African-American inventor named\nGarrett Morgan came up with an affordable, patented traffic signal. The yellow light made intersections safer than the old stop and go system. The new design was inexpensive enough that it allowed the installation of a lot more lights.\nN) Morgan sold the patent to General Electric—and the spread of the traffic light was green lighted. Green means go. It is that simple, but it's still best to check both ways for oncoming traffic that may not be paying attention or is running the light.\nYellow means slow down and prepare to stop. It does not mean full-throttle ahead.\nWhile you may get away with gunning it into the intersection, running a yellow can lead to tickets and dangerous accidents. Red lights are a clear and consistent warning to stop. Even where right turns are allowed on red lights, you must come to a complete stop before turning right. You must also yield to any through traffic, which has the right of way. In most states and cities, you can take a right on red unless otherwise indicated. New York City does not allow a right on red.\nO) Red arrows mean you cannot turn right on a red in most states. The green arrow, in these cases, is the only time you can make the turn. However, you can take a right on a red arrow after a full stop in the states of Illinois, Kansas, Louisiana, Maryland,\nMichigan, New Hampshire, North Dakota, Oregon, South Carolina, Utah, Washington\nState and Wyoming.\nP) Flashing Red is the same as a stop sign, generally used at four-way intersections where there is minimal traffic. When arriving at a flashing red light, make a full and complete stop. Flashing Red Arrows similarly mean to stop and then proceed to take the turn. Flashing Yellow lights mean yield or signal caution, like outside of a fire station. There are no all-direction flashing yellow lights, since it is prohibited in the\nUnited States. If you have a flashing yellow light, you are to yield to oncoming traffic.\nQ) Flashing Yellow Arrows are part of a four-signal traffic light. These are used in some states after a protected green turn signal, or arrow, but before a steady yellow arrow. When a flashing yellow arrow is shown, you can take the turn after yielding to pedestrians and traffic. Steady Yellow Arrows maintain the normal yellow light caution in three-light signals, meaning to stop or prepare to stop. In a four-signal system that has a flashing yellow arrow, the steady yellow arrow is a signal that the yield period is ending. The red arrow is about to start. Vehicles should stop if safely possible. Traffic tickets are possible for running a steady yellow arrow.\nR) Traffic light meaning is fairly consistent across the board with various deviations.\nGreen means it's safe to proceed (though you should still exercise caution). Yellow means caution and yield. Red means danger and stop. Always drive defensively and obey traffic signals.",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Mindfulness has been shown to have a number of meaningful health benefits—it can help reduce anxiety and promote healing in those suffering from chronic illness.\nThe practice is based on an insight first described in ancient Buddhist texts that human beings have the capacity to observe experience without being caught up in it. This means simply that it is possible to observe ourselves having a craving, or a happy thought, or even a scary emotion, without reacting in the moment in a way that amplifies the feeling or sends the mind spiraling off into thinking about old memories or anticipating events.\nThis practice of mindfulness can help calm the mind and the body as we learn not to react to experience with likes and dislikes or judgments of good and bad. It does not make us cold or indifferent but more fully present.\nOne of the challenges of practicing mindfulness in our contemporary world is that there has been a profound transformation in human attention. The artist Jenny Odell argues that in our “attention economy” human attention has been transformed into a commodity that big corporations buy and sell. This economy rests on a technological revolution of mobile phones and social media that makes it possible for corporations to target our attention with their content at every moment.\nThe devices most people use are a perpetual diversion from the present moment.\nThe result is that it can feel as though our ability to focus, and be fully present, has been stolen. But mindfulness can help us resist the attention economy and relish the things that make life special, like being together with those we love.\nMost mindfulness research focuses on the individual benefits of the practice, but some scholars assert that we can not only practice mindfulness for ourselves but also practice it for others. It can help us build stronger, healthier relationships.\nThe sad truth is that living in the attention economy, most of us have become bad listeners. However, just as it is possible to watch ourselves having an experience without reacting, it's possible to watch another person have an experience without getting tied up in reactivity and judgment.\nThe gift of mindfulness is a practice of listening with compassion to others describe their experiences. To give this gift means putting away your phone, turning off social media, and setting aside other common distractions. It means practicing being fully present in another person's presence and listening to them with complete attention without judgment, while resisting the urge to make the interaction about you.\nIf we judge the value of gifts based on their price, this gift may seem worthless, but in a distracted world, it is a precious one.",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "The other day I had to log into a service I hadn't used before. Since I was a new user, the website decided that it needed to check I wasn't a robot and so set me a\nCaptcha test to determine whether the user is a person or a machine.\nI was presented with an image of a roadside scene over which was laid a grid. My\n“challenge” was to click on each cell in the grid that contained a traffic sign. I did so, a bit irritated. Then I was presented with another image and another grid—also with a request to identify road signs. Like a lamb, I compiled, after which the website accepted my input.\nAnd then I realised what I had been doing was adding to a dataset for training the machine-learning software that guides self-driving cars. So, to gain access to an automated service that will benefit financially from my input, I first have to do some unpaid labour to help improve the performance of autonomous vehicles.\nNeat, eh? But note also the delicious additional irony that the Captcha is described as an “automated Turing test”. The Turing test was conceived, you may recall, as a way of enabling humans to determine whether a machine could respond in such a way that one couldn't tell whether it was a human or a robot. So we have wandered into a world in which machines make us do tricks to prove that we are humans!\nThe strangest aspect of this unparalleled shift is how under-discussed it has been.\nThe metaphor of the boiling frog comes to mind. Have we become so subtly conditioned by digital technology that we don't see what's been happening to us?\nHave we been conditioned to accept a world governed by \"smart\" tech, trading convenience to the point where we become a bit like machines ourselves?\nIn a recent startling and thoughtful book, two scholars—Brett Frischmann, a law professor, and Evan Selinger, a philosopher—argue that the answer to that question is “yes”.\nAnd they're right. There's nothing technophobic about that. We shape our tools and then our tools shape us. Technology is supposed to provide tools that serve human ends. But, as the machine-learning Captcha demonstrates, a significant proportion of digital tech now sees (and uses) humans as means to ends that are not ours. In the process, they reduce us to the status of cheery rats running on treadmills designed by people who do not have our interests at heart. So back to the frog metaphor. Are we smart enough to jump out before it's too late? You don't even have to Google it to know the answer.",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              13,
+              14
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-12-3-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "N",
+          "explanation": "句意：“口音不是方言的同义词。” synonym 表示“同义词”，符合上下\n文。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "G",
+          "explanation": "句意：“外行人认为每个国家只有一种标准的说话方式。” laymen 表示“外\n行、普通人”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "F",
+          "explanation": "句意：“这种被认为是标准的方式固有地是最好的说话方式。” inherently\n表示“固有地”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "J",
+          "explanation": "句意：“标准口音的概念最好理解为一种理想，而不是现实。” reality 与\n“ideal”形成对比。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "H",
+          "explanation": "句意：“历史上曾经有多个所谓的标准。” multiple 表示“多个”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "M",
+          "explanation": "句意：“广播机构遍及整个范围。” spectrum 表示“范围、谱”，指各种广\n播机构。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "E",
+          "explanation": "句意：“标准口音的观念是有影响力的。” influential 表示“有影响力的”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "C",
+          "explanation": "句意：“偏离当前标准的口音被认为不太合适。” deviate from 表示“偏\n离”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "D",
+          "explanation": "句意：“在美国南部口音在领域如政府、法律和服务行业中更被接受。”\ndomains 表示“领域”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "affix"
+            },
+            {
+              "key": "B",
+              "text": "correlate"
+            },
+            {
+              "key": "C",
+              "text": "deviate"
+            },
+            {
+              "key": "D",
+              "text": "domains"
+            },
+            {
+              "key": "E",
+              "text": "influential"
+            },
+            {
+              "key": "F",
+              "text": "inherently"
+            },
+            {
+              "key": "G",
+              "text": "laymen"
+            },
+            {
+              "key": "H",
+              "text": "multiple"
+            },
+            {
+              "key": "I",
+              "text": "properties"
+            },
+            {
+              "key": "J",
+              "text": "reality"
+            },
+            {
+              "key": "K",
+              "text": "reciprocally"
+            },
+            {
+              "key": "L",
+              "text": "specimen"
+            },
+            {
+              "key": "M",
+              "text": "spectrum"
+            },
+            {
+              "key": "N",
+              "text": "synonym"
+            },
+            {
+              "key": "O",
+              "text": "unanimous"
+            }
+          ],
+          "answer": "B",
+          "explanation": "句意：“非标准口音的可接受性可能与阶级和文化的差异相关。” correlate\nwith 表示“与 …… 相关”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "Upon seeing a flashing yellow arrow, a driver should let pedestrians and traffic pass first before taking the turn.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "Q",
+          "explanation": "Q 段：“When a flashing yellow arrow is shown, you can take the turn\nafter yielding to pedestrians and traffic.”对应题干。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "The red and green automatic traffic light system originated in an American city.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "I",
+          "explanation": "I 段：“in San Francisco the first red and green electric light system that\ncould be operated automatically was introduced in 1917.”对应题干“originated in\nan American city”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "Residents of an American city tend to share the opinion that time saved on the road justifies the cost of upgrading its traffic light system.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "A",
+          "explanation": "A 段：“Ask a resident of the city and they are likely to agree that saving\ntime on the road is well worth it.”对应题干。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Mass production of cars made it possible for ordinary people to buy them.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "J",
+          "explanation": "J 段：“Ford made cars affordable for more common people…by creating\nlarger scale factory production.”对应题干“Mass production of cars”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "What a traffic light means is almost the same everywhere despite some variations.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "R",
+          "explanation": "R 段：“Traffic light meaning is fairly consistent across the board with\nvarious deviations.”对应题干“almost the same everywhere”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "Pedestrian crossings came into being only in the mid-twentieth century.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "L",
+          "explanation": "L 段：“Crosswalks weren't even introduced until 1951.”对应题干“mid-\ntwentieth century”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "People raced to address increasing traffic problems along with the expansion of cities and traffic.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "F 段：“As traffic and cities grew, so did the race to solve growing traffic\nproblems.”对应题干。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "When the warning yellow light was introduced, driving became safer and traffic accidents reduced.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "K",
+          "explanation": "K 段：“The introduction of the cautionary yellow light helped increase\ndriver safety, decreasing accidents.”对应题干。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "The signal system on the railroad served as the basis for the first traffic light.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "B",
+          "explanation": "B 段：“It had been adapted from the railroad signal system…in 1868.”对\n应题干“railroad served as the basis”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Even though a green light signals \"go\", attention should be paid to traffic on either side in case some driver is being careless or ignoring a red light.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            },
+            {
+              "key": "P",
+              "text": "段落 [P]"
+            },
+            {
+              "key": "Q",
+              "text": "段落 [Q]"
+            },
+            {
+              "key": "R",
+              "text": "段落 [R]"
+            }
+          ],
+          "answer": "N",
+          "explanation": "N 段：“it's still best to check both ways for oncoming traffic that may\nnot be paying attention or is running the light.”对应题干。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What do we learn from the passage about practicing mindfulness?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It triggers our mind to reflect on past experiences or anticipate future events."
+            },
+            {
+              "key": "B",
+              "text": "It focuses our attention on the present moment without making judgments."
+            },
+            {
+              "key": "C",
+              "text": "It concentrates our mind on our personal feelings, happy or scary."
+            },
+            {
+              "key": "D",
+              "text": "It helps our mind to stay calm when facing judgments from others."
+            }
+          ],
+          "answer": "B",
+          "explanation": "第二段：正念是“observe experience without being caught up in it”，第\n三段提到“without reacting…with likes and dislikes or judgments”，即专注于当下\n而不做评判。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What do we see in today's \"attention economy\" according to Jenny Odell?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Focus on technological advances continuously updates products and services."
+            },
+            {
+              "key": "B",
+              "text": "People's attention is turned into something that can be bought and sold."
+            },
+            {
+              "key": "C",
+              "text": "Businesses profit from selling mobile phones and revolutionizing social media."
+            },
+            {
+              "key": "D",
+              "text": "People tend to purchase products and services without careful thinking."
+            }
+          ],
+          "answer": "B",
+          "explanation": "第四段： Odell 认为“human attention has been transformed into a\ncommodity that big corporations buy and sell”，即人们的注意力被转化为可买卖\n的商品。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What happens with the prevalent use of mobile phones or social media?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They keep distracting users from the here and now."
+            },
+            {
+              "key": "B",
+              "text": "They render users incapable of resisting temptation."
+            },
+            {
+              "key": "C",
+              "text": "They rob users of their ability to observe experience."
+            },
+            {
+              "key": "D",
+              "text": "They tempt users to endorse the attention economy."
+            }
+          ],
+          "answer": "A",
+          "explanation": "第五段：“The devices most people use are a perpetual diversion from\nthe present moment.”即不断分散用户对当下的注意力。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What benefit can practicing mindfulness bring to us according to some scholars?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It prevents us from making arbitrary judgments about others."
+            },
+            {
+              "key": "B",
+              "text": "It shifts our attention from material things to spiritual pursuits."
+            },
+            {
+              "key": "C",
+              "text": "It is conducive to our forging better interpersonal relationships."
+            },
+            {
+              "key": "D",
+              "text": "It is helpful in regaining our ability to enjoy what we have in life."
+            }
+          ],
+          "answer": "C",
+          "explanation": "第六段：“some scholars assert that…practice it for others. It can help us\nbuild stronger, healthier relationships.”即有助于建立更好的人际关系。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What does the author suggest we do in another person's presence?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Share each other's experience frankly and compassionately."
+            },
+            {
+              "key": "B",
+              "text": "Pay full attention to establishing close relationships with them."
+            },
+            {
+              "key": "C",
+              "text": "Be attentive listeners while refraining from making judgments."
+            },
+            {
+              "key": "D",
+              "text": "Remind them of the distraction from mobile phones and social media."
+            }
+          ],
+          "answer": "C",
+          "explanation": "第八段：“listening to them with complete attention without judgment”\n即做专注的倾听者，避免评判。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "How did the author respond to the Captcha test?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "He clicked on the cells randomly."
+            },
+            {
+              "key": "B",
+              "text": "He accepted the challenge readily."
+            },
+            {
+              "key": "C",
+              "text": "He completed it confidently."
+            },
+            {
+              "key": "D",
+              "text": "He worked on it submissively."
+            }
+          ],
+          "answer": "D",
+          "explanation": "第一段末：“Like a lamb, I compiled”即顺从地完成了， submissively 与\n“like a lamb”呼应。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What is ironic about the Captcha test?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "A machine can respond to the test as well as humans do."
+            },
+            {
+              "key": "B",
+              "text": "A machine can outperform humans in object identification."
+            },
+            {
+              "key": "C",
+              "text": "A test designed to test machines is now used by machines to test humans."
+            },
+            {
+              "key": "D",
+              "text": "A test conceived to tell a human from a robot can now do tricks humans can't."
+            }
+          ],
+          "answer": "C",
+          "explanation": "第三段：验证码被称为“自动化图灵测试”，图灵测试本是用来判断机器是\n否像人，而现在却是机器用测试来验证人类，这是讽刺之处。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "Why does the author use the metaphor of the boiling frog?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "To show that humans are unwilling to trade convenience for control by smart tech."
+            },
+            {
+              "key": "B",
+              "text": "To show that humans are unaware of the potential danger brought by smart tech."
+            },
+            {
+              "key": "C",
+              "text": "To question whether humans are conditioned to accept digital tech."
+            },
+            {
+              "key": "D",
+              "text": "To question whether humans are as vulnerable as the boiling frog."
+            }
+          ],
+          "answer": "B",
+          "explanation": "第四段：“Have we become so subtly conditioned…that we don't see\nwhat's been happening to us?”用煮青蛙比喻人类未意识到智能科技带来的潜在危\n险。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "Why does the author think that Brett Frischmann and Evan Selinger are right?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "A large part of digital tech is now making use of humans to meet its own ends."
+            },
+            {
+              "key": "B",
+              "text": "Humans are now fast locked in a race against digital tech to control the world."
+            },
+            {
+              "key": "C",
+              "text": "Digital tech can serve human needs in ways previously thought impossible."
+            },
+            {
+              "key": "D",
+              "text": "Digital tech is now doing thinking while humans are doing repetitive work."
+            }
+          ],
+          "answer": "A",
+          "explanation": "第五段提到两位学者认为答案是肯定的，第六段作者举例说明“a\nsignificant proportion of digital tech now sees (and uses) humans as means to\nends that are not ours”，即大部分数字技术利用人类来达到其自身目的。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2025-12-3-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What does the author imply by asking \"Are we smart enough to jump out before it's too late?\" at the end of the passage?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is not sensible to expect digital tech to take humans' interest to heart."
+            },
+            {
+              "key": "B",
+              "text": "It is hard to say whether technology or humans will get the upper hand."
+            },
+            {
+              "key": "C",
+              "text": "We may have to search the web to get the answer to the question."
+            },
+            {
+              "key": "D",
+              "text": "We may not awake in time to the danger digital tech poses to us."
+            }
+          ],
+          "answer": "D",
+          "explanation": "末句“Are we smart enough to jump out before it's too late?”以及“You\ndon't even have to Google it to know the answer”暗示我们可能无法及时醒悟数字\n技术带来的危险。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              4
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "节俭（frugality）是中华民族的传统美德。在中国古代，生产力低下，先人们深知劳动成果来之不易，因而秉持节俭的理念。到了物质极大丰富的今天，中国人民依然坚持节俭的生活方式，体现了理性消费的生活理念和对劳动的尊重。近年来，中国政府持续加强节约型社会的建设，倡导“光盘行动”，减少食物浪费，提倡简约低碳的生活方式，推进资源循环利用，反对过度消费。节约型社会的建设有力地推动了中国经济的高质量发展。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              10
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-12-3-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "节俭（frugality）是中华民族的传统美德。在中国古代，生产力低下，先人们深知劳动成果来之不易，因而秉持节俭的理念。到了物质极大丰富的今天，中国人民依然坚持节俭的生活方式，体现了理性消费的生活理念和对劳动的尊重。近年来，中国政府持续加强节约型社会的建设，倡导“光盘行动”，减少食物浪费，提倡简约低碳的生活方式，推进资源循环利用，反对过度消费。节约型社会的建设有力地推动了中国经济的高质量发展。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "Frugality is a traditional virtue of the Chinese nation. In ancient China, when productivity was low, our ancestors were well aware that the fruits of labor were hard-won, and thus they upheld the principle of thrift. Even in today's world of material abundance, the Chinese people still adhere to a frugal lifestyle, reflecting a philosophy of rational consumption and respect for labor. In recent years, the Chinese government has continuously intensified efforts to build a conservation- minded society, advocating the \"Clean Plate Campaign\" to reduce food waste, promoting a simple and low-carbon lifestyle, advancing the recycling of resources, and opposing excessive consumption. The construction of a conservation-oriented society has effectively propelled the high-quality development of China's economy.",
+          "explanation": "【参考译文】\nFrugality is a traditional virtue of the Chinese nation. In ancient China, when productivity was low, our ancestors were well aware that the fruits of labor were hard-won, and thus they upheld the principle of thrift. Even in today's world of material abundance, the Chinese people still adhere to a frugal lifestyle, reflecting a philosophy of rational consumption and respect for labor. In recent years, the Chinese government has continuously intensified efforts to build a conservation- minded society, advocating the \"Clean Plate Campaign\" to reduce food waste, promoting a simple and low-carbon lifestyle, advancing the recycling of resources, and opposing excessive consumption. The construction of a conservation-oriented society has effectively propelled the high-quality development of China's economy. 翻译要点：节俭“frugality”；传统美德“traditional virtue”；来之不易“hard- won”；秉持“uphold”；理性消费“rational consumption”；光盘行动“Clean Plate Campaign”；简约低碳“simple and low-carbon”；资源循环利用“recycling of resources”；高质量发展“high-quality development”。",
+          "source": {
+            "fileId": "1LVUDA9jvprKrFuuGcnaY-_mADBykptQ-",
+            "pages": [
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1XxlvZMfohcXZDM1X1mISK_g8iqrJzLHR",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "Frugality is a traditional virtue of the Chinese nation. In ancient China, when productivity was low, our ancestors were well aware that the fruits of labor were hard-won, and thus they upheld the principle of thrift. Even in today's world of material abundance, the Chinese people still adhere to a frugal lifestyle, reflecting a philosophy of rational consumption and respect for labor. In recent years, the Chinese government has continuously intensified efforts to build a conservation- minded society, advocating the \"Clean Plate Campaign\" to reduce food waste, promoting a simple and low-carbon lifestyle, advancing the recycling of resources, and opposing excessive consumption. The construction of a conservation-oriented society has effectively propelled the high-quality development of China's economy. 翻译要点： 节俭 “frugality” ；传统美德 “traditional virtue” ；来之不易 “hard- won” ；秉持 “uphold” ；理性消费 “rational consumption” ；光盘行动 “Clean Plate Campaign” ；简约低碳 “simple and low-carbon” ；资源循环利用 “recycling of resources” ；高质量发展 “high-quality development” 。"
+        }
+      ]
+    }
+  ]
+}

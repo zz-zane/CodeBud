@@ -1,0 +1,24 @@
+{
+  "templateId": "java-s3-dp-singleton-no-guard",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-14",
+  "type": "codefix",
+  "concept": [
+    "拿元素前先看类定义那一格空着没有",
+    "少了判空每次都是新的一个",
+    "单例的考点就是「怎么调用都只给同一个」"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 2,
+      "max": 5
+    }
+  },
+  "stemTemplate": "我们这段单例跑起来，两处拿到的居然**不是同一个元素**。\n\n毛病在 `拿元素()` 里 —— 你看一眼就明白了。别的都别动，类定义那一格和锁上的产房都别碰。改好之后，程序该印出**两行**：第一行 `是同一个元素吗：true`，第二行 `乙 里看到的存量：` 后面跟着我们添进去的那个数。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+  "brokenCodeTemplate": "public class Main {\n    public static void main(String[] args) {\n        数组元素 甲 = 数组元素.拿元素();\n        数组元素 乙 = 数组元素.拿元素();\n        甲.存量 = 甲.存量 + {n};\n        System.out.println(\"是同一个元素吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的存量：\" + 乙.存量);\n    }\n}\n\nclass 数组元素 {\n    private static 数组元素 唯一的一个;\n\n    int 存量;\n\n    private 数组元素() {\n    }\n\n    static 数组元素 拿元素() {\n        唯一的一个 = new 数组元素();\n        return 唯一的一个;\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void main(String[] args) {\n        数组元素 甲 = 数组元素.拿元素();\n        数组元素 乙 = 数组元素.拿元素();\n        甲.存量 = 甲.存量 + {n};\n        System.out.println(\"是同一个元素吗：\" + (甲 == 乙));\n        System.out.println(\"乙 里看到的存量：\" + 乙.存量);\n    }\n}\n\nclass 数组元素 {\n    private static 数组元素 唯一的一个;\n\n    int 存量;\n\n    private 数组元素() {\n    }\n\n    static 数组元素 拿元素() {\n        if (唯一的一个 == null) {\n            唯一的一个 = new 数组元素();\n        }\n        return 唯一的一个;\n    }\n}\n",
+  "explanationTemplate": "坏版本印出来的是这样两行：\n\n```text\n是同一个元素吗：false\n乙 里看到的存量：0\n```\n\n毛病只有一处：`拿元素()` 里**没有先看类定义那一格**，每调用一次就当场造一个新的、再把那一格盖掉。于是 `甲` 拿到一个、`乙` 拿到另一个 —— 问「是不是同一个」答 `false`；我们往 `甲` 里添的那些数据，`乙` 那边当然看不到，所以第二行是 `0`。\n\n改法就是把单例那句心思补回去：\n\n```java\nif (唯一的一个 == null) {\n    唯一的一个 = new 数组元素();\n}\nreturn 唯一的一个;\n```\n\n先看那一格**空着没有**：空着才动手造、造完顺手记进去；已经记着了就直接把那一个递出去。补上之后 `甲` 和 `乙` 拿到的是同一个，第二行才跟着我们添的数变。\n\n顺带记一句：**这一摔不是翻译那一关拦的** —— 坏版本照样跑得起来，只是答案错了。单例这种摆法，编译器帮不上忙，得靠你自己盯着「拿到的是不是同一个」。"
+}

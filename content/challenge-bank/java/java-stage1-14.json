@@ -1,0 +1,466 @@
+{
+  "lessonId": "java-stage1-14",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s1-try-divide-guard-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给两个数：数据数、对象数。我们要把数据**平均分给这些对象**，规矩三条：\n\n- 分得了：印 `每个对象分到 X 条`（`X` 是整条算的除法结果）\n- 一个对象都没有（对象数就是 `0`）：**不许断气**，印 `没有对象来分，这条算不了`\n- 不管哪种情况，最后都要印 `分账结束`\n\n比如程序的输入是\n\n12 4\n\n程序就要返回\n\n每个对象分到 3 条\n分账结束\n\n（判分用的是**另外一组数** —— 纸条上那两个数里**可能是 0**，别让程序断气。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n        try {\n            System.out.println(\"每个对象分到 \" + fish / cats + \" 条\");\n        } catch (ArithmeticException e) {\n            System.out.println(\"没有对象来分，这条算不了\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "expectedOutput": "没有对象来分，这条算不了\n分账结束",
+      "stdin": "5 0\n",
+      "explanation": "这一路车的名字是 `ArithmeticException`（「算数算不成」）：`fish / cats` 里 `cats` 是 `0` 的时候，Java 不会印 `0`、也不会印别的 —— 它当场翻车，没人接住就断气。\n\n写法就是三块：\n\n- **没底的活儿进 `try`**：除法那一句（连着它那句打印）放进去；\n- **接住哪一路写清楚**：`catch (ArithmeticException e)` 里印「没有对象来分，这条算不了」；\n- **收尾那句摆外面**：`分账结束` 放在 `try` / `catch` **外面**，翻没翻车都照跑。\n\n顺一句：这一课学的四种常见翻车，「除以 0」只有这一路（`ArithmeticException`）。我们要是把括号里写成 `NumberFormatException`，程序该断气还是断气 —— **名称认错了车，等于没接**。",
+      "templateId": "java-s1-try-divide-guard",
+      "params": {
+        "a": 5,
+        "b": "0",
+        "a2": 12,
+        "b2": "4"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "daac7b53c8d64e89"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-divide-guard-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给两个数：数据数、对象数。我们要把数据**平均分给这些对象**，规矩三条：\n\n- 分得了：印 `每个对象分到 X 条`（`X` 是整条算的除法结果）\n- 一个对象都没有（对象数就是 `0`）：**不许断气**，印 `没有对象来分，这条算不了`\n- 不管哪种情况，最后都要印 `分账结束`\n\n比如程序的输入是\n\n13 4\n\n程序就要返回\n\n每个对象分到 3 条\n分账结束\n\n（判分用的是**另外一组数** —— 纸条上那两个数里**可能是 0**，别让程序断气。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n        try {\n            System.out.println(\"每个对象分到 \" + fish / cats + \" 条\");\n        } catch (ArithmeticException e) {\n            System.out.println(\"没有对象来分，这条算不了\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "expectedOutput": "每个对象分到 1 条\n分账结束",
+      "stdin": "5 3\n",
+      "explanation": "这一路车的名字是 `ArithmeticException`（「算数算不成」）：`fish / cats` 里 `cats` 是 `0` 的时候，Java 不会印 `0`、也不会印别的 —— 它当场翻车，没人接住就断气。\n\n写法就是三块：\n\n- **没底的活儿进 `try`**：除法那一句（连着它那句打印）放进去；\n- **接住哪一路写清楚**：`catch (ArithmeticException e)` 里印「没有对象来分，这条算不了」；\n- **收尾那句摆外面**：`分账结束` 放在 `try` / `catch` **外面**，翻没翻车都照跑。\n\n顺一句：这一课学的四种常见翻车，「除以 0」只有这一路（`ArithmeticException`）。我们要是把括号里写成 `NumberFormatException`，程序该断气还是断气 —— **名称认错了车，等于没接**。",
+      "templateId": "java-s1-try-divide-guard",
+      "params": {
+        "a": 5,
+        "b": "3",
+        "a2": 13,
+        "b2": "4"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "6b18b492ef7c7e59"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-divide-guard-012",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给两个数：数据数、对象数。我们要把数据**平均分给这些对象**，规矩三条：\n\n- 分得了：印 `每个对象分到 X 条`（`X` 是整条算的除法结果）\n- 一个对象都没有（对象数就是 `0`）：**不许断气**，印 `没有对象来分，这条算不了`\n- 不管哪种情况，最后都要印 `分账结束`\n\n比如程序的输入是\n\n12 4\n\n程序就要返回\n\n每个对象分到 3 条\n分账结束\n\n（判分用的是**另外一组数** —— 纸条上那两个数里**可能是 0**，别让程序断气。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n        try {\n            System.out.println(\"每个对象分到 \" + fish / cats + \" 条\");\n        } catch (ArithmeticException e) {\n            System.out.println(\"没有对象来分，这条算不了\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "expectedOutput": "每个对象分到 2 条\n分账结束",
+      "stdin": "6 3\n",
+      "explanation": "这一路车的名字是 `ArithmeticException`（「算数算不成」）：`fish / cats` 里 `cats` 是 `0` 的时候，Java 不会印 `0`、也不会印别的 —— 它当场翻车，没人接住就断气。\n\n写法就是三块：\n\n- **没底的活儿进 `try`**：除法那一句（连着它那句打印）放进去；\n- **接住哪一路写清楚**：`catch (ArithmeticException e)` 里印「没有对象来分，这条算不了」；\n- **收尾那句摆外面**：`分账结束` 放在 `try` / `catch` **外面**，翻没翻车都照跑。\n\n顺一句：这一课学的四种常见翻车，「除以 0」只有这一路（`ArithmeticException`）。我们要是把括号里写成 `NumberFormatException`，程序该断气还是断气 —— **名称认错了车，等于没接**。",
+      "templateId": "java-s1-try-divide-guard",
+      "params": {
+        "a": 6,
+        "b": "3",
+        "a2": 12,
+        "b2": "4"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "fe801c1ca2dd4818"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-divide-guard-019",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给两个数：数据数、对象数。我们要把数据**平均分给这些对象**，规矩三条：\n\n- 分得了：印 `每个对象分到 X 条`（`X` 是整条算的除法结果）\n- 一个对象都没有（对象数就是 `0`）：**不许断气**，印 `没有对象来分，这条算不了`\n- 不管哪种情况，最后都要印 `分账结束`\n\n比如程序的输入是\n\n13 5\n\n程序就要返回\n\n每个对象分到 2 条\n分账结束\n\n（判分用的是**另外一组数** —— 纸条上那两个数里**可能是 0**，别让程序断气。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n        try {\n            System.out.println(\"每个对象分到 \" + fish / cats + \" 条\");\n        } catch (ArithmeticException e) {\n            System.out.println(\"没有对象来分，这条算不了\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "expectedOutput": "没有对象来分，这条算不了\n分账结束",
+      "stdin": "7 0\n",
+      "explanation": "这一路车的名字是 `ArithmeticException`（「算数算不成」）：`fish / cats` 里 `cats` 是 `0` 的时候，Java 不会印 `0`、也不会印别的 —— 它当场翻车，没人接住就断气。\n\n写法就是三块：\n\n- **没底的活儿进 `try`**：除法那一句（连着它那句打印）放进去；\n- **接住哪一路写清楚**：`catch (ArithmeticException e)` 里印「没有对象来分，这条算不了」；\n- **收尾那句摆外面**：`分账结束` 放在 `try` / `catch` **外面**，翻没翻车都照跑。\n\n顺一句：这一课学的四种常见翻车，「除以 0」只有这一路（`ArithmeticException`）。我们要是把括号里写成 `NumberFormatException`，程序该断气还是断气 —— **名称认错了车，等于没接**。",
+      "templateId": "java-s1-try-divide-guard",
+      "params": {
+        "a": 7,
+        "b": "0",
+        "a2": 13,
+        "b2": "5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "35355e47d688c9f3"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-divide-guard-025",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给两个数：数据数、对象数。我们要把数据**平均分给这些对象**，规矩三条：\n\n- 分得了：印 `每个对象分到 X 条`（`X` 是整条算的除法结果）\n- 一个对象都没有（对象数就是 `0`）：**不许断气**，印 `没有对象来分，这条算不了`\n- 不管哪种情况，最后都要印 `分账结束`\n\n比如程序的输入是\n\n12 5\n\n程序就要返回\n\n每个对象分到 2 条\n分账结束\n\n（判分用的是**另外一组数** —— 纸条上那两个数里**可能是 0**，别让程序断气。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n        try {\n            System.out.println(\"每个对象分到 \" + fish / cats + \" 条\");\n        } catch (ArithmeticException e) {\n            System.out.println(\"没有对象来分，这条算不了\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "expectedOutput": "没有对象来分，这条算不了\n分账结束",
+      "stdin": "8 0\n",
+      "explanation": "这一路车的名字是 `ArithmeticException`（「算数算不成」）：`fish / cats` 里 `cats` 是 `0` 的时候，Java 不会印 `0`、也不会印别的 —— 它当场翻车，没人接住就断气。\n\n写法就是三块：\n\n- **没底的活儿进 `try`**：除法那一句（连着它那句打印）放进去；\n- **接住哪一路写清楚**：`catch (ArithmeticException e)` 里印「没有对象来分，这条算不了」；\n- **收尾那句摆外面**：`分账结束` 放在 `try` / `catch` **外面**，翻没翻车都照跑。\n\n顺一句：这一课学的四种常见翻车，「除以 0」只有这一路（`ArithmeticException`）。我们要是把括号里写成 `NumberFormatException`，程序该断气还是断气 —— **名称认错了车，等于没接**。",
+      "templateId": "java-s1-try-divide-guard",
+      "params": {
+        "a": 8,
+        "b": "0",
+        "a2": 12,
+        "b2": "5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "d99e755791ab032c"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-divide-guard-031",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给两个数：数据数、对象数。我们要把数据**平均分给这些对象**，规矩三条：\n\n- 分得了：印 `每个对象分到 X 条`（`X` 是整条算的除法结果）\n- 一个对象都没有（对象数就是 `0`）：**不许断气**，印 `没有对象来分，这条算不了`\n- 不管哪种情况，最后都要印 `分账结束`\n\n比如程序的输入是\n\n13 5\n\n程序就要返回\n\n每个对象分到 2 条\n分账结束\n\n（判分用的是**另外一组数** —— 纸条上那两个数里**可能是 0**，别让程序断气。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        int cats = sc.nextInt();\n        try {\n            System.out.println(\"每个对象分到 \" + fish / cats + \" 条\");\n        } catch (ArithmeticException e) {\n            System.out.println(\"没有对象来分，这条算不了\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "expectedOutput": "每个对象分到 2 条\n分账结束",
+      "stdin": "8 3\n",
+      "explanation": "这一路车的名字是 `ArithmeticException`（「算数算不成」）：`fish / cats` 里 `cats` 是 `0` 的时候，Java 不会印 `0`、也不会印别的 —— 它当场翻车，没人接住就断气。\n\n写法就是三块：\n\n- **没底的活儿进 `try`**：除法那一句（连着它那句打印）放进去；\n- **接住哪一路写清楚**：`catch (ArithmeticException e)` 里印「没有对象来分，这条算不了」；\n- **收尾那句摆外面**：`分账结束` 放在 `try` / `catch` **外面**，翻没翻车都照跑。\n\n顺一句：这一课学的四种常见翻车，「除以 0」只有这一路（`ArithmeticException`）。我们要是把括号里写成 `NumberFormatException`，程序该断气还是断气 —— **名称认错了车，等于没接**。",
+      "templateId": "java-s1-try-divide-guard",
+      "params": {
+        "a": 8,
+        "b": "3",
+        "a2": 13,
+        "b2": "5"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "688e4ff66e29810e"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-finally-alone-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们把**收尾**那一句放进了 `finally`，可整段里**没写 `catch`** ：元素是收好了（`元素收好了` 印出来了），程序却在半路**还是断气** —— 最后那句一个字没跑。\n\n你帮我们把这一路车接住（`catch` 里印 `越界了`），三块的顺序要排对：先接住、再收元素、最后照常收尾。\n\n改好之后屏幕上该是三行：\n\n```text\n越界了\n元素收好了\n账记完了\n```\n\n（元素那几行、还有最后那一句都别动。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        int[] bowls = {3, 5, 7};\n        try {\n            System.out.println(bowls[3]);\n        } finally {\n            System.out.println(\"元素收好了\");\n        }\n        System.out.println(\"账记完了\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        int[] bowls = {3, 5, 7};\n        try {\n            System.out.println(bowls[3]);\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"越界了\");\n        } finally {\n            System.out.println(\"元素收好了\");\n        }\n        System.out.println(\"账记完了\");\n    }\n}\n",
+      "expectedOutput": "越界了\n元素收好了\n账记完了",
+      "stdin": null,
+      "explanation": "`finally` 的活儿是**不管翻没翻车都要干的那几句**（收元素、关账） —— 可它**接不住车**。这一次它照样跑了（`元素收好了` 印出来了），但没人接住这一路车，程序最后还是断气，`finally` 后面那句一个字没跑。\n\n**想让程序活着把活干完，`catch` 那一块不能省。** 三块各管什么，一次排清：\n\n- `try` —— 放没底的活儿；哪句翻了车，它**后面**的句子全跳过；\n- `catch (ArrayIndexOutOfBoundsException e)` —— 这一路就接住（这儿是「一排元素的编号越界」：三个元素的编号只有 `0`、`1`、`2`，`bowls[3]` 越界）；\n- `finally` —— 接不接住都跑，摆在最后收尾。\n\n接住之后，`finally` 后面那句也就照常跑了 —— 这才是这一课要的那个「翻完车接着把账记完」。",
+      "templateId": "java-s1-try-finally-alone",
+      "params": {
+        "tail": "账记完了"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "0bec73c0130a1ec2"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-finally-alone-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们把**收尾**那一句放进了 `finally`，可整段里**没写 `catch`** ：元素是收好了（`元素收好了` 印出来了），程序却在半路**还是断气** —— 最后那句一个字没跑。\n\n你帮我们把这一路车接住（`catch` 里印 `越界了`），三块的顺序要排对：先接住、再收元素、最后照常收尾。\n\n改好之后屏幕上该是三行：\n\n```text\n越界了\n元素收好了\n收摊了\n```\n\n（元素那几行、还有最后那一句都别动。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        int[] bowls = {3, 5, 7};\n        try {\n            System.out.println(bowls[3]);\n        } finally {\n            System.out.println(\"元素收好了\");\n        }\n        System.out.println(\"收摊了\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        int[] bowls = {3, 5, 7};\n        try {\n            System.out.println(bowls[3]);\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"越界了\");\n        } finally {\n            System.out.println(\"元素收好了\");\n        }\n        System.out.println(\"收摊了\");\n    }\n}\n",
+      "expectedOutput": "越界了\n元素收好了\n收摊了",
+      "stdin": null,
+      "explanation": "`finally` 的活儿是**不管翻没翻车都要干的那几句**（收元素、关账） —— 可它**接不住车**。这一次它照样跑了（`元素收好了` 印出来了），但没人接住这一路车，程序最后还是断气，`finally` 后面那句一个字没跑。\n\n**想让程序活着把活干完，`catch` 那一块不能省。** 三块各管什么，一次排清：\n\n- `try` —— 放没底的活儿；哪句翻了车，它**后面**的句子全跳过；\n- `catch (ArrayIndexOutOfBoundsException e)` —— 这一路就接住（这儿是「一排元素的编号越界」：三个元素的编号只有 `0`、`1`、`2`，`bowls[3]` 越界）；\n- `finally` —— 接不接住都跑，摆在最后收尾。\n\n接住之后，`finally` 后面那句也就照常跑了 —— 这才是这一课要的那个「翻完车接着把账记完」。",
+      "templateId": "java-s1-try-finally-alone",
+      "params": {
+        "tail": "收摊了"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "9c3900dd0b12fce0"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-index-guard-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "读取一个字符串和一个整数下标 k。在 try 中使用 charAt(k) 访问对应字符；访问成功时保持参考代码规定的输出格式。发生 IndexOutOfBoundsException 时，捕获异常并输出固定消息“出错啦：索引超出范围”，不使用 getMessage 的版本相关文案。finally 中输出“收工”。正常和异常路径都必须执行收尾。\n\n比如程序的输入是\n\n李四的毛线球 6\n\n程序就要返回\n\n出错啦：索引超出范围\n收工\n\n（判分用的是**另外一串字、另外一个编号** —— 编号可能越过界，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n        try {\n            System.out.println(\"第 \" + i + \" 颗是 \" + s.charAt(i));\n        } catch (IndexOutOfBoundsException e) {\n            System.out.println(\"出错啦：\" + \"索引超出范围\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "第 1 颗是 据\n收工",
+      "stdin": "数据到手 1\n",
+      "explanation": "try 中访问 charAt 可能抛出 IndexOutOfBoundsException。catch 处理越界并输出题目规定的固定中性消息，finally 输出结束标记；异常消息不依赖 JDK 的 getMessage 文案。正常访问和异常访问都应执行 finally。",
+      "templateId": "java-s1-try-index-guard",
+      "params": {
+        "word": "数据到手",
+        "i": "1",
+        "word2": "李四的毛线球",
+        "i2": "6"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.869Z",
+        "hash": "109dbca25d742ac2"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-index-guard-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "读取一个字符串和一个整数下标 k。在 try 中使用 charAt(k) 访问对应字符；访问成功时保持参考代码规定的输出格式。发生 IndexOutOfBoundsException 时，捕获异常并输出固定消息“出错啦：索引超出范围”，不使用 getMessage 的版本相关文案。finally 中输出“收工”。正常和异常路径都必须执行收尾。\n\n比如程序的输入是\n\n张三的数据容器 7\n\n程序就要返回\n\n出错啦：索引超出范围\n收工\n\n（判分用的是**另外一串字、另外一个编号** —— 编号可能越过界，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n        try {\n            System.out.println(\"第 \" + i + \" 颗是 \" + s.charAt(i));\n        } catch (IndexOutOfBoundsException e) {\n            System.out.println(\"出错啦：\" + \"索引超出范围\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "第 1 颗是 据\n收工",
+      "stdin": "数据到手 1\n",
+      "explanation": "try 中访问 charAt 可能抛出 IndexOutOfBoundsException。catch 处理越界并输出题目规定的固定中性消息，finally 输出结束标记；异常消息不依赖 JDK 的 getMessage 文案。正常访问和异常访问都应执行 finally。",
+      "templateId": "java-s1-try-index-guard",
+      "params": {
+        "word": "数据到手",
+        "i": "1",
+        "word2": "张三的数据容器",
+        "i2": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.869Z",
+        "hash": "a41246fabdd38b4c"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-index-guard-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "读取一个字符串和一个整数下标 k。在 try 中使用 charAt(k) 访问对应字符；访问成功时保持参考代码规定的输出格式。发生 IndexOutOfBoundsException 时，捕获异常并输出固定消息“出错啦：索引超出范围”，不使用 getMessage 的版本相关文案。finally 中输出“收工”。正常和异常路径都必须执行收尾。\n\n比如程序的输入是\n\n张三的数据容器 6\n\n程序就要返回\n\n第 6 颗是 器\n收工\n\n（判分用的是**另外一串字、另外一个编号** —— 编号可能越过界，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n        try {\n            System.out.println(\"第 \" + i + \" 颗是 \" + s.charAt(i));\n        } catch (IndexOutOfBoundsException e) {\n            System.out.println(\"出错啦：\" + \"索引超出范围\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "出错啦：索引超出范围\n收工",
+      "stdin": "示例文本集合 6\n",
+      "explanation": "try 中访问 charAt 可能抛出 IndexOutOfBoundsException。catch 处理越界并输出题目规定的固定中性消息，finally 输出结束标记；异常消息不依赖 JDK 的 getMessage 文案。正常访问和异常访问都应执行 finally。",
+      "templateId": "java-s1-try-index-guard",
+      "params": {
+        "word": "数据到手",
+        "i": "6",
+        "word2": "张三的数据容器",
+        "i2": "6"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.869Z",
+        "hash": "424e6cf429ac7048"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-index-guard-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "读取一个字符串和一个整数下标 k。在 try 中使用 charAt(k) 访问对应字符；访问成功时保持参考代码规定的输出格式。发生 IndexOutOfBoundsException 时，捕获异常并输出固定消息“出错啦：索引超出范围”，不使用 getMessage 的版本相关文案。finally 中输出“收工”。正常和异常路径都必须执行收尾。\n\n比如程序的输入是\n\n李四的毛线球 7\n\n程序就要返回\n\n出错啦：索引超出范围\n收工\n\n（判分用的是**另外一串字、另外一个编号** —— 编号可能越过界，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n        try {\n            System.out.println(\"第 \" + i + \" 颗是 \" + s.charAt(i));\n        } catch (IndexOutOfBoundsException e) {\n            System.out.println(\"出错啦：\" + \"索引超出范围\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "第 1 颗是 算\n收工",
+      "stdin": "计算机的工作区 1\n",
+      "explanation": "try 中访问 charAt 可能抛出 IndexOutOfBoundsException。catch 处理越界并输出题目规定的固定中性消息，finally 输出结束标记；异常消息不依赖 JDK 的 getMessage 文案。正常访问和异常访问都应执行 finally。",
+      "templateId": "java-s1-try-index-guard",
+      "params": {
+        "word": "计算机的工作区",
+        "i": "1",
+        "word2": "李四的毛线球",
+        "i2": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.869Z",
+        "hash": "bbd1f3d7d5b53fb4"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-index-guard-012",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "读取一个字符串和一个整数下标 k。在 try 中使用 charAt(k) 访问对应字符；访问成功时保持参考代码规定的输出格式。发生 IndexOutOfBoundsException 时，捕获异常并输出固定消息“出错啦：索引超出范围”，不使用 getMessage 的版本相关文案。finally 中输出“收工”。正常和异常路径都必须执行收尾。\n\n比如程序的输入是\n\n李四的毛线球 6\n\n程序就要返回\n\n出错啦：索引超出范围\n收工\n\n（判分用的是**另外一串字、另外一个编号** —— 编号可能越过界，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n        try {\n            System.out.println(\"第 \" + i + \" 颗是 \" + s.charAt(i));\n        } catch (IndexOutOfBoundsException e) {\n            System.out.println(\"出错啦：\" + \"索引超出范围\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "出错啦：索引超出范围\n收工",
+      "stdin": "示例文本集合 6\n",
+      "explanation": "try 中访问 charAt 可能抛出 IndexOutOfBoundsException。catch 处理越界并输出题目规定的固定中性消息，finally 输出结束标记；异常消息不依赖 JDK 的 getMessage 文案。正常访问和异常访问都应执行 finally。",
+      "templateId": "java-s1-try-index-guard",
+      "params": {
+        "word": "计算机的工作区",
+        "i": "6",
+        "word2": "李四的毛线球",
+        "i2": "6"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.869Z",
+        "hash": "8c75d5c01a4e2aa0"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-index-guard-015",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "读取一个字符串和一个整数下标 k。在 try 中使用 charAt(k) 访问对应字符；访问成功时保持参考代码规定的输出格式。发生 IndexOutOfBoundsException 时，捕获异常并输出固定消息“出错啦：索引超出范围”，不使用 getMessage 的版本相关文案。finally 中输出“收工”。正常和异常路径都必须执行收尾。\n\n比如程序的输入是\n\n张三的数据容器 7\n\n程序就要返回\n\n出错啦：索引超出范围\n收工\n\n（判分用的是**另外一串字、另外一个编号** —— 编号可能越过界，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n        try {\n            System.out.println(\"第 \" + i + \" 颗是 \" + s.charAt(i));\n        } catch (IndexOutOfBoundsException e) {\n            System.out.println(\"出错啦：\" + \"索引超出范围\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "出错啦：索引超出范围\n收工",
+      "stdin": "示例文本集合 6\n",
+      "explanation": "try 中访问 charAt 可能抛出 IndexOutOfBoundsException。catch 处理越界并输出题目规定的固定中性消息，finally 输出结束标记；异常消息不依赖 JDK 的 getMessage 文案。正常访问和异常访问都应执行 finally。",
+      "templateId": "java-s1-try-index-guard",
+      "params": {
+        "word": "计算机的工作区",
+        "i": "6",
+        "word2": "张三的数据容器",
+        "i2": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.869Z",
+        "hash": "07ec04c629467512"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-parse-finally-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要把它**变成一个数**：\n\n- 变得成：印 `两倍是 X `（`X` 是这个数的两倍）\n- 变不成：**不许断气**，印 `这串字不算数`\n- **不管翻没翻车**，最后都要印 `收工` —— 这一句要放进 `finally` 里\n\n比如程序的输入是\n\n7\n\n程序就要返回\n\n两倍是 14 \n收工\n\n（判分用的是**另外一串字** —— 可能是数、也可能不是，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        try {\n            int n = Integer.parseInt(word);\n            System.out.println(\"两倍是 \" + (n * 2) + \" \");\n        } catch (NumberFormatException e) {\n            System.out.println(\"这串字不算数\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "两倍是 24 \n收工",
+      "stdin": "12\n",
+      "explanation": "三块各自管什么，这一题正好一次用全：\n\n- **`try`** —— 放没底的活儿：把字变成数那句，加上紧跟的那句打印。翻了车，它**后面**的句子全跳过；\n- **`catch (NumberFormatException e)`** —— 「一串字变不成数」这一路接住，印一句自己的话；\n- **`finally`** —— **不管翻没翻车都要干**的那几句：收工这句话就住在这儿。\n\n有一处最容易踩：`finally` **接不住车**。要是只写 `finally` 不写 `catch`，收工的活儿照样干（那句会印出来），可没人接住这一路车，程序最后还是断气。想让程序活着把活干完，`catch` 那一块不能省。\n\n还有一笔地盘的账：`int n = Integer.parseInt(word);` 里那个 `n`，只活在 `try` 那一块地方 —— 出了 `try` / `catch` 就调用不着它了。所以用它的那句打印，得跟它待在**同一块**地方（写在 `try` 里面）。",
+      "templateId": "java-s1-try-parse-finally",
+      "params": {
+        "word": "12",
+        "word2": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "0d9cbce2172f4f67"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-parse-finally-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要把它**变成一个数**：\n\n- 变得成：印 `两倍是 X `（`X` 是这个数的两倍）\n- 变不成：**不许断气**，印 `这串字不算数`\n- **不管翻没翻车**，最后都要印 `收工` —— 这一句要放进 `finally` 里\n\n比如程序的输入是\n\n数据\n\n程序就要返回\n\n这串字不算数\n收工\n\n（判分用的是**另外一串字** —— 可能是数、也可能不是，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        try {\n            int n = Integer.parseInt(word);\n            System.out.println(\"两倍是 \" + (n * 2) + \" \");\n        } catch (NumberFormatException e) {\n            System.out.println(\"这串字不算数\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "两倍是 24 \n收工",
+      "stdin": "12\n",
+      "explanation": "三块各自管什么，这一题正好一次用全：\n\n- **`try`** —— 放没底的活儿：把字变成数那句，加上紧跟的那句打印。翻了车，它**后面**的句子全跳过；\n- **`catch (NumberFormatException e)`** —— 「一串字变不成数」这一路接住，印一句自己的话；\n- **`finally`** —— **不管翻没翻车都要干**的那几句：收工这句话就住在这儿。\n\n有一处最容易踩：`finally` **接不住车**。要是只写 `finally` 不写 `catch`，收工的活儿照样干（那句会印出来），可没人接住这一路车，程序最后还是断气。想让程序活着把活干完，`catch` 那一块不能省。\n\n还有一笔地盘的账：`int n = Integer.parseInt(word);` 里那个 `n`，只活在 `try` 那一块地方 —— 出了 `try` / `catch` 就调用不着它了。所以用它的那句打印，得跟它待在**同一块**地方（写在 `try` 里面）。",
+      "templateId": "java-s1-try-parse-finally",
+      "params": {
+        "word": "12",
+        "word2": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "98807ec589966baf"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-parse-finally-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要把它**变成一个数**：\n\n- 变得成：印 `两倍是 X `（`X` 是这个数的两倍）\n- 变不成：**不许断气**，印 `这串字不算数`\n- **不管翻没翻车**，最后都要印 `收工` —— 这一句要放进 `finally` 里\n\n比如程序的输入是\n\n7\n\n程序就要返回\n\n两倍是 14 \n收工\n\n（判分用的是**另外一串字** —— 可能是数、也可能不是，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        try {\n            int n = Integer.parseInt(word);\n            System.out.println(\"两倍是 \" + (n * 2) + \" \");\n        } catch (NumberFormatException e) {\n            System.out.println(\"这串字不算数\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "这串字不算数\n收工",
+      "stdin": "输入示例\n",
+      "explanation": "Integer.parseInt 不能解析非数字文本时抛出 NumberFormatException。捕获该异常后给出题目要求的提示，finally 在正常结束或发生异常时都执行。输入应为非空的测试标记，避免把 Scanner 无输入错误误当成数值解析错误。",
+      "templateId": "java-s1-try-parse-finally",
+      "params": {
+        "word": "",
+        "word2": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "0c798948bbb13f8e"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-parse-finally-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "纸条上给**一串字**。我们要把它**变成一个数**：\n\n- 变得成：印 `两倍是 X `（`X` 是这个数的两倍）\n- 变不成：**不许断气**，印 `这串字不算数`\n- **不管翻没翻车**，最后都要印 `收工` —— 这一句要放进 `finally` 里\n\n比如程序的输入是\n\n数据\n\n程序就要返回\n\n这串字不算数\n收工\n\n（判分用的是**另外一串字** —— 可能是数、也可能不是，两条路都要走得了。）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        try {\n            int n = Integer.parseInt(word);\n            System.out.println(\"两倍是 \" + (n * 2) + \" \");\n        } catch (NumberFormatException e) {\n            System.out.println(\"这串字不算数\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+      "expectedOutput": "这串字不算数\n收工",
+      "stdin": "输入示例\n",
+      "explanation": "Integer.parseInt 不能解析非数字文本时抛出 NumberFormatException。捕获该异常后给出题目要求的提示，finally 在正常结束或发生异常时都执行。输入应为非空的测试标记，避免把 Scanner 无输入错误误当成数值解析错误。",
+      "templateId": "java-s1-try-parse-finally",
+      "params": {
+        "word": "",
+        "word2": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "0be3ac816597e697"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-uncaught-parse-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "纸条上递来的**不是数字**，我们却拿它去变数字 —— 程序当场**断气**，最后那句「记账结束」一个字都没印出来。\n\n你帮我们把这一路车接住：变了不成就印一句 `这串字变不成数字`，然后**照常**把 `记账结束` 印出来。\n\n比如纸条上递来的是\n\n数据\n\n程序就要返回\n\n这串字变不成数字\n记账结束\n\n（判分用的是**另外一串字**，也一样不是数字。）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        int n = Integer.parseInt(word);\n        System.out.println(\"读到了 \" + n + \" 条\");\n        System.out.println(\"记账结束\");\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        try {\n            int n = Integer.parseInt(word);\n            System.out.println(\"读到了 \" + n + \" 条\");\n        } catch (NumberFormatException e) {\n            System.out.println(\"这串字变不成数字\");\n        }\n        System.out.println(\"记账结束\");\n    }\n}\n",
+      "expectedOutput": "这串字变不成数字\n记账结束",
+      "stdin": "输入示例\n",
+      "explanation": "捕获与实际抛出异常匹配的 NumberFormatException，保留 finally 的收尾行为。不能用删除解析操作或删除异常分支来让程序表面通过。",
+      "templateId": "java-s1-try-uncaught-parse",
+      "params": {
+        "word": "",
+        "word2": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.878Z",
+        "hash": "aeb1a5292691c795"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-uncaught-parse-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "纸条上递来的**不是数字**，我们却拿它去变数字 —— 程序当场**断气**，最后那句「记账结束」一个字都没印出来。\n\n你帮我们把这一路车接住：变了不成就印一句 `这串字变不成数字`，然后**照常**把 `记账结束` 印出来。\n\n比如纸条上递来的是\n\n一打数据\n\n程序就要返回\n\n这串字变不成数字\n记账结束\n\n（判分用的是**另外一串字**，也一样不是数字。）",
+      "brokenCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        int n = Integer.parseInt(word);\n        System.out.println(\"读到了 \" + n + \" 条\");\n        System.out.println(\"记账结束\");\n    }\n}\n",
+      "referenceFix": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        try {\n            int n = Integer.parseInt(word);\n            System.out.println(\"读到了 \" + n + \" 条\");\n        } catch (NumberFormatException e) {\n            System.out.println(\"这串字变不成数字\");\n        }\n        System.out.println(\"记账结束\");\n    }\n}\n",
+      "expectedOutput": "这串字变不成数字\n记账结束",
+      "stdin": "三个对象\n",
+      "explanation": "断气那一行的原话是：\n\n```text\nException in thread \"main\" java.lang.NumberFormatException: For input string: \"三个对象\"\n```\n\n念起来是「在 `main` 里翻了一路车：**一串字变不成数**，惹事的就是这个字」。没人接住它，程序当场断气 —— 后面那句「记账结束」全撂了。\n\n正路就是把没底的活儿放进 `try`、翻车之后怎么办写进 `catch`：\n\n```java\nString word = sc.next();\ntry {\n    int n = Integer.parseInt(word);\n    System.out.println(\"读到了 \" + n + \" 条\");\n} catch (NumberFormatException e) {\n    System.out.println(\"这串字变不成数字\");\n}\nSystem.out.println(\"记账结束\");\n```\n\n三处要看清：\n\n- **`catch` 括号里的名字，必须是它真翻的那一路**（这儿是 `NumberFormatException` ——「一串字变不成数」这一路）；\n- **「读到了 ...」那句也得进 `try`**：翻了车，`try` 里**后面**的句子全都跳过，不会印出半句话来；\n- **最后那句摆在 `try` / `catch` 外面**：所以不管翻没翻车它都照跑 —— 这就是接住翻车的全部意义。",
+      "templateId": "java-s1-try-uncaught-parse",
+      "params": {
+        "word": "三个对象",
+        "word2": "一打数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "5f395977017debd0"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-wrong-guard-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们守着「一串字变不成数」那一路车，可这次翻的**不是那一路** —— 一个对象都没有，这份账除不了。结果 `catch` 里的活儿一句没干，程序照样**断气**。\n\n你帮我们把这一路接住：翻车了就印 `没有对象来分，这条算不了`，然后照常印 `分账结束`。\n\n（这两样我们是写死的：`fish = 5`、`cats = 0`。跑一遍，断气那行字里会写这一路车**真正的名字** —— 照着它改。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        int fish = 5;\n        int cats = 0;\n        try {\n            System.out.println(fish / cats);\n        } catch (NumberFormatException e) {\n            System.out.println(\"这串字变不成数字\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        int fish = 5;\n        int cats = 0;\n        try {\n            System.out.println(fish / cats);\n        } catch (ArithmeticException e) {\n            System.out.println(\"没有对象来分，这条算不了\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "expectedOutput": "没有对象来分，这条算不了\n分账结束",
+      "stdin": null,
+      "explanation": "这一处的关键不是「有没有 `catch`」，是「**手里这块名称认不认这一路车**」。断气那一行的原话是：\n\n```text\nException in thread \"main\" java.lang.ArithmeticException: / by zero\n```\n\n那是「算数算不成」这一路车的名字：`ArithmeticException`。我们手里举的名称写的是 `NumberFormatException`（一串字变不成数那一路）—— 车不认这块名称，`catch` 里那句一个字没跑，程序照旧断气。\n\n改法就是把括号里的名字换成它真翻的那一路：`catch (ArithmeticException e)`。\n\n**判据一句话：程序断气、而 `catch` 里的活儿一句没干 —— 第一个要查的就是括号里的名字对不对。** 拿不准的时候，看断气那行字写的是什么，那上面就是这一路车真正的名字。",
+      "templateId": "java-s1-try-wrong-guard",
+      "params": {
+        "a": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "7407f1c9ce6dc5a3"
+      }
+    },
+    {
+      "id": "bank-java-s1-try-wrong-guard-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们守着「一串字变不成数」那一路车，可这次翻的**不是那一路** —— 一个对象都没有，这份账除不了。结果 `catch` 里的活儿一句没干，程序照样**断气**。\n\n你帮我们把这一路接住：翻车了就印 `没有对象来分，这条算不了`，然后照常印 `分账结束`。\n\n（这两样我们是写死的：`fish = 8`、`cats = 0`。跑一遍，断气那行字里会写这一路车**真正的名字** —— 照着它改。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        int fish = 8;\n        int cats = 0;\n        try {\n            System.out.println(fish / cats);\n        } catch (NumberFormatException e) {\n            System.out.println(\"这串字变不成数字\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        int fish = 8;\n        int cats = 0;\n        try {\n            System.out.println(fish / cats);\n        } catch (ArithmeticException e) {\n            System.out.println(\"没有对象来分，这条算不了\");\n        }\n        System.out.println(\"分账结束\");\n    }\n}\n",
+      "expectedOutput": "没有对象来分，这条算不了\n分账结束",
+      "stdin": null,
+      "explanation": "这一处的关键不是「有没有 `catch`」，是「**手里这块名称认不认这一路车**」。断气那一行的原话是：\n\n```text\nException in thread \"main\" java.lang.ArithmeticException: / by zero\n```\n\n那是「算数算不成」这一路车的名字：`ArithmeticException`。我们手里举的名称写的是 `NumberFormatException`（一串字变不成数那一路）—— 车不认这块名称，`catch` 里那句一个字没跑，程序照旧断气。\n\n改法就是把括号里的名字换成它真翻的那一路：`catch (ArithmeticException e)`。\n\n**判据一句话：程序断气、而 `catch` 里的活儿一句没干 —— 第一个要查的就是括号里的名字对不对。** 拿不准的时候，看断气那行字写的是什么，那上面就是这一路车真正的名字。",
+      "templateId": "java-s1-try-wrong-guard",
+      "params": {
+        "a": 8
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.525Z",
+        "hash": "02a06b6678dddc9c"
+      }
+    }
+  ]
+}

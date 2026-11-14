@@ -1,0 +1,34 @@
+{
+  "templateId": "java-s2-concat-uncaught",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-07",
+  "type": "codefix",
+  "concept": [
+    "字符串焊死了",
+    "concat 返回新字符串",
+    "没接住",
+    "不报错的错"
+  ],
+  "instances": 2,
+  "params": {
+    "head": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "张三"
+      ]
+    },
+    "tail": {
+      "kind": "pick",
+      "values": [
+        "文本",
+        "汪汪"
+      ]
+    }
+  },
+  "stemTemplate": "我们想让字符串接长一点 —— 程序**跑起来了**，屏幕上连一行错误信息都没有，可印出来的还是原来那一条，接上去的那段**不知去向**。\n\n规矩是这样的：字符串创建后就**焊死了**，`concat` 这种接一段的函数**碰都不碰原来那条**，它返回的是一条**新字符串**。我们没接住，那条新字符串就在窝里躺着没人管。\n\n请你帮我们改好，规矩是：**让下面印出来的 `s` 真的变成接长之后的那一条**。\n\n改好之后，程序该印出两行：\n\n1. 第一行是接上 `{tail}` 之后的**整条**字符串；\n2. 第二行是这条字符串的**颗数**。\n\n只有接字符串那一行的问题，别的我们都没写错。",
+  "brokenCodeTemplate": "public class Main {\n    public static void main(String[] args) {\n        String s = \"{head}\";\n        s.concat(\"{tail}\");\n        System.out.println(s);\n        System.out.println(s.length());\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void main(String[] args) {\n        String s = \"{head}\";\n        s = s.concat(\"{tail}\");\n        System.out.println(s);\n        System.out.println(s.length());\n    }\n}\n",
+  "explanationTemplate": "String 不可变，concat 返回连接后的新字符串，不修改原对象。必须把返回值赋给 s；追加文本必须非空，才能观察到忽略返回值与正确赋值的差别。"
+}

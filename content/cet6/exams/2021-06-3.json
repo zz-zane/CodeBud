@@ -1,0 +1,2667 @@
+{
+  "id": "2021-06-3",
+  "title": "2021年06月第3套",
+  "year": 2021,
+  "month": 6,
+  "set": 3,
+  "status": "partial",
+  "totalQuestions": 57,
+  "answeredQuestions": 51,
+  "sources": [
+    {
+      "id": "14K02TEnJdTGaFjQ2ApWORI6Y5zNTibkn",
+      "title": "听力说明.txt",
+      "url": "https://drive.google.com/file/d/14K02TEnJdTGaFjQ2ApWORI6Y5zNTibkn/view?usp=drivesdk"
+    },
+    {
+      "id": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+      "title": "2021.06英语六级答案解析第3套.pdf",
+      "url": "https://drive.google.com/file/d/1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1/view?usp=drivesdk"
+    },
+    {
+      "id": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+      "title": "2021.06六级真题第3套.pdf",
+      "url": "https://drive.google.com/file/d/1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl/view?usp=drivesdk"
+    },
+    {
+      "id": "1KfzCFWAP2wOJPiEJi1616xD21vs_V-nh",
+      "title": "2021年6月大学英语六级听力真题（第二套）.mp3",
+      "url": "https://drive.google.com/file/d/1KfzCFWAP2wOJPiEJi1616xD21vs_V-nh/view?usp=drivesdk"
+    },
+    {
+      "id": "1IiM7JLOQk20q953zBVA_rt8S2r-06yk5",
+      "title": "2021.06英语六级答案解析第2套.pdf",
+      "url": "https://drive.google.com/file/d/1IiM7JLOQk20q953zBVA_rt8S2r-06yk5/view?usp=drivesdk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay based on the chart below. You should start your essay with a brief description of the chart and comment on China's achievements in poverty alleviation. You should write at least 150 words but no more than 200 words. （见下图。）",
+      "blocks": [
+        {
+          "id": "writing-prompt-block",
+          "title": "Writing Task",
+          "text": "For this part, you are allowed 30 minutes to write an essay based on the chart below. You should start your essay with a brief description of the chart and comment on China's achievements in poverty alleviation. You should write at least 150 words but no more than 200 words. （见下图。）",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2021-06-3-q0",
+          "number": 0,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay based on the chart below. You should start your essay with a brief description of the chart and comment on China's achievements in poverty alleviation. You should write at least 150 words but no more than 200 words. （见下图。）",
+          "blockId": "writing-prompt-block",
+          "options": [],
+          "answer": "China's Achievements in Poverty Alleviation As the chart shows, in 2012, there are nearly one hundred million rural people in poverty, which accounts for approximately 10% of rural population. However; the following several years have witnessed the continual decrease in this figure, and in 2020, all the Chinese rural people have got rid of poverty. It can be seen that China has made tremendous achievements in poverty alleviation. It is beyond all doubt that the achievements are attributed to China's rapid economic development in these years, as without economic growth, people's poverty situation cannot be alleviated. And more importantly, the poor have enjoyed the great benefit of the economic growth due to the strong support from our government, active promotion of industrialization and urbanization. Many rural people are attracted to urban areas, so that they can benefit more from the economic growth. In addition, our country has attached great importance to infrastructure establishment in poor areas, such as roads, communication, and electricity facilities, which effectively narrow the gap between the rich and the poor. To conclude, having witnessed the remarkable achievements in poverty alleviation, we have every reason to believe that our people will lead a richer and better life, and our great country will become more thriving and prosperous.",
+          "explanation": "审题与范文解析见答案详情。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              1
+            ]
+          },
+          "verified": false
+        }
+      ],
+      "figure": {
+        "src": "assets/figures/2021-06-3.png",
+        "alt": "Rural population in poverty（柱线图：2012–2020 年农村贫困人口与贫困发生率逐年下降）"
+      }
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2021-06-2",
+      "sharedWithTitle": "2021年06月第2套",
+      "sharedNote": "本套听力与 2021年06月第2套 共用，题目、解析和听力材料集中在 2021-06-2 练习；本套不再重复展示。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading Comprehension (阅读理解)",
+      "directions": "In this section, you will read several passages and answer questions based on them.",
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A Banked Cloze",
+          "text": "At 43, I've reached the stage where women are warned to watch out for the creeping sadness of middle age. We're served up an endless stream of advice on \"how to survive your 40s\", as if we're in the endurance stage of a slow limp toward __(26)__. This is the age women start to become \"invisible\"-our value, attractiveness and power supposedly __(27)__ by the vanishing of youth. But I don't feel like I'm fading into __(28)__. I feel more seen than I ever have, and for. the first time in my life, I have a clear-eyed view of myself that is __(29)__, compassionate and accepting. When I look in the mirror, I'm proud of who I am-even those \"broken\" parts that for so long seemed impossible to love. So when advertisers try to sell me ways to \"turn back the clock\", I have to __(30)__ a laugh. I wouldn't go back to the crippling self-consciousness of my youth if you paid me. This hard-won sense of self-acceptance is one of the joys of being an older woman. But it's a narrative often __(31)__ out by the shame that marketers rely on to peddle us their diet pills, miracle face creams and breathable yoga pants-as if self-love is a __(32)__ commodity. For some women I know, this sense of trust and self-belief later in life gave them the courage to leave dysfunctional relationships or __(33)__ on new career paths. Others talked about enjoying their own company, of growth through __(34)__, deepening bonds of friendships, the ability to be more compassionate, less judgmental and to listen more and appreciate the small pleasures. Life past 40 is far from smooth sailing, but it's so much more than the reductive __(35)__ we see in women's magazines and on the Hollywood big screen.",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B Long Reading",
+          "text": "[A] adversity [B] authentic [C] convey [D] depictions [E] diminished Section B [F] drowned [G] embark [H] fragility [I] neglected [J] obscurity [K] outlines [L] prevalent [M] purchasable [N] submit 0) suppress Directions: In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one of the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by marking the corresponding letter on Answer Sheet 2. What Are the Ethics of CGI Actors-And Will They Replace Real Ones? [A] Digital humans are coming to a screen near you. As computer-generated imagery (CGI) has become cheaper and more sophisticated, the film industry can now convincingly recreate people on screen­ even actors who have been dead for decades. The technology's ability to effectively keep celebrities alive beyond the grave is raising questions about public legacies and image rights. [B] Late in 2019, it was announced that US actor James Dean, who died in 1955, will star in a Vietnam War film scheduled for release later this year. In the film, which will be called Finding Jack, Dean will be recreated on screen with CGI based on old footage and photographs, with another actor voicing him. The news was met with excitement by those keen to see Dean digitally brought back to life for only his fourth film, but it also drew sharp criticism. \"This is puppeteering the dead for their fame alone,\" actress Zelda Williams wrote on Twitter. \"It sets such an awful precedent for the future of performance.\" Het father, Robin Williams, who·died in 2014, was-keen to avoid the same:fate, Before his death, he filed a deed protecting the use of his image until 2039, preventing others from recreating him using CGI to appear in a film, TV show or as a hologram. [C] The James Dean film is a way to keep the actor's image relevant for younger generations, says Mark Roesler of CMG Worldwide, the firm that represents Dean's estate. \"I think this is the beginning of an entire wave,\" says Travis Cloyd, CEO of Worldwide XR, one of the companies behind the digital recreation of Dean. \"Moving into the future, we want James Dean to be brought into different gaming environments, or different virtual reality environments, or augmented reality environments,\" he says. [D] Other actors have been revived, with the permission of their estates, for advertising purposes: for example, a 2011 advertisement for Dior featured contemporary actress Charlize Theron alongside iconic 20th-century stars Marilyn Monroe, Grace Kelly and Marlene Dietrich. Later, Audrey Hepburn was digitally recreated for a chocolate commercial in 2013. In the same year, a CGI Bruce Lee appeared in a Chinese-language ad for a whisky brand, which offended many fans because Lee was widely known not to drink alcohol at all. \"In the last five years, it's become more affordable and more achievable in a whole movie,\" says Tim Webber at UK visual effects firm Framestore, the company behind the Hepburn chocolate ad. Framestore used body doubles with resemblance to Hepburn's facial structure and body shape as a framework for manual animation. The process was extremely difficult and expensive, says Webber, but the technology has moved on.\n[E] Now, a person can be animated from scratch. \"If they're alive today, you can put them in scanning rigs, you can get every detail of their body analysed very carefully and that makes it much easier, whereas working from available photographs is tricky,\" says Webber, who won an Academy Award for his visual effects work on the 2013 film Gravity. \"I also see a lot of actors today who will have the desire to take advantage of this technology: to have their likeness captured. and stored for future content,\" says Cloyd. \"They foresee this being something that could give their estates and give their families the ability to make money from their likeness when they're gone.\" [F] A hidden hazard of digitally recreating a deceased celebrity is the risk of damaging their legacy. \"We have to respect the security and the integrity of rights holders,\" says John Canning at Digital Domain, a US firm that created a hologram rapper (ill, nSt:.AJ·Tupac Shakur, which appeared at the Coachella music festival in 201Z, 15 years after his death. [G] Legally, a person's rights to control the commercial use of their name and image beyond their death differ between and even within countries. In certain US states, for example, these rights are treated similarly to property rights, and are transferable to a person's heirs. In California; under the Celebrities Rights Act, the personality rights for a celebrity last for 70 years after their death. \"We've got a societal debate going on about access to our public commons, as it were, about famous faces, says Lilian Edwards at Newcastle University, UK. Should the public be allowed to use or reproduce images of famous people, given how iconic they are? And what is in. the best interest of a deceased person's legacy may conflict with the desires of their family or the public, says Edwards. [H] A recreation, however lifelike, will never be in distinguish able from a real actor, says Webber. \"When we are bringing someone back, representing someone who is no longer alive on the screen, what we are doing is extremely sophisticated digital make\"\".up,\" he says; \"A performance is a lot more than a physical resemblance.\" [I] As it becomes easier to digitally recreate celebrities and to entirely manufacture on'.\"screen identities, could this kind of technology put actors out of jobs? \"J think actors are worried about this,\" says Edwards. \"But I think it will take a very long time. \" This is partly because of the risk that viewers find virtual humans scary. Edwards cites widespread backlash to the digital recreation of Carrie Fisher as· a young Princess Leia in Rogue One, a trick later repeated in the recent Star Wars: The Rise of Skywalker, which was filmed after Fisher's death in 2016. \"People didn't like it,\" she says. \"They discovered the uncanny valley.\" [J] This refers to the idea that when objects trying to resemble humans aren't.quite perfect, they can make viewers feel uneasy because they fall somewhere between obviously non-human and fully human. \"That's always a danger when you're doing anything human or human-like,\" says Webber. \"There're a thousand things that could go wrong with a computer-generated facial performance, and any one of those could make it fall into the uncanny valley,\" he says·; \"Your brain j°:st knows there's something wrong.\" The problem often arises around the eyes or mouth, says Webber.. \"They're the areas that you look at when you're talking to someone.\" [K] An unfamiliar digital human that has been created through CGI will also face the same challenge as an unknown actor: they don't have the appeal of an established name. \"You have to spend substantial capital in creating awareness around their likeness and making sure people are familiar with who they are,\" says Cloyd. This is now starting to happen. \"The way you pre-sell a movie in a foreign market is based on relevant talent,\" he says. \"I think we're a long way away from having virtual beings that have the ability to pre-sell content.\" [L] Webber expects that we will see more digital humans on screen. \"It's happening because it can happen,\" he says. Referring to a line from JurassicPark, he adds: \"People are too busy thinking about what they c·an do to think about whether they should do it.\" 7\\f& 2021' &f: 6 JI 49",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-c-passage-1",
+          "title": "Section C Passage One",
+          "text": "You can't see it, smell it, or hear it, and people disagree on how precisely to define it, or where exactly it comes from. It isn't a school subject or an academic discipline, but it can be learned. It is a quality that is required of artists, but it is also present in the lives of scientists and entrepreneurs. All of us benefit from it and we thrive mentally and spiritually when we are able to wield it. It is a delicate thing, easily stamped out; in fact, it flourishes most fully when people are playful and childlike. Meanwhile, it works best in conjunction with deep knowledge and expertise. This mysterious-but teachable-quality is creativity, the subject of a recently-published report by Durham· Commission on Creativity and Education; The report concludes that· creativity-should not inhabit the school curriculum only as it relates to drama, music, art and other obviously creative subjects, but that creative thinking ought to run through all of school life, infusing (充满) the way humanities and natural sciences are learned. The authors, who focus on education in England, off er a number of sensible recommendations, some of which are an attempt to alleviate the uninspiring and fact-based approach to education that has crept into policy in recent years. When children are regarded as vessels to be filled with facts, creativity does not prosper; nor does it when teachers' sole objective is coaching children towards exams. One suggestion from the commission is a network of teacher-led \"creativity collaboratives\", along the lines of existing maths hubs (中心), with the aim of supporting teaching for creativity through the school curriculum. Nevertheless, it is arts subjects through which creativity can most obviously be fostered. The value placed on them by the independent education sector is clear. One only has to look at the remarkable arts facilities at Britain's top private schools to comprehend this. But in the state sector the excessive focus on English, maths and science threatens to crush arts subjects; meanwhile, reduced school budgets mean diminishing extra curricular activities. There has been a 28.1 % decline in students taking creative subjects at high schools since 2014, though happily, art and design have seen a recent increase. This discrepancy between state and private education is a matter of social justice. It is simply wrong and unfair that most children have a fraction of the access to choirs, orchestras, art studios and drama that their more privileged peers enjoy. As lives are affected by any number of looming challenges-climate crisis, automation in the workplace-humans are going to need creative thinking more than ever. For all of our sakes, creativity in education, and for all, must become a priority.",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-c-passage-2",
+          "title": "Section C Passage Two",
+          "text": "Emulating your conversation partner's actions is a common human behavior classified as \"mirroring\" and has been known and studied by psychologists for years. We all tend to sub consciously copy gestures of people we like. But why do we act like this? As a rule, mirroring means that conversation a lists enjoy their communication and that there's a certain level of agreement between them. The topic of discussion is equally interesting for both and they know their interests meet. Repeating someone's behavior is typical of talented communicators, not always because the person is sympathetic, but because there is a goal to be achieved. This way new idols have been brought to the stage: politicians, celebrities, and other big names. Popular culture makes people want to look popular, and act and speak like popular people. Nowadays celebrities steal lyrics from each other and struggle with copyright violation accusations or straightforwardly claim themselves to be the authors, even though all the work was done by other people. • Among celebrities, it's trendy nowadays to use their own speech writers as politicians do. The so- called \"ghostwriting\" can take various forms: books, articles, auto biographies, and even social media posts. Who is a true copycat and who gets copycatted? Sometimes, it is a hard nut to crack without an expert's help. But new authorship defending methods based on identifying individual writing patterns are already here. Their aim is to protect intellectual property. Using scientific methods, some of them can define authorship with 85 % accuracy. Writing is not an easy craft to master. If you want to write like a professional without plagiarism (tf;, there are a few lessons to learn and the first one is: \"Copy from one, it's plagiarism; copy from two, it's research.\" The correct interpretation of this statement is not about copying, but rather about creating your own style. When you study an author's writing style, don't stop on a single one, but explore numerous styles instead. Examine types of sentences they use, pay attention to their metaphors, and focus on stories Imitation is rather paradoxical. As an integral part of learning, it brings about positive changes, making people develop and grow. However, it may do a lot of harm. Copying someone's thoughts, ideas or inventions is completely unacceptable. It infringes on intellectual property rights of others. Still, many things we do are about copying others one way.or another. So if you want to compliment someone on the work they have done and imitate it, just make sure you do it the right way to avoid committing plagiarism.",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              5
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2021-06-3-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "选词填空第 26 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "H",
+          "explanation": "作者把“如何熬过四十多岁”的建议比作缓慢走向某种状态的过程；fragility 表示“虚弱、脆弱”，符合这段对衰老的描述。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "选词填空第 27 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "E",
+          "explanation": "破折号后的内容解释女性步入中年后被视为“不再受关注”：青春消逝使价值、吸引力和能力减弱，因此选 diminished（减弱的）。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "选词填空第 28 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "J",
+          "explanation": "后一句说作者比以往任何时候都更受关注，因此她认为自己并未变得默默无闻；obscurity 表示“默默无闻”。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          },
+          "verified": false,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "选词填空第 29 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "B",
+          "explanation": "空格与 compassionate 和 accepting 并列，描述人的积极品质；authentic 表示“真实的”，符合上下文。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "选词填空第 30 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "O",
+          "explanation": "作者对现状感到骄傲，不想重回年轻时的状态，因此当广告商推销“时光逆转”之法时，她不得不忍住笑；suppress 意为“抑制、忍住”。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "选词填空第 31 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "F",
+          "explanation": "上文说自我接纳是年长女性的一种乐趣，but 引出转折，指出这种叙事经常被羞耻感淹没，因此选 drowned。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "选词填空第 32 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "M",
+          "explanation": "营销人员利用羞耻感销售减肥药等产品，作者认为自爱被当成可购买的商品，因此选 purchasable（可购买的）。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "选词填空第 33 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "G",
+          "explanation": "不定式 to leave 与空处及 on new career paths 并列，表示离开不良关系或开始新的职业道路；embark on 意为“开始从事”。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "选词填空第 34 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "A",
+          "explanation": "through 后需要名词。上下文谈到女性通过艰难经历成长，因此选 adversity（逆境）。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "选词填空第 35 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adversity"
+            },
+            {
+              "key": "B",
+              "text": "authentic"
+            },
+            {
+              "key": "C",
+              "text": "convey"
+            },
+            {
+              "key": "D",
+              "text": "depictions"
+            },
+            {
+              "key": "E",
+              "text": "diminished"
+            },
+            {
+              "key": "F",
+              "text": "drowned"
+            },
+            {
+              "key": "G",
+              "text": "embark"
+            },
+            {
+              "key": "H",
+              "text": "fragility"
+            },
+            {
+              "key": "I",
+              "text": "neglected"
+            },
+            {
+              "key": "J",
+              "text": "obscurity"
+            },
+            {
+              "key": "K",
+              "text": "outlines"
+            },
+            {
+              "key": "L",
+              "text": "prevalent"
+            },
+            {
+              "key": "M",
+              "text": "purchasable"
+            },
+            {
+              "key": "N",
+              "text": "submit"
+            },
+            {
+              "key": "O",
+              "text": "suppress"
+            }
+          ],
+          "answer": "D",
+          "explanation": "后面的定语从句指女性杂志和好莱坞银幕上展现的内容；depictions 意为“描述、描绘”。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          },
+          "verified": false,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "There is an ongoing debate among the public as to whether the images of deceased celebrities should be recreated.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "G",
+          "explanation": "G 段讨论公众是否应被允许使用或复制已故名人的肖像，说明该问题仍存在社会争论。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "The COi technology allows the image of the deceased James Dean to be presented to young people in new settings.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "C",
+          "explanation": "C 段介绍詹姆斯·迪恩的数字形象可用于新影片等场景，让年轻一代了解他。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "It is very likely that the COi-recreated image of a deceased celebrity will fail to match the real actor especially in facial expressions.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "J",
+          "explanation": "J 段指出数字化再现虽力求接近真人，但面部表情尤其是眼睛或嘴巴周围仍容易出现问题。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "The use of digital technology can bring images of deceased celebrities back to the screen.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "A",
+          "explanation": "A 段指出 CGI 技术能够将已故多年的演员重新呈现在银幕上。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              5
+            ]
+          },
+          "verified": false,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Recreating a deceased famous actor or actress may violate their legitimate rights.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "F",
+          "explanation": "F 段说数字化再现已故名人可能损害其遗产，对应题干对合法权益的担忧。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "More COi-recreated images of deceased celebrities are expected to appear on screen.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "L",
+          "explanation": "L 段提到未来银幕上预计会出现更多数字化人物。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          },
+          "verified": false,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "The image of James Dean will be recreated on screen with his voice dubbed by someone else.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "B",
+          "explanation": "B 段介绍电影将根据詹姆斯·迪恩生前影像资料重现其形象，并由另一位演员配音。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "However advanced the COi technology is, the recreated image will differ in a way from the real actor.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "H",
+          "explanation": "H 段指出，数字形象无论多么逼真，也无法做到与真人演员完全无法区分。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              4
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "A lot of actors today are likely to make use of the COi technology to have their images stored for the benefit of their families.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "E",
+          "explanation": "E 段说一些演员希望保存自己的数字肖像，以便其家人在他们去世后获得收入。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Some actors are concerned that they may lose jobs because of the COi technology.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            },
+            {
+              "key": "Q",
+              "text": "Paragraph Q"
+            },
+            {
+              "key": "R",
+              "text": "Paragraph R"
+            },
+            {
+              "key": "S",
+              "text": "Paragraph S"
+            },
+            {
+              "key": "T",
+              "text": "Paragraph T"
+            }
+          ],
+          "answer": "I",
+          "explanation": "I 段讨论演员担心 CGI 技术的发展可能导致他们失去工作。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What do we learn from the passage about creativity?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It develops best when people are spiritually prepared."
+            },
+            {
+              "key": "B",
+              "text": "It is most often wielded by scientists and entrepreneurs."
+            },
+            {
+              "key": "C",
+              "text": "It is founded on scientific knowledge and analytical skills."
+            },
+            {
+              "key": "D",
+              "text": "It contributes to intellectual growth but can easily be killed."
+            }
+          ],
+          "answer": "D",
+          "explanation": "文章指出创造力使心智和精神成长，但也十分脆弱，容易受到扼杀。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What is the conclusion of a recently-published report?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Natural sciences should be learned the way humanities courses are."
+            },
+            {
+              "key": "B",
+              "text": "Cultivation of creativity should permeate the entire school curriculum."
+            },
+            {
+              "key": "C",
+              "text": "Art courses should be made compulsory for all students."
+            },
+            {
+              "key": "D",
+              "text": "Students should learn more obviously creative subjects."
+            }
+          ],
+          "answer": "B",
+          "explanation": "报告认为创造性思维不应局限于明显的艺术类课程，而应贯穿整个学校课程及人文、自然科学学习。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What does the report say is detrimental to the fostering of creativity?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Alleviation of pressure."
+            },
+            {
+              "key": "B",
+              "text": "Teacher-led school activities."
+            },
+            {
+              "key": "C",
+              "text": "Test-oriented teaching."
+            },
+            {
+              "key": "D",
+              "text": "Independent learning."
+            }
+          ],
+          "answer": "C",
+          "explanation": "文章指出，当教师的唯一目标是教孩子应付考试时，创造力无法充分发展。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              7
+            ]
+          },
+          "verified": false,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What do we learn about the private schools in the UK?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They encourage extra curricular activities."
+            },
+            {
+              "key": "B",
+              "text": "They attach great importance to arts education."
+            },
+            {
+              "key": "C",
+              "text": "They prioritize arts subjects over maths and sciences."
+            },
+            {
+              "key": "D",
+              "text": "They cater to students from different family backgrounds."
+            }
+          ],
+          "answer": "B",
+          "explanation": "文章以英国顶级私立学校出色的艺术设施为例，说明私立教育非常重视艺术教育。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              7
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What should be done to meet the future challenges?",
+          "blockId": "reading-sec-c-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Increasing government investment in school education."
+            },
+            {
+              "key": "B",
+              "text": "Narrowing the existing gap between the rich and the poor."
+            },
+            {
+              "key": "C",
+              "text": "Providing all children with equal access to arts education."
+            },
+            {
+              "key": "D",
+              "text": "Focusing on meeting the needs of under-privileged students."
+            }
+          ],
+          "answer": "C",
+          "explanation": "文章认为面对未来挑战，人类更需要创造性思维，应该为所有孩子提供培养创造力的平等机会。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              7
+            ]
+          },
+          "verified": false,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What do people tend to do while engaging in a conversation?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Repeat what their partners say one way or another."
+            },
+            {
+              "key": "B",
+              "text": "Focus as much as possible on topics of mutual interest."
+            },
+            {
+              "key": "C",
+              "text": "Imitate their partners' gestures without their knowing it."
+            },
+            {
+              "key": "D",
+              "text": "Observe carefully how their partners make use of gestures."
+            }
+          ],
+          "answer": "C",
+          "explanation": "所谓“镜像”是人们无意识地模仿喜欢的交谈对象的行为，尤其包括对方的手势。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              8
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "When does mirroring usually take place in a conversation?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "When both sides are sympathetic with each other."
+            },
+            {
+              "key": "B",
+              "text": "When both sides have a lot of things in common."
+            },
+            {
+              "key": "C",
+              "text": "When both sides make interesting contributions."
+            },
+            {
+              "key": "D",
+              "text": "When both sides try to seek common ground."
+            }
+          ],
+          "answer": "B",
+          "explanation": "镜像通常出现在双方喜欢交流、兴趣相投并达到一定共识的交谈中。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              8
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What do we learn about popular culture?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It encourages people to imitate."
+            },
+            {
+              "key": "B",
+              "text": "It appeals mostly to big names."
+            },
+            {
+              "key": "C",
+              "text": "I.t acquaints young people with their idols."
+            },
+            {
+              "key": "D",
+              "text": "It.can change people's mode of cognition."
+            }
+          ],
+          "answer": "A",
+          "explanation": "文章说流行文化使人们想看起来受欢迎，并模仿受欢迎者的言行。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              9
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "Why is the saying \"copy from two, it's research\" a lesson to learn?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It facilitates the creation of one's own writing style."
+            },
+            {
+              "key": "B",
+              "text": "It helps to protect one's intellectual property rights."
+            },
+            {
+              "key": "C",
+              "text": "It fosters correct interpretation of professional writing.."
+            },
+            {
+              "key": "D",
+              "text": "It enables one to write intriguing sequels to famous stories."
+            }
+          ],
+          "answer": "A",
+          "explanation": "作者解释，“复制两个人是研究”的重点并非简单复制，而是借鉴多种写作风格，形成自己的风格。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              9
+            ]
+          }
+        },
+        {
+          "id": "2021-06-3-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "Why does the author say imitation is rather paradoxical?",
+          "blockId": "reading-sec-c-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is liable to different interpretations."
+            },
+            {
+              "key": "B",
+              "text": "It is by and large a necessary evil."
+            },
+            {
+              "key": "C",
+              "text": "Jt can give rise to endless disputes."
+            },
+            {
+              "key": "D",
+              "text": "It may do harm as well as good."
+            }
+          ],
+          "answer": "D",
+          "explanation": "模仿既能作为学习的一部分促进成长，也可能造成伤害，例如侵犯他人的知识产权，因此具有矛盾性。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              9
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "blocks": [
+        {
+          "id": "translation-task-block",
+          "title": "Translation Passage",
+          "text": "云南是位于中国西南的一个省份，平均海拔1500米。云南历史悠久，风景秀丽，气候宜人。云南生态环境优越，生物多种多样，被誉为野生动植物的天堂。云南还有多种矿藏和充足的水资源，为全省经济的可持续发展提供了有利条件。\n云南居住着25个少数民族，他们大多有自己的语言、习俗和宗教。云南独特的自然景色和丰富的民族文化使其成为中国最受欢迎的旅游目的地之一，每年都吸引着大批国内外游客前往观光旅游。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2021-06-3-q56",
+          "number": 56,
+          "kind": "translation",
+          "stem": "云南是位于中国西南的一个省份，平均海拔1500米。云南历史悠久，风景秀丽，气候宜人。云南生态环境优越，生物多种多样，被誉为野生动植物的天堂。云南还有多种矿藏和充足的水资源，为全省经济的可持续发展提供了有利条件。\n云南居住着25个少数民族，他们大多有自己的语言、习俗和宗教。云南独特的自然景色和丰富的民族文化使其成为中国最受欢迎的旅游目的地之一，每年都吸引着大批国内外游客前往观光旅游。",
+          "blockId": "translation-task-block",
+          "options": [],
+          "answer": "Yunnan is a province located in the southwest of China with an average altitude of 1,500 meters. Yunnan has a long history, beautiful scenery and pleasant climate. Endowed with a superior ecological environment and a wide variety of living creatures, Yunnan is known as a paradise for wild animals.and plants. Yunnan also has a variety of mineral resources and adequate water resources, which provide favorable conditions for the sustainable development of the whole province's economy. Yunnan is inhabited by 25 ethnic minorities, most of whom have their own languages, customs and religions. With unique natural scenery and rich ethnic culture, Yunnan has been made into one of the most popular tourist destinations in China, attracting large numbers of domestic and foreign tourists each year.",
+          "explanation": "详见翻译解析与词汇注释。",
+          "source": {
+            "fileId": "1bGseGhn3P_G67WJI9q-hevM-PaOY9qAl",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1ZE8-2pOntSosn7gUhIKKeCBwUJqU4Kt1",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "Yunnan is a province located in the southwest of China with an average altitude of 1,500 meters. Yunnan has a long history, beautiful scenery and pleasant climate. Endowed with a superior ecological environment and a wide variety of living creatures, Yunnan is known as a paradise for wild animals.and plants. Yunnan also has a variety of mineral resources and adequate water resources, which provide favorable conditions for the sustainable development of the whole province's economy."
+        }
+      ]
+    }
+  ],
+  "issues": [
+    "官方听力与第2套相同（见听力说明.txt），听力音频及试题复用第2套。",
+    "试卷题目结构已完整提取（57题），答案已录入51题，其余答案待进一步核对校正。",
+    "严格质检：所指向的共用听力仍有缺失或待核实内容；6 题答案未核实；疑似 OCR 乱码或英文粘连待核查。",
+    "翻译中文原文：原卷 PDF 文字层字体编码损坏，已渲染页面图像后人工转录（2026-11-08），建议再对照原卷校一遍。",
+    "写作：原卷附图已按页面截图收录（assets/figures）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "templateId": "cpp-s2-02-ctor-void-return",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-02",
+  "type": "codefix",
+  "concept": [
+    "构造函数的脑袋",
+    "不能写返回什么的类型",
+    "编译期报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们照课文画了一张叫 `Cat` 的类定义，想让对象一初始化就把名字装好 —— 构造函数的状态里也写好了 `name = n;`。\n\n可信封递进去，编译器当场拦下、一行都不让跑。\n\n你帮我们改一处，让它跑起来、把那一行印对。**类定义上已有的部分一个都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    void Cat(string n) {\n        name = n;\n    }\n};\n\nint main() {\n    Cat c1(\"{name}\");\n    cout << c1.name << \" 蹦出来了\" << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) {\n        name = n;\n    }\n};\n\nint main() {\n    Cat c1(\"{name}\");\n    cout << c1.name << \" 蹦出来了\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:9:5: error: return type specification for constructor invalid`\n\n用自然语言解释：**「构造函数的脑袋上不许写返回什么的类型。」** 它是在翻译阶段就拦下的，程序根本没跑起来。\n\n我们当时想的是「函数都爱在脑袋上写个类型，我们也写一个总没错吧」—— 错就错在**构造函数不是被谁调用去干活的普通函数**：它只管在对象落地那一刻把自己那几格装好，压根不存在「返回什么」。所以它的脑袋上除了「收什么料」，别的什么都不该有。\n\n改法就是把那个 `void` **删掉**。看到报错里出现 `constructor` 这个词，就去检查脑袋上是不是多写了点什么 —— 这是它最常复发的病。"
+}

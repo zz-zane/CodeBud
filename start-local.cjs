@@ -1,0 +1,8 @@
+const { app } = require('electron')
+const { join } = require('node:path')
+const { mkdirSync } = require('node:fs')
+const data = join(__dirname, 'local-data')
+mkdirSync(data, { recursive: true })
+app.setPath('userData', data)
+app.setPath('sessionData', data)
+require('./out/main/index.js')

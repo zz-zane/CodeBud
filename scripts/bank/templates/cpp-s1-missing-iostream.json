@@ -1,0 +1,27 @@
+{
+  "templateId": "cpp-s1-missing-iostream",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-01",
+  "type": "codefix",
+  "concept": [
+    "include",
+    "cout",
+    "请管理员"
+  ],
+  "instances": 2,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "你好，！",
+        "处理完成",
+        "我们回来啦"
+      ]
+    }
+  },
+  "stemTemplate": "我们写了一份新源代码，想让点单机念一句「{word}」给计算机听。\n\n可它又双叒叕跑不起来：编译器说 `cout` 这个名字它压根没听说过，屏幕上连一个字都没输出。你帮我们把这份源代码改好，让它把这句输出。",
+  "brokenCodeTemplate": "using namespace std;\n\nint main() {\n    cout << \"{word}\" << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"{word}\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的抱怨原话是：\n\n`error: 'cout' was not declared in this scope`\n\n`declared` 是「登记过、报备过」的意思，整句话是在说：**`cout` 这个名字我们没听说过**。\n\n可源代码里明明有那句 `using namespace std;`（柜门开着的呀）？问题在于：柜门是开了，可**柜子里的东西压根没搬进来**。`cout` 这件家伙的来历写在第一行请来的那位管理员家里，管理员没请，柜子是空的。\n\n最贴心的是，编译器还会跟着补一句 `this is probably fixable by adding`——「**加上那一样东西，大概就修好了**」。它连该请哪位管理员都替你写出来了，就是报错最后被单引号夹着的那半句。\n\n所以往后记住这条链子：**先请管理员，再开柜门，最后才能调用短名字**。少哪一步都不行"
+}

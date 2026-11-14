@@ -1,0 +1,4756 @@
+{
+  "algo-s001": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "《Hello 算法》是一本怎样的算法入门开源教程？",
+      "options": [
+        "动画图解、能运行、提炼核心的数据结构与算法入门书",
+        "专供 ACM 竞赛选手的高难度纯理论数学证明集",
+        "仅支持 C 语言且没有任何插图的代码合集",
+        "面向硬件底层的电路与微机接口教程"
+      ],
+      "answer": 0,
+      "explanation": "《Hello 算法》致力于成为一本动画图解、能运行、提炼核心的数据结构与算法入门书。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "计算机科学中，程序等于____加算法（请填数据结构的中文或英文名称）。",
+      "answer": "数据结构",
+      "accept": [
+        "Data Structure",
+        "data structure",
+        "数据结构与算法"
+      ],
+      "explanation": "著名计算机科学家沃斯（Niklaus Wirth）提出经典公式：程序 = 数据结构 + 算法。"
+    }
+  ],
+  "algo-s002": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "学习数据结构与算法最主要的意义不包括以下哪一项？",
+      "options": [
+        "提升代码运行效率和空间利用率",
+        "培养抽象思维与模块化解决复杂问题的工程能力",
+        "彻底取代计算机硬件升级的需求",
+        "应对技术面试与大型软件系统的架构设计"
+      ],
+      "answer": 2,
+      "explanation": "算法优化能够极大提升程序效率，但并不能消除或取代计算机硬件的物理需求与升级。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "《Hello 算法》开源项目遵循的知识共享许可协议类型是 CC BY-NC-____ 4.0。",
+      "answer": "SA",
+      "accept": [
+        "sa",
+        "SA 4.0"
+      ],
+      "explanation": "《Hello 算法》采用知识共享 署名-非商业性使用-相同方式共享 (CC BY-NC-SA 4.0) 国际许可协议。"
+    }
+  ],
+  "algo-s003": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "对于算法初学者，在阅读本书和动手编码时的最佳实践建议是：",
+      "options": [
+        "只看文字，跳过所有动画演示与代码运行",
+        "结合图解理解核心逻辑，亲手单步调试与运行配套代码",
+        "直接死记硬背所有题目的代码模板而不理解原理",
+        "遇到不懂的数学证明立即放弃学习整章"
+      ],
+      "answer": 1,
+      "explanation": "学习算法最有效的方式是结合动画图解建立直观认知，并亲自动手编写、单步调试代码，验证思维过程。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在算法学习中，若某个知识点带有星号标记（*），通常代表该内容属于____（请填选读/必读/废弃）。",
+      "answer": "选读",
+      "accept": [
+        "选读内容",
+        "进阶选读",
+        "选学"
+      ],
+      "explanation": "在本书目录中，带 * 的小节为选读进阶内容，初学者可以先跳过，学完主干后再回过头精读。"
+    }
+  ],
+  "algo-s004": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "关于不同编程语言实现算法的特点，下列说法正确的是：",
+      "options": [
+        "Python 语法简洁明了，适合快速验证算法核心思想",
+        "C 语言具有自动垃圾回收，完全不需要关心指针与内存分配",
+        "Java 的执行速度总是比 C++ 快一个数量级",
+        "算法的逻辑本质会随着编写语言的改变而彻底改变"
+      ],
+      "answer": 0,
+      "explanation": "Python 语法优雅简洁，能让初学者专注于算法思想本身；而算法背后的数学和逻辑本质是跨语言通用的。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在 C 和 C++ 中，动态申请的内存必须由程序员手动释放，否则会导致____泄漏。",
+      "answer": "内存",
+      "accept": [
+        "memory",
+        "内存泄漏"
+      ],
+      "explanation": "C/C++ 没有自动垃圾回收机制，未释放动态内存会导致内存泄漏（Memory Leak）。"
+    }
+  ],
+  "algo-s005": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在算法刷题与工程实践中，遇到难以理解的复杂算法时，哪种方法最有效？",
+      "options": [
+        "通过小规模样本手绘调用栈或指针移动图逐步推演",
+        "一遍遍盲目重读长篇文字解释",
+        "立即换一本更厚的高难度理论书",
+        "将代码全部复制给编译器直接猜测结果"
+      ],
+      "answer": 0,
+      "explanation": "使用简单具体的小数据集，亲手在纸上绘制指针移动、数组索引变化或递归树，是透彻理解算法的绝佳方法。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "数据结构与算法的核心目标就是在时间复杂度与____复杂度之间寻求最佳权衡。",
+      "answer": "空间",
+      "accept": [
+        "空间复杂度",
+        "space",
+        "Space"
+      ],
+      "explanation": "时间复杂度和空间复杂度是衡量算法优劣的两大核心指标，工程中常需要进行以空间换时间或以时间换空间的取舍。"
+    }
+  ],
+  "algo-s006": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "下列关于“算法”定义的描述中，最准确的是：",
+      "options": [
+        "算法是在有限步骤内解决特定问题的一组明确清晰的计算指令",
+        "算法就是随便写出的一段能够被计算机编译运行的代码",
+        "算法必须包含复杂的微积分数学公式才算算法",
+        "算法是指计算机的中央处理器（CPU）指令集架构"
+      ],
+      "answer": 0,
+      "explanation": "算法是一系列明确、有限的步骤，用于解决特定问题或执行特定计算。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "算法具有五个基本特征：输入、输出、有穷性、确定性和____性。",
+      "answer": "可行",
+      "accept": [
+        "可行性",
+        "有效性"
+      ],
+      "explanation": "算法的五个核心特征为：有输入、有输出、有穷性、确定性、可行性。"
+    }
+  ],
+  "algo-s007": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在日常生活中，下列哪个场景最能对应计算机中的“查字典（查词）”算法？",
+      "options": [
+        "在有序单词列表中利用首字母拼音快速定位的二分/哈希思想",
+        "随机翻开一页碰运气",
+        "从字典第一页第一行逐字向后查阅的穷举遍历",
+        "把字典全部背下来"
+      ],
+      "answer": 0,
+      "explanation": "查字典按字母顺序查阅对应二分查找，按部首/拼音索引表查阅对应哈希检索思想。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "def linear_search(nums: list[int], target: int) -> int:\n    for i in range(len(nums)):\n        if nums[i] == target:\n            return i\n    return -1\n\nprint(linear_search([10, 20, 30, 40], 30))",
+      "stem": "执行上述线性搜索代码，控制台打印的返回值是多少？",
+      "answer": "2",
+      "accept": [
+        "2\n"
+      ],
+      "explanation": "数组索引从 0 开始，元素 30 位于下标 2 处，因此函数返回 2。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "如果在无序数组中查找一个元素，最基础的搜索算法是____搜索（线性/二分）。",
+      "answer": "线性",
+      "accept": [
+        "线性搜索",
+        "顺序",
+        "顺序搜索"
+      ],
+      "explanation": "无序数组无法直接利用大小关系二分，只能从头到尾进行线性搜索。"
+    }
+  ],
+  "algo-s008": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "下列各项中，不能被称为算法的是：",
+      "options": [
+        "无限循环且永远无法得出结果或退出的计算逻辑",
+        "计算两个正整数最大公约数的欧几里得辗转相除法",
+        "求解一元二次方程根的求根公式执行步骤",
+        "将一组杂乱无章的扑克牌从小到大插入排好序的手牌整理过程"
+      ],
+      "answer": 0,
+      "explanation": "算法必须满足“有穷性”，即必须在有限步内终止执行，不能陷入死循环。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def add_numbers(n: int) -> int:\n    # 求解 1 + 2 + ... + n\n    res = 0\n    for i in range(1, ____):\n        res += i\n    return res",
+      "stem": "补全求解 1 到 n 累加和的循环范围：",
+      "blanks": [
+        {
+          "answer": "n + 1",
+          "accept": [
+            "n+1"
+          ]
+        }
+      ],
+      "explanation": "Python range(start, stop) 是左闭右开区间，若要包含 n，右边界必须为 n + 1。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "同一道计算问题通常可以有多种不同的算法解决方案，我们通过评估算法的____与空间开销来评判其优劣。",
+      "answer": "时间",
+      "accept": [
+        "时间复杂度",
+        "时间开销",
+        "运行时间"
+      ],
+      "explanation": "时间和空间是衡量算法效率的两大核心标准。"
+    }
+  ],
+  "algo-s009": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "数据结构与算法的关系可以用下列哪组形象比喻来描述？",
+      "options": [
+        "数据结构如同食材原料的组织存放方式，算法如同烹饪制作的菜谱步骤",
+        "数据结构就是硬件内存条，算法就是显示器",
+        "数据结构只能在编译期存在，算法只能在操作系统关机时存在",
+        "数据结构只处理数字，算法只处理文字"
+      ],
+      "answer": 0,
+      "explanation": "数据结构是数据的组织、存储与管理结构，算法是在该结构上执行的操作步骤，二者紧密结合构成完整程序。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "衡量算法好坏的标准不能仅仅看在某台特定电脑上的绝对秒数，而应分析其随着数据规模 n 增长的____趋势（大O表示法）。",
+      "answer": "渐近",
+      "accept": [
+        "渐进",
+        "渐近增长",
+        "增长"
+      ],
+      "explanation": "渐近复杂度分析剥离了硬件差异，专注于数据规模增长对开销的影响趋势。"
+    }
+  ],
+  "algo-s010": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "为什么我们在分析算法时不直接采用“实测计时”的方法，而要采用复杂度分析？",
+      "options": [
+        "实际运行时间受硬件性能、操作系统调度、编程语言及输入规模等多种环境因素干扰",
+        "因为所有操作系统的时钟都无法测量微秒级时间",
+        "实测运行时间会导致硬盘物理损坏",
+        "理论分析可以证明计算机硬件永远不需要升级"
+      ],
+      "answer": 0,
+      "explanation": "实际测试具有环境依赖性与输入局限性，而渐近复杂度分析能提供客观、跨平台的数学模型。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在渐近符号中，大 O 符号通常用于表示算法运行时间的____界（上界/下界/平均）。",
+      "answer": "上界",
+      "accept": [
+        "渐近上界",
+        "最差情况",
+        "上"
+      ],
+      "explanation": "大 O（Big-O）表示法在数学上严格定义了函数增长的渐近上界。"
+    }
+  ],
+  "algo-s011": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "事后统计法（直接在电脑上跑代码计时）的严重缺陷是：",
+      "options": [
+        "无法在算法设计阶段就对效率进行预先评估",
+        "测试结果绝对不会受到输入数据测试集的影响",
+        "它不需要写出任何代码即可测量",
+        "统计结果在数学上等于时间常数 0"
+      ],
+      "answer": 0,
+      "explanation": "事后统计法必须先写出完整可运行代码并在真实机器上跑，无法在设计前期指导方案选型。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "事前估算算法效率的核心分析方法称为____分析法。",
+      "answer": "渐近复杂度",
+      "accept": [
+        "渐进复杂度",
+        "复杂度",
+        "渐近"
+      ],
+      "explanation": "事前估算通过渐近分析（Asymptotic Analysis）评估算法随数据规模变化的增长率。"
+    }
+  ],
+  "algo-s012": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在编写递归函数时，必须具备的至关重要的要素是：",
+      "options": [
+        "终止条件（递归出口）和递归调用",
+        "必须包含 while 循环",
+        "必须动态分配堆内存",
+        "参数必须是浮点数"
+      ],
+      "answer": 0,
+      "explanation": "递归函数必须有明确的终止条件以避免无限递归栈溢出，并有向终止条件逐步推进的递归调用。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def fib(n: int) -> int:\n    # 递归计算斐波那契数列第 n 项\n    if n <= 1:\n        return ____\n    return fib(n - 1) + fib(n - 2)",
+      "stem": "补全斐波那契递归函数的边界返回值：",
+      "blanks": [
+        {
+          "answer": "n",
+          "accept": [
+            "n"
+          ]
+        }
+      ],
+      "explanation": "当 n = 0 时返回 0，当 n = 1 时返回 1，统一简写为 return n。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "如果递归调用层次过深，超过了调用栈所能分配的最大内存限制，会导致____溢出错误（Stack Overflow）。",
+      "answer": "栈",
+      "accept": [
+        "栈溢出",
+        "stack",
+        "调用栈"
+      ],
+      "explanation": "每一次函数调用都在内存的调用栈上压入栈帧，递归过深会引发栈溢出（Stack Overflow）。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "尾递归（Tail Recursion）是指：",
+      "options": [
+        "递归调用是函数体执行的最后一个操作，且其返回值不包含任何额外的运算",
+        "递归函数在最后一行才声明变量",
+        "递归函数只有一个参数",
+        "递归深度不能超过 10"
+      ],
+      "answer": 0,
+      "explanation": "尾递归由于最后一步直接返回递归调用结果，部分编译器能将其优化为等价循环，避免压栈。"
+    }
+  ],
+  "algo-s013": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "设某算法的操作步数函数为 T(n) = 3n^2 + 100n + 5000，则该算法的大 O 时间复杂度为：",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(1)",
+        "O(n^3)"
+      ],
+      "answer": 0,
+      "explanation": "大 O 复杂度忽略低次项和最高项常数系数，3n^2 的阶最高，因此是 O(n^2)。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "def func(n: int):\n    count = 0\n    i = 1\n    while i < n:\n        i = i * 2\n        count += 1\n    return count\n\nprint(func(16))",
+      "stem": "上述代码循环体执行次数是几次？",
+      "answer": "4",
+      "accept": [
+        "4\n"
+      ],
+      "explanation": "i 的序列依次为 1, 2, 4, 8，下次为 16 退出循环，共执行 4 次，时间复杂度为 O(log n)。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "常见时间复杂度按增长率从小到大排列：O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(____^n) < O(n!)。",
+      "answer": "2",
+      "accept": [
+        "2",
+        "2^n"
+      ],
+      "explanation": "多项式阶之后是指数阶 O(2^n) 和阶乘阶 O(n!)。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "若一个算法处理规模为 n 的问题时，无论输入数据是完全随机还是完全有序，步数都固定为 5n + 10，则其时间复杂度为：",
+      "options": [
+        "O(n)",
+        "O(1)",
+        "O(n^2)",
+        "O(log n)"
+      ],
+      "answer": 0,
+      "explanation": "线性多项式 5n + 10 在大 O 表示下直接归化为 O(n)。"
+    }
+  ],
+  "algo-s014": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "计算函数空间复杂度时，下列哪项不属于需要计入的额外开销？",
+      "options": [
+        "输入数据本身已占用的固定存储空间",
+        "函数内部动态申请的数组或哈希表空间",
+        "函数递归调用所产生的调用栈帧空间",
+        "为算法辅助计算而声明的临时变量"
+      ],
+      "answer": 0,
+      "explanation": "空间复杂度衡量的是算法在运行过程中“额外”占用的存储空间，输入数据本身的内存不计入辅助空间复杂度。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "一个递归深度为 n 且每层只使用 O(1) 辅助变量的函数，其空间复杂度为 O(____)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "递归深度为 n 会在调用栈上依次产生 n 个栈帧，因此占用 O(n) 的栈空间。"
+    }
+  ],
+  "algo-s015": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "当两个算法解决同一问题时，算法 A 为 O(n)，算法 B 为 O(1000n)，以下描述正确的是：",
+      "options": [
+        "虽然在大 O 视角下二者都是线性阶 O(n)，但在常数因子相差巨大时需结合实际数据规模分析",
+        "算法 B 的大 O 一定是 O(n^2)",
+        "算法 A 在所有规模下都必须比算法 B 快 1000 倍",
+        "大 O 记号必须严格保留 1000 这个常数"
+      ],
+      "answer": 0,
+      "explanation": "大 O 分析主要描述增长趋势，常数项被省略，但实际工程中常数因子的影响不可完全忽视。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在算法分析中，我们最常用的是____情况时间复杂度（最好/最差/均摊），因为它给出了算法性能的安全保障底线。",
+      "answer": "最差",
+      "accept": [
+        "最坏",
+        "最差情况",
+        "最坏情况"
+      ],
+      "explanation": "最差情况复杂度为算法的运行时间提供了绝对的上界保障。"
+    }
+  ],
+  "algo-s016": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "计算 1 + 2 + ... + n，迭代写法空间复杂度为 O(1)，普通递归写法空间复杂度为 O(n)。造成差异的根本原因是：",
+      "options": [
+        "普通递归需要在系统栈上保存每一层调用的局部变量和返回地址",
+        "迭代写法在 CPU 硬件内部不需要时钟周期",
+        "递归写法会自动把所有数值保存到硬盘上",
+        "迭代写法每次循环都会抹掉编译器的符号表"
+      ],
+      "answer": 0,
+      "explanation": "递归函数每递归一层就会压入一个栈帧，n 层递归累积深度为 n，而迭代仅复用固定几个局部变量。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "def nested_loops(n: int):\n    res = 0\n    for i in range(n):\n        for j in range(i, n):\n            res += 1\n    return res\n\nprint(nested_loops(4))",
+      "stem": "输入 n = 4 执行上述嵌套循环代码，res 的最终返回值是多少？",
+      "answer": "10",
+      "accept": [
+        "10\n"
+      ],
+      "explanation": "外层 i=0 时内层循环 4 次，i=1 时 3 次，i=2 时 2 次，i=3 时 1 次，4+3+2+1 = 10，时间复杂度为 O(n^2)。"
+    },
+    {
+      "id": "q3",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def recursive_sum(n: int) -> int:\n    if n == 1:\n        return 1\n    return n + recursive_sum(____)",
+      "stem": "补全递归求和函数向下递归的参数：",
+      "blanks": [
+        {
+          "answer": "n - 1",
+          "accept": [
+            "n-1"
+          ]
+        }
+      ],
+      "explanation": "计算 1 到 n 的和，递归关系为 n + sum(n - 1)。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "双层嵌套循环，外层循环 n 次，内层循环与 i 无关固定循环 100 次，其大 O 时间复杂度为 O(____)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "总循环次数为 100n，忽略常数系数 100，大 O 复杂度为 O(n)。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "下列代码段的时间复杂度是多少？\ndef example(n):\n    for i in range(n):\n        for j in range(n):\n            print(i, j)",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(log n)",
+        "O(2^n)"
+      ],
+      "answer": 0,
+      "explanation": "外层循环 n 次，内层循环每次执行 n 次，总执行次数为 n * n = n^2，时间复杂度为 O(n^2)。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "斐波那契数列未经记忆化优化的朴素递归实现，其时间复杂度为指数阶 O(____^n)。",
+      "answer": "2",
+      "accept": [
+        "2",
+        "2^n"
+      ],
+      "explanation": "未经优化的递归树呈现二叉分裂，节点数以指数级 2^n 增长。"
+    }
+  ],
+  "algo-s017": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "关于逻辑结构与物理结构的定义，下列说法正确的是：",
+      "options": [
+        "逻辑结构描述数据元素之间的逻辑关系，物理结构描述数据在计算机内存中的物理存储方式",
+        "逻辑结构是指内存条的插槽位置，物理结构是软件算法流程",
+        "所有数据结构在物理内存中都只能是连续存储的",
+        "逻辑结构与物理结构没有任何对应关系，互不影响"
+      ],
+      "answer": 0,
+      "explanation": "逻辑结构（如线性、树形、图形）从概念上抽象关系，物理结构（连续、链式）反映在内存中的实际组织形式。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在计算机底层，所有数据结构的物理存储本质上只有两种基本组织形式：连续存储（数组）与____存储（链表）。",
+      "answer": "链式",
+      "accept": [
+        "离散",
+        "链式存储",
+        "指针"
+      ],
+      "explanation": "连续空间（数组）和离散节点指针（链表）是内存物理存储的两大基石。"
+    }
+  ],
+  "algo-s018": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "下列数据结构中，属于非线性数据结构的是：",
+      "options": [
+        "二叉树与图",
+        "一维数组",
+        "单向链表",
+        "栈与队列"
+      ],
+      "answer": 0,
+      "explanation": "数组、链表、栈、队列均为线性结构，元素间呈一对一前后关系；树（一对多）和图（多对多）属于非线性结构。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "树结构中元素之间呈现一对____的层级从属关系（一/多）。",
+      "answer": "多",
+      "accept": [
+        "多",
+        "N"
+      ],
+      "explanation": "树节点与子节点呈现典型的一对多层级分支结构。"
+    }
+  ],
+  "algo-s019": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在标准 64 位体系中，C/C++ 中一个 int 类型通常占用多少个字节（Bytes）？",
+      "options": [
+        "4",
+        "1",
+        "8",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "在大多数常见系统与编译器下，标准 32 位整型 int 占用 4 个字节（32 位）。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "计算机内部所有数据的最基本度量单位是比特（bit），1 字节（Byte）等于____个比特。",
+      "answer": "8",
+      "accept": [
+        "8"
+      ],
+      "explanation": "1 Byte = 8 bits。"
+    }
+  ],
+  "algo-s020": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在现代计算机系统中，带符号整数通常采用下列哪种编码格式存储？",
+      "options": [
+        "补码（Two's Complement）",
+        "原码",
+        "反码",
+        "BCD 码"
+      ],
+      "answer": 0,
+      "explanation": "补码可以将符号位与数值位统一参与加减运算，且消除了正负零歧义，是计算机存储有符号整数的标准编码。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "8 位二进制有符号整数中，补码 11111111 对应的十进制真值是____。",
+      "answer": "-1",
+      "accept": [
+        "-1"
+      ],
+      "explanation": "全 1 的补码在十进制中对应数值 -1。"
+    }
+  ],
+  "algo-s021": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "当今互联网最通用的变长多字节 Unicode 字符编码方案是：",
+      "options": [
+        "UTF-8",
+        "ASCII",
+        "GB2312",
+        "Latin-1"
+      ],
+      "answer": 0,
+      "explanation": "UTF-8 使用 1 到 4 个字节编码 Unicode 字符，向后兼容 ASCII，成为互联网标准。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "标准 ASCII 码使用____个二进制位（bits）对英文字符及常见控制符进行编码。",
+      "answer": "7",
+      "accept": [
+        "7",
+        "8"
+      ],
+      "explanation": "标准 ASCII 码使用 7 位（占用一个字节的低 7 位），编码范围 0~127。"
+    }
+  ],
+  "algo-s022": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "根据数据元素在内存中的连续性，下列对比完全正确的是：",
+      "options": [
+        "数组连续存储，空间局部性好；链表离散存储，增删节点无需搬移后续元素",
+        "数组离散存储，不可随机访问；链表连续存储，无法动态扩容",
+        "数组访问任何元素都需要 O(n) 遍历",
+        "链表在内存中不需要消耗任何指针额外开销"
+      ],
+      "answer": 0,
+      "explanation": "数组利用连续空间实现 O(1) 索引定位与良好缓存局部性；链表利用指针链接离散节点，插入删除快速但无法直接下标跳转。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "基于连续内存的数据结构对 CPU 高速____友好（Cache 命中率高）。",
+      "answer": "缓存",
+      "accept": [
+        "Cache",
+        "cache",
+        "高速缓存"
+      ],
+      "explanation": "连续内存由于预读机制，具有极佳的空间局部性，能极大提高 CPU Cache 命中率。"
+    }
+  ],
+  "algo-s023": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "若要存储一个班级 50 名学生的考试成绩，并且需要频繁按学号直接查询某生成绩，最适宜选用的数据结构是：",
+      "options": [
+        "数组（或以学号为下标的列表）",
+        "单向非循环链表",
+        "二叉平衡树",
+        "单向队列"
+      ],
+      "answer": 0,
+      "explanation": "学号可直接映射为连续整数下标，数组的 O(1) 随机访问性能最优。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "一个 32 位无符号整数所能表示的最大十进制整数约为 42.9____（亿/万/千）。",
+      "answer": "亿",
+      "accept": [
+        "亿",
+        "42.9亿",
+        "43亿"
+      ],
+      "explanation": "2^32 - 1 = 4,294,967,295，约为 42.9 亿。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "下列哪项是链表相比数组的主要缺点？",
+      "options": [
+        "每个节点都需要额外存储指针变量，且不支持 O(1) 随机访问",
+        "插入新元素必须整体向后搬移整个链表",
+        "链表的最大容量必须在编译期写死无法扩容",
+        "链表无法保存对象类型的数据"
+      ],
+      "answer": 0,
+      "explanation": "链表每个节点附带指针开销，且查找指定索引元素必须从表头沿指针一步步遍历，耗时 O(n)。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "在具有高频随机访问（如按索引取值）、极少发生插入删除的场景下，首选的数据结构是：",
+      "options": [
+        "数组",
+        "单向链表",
+        "双向链表",
+        "循环链表"
+      ],
+      "answer": 0,
+      "explanation": "数组支持 O(1) 的随机访问，极其契合高频查值场景。"
+    },
+    {
+      "id": "q5",
+      "type": "fill",
+      "stem": "单向链表的每个节点包含数据域与指向下一个节点的____域。",
+      "answer": "指针",
+      "accept": [
+        "指针",
+        "引用",
+        "next",
+        "地址"
+      ],
+      "explanation": "单链表节点由数据域（val）与指针域（next）组成。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "python",
+      "code": "arr = [10, 20, 30]\nprint(arr[1] + len(arr))",
+      "stem": "上述数组读取与长度代码执行后，打印的计算结果是多少？",
+      "answer": "23",
+      "accept": [
+        "23",
+        "23\n"
+      ],
+      "explanation": "arr[1] 是 20，len(arr) 是 3，20 + 3 = 23。"
+    }
+  ],
+  "algo-s024": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "数组（Array）在计算机内存中的物理布局是：",
+      "options": [
+        "一段长度固定、地址连续的内存空间",
+        "随机分散在各个不同物理内存页上的节点",
+        "保存在硬盘文件中的键值对树",
+        "依赖指针互相指引的循环闭环"
+      ],
+      "answer": 0,
+      "explanation": "数组的本质特征就是分配在一段连续的物理内存空间中。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "设数组首地址为 base_addr，每个元素大小为 size，则下标为 i 的元素内存地址计算公式为：base_addr + i * ____。",
+      "answer": "size",
+      "accept": [
+        "size",
+        "element_size",
+        "元素大小"
+      ],
+      "explanation": "内存寻址公式：address = base_addr + i * size，这使得数组能以 O(1) 快速定位元素。"
+    }
+  ],
+  "algo-s025": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在具有 n 个元素的数组中，向索引 index 处插入一个新元素，最差时间复杂度是：",
+      "options": [
+        "O(n)",
+        "O(1)",
+        "O(log n)",
+        "O(n^2)"
+      ],
+      "answer": 0,
+      "explanation": "在数组头部或中间插入元素时，需要将 index 及其右侧的所有元素依次向后挪动一位，最坏情况下需要挪动 n 个元素，复杂度为 O(n)。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def insert(nums: list[int], num: int, index: int):\n    # 将元素 num 插入到数组下标 index 处（假设末尾有富余空间）\n    for i in range(len(nums) - 1, index, -1):\n        nums[i] = nums[____]\n    nums[index] = num",
+      "stem": "补全元素向后搬移的读取下标：",
+      "blanks": [
+        {
+          "answer": "i - 1",
+          "accept": [
+            "i-1"
+          ]
+        }
+      ],
+      "explanation": "从后向前循环，每个位置 nums[i] 被前一个位置 nums[i - 1] 的值覆盖。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "在已知元素下标的前提下，访问数组中该元素的时间复杂度为 O(____)。",
+      "answer": "1",
+      "accept": [
+        "1",
+        "O(1)"
+      ],
+      "explanation": "数组直接根据首地址加偏移量寻址，时间复杂度为 O(1)。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "在数组末尾追加一个新元素（假设未超过预留容量），其时间复杂度为：",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(n^2)",
+        "O(log n)"
+      ],
+      "answer": 0,
+      "explanation": "末尾追加无需搬移任何既有元素，只需直接向末尾下标赋值，耗时 O(1)。"
+    }
+  ],
+  "algo-s026": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在已知待插入节点的前驱节点指针 node 的前提下，在单向链表中插入新节点 newNode 的操作时间复杂度是：",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n^2)"
+      ],
+      "answer": 0,
+      "explanation": "已知前驱指针时，只需修改两个指针指向（newNode.next = node.next; node.next = newNode），无需遍历，耗时 O(1)。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def insert(n0: ListNode, p: ListNode):\n    # 在节点 n0 之后插入新节点 p\n    p.next = ____\n    n0.next = p",
+      "stem": "补全链表插入操作中新节点 p 的后继指针赋值：",
+      "blanks": [
+        {
+          "answer": "n0.next",
+          "accept": [
+            "n0.next"
+          ]
+        }
+      ],
+      "explanation": "必须先将 p 的 next 指向原本 n0 的下一个节点 n0.next，再将 n0.next 指向 p，否则会丢失链表后序节点引用。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "单向链表中最后一个节点的 next 指针通常指向____（Python 中的 None 或 C++ 中的 nullptr）。",
+      "answer": "null",
+      "accept": [
+        "None",
+        "nullptr",
+        "NULL",
+        "null",
+        "空"
+      ],
+      "explanation": "链表尾节点的 next 指针指向 null/None，作为遍历终止的标志。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "在具有头节点 Dummy Head（哨兵节点）的单链表中，哨兵节点的核心作用是：",
+      "options": [
+        "简化边界处理，使得在头节点之前插入或删除头节点的操作逻辑与中间节点统一",
+        "使链表自动具备双向索引能力",
+        "加快链表的遍历速度 10 倍",
+        "减少链表的内存开销"
+      ],
+      "answer": 0,
+      "explanation": "虚拟头节点（Dummy Head）消除了对 head 为空或删除首节点的特殊 if 判断，极大简化链表代码。"
+    }
+  ],
+  "algo-s027": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "动态数组（如 Python 的 list，Java 的 ArrayList，C++ 的 vector）通常是如何实现容量自动扩充的？",
+      "options": [
+        "当容量不足时，申请一段通常为原容量 1.5 或 2 倍的新连续内存，将原元素搬移过去并释放旧数组",
+        "向操作系统发出硬件指令直接在原有物理内存地址后强行追加空间",
+        "自动转变成单向离散链表存储",
+        "删除最早入队的一半元素以腾出空间"
+      ],
+      "answer": 0,
+      "explanation": "动态数组扩容机制是开辟更大的新连续空间、复制原数据并更新内部指针，均摊时间复杂度为 O(1)。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "arr = [1, 2, 3]\narr.append(4)\narr.pop(1)\nprint(arr)",
+      "stem": "上述 Python 列表操作执行后，打印输出的列表内容是什么？",
+      "answer": "[1, 3, 4]",
+      "accept": [
+        "[1, 3, 4]",
+        "[1,3,4]",
+        "[1, 3, 4]\n"
+      ],
+      "explanation": "append(4) 之后列表为 [1, 2, 3, 4]，pop(1) 删除了下标 1 的元素 2，剩余 [1, 3, 4]。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "虽然单次扩容复制需要 O(n) 时间，但由于扩容不频繁，动态数组末尾追加元素（append）的____时间复杂度为 O(1)。",
+      "answer": "均摊",
+      "accept": [
+        "均摊",
+        "平均",
+        "分摊"
+      ],
+      "explanation": "每次扩容使容量翻倍，扩容成本被均匀分摊到后续多次插入中，均摊（Amortized）时间复杂度为 O(1)。"
+    }
+  ],
+  "algo-s028": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在遍历数据结构时，数组的遍历速度往往显著快于相同元素数量的链表，其核心硬件原因是：",
+      "options": [
+        "数组具有优秀的空间局部性，能够充分利用 CPU 高速缓存行（Cache Line）预取",
+        "链表节点的指针比整型数值更加占用带宽",
+        "CPU 内部没有能够处理指针跳转的电路",
+        "操作系统会刻意对链表线程进行降速调度"
+      ],
+      "answer": 0,
+      "explanation": "CPU 访问连续内存时，相邻内存块被一同预读入缓存（空间局部性）；链表节点离散分布，容易引发缓存未命中（Cache Miss）。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "程序在短时间内重复访问临近的内存单元，这种现象在计算机组成原理中被称为____局部性原理（时间/空间）。",
+      "answer": "空间",
+      "accept": [
+        "空间",
+        "空间局部性"
+      ],
+      "explanation": "连续访问相邻存储位置体现了典型的空间局部性（Spatial Locality）。"
+    }
+  ],
+  "algo-s029": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在数据量变化剧烈且频繁在头部或中间进行插入/删除操作的业务场景下，应优先考虑使用：",
+      "options": [
+        "链表",
+        "固定大小数组",
+        "只读字符串",
+        "哈希集合"
+      ],
+      "answer": 0,
+      "explanation": "链表在节点插入和删除时只需更新相邻指针，无须像数组那样大批量搬移后续元素。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "双向链表的每个节点除了保存 val 和 next 外，还额外包含指向前驱节点的____指针。",
+      "answer": "prev",
+      "accept": [
+        "prev",
+        "previous",
+        "前驱"
+      ],
+      "explanation": "双向链表通过 prev 指针支持双向遍历。"
+    }
+  ],
+  "algo-s030": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在单向链表中，已知头节点 head，如何找到倒数第 k 个节点（双指针经典技巧）？",
+      "options": [
+        "让快指针先走 k 步，然后快慢指针同速前进，当快指针到达链表末尾时慢指针刚好指向倒数第 k 个",
+        "先反转整个链表，再把链表全部删除",
+        "慢指针每次走两步，快指针每次走一步",
+        "无法在单向链表中完成，必须使用双向链表"
+      ],
+      "answer": 0,
+      "explanation": "快慢双指针相差 k 步，快指针探底时，慢指针与末尾相差 k 步，恰好落在倒数第 k 个节点。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def reverse_list(head: ListNode) -> ListNode:\n    # 反转单向链表\n    cur, pre = head, None\n    while cur:\n        tmp = cur.next\n        cur.next = pre\n        pre = cur\n        cur = ____\n    return pre",
+      "stem": "补全反转链表双指针迭代逻辑：",
+      "blanks": [
+        {
+          "answer": "tmp",
+          "accept": [
+            "tmp"
+          ]
+        }
+      ],
+      "explanation": "修改完当前节点指向后，当前指针 cur 前进到之前暂存的后继节点 tmp。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\nnode3 = ListNode(3)\nnode2 = ListNode(2, node3)\nnode1 = ListNode(1, node2)\n\nnode1.next = node3\nprint(node1.next.val)",
+      "stem": "上述代码通过删除 node2 节点，最后打印出来的 node1.next.val 是多少？",
+      "answer": "3",
+      "accept": [
+        "3",
+        "3\n"
+      ],
+      "explanation": "执行 node1.next = node3 后，跳过了 node2，直接指向 node3，因此值为 3。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "环形链表中最后一个节点的 next 指针指向的是链表的____节点，从而形成闭环。",
+      "answer": "头",
+      "accept": [
+        "头",
+        "头节点",
+        "head"
+      ],
+      "explanation": "环形链表的尾节点 next 回指头节点（或链中某节点）形成环。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "若已知单链表可能存在环，判断是否有环的最高效经典算法是：",
+      "options": [
+        "快慢指针法（Floyd 判环算法）：快指针每次走两步，慢指针每次走一步，若相遇则有环",
+        "把所有节点的值全部加起来看是否溢出",
+        "将链表节点全部反转",
+        "计算链表的总长度"
+      ],
+      "answer": 0,
+      "explanation": "快慢双指针（龟兔赛跑算法）只需 O(1) 额外空间即可在 O(n) 时间内检测链表中是否存在环路。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "在单向链表中删除某个节点 node，若拥有其前驱节点 prev，则执行 prev.next = node.____。",
+      "answer": "next",
+      "accept": [
+        "next",
+        "后继"
+      ],
+      "explanation": "跨过目标节点：prev.next = node.next。"
+    }
+  ],
+  "algo-s031": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "栈与队列在计算机科学中属于典型的：",
+      "options": [
+        "操作受限的线性表",
+        "非线性树形结构",
+        "无序散列集合",
+        "多对多复杂网络"
+      ],
+      "answer": 0,
+      "explanation": "栈和队列本质上仍然是元素排成序列的线性结构，但限定了只能在特定端点进行插入与删除操作。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "栈的操作原则是“后进先出”（LIFO），而队列的操作原则是“____先出”（FIFO）。",
+      "answer": "先进",
+      "accept": [
+        "先进",
+        "先进先出",
+        "先到"
+      ],
+      "explanation": "队列具有先进先出（First In, First Out）的特性。"
+    }
+  ],
+  "algo-s032": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在软件系统中，下列哪个实际场景最适宜使用“栈”来实现？",
+      "options": [
+        "浏览器网页访问的历史后退功能与编辑器的撤销（Undo）操作",
+        "打印机任务排队打印",
+        "按姓名拼音字母快速检索通讯录联系人",
+        "银行网点叫号排队办理业务"
+      ],
+      "answer": 0,
+      "explanation": "撤销与后退都是倒序恢复上一步操作，完全符合后进先出（LIFO）的栈模型。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "s = []\ns.append(10)\ns.append(20)\ns.append(30)\ns.pop()\ns.append(40)\nprint(s[-1])",
+      "stem": "执行上述代码后，栈顶元素 s[-1] 输出为：",
+      "answer": "40",
+      "accept": [
+        "40",
+        "40\n"
+      ],
+      "explanation": "入栈 10, 20, 30 后，pop() 移除了 30，随后再入栈 40，此时栈顶为 40。"
+    },
+    {
+      "id": "q3",
+      "type": "codefill",
+      "lang": "python",
+      "code": "class ArrayStack:\n    def __init__(self):\n        self._stack = []\n    def push(self, val: int):\n        self._stack.append(val)\n    def pop(self) -> int:\n        return self._stack.____()",
+      "stem": "补全基于列表实现的栈 pop 出栈操作：",
+      "blanks": [
+        {
+          "answer": "pop",
+          "accept": [
+            "pop"
+          ]
+        }
+      ],
+      "explanation": "列表尾部作为栈顶，append 为入栈，pop() 移除末尾元素为出栈。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "调用栈（Call Stack）在函数调用时用来保存：",
+      "options": [
+        "局部变量、函数参数与函数执行完毕后的返回地址",
+        "所有用户的数据库密码",
+        "所有静态网页的 HTML 代码",
+        "声卡和网卡的硬件驱动程序"
+      ],
+      "answer": 0,
+      "explanation": "栈帧（Stack Frame）保存每次函数调用的现场数据（局部变量、参数、返回地址）。"
+    }
+  ],
+  "algo-s033": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "若基于单向链表实现队列，为了实现出队与入队均为 O(1) 时间，最佳设计是：",
+      "options": [
+        "链表头作为队首（出队），链表尾作为队尾（入队）",
+        "链表头作为队尾（入队），链表尾作为队首（出队）",
+        "出队时必须遍历整个链表找到尾部",
+        "只使用一个指针指向链表中间"
+      ],
+      "answer": 0,
+      "explanation": "单链表头节点删除只需修改 head 指针为 O(1)；配合 tail 指针在链表尾追加节点也是 O(1)。若在单链表尾部删除节点需要寻找前驱，耗时 O(n)。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "class ArrayQueue:\n    def __init__(self, capacity: int):\n        self.nums = [0] * capacity\n        self.front = 0\n        self.size = 0\n    def push(self, num: int):\n        rear = (self.front + self.size) % len(self.nums)\n        self.nums[rear] = num\n        self.size += 1",
+      "stem": "环形队列中利用模运算（%）解决数组假溢出问题。若 front=3, size=2, 容量为 5，新元素存放下标 rear 是多少？",
+      "answer": "0",
+      "accept": [
+        "0",
+        "0\n"
+      ],
+      "explanation": "(3 + 2) % 5 = 0，元素环绕放回数组开头第 0 位。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "在操作系统进程调度中，先到达就绪状态的进程先获得 CPU 运行，采用的是基于____（栈/队列）的调度机制。",
+      "answer": "队列",
+      "accept": [
+        "队列",
+        "FIFO队列",
+        "queue"
+      ],
+      "explanation": "先来先服务（FCFS）是典型的基于队列的数据结构。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "环形队列中判断队列已满的常见经典条件是（牺牲一个存储单元空闲）：",
+      "options": [
+        "(rear + 1) % capacity == front",
+        "rear == front",
+        "size == 0",
+        "front == 0"
+      ],
+      "answer": 0,
+      "explanation": "留空一个位置用于区分“队空”（rear == front）与“队满”（(rear + 1) % capacity == front）。"
+    }
+  ],
+  "algo-s034": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "双向队列（Double-Ended Queue / Deque）相比普通队列的特点是：",
+      "options": [
+        "允许在队首和队尾两端同时进行元素的插入和删除操作",
+        "只能在中间位置插入元素",
+        "元素容量绝对不可动态扩充",
+        "内部元素会自动按从小到大排序"
+      ],
+      "answer": 0,
+      "explanation": "双向队列在两端都开放了 push 和 pop 功能，兼具栈与队列的灵活性。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "from collections import deque\nd = deque()\nd.append(1)\nd.appendleft(2)\nd.append(3)\nd.popleft()\nprint(list(d))",
+      "stem": "执行上述双向队列代码后，打印的列表结果是什么？",
+      "answer": "[1, 3]",
+      "accept": [
+        "[1, 3]",
+        "[1,3]",
+        "[1, 3]\n"
+      ],
+      "explanation": "append(1) 后为 [1]，appendleft(2) 后为 [2, 1]，append(3) 后为 [2, 1, 3]，popleft() 移除了开头的 2，剩余 [1, 3]。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "在滑动窗口求最大值的经典算法题目中，最常用的高效数据结构是____双向队列（单调/循环）。",
+      "answer": "单调",
+      "accept": [
+        "单调",
+        "单调队列"
+      ],
+      "explanation": "单调双向队列（保持队内元素单调递减）能在 O(n) 内解决滑动窗口极值问题。"
+    }
+  ],
+  "algo-s035": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "下列关于基于环形数组实现队列的描述，正确的是：",
+      "options": [
+        "通过将数组首尾逻辑上相连，有效避免了普通线性数组出队后前端空间的“假溢出”浪费",
+        "环形数组只允许存储负数",
+        "环形数组在物理内存上也是弯曲成圆环的",
+        "环形数组的出队操作时间复杂度会上升到 O(n)"
+      ],
+      "answer": 0,
+      "explanation": "环形数组借助取模运算复用数组前端已出队腾出的空间，避免假溢出，入队和出队保持 O(1)。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "栈与队列的 push、pop、peek 核心操作，其时间复杂度均应当为 O(____)。",
+      "answer": "1",
+      "accept": [
+        "1",
+        "O(1)"
+      ],
+      "explanation": "栈和队列在两端点的常规操作均为常数阶 O(1)。"
+    }
+  ],
+  "algo-s036": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "给定入栈顺序为 1, 2, 3，在允许进栈过程中随时出栈的前提下，不可能得到的出栈序列是：",
+      "options": [
+        "3, 1, 2",
+        "3, 2, 1",
+        "1, 2, 3",
+        "2, 3, 1"
+      ],
+      "answer": 0,
+      "explanation": "如果 3 最先出栈，说明 1 和 2 已经在栈内，且 2 在栈顶、1 在栈底，出栈顺序只能是 3, 2, 1，不可能出现 1 先于 2 出栈的 3, 1, 2。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def is_valid_parentheses(s: str) -> bool:\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping:\n            top = stack.pop() if stack else \"#\"\n            if mapping[char] != ____:\n                return False\n        else:\n            stack.append(char)\n    return not stack",
+      "stem": "补全经典括号匹配算法中校验栈顶字符的变量名：",
+      "blanks": [
+        {
+          "answer": "top",
+          "accept": [
+            "top"
+          ]
+        }
+      ],
+      "explanation": "右括号 char 对应的期望左括号 mapping[char] 必须与弹出的栈顶字符 top 完全一致。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "stack = []\nfor x in [1, 2, 3, 4]:\n    stack.append(x)\n    if x % 2 == 0:\n        stack.pop()\nprint(stack)",
+      "stem": "上述模拟栈操作代码执行后，最终留在 stack 中的元素列表是什么？",
+      "answer": "[1, 3]",
+      "accept": [
+        "[1, 3]",
+        "[1,3]",
+        "[1, 3]\n"
+      ],
+      "explanation": "进 1; 进 2 并退 2; 进 3; 进 4 并退 4; 最终留在栈中的是 [1, 3]。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "使用两个先进先出的栈可以模拟实现一个先进先出的____（数据结构名称）。",
+      "answer": "队列",
+      "accept": [
+        "队列",
+        "Queue",
+        "queue"
+      ],
+      "explanation": "两个栈颠倒负负得正，输入栈和输出栈配合可以完全模拟出队列的功能。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "下列关于用两个队列实现一个栈的叙述中，正确的是：",
+      "options": [
+        "入栈时将新元素加入非空队列，出栈时将队列前面元素依次导入另一队列只留下队尾元素出队",
+        "永远不可能用两个先进先出的队列模拟栈",
+        "两个队列必须同时出队",
+        "模拟栈的时间复杂度为 O(n!)"
+      ],
+      "answer": 0,
+      "explanation": "利用辅助队列倒运数据，可以完全模拟后进先出的栈操作。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "在编译器中，计算后缀算术表达式（逆波兰表达式）最常用的核心数据结构是____。",
+      "answer": "栈",
+      "accept": [
+        "栈",
+        "Stack",
+        "stack"
+      ],
+      "explanation": "逆波兰表达式求值是栈的经典工程应用：遇操作数入栈，遇运算符弹出两个操作数计算后压回。"
+    }
+  ],
+  "algo-s037": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "哈希表（Hash Table）的核心优势在于：",
+      "options": [
+        "在理想状态下能够实现近乎 O(1) 的快速增删查改",
+        "内部元素会自动按插入时间从大到小严格有序排列",
+        "占用绝对不会超出数据本身大小的零内存空间",
+        "完全不需要任何哈希函数"
+      ],
+      "answer": 0,
+      "explanation": "哈希表利用哈希函数将键直接映射为数组存储下标，实现常数时间复杂度的快速查询。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "哈希表本质上是建立“键”（Key）与“____”（Value）之间的映射映射关系。",
+      "answer": "值",
+      "accept": [
+        "值",
+        "数值",
+        "Value",
+        "value"
+      ],
+      "explanation": "哈希表是键值对（Key-Value Pair）的存储结构。"
+    }
+  ],
+  "algo-s038": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "哈希函数（Hash Function）在哈希表中的作用是：",
+      "options": [
+        "将任意类型的输入键（Key）计算转换为固定范围内的数组整型索引",
+        "把所有输入字符串逆序翻转",
+        "对输入数据进行 AES-256 加密解密",
+        "按字典序对所有键排序"
+      ],
+      "answer": 0,
+      "explanation": "哈希函数将大范围或非整型键映射为连续紧凑的桶数组下标。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "h = {}\nh[\"apple\"] = 5\nh[\"banana\"] = 8\nh[\"apple\"] = 10\nprint(h[\"apple\"] + len(h))",
+      "stem": "上述字典代码执行后，打印的整数计算结果是多少？",
+      "answer": "12",
+      "accept": [
+        "12",
+        "12\n"
+      ],
+      "explanation": "h[\"apple\"] 被更新为 10，字典中共有两个键值对（apple 和 banana），长度为 2，10 + 2 = 12。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "哈希表中已存储元素数量与哈希表总容量的比值被称为____因子（Load Factor）。",
+      "answer": "负载",
+      "accept": [
+        "负载",
+        "装载",
+        "负载因子",
+        "装载因子"
+      ],
+      "explanation": "负载因子（Load Factor = 元素数量 / 桶数组容量）是衡量哈希表拥挤程度与是否触发扩容的关键指标。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "哈希表中如果直接使用 Key % capacity 作为散列函数，capacity 最好选为：",
+      "options": [
+        "质数（素数）",
+        "合数",
+        "偶数",
+        "任意负数"
+      ],
+      "answer": 0,
+      "explanation": "质数能有效打散包含公因数的输入模式，使哈希分布更均匀。"
+    }
+  ],
+  "algo-s039": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "解决哈希冲突的常见方法主要分为两大类，分别是：",
+      "options": [
+        "链式地址法（Separate Chaining）与开放寻址法（Open Addressing）",
+        "双向链表法与快速排序法",
+        "直接忽略法与死循环重试法",
+        "格式化硬盘法与二叉搜索法"
+      ],
+      "answer": 0,
+      "explanation": "链式地址法在冲突桶挂接链表/红黑树，开放寻址法（如线性探测）在数组其他空闲位置探测。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def linear_probe(hash_val: int, i: int, capacity: int) -> int:\n    # 线性探测第 i 次冲突的探测位置公式\n    return (hash_val + ____) % capacity",
+      "stem": "补全线性探测寻找下一个候选桶的偏移量表达式：",
+      "blanks": [
+        {
+          "answer": "i",
+          "accept": [
+            "i"
+          ]
+        }
+      ],
+      "explanation": "线性探测每次探测 (hash + i) % capacity，步长为线性递增的 i。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "当不同键经过哈希函数计算得到了完全相同的数组下标时，这种现象被称为哈希____。",
+      "answer": "冲突",
+      "accept": [
+        "冲突",
+        "碰撞",
+        "哈希冲突",
+        "哈希碰撞"
+      ],
+      "explanation": "因为输入键集合通常远大于哈希表容量，根据抽屉原理，哈希冲突（Hash Collision）是不可避免的。"
+    }
+  ],
+  "algo-s040": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "设计一个优秀的哈希算法，最关键的特性不包括以下哪一项？",
+      "options": [
+        "每次执行算法的时间必须超过 1 秒钟以确保安全",
+        "输出哈希值在目标范围内分布均匀，极大减少碰撞概率",
+        "确定性：相同输入必须产生绝对一致的输出",
+        "计算速度快，开销小"
+      ],
+      "answer": 0,
+      "explanation": "数据结构中的哈希算法追求高吞吐量与极低计算延迟，必须又快又均匀，不能刻意延迟。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在密码学中广泛使用的经典单向哈希函数 MD5，其生成的哈希值长度为____位（128/256/512）。",
+      "answer": "128",
+      "accept": [
+        "128",
+        "128位"
+      ],
+      "explanation": "MD5 输出固定为 128 位二进制数（常表示为 32 位十六进制字符串）。"
+    }
+  ],
+  "algo-s041": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "当哈希表的负载因子过高（例如超过 0.75）时，为了维持 O(1) 的查询效率，哈希表通常会：",
+      "options": [
+        "进行扩容（Rehash），开辟一个容量更大的新桶数组并将全部元素重新哈希放置",
+        "抛出异常并直接终止程序",
+        "自动删除所有出现过冲突的键",
+        "将内部结构转换成无序链表"
+      ],
+      "answer": 0,
+      "explanation": "扩容 Rehash 能大幅降低负载因子与冲突率，确保增删查改维持在平均 O(1)。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "如果哈希函数设计极差导致所有键全部冲突到一个桶中，链式地址哈希表的查找时间复杂度会退化为 O(____)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "全部挂在同一链表上，查找等同于线性扫描链表，退化为 O(n)。"
+    }
+  ],
+  "algo-s042": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在力扣经典第 1 题“两数之和”中，如何利用哈希表将暴力双重循环的 O(n^2) 复杂度优化至 O(n)？",
+      "options": [
+        "遍历数组时，通过哈希表在 O(1) 时间内查找目标差值 (target - num) 是否在之前出现过",
+        "把数组元素先用冒泡排序排好序",
+        "把数组直接当成栈连续进行 pop 操作",
+        "计算数组中所有数字的阶乘"
+      ],
+      "answer": 0,
+      "explanation": "借助哈希表记录已经遍历过的数字及其下标，每次只需检索当前数字的配对数 (target - num) 是否已在哈希表中。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def two_sum(nums: list[int], target: int) -> list[int]:\n    dic = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in dic:\n            return [dic[complement], ____]\n        dic[num] = i\n    return []",
+      "stem": "补全两数之和返回当前数字下标的变量：",
+      "blanks": [
+        {
+          "answer": "i",
+          "accept": [
+            "i"
+          ]
+        }
+      ],
+      "explanation": "找到匹配数时，返回匹配数的索引 dic[complement] 和当前数字索引 i。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "nums = [2, 7, 11, 15]\ntarget = 9\nh = {}\nres = []\nfor i, x in enumerate(nums):\n    if target - x in h:\n        res = [h[target - x], i]\n        break\n    h[x] = i\nprint(res)",
+      "stem": "上述代码执行后，打印输出的配对下标是什么？",
+      "answer": "[0, 1]",
+      "accept": [
+        "[0, 1]",
+        "[0,1]",
+        "[0, 1]\n"
+      ],
+      "explanation": "nums[0] 为 2，当遍历到 i=1, x=7 时，9 - 7 = 2 已在 h 中，得到下标 [0, 1]。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "哈希集合（HashSet）在底层通常是基于____表实现的，只是其值的存储被置为空或固定占位符。",
+      "answer": "哈希",
+      "accept": [
+        "哈希",
+        "哈希表",
+        "HashMap"
+      ],
+      "explanation": "HashSet 通常是包裹了 HashMap 的简化版，只利用其键的互异性。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "在哈希表中，为什么除留余数法通常选择一个质数（素数）作为模数？",
+      "options": [
+        "质数能减少公约数分布规律带来的聚集冲突，使散列值分布更加均匀",
+        "计算机 CPU 只能对质数进行取模运算",
+        "质数可以彻底消除所有的哈希冲突",
+        "质数不需要占用任何内存"
+      ],
+      "answer": 0,
+      "explanation": "选取质数作为散列表大小，可以有效避免输入键具有公约数模式时引起的哈希冲突聚集。"
+    },
+    {
+      "id": "q6",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def contains_duplicate(nums: list[int]) -> bool:\n    # 判断数组中是否存在重复元素\n    seen = set()\n    for x in nums:\n        if x in seen:\n            return True\n        seen.____(x)\n    return False",
+      "stem": "补全哈希集合添加新元素的集合方法名：",
+      "blanks": [
+        {
+          "answer": "add",
+          "accept": [
+            "add"
+          ]
+        }
+      ],
+      "explanation": "Python set 添加元素使用 seen.add(x)。"
+    }
+  ],
+  "algo-s043": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "关于树（Tree）结构的基本术语，下列说法错误的是：",
+      "options": [
+        "树可以包含成环的闭合回路",
+        "没有父节点的节点称为根节点（Root）",
+        "没有子节点的节点称为叶节点（Leaf）",
+        "节点的度（Degree）是指其拥有的子节点数量"
+      ],
+      "answer": 0,
+      "explanation": "树是一种无环连通图，若包含环路则不再是树结构。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在具有 n 个节点的树中，边的总数严格等于 n - ____。",
+      "answer": "1",
+      "accept": [
+        "1"
+      ],
+      "explanation": "除根节点外，每个节点上方都唯一对应一条入射边，因此 n 个节点的树恰有 n - 1 条边。"
+    }
+  ],
+  "algo-s044": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "一棵深度为 k 的满二叉树（Full Binary Tree），其节点总数是：",
+      "options": [
+        "2^k - 1",
+        "2k",
+        "k^2",
+        "2^(k - 1)"
+      ],
+      "answer": 0,
+      "explanation": "满二叉树每层节点数按等比数列 1 + 2 + 4 + ... + 2^(k-1) 求和为 2^k - 1。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "class TreeNode:\n    def __init__(self, val: int = 0):\n        self.val = val\n        self.left: TreeNode | None = None\n        self.right: TreeNode | None = ____",
+      "stem": "补全二叉树节点类右孩子指针初始默认值：",
+      "blanks": [
+        {
+          "answer": "None",
+          "accept": [
+            "None"
+          ]
+        }
+      ],
+      "explanation": "新创建的叶子节点其左、右孩子默认均指向 None。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "每个节点的度都不大于 2 的树被称为____二叉树。",
+      "answer": "二叉",
+      "accept": [
+        "二叉",
+        "二叉树"
+      ],
+      "explanation": "每个节点最多只能有两个子节点（左孩子和右孩子）的树即二叉树。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "在具有 n 个节点的完全二叉树中，其最大树高为：",
+      "options": [
+        "⌊log2 n⌋ + 1",
+        "n",
+        "n / 2",
+        "2n"
+      ],
+      "answer": 0,
+      "explanation": "完全二叉树各层紧凑排列，树高对数严格受限为 floor(log2 n) + 1。"
+    }
+  ],
+  "algo-s045": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "二叉树的前序遍历（Pre-order Traversal）访问节点的先后顺序是：",
+      "options": [
+        "根节点 -> 左子树 -> 右子树",
+        "左子树 -> 根节点 -> 右子树",
+        "左子树 -> 右子树 -> 根节点",
+        "逐层从上到下、从左到右"
+      ],
+      "answer": 0,
+      "explanation": "前序即根在前（根左右），中序即根在中（左根右），后序即根在后（左右根）。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\nroot = TreeNode(1, TreeNode(2), TreeNode(3))\nres = []\ndef in_order(node):\n    if not node: return\n    in_order(node.left)\n    res.append(node.val)\n    in_order(node.right)\nin_order(root)\nprint(res)",
+      "stem": "上述中序遍历代码执行后，打印出的 res 列表是什么？",
+      "answer": "[2, 1, 3]",
+      "accept": [
+        "[2, 1, 3]",
+        "[2,1,3]",
+        "[2, 1, 3]\n"
+      ],
+      "explanation": "中序遍历为左根右，左孩子 2 -> 根 1 -> 右孩子 3，顺序为 [2, 1, 3]。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "二叉树的层序遍历（按层从上到下、从左到右）通常需要借助____（数据结构）辅助实现。",
+      "answer": "队列",
+      "accept": [
+        "队列",
+        "Queue",
+        "queue"
+      ],
+      "explanation": "层序遍历属于典型的广度优先搜索（BFS），依赖先进先出的队列维护待访问节点。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "二叉树的后序遍历访问顺序是：",
+      "options": [
+        "左子树 -> 右子树 -> 根节点",
+        "根节点 -> 左子树 -> 右子树",
+        "左子树 -> 根节点 -> 右子树",
+        "根节点 -> 右子树 -> 左子树"
+      ],
+      "answer": 0,
+      "explanation": "后序遍历为左右根。"
+    }
+  ],
+  "algo-s046": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "使用一维数组存储完全二叉树，若某节点在数组中的下标为 i（以 0 为起始下标），则其左孩子的下标是：",
+      "options": [
+        "2 * i + 1",
+        "2 * i",
+        "2 * i + 2",
+        "i / 2"
+      ],
+      "answer": 0,
+      "explanation": "在 0-based 数组表示法中，父节点为 i 时，左孩子为 2i + 1，右孩子为 2i + 2。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "完全二叉树使用数组存储不会产生空间空洞，但如果用来存储极端不平衡的倾斜单支树，会导致严重的内存____浪费。",
+      "answer": "空间",
+      "accept": [
+        "空间",
+        "内存",
+        "空洞"
+      ],
+      "explanation": "稀疏树在数组中会填充大量 None/空洞，造成极大空间开销。"
+    }
+  ],
+  "algo-s047": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "二叉搜索树（Binary Search Tree，BST）的核心性质是：",
+      "options": [
+        "对于任意节点，其左子树所有节点的值均小于根节点的值，右子树所有节点的值均大于根节点的值",
+        "根节点的值必须大于所有左孩子和右孩子的值",
+        "每个节点都必须同时拥有左孩子和右孩子",
+        "所有叶子节点必须位于同一深度"
+      ],
+      "answer": 0,
+      "explanation": "BST 的性质是左子树 < 根 < 右子树，且其左右子树也各自是二叉搜索树。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def search(root: TreeNode, num: int) -> TreeNode | None:\n    cur = root\n    while cur:\n        if cur.val < num:\n            cur = cur.____\n        elif cur.val > num:\n            cur = cur.left\n        else:\n            break\n    return cur",
+      "stem": "补全 BST 中目标值比当前值大时前进的子树分支指针：",
+      "blanks": [
+        {
+          "answer": "right",
+          "accept": [
+            "right"
+          ]
+        }
+      ],
+      "explanation": "根据 BST 性质，比当前节点大的值一定位于其右子树中，因此转向 cur.right。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "对二叉搜索树进行____遍历（前序/中序/后序），得到的节点数值序列是有序递增的。",
+      "answer": "中序",
+      "accept": [
+        "中序",
+        "中序遍历"
+      ],
+      "explanation": "由于左 < 根 < 右，中序遍历（左根右）自然输出严格升序序列。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "在 BST 中删除一个同时拥有左子树和右子树的节点，标准的替换节点是：",
+      "options": [
+        "其右子树中的最小节点（后继节点）或左子树中的最大节点（前驱节点）",
+        "根节点",
+        "任意叶子节点",
+        "其父节点"
+      ],
+      "answer": 0,
+      "explanation": "用其右子树最小值或左子树最大值填补被删位置，能完美维持 BST 的有序性质。"
+    }
+  ],
+  "algo-s048": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在 AVL 树中，任意节点的“平衡因子”（Balance Factor）定义为：",
+      "options": [
+        "左子树高度减去右子树高度（其绝对值不超过 1）",
+        "左子树节点个数减去右子树节点个数",
+        "根节点的数值除以子节点的数值",
+        "父节点的深度乘以此节点的度"
+      ],
+      "answer": 0,
+      "explanation": "AVL 树的平衡因子是左右子树高度差，合法值只能是 -1, 0 或 1。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "当 AVL 树因插入新节点破坏平衡时，通过局部“____”（旋转/交换）操作可以在 O(1) 内恢复整棵树的平衡。",
+      "answer": "旋转",
+      "accept": [
+        "旋转",
+        "树旋转",
+        "左旋右旋"
+      ],
+      "explanation": "AVL 树利用左旋、右旋及其组合（左右双旋、右左双旋）在常数时间内修复局部平衡。"
+    }
+  ],
+  "algo-s049": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "若向一棵普通的二叉搜索树中依次连续插入已排序的升序序列 [1, 2, 3, 4, 5]，该树会退化成：",
+      "options": [
+        "单向链表，查找时间复杂度退化为 O(n)",
+        "满二叉树，查找时间复杂度优化为 O(1)",
+        "大顶堆",
+        "二叉完全树"
+      ],
+      "answer": 0,
+      "explanation": "依次插入有序序列会使所有节点都只有右孩子，退化为一条单向链表，失去对数查询优势。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "平衡二叉树（如 AVL 树、红黑树）在最坏情况下的查找、插入和删除时间复杂度均保持在 O(____)。",
+      "answer": "log n",
+      "accept": [
+        "log n",
+        "logn",
+        "log(n)"
+      ],
+      "explanation": "平衡树严格控制树高在 O(log n) 级别，从而保证各项操作的对数性能。"
+    }
+  ],
+  "algo-s050": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "如何判断两棵二叉树是否完全对称（镜像对称）？",
+      "options": [
+        "递归判断根节点的左子树与右子树是否镜像：左的左与右的右相等，且左的右与右的左相等",
+        "直接判断两棵树的中序遍历字符串是否一样",
+        "比较两棵树的叶子节点数量是否相等",
+        "只需判断两棵树的根节点数值是否相同"
+      ],
+      "answer": 0,
+      "explanation": "镜像对称要求内外两侧对应相等：t1.left 与 t2.right 对称，同时 t1.right 与 t2.left 对称。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def max_depth(root: TreeNode) -> int:\n    # 递归求二叉树的最大深度\n    if not root:\n        return 0\n    return max(max_depth(root.left), max_depth(root.right)) + ____",
+      "stem": "补全求解二叉树最大深度时的本层深度累加常数：",
+      "blanks": [
+        {
+          "answer": "1",
+          "accept": [
+            "1"
+          ]
+        }
+      ],
+      "explanation": "树的最大深度等于左子树深度与右子树深度的较大者加上根节点本身的 1 层高度。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "class Node:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\n\nr = Node(4)\nr.left = Node(2)\nr.right = Node(6)\n\ndef count_nodes(n):\n    if not n: return 0\n    return 1 + count_nodes(n.left) + count_nodes(n.right)\n\nprint(count_nodes(r))",
+      "stem": "上述代码统计二叉树节点个数，输出结果是多少？",
+      "answer": "3",
+      "accept": [
+        "3",
+        "3\n"
+      ],
+      "explanation": "树包含根节点 4 及其左右两个孩子 2 和 6，总节点数为 3。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "根据前序遍历和____遍历（中序/后序）的序列结果，可以唯一确定还原出一棵原始二叉树（假设节点值均不重复）。",
+      "answer": "中序",
+      "accept": [
+        "中序",
+        "中序遍历"
+      ],
+      "explanation": "前序确定根节点，中序区分左右子树，两者结合可唯一重构二叉树。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "在二叉搜索树（BST）中查找某个节点的前驱节点（中序遍历中紧邻的前一个节点），若该节点有左子树，则其前驱是：",
+      "options": [
+        "其左子树中的最大节点（最右侧节点）",
+        "其右子树中的最小节点",
+        "其根节点",
+        "其直接右孩子"
+      ],
+      "answer": 0,
+      "explanation": "左子树中所有节点都比当前节点小，其中最右侧最大的那个即为中序遍历紧挨着的前驱。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "二叉树如果除了叶节点之外，每个节点都有且仅有两个子节点，并且所有叶节点都在同一层上，称之为____二叉树。",
+      "answer": "满",
+      "accept": [
+        "满",
+        "满二叉树"
+      ],
+      "explanation": "满二叉树（Full/Perfect Binary Tree）的所有叶节点都在最底层且每层完全填满。"
+    }
+  ],
+  "algo-s051": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "堆（Heap）通常在逻辑上是一棵：",
+      "options": [
+        "完全二叉树",
+        "满三叉树",
+        "倾斜单支树",
+        "任意无向图"
+      ],
+      "answer": 0,
+      "explanation": "堆在结构上满足完全二叉树的定义，因此非常适合使用紧凑的一维数组进行存储。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "每个父节点的值都大于或等于其子节点的值的堆被称为____顶堆（大/小）。",
+      "answer": "大",
+      "accept": [
+        "大",
+        "最大堆",
+        "大顶堆"
+      ],
+      "explanation": "大顶堆（Max Heap）的堆顶存放的是整棵树的最大值。"
+    }
+  ],
+  "algo-s052": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "向包含 n 个元素的二叉堆中插入一个新元素（并执行从底向上的堆化修复），时间复杂度是：",
+      "options": [
+        "O(log n)",
+        "O(1)",
+        "O(n)",
+        "O(n^2)"
+      ],
+      "answer": 0,
+      "explanation": "完全二叉树树高为 log n，新元素在最底层叶子加入后最多向上交换 log n 次，耗时 O(log n)。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def sift_up(heap: list[int], i: int):\n    # 大顶堆从下到上堆化\n    while i > 0:\n        p = (i - 1) // 2\n        if heap[i] > heap[p]:\n            heap[i], heap[p] = heap[p], heap[i]\n            i = ____\n        else:\n            break",
+      "stem": "补全大顶堆上浮过程中当前索引向前推进到父节点的赋值：",
+      "blanks": [
+        {
+          "answer": "p",
+          "accept": [
+            "p"
+          ]
+        }
+      ],
+      "explanation": "与父节点交换后，当前指针 i 移动到父节点下标 p 继续向上比较。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "访问堆顶元素（获取最大值或最小值）的操作，时间复杂度为 O(____)。",
+      "answer": "1",
+      "accept": [
+        "1",
+        "O(1)"
+      ],
+      "explanation": "堆顶元素直接位于数组第 0 位，读取只需 O(1)。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "在二叉堆中删除堆顶元素后，恢复堆序的标准做法是：",
+      "options": [
+        "将堆末尾最后一个元素移到堆顶，然后自顶向下执行下沉（Sift Down）操作",
+        "将整个数组清零",
+        "将左孩子直接删除",
+        "重新分配两倍内存"
+      ],
+      "answer": 0,
+      "explanation": "末尾元素覆盖堆顶，保证完全二叉树结构完整，再通过 Sift Down 恢复堆偏序。"
+    }
+  ],
+  "algo-s053": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "对一个包含 n 个无序元素的数组原地建堆，若采用自底向上的下沉（Sift Down）建堆法，其总时间复杂度是：",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "explanation": "数学求和可证明：深层节点多而下沉步数少，高层节点少而下沉步数多，错位相减求和后总时间为线性阶 O(n)。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在包含 n 个节点的完全二叉树中，最后一个非叶子节点的数组下标是 (n - 2) // ____。",
+      "answer": "2",
+      "accept": [
+        "2"
+      ],
+      "explanation": "最后一个节点下标为 n - 1，其父节点下标即 ((n - 1) - 1) // 2 = (n - 2) // 2。"
+    }
+  ],
+  "algo-s054": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在海量数据流中寻找最大的 k 个数（Top-k 大），最高效的经典做法是维护一个容量为 k 的：",
+      "options": [
+        "小顶堆",
+        "大顶堆",
+        "双向链表",
+        "哈希映射表"
+      ],
+      "answer": 0,
+      "explanation": "维护容量为 k 的小顶堆，堆顶是当前 k 个大数中的最小值；若新数大于堆顶则替换堆顶并下沉，遍历完全部数据后堆内即为 Top-k 大元素。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "import heapq\nnums = [5, 2, 8, 1, 9, 3]\nprint(heapq.nlargest(3, nums))",
+      "stem": "上述代码通过堆查找最大的 3 个元素，返回的排序列表是什么？",
+      "answer": "[9, 8, 5]",
+      "accept": [
+        "[9, 8, 5]",
+        "[9,8,5]",
+        "[9, 8, 5]\n"
+      ],
+      "explanation": "最大前 3 名是 9, 8, 5。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "使用容量为 k 的堆求解 n 个元素的 Top-k 问题，其总时间复杂度为 O(n log ____)。",
+      "answer": "k",
+      "accept": [
+        "k",
+        "K"
+      ],
+      "explanation": "遍历 n 个数，每次堆化开销 log k，总体复杂度为 O(n log k)。"
+    }
+  ],
+  "algo-s055": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "优先队列（Priority Queue）这种抽象数据类型最常用的底层实现数据结构是：",
+      "options": [
+        "二叉堆",
+        "普通单链表",
+        "循环队列",
+        "二维网格矩阵"
+      ],
+      "answer": 0,
+      "explanation": "二叉堆在入队（插入）和出队（获取最高优先级）上均具有极佳的 O(log n) 平衡性能，是优先队列的标准实现。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "优先队列中优先级最高的元素始终位于优先队列的____端（堆顶/队尾）。",
+      "answer": "堆顶",
+      "accept": [
+        "堆顶",
+        "队头",
+        "首端"
+      ],
+      "explanation": "堆顶存储当前优先级最高的元素。"
+    }
+  ],
+  "algo-s056": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在包含 7 个元素的小顶堆中，第二小的元素一定位于数组中的哪个位置范围？",
+      "options": [
+        "下标 1 或下标 2（根节点的直接孩子节点中）",
+        "一定是下标 6",
+        "只能是下标 0",
+        "位于任意一个叶子节点"
+      ],
+      "answer": 0,
+      "explanation": "最小元素位于根节点下标 0，第二小元素必然是其直接左孩子（下标 1）或右孩子（下标 2）之一。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "双堆法维护中位数时，为了用 Python 默认的小根堆 heapq 模拟大根堆，通常存入数值的____数（绝对值/相反数）。",
+      "answer": "相反",
+      "accept": [
+        "相反",
+        "相反数",
+        "负",
+        "负数"
+      ],
+      "explanation": "将数值取相反数（乘以 -1）存入小根堆，即可模拟大顶堆行为。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "import heapq\nh = []\nheapq.heappush(h, 30)\nheapq.heappush(h, 10)\nheapq.heappush(h, 20)\nprint(heapq.heappop(h))",
+      "stem": "上述小顶堆代码执行后，首次弹出（heappop）的数值是多少？",
+      "answer": "10",
+      "accept": [
+        "10",
+        "10\n"
+      ],
+      "explanation": "小根堆堆顶保存全局最小值，10 最小，最先被弹出。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "堆排序（Heap Sort）算法的第一步是将待排序无序数组构造成一个____顶堆（大/小，以实现升序排序）。",
+      "answer": "大",
+      "accept": [
+        "大",
+        "大顶堆",
+        "最大堆"
+      ],
+      "explanation": "升序排序建大顶堆，每次把堆顶最大数与末尾交换，再缩小堆范围下沉。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "在大小为 k 的小顶堆中，堆顶元素的值为 10。如果数据流新来一个数值 15，正确的更新操作是：",
+      "options": [
+        "15 比堆顶 10 大，将堆顶替换为 15 并执行一次下沉堆化（Sift Down）",
+        "直接把 15 丢弃",
+        "清空整个堆重新建堆",
+        "直接将堆容量扩充到 2k"
+      ],
+      "answer": 0,
+      "explanation": "在维持最大 Top-k 时，遇到大于堆顶的数，弹出原堆顶最小值，将新数推入并下沉。"
+    },
+    {
+      "id": "q6",
+      "type": "codefill",
+      "lang": "python",
+      "code": "import heapq\nnums = [4, 1, 7, 3, 8, 5]\n# 原地建立小顶堆\nheapq.____(nums)",
+      "stem": "补全 heapq 原地线性建堆的函数名称：",
+      "blanks": [
+        {
+          "answer": "heapify",
+          "accept": [
+            "heapify"
+          ]
+        }
+      ],
+      "explanation": "heapq.heapify(nums) 在 O(n) 时间内将列表原地重排为堆。"
+    }
+  ],
+  "algo-s057": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "图（Graph）数据结构能够描述多对多的复杂关系，其两个基本组成要素是：",
+      "options": [
+        "顶点（Vertex）与边（Edge）",
+        "数组与下标",
+        "键（Key）与值（Value）",
+        "前序与后序"
+      ],
+      "answer": 0,
+      "explanation": "图是由顶点集合 V 和连接顶点之间的边集合 E 组成的非线性数据结构：G = (V, E)。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "若边具有明确的方向（从起点指向终点），则该图被称为____图（有向/无向）。",
+      "answer": "有向",
+      "accept": [
+        "有向",
+        "有向图"
+      ],
+      "explanation": "边带方向的图为有向图（Directed Graph），无方向的为无向图（Undirected Graph）。"
+    }
+  ],
+  "algo-s058": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "表示图的两种最经典常见存储结构是：",
+      "options": [
+        "邻接矩阵（Adjacency Matrix）与邻接表（Adjacency List）",
+        "单链表与循环链表",
+        "二叉树与哈希表",
+        "栈与队列"
+      ],
+      "answer": 0,
+      "explanation": "邻接矩阵用二维二维布尔/权值矩阵表示，适合稠密图；邻接表用链表/动态数组挂接邻居节点，适合稀疏图。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "adj_matrix = [\n    [0, 1, 1],\n    [1, 0, 0],\n    [1, 0, 0]\n]\nprint(sum(adj_matrix[0]))",
+      "stem": "在上述无权无向图邻接矩阵中，顶点 0 的度（相连边的总数）是多少？",
+      "answer": "2",
+      "accept": [
+        "2",
+        "2\n"
+      ],
+      "explanation": "邻接矩阵第 0 行表示顶点 0 连接的边，与顶点 1 和顶点 2 相连，因此度为 2。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "包含 V 个顶点的图，其邻接矩阵占用的空间复杂度恒为 O(____^2)。",
+      "answer": "V",
+      "accept": [
+        "V",
+        "v",
+        "n"
+      ],
+      "explanation": "邻接矩阵为一个 V × V 的二维矩阵，空间复杂度为 O(V^2)。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "对于具有 V 个顶点的完全无向图（任意两点间都有一条边），边的总数是：",
+      "options": [
+        "V * (V - 1) / 2",
+        "V^2",
+        "V - 1",
+        "2V"
+      ],
+      "answer": 0,
+      "explanation": "每对顶点之间都有一条边，边数为组合数 C(V, 2) = V(V - 1) / 2。"
+    }
+  ],
+  "algo-s059": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在基于哈希表实现的邻接表中，添加一个顶点与添加一条边的时间复杂度分别是：",
+      "options": [
+        "均为 O(1)",
+        "添加顶点 O(V^2)，添加边 O(E)",
+        "添加顶点 O(V)，添加边 O(V)",
+        "均为 O(V!)"
+      ],
+      "answer": 0,
+      "explanation": "基于哈希表映射顶点与邻接集合，新增键与在集合中追加元素平均均为 O(1)。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "class GraphAdjList:\n    def __init__(self):\n        self.adj_list = {}\n    def add_edge(self, v1: int, v2: int):\n        # 无向图添加双向边\n        self.adj_list[v1].append(v2)\n        self.adj_list[v2].append(____)",
+      "stem": "补全无向图添加对称反向边的目标顶点：",
+      "blanks": [
+        {
+          "answer": "v1",
+          "accept": [
+            "v1"
+          ]
+        }
+      ],
+      "explanation": "无向图边是双向的，v1 邻接表中加入 v2，v2 邻接表中必须加入 v1。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "在稀疏图（边数 E 远小于 V^2）中，使用____表（邻接矩阵/邻接表）存储能够大幅节省内存空间。",
+      "answer": "邻接",
+      "accept": [
+        "邻接",
+        "邻接表"
+      ],
+      "explanation": "邻接表只需 O(V + E) 空间，非常适合稀疏图。"
+    }
+  ],
+  "algo-s060": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在图的遍历过程中，为了防止由于环路导致算法陷入死循环，必须引入的机制是：",
+      "options": [
+        "使用 visited 集合（或布尔数组）记录并标记已访问过的顶点",
+        "每次遇到分叉就格式化图",
+        "只能遍历有向无环图",
+        "限制图的最大节点数不能超过 5"
+      ],
+      "answer": 0,
+      "explanation": "图可能包含环路，维护 visited 集合能够保证每个顶点最多被访问一次，避免死循环。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "from collections import deque\ngraph = {0: [1, 2], 1: [2], 2: []}\nvisited = {0}\norder = []\nq = deque([0])\nwhile q:\n    u = q.popleft()\n    order.append(u)\n    for v in graph[u]:\n        if v not in visited:\n            visited.add(v)\n            q.append(v)\nprint(order)",
+      "stem": "上述 BFS 广度优先搜索代码执行后，打印的访问序列是什么？",
+      "answer": "[0, 1, 2]",
+      "accept": [
+        "[0, 1, 2]",
+        "[0,1,2]",
+        "[0, 1, 2]\n"
+      ],
+      "explanation": "从 0 开始，先访问邻居 1 和 2，加入队列，依次弹出，遍历序列为 [0, 1, 2]。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "图的深度优先搜索（DFS）本质上是基于____（递归/循环队列）思想展开回溯搜索的。",
+      "answer": "递归",
+      "accept": [
+        "递归",
+        "栈",
+        "回溯"
+      ],
+      "explanation": "DFS 沿着一条分支一直探索到底再回溯，自然对应系统调用栈或显式栈。"
+    }
+  ],
+  "algo-s061": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "使用邻接表对具有 V 个顶点和 E 条边的连通图进行深度优先遍历（DFS），其时间复杂度为：",
+      "options": [
+        "O(V + E)",
+        "O(V * E)",
+        "O(V^2)",
+        "O(log(V + E))"
+      ],
+      "answer": 0,
+      "explanation": "DFS 中每个顶点被访问一次（O(V)），每条边被检查一次或两次（O(E)），总时间为 O(V + E)。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在无向图中，如果从顶点 u 到顶点 v 存在一条路径，则称 u 和 v 是____的（连通/孤立）。",
+      "answer": "连通",
+      "accept": [
+        "连通",
+        "相通"
+      ],
+      "explanation": "两点间有路径相连称为连通。"
+    }
+  ],
+  "algo-s062": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在拓扑排序（Topological Sort）算法中，每次应当从有向无环图（DAG）中选取并移出的顶点具有的特征是：",
+      "options": [
+        "入度（In-degree）为 0 的顶点",
+        "出度（Out-degree）为 0 的顶点",
+        "编号最大的顶点",
+        "与其他所有点都有边相连的点"
+      ],
+      "answer": 0,
+      "explanation": "入度为 0 表示没有前置依赖任务，因此可以率先执行并在图中移除。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def dfs(graph: dict, v: int, visited: set):\n    visited.add(v)\n    for neighbor in graph[v]:\n        if neighbor not in ____:\n            dfs(graph, neighbor, visited)",
+      "stem": "补全 DFS 遍历避免重复访问的核心集合判断：",
+      "blanks": [
+        {
+          "answer": "visited",
+          "accept": [
+            "visited"
+          ]
+        }
+      ],
+      "explanation": "只有尚未被访问过的邻居（neighbor not in visited）才发起下一层递归。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "in_degrees = {1: 1, 2: 0, 3: 2}\nzero_in = [k for k, v in in_degrees.items() if v == 0]\nprint(zero_in)",
+      "stem": "上述筛选入度为 0 的节点代码，打印结果列表是什么？",
+      "answer": "[2]",
+      "accept": [
+        "[2]",
+        "[2]\n"
+      ],
+      "explanation": "只有节点 2 的入度 v 为 0。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "如果在有向图中存在回路，则该图____（能/不能）产生有效的拓扑排序序列。",
+      "answer": "不能",
+      "accept": [
+        "不能",
+        "无法",
+        "不可以"
+      ],
+      "explanation": "只有有向无环图（DAG）才存在拓扑排序，环路会导致互相循环依赖。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "判断一个无向图是否存在环，可以使用哪种算法实现？",
+      "options": [
+        "深度优先搜索（DFS）中遇到非父节点的已访问顶点，或利用并查集检测相交集合",
+        "二分查找算法",
+        "直接对所有顶点编号求和",
+        "利用冒泡排序"
+      ],
+      "answer": 0,
+      "explanation": "无向图 DFS 遍历时，若访问到非直接父节点的已访问邻居，说明形成了闭合环路；也可使用并查集检测边两端是否已处于同一连通分量。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "在具有 V 个顶点和 E 条边的无向连通图中，最小生成树（MST）包含恰好____条边。",
+      "answer": "V - 1",
+      "accept": [
+        "V - 1",
+        "V-1",
+        "v-1",
+        "n-1"
+      ],
+      "explanation": "连接 V 个顶点的无环连通图是树，包含且仅包含 V - 1 条边。"
+    }
+  ],
+  "algo-s063": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "二分查找（Binary Search）算法能够以 O(log n) 对数时间高效运行的决定性先决条件是：",
+      "options": [
+        "数据必须存储在支持随机访问的结构中，且元素必须按顺序有序排列",
+        "数组长度必须是偶数",
+        "数组中所有元素必须是正整数",
+        "数组容量必须超过 100 万"
+      ],
+      "answer": 0,
+      "explanation": "二分查找依赖下标随机访问（计算中间位置）和数据的有序性（根据大小单调排除半区）。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "二分查找每次比较后，都能将搜索目标所在的区间规模缩小为原来的____分之一。",
+      "answer": "二",
+      "accept": [
+        "二",
+        "2",
+        "半"
+      ],
+      "explanation": "每次折半缩小问题规模，故称为二分。"
+    }
+  ],
+  "algo-s064": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在计算二分查找中间索引 mid 时，采用 m = i + (j - i) // 2 相比 (i + j) // 2 的主要工程优势是：",
+      "options": [
+        "防止在 i 和 j 极大时发生整数加法溢出（Integer Overflow）",
+        "执行速度能提升 100 倍",
+        "可以用于负数浮点数的取模",
+        "编译器只支持减法语法"
+      ],
+      "answer": 0,
+      "explanation": "在 C/C++/Java 等强类型语言中，大整数 i + j 可能超过最大表示范围产生负数溢出，i + (j - i) // 2 能避免加法溢出。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def binary_search(nums: list[int], target: int) -> int:\n    i, j = 0, len(nums) - 1\n    while i <= j:\n        m = i + (j - i) // 2\n        if nums[m] < target:\n            i = ____\n        elif nums[m] > target:\n            j = m - 1\n        else:\n            return m\n    return -1",
+      "stem": "在双闭区间二分查找中，当 nums[m] < target 时，左边界 i 的更新表达式是：",
+      "blanks": [
+        {
+          "answer": "m + 1",
+          "accept": [
+            "m+1"
+          ]
+        }
+      ],
+      "explanation": "nums[m] 小于目标值，目标必定在右半区 [m + 1, j]，故左边界收缩为 m + 1。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "nums = [1, 3, 5, 7, 9, 11]\ntarget = 7\n# 查找 target 下标\ni, j = 0, len(nums) - 1\nwhile i <= j:\n    m = (i + j) // 2\n    if nums[m] == target:\n        print(m)\n        break\n    elif nums[m] < target:\n        i = m + 1\n    else:\n        j = m - 1",
+      "stem": "上述二分查找执行后，输出的目标元素下标是什么？",
+      "answer": "3",
+      "accept": [
+        "3",
+        "3\n"
+      ],
+      "explanation": "元素 7 在数组中的下标为 3。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "如果二分查找采用左闭右开区间 [i, j)，循环的终止判定条件应为：",
+      "options": [
+        "i < j",
+        "i <= j",
+        "i == j",
+        "i > j"
+      ],
+      "answer": 0,
+      "explanation": "左闭右开区间在 i == j 时区间为空，因此循环条件为 while i < j。"
+    }
+  ],
+  "algo-s065": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在有序数组 [1, 3, 5, 6] 中寻找插入目标值 2 的最佳插入点下标，二分查找循环结束后左指针 i 的位置是：",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "插入 2 后应保持有序为 [1, 2, 3, 5, 6]，原下标 1（元素 3）及其后元素后移，故插入点为 1。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在双闭区间二分查找中，若目标元素不存在，循环结束退出时，指针____恰好指向该元素的合适插入位置。",
+      "answer": "i",
+      "accept": [
+        "i",
+        "left",
+        "左指针"
+      ],
+      "explanation": "当 i > j 时跳出循环，i 的最终落点恰好就是第一个大于 target 的位置，即插入位置。"
+    }
+  ],
+  "algo-s066": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在包含重复元素的有序数组中查找目标值 target 的“最左侧插入边界”（即第一个大于等于 target 的位置），当 nums[m] == target 时，右边界 j 应当如何调整？",
+      "options": [
+        "j = m - 1，继续向左半区间收缩",
+        "立即 return m",
+        "i = m + 1，向右半区间收缩",
+        "break 跳出循环"
+      ],
+      "answer": 0,
+      "explanation": "为了寻找最左侧出现的边界，即使找到了 target 也不能停下，应当继续收缩右边界 j = m - 1 逼近最左端。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "nums = [1, 2, 2, 2, 3]\n# 寻找 2 的左边界\ni, j = 0, len(nums) - 1\nwhile i <= j:\n    m = (i + j) // 2\n    if nums[m] >= 2:\n        j = m - 1\n    else:\n        i = m + 1\nprint(i)",
+      "stem": "上述查找重复元素 2 左边界代码执行后，打印出的起始下标 i 是多少？",
+      "answer": "1",
+      "accept": [
+        "1",
+        "1\n"
+      ],
+      "explanation": "元素 2 首次出现在下标 1 处，最终 i 的收敛位置为 1。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "在有序数组中，查找某个元素出现的总次数，可以通过“最右边界”减去“最____边界”再加 1 快速求得。",
+      "answer": "左",
+      "accept": [
+        "左",
+        "左边界"
+      ],
+      "explanation": "出现区间为 [left, right]，次数为 right - left + 1。"
+    }
+  ],
+  "algo-s067": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "将线性搜索优化为哈希查找（以空间换时间）的典型核心思想是：",
+      "options": [
+        "提前构建哈希表索引，将每次 O(n) 的扫描查找降维到 O(1) 的常数哈希命中",
+        "把所有数据存入显卡显存",
+        "把算法改写为多线程死循环",
+        "每次查询前对数组重新随机打乱"
+      ],
+      "answer": 0,
+      "explanation": "哈希优化通过建立前置索引表，把重复的大规模遍历转化为单次快速定位，典型的以空间换时间策略。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "空间换时间虽然降低了时间复杂度，但往往会增加程序的____消耗。",
+      "answer": "内存",
+      "accept": [
+        "内存",
+        "空间",
+        "空间复杂度"
+      ],
+      "explanation": "构建额外的哈希表等索引数据结构需要付出额外的内存空间成本。"
+    }
+  ],
+  "algo-s068": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "关于广度优先搜索（BFS）与深度优先搜索（DFS）的搜索空间遍历特点，描述正确的是：",
+      "options": [
+        "BFS 呈同心圆波纹状层层扩展，适合寻找无权图最短路径；DFS 执着于一条路走到黑，适合回溯与排列组合生成",
+        "BFS 永远无法遍历完整棵树",
+        "DFS 每次弹出的都是最早放入队列的节点",
+        "BFS 和 DFS 的时间复杂度具有阶乘级差距"
+      ],
+      "answer": 0,
+      "explanation": "BFS 逐层扩散能够保证首次触达目标时经过的步数最少；DFS 纵向深入有利于探索全部解路径与分支剪枝。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在迷宫寻路问题中，若每走一步代价均为 1，寻找步数最少的最短路径优先选用____（BFS/DFS）。",
+      "answer": "BFS",
+      "accept": [
+        "BFS",
+        "bfs",
+        "广度优先搜索",
+        "广度优先"
+      ],
+      "explanation": "无权图最短路径是 BFS 的绝对强项。"
+    }
+  ],
+  "algo-s069": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在数组规模 n 达到 10 亿级别时，O(log n) 的二分查找最多大约需要比较多少次即可定位目标？",
+      "options": [
+        "约 30 次",
+        "约 1000 万次",
+        "约 10 亿次",
+        "约 5 亿次"
+      ],
+      "answer": 0,
+      "explanation": "2^30 约等于 10.7 亿，因此对于 10 亿级规模的数据，二分查找仅需约 30 次比较，效率极其惊人。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "二分查找算法在每一次迭代时，均将原搜索区间分为左半部分、中间点和____半部分。",
+      "answer": "右",
+      "accept": [
+        "右",
+        "右半"
+      ],
+      "explanation": "二分根据 mid 将区间划分为左区间、中点、右区间。"
+    }
+  ],
+  "algo-s070": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "若数组是一个“旋转排序数组”（例如 [4, 5, 6, 7, 0, 1, 2]），能否应用二分查找？为什么？",
+      "options": [
+        "可以，因为通过 mid 划分后，左半部分和右半部分必定至少有一半是严格有序的",
+        "绝对不能，因为二分必须全数组全局有序",
+        "只能用 O(n^2) 的冒泡查找",
+        "必须先重新排序再查找，否则不可解"
+      ],
+      "answer": 0,
+      "explanation": "旋转数组折半后，必有一半保持有序，判断目标值是否在有序半区内即可决定缩小哪一侧区间。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def find_min_rotated(nums: list[int]) -> int:\n    # 寻找旋转数组中的最小值（无重复值）\n    i, j = 0, len(nums) - 1\n    while i < j:\n        m = (i + j) // 2\n        if nums[m] > nums[j]:\n            i = ____\n        else:\n            j = m\n    return nums[i]",
+      "stem": "当中间值 nums[m] 大于最右端 nums[j] 时，最小值必在右半区，补全左边界更新语句：",
+      "blanks": [
+        {
+          "answer": "m + 1",
+          "accept": [
+            "m+1"
+          ]
+        }
+      ],
+      "explanation": "nums[m] > nums[j] 说明旋转折断点在 m 右侧，故左边界更新为 m + 1。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "nums = [4, 5, 6, 7, 0, 1, 2]\ni, j = 0, len(nums) - 1\nwhile i < j:\n    m = (i + j) // 2\n    if nums[m] > nums[j]: i = m + 1\n    else: j = m\nprint(nums[i])",
+      "stem": "上述在旋转排序数组中寻找最小值的代码执行后，打印的最小值是多少？",
+      "answer": "0",
+      "accept": [
+        "0",
+        "0\n"
+      ],
+      "explanation": "数组中的最小值为 0。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "在具有 n 个元素的有序数组中，二分查找最坏情况下的比较次数为 ⌊log2(n)⌋ + ____。",
+      "answer": "1",
+      "accept": [
+        "1"
+      ],
+      "explanation": "标准二分查找在最坏情况下的比较次数为 floor(log2(n)) + 1。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "在包含 n 个元素的有序二维矩阵（每行从左到右递增，每列从上到下递增）中搜索目标值，最优的右上角 Z 字形搜索时间复杂度是：",
+      "options": [
+        "O(m + n)",
+        "O(m * n)",
+        "O(1)",
+        "O((m + n)^2)"
+      ],
+      "answer": 0,
+      "explanation": "从右上角开始：若当前值大于 target 向左走，小于 target 向下走，步数最多 m + n，复杂度 O(m + n)。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "在二分答案问题中，要求在单调可行性区间内寻找满足条件的最大或最小值，利用的是判定函数的____性（单调/随机）。",
+      "answer": "单调",
+      "accept": [
+        "单调",
+        "单调性"
+      ],
+      "explanation": "二分答案成立的数学基础是检验函数 check(x) 的输出结果具有严格的单调分布。"
+    }
+  ],
+  "algo-s071": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "排序算法的“稳定性”（Stability）是指：",
+      "options": [
+        "如果待排序序列中有多个值相等的元素，排序后它们的相对先后顺序保持不变",
+        "排序算法无论在什么电脑上运行都不会死机崩溃",
+        "算法的运行时间永远是固定的秒数",
+        "排序过程中不会产生任何内存碎片"
+      ],
+      "answer": 0,
+      "explanation": "稳定性保证了相等键值元素的原始相对次序不被打乱，在多关键字排序中极为重要。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "排序算法如果只使用 O(1) 的额外辅助内存空间，被称为____排序（原地/非原地）。",
+      "answer": "原地",
+      "accept": [
+        "原地",
+        "In-place",
+        "原地排序"
+      ],
+      "explanation": "原地排序（In-place sort）的空间复杂度为 O(1)。"
+    }
+  ],
+  "algo-s072": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "基于比较的排序算法（如快速排序、归并排序、堆排序），其理论下界时间复杂度是：",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "explanation": "通过决策树模型数学证明，任何基于元素两两比较的排序算法，其最差时间下界无法突破 O(n log n)。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "计数排序和桶排序能够突破 O(n log n) 达到 O(n) 的前提是它们属于____比较排序（基于/非）。",
+      "answer": "非",
+      "accept": [
+        "非",
+        "非比较",
+        "不基于"
+      ],
+      "explanation": "非比较排序利用数据的数值范围分布特性直接归位，突破了比较排序的理论下界。"
+    }
+  ],
+  "algo-s073": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "选择排序（Selection Sort）的基本操作逻辑是：",
+      "options": [
+        "每一轮在未排序区间中挑出最小的元素，与未排序区间的首个元素交换位置",
+        "两两相邻元素比较，若逆序则交换",
+        "将未排序元素逐个插入到已排序区间的合适位置",
+        "利用基数划分放入不同的桶中"
+      ],
+      "answer": 0,
+      "explanation": "选择排序每轮通过全局扫描未排序部分选出全局最小，放入已排序末尾。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def selection_sort(nums: list[int]):\n    n = len(nums)\n    for i in range(n - 1):\n        min_idx = i\n        for j in range(i + 1, n):\n            if nums[j] < nums[min_idx]:\n                min_idx = ____\n        nums[i], nums[min_idx] = nums[min_idx], nums[i]",
+      "stem": "补全选择排序中发现更小元素时更新最小下标的变量：",
+      "blanks": [
+        {
+          "answer": "j",
+          "accept": [
+            "j"
+          ]
+        }
+      ],
+      "explanation": "遍历发现 nums[j] 更小，将最小索引更新为 j。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "选择排序无论原始输入数据是否有序，其时间复杂度始终为稳定的 O(____^2)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "两层嵌套循环执行次数固定为 n(n-1)/2，恒为 O(n^2)。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "选择排序是不稳定排序，下列哪个例子能直观证明其不稳定性？",
+      "options": [
+        "待排序序列为 [5, 5, 2]，第一轮将第一个 5 与 2 交换后，两个 5 的相对位置被颠倒",
+        "[1, 2, 3] 排序后仍是 [1, 2, 3]",
+        "[2, 1] 交换为 [1, 2]",
+        "所有元素都相等的数组"
+      ],
+      "answer": 0,
+      "explanation": "长距离交换会跳过相等的元素，从而破坏相对先后顺序。"
+    }
+  ],
+  "algo-s074": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "冒泡排序（Bubble Sort）在最好情况下（数组本身已经完全有序），加入 flag 优化后的时间复杂度是：",
+      "options": [
+        "O(n)",
+        "O(n^2)",
+        "O(log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "explanation": "设置 swapped 标志位，若第一轮扫描没有发生任何交换，说明已有序，直接退出，耗时 O(n)。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "nums = [3, 1, 2]\n# 一轮冒泡\nfor j in range(len(nums) - 1):\n    if nums[j] > nums[j + 1]:\n        nums[j], nums[j + 1] = nums[j + 1], nums[j]\nprint(nums)",
+      "stem": "数组 [3, 1, 2] 经过第一轮单趟相邻交换冒泡后，数组变为：",
+      "answer": "[1, 2, 3]",
+      "accept": [
+        "[1, 2, 3]",
+        "[1,2,3]",
+        "[1, 2, 3]\n"
+      ],
+      "explanation": "3 与 1 换成 [1, 3, 2]，3 与 2 换成 [1, 2, 3]，最大数 3 成功沉底到末尾。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "冒泡排序是一种____（稳定/不稳定）的排序算法（只在严格大于时才发生交换）。",
+      "answer": "稳定",
+      "accept": [
+        "稳定",
+        "稳定的"
+      ],
+      "explanation": "相邻相同元素不发生交换，因而相对次序得以保持，是稳定排序。"
+    }
+  ],
+  "algo-s075": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在实际工程库中（如 Python 的 Timsort 或 C++ 的 std::sort），在数据规模较小（如 n <= 16）或接近有序时，为何频繁选用插入排序？",
+      "options": [
+        "插入排序在小规模或几乎有序时开销极低、常数小，且为稳定原地排序",
+        "插入排序理论时间复杂度永远是 O(1)",
+        "其他高级算法在小规模时无法编译",
+        "插入排序不需要占用 CPU 寄存器"
+      ],
+      "answer": 0,
+      "explanation": "插入排序常数极小，在数据几乎有序时退化为 O(n)，小数组下表现极其优异。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def insertion_sort(nums: list[int]):\n    for i in range(1, len(nums)):\n        base = nums[i]\n        j = i - 1\n        while j >= 0 and nums[j] > base:\n            nums[j + 1] = nums[j]\n            j -= 1\n        nums[j + 1] = ____",
+      "stem": "补全插入排序将基准元素归位到空出位置的变量名：",
+      "blanks": [
+        {
+          "answer": "base",
+          "accept": [
+            "base"
+          ]
+        }
+      ],
+      "explanation": "已腾出位置 nums[j + 1]，填入原本暂存的 base 元素。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "若数组完全逆序，插入排序需要搬移元素的总次数达到最大，时间复杂度为 O(____^2)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "逆序数组每次插入都要完整扫描已排序前缀，耗时 O(n^2)。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "在插入排序中，若当前考察的元素已经大于已排序部分的末尾元素，内层循环比较次数为：",
+      "options": [
+        "1 次",
+        "n 次",
+        "0 次",
+        "n^2 次"
+      ],
+      "answer": 0,
+      "explanation": "仅需与已排序末尾比较 1 次即可确认无需后移，直接插入原位。"
+    }
+  ],
+  "algo-s076": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "快速排序（Quick Sort）的核心思想是：",
+      "options": [
+        "分治（Divide and Conquer）：选取基准数（Pivot），将数组划分为小于基准和大于基准的两部分，然后递归排序子数组",
+        "将相邻元素两两归并",
+        "将所有数据构造成大顶堆后依次弹出",
+        "计算数组中所有前缀和"
+      ],
+      "answer": 0,
+      "explanation": "快排围绕基准数划分（Partition），使得基准数左侧均小于它、右侧均大于它，再递归处理左右半区。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def partition(nums: list[int], left: int, right: int) -> int:\n    # 哨兵划分以 nums[left] 为基准\n    i, j = left, right\n    while i < j:\n        while i < j and nums[j] >= nums[left]:\n            j -= 1\n        while i < j and nums[i] <= nums[left]:\n            i += 1\n        nums[i], nums[j] = nums[j], nums[i]\n    nums[i], nums[left] = nums[left], nums[i]\n    return ____",
+      "stem": "补全划分操作最终返回的基准数落点索引：",
+      "blanks": [
+        {
+          "answer": "i",
+          "accept": [
+            "i",
+            "j"
+          ]
+        }
+      ],
+      "explanation": "循环结束时 i 与 j 相遇，相遇位置与基准数交换，返回相遇点下标 i。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "如果基准数每次都选到极值导致划分极不均匀，快速排序最坏时间复杂度会退化为 O(____^2)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "最坏情况下递归树退化为单支链，耗时 O(n^2)，因此工程中常采用“三数取中”或随机基准数优化。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "快速排序平均时间复杂度为 O(n log n)，其递归树的平均深度为：",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n^2)"
+      ],
+      "answer": 0,
+      "explanation": "平均对半划分时树高为 log n，每层累计工作量为 n，总时间 O(n log n)。"
+    }
+  ],
+  "algo-s077": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "关于归并排序（Merge Sort）的特征，下列说法正确的是：",
+      "options": [
+        "在任何情况下时间复杂度都是稳定的 O(n log n)，且具有稳定性，但需要 O(n) 的额外辅助内存空间",
+        "不需要任何辅助空间，是绝对的原地排序",
+        "最差时间复杂度为 O(n^2)",
+        "是一种非比较排序"
+      ],
+      "answer": 0,
+      "explanation": "归并排序合并两个有序子数组时需要开辟辅助数组，空间复杂度为 O(n)，但时间复杂度极其稳定且保持相同元素相对次序。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "left = [1, 4, 7]\nright = [2, 3, 5]\nres = []\ni = j = 0\nwhile i < len(left) and j < len(right):\n    if left[i] <= right[j]:\n        res.append(left[i])\n        i += 1\n    else:\n        res.append(right[j])\n        j += 1\nres.extend(left[i:])\nres.extend(right[j:])\nprint(res)",
+      "stem": "上述合并两个有序数组的代码执行后，打印的合并结果是什么？",
+      "answer": "[1, 2, 3, 4, 5, 7]",
+      "accept": [
+        "[1, 2, 3, 4, 5, 7]",
+        "[1,2,3,4,5,7]",
+        "[1, 2, 3, 4, 5, 7]\n"
+      ],
+      "explanation": "双指针归并两路有序序列，得到完整递增序列 [1, 2, 3, 4, 5, 7]。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "归并排序算法的“分”（划分）和“治”（合并）两个阶段中，核心计算工作主要发生在____阶段（划分/合并）。",
+      "answer": "合并",
+      "accept": [
+        "合并",
+        "merge",
+        "治"
+      ],
+      "explanation": "划分只是简单求中点递归，真正比较与排序的工作全部在 merge 合并阶段完成。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "对单向链表进行排序，最适合且时间复杂度稳定为 O(n log n) 的算法是：",
+      "options": [
+        "归并排序（通过快慢指针切分，且合并链表不需要额外数组空间）",
+        "堆排序",
+        "二分查找",
+        "计数排序"
+      ],
+      "answer": 0,
+      "explanation": "链表归并排序只需修改指针，不需要像数组那样开辟 O(n) 辅助空间，表现极佳。"
+    }
+  ],
+  "algo-s078": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "堆排序（Heap Sort）相比归并排序的最大优势在于：",
+      "options": [
+        "它是原地排序（In-place），空间复杂度仅为 O(1)",
+        "它是一种稳定排序",
+        "它的最好时间复杂度为 O(1)",
+        "它在硬件缓存行上的命中率远高于快速排序"
+      ],
+      "answer": 0,
+      "explanation": "堆排序在时间复杂度保持 O(n log n) 的同时，不需要 O(n) 辅助数组，空间仅需 O(1)。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "若要使用堆排序对数组进行升序（从小到大）排列，第一步应先建立一个____顶堆（大/小）。",
+      "answer": "大",
+      "accept": [
+        "大",
+        "大顶堆",
+        "最大堆"
+      ],
+      "explanation": "建立大顶堆后，每次将堆顶（全局最大值）与末尾交换，即可逐步将大数沉降到数组尾部。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "堆排序在最坏情况下的时间复杂度为：",
+      "options": [
+        "O(n log n)",
+        "O(n^2)",
+        "O(n)",
+        "O(log n)"
+      ],
+      "answer": 0,
+      "explanation": "堆的高度的严格对数性保证了最坏情况依然是 O(n log n)。"
+    }
+  ],
+  "algo-s079": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "桶排序（Bucket Sort）取得 O(n) 线性时间复杂度的关键前提是：",
+      "options": [
+        "输入数据在各个取值区间内呈现均匀分布",
+        "所有数据都集中在同一个极端数值上",
+        "数组长度必须是 2 的整数次幂",
+        "必须基于链表实现"
+      ],
+      "answer": 0,
+      "explanation": "若数据均匀分布，每个桶分配到的元素数量平均为常数个，桶内排序总开销呈线性阶。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "如果大量数据发生倾斜，全部挤入同一个桶中，桶排序的时间复杂度会退化为该桶内所用排序算法的最坏复杂度 O(____^2)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "所有数据堆积在单桶内，退化为普通比较排序，如 O(n^2)。"
+    }
+  ],
+  "algo-s080": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "计数排序（Counting Sort）最适合的应用场景是：",
+      "options": [
+        "数据量巨大（如高考百万考生成绩），但数据取值范围集中在有限的小区间（如 0~750 分）内",
+        "元素全为极其分散的 64 位双精度浮点数",
+        "输入数据全为长篇无规律英文字符串",
+        "数据规模不超过 5 个元素"
+      ],
+      "answer": 0,
+      "explanation": "计数排序依赖数值作为计数数组的连续下标，极适合范围小（小 k）、数据量大（大 n）的非负整数排序。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "nums = [1, 0, 1, 2, 0, 1]\ncounter = [0] * 3\nfor x in nums:\n    counter[x] += 1\nprint(counter)",
+      "stem": "上述统计元素出现频次代码执行后，打印的计数数组 counter 是什么？",
+      "answer": "[2, 3, 1]",
+      "accept": [
+        "[2, 3, 1]",
+        "[2,3,1]",
+        "[2, 3, 1]\n"
+      ],
+      "explanation": "0 出现 2 次，1 出现 3 次，2 出现 1 次，计数数组为 [2, 3, 1]。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "设数据最大值与最小值之差为 m，数据量为 n，计数排序的时间复杂度为 O(n + ____)。",
+      "answer": "m",
+      "accept": [
+        "m",
+        "M",
+        "k"
+      ],
+      "explanation": "时间由统计遍历 n 和遍历计数桶 m 共同决定，为 O(n + m)。"
+    }
+  ],
+  "algo-s081": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "基数排序（Radix Sort）按位排序时，从最低有效位向最高有效位排序（LSD），要求每一轮的子排序算法必须满足：",
+      "options": [
+        "稳定性（Stability）",
+        "必须是原地排序",
+        "空间复杂度必须是 O(1)",
+        "递归深度不能超过 3"
+      ],
+      "answer": 0,
+      "explanation": "若子排序不稳定，按高位排序时会打乱低位原本排好的相对大小次序，导致最终结果错误。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "十进制整数的基数（Radix / 桶数）固定为____（数值）。",
+      "answer": "10",
+      "accept": [
+        "10",
+        "十"
+      ],
+      "explanation": "十进制数字每一位由 0~9 组成，故基数为 10。"
+    }
+  ],
+  "algo-s082": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "下列常见排序算法中，属于不稳定排序的是：",
+      "options": [
+        "快速排序与堆排序",
+        "冒泡排序",
+        "插入排序",
+        "归并排序"
+      ],
+      "answer": 0,
+      "explanation": "快排的长距离哨兵交换和堆排序的堆顶交换，都会跨越相等元素打破原始相对位置，是不稳定排序。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "归并排序的时间复杂度在最好、最坏和平均情况下始终为 O(____)。",
+      "answer": "n log n",
+      "accept": [
+        "n log n",
+        "nlogn",
+        "n log(n)"
+      ],
+      "explanation": "归并排序递归树划分均匀且每一层合并固定耗时 n，不受输入初态影响，始终为 O(n log n)。"
+    }
+  ],
+  "algo-s083": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "给出一组只有 0, 1, 2 三种颜色的无序数组（力扣经典“颜色分类 / 荷兰国旗问题”），最佳的原地单趟 O(n) 解法是：",
+      "options": [
+        "三指针法（left 指向 0 的右界，right 指向 2 的左界，curr 线性扫描交换）",
+        "建立容量为 1000 的大顶堆",
+        "执行两遍全量快速排序",
+        "把数组转换为二叉搜索树"
+      ],
+      "answer": 0,
+      "explanation": "荷兰国旗问题利用三个指针维护三个区间：[0, left-1] 为 0，[left, i-1] 为 1，[right+1, n-1] 为 2，O(n) 时间原地解决。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def sort_colors(nums: list[int]):\n    # 荷兰国旗三指针\n    p0, p2, i = 0, len(nums) - 1, 0\n    while i <= p2:\n        if nums[i] == 0:\n            nums[i], nums[p0] = nums[p0], nums[i]\n            p0 += 1\n            i += 1\n        elif nums[i] == 2:\n            nums[i], nums[p2] = nums[p2], nums[i]\n            p2 -= 1\n        else:\n            i += ____",
+      "stem": "当当前元素为 1 时，处于中间合法区域，补全指针 i 步进值：",
+      "blanks": [
+        {
+          "answer": "1",
+          "accept": [
+            "1"
+          ]
+        }
+      ],
+      "explanation": "为 1 时无需交换，直接 i += 1 继续检查下一个元素。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "arr = [2, 0, 2, 1, 1, 0]\np0, p2, i = 0, len(arr) - 1, 0\nwhile i <= p2:\n    if arr[i] == 0:\n        arr[i], arr[p0] = arr[p0], arr[i]\n        p0 += 1\n        i += 1\n    elif arr[i] == 2:\n        arr[i], arr[p2] = arr[p2], arr[i]\n        p2 -= 1\n    else:\n        i += 1\nprint(arr)",
+      "stem": "上述荷兰国旗排序代码执行后，打印的有序数组是什么？",
+      "answer": "[0, 0, 1, 1, 2, 2]",
+      "accept": [
+        "[0, 0, 1, 1, 2, 2]",
+        "[0,0,1,1,2,2]",
+        "[0, 0, 1, 1, 2, 2]\n"
+      ],
+      "explanation": "排序后结果为 [0, 0, 1, 1, 2, 2]。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "在包含 n 个互不相同元素的数组中，逆序对的最大可能数量是 n * (n - 1) / ____。",
+      "answer": "2",
+      "accept": [
+        "2"
+      ],
+      "explanation": "完全逆序时，任意两两元素都构成逆序对，总数为组合数 C(n, 2) = n(n-1)/2。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "如果待排序序列已经完全有序，下列哪种排序算法的性能反而最差（若基准数固定选取第一位）？",
+      "options": [
+        "未经随机化基准优化的快速排序（退化为 O(n^2)）",
+        "插入排序（保持 O(n)）",
+        "冒泡排序（保持 O(n)）",
+        "归并排序（保持 O(n log n)）"
+      ],
+      "answer": 0,
+      "explanation": "固定选首位为基准的快排在已有序时递归树极其倾斜，退化成 O(n^2)。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "快速选择（Quick Select）算法利用快排的划分思想，可以在平均 O(____) 时间内找出第 k 小的元素。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N",
+        "O(n)"
+      ],
+      "explanation": "快速选择每次只递归一边，时间求和为 n + n/2 + n/4 + ... = 2n，平均时间复杂度为 O(n)。"
+    }
+  ],
+  "algo-s084": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "分治算法（Divide and Conquer）解决问题的三步通用框架是：",
+      "options": [
+        "分解原问题 -> 解决各子问题 -> 合并子问题的解",
+        "穷举所有分支 -> 随机打乱 -> 选取最优",
+        "建立哈希表 -> 排序键值 -> 打印结果",
+        "建立大顶堆 -> 逐个弹出 -> 格式化输出"
+      ],
+      "answer": 0,
+      "explanation": "分治算法的核心三步法：分（Divide）、治（Conquer）、合（Combine）。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "分治算法要求子问题必须与原问题结构具有相____性（同/异），且子问题之间相互独立。",
+      "answer": "同",
+      "accept": [
+        "同",
+        "相同",
+        "相似"
+      ],
+      "explanation": "子问题具有相同的逻辑形式只是规模更小，因此可以用相同的递归函数解决。"
+    }
+  ],
+  "algo-s085": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在分治算法中，当子问题规模缩小到可以直接求解的边界时，对应的递归部分称为：",
+      "options": [
+        "基准情况（Base Case / 递归终止条件）",
+        "归并状态",
+        "死循环",
+        "贪心选择"
+      ],
+      "answer": 0,
+      "explanation": "基准情况是递归的出口，直接给出解而不继续向下分解。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "归并排序和____排序（快速/冒泡）是计算机科学中最为著名的两类分治经典代表算法。",
+      "answer": "快速",
+      "accept": [
+        "快速",
+        "快排",
+        "快速排序"
+      ],
+      "explanation": "归并排序和快速排序是分治思想的两大经典支柱。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "分治算法中，若将规模为 n 的问题划分为 2 个规模为 n/2 的子问题，合并开销为 O(n)，根据主定理，总时间复杂度为：",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n^2)",
+        "O(log n)"
+      ],
+      "answer": 0,
+      "explanation": "T(n) = 2T(n/2) + O(n)，属于主定理第二种情况，结果为 O(n log n)（即归并排序）。"
+    }
+  ],
+  "algo-s086": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在有序数组中，二分查找可以视为分治算法的一个特例（减治法，Decrease and Conquer），因为：",
+      "options": [
+        "每次计算 mid 后只需递归求解左半区或右半区其中一个子问题，另一半被完全舍弃",
+        "每次必须同时求解两个子问题",
+        "它需要 O(n) 的合并时间",
+        "它不需要递归终止条件"
+      ],
+      "answer": 0,
+      "explanation": "二分查找每次根据中点直接剪掉一半区间，只保留另一半继续递归，属于减半规模的减治法。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def dfs_search(nums: list[int], target: int, i: int, j: int) -> int:\n    if i > j:\n        return -1\n    m = (i + j) // 2\n    if nums[m] < target:\n        return dfs_search(nums, target, ____, j)\n    elif nums[m] > target:\n        return dfs_search(nums, target, i, m - 1)\n    return m",
+      "stem": "补全递归二分查找向右半区搜索的左边界参数：",
+      "blanks": [
+        {
+          "answer": "m + 1",
+          "accept": [
+            "m+1"
+          ]
+        }
+      ],
+      "explanation": "当 nums[m] < target 时，向右半区间 [m + 1, j] 递归查找。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "递归分治二分查找在每次递归时问题规模变为 n/2，其空间复杂度（调用栈深度）为 O(log ____)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "递归深度即折半次数，空间复杂度为 O(log n)。"
+    }
+  ],
+  "algo-s087": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "根据一棵二叉树的前序遍历序列 [3, 9, 20, 15, 7] 和中序遍历序列 [9, 3, 15, 20, 7]，该树的根节点值是：",
+      "options": [
+        "3",
+        "9",
+        "7",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "前序遍历的第一个元素（nums[0]）即为当前子树的根节点，故根节点为 3。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在中序遍历中定位根节点后，根节点左侧的所有元素构成了该树的____子树（左/右）。",
+      "answer": "左",
+      "accept": [
+        "左",
+        "左子树"
+      ],
+      "explanation": "中序遍历为左根右，根节点左边全属于左子树，右边全属于右子树。"
+    }
+  ],
+  "algo-s088": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "经典汉诺塔（Tower of Hanoi）问题中，将 n 个圆盘从柱子 A 借助柱子 B 移动到柱子 C，移动的最少总步数是：",
+      "options": [
+        "2^n - 1",
+        "n^2",
+        "2n",
+        "n!"
+      ],
+      "answer": 0,
+      "explanation": "递推关系 T(n) = 2T(n - 1) + 1，解得 T(n) = 2^n - 1。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "def hanoi_steps(n: int) -> int:\n    if n == 1:\n        return 1\n    return 2 * hanoi_steps(n - 1) + 1\n\nprint(hanoi_steps(3))",
+      "stem": "输入 n = 3 执行上述代码，移动 3 个圆盘的最少步数是几步？",
+      "answer": "7",
+      "accept": [
+        "7",
+        "7\n"
+      ],
+      "explanation": "2^3 - 1 = 7 步。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "汉诺塔算法的时间复杂度属于典型的____阶 O(2^n)（多项式/指数）。",
+      "answer": "指数",
+      "accept": [
+        "指数",
+        "指数阶"
+      ],
+      "explanation": "每增加一个圆盘步数翻倍，增长速度呈指数级。"
+    }
+  ],
+  "algo-s089": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "分治算法若要取得高效运行表现，子问题之间通常应当满足的性质是：",
+      "options": [
+        "子问题相互独立，不包含大量重复的重叠子问题",
+        "每个子问题必须由不同的 CPU 进程并发运行",
+        "子问题的输出结果必须全部为 0",
+        "必须基于链表传递参数"
+      ],
+      "answer": 0,
+      "explanation": "如果子问题存在大量重叠（如无记忆化的递归斐波那契），分治会造成严重重复计算，此时应当使用动态规划。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "主定理（Master Theorem）是专门用于渐近求解递归____算法时间复杂度的强有力数学工具。",
+      "answer": "分治",
+      "accept": [
+        "分治",
+        "分治法",
+        "递归"
+      ],
+      "explanation": "主定理专门针对形如 T(n) = aT(n/b) + f(n) 的分治递推方程进行复杂度判定。"
+    }
+  ],
+  "algo-s090": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "使用分治算法求解最大子数组和问题时，跨越中点 mid 的最大子数组和应当如何计算？",
+      "options": [
+        "从中点向左扫描求出包含 mid 的最大前缀，从中点向右扫描求出包含 mid+1 的最大前缀，两者相加",
+        "直接把整个数组所有数加起来",
+        "取左半部分的最大值乘以右半部分的最大值",
+        "只能为 0"
+      ],
+      "answer": 0,
+      "explanation": "跨中点的最大连续子数组必然包含 mid 和 mid+1，分别向两侧贪心求最大边界和再合并即可。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def my_pow(x: float, n: int) -> float:\n    # 快速幂分治求解 x^n\n    if n == 0:\n        return 1.0\n    if n < 0:\n        return 1.0 / my_pow(x, -n)\n    sub = my_pow(x, n // 2)\n    if n % 2 == 0:\n        return sub * sub\n    return sub * sub * ____",
+      "stem": "当指数 n 为奇数时，快速幂在平方后还需要额外乘上一个底数，补全变量名：",
+      "blanks": [
+        {
+          "answer": "x",
+          "accept": [
+            "x"
+          ]
+        }
+      ],
+      "explanation": "n 为奇数时 x^n = (x^(n // 2))^2 * x。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "def pow_test(x, n):\n    res = 1\n    while n > 0:\n        if n % 2 == 1:\n            res *= x\n        x *= x\n        n //= 2\n    return res\nprint(pow_test(2, 5))",
+      "stem": "上述快速幂迭代代码计算 2^5，输出打印值是多少？",
+      "answer": "32",
+      "accept": [
+        "32",
+        "32\n"
+      ],
+      "explanation": "2^5 = 32。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "快速幂算法将计算 x^n 的朴素 O(n) 连乘时间复杂度大幅优化至 O(log ____)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "每次折半指数 n，复杂度为对数阶 O(log n)。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "分治法与动态规划的核心共同点和差异在于：",
+      "options": [
+        "二者都将大问题分解为子问题；分治的子问题互相独立，动态规划的子问题存在大量重叠",
+        "分治只能用 C 语言，动态规划只能用 Python",
+        "动态规划不能求最值",
+        "分治算法不需要递归"
+      ],
+      "answer": 0,
+      "explanation": "分治与 DP 均有子问题结构，但分治适合独立子问题，DP 针对重叠子问题利用记忆化避免冗余。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "在大整数乘法中，Karatsuba 分治算法将乘法的复数项从 4 次减少为____次，将复杂度降至约 O(n^1.585)。",
+      "answer": "3",
+      "accept": [
+        "3",
+        "三次"
+      ],
+      "explanation": "Karatsuba 技巧利用 (a+b)(c+d) 结合加减法，将子乘法次数从 4 次压缩到 3 次。"
+    }
+  ],
+  "algo-s091": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "回溯算法（Backtracking）常被称为“具有放弃能力的深度优先搜索”，其核心过程包含：",
+      "options": [
+        "做出选择 -> 递归深入 -> 撤销选择（恢复现场）",
+        "随机产生解 -> 打印输出",
+        "建立小顶堆 -> 删除堆顶",
+        "双指针从两侧向中间靠近"
+      ],
+      "answer": 0,
+      "explanation": "回溯沿着解空间树深入，在返回前一步时必须撤销当前选择以恢复状态现场。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在回溯搜索过程中，通过特定条件提前排除不可能产生合法解的无效分支，这一关键操作被称为____（剪枝/排序）。",
+      "answer": "剪枝",
+      "accept": [
+        "剪枝",
+        "剪枝优化",
+        "pruning"
+      ],
+      "explanation": "剪枝（Pruning）能够大幅缩小搜索树空间，提高回溯效率。"
+    }
+  ],
+  "algo-s092": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "回溯算法通常用于解决下列哪类问题？",
+      "options": [
+        "排列组合、全子集生成、数独求解及约束满足问题",
+        "计算单源无权图的最短路径",
+        "海量浮点数的哈希去重",
+        "快速合并两个升序数组"
+      ],
+      "answer": 0,
+      "explanation": "回溯法是穷举所有可能排列、组合、划分方案的通用框架。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "回溯算法的搜索空间在逻辑上可以组织并抽象为一棵____树（数据结构名）。",
+      "answer": "决策",
+      "accept": [
+        "决策",
+        "状态",
+        "解空间",
+        "决策树",
+        "解空间树"
+      ],
+      "explanation": "回溯算法对决策树（或状态树）进行深度优先遍历。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "回溯算法在搜索过程中，如果到达了叶子节点或满足了目标条件，应当执行的操作是：",
+      "options": [
+        "将当前有效路径保存到全局结果集中，并 return 返回上一层",
+        "直接 exit 终止整个进程",
+        "重置所有变量为 None",
+        "重新从根节点发起一次完整搜索"
+      ],
+      "answer": 0,
+      "explanation": "命中基准解后，记录答案并返回，触发父层恢复现场继续遍历其他分支。"
+    }
+  ],
+  "algo-s093": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "对包含 n 个互不相同元素的数组求解无重复全排列，解的总数量是：",
+      "options": [
+        "n!",
+        "2^n",
+        "n^2",
+        "n * (n - 1) / 2"
+      ],
+      "answer": 0,
+      "explanation": "根据排列组合公式，n 个不同元素的全排列数量为 n 的阶乘 n!。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def backtrack(nums: list[int], path: list[int], selected: list[bool], res: list):\n    if len(path) == len(nums):\n        res.append(list(path))\n        return\n    for i in range(len(nums)):\n        if not selected[i]:\n            selected[i] = True\n            path.append(nums[i])\n            backtrack(nums, path, selected, res)\n            path.pop()\n            selected[i] = ____",
+      "stem": "补全全排列回溯在递归返回后恢复选择现场的状态值：",
+      "blanks": [
+        {
+          "answer": "False",
+          "accept": [
+            "False"
+          ]
+        }
+      ],
+      "explanation": "撤销选择：先弹栈 path.pop()，再将 selected[i] 重置回 False。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "import itertools\nperms = list(itertools.permutations([1, 2, 3]))\nprint(len(perms))",
+      "stem": "包含 3 个不同数字的数组，其全排列总数是多少个？",
+      "answer": "6",
+      "accept": [
+        "6",
+        "6\n"
+      ],
+      "explanation": "3! = 3 × 2 × 1 = 6。"
+    }
+  ],
+  "algo-s094": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在正整数数组中寻找和为 target 的组合时，若先对原数组进行升序排序，可以在循环中增加怎样的强力剪枝？",
+      "options": [
+        "当当前累加和加上当前元素已经超过 target 时，由于后续元素更大，可以直接 break 提前结束本层循环",
+        "直接把当前元素替换为 0",
+        "直接清空之前的所有答案",
+        "向后无限递归"
+      ],
+      "answer": 0,
+      "explanation": "数组升序后，只要某个候选数导致总和超标，其后面的数更加超标，无需再尝试，可直接 break 剪枝。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "若数组包含 n 个不同元素，其所有可能子集（幂集，包含空集和自身）的总数是____^n。",
+      "answer": "2",
+      "accept": [
+        "2"
+      ],
+      "explanation": "每个元素都有选或不选 2 种状态，总子集数量为 2^n。"
+    }
+  ],
+  "algo-s095": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "N 皇后问题中，棋盘上的任意两个皇后不能相互攻击，必须满足的约束规则是：",
+      "options": [
+        "任意两个皇后不能处于同一行、同一列或同一对角线上",
+        "皇后只能放置在棋盘黑色格子上",
+        "所有皇后必须连成一条直线",
+        "每行只能放两个皇后"
+      ],
+      "answer": 0,
+      "explanation": "国际象棋中皇后可以横、竖、斜任意格移动攻击，因此同一行、同一列、主副对角线上均不能同时存在两个皇后。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "# 经典 4 皇后问题\n# 4 皇后在 4x4 棋盘上的合法摆放方案数\nprint(2)",
+      "stem": "标准 4 皇后问题在 4×4 棋盘上共有多少种不同的互不冲突解法？",
+      "answer": "2",
+      "accept": [
+        "2",
+        "2\n"
+      ],
+      "explanation": "4 皇后问题共有 2 种合法放置解。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "在 N 皇后算法中，可以通过维护列集合、主对角线集合（行 - 列）和副对角线集合（行 + 列）实现 O(____) 的快速冲突判定。",
+      "answer": "1",
+      "accept": [
+        "1",
+        "O(1)"
+      ],
+      "explanation": "利用三个哈希集合（或布尔数组）记录已被占用的行列及对角线编号，判断冲突只需 O(1)。"
+    }
+  ],
+  "algo-s096": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "关于回溯算法中的“状态重置 / 恢复现场”，下列说法正确的是：",
+      "options": [
+        "在从子递归分支返回到父节点前，必须将对全局状态路径的修改还原，避免污染并列同级分支的搜索",
+        "状态重置会增加时间复杂度，应尽量避免使用",
+        "只有树的叶子节点才需要恢复现场",
+        "如果使用局部变量按值传参，就绝对不需要任何重置"
+      ],
+      "answer": 0,
+      "explanation": "回溯共用一条全局路径（如 path 列表），深入时 append，回退时必须 pop，以防污染兄弟分支。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "回溯算法的时间复杂度通常是指数阶 O(2^n) 或____阶 O(n!)。",
+      "answer": "阶乘",
+      "accept": [
+        "阶乘",
+        "阶乘阶"
+      ],
+      "explanation": "组合子集问题通常对应指数阶，全排列问题对应阶乘阶。"
+    }
+  ],
+  "algo-s097": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在含有重复元素的数组中求解不重复的全排列（例如 [1, 1, 2]），避免生成重复解的关键剪枝条件是：",
+      "options": [
+        "先对数组排序，当 nums[i] == nums[i-1] 且前一个相同元素尚未在本次路径中使用时，直接跳过当前元素",
+        "每次随机删掉一个重复元素",
+        "将生成的全部结果放入列表后再做 O(n^2) 线性去重",
+        "把所有重复数字全变成负数"
+      ],
+      "answer": 0,
+      "explanation": "经典剪枝：排序后，若当前数与前数相同且前数未被使用（同一树层），说明该分支已被前一个数穷举过，跳过当前数以避免同层重复。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def subsets(nums: list[int]) -> list[list[int]]:\n    res = []\n    def dfs(start: int, path: list[int]):\n        res.append(list(path))\n        for i in range(start, len(nums)):\n            path.append(nums[i])\n            dfs(i + 1, path)\n            path.____()\n    dfs(0, [])\n    return res",
+      "stem": "补全子集生成算法递归返回后撤销选择的列表方法名：",
+      "blanks": [
+        {
+          "answer": "pop",
+          "accept": [
+            "pop"
+          ]
+        }
+      ],
+      "explanation": "回溯撤销选择：path.pop()。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "nums = [1, 2]\nres = []\ndef dfs(start, path):\n    res.append(list(path))\n    for i in range(start, len(nums)):\n        path.append(nums[i])\n        dfs(i + 1, path)\n        path.pop()\ndfs(0, [])\nprint(len(res))",
+      "stem": "对含有 2 个元素的数组求解所有可能子集，最终结果列表 res 的长度是多少？",
+      "answer": "4",
+      "accept": [
+        "4",
+        "4\n"
+      ],
+      "explanation": "2 个元素的子集数量为 2^2 = 4（分别为 [], [1], [1, 2], [2]）。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "数独（Sudoku）游戏的自动求解程序，本质上是基于深度优先搜索和____算法实现的。",
+      "answer": "回溯",
+      "accept": [
+        "回溯",
+        "剪枝",
+        "回溯算法"
+      ],
+      "explanation": "在每个空格尝试填入 1~9，根据行列及九宫格规则检验剪枝，遇死胡同回溯。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "在电话号码的字母组合问题（每个按键对应 3~4 个字母）中，回溯算法的搜索树深度严格等于：",
+      "options": [
+        "输入数字字符串的长度",
+        "所有可能字母的总数",
+        "固定为 100",
+        "手机屏幕的高度"
+      ],
+      "answer": 0,
+      "explanation": "每处理一个数字代表在决策树上下潜一层，递归树深度正好等于输入的数字个数。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "在回溯搜索中，若当前路径上的部分和已超过目标 target，执行 return 提前结束当前分支的操作被称为____。",
+      "answer": "剪枝",
+      "accept": [
+        "剪枝",
+        "剪枝优化"
+      ],
+      "explanation": "提前终止无效分支即剪枝。"
+    }
+  ],
+  "algo-s098": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "动态规划（Dynamic Programming，DP）能够高效解决复杂最优化问题的核心手段是：",
+      "options": [
+        "记录已解决的子问题答案（记忆化/查表），避免重叠子问题的重复计算",
+        "将问题转化为图后执行深度优先搜索",
+        "必须使用双向链表存储状态",
+        "每次只做贪心选择而不考虑全局最优"
+      ],
+      "answer": 0,
+      "explanation": "动态规划通过存储子问题状态（表格缓存），将指数级穷举搜索降维至多项式时间。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "动态规划自底向上递推计算时，用来描述大问题与其子问题之间递推关系的数学方程被称为状态____方程。",
+      "answer": "转移",
+      "accept": [
+        "转移",
+        "状态转移",
+        "转移方程"
+      ],
+      "explanation": "状态转移方程（State Transition Equation）是动态规划的核心灵魂。"
+    }
+  ],
+  "algo-s099": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "经典“爬楼梯”问题：每次可以爬 1 阶或 2 阶，到达第 n 阶的方法数 dp[n] 满足的递推关系是：",
+      "options": [
+        "dp[n] = dp[n - 1] + dp[n - 2]",
+        "dp[n] = dp[n - 1] * dp[n - 2]",
+        "dp[n] = max(dp[n - 1], dp[n - 2])",
+        "dp[n] = 2 * dp[n - 1]"
+      ],
+      "answer": 0,
+      "explanation": "到达第 n 阶的最后一步只能是从 n-1 跨 1 步，或从 n-2 跨 2 步，两类互斥路径相加，等同于斐波那契数列。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def climb_stairs(n: int) -> int:\n    if n <= 2:\n        return n\n    a, b = 1, 2\n    for _ in range(3, n + 1):\n        a, b = b, ____\n    return b",
+      "stem": "补全滚动变量优化空间后的斐波那契递推式：",
+      "blanks": [
+        {
+          "answer": "a + b",
+          "accept": [
+            "a+b"
+          ]
+        }
+      ],
+      "explanation": "下一个状态等于前两个状态之和 a + b，空间优化至 O(1)。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "def climb(n):\n    if n <= 2: return n\n    dp = [0] * (n + 1)\n    dp[1], dp[2] = 1, 2\n    for i in range(3, n + 1):\n        dp[i] = dp[i - 1] + dp[i - 2]\n    return dp[n]\nprint(climb(4))",
+      "stem": "爬 4 阶楼梯的不同走法总共有多少种？",
+      "answer": "5",
+      "accept": [
+        "5",
+        "5\n"
+      ],
+      "explanation": "dp[1]=1, dp[2]=2, dp[3]=3, dp[4]=5。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "动态规划中，“重叠子问题”如果用朴素递归处理，会导致其时间复杂度达到：",
+      "options": [
+        "指数阶 O(2^n)",
+        "线性阶 O(n)",
+        "常数阶 O(1)",
+        "对数阶 O(log n)"
+      ],
+      "answer": 0,
+      "explanation": "无记忆化递归会成倍重复计算完全相同的子节点，产生指数级树形调用爆炸。"
+    }
+  ],
+  "algo-s100": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "一个问题适宜使用动态规划求解，必须具备的两个核心特征是：",
+      "options": [
+        "重叠子问题（Overlapping Subproblems）与最优子结构（Optimal Substructure）",
+        "数据必须为浮点数且必须为链表存储",
+        "子问题之间必须相互依赖产生循环死锁",
+        "必须使用多线程并发计算"
+      ],
+      "answer": 0,
+      "explanation": "最优子结构保证大问题最优解由小问题最优解构成；重叠子问题保证查表能带来性能飞跃。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "未来状态的演化只取决于当前状态，而与过去的决策路径历史无关，这一性质被称为无____性（后效/收敛）。",
+      "answer": "后效",
+      "accept": [
+        "后效",
+        "后效性"
+      ],
+      "explanation": "无后效性（Memoryless / Markov Property）是建立状态转移方程的基本前提。"
+    }
+  ],
+  "algo-s101": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "解决动态规划问题的标准四步设计流程通常为：",
+      "options": [
+        "定义状态 -> 确定状态转移方程 -> 明确初始状态与边界条件 -> 确定遍历计算顺序",
+        "随机赋值 -> 快速排序 -> 二分查找 -> 打印",
+        "暴力递归 -> 撤销选择 -> 贪心跳跃 -> 格式化输出",
+        "建立邻接表 -> BFS 遍历 -> 释放内存"
+      ],
+      "answer": 0,
+      "explanation": "DP 解题套路：明确状态定义、列出转移方程、确定 base case、确定填表递推方向。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "如果状态 dp[i] 只依赖于上一轮计算的 dp[i-1]，可以通过“____变量”技术将空间复杂度从 O(n) 压缩至 O(1)。",
+      "answer": "滚动",
+      "accept": [
+        "滚动",
+        "滚动数组",
+        "滑动"
+      ],
+      "explanation": "只保留有限个历史变量轮流滚动更新，极大压缩空间。"
+    }
+  ],
+  "algo-s102": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在 0-1 背包问题中，每件物品面临的决策是：",
+      "options": [
+        "要么不选（0），要么选且只能选 1 次（1）",
+        "每件物品可以无限制切分成任意碎块放入",
+        "每件物品可以放入无限多次",
+        "必须全部物品同时打包放入"
+      ],
+      "answer": 0,
+      "explanation": "0-1 背包的关键约束是每种物品仅此一件，选或不选，不可分割。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def knapsack(weights: list[int], values: list[int], cap: int) -> int:\n    # 空间压缩后的一维 0-1 背包\n    dp = [0] * (cap + 1)\n    for w, v in zip(weights, values):\n        for c in range(cap, w - 1, ____):\n            dp[c] = max(dp[c], dp[c - w] + v)\n    return dp[cap]",
+      "stem": "一维 0-1 背包为了防止同一物品被重复利用，容量循环必须从大到小倒序遍历，补全 range 步长：",
+      "blanks": [
+        {
+          "answer": "-1",
+          "accept": [
+            "-1"
+          ]
+        }
+      ],
+      "explanation": "0-1 背包一维优化必须逆序遍历（步长为 -1），确保计算当前 dp[c] 时所引用的 dp[c - w] 仍然是上一轮的值。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "w = [1, 2]\nv = [10, 20]\ncap = 2\ndp = [0] * (cap + 1)\nfor weight, val in zip(w, v):\n    for c in range(cap, weight - 1, -1):\n        dp[c] = max(dp[c], dp[c - weight] + val)\nprint(dp[cap])",
+      "stem": "上述 0-1 背包代码计算容量为 2 时的最大总价值，打印结果是多少？",
+      "answer": "20",
+      "accept": [
+        "20",
+        "20\n"
+      ],
+      "explanation": "物品 1 重 1 值 10，物品 2 重 2 值 20。容量 2 时选物品 2 价值为 20 最大。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "在二维 0-1 背包 DP 中，dp[i][c] 代表的含义是：",
+      "options": [
+        "在前 i 个物品中进行选择，在不超过容量 c 的限制下所能获得的最大总价值",
+        "第 i 个物品的重量乘以容量 c",
+        "背包当前剩余的可用空间大小",
+        "第 i 件物品是否能放进背包的布尔值"
+      ],
+      "answer": 0,
+      "explanation": "状态定义：前 i 个物品、容量限制为 c 时的最大价值。"
+    }
+  ],
+  "algo-s103": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "完全背包问题与 0-1 背包问题的核心区别在于：",
+      "options": [
+        "完全背包中每种物品的存量是无限的，可以重复选取任意多次",
+        "完全背包的容量无限大",
+        "完全背包物品的价值不能是整数",
+        "完全背包只能使用贪心算法求解"
+      ],
+      "answer": 0,
+      "explanation": "完全背包允许对同一物品重复多次选择，直到背包装不下为止。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在空间优化为一维数组后，完全背包的背包容量循环方向应采用____序遍历（正/逆）。",
+      "answer": "正",
+      "accept": [
+        "正",
+        "正序",
+        "从小到大"
+      ],
+      "explanation": "正序遍历允许当前计算利用本轮物品的新状态，恰好实现了重复选择同一物品的语义。"
+    }
+  ],
+  "algo-s104": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "经典编辑距离（Levenshtein 距离）问题允许对字符串执行的 3 种基础编辑操作是：",
+      "options": [
+        "插入一个字符、删除一个字符、替换一个字符",
+        "反转字符串、清空字符串、字符串相乘",
+        "转为大写、转为小写、添加空格",
+        "加密、解密、压缩"
+      ],
+      "answer": 0,
+      "explanation": "编辑距离定义将单词 A 转换为单词 B 所需的最少操作数：插入、删除、替换。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "将字符串 \"horse\" 转换为 \"ros\"，最少需要执行的编辑操作步数是____步。",
+      "answer": "3",
+      "accept": [
+        "3"
+      ],
+      "explanation": "horse -> rorse（替换 h 为 r）-> rose（删除 r）-> ros（删除 e），最少需要 3 步。"
+    }
+  ],
+  "algo-s105": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "比较贪心、动态规划与分治三种思想，下列概括最精准的是：",
+      "options": [
+        "分治自顶向下分解独立子问题；动态规划解决具有重叠子问题的最优化；贪心则在每一步仅做局部最优决策",
+        "贪心一定能求得全局最优解而动态规划不行",
+        "分治的时间复杂度永远比动态规划低",
+        "三者没有任何区别，完全等同"
+      ],
+      "answer": 0,
+      "explanation": "分治要求子问题相互独立；动态规划通过表格记录重叠子问题实现全局最优；贪心做出当下最好选择而不回溯。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "动态规划自顶向下的实现方式通常表现为带____表的递归（记忆化）。",
+      "answer": "备忘录",
+      "accept": [
+        "备忘录",
+        "记忆",
+        "记忆化",
+        "缓存"
+      ],
+      "explanation": "带备忘录的递归（Memoization）是 DP 自顶向下的典型形式。"
+    }
+  ],
+  "algo-s106": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在“零钱兑换”（Coin Change）问题中，给定硬币面额 [1, 2, 5]，凑齐总金额 11 所需的最少硬币枚数是：",
+      "options": [
+        "3 枚（5 + 5 + 1）",
+        "11 枚",
+        "4 枚",
+        "2 枚"
+      ],
+      "answer": 0,
+      "explanation": "选择 5 + 5 + 1 仅需 3 枚硬币，是最少枚数。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def coin_change(coins: list[int], amount: int) -> int:\n    dp = [float(\"inf\")] * (amount + 1)\n    dp[0] = 0\n    for a in range(1, amount + 1):\n        for c in coins:\n            if a - c >= 0:\n                dp[a] = min(dp[a], dp[a - c] + ____)\n    return dp[amount] if dp[amount] != float(\"inf\") else -1",
+      "stem": "补全凑硬币状态转移方程中加上当前 1 枚硬币的常数：",
+      "blanks": [
+        {
+          "answer": "1",
+          "accept": [
+            "1"
+          ]
+        }
+      ],
+      "explanation": "转移方程为 dp[a] = min(dp[a], dp[a - c] + 1)。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "coins = [1, 2, 5]\namount = 6\ndp = [999] * (amount + 1)\ndp[0] = 0\nfor a in range(1, amount + 1):\n    for c in coins:\n        if a >= c: dp[a] = min(dp[a], dp[a - c] + 1)\nprint(dp[6])",
+      "stem": "凑齐金额 6 所需的最少硬币数量是多少枚？",
+      "answer": "2",
+      "accept": [
+        "2",
+        "2\n"
+      ],
+      "explanation": "5 + 1 = 6，需要 2 枚硬币。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "求解最长递增子序列（LIS）问题，朴素动态规划的时间复杂度为 O(____^2)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "双重循环遍历前驱，朴素 DP 时间复杂度为 O(n^2)（可用贪心加二分优化至 O(n log n)）。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "在“打家劫舍”问题中（不能同时偷窃相邻两间房屋），偷窃前 i 间房屋的最大金额 dp[i] 满足的转移方程是：",
+      "options": [
+        "dp[i] = max(dp[i - 1], dp[i - 2] + nums[i])",
+        "dp[i] = dp[i - 1] + nums[i]",
+        "dp[i] = min(dp[i - 1], dp[i - 2])",
+        "dp[i] = dp[i - 2] * nums[i]"
+      ],
+      "answer": 0,
+      "explanation": "第 i 间房如果不偷，收益为 dp[i-1]；如果偷，则不能偷第 i-1 间，收益为 dp[i-2] + nums[i]，二者取较大值。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "最长公共子序列（LCS）问题中，若两个字符串当前字符相同，则状态转移方程在子问题基础上加____。",
+      "answer": "1",
+      "accept": [
+        "1",
+        "一"
+      ],
+      "explanation": "若 text1[i-1] == text2[j-1]，则 dp[i][j] = dp[i-1][j-1] + 1。"
+    }
+  ],
+  "algo-s107": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "贪心算法（Greedy Algorithm）在解决最优化问题时的策略是：",
+      "options": [
+        "在每一步决策中都采取在当前状态下最好或最优的选择，希望导致全局最优",
+        "穷举所有分支的所有组合并排序",
+        "每一步都选择最差的选择",
+        "回溯所有之前的选择重新抉择"
+      ],
+      "answer": 0,
+      "explanation": "贪心算法具有“短视”特征，步步求局部最优，无需回溯。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "贪心算法能够保证求得全局最优解的前提是该问题必须具备____选择性质。",
+      "answer": "贪心",
+      "accept": [
+        "贪心",
+        "贪心选择",
+        "最优子结构"
+      ],
+      "explanation": "具备贪心选择性质（Greedy Choice Property）意味着局部最优选择能逐步导出全局最优解。"
+    }
+  ],
+  "algo-s108": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在很多问题中贪心算法无法得到全局最优解（例如普通 0-1 背包）。但在以下哪个问题中贪心算法被证明能绝对得到全局最优解？",
+      "options": [
+        "最小生成树（Kruskal / Prim 算法）和单源最短路径（Dijkstra 算法）",
+        "旅行商问题（TSP）",
+        "任意面额的硬币兑换问题",
+        "最长公共子序列问题"
+      ],
+      "answer": 0,
+      "explanation": "Kruskal、Prim、Dijkstra 等经典图算法均严格证明了贪心策略的全局最优性。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "相比动态规划，贪心算法不需要保存大量历史状态表，因此通常具有极低的时间复杂度和 O(____) 的常数级额外空间开销。",
+      "answer": "1",
+      "accept": [
+        "1",
+        "O(1)"
+      ],
+      "explanation": "贪心只顾当前步进，往往是原地或仅需固定几个统计指针。"
+    },
+    {
+      "id": "q4",
+      "type": "choice",
+      "stem": "如果在找零钱问题中，硬币面额为 [1, 5, 10, 20, 50, 100]，贪心算法每次选取最大可能面额：",
+      "options": [
+        "能够严格保证得到最少硬币总数（因为我国货币体系满足特定倍数与拟阵特性）",
+        "绝对无法找零",
+        "只能找偶数金额",
+        "会陷入死循环"
+      ],
+      "answer": 0,
+      "explanation": "现实中的法定货币体系经过精心设计，面额之间通常成倍数关系，贪心选择能得到全局最优解。"
+    }
+  ],
+  "algo-s109": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在分数背包（Fractional Knapsack）问题中物品可以任意分割，贪心算法的排序选优准则是：",
+      "options": [
+        "优先选取性价比（单位重量价值 = 价值 / 重量）最高的物品",
+        "优先选取重量最大的物品",
+        "优先选取价格绝对值最小的物品",
+        "随机选取"
+      ],
+      "answer": 0,
+      "explanation": "分数背包中物品可拆分，按单位价值从大到小贪心放入，直到装满背包，能严格证明达到最大总价值。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "class Item:\n    def __init__(self, w: int, v: int):\n        self.w = w\n        self.v = v\n        self.unit_val = v / ____",
+      "stem": "补全物品性价比（单位重量价值）计算的除数变量：",
+      "blanks": [
+        {
+          "answer": "w",
+          "accept": [
+            "w"
+          ]
+        }
+      ],
+      "explanation": "单位价值 = 总价值 v / 总重量 w。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "0-1 背包问题____（能/不能）直接简单地使用单位价值贪心法求得全局最优解。",
+      "answer": "不能",
+      "accept": [
+        "不能",
+        "无法",
+        "不可以"
+      ],
+      "explanation": "0-1 背包不可分割，单位价值高的物品可能产生空间浪费导致总体价值不如低单价组合，因此贪心失效，必须用 DP。"
+    }
+  ],
+  "algo-s110": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在“盛最多水的容器”（接雨水横向面积最大）双指针问题中，每次应当如何移动指针？",
+      "options": [
+        "移动两端中高度较短的那根柱子对应的指针向内靠拢",
+        "移动高度较长的那根柱子",
+        "左右指针每次随机移动一个",
+        "两个指针同时向内移动"
+      ],
+      "answer": 0,
+      "explanation": "容器容量受限于短板高度。宽度在不断减小，只有舍弃短板、尝试寻找更高的新板才可能使面积增大。"
+    },
+    {
+      "id": "q2",
+      "type": "code",
+      "lang": "python",
+      "code": "h = [1, 8, 6, 2, 5, 4, 8, 3, 7]\ni, j = 0, len(h) - 1\nmax_area = 0\nwhile i < j:\n    area = min(h[i], h[j]) * (j - i)\n    max_area = max(max_area, area)\n    if h[i] < h[j]: i += 1\n    else: j -= 1\nprint(max_area)",
+      "stem": "上述盛最多水的容器代码执行后，打印的最大储水面积是多少？",
+      "answer": "49",
+      "accept": [
+        "49",
+        "49\n"
+      ],
+      "explanation": "选下标 1（高 8）与下标 8（高 7），跨度 7，min(8, 7) * 7 = 49。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "该双指针贪心策略从两端向中间逼近，每个柱子仅被访问一次，时间复杂度为 O(____)。",
+      "answer": "n",
+      "accept": [
+        "n",
+        "N"
+      ],
+      "explanation": "左右双指针相遇遍历 n 次，线性阶 O(n)。"
+    }
+  ],
+  "algo-s111": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "将正整数 n 拆分为若干个正整数之和，使其乘积最大（剪绳子问题），数学上可以证明应当尽可能多地拆分出数字几？",
+      "options": [
+        "3",
+        "1",
+        "5",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "利用微积分函数求极值可知，单份长度为自然对数底 e ≈ 2.718 时乘积最大，最接近的整数是 3，故应尽可能多拆出 3。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "当把正整数 n 尽可能拆分成 3 之后，若最后剩余的一小段长度为 1，最佳策略是将 3 + 1 调整拆分成 2 + ____。",
+      "answer": "2",
+      "accept": [
+        "2"
+      ],
+      "explanation": "因为 2 × 2 = 4 大于 3 × 1 = 3。"
+    }
+  ],
+  "algo-s112": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "证明一个贪心算法正确性最常用的两种经典数学证明方法是：",
+      "options": [
+        "数学归纳法与微调反证法（交换论证，Exchange Argument）",
+        "穷举法与实测打卡",
+        "矩阵求逆法与傅里叶变换",
+        "冒泡法与二分法"
+      ],
+      "answer": 0,
+      "explanation": "交换论证（证明若解与贪心选择不同，交换后不会变差）和数学归纳法是证明贪心最优性的核心工具。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "贪心算法虽然速度极快，但最容易陷入局部最优解而错过____最优解。",
+      "answer": "全局",
+      "accept": [
+        "全局",
+        "全局最优"
+      ],
+      "explanation": "贪心只顾眼前不回头，缺乏全局规划容易错失全局最优。"
+    }
+  ],
+  "algo-s113": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在“无重叠区间”区间调度问题中，为了尽可能保留最多的互不重叠区间，应当优先选择哪种区间？",
+      "options": [
+        "结束时间（End Time）最早的区间",
+        "开始时间（Start Time）最早的区间",
+        "长度最长的区间",
+        "任意包含原点的区间"
+      ],
+      "answer": 0,
+      "explanation": "结束时间越早，给后续其他待选区间留下的剩余可用时间越多，是区间调度的经典贪心准则。"
+    },
+    {
+      "id": "q2",
+      "type": "codefill",
+      "lang": "python",
+      "code": "def erase_overlap_intervals(intervals: list[list[int]]) -> int:\n    if not intervals:\n        return 0\n    # 按结束时间升序排序\n    intervals.sort(key=lambda x: x[____])\n    count = 1\n    end = intervals[0][1]\n    for i in range(1, len(intervals)):\n        if intervals[i][0] >= end:\n            count += 1\n            end = intervals[i][1]\n    return len(intervals) - count",
+      "stem": "区间格式为 [start, end]，补全按结束时间排序的 lambda 下标：",
+      "blanks": [
+        {
+          "answer": "1",
+          "accept": [
+            "1"
+          ]
+        }
+      ],
+      "explanation": "x[0] 是开始时间，x[1] 是结束时间，按结束时间排序取 x[1]。"
+    },
+    {
+      "id": "q3",
+      "type": "code",
+      "lang": "python",
+      "code": "intervals = [[1, 2], [2, 3], [3, 4], [1, 3]]\nintervals.sort(key=lambda x: x[1])\ncount = 1\nend = intervals[0][1]\nfor i in range(1, len(intervals)):\n    if intervals[i][0] >= end:\n        count += 1\n        end = intervals[i][1]\nprint(count)",
+      "stem": "上述区间贪心代码执行后，能够保留的最多不重叠区间数量是多少？",
+      "answer": "3",
+      "accept": [
+        "3",
+        "3\n"
+      ],
+      "explanation": "可选 [1, 2], [2, 3], [3, 4] 共 3 个，剔除冲突的 [1, 3]。"
+    },
+    {
+      "id": "q4",
+      "type": "fill",
+      "stem": "在跳跃游戏（Jump Game）中，通过贪心维护当前能够触达的最____距离（大/小）来判断是否可到达终点。",
+      "answer": "大",
+      "accept": [
+        "大",
+        "远",
+        "远距离",
+        "大距离"
+      ],
+      "explanation": "每到一个位置尝试扩展全局可达的最远边界 max_reach。"
+    },
+    {
+      "id": "q5",
+      "type": "choice",
+      "stem": "在霍夫曼编码（Huffman Coding）中，为了使总加权路径长度最短，每次应当从优先队列中取出：",
+      "options": [
+        "出现频次（权重）最小的两个节点合并为一个新父节点",
+        "出现频次最大的两个节点",
+        "随机两个节点",
+        "首字母最大的两个节点"
+      ],
+      "answer": 0,
+      "explanation": "贪心策略：频次越低越放在树深处，每次选两个最小权重节点合并，保证高频字符编码短。"
+    },
+    {
+      "id": "q6",
+      "type": "fill",
+      "stem": "最小生成树算法中，以顶点为中心逐步向外扩张最短切分边的经典贪心算法是____算法（普里姆/克鲁斯卡尔）。",
+      "answer": "普里姆",
+      "accept": [
+        "普里姆",
+        "Prim",
+        "prim"
+      ],
+      "explanation": "Prim 算法以点为核心贪心扩展，Kruskal 算法以边为核心并查集贪心选边。"
+    }
+  ],
+  "algo-s114": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "本书附录部分主要涵盖的内容不包括：",
+      "options": [
+        "各个编程语言的运行环境安装配置指南",
+        "参与本书开源协作与建设的说明",
+        "专业数据结构与算法术语中英文对照表",
+        "大型关系数据库 SQL 物理执行计划内核剖析"
+      ],
+      "answer": 3,
+      "explanation": "附录主要提供环境安装、开源贡献指南与术语对照表，不包含数据库 SQL 内核。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "《Hello 算法》支持多种主流语言代码实现，包括 Python、C、C++、____、Go 等。",
+      "answer": "Java",
+      "accept": [
+        "Java",
+        "java",
+        "JS",
+        "JavaScript"
+      ],
+      "explanation": "Java 是《Hello 算法》核心支持的四大经典主流语言之一。"
+    }
+  ],
+  "algo-s115": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在现代计算机上搭建 C/C++ 算法开发调试环境，最常用的轻量现代化编辑器是：",
+      "options": [
+        "Visual Studio Code (VS Code)",
+        "Windows 记事本",
+        "Adobe Photoshop",
+        "WPS 表格"
+      ],
+      "answer": 0,
+      "explanation": "VS Code 是当今全球最流行、插件生态极丰富的跨平台代码编辑器。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在 Windows 系统上为 VS Code 配置 C/C++ 编译工具链，最常用的开源套件是 MinGW-____。",
+      "answer": "w64",
+      "accept": [
+        "w64",
+        "W64"
+      ],
+      "explanation": "MinGW-w64 是 Windows 下广泛采用的 GNU 编译器套件。"
+    }
+  ],
+  "algo-s116": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "在 GitHub 开源社区中，为《Hello 算法》提交修正建议或新代码的规范流程是：",
+      "options": [
+        "Fork 仓库 -> 创建新分支修改代码 -> 提交 Pull Request (PR) 发起审查",
+        "直接给原作者家里寄纸质书信",
+        "在社交媒体发帖吐槽",
+        "强行向主干分支强制推送 force push"
+      ],
+      "answer": 0,
+      "explanation": "Fork & Pull Request 是 GitHub 标准的协作开源贡献工作流。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "发现教程中存在文字笔误或代码错误时，可以在 GitHub 仓库提交____（Issue/Merge）进行反馈报告。",
+      "answer": "Issue",
+      "accept": [
+        "Issue",
+        "issue",
+        "工单"
+      ],
+      "explanation": "提交 Issue 是开源项目标准的问题反馈与讨论机制。"
+    }
+  ],
+  "algo-s117": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "术语表中的“Time Complexity”和“Space Complexity”分别对应中文计算机术语：",
+      "options": [
+        "时间复杂度与空间复杂度",
+        "时钟频率与硬盘容量",
+        "执行速度与代码行数",
+        "网络延迟与传输带宽"
+      ],
+      "answer": 0,
+      "explanation": "Time Complexity 翻译为时间复杂度，Space Complexity 翻译为空间复杂度。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "在算法中，“Divide and Conquer”的官方标准中文翻译是____法。",
+      "answer": "分治",
+      "accept": [
+        "分治",
+        "分治法",
+        "分而治之"
+      ],
+      "explanation": "Divide and Conquer 翻译为分治算法。"
+    }
+  ],
+  "algo-s118": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "计算机算法领域的权威殿堂级巨著《算法导论》（Introduction to Algorithms），通常被业界和读者简称为：",
+      "options": [
+        "CLRS",
+        "HTTP",
+        "TCP/IP",
+        "POSIX"
+      ],
+      "answer": 0,
+      "explanation": "CLRS 是四位作者 Cormen, Leiserson, Rivest, Stein 的姓氏首字母缩写。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "高德纳（Donald Knuth）所著的计算机算法开山经典丛书全称是《计算机程序设计____》（The Art of Computer Programming，TAOCP）。",
+      "answer": "艺术",
+      "accept": [
+        "艺术",
+        "技艺"
+      ],
+      "explanation": "The Art of Computer Programming 中文翻译为《计算机程序设计艺术》。"
+    }
+  ],
+  "algo-s119": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "相比在电脑屏幕前浏览网页，阅读《Hello 算法》实体纸质书的核心优势在于：",
+      "options": [
+        "沉浸式纸质阅读体验，支持更从容的笔记标注与整体知识脉络梳理",
+        "纸质书可以运行动态交互动画",
+        "纸质书可以自动连接云端题库打卡",
+        "纸质书会自动修正语法错误"
+      ],
+      "answer": 0,
+      "explanation": "纸质图书带来独特的专注阅读质感，便于随时在纸张上推演草稿和划线笔记。"
+    },
+    {
+      "id": "q2",
+      "type": "fill",
+      "stem": "《Hello 算法》纸质书采用全彩印刷，完美呈现了书中的精美动画____（插图/代码）。",
+      "answer": "插图",
+      "accept": [
+        "插图",
+        "图解",
+        "配图"
+      ],
+      "explanation": "全彩印刷将数百张直观的原版图解清晰印制在纸面上。"
+    }
+  ]
+}

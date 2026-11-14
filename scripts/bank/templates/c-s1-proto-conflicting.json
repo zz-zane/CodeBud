@@ -1,0 +1,30 @@
+{
+  "templateId": "c-s1-proto-conflicting",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-13",
+  "type": "codefix",
+  "concept": [
+    "招牌",
+    "declaration",
+    "conflicting types",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "a": {
+      "kind": "int",
+      "min": 1,
+      "max": 4
+    },
+    "b": {
+      "kind": "int",
+      "min": 5,
+      "max": 9
+    }
+  },
+  "stemTemplate": "我们把函数的**招牌**挂在了最上面（挂在那儿，`main` 就能摆在中间、一眼看全流程），函数身体写在最下面。\n\n可编译器把招牌和真函数一对照，当场就不干了……\n\n你帮我们看看哪儿对不上号，把它改好。改好之后，程序应该印出 **{a} 加 {b} 的结果**。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nint add(int a, int b);\n\nint main(void) {\n    printf(\"%d\\n\", add({a}, {b}));\n    return 0;\n}\n\nint add(int a, int b, int c) {\n    return a + b + c;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint add(int a, int b);\n\nint main(void) {\n    printf(\"%d\\n\", add({a}, {b}));\n    return 0;\n}\n\nint add(int a, int b) {\n    return a + b;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: conflicting types for 'add'`，底下还跟了一句 `note: previous declaration of 'add' with type 'int(int,  int)'`  —— 它把**招牌上写的**和**真函数摆的**都念了出来，两边一比，对不上号。\n\n`conflicting types` 就是「**对不上号**」：招牌说这招收**两个**元素，真函数却摆了三个。\n\n招牌必须和真函数**一字不差地对上** —— 把真函数改回两个元素就好啦。\n\n为什么我们非要挂这块招牌？因为顺序：编译器是从上往下念的。`main` 在最上面就调用了 `add`，可那时候真函数还没登场 —— 挂块招牌等于提前打了个招呼：「这招待会儿会来，长这样。」没有招牌，它念到 `add({a}, {b})` 的时候压根不认识这个名字。\n\n⚠️ 招牌上的元素**叫什么名字**其实随便（`int add(int x, int y);` 也能对上），**元素的只数和类型**才必须完全一致。"
+}

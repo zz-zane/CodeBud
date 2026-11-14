@@ -1,0 +1,293 @@
+{
+  "lessonId": "python-stage2-08",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-py-s2-dunder-bowl-str-add-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想要一个元素，还得给这个元素两种本事：\n\n1. `print(元素)` 的时候，印出来长这样：`保存了 3 条数据`（「保存了」后面一个空格，数字和量词之间一个空格）。\n2. 两个元素用 `+` 加起来的时候，得到的是一个**新元素**，里面保存两个元素**合起来**的数。\n\n请你画好这张类定义，然后**读两行整数**（一行一个，先读到的是 `a`，后读到的是 `b`），分别拿来造两个元素，最后**印两行**：\n\n1. 第一个元素被 `print` 出来的样子\n2. 两个元素 `+` 起来并成的那个**新元素**被 `print` 出来的样子\n\n比如输入是\n\n6\n8\n\n就要输出\n\n保存了 6 条数据\n保存了 14 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\na = Bowl(int(input()))\nb = Bowl(int(input()))\nprint(a)\nprint(a + b)\n",
+      "expectedOutput": "保存了 4 条数据\n保存了 6 条数据",
+      "stdin": "4\n2\n",
+      "explanation": "这是**两个手同时开工**的一个类定义，两招各管一个时刻。\n\n- **`__str__` 的时刻**：`print(元素)` 的时候。Python 先悄悄调用一遍 `元素.__str__()`，**拿它返回的那句话**去印。所以这一个方法要 `return` 一句话，**不是自己 `print`** —— 只印不返回的话，Python 拿不到话，当场翻脸。\n- **`__add__` 的时刻**：`+` 的**左边**摆着这个元素的时候。我们写 `a + b`，Python 背地里引用的是 `a.__add__(b)`：`self` 是左边那个，`other` 是右边那个。\n\n⚠️ **`__add__` 返回的是一个新元素** —— 所以最后 `return` 的那一句是 `Bowl(self.n + other.n)`，把两边的数加起来，**再造一个新的**。原来那两个一点没变，好好的。想让 `a` 自己也变，得自己写 `a = a + b` 重新接住。\n\n⚠️ **`print(a + b)` 能印出「保存了…」，是我们写的两招接力跑的结果**：`+` 先调用 `__add__` 拿到新元素，`print` 再调用新元素的 `__str__` 拿话去印。一句话没写对，最后印出来的就不是我们要的样子。\n\n⚠️ 还有一件小事很扎眼：数字要接在话后面，必须自己用 `str(self.n)` 把它变成字，两段之间那个空格也得自己补 —— 少了它，印出来会挨在一起。",
+      "templateId": "py-s2-dunder-bowl-str-add",
+      "params": {
+        "unit": "条数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "aa6fcc13f6df8a4c"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-bowl-str-add-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想要一个元素，还得给这个元素两种本事：\n\n1. `print(元素)` 的时候，印出来长这样：`保存了 3 颗商品`（「保存了」后面一个空格，数字和量词之间一个空格）。\n2. 两个元素用 `+` 加起来的时候，得到的是一个**新元素**，里面保存两个元素**合起来**的数。\n\n请你画好这张类定义，然后**读两行整数**（一行一个，先读到的是 `a`，后读到的是 `b`），分别拿来造两个元素，最后**印两行**：\n\n1. 第一个元素被 `print` 出来的样子\n2. 两个元素 `+` 起来并成的那个**新元素**被 `print` 出来的样子\n\n比如输入是\n\n9\n3\n\n就要输出\n\n保存了 9 颗商品\n保存了 12 颗商品\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 颗商品\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\na = Bowl(int(input()))\nb = Bowl(int(input()))\nprint(a)\nprint(a + b)\n",
+      "expectedOutput": "保存了 9 颗商品\n保存了 11 颗商品",
+      "stdin": "9\n2\n",
+      "explanation": "这是**两个手同时开工**的一个类定义，两招各管一个时刻。\n\n- **`__str__` 的时刻**：`print(元素)` 的时候。Python 先悄悄调用一遍 `元素.__str__()`，**拿它返回的那句话**去印。所以这一个方法要 `return` 一句话，**不是自己 `print`** —— 只印不返回的话，Python 拿不到话，当场翻脸。\n- **`__add__` 的时刻**：`+` 的**左边**摆着这个元素的时候。我们写 `a + b`，Python 背地里引用的是 `a.__add__(b)`：`self` 是左边那个，`other` 是右边那个。\n\n⚠️ **`__add__` 返回的是一个新元素** —— 所以最后 `return` 的那一句是 `Bowl(self.n + other.n)`，把两边的数加起来，**再造一个新的**。原来那两个一点没变，好好的。想让 `a` 自己也变，得自己写 `a = a + b` 重新接住。\n\n⚠️ **`print(a + b)` 能印出「保存了…」，是我们写的两招接力跑的结果**：`+` 先调用 `__add__` 拿到新元素，`print` 再调用新元素的 `__str__` 拿话去印。一句话没写对，最后印出来的就不是我们要的样子。\n\n⚠️ 还有一件小事很扎眼：数字要接在话后面，必须自己用 `str(self.n)` 把它变成字，两段之间那个空格也得自己补 —— 少了它，印出来会挨在一起。",
+      "templateId": "py-s2-dunder-bowl-str-add",
+      "params": {
+        "unit": "颗商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "012e771b6b19a317"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-bowl-str-add-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想要一个元素，还得给这个元素两种本事：\n\n1. `print(元素)` 的时候，印出来长这样：`保存了 3 块商品`（「保存了」后面一个空格，数字和量词之间一个空格）。\n2. 两个元素用 `+` 加起来的时候，得到的是一个**新元素**，里面保存两个元素**合起来**的数。\n\n请你画好这张类定义，然后**读两行整数**（一行一个，先读到的是 `a`，后读到的是 `b`），分别拿来造两个元素，最后**印两行**：\n\n1. 第一个元素被 `print` 出来的样子\n2. 两个元素 `+` 起来并成的那个**新元素**被 `print` 出来的样子\n\n比如输入是\n\n2\n2\n\n就要输出\n\n保存了 2 块商品\n保存了 4 块商品\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 块商品\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\na = Bowl(int(input()))\nb = Bowl(int(input()))\nprint(a)\nprint(a + b)\n",
+      "expectedOutput": "保存了 3 块商品\n保存了 9 块商品",
+      "stdin": "3\n6\n",
+      "explanation": "这是**两个手同时开工**的一个类定义，两招各管一个时刻。\n\n- **`__str__` 的时刻**：`print(元素)` 的时候。Python 先悄悄调用一遍 `元素.__str__()`，**拿它返回的那句话**去印。所以这一个方法要 `return` 一句话，**不是自己 `print`** —— 只印不返回的话，Python 拿不到话，当场翻脸。\n- **`__add__` 的时刻**：`+` 的**左边**摆着这个元素的时候。我们写 `a + b`，Python 背地里引用的是 `a.__add__(b)`：`self` 是左边那个，`other` 是右边那个。\n\n⚠️ **`__add__` 返回的是一个新元素** —— 所以最后 `return` 的那一句是 `Bowl(self.n + other.n)`，把两边的数加起来，**再造一个新的**。原来那两个一点没变，好好的。想让 `a` 自己也变，得自己写 `a = a + b` 重新接住。\n\n⚠️ **`print(a + b)` 能印出「保存了…」，是我们写的两招接力跑的结果**：`+` 先调用 `__add__` 拿到新元素，`print` 再调用新元素的 `__str__` 拿话去印。一句话没写对，最后印出来的就不是我们要的样子。\n\n⚠️ 还有一件小事很扎眼：数字要接在话后面，必须自己用 `str(self.n)` 把它变成字，两段之间那个空格也得自己补 —— 少了它，印出来会挨在一起。",
+      "templateId": "py-s2-dunder-bowl-str-add",
+      "params": {
+        "unit": "块商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "b00a47afb9ec62e1"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-eq-missing-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们的元素类定义上已经写好了 `__init__`、`__str__`，还有一个方法 `__add__` 。\n\n现在我们想比一比「两个元素相等吗」。前两行我们都心里有数：\n\n- 第二行本来就该是 `False` —— 那两个元素装的数**不一样**（一个 2，一个 3）。\n- 毛病在**第三行**：我们拿 2 这个数**新造了一个**元素，然后跟第一个比 —— 装的明明一样多，它却印了 `False`。我们要的是 `True`。\n\n你帮我们改对。\n\n⚠️ 三行 `print` **一个字都不许改**，已经写好的 `__str__` 和 `__add__` 也不许改 —— 缺的东西**补上**就行。",
+      "brokenCode": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\na = Bowl(2)\nb = Bowl(3)\nprint(a + b)\nprint(a == b)\nprint(a == Bowl(2))\n",
+      "referenceFix": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n    def __eq__(self, other):\n        return self.n == other.n\n\n\na = Bowl(2)\nb = Bowl(3)\nprint(a + b)\nprint(a == b)\nprint(a == Bowl(2))\n",
+      "expectedOutput": "保存了 5 条数据\nFalse\nTrue",
+      "stdin": null,
+      "explanation": "这一处**不报错**，它只是**悄悄给出一个你不想要的答案** —— 这种毛病比报错更难抓。\n\n原因在类定义上**少了一个方法**：`==` 两边摆着两个元素的时候，Python 想引用的是 `__eq__`。类定义上没写这一个方法，它就搬出**出厂默认的那条规矩**：只看两格是不是**同一个元素**（同一次创建后的那一个），不是同一个就一律 `False`。\n\n- 所以第二行的 `False` 是**对的**（两个元素装的数本来就不一样）。\n- 可第三行翻车了：`Bowl(2)` 是**新生的另一个**，装的数一样多，但默认规矩不认这个 —— 它说「不是同一个啊」，印出来还是 `False`。\n\n修法就是把这一个方法补上：`def __eq__(self, other):` 里返回 `self.n == other.n`。这一句比的是**两个数字**，数字的 `==` Python 天生就认，不会再回头调用 `__eq__`，所以**不会转圈圈**。\n\n⚠️ `__eq__` 要**返回** `True` 或 `False`（`return`），不是自己印 —— 和 `__str__` 一个脾气：印出来了不等于返回了。\n\n⚠️ 三条要一起记牢：`self` 是 `==` **左边**那个，`other` 是**右边**那个；名字前后**各两条下划线**（写成 `_eq_` 就只是个普通名字，Python 永远不会替你调用，而程序**不报错**）；`__eq__` 补上之后，`a == b` 这种「装的数一样就算相等」才是我们想要的意思。",
+      "templateId": "py-s2-dunder-eq-missing",
+      "params": {
+        "n1": 2,
+        "n2": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "b91227e11efda772"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-eq-missing-020",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们的元素类定义上已经写好了 `__init__`、`__str__`，还有一个方法 `__add__` 。\n\n现在我们想比一比「两个元素相等吗」。前两行我们都心里有数：\n\n- 第二行本来就该是 `False` —— 那两个元素装的数**不一样**（一个 8，一个 5）。\n- 毛病在**第三行**：我们拿 8 这个数**新造了一个**元素，然后跟第一个比 —— 装的明明一样多，它却印了 `False`。我们要的是 `True`。\n\n你帮我们改对。\n\n⚠️ 三行 `print` **一个字都不许改**，已经写好的 `__str__` 和 `__add__` 也不许改 —— 缺的东西**补上**就行。",
+      "brokenCode": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\na = Bowl(8)\nb = Bowl(5)\nprint(a + b)\nprint(a == b)\nprint(a == Bowl(8))\n",
+      "referenceFix": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n    def __eq__(self, other):\n        return self.n == other.n\n\n\na = Bowl(8)\nb = Bowl(5)\nprint(a + b)\nprint(a == b)\nprint(a == Bowl(8))\n",
+      "expectedOutput": "保存了 13 条数据\nFalse\nTrue",
+      "stdin": null,
+      "explanation": "这一处**不报错**，它只是**悄悄给出一个你不想要的答案** —— 这种毛病比报错更难抓。\n\n原因在类定义上**少了一个方法**：`==` 两边摆着两个元素的时候，Python 想引用的是 `__eq__`。类定义上没写这一个方法，它就搬出**出厂默认的那条规矩**：只看两格是不是**同一个元素**（同一次创建后的那一个），不是同一个就一律 `False`。\n\n- 所以第二行的 `False` 是**对的**（两个元素装的数本来就不一样）。\n- 可第三行翻车了：`Bowl(8)` 是**新生的另一个**，装的数一样多，但默认规矩不认这个 —— 它说「不是同一个啊」，印出来还是 `False`。\n\n修法就是把这一个方法补上：`def __eq__(self, other):` 里返回 `self.n == other.n`。这一句比的是**两个数字**，数字的 `==` Python 天生就认，不会再回头调用 `__eq__`，所以**不会转圈圈**。\n\n⚠️ `__eq__` 要**返回** `True` 或 `False`（`return`），不是自己印 —— 和 `__str__` 一个脾气：印出来了不等于返回了。\n\n⚠️ 三条要一起记牢：`self` 是 `==` **左边**那个，`other` 是**右边**那个；名字前后**各两条下划线**（写成 `_eq_` 就只是个普通名字，Python 永远不会替你调用，而程序**不报错**）；`__eq__` 补上之后，`a == b` 这种「装的数一样就算相等」才是我们想要的意思。",
+      "templateId": "py-s2-dunder-eq-missing",
+      "params": {
+        "n1": 8,
+        "n2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "3d00d6f7a05d539a"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-len-eq-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的元素里保存数据，它还得能回答两个问题：\n\n1. `len(元素)` 报出**里面保存几样**\n2. 两个元素用 `==` 比的时候，**装的数一样就算相等**（哪怕它们是分两次生的两个不同的元素）\n\n请你画好这张类定义，然后**读两行整数**（一行一个，先读到的是 `x`，后读到的是 `y`），拿它们造两个元素 `a` 和 `b`，最后**印三行**：\n\n1. `len(a)` 的结果\n2. `a == b` 的结果\n3. 拿 `x` 这个数**再新造一个**元素，跟 `a` 比 —— `==` 的结果\n\n比如输入是\n\n2\n4\n\n就要输出\n\n2\nFalse\nTrue\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __len__(self):\n        return self.n\n\n    def __eq__(self, other):\n        return self.n == other.n\n\n\nx = int(input())\ny = int(input())\na = Bowl(x)\nb = Bowl(y)\nprint(len(a))\nprint(a == b)\nprint(Bowl(x) == a)\n",
+      "expectedOutput": "2\nFalse\nTrue",
+      "stdin": "2\n3\n",
+      "explanation": "这两招管的是两个不同的时刻，我们一个一个说。\n\n- **`__len__` 的时刻**：`len(...)` 套在这个元素上的时候。它返回的必须是**一个不小于 0 的整数** —— Python 拿这个数去数「有几样」，返回小数或者话（字）它都翻脸。这里元素里装几个就报几个，所以返回 `self.n` 正合适。\n- **`__eq__` 的时刻**：`==` 两边摆着两个元素的时候。它得返回 `True` 或 `False`。\n\n⚠️ **`__eq__` 里比的是两个数字**：`self.n == other.n`。数字的 `==` Python 天生就认，**不会再回头调用 `__eq__`**，所以这里不会转圈圈；要是手一滑写成 `self == other`，那才是自己调用自身，转不停的圈。\n\n⚠️ **第三行才是我们要这一个方法的理由**：`Bowl(x)` 是**新生的另一个**。不写 `__eq__` 的话，Python 默认只比「是不是同一个元素」，这一行会印 `False`，可我们明明造的是保存同样多的元素。补上这一个方法，它才印 `True`。\n\n⚠️ 顺手记一句：`__eq__` 里的 `self` 是 `==` **左边**那个，`other` 是**右边**那个 —— 万一以后想写「我的数比你的大」这种规矩，就知道该拿谁跟谁比了。",
+      "templateId": "py-s2-dunder-len-eq",
+      "params": {
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "62c76298bc021e6a"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-len-eq-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的元素里保存商品，它还得能回答两个问题：\n\n1. `len(元素)` 报出**里面保存几样**\n2. 两个元素用 `==` 比的时候，**装的数一样就算相等**（哪怕它们是分两次生的两个不同的元素）\n\n请你画好这张类定义，然后**读两行整数**（一行一个，先读到的是 `x`，后读到的是 `y`），拿它们造两个元素 `a` 和 `b`，最后**印三行**：\n\n1. `len(a)` 的结果\n2. `a == b` 的结果\n3. 拿 `x` 这个数**再新造一个**元素，跟 `a` 比 —— `==` 的结果\n\n比如输入是\n\n7\n9\n\n就要输出\n\n7\nFalse\nTrue\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __len__(self):\n        return self.n\n\n    def __eq__(self, other):\n        return self.n == other.n\n\n\nx = int(input())\ny = int(input())\na = Bowl(x)\nb = Bowl(y)\nprint(len(a))\nprint(a == b)\nprint(Bowl(x) == a)\n",
+      "expectedOutput": "6\nFalse\nTrue",
+      "stdin": "6\n8\n",
+      "explanation": "这两招管的是两个不同的时刻，我们一个一个说。\n\n- **`__len__` 的时刻**：`len(...)` 套在这个元素上的时候。它返回的必须是**一个不小于 0 的整数** —— Python 拿这个数去数「有几样」，返回小数或者话（字）它都翻脸。这里元素里装几个就报几个，所以返回 `self.n` 正合适。\n- **`__eq__` 的时刻**：`==` 两边摆着两个元素的时候。它得返回 `True` 或 `False`。\n\n⚠️ **`__eq__` 里比的是两个数字**：`self.n == other.n`。数字的 `==` Python 天生就认，**不会再回头调用 `__eq__`**，所以这里不会转圈圈；要是手一滑写成 `self == other`，那才是自己调用自身，转不停的圈。\n\n⚠️ **第三行才是我们要这一个方法的理由**：`Bowl(x)` 是**新生的另一个**。不写 `__eq__` 的话，Python 默认只比「是不是同一个元素」，这一行会印 `False`，可我们明明造的是保存同样多的元素。补上这一个方法，它才印 `True`。\n\n⚠️ 顺手记一句：`__eq__` 里的 `self` 是 `==` **左边**那个，`other` 是**右边**那个 —— 万一以后想写「我的数比你的大」这种规矩，就知道该拿谁跟谁比了。",
+      "templateId": "py-s2-dunder-len-eq",
+      "params": {
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "2ded3929a21fc135"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-len-eq-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的元素里保存商品，它还得能回答两个问题：\n\n1. `len(元素)` 报出**里面保存几样**\n2. 两个元素用 `==` 比的时候，**装的数一样就算相等**（哪怕它们是分两次生的两个不同的元素）\n\n请你画好这张类定义，然后**读两行整数**（一行一个，先读到的是 `x`，后读到的是 `y`），拿它们造两个元素 `a` 和 `b`，最后**印三行**：\n\n1. `len(a)` 的结果\n2. `a == b` 的结果\n3. 拿 `x` 这个数**再新造一个**元素，跟 `a` 比 —— `==` 的结果\n\n比如输入是\n\n7\n4\n\n就要输出\n\n7\nFalse\nTrue\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __len__(self):\n        return self.n\n\n    def __eq__(self, other):\n        return self.n == other.n\n\n\nx = int(input())\ny = int(input())\na = Bowl(x)\nb = Bowl(y)\nprint(len(a))\nprint(a == b)\nprint(Bowl(x) == a)\n",
+      "expectedOutput": "4\nFalse\nTrue",
+      "stdin": "4\n2\n",
+      "explanation": "这两招管的是两个不同的时刻，我们一个一个说。\n\n- **`__len__` 的时刻**：`len(...)` 套在这个元素上的时候。它返回的必须是**一个不小于 0 的整数** —— Python 拿这个数去数「有几样」，返回小数或者话（字）它都翻脸。这里元素里装几个就报几个，所以返回 `self.n` 正合适。\n- **`__eq__` 的时刻**：`==` 两边摆着两个元素的时候。它得返回 `True` 或 `False`。\n\n⚠️ **`__eq__` 里比的是两个数字**：`self.n == other.n`。数字的 `==` Python 天生就认，**不会再回头调用 `__eq__`**，所以这里不会转圈圈；要是手一滑写成 `self == other`，那才是自己调用自身，转不停的圈。\n\n⚠️ **第三行才是我们要这一个方法的理由**：`Bowl(x)` 是**新生的另一个**。不写 `__eq__` 的话，Python 默认只比「是不是同一个元素」，这一行会印 `False`，可我们明明造的是保存同样多的元素。补上这一个方法，它才印 `True`。\n\n⚠️ 顺手记一句：`__eq__` 里的 `self` 是 `==` **左边**那个，`other` 是**右边**那个 —— 万一以后想写「我的数比你的大」这种规矩，就知道该拿谁跟谁比了。",
+      "templateId": "py-s2-dunder-len-eq",
+      "params": {
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "6fb1a2a56955118c"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-len-not-int-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们的元素里保存了 5 条数据，想把它们**两条一捆**扎起来。\n\n我们想让 `len(这个元素)` 报出**能扎成几捆** —— 扎不满一捆的零头**不算**。\n\n可这一段一跑就报错。你帮我们改对，让它印出捆数。\n\n⚠️ 元素里装几条这件事（`__init__` 那一段）**不许改**，`print(len(a))` 那一行也不许改。",
+      "brokenCode": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __len__(self):\n        return self.n / 2\n\n\na = Bowl(5)\nprint(len(a))\n",
+      "referenceFix": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __len__(self):\n        return self.n // 2\n\n\na = Bowl(5)\nprint(len(a))\n",
+      "expectedOutput": "2",
+      "stdin": null,
+      "explanation": "毛病有两层，一层比一层深。\n\n**第一层：`/` 给的是小数，`//` 给的才是整数。** 这一个方法返回的是 `5 / 2` 算出来的东西，那是个小数（比如 `4.5`），不是整数。\n\n**第二层（这一课真正的点）：`__len__` 返回的必须是——一个不小于 0 的整数。** Python 拿到你返回的东西，是要拿去**数「有几样」**的，小数它数不了，于是当场翻脸：返回的不是整数。\n\n所以修法就是把 `/` 换成 `//`（往下取整，零头砍掉）——正好就是题目要的「扎不满一捆的不算」。\n\n⚠️ 顺便记住 `len(...)` 这个时刻：写在类定义上的那一个方法不是自己引用的，是 `len(...)` 套上来的时候 Python 替你引用的。和 `__str__` 一个脾气。\n\n⚠️ 还有两条边界要顺手记住：元素里**一条都没有**时报 `0` 是可以的（0 也不小于 0）；可要是算出来是**负数**，Python 一样翻脸 —— 这一个方法里返回的东西得是「一个不小于 0 的整数」，两头都算数。",
+      "templateId": "py-s2-dunder-len-not-int",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "4286486f53a82ba2"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-len-not-int-004",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们的元素里保存了 9 条数据，想把它们**两条一捆**扎起来。\n\n我们想让 `len(这个元素)` 报出**能扎成几捆** —— 扎不满一捆的零头**不算**。\n\n可这一段一跑就报错。你帮我们改对，让它印出捆数。\n\n⚠️ 元素里装几条这件事（`__init__` 那一段）**不许改**，`print(len(a))` 那一行也不许改。",
+      "brokenCode": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __len__(self):\n        return self.n / 2\n\n\na = Bowl(9)\nprint(len(a))\n",
+      "referenceFix": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __len__(self):\n        return self.n // 2\n\n\na = Bowl(9)\nprint(len(a))\n",
+      "expectedOutput": "4",
+      "stdin": null,
+      "explanation": "毛病有两层，一层比一层深。\n\n**第一层：`/` 给的是小数，`//` 给的才是整数。** 这一个方法返回的是 `9 / 2` 算出来的东西，那是个小数（比如 `4.5`），不是整数。\n\n**第二层（这一课真正的点）：`__len__` 返回的必须是——一个不小于 0 的整数。** Python 拿到你返回的东西，是要拿去**数「有几样」**的，小数它数不了，于是当场翻脸：返回的不是整数。\n\n所以修法就是把 `/` 换成 `//`（往下取整，零头砍掉）——正好就是题目要的「扎不满一捆的不算」。\n\n⚠️ 顺便记住 `len(...)` 这个时刻：写在类定义上的那一个方法不是自己引用的，是 `len(...)` 套上来的时候 Python 替你引用的。和 `__str__` 一个脾气。\n\n⚠️ 还有两条边界要顺手记住：元素里**一条都没有**时报 `0` 是可以的（0 也不小于 0）；可要是算出来是**负数**，Python 一样翻脸 —— 这一个方法里返回的东西得是「一个不小于 0 的整数」，两头都算数。",
+      "templateId": "py-s2-dunder-len-not-int",
+      "params": {
+        "n": 9
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "141e985cdcd06c5f"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-str-print-not-return-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想在纸上写一句 `print(a)`，让屏幕上冒出「这个元素被说成什么样」的一句话 —— 具体就是：\n\n```text\n保存了 3 条数据\n```\n\n类定义上那一个方法我们已经写好了，可它一跑就报错。你帮我们改对。\n\n⚠️ 那句话**一个字都不许改**，`print(a)` 那一行也不许改成别的写法。",
+      "brokenCode": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        print(\"保存了 \" + str(self.n) + \" 条数据\")\n\n\na = Bowl(3)\nprint(a)\n",
+      "referenceFix": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n\na = Bowl(3)\nprint(a)\n",
+      "expectedOutput": "保存了 3 条数据",
+      "stdin": null,
+      "explanation": "毛病出在那一个方法的**最后一步**上：它把话**印出去了**，却没有**返回**。\n\n要看清这个坑，先记住 `__str__` 是干什么的：`print(a)` 的时候，Python 会先悄悄调用一遍 `a.__str__()`，**把它返回的那句话**拿去印。所以这一个方法的任务是**把话返回**（`return`），不是自己印。\n\n⚠️ 跑坏代码的时候你会看到一件很能说明问题的事：那句「保存了 3 条数据」**其实是印出来了的** —— 因为函数里的 `print` 真的执行了。可紧接着 Python 还是翻脸，说它返回的不是一句话。**印出来了 ≠ 返回了**，这就是这一课最要紧的分界。\n\n⚠️ 只印不返回的话，这一个方法实际返回的是个「空」（`None`）。Python 拿这个空去当一句话用，只能翻脸：`__str__ returned non-string`。\n\n⚠️ 顺带记一句：`__str__` 和 `__init__` 一样，**名字前后各是两条下划线**，一共四条。少一条它就只是个普通名字，Python 永远不会替你称呼它 —— 而程序**不报错**，你只会百思不得其解「怎么没生效」。",
+      "templateId": "py-s2-dunder-str-print-not-return",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "c54de5ccd42a67b0"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-str-print-not-return-005",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想在纸上写一句 `print(a)`，让屏幕上冒出「这个元素被说成什么样」的一句话 —— 具体就是：\n\n```text\n保存了 8 条数据\n```\n\n类定义上那一个方法我们已经写好了，可它一跑就报错。你帮我们改对。\n\n⚠️ 那句话**一个字都不许改**，`print(a)` 那一行也不许改成别的写法。",
+      "brokenCode": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        print(\"保存了 \" + str(self.n) + \" 条数据\")\n\n\na = Bowl(8)\nprint(a)\n",
+      "referenceFix": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n\na = Bowl(8)\nprint(a)\n",
+      "expectedOutput": "保存了 8 条数据",
+      "stdin": null,
+      "explanation": "毛病出在那一个方法的**最后一步**上：它把话**印出去了**，却没有**返回**。\n\n要看清这个坑，先记住 `__str__` 是干什么的：`print(a)` 的时候，Python 会先悄悄调用一遍 `a.__str__()`，**把它返回的那句话**拿去印。所以这一个方法的任务是**把话返回**（`return`），不是自己印。\n\n⚠️ 跑坏代码的时候你会看到一件很能说明问题的事：那句「保存了 8 条数据」**其实是印出来了的** —— 因为函数里的 `print` 真的执行了。可紧接着 Python 还是翻脸，说它返回的不是一句话。**印出来了 ≠ 返回了**，这就是这一课最要紧的分界。\n\n⚠️ 只印不返回的话，这一个方法实际返回的是个「空」（`None`）。Python 拿这个空去当一句话用，只能翻脸：`__str__ returned non-string`。\n\n⚠️ 顺带记一句：`__str__` 和 `__init__` 一样，**名字前后各是两条下划线**，一共四条。少一条它就只是个普通名字，Python 永远不会替你称呼它 —— 而程序**不报错**，你只会百思不得其解「怎么没生效」。",
+      "templateId": "py-s2-dunder-str-print-not-return",
+      "params": {
+        "n": 8
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "8bf1c88ddaf14c18"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-sum-bowls-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们有一堆元素，想把它们一个只**并成一个大元素**。\n\n请你画一张元素的类定义：`print(元素)` 印出来长这样 —— `保存了 12 条数据`（「保存了」后面一个空格，数字和「条」之间一个空格）；两个元素用 `+` 加起来得一个**新元素**，里面保存两个元素**合起来**的数。\n\n然后写主程序：**先读一行整数 `n`**，接着**再读 n 行**（每行是一个元素里装的数据数）。每读到一个元素，就把它**加到已经并起来的那个元素上**；最后把并成的那个元素印出来。\n\n比如输入是\n\n2\n9\n3\n\n就要输出\n\n保存了 12 条数据\n\n（判分用的是**另外一组数** —— `n` 和每一行的数都会变，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\nn = int(input())\ntotal = Bowl(int(input()))\nfor _ in range(n - 1):\n    total = total + Bowl(int(input()))\nprint(total)\n",
+      "expectedOutput": "保存了 14 条数据",
+      "stdin": "2\n7\n7\n",
+      "explanation": "这题考的不是加法的算术，而是**「谁把结果接住」**这件事。\n\n⚠️ **`__add__` 返回的是一个新元素，原来那两个一点没变。** 所以这一行必须是\n\n```text\ntotal = total + Bowl(int(input()))\n```\n\n**等号是必须的**：`+` 造出来的那个新元素得**重新塞回 `total` 手里**。只写 `total + Bowl(...)` 的话，那个新元素就掉在地上没人接，`total` 手里还是原来那个 —— **程序不报错**，只是最后印出来的数少加了好几个元素。这是这一课最容易栽的坑。\n\n⚠️ **开头那个元素别拿数字 0 去凑**。要是写 `total = 0` 再往上加，第一回就是 `0 + 元素`：`+` 的左边是数字 0，Python 会去调用**数字那一套加法**，它不认识元素，直接翻脸。所以我们先读进来的**第一个元素**就当了开头。\n\n⚠️ **最后 `print(total)` 能印出话，靠的是 `__str__`。** 要是这一个方法忘了写，`print(元素)` 印出来的会是「这个元素住在哪儿」那种没人看得懂的记号 —— 不报错，但不是我们要的样子。\n\n⚠️ 数几个元素的时候别数错：`n` 只元素里第一个已经读了，所以圈圈只转 `n - 1` 趟。",
+      "templateId": "py-s2-dunder-sum-bowls",
+      "params": {
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "6a703c070bcfd8bc"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-sum-bowls-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们有一堆元素，想把它们一个只**并成一个大元素**。\n\n请你画一张元素的类定义：`print(元素)` 印出来长这样 —— `保存了 12 条数据`（「保存了」后面一个空格，数字和「条」之间一个空格）；两个元素用 `+` 加起来得一个**新元素**，里面保存两个元素**合起来**的数。\n\n然后写主程序：**先读一行整数 `n`**，接着**再读 n 行**（每行是一个元素里装的数据数）。每读到一个元素，就把它**加到已经并起来的那个元素上**；最后把并成的那个元素印出来。\n\n比如输入是\n\n3\n4\n2\n5\n\n就要输出\n\n保存了 11 条数据\n\n（判分用的是**另外一组数** —— `n` 和每一行的数都会变，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\nn = int(input())\ntotal = Bowl(int(input()))\nfor _ in range(n - 1):\n    total = total + Bowl(int(input()))\nprint(total)\n",
+      "expectedOutput": "保存了 19 条数据",
+      "stdin": "3\n7\n9\n3\n",
+      "explanation": "这题考的不是加法的算术，而是**「谁把结果接住」**这件事。\n\n⚠️ **`__add__` 返回的是一个新元素，原来那两个一点没变。** 所以这一行必须是\n\n```text\ntotal = total + Bowl(int(input()))\n```\n\n**等号是必须的**：`+` 造出来的那个新元素得**重新塞回 `total` 手里**。只写 `total + Bowl(...)` 的话，那个新元素就掉在地上没人接，`total` 手里还是原来那个 —— **程序不报错**，只是最后印出来的数少加了好几个元素。这是这一课最容易栽的坑。\n\n⚠️ **开头那个元素别拿数字 0 去凑**。要是写 `total = 0` 再往上加，第一回就是 `0 + 元素`：`+` 的左边是数字 0，Python 会去调用**数字那一套加法**，它不认识元素，直接翻脸。所以我们先读进来的**第一个元素**就当了开头。\n\n⚠️ **最后 `print(total)` 能印出话，靠的是 `__str__`。** 要是这一个方法忘了写，`print(元素)` 印出来的会是「这个元素住在哪儿」那种没人看得懂的记号 —— 不报错，但不是我们要的样子。\n\n⚠️ 数几个元素的时候别数错：`n` 只元素里第一个已经读了，所以圈圈只转 `n - 1` 趟。",
+      "templateId": "py-s2-dunder-sum-bowls",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "b417b5788ddcecc4"
+      }
+    },
+    {
+      "id": "bank-py-s2-dunder-sum-bowls-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们有一堆元素，想把它们一个只**并成一个大元素**。\n\n请你画一张元素的类定义：`print(元素)` 印出来长这样 —— `保存了 12 条数据`（「保存了」后面一个空格，数字和「条」之间一个空格）；两个元素用 `+` 加起来得一个**新元素**，里面保存两个元素**合起来**的数。\n\n然后写主程序：**先读一行整数 `n`**，接着**再读 n 行**（每行是一个元素里装的数据数）。每读到一个元素，就把它**加到已经并起来的那个元素上**；最后把并成的那个元素印出来。\n\n比如输入是\n\n4\n6\n8\n9\n3\n\n就要输出\n\n保存了 26 条数据\n\n（判分用的是**另外一组数** —— `n` 和每一行的数都会变，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\nn = int(input())\ntotal = Bowl(int(input()))\nfor _ in range(n - 1):\n    total = total + Bowl(int(input()))\nprint(total)\n",
+      "expectedOutput": "保存了 17 条数据",
+      "stdin": "4\n2\n5\n4\n6\n",
+      "explanation": "这题考的不是加法的算术，而是**「谁把结果接住」**这件事。\n\n⚠️ **`__add__` 返回的是一个新元素，原来那两个一点没变。** 所以这一行必须是\n\n```text\ntotal = total + Bowl(int(input()))\n```\n\n**等号是必须的**：`+` 造出来的那个新元素得**重新塞回 `total` 手里**。只写 `total + Bowl(...)` 的话，那个新元素就掉在地上没人接，`total` 手里还是原来那个 —— **程序不报错**，只是最后印出来的数少加了好几个元素。这是这一课最容易栽的坑。\n\n⚠️ **开头那个元素别拿数字 0 去凑**。要是写 `total = 0` 再往上加，第一回就是 `0 + 元素`：`+` 的左边是数字 0，Python 会去调用**数字那一套加法**，它不认识元素，直接翻脸。所以我们先读进来的**第一个元素**就当了开头。\n\n⚠️ **最后 `print(total)` 能印出话，靠的是 `__str__`。** 要是这一个方法忘了写，`print(元素)` 印出来的会是「这个元素住在哪儿」那种没人看得懂的记号 —— 不报错，但不是我们要的样子。\n\n⚠️ 数几个元素的时候别数错：`n` 只元素里第一个已经读了，所以圈圈只转 `n - 1` 趟。",
+      "templateId": "py-s2-dunder-sum-bowls",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.479Z",
+        "hash": "0c6f7d4fd9aba891"
+      }
+    }
+  ]
+}

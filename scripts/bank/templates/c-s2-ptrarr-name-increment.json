@@ -1,0 +1,30 @@
+{
+  "templateId": "c-s2-ptrarr-name-increment",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-02",
+  "type": "codefix",
+  "concept": [
+    "数组名",
+    "指针与数组",
+    "指针自增",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "base": {
+      "kind": "int",
+      "min": 1,
+      "max": 4
+    },
+    "step": {
+      "kind": "int",
+      "min": 2,
+      "max": 5
+    }
+  },
+  "stemTemplate": "我们在架子上摆了 3 只元素：第 0 只元素里放着 {base} 条数据，往后每个元素都比前一个多 {step} 条。\n\n程序想用**一块名称**从第 0 只元素开始，一个一个往后挪，把三个元素全报出来，格式是 `第 i 只：v`（`i` 是元素的编号，从 0 数起）。\n\n可编译器一瞧见就不干了，把整段代码退了回来。你帮我们看看它为什么不高兴，把它改好。改好之后程序要把三个元素从第 0 只起报全。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[3];\n    int *p = bowls;\n\n    for (int i = 0; i < 3; i++) {\n        bowls[i] = {base} + i * {step};\n    }\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"第 %d 只：%d\\n\", i, *p);\n        bowls++;\n    }\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[3];\n    int *p = bowls;\n\n    for (int i = 0; i < 3; i++) {\n        bowls[i] = {base} + i * {step};\n    }\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"第 %d 只：%d\\n\", i, *p);\n        p++;\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: lvalue required as increment operand` —— 翻过来就是「**这个 `++` 要加的东西，我们加不动**」。\n\n为什么加不动？因为 `bowls` 这个名字**不是一个元素**。前面第一课就说过：一排元素的名字单独写出来，等于 `&bowls[0]` —— 它是个**算出来的地址**，不是一个能往里装东西的变量。地址算出来就定死了，`++` 想把新地址「存回去」，可它没有地方可存，于是编译器当场拦下。\n\n能挪的只有**名称**：`int *p = bowls;` 之后，`p++` 的意思是「把名称上写的地址加一格，**存回名称**」。名称是只变量，装得下新地址，所以它挪得动。所以修法特别朴素：元素名那行留着别动（它本来就指着第 0 只），把 `bowls++` 换成挪名称就行。\n\n⚠️ 有一条容易记岔的地方，我们在跑台上真验过：**要是这块名称长在函数头上**（比如 `void show(int bowls[], int n)` 那种写法），那么在函数里头写 `bowls++` 是**能跑的**。原因是函数头上那种写法本身就已经是一块名称了，不是那一排元素的名字。所以「挪不动」这条规矩，只对 `main` 里那个元素名成立。"
+}

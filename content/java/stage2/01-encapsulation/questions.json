@@ -1,0 +1,83 @@
+{
+  "lessonId": "java-stage2-01",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们把类定义上的一盒家当写成 `private`，意思是____。",
+      "options": [
+        "只有这个类自己写的函数能访问，外面要用就得走我们留的小窗",
+        "连类自己的函数也读不到它了",
+        "这个实例一初始化就会把它删掉",
+        "所有实例共用这一盒家当"
+      ],
+      "answer": 0,
+      "explanation": "盖子扣上之后管的是「外面的人伸不伸得进手」，类定义自己人照样拿得到 —— 初始化那一手里的 `this.name = name;` 就是我们自己伸手，一点问题都没有。共用的那盒家当是另一回事，我们往后的课再讲；「一初始化就删掉」更是没这回事。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们想让外面的对象**读到**盒子里的数据数，又**不让它改**，该怎么办？",
+      "options": [
+        "只开读的那扇小窗，写 `public int getFish() { return fish; }`，不写写的那一扇",
+        "把家当写成 `public`",
+        "只写一扇 `setFish` 就够了",
+        "把数据数那一盒换成 `String`"
+      ],
+      "answer": 0,
+      "explanation": "读和写是两扇独立的小窗：只开 `get` 开头那一扇，盒子就成了「只能看不能改」。把家当写成 `public` 等于把盖子整个掀了，谁都能改；只写 `set` 开头那一扇等于只留了进货口，外面反而读不出来；把数字换成 `String` 那种一串字，加减就算不动了，也不是我们想要的东西。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "下面哪一句会被编译器当场拦下，报出 `has private access`？",
+      "options": [
+        "在类定义外面写 `c.name`（`name` 在类定义里是 `private` 的）",
+        "在类的函数里写 `return name;`",
+        "在初始化那一手里写 `this.name = name;`",
+        "在类定义里写 `private String name;`"
+      ],
+      "answer": 0,
+      "explanation": "只有「外面的人隔着盖子伸手」才会被拦下。类定义自己人 —— 方法里读它、初始化那一手里写它 —— 都完全合法；而 `private String name;` 那一句本身就是扣盖子的动作，编译器不但不拦，还老老实实照着办。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "java",
+      "code": "class Cat {\n    ____ String name;\n\n    public void setName(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat();\n        c.setName(\"张三\");\n        System.out.println(c.getName());\n    }\n}",
+      "stem": "我们要给 `name` 这盒家当扣上盖子 —— 只留 `setName` 和 `getName` 两扇小窗，空白处该填哪个小词？",
+      "blanks": [
+        {
+          "answer": "private",
+          "accept": []
+        }
+      ],
+      "explanation": "扣盖子的小词就是 `private`：出了这张类定义谁都别想直接碰这盒家当，外面想读想写都得走我们留的两扇小窗。填上之后跑一遍，印出来是张三 —— 外面是用 `setName` 递进去的，读是 `getName` 返回的，一扇窗都没少。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "java",
+      "code": "class Cat {\n    private int fish;\n\n    public void setFish(int fish) {\n        if (fish < 0) {\n            System.out.println(\"不能是负的\");\n            return;\n        }\n        this.fish = fish;\n    }\n\n    public int getFish() {\n        return fish;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat();\n        c.setFish(-2);\n        c.setFish(5);\n        System.out.println(c.getFish());\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "不能是负的\n5",
+      "accept": [
+        "不能是负的\n5\n"
+      ],
+      "explanation": "`setFish(-2)` 递进来的是负数，被门口的名称挡回去了 —— 只印一句提示，账本上一个字都没改；`setFish(5)` 才是真收下的那一笔。所以最后读出来是 5，而不是 3 或者 -2 。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "java",
+      "code": "class Cat {\n    private String name;\n    private int fish;\n\n    Cat(String name, int fish) {\n        this.name = name;\n        this.fish = fish;\n    }\n\n    public String report() {\n        return name + \" 有 \" + fish + \" 条数据\";\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\", 3);\n        System.out.println(c.report());\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "张三 有 3 条数据",
+      "accept": [
+        "张三 有 3 条数据\n"
+      ],
+      "explanation": "两盒家当都盖着盖子，可初始化那一手和 `report` 都在类定义里面，伸手完全合法 —— 名字和数据数在初始化那一刻就装好了，`report` 再把它们拼成一串字返回。外面从头到尾没碰过盒子里的东西，走的一直是类定义自己留的口子。"
+    }
+  ]
+}

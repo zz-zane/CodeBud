@@ -1,0 +1,24 @@
+{
+  "templateId": "cpp-s1-rec-below-main",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-16",
+  "type": "codefix",
+  "concept": [
+    "函数要写在前面",
+    "从上往下登记",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 5,
+      "max": 6
+    }
+  },
+  "stemTemplate": "我们写了个递归函数 `fact` 算阶乘：传入一个数进去，它把 **1 一路乘到那个数**，把乘出来的积返回（传入 4 进去，返回的就是 1×2×3×4）。\n\n传入 {n} 进去，屏幕上该出现 **{n} 的阶乘那一个数**。\n\n可这份源代码**编译器压根不肯翻** —— 它只甩回来一句错，屏幕上什么都不会有。\n\n你帮我们改好：改完跑起来，屏幕上正好是 {n} 的阶乘。**函数里面那一行都不用动**，动的是它在源代码里的位置。",
+  "brokenCodeTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << fact({n}) << endl;\n    return 0;\n}\n\nlong long fact(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    return n * fact(n - 1);\n}\n",
+  "referenceFixTemplate": "#include <iostream>\nusing namespace std;\n\nlong long fact(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    return n * fact(n - 1);\n}\n\nint main() {\n    cout << fact({n}) << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: 'fact' was not declared in this scope`，用自然语言解释：**「`fact` 这个名字，我们在登记簿上没找着。」**\n\n它念源代码是**从上往下**念的：念到 `main` 里那句 `fact({n})` 的时候，下面那一整招**还没登场** —— 在它眼里这个名字到此刻为止根本没出现过。\n\n⚠️ 注意它卡的**不是**「自己调用自身」那一步：函数在身子里面调用自身，名字在函数脑袋上就登记过了，一点都不算没见过。所以这一题不是「不能自己调用自身」，是**顺序**问题。\n\n两条路都对：\n\n1. **把整招搬到 `main` 上面**（我们给的改法走的是这条）—— 最简单，一眼就顺；\n2. **在 `main` 上面挂块招牌**：先写一行 `long long fact(int n);` 报个信，真函数还留在下面。招牌只写脑袋、末尾别忘了分号，**别把整招收进来**。\n\n本课记住一句话就够了：**函数要么写在前面，要么先挂招牌。**"
+}

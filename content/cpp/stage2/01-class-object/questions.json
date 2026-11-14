@@ -1,0 +1,87 @@
+{
+  "lessonId": "cpp-stage2-01",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们画完类定义，忘了在大括号后面写那个分号，编译器报的原话是 `expected ';' after class definition`。看到这一句，该先去哪儿找问题？",
+      "options": [
+        "先看类定义大括号**后面**那一个字符",
+        "把类定义里每一行从头到尾逐行查一遍",
+        "先看 `main` 里创建对象那一句",
+        "先看 `public:` 那一行是不是漏了"
+      ],
+      "answer": 0,
+      "explanation": "编译器那句里 `after class definition` 说的是「类定义画完**之后**」—— 它等的那个分号站在大括号**外面**。所以别急着逐行读类定义，先看大括号后面那一个字符。`public:` 漏了会报「够不着那一格」，`main` 里写错会直接点 `main` 的行号，都不是这一句。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们在一张纸上画好了一张叫 `Cat` 的类定义，类定义里写着一格 `string name;`，画完就停手了 —— 一句对象也没生。这会儿元素边站着几个对象？",
+      "options": [
+        "一个都没有 —— 类定义画了不等于生了对象",
+        "一个，名字那一格是空的",
+        "类定义里有几格就站几个",
+        "两个，`name` 那一格自己算一个"
+      ],
+      "answer": 0,
+      "explanation": "类定义画的只是「凡是照它创建后的对象长什么样、会什么」，它自己不占任何一格，也不包含独立执行过程、不会处理数据。真正让世界多一个对象的，是 `Cat c1;` 那一句。只定义类不写这一句，元素边一个对象都没有。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "`c1` 和 `c2` 是照同一个类定义创建后的两个对象。我们只给 `c1` 的数据那格里加了 2 条，`c2` 会跟着变吗？",
+      "options": [
+        "不会 —— 格子是每个对象各带一份的",
+        "会 —— 它俩照的是同一个类定义",
+        "会 —— 类定义上那一格被我们改掉了",
+        "不会 —— 因为 `c2` 那一格还没放过东西"
+      ],
+      "answer": 0,
+      "explanation": "类定义只有一张，画完就那样，生多少个对象都不会把它用旧；但**格子是每个对象各带一份的** —— 创建一个就带一套自己的 `name` 和 `fish`，跟别的对象谁也不碰谁。所以加 `c1` 那一格，`c2` 半点都不动（它变不变跟放没放过东西没关系，那是另一回事）。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void meow() {\n        cout << \"我们是\" << ____ << \"，当前记录了 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"张三\";\n    c1.fish = 3;\n    c1.____();\n    return 0;\n}",
+      "stem": "这段代码里有两处被我们挖空了（用 `____` 标出），补上之后它会印出「我们是张三，当前记录了 3 条数据」。",
+      "blanks": [
+        {
+          "answer": "name",
+          "accept": []
+        },
+        {
+          "answer": "meow",
+          "accept": []
+        }
+      ],
+      "explanation": "第一处在类定义画的那一个方法里面 —— 函数里直接写 `name`，说的就是**我们自己**那一格，不用加任何前缀。第二处是把函数输出的写法：先说哪个对象、再调用函数名，所以那一格填的是函数名 `meow`，连起来念作「让 `c1` 这一个施展 `meow`」。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    Cat c2;\n    c1.name = \"张三\";\n    c1.fish = 3;\n    c2.name = \"李四\";\n    c2.fish = 1;\n    c1.fish = c1.fish + 4;\n    cout << c1.name << \" 的账上是 \" << c1.fish << \" 条\" << endl;\n    cout << c2.name << \" 的账上是 \" << c2.fish << \" 条\" << endl;\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "张三 的账上是 7 条\n李四 的账上是 1 条",
+      "accept": [
+        "张三 的账上是 7 条\n李四 的账上是 1 条\n"
+      ],
+      "explanation": "张三原本 3 条，加上 4 条就是 7 条；李四那格从头到尾没人碰过，还是它自己那 1 条。两个对象照的是同一个类定义，可格子各带各的 —— 所以改一个，另一个一点没跟着变。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void meow() {\n        cout << name << \" 说：我们有 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"王五\";\n    c1.fish = 5;\n    c1.meow();\n    c1.fish = 2;\n    c1.meow();\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "王五 说：我们有 5 条\n王五 说：我们有 2 条",
+      "accept": [
+        "王五 说：我们有 5 条\n王五 说：我们有 2 条\n"
+      ],
+      "explanation": "那一个方法里念的两个名字，读的都是**这一个自己**那两格，所以两次引用的都是王五。第一次引用的时候那格保存 5；中间那句把 2 保存了进去，第二次调用读到的自然就是 2 —— 函数不记旧账，每次念的都是格子里**当下**保存的东西。"
+    }
+  ]
+}

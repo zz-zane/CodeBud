@@ -1,0 +1,30 @@
+{
+  "templateId": "c-s1-ptr-forgot-amp",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-14",
+  "type": "codefix",
+  "concept": [
+    "&",
+    "取地址",
+    "指针参数",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "v": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    },
+    "k": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    }
+  },
+  "stemTemplate": "我们写函数的功夫又长进了：这一个方法收的**不是数，是一个元素的地址** —— 它会顺着名称走进来，把元素里的数乘一乘。\n\n可 `main` 里称呼它的时候，编译器当场拦下了，还补了一句「也许你是想这样做」……\n\n你帮我们看看是哪儿漏了，把它改好。改好之后，程序应该印出 `{v}` 乘 `{k}` 的结果。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * {k};\n}\n\nint main(void) {\n    int fish = {v};\n\n    treat(fish);\n    printf(\"%d\\n\", fish);\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * {k};\n}\n\nint main(void) {\n    int fish = {v};\n\n    treat(&fish);\n    printf(\"%d\\n\", fish);\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: passing argument 1 of 'treat' makes pointer from integer without a cast [-Wint-conversion]`，底下那句 `note` 更贴心：**`possible fix: take the address with '&'`** —— 「也许你该用 `&` 把地址取出来」。\n\n它看得很清楚：这一个方法头上写的是 `int *p`，它要的是**一块名称**；可你递进去的 `fish` 是**一个数字**。数字和名称在 C 里是两个完全不同的形状，对不上就得拦。\n\n修法就是加一个字符：写成 `treat(&fish);`。`&` 是去问 `fish` 那个元素的地址。地址递进去，函数里那句 `*p = *p * {k};` 改的才**是你本人的那个元素**。\n\n对照着记这一对：\n\n- 头里写 `void feed(int n)`，引用的时候传入 `feed(fish)` → 函数拿到**抄件**，里面怎么改，外面纹丝不动；\n- 头里写 `void treat(int *p)`，引用的时候传入 `treat(&fish)` → 函数拿到**名称**，里面改了，外面**真的会变**。"
+}

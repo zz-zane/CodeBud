@@ -1,0 +1,33 @@
+{
+  "templateId": "java-s2-necklace-peek",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-07",
+  "type": "codewrite",
+  "concept": [
+    "编号从 0 起",
+    "length",
+    "charAt",
+    "substring 不含末尾"
+  ],
+  "instances": 6,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "王五鱼",
+        "张三干"
+      ]
+    },
+    "k": {
+      "kind": "int",
+      "min": 1,
+      "max": 2
+    }
+  },
+  "stemTemplate": "我们要拿字符串 `{word}` 练练手上那几个函数。\n\n按下面的顺序印**四行**（那个 `K` 就是 {k}）：\n\n```text\n这串有 N 颗\n编号 K 那颗是 X\n从头剪到编号 K 之前：Y\n最后一颗是 Z\n```\n\n- `N` 是这串的颗数；\n- `X` 是**编号 K** 那一颗；\n- `Y` 是**从编号 0 一路剪到编号 K 之前**、剪出来的那几颗（**编号 K 那颗不算在里面**）；\n- `Z` 是**最后一颗**。这一处**别直接写死数字** —— 让它自己算出来是哪一号。\n\n冒号、空格都照上面印的样子来。这一题**不需要输入**，程序自己就能跑。",
+  "starterTemplate": "public class Main {\n    public static void main(String[] args) {\n        String s = \"{word}\";\n\n    }\n}\n",
+  "referenceSolutionTemplate": "public class Main {\n    public static void main(String[] args) {\n        String s = \"{word}\";\n        System.out.println(\"这串有 \" + s.length() + \" 颗\");\n        System.out.println(\"编号 {k} 那颗是 \" + s.charAt({k}));\n        System.out.println(\"从头剪到编号 {k} 之前：\" + s.substring(0, {k}));\n        System.out.println(\"最后一颗是 \" + s.charAt(s.length() - 1));\n    }\n}\n",
+  "explanationTemplate": "length() 返回 UTF-16 代码单元数量，charAt(k) 访问下标 k，substring(0,k) 不包含 k。最后一个代码单元的下标是 length()-1；输入文本必须满足题目要求的访问范围。"
+}

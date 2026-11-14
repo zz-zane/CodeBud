@@ -1,0 +1,474 @@
+{
+  "lessonId": "c-stage3-12",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-c-s3-varargs-biggest-write-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `biggest` ：传入表第一位是**账本** `count`，后头那一串是主人递进来的四份数。\n\n它要从这一串里挑出**最大**的那份返回。`main` 里会称呼它一回，该印出那一行数里**最大**的那个（一行一个数，别的字都别印）。\n\n四步照旧一步不能少（开、挂、返回、收）；挑的时候记住：**先有一个「目前最大的」，再一份一份比过去**，比它大就把王座让出来。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    /* ↓ 在这儿写：从后头那一串里挑出最大的那份返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 3, 9, 2, 7));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int best = va_arg(list, int);\n    for (int i = 1; i < count; i++) {\n        int v = va_arg(list, int);\n        if (v > best) {\n            best = v;\n        }\n    }\n    va_end(list);\n    return best;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 3, 9, 2, 7));\n    return 0;\n}\n",
+      "expectedOutput": "9",
+      "stdin": null,
+      "explanation": "四步照旧：开清单 `va_list list;`、挂名字 `va_start(list, count);`、返回 `va_arg(list, int)`、收摊 `va_end(list);`。\n\n挑最大比求和多想一步：\n\n- 先**把第一份读取当王座**（`best = va_arg(list, int);`）—— 王座上总得先坐一个；\n- 循环从**第二份**开始（`i = 1`），每返回一份就跟王座比一比，比王座大就让位；\n- 绕完，王座上那位就是最大的，返回。\n\n要是王座一开始写 `0`，递进来的全是负数时就会出错啦 —— 所以「先返回第一份坐上去」才是稳妥的写法。",
+      "templateId": "c-s3-varargs-biggest-write",
+      "params": {
+        "a": "3",
+        "b": "9",
+        "c": "2",
+        "d": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "383fed6423ac1b2d"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-biggest-write-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `biggest` ：传入表第一位是**账本** `count`，后头那一串是主人递进来的四份数。\n\n它要从这一串里挑出**最大**的那份返回。`main` 里会称呼它一回，该印出那一行数里**最大**的那个（一行一个数，别的字都别印）。\n\n四步照旧一步不能少（开、挂、返回、收）；挑的时候记住：**先有一个「目前最大的」，再一份一份比过去**，比它大就把王座让出来。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    /* ↓ 在这儿写：从后头那一串里挑出最大的那份返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 3, 9, 8, 2));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int best = va_arg(list, int);\n    for (int i = 1; i < count; i++) {\n        int v = va_arg(list, int);\n        if (v > best) {\n            best = v;\n        }\n    }\n    va_end(list);\n    return best;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 3, 9, 8, 2));\n    return 0;\n}\n",
+      "expectedOutput": "9",
+      "stdin": null,
+      "explanation": "四步照旧：开清单 `va_list list;`、挂名字 `va_start(list, count);`、返回 `va_arg(list, int)`、收摊 `va_end(list);`。\n\n挑最大比求和多想一步：\n\n- 先**把第一份读取当王座**（`best = va_arg(list, int);`）—— 王座上总得先坐一个；\n- 循环从**第二份**开始（`i = 1`），每返回一份就跟王座比一比，比王座大就让位；\n- 绕完，王座上那位就是最大的，返回。\n\n要是王座一开始写 `0`，递进来的全是负数时就会出错啦 —— 所以「先返回第一份坐上去」才是稳妥的写法。",
+      "templateId": "c-s3-varargs-biggest-write",
+      "params": {
+        "a": "3",
+        "b": "9",
+        "c": "8",
+        "d": "2"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "d044baa3b8640af7"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-biggest-write-006",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `biggest` ：传入表第一位是**账本** `count`，后头那一串是主人递进来的四份数。\n\n它要从这一串里挑出**最大**的那份返回。`main` 里会称呼它一回，该印出那一行数里**最大**的那个（一行一个数，别的字都别印）。\n\n四步照旧一步不能少（开、挂、返回、收）；挑的时候记住：**先有一个「目前最大的」，再一份一份比过去**，比它大就把王座让出来。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    /* ↓ 在这儿写：从后头那一串里挑出最大的那份返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 3, 7, 8, 7));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int best = va_arg(list, int);\n    for (int i = 1; i < count; i++) {\n        int v = va_arg(list, int);\n        if (v > best) {\n            best = v;\n        }\n    }\n    va_end(list);\n    return best;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 3, 7, 8, 7));\n    return 0;\n}\n",
+      "expectedOutput": "8",
+      "stdin": null,
+      "explanation": "四步照旧：开清单 `va_list list;`、挂名字 `va_start(list, count);`、返回 `va_arg(list, int)`、收摊 `va_end(list);`。\n\n挑最大比求和多想一步：\n\n- 先**把第一份读取当王座**（`best = va_arg(list, int);`）—— 王座上总得先坐一个；\n- 循环从**第二份**开始（`i = 1`），每返回一份就跟王座比一比，比王座大就让位；\n- 绕完，王座上那位就是最大的，返回。\n\n要是王座一开始写 `0`，递进来的全是负数时就会出错啦 —— 所以「先返回第一份坐上去」才是稳妥的写法。",
+      "templateId": "c-s3-varargs-biggest-write",
+      "params": {
+        "a": "3",
+        "b": "7",
+        "c": "8",
+        "d": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "02c6958430d3f267"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-biggest-write-009",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `biggest` ：传入表第一位是**账本** `count`，后头那一串是主人递进来的四份数。\n\n它要从这一串里挑出**最大**的那份返回。`main` 里会称呼它一回，该印出那一行数里**最大**的那个（一行一个数，别的字都别印）。\n\n四步照旧一步不能少（开、挂、返回、收）；挑的时候记住：**先有一个「目前最大的」，再一份一份比过去**，比它大就把王座让出来。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    /* ↓ 在这儿写：从后头那一串里挑出最大的那份返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 1, 9, 2, 2));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int best = va_arg(list, int);\n    for (int i = 1; i < count; i++) {\n        int v = va_arg(list, int);\n        if (v > best) {\n            best = v;\n        }\n    }\n    va_end(list);\n    return best;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 1, 9, 2, 2));\n    return 0;\n}\n",
+      "expectedOutput": "9",
+      "stdin": null,
+      "explanation": "四步照旧：开清单 `va_list list;`、挂名字 `va_start(list, count);`、返回 `va_arg(list, int)`、收摊 `va_end(list);`。\n\n挑最大比求和多想一步：\n\n- 先**把第一份读取当王座**（`best = va_arg(list, int);`）—— 王座上总得先坐一个；\n- 循环从**第二份**开始（`i = 1`），每返回一份就跟王座比一比，比王座大就让位；\n- 绕完，王座上那位就是最大的，返回。\n\n要是王座一开始写 `0`，递进来的全是负数时就会出错啦 —— 所以「先返回第一份坐上去」才是稳妥的写法。",
+      "templateId": "c-s3-varargs-biggest-write",
+      "params": {
+        "a": "1",
+        "b": "9",
+        "c": "2",
+        "d": "2"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "faea3bc3046eaf67"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-biggest-write-012",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `biggest` ：传入表第一位是**账本** `count`，后头那一串是主人递进来的四份数。\n\n它要从这一串里挑出**最大**的那份返回。`main` 里会称呼它一回，该印出那一行数里**最大**的那个（一行一个数，别的字都别印）。\n\n四步照旧一步不能少（开、挂、返回、收）；挑的时候记住：**先有一个「目前最大的」，再一份一份比过去**，比它大就把王座让出来。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    /* ↓ 在这儿写：从后头那一串里挑出最大的那份返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 1, 7, 2, 7));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int best = va_arg(list, int);\n    for (int i = 1; i < count; i++) {\n        int v = va_arg(list, int);\n        if (v > best) {\n            best = v;\n        }\n    }\n    va_end(list);\n    return best;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 1, 7, 2, 7));\n    return 0;\n}\n",
+      "expectedOutput": "7",
+      "stdin": null,
+      "explanation": "四步照旧：开清单 `va_list list;`、挂名字 `va_start(list, count);`、返回 `va_arg(list, int)`、收摊 `va_end(list);`。\n\n挑最大比求和多想一步：\n\n- 先**把第一份读取当王座**（`best = va_arg(list, int);`）—— 王座上总得先坐一个；\n- 循环从**第二份**开始（`i = 1`），每返回一份就跟王座比一比，比王座大就让位；\n- 绕完，王座上那位就是最大的，返回。\n\n要是王座一开始写 `0`，递进来的全是负数时就会出错啦 —— 所以「先返回第一份坐上去」才是稳妥的写法。",
+      "templateId": "c-s3-varargs-biggest-write",
+      "params": {
+        "a": "1",
+        "b": "7",
+        "c": "2",
+        "d": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "4169233083c32d97"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-biggest-write-015",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `biggest` ：传入表第一位是**账本** `count`，后头那一串是主人递进来的四份数。\n\n它要从这一串里挑出**最大**的那份返回。`main` 里会称呼它一回，该印出那一行数里**最大**的那个（一行一个数，别的字都别印）。\n\n四步照旧一步不能少（开、挂、返回、收）；挑的时候记住：**先有一个「目前最大的」，再一份一份比过去**，比它大就把王座让出来。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    /* ↓ 在这儿写：从后头那一串里挑出最大的那份返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 1, 7, 8, 2));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint biggest(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int best = va_arg(list, int);\n    for (int i = 1; i < count; i++) {\n        int v = va_arg(list, int);\n        if (v > best) {\n            best = v;\n        }\n    }\n    va_end(list);\n    return best;\n}\n\nint main(void) {\n    printf(\"%d\\n\", biggest(4, 1, 7, 8, 2));\n    return 0;\n}\n",
+      "expectedOutput": "8",
+      "stdin": null,
+      "explanation": "四步照旧：开清单 `va_list list;`、挂名字 `va_start(list, count);`、返回 `va_arg(list, int)`、收摊 `va_end(list);`。\n\n挑最大比求和多想一步：\n\n- 先**把第一份读取当王座**（`best = va_arg(list, int);`）—— 王座上总得先坐一个；\n- 循环从**第二份**开始（`i = 1`），每返回一份就跟王座比一比，比王座大就让位；\n- 绕完，王座上那位就是最大的，返回。\n\n要是王座一开始写 `0`，递进来的全是负数时就会出错啦 —— 所以「先返回第一份坐上去」才是稳妥的写法。",
+      "templateId": "c-s3-varargs-biggest-write",
+      "params": {
+        "a": "1",
+        "b": "7",
+        "c": "8",
+        "d": "2"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "d2d41257f36be2cf"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-count-hardcoded-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们递了**五份**进去（1、2、3、4、5），账本上写得明明白白：`5`。可它印出来的数**小了一截** —— 后头两份明明就摆在那儿，它压根没伸手。\n\n请你把它改对（`main` 里那一行别动）。改好之后该印出这**五份加起来**的总和。",
+      "brokenCode": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < 3; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(5, 1, 2, 3, 4, 5));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(5, 1, 2, 3, 4, 5));\n    return 0;\n}\n",
+      "expectedOutput": "15",
+      "stdin": null,
+      "explanation": "账本 `count` 传进来了，可**循环的圈数写死成了 3** —— 我们递五份，它只绕三圈，后两份压根没被返回起来，所以印出来的数小了一截。\n\n规矩是：那一串的**份数只有账本知道**，绕圈一定要跟着账本走（`i < count`）。这里写成 `i < 3`，就是我们自己把那句话钉死在墙上了。\n\n这跟课文里「份数说错」那个坑是同一个家族：账本说几份就得绕几圈 —— 少绕一圈就少返回一份，多绕一圈则会返回来**谁也不知道从哪儿抓来的**东西（那个更阴，印出来的数毫无意义）。",
+      "templateId": "c-s3-varargs-count-hardcoded",
+      "params": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4",
+        "e": "5"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "83d9192acc89e51b"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-count-hardcoded-031",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们递了**五份**进去（2、4、6、8、10），账本上写得明明白白：`5`。可它印出来的数**小了一截** —— 后头两份明明就摆在那儿，它压根没伸手。\n\n请你把它改对（`main` 里那一行别动）。改好之后该印出这**五份加起来**的总和。",
+      "brokenCode": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < 3; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(5, 2, 4, 6, 8, 10));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(5, 2, 4, 6, 8, 10));\n    return 0;\n}\n",
+      "expectedOutput": "30",
+      "stdin": null,
+      "explanation": "账本 `count` 传进来了，可**循环的圈数写死成了 3** —— 我们递五份，它只绕三圈，后两份压根没被返回起来，所以印出来的数小了一截。\n\n规矩是：那一串的**份数只有账本知道**，绕圈一定要跟着账本走（`i < count`）。这里写成 `i < 3`，就是我们自己把那句话钉死在墙上了。\n\n这跟课文里「份数说错」那个坑是同一个家族：账本说几份就得绕几圈 —— 少绕一圈就少返回一份，多绕一圈则会返回来**谁也不知道从哪儿抓来的**东西（那个更阴，印出来的数毫无意义）。",
+      "templateId": "c-s3-varargs-count-hardcoded",
+      "params": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "8",
+        "e": "10"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "5d8c1bf0f5d650b6"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-forward-write-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `report` ：主人递进来一个**格式串**和后头一串数，它要**原样**把这句话印出来（格式串里的 `%d` 照旧按递进来的数渲染），**每句末尾换一行**。\n\n`main` 里在这么称呼它：\n\n```text\nreport(\"收货：%d 条\", 3);\nreport(\"今天到此为止\");\n```\n\n该印两行：第一行是 `收货：3 条`，第二行原样是 `今天到此为止`。\n\n⚠️ 递进来的那一串，在函数手里只剩一张**清单** —— 想转交给那个会印字的函数，认准名字里带 `v` 的那一位。`main` 里那两行别动。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nvoid report(const char *fmt, ...) {\n    /* ↓ 在这儿写：把主人递进来的这一串，原样递给那个会印字的函数；每句末尾换一行 */\n\n}\n\nint main(void) {\n    report(\"收货：%d 条\", 3);\n    report(\"今天到此为止\");\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nvoid report(const char *fmt, ...) {\n    va_list list;\n    va_start(list, fmt);\n    vprintf(fmt, list);\n    va_end(list);\n    printf(\"\\n\");\n}\n\nint main(void) {\n    report(\"收货：%d 条\", 3);\n    report(\"今天到此为止\");\n    return 0;\n}\n",
+      "expectedOutput": "收货：3 条\n今天到此为止",
+      "stdin": null,
+      "explanation": "关键就一句话：**主人递进来的那一串，在函数手里只剩一张清单**（`va_list`），它没法原样递给只收「一串传入」的 `printf`。\n\n所以要用**收清单的那一版**：`vprintf(fmt, list);` —— 格式串照样是账本，清单里的东西按占位符一份一份读取渲染。\n\n四步还是那四步：开 `va_list list;`、挂 `va_start(list, fmt);`（这里最后那个有名字的传入是 `fmt`）、返回（交给 `vprintf`）、收 `va_end(list);`，最后补一句换行。\n\n顺一句：第二个输出 `report(\"今天到此为止\")` 后头**一份都没跟**，照样能印 —— 那一串本来就是「想跟几份跟几份」，包括一份都不跟。以后凡是要把一串传入往下转交，认准名字里带 `v` 的那一位就行。",
+      "templateId": "c-s3-varargs-forward-write",
+      "params": {
+        "msg": "收货",
+        "a": "3"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "b41decd4be49fc0d"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-forward-write-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `report` ：主人递进来一个**格式串**和后头一串数，它要**原样**把这句话印出来（格式串里的 `%d` 照旧按递进来的数渲染），**每句末尾换一行**。\n\n`main` 里在这么称呼它：\n\n```text\nreport(\"收货：%d 条\", 7);\nreport(\"今天到此为止\");\n```\n\n该印两行：第一行是 `收货：7 条`，第二行原样是 `今天到此为止`。\n\n⚠️ 递进来的那一串，在函数手里只剩一张**清单** —— 想转交给那个会印字的函数，认准名字里带 `v` 的那一位。`main` 里那两行别动。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nvoid report(const char *fmt, ...) {\n    /* ↓ 在这儿写：把主人递进来的这一串，原样递给那个会印字的函数；每句末尾换一行 */\n\n}\n\nint main(void) {\n    report(\"收货：%d 条\", 7);\n    report(\"今天到此为止\");\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nvoid report(const char *fmt, ...) {\n    va_list list;\n    va_start(list, fmt);\n    vprintf(fmt, list);\n    va_end(list);\n    printf(\"\\n\");\n}\n\nint main(void) {\n    report(\"收货：%d 条\", 7);\n    report(\"今天到此为止\");\n    return 0;\n}\n",
+      "expectedOutput": "收货：7 条\n今天到此为止",
+      "stdin": null,
+      "explanation": "关键就一句话：**主人递进来的那一串，在函数手里只剩一张清单**（`va_list`），它没法原样递给只收「一串传入」的 `printf`。\n\n所以要用**收清单的那一版**：`vprintf(fmt, list);` —— 格式串照样是账本，清单里的东西按占位符一份一份读取渲染。\n\n四步还是那四步：开 `va_list list;`、挂 `va_start(list, fmt);`（这里最后那个有名字的传入是 `fmt`）、返回（交给 `vprintf`）、收 `va_end(list);`，最后补一句换行。\n\n顺一句：第二个输出 `report(\"今天到此为止\")` 后头**一份都没跟**，照样能印 —— 那一串本来就是「想跟几份跟几份」，包括一份都不跟。以后凡是要把一串传入往下转交，认准名字里带 `v` 的那一位就行。",
+      "templateId": "c-s3-varargs-forward-write",
+      "params": {
+        "msg": "收货",
+        "a": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "d5c8a3d8a70d0ef4"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-forward-write-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `report` ：主人递进来一个**格式串**和后头一串数，它要**原样**把这句话印出来（格式串里的 `%d` 照旧按递进来的数渲染），**每句末尾换一行**。\n\n`main` 里在这么称呼它：\n\n```text\nreport(\"开箱：%d 条\", 3);\nreport(\"今天到此为止\");\n```\n\n该印两行：第一行是 `开箱：3 条`，第二行原样是 `今天到此为止`。\n\n⚠️ 递进来的那一串，在函数手里只剩一张**清单** —— 想转交给那个会印字的函数，认准名字里带 `v` 的那一位。`main` 里那两行别动。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nvoid report(const char *fmt, ...) {\n    /* ↓ 在这儿写：把主人递进来的这一串，原样递给那个会印字的函数；每句末尾换一行 */\n\n}\n\nint main(void) {\n    report(\"开箱：%d 条\", 3);\n    report(\"今天到此为止\");\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nvoid report(const char *fmt, ...) {\n    va_list list;\n    va_start(list, fmt);\n    vprintf(fmt, list);\n    va_end(list);\n    printf(\"\\n\");\n}\n\nint main(void) {\n    report(\"开箱：%d 条\", 3);\n    report(\"今天到此为止\");\n    return 0;\n}\n",
+      "expectedOutput": "开箱：3 条\n今天到此为止",
+      "stdin": null,
+      "explanation": "关键就一句话：**主人递进来的那一串，在函数手里只剩一张清单**（`va_list`），它没法原样递给只收「一串传入」的 `printf`。\n\n所以要用**收清单的那一版**：`vprintf(fmt, list);` —— 格式串照样是账本，清单里的东西按占位符一份一份读取渲染。\n\n四步还是那四步：开 `va_list list;`、挂 `va_start(list, fmt);`（这里最后那个有名字的传入是 `fmt`）、返回（交给 `vprintf`）、收 `va_end(list);`，最后补一句换行。\n\n顺一句：第二个输出 `report(\"今天到此为止\")` 后头**一份都没跟**，照样能印 —— 那一串本来就是「想跟几份跟几份」，包括一份都不跟。以后凡是要把一串传入往下转交，认准名字里带 `v` 的那一位就行。",
+      "templateId": "c-s3-varargs-forward-write",
+      "params": {
+        "msg": "开箱",
+        "a": "3"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "706d80abcf2c3252"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-forward-write-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请写一个方法 `report` ：主人递进来一个**格式串**和后头一串数，它要**原样**把这句话印出来（格式串里的 `%d` 照旧按递进来的数渲染），**每句末尾换一行**。\n\n`main` 里在这么称呼它：\n\n```text\nreport(\"开箱：%d 条\", 7);\nreport(\"今天到此为止\");\n```\n\n该印两行：第一行是 `开箱：7 条`，第二行原样是 `今天到此为止`。\n\n⚠️ 递进来的那一串，在函数手里只剩一张**清单** —— 想转交给那个会印字的函数，认准名字里带 `v` 的那一位。`main` 里那两行别动。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nvoid report(const char *fmt, ...) {\n    /* ↓ 在这儿写：把主人递进来的这一串，原样递给那个会印字的函数；每句末尾换一行 */\n\n}\n\nint main(void) {\n    report(\"开箱：%d 条\", 7);\n    report(\"今天到此为止\");\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nvoid report(const char *fmt, ...) {\n    va_list list;\n    va_start(list, fmt);\n    vprintf(fmt, list);\n    va_end(list);\n    printf(\"\\n\");\n}\n\nint main(void) {\n    report(\"开箱：%d 条\", 7);\n    report(\"今天到此为止\");\n    return 0;\n}\n",
+      "expectedOutput": "开箱：7 条\n今天到此为止",
+      "stdin": null,
+      "explanation": "关键就一句话：**主人递进来的那一串，在函数手里只剩一张清单**（`va_list`），它没法原样递给只收「一串传入」的 `printf`。\n\n所以要用**收清单的那一版**：`vprintf(fmt, list);` —— 格式串照样是账本，清单里的东西按占位符一份一份读取渲染。\n\n四步还是那四步：开 `va_list list;`、挂 `va_start(list, fmt);`（这里最后那个有名字的传入是 `fmt`）、返回（交给 `vprintf`）、收 `va_end(list);`，最后补一句换行。\n\n顺一句：第二个输出 `report(\"今天到此为止\")` 后头**一份都没跟**，照样能印 —— 那一串本来就是「想跟几份跟几份」，包括一份都不跟。以后凡是要把一串传入往下转交，认准名字里带 `v` 的那一位就行。",
+      "templateId": "c-s3-varargs-forward-write",
+      "params": {
+        "msg": "开箱",
+        "a": "7"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "0a527c9050ae7042"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-no-stdarg-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "源代码翻译到一半就停了 —— 编译器说它压根**不认识** `va_list`、`va_start` 这几个名字。这几件工具不是 C 语言自带的语法字，它们住在一座现成的工具房里。\n\n请你把缺的那一行补上（`main` 里那几个数别动）。改好之后该印出 `2`、`3`、`4` 三份加起来的总和。",
+      "brokenCode": "#include <stdio.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(3, 2, 3, 4));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(3, 2, 3, 4));\n    return 0;\n}\n",
+      "expectedOutput": "9",
+      "stdin": null,
+      "explanation": "`va_list`、`va_start`、`va_arg`、`va_end` 这四件工具**不是** C 语言自带的语法字，它们都住在一座现成的工具房里：`stdarg.h`。少了 `#include <stdarg.h>` 这一行，编译器压根不认识它们，只当是没听过的新函数名字，一路 `implicit declaration` 报下去（课文里那个报错演示就是这个样子）。\n\n补上这一行之后，`2`、`3`、`4` 三份就能一份一份被读取相加了。\n\n记一句：以后看见 `implicit declaration`，先摸一摸是不是**忘了带工具房那一行** —— 不限量传入这一族工具，全靠它才能用。",
+      "templateId": "c-s3-varargs-no-stdarg",
+      "params": {
+        "a": "2",
+        "b": "3",
+        "c": "4"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "48cd5c3f986d7ebb"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-no-stdarg-007",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "源代码翻译到一半就停了 —— 编译器说它压根**不认识** `va_list`、`va_start` 这几个名字。这几件工具不是 C 语言自带的语法字，它们住在一座现成的工具房里。\n\n请你把缺的那一行补上（`main` 里那几个数别动）。改好之后该印出 `4`、`5`、`6` 三份加起来的总和。",
+      "brokenCode": "#include <stdio.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(3, 4, 5, 6));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(3, 4, 5, 6));\n    return 0;\n}\n",
+      "expectedOutput": "15",
+      "stdin": null,
+      "explanation": "`va_list`、`va_start`、`va_arg`、`va_end` 这四件工具**不是** C 语言自带的语法字，它们都住在一座现成的工具房里：`stdarg.h`。少了 `#include <stdarg.h>` 这一行，编译器压根不认识它们，只当是没听过的新函数名字，一路 `implicit declaration` 报下去（课文里那个报错演示就是这个样子）。\n\n补上这一行之后，`4`、`5`、`6` 三份就能一份一份被读取相加了。\n\n记一句：以后看见 `implicit declaration`，先摸一摸是不是**忘了带工具房那一行** —— 不限量传入这一族工具，全靠它才能用。",
+      "templateId": "c-s3-varargs-no-stdarg",
+      "params": {
+        "a": "4",
+        "b": "5",
+        "c": "6"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.354Z",
+        "hash": "0381b45f6f1c9091"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-sum-write-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请把这招补完：传入表第一位是**账本** `count`，后头那一串就是主人递进来的份（几个不好说）。\n\n它该把后头那一串**一份一份读取加起来**，把总和返回。四步一步都不能少（开、挂、返回、收），`main` 里那两行别动。\n\n该印两行：第一行 `三个对象的：` 跟着**三份**的总和，第二行 `五个对象的：` 跟着**五份**的总和。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    /* ↓ 在这儿写：把后头那一串一份一份读取加起来，把总和返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 2, 3, 4));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 2, 3, 4, 3, 2));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 2, 3, 4));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 2, 3, 4, 3, 2));\n    return 0;\n}\n",
+      "expectedOutput": "三个对象的：9\n五个对象的：14",
+      "stdin": null,
+      "explanation": "四步照着课文走一遍就成：\n\n1. **开**：`va_list list;` —— 后头那一串记在它名下；\n2. **挂**：`va_start(list, count);` —— 从最后那个有名字的传入（就是账本 `count`）后面开始记；\n3. **返回**：循环里一份一份 `va_arg(list, int)`，返回过的往后挪一位；圈数**跟着账本走**（`i < count`），不能写死；\n4. **收**：`va_end(list);` 收摊，再把总和返回。\n\n看那两行输出：第一回账本写 `3`，就绕三圈；第二回写 `5`，就绕五圈 —— **同一个方法，来几份收几份**，这就是不限量传入的窍门。\n\n（注意类型：传入的都是整数，返回的时候就得说 `int`。说错了它不报错，只是返回一个跟原来毫无关系的数。）",
+      "templateId": "c-s3-varargs-sum-write",
+      "params": {
+        "a": "2",
+        "b": "3",
+        "c": "4"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.355Z",
+        "hash": "4558123c5ddad172"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-sum-write-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请把这招补完：传入表第一位是**账本** `count`，后头那一串就是主人递进来的份（几个不好说）。\n\n它该把后头那一串**一份一份读取加起来**，把总和返回。四步一步都不能少（开、挂、返回、收），`main` 里那两行别动。\n\n该印两行：第一行 `三个对象的：` 跟着**三份**的总和，第二行 `五个对象的：` 跟着**五份**的总和。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    /* ↓ 在这儿写：把后头那一串一份一份读取加起来，把总和返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 2, 3, 6));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 2, 3, 6, 3, 2));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 2, 3, 6));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 2, 3, 6, 3, 2));\n    return 0;\n}\n",
+      "expectedOutput": "三个对象的：11\n五个对象的：16",
+      "stdin": null,
+      "explanation": "四步照着课文走一遍就成：\n\n1. **开**：`va_list list;` —— 后头那一串记在它名下；\n2. **挂**：`va_start(list, count);` —— 从最后那个有名字的传入（就是账本 `count`）后面开始记；\n3. **返回**：循环里一份一份 `va_arg(list, int)`，返回过的往后挪一位；圈数**跟着账本走**（`i < count`），不能写死；\n4. **收**：`va_end(list);` 收摊，再把总和返回。\n\n看那两行输出：第一回账本写 `3`，就绕三圈；第二回写 `5`，就绕五圈 —— **同一个方法，来几份收几份**，这就是不限量传入的窍门。\n\n（注意类型：传入的都是整数，返回的时候就得说 `int`。说错了它不报错，只是返回一个跟原来毫无关系的数。）",
+      "templateId": "c-s3-varargs-sum-write",
+      "params": {
+        "a": "2",
+        "b": "3",
+        "c": "6"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.355Z",
+        "hash": "6a5429c15e372445"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-sum-write-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请把这招补完：传入表第一位是**账本** `count`，后头那一串就是主人递进来的份（几个不好说）。\n\n它该把后头那一串**一份一份读取加起来**，把总和返回。四步一步都不能少（开、挂、返回、收），`main` 里那两行别动。\n\n该印两行：第一行 `三个对象的：` 跟着**三份**的总和，第二行 `五个对象的：` 跟着**五份**的总和。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    /* ↓ 在这儿写：把后头那一串一份一份读取加起来，把总和返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 2, 5, 6));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 2, 5, 6, 5, 2));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 2, 5, 6));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 2, 5, 6, 5, 2));\n    return 0;\n}\n",
+      "expectedOutput": "三个对象的：13\n五个对象的：20",
+      "stdin": null,
+      "explanation": "四步照着课文走一遍就成：\n\n1. **开**：`va_list list;` —— 后头那一串记在它名下；\n2. **挂**：`va_start(list, count);` —— 从最后那个有名字的传入（就是账本 `count`）后面开始记；\n3. **返回**：循环里一份一份 `va_arg(list, int)`，返回过的往后挪一位；圈数**跟着账本走**（`i < count`），不能写死；\n4. **收**：`va_end(list);` 收摊，再把总和返回。\n\n看那两行输出：第一回账本写 `3`，就绕三圈；第二回写 `5`，就绕五圈 —— **同一个方法，来几份收几份**，这就是不限量传入的窍门。\n\n（注意类型：传入的都是整数，返回的时候就得说 `int`。说错了它不报错，只是返回一个跟原来毫无关系的数。）",
+      "templateId": "c-s3-varargs-sum-write",
+      "params": {
+        "a": "2",
+        "b": "5",
+        "c": "6"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.355Z",
+        "hash": "d1f7716d6f8c5959"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-sum-write-004",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请把这招补完：传入表第一位是**账本** `count`，后头那一串就是主人递进来的份（几个不好说）。\n\n它该把后头那一串**一份一份读取加起来**，把总和返回。四步一步都不能少（开、挂、返回、收），`main` 里那两行别动。\n\n该印两行：第一行 `三个对象的：` 跟着**三份**的总和，第二行 `五个对象的：` 跟着**五份**的总和。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    /* ↓ 在这儿写：把后头那一串一份一份读取加起来，把总和返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 1, 3, 4));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 1, 3, 4, 3, 1));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 1, 3, 4));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 1, 3, 4, 3, 1));\n    return 0;\n}\n",
+      "expectedOutput": "三个对象的：8\n五个对象的：12",
+      "stdin": null,
+      "explanation": "四步照着课文走一遍就成：\n\n1. **开**：`va_list list;` —— 后头那一串记在它名下；\n2. **挂**：`va_start(list, count);` —— 从最后那个有名字的传入（就是账本 `count`）后面开始记；\n3. **返回**：循环里一份一份 `va_arg(list, int)`，返回过的往后挪一位；圈数**跟着账本走**（`i < count`），不能写死；\n4. **收**：`va_end(list);` 收摊，再把总和返回。\n\n看那两行输出：第一回账本写 `3`，就绕三圈；第二回写 `5`，就绕五圈 —— **同一个方法，来几份收几份**，这就是不限量传入的窍门。\n\n（注意类型：传入的都是整数，返回的时候就得说 `int`。说错了它不报错，只是返回一个跟原来毫无关系的数。）",
+      "templateId": "c-s3-varargs-sum-write",
+      "params": {
+        "a": "1",
+        "b": "3",
+        "c": "4"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.355Z",
+        "hash": "19e08d104d5c284c"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-sum-write-006",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请把这招补完：传入表第一位是**账本** `count`，后头那一串就是主人递进来的份（几个不好说）。\n\n它该把后头那一串**一份一份读取加起来**，把总和返回。四步一步都不能少（开、挂、返回、收），`main` 里那两行别动。\n\n该印两行：第一行 `三个对象的：` 跟着**三份**的总和，第二行 `五个对象的：` 跟着**五份**的总和。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    /* ↓ 在这儿写：把后头那一串一份一份读取加起来，把总和返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 1, 5, 4));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 1, 5, 4, 5, 1));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 1, 5, 4));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 1, 5, 4, 5, 1));\n    return 0;\n}\n",
+      "expectedOutput": "三个对象的：10\n五个对象的：16",
+      "stdin": null,
+      "explanation": "四步照着课文走一遍就成：\n\n1. **开**：`va_list list;` —— 后头那一串记在它名下；\n2. **挂**：`va_start(list, count);` —— 从最后那个有名字的传入（就是账本 `count`）后面开始记；\n3. **返回**：循环里一份一份 `va_arg(list, int)`，返回过的往后挪一位；圈数**跟着账本走**（`i < count`），不能写死；\n4. **收**：`va_end(list);` 收摊，再把总和返回。\n\n看那两行输出：第一回账本写 `3`，就绕三圈；第二回写 `5`，就绕五圈 —— **同一个方法，来几份收几份**，这就是不限量传入的窍门。\n\n（注意类型：传入的都是整数，返回的时候就得说 `int`。说错了它不报错，只是返回一个跟原来毫无关系的数。）",
+      "templateId": "c-s3-varargs-sum-write",
+      "params": {
+        "a": "1",
+        "b": "5",
+        "c": "4"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.355Z",
+        "hash": "104368ea1e14912a"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-sum-write-007",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "请把这招补完：传入表第一位是**账本** `count`，后头那一串就是主人递进来的份（几个不好说）。\n\n它该把后头那一串**一份一份读取加起来**，把总和返回。四步一步都不能少（开、挂、返回、收），`main` 里那两行别动。\n\n该印两行：第一行 `三个对象的：` 跟着**三份**的总和，第二行 `五个对象的：` 跟着**五份**的总和。",
+      "starter": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    /* ↓ 在这儿写：把后头那一串一份一份读取加起来，把总和返回 */\n\n    return 0;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 1, 5, 6));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 1, 5, 6, 5, 1));\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"三个对象的：%d\\n\", fish_total(3, 1, 5, 6));\n    printf(\"五个对象的：%d\\n\", fish_total(5, 1, 5, 6, 5, 1));\n    return 0;\n}\n",
+      "expectedOutput": "三个对象的：12\n五个对象的：18",
+      "stdin": null,
+      "explanation": "四步照着课文走一遍就成：\n\n1. **开**：`va_list list;` —— 后头那一串记在它名下；\n2. **挂**：`va_start(list, count);` —— 从最后那个有名字的传入（就是账本 `count`）后面开始记；\n3. **返回**：循环里一份一份 `va_arg(list, int)`，返回过的往后挪一位；圈数**跟着账本走**（`i < count`），不能写死；\n4. **收**：`va_end(list);` 收摊，再把总和返回。\n\n看那两行输出：第一回账本写 `3`，就绕三圈；第二回写 `5`，就绕五圈 —— **同一个方法，来几份收几份**，这就是不限量传入的窍门。\n\n（注意类型：传入的都是整数，返回的时候就得说 `int`。说错了它不报错，只是返回一个跟原来毫无关系的数。）",
+      "templateId": "c-s3-varargs-sum-write",
+      "params": {
+        "a": "1",
+        "b": "5",
+        "c": "6"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.355Z",
+        "hash": "0cd3c1a6ca28f06f"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-wrong-type-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "这一个方法看着哪哪都对：清单开了、名字挂了、循环也走了、收摊也收了。可它印出来的数跟传入的**毫无关系** —— 我们真跑过：编译器一次没吭，程序照样跑完。\n\n请你把它改对（四步一步都别删，只动该动的那一处）。改好之后该印出 `2`、`3`、`4` 三份加起来的总和。",
+      "brokenCode": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, double);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(3, 2, 3, 4));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(3, 2, 3, 4));\n    return 0;\n}\n",
+      "expectedOutput": "9",
+      "stdin": null,
+      "explanation": "病根在**返回的那一句**：`va_arg` 的第二个传入要说清「这一份是什么类型」，它写成了 `double` —— 可我们传入的三份都是 `int`。\n\n清单不认字：你说按小数返回，它就从**放小数的地方**去抓一个；那儿压根没人放过东西，抓回来的是**谁也不知道从哪儿来的**数。于是总和跟传入的毫无关系。\n\n最阴的地方是：**它不报错、也不警告**，程序看着一切正常。（对照一下：`printf` 的格式串跟传入对不上，编译器会嘟囔一句 `-Wformat=` 警告；自己写的清单没这个福气。）\n\n规矩记牢：`va_arg` 的类型要和**传入的那一份**一份一份对上 —— 这一处替不了你。",
+      "templateId": "c-s3-varargs-wrong-type",
+      "params": {
+        "a": "2",
+        "b": "3",
+        "c": "4"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.355Z",
+        "hash": "3327717b44efe872"
+      }
+    },
+    {
+      "id": "bank-c-s3-varargs-wrong-type-007",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "这一个方法看着哪哪都对：清单开了、名字挂了、循环也走了、收摊也收了。可它印出来的数跟传入的**毫无关系** —— 我们真跑过：编译器一次没吭，程序照样跑完。\n\n请你把它改对（四步一步都别删，只动该动的那一处）。改好之后该印出 `4`、`5`、`6` 三份加起来的总和。",
+      "brokenCode": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, double);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(3, 4, 5, 6));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdarg.h>\n\nint fish_total(int count, ...) {\n    va_list list;\n    va_start(list, count);\n    int sum = 0;\n    for (int i = 0; i < count; i++) {\n        sum += va_arg(list, int);\n    }\n    va_end(list);\n    return sum;\n}\n\nint main(void) {\n    printf(\"%d\\n\", fish_total(3, 4, 5, 6));\n    return 0;\n}\n",
+      "expectedOutput": "15",
+      "stdin": null,
+      "explanation": "病根在**返回的那一句**：`va_arg` 的第二个传入要说清「这一份是什么类型」，它写成了 `double` —— 可我们传入的三份都是 `int`。\n\n清单不认字：你说按小数返回，它就从**放小数的地方**去抓一个；那儿压根没人放过东西，抓回来的是**谁也不知道从哪儿来的**数。于是总和跟传入的毫无关系。\n\n最阴的地方是：**它不报错、也不警告**，程序看着一切正常。（对照一下：`printf` 的格式串跟传入对不上，编译器会嘟囔一句 `-Wformat=` 警告；自己写的清单没这个福气。）\n\n规矩记牢：`va_arg` 的类型要和**传入的那一份**一份一份对上 —— 这一处替不了你。",
+      "templateId": "c-s3-varargs-wrong-type",
+      "params": {
+        "a": "4",
+        "b": "5",
+        "c": "6"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.355Z",
+        "hash": "122df3c9e07ee345"
+      }
+    }
+  ]
+}

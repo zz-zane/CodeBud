@@ -1,0 +1,30 @@
+{
+  "templateId": "c-s2-ptr-star-before-plus",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-01",
+  "type": "codefix",
+  "concept": [
+    "指针算术",
+    "解引用",
+    "运算符优先级",
+    "星号"
+  ],
+  "instances": 2,
+  "params": {
+    "base": {
+      "kind": "int",
+      "min": 1,
+      "max": 4
+    },
+    "step": {
+      "kind": "int",
+      "min": 2,
+      "max": 5
+    }
+  },
+  "stemTemplate": "我们在架子上摆了 3 只元素：第 0 只元素里放着 {base} 条数据，往后每个元素都比前一个多 {step} 条。\n\n程序要用一块名称把这三个元素从第 0 只起一个一个报出来，格式是 `第 i 只：v`（`i` 是元素的编号，从 0 数起，`v` 是那个元素里的数）。\n\n可它跑出来第 1 只元素的数不对 —— 编译器一次没吭，代码照样编了出来。你帮我们看看是哪儿写歪了，把它改好。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[3];\n    int *p = bowls;\n\n    for (int i = 0; i < 3; i++) {\n        bowls[i] = {base} + i * {step};\n    }\n\n    printf(\"第 0 只：%d\\n\", *p);\n    printf(\"第 1 只：%d\\n\", *p + 1);\n    printf(\"第 2 只：%d\\n\", *(p + 2));\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[3];\n    int *p = bowls;\n\n    for (int i = 0; i < 3; i++) {\n        bowls[i] = {base} + i * {step};\n    }\n\n    printf(\"第 0 只：%d\\n\", *p);\n    printf(\"第 1 只：%d\\n\", *(p + 1));\n    printf(\"第 2 只：%d\\n\", *(p + 2));\n    return 0;\n}\n",
+  "explanationTemplate": "三个元素里的数分别是 {base}、还有往后每一步加 {step} 得到的数，所以第 1 只元素里的数**一定**比第 0 只大 {step} 。\n\n出问题的是第 1 只那一行，它写的是 `*p + 1`。这个写法要**从星号开始读**：星号先跟紧它右边那一样东西（这里就是 `p`），于是它先把 `p` 指着的第 0 只元素里的数拿出来，**再给这个数加 1**。加的是元素里的数，跟地址一点关系都没有 —— 所以才得到「第 0 只的数 + 1」，而不是第 1 只的数。\n\n想让 `+ 1` 落在**地址**上，就得给加法套一对括号：`*(p + 1)`。括号先把地址算好（「往后挪一个」），外面的星号再去处理它，拿到的才是第 1 只元素里的数。\n\n这条规矩是本课的地基，收下：**星号只处理紧挨着它的那一样东西。** `*p + 1` 里星号只处理了 `p`；`*(p + 1)` 里被消耗的是一整个 `(p + 1)`。\n\n⚠️ 最要命的一点：**这个坑编译器是不出声的。** 我们真把两版都跑过一遍，`-Wall` 开着，它一个字都没说 —— 因为 `*p + 1` 和 `*(p + 1)` **两种写法本身都合法**，只是意思不同。代码照样编出来、照样跑完，只有数字悄悄错掉。这种错没有闸门替你拦，只能靠你自己盯紧那对括号。"
+}

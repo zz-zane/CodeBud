@@ -1,0 +1,27 @@
+{
+  "templateId": "cpp-s2-10-no-virtual",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-10",
+  "type": "codefix",
+  "concept": [
+    "名字定终身",
+    "顺着名称调用却跑了老类定义那一版",
+    "一个字都不报"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们拿着一张写着「对象」的名称指向学生甲 {name}，顺着名称调用了一次，又用学生甲自己的名字调用了一次。\n\n**两行应该一样**（都是学生甲那一版），可现在第一行**平平无奇**。程序照样跑、编译器一个字都没说。\n\n你帮我们在**老类定义**上补一样东西，让两行都变成学生甲那一版。**`main` 里那几句、还有子类定义上的一字一句，都不用改。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\npublic:\n    Cat(string n) : name(n) {}\n    void speak() const {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass OrangeCat : public Cat {\npublic:\n    OrangeCat(string n) : Cat(n) {}\n    void speak() const {\n        cout << name << \"：我们是学生甲，！\" << endl;\n    }\n};\n\nint main() {\n    OrangeCat o(\"{name}\");\n    Cat& r = o;\n    r.speak();\n    o.speak();\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\npublic:\n    Cat(string n) : name(n) {}\n    virtual void speak() const {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass OrangeCat : public Cat {\npublic:\n    OrangeCat(string n) : Cat(n) {}\n    void speak() const {\n        cout << name << \"：我们是学生甲，！\" << endl;\n    }\n};\n\nint main() {\n    OrangeCat o(\"{name}\");\n    Cat& r = o;\n    r.speak();\n    o.speak();\n    return 0;\n}\n",
+  "explanationTemplate": "这一题**一个报错都没有**。我们在本机跑过没补的样子（名字用张三时），屏幕上是：\n\n```text\n张三：\n张三：我们是学生甲，！\n```\n\n同一个对象、两个名字、两种结果，而且编译器一次没吭。\n\n根子在**翻译阶段就把话说死了**：我们手上那张名称上写的是「对象」，它就直接把这一次指到老类定义的 `speak` 上去，**根本没打算在真跑起来的时候再看一眼手里到底是哪个对象**。这就是「**名字定终身**」的脾气。\n\n解法只有三个字母 —— 在**老类定义那一手的开头**挂上 `virtual`：\n\n```text\nvirtual void speak() const\n```\n\n它说的是「**这一手后续课程将进一步说明。着定死，等真跑起来再看手里到底是哪个对象**」。挂上之后，第一行也变成 `{name}：我们是学生甲，！` —— 因为名称上写的是谁不重要，**继续调用的那一刻看的是屋里住的是谁**。\n\n⚠️ 两条容易摔的边界，这里一并钉住：\n\n- **只有老类定义那一手需要挂。** 子类定义改写出来的那份**自动也是「会看屋里住的是谁」的**，不用再挂。反过来（子对象挂、老类定义不挂）是**不管用的** —— 那三个字母挂在轮不到上场的地方。\n- **挂 `virtual` 的那一手不能是 `private`。** 子类定义得看得见它，才谈得上改写，所以这一格挂的是「照着画的类定义也够得着」的那一档。"
+}

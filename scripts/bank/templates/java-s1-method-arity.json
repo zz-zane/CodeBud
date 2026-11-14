@@ -1,0 +1,35 @@
+{
+  "templateId": "java-s1-method-arity",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-09",
+  "type": "codefix",
+  "concept": [
+    "方法",
+    "输入接口",
+    "传入几样就传入几样",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "a": {
+      "kind": "int",
+      "min": 1,
+      "max": 3
+    },
+    "b": {
+      "kind": "int",
+      "min": 4,
+      "max": 6
+    },
+    "c": {
+      "kind": "int",
+      "min": 7,
+      "max": 9
+    }
+  },
+  "stemTemplate": "我们这一个方法 `add` 要**三样料**：三个元素里的数全加起来，把和返回。\n\n可称呼它的时候我们手滑，只传入了**两样** —— 编译器当场拦下，一张错误信息，这一个方法一次都没跑起来。\n\n你帮我们看看输入接口那儿说好要几样，把它改好。改好之后，印出来的得是 {a}、{b}、{c} 三个数加起来的那个和。",
+  "brokenCodeTemplate": "public class Main {\n    public static int add(int a, int b, int c) {\n        return a + b + c;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(add({a}, {b}));\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static int add(int a, int b, int c) {\n        return a + b + c;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(add({a}, {b}, {c}));\n    }\n}\n",
+  "explanationTemplate": "函数打头那对小括号里的，是**输入接口**：写「类型 + 名字」，几样就写几样，逗号隔开。我们这一个方法写的是 `(int a, int b, int c)` —— 那就是说好要**三样**料。\n\n称呼它的时候我们只传入了两样，编译器当场就拦下了，错误信息大意是：**「`add` 这一个方法要三个 `int`，你只传入了两个。」**（那行原文里的 `cannot be applied to given types; required: int,int,int; found: int,int` 就是这个意思：`required` 是说好要的，`found` 是你真传入的。）\n\n**调用函数的时候，几样、什么料，都得跟打头那儿写的一模一样** —— 传入少了、传入多了、传入错料（比如本该传入整数却传入了一串字），报的都是这一句。\n\n好在函数写错**全都在编译时就被拦下**：错了就跑不起来，不会偷偷给你一个错答案，比上一课那个越界的坑省心多了。"
+}

@@ -1,0 +1,27 @@
+{
+  "templateId": "cpp-s2-10-override-typo",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-10",
+  "type": "codefix",
+  "concept": [
+    "改写那一手挂了护身符",
+    "名字差一个字",
+    "报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们让学生甲类定义改写老类定义的 `speak`，还在那一手上挂了护身符。\n\n编译器当场拦下我们，说**基类类定义上没有一手能让我们改写**。\n\n你帮我们改到能跑起来（学生甲叫 {name}，调用一次，印出学生甲那一版台词）。**护身符留在原地，别的都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\npublic:\n    Cat(string n) : name(n) {}\n    virtual void speak() const {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass OrangeCat : public Cat {\npublic:\n    OrangeCat(string n) : Cat(n) {}\n    void speek() const override {\n        cout << name << \"：我们是学生甲，！\" << endl;\n    }\n};\n\nint main() {\n    OrangeCat o(\"{name}\");\n    o.speak();\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\npublic:\n    Cat(string n) : name(n) {}\n    virtual void speak() const {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass OrangeCat : public Cat {\npublic:\n    OrangeCat(string n) : Cat(n) {}\n    void speak() const override {\n        cout << name << \"：我们是学生甲，！\" << endl;\n    }\n};\n\nint main() {\n    OrangeCat o(\"{name}\");\n    o.speak();\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:18:10: error: 'void OrangeCat::speek() const' marked 'override', but does not override`\n\n念作：**「你给这一手挂了『我要改写基类那一手』的名称，可基类类定义上根本没有一手能让你改写。」**\n\n这一题我们把 `speak` 打成了 `speek`（少了个 `a`）。**报错里那前半段 `'void OrangeCat::speek() const'` 就是证据** —— 编译器把我们写的那一行原样念了一遍，我们对着基类那行一比，那个字母就露馅了。所以看到这条错，第一件事是**拿两边的名字对一遍**（名字、料、行尾的 `const`，三样都要一字不差）。\n\n我们还实测过**没挂护身符**的样子（同一段代码，把 `override` 删掉）：编译器**一次不吭**，程序跑得「成功」，只是输出的是老类定义那一版 ——\n\n```text\n{name}：\n```\n\n于是我们对着满变量对象调用了半天，一个都没动，还找不出原因。**这就是护身符的价值：六个字母，换一辈子不摔。**\n\n所以规矩定死：**凡是打算改写老类定义那一手的，一律挂上 `override`。**"
+}

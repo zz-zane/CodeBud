@@ -1,0 +1,358 @@
+{
+  "lessonId": "c-stage2-12",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-c-s2-fptr-each-callback-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要写一套「**每一个元素都过一遍**」的框架，至于过的时候干什么，**由递进来的名称说了算**。\n\n请你写四样东西：\n\n1. 一个方法 `show`：收一个整数，印一行 `元素里是 <那个数>`；\n2. 一个方法 `show_double`：收一个整数，印一行 `翻倍是 <那个数乘 2>`；\n3. 一个方法 `each`：头上收**一排元素**、**一共几个**、还有**一张名称** —— 名称上写的是「收一个整数、什么都不交回」。函数里用绕圈从排头走到排尾，**每走到一个元素前面，就回头调用一次名称上写的那一个方法**，把元素里的数传给它；\n4. `main`：准备好一排刚好 n 只的元素，把数读进来（一行一个），然后**先用 `show` 过一遍、再用 `show_double` 过一遍**。\n\n同一段框架、换一张名称就换一套活 —— 一共印两趟，第一趟是 `元素里是`，第二趟是 `翻倍是`。\n\n比如程序的输入是\n\n9\n1\n4\n\n程序就要返回\n\n元素里是 9\n元素里是 1\n元素里是 4\n翻倍是 18\n翻倍是 2\n翻倍是 8\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid show(int x) {\n    printf(\"元素里是 %d\\n\", x);\n}\n\nvoid show_double(int x) {\n    printf(\"翻倍是 %d\\n\", x * 2);\n}\n\nvoid each(int a[], int n, void (*visit)(int)) {\n    for (int i = 0; i < n; i++) {\n        visit(a[i]);\n    }\n}\n\nint main(void) {\n    int bowl[3];\n\n    for (int i = 0; i < 3; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    each(bowl, 3, show);\n    each(bowl, 3, show_double);\n    return 0;\n}\n",
+      "expectedOutput": "元素里是 4\n元素里是 4\n元素里是 6\n翻倍是 8\n翻倍是 8\n翻倍是 12",
+      "stdin": "4\n4\n6\n",
+      "explanation": "这道题练的是**回调** —— 先递一张名称过去，等合适的时机到了，它**回头调用你一次**。\n\n**① `each` 头上第三样传入是名称。**\n\n```c\nvoid (*visit)(int)\n```\n\n还是从里往外念：最右边 `(int)` 是「收一个整数」，最左边 `void` 是「什么都不交回」，中间 `(*visit)` 是那个元素。**注意最左边写的是 `void`** —— 因为 `show` 和 `show_double` 干完活什么都不交回来，只负责印。名称上的长相得跟它们对得上。\n\n**② 框架里怎么用名称？** `visit(a[i]);` —— 走到第 i 只元素前面，照着名称调用一次，把元素里的数传入。`each` 自己**完全不知道**输出的是「印一遍」还是「印两遍」，那是名称的事。\n\n**③ 引用的时候直接写函数名。** `each(bowl, 3, show);` —— 函数名单独写出来就等于那张名称，不用写 `&show`。（写了也对，编译器两种都认。）\n\n**④ 回调跟上一课的递归调用不一样在哪儿？** 长得像，劲头不同：上一课的 `countdown` 引用的是**自己**；今天的 `each` 引用的是**别人递进来的名称**。前者是「同一道题小一圈」，后者是「同一套框架、换一种活法」。\n\n**为什么这个形状值钱？** 因为 `each` **只写一遍**。想怎么处理每个元素，就换一张名称递进来 —— 不用把 `each` 抄成两份、三份。这在真实代码里到处都是：框架是别人写好的，你只负责递一小张「规矩」进去。\n\n（还有个小地方：`main` 里那两个绕圈是**分开的两趟** —— 先把所有元素按 `show` 报一遍，再按 `show_double` 报一遍。别把两张名称混在同一趟里。）",
+      "templateId": "c-s2-fptr-each-callback",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.341Z",
+        "hash": "f16fc745d7a4748d"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-each-callback-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要写一套「**每一个元素都过一遍**」的框架，至于过的时候干什么，**由递进来的名称说了算**。\n\n请你写四样东西：\n\n1. 一个方法 `show`：收一个整数，印一行 `元素里是 <那个数>`；\n2. 一个方法 `show_double`：收一个整数，印一行 `翻倍是 <那个数乘 2>`；\n3. 一个方法 `each`：头上收**一排元素**、**一共几个**、还有**一张名称** —— 名称上写的是「收一个整数、什么都不交回」。函数里用绕圈从排头走到排尾，**每走到一个元素前面，就回头调用一次名称上写的那一个方法**，把元素里的数传给它；\n4. `main`：准备好一排刚好 n 只的元素，把数读进来（一行一个），然后**先用 `show` 过一遍、再用 `show_double` 过一遍**。\n\n同一段框架、换一张名称就换一套活 —— 一共印两趟，第一趟是 `元素里是`，第二趟是 `翻倍是`。\n\n比如程序的输入是\n\n7\n7\n5\n9\n\n程序就要返回\n\n元素里是 7\n元素里是 7\n元素里是 5\n元素里是 9\n翻倍是 14\n翻倍是 14\n翻倍是 10\n翻倍是 18\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid show(int x) {\n    printf(\"元素里是 %d\\n\", x);\n}\n\nvoid show_double(int x) {\n    printf(\"翻倍是 %d\\n\", x * 2);\n}\n\nvoid each(int a[], int n, void (*visit)(int)) {\n    for (int i = 0; i < n; i++) {\n        visit(a[i]);\n    }\n}\n\nint main(void) {\n    int bowl[4];\n\n    for (int i = 0; i < 4; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    each(bowl, 4, show);\n    each(bowl, 4, show_double);\n    return 0;\n}\n",
+      "expectedOutput": "元素里是 6\n元素里是 9\n元素里是 7\n元素里是 1\n翻倍是 12\n翻倍是 18\n翻倍是 14\n翻倍是 2",
+      "stdin": "6\n9\n7\n1\n",
+      "explanation": "这道题练的是**回调** —— 先递一张名称过去，等合适的时机到了，它**回头调用你一次**。\n\n**① `each` 头上第三样传入是名称。**\n\n```c\nvoid (*visit)(int)\n```\n\n还是从里往外念：最右边 `(int)` 是「收一个整数」，最左边 `void` 是「什么都不交回」，中间 `(*visit)` 是那个元素。**注意最左边写的是 `void`** —— 因为 `show` 和 `show_double` 干完活什么都不交回来，只负责印。名称上的长相得跟它们对得上。\n\n**② 框架里怎么用名称？** `visit(a[i]);` —— 走到第 i 只元素前面，照着名称调用一次，把元素里的数传入。`each` 自己**完全不知道**输出的是「印一遍」还是「印两遍」，那是名称的事。\n\n**③ 引用的时候直接写函数名。** `each(bowl, 4, show);` —— 函数名单独写出来就等于那张名称，不用写 `&show`。（写了也对，编译器两种都认。）\n\n**④ 回调跟上一课的递归调用不一样在哪儿？** 长得像，劲头不同：上一课的 `countdown` 引用的是**自己**；今天的 `each` 引用的是**别人递进来的名称**。前者是「同一道题小一圈」，后者是「同一套框架、换一种活法」。\n\n**为什么这个形状值钱？** 因为 `each` **只写一遍**。想怎么处理每个元素，就换一张名称递进来 —— 不用把 `each` 抄成两份、三份。这在真实代码里到处都是：框架是别人写好的，你只负责递一小张「规矩」进去。\n\n（还有个小地方：`main` 里那两个绕圈是**分开的两趟** —— 先把所有元素按 `show` 报一遍，再按 `show_double` 报一遍。别把两张名称混在同一趟里。）",
+      "templateId": "c-s2-fptr-each-callback",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.341Z",
+        "hash": "40c64d3cca2c5253"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-each-callback-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要写一套「**每一个元素都过一遍**」的框架，至于过的时候干什么，**由递进来的名称说了算**。\n\n请你写四样东西：\n\n1. 一个方法 `show`：收一个整数，印一行 `元素里是 <那个数>`；\n2. 一个方法 `show_double`：收一个整数，印一行 `翻倍是 <那个数乘 2>`；\n3. 一个方法 `each`：头上收**一排元素**、**一共几个**、还有**一张名称** —— 名称上写的是「收一个整数、什么都不交回」。函数里用绕圈从排头走到排尾，**每走到一个元素前面，就回头调用一次名称上写的那一个方法**，把元素里的数传给它；\n4. `main`：准备好一排刚好 n 只的元素，把数读进来（一行一个），然后**先用 `show` 过一遍、再用 `show_double` 过一遍**。\n\n同一段框架、换一张名称就换一套活 —— 一共印两趟，第一趟是 `元素里是`，第二趟是 `翻倍是`。\n\n比如程序的输入是\n\n6\n9\n6\n6\n5\n\n程序就要返回\n\n元素里是 6\n元素里是 9\n元素里是 6\n元素里是 6\n元素里是 5\n翻倍是 12\n翻倍是 18\n翻倍是 12\n翻倍是 12\n翻倍是 10\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid show(int x) {\n    printf(\"元素里是 %d\\n\", x);\n}\n\nvoid show_double(int x) {\n    printf(\"翻倍是 %d\\n\", x * 2);\n}\n\nvoid each(int a[], int n, void (*visit)(int)) {\n    for (int i = 0; i < n; i++) {\n        visit(a[i]);\n    }\n}\n\nint main(void) {\n    int bowl[5];\n\n    for (int i = 0; i < 5; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    each(bowl, 5, show);\n    each(bowl, 5, show_double);\n    return 0;\n}\n",
+      "expectedOutput": "元素里是 3\n元素里是 5\n元素里是 3\n元素里是 7\n元素里是 9\n翻倍是 6\n翻倍是 10\n翻倍是 6\n翻倍是 14\n翻倍是 18",
+      "stdin": "3\n5\n3\n7\n9\n",
+      "explanation": "这道题练的是**回调** —— 先递一张名称过去，等合适的时机到了，它**回头调用你一次**。\n\n**① `each` 头上第三样传入是名称。**\n\n```c\nvoid (*visit)(int)\n```\n\n还是从里往外念：最右边 `(int)` 是「收一个整数」，最左边 `void` 是「什么都不交回」，中间 `(*visit)` 是那个元素。**注意最左边写的是 `void`** —— 因为 `show` 和 `show_double` 干完活什么都不交回来，只负责印。名称上的长相得跟它们对得上。\n\n**② 框架里怎么用名称？** `visit(a[i]);` —— 走到第 i 只元素前面，照着名称调用一次，把元素里的数传入。`each` 自己**完全不知道**输出的是「印一遍」还是「印两遍」，那是名称的事。\n\n**③ 引用的时候直接写函数名。** `each(bowl, 5, show);` —— 函数名单独写出来就等于那张名称，不用写 `&show`。（写了也对，编译器两种都认。）\n\n**④ 回调跟上一课的递归调用不一样在哪儿？** 长得像，劲头不同：上一课的 `countdown` 引用的是**自己**；今天的 `each` 引用的是**别人递进来的名称**。前者是「同一道题小一圈」，后者是「同一套框架、换一种活法」。\n\n**为什么这个形状值钱？** 因为 `each` **只写一遍**。想怎么处理每个元素，就换一张名称递进来 —— 不用把 `each` 抄成两份、三份。这在真实代码里到处都是：框架是别人写好的，你只负责递一小张「规矩」进去。\n\n（还有个小地方：`main` 里那两个绕圈是**分开的两趟** —— 先把所有元素按 `show` 报一遍，再按 `show_double` 报一遍。别把两张名称混在同一趟里。）",
+      "templateId": "c-s2-fptr-each-callback",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.341Z",
+        "hash": "4ebf8cca8c983b68"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-missing-parens-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一个方法「加」（传入两个整数、返回一个整数）。现在想摆**一个元素**，里面装这张「加」的名称，然后照名称上写的把 1 和 5 加起来印出来。\n\n可编译器把整段代码退了回来，第一句话就是「函数怎么可以像一个元素那样给初值」。你帮我们看看是哪儿让它读岔了，把它改好。",
+      "brokenCode": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint main(void) {\n    int *p(int, int) = add;\n    printf(\"%d\\n\", p(1, 5));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint main(void) {\n    int (*p)(int, int) = add;\n    printf(\"%d\\n\", p(1, 5));\n    return 0;\n}\n",
+      "expectedOutput": "6",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: function 'p' is initialized like a variable` —— 翻过来就是「**函数 `p` 怎么可以像一个元素那样给初值**」（底下还会跟着一串抱怨，都是从这一句牵出来的）。\n\n少的就是**包着 `*p` 的那对小括号**。看一下它把这行字读成了什么：\n\n- 我们想写的：`int (*p)(int, int)` —— 「**一个元素**叫 `p`，里面装一张名称，名称上写的是『收两个整数、返回一个整数』」。\n- 少了括号以后：`int *p(int, int)` —— 「**一个方法**名叫 `p`，传入两个整数、**返回一张指向整数的名称**」。\n\n看出来了吗？少了那对括号，编译器认为我们在**定义一个方法**（名字叫 `p`、身体待会儿再写）。可后面又跟了个等号加初值 —— **函数是不能这样赋值的**，于是它当场翻脸。\n\n补上括号就完事。**这对括号是「这是一个元素」和「这是一个方法」的分界线**，一个都不能省。\n\n念法也顺手收下，**从里往外念**：\n\n1. 最右边那两个 `(int, int)`：这招要传入什么 —— 两个整数；\n2. 最左边那个 `int`：它返回什么 —— 一个整数；\n3. 中间那包 `(*p)`：这个元素叫 `p`，保存的是名称。\n\n补好之后再调用：`p(1, 5)` 照着名称上写的走，得到 1 加 5 的和。",
+      "templateId": "c-s2-fptr-missing-parens",
+      "params": {
+        "a": 1,
+        "b": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.341Z",
+        "hash": "c306ef221aff5d86"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-missing-parens-019",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一个方法「加」（传入两个整数、返回一个整数）。现在想摆**一个元素**，里面装这张「加」的名称，然后照名称上写的把 4 和 9 加起来印出来。\n\n可编译器把整段代码退了回来，第一句话就是「函数怎么可以像一个元素那样给初值」。你帮我们看看是哪儿让它读岔了，把它改好。",
+      "brokenCode": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint main(void) {\n    int *p(int, int) = add;\n    printf(\"%d\\n\", p(4, 9));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint main(void) {\n    int (*p)(int, int) = add;\n    printf(\"%d\\n\", p(4, 9));\n    return 0;\n}\n",
+      "expectedOutput": "13",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: function 'p' is initialized like a variable` —— 翻过来就是「**函数 `p` 怎么可以像一个元素那样给初值**」（底下还会跟着一串抱怨，都是从这一句牵出来的）。\n\n少的就是**包着 `*p` 的那对小括号**。看一下它把这行字读成了什么：\n\n- 我们想写的：`int (*p)(int, int)` —— 「**一个元素**叫 `p`，里面装一张名称，名称上写的是『收两个整数、返回一个整数』」。\n- 少了括号以后：`int *p(int, int)` —— 「**一个方法**名叫 `p`，传入两个整数、**返回一张指向整数的名称**」。\n\n看出来了吗？少了那对括号，编译器认为我们在**定义一个方法**（名字叫 `p`、身体待会儿再写）。可后面又跟了个等号加初值 —— **函数是不能这样赋值的**，于是它当场翻脸。\n\n补上括号就完事。**这对括号是「这是一个元素」和「这是一个方法」的分界线**，一个都不能省。\n\n念法也顺手收下，**从里往外念**：\n\n1. 最右边那两个 `(int, int)`：这招要传入什么 —— 两个整数；\n2. 最左边那个 `int`：它返回什么 —— 一个整数；\n3. 中间那包 `(*p)`：这个元素叫 `p`，保存的是名称。\n\n补好之后再调用：`p(4, 9)` 照着名称上写的走，得到 4 加 9 的和。",
+      "templateId": "c-s2-fptr-missing-parens",
+      "params": {
+        "a": 4,
+        "b": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "10778ea59af72d70"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-op-arg-mixup-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们写了两招：`add`（两个数相加）、`sub`（两个数相减）。另有一个方法 `apply`：头上收**一张名称**加两个数，然后把两个数交给名称上写的那一个方法去办。\n\n`main` 里请它办两次：递「加」的名称一次，递「减」的名称一次，各印一行。用我们给的 1 和 5 试，应该是 `1 加 5` 和 `1 减 5` 两个结果。\n\n可跑出来两个数都不对。编译器**一个字都没说**。你帮我们在 `apply` 里找出那一处笔误。",
+      "brokenCode": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint sub(int a, int b) {\n    return a - b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, a);\n}\n\nint main(void) {\n    printf(\"%d\\n\", apply(add, 1, 5));\n    printf(\"%d\\n\", apply(sub, 1, 5));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint sub(int a, int b) {\n    return a - b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, b);\n}\n\nint main(void) {\n    printf(\"%d\\n\", apply(add, 1, 5));\n    printf(\"%d\\n\", apply(sub, 1, 5));\n    return 0;\n}\n",
+      "expectedOutput": "6\n-4",
+      "stdin": null,
+      "explanation": "笔误在 `apply` 的最后一句：写成了 `op(a, a)` —— **同一位传入喂了两遍**。\n\n于是两次都只在跟 1 打交道：递「加」的名称进去，算的是 1 加 1；递「减」的名称进去，算的是 1 减 1，也就是 0。b 那一份从头到尾被晾在一边。\n\n改成 `op(a, b)` 就对了。**注意这一处错编译器完全挑不出来**：`a` 和 `b` 都是同样长相的整数，一个元素装什么它不管 —— 它只管「字写没写规矩」。所以这类错得靠我们自己**对着题面走一遍**：题面说「把两个数交给名称上写的那一个方法」，那就得是两样都给过去。\n\n顺手把这一课真正的甜头再念一遍：`apply` 自己**完全不知道**进来的是加还是乘还是减。它只管照着名称干活 —— 递「加」就加，递「减」就减。**这就是名称最值钱的地方：把「怎么干」从「什么时候干」里拆了出来。**\n\n（顺带一提：`apply` 头上第一样传入 `int (*op)(int, int)` 要的**不是数，是一张名称**，而且名称的长相写清楚了 —— 收两个整数、返回一个整数。长相写对了，递进来的函数就必须对得上。）",
+      "templateId": "c-s2-fptr-op-arg-mixup",
+      "params": {
+        "a": 1,
+        "b": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "cbe629949cc4c9cd"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-op-arg-mixup-019",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们写了两招：`add`（两个数相加）、`sub`（两个数相减）。另有一个方法 `apply`：头上收**一张名称**加两个数，然后把两个数交给名称上写的那一个方法去办。\n\n`main` 里请它办两次：递「加」的名称一次，递「减」的名称一次，各印一行。用我们给的 4 和 9 试，应该是 `4 加 9` 和 `4 减 9` 两个结果。\n\n可跑出来两个数都不对。编译器**一个字都没说**。你帮我们在 `apply` 里找出那一处笔误。",
+      "brokenCode": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint sub(int a, int b) {\n    return a - b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, a);\n}\n\nint main(void) {\n    printf(\"%d\\n\", apply(add, 4, 9));\n    printf(\"%d\\n\", apply(sub, 4, 9));\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint sub(int a, int b) {\n    return a - b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, b);\n}\n\nint main(void) {\n    printf(\"%d\\n\", apply(add, 4, 9));\n    printf(\"%d\\n\", apply(sub, 4, 9));\n    return 0;\n}\n",
+      "expectedOutput": "13\n-5",
+      "stdin": null,
+      "explanation": "笔误在 `apply` 的最后一句：写成了 `op(a, a)` —— **同一位传入喂了两遍**。\n\n于是两次都只在跟 4 打交道：递「加」的名称进去，算的是 4 加 4；递「减」的名称进去，算的是 4 减 4，也就是 0。b 那一份从头到尾被晾在一边。\n\n改成 `op(a, b)` 就对了。**注意这一处错编译器完全挑不出来**：`a` 和 `b` 都是同样长相的整数，一个元素装什么它不管 —— 它只管「字写没写规矩」。所以这类错得靠我们自己**对着题面走一遍**：题面说「把两个数交给名称上写的那一个方法」，那就得是两样都给过去。\n\n顺手把这一课真正的甜头再念一遍：`apply` 自己**完全不知道**进来的是加还是乘还是减。它只管照着名称干活 —— 递「加」就加，递「减」就减。**这就是名称最值钱的地方：把「怎么干」从「什么时候干」里拆了出来。**\n\n（顺带一提：`apply` 头上第一样传入 `int (*op)(int, int)` 要的**不是数，是一张名称**，而且名称的长相写清楚了 —— 收两个整数、返回一个整数。长相写对了，递进来的函数就必须对得上。）",
+      "templateId": "c-s2-fptr-op-arg-mixup",
+      "params": {
+        "a": 4,
+        "b": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "888f321e1684ba0c"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-qsort-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要给一排数据**排排坐**，从小到大站好。\n\nC 里干这件事的函数叫 `qsort`，它住在 `stdlib.h` 家里。它有个脾气：**自己不知道怎么比大小** —— 所以规矩得我们写成一张名称递进去。\n\n请你写一件事：\n\n1. 一个方法 `cmp`：收两张「**不知道是什么的名称**」（也就是 `const void *`），把它们**转回指向整数的名称**，各取出一个数，用**前面的数减后面的数**当结果交回来（这个差值就是「谁该站前面」的规矩）；\n2. `main` 里准备好一排刚好 n 只的元素，把数读进来（一行一个）；\n3. 请 `qsort` 帮忙排排坐 —— 四样传入是：那排元素、**一共几个**、**每个元素占多大**、还有 `cmp` 这张名称；\n4. 排完之后**一行一个**印出来，最后再印一行 `最小的 <第一个>，最大的 <最后一个>`。\n\n比如程序的输入是\n\n9\n2\n7\n3\n\n程序就要返回\n\n2\n3\n7\n9\n最小的 2，最大的 9\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint cmp(const void *a, const void *b) {\n    return (*(const int *)a) - (*(const int *)b);\n}\n\nint main(void) {\n    int nums[4];\n\n    for (int i = 0; i < 4; i++) {\n        if (scanf(\"%d\", &nums[i]) != 1) {\n            return 1;\n        }\n    }\n\n    qsort(nums, 4, sizeof(int), cmp);\n\n    for (int i = 0; i < 4; i++) {\n        printf(\"%d\\n\", nums[i]);\n    }\n    printf(\"最小的 %d，最大的 %d\\n\", nums[0], nums[4 - 1]);\n    return 0;\n}\n",
+      "expectedOutput": "2\n6\n7\n8\n最小的 2，最大的 8",
+      "stdin": "8\n2\n6\n7\n",
+      "explanation": "这道题里**唯一一张由我们提供的名称**就是 `cmp`  —— 其余全是 `qsort` 自己写好的框架。\n\n**① 为什么名称上是「不知道是什么的名称」？** `qsort` 要能排整数、排小数、排名字，它没法预先知道里面保存的是什么，所以只好**假装不知道** —— 这就是 `void *` 的意思：一张写着「不知道是什么」的名称。轮到我们自己动手时，先把它**转回来**：\n\n```c\n(*(const int *)a)\n```\n\n从里往外念：`(const int *)a` 是「把这名称按**指向整数的名称**来读」，前面那个 `*` 是「顺着名称把数取出来」，外面那对小括号只是为了让它跟后面的减法读得清楚。\n\n**② 名称上交回来的那个差值是「谁该站前面」的规矩。** 我们写的是**前面的减后面的**：结果是负数就说明前面那位更小、该站前面 —— 于是排出来是从小到大。要是把两句**倒过来**（后面的减前面的），规矩就反了，排出来会变成从大到小。（这是个小实验，你有空可以真跑一遍看看。）\n\n**③ `qsort` 收的四样传入**，一样都不能少：\n\n| 传入 | 是什么 |\n|---|---|\n| `nums` | 要排的那一排元素 |\n| `4` | 一共几个元素 |\n| `sizeof(int)` | **每个元素占多大** |\n| `cmp` | 比的规矩在哪张名称上 |\n\n第三样最容易漏，也最容易写错：它说的是**每一个元素**多大，不是整排多大。写错了 `qsort` 会按错误的步子在里面走，结果一团糟 —— 而且它不会报错。用 `sizeof(int)` 让编译器自己量，比手写数字稳。\n\n**④ 排完之后。** 从小到大站好以后，第一个元素就是最小的、第 4 只元素（也就是地址 `4 - 1` 那个）就是最大的 —— 这也是为什么最后那行能用 `nums[0]` 和 `nums[4 - 1]` 直接报出来。\n\n这一段**今天只要眼熟就行**，不用背。记住那句话：**框架是别人写好的，你只负责递一小张「规矩」进去。** 这正是上一节回调的形状，只不过这回递名称的人是 C 自己。",
+      "templateId": "c-s2-fptr-qsort",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "12f27049db93069e"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-qsort-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要给一排数据**排排坐**，从小到大站好。\n\nC 里干这件事的函数叫 `qsort`，它住在 `stdlib.h` 家里。它有个脾气：**自己不知道怎么比大小** —— 所以规矩得我们写成一张名称递进去。\n\n请你写一件事：\n\n1. 一个方法 `cmp`：收两张「**不知道是什么的名称**」（也就是 `const void *`），把它们**转回指向整数的名称**，各取出一个数，用**前面的数减后面的数**当结果交回来（这个差值就是「谁该站前面」的规矩）；\n2. `main` 里准备好一排刚好 n 只的元素，把数读进来（一行一个）；\n3. 请 `qsort` 帮忙排排坐 —— 四样传入是：那排元素、**一共几个**、**每个元素占多大**、还有 `cmp` 这张名称；\n4. 排完之后**一行一个**印出来，最后再印一行 `最小的 <第一个>，最大的 <最后一个>`。\n\n比如程序的输入是\n\n1\n2\n3\n8\n6\n\n程序就要返回\n\n1\n2\n3\n6\n8\n最小的 1，最大的 8\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint cmp(const void *a, const void *b) {\n    return (*(const int *)a) - (*(const int *)b);\n}\n\nint main(void) {\n    int nums[5];\n\n    for (int i = 0; i < 5; i++) {\n        if (scanf(\"%d\", &nums[i]) != 1) {\n            return 1;\n        }\n    }\n\n    qsort(nums, 5, sizeof(int), cmp);\n\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d\\n\", nums[i]);\n    }\n    printf(\"最小的 %d，最大的 %d\\n\", nums[0], nums[5 - 1]);\n    return 0;\n}\n",
+      "expectedOutput": "1\n1\n4\n5\n8\n最小的 1，最大的 8",
+      "stdin": "8\n5\n1\n1\n4\n",
+      "explanation": "这道题里**唯一一张由我们提供的名称**就是 `cmp`  —— 其余全是 `qsort` 自己写好的框架。\n\n**① 为什么名称上是「不知道是什么的名称」？** `qsort` 要能排整数、排小数、排名字，它没法预先知道里面保存的是什么，所以只好**假装不知道** —— 这就是 `void *` 的意思：一张写着「不知道是什么」的名称。轮到我们自己动手时，先把它**转回来**：\n\n```c\n(*(const int *)a)\n```\n\n从里往外念：`(const int *)a` 是「把这名称按**指向整数的名称**来读」，前面那个 `*` 是「顺着名称把数取出来」，外面那对小括号只是为了让它跟后面的减法读得清楚。\n\n**② 名称上交回来的那个差值是「谁该站前面」的规矩。** 我们写的是**前面的减后面的**：结果是负数就说明前面那位更小、该站前面 —— 于是排出来是从小到大。要是把两句**倒过来**（后面的减前面的），规矩就反了，排出来会变成从大到小。（这是个小实验，你有空可以真跑一遍看看。）\n\n**③ `qsort` 收的四样传入**，一样都不能少：\n\n| 传入 | 是什么 |\n|---|---|\n| `nums` | 要排的那一排元素 |\n| `5` | 一共几个元素 |\n| `sizeof(int)` | **每个元素占多大** |\n| `cmp` | 比的规矩在哪张名称上 |\n\n第三样最容易漏，也最容易写错：它说的是**每一个元素**多大，不是整排多大。写错了 `qsort` 会按错误的步子在里面走，结果一团糟 —— 而且它不会报错。用 `sizeof(int)` 让编译器自己量，比手写数字稳。\n\n**④ 排完之后。** 从小到大站好以后，第一个元素就是最小的、第 5 只元素（也就是地址 `5 - 1` 那个）就是最大的 —— 这也是为什么最后那行能用 `nums[0]` 和 `nums[5 - 1]` 直接报出来。\n\n这一段**今天只要眼熟就行**，不用背。记住那句话：**框架是别人写好的，你只负责递一小张「规矩」进去。** 这正是上一节回调的形状，只不过这回递名称的人是 C 自己。",
+      "templateId": "c-s2-fptr-qsort",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "6978d34fa8b0d414"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-qsort-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要给一排数据**排排坐**，从小到大站好。\n\nC 里干这件事的函数叫 `qsort`，它住在 `stdlib.h` 家里。它有个脾气：**自己不知道怎么比大小** —— 所以规矩得我们写成一张名称递进去。\n\n请你写一件事：\n\n1. 一个方法 `cmp`：收两张「**不知道是什么的名称**」（也就是 `const void *`），把它们**转回指向整数的名称**，各取出一个数，用**前面的数减后面的数**当结果交回来（这个差值就是「谁该站前面」的规矩）；\n2. `main` 里准备好一排刚好 n 只的元素，把数读进来（一行一个）；\n3. 请 `qsort` 帮忙排排坐 —— 四样传入是：那排元素、**一共几个**、**每个元素占多大**、还有 `cmp` 这张名称；\n4. 排完之后**一行一个**印出来，最后再印一行 `最小的 <第一个>，最大的 <最后一个>`。\n\n比如程序的输入是\n\n9\n7\n6\n4\n7\n9\n\n程序就要返回\n\n4\n6\n7\n7\n9\n9\n最小的 4，最大的 9\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint cmp(const void *a, const void *b) {\n    return (*(const int *)a) - (*(const int *)b);\n}\n\nint main(void) {\n    int nums[6];\n\n    for (int i = 0; i < 6; i++) {\n        if (scanf(\"%d\", &nums[i]) != 1) {\n            return 1;\n        }\n    }\n\n    qsort(nums, 6, sizeof(int), cmp);\n\n    for (int i = 0; i < 6; i++) {\n        printf(\"%d\\n\", nums[i]);\n    }\n    printf(\"最小的 %d，最大的 %d\\n\", nums[0], nums[6 - 1]);\n    return 0;\n}\n",
+      "expectedOutput": "2\n2\n5\n7\n9\n9\n最小的 2，最大的 9",
+      "stdin": "2\n2\n5\n9\n9\n7\n",
+      "explanation": "这道题里**唯一一张由我们提供的名称**就是 `cmp`  —— 其余全是 `qsort` 自己写好的框架。\n\n**① 为什么名称上是「不知道是什么的名称」？** `qsort` 要能排整数、排小数、排名字，它没法预先知道里面保存的是什么，所以只好**假装不知道** —— 这就是 `void *` 的意思：一张写着「不知道是什么」的名称。轮到我们自己动手时，先把它**转回来**：\n\n```c\n(*(const int *)a)\n```\n\n从里往外念：`(const int *)a` 是「把这名称按**指向整数的名称**来读」，前面那个 `*` 是「顺着名称把数取出来」，外面那对小括号只是为了让它跟后面的减法读得清楚。\n\n**② 名称上交回来的那个差值是「谁该站前面」的规矩。** 我们写的是**前面的减后面的**：结果是负数就说明前面那位更小、该站前面 —— 于是排出来是从小到大。要是把两句**倒过来**（后面的减前面的），规矩就反了，排出来会变成从大到小。（这是个小实验，你有空可以真跑一遍看看。）\n\n**③ `qsort` 收的四样传入**，一样都不能少：\n\n| 传入 | 是什么 |\n|---|---|\n| `nums` | 要排的那一排元素 |\n| `6` | 一共几个元素 |\n| `sizeof(int)` | **每个元素占多大** |\n| `cmp` | 比的规矩在哪张名称上 |\n\n第三样最容易漏，也最容易写错：它说的是**每一个元素**多大，不是整排多大。写错了 `qsort` 会按错误的步子在里面走，结果一团糟 —— 而且它不会报错。用 `sizeof(int)` 让编译器自己量，比手写数字稳。\n\n**④ 排完之后。** 从小到大站好以后，第一个元素就是最小的、第 6 只元素（也就是地址 `6 - 1` 那个）就是最大的 —— 这也是为什么最后那行能用 `nums[0]` 和 `nums[6 - 1]` 直接报出来。\n\n这一段**今天只要眼熟就行**，不用背。记住那句话：**框架是别人写好的，你只负责递一小张「规矩」进去。** 这正是上一节回调的形状，只不过这回递名称的人是 C 自己。",
+      "templateId": "c-s2-fptr-qsort",
+      "params": {
+        "n": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "5148c16b7d2f0068"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-shape-mismatch-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一个方法 `hello`：**不传入、也不返回**，只是印一句 `你好`。\n\n现在想摆一个元素装它的名称，然后调用一次。程序该印两行：先一句 `你好`，再一句 `名称调用结束了，数据已经备好`。\n\n可编译器把整段代码退了回来，说**长相对不上**。你帮我们把这个元素和引用的那一次都改对（函数 `hello` 本身一个字都不用改）。",
+      "brokenCode": "#include <stdio.h>\n\nvoid hello(void) {\n    printf(\"你好\\n\");\n}\n\nint main(void) {\n    int (*p)(int) = hello;\n    printf(\"%d\\n\", p(1));\n    printf(\"名称调用结束了，数据已经备好\\n\");\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nvoid hello(void) {\n    printf(\"你好\\n\");\n}\n\nint main(void) {\n    void (*p)(void) = hello;\n    p();\n    printf(\"名称调用结束了，数据已经备好\\n\");\n    return 0;\n}\n",
+      "expectedOutput": "你好\n名称调用结束了，数据已经备好",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: initialization of 'int (*)(int)' from incompatible pointer type 'void (*)(void)' [-Wincompatible-pointer-types]` —— 翻过来就一句：**长相对不上**。\n\n它把两边都念了一遍：\n\n- **左边这个元素（`int (*p)(int)`）**要保存的是「**传入一个整数、返回一个整数**」的名称；\n- **右边的 `hello`** 是「**不传入、也不返回**」的函数。\n\n两边的长相不一样，它就不许你把它们放进同一个元素里。所以要改的地方是**元素和调用方式**，不是函数本身：\n\n```c\nvoid (*p)(void) = hello;\np();\n```\n\n`void (*p)(void)` 读起来还是从里往外：最右边 `(void)` 是「不传入」，最左边 `void` 是「不返回」，中间 `(*p)` 是那个元素。引用的时候也**不用给传入**，所以写 `p();` 就完了。\n\n**为什么原来的写法连调用都是错的？** 因为元素按旧长相说好了「要传入一个整数」，我们就顺手写了 `p(1)`、还想用 `%d` 把「返回的整数」印出来 —— 可 `hello` 根本不返回东西。牵一发动全身：**名称的长相说的是「这招长什么样」的承诺，承诺错了，后面每一处都跟着错。**\n\n最后收一句让人安心的：这类错**根本跑不起来**。编译器在翻的阶段就把它拦下了，你不可能带着它上考场 —— 这正是 C 让人放心的地方。",
+      "templateId": "c-s2-fptr-shape-mismatch",
+      "params": {
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "8b3ba62ee6da76c4"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-shape-mismatch-002",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们有一个方法 `hello`：**不传入、也不返回**，只是印一句 `你好`。\n\n现在想摆一个元素装它的名称，然后调用一次。程序该印两行：先一句 `你好`，再一句 `名称调用结束了，商品已经备好`。\n\n可编译器把整段代码退了回来，说**长相对不上**。你帮我们把这个元素和引用的那一次都改对（函数 `hello` 本身一个字都不用改）。",
+      "brokenCode": "#include <stdio.h>\n\nvoid hello(void) {\n    printf(\"你好\\n\");\n}\n\nint main(void) {\n    int (*p)(int) = hello;\n    printf(\"%d\\n\", p(1));\n    printf(\"名称调用结束了，商品已经备好\\n\");\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nvoid hello(void) {\n    printf(\"你好\\n\");\n}\n\nint main(void) {\n    void (*p)(void) = hello;\n    p();\n    printf(\"名称调用结束了，商品已经备好\\n\");\n    return 0;\n}\n",
+      "expectedOutput": "你好\n名称调用结束了，商品已经备好",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: initialization of 'int (*)(int)' from incompatible pointer type 'void (*)(void)' [-Wincompatible-pointer-types]` —— 翻过来就一句：**长相对不上**。\n\n它把两边都念了一遍：\n\n- **左边这个元素（`int (*p)(int)`）**要保存的是「**传入一个整数、返回一个整数**」的名称；\n- **右边的 `hello`** 是「**不传入、也不返回**」的函数。\n\n两边的长相不一样，它就不许你把它们放进同一个元素里。所以要改的地方是**元素和调用方式**，不是函数本身：\n\n```c\nvoid (*p)(void) = hello;\np();\n```\n\n`void (*p)(void)` 读起来还是从里往外：最右边 `(void)` 是「不传入」，最左边 `void` 是「不返回」，中间 `(*p)` 是那个元素。引用的时候也**不用给传入**，所以写 `p();` 就完了。\n\n**为什么原来的写法连调用都是错的？** 因为元素按旧长相说好了「要传入一个整数」，我们就顺手写了 `p(1)`、还想用 `%d` 把「返回的整数」印出来 —— 可 `hello` 根本不返回东西。牵一发动全身：**名称的长相说的是「这招长什么样」的承诺，承诺错了，后面每一处都跟着错。**\n\n最后收一句让人安心的：这类错**根本跑不起来**。编译器在翻的阶段就把它拦下了，你不可能带着它上考场 —— 这正是 C 让人放心的地方。",
+      "templateId": "c-s2-fptr-shape-mismatch",
+      "params": {
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "9415bfb5de69b28c"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-swappable-op-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想让「哪一个方法上」这件事**能改**：同一段 `main`，换一张名称就换一套活。\n\n请你写三样东西：\n\n1. 一个方法 `add`：两个整数相加，把和交回来；\n2. 一个方法 `mul`：两个整数相乘，把积交回来；\n3. 一个方法 `apply`：头上第一样传入是**一张名称**（名称上写的是「收两个整数、交回一个整数」），后面两样是两个整数 —— 函数里照着名称把两个数办掉，把结果交回来。\n\n`main` 里：先摆一个元素装上 `add` 的名称，请 `apply` 用 2 和 3 办一次，印一行 `先加：<结果>`；**然后把这个元素里的名称换成 `mul`**（元素没换、名称换了），再请 `apply` 办一次，印一行 `再乘：<结果>`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint mul(int a, int b) {\n    return a * b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, b);\n}\n\nint main(void) {\n    int (*op)(int, int) = add;\n\n    printf(\"先加：%d\\n\", apply(op, 2, 3));\n    op = mul;\n    printf(\"再乘：%d\\n\", apply(op, 2, 3));\n    return 0;\n}\n",
+      "expectedOutput": "先加：5\n再乘：6",
+      "stdin": null,
+      "explanation": "这道题是这一课所有本事的种子，拆成三段看：\n\n**① 摆一个元素装名称。**\n\n```c\nint (*op)(int, int) = add;\n```\n\n从里往外念：最右边 `(int, int)` 是「收两个整数」，最左边 `int` 是「交回一个整数」，中间 `(*op)` 是那个元素。包着 `*op` 的这对小括号**一个都不能省** —— 省了意思就从「一个元素」变成「一个方法」了。\n\n右边写 `add` 就行：**函数名单独写出来的时候，它自己就等于那张名称**，所以写 `&add` 也是同一件事。\n\n**② 元素没换，名称换了。** `op = mul;` 这一句是本课的甜头 —— 同一个元素，换张名称就换了一套活。引用的时候照旧 `op(a, b)`，或者像我们这样把名称当数据递进 `apply`。\n\n**③ 名称当传入递出去。** `apply` 头上第一样写的是 `int (*op)(int, int)` —— 它要的**不是数，是一张名称**，而且把长相写清楚了。所以递「加」就加、递「乘」就乘，`apply` 自己完全不知道进来的是哪一个方法。\n\n**为什么这个形状值钱？** 因为它把「**怎么干**」从「**什么时候干**」里拆了出来。`apply` 只写一遍，想换活法就换名称 —— 不用把它抄成两份、三份。往后你会见到很多这样的形状：别人写好一个框架，你只递进去一小张「规矩」。**这就是回调。**\n\n（两个小地方顺手记住：引用的时候写 `op(a, b)` 最干净 —— 写 `(*op)(a, b)` 也对，编译器两种都认；但 `int *op(int, int)` 和 `int (*op)(int, int)` 是**两个完全不同的意思**，别手滑。）",
+      "templateId": "c-s2-fptr-swappable-op",
+      "params": {
+        "a": 2,
+        "b": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "69c2fdbbd223b499"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-swappable-op-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想让「哪一个方法上」这件事**能改**：同一段 `main`，换一张名称就换一套活。\n\n请你写三样东西：\n\n1. 一个方法 `add`：两个整数相加，把和交回来；\n2. 一个方法 `mul`：两个整数相乘，把积交回来；\n3. 一个方法 `apply`：头上第一样传入是**一张名称**（名称上写的是「收两个整数、交回一个整数」），后面两样是两个整数 —— 函数里照着名称把两个数办掉，把结果交回来。\n\n`main` 里：先摆一个元素装上 `add` 的名称，请 `apply` 用 2 和 5 办一次，印一行 `先加：<结果>`；**然后把这个元素里的名称换成 `mul`**（元素没换、名称换了），再请 `apply` 办一次，印一行 `再乘：<结果>`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint mul(int a, int b) {\n    return a * b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, b);\n}\n\nint main(void) {\n    int (*op)(int, int) = add;\n\n    printf(\"先加：%d\\n\", apply(op, 2, 5));\n    op = mul;\n    printf(\"再乘：%d\\n\", apply(op, 2, 5));\n    return 0;\n}\n",
+      "expectedOutput": "先加：7\n再乘：10",
+      "stdin": null,
+      "explanation": "这道题是这一课所有本事的种子，拆成三段看：\n\n**① 摆一个元素装名称。**\n\n```c\nint (*op)(int, int) = add;\n```\n\n从里往外念：最右边 `(int, int)` 是「收两个整数」，最左边 `int` 是「交回一个整数」，中间 `(*op)` 是那个元素。包着 `*op` 的这对小括号**一个都不能省** —— 省了意思就从「一个元素」变成「一个方法」了。\n\n右边写 `add` 就行：**函数名单独写出来的时候，它自己就等于那张名称**，所以写 `&add` 也是同一件事。\n\n**② 元素没换，名称换了。** `op = mul;` 这一句是本课的甜头 —— 同一个元素，换张名称就换了一套活。引用的时候照旧 `op(a, b)`，或者像我们这样把名称当数据递进 `apply`。\n\n**③ 名称当传入递出去。** `apply` 头上第一样写的是 `int (*op)(int, int)` —— 它要的**不是数，是一张名称**，而且把长相写清楚了。所以递「加」就加、递「乘」就乘，`apply` 自己完全不知道进来的是哪一个方法。\n\n**为什么这个形状值钱？** 因为它把「**怎么干**」从「**什么时候干**」里拆了出来。`apply` 只写一遍，想换活法就换名称 —— 不用把它抄成两份、三份。往后你会见到很多这样的形状：别人写好一个框架，你只递进去一小张「规矩」。**这就是回调。**\n\n（两个小地方顺手记住：引用的时候写 `op(a, b)` 最干净 —— 写 `(*op)(a, b)` 也对，编译器两种都认；但 `int *op(int, int)` 和 `int (*op)(int, int)` 是**两个完全不同的意思**，别手滑。）",
+      "templateId": "c-s2-fptr-swappable-op",
+      "params": {
+        "a": 2,
+        "b": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "fa1e9b3e4fab5ff7"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-swappable-op-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想让「哪一个方法上」这件事**能改**：同一段 `main`，换一张名称就换一套活。\n\n请你写三样东西：\n\n1. 一个方法 `add`：两个整数相加，把和交回来；\n2. 一个方法 `mul`：两个整数相乘，把积交回来；\n3. 一个方法 `apply`：头上第一样传入是**一张名称**（名称上写的是「收两个整数、交回一个整数」），后面两样是两个整数 —— 函数里照着名称把两个数办掉，把结果交回来。\n\n`main` 里：先摆一个元素装上 `add` 的名称，请 `apply` 用 3 和 3 办一次，印一行 `先加：<结果>`；**然后把这个元素里的名称换成 `mul`**（元素没换、名称换了），再请 `apply` 办一次，印一行 `再乘：<结果>`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint mul(int a, int b) {\n    return a * b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, b);\n}\n\nint main(void) {\n    int (*op)(int, int) = add;\n\n    printf(\"先加：%d\\n\", apply(op, 3, 3));\n    op = mul;\n    printf(\"再乘：%d\\n\", apply(op, 3, 3));\n    return 0;\n}\n",
+      "expectedOutput": "先加：6\n再乘：9",
+      "stdin": null,
+      "explanation": "这道题是这一课所有本事的种子，拆成三段看：\n\n**① 摆一个元素装名称。**\n\n```c\nint (*op)(int, int) = add;\n```\n\n从里往外念：最右边 `(int, int)` 是「收两个整数」，最左边 `int` 是「交回一个整数」，中间 `(*op)` 是那个元素。包着 `*op` 的这对小括号**一个都不能省** —— 省了意思就从「一个元素」变成「一个方法」了。\n\n右边写 `add` 就行：**函数名单独写出来的时候，它自己就等于那张名称**，所以写 `&add` 也是同一件事。\n\n**② 元素没换，名称换了。** `op = mul;` 这一句是本课的甜头 —— 同一个元素，换张名称就换了一套活。引用的时候照旧 `op(a, b)`，或者像我们这样把名称当数据递进 `apply`。\n\n**③ 名称当传入递出去。** `apply` 头上第一样写的是 `int (*op)(int, int)` —— 它要的**不是数，是一张名称**，而且把长相写清楚了。所以递「加」就加、递「乘」就乘，`apply` 自己完全不知道进来的是哪一个方法。\n\n**为什么这个形状值钱？** 因为它把「**怎么干**」从「**什么时候干**」里拆了出来。`apply` 只写一遍，想换活法就换名称 —— 不用把它抄成两份、三份。往后你会见到很多这样的形状：别人写好一个框架，你只递进去一小张「规矩」。**这就是回调。**\n\n（两个小地方顺手记住：引用的时候写 `op(a, b)` 最干净 —— 写 `(*op)(a, b)` 也对，编译器两种都认；但 `int *op(int, int)` 和 `int (*op)(int, int)` 是**两个完全不同的意思**，别手滑。）",
+      "templateId": "c-s2-fptr-swappable-op",
+      "params": {
+        "a": 3,
+        "b": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "adf260e4a380607a"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-swappable-op-005",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想让「哪一个方法上」这件事**能改**：同一段 `main`，换一张名称就换一套活。\n\n请你写三样东西：\n\n1. 一个方法 `add`：两个整数相加，把和交回来；\n2. 一个方法 `mul`：两个整数相乘，把积交回来；\n3. 一个方法 `apply`：头上第一样传入是**一张名称**（名称上写的是「收两个整数、交回一个整数」），后面两样是两个整数 —— 函数里照着名称把两个数办掉，把结果交回来。\n\n`main` 里：先摆一个元素装上 `add` 的名称，请 `apply` 用 3 和 5 办一次，印一行 `先加：<结果>`；**然后把这个元素里的名称换成 `mul`**（元素没换、名称换了），再请 `apply` 办一次，印一行 `再乘：<结果>`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint mul(int a, int b) {\n    return a * b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, b);\n}\n\nint main(void) {\n    int (*op)(int, int) = add;\n\n    printf(\"先加：%d\\n\", apply(op, 3, 5));\n    op = mul;\n    printf(\"再乘：%d\\n\", apply(op, 3, 5));\n    return 0;\n}\n",
+      "expectedOutput": "先加：8\n再乘：15",
+      "stdin": null,
+      "explanation": "这道题是这一课所有本事的种子，拆成三段看：\n\n**① 摆一个元素装名称。**\n\n```c\nint (*op)(int, int) = add;\n```\n\n从里往外念：最右边 `(int, int)` 是「收两个整数」，最左边 `int` 是「交回一个整数」，中间 `(*op)` 是那个元素。包着 `*op` 的这对小括号**一个都不能省** —— 省了意思就从「一个元素」变成「一个方法」了。\n\n右边写 `add` 就行：**函数名单独写出来的时候，它自己就等于那张名称**，所以写 `&add` 也是同一件事。\n\n**② 元素没换，名称换了。** `op = mul;` 这一句是本课的甜头 —— 同一个元素，换张名称就换了一套活。引用的时候照旧 `op(a, b)`，或者像我们这样把名称当数据递进 `apply`。\n\n**③ 名称当传入递出去。** `apply` 头上第一样写的是 `int (*op)(int, int)` —— 它要的**不是数，是一张名称**，而且把长相写清楚了。所以递「加」就加、递「乘」就乘，`apply` 自己完全不知道进来的是哪一个方法。\n\n**为什么这个形状值钱？** 因为它把「**怎么干**」从「**什么时候干**」里拆了出来。`apply` 只写一遍，想换活法就换名称 —— 不用把它抄成两份、三份。往后你会见到很多这样的形状：别人写好一个框架，你只递进去一小张「规矩」。**这就是回调。**\n\n（两个小地方顺手记住：引用的时候写 `op(a, b)` 最干净 —— 写 `(*op)(a, b)` 也对，编译器两种都认；但 `int *op(int, int)` 和 `int (*op)(int, int)` 是**两个完全不同的意思**，别手滑。）",
+      "templateId": "c-s2-fptr-swappable-op",
+      "params": {
+        "a": 3,
+        "b": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "030fe07d7ad5a614"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-swappable-op-006",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想让「哪一个方法上」这件事**能改**：同一段 `main`，换一张名称就换一套活。\n\n请你写三样东西：\n\n1. 一个方法 `add`：两个整数相加，把和交回来；\n2. 一个方法 `mul`：两个整数相乘，把积交回来；\n3. 一个方法 `apply`：头上第一样传入是**一张名称**（名称上写的是「收两个整数、交回一个整数」），后面两样是两个整数 —— 函数里照着名称把两个数办掉，把结果交回来。\n\n`main` 里：先摆一个元素装上 `add` 的名称，请 `apply` 用 4 和 3 办一次，印一行 `先加：<结果>`；**然后把这个元素里的名称换成 `mul`**（元素没换、名称换了），再请 `apply` 办一次，印一行 `再乘：<结果>`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint mul(int a, int b) {\n    return a * b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, b);\n}\n\nint main(void) {\n    int (*op)(int, int) = add;\n\n    printf(\"先加：%d\\n\", apply(op, 4, 3));\n    op = mul;\n    printf(\"再乘：%d\\n\", apply(op, 4, 3));\n    return 0;\n}\n",
+      "expectedOutput": "先加：7\n再乘：12",
+      "stdin": null,
+      "explanation": "这道题是这一课所有本事的种子，拆成三段看：\n\n**① 摆一个元素装名称。**\n\n```c\nint (*op)(int, int) = add;\n```\n\n从里往外念：最右边 `(int, int)` 是「收两个整数」，最左边 `int` 是「交回一个整数」，中间 `(*op)` 是那个元素。包着 `*op` 的这对小括号**一个都不能省** —— 省了意思就从「一个元素」变成「一个方法」了。\n\n右边写 `add` 就行：**函数名单独写出来的时候，它自己就等于那张名称**，所以写 `&add` 也是同一件事。\n\n**② 元素没换，名称换了。** `op = mul;` 这一句是本课的甜头 —— 同一个元素，换张名称就换了一套活。引用的时候照旧 `op(a, b)`，或者像我们这样把名称当数据递进 `apply`。\n\n**③ 名称当传入递出去。** `apply` 头上第一样写的是 `int (*op)(int, int)` —— 它要的**不是数，是一张名称**，而且把长相写清楚了。所以递「加」就加、递「乘」就乘，`apply` 自己完全不知道进来的是哪一个方法。\n\n**为什么这个形状值钱？** 因为它把「**怎么干**」从「**什么时候干**」里拆了出来。`apply` 只写一遍，想换活法就换名称 —— 不用把它抄成两份、三份。往后你会见到很多这样的形状：别人写好一个框架，你只递进去一小张「规矩」。**这就是回调。**\n\n（两个小地方顺手记住：引用的时候写 `op(a, b)` 最干净 —— 写 `(*op)(a, b)` 也对，编译器两种都认；但 `int *op(int, int)` 和 `int (*op)(int, int)` 是**两个完全不同的意思**，别手滑。）",
+      "templateId": "c-s2-fptr-swappable-op",
+      "params": {
+        "a": 4,
+        "b": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "f4ece51772b0f243"
+      }
+    },
+    {
+      "id": "bank-c-s2-fptr-swappable-op-008",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想让「哪一个方法上」这件事**能改**：同一段 `main`，换一张名称就换一套活。\n\n请你写三样东西：\n\n1. 一个方法 `add`：两个整数相加，把和交回来；\n2. 一个方法 `mul`：两个整数相乘，把积交回来；\n3. 一个方法 `apply`：头上第一样传入是**一张名称**（名称上写的是「收两个整数、交回一个整数」），后面两样是两个整数 —— 函数里照着名称把两个数办掉，把结果交回来。\n\n`main` 里：先摆一个元素装上 `add` 的名称，请 `apply` 用 4 和 5 办一次，印一行 `先加：<结果>`；**然后把这个元素里的名称换成 `mul`**（元素没换、名称换了），再请 `apply` 办一次，印一行 `再乘：<结果>`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint mul(int a, int b) {\n    return a * b;\n}\n\nint apply(int (*op)(int, int), int a, int b) {\n    return op(a, b);\n}\n\nint main(void) {\n    int (*op)(int, int) = add;\n\n    printf(\"先加：%d\\n\", apply(op, 4, 5));\n    op = mul;\n    printf(\"再乘：%d\\n\", apply(op, 4, 5));\n    return 0;\n}\n",
+      "expectedOutput": "先加：9\n再乘：20",
+      "stdin": null,
+      "explanation": "这道题是这一课所有本事的种子，拆成三段看：\n\n**① 摆一个元素装名称。**\n\n```c\nint (*op)(int, int) = add;\n```\n\n从里往外念：最右边 `(int, int)` 是「收两个整数」，最左边 `int` 是「交回一个整数」，中间 `(*op)` 是那个元素。包着 `*op` 的这对小括号**一个都不能省** —— 省了意思就从「一个元素」变成「一个方法」了。\n\n右边写 `add` 就行：**函数名单独写出来的时候，它自己就等于那张名称**，所以写 `&add` 也是同一件事。\n\n**② 元素没换，名称换了。** `op = mul;` 这一句是本课的甜头 —— 同一个元素，换张名称就换了一套活。引用的时候照旧 `op(a, b)`，或者像我们这样把名称当数据递进 `apply`。\n\n**③ 名称当传入递出去。** `apply` 头上第一样写的是 `int (*op)(int, int)` —— 它要的**不是数，是一张名称**，而且把长相写清楚了。所以递「加」就加、递「乘」就乘，`apply` 自己完全不知道进来的是哪一个方法。\n\n**为什么这个形状值钱？** 因为它把「**怎么干**」从「**什么时候干**」里拆了出来。`apply` 只写一遍，想换活法就换名称 —— 不用把它抄成两份、三份。往后你会见到很多这样的形状：别人写好一个框架，你只递进去一小张「规矩」。**这就是回调。**\n\n（两个小地方顺手记住：引用的时候写 `op(a, b)` 最干净 —— 写 `(*op)(a, b)` 也对，编译器两种都认；但 `int *op(int, int)` 和 `int (*op)(int, int)` 是**两个完全不同的意思**，别手滑。）",
+      "templateId": "c-s2-fptr-swappable-op",
+      "params": {
+        "a": 4,
+        "b": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.342Z",
+        "hash": "8a60f33866a59480"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s2-01-no-such-member",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-01",
+  "type": "codefix",
+  "concept": [
+    "类定义上没有的家常",
+    "根据类创建的实例",
+    "报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "w": {
+      "kind": "int",
+      "min": 4,
+      "max": 5
+    },
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们想给对象多记一样东西，于是在照它创建后的那个对象身上写了一句；可信封递进去，编译器说**它身上没有这一格**。\n\n你帮我们改到能跑起来。**类定义上那两栏和最后那行账都不用动**——这一题要你练的是「东西是从哪来的」：格子得先画在类定义上，实例身上才长得出来。",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"{name}\";\n    c1.weight = {w};\n    cout << c1.name << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n    int weight;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"{name}\";\n    c1.weight = {w};\n    cout << c1.name << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:14:8: error: 'class Cat' has no member named 'weight'`\n\n用自然语言解释：**「`Cat` 这张类定义上，没有叫 `weight` 的那一格。」**\n\n顺序是这样的：**格子先是画在类定义上的一行，实例身上才跟着长出一格。** 我们想给对象记体重，可类定义上压根没画这一栏——类定义上没有的东西，照它创建后的每一个身上当然也没有（连名字都还没起过的格子，是根本不存在的）。\n\n所以这一题的改法不是改那一句，**是回类定义上添一栏**。添完再回来看，那一句自己就成立了。\n\n顺手记一个手感：看到 `has no member named`（没有叫某某的一员），就是**类定义上没有这一栏**，别去怀疑点号前面那个对象的名字。"
+}

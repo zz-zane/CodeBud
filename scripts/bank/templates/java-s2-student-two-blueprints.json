@@ -1,0 +1,55 @@
+{
+  "templateId": "java-s2-student-two-blueprints",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-15",
+  "type": "codewrite",
+  "concept": [
+    "父类与子类",
+    "extends 认亲与 super(...)",
+    "盖掉那一个方法再请它出手",
+    "一个柜子收两样东西"
+  ],
+  "instances": 6,
+  "params": {
+    "a": {
+      "kind": "pick",
+      "values": [
+        "计算机",
+        "小黑"
+      ]
+    },
+    "b": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "小虎"
+      ]
+    },
+    "s1": {
+      "kind": "pick",
+      "values": [
+        "92",
+        "86"
+      ]
+    },
+    "c": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "花花"
+      ]
+    },
+    "s2": {
+      "kind": "pick",
+      "values": [
+        "78",
+        "90"
+      ]
+    }
+  },
+  "stemTemplate": "我们要给工作区学校画两张类定义，再把名单收进一个柜子印出来。要办的事：\n\n1. **父类 `Person`**：一格家当「名字」关起来（`private`）、生的时候传入进来；一个方法 `intro()` 把话串好返回 —— `我们叫 名字`；\n2. **子类 `Student`**：**套在父类上**（`extends`），另外多一格家当「分数」（也关起来）；初始化那一手的第一句先请父类把名字收下，再装自己的分数；\n3. 子类把 `intro()` **盖掉**：先请父类把 `我们叫 名字` 串一遍，再把 `，考了 分数 分` 接上去（别自己重写名字那半句）；\n4. `main` 里照名单收进一个柜子：先一个 `Person`、再两个 `Student`；\n5. 从第 `1` 条起印 `编号. 自我介绍`；最后印一行 `名单上一共 3 只`。\n\n要印成：\n\n```text\n1. 我们叫 {a}\n2. 我们叫 {b}，考了 {s1} 分\n3. 我们叫 {c}，考了 {s2} 分\n名单上一共 3 只\n```\n\n（判分那两份名单里，名字和分数都是**另外一套**，别把答案写死）",
+  "starterTemplate": "import java.util.ArrayList;\nimport java.util.List;\n\nclass Person {\n    // 父类：名字 + intro()\n}\n\nclass Student extends Person {\n    // 子类：套上去、多一格分数、把 intro() 盖掉\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Person> mingdan = new ArrayList<>();\n\n    }\n}\n",
+  "referenceSolutionTemplate": "import java.util.ArrayList;\nimport java.util.List;\n\nclass Person {\n    private String name;\n\n    Person(String name) {\n        this.name = name;\n    }\n\n    String intro() {\n        return \"我们叫 \" + name;\n    }\n}\n\nclass Student extends Person {\n    private int score;\n\n    Student(String name, int score) {\n        super(name);\n        this.score = score;\n    }\n\n    int getScore() { return score; }\n\n    @Override\n    String intro() {\n        return super.intro() + \"，考了 \" + score + \" 分\";\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Person> mingdan = new ArrayList<>();\n        mingdan.add(new Person(\"{a}\"));\n        mingdan.add(new Student(\"{b}\", {s1}));\n        mingdan.add(new Student(\"{c}\", {s2}));\n        for (int i = 0; i < mingdan.size(); i++) {\n            System.out.println((i + 1) + \". \" + mingdan.get(i).intro());\n        }\n        System.out.println(\"名单上一共 \" + mingdan.size() + \" 只\");\n    }\n}\n",
+  "explanationTemplate": "这一题把「继承」那套关节全走了一遍。\n\n**一、父类只管所有东西都有的那部分。** 名字谁都有，所以名字这一格、`intro()` 这一个方法画在父类上。`intro()` 里是 `return \"我们叫 \" + name;` —— **把话串好返回，不自己印**，这样用的人想印就印、想接在别的字后面也行。\n\n**二、子类一句话认亲，多带一格自己的家当。** `class Student extends Person` 之后，父类上画着的函数、家当子类上就都有了（所以 `getName()` 这种没在子类上写过的函数，学员也调用得动）。多出来的分数那一格自己保存：\n\n```java\nStudent(String name, int score) {\n    super(name);\n    this.score = score;\n}\n```\n\n**第一句必须是 `super(name)`** —— 父类的初始化那一手不会自己跑，得点名请它（第二课那条）。\n\n**三、盖掉那一个方法，再把老的那半句请回来。** 子类上写 `@Override String intro()`，身子第一句是 `super.intro()`：先请父类把「我们叫 {a}」串好，再添自己这半句。我们把这一句拆掉真跑过：印出来变成光秃秃的 `，考了 {s1} 分`，开头那半句没了（**编得过、跑得起来，就是不冒错误信息**，这类坏法最难自己发现）。\n\n**四、一个柜子收两样东西。** `List<Person>` 里既装 `Person` 也装 `Student` —— 学员**也是一个**，名称写父类名收得下。印的时候引用的还是同一句 `mingdan.get(i).intro()`，**各对象各样**：我们那条走父类那一版，学员那两条走子类盖过的那一版。\n\n判分那两份名单名字和分数都不一样，所以「只写死我们这一套」的源代码过不了。"
+}

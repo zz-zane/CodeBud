@@ -1,0 +1,3442 @@
+{
+  "id": "2022-12-2",
+  "title": "2022年12月第2套",
+  "year": 2022,
+  "month": 12,
+  "set": 2,
+  "status": "partial",
+  "issues": [
+    "严格质检：听力译文 0/7。",
+    "翻译题干已据原卷文字层补回（2026-11-08）。",
+    "写作题干：已对照原卷页面图像核对（2026-11-08）。",
+    "听力解析：原为一句话摘要的题目，已追加依据听力原文自动定位的支持句（标注「自动匹配」，非官方解析，可能不准）；原摘要保留在 explanationOriginal。",
+    "听力解析：原「未能定位」题已按解析摘要与原文对照选句补回（语义匹配/答案标记，未经录音核听，非官方）。",
+    "长篇阅读匹配：选项范围已按材料实际段落标识校正（去掉不存在的段落、补回缺失的段落）。",
+    "阅读：长篇阅读匹配语句与仔细阅读题干/选项已对照原卷重新录入（此前缺失或与原卷不符）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "标准答案按解析册与原卷修正（2026-11-09）：Q32 C→O、Q39 O→C；原值存于 answerOriginal。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+      "title": "2022.12六级真题第2套答案及详解.pdf",
+      "url": "https://drive.google.com/file/d/1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V/view?usp=drivesdk"
+    },
+    {
+      "id": "1ioqJRkwEyKR8UMSAx0NOR3qGyh-gEuMS",
+      "title": "2022.12六级真题第2套听力.mp3",
+      "url": "https://drive.google.com/file/d/1ioqJRkwEyKR8UMSAx0NOR3qGyh-gEuMS/view?usp=drivesdk"
+    },
+    {
+      "id": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+      "title": "2022.12六级真题第2套.pdf",
+      "url": "https://drive.google.com/file/d/1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4/view?usp=drivesdk"
+    },
+    {
+      "id": "reference-2022-12-2-listening-q24",
+      "title": "2022 年 12 月第二套听力第 24 题公开参考（非官方）",
+      "url": "https://english-exam.lazynote.cn/cet6/sections/listening/2022-12-2/",
+      "type": "external-reference"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “In an era of information explosion, it is vitally important to develop the ability to think critically and make rational choices.” You can make statements, give reasons, or cite examples to develop your essay. You should write at least 150 words but no more than 200 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-prompt-block",
+          "title": "写作题目要求",
+          "text": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “In an era of information explosion, it is vitally important to develop the ability to think critically and make rational choices.” You can make statements, give reasons, or cite examples to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-12-2-writing",
+          "number": 0,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “In an era of information explosion, it is vitally important to develop the ability to think critically and make rational choices.” You can make statements, give reasons, or cite examples to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "blockId": "writing-prompt-block",
+          "options": [],
+          "answer": "\"lhe importance of Developing the Ability tO Think Critically\n【 1 】 In an era Of information explosion. it is vitally important\nto develop the ability to think critically and make rational choices.\n【 2 】 In today's world. we have access to vast amounts of\ninformatlon. data. facts and research than ever before. which\nmay be a blessing to some, but a nightmare to others. 【 3 】 A key\nfactor in managing such information overload is the ability tO use\ncritical thinking skills. 【 4 】 For one thing. critical thinking skills are crucial to\nmaking well-informed decisions In an age Of information overload\nand fake news. Making a decision solely on the basis of emotion or\ngut instinct can result in unhealthy lifestyles. dire financial\ncircumstances or unsound investments. Critical thinking. on the\nother hand. facilitates the development of informed. healthy\ndecisions based on facts rather than faulty assumptions and also\nassists In sorting through extra noise. 【 5 】 For another. being able\nto think critically will define one as a problem solver. who can see\nthings from multiple perspectives and come up with creative\nsolutions that others may not have considered.\n【 6 】 To sum up. it is important to develop critical thinking\nskills SO that we can form informed opinions and set ourselves apart\nfrom our peers in a competitive environment.\nPart\nSection A",
+          "explanation": "【审题思路】\n\n\n【全文翻译】\n\n\n【点评与要点】\n第 1 段引出话题 : 在信息爆炸的时代，培养批判性思维和做出理选择的能力至关重要。\n” 0 : 第 2 段具体阐述培养批判性思维能力至关重要的原因。\n第 3 段总结全文，重申观点。\n精彩点评\n【1】引出话题 : 在信息爆炸的时代，培养批判性思维和做出理性选择的能力至关重要。\n【2】【3】指出解决信息过载问题的关键在于使用批判性思维的能力。\n【4】【5】分别使用 \"For one thing.。\n\"For another . . “”具体阐述培养批判性思维和做出理性选择的能力至关重要的原因。\n【6】用“To sum up. · ·”总结全文，再次强调培养批判性思维能力的重要性。\n话题词汇 ·\nadapt to 适应\npersonal bias 个人偏见\nlogical reasoning 逻辑推理\nobjective analysis 客观分析\ndistinguish fact from opinion 区分事实和观点\nexplore multiple perspectives 探索多种视角\nadjust assumptions in light of facts 根据事实调整假，没\nmake hasty or thoughtless judgments 做出草率或轻率的判断",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear long conversations, passages and recordings of talks.",
+      "audio": {
+        "src": "source-media/2022年12月第2套/2022.12六级真题第2套听力.mp3",
+        "sourceId": "1ioqJRkwEyKR8UMSAx0NOR3qGyh-gEuMS",
+        "sharedWith": [
+          "2022-12-3"
+        ]
+      },
+      "blocks": [
+        {
+          "id": "listening-conv-1",
+          "title": "Section A Conversation One",
+          "text": "M: Welcome to the Book Club. Today s guest is Susan Lane. the author of a new book on personal finances\nthat has already sold half a million copies. Hi. Susan. your book is extremely successful. Why do you think\nthat is?\n': (I)I think that's because of my message. which is making happiness a priority over money. SO many of us\nm my generation have spent decades trying to earn more money. just to consume more. but it made us more\nmiserable. (2-1)You yourself were once caught in that cycle. working for tWO decades as an executive and earmng a\nhigh salary. but still accumulating debt. ': ( 2. 2 ) I most certainly was. I earned millions. but by the time I quit my job four years ago to become a\nwriter. I owed over $ 30. 000. M: So how did you escape that pattern? And what would you advise other people to do?\nW: The first change IS in what we value. We need to emphasize things that actually make us happy. like\nrelationshlps. the environment or even our hobbies. (3)Once we make the nght things our priority. our\ngoals will change and so will our financial behauor. M: How does that translate intO practical action? Can you our audience examples Of what you are talking\nabout on an everyday basis?\n': The major areas for action are usually housing. food and transportation. SO people might share a home with\nfriends instead of living on their own. bring lunch from home instead of going to restaurants. and use public\ntransport instead Of owning a car.\nM: ( 4 ) Those sound like major sacrifices. I could never share my home. I need my own space.\n'. But they aren. t sacrifices. When people change their values. their desires change. SO in the example of\nhousing. if we value relationships. sharing a home isn't deprivrng ourselves of space. but giving us an\nopportunity to spend more time with our loved ones. M: lndeed it is.",
+          "source": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1,
+              2
+            ]
+          },
+          "transcript": "M: Welcome to the Book Club. Today s guest is Susan Lane. the author of a new book on personal finances\nthat has already sold half a million copies. Hi. Susan. your book is extremely successful. Why do you think\nthat is?\n': (I)I think that's because of my message. which is making happiness a priority over money. SO many of us\nm my generation have spent decades trying to earn more money. just to consume more. but it made us more\nmiserable. (2-1)You yourself were once caught in that cycle. working for two decades as an executive and earmng a\nhigh salary. but still accumulating debt. ': ( 2. 2 ) I most certainly was. I earned millions. but by the time I quit my job four years ago to become a\nwriter. I owed over $ 30. 000. M: So how did you escape that pattern? And what would you advise other people to do?\nW: The first change IS in what we value. We need to emphasize things that actually make us happy. like\nrelationshlps. the environment or even our hobbies. (3)Once we make the nght things our priority. our\ngoals will change and so will our financial behauor. M: How does that translate into practical action? Can you our audience examples of what you are talking\nabout on an everyday basis?\n': The major areas for action are usually housing. food and transportation. SO people might share a home with\nfriends instead of living on their own. bring lunch from home instead of going to restaurants. and use public\ntransport instead of owning a car.\nM: ( 4 ) Those sound like major sacrifices. I could never share my home. I need my own space.\n'. But they aren. t sacrifices. When people change their values. their desires change. SO in the example of\nhousing. if we value relationships. sharing a home isn't deprivrng ourselves of space. but giving us an\nopportunity to spend more time with our loved ones. M: lndeed it is."
+        },
+        {
+          "id": "listening-conv-2",
+          "title": "Section A Conversation Two",
+          "text": "W: Thank you for inviting me to the gallery. Christopher. I haven't visited here since your predecessor s\nretirement functioned. M:. MouId you like to see the newest additions to our collection first. Catherine? W: Are those the landscapes by Daniel Gregory? I absolutely adore her work. M: ( 5 ) This first piece was a gift to the gallery from the artist herself. and it's quite exquisite.\n': I love how she depicts the barren landscape. The colors complement each other perfectly. M: You can sense the desolation in the picture. This piece was inspired by Gregory s recent trek in the Gobi\nDesert. '. And how did you obtain her other piece. over here?\nM: (6)It was purchased at auction by an anonymous collector who lent it to the gallery for display. This\ncomposition is one Of her most acclaimed pmntings. ／: It must have cost that collector a small fortune to purchase this. M: Obviously. I can. t disclose the exact amount he paid. but it was substantial.\nW: ( 7 ) There's SO much detail in this painting. I feel like I can really immerse myself in the scene. I\nparticularly like the symmetry created by the reflection of the mountain in the lake. M: This particular piece was the one that was nominated for a Gateway Award. I was lucky enough to attend\nthe awards ceremony as Gregory s guest.\nW: SO you know her personally. I assume she is an eccentric artist. M: Quite the opposite. In fact. she's not at all eccentric. (8)1 would say she's one of the most easygoing and\nintelligent people I know. ': I'd love to be able to meet her. There are so many questions I d like to ask. M:. Mhat a coincidence ！ I'm meeting her for dinner tonight. Would you like to come along?\nW: I'd love to. Thank you.",
+          "source": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              2,
+              3
+            ]
+          },
+          "transcript": "W: Thank you for inviting me to the gallery. Christopher. I haven't visited here since your predecessor s\nretirement functioned. M:. MouId you like to see the newest additions to our collection first. Catherine? W: Are those the landscapes by Daniel Gregory? I absolutely adore her work. M: ( 5 ) This first piece was a gift to the gallery from the artist herself. and it's quite exquisite.\n': I love how she depicts the barren landscape. The colors complement each other perfectly. M: You can sense the desolation in the picture. This piece was inspired by Gregory s recent trek in the Gobi\nDesert. '. And how did you obtain her other piece. over here?\nM: (6)It was purchased at auction by an anonymous collector who lent it to the gallery for display. This\ncomposition is one of her most acclaimed pmntings. ／: It must have cost that collector a small fortune to purchase this. M: Obviously. I can. t disclose the exact amount he paid. but it was substantial.\nW: ( 7 ) There's SO much detail in this painting. I feel like I can really immerse myself in the scene. I\nparticularly like the symmetry created by the reflection of the mountain in the lake. M: This particular piece was the one that was nominated for a Gateway Award. I was lucky enough to attend\nthe awards ceremony as Gregory s guest.\nW: SO you know her personally. I assume she is an eccentric artist. M: Quite the opposite. In fact. she's not at all eccentric. (8)1 would say she's one of the most easygoing and\nintelligent people I know. ': I'd love to be able to meet her. There are so many questions I d like to ask. M:. Mhat a coincidence ！ I'm meeting her for dinner tonight. Would you like to come along?\nW: I'd love to. Thank you."
+        },
+        {
+          "id": "listening-pass-1",
+          "title": "Section B Passage One",
+          "text": "Forgiveness iS the release Of resentment or anger. Forg1veness doesn't mean reconciliation. to return to the same relationship. nor do we have to accept the same harmful behaviors from an offender. ( 9 )\nForgiveness is vitally nmportant for the mental health of certain victims. It propels people forward rather than\nkeeping them emotionally engaged in an injustice or trauma. Carrying the hurt or anger of an offense leads the\nbody to release stress chemicals. Eliminating the perpetual flow of those chemicals may also explain why\nforgiveness provides physical health benefits. There are scenarios in which foryveness IS not the best course. Sometimes the victim becomes more\nempowered when they give themselves permission not to forgive. (10)Forgrveness can be challengmg. This is\nespecially true when the offending party offers an insincere apology. or maybe they haven't offered anything at\nall. However. it's often the healthiest path forward. (ll)It's important to cultivate forgiveness by developing\ncompassion for the offender. reflect on whether the act was due to malicious intent. or whether it was caused\nby challenging circumstances in the offender s life.\n\nWhat about forgiving ourselves? We sometimes need to take responsibility for mistakes. but intense guilt\nand shame aren't a desirable outcome in the long run Foryving yourself may seem like an ambiguous process. You can begin by acknowledging that you are at fault. take responsibility for the hurt you caused. then reflect\non why the event occurred. Draw the lessons you learned and try to avoid committing a similar offense in the\nfuture . 答案详解\n9.. Mhat does the passage say about forgiveness?",
+          "source": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              3,
+              4
+            ]
+          },
+          "transcript": "Forgiveness is the release of resentment or anger. Forgiveness doesn't mean reconciliation. to return to the same relationship. nor do we have to accept the same harmful behaviors from an offender. ( 9 )\nForgiveness is vitally nmportant for the mental health of certain victims. It propels people forward rather than\nkeeping them emotionally engaged in an injustice or trauma. Carrying the hurt or anger of an offense leads the\nbody to release stress chemicals. Eliminating the perpetual flow of those chemicals may also explain why\nforgiveness provides physical health benefits. There are scenarios in which foryveness IS not the best course. Sometimes the victim becomes more\nempowered when they give themselves permission not to forgive. (10)Forgrveness can be challengmg. This is\nespecially true when the offending party offers an insincere apology. or maybe they haven't offered anything at\nall. However. it's often the healthiest path forward. (ll)It's important to cultivate forgiveness by developing\ncompassion for the offender. reflect on whether the act was due to malicious intent. or whether it was caused\nby challenging circumstances in the offenders life.\n\nWhat about forgiving ourselves? We sometimes need to take responsibility for mistakes. but intense guilt\nand shame aren't a desirable outcome in the long run Foryving yourself may seem like an ambiguous process. You can begin by acknowledging that you are at fault. take responsibility for the hurt you caused. then reflect\non why the event occurred. Draw the lessons you learned and try to avoid committing a similar offense in the\nfuture . 答案详解\n9.. Mhat does the passage say about forgiveness?"
+        },
+        {
+          "id": "listening-pass-2",
+          "title": "Section B Passage Two",
+          "text": "The Glasgow subway first opened in 1896 as a cable-hauled system. It is generally recognized as the world's\nthird underground railway. after London and Budapest. In its long history. it has never been expanded\nremaining as a single loop line with a mere 15 stations. At its peak. it served the shipyard workers on the south\nside of the city. (12)In the 1960s. there was a decline in the shipburlding industry. and the popularity of private\ntransport grew. As a result. the subway saw a rapid decline in ridership. (13)It ran with little further change until 1977 when its new operators closed it for major modernization\ninvestment. Carriages were replaced. ventilation was lmproved. and the main depot was alSO renovated and\nfitted with connecting tracks to replace the outdated crane transfer mechanism. The subway in its present form\nreopened for operation in ApriI 1980. Since its relaunch. the subway has seen a revival in its fortunes. (14)It\nserves as a viable alternative to other forms Of transport and has gone a long way to alleviate traffic in the\ncity center. ln 1996. the system reached an important milestone—100 years. TO commemorate this special\nevent. the COlor scheme Of the traiff carriages was updated. (15)Recently. high-tech systems such as smart card ticketing machines and smart gates are used across all\nsubway stations. The smart card provides more convement travel and passengers simply top up their cards and\ntap them to get in and out the subway. Since its launch. the technology has been adopted by more than 100. 000\nsubway customers.",
+          "source": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              4,
+              5
+            ]
+          },
+          "transcript": "The Glasgow subway first opened in 1896 as a cable-hauled system. It is generally recognized as the world's\nthird underground railway. after London and Budapest. In its long history. it has never been expanded\nremaining as a single loop line with a mere 15 stations. At its peak. it served the shipyard workers on the south\nside of the city. (12)In the 1960s. there was a decline in the shipburlding industry. and the popularity of private\ntransport grew. As a result. the subway saw a rapid decline in ridership. (13)It ran with little further change until 1977 when its new operators closed it for major modernization\ninvestment. Carriages were replaced. ventilation was lmproved. and the main depot was also renovated and\nfitted with connecting tracks to replace the outdated crane transfer mechanism. The subway in its present form\nreopened for operation in ApriI 1980. Since its relaunch. the subway has seen a revival in its fortunes. (14)It\nserves as a viable alternative to other forms of transport and has gone a long way to alleviate traffic in the\ncity center. ln 1996. the system reached an important milestone—100 years. TO commemorate this special\nevent. the COlor scheme of the traiff carriages was updated. (15)Recently. high-tech systems such as smart card ticketing machines and smart gates are used across all\nsubway stations. The smart card provides more convement travel and passengers simply top up their cards and\ntap them to get in and out the subway. Since its launch. the technology has been adopted by more than 100. 000\nsubway customers."
+        },
+        {
+          "id": "listening-rec-1",
+          "title": "Section C Recording One",
+          "text": "If you visit the Great Smoky Mountains National Park. chances are you will remember the roadside or\n\ncampground bears above all else. Bears are the most popular animals in a number of our national parks. ln\nthese mountains. where the population of bears runs into the hundreds. opportunities to observe these large\nwild animals are plentiful during the summer. ( 16 ) Since national parks are wildlife sanctuaries where no\ndisturbance of the native animals is allowed. years of protection have served to break down the wild bears. fear\nof humans. Now. instead of depending on their own resources for a living. many bears patrol park roads and\ncampgrounds. They gtve the garbage cans a frequent going over. An occasional offer of food from a park\nvisitor. an illegal and dangerous practice' makes beggars of them. Bears are very often hungry and since they\nwill feed on almost any kind of plant or animal. garbage is quite acceptable.\nFeeding them. however. represents misguided kindness because the bears come to expect such generosity\nfrom everyone and consequently. trouble could lie ahead. ( 17 ) Park rules prohibit the feeding of bears. Violators are arrested. Every year. doctors whO have offices near the park treat a number Of cases Of bear bites\nand bear scratches. Some Of the accidents have come about in strange ways. One man was In the process Of\nfeeding two small cubs. when the mother bear appeared and insisted upon having some of the food. Shoving the\nbig bear aside with one hand. the man continued feeding the cubs when suddenly he was struck a fierce blow in\nthe face. A bear. prompted by the food that a lady kept offering to him. entered the car where the generous\nperson was sitting. Her efforts to push the bear out of the car resulted in injuries. A man reqmred medical\nattention after he applied a lighted cigarette to a bear's nose · Another man tried to boost a bear intO the front\nseat of his car so that he might take a picture of a bear sitting beside his wife who was behind the wheel.\nBecause bears prefer roads and campgrounds, (18)the possibility of a hiker meeting up with a bear along\npark trails is small. but there's always that chance. for a bear seems to know if you are carrying a lunch or a\ncandy bar . He may even insist on taking it . 答案详解\n16.. Mhat does the speaker say about the bears in\nnational parks now?",
+          "source": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              5,
+              6
+            ]
+          },
+          "transcript": "If you visit the Great Smoky Mountains National Park. chances are you will remember the roadside or\n\ncampground bears above all else. Bears are the most popular animals in a number of our national parks. ln\nthese mountains. where the population of bears runs into the hundreds. opportunities to observe these large\nwild animals are plentiful during the summer. ( 16 ) Since national parks are wildlife sanctuaries where no\ndisturbance of the native animals is allowed. years of protection have served to break down the wild bears. fear\nof humans. Now. instead of depending on their own resources for a living. many bears patrol park roads and\ncampgrounds. They gtve the garbage cans a frequent going over. An occasional offer of food from a park\nvisitor. an illegal and dangerous practice' makes beggars of them. Bears are very often hungry and since they\nwill feed on almost any kind of plant or animal. garbage is quite acceptable.\nFeeding them. however. represents misguided kindness because the bears come to expect such generosity\nfrom everyone and consequently. trouble could lie ahead. ( 17 ) Park rules prohibit the feeding of bears. Violators are arrested. Every year. doctors who have offices near the park treat a number of cases of bear bites\nand bear scratches. Some of the accidents have come about in strange ways. One man was In the process Of\nfeeding two small cubs. when the mother bear appeared and insisted upon having some of the food. Shoving the\nbig bear aside with one hand. the man continued feeding the cubs when suddenly he was struck a fierce blow in\nthe face. A bear. prompted by the food that a lady kept offering to him. entered the car where the generous\nperson was sitting. Her efforts to push the bear out of the car resulted in injuries. A man reqmred medical\nattention after he applied a lighted cigarette to a bear's nose · Another man tried to boost a bear into the front\nseat of his car so that he might take a picture of a bear sitting beside his wife who was behind the wheel.\nBecause bears prefer roads and campgrounds, (18)the possibility of a hiker meeting up with a bear along\npark trails is small. but there's always that chance. for a bear seems to know if you are carrying a lunch or a\ncandy bar . He may even insist on taking it . 答案详解\n16.. Mhat does the speaker say about the bears in\nnational parks now?"
+        },
+        {
+          "id": "listening-rec-2",
+          "title": "Section C Recording Two",
+          "text": "Why do we form opinions or attitudes about someone or something without really knowing much about\nthem? Just hearing something good or bad about a person. a place or thing can influence our opinions positively\nor negatively. But letting the opimons of another person determine what our oplmons will be is dangerous. ( 19 )\nForming opimons about someone or somethmg before really knowing them well is called preiudice. “ pre-. means before and \"-judice ” refers to judgment. Hence. prejudice means to judge before having adequate\nknowledge. We can be prejudiced toward or agamst someone or something. In either case. we are only allowing\nourselves to see half of the picture. Very few people or things in this world are all good or all bad. Prejudiced\nattitudes are usually based on myths. half truths or incorrect information. (20)and they are dangerous because\nthey can keep us from learmng the truth about someone or something. PeopIe form prejudices against others for\nmany reasons—differences in their race. religion. gender or occupation. Prejudices keep people apart. They\nkeep us from really knowing and understanding each other. We should feel proud of who we are and the group of people we represent. (21)If feelings of pride begin to\nturn to feelings of superiority when we think that our group or our beliefs are better than those around us. however. then we begin to develop prejudiced attitudes that can be harmful. For example. the prejudiced\nattitudes of one group may keep another group from attending certain schools. from living any neighborhood they want. or from getting a job or a promotion. Extreme feelings of prejudice have caused the deaths of\ninnocent people. We are responsible for our own thoughts and opinions. When we let someone else tell us what\nto think about someone or something. we are giving up some control Of our own lives. Before you form an attitude or opinion. find out for yourself about the person or the thing in question. Sometimes we don. t realize that we hOld prejudiced attitudes toward or against someone or something. We need\nto carefully examine our lives and our fears. and to ask ourselves whether our attitudes come from our personal\nknowledge and experience or from rumors and fear of the unknown. The good news about prejudice is that we\nare not born with it. Prejudiced attitudes and opinions develop over time. But with education and knowledge. we can replace our prejudices with cooperation and understanding.",
+          "source": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "transcript": "Why do we form opinions or attitudes about someone or something without really knowing much about\nthem? Just hearing something good or bad about a person. a place or thing can influence our opinions positively\nor negatively. But letting the opimons of another person determine what our oplmons will be is dangerous. ( 19 )\nForming opimons about someone or something before really knowing them well is called preiudice. “ pre-. means before and \"-judice ” refers to judgment. Hence. prejudice means to judge before having adequate\nknowledge. We can be prejudiced toward or agamst someone or something. In either case. we are only allowing\nourselves to see half of the picture. Very few people or things in this world are all good or all bad. Prejudiced\nattitudes are usually based on myths. half truths or incorrect information. (20)and they are dangerous because\nthey can keep us from learmng the truth about someone or something. PeopIe form prejudices against others for\nmany reasons—differences in their race. religion. gender or occupation. Prejudices keep people apart. They\nkeep us from really knowing and understanding each other. We should feel proud of who we are and the group of people we represent. (21)If feelings of pride begin to\nturn to feelings of superiority when we think that our group or our beliefs are better than those around us. however. then we begin to develop prejudiced attitudes that can be harmful. For example. the prejudiced\nattitudes of one group may keep another group from attending certain schools. from living any neighborhood they want. or from getting a job or a promotion. Extreme feelings of prejudice have caused the deaths of\ninnocent people. We are responsible for our own thoughts and opinions. When we let someone else tell us what\nto think about someone or something. we are giving up some control of our own lives. Before you form an attitude or opinion. find out for yourself about the person or the thing in question. Sometimes we don. t realize that we hold prejudiced attitudes toward or against someone or something. We need\nto carefully examine our lives and our fears. and to ask ourselves whether our attitudes come from our personal\nknowledge and experience or from rumors and fear of the unknown. The good news about prejudice is that we\nare not born with it. Prejudiced attitudes and opinions develop over time. But with education and knowledge. we can replace our prejudices with cooperation and understanding."
+        },
+        {
+          "id": "listening-rec-3",
+          "title": "Section C Recording Three",
+          "text": "Questions 22 to 25 are based on the recording you have.just\n(22)When I started high school, it was a shock. I had spent eight years fighting my way to be the most\npopular kid in the Catholic school student body. I had been a big. tough 8th grader and suddenly I was a lonely\n9th grader bullied by the big, tough 12th grade seniors who ran the high school. I realized then that it's nice to\nstrive for something, but that you also have to enjoy the moment you're in and be happy where you are. Rock\nand roll had always been an lmportant part of my life. I remember my friends and I used to drive around until\nthe late hours of the nights listening to the music of Rock and RoII Legends. ( 23 ) During those teenage years. I\nbuilt friendships that I thought would last a lifetime. Most people that age think the same thing. but people\ndrift apart. Jobs. families and tragedies separate people from those lasting friendships. The tragedy that separated me from my friends forever was the Vietnam war. A year after I graduated\nfrom high school. I left for Vietnam. I came back. burned out. and tired. ( 24. 1) as though I had lived 10\nlifetrmes in the short span of 14 months. the 14 months I was in the war. I couldn't relate to the friends I had\nhad in hlgh school. ( 24 一 2 ) They still seem childish . concerned with childish things that weren t important to\nme 庵 I was still trying to cope with the death . destruction and evil I had seen in Vietnam . I felt like we had done\nterrible things to innocent people there and in turn. I had seen terrible things done to my friends. I withdrew for my friends and started college. Then I quit college and took many different jobs. I spent a\nlot of my time and money on alcohol and other drugs. Finally. in an effort to get my life going in the right\ndirection again. I sold everything and took what little money I had and bought myself an airplane ticket to\nisrael. I went there to study history. WhiIe studying at Haifa University. I met my wife. whO was also an\nAmerican student. I now teach in a high school back in America. 1 look at my students and see them struggling with many of\nthe very things I struggled with many years ago. (25)As a teacher. I try to help them over the rough spots as\nbest I can.",
+          "source": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "transcript": "Questions 22 to 25 are based on the recording you have.just\n(22)When I started high school, it was a shock. I had spent eight years fighting my way to be the most\npopular kid in the Catholic school student body. I had been a big. tough 8th grader and suddenly I was a lonely\n9th grader bullied by the big, tough 12th grade seniors who ran the high school. I realized then that it's nice to\nstrive for something, but that you also have to enjoy the moment you're in and be happy where you are. Rock\nand roll had always been an lmportant part of my life. I remember my friends and I used to drive around until\nthe late hours of the nights listening to the music of Rock and RoII Legends. ( 23 ) During those teenage years. I\nbuilt friendships that I thought would last a lifetime. Most people that age think the same thing. but people\ndrift apart. Jobs. families and tragedies separate people from those lasting friendships. The tragedy that separated me from my friends forever was the Vietnam war. A year after I graduated\nfrom high school. I left for Vietnam. I came back. burned out. and tired. ( 24. 1) as though I had lived 10\nlifetrmes in the short span of 14 months. the 14 months I was in the war. I couldn't relate to the friends I had\nhad in hlgh school. ( 24 一 2 ) They still seem childish . concerned with childish things that weren't important to\nme 庵 I was still trying to cope with the death . destruction and evil I had seen in Vietnam . I felt like we had done\nterrible things to innocent people there and in turn. I had seen terrible things done to my friends. I withdrew for my friends and started college. Then I quit college and took many different jobs. I spent a\nlot of my time and money on alcohol and other drugs. Finally. in an effort to get my life going in the right\ndirection again. I sold everything and took what little money I had and bought myself an airplane ticket to\nisrael. I went there to study history. WhiIe studying at Haifa University. I met my wife. who was also an\nAmerican student. I now teach in a high school back in America. 1 look at my students and see them struggling with many of\nthe very things I struggled with many years ago. (25)As a teacher. I try to help them over the rough spots as\nbest I can."
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-12-2-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "Question 1（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Prioritizing happiness over money."
+            },
+            {
+              "key": "B",
+              "text": "Joining the club to get her new book."
+            },
+            {
+              "key": "C",
+              "text": "Managing one's personal finances wisely."
+            },
+            {
+              "key": "D",
+              "text": "Consuming more only when earning more."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat message does the woman convey in her\nbook?\nA) 【精析】细节辨认题。当男士问女士她认为是什么使得她的书那么成功时，女士在句 ( 1) 中明确给出了答案，那就是她在书中传达的信息，即 : 将幸福的重要性排在金钱的前面。 A ) 选项与原文的意思完全一样，区别仅在于原文中使用了词组 make sth.\na priority over sth. . 而选项中使用了动词\nprioritize。因此答案为 A)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "Question 2（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "She was in debt."
+            },
+            {
+              "key": "B",
+              "text": "She was a financial adviser."
+            },
+            {
+              "key": "C",
+              "text": "She earned $30,000 a month."
+            },
+            {
+              "key": "D",
+              "text": "She enjoyed a happy life."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\n2 ) I most certainly was. I earned millions. but by the time I quit my job four years ago to become a\nwriter. I owed over $ 30. 000. M: So how did you escape that pattern? And what would you advise other people to do?\nW: The first change IS in what we value. We need to emphasize things that actually make us happy. like\nrelationshlps. the environment or even our hobbies. (3)Once we make",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "Question 3（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It reflects one's earning power."
+            },
+            {
+              "key": "B",
+              "text": "It varies with one's environment."
+            },
+            {
+              "key": "C",
+              "text": "It mirrors one's sense of wellbeing."
+            },
+            {
+              "key": "D",
+              "text": "It changes with one's goals in life."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat does the woman say about one's financial\nbehavior?\nD) 【精析】细节推断题。女士说我们应该重视真正使我们快乐的事物，接着句 ( 3 ) 提到，一旦我们把这些事物放在首位，我们的人生目标就会改变，而我们的财务行为也会随之而发生改变，由此可知，我们的财务行为受我们的生活目标影响，会与之一起发生变化。因此答案为 D)O\nWhat does the man say about sharing a home?",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "Question 4（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It would give him more time to be with his loved ones."
+            },
+            {
+              "key": "B",
+              "text": "It would be good for tho s e who value relationships."
+            },
+            {
+              "key": "C",
+              "text": "It would mean major sacrifices for him"
+            },
+            {
+              "key": "D",
+              "text": "It would deprive him of his ind iv iduality."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nO 【精析】细节推断题。当听女士说可以通过共享居所，少去饭店吃饭或使用公共交通工具出行这些行为来体现生活目标以及财务行为的变化时，男士在句 ( 4 ) 中提到，这些对他来说是重大牺牲，他做不到与人共享居所，因为他需要拥有自己的空间。也就是说，与他人分享住所对男士来说意味着重大的牺牲。因此答案为 C)O",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "Question 5（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It was the artist's first landscape."
+            },
+            {
+              "key": "B",
+              "text": "It was a painting by Christopher"
+            },
+            {
+              "key": "C",
+              "text": "It was donated by the artist herself"
+            },
+            {
+              "key": "D",
+              "text": "It was displayed at a retirement party."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat do we learn about one of the newest\nadditions to the gallery s collection?\n0 【精析】细节辨认题。根据句 ( 5 ) 可知，男士向女士介绍画廊的新增画作，并告诉女士其中第一幅作品是由画家自己捐赠给画廊的。因此答案为 O。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "Question 6（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It was the painting that instantly made her rich"
+            },
+            {
+              "key": "B",
+              "text": "It has cost him a I ot of money to purchase it."
+            },
+            {
+              "key": "C",
+              "text": "It was recently purchased by the gallery."
+            },
+            {
+              "key": "D",
+              "text": "It is owned by an anonymous collector."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat does the man say about one of the most\nacclaimed paintings by Daniel Gregory?\nD) 【精析】细节辨认题。男士向女士介绍画廊展出的丹尼尔 · 格雷戈里的另一幅作品时，在句 ( 6 ) 中提到，那是画家最受赞誉的一幅作品，并说这幅作品是由一位不愿意公开姓名的私人收藏家购买后借给画廊进行展出的，由此可知，那幅作品属于这位匿名收藏家。因此答案为 D)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "Question 7（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It reflects her emotions."
+            },
+            {
+              "key": "B",
+              "text": "It contains ample details."
+            },
+            {
+              "key": "C",
+              "text": "It appears perfectly symmetrical."
+            },
+            {
+              "key": "D",
+              "text": "It depicts the beauty of desolation."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhy does the woman say she can feel immersed in\nthe scene in the painting?\nB) 【精析】细节推断题。根据句 ( 7 ) . 女士先感慨于画",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "Question 8（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "She is eccentric like any other artist."
+            },
+            {
+              "key": "B",
+              "text": "She is a very nice and intelligent artist."
+            },
+            {
+              "key": "C",
+              "text": "She is as lucky as any acclaimed artist."
+            },
+            {
+              "key": "D",
+              "text": "She is one of the most productive artists."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nHow does the man describe Daniel Gregory?\nB) 【精析】细节推断题。男士说，画家丹尼尔 · 格雷戈里一点儿都不古怪。接着句 ( 8 ) 提到，她非常平易近人，也特别聪明。选项中用近义词 nice 替代了原文中的 easygoing . 保留了原文中的\nintelligent, 并且没有采用原文中的 \"one of the\nmost. . .”这样的表达方式，而是直接使用副词 very\n来修饰形容词 nice 和 intelligent . 但这些小的变化并不改变意思的表达。因此答案为 B)O\nQuestions 9 to 11 are b on the passage you have just heard.\nForgiveness is the release of resentment orange",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "Question 9（请根据录音作答）",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is vital to ones mental health"
+            },
+            {
+              "key": "B",
+              "text": "It leads to reconciliation and peace."
+            },
+            {
+              "key": "C",
+              "text": "It promotes interpersonal relationship."
+            },
+            {
+              "key": "D",
+              "text": "It keeps one from traumatic experience."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\n. Mhat does the passage say about forgiveness?\nA) 【精析】细节辨认题。句 ( 9 ) 提到，宽恕对某些受害者的心理健康至关重要。因此答案为 A)O 本题各选项中干扰性最强的是 D) . 因为文中提到了 it\npropels people forward rather than keeping them\nemotionally engaged in an injustice or trauma . 但原文中所表达的意思是“使这些人不再深陷于那些情感上的偏颇或创伤不可自拔” . 而 D ) 选项中所表达含义是“让他们不经受痛苦难忘的经历” . 故排除 D)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "Question 10（请根据录音作答）",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "When the offender has power over the victim."
+            },
+            {
+              "key": "B",
+              "text": "When the offender is not willing to apologize."
+            },
+            {
+              "key": "C",
+              "text": "When the offender is not duly penalized."
+            },
+            {
+              "key": "D",
+              "text": "When the offender adds insult to injury."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\n. Mhen is forgiveness especially challenging?\nB) 【精析】细节辨认题。句 ( 10 ) 指出，当冒犯的一方给出的道歉并不真诚，或者他们根本没有显露出任何歉意时，宽恕就特别有挑战性。因此答案为 B)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "Question 11（请根据录音作答）",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Talk with the offender calmly."
+            },
+            {
+              "key": "B",
+              "text": "Accept the offender's apology."
+            },
+            {
+              "key": "C",
+              "text": "Find out why he committed the offense."
+            },
+            {
+              "key": "D",
+              "text": "Determine how serious the offense was."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat should one do in order to forgive the\noffender?\n0 【精析】细节推断题。在讲到该如何对冒犯者进行宽恕时，句 ( 11 ) 提到，通过逐渐对冒犯者产生同情来培养宽恕是很重要的，反思冒犯行为是出于恶意，还是由冒犯者充满挑战的生活环境所造成的。\nC ) 选项符合题意，故为答案。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "Question 12（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The number of passengers dropped sharply."
+            },
+            {
+              "key": "B",
+              "text": "It served more and more commuters."
+            },
+            {
+              "key": "C",
+              "text": "The number of stations increased to 50."
+            },
+            {
+              "key": "D",
+              "text": "It became the longest in the United Kingdom."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat does the passage say about the Glasgow\nsubway in the 1960S?\nA) 【精析】细节辨认题。句 ( 12 ) 提到，在 20 世纪 60\n年代，造船业出现了衰退，私人运输的普及率上升。因此，地铁乘客量迅速下降。选项中与之对应的为 A) . 所以答案为 A)。选项以 passengers 代替了原文中的 ridership . 用 dropped sharply 来表述原文中 a rapid decline 的意思。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "Question 13（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "To increase capacity to meet growing needs."
+            },
+            {
+              "key": "B",
+              "text": "To make way for other means of transport."
+            },
+            {
+              "key": "C",
+              "text": "To have its systems modernised."
+            },
+            {
+              "key": "D",
+              "text": "To avoid further financial losses."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhy was the Glasgow subway closed in 1977?\nO 【精析】细节推断题。句 ( 13 ) 明确指出 . 1977 年，这条线路被关闭，是因为新的运营商投人大量资金进行现代化改造，换句话说，关闭地铁是为了完",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "Question 14（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is generally recognised as a world heritage site."
+            },
+            {
+              "key": "B",
+              "text": "It is the fastest way to reach the city's south side."
+            },
+            {
+              "key": "C",
+              "text": "It constitutes a source of revenue for the city."
+            },
+            {
+              "key": "D",
+              "text": "It helps reduce traffic jams in the city centre."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhy does the Glasgow subway remained\nimportant today?\nD) 【精析】细节辨认题。句 ( 14 ) 说，经过改造重新开通运营后，格拉斯哥地铁的命运发生了重大变化，作为其他交通方式的可行性替代方案，该地铁大大缓解了市中心的交通堵塞。因此答案为 D)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "Question 15（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are usually crowded."
+            },
+            {
+              "key": "B",
+              "text": "They use high-tech systems."
+            },
+            {
+              "key": "C",
+              "text": "They accept smartcards only."
+            },
+            {
+              "key": "D",
+              "text": "They are colourfully decorated."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhat does the passage say about all subway\nstations in Glasgow nowadays?\nB) 【精析】细节辨认题。句 ( 15 ) 提到，所有地铁站都使用了智能卡售票机和智能闸机等高科技系统。\n因此答案为 B)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "Question 16（请根据录音作答）",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are quite friendly to humans."
+            },
+            {
+              "key": "B",
+              "text": "They are shrinking in numbers."
+            },
+            {
+              "key": "C",
+              "text": "They are unafraid of humans."
+            },
+            {
+              "key": "D",
+              "text": "They are especially fond of garbage"
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\n. Mhat does the speaker say about the bears in\nnational parks now?\nC) 【精析】细节辨认题。句 ( 16 ) 提到，由于在国家公园中不允许干扰当地动物，这种保护消除了生活在那里的野生熊类对人类的恐惧，选项中的\nunafraid of humans 是对原文中 break down the\nWIId bears . fear of humans 这一部分的同义转述。\n因此答案为 0。选项中干扰性比较强的是 D) . 因为原文中也提到熊经常去翻垃圾桶，但这与选项中的“它们特别喜欢垃圾”所表述的意思还是有一定的偏差，故排除 D)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "What does the speaker say about visitors feeding bears in national parks?",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is strictly forbidden"
+            },
+            {
+              "key": "B",
+              "text": "It is an uncommon sight"
+            },
+            {
+              "key": "C",
+              "text": "It is a ge sture of human genero s ity."
+            },
+            {
+              "key": "D",
+              "text": "It is allowed only in certain areas."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat does the speaker say about visitors feeding\nbears in national parks?\nA) 【精析】细节辨认题。句 ( 17 ) 明确指出，在公园中是严格禁止对熊进行喂食的，违反规定者会被逮捕。因此答案为 A)O\n1 & What is the speakers advice to people who carry\nsome food while hiking on a park trail?\nB) 【精析】细节推断题。句 ( 18 ) 提到，虽然徒步旅行者在公园小路上遇到熊的概率很小，但这也不是绝对不可能发生的事情，因为熊似乎有某种天赋，能够看出来人们身上是否有吃的 .；而且他还可能会坚持索要。由此推测，讲话者是想告诉那些在公园小路上徒步旅行的人，他们还是有",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "school?"
+        },
+        {
+          "id": "2022-12-2-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "Question 18（请根据录音作答）",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Share the ir food with the bear they see."
+            },
+            {
+              "key": "B",
+              "text": "Be prepared to run into a hungry bear."
+            },
+            {
+              "key": "C",
+              "text": "Try to be friendly with the bear they meet."
+            },
+            {
+              "key": "D",
+              "text": "Refrain from teas ing bears with cubs."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nB) 【精析】细节推断题。句 ( 18 ) 提到，虽然徒步旅行者在公园小路上遇到熊的概率很小，但这也不是绝对不可能发生的事情，因为熊似乎有某种天赋，能够看出来人们身上是否有吃的 .；而且他还可能会坚持索要。由此推测，讲话者是想告诉那些在公园小路上徒步旅行的人，他们还是有可能会碰上需要食物的大熊的。因此答案为 B)。\nQuestions 19 to 21 are b on the recording you have just heard.\nWhy do we form opinions or attitudes about someone or something without really knowing much about\nthem? Just hearing something good or bad about a person",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "Question 19（请根据录音作答）",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It refers to opinions that are radical and widespread."
+            },
+            {
+              "key": "B",
+              "text": "It means making judgments without adequate knowledge"
+            },
+            {
+              "key": "C",
+              "text": "It refers to deep-rooted beliefs about someone or something."
+            },
+            {
+              "key": "D",
+              "text": "It means sticking to one's judgments even when proved wrong."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhat does the speaker say about prejudice?\nB) 【精析】细节辨认题。句 ( 19 ) 提到，在真正了解某人或某事之前形成对他们的看法被称为偏见。也就是说，没有足够的信息就做出判断，即为偏见。\n因此答案为 B)O 选项中用 adequate knowledge\n对原文中的 really knowing them well 进行了同义转述。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "Why does the speaker say prejudiced attitudes are dangerous?",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They often lead to war between religious groups."
+            },
+            {
+              "key": "B",
+              "text": "They keep certain occupations from thriv ing."
+            },
+            {
+              "key": "C",
+              "text": "They allow myths and half-truths to persist."
+            },
+            {
+              "key": "D",
+              "text": "They prevent us from getting to the truth"
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhy does the speaker say prejudiced attitudes are\ndangerous?\nD) 【精析】细节推断题。由问题中的 dangerous 一词可以比较容易地找到答案在句 ( 20 ) . 讲话者提到，偏见很危险，因为它们使我们无法了解某人或某事的真相。因此答案为 D)O\n21\nWhen does the speaker say we begin to develop\nprejudiced attitudes?\nA) 【精析】细节辨认题。句 ( (1) 提到，当我们的自豪感开始转变为优越感时，我们就会开始形成带有偏见的态度。因此答案为 A)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "school?"
+        },
+        {
+          "id": "2022-12-2-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "Question 21（请根据录音作答）",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "When we start to feel superior"
+            },
+            {
+              "key": "B",
+              "text": "When we m IX with prejudiced people."
+            },
+            {
+              "key": "C",
+              "text": "When we live in an isolated neighborhood."
+            },
+            {
+              "key": "D",
+              "text": "When we try to keep up with tho s e around us."
+            }
+          ],
+          "answer": "A",
+          "explanation": "21\nWhen does the speaker say we begin to develop\nprejudiced attitudes?\nA) 〖精析〗细节辨认题。句 ( (1) 提到，当我们的自豪感开始转变为优越感时，我们就会开始形成带有偏见的态度。因此答案为 A)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "How did the speaker feel when he started high school?",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Motivated."
+            },
+            {
+              "key": "B",
+              "text": "Disappointed"
+            },
+            {
+              "key": "C",
+              "text": "Perplexed."
+            },
+            {
+              "key": "D",
+              "text": "Shocked."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nHow did the speaker feel when he started high\nschool?\nD) 【精析】细节辨认题。根据句 ( 22 ) . 讲话者提到他刚上高中的时候，就感到特别震惊。因此答案为 D)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "school?"
+        },
+        {
+          "id": "2022-12-2-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "Question 23（请根据录音作答）",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They would change with the passage of time."
+            },
+            {
+              "key": "B",
+              "text": "They would benefit young people's adult life."
+            },
+            {
+              "key": "C",
+              "text": "They would help kids grow."
+            },
+            {
+              "key": "D",
+              "text": "They would last a lifetime."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat did the speaker once think of teenage\nfriendships?\nA) 【精析】细节推断题。根据句 ( 23 ) . 讲话者说，很多人在十几岁的时候都认为那时候形成的友谊可以持续一生，但其实，慢慢地，工作，家庭，悲剧事件会让人们逐渐疏远，友谊也不复存在。虽然原文中没有提到时间的推移，但其他三个选项都无法从原文中找到依据，所以只有 A ) 选项与讲座中的这段话意思相近。因此答案为 A)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "What do we learn about the speaker when he returned from the Vietnam War?",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "He had become mature."
+            },
+            {
+              "key": "B",
+              "text": "He suffered poor health."
+            },
+            {
+              "key": "C",
+              "text": "He had lots of stories to tell."
+            },
+            {
+              "key": "D",
+              "text": "He regretted leaving Vietnam."
+            }
+          ],
+          "answer": "A",
+          "explanation": "说话者返乡后觉得高中朋友仍然幼稚，而自己经历战争后已难以与他们产生共鸣，反映出他的成熟。\n【原文定位·答案标记】They still seem childish, concerned with childish things that weren't important to me. I was still trying to cope with the death, destruction and evil I had seen in Vietnam.\n【正确选项】A) He had become mature.\n【标注】按答案标记定位；原文为扫描文本，已人工修正明显识别错误（部分句子依上下文还原），未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              3
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "stemSource": {
+            "fileId": "reference-2022-12-2-listening-q24"
+          },
+          "explanationSource": {
+            "type": "marker-ocr",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 0.76
+          },
+          "verificationNote": "结合 G 盘听力录音稿和非官方公开题干核对；清除原解析串入的错误答案 D。",
+          "explanationOriginal": "说话者返乡后觉得高中朋友仍然幼稚，而自己经历战争后已难以与他们产生共鸣，反映出他的成熟。",
+          "explanationSourceOriginal": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2022-12-2-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "Question 25（请根据录音作答）",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Make friends with his students."
+            },
+            {
+              "key": "B",
+              "text": "Show his students how to do their best."
+            },
+            {
+              "key": "C",
+              "text": "Help his students get through the growing pains."
+            },
+            {
+              "key": "D",
+              "text": "Share his personal experience with his students."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat does the speaker try to do as a teacher?\nC) 【精析】细节辨认题。根据句 ( 25 ) . 讲话者说，作为一名教师 . “我”会尽力帮助学生渡过难关。选项中用 growing pains 替代了原文中的 rough spots。\n因此答案为 C)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空短文",
+          "text": "The task of the global strategist of a business is to build a platform of capabilities derived 什 OI 嗆 the resources, experiences and innovations of units operating in multiple locations, to transplant tho s e capabilities wherever and then to systematically __(26)__ upgrade and renew them—ahead of the c ompetition\nApple is an outstanding case of a company whose unique capabilities give it a worldwide __(27)__\nadvantage, particularly with respect to its ability to build platforms from a product base that integrates functional and __(28)__ design Apple has been able to\nI everage and exploit its California-based design and marketing advantages successfully throughout the world. IKEA is another such case. The do-it-yourself furniture and houseware company first developed a compelling s et of capabilities to design, manufacture and __(29)__ furniture at I ow cost and sell it in a novel way in Sweden Later IKEA successfully __(30)__ this formula in many other countries.\nBy contrast Telefónica, a Spanish telecommunications company that is now the world's fifth largest telecom by __(31)__\nfirst developed its special advantage abroad. In\n1989 and 1990. TeIefonica had the opportunity to enter Chile and Argentina, countries that shared many institutional and cultural characteristics with its home country but that __(32)__ more rapid market reform. Throughout the 1990S. TeIefonica took what it were learned in Chile and Argentina about rec on struct ing former state-owned telecoms to Other\nLatin American countries that were privatiz lng the ir state telecoms and deregul ating the ir telecom markets. The se examples might lead the reader to believe that creating a global advantage is an easy task. But many other __(33)__ Of expensive failed experiments suggest that creating a lasting global advantage actually requires a great deal of and operational 刀 e e __(34)__\n(技巧 〗 Our research suggests that global winners typically create and sustain the ir international presence through a systematic process of renewmg and enhancing __(35)__ the ir Core capabilities.",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读短文",
+          "text": "A) What do we lose when natural spaces and species disappear? increasingly, research has shown that as species and ecosystems vanish it also chips away at our ability to preserve What remains—because we no longer understand What we re losing.\n\nB) You probably see it all the time. The neighbor who puts pesticides on his lawn rather than deal with annoying bees. The politician who votes against wildlife protection because she's never seen a wolf in the wild. The corporation that wants to / 0 二 e (用推土机推平) the habitat of a rare frog.\n\nC) At best this can be termed 'the extinction of expenence, ' where our cultural and natural histories fade from our memones and therefore our reality. At its worst it becomes something even more concerning. biophobia ' the fear of living things and a complete aversion to nature.\n\nD) This isn't the fiction of living in a cold, empty ' 0 (绝望的世界 〗 Sadly, it's becoming a way of life for too many people—especially children. A recent study in\nJapan paints a striking portrait of this problem. A survey of more than 5 300 school children in the Tochigi Prefecture examined the ir perception of 14 local insect species and one spider The results? A collective \"ew! ' MOSt of the students saw the species as things to dislike or fear or even as sources of danger. The less expenence the students had with nature the more negative the ir feelings\n\nE) The results were published earlier this year in the Journal Biological Conservation Lead researcher Mas ashi Soga with the University of Tokyo says the study stemmed from observations about today S nature-deficient children \"Humans inherently avoid dangerous organisms such as bees, but children the s e days avoid even harmless insects such as butterflies and & 蜻蜓), ' he says. \"I have long wondered why so many of today's children react like this.\n\nF) Although the children's reactions were somewhat expected, the new study did c ontmn an unexpected finding. Many of the surveyed children revealed that the ir parents also expressed fear or disgust of the same animals. In fact the se parental emotions were strong enough to overwhelm any positive experience S the children might have gained from direct experience S in nature. AS Soga and his coauthors wrote in the ir paper, Our results suggest that there is likely a feedback loop in which an increase in people who\nhave negative attitudes towards nature in one generation will lead to a further increase In people with similar attitudes in the next generation.\n\nG) And that's possibly the greater threat posed by extinction of experience. Soga suggests the generational loss—condition previously dubbed environmental generational\n磊 m ” “ (逗悉)—could chip away at our societal ability to preserve what we're losing.\n\"I believe that increased b iophob ia is a major, but invisible threat to global biodiversity, Soga says. As the number of children who have biophobia increases, public interest and support for biodiversity conservation will gradually decline.\nAlthough many conservation biologists still consider that preventing the loss of wildlife habitat is the most important way to conserve biodiversity, I think preventing increased biophobia is also important for conservation.\n\nH) What's to be done about this? The paper makes several recommendations, the most obvious of which is that children should expenence nature more Often The authors also suggest establishing policies to guide the s e natural experiences and increasing educational programs about the natural world.\nI) Helping parents to see species around them in a new light would make a difference, too.\nAnd of c ours e, maintaining support for preserving the wild spaces where the se 'scary creatures live is the most important thing of all. That's a point reinforced by another recent study, which found that wild spaces located within urban areas—and the plants and animals that thrive in them-are particularly important for human health and well-being.\n\nJ) Published in the Journal Frontiers in Sustainable Cities, the study examined attitudes toward Discovery Park the heavily fore sted 534-acre public park in Seattle\nWashington It found that the public had the most appreciation for-and gained the most value from-the wildest parts of the park. \"I have seen whales, seals fish eagles, shorebirds and many Other sea creatures in the ir natural habitat ” one survey participant wrote. \"Coming here with people has allowed me to connect and talk with them about conversation that simply does not happen in everyday life ' wrote another.\n\nK) The participants reported that the ir most valuable experience s in the park included encountering wildlife walking through open spaces, exploring the beach and finding beautiful views. ' 从厂 e saw that a large majority of participants' interactions, especially the ir most meaningful interactions, depended on Discovery Park's relative wildness says lead author EIizabeth Lev, a master 's student in the University of Washington s\nHuman interaction with Nature Lab. This is only possible because the park is relatively wild. After all, you can't enjoy watching birds if there are no birds to follow; gaze at the sunset if it's obscured by skyscrapers; or stop and smell the flowers if they don't have room to grow.\n\nL) And yet even this long-protected space could someday become less hospitable to nature.\nOver the past few years a lot of people and organizations have suggested developing parts of Discovery Park or the neighboring area. Most recently a plan proposed building\n34 acres of much-needed affordable housing and parking spaces adjacent to the park bringing with them noise, traffic and pollution\n\nM) If anything like that happened, both the park and the people of Seattle could lose something vital. And that would continue the trend of chipping away at Seattle's—and the world's—natural spaces, leaving JLISt tiny pocket parks and green-but-empty spaces that offer little real value to wildlife, plants or people\n\nN) 'It is true that any interaction with nature is better than none but I don't want people to be satisfied with any small bit of grass and trees,\" Lev says. We have been in this cycle\nOf env ironmental generational amnesia for a long tlme where the baseline keeps shifting and we don't even realize what we're losing until it's gone. If we can get people to understand how much meaning and value can come 什 OI 嗆 having more experience S with more wild forms of nature, then maybe we can stop this cyc I e and move toward cons erv ing and restoring what we have left.\n\nO) Building this understand ing in an ever-more fearful and disconnected world may be the biggest challenge. Peter Kahn the senior author of Lev's paper and the director of the\nHuman interaction with Nature lab made several suggestions for bridging this gap this 20 II book Technological Nature. They echo the recommendation about getting children into nature but also include telling stories of how things used to be, imaglmng what things might be like in the future, and developing a common I anguage about nature, a way of speaking about wild and domestic interaction patterns, and the meaningful, deep and often 」 oyful feelings that they generate.\nP) No matter what techniques we use, this growing field of research illustrates that saving nature reqtllres encouragmg people to expenence it more Often and more deeply. That calls for additional research-Lev and her coauthors have published a toolkit that other municipalities can follow to study the value of the ir own wild spaces—and clear communication of the results. \"If we can continue to show people the benefits of the se wild spaces,\" Lev says, maybe people will begin to see more value in keeping the se areas undevel oped—for the sake of our mutual benefit.",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Some people in the US have asserted that forgiving student loan debt is one way to\nstimulate the economy and give assistance to those need. One government proposition is to eliminate $ 10 000 of debt for economically distressed' students. Some in US Congress have gone so far as to suggest forgiv mg up to $ 50 000 in debt per student borrower but does forgiving student debt necessarily correlate to helping the economically disadvantaged?\nThe answer IS no. This policy is JLlSt giving money away to universities and the most affluent students in attendance. Federal Reserve data reveals that the highest-income 40\npercent of households owe approximately 60 percent of outstanding student debt while the lowest 40 percent owe JLISt under 20 percent. This could be due to a combination of factors.\nstudents from high-income households are more likely to go to expens lve colleges, less likely to receive financial aid and more likely to have high incomes post-graduation Plus the majority of student debt is held by graduate degree earners, who earn approximately 25 percent more than the ir undergraduate counterparts. Clearly, giving free reign to banks to forgive student debt is a step in the wrong direction\nOther proposals for broader, I ong- term student loan plans have some fundamental problems. One idea is to cancel student debt only for undergraduate degrees and for students making less than $ 125 000.\nThis attempts to address the fact that Congress previously mentioned student loan forgivene s s plan largely helps out the wealthy, but is an adverse incentive for universities to keep ral s ing tuition and for students to choose to major in low-earning degree programs.\nColleges have no reason to make the ir programs more affordable if they believe students will JLISt take out more debt. And, students will feel more comfortable making the irresponsible decision to go tens of thousands of dollars in debt to major impractical or idealistic subjects if they know the ir loans will be forgiven\nThis is especially concerning given the 0 ” m 记 (大流行) has rendered a college education practically worthless. Students are paying tens of thousands of dollars per year to\nlive at home and be I ectured on the internet. DO we really want to tell colleges that they can get away with providing below-average service for an outrageous cost?\nIn the case of any of the s e student debt plans, working-class Americans who chose not to or could not afford to go to college will be subsidizing the education of the professional class. Plumbers and retail workers will be paying for the degrees of doctors and lawyers.\nThe US government's effort to help tho s e in debt is commendable but is this really the solution that will help the poor financially recover?",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "If there's one rule that most parents c ling to in the confusing, fast- changing world of kids and media, it's \"NO screens before age 2\nAs of today, that rule has been thrown out the window.\nThe American Academy of Pediatrics (AAP), which first issued that recommendation back in 1999 has extensively updated and revised its guidelines for children and adolescents to reflect new research and new habits.\nThe new guidelines, especially for very YOung children shift the focus from WHAT is on the screen to WHO else is in the room. And in do ing SO, they raise some intriguing points about the future of learning from media.\nFor babies YOunger than 1 8 months, AAP still says no screens at all are the best idea—with one notable exception Live video chat. Surveys indicate that families already popul arly believe that \"Face time doesn't count' or at I east that the benefit of virtual visits with grandparents or Other relatives outweighs the potential cost of exposing babies to the\nlaptop or smartphone.\nThe AAP doesn't cite positive evidence that infants actually get something out of this kind Of \"conversation the way that they clearly do from live social interaction. But there ' s some observational research that infants as young as S IX months Old are emotionally engaged by playing live “ 忉方 00 (躲猫猫) with Grandma online\nFor infants and e (学步儿童), ages 巧 months to 2 years old, there ' s limited evidence from a couple of very small studies that they can learn new words from educational media, if and only if parents are watching alongside them, repeating what the video says and/or drawing attention to what is on the screen. In Other words, treating a video or an app like a picture book is the best bet.\nThe fl ip side of this is that many studies have actually shown poorer I anguage skills correlated with earlier SOIo viewing Of 'educational ” videos. There's also research that's hows I anguage delays in children who watch more TV and start watching earlier. In both cases, the problem seems to be media replacing interaction with people. For this reason the new AAP guideline has changed from 'avoid all screens under age 2 ' to \"avoid SOIo media use in this age group.\nFor preschoolers ages 2 to 5, there's more evidence that they have the ability to\ntransfer knowledge from screens to the real world including early literacy and math For this age group, AAP recommends no more than an hour a day of screen use. And, JLISt as with younger children they want care-givers to take part in screen time. \"Co-view with your children help children understand what they are seeing, and help them apply what they learn to the world around them. ",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              9
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-12-2-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "选词填空第 26 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【考点】形容词辨析题。\nB) 【语法判断】空格前面是地点副词 wherever . 引导让步状语从句，后面一般接句子的主谓部分。由于空格处只能填人一个单词，可以考虑这里省略了某些成分，由此可推断出此处原本应是“主语 +\nbe 动词 + 形容词”的结构，这里省略了主语和 be\n动词，那么空格处应该就是一个形容词。\n【语义判断】空格所在句提到，企业全球战略家的任务是建立一个能力平台，从多地运营单位的资源，经验和创新中获取能力，然后把这些能力迁移到某些地方，系统地升级和更新它们，从而领先于竞争对手。备选项中的形容词 appropriate\" 合适的，恰当的”用在此处表示“把这些能力迁移到任何合适的地方” . 符合语境，故 B ) 为答案。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "选词填空第 27 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【考点】形容词辨析题。\nD) 【语法判断】空格前面是形容词 worldwtde . 后面是名词 advantage, 说明空格处应该填人一个形容词性的单词，和 worldwide 一同修饰名词\nadvantage。\n【语义判断】文章第一段就指出，企业全球战略家要努力建设企业能力，使其领先于竞争对手。空格所在句则以苹果公司为例，介绍了其独特的能力，这种能力让它拥有了全球范围内的一种优势，根据上下文可推断，这里指的应该是“竞争上的优势”。由此确定 D ) competitive 为答案。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "选词填空第 28 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【考点】形容词辨析题。\nA) 【语法判断】空格后面是名词 design, 前面是并列连词 and . and 前面是形容词 functional, 由此可推断，空格处应该也是一个形容词，和 functional 呈并列关系。\n【语义判断】空格所在句指出，苹果公司的产品融合了两方面的设计 . functional “实用的”是其中的一个设计特征，那么空格处的形容词也应该用来描述某种特征，形容词中 . aesthetic\" 美学的，审美的”符合文意，故答案为 A) aesthetic。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "选词填空第 29 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "L",
+          "explanation": "【考点】动词辨析题。\nL) 【语法判断】空格前面是并列连词 and . 根据 and\n前面的两个动词 design\" 设计”和 manufacture\" 制\n\n造”可知，空格处也应该是一个动词，并且为动词原形。\n【语义判断 1 空格所在句描述的是宜家建设企业能力的具体做法，他们以低成本设计，制造和家具，并以新颖的方式在瑞典销售。根据一般逻辑可知，设计和制造结束后应该就是“运输 \" “售卖 \" 等环节 . . ship “( 用船，飞机，卡车等 ) 运送”符合语义逻辑，故 L) ship 为答案。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "选词填空第 30 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【考点】动词辨析题。\nI) 【语法判断】空格前面是副词 successfully, 后面是名词短语 this formula . 空格所在句包含主语\nIKEA . 但缺少谓语动词，由此可推断出空格处应该填人一个动词作为空格所在句的谓语，再结合文章时态可知，此处应填人动词的过去式。\n【语义判断】上文指出，宜家已经在国内实践了成功的商业做法，接着空格所在句指出，宜家在许多其他国家这一方法，说明它是把国内的成功经验再运用到其他国家中去。 1) reproduced\n“复制”符合语境，故为答案。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "选词填空第 31 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【考点】名词辨析题。\nJ) 【语法判断】空格前为介词 by . 后面再无内容，因此可推断空格处是一个名词，和介词 by 构成介词短语。\n【语义判断】空格所在句提到西班牙电信公司\n(Telef6nica) 目前是世界第五大电信公司，介词 by\n在这里应该表方式 . “从“. “. 方面 / 就““而言”可以衡量出它是第五大电信公司，复数名词中 . revenues\"( 政府的 ) 税收； ( 公司的 ) 收益”用在这里表示“按收益来算” . 符合语义，故答案为 J)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "选词填空第 32 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "O",
+          "explanation": "【考点】动词辨析题。\n仞【语法判断】空格位于 that 引导的从句中，该从句中引导词 that 充当主语，宾语为 more rapid\nmarket reform . 可推断 be 动词 were 应和空格所在词一起构成谓语部分，因此可以推断此处最有可能填人一个动词的现在分词。\n【语义判断】空格所在句提到，智利和阿根廷这两个国家与西班牙有许多相同的制度和文化特征，但正在，一一一一一更迅速的市场改革。动词的现在分词中，只有 undergoing “经历”能与 market\nreform 搭配，且符合上下文语义，故答案为 O)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "C"
+        },
+        {
+          "id": "2022-12-2-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "选词填空第 33 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【考点】名词辨析题。\nG) 【语法判断】空格后面是介词 of . 前面的 other 用作形容词时后面一般接复数名词，由此可推断出空格处应填人一个名词的复数形式。\n【语义判断】上一句指出，前文提到的这些成功案例可能会让读者觉得创造全球优势是一件容易的事。空格所在句以 but 为转折，表示也有许多失败的实验表明创造持久的全球优势实际上需要技巧，也就是说，同样存在很多失败案例 . G)\ninstances\" 例子，实例”与前一句中的 example 相对应，且符合文意，故为答案。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "选词填空第 34 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "M",
+          "explanation": "【考点】形容词辨析题。\nM) 【语法判断】空格前面是介词短语 a great deal of . 可知后面应该是一个名词或名词短语，而本文中空格后面是并列连词 and . 且 and 后面已经存在名词短语 operational finesse . 由此可推断出空格处应该填人一个形容词，和 and 后面的 operational\n形成并列关系。\n【语义判断】空格所在句的意思是，创造持久的全球优势实际上需要大量的技巧，其中一个技巧是运营层面的，由此可知，空格处所填的形容词应该是和公司运行发展相关的 . strategic\" 战略性的”符合文意，故为答案。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "选词填空第 35 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "appropriate"
+            },
+            {
+              "key": "C",
+              "text": "clusters"
+            },
+            {
+              "key": "D",
+              "text": "competitive"
+            },
+            {
+              "key": "E",
+              "text": "exploiting"
+            },
+            {
+              "key": "F",
+              "text": "fiscal"
+            },
+            {
+              "key": "G",
+              "text": "instances"
+            },
+            {
+              "key": "H",
+              "text": "rehabilitated"
+            },
+            {
+              "key": "I",
+              "text": "reproduced"
+            },
+            {
+              "key": "J",
+              "text": "revenues"
+            },
+            {
+              "key": "K",
+              "text": "safeguarding"
+            },
+            {
+              "key": "L",
+              "text": "ship"
+            },
+            {
+              "key": "M",
+              "text": "strategic"
+            },
+            {
+              "key": "N",
+              "text": "transcend"
+            },
+            {
+              "key": "O",
+              "text": "undergoing"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【考点】动词辨析题。\nE) 【语法判断】空格前面是介词短语 of . 后面两个动词的现在分词 renewing “更新”和\nenhancing\" 增强”由并列连词 and 连接起来，说明空格处也应该填人一个动词的现在分词，保持并列关系。\n【语义判断】此处意思是 : 全球赢家通常是通过\n. 更新和增强其核心能力的系统化过程来建立和维持其国际影响力。备选项中的\nexp iting “开发；利用 \" 用在这里符合语义逻辑，故答案为 E)。\n参考译文企业全球战略家的任务是建立一个能力平台，从多地运营单位的资源，经验和创新中获取能力，在适当的地方迁移这些能力，然后系统地升级和更新它们，使其领先于竞争对手。\n苹果公司就是一个杰出的案例，其独特的能力使其在全球范围内具有竞争优势，特别是其在整合了功能和美学设计的产品基础",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "A new study found parents' aversion to certain animals would pass on to their children.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【定位】由题干中的 parents . aversion to certain\nanimals 和 pass on to their children 定位到文章\nF ) 段第一句和最后一句。\nF) 【精析】细节推断题。 F ) 段第一句提到，这项新研究确实含有一个意想不到的发现 : 许多接受调查的孩子透露，他们的父母也对同样的动物表现出恐惧或厌恶。由该句中 also 和 the same animals\n可知，这些孩子和他们的父母一样恐惧或厌恶这些动物。该段最后一句强调该研究结果表明上一代对自然持负面态度的人数增加会导致下一代持类似态度的人数进一步增加。由此可以推知，家长对某些动物的厌恶会导致其孩子同样厌恶这些动物 . . 题干中的 parents' aversion to certain\nanimals 对应原文中的 their parent",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "The disappearance of species and ecological systems erodes our ability to keep what is left.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 species and ecological systems\n和 our ability to keep what is left 定位到 A ) 段最后一句。\nA) 【精析】同义转述题。 A ) 段最后一句提到，越来越多的研究表明，随着物种和生态系统的消亡，这也逐步削弱了我们保护剩余资源的能力。题干中的\nthe disappearance of species and ecological\nsystems 扌应原文中的 species and ecosystems\nvanish . : 题干中的 erodes our ability 和 keep what\nis left 分别是对原文中 chips away at our ability\n和 preserve what remains 的同义转述，故答案为",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "A study showed that the wildest areas of Discovery Park appealed most to the public.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【定位】由题干中的 the wildest areas of\nDiscovery Park 和 appealed most to the public 定位到 J ) 段第二句。\n【精析】同义转述题。 J ) 段第二句提到，研究发现 . J)\n公众对公园最荒野的地方最为欣赏，并从中获得了最大价值。题干中的 the wildest areas of\nDiscovery Park 对应原文中的 the wildest parts of\nthe park, 题干中的 appealed most to the public 是对原文中 the public had the most appreciation\nfor 的同义转述，故答案为 J)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "The fear of living organisms is becoming more worrisome.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 the fear of living organisms\n和 more worrisome 定位到文章 C) 段最后一句。\nO 【精析】同义转述题。 C ) 段最后一句指出，最糟糕的情况是变成更加令人担忧的问题 : “生物恐惧症” . 即对生物的恐惧和对自然的完全厌恶。题干中的 the fear of living orgamsms 对应原文中的\nbiophobia 和 the fear of living things . 题干中的\nworrisome 是原文中 concermng 的近义词，故答案为 C)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "O"
+        },
+        {
+          "id": "2022-12-2-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Preventing the increase in children's fear of living creatures is also important for conserving biodiversity.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【定位】由题干中的 preventing the increase 和\nalso important for conserving biodiversity 定位到\nG ) 段最后一句。\nG) 【精析】同义转述题。 G ) 段最后一句提到，尽管许多保护生物学家仍然认为防止野生动物栖息地的丧失是保护生物多样性最重要的方法，但曾我昌史觉得防止生物恐惧症的增加对保护也很重要。\n题干中的 the increase in children's fear of living\n\ncreatures 是对原文中 increased biophobia 的同义转述，题干中的 conserving biodiversity 对应原文中的 conserve biodiversity 和 conservation . 故 : 答案为 G)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "Research shows that more and deeper experience people have with nature will help save it.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "P",
+          "explanation": "41. P) 〖精析〗细节推断题。 P ) 段第一句提到，这一不断发展的研究领域表明，拯救自然需要鼓励人们更频繁，更深人地体验自然。由 requires encouraging 可以推知，人们更频繁，更深人地体验自然对于拯救自然有所助益，所以才会需要鼓励人们这么去做，题干中的“more and deeper with nature”对应原文中的 experience it more often and more deeply . 题干中的 will help save it 是根据原文中 saving nature requires encouraging people to experience it more often and more deeply . 故答案为 P)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              7
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              10
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "Though humans naturally tend to avoid dangerous animals, today's children try to stay away from even harmless ones.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【定位】由题干中的 naturally tend to avoid\ndangerous animals 和 even harmless ones 定位到文章 E ) 段第三句。\nE) 【精析】同义转述题。 E ) 段第三句指出，人类生来就会避开像蜜蜂这样的危险生物，但如今的儿童甚至还会躲避诸如蝴蝶和蜻蜓之类的无害昆虫。\n题干中的 naturally tend to avoid dangerous\nanimals 不日 stay away from even harmless ones 弓 }\n别对应原文中的 inherently avoid dangerous\norganisms 和 avoid even harmless insects . 故答案为 E)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "Development in and around Discovery Park could cause heavy losses to the park and the local residents.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "M",
+          "explanation": "【定位】由题干中的 heavy losses 和 the park and\nthe local residents 定位到文章 M) 段第一句。\nM) 【精析】细节推断题。 M ) 段第一句提出，如果发生类似的事情，探索公园和西雅图人都可能失去一些至关重要的东西。由上一段可知 . anything like\nthat 是指开发探索公园的部分地区或周边地区。\n而 J ) 段第一句表明探索公园位于西雅图，由此可以推知，题干中的当地人就是指西雅图人。也就是说，开发探索公园的部分地区或周边地区会令公园自身以及西雅图当地人损失重大。题干中的\ncause heavy losses 对应原文中的 lose something\nvital . 故答案为 M)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "A large survey of school children found that their negative feelings grew as their experience with nature diminished.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 a large survey of school\nchildren 和 negative feelings grew 定位到文章 D)\n段第四句和最后一句。\nD) 【精析】同义转述题。 D ) 段第四句提到一项对粝木县 5 300 多名学龄儿童的调查，研究了他们对\n14 种当地昆虫和 1 种蜘蛛的看法。由 5 300 多名学龄儿童可知，这是一项大型调查。然后该段最后一句指出调查结果发现学生对自然的体验越少，他们的感受就越负面。题干中的 a large\nsurvey of sc № 01 children 对应原文中的 a survey\nof more than 5 . 300 school children . 题干中的\ntheir negative feelings grew as their experience\nwith n",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Elizabeth Lev believes increased contact with more wildlife helps conserve biodiversity.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            },
+            {
+              "key": "P",
+              "text": "Paragraph P"
+            }
+          ],
+          "answer": "N",
+          "explanation": "【定位】由题干中的 Elizabeth Lev 和 increased\ncontact with more wildlife 定位到文章 N) 段最后\nN) 【精析】细节推断题。 N ) 段最后一句指出，伊丽莎白 · 列夫表示如果我们能让人们了解到与大自然更多类型的野生动植物进行更多接触所带来的意义和价值，那么也许我们可以停止这一循环，并朝着保护和恢复我们剩余资源的方向迈进。由此可以推知，与更多类型的野生动植物进行更多接触有助于保护和恢复我们的剩余资源，即保护生物多样性。 . 题干中的 increased contact with more\nwildlife 对应原文中的 having more experiences\nwith more wild forms of nature, 题干中的 helps\nconserve biodiversity 是",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "Why do some people advocate forgiving student loan debt?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They assert it will narrow the gap between the wealthy and the poor."
+            },
+            {
+              "key": "B",
+              "text": "They believe it will benefit both the economy and the underprivileged."
+            },
+            {
+              "key": "C",
+              "text": "They claim it will eliminate economic distress among college students."
+            },
+            {
+              "key": "D",
+              "text": "They think the cost of education is the responsibility of the government."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 some people advocate 定位到第一段首句。\nB) 【精析】事实细节题。定位句指出，一些美国人断言，免除学生贷款债务是刺激经济，帮助有需要者的一种方式，而作者在定位段末句质疑这样做是否真的是在帮助弱势群体，可知主张免除学生贷款的人认为这样做有利于经济和弱势群体，故答案为 B)。\n【避错】文中没有提及贫富差距问题，也未提到政府应承担教育费用，故排除 A) 和 D)； c ) 项有一定迷惑性，首段第二句提到，政府的一项建议是免除\n“经济困难”学生 1 万美元债务，但细读原文可知，这并不是所谓的“有些美国人”宣称的免除学生债务的理由和益处，故排除 C)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What do we learn from the Federal Reserve data?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Approximately 60% of student debt remains unpaid."
+            },
+            {
+              "key": "B",
+              "text": "Cancelling student debt benefits wealthy families most."
+            },
+            {
+              "key": "C",
+              "text": "Forgiving student debt provides little benefit to universities."
+            },
+            {
+              "key": "D",
+              "text": "Low-income families owe the biggest amount of student debt."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 the Federal Reserve data 定位到第二段第三句。\nB) 【精析】推理判断题。定位句指出，根据美联储的数据，在未偿还的学生债务中，约 60 ％ 是收人排在前 40 ％ 的家庭欠下的，而收人排在后 40 ％ 的家庭的欠款只占不到 20 ％ . 而之前一句则说，免除学生债务只是给大学和最富裕的在校学生送钱，综合这两句可知，作者引用美联储的这一数据就是为了说明取消学生债务对富裕家庭最有利，故答案\n【避错】 A ) 项是对定位句的误解，原句是说在未偿还的学生债务中，富裕家庭占 60 ％ . 而不是指现有欠款有 60 ％ 未偿还； c ) 项与第二段第二句相悖，该句明确指出免除大学生债务是给大学和富人送钱；根据定位句，低收人家庭欠款只占总数的\n20 ％ . 而高收人家庭则占 60 ％",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What does the author say students are likely to do if they know they needn't repay their loans?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They will choose to study subjects without considering their job prospects."
+            },
+            {
+              "key": "B",
+              "text": "They will be free to pursue their goals without being burdened financially."
+            },
+            {
+              "key": "C",
+              "text": "They will over-borrow and live beyond their means."
+            },
+            {
+              "key": "D",
+              "text": "They will be able to enroll in expensive universities."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 if they know 和 needn . t repay\ntheir loans 定位到第四段最后一句。\nA) 【精析】推理判断题。定位句指出，如果学生们知道自己的贷款会被免除，那么他们更容易做出不负责任的决定，主修不切实际或理想主义的科目，而不惜签下数万美元的债务。由此可知，作者认为学生提前知道学费债务免除的后果，主要是导致他们选择的专业不实际。再结合该段首句中所说的，学生因此会选择主修低收人学位课程，概括而言，如果学生知道债务可以免除，那么他们就会不太考虑就业后的收人前景，主修不切实际的课程，故 A ) 为答案。\n【避错】 B ) 项具有干扰性，但原文所说的“做出不负责任的决定” . 学习“不切实际或理想主义的科目”明显是负面含义，不可等同于自由追求目标，故",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What does the author imply about colleges offering online education?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They cannot get away with the serious consequences."
+            },
+            {
+              "key": "B",
+              "text": "They have suffered greatly from the current pandemic."
+            },
+            {
+              "key": "C",
+              "text": "The tuition they charge is not justified by the quality of their service."
+            },
+            {
+              "key": "D",
+              "text": "The tuition they charge has surged outrageously during the pandemic."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 online education 定位到第五段第二句。\n0 【精析】推理判断题。定位句提到，大流行病期间，学生们每年支付数万美元却只是待在家里，接受网上授课。在随后一句，作者批评这些大学收取高昂的费用而只提供低于平均水平的服务，可知其学费与服务质量不相匹配，故答案为 O。\n【避错】 A ) 表述含糊不清，文中并未提到在线教育会对大学产生什么后果，故排除；根据定位段可知，提供在线教育的大学并未降低学费，可知 B)\n所说的遭受巨大损失并无依据；作者只提到提供在线教育的大学收取高昂的学费，但没有说它们是否提高了学费，故排除 D)。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What will happen if any of the proposed student debt plans is implemented?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Plumbers and retail workers will have a chance of becoming professionals."
+            },
+            {
+              "key": "B",
+              "text": "Working-class students will have increasing access to subsidized education."
+            },
+            {
+              "key": "C",
+              "text": "Blue-collar workers will have to bear the cost of educating would-be high-earners."
+            },
+            {
+              "key": "D",
+              "text": "A growing number of students will be able to earn degrees in medicine and law."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 student debt plans 和\nimplemented 定位到倒数第二段。\n0 【精析】事实细节题。定位段首句指出，无论施行何种学生债务计划，都是让美国工薪阶层资助专业阶层的教育，随后采用举例的方式，说管道工和零售工人将为医生和律师的学位支付学费，也就是蓝领阶层将为高收人的专业人士承担教育费\n\n用，故答案为 O。\n【避错】选项 A) 和 B ) 均混淆了原句概念，定位段的意思是管道工和零售工人为他人的教育买单，工薪阶层资助专业人士的教育，而不是自己受教育成为专业人士或获得更多资助，故均排除； D ) 项偏离了定位段主题，该段主要探讨的是免除学生债务是否公平，是否不利于工人阶层，并未涉及获得学位的学生是否会增多的问题，故排除。\n参考译文\n( 46 . 1) 一些美国人断言 .",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What do we learn about the \"No screens under 2\" rule?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It has met more and more resistance from parents."
+            },
+            {
+              "key": "B",
+              "text": "It has proved helpful to children's healthy growth."
+            },
+            {
+              "key": "C",
+              "text": "It confuses parents with regard to kids' education."
+            },
+            {
+              "key": "D",
+              "text": "It has been discarded in line with recent research."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的“№ screens under 2” rule 定位到第一，二段。\nD) 【精析】事实细节题。文章首段第一句指出，大多数父母认为在孩子未满 2 周岁之前，应该限制孩子看屏幕。第二段第一句指出，但从今天起，这条规则就不适用了。由此可知 . “未满 2 周岁之前，限制孩子看屏幕”这条规则现在已经不提倡了，故答案为 D)。\n【避错】首段第一句指出大多数父母认为在孩子未满 2 周岁之前，应该限制孩子看屏幕，即他们赞成这条规则，而不是抵制这条规则 . A ) 项表述与此矛盾，故排除；本文并未提及相关证据说明这条规则有助于儿童的健康成长，故排除 B ) 项；根据首段第一句可知，大多数父母赞成这条规则，而非使父母对儿童的教育感到困惑，故排除 C) 项。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              13
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What do the new AAP guidelines advocate?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Young children should be accompanied by parents during screen time."
+            },
+            {
+              "key": "B",
+              "text": "Parents should be emotionally involved in their children's upbringing."
+            },
+            {
+              "key": "C",
+              "text": "Young children should watch videos carefully selected by parents."
+            },
+            {
+              "key": "D",
+              "text": "Parents should protect their children from too much media exposure."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 new AAP guidelines 和\nadvocate 定位到第四段和七段。\nA) 【精析】推理判断题。文章第四段第一句指出，这项新的指导方针，特别是针对非常年幼的儿童的部分，将重点从屏幕上的内容转向房间里的其他\n\n人。文章第七段第一句指出，只有当父母和孩子一起观看视频，并且对孩子重复视频中的内容，或者提示孩子注意屏幕上的内容时，孩子才能从教育媒体中学到新单词。由此可知，新指南提倡在看屏幕期间，年幼的孩子应该有父母陪伴，故答案为 A)。\n【避错】第四段第一句指出，新指南提倡在看屏幕期间，年幼的孩子应该有父母陪伴，但这并不能说明，父母应该在情感上参与孩子的成长 . B ) 选项为过度推理，故排除；根据第四段第一句可知，新指南提倡的是陪伴，而不是强调孩子具体观看的视",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What do families think of live video chat according to surveys?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It should not be regarded as screen time."
+            },
+            {
+              "key": "B",
+              "text": "It helps babies to develop their verbal skills."
+            },
+            {
+              "key": "C",
+              "text": "It is not as harmful as playing games on laptops."
+            },
+            {
+              "key": "D",
+              "text": "It is a good substitute for video viewing."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 families 和 live video chat 定位到第五段。\nA) 【精析】推理判断题。文章第五段第二句指出，调查显示，美国家庭已经普遍认为“实时视频聊天没事” . 或者至少他们认为云端看望祖父母或其他亲戚的好处要大于让婴儿接触笔记本电脑或智能手机的潜在危害。由此可知，调查表明，家庭认为实时视频聊天不应被视为屏幕时间，故答案为 A)。\n【避错】定位句并未提及美国家庭认为和家人实时视频聊天有助于婴儿发展他们的语言技能 . B) 项表述与原文不符，故排除；根据定位句可知 . “实时视频聊天没事” . 或者至少他们认为云端看望祖父母或其他亲戚的好处，要大于让婴儿接触笔记本电脑或智能手机的潜在危害。这里是指与家人实时聊天的好处大于孩子接触电脑或者手机，文章没有把实时视频聊天和在电脑上打游戏的",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What do researches find about kids solo viewing educational videos?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It arouses their interest in language learning."
+            },
+            {
+              "key": "B",
+              "text": "It works no better than reading picture books."
+            },
+            {
+              "key": "C",
+              "text": "It hampers their development of language skills."
+            },
+            {
+              "key": "D",
+              "text": "It helps them acquire independent learning skills."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 kids solo viewing educational\nvideos 定位到第八段第一句。\nC) 【精析】事实细节题。文章第八段第一句指出，另一方面，许多研究实际表明，孩子语言技能较差与其早期单独观看“教育”视频相关。由此可知，孩子自己看视频，会阻碍他们语言技能的发展，故答案为 O。\n【避错】定位句指出，孩子语言技能较差与其早期单独观看“教育”视频相关，即孩子自己看视频会影响语言发展，而非引起了他们对语言学习的兴趣，故排除 A) 项；第七段最后一句指出，把视频或应用程序当作一本图画书，这种方法最佳，但并没有把自己单独看视频和读图画书相比较，故排除\nB ) 项；定位句指出孩子自己单独看视频会影响语言发展，而非会帮助他们获得独立的学习技能，故排除 D )",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-2-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What does the author say about preschoolers ages 2 to 5?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They can understand pretty well what they see on the screen."
+            },
+            {
+              "key": "B",
+              "text": "They can learn on their own without much parental guidance."
+            },
+            {
+              "key": "C",
+              "text": "They can make use of educational videos to develop digital literacy."
+            },
+            {
+              "key": "D",
+              "text": "They can relate what they learn on the screen to real life situations."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 ages 2 to 5 定位到最后一段第\nD) 【精析】推理判断题。文章最后一段第一句指出，对于 2 至 5 岁的学龄前儿童，有更多证据表明他们有能力将知识从屏幕转移到现实世界，包括早期识字和数学。由此可知 . 2 至 5 岁的学龄前儿童可以将屏幕上学到的内容与现实生活情境联系起来，故答案为 D)。\n【避错】最后一段第一句指出 . 2 至 5 岁的学龄前儿童可以将屏幕上学到的内容与现实生活情境联系起来，而非可以很好地理解他们在屏幕上看到的内容，故排除 A ) 项；最后一段最后一句指出，正如与更年幼的孩子一起观看一样，该指南希望照顾者也能参与到屏幕时间中，与孩子共同观看，而非孩子可以在没有父母指导的情况下自学，故排除 B) 项；文章最后一段第一句指出，对于 2 至 5 岁的学龄前儿童 .",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "黄土高原（the Loess Plateau）是中国第三大高原，面积约60万平方公里，平均海拔1000-2000米，绝大部分覆盖着50-80米厚的黄土，是世界上黄土分布最集中、覆盖厚度最大的区域。这是大自然创造的一个奇迹，在世界上也是绝无仅有的。\n黄土高原是中华民族的发祥地之一。早在5500年前，人们就已经在黄土高原上开始农耕。随着农耕业的持续发展，黄土高原人口不断增加，在秦汉时期就成为中国的政治和经济中心。如今，随着西部大开发战略的实施，黄土高原地区的经济得到了迅速发展。",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-12-2-translation",
+          "number": 56,
+          "kind": "translation",
+          "stem": "黄土高原（the Loess Plateau）是中国第三大高原，面积约60万平方公里，平均海拔1000-2000米，绝大部分覆盖着50-80米厚的黄土，是世界上黄土分布最集中、覆盖厚度最大的区域。这是大自然创造的一个奇迹，在世界上也是绝无仅有的。\n黄土高原是中华民族的发祥地之一。早在5500年前，人们就已经在黄土高原上开始农耕。随着农耕业的持续发展，黄土高原人口不断增加，在秦汉时期就成为中国的政治和经济中心。如今，随着西部大开发战略的实施，黄土高原地区的经济得到了迅速发展。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "The Loess Plateau is the third largest plateau in China, with an area of about 600,000 square kilometers and an average altitude of 1,000-2,000 meters. Most of the plateau is covered with 50-80 meters thick loess, which has the most concentrated distribution and the greatest thickness in the world. This is a miracle created by nature, and it is unique in the world.\nThe Loess Plateau is one of the birthplaces of the Chinese nation. As early as 5,500 years ago, people have already started farming on the Loess Plateau. With the continuous development of farming, the population of the Loess Plateau continued to increase, and it became the political and economic center of China during the Qin and Han Dynasties. Nowadays, with the implementation of strategy for large-scale development of western China, the economy of the Loess Plateau region has been developing rapidly.",
+          "explanation": "【参考译文】\n与难点注释\n1. 第一句介绍了黄土高原的基本地理信息。本句较长，翻译时可以将前三个分句译为一句，将最后两个分句译为一句。“面积”和“海拔”\n属于并列关系，翻译时可以选择像参考译文那样，采用介词 with 引导伴随状语的方式；或者也可以用现在分词 covering 和介词 with\n分别引导伴随状语，即 covering an area of about 600 . 000 square\nkilometers . with an average altitude of 1 . 000 一 2 . 000 meters。在翻译后两个分句时，可以像参考译文那样，将后一句译为定语从句，也可以将两个分句单独翻译，用 and 连接，即 \"Most of the plateau is\ncovered with 50 一 80 meters thick loess . and it is the region with\nthe most concentrated distribution and the greatest thickness Of\nloess in the world . 2 . 第二句指出黄土高原的黄土分布集中程度和厚度在世界上绝无仅有。本句表达比较简短，翻译时前后两个分句可以用 and 连接。\n3 . 第三句指出黄土高原是中华民族的发祥地之一。本句表达比较简短，可以直接按照参考译文那样翻译。\n4 . 第四句指出人们 5 500 年前就开始在黄土高原上农耕。翻译时要注意，本句应使用现在完成时。\n5 . 第五句介绍黄土高原上人口的增加和政治经济的发展。翻译时可以像参考译文那样，第一个分句采用介词短语作伴随状语的方式；\n后面两个分句之间是递进关系，翻译时可以用 and 连接。\n6 . 第六句指出，在实施西部大开发战略后，黄土高原的经济迅速发展。\n两个分句是因果关系 . “随着““的实施”可以采用介词短语作伴随状语的方式来翻译；第二个分句可以像参考译文那样，将“经济”作为主语，也可以将“黄土高原地区”作为主语，即 the Loess Plateau\nregion has developed its economy rapidly。\n话题词汇\ndebns flow 泥石流\ncave dwelling 窑洞\nAnsai . s waist drums 安塞腰鼓\na kind of Shanxi local melody 信天游\n\n【难点解析】\n1. 第一句介绍了黄土高原的基本地理信息。本句较长，翻译时可以将前三个分句译为一句，将最后两个分句译为一句。“面积”和“海拔”\n属于并列关系，翻译时可以选择像参考译文那样，采用介词 with 引导伴随状语的方式；或者也可以用现在分词 covering 和介词 with\n分别引导伴随状语，即 covering an area of about 600 . 000 square\nkilometers . with an average altitude of 1 . 000 一 2 . 000 meters。在翻译后两个分句时，可以像参考译文那样，将后一句译为定语从句，也可以将两个分句单独翻译，用 and 连接，即 \"Most of the plateau is\ncovered with 50 一 80 meters thick loess . and it is the region with\nthe most concentrated distribution and the greatest thickness Of\nloess in the world . 2 . 第二句指出黄土高原的黄土分布集中程度和厚度在世界上绝无仅有。本句表达比较简短，翻译时前后两个分句可以用 and 连接。\n3 . 第三句指出黄土高原是中华民族的发祥地之一。本句表达比较简短，可以直接按照参考译文那样翻译。\n4 . 第四句指出人们 5 500 年前就开始在黄土高原上农耕。翻译时要注意，本句应使用现在完成时。\n5 . 第五句介绍黄土高原上人口的增加和政治经济的发展。翻译时可以像参考译文那样，第一个分句采用介词短语作伴随状语的方式；\n后面两个分句之间是递进关系，翻译时可以用 and 连接。\n6 . 第六句指出，在实施西部大开发战略后，黄土高原的经济迅速发展。\n两个分句是因果关系 . “随着““的实施”可以采用介词短语作伴随状语的方式来翻译；第二个分句可以像参考译文那样，将“经济”作为主语，也可以将“黄土高原地区”作为主语，即 the Loess Plateau\nregion has developed its economy rapidly。\n话题词汇\ndebns flow 泥石流\ncave dwelling 窑洞\nAnsai . s waist drums 安塞腰鼓\na kind of Shanxi local melody 信天游",
+          "source": {
+            "fileId": "1ReUzLCl4-tBG0r6wF0ngAjn3yPNPcso4",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1386sqkg_5V7VvRuIxPzgc_i9rEsZSz-V",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "与难点注释\n1. 第一句介绍了黄土高原的基本地理信息 。 本句较长 . 翻译时可以将前三个分句译为一句 . 将最后两个分句译为一句 。 “ 面积 ” 和 “ 海拔 ”\n属于并列关系 . 翻译时可以选择像参考译文那样 . 采用介词 with 引导伴随状语的方式 ； 或者也可以用现在分词 covering 和介词 with\n分别引导伴随状语 . 即 covering an area of about 600 . 000 square\nkilometers . with an average altitude of 1 . 000 一 2 . 000 meters 。 在翻译后两个分句时 . 可以像参考译文那样 . 将后一句译为定语从句 . 也可以将两个分句单独翻译 . 用 and 连接 . 即 \"Most of the plateau is\ncovered with 50 一 80 meters thick loess . and it is the region with\nthe most concentrated distribution and the greatest thickness Of\nloess in the world . 2 . 第二句指出黄土高原的黄土分布集中程度和厚度在世界上绝无仅有 。 本句表达比较简短 . 翻译时前后两个分句可以用 and 连接 。\n3 . 第三句指出黄土高原是中华民族的发祥地之一 。 本句表达比较简短 . 可以直接按照参考译文那样翻译 。\n4 . 第四句指出人们 5 500 年前就开始在黄土高原上农耕 。 翻译时要注意 . 本句应使用现在完成时 。\n5 . 第五句介绍黄土高原上人口的增加和政治经济的发展 。 翻译时可以像参考译文那样 . 第一个分句采用介词短语作伴随状语的方式 ；\n后面两个分句之间是递进关系 . 翻译时可以用 and 连接 。\n6 . 第六句指出 . 在实施西部大开发战略后 . 黄土高原的经济迅速发展 。\n两个分句是因果关系 . “ 随着 “ “ 的实施 ” 可以采用介词短语作伴随状语的方式来翻译 ； 第二个分句可以像参考译文那样 . 将 “ 经济 ” 作为主语 . 也可以将 “ 黄土高原地区 ” 作为主语 . 即 the Loess Plateau\nregion has developed its economy rapidly 。\n话题词汇\ndebns flow 泥石流\ncave dwelling 窑洞\nAnsai . s waist drums 安塞腰鼓\na kind of Shanxi 10ca1 melody 信天游"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "templateId": "cpp-s2-09-build-teardown",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-09",
+  "type": "codewrite",
+  "concept": [
+    "搭的时候先基类后子对象",
+    "拆的时候先子对象后基类",
+    "数输出行数"
+  ],
+  "instances": 6,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    },
+    "word": {
+      "kind": "pick",
+      "values": [
+        "等待执行",
+        "暂停"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{name}\n",
+    "sampleText": "小胖\n"
+  },
+  "stemTemplate": "我们要把**搭的顺序**和**拆的顺序**都印出来看清楚。输入接口会递进来**一串字**（名字）。\n\n请你这么办：\n\n1. **画老类定义** `Cat`：一栏够得着的那一档的 `name`（一串字）；构造函数把名字填进去，**并印一行** `先搭基类那一半：X`；析构函数**印一行** `后拆基类那一半：X`。\n2. **让新类定义照它画下来**：叫 `Kitten`；构造函数**先把料交给基类**（那一小段 `: Cat(n)` 不能省），**再印一行** `再初始化子类成员：X`；析构函数**印一行** `先执行子类的清理：X`。\n3. 在 `main` 里：照 `Kitten` 创建一个子对象（名字用输入接口递进来的），然后**印一行** `---- {word} ----`。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n**这一题请你数一数屏幕上有几行、每一行是哪一个动作印的。**\n\n（判分传入的是**另一个对象**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\npublic:\n    Cat(string n) : name(n) {\n        cout << \"先搭基类那一半：\" << name << endl;\n    }\n    ~Cat() {\n        cout << \"后拆基类那一半：\" << name << endl;\n    }\n};\n\nclass Kitten : public Cat {\npublic:\n    Kitten(string n) : Cat(n) {\n        cout << \"再初始化子类成员：\" << name << endl;\n    }\n    ~Kitten() {\n        cout << \"先执行子类的清理：\" << name << endl;\n    }\n};\n\nint main() {\n    string name;\n    cin >> name;\n\n    Kitten k(name);\n    cout << \"---- {word} ----\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "我们在本机跑过这一题（名字用张三时），屏幕上是五行：\n\n```text\n先搭基类那一半：张三\n再初始化子类成员：张三\n---- 等待执行 ----\n先执行子类的清理：张三\n后拆基类那一半：张三\n```\n\n对着这五行看顺序，一句话就记住了：\n\n> **搭的时候从基类往上搭，拆的时候从子对象往下拆。**\n\n- **搭**：子类定义照出来的实例，是「基类那一半 + 子对象那一半」拼起来的。那一小段 `: Cat(n)` 排在最前面，所以基类的活**先**跑完，基类那一半里已经有名字了，我们这一半才开始。\n- **中间那一行**是我们在 `main` 里印的：它夹在两**头**中间，说明那时候两个对象**都活着** —— 基类那一半和子对象那一半都在。\n- **拆**：顺序**反过来**，子对象那一半先走、基类那一半后走。就像拆房子：楼上先拆掉，地基最后挖。\n\n⚠️ 为什么这个顺序不能靠猜？我们下一课会讲得更狠：**基类那一半的收尾动作要是没跑到，它管着的东西就漏了。**（比如上一课那种「动态内存」—— 收尾没跑到，该变量就再也没人还了。）顺序这件事看着像细节，它管的是**东西有没有还清**。\n\n⚠️ 顺手记一个反过来的例子：要是把构造函数后面那一小段 `: Cat(n)` **删掉**，编译器会报 `no matching function for call to 'Cat::Cat()'` —— 它找不到一个「不用料就能搭基类那一半」的函数。"
+}

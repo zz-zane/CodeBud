@@ -1,0 +1,33 @@
+{
+  "templateId": "java-s1-method-rollcall",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-09",
+  "type": "codewrite",
+  "concept": [
+    "方法",
+    "void",
+    "打包一套动作",
+    "Scanner"
+  ],
+  "instances": 6,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "到！",
+        "有！"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 1,
+    "min": 1,
+    "max": 5
+  },
+  "stemTemplate": "纸条上写着一排有**几个**。我们要挨个点名：从 1 号一直报到最后一个，每个念**一行**，一行长这样 ——\n\n```text\n第 1 只：{word}\n```\n\n请你写个程序：先读进来「有几个」，再把点名这活儿**打包成一个方法** —— 名字就叫 `rollCall`，传入进去一个数，调用一次它就把整排报一遍。这一个方法只管念、不返回东西回来，打头那儿写的是 `void` 。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+  "starterTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+  "referenceSolutionTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void rollCall(int n) {\n        for (int i = 1; i <= n; i++) {\n            System.out.println(\"第 \" + i + \" 只：{word}\");\n        }\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n\n        rollCall(n);\n    }\n}\n",
+  "explanationTemplate": "打包成一个方法之后，`main` 里只剩两件事：读进来一个数、调用一次 `rollCall(n)` 。\n\n- **函数写在类定义的花括号里面，跟 `main` 平起平坐** —— 上面一段是 `rollCall`，下面一段还是老朋友 `main`，各自带着自己的花括号。\n- **`void` 是「干完活不返回东西回来」**：所以称呼它的时候写成一句 `rollCall(n);` 就好，不能写成 `int x = rollCall(n);` —— 它没有结果可装。\n- 函数里用的是上一课学的绕圈：名称从 `1` 摆起，眼色 `i <= n`，一路报到最后一个。\n\n打包的好处就在这儿：**动作写一遍，料每次现传入**。今天传入 3、明天传入 5，改的只是传入进去的那个数，函数的身子一个字都不用动。"
+}

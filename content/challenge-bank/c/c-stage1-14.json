@@ -1,0 +1,356 @@
+{
+  "lessonId": "c-stage1-14",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-c-s1-ptr-bump-first-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们这一个方法只动**第一个元素**。\n\n请你写个程序：**先读进来一个数**（这次有 3 只元素），**再读进来 3 行数**（一行一个，按顺序摆进那排元素里）。\n\n先写一个方法 `bumpFirst`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个要加的数（`int k`）；身体里只改**名称指的那个元素**，把它加上 `6`。\n\n然后调用一次这一个方法，把**那排元素的名字**和 `6` 一起传入（不用写 `&`，想想为什么），最后把那排元素从头到尾印出来，一行一个。\n\n比如程序的输入是\n\n3\n4\n9\n1\n\n程序就要返回\n\n10\n9\n1\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 bumpFirst 这一个方法（只动名称指的那一个元素）\n\nint main(void) {\n    int n;\n\n    // 先读「有几个元素」\n\n    // 摆一排够宽的元素，把 3 个数读进去\n\n    // 调用一次 bumpFirst（第一样喂那排元素的名字）\n\n    // 把整排元素从头到尾印出来\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid bumpFirst(int *p, int k) {\n    *p = *p + k;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int bowl[10];\n    int i;\n    for (i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    bumpFirst(bowl, 6);\n\n    for (i = 0; i < n; i++) {\n        printf(\"%d\\n\", bowl[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "12\n2\n7",
+      "stdin": "3\n6\n2\n7\n",
+      "explanation": "这一题的关键是**整排元素的名字自己就充当了地址**。\n\n上一课那个谜团在这儿彻底解开了：为什么整排元素交进函数、改的却是你本人的原件？因为整排元素交出去的时候，交的正是**第一个元素的地址** —— 名字 `bowl` 本身就顶得上一块名称，函数里的 `int *p` 接的正是它。于是函数里那句 `*p = *p + k;` 改的，就是你本人的第一个元素，其余的元素一动不动。\n\n这也正是为什么喂它的时候**不用写 `&`**：`bowl` 本来就是地址。再写 `&bowl` 意思就变了 —— 那成了「整排元素的地址」，跟函数头里那块指整数元素的名称对不上类型，编译器要拦你。\n\n函数头里的两个元素一个都不能少：一个接**地址**（`int *p`），一个接**要加的数**（`int k`）—— 名字叫什么随便，形状和顺序才要紧。",
+      "templateId": "c-s1-ptr-bump-first",
+      "params": {
+        "n": 3,
+        "k": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.329Z",
+        "hash": "2018a107d17331a5"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-bump-first-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们这一个方法只动**第一个元素**。\n\n请你写个程序：**先读进来一个数**（这次有 3 只元素），**再读进来 3 行数**（一行一个，按顺序摆进那排元素里）。\n\n先写一个方法 `bumpFirst`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个要加的数（`int k`）；身体里只改**名称指的那个元素**，把它加上 `8`。\n\n然后调用一次这一个方法，把**那排元素的名字**和 `8` 一起传入（不用写 `&`，想想为什么），最后把那排元素从头到尾印出来，一行一个。\n\n比如程序的输入是\n\n3\n5\n2\n3\n\n程序就要返回\n\n13\n2\n3\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 bumpFirst 这一个方法（只动名称指的那一个元素）\n\nint main(void) {\n    int n;\n\n    // 先读「有几个元素」\n\n    // 摆一排够宽的元素，把 3 个数读进去\n\n    // 调用一次 bumpFirst（第一样喂那排元素的名字）\n\n    // 把整排元素从头到尾印出来\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid bumpFirst(int *p, int k) {\n    *p = *p + k;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int bowl[10];\n    int i;\n    for (i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    bumpFirst(bowl, 8);\n\n    for (i = 0; i < n; i++) {\n        printf(\"%d\\n\", bowl[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "11\n7\n3",
+      "stdin": "3\n3\n7\n3\n",
+      "explanation": "这一题的关键是**整排元素的名字自己就充当了地址**。\n\n上一课那个谜团在这儿彻底解开了：为什么整排元素交进函数、改的却是你本人的原件？因为整排元素交出去的时候，交的正是**第一个元素的地址** —— 名字 `bowl` 本身就顶得上一块名称，函数里的 `int *p` 接的正是它。于是函数里那句 `*p = *p + k;` 改的，就是你本人的第一个元素，其余的元素一动不动。\n\n这也正是为什么喂它的时候**不用写 `&`**：`bowl` 本来就是地址。再写 `&bowl` 意思就变了 —— 那成了「整排元素的地址」，跟函数头里那块指整数元素的名称对不上类型，编译器要拦你。\n\n函数头里的两个元素一个都不能少：一个接**地址**（`int *p`），一个接**要加的数**（`int k`）—— 名字叫什么随便，形状和顺序才要紧。",
+      "templateId": "c-s1-ptr-bump-first",
+      "params": {
+        "n": 3,
+        "k": 8
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.329Z",
+        "hash": "d2669a91cfda8650"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-bump-first-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们这一个方法只动**第一个元素**。\n\n请你写个程序：**先读进来一个数**（这次有 4 只元素），**再读进来 4 行数**（一行一个，按顺序摆进那排元素里）。\n\n先写一个方法 `bumpFirst`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个要加的数（`int k`）；身体里只改**名称指的那个元素**，把它加上 `6`。\n\n然后调用一次这一个方法，把**那排元素的名字**和 `6` 一起传入（不用写 `&`，想想为什么），最后把那排元素从头到尾印出来，一行一个。\n\n比如程序的输入是\n\n4\n9\n3\n9\n9\n\n程序就要返回\n\n15\n3\n9\n9\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 bumpFirst 这一个方法（只动名称指的那一个元素）\n\nint main(void) {\n    int n;\n\n    // 先读「有几个元素」\n\n    // 摆一排够宽的元素，把 4 个数读进去\n\n    // 调用一次 bumpFirst（第一样喂那排元素的名字）\n\n    // 把整排元素从头到尾印出来\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid bumpFirst(int *p, int k) {\n    *p = *p + k;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int bowl[10];\n    int i;\n    for (i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    bumpFirst(bowl, 6);\n\n    for (i = 0; i < n; i++) {\n        printf(\"%d\\n\", bowl[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "14\n8\n1\n6",
+      "stdin": "4\n8\n8\n1\n6\n",
+      "explanation": "这一题的关键是**整排元素的名字自己就充当了地址**。\n\n上一课那个谜团在这儿彻底解开了：为什么整排元素交进函数、改的却是你本人的原件？因为整排元素交出去的时候，交的正是**第一个元素的地址** —— 名字 `bowl` 本身就顶得上一块名称，函数里的 `int *p` 接的正是它。于是函数里那句 `*p = *p + k;` 改的，就是你本人的第一个元素，其余的元素一动不动。\n\n这也正是为什么喂它的时候**不用写 `&`**：`bowl` 本来就是地址。再写 `&bowl` 意思就变了 —— 那成了「整排元素的地址」，跟函数头里那块指整数元素的名称对不上类型，编译器要拦你。\n\n函数头里的两个元素一个都不能少：一个接**地址**（`int *p`），一个接**要加的数**（`int k`）—— 名字叫什么随便，形状和顺序才要紧。",
+      "templateId": "c-s1-ptr-bump-first",
+      "params": {
+        "n": 4,
+        "k": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.329Z",
+        "hash": "c0a49002307a614e"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-bump-first-005",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们这一个方法只动**第一个元素**。\n\n请你写个程序：**先读进来一个数**（这次有 4 只元素），**再读进来 4 行数**（一行一个，按顺序摆进那排元素里）。\n\n先写一个方法 `bumpFirst`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个要加的数（`int k`）；身体里只改**名称指的那个元素**，把它加上 `8`。\n\n然后调用一次这一个方法，把**那排元素的名字**和 `8` 一起传入（不用写 `&`，想想为什么），最后把那排元素从头到尾印出来，一行一个。\n\n比如程序的输入是\n\n4\n9\n2\n2\n3\n\n程序就要返回\n\n17\n2\n2\n3\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 bumpFirst 这一个方法（只动名称指的那一个元素）\n\nint main(void) {\n    int n;\n\n    // 先读「有几个元素」\n\n    // 摆一排够宽的元素，把 4 个数读进去\n\n    // 调用一次 bumpFirst（第一样喂那排元素的名字）\n\n    // 把整排元素从头到尾印出来\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid bumpFirst(int *p, int k) {\n    *p = *p + k;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int bowl[10];\n    int i;\n    for (i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    bumpFirst(bowl, 8);\n\n    for (i = 0; i < n; i++) {\n        printf(\"%d\\n\", bowl[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "9\n4\n9\n6",
+      "stdin": "4\n1\n4\n9\n6\n",
+      "explanation": "这一题的关键是**整排元素的名字自己就充当了地址**。\n\n上一课那个谜团在这儿彻底解开了：为什么整排元素交进函数、改的却是你本人的原件？因为整排元素交出去的时候，交的正是**第一个元素的地址** —— 名字 `bowl` 本身就顶得上一块名称，函数里的 `int *p` 接的正是它。于是函数里那句 `*p = *p + k;` 改的，就是你本人的第一个元素，其余的元素一动不动。\n\n这也正是为什么喂它的时候**不用写 `&`**：`bowl` 本来就是地址。再写 `&bowl` 意思就变了 —— 那成了「整排元素的地址」，跟函数头里那块指整数元素的名称对不上类型，编译器要拦你。\n\n函数头里的两个元素一个都不能少：一个接**地址**（`int *p`），一个接**要加的数**（`int k`）—— 名字叫什么随便，形状和顺序才要紧。",
+      "templateId": "c-s1-ptr-bump-first",
+      "params": {
+        "n": 4,
+        "k": 8
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.329Z",
+        "hash": "c3e143a275abbb69"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-bump-first-006",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们这一个方法只动**第一个元素**。\n\n请你写个程序：**先读进来一个数**（这次有 5 只元素），**再读进来 5 行数**（一行一个，按顺序摆进那排元素里）。\n\n先写一个方法 `bumpFirst`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个要加的数（`int k`）；身体里只改**名称指的那个元素**，把它加上 `6`。\n\n然后调用一次这一个方法，把**那排元素的名字**和 `6` 一起传入（不用写 `&`，想想为什么），最后把那排元素从头到尾印出来，一行一个。\n\n比如程序的输入是\n\n5\n6\n7\n2\n2\n3\n\n程序就要返回\n\n12\n7\n2\n2\n3\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 bumpFirst 这一个方法（只动名称指的那一个元素）\n\nint main(void) {\n    int n;\n\n    // 先读「有几个元素」\n\n    // 摆一排够宽的元素，把 5 个数读进去\n\n    // 调用一次 bumpFirst（第一样喂那排元素的名字）\n\n    // 把整排元素从头到尾印出来\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid bumpFirst(int *p, int k) {\n    *p = *p + k;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int bowl[10];\n    int i;\n    for (i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    bumpFirst(bowl, 6);\n\n    for (i = 0; i < n; i++) {\n        printf(\"%d\\n\", bowl[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "15\n6\n5\n2\n1",
+      "stdin": "5\n9\n6\n5\n2\n1\n",
+      "explanation": "这一题的关键是**整排元素的名字自己就充当了地址**。\n\n上一课那个谜团在这儿彻底解开了：为什么整排元素交进函数、改的却是你本人的原件？因为整排元素交出去的时候，交的正是**第一个元素的地址** —— 名字 `bowl` 本身就顶得上一块名称，函数里的 `int *p` 接的正是它。于是函数里那句 `*p = *p + k;` 改的，就是你本人的第一个元素，其余的元素一动不动。\n\n这也正是为什么喂它的时候**不用写 `&`**：`bowl` 本来就是地址。再写 `&bowl` 意思就变了 —— 那成了「整排元素的地址」，跟函数头里那块指整数元素的名称对不上类型，编译器要拦你。\n\n函数头里的两个元素一个都不能少：一个接**地址**（`int *p`），一个接**要加的数**（`int k`）—— 名字叫什么随便，形状和顺序才要紧。",
+      "templateId": "c-s1-ptr-bump-first",
+      "params": {
+        "n": 5,
+        "k": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.329Z",
+        "hash": "1f62c0bfbc48abd1"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-bump-first-008",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们这一个方法只动**第一个元素**。\n\n请你写个程序：**先读进来一个数**（这次有 5 只元素），**再读进来 5 行数**（一行一个，按顺序摆进那排元素里）。\n\n先写一个方法 `bumpFirst`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个要加的数（`int k`）；身体里只改**名称指的那个元素**，把它加上 `8`。\n\n然后调用一次这一个方法，把**那排元素的名字**和 `8` 一起传入（不用写 `&`，想想为什么），最后把那排元素从头到尾印出来，一行一个。\n\n比如程序的输入是\n\n5\n2\n4\n6\n1\n6\n\n程序就要返回\n\n10\n4\n6\n1\n6\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 bumpFirst 这一个方法（只动名称指的那一个元素）\n\nint main(void) {\n    int n;\n\n    // 先读「有几个元素」\n\n    // 摆一排够宽的元素，把 5 个数读进去\n\n    // 调用一次 bumpFirst（第一样喂那排元素的名字）\n\n    // 把整排元素从头到尾印出来\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid bumpFirst(int *p, int k) {\n    *p = *p + k;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int bowl[10];\n    int i;\n    for (i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    bumpFirst(bowl, 8);\n\n    for (i = 0; i < n; i++) {\n        printf(\"%d\\n\", bowl[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "11\n6\n2\n3\n4",
+      "stdin": "5\n3\n6\n2\n3\n4\n",
+      "explanation": "这一题的关键是**整排元素的名字自己就充当了地址**。\n\n上一课那个谜团在这儿彻底解开了：为什么整排元素交进函数、改的却是你本人的原件？因为整排元素交出去的时候，交的正是**第一个元素的地址** —— 名字 `bowl` 本身就顶得上一块名称，函数里的 `int *p` 接的正是它。于是函数里那句 `*p = *p + k;` 改的，就是你本人的第一个元素，其余的元素一动不动。\n\n这也正是为什么喂它的时候**不用写 `&`**：`bowl` 本来就是地址。再写 `&bowl` 意思就变了 —— 那成了「整排元素的地址」，跟函数头里那块指整数元素的名称对不上类型，编译器要拦你。\n\n函数头里的两个元素一个都不能少：一个接**地址**（`int *p`），一个接**要加的数**（`int k`）—— 名字叫什么随便，形状和顺序才要紧。",
+      "templateId": "c-s1-ptr-bump-first",
+      "params": {
+        "n": 5,
+        "k": 8
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.329Z",
+        "hash": "1eaf46dde81da405"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-deref-plain-int-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们听说顺着名称能把元素里的东西**拿出来**，就在一个普通的元素上试了试。\n\n可编译器一看见那颗星就不干了……\n\n你帮我们看看这颗星用错在哪儿了，把它改好。改好之后，程序应该印出 `3`。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int fish = 3;\n\n    printf(\"%d\\n\", *fish);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int fish = 3;\n\n    printf(\"%d\\n\", fish);\n    return 0;\n}\n",
+      "expectedOutput": "3",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: invalid type argument of unary '*' (have 'int')`，翻过来就是 **「这颗星放的地方不对。」**\n\n「顺着走」的前提是**它得是一块名称**。`fish` 是一个装整数的元素，`*fish` 等于拿一个**数字**当地址去敲门 —— 编译器当然要拦下来。\n\n想顺着走，得先有名称：\n\n1. `int *p = &fish;` —— `&` 是去问 `fish` 那个元素**地址**，把名称稳稳插在它门口；\n2. `*p` 才是「**走到它指的那个元素前面**」，`%d` 一打就是元素里的数。\n\n这一题我们压根不需要名称 —— 直接写 `fish`，元素里的数就到手了。\n\n⚠️ 顺带记一条：**`&` 和 `*` 是一对反义词。** `&fish` 是「元素 → 地址」，`*p` 是「地址 → 元素里的东西」。",
+      "templateId": "c-s1-ptr-deref-plain-int",
+      "params": {
+        "v": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "e0c07b6840d0e870"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-deref-plain-int-004",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们听说顺着名称能把元素里的东西**拿出来**，就在一个普通的元素上试了试。\n\n可编译器一看见那颗星就不干了……\n\n你帮我们看看这颗星用错在哪儿了，把它改好。改好之后，程序应该印出 `7`。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int fish = 7;\n\n    printf(\"%d\\n\", *fish);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int fish = 7;\n\n    printf(\"%d\\n\", fish);\n    return 0;\n}\n",
+      "expectedOutput": "7",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: invalid type argument of unary '*' (have 'int')`，翻过来就是 **「这颗星放的地方不对。」**\n\n「顺着走」的前提是**它得是一块名称**。`fish` 是一个装整数的元素，`*fish` 等于拿一个**数字**当地址去敲门 —— 编译器当然要拦下来。\n\n想顺着走，得先有名称：\n\n1. `int *p = &fish;` —— `&` 是去问 `fish` 那个元素**地址**，把名称稳稳插在它门口；\n2. `*p` 才是「**走到它指的那个元素前面**」，`%d` 一打就是元素里的数。\n\n这一题我们压根不需要名称 —— 直接写 `fish`，元素里的数就到手了。\n\n⚠️ 顺带记一条：**`&` 和 `*` 是一对反义词。** `&fish` 是「元素 → 地址」，`*p` 是「地址 → 元素里的东西」。",
+      "templateId": "c-s1-ptr-deref-plain-int",
+      "params": {
+        "v": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "a4f4491f18470866"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-forgot-amp-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们写函数的功夫又长进了：这一个方法收的**不是数，是一个元素的地址** —— 它会顺着名称走进来，把元素里的数乘一乘。\n\n可 `main` 里称呼它的时候，编译器当场拦下了，还补了一句「也许你是想这样做」……\n\n你帮我们看看是哪儿漏了，把它改好。改好之后，程序应该印出 `2` 乘 `3` 的结果。",
+      "brokenCode": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * 3;\n}\n\nint main(void) {\n    int fish = 2;\n\n    treat(fish);\n    printf(\"%d\\n\", fish);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * 3;\n}\n\nint main(void) {\n    int fish = 2;\n\n    treat(&fish);\n    printf(\"%d\\n\", fish);\n    return 0;\n}\n",
+      "expectedOutput": "6",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: passing argument 1 of 'treat' makes pointer from integer without a cast [-Wint-conversion]`，底下那句 `note` 更贴心：**`possible fix: take the address with '&'`** —— 「也许你该用 `&` 把地址取出来」。\n\n它看得很清楚：这一个方法头上写的是 `int *p`，它要的是**一块名称**；可你递进去的 `fish` 是**一个数字**。数字和名称在 C 里是两个完全不同的形状，对不上就得拦。\n\n修法就是加一个字符：写成 `treat(&fish);`。`&` 是去问 `fish` 那个元素的地址。地址递进去，函数里那句 `*p = *p * 3;` 改的才**是你本人的那个元素**。\n\n对照着记这一对：\n\n- 头里写 `void feed(int n)`，引用的时候喂 `feed(fish)` → 函数拿到**抄件**，里面怎么改，外面纹丝不动；\n- 头里写 `void treat(int *p)`，引用的时候喂 `treat(&fish)` → 函数拿到**名称**，里面改了，外面**真的会变**。",
+      "templateId": "c-s1-ptr-forgot-amp",
+      "params": {
+        "v": 2,
+        "k": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "96f53251c4c83f1f"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-forgot-amp-008",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们写函数的功夫又长进了：这一个方法收的**不是数，是一个元素的地址** —— 它会顺着名称走进来，把元素里的数乘一乘。\n\n可 `main` 里称呼它的时候，编译器当场拦下了，还补了一句「也许你是想这样做」……\n\n你帮我们看看是哪儿漏了，把它改好。改好之后，程序应该印出 `4` 乘 `5` 的结果。",
+      "brokenCode": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * 5;\n}\n\nint main(void) {\n    int fish = 4;\n\n    treat(fish);\n    printf(\"%d\\n\", fish);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * 5;\n}\n\nint main(void) {\n    int fish = 4;\n\n    treat(&fish);\n    printf(\"%d\\n\", fish);\n    return 0;\n}\n",
+      "expectedOutput": "20",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: passing argument 1 of 'treat' makes pointer from integer without a cast [-Wint-conversion]`，底下那句 `note` 更贴心：**`possible fix: take the address with '&'`** —— 「也许你该用 `&` 把地址取出来」。\n\n它看得很清楚：这一个方法头上写的是 `int *p`，它要的是**一块名称**；可你递进去的 `fish` 是**一个数字**。数字和名称在 C 里是两个完全不同的形状，对不上就得拦。\n\n修法就是加一个字符：写成 `treat(&fish);`。`&` 是去问 `fish` 那个元素的地址。地址递进去，函数里那句 `*p = *p * 5;` 改的才**是你本人的那个元素**。\n\n对照着记这一对：\n\n- 头里写 `void feed(int n)`，引用的时候喂 `feed(fish)` → 函数拿到**抄件**，里面怎么改，外面纹丝不动；\n- 头里写 `void treat(int *p)`，引用的时候喂 `treat(&fish)` → 函数拿到**名称**，里面改了，外面**真的会变**。",
+      "templateId": "c-s1-ptr-forgot-amp",
+      "params": {
+        "v": 4,
+        "k": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "9c91fb04f8e938c3"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-keep-bigger-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想挑出这一批数据里**最大的那条**。\n\n请你写个程序：**先读进来一个数**（这次有几条），**再读进来 4 行数**（一行一个，每条上刻的数字，都在 1~9 之间）。\n\n先摆一个元素叫 `best`，**装上 0**（它待会儿用来存冠军）。\n\n再写一个方法 `keepBigger`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个挑战者（`int v`）；身体里让它们比一比：**要是挑战者比元素里的大，就顺着名称把它放进元素里**，不然什么也别做。\n\n然后转 4 圈：每圈读进来一条，**把 `best` 的地址和它一起传入**。转完印一行冠军。\n\n比如程序的输入是\n\n4\n5\n4\n7\n9\n\n程序就要返回\n\n9\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 keepBigger 这一个方法\n\nint main(void) {\n    int n;\n\n    // 先读「有几条」\n\n    // 摆一个元素 best，装上 0\n\n    // 转 4 圈：每圈读一条，把 best 的门牌号和它一起传入\n\n    // 印冠军\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid keepBigger(int *p, int v) {\n    if (v > *p) {\n        *p = v;\n    }\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int best = 0;\n    int i;\n    for (i = 0; i < n; i++) {\n        int x;\n        if (scanf(\"%d\", &x) != 1) {\n            return 1;\n        }\n        keepBigger(&best, x);\n    }\n\n    printf(\"%d\\n\", best);\n    return 0;\n}\n",
+      "expectedOutput": "6",
+      "stdin": "4\n6\n4\n3\n6\n",
+      "explanation": "函数身体里那句话是「**顺着名称比、顺着名称放**」：先让 `*p` 走过去看一眼元素里现在是几，要是挑战者更大，就用 `*p = v;` 把它放回元素里；不然整招就当没来过。\n\n**为什么要递名称，而不是直接递数？** 因为这一个方法的任务是**改你那个元素**。要是头里写成 `void keepBigger(int p, int v)`（没有那颗星），引用的时候写 `keepBigger(best, x)`，函数拿到的就是**抄件** —— 它在里面把 `p` 改成多大，你那个 `best` 都不会动，最后印出来永远是 0。\n\n所以称呼它的时候那一个 `&` 不能省：`keepBigger(&best, x);`。\n\n还有一处容易漏的：转圈**之前**就得把 `best` 摆好、装上 0。数字都是 1~9，0 比它们都小，所以第一条进来就能顶上去；要是忘了装初值，那个元素里躺着的是垃圾，比出来的结果全看运气。",
+      "templateId": "c-s1-ptr-keep-bigger",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "8d35e6fc1a6fe101"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-keep-bigger-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想挑出这一批数据里**最大的那条**。\n\n请你写个程序：**先读进来一个数**（这次有几条），**再读进来 5 行数**（一行一个，每条上刻的数字，都在 1~9 之间）。\n\n先摆一个元素叫 `best`，**装上 0**（它待会儿用来存冠军）。\n\n再写一个方法 `keepBigger`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个挑战者（`int v`）；身体里让它们比一比：**要是挑战者比元素里的大，就顺着名称把它放进元素里**，不然什么也别做。\n\n然后转 5 圈：每圈读进来一条，**把 `best` 的地址和它一起传入**。转完印一行冠军。\n\n比如程序的输入是\n\n5\n7\n9\n2\n2\n5\n\n程序就要返回\n\n9\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 keepBigger 这一个方法\n\nint main(void) {\n    int n;\n\n    // 先读「有几条」\n\n    // 摆一个元素 best，装上 0\n\n    // 转 5 圈：每圈读一条，把 best 的门牌号和它一起传入\n\n    // 印冠军\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid keepBigger(int *p, int v) {\n    if (v > *p) {\n        *p = v;\n    }\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int best = 0;\n    int i;\n    for (i = 0; i < n; i++) {\n        int x;\n        if (scanf(\"%d\", &x) != 1) {\n            return 1;\n        }\n        keepBigger(&best, x);\n    }\n\n    printf(\"%d\\n\", best);\n    return 0;\n}\n",
+      "expectedOutput": "8",
+      "stdin": "5\n8\n3\n2\n6\n2\n",
+      "explanation": "函数身体里那句话是「**顺着名称比、顺着名称放**」：先让 `*p` 走过去看一眼元素里现在是几，要是挑战者更大，就用 `*p = v;` 把它放回元素里；不然整招就当没来过。\n\n**为什么要递名称，而不是直接递数？** 因为这一个方法的任务是**改你那个元素**。要是头里写成 `void keepBigger(int p, int v)`（没有那颗星），引用的时候写 `keepBigger(best, x)`，函数拿到的就是**抄件** —— 它在里面把 `p` 改成多大，你那个 `best` 都不会动，最后印出来永远是 0。\n\n所以称呼它的时候那一个 `&` 不能省：`keepBigger(&best, x);`。\n\n还有一处容易漏的：转圈**之前**就得把 `best` 摆好、装上 0。数字都是 1~9，0 比它们都小，所以第一条进来就能顶上去；要是忘了装初值，那个元素里躺着的是垃圾，比出来的结果全看运气。",
+      "templateId": "c-s1-ptr-keep-bigger",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "11b0ea3f57444d65"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-keep-bigger-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想挑出这一批数据里**最大的那条**。\n\n请你写个程序：**先读进来一个数**（这次有几条），**再读进来 6 行数**（一行一个，每条上刻的数字，都在 1~9 之间）。\n\n先摆一个元素叫 `best`，**装上 0**（它待会儿用来存冠军）。\n\n再写一个方法 `keepBigger`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个挑战者（`int v`）；身体里让它们比一比：**要是挑战者比元素里的大，就顺着名称把它放进元素里**，不然什么也别做。\n\n然后转 6 圈：每圈读进来一条，**把 `best` 的地址和它一起传入**。转完印一行冠军。\n\n比如程序的输入是\n\n6\n1\n4\n3\n2\n3\n1\n\n程序就要返回\n\n4\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 keepBigger 这一个方法\n\nint main(void) {\n    int n;\n\n    // 先读「有几条」\n\n    // 摆一个元素 best，装上 0\n\n    // 转 6 圈：每圈读一条，把 best 的门牌号和它一起传入\n\n    // 印冠军\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid keepBigger(int *p, int v) {\n    if (v > *p) {\n        *p = v;\n    }\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int best = 0;\n    int i;\n    for (i = 0; i < n; i++) {\n        int x;\n        if (scanf(\"%d\", &x) != 1) {\n            return 1;\n        }\n        keepBigger(&best, x);\n    }\n\n    printf(\"%d\\n\", best);\n    return 0;\n}\n",
+      "expectedOutput": "9",
+      "stdin": "6\n4\n2\n8\n9\n5\n9\n",
+      "explanation": "函数身体里那句话是「**顺着名称比、顺着名称放**」：先让 `*p` 走过去看一眼元素里现在是几，要是挑战者更大，就用 `*p = v;` 把它放回元素里；不然整招就当没来过。\n\n**为什么要递名称，而不是直接递数？** 因为这一个方法的任务是**改你那个元素**。要是头里写成 `void keepBigger(int p, int v)`（没有那颗星），引用的时候写 `keepBigger(best, x)`，函数拿到的就是**抄件** —— 它在里面把 `p` 改成多大，你那个 `best` 都不会动，最后印出来永远是 0。\n\n所以称呼它的时候那一个 `&` 不能省：`keepBigger(&best, x);`。\n\n还有一处容易漏的：转圈**之前**就得把 `best` 摆好、装上 0。数字都是 1~9，0 比它们都小，所以第一条进来就能顶上去；要是忘了装初值，那个元素里躺着的是垃圾，比出来的结果全看运气。",
+      "templateId": "c-s1-ptr-keep-bigger",
+      "params": {
+        "n": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "296eacfc12956dd1"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-times-ten-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想让一个方法顺着名称把元素里的数**翻成十倍**。\n\n请你写个程序：**先读进来一个数**（这次有几颗），**再读进来 3 行数**（一行一个，每颗上刻的数字，都在 1~5 之间）。\n\n先写一个方法 `treat`：头上摆一块**指整数元素的名称**（写成 `int *p`），身体里顺着名称把元素里的数乘 10、再顺着名称放回去。\n\n然后转 3 圈：每圈读进来一颗数，**把它的地址传给这一个方法**，再把改完之后的数印成一行。\n\n比如程序的输入是\n\n3\n5\n4\n1\n\n程序就要返回\n\n50\n40\n10\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 treat 这一个方法（头里要摆一块指整数元素的名称）\n\nint main(void) {\n    int n;\n\n    // 先读「有几颗」\n\n    // 转 3 圈：每圈读一颗，把它的门牌号传给 treat，再把结果印出来\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * 10;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int i;\n    for (i = 0; i < n; i++) {\n        int x;\n        if (scanf(\"%d\", &x) != 1) {\n            return 1;\n        }\n        treat(&x);\n        printf(\"%d\\n\", x);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "30\n40\n40",
+      "stdin": "3\n3\n4\n4\n",
+      "explanation": "函数头里那块 `int *p` 收的是**地址**，所以称呼它的时候必须写 `treat(&x);`  —— `&` 就是去问 `x` 那个元素的地址。少写这个 `&`，编译器当场就拦（它会说「数字和名称不是一个形状」）。\n\n函数里那句 `*p = *p * 10;` 分两半看：\n\n1. 右边的 `*p` —— 顺着名称走到元素前，把里面的数**拿出来**；\n2. 左边的 `*p =` —— 算完再顺着**同一块名称**把新数**放回去**。\n\n拿和放走的是同一块名称，所以改的**就是你本人的那个元素** —— 回到 `main` 一印，真的是十倍的数。\n\n对照一下就更清楚了：要是函数头写成 `void treat(int p)`（没有那颗星），引用的时候写 `treat(x)`，那函数拿到的就是**抄件**，它在里面怎么折腾，你那个元素都纹丝不动。",
+      "templateId": "c-s1-ptr-times-ten",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "be15084cf2968ae1"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-times-ten-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想让一个方法顺着名称把元素里的数**翻成十倍**。\n\n请你写个程序：**先读进来一个数**（这次有几颗），**再读进来 4 行数**（一行一个，每颗上刻的数字，都在 1~5 之间）。\n\n先写一个方法 `treat`：头上摆一块**指整数元素的名称**（写成 `int *p`），身体里顺着名称把元素里的数乘 10、再顺着名称放回去。\n\n然后转 4 圈：每圈读进来一颗数，**把它的地址传给这一个方法**，再把改完之后的数印成一行。\n\n比如程序的输入是\n\n4\n3\n5\n2\n1\n\n程序就要返回\n\n30\n50\n20\n10\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 treat 这一个方法（头里要摆一块指整数元素的名称）\n\nint main(void) {\n    int n;\n\n    // 先读「有几颗」\n\n    // 转 4 圈：每圈读一颗，把它的门牌号传给 treat，再把结果印出来\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * 10;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int i;\n    for (i = 0; i < n; i++) {\n        int x;\n        if (scanf(\"%d\", &x) != 1) {\n            return 1;\n        }\n        treat(&x);\n        printf(\"%d\\n\", x);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "40\n40\n20\n20",
+      "stdin": "4\n4\n4\n2\n2\n",
+      "explanation": "函数头里那块 `int *p` 收的是**地址**，所以称呼它的时候必须写 `treat(&x);`  —— `&` 就是去问 `x` 那个元素的地址。少写这个 `&`，编译器当场就拦（它会说「数字和名称不是一个形状」）。\n\n函数里那句 `*p = *p * 10;` 分两半看：\n\n1. 右边的 `*p` —— 顺着名称走到元素前，把里面的数**拿出来**；\n2. 左边的 `*p =` —— 算完再顺着**同一块名称**把新数**放回去**。\n\n拿和放走的是同一块名称，所以改的**就是你本人的那个元素** —— 回到 `main` 一印，真的是十倍的数。\n\n对照一下就更清楚了：要是函数头写成 `void treat(int p)`（没有那颗星），引用的时候写 `treat(x)`，那函数拿到的就是**抄件**，它在里面怎么折腾，你那个元素都纹丝不动。",
+      "templateId": "c-s1-ptr-times-ten",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "aa1e33c579b5af11"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-times-ten-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们想让一个方法顺着名称把元素里的数**翻成十倍**。\n\n请你写个程序：**先读进来一个数**（这次有几颗），**再读进来 5 行数**（一行一个，每颗上刻的数字，都在 1~5 之间）。\n\n先写一个方法 `treat`：头上摆一块**指整数元素的名称**（写成 `int *p`），身体里顺着名称把元素里的数乘 10、再顺着名称放回去。\n\n然后转 5 圈：每圈读进来一颗数，**把它的地址传给这一个方法**，再把改完之后的数印成一行。\n\n比如程序的输入是\n\n5\n1\n2\n1\n1\n2\n\n程序就要返回\n\n10\n20\n10\n10\n20\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\n// 在这里登记 treat 这一个方法（头里要摆一块指整数元素的名称）\n\nint main(void) {\n    int n;\n\n    // 先读「有几颗」\n\n    // 转 5 圈：每圈读一颗，把它的门牌号传给 treat，再把结果印出来\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * 10;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int i;\n    for (i = 0; i < n; i++) {\n        int x;\n        if (scanf(\"%d\", &x) != 1) {\n            return 1;\n        }\n        treat(&x);\n        printf(\"%d\\n\", x);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "10\n40\n30\n30\n10",
+      "stdin": "5\n1\n4\n3\n3\n1\n",
+      "explanation": "函数头里那块 `int *p` 收的是**地址**，所以称呼它的时候必须写 `treat(&x);`  —— `&` 就是去问 `x` 那个元素的地址。少写这个 `&`，编译器当场就拦（它会说「数字和名称不是一个形状」）。\n\n函数里那句 `*p = *p * 10;` 分两半看：\n\n1. 右边的 `*p` —— 顺着名称走到元素前，把里面的数**拿出来**；\n2. 左边的 `*p =` —— 算完再顺着**同一块名称**把新数**放回去**。\n\n拿和放走的是同一块名称，所以改的**就是你本人的那个元素** —— 回到 `main` 一印，真的是十倍的数。\n\n对照一下就更清楚了：要是函数头写成 `void treat(int p)`（没有那颗星），引用的时候写 `treat(x)`，那函数拿到的就是**抄件**，它在里面怎么折腾，你那个元素都纹丝不动。",
+      "templateId": "c-s1-ptr-times-ten",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "f0bb2989799f7553"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-type-mismatch-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们想给一个**装整数的元素**插一块名称，然后用名称把元素里的数拿出来印掉。\n\n可编译器说**名称和元素对不上号**……\n\n你帮我们看看是哪儿写岔了，把它改好。改好之后，程序应该印出 `3`。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int fish = 3;\n    double *p = &fish;\n\n    printf(\"%d\\n\", *p);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int fish = 3;\n    int *p = &fish;\n\n    printf(\"%d\\n\", *p);\n    return 0;\n}\n",
+      "expectedOutput": "3",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: initialization of 'double *' from incompatible pointer type 'int *' [-Wincompatible-pointer-types]`  —— `incompatible pointer type` 就是「**名称说的和元素里装的不是一回事**」。\n\n`double *p;` 这行字要**分两半读**：\n\n- 前面的 `double` —— 说的是「**它指的那个元素里保存的是小数**」；\n- 后面那颗 `*` —— 说的是「**这是一块名称**」。\n\n所以元素里装什么类型，名称前头就得写什么类型：元素里装整数就写 `int *`，元素里装小数就写 `double *`。\n\n写成 `double *p = &fish;`，编译器一看：名称上说这元素装小数，可 `fish` 明明是一个整数元素 —— 两边对不上，当场拦下。\n\n改成 `int *p = &fish;` 就好啦。这一条也是 C「什么都要你自己管」的一部分：**名称指的是什么元素，你得亲口说清楚。**",
+      "templateId": "c-s1-ptr-type-mismatch",
+      "params": {
+        "v": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "9639fa03f6e0edfa"
+      }
+    },
+    {
+      "id": "bank-c-s1-ptr-type-mismatch-004",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们想给一个**装整数的元素**插一块名称，然后用名称把元素里的数拿出来印掉。\n\n可编译器说**名称和元素对不上号**……\n\n你帮我们看看是哪儿写岔了，把它改好。改好之后，程序应该印出 `7`。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int fish = 7;\n    double *p = &fish;\n\n    printf(\"%d\\n\", *p);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int fish = 7;\n    int *p = &fish;\n\n    printf(\"%d\\n\", *p);\n    return 0;\n}\n",
+      "expectedOutput": "7",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: initialization of 'double *' from incompatible pointer type 'int *' [-Wincompatible-pointer-types]`  —— `incompatible pointer type` 就是「**名称说的和元素里装的不是一回事**」。\n\n`double *p;` 这行字要**分两半读**：\n\n- 前面的 `double` —— 说的是「**它指的那个元素里保存的是小数**」；\n- 后面那颗 `*` —— 说的是「**这是一块名称**」。\n\n所以元素里装什么类型，名称前头就得写什么类型：元素里装整数就写 `int *`，元素里装小数就写 `double *`。\n\n写成 `double *p = &fish;`，编译器一看：名称上说这元素装小数，可 `fish` 明明是一个整数元素 —— 两边对不上，当场拦下。\n\n改成 `int *p = &fish;` 就好啦。这一条也是 C「什么都要你自己管」的一部分：**名称指的是什么元素，你得亲口说清楚。**",
+      "templateId": "c-s1-ptr-type-mismatch",
+      "params": {
+        "v": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.330Z",
+        "hash": "d5f3838468485475"
+      }
+    }
+  ]
+}

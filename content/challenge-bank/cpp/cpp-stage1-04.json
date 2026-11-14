@@ -1,0 +1,427 @@
+{
+  "lessonId": "cpp-stage1-04",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s1-04-add-two-numbers-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们的点单机要接上耳朵了。输入接口会递进来**两个数**（一行一个）：今天攒的条数、又攒的条数。\n\n请你写一个程序：把这两个数**返回进两间装整数的屋**，然后把这一句话印出来：\n\n```text\n张三 攒了 N 条，又攒了 M 条，一共 K 条\n```\n\n（`K` 是两个数加起来的结果，你自己在印的时候当场算出来。）\n\n⚠️ 管子塞什么念什么 —— **每一处空格都得自己写进引号里**，别指望它替你垫。\n\n比如程序的输入是\n\n6\n7\n\n程序就要返回\n\n张三 攒了 6 条，又攒了 7 条，一共 13 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    cout << \"张三 攒了 \" << a << \" 条，又攒了 \" << b << \" 条，一共 \" << a + b << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 攒了 1 条，又攒了 3 条，一共 4 条",
+      "stdin": "1\n3\n",
+      "explanation": "这一题练的是两件工具各管一头的分工：\n\n- **`cin >>`** 是进水管：它把外面的东西返回进屋。我们写 `cin >> a >> b;` 就是**连着返回两口**。\n- **`cout <<`** 是出水管：塞一样、念一样。整数不用我们操心格式 —— **屋里挂的是 `int` 的名称，它自己知道该怎么念**。\n\n两个容易摔的地方：\n\n1. **缝要自己写进引号里。** `cout << \"攒了 \" << a` 里那个空格是我们写进去的；写成 `\"攒了\"` 就会印出「攒了张三」这种挤在一起的话。\n2. **`cin >>` 遇空格就停。** 它读的是「一样东西」，不是「一整行」：`cin >> a >> b;` 会从输入接口里一样一样往前分，喂两个数它就返回两口。\n\n⚠️ 还有一条我们替你标出来：我们把两间屋都**先填了 0**（`int a = 0;`）。这不是必须的，是个好习惯 —— 万一返回不到东西，屋里至少有个干净的起点，不会输出莫名其妙的值。",
+      "templateId": "cpp-s1-04-add-two-numbers",
+      "params": {
+        "who": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "ba20f7b85c152460"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-add-two-numbers-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们的点单机要接上耳朵了。输入接口会递进来**两个数**（一行一个）：今天攒的条数、又攒的条数。\n\n请你写一个程序：把这两个数**返回进两间装整数的屋**，然后把这一句话印出来：\n\n```text\n王五 攒了 N 条，又攒了 M 条，一共 K 条\n```\n\n（`K` 是两个数加起来的结果，你自己在印的时候当场算出来。）\n\n⚠️ 管子塞什么念什么 —— **每一处空格都得自己写进引号里**，别指望它替你垫。\n\n比如程序的输入是\n\n9\n9\n\n程序就要返回\n\n王五 攒了 9 条，又攒了 9 条，一共 18 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    cout << \"王五 攒了 \" << a << \" 条，又攒了 \" << b << \" 条，一共 \" << a + b << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 攒了 2 条，又攒了 6 条，一共 8 条",
+      "stdin": "2\n6\n",
+      "explanation": "这一题练的是两件工具各管一头的分工：\n\n- **`cin >>`** 是进水管：它把外面的东西返回进屋。我们写 `cin >> a >> b;` 就是**连着返回两口**。\n- **`cout <<`** 是出水管：塞一样、念一样。整数不用我们操心格式 —— **屋里挂的是 `int` 的名称，它自己知道该怎么念**。\n\n两个容易摔的地方：\n\n1. **缝要自己写进引号里。** `cout << \"攒了 \" << a` 里那个空格是我们写进去的；写成 `\"攒了\"` 就会印出「攒了张三」这种挤在一起的话。\n2. **`cin >>` 遇空格就停。** 它读的是「一样东西」，不是「一整行」：`cin >> a >> b;` 会从输入接口里一样一样往前分，喂两个数它就返回两口。\n\n⚠️ 还有一条我们替你标出来：我们把两间屋都**先填了 0**（`int a = 0;`）。这不是必须的，是个好习惯 —— 万一返回不到东西，屋里至少有个干净的起点，不会输出莫名其妙的值。",
+      "templateId": "cpp-s1-04-add-two-numbers",
+      "params": {
+        "who": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "d3d13c5519e7a3a6"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-arrow-reversed-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给点单机装上了输入接口，里面会递进来**一样东西加一个数**（中间用空格隔开）。\n\n可编译器一瞧见就不干了，把整段代码退了回来……\n\n你帮我们看看它为什么不高兴，把它改好。改好之后，程序应该返回两行：第一行 `名字：` 后面跟着递进来的名字，第二行 `攒了 N 条`。\n\n比如程序的输入是\n\n计算机 7\n\n程序就要返回\n\n名字：计算机\n攒了 7 条\n\n（判分用的是**另外一组**，所以别把答案写死）",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name;\n    cin << fish;\n\n    cout << \"名字：\" << name << endl;\n    cout << \"攒了 \" << fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name;\n    cin >> fish;\n\n    cout << \"名字：\" << name << endl;\n    cout << \"攒了 \" << fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "名字：张三\n攒了 3 条",
+      "stdin": "张三 3\n",
+      "explanation": "编译器的**开场白**是这个：\n\n```text\nerror: no match for 'operator<<' (operand types are ...)\n```\n\n（「`<<` 这个写法，我们找不到能接住这两个东西的组合」）—— 省略号那里，它后面念念叨叨列了一长串「谁能接这个箭头」的组合，还把它们内部的名字都念了出来，反正全配不上。\n\n问题在**箭头的方向**：\n\n- `cin` 是**进来**的管口，只认 `>>`；\n- `cout` 是**出去**的管口，只认 `<<`。\n\n写 `cin << fish`，等于把出水口当进水口接 —— 编译器在门口就把它拦下了，程序一步都跑不起来。\n\n记法：**箭头一律指着「东西要去哪儿」**。`cin >> fish` 是从管子流进 `fish`；`cout << fish` 是从 `fish` 流进管子。平时写熟的 `cin >> 名字` 也是同一个道理 —— 往屋里流的那一边，箭头冲着自己。",
+      "templateId": "cpp-s1-04-arrow-reversed",
+      "params": {
+        "name": "张三",
+        "fish": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "ce5f7d93e5d3eb4a"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-arrow-reversed-020",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给点单机装上了输入接口，里面会递进来**一样东西加一个数**（中间用空格隔开）。\n\n可编译器一瞧见就不干了，把整段代码退了回来……\n\n你帮我们看看它为什么不高兴，把它改好。改好之后，程序应该返回两行：第一行 `名字：` 后面跟着递进来的名字，第二行 `攒了 N 条`。\n\n比如程序的输入是\n\n计算机 7\n\n程序就要返回\n\n名字：计算机\n攒了 7 条\n\n（判分用的是**另外一组**，所以别把答案写死）",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name;\n    cin << fish;\n\n    cout << \"名字：\" << name << endl;\n    cout << \"攒了 \" << fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name;\n    cin >> fish;\n\n    cout << \"名字：\" << name << endl;\n    cout << \"攒了 \" << fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "名字：三花\n攒了 9 条",
+      "stdin": "三花 9\n",
+      "explanation": "编译器的**开场白**是这个：\n\n```text\nerror: no match for 'operator<<' (operand types are ...)\n```\n\n（「`<<` 这个写法，我们找不到能接住这两个东西的组合」）—— 省略号那里，它后面念念叨叨列了一长串「谁能接这个箭头」的组合，还把它们内部的名字都念了出来，反正全配不上。\n\n问题在**箭头的方向**：\n\n- `cin` 是**进来**的管口，只认 `>>`；\n- `cout` 是**出去**的管口，只认 `<<`。\n\n写 `cin << fish`，等于把出水口当进水口接 —— 编译器在门口就把它拦下了，程序一步都跑不起来。\n\n记法：**箭头一律指着「东西要去哪儿」**。`cin >> fish` 是从管子流进 `fish`；`cout << fish` 是从 `fish` 流进管子。平时写熟的 `cin >> 名字` 也是同一个道理 —— 往屋里流的那一边，箭头冲着自己。",
+      "templateId": "cpp-s1-04-arrow-reversed",
+      "params": {
+        "name": "三花",
+        "fish": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "67de6728d5280fa2"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-eat-then-name-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这次两件工具要**混着用**：输入接口里有两行，第一行是**一个数**，第二行是**一整行字**（中间带个空格）。\n\n请你写一个程序，印出两行：\n\n```text\n数据 N 条\n名字是 <第二行那一整行>\n```\n\n⚠️ 这一课有个**不吭声的坑**正等在这里：先读数字的那件工具读完就停，可它**没把那个换行拿走** —— 换行还留在管子里，下一件工具一开口就先复制到它。前面我们已经喂过你一句口令，这时候正好用上。\n\n比如程序的输入是\n\n9\n花花 小队长\n\n程序就要返回\n\n数据 9 条\n名字是 花花 小队长\n\n（判分喂的是**另外一组字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    string name;\n    cin >> fish;\n    cin.ignore();\n    getline(cin, name);\n\n    cout << \"数据 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数据 2 条\n名字是 张三 ",
+      "stdin": "2\n张三 \n",
+      "explanation": "这一题要看清那个**不报错的坑**是怎么来的，一步一步：\n\n1. `cin >> fish` 只认「一样东西」，读到那个数后面的**换行**时就停下来了；\n2. 可它**没把那个换行拿走** —— 换行还留在管子里；\n3. 这时候 `getline` 一开口，先复制到的东西正是那个换行。它确实复制到了「一整行」，只不过**这一行是空的**，所以名字该变量里什么都没有；\n4. 而真正的第二行（带空格的那串字）还排在管子后面，压根没轮到它。\n\n屏幕上会是「名字是」后面空空的，**而且它一个错都不报** —— 这种坑最难自己发现。\n\n解法就是在两件工具中间垫一句 `cin.ignore();`：它的活是「**把管子里剩着的那一个字符丢掉**」，丢掉的正是那个捣乱的换行。丢完再开口，`getline` 复制到的才是真正的第二行。\n\n记住这条口令：**`cin >>` 和 `getline` 混着用的时候，中间垫一句 `cin.ignore();`**。",
+      "templateId": "cpp-s1-04-eat-then-name",
+      "params": {
+        "fish": 2,
+        "name": "张三 ",
+        "word": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "c425b55a6bcb0ca0"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-eat-then-name-009",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这次两件工具要**混着用**：输入接口里有两行，第一行是**一个数**，第二行是**一整行字**（中间带个空格）。\n\n请你写一个程序，印出两行：\n\n```text\n商品 N 条\n名字是 <第二行那一整行>\n```\n\n⚠️ 这一课有个**不吭声的坑**正等在这里：先读数字的那件工具读完就停，可它**没把那个换行拿走** —— 换行还留在管子里，下一件工具一开口就先复制到它。前面我们已经喂过你一句口令，这时候正好用上。\n\n比如程序的输入是\n\n9\n花花 小队长\n\n程序就要返回\n\n商品 9 条\n名字是 花花 小队长\n\n（判分喂的是**另外一组字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    string name;\n    cin >> fish;\n    cin.ignore();\n    getline(cin, name);\n\n    cout << \"商品 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "商品 3 条\n名字是 计算机 二号",
+      "stdin": "3\n计算机 二号\n",
+      "explanation": "这一题要看清那个**不报错的坑**是怎么来的，一步一步：\n\n1. `cin >> fish` 只认「一样东西」，读到那个数后面的**换行**时就停下来了；\n2. 可它**没把那个换行拿走** —— 换行还留在管子里；\n3. 这时候 `getline` 一开口，先复制到的东西正是那个换行。它确实复制到了「一整行」，只不过**这一行是空的**，所以名字该变量里什么都没有；\n4. 而真正的第二行（带空格的那串字）还排在管子后面，压根没轮到它。\n\n屏幕上会是「名字是」后面空空的，**而且它一个错都不报** —— 这种坑最难自己发现。\n\n解法就是在两件工具中间垫一句 `cin.ignore();`：它的活是「**把管子里剩着的那一个字符丢掉**」，丢掉的正是那个捣乱的换行。丢完再开口，`getline` 复制到的才是真正的第二行。\n\n记住这条口令：**`cin >>` 和 `getline` 混着用的时候，中间垫一句 `cin.ignore();`**。",
+      "templateId": "cpp-s1-04-eat-then-name",
+      "params": {
+        "fish": 3,
+        "name": "计算机 二号",
+        "word": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "4eaefda0f696ec1f"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-eat-then-name-019",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这次两件工具要**混着用**：输入接口里有两行，第一行是**一个数**，第二行是**一整行字**（中间带个空格）。\n\n请你写一个程序，印出两行：\n\n```text\n商品 N 条\n名字是 <第二行那一整行>\n```\n\n⚠️ 这一课有个**不吭声的坑**正等在这里：先读数字的那件工具读完就停，可它**没把那个换行拿走** —— 换行还留在管子里，下一件工具一开口就先复制到它。前面我们已经喂过你一句口令，这时候正好用上。\n\n比如程序的输入是\n\n9\n花花 小队长\n\n程序就要返回\n\n商品 9 条\n名字是 花花 小队长\n\n（判分喂的是**另外一组字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    string name;\n    cin >> fish;\n    cin.ignore();\n    getline(cin, name);\n\n    cout << \"商品 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "商品 5 条\n名字是 张三 ",
+      "stdin": "5\n张三 \n",
+      "explanation": "这一题要看清那个**不报错的坑**是怎么来的，一步一步：\n\n1. `cin >> fish` 只认「一样东西」，读到那个数后面的**换行**时就停下来了；\n2. 可它**没把那个换行拿走** —— 换行还留在管子里；\n3. 这时候 `getline` 一开口，先复制到的东西正是那个换行。它确实复制到了「一整行」，只不过**这一行是空的**，所以名字该变量里什么都没有；\n4. 而真正的第二行（带空格的那串字）还排在管子后面，压根没轮到它。\n\n屏幕上会是「名字是」后面空空的，**而且它一个错都不报** —— 这种坑最难自己发现。\n\n解法就是在两件工具中间垫一句 `cin.ignore();`：它的活是「**把管子里剩着的那一个字符丢掉**」，丢掉的正是那个捣乱的换行。丢完再开口，`getline` 复制到的才是真正的第二行。\n\n记住这条口令：**`cin >>` 和 `getline` 混着用的时候，中间垫一句 `cin.ignore();`**。",
+      "templateId": "cpp-s1-04-eat-then-name",
+      "params": {
+        "fish": 5,
+        "name": "张三 ",
+        "word": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "781cdaee148a0056"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-eat-then-name-028",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这次两件工具要**混着用**：输入接口里有两行，第一行是**一个数**，第二行是**一整行字**（中间带个空格）。\n\n请你写一个程序，印出两行：\n\n```text\n数据 N 条\n名字是 <第二行那一整行>\n```\n\n⚠️ 这一课有个**不吭声的坑**正等在这里：先读数字的那件工具读完就停，可它**没把那个换行拿走** —— 换行还留在管子里，下一件工具一开口就先复制到它。前面我们已经喂过你一句口令，这时候正好用上。\n\n比如程序的输入是\n\n9\n花花 小队长\n\n程序就要返回\n\n数据 9 条\n名字是 花花 小队长\n\n（判分喂的是**另外一组字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    string name;\n    cin >> fish;\n    cin.ignore();\n    getline(cin, name);\n\n    cout << \"数据 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数据 6 条\n名字是 三花 小",
+      "stdin": "6\n三花 小\n",
+      "explanation": "这一题要看清那个**不报错的坑**是怎么来的，一步一步：\n\n1. `cin >> fish` 只认「一样东西」，读到那个数后面的**换行**时就停下来了；\n2. 可它**没把那个换行拿走** —— 换行还留在管子里；\n3. 这时候 `getline` 一开口，先复制到的东西正是那个换行。它确实复制到了「一整行」，只不过**这一行是空的**，所以名字该变量里什么都没有；\n4. 而真正的第二行（带空格的那串字）还排在管子后面，压根没轮到它。\n\n屏幕上会是「名字是」后面空空的，**而且它一个错都不报** —— 这种坑最难自己发现。\n\n解法就是在两件工具中间垫一句 `cin.ignore();`：它的活是「**把管子里剩着的那一个字符丢掉**」，丢掉的正是那个捣乱的换行。丢完再开口，`getline` 复制到的才是真正的第二行。\n\n记住这条口令：**`cin >>` 和 `getline` 混着用的时候，中间垫一句 `cin.ignore();`**。",
+      "templateId": "cpp-s1-04-eat-then-name",
+      "params": {
+        "fish": 6,
+        "name": "三花 小",
+        "word": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "c3b3ddc67d9c009d"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-eat-then-name-038",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这次两件工具要**混着用**：输入接口里有两行，第一行是**一个数**，第二行是**一整行字**（中间带个空格）。\n\n请你写一个程序，印出两行：\n\n```text\n数据 N 条\n名字是 <第二行那一整行>\n```\n\n⚠️ 这一课有个**不吭声的坑**正等在这里：先读数字的那件工具读完就停，可它**没把那个换行拿走** —— 换行还留在管子里，下一件工具一开口就先复制到它。前面我们已经喂过你一句口令，这时候正好用上。\n\n比如程序的输入是\n\n9\n花花 小队长\n\n程序就要返回\n\n数据 9 条\n名字是 花花 小队长\n\n（判分喂的是**另外一组字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    string name;\n    cin >> fish;\n    cin.ignore();\n    getline(cin, name);\n\n    cout << \"数据 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数据 8 条\n名字是 计算机 二号",
+      "stdin": "8\n计算机 二号\n",
+      "explanation": "这一题要看清那个**不报错的坑**是怎么来的，一步一步：\n\n1. `cin >> fish` 只认「一样东西」，读到那个数后面的**换行**时就停下来了；\n2. 可它**没把那个换行拿走** —— 换行还留在管子里；\n3. 这时候 `getline` 一开口，先复制到的东西正是那个换行。它确实复制到了「一整行」，只不过**这一行是空的**，所以名字该变量里什么都没有；\n4. 而真正的第二行（带空格的那串字）还排在管子后面，压根没轮到它。\n\n屏幕上会是「名字是」后面空空的，**而且它一个错都不报** —— 这种坑最难自己发现。\n\n解法就是在两件工具中间垫一句 `cin.ignore();`：它的活是「**把管子里剩着的那一个字符丢掉**」，丢掉的正是那个捣乱的换行。丢完再开口，`getline` 复制到的才是真正的第二行。\n\n记住这条口令：**`cin >>` 和 `getline` 混着用的时候，中间垫一句 `cin.ignore();`**。",
+      "templateId": "cpp-s1-04-eat-then-name",
+      "params": {
+        "fish": 8,
+        "name": "计算机 二号",
+        "word": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "5d451950ca321217"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-eat-then-name-047",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这次两件工具要**混着用**：输入接口里有两行，第一行是**一个数**，第二行是**一整行字**（中间带个空格）。\n\n请你写一个程序，印出两行：\n\n```text\n商品 N 条\n名字是 <第二行那一整行>\n```\n\n⚠️ 这一课有个**不吭声的坑**正等在这里：先读数字的那件工具读完就停，可它**没把那个换行拿走** —— 换行还留在管子里，下一件工具一开口就先复制到它。前面我们已经喂过你一句口令，这时候正好用上。\n\n比如程序的输入是\n\n9\n花花 小队长\n\n程序就要返回\n\n商品 9 条\n名字是 花花 小队长\n\n（判分喂的是**另外一组字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish = 0;\n    string name;\n    cin >> fish;\n    cin.ignore();\n    getline(cin, name);\n\n    cout << \"商品 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "商品 9 条\n名字是 三花 小",
+      "stdin": "9\n三花 小\n",
+      "explanation": "这一题要看清那个**不报错的坑**是怎么来的，一步一步：\n\n1. `cin >> fish` 只认「一样东西」，读到那个数后面的**换行**时就停下来了；\n2. 可它**没把那个换行拿走** —— 换行还留在管子里；\n3. 这时候 `getline` 一开口，先复制到的东西正是那个换行。它确实复制到了「一整行」，只不过**这一行是空的**，所以名字该变量里什么都没有；\n4. 而真正的第二行（带空格的那串字）还排在管子后面，压根没轮到它。\n\n屏幕上会是「名字是」后面空空的，**而且它一个错都不报** —— 这种坑最难自己发现。\n\n解法就是在两件工具中间垫一句 `cin.ignore();`：它的活是「**把管子里剩着的那一个字符丢掉**」，丢掉的正是那个捣乱的换行。丢完再开口，`getline` 复制到的才是真正的第二行。\n\n记住这条口令：**`cin >>` 和 `getline` 混着用的时候，中间垫一句 `cin.ignore();`**。",
+      "templateId": "cpp-s1-04-eat-then-name",
+      "params": {
+        "fish": 9,
+        "name": "三花 小",
+        "word": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "fde3af986a674e09"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-whole-line-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这回递进来的**是一整行字**，中间还夹着一个空格（比如对象的名字带个称号）。\n\n请你写一个程序：把这一行**整行取走**（中间那个空格要原样留着），然后印成一行：\n\n```text\n整行复制到：<这一整行>\n```\n\n⚠️ 本课那两件工具的分工要挑对：`cin >>` 只认「一样东西」，**遇空格就停**；要连空格一起取走，得换**专处理一整行**的那件工具。\n\n比如程序的输入是\n\n花花 小队长\n\n程序就要返回\n\n整行复制到：花花 小队长\n\n（判分喂的是**另外一行字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string line;\n    getline(cin, line);\n\n    cout << \"整行复制到：\" << line << endl;\n    return 0;\n}\n",
+      "expectedOutput": "整行复制到：张三 ",
+      "stdin": "张三 \n",
+      "explanation": "这一题的关键是**挑对工具**：\n\n| 工具 | 返回什么 |\n|---|---|\n| `cin >>` | 一样东西，**遇空格就停** |\n| `getline(cin, ...)` | **一整行**，一直复制到换行 |\n\n用 `cin >>` 会怎样？它复制到第一个空格就停下，我们只拿到半截（`张三`），后半截（``）还留在管子里。**屏幕上会少一截，而且它不报错。**\n\n用 `getline` 才对，注意它有**两样货**：先给**管子**（`cin`，从哪儿返回），再给**屋**（返回进哪间）。少给一样，编译器会说 `no matching function`；给的时候忘了 `#include <string>`，装字的该变量它也不认识。\n\n⚠️ 还有一条容易忘的：`getline` 取走的**不包括**那个换行本身（换行被它消耗了），所以印的时候我们自己写一句 `endl` 收尾就行，不会多出一个空行。",
+      "templateId": "cpp-s1-04-whole-line",
+      "params": {
+        "name": "张三 ",
+        "prefix": "整行复制到："
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "1d13e7dc0df6fbfc"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-whole-line-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这回递进来的**是一整行字**，中间还夹着一个空格（比如对象的名字带个称号）。\n\n请你写一个程序：把这一行**整行取走**（中间那个空格要原样留着），然后印成一行：\n\n```text\n耳朵收到：<这一整行>\n```\n\n⚠️ 本课那两件工具的分工要挑对：`cin >>` 只认「一样东西」，**遇空格就停**；要连空格一起取走，得换**专处理一整行**的那件工具。\n\n比如程序的输入是\n\n花花 小队长\n\n程序就要返回\n\n耳朵收到：花花 小队长\n\n（判分喂的是**另外一行字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string line;\n    getline(cin, line);\n\n    cout << \"耳朵收到：\" << line << endl;\n    return 0;\n}\n",
+      "expectedOutput": "耳朵收到：张三 ",
+      "stdin": "张三 \n",
+      "explanation": "这一题的关键是**挑对工具**：\n\n| 工具 | 返回什么 |\n|---|---|\n| `cin >>` | 一样东西，**遇空格就停** |\n| `getline(cin, ...)` | **一整行**，一直复制到换行 |\n\n用 `cin >>` 会怎样？它复制到第一个空格就停下，我们只拿到半截（`张三`），后半截（``）还留在管子里。**屏幕上会少一截，而且它不报错。**\n\n用 `getline` 才对，注意它有**两样货**：先给**管子**（`cin`，从哪儿返回），再给**屋**（返回进哪间）。少给一样，编译器会说 `no matching function`；给的时候忘了 `#include <string>`，装字的该变量它也不认识。\n\n⚠️ 还有一条容易忘的：`getline` 取走的**不包括**那个换行本身（换行被它消耗了），所以印的时候我们自己写一句 `endl` 收尾就行，不会多出一个空行。",
+      "templateId": "cpp-s1-04-whole-line",
+      "params": {
+        "name": "张三 ",
+        "prefix": "耳朵收到："
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "e848e8622ca93420"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-whole-line-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这回递进来的**是一整行字**，中间还夹着一个空格（比如对象的名字带个称号）。\n\n请你写一个程序：把这一行**整行取走**（中间那个空格要原样留着），然后印成一行：\n\n```text\n整行复制到：<这一整行>\n```\n\n⚠️ 本课那两件工具的分工要挑对：`cin >>` 只认「一样东西」，**遇空格就停**；要连空格一起取走，得换**专处理一整行**的那件工具。\n\n比如程序的输入是\n\n花花 小队长\n\n程序就要返回\n\n整行复制到：花花 小队长\n\n（判分喂的是**另外一行字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string line;\n    getline(cin, line);\n\n    cout << \"整行复制到：\" << line << endl;\n    return 0;\n}\n",
+      "expectedOutput": "整行复制到：计算机 二号",
+      "stdin": "计算机 二号\n",
+      "explanation": "这一题的关键是**挑对工具**：\n\n| 工具 | 返回什么 |\n|---|---|\n| `cin >>` | 一样东西，**遇空格就停** |\n| `getline(cin, ...)` | **一整行**，一直复制到换行 |\n\n用 `cin >>` 会怎样？它复制到第一个空格就停下，我们只拿到半截（`张三`），后半截（``）还留在管子里。**屏幕上会少一截，而且它不报错。**\n\n用 `getline` 才对，注意它有**两样货**：先给**管子**（`cin`，从哪儿返回），再给**屋**（返回进哪间）。少给一样，编译器会说 `no matching function`；给的时候忘了 `#include <string>`，装字的该变量它也不认识。\n\n⚠️ 还有一条容易忘的：`getline` 取走的**不包括**那个换行本身（换行被它消耗了），所以印的时候我们自己写一句 `endl` 收尾就行，不会多出一个空行。",
+      "templateId": "cpp-s1-04-whole-line",
+      "params": {
+        "name": "计算机 二号",
+        "prefix": "整行复制到："
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "7cc03b5dac7143ab"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-whole-line-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这回递进来的**是一整行字**，中间还夹着一个空格（比如对象的名字带个称号）。\n\n请你写一个程序：把这一行**整行取走**（中间那个空格要原样留着），然后印成一行：\n\n```text\n耳朵收到：<这一整行>\n```\n\n⚠️ 本课那两件工具的分工要挑对：`cin >>` 只认「一样东西」，**遇空格就停**；要连空格一起取走，得换**专处理一整行**的那件工具。\n\n比如程序的输入是\n\n花花 小队长\n\n程序就要返回\n\n耳朵收到：花花 小队长\n\n（判分喂的是**另外一行字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string line;\n    getline(cin, line);\n\n    cout << \"耳朵收到：\" << line << endl;\n    return 0;\n}\n",
+      "expectedOutput": "耳朵收到：计算机 二号",
+      "stdin": "计算机 二号\n",
+      "explanation": "这一题的关键是**挑对工具**：\n\n| 工具 | 返回什么 |\n|---|---|\n| `cin >>` | 一样东西，**遇空格就停** |\n| `getline(cin, ...)` | **一整行**，一直复制到换行 |\n\n用 `cin >>` 会怎样？它复制到第一个空格就停下，我们只拿到半截（`张三`），后半截（``）还留在管子里。**屏幕上会少一截，而且它不报错。**\n\n用 `getline` 才对，注意它有**两样货**：先给**管子**（`cin`，从哪儿返回），再给**屋**（返回进哪间）。少给一样，编译器会说 `no matching function`；给的时候忘了 `#include <string>`，装字的该变量它也不认识。\n\n⚠️ 还有一条容易忘的：`getline` 取走的**不包括**那个换行本身（换行被它消耗了），所以印的时候我们自己写一句 `endl` 收尾就行，不会多出一个空行。",
+      "templateId": "cpp-s1-04-whole-line",
+      "params": {
+        "name": "计算机 二号",
+        "prefix": "耳朵收到："
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "63e2250caf210bc8"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-whole-line-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这回递进来的**是一整行字**，中间还夹着一个空格（比如对象的名字带个称号）。\n\n请你写一个程序：把这一行**整行取走**（中间那个空格要原样留着），然后印成一行：\n\n```text\n整行复制到：<这一整行>\n```\n\n⚠️ 本课那两件工具的分工要挑对：`cin >>` 只认「一样东西」，**遇空格就停**；要连空格一起取走，得换**专处理一整行**的那件工具。\n\n比如程序的输入是\n\n花花 小队长\n\n程序就要返回\n\n整行复制到：花花 小队长\n\n（判分喂的是**另外一行字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string line;\n    getline(cin, line);\n\n    cout << \"整行复制到：\" << line << endl;\n    return 0;\n}\n",
+      "expectedOutput": "整行复制到：三花 小",
+      "stdin": "三花 小\n",
+      "explanation": "这一题的关键是**挑对工具**：\n\n| 工具 | 返回什么 |\n|---|---|\n| `cin >>` | 一样东西，**遇空格就停** |\n| `getline(cin, ...)` | **一整行**，一直复制到换行 |\n\n用 `cin >>` 会怎样？它复制到第一个空格就停下，我们只拿到半截（`张三`），后半截（``）还留在管子里。**屏幕上会少一截，而且它不报错。**\n\n用 `getline` 才对，注意它有**两样货**：先给**管子**（`cin`，从哪儿返回），再给**屋**（返回进哪间）。少给一样，编译器会说 `no matching function`；给的时候忘了 `#include <string>`，装字的该变量它也不认识。\n\n⚠️ 还有一条容易忘的：`getline` 取走的**不包括**那个换行本身（换行被它消耗了），所以印的时候我们自己写一句 `endl` 收尾就行，不会多出一个空行。",
+      "templateId": "cpp-s1-04-whole-line",
+      "params": {
+        "name": "三花 小",
+        "prefix": "整行复制到："
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "b791a11fba8d6003"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-04-whole-line-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这回递进来的**是一整行字**，中间还夹着一个空格（比如对象的名字带个称号）。\n\n请你写一个程序：把这一行**整行取走**（中间那个空格要原样留着），然后印成一行：\n\n```text\n耳朵收到：<这一整行>\n```\n\n⚠️ 本课那两件工具的分工要挑对：`cin >>` 只认「一样东西」，**遇空格就停**；要连空格一起取走，得换**专处理一整行**的那件工具。\n\n比如程序的输入是\n\n花花 小队长\n\n程序就要返回\n\n耳朵收到：花花 小队长\n\n（判分喂的是**另外一行字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string line;\n    getline(cin, line);\n\n    cout << \"耳朵收到：\" << line << endl;\n    return 0;\n}\n",
+      "expectedOutput": "耳朵收到：三花 小",
+      "stdin": "三花 小\n",
+      "explanation": "这一题的关键是**挑对工具**：\n\n| 工具 | 返回什么 |\n|---|---|\n| `cin >>` | 一样东西，**遇空格就停** |\n| `getline(cin, ...)` | **一整行**，一直复制到换行 |\n\n用 `cin >>` 会怎样？它复制到第一个空格就停下，我们只拿到半截（`张三`），后半截（``）还留在管子里。**屏幕上会少一截，而且它不报错。**\n\n用 `getline` 才对，注意它有**两样货**：先给**管子**（`cin`，从哪儿返回），再给**屋**（返回进哪间）。少给一样，编译器会说 `no matching function`；给的时候忘了 `#include <string>`，装字的该变量它也不认识。\n\n⚠️ 还有一条容易忘的：`getline` 取走的**不包括**那个换行本身（换行被它消耗了），所以印的时候我们自己写一句 `endl` 收尾就行，不会多出一个空行。",
+      "templateId": "cpp-s1-04-whole-line",
+      "params": {
+        "name": "三花 小",
+        "prefix": "耳朵收到："
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "7f494a87b0fac2a2"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-getline-missing-cin-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想**整行**返回一句话（里面还带个空格），于是照着课文写了一句，可翻不过去——编译器说，它认识的那个返回整行的家伙，跟我们递过去的这份**对不上号**。\n\n你帮我们改好，让它把输入接口里的那一整行原样输出。\n\n比如程序的输入是\n\n花花 小队长\n\n程序就要返回\n\n整行复制到：花花 小队长\n\n（判分用的是**另外一组字**，所以别把答案写死）",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    getline(name);\n    cout << \"整行复制到：\" << name << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    getline(cin, name);\n    cout << \"整行复制到：\" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "整行复制到：张三 ",
+      "stdin": "张三 \n",
+      "explanation": "编译器的原话是：\n\n`error: no matching function for call to 'getline(std::string&)'`\n\n用自然语言解释：**「我们认识的 `getline`，跟这个东西对不上号。」**\n\n它认识的 `getline` 要**两样货**：先给**管子**（从哪儿返回），再给**屋**（返回进哪间）。我们只递了一个变量，它当然认不出这是件什么活儿。补上管子那句 `cin`，两样凑齐，它就开工了。\n\n这道题还有个可以顺手学会的本事：编译器在这句下面列了**几个候选**，每个候选后面都写着 `candidate expects 2 arguments, 1 provided`——「**我们要两样，你只给了一样**」。报错后面这些候选行看着吓人，其实它们说的是同一句话：**数一数你递了几样，再看它要几样**，差多少就补多少。",
+      "templateId": "cpp-s1-getline-missing-cin",
+      "params": {
+        "name": "张三 "
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "3154c1e9dc3b994b"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-getline-missing-cin-002",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想**整行**返回一句话（里面还带个空格），于是照着课文写了一句，可翻不过去——编译器说，它认识的那个返回整行的家伙，跟我们递过去的这份**对不上号**。\n\n你帮我们改好，让它把输入接口里的那一整行原样输出。\n\n比如程序的输入是\n\n花花 小队长\n\n程序就要返回\n\n整行复制到：花花 小队长\n\n（判分用的是**另外一组字**，所以别把答案写死）",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    getline(name);\n    cout << \"整行复制到：\" << name << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string name;\n    getline(cin, name);\n    cout << \"整行复制到：\" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "整行复制到：三花 小",
+      "stdin": "三花 小\n",
+      "explanation": "编译器的原话是：\n\n`error: no matching function for call to 'getline(std::string&)'`\n\n用自然语言解释：**「我们认识的 `getline`，跟这个东西对不上号。」**\n\n它认识的 `getline` 要**两样货**：先给**管子**（从哪儿返回），再给**屋**（返回进哪间）。我们只递了一个变量，它当然认不出这是件什么活儿。补上管子那句 `cin`，两样凑齐，它就开工了。\n\n这道题还有个可以顺手学会的本事：编译器在这句下面列了**几个候选**，每个候选后面都写着 `candidate expects 2 arguments, 1 provided`——「**我们要两样，你只给了一样**」。报错后面这些候选行看着吓人，其实它们说的是同一句话：**数一数你递了几样，再看它要几样**，差多少就补多少。",
+      "templateId": "cpp-s1-getline-missing-cin",
+      "params": {
+        "name": "三花 小"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "d0ec9c2169397e9f"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-getline-needs-ignore-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给点单机装上了耳朵，输入接口里会递进来两行：第一行是今天攒的条数，第二行是对象的名字（名字里可能带空格）。\n\n可它返回的名字**是空的**——屏幕上「名字是」后面什么都没有，条数倒是返回对了。它一个错都不报，安安静静就跑完了。\n\n你帮我们改好：让第二行原样返回进该变量。\n\n比如程序的输入是\n\n9\n三花 小\n\n程序就要返回\n\n数据 9 条\n名字是 三花 小\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish;\n    string name;\n    cin >> fish;\n    getline(cin, name);\n    cout << \"数据 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish;\n    string name;\n    cin >> fish;\n    cin.ignore();\n    getline(cin, name);\n    cout << \"数据 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数据 3 条\n名字是 计算机 二号",
+      "stdin": "3\n计算机 二号\n",
+      "explanation": "这道题**一个错都不报**，可它就是返回错了——这样的坑最难受。\n\n事情要一步一步看：\n\n1. `cin >> fish` 只认「一样东西」，它读到第一行那个数后面的**换行**时就停下来了；\n2. 可它**没把那个换行拿走**——换行还留在管子里；\n3. `getline` 一开口，先复制到的东西正是那个换行。它确实复制到了「一整行」，只不过**这一行是空的**，所以该变量里什么都没有。\n\n多出来的那一句 `cin.ignore();` 就是「**把管子里剩着的那一个字符丢掉**」——丢掉的正是那个捣乱的换行。丢完再开口，`getline` 复制到的才是真正的第二行。\n\n记住这条口令：**`cin >>` 和 `getline` 混着用的时候，中间垫一句 `cin.ignore();`**。一个只认「一样东西」、还把换行留在管子里，一个专处理「一整行」——它俩的分工要记清，别让换行钻了空子。",
+      "templateId": "cpp-s1-getline-needs-ignore",
+      "params": {
+        "fish": 3,
+        "name": "计算机 二号"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "6785e284a4b42adb"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-getline-needs-ignore-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给点单机装上了耳朵，输入接口里会递进来两行：第一行是今天攒的条数，第二行是对象的名字（名字里可能带空格）。\n\n可它返回的名字**是空的**——屏幕上「名字是」后面什么都没有，条数倒是返回对了。它一个错都不报，安安静静就跑完了。\n\n你帮我们改好：让第二行原样返回进该变量。\n\n比如程序的输入是\n\n9\n三花 小\n\n程序就要返回\n\n数据 9 条\n名字是 三花 小\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish;\n    string name;\n    cin >> fish;\n    getline(cin, name);\n    cout << \"数据 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int fish;\n    string name;\n    cin >> fish;\n    cin.ignore();\n    getline(cin, name);\n    cout << \"数据 \" << fish << \" 条\" << endl;\n    cout << \"名字是 \" << name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数据 4 条\n名字是 三花 小",
+      "stdin": "4\n三花 小\n",
+      "explanation": "这道题**一个错都不报**，可它就是返回错了——这样的坑最难受。\n\n事情要一步一步看：\n\n1. `cin >> fish` 只认「一样东西」，它读到第一行那个数后面的**换行**时就停下来了；\n2. 可它**没把那个换行拿走**——换行还留在管子里；\n3. `getline` 一开口，先复制到的东西正是那个换行。它确实复制到了「一整行」，只不过**这一行是空的**，所以该变量里什么都没有。\n\n多出来的那一句 `cin.ignore();` 就是「**把管子里剩着的那一个字符丢掉**」——丢掉的正是那个捣乱的换行。丢完再开口，`getline` 复制到的才是真正的第二行。\n\n记住这条口令：**`cin >>` 和 `getline` 混着用的时候，中间垫一句 `cin.ignore();`**。一个只认「一样东西」、还把换行留在管子里，一个专处理「一整行」——它俩的分工要记清，别让换行钻了空子。",
+      "templateId": "cpp-s1-getline-needs-ignore",
+      "params": {
+        "fish": 4,
+        "name": "三花 小"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "7c9f0e9bf35f71de"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-missing-semicolon-003",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想让程序报一下攒了5条数据，可它又双叒叕跑不起来……\n\n奇怪的是我们看了半天也没看出哪里不对。你帮我们找找它为什么不高兴，把它改好。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 5\n    cout << \"攒下来的数据是 \" << fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 5;\n    cout << \"攒下来的数据是 \" << fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "攒下来的数据是 5 条",
+      "stdin": null,
+      "explanation": "是**分号**！`int fish = 5` 那一行末尾少了一个 `;`。\n\nC++ 里每条语句末尾都要有分号，它是「这句话说完了」的句号。少了它，编译器会一路读下去，读到下一行的 `cout` 才发现不对劲 —— 所以它报错的行号往往指着**下一行**，看着像是下一行有问题。这也是为什么这个错特别难找",
+      "templateId": "cpp-s1-missing-semicolon",
+      "params": {
+        "fish": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.276Z",
+        "hash": "7b9d97a55f3bcc2b"
+      }
+    }
+  ]
+}

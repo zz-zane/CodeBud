@@ -1,0 +1,87 @@
+{
+  "lessonId": "c-stage2-12",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们写下 `int (*op)(int, int) = add;`。这句话里**最前面**那个 `int` 说的是什么？",
+      "options": [
+        "这个函数返回值是一个整数",
+        "这招要传入两个整数",
+        "`op` 这个元素里保存整数张名称",
+        "这招的名字叫 `int`"
+      ],
+      "answer": 0,
+      "explanation": "拆成三段念：最右边的 `(int, int)` 是**传入清单**（两个整数），中间包起来的 `(*op)` 是「这个元素叫 `op`、保存的是名称」，最左边那个 `int` 就是**返回值**是什么。要是写成 `double (*op)(int, int)`，那就变成「传入两个整数、返回一个小数」了。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "第一节那段里，先调用了一次 `op(7, 2)`，接着写了一句 `op = sub;`，又调用了一次 `op(7, 2)`。这两次分别跑来哪一个方法？",
+      "options": [
+        "第一次跑 `add`、第二次跑 `sub` —— 元素没换，换的是元素里的名称",
+        "第一次跑 `add`、第二次跑 `sub` —— 连元素也一起换掉了",
+        "两次都跑 `add`，因为函数是写死在代码里的",
+        "编译器会拦下第二次，说同一个变量不能声明成两类型型"
+      ],
+      "answer": 0,
+      "explanation": "元素一直是那个元素，**换的是元素里的名称** —— 所以两回印出来是 9 和 5。这也是这一课全部本事的种子：同一个元素、同一个写法，换张名称就换了一套活。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们调用 `apply(add, 3, 4)` 和 `apply(mul, 3, 4)`，`apply` 里面那句 `return op(a, b);` 到底干了加法还是乘法，是谁说了算？",
+      "options": [
+        "递进来的那张名称说了算 —— `apply` 自己并不知道进来的是哪一个方法",
+        "`apply` 自己说了算，它在代码里写死了",
+        "编译器读代码的时候挑一个",
+        "两边谁先写好的就听谁的"
+      ],
+      "answer": 0,
+      "explanation": "`apply` 只管照着名称干活：递进来的名称上写着「加」，它就算加法；写着「乘」，它就算乘法。同一段代码能有两种活法，靠的全是名称 —— 这就是「把怎么干，从什么时候干里拆出来」的意思。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint apply(____, int a, int b) {\n    return op(a, b);\n}\n\nint main(void) {\n    printf(\"%d\\n\", apply(add, 3, 4));\n    return 0;\n}",
+      "stem": "我们要把「一张名称」当第一样传入递给 `apply`，可头上的那一格空着。空里该填什么？",
+      "blanks": [
+        {
+          "answer": "int (*op)(int, int)",
+          "accept": [
+            "int (*op)(int,int)",
+            "int (* op)(int, int)",
+            "int (* op)(int,int)"
+          ]
+        }
+      ],
+      "explanation": "空里要写的是「**一个装名称的元素**」：`int (*op)(int, int)` 。从里往外念 —— `op` 是元素名，包着它的那对小括号一个都不能省；最右边 `(int, int)` 是传入清单（两个整数）；最左边 `int` 是返回值。为什么元素名非得叫 `op`？因为下面那句 `return op(a, b);` 就是拿着这个元素去调用名称上的函数，两个名字得对得上。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint sub(int a, int b) {\n    return a - b;\n}\n\nint main(void) {\n    int (*op)(int, int) = add;\n    printf(\"%d\\n\", op(7, 2));\n    op = sub;\n    printf(\"%d\\n\", op(7, 2));\n    return 0;\n}",
+      "stem": "这段代码印出什么？",
+      "answer": "9\n5",
+      "accept": [
+        "9\n5\n"
+      ],
+      "explanation": "第一回 `op` 里保存的是「加」的名称，7 加 2 得 9；`op = sub;` 换上「减」的名称之后，7 减 2 得 5 。两次都是同一个元素、同一个写法，变的只有名称。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nvoid show(int x) {\n    printf(\"元素里是 %d\\n\", x);\n}\n\nvoid show_double(int x) {\n    printf(\"翻倍是 %d\\n\", x * 2);\n}\n\nvoid each(int a[], int n, void (*visit)(int)) {\n    for (int i = 0; i < n; i++) {\n        visit(a[i]);\n    }\n}\n\nint main(void) {\n    int bowl[3] = {3, 5, 7};\n    each(bowl, 3, show);\n    each(bowl, 3, show_double);\n    return 0;\n}",
+      "stem": "这段代码印出什么？",
+      "answer": "元素里是 3\n元素里是 5\n元素里是 7\n翻倍是 6\n翻倍是 10\n翻倍是 14",
+      "accept": [
+        "元素里是 3\n元素里是 5\n元素里是 7\n翻倍是 6\n翻倍是 10\n翻倍是 14\n"
+      ],
+      "explanation": "`each` 走到每个元素前面，就**回头调用一次名称上写的函数**，把元素里的数传入。第一趟递的是「印一遍」的名称，所以先印三行「元素里是」；第二趟递的是「印两遍」的名称，于是翻倍之后印出 6、10、14。`each` 自己一直没变，变的只是递进去的名称。"
+    }
+  ]
+}

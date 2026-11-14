@@ -1,0 +1,32 @@
+{
+  "templateId": "java-s2-insert-arg-order",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-07",
+  "type": "codefix",
+  "concept": [
+    "会自己长大的抽屉",
+    "insert",
+    "两样料有先后",
+    "过不了源代码"
+  ],
+  "instances": 2,
+  "params": {
+    "head": {
+      "kind": "pick",
+      "values": [
+        "当前记录",
+        "明天处理"
+      ]
+    },
+    "pos": {
+      "kind": "int",
+      "min": 0,
+      "max": 1
+    }
+  },
+  "stemTemplate": "我们想往抽屉里那串字的**中间**塞一段，可编译器又把源代码退回来了。\n\n抽屉里先攒好的是 `数据`。我们想做的事只有一件：**把 `{head}` 塞到编号 {pos} 那个位置上去**，原来的字一个都不许少、顺序也不许变。\n\n（塞进去之后长什么样？比如往 `abcd` 的编号 1 塞一段 `XY`，得到的就是 `aXYbcd`  —— 记住是**先掰开、再塞进去、再合上**。）\n\n只有塞那一段的问题，别的我们都没写错。",
+  "brokenCodeTemplate": "public class Main {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder();\n        sb.append(\"数据\");\n        sb.insert(\"{head}\", {pos});\n        System.out.println(sb);\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder();\n        sb.append(\"数据\");\n        sb.insert({pos}, \"{head}\");\n        System.out.println(sb);\n    }\n}\n",
+  "explanationTemplate": "StringBuilder.insert 的参数顺序是插入位置与待插入内容。插入会改变可变序列，位置按插入前文本的 UTF-16 下标确定；不能交换参数含义。"
+}

@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s2-06-key-not-lent",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-06",
+  "type": "codefix",
+  "concept": [
+    "后门不传递",
+    "整张类定义开门",
+    "报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "fish": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    },
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们给对象大夫那张类定义开了后门，对象大夫翻账本翻得好好的。\n\n现在来了个**学徒**，它也想瞄一眼盒子里的条数——可信封递进去，编译器还是说**够不着**。\n\n你帮我们改到能跑起来。**对象大夫那张类定义、还有工作区那段账，都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n};\n\nclass Vet {\n};\n\nclass Assistant {\npublic:\n    void peek(const Cat& c) {\n        cout << c.fish << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"{name}\", {fish});\n    Assistant a;\n    a.peek(c1);\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n    friend class Assistant;\n};\n\nclass Vet {\n};\n\nclass Assistant {\npublic:\n    void peek(const Cat& c) {\n        cout << c.fish << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"{name}\", {fish});\n    Assistant a;\n    a.peek(c1);\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:19:19: error: 'int Cat::fish' is private within this context`\n\n用自然语言解释：**「`cat` 盒子里的 `fish` 那一格，你现在站的这个地方够不着。」**\n\n我们明明开过后门了呀？——因为开的是**给对象大夫那张类定义的**，学徒不是对象大夫。这一条是刻意的：\n\n> **后门不传递。** 通行证不许转借：`Vet` 有，`Assistant` 没有。想让它进得来，就得在类定义里**再写一行**，把名字写清楚。\n\n要是通行证能转借，那我们开一次门就等于给全世界开门了——盖子也就白扣了。\n\n顺带记上另外两条边界：**后门是单向的**（我们给谁开门是我们单方面签的字，对方不会把它的钥匙回赠过来），**后门也不是工牌**（拿到通行证的函数身份上还是外面的一手）。\n\n想让这一位进来，解法就是在类定义里补上给它那一行。"
+}

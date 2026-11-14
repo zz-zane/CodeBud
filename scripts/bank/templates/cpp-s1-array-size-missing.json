@@ -1,0 +1,34 @@
+{
+  "templateId": "cpp-s1-array-size-missing",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-08",
+  "type": "codefix",
+  "concept": [
+    "一排元素",
+    "方括号里的格数",
+    "storage size"
+  ],
+  "instances": 2,
+  "params": {
+    "v1": {
+      "kind": "int",
+      "min": 3,
+      "max": 4
+    },
+    "v2": {
+      "kind": "int",
+      "min": 5,
+      "max": 7
+    },
+    "v3": {
+      "kind": "int",
+      "min": 2,
+      "max": 6
+    }
+  },
+  "stemTemplate": "我们要摆**一排三个元素**（第 0 格、第 1 格、第 2 格），一格一格把数赋值，再照编号一串报出来。\n\n这段代码**翻不过去** —— 编译器把它拦下了，一行都没跑。你帮我们把漏掉的那个数补上，让它翻得过去、跑起来：\n\n- 第 0 格装 {v1}\n- 第 1 格装 {v2}\n- 第 2 格装 {v3}\n\n（这三行赋值的话一个字都别改 —— 毛病不在赋值上。）",
+  "brokenCodeTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish[];\n\n    fish[0] = {v1};\n    fish[1] = {v2};\n    fish[2] = {v3};\n\n    for (int i = 0; i < 3; i++) {\n        cout << \"第 \" << i << \" 格有 \" << fish[i] << \" 条\" << endl;\n    }\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish[3];\n\n    fish[0] = {v1};\n    fish[1] = {v2};\n    fish[2] = {v3};\n\n    for (int i = 0; i < 3; i++) {\n        cout << \"第 \" << i << \" 格有 \" << fish[i] << \" 条\" << endl;\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: storage size of 'fish' isn't known`，翻过来就是：**「这一排几格，我们不知道。」**\n\n方括号里空着是**有条件的**：只有你**同时**用花括号把每个元素里的东西一次写出来（一排三个元素就写三份值），编译器才会替你数你写了几个、照那个数划地方。\n\n这一题里我们是**先摆元素、再一格一格装**的 —— 赋值的话还在下面几行，摆元素这一行上什么值都没有，它就不知道该划几格，只好把我们拦下来。\n\n修法：在方括号里把格数写出来（三个元素就写 `3`）。\n\n顺带记牢这一条：**这一排元素的格数，是写代码的时候就钉死的** —— 它不像「列表」那种东西，想多一格就回去改这个数、再让编译器重新翻一遍。"
+}

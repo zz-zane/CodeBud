@@ -1,0 +1,39 @@
+{
+  "templateId": "java-s1-charat-length-oob",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-11",
+  "type": "codefix",
+  "concept": [
+    "charAt",
+    "编号越界",
+    "断气",
+    "Scanner"
+  ],
+  "instances": 2,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "数据到手",
+        "计算机的工作区"
+      ]
+    },
+    "word2": {
+      "kind": "pick",
+      "values": [
+        "李四的毛线球",
+        "张三的数据容器"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{word}\n",
+    "sampleText": "{word2}\n"
+  },
+  "stemTemplate": "我们想印出一串字的**最后一颗字符**。这串字每次从纸条上来，长短都不一样，所以我们偷了个懒：不写死编号，拿「有几颗」这个数去报编号。\n\n结果这程序**一跑就断气** —— 屏幕上错误信息一长串，该印的那行一个字都没有。\n\n你帮我们把编号改对，让它把这串字的最后一颗印出来。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一串字**，长短也不一样。）",
+  "brokenCodeTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        System.out.println(\"最后一颗是 \" + s.charAt(s.length()));\n    }\n}\n",
+  "referenceFixTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        System.out.println(\"最后一颗是 \" + s.charAt(s.length() - 1));\n    }\n}\n",
+  "explanationTemplate": "Java String 下标从 0 开始，有效范围小于 length()。charAt(length()) 越界，最后一个 UTF-16 代码单元位于 length()-1；length() 不是任意 Unicode 字符串的用户感知字符数。"
+}

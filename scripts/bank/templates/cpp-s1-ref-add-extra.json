@@ -1,0 +1,34 @@
+{
+  "templateId": "cpp-s1-ref-add-extra",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-10",
+  "type": "codewrite",
+  "concept": [
+    "写一个方法改外面的元素",
+    "温柔版收料",
+    "两份料"
+  ],
+  "instances": 6,
+  "params": {
+    "a": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    },
+    "b": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{a}\n{b}\n",
+    "sampleText": "8\n9\n"
+  },
+  "stemTemplate": "我们要自己写一个方法，名字叫 `addFish`：**把外面那个元素里的数加上另一个数**。\n\n输入接口会传入进来两个数（一行一个）：第一个是元素里原来有几条，第二个是要加几条。\n\n请你写个程序：\n\n1. 把两个数读进来；\n2. 写一个方法 `addFish`，**调用结束它之后，外面那个元素里的数要真的变成加上去的那个数**（这一个方法就是要动外面的元素，别只动自己手边那份）；\n3. 把加完之后的元素印成一行 `元素里现在有 Y 条`。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外两个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\nusing namespace std;\n\nvoid addFish(int& bowl, int extra) {\n    bowl = bowl + extra;\n}\n\nint main() {\n    int bowl = 0;\n    int extra = 0;\n    cin >> bowl >> extra;\n\n    addFish(bowl, extra);\n    cout << \"元素里现在有 \" << bowl << \" 条\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一个方法的脑袋上摆了两个元素，**一个带记号、一个不带** —— 这不是随便挑的：\n\n```\nvoid addFish(int& bowl, int extra)\n```\n\n- `int& bowl` 前面那个 `&` 说：**这一份料别抄，就用外面那个元素本身**。所以函数里 `bowl = bowl + extra;` 改的是**外面那个**。\n- `int extra` 前面没有记号：**要加几条**这个数只是拿来用一下，抄一份进来就够了 —— 外面没有哪只元素需要跟着变。\n\n一句话：**哪只元素要动，哪只元素前面加记号。** 两个都要动就两个都加（下一题对调两个元素就是这个样子）。\n\n⚠️ 少写了那个记号会怎样？函数改的就是一张抄件，调用结束外面那个元素**一点没变** —— 而且它**不报错、不吭声**，只是印出来的数不对。这个坑在本课里已经出现过一次（另一道题正是它）。\n\n最后：函数得摆在主程序**上面**，称呼它的时候按脑袋上的顺序传入两份料（先给元素、再给要加的数）。"
+}

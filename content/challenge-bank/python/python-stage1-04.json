@@ -1,0 +1,442 @@
+{
+  "lessonId": "python-stage1-04",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-py-s1-in-check-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们手上有一条字符串 `字符串`，想问问它里面**有没有** `项链` 这一小段。\n\n请你写个程序，用今天新学的那个问法去问一问，把电脑的回答打印出来：有的话回答是 `True`，没有就是 `False`。",
+      "starter": null,
+      "referenceSolution": "s = \"字符串\"\nprint(\"项链\" in s)\n",
+      "expectedOutput": "False",
+      "stdin": null,
+      "explanation": "in 判断左侧字符串是否是右侧字符串的子串，结果是布尔值。它检查内容是否连续出现，不检查变量名或字符串长度；测试文本改变后，应按当前文本重新判断。",
+      "templateId": "py-s1-in-check",
+      "params": {
+        "s": "字符串",
+        "sub": "项链"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.873Z",
+        "hash": "362f0a65f5257edb"
+      }
+    },
+    {
+      "id": "bank-py-s1-in-check-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们手上有一条字符串 `字符串`，想问问它里面**有没有** `车车` 这一小段。\n\n请你写个程序，用今天新学的那个问法去问一问，把电脑的回答打印出来：有的话回答是 `True`，没有就是 `False`。",
+      "starter": null,
+      "referenceSolution": "s = \"字符串\"\nprint(\"车车\" in s)\n",
+      "expectedOutput": "False",
+      "stdin": null,
+      "explanation": "今天新学的问法是 `in` ：`\"项链\" in s` 整句读作「这条字符串里**有没有**这一小段」。电脑会返回一个真假值 —— 有就是 `True`，没有就是 `False`。\n\n它跟「报编号」是两回事：报编号要你写清楚是第几颗，答不出来就报错；`in` 只回答「有」或者「没有」，问的东西在里面待着就行，待在哪一段它不管。\n\n（要问的那一小段同样得用引号围起来 —— 它是一串字，不是名字。）",
+      "templateId": "py-s1-in-check",
+      "params": {
+        "s": "字符串",
+        "sub": "车车"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "8b08e168e0505df7"
+      }
+    },
+    {
+      "id": "bank-py-s1-in-check-004",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们手上有一条字符串 `商品罐头`，想问问它里面**有没有** `项链` 这一小段。\n\n请你写个程序，用今天新学的那个问法去问一问，把电脑的回答打印出来：有的话回答是 `True`，没有就是 `False`。",
+      "starter": null,
+      "referenceSolution": "s = \"商品罐头\"\nprint(\"项链\" in s)\n",
+      "expectedOutput": "False",
+      "stdin": null,
+      "explanation": "今天新学的问法是 `in` ：`\"项链\" in s` 整句读作「这条字符串里**有没有**这一小段」。电脑会返回一个真假值 —— 有就是 `True`，没有就是 `False`。\n\n它跟「报编号」是两回事：报编号要你写清楚是第几颗，答不出来就报错；`in` 只回答「有」或者「没有」，问的东西在里面待着就行，待在哪一段它不管。\n\n（要问的那一小段同样得用引号围起来 —— 它是一串字，不是名字。）",
+      "templateId": "py-s1-in-check",
+      "params": {
+        "s": "商品罐头",
+        "sub": "项链"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "de8d3f65cf8a8697"
+      }
+    },
+    {
+      "id": "bank-py-s1-in-check-007",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们手上有一条字符串 `商品罐头`，想问问它里面**有没有** `商品` 这一小段。\n\n请你写个程序，用今天新学的那个问法去问一问，把电脑的回答打印出来：有的话回答是 `True`，没有就是 `False`。",
+      "starter": null,
+      "referenceSolution": "s = \"商品罐头\"\nprint(\"商品\" in s)\n",
+      "expectedOutput": "True",
+      "stdin": null,
+      "explanation": "今天新学的问法是 `in` ：`\"项链\" in s` 整句读作「这条字符串里**有没有**这一小段」。电脑会返回一个真假值 —— 有就是 `True`，没有就是 `False`。\n\n它跟「报编号」是两回事：报编号要你写清楚是第几颗，答不出来就报错；`in` 只回答「有」或者「没有」，问的东西在里面待着就行，待在哪一段它不管。\n\n（要问的那一小段同样得用引号围起来 —— 它是一串字，不是名字。）",
+      "templateId": "py-s1-in-check",
+      "params": {
+        "s": "商品罐头",
+        "sub": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "9e71bcb480fcbf3a"
+      }
+    },
+    {
+      "id": "bank-py-s1-in-check-009",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们手上有一条字符串 `毛线球车车`，想问问它里面**有没有** `罐头` 这一小段。\n\n请你写个程序，用今天新学的那个问法去问一问，把电脑的回答打印出来：有的话回答是 `True`，没有就是 `False`。",
+      "starter": null,
+      "referenceSolution": "s = \"毛线球车车\"\nprint(\"罐头\" in s)\n",
+      "expectedOutput": "False",
+      "stdin": null,
+      "explanation": "今天新学的问法是 `in` ：`\"项链\" in s` 整句读作「这条字符串里**有没有**这一小段」。电脑会返回一个真假值 —— 有就是 `True`，没有就是 `False`。\n\n它跟「报编号」是两回事：报编号要你写清楚是第几颗，答不出来就报错；`in` 只回答「有」或者「没有」，问的东西在里面待着就行，待在哪一段它不管。\n\n（要问的那一小段同样得用引号围起来 —— 它是一串字，不是名字。）",
+      "templateId": "py-s1-in-check",
+      "params": {
+        "s": "毛线球车车",
+        "sub": "罐头"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "ee609fb939000787"
+      }
+    },
+    {
+      "id": "bank-py-s1-in-check-011",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们手上有一条字符串 `毛线球车车`，想问问它里面**有没有** `商品` 这一小段。\n\n请你写个程序，用今天新学的那个问法去问一问，把电脑的回答打印出来：有的话回答是 `True`，没有就是 `False`。",
+      "starter": null,
+      "referenceSolution": "s = \"毛线球车车\"\nprint(\"商品\" in s)\n",
+      "expectedOutput": "False",
+      "stdin": null,
+      "explanation": "今天新学的问法是 `in` ：`\"项链\" in s` 整句读作「这条字符串里**有没有**这一小段」。电脑会返回一个真假值 —— 有就是 `True`，没有就是 `False`。\n\n它跟「报编号」是两回事：报编号要你写清楚是第几颗，答不出来就报错；`in` 只回答「有」或者「没有」，问的东西在里面待着就行，待在哪一段它不管。\n\n（要问的那一小段同样得用引号围起来 —— 它是一串字，不是名字。）",
+      "templateId": "py-s1-in-check",
+      "params": {
+        "s": "毛线球车车",
+        "sub": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "321ce60ea6420959"
+      }
+    },
+    {
+      "id": "bank-py-s1-index-oob-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想打印 `数据` 的**最后一个字**，可程序一跑就报错……\n\n你帮我们把它改好，让它打印出最后一个字。",
+      "brokenCode": "s = \"数据\"\nprint(s[9])\n",
+      "referenceFix": "s = \"数据\"\nprint(s[-1])\n",
+      "expectedOutput": "据",
+      "stdin": null,
+      "explanation": "Python 字符串下标从 0 开始。访问超出范围的下标会抛出 IndexError；最后一个字符可用 s[-1] 访问，不应把旧例子的固定下标当作任意长度字符串的末尾。",
+      "templateId": "py-s1-index-oob",
+      "params": {
+        "s": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.873Z",
+        "hash": "9f39d597a17073e8"
+      }
+    },
+    {
+      "id": "bank-py-s1-index-oob-002",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想打印 `毛线球` 的**最后一个字**，可程序一跑就报错……\n\n你帮我们把它改好，让它打印出最后一个字。",
+      "brokenCode": "s = \"毛线球\"\nprint(s[9])\n",
+      "referenceFix": "s = \"毛线球\"\nprint(s[2])\n",
+      "expectedOutput": "球",
+      "stdin": null,
+      "explanation": "`s[9]` 想拿**下标 9** 那个字，可 `毛线球` 一共只有 3 个字 —— 下标最大的那个是 **2**，9 号根本不存在，解释器只好报 `IndexError`（下标越界）。\n\n**下标从 0 开始数**：`毛线球` 的三个字分别是 `s[0]`、`s[1]`、`s[2]`。所以最后一个字是 `s[2]`。\n\n（也可以写 `s[-1]`——负数从末尾倒着数，`-1` 就是最后一个，而且不管这串字多长都对，更省心。）",
+      "templateId": "py-s1-index-oob",
+      "params": {
+        "s": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "f051ca6c6171a08e"
+      }
+    },
+    {
+      "id": "bank-py-s1-join-and-copy-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要玩两条字符串，屏幕上从上往下出现两行：\n\n第一行：把 `一口` 这一串**复印 2 遍**、串成一条\n\n第二行：把 `一口` 和 `两口` **接成一条**\n\n（两行都是要打印出来的字，复印和节点都交给程序去干，别自己手打出来。）",
+      "starter": null,
+      "referenceSolution": "print(\"一口\" * 2)\nprint(\"一口\" + \"两口\")\n",
+      "expectedOutput": "一口一口\n一口两口",
+      "stdin": null,
+      "explanation": "字符串身上有两个好用的符号：\n\n- `*` 是**复印**：`\"哈\" * 3` 就是「把这一颗复印三份、再串成一串」，得到「哈哈哈」。复印几遍由右边那个数说了算。\n- `+` 是**节点**：两条字符串接成一条更长的，`\"一口\" + \"一口\"` 得到「一口一口」。\n\n要留意的是：同样一个 `+`，放在**数字**身上才是加法（`3 + 5` 得 `8`），放在**字符串**身上就是节点。这就是引号划出来的那条界线 —— 引号里的东西是字，不是数。",
+      "templateId": "py-s1-join-and-copy",
+      "params": {
+        "w1": "一口",
+        "w2": "两口",
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "e18fcabdb642449f"
+      }
+    },
+    {
+      "id": "bank-py-s1-join-and-copy-005",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要玩两条字符串，屏幕上从上往下出现两行：\n\n第一行：把 `一口` 这一串**复印 4 遍**、串成一条\n\n第二行：把 `一口` 和 `` **接成一条**\n\n（两行都是要打印出来的字，复印和节点都交给程序去干，别自己手打出来。）",
+      "starter": null,
+      "referenceSolution": "print(\"一口\" * 4)\nprint(\"一口\" + \"\")\n",
+      "expectedOutput": "一口一口一口一口\n一口",
+      "stdin": null,
+      "explanation": "字符串身上有两个好用的符号：\n\n- `*` 是**复印**：`\"哈\" * 3` 就是「把这一颗复印三份、再串成一串」，得到「哈哈哈」。复印几遍由右边那个数说了算。\n- `+` 是**节点**：两条字符串接成一条更长的，`\"一口\" + \"一口\"` 得到「一口一口」。\n\n要留意的是：同样一个 `+`，放在**数字**身上才是加法（`3 + 5` 得 `8`），放在**字符串**身上就是节点。这就是引号划出来的那条界线 —— 引号里的东西是字，不是数。",
+      "templateId": "py-s1-join-and-copy",
+      "params": {
+        "w1": "一口",
+        "w2": "",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "4360d989e74bc5b8"
+      }
+    },
+    {
+      "id": "bank-py-s1-join-and-copy-010",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要玩两条字符串，屏幕上从上往下出现两行：\n\n第一行：把 `` 这一串**复印 3 遍**、串成一条\n\n第二行：把 `` 和 `两口` **接成一条**\n\n（两行都是要打印出来的字，复印和节点都交给程序去干，别自己手打出来。）",
+      "starter": null,
+      "referenceSolution": "print(\"\" * 3)\nprint(\"\" + \"两口\")\n",
+      "expectedOutput": "\n两口",
+      "stdin": null,
+      "explanation": "字符串身上有两个好用的符号：\n\n- `*` 是**复印**：`\"哈\" * 3` 就是「把这一颗复印三份、再串成一串」，得到「哈哈哈」。复印几遍由右边那个数说了算。\n- `+` 是**节点**：两条字符串接成一条更长的，`\"一口\" + \"一口\"` 得到「一口一口」。\n\n要留意的是：同样一个 `+`，放在**数字**身上才是加法（`3 + 5` 得 `8`），放在**字符串**身上就是节点。这就是引号划出来的那条界线 —— 引号里的东西是字，不是数。",
+      "templateId": "py-s1-join-and-copy",
+      "params": {
+        "w1": "",
+        "w2": "两口",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "721b32a0ac6750e3"
+      }
+    },
+    {
+      "id": "bank-py-s1-join-and-copy-016",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要玩两条字符串，屏幕上从上往下出现两行：\n\n第一行：把 `` 这一串**复印 3 遍**、串成一条\n\n第二行：把 `` 和 `骨头` **接成一条**\n\n（两行都是要打印出来的字，复印和节点都交给程序去干，别自己手打出来。）",
+      "starter": null,
+      "referenceSolution": "print(\"\" * 3)\nprint(\"\" + \"骨头\")\n",
+      "expectedOutput": "\n骨头",
+      "stdin": null,
+      "explanation": "字符串身上有两个好用的符号：\n\n- `*` 是**复印**：`\"哈\" * 3` 就是「把这一颗复印三份、再串成一串」，得到「哈哈哈」。复印几遍由右边那个数说了算。\n- `+` 是**节点**：两条字符串接成一条更长的，`\"一口\" + \"一口\"` 得到「一口一口」。\n\n要留意的是：同样一个 `+`，放在**数字**身上才是加法（`3 + 5` 得 `8`），放在**字符串**身上就是节点。这就是引号划出来的那条界线 —— 引号里的东西是字，不是数。",
+      "templateId": "py-s1-join-and-copy",
+      "params": {
+        "w1": "",
+        "w2": "骨头",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "750e83d4139b0735"
+      }
+    },
+    {
+      "id": "bank-py-s1-join-and-copy-021",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要玩两条字符串，屏幕上从上往下出现两行：\n\n第一行：把 `数据` 这一串**复印 2 遍**、串成一条\n\n第二行：把 `数据` 和 `` **接成一条**\n\n（两行都是要打印出来的字，复印和节点都交给程序去干，别自己手打出来。）",
+      "starter": null,
+      "referenceSolution": "print(\"数据\" * 2)\nprint(\"数据\" + \"\")\n",
+      "expectedOutput": "数据数据\n数据",
+      "stdin": null,
+      "explanation": "字符串身上有两个好用的符号：\n\n- `*` 是**复印**：`\"哈\" * 3` 就是「把这一颗复印三份、再串成一串」，得到「哈哈哈」。复印几遍由右边那个数说了算。\n- `+` 是**节点**：两条字符串接成一条更长的，`\"一口\" + \"一口\"` 得到「一口一口」。\n\n要留意的是：同样一个 `+`，放在**数字**身上才是加法（`3 + 5` 得 `8`），放在**字符串**身上就是节点。这就是引号划出来的那条界线 —— 引号里的东西是字，不是数。",
+      "templateId": "py-s1-join-and-copy",
+      "params": {
+        "w1": "数据",
+        "w2": "",
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "2d709a4f6c614e65"
+      }
+    },
+    {
+      "id": "bank-py-s1-join-and-copy-026",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要玩两条字符串，屏幕上从上往下出现两行：\n\n第一行：把 `数据` 这一串**复印 4 遍**、串成一条\n\n第二行：把 `数据` 和 `骨头` **接成一条**\n\n（两行都是要打印出来的字，复印和节点都交给程序去干，别自己手打出来。）",
+      "starter": null,
+      "referenceSolution": "print(\"数据\" * 4)\nprint(\"数据\" + \"骨头\")\n",
+      "expectedOutput": "数据数据数据数据\n数据骨头",
+      "stdin": null,
+      "explanation": "字符串身上有两个好用的符号：\n\n- `*` 是**复印**：`\"哈\" * 3` 就是「把这一颗复印三份、再串成一串」，得到「哈哈哈」。复印几遍由右边那个数说了算。\n- `+` 是**节点**：两条字符串接成一条更长的，`\"一口\" + \"一口\"` 得到「一口一口」。\n\n要留意的是：同样一个 `+`，放在**数字**身上才是加法（`3 + 5` 得 `8`），放在**字符串**身上就是节点。这就是引号划出来的那条界线 —— 引号里的东西是字，不是数。",
+      "templateId": "py-s1-join-and-copy",
+      "params": {
+        "w1": "数据",
+        "w2": "骨头",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "06af068754ee1564"
+      }
+    },
+    {
+      "id": "bank-py-s1-len-as-method-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们手里有一条字符串 `字符串`，想数一数它一共有几颗，把数目打印出来。\n\n可这段代码一跑就报错了……你帮我们改对。",
+      "brokenCode": "s = \"字符串\"\nprint(s.len())\n",
+      "referenceFix": "s = \"字符串\"\nprint(len(s))\n",
+      "expectedOutput": "3",
+      "stdin": null,
+      "explanation": "Python 字符串长度使用内置函数 len(s)，不是 s.len()。结果统计字符串的 Unicode 码点数；本例不把引号计入内容，也不能沿用旧示例的长度。",
+      "templateId": "py-s1-len-as-method",
+      "params": {
+        "s": "字符串"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.873Z",
+        "hash": "279ba54860d497d7"
+      }
+    },
+    {
+      "id": "bank-py-s1-len-as-method-002",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们手里有一条字符串 `毛线球`，想数一数它一共有几颗，把数目打印出来。\n\n可这段代码一跑就报错了……你帮我们改对。",
+      "brokenCode": "s = \"毛线球\"\nprint(s.len())\n",
+      "referenceFix": "s = \"毛线球\"\nprint(len(s))\n",
+      "expectedOutput": "3",
+      "stdin": null,
+      "explanation": "`len` 是**外面请来的外援**，它不顺字符串的点名规矩。写成 `s.len()`，等于对着字符串调用「你自己那件 `len` 呢」—— 字符串翻遍全身也没有这一件，只好报 `AttributeError` 给你看。\n\n外援的调用方式正好反过来：**把字符串放进它的括号里，前面不点**：`len(s)`。\n\n（一句话分清两路人马：`lower` / `upper` 这种是字符串**自带**的函数，点着名字调用；`len` 这种是**请来的外援**，字符串得乖乖进括号。写错了电脑不会猜你想干嘛，只会当场报错。）",
+      "templateId": "py-s1-len-as-method",
+      "params": {
+        "s": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "7889338cd8ff0c17"
+      }
+    },
+    {
+      "id": "bank-py-s1-slice-tail-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们有一串字：`数据`\n\n请你写个程序，把这串字的**后两个字**打印出来。\n\n（我们只要后两个字，前面那个字不要）",
+      "starter": null,
+      "referenceSolution": "s = \"数据\"\nprint(s[1:3])\n",
+      "expectedOutput": "据",
+      "stdin": null,
+      "explanation": "切片 s[a:b] 包含 a 而不包含 b，省略终点表示到末尾。切片返回新字符串，不改变原字符串；字符位置必须依据当前文本计算。",
+      "templateId": "py-s1-slice-tail",
+      "params": {
+        "s": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.873Z",
+        "hash": "1848f1035aea3d4a"
+      }
+    },
+    {
+      "id": "bank-py-s1-slice-tail-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们有一串字：`商品A`\n\n请你写个程序，把这串字的**后两个字**打印出来。\n\n（我们只要后两个字，前面那个字不要）",
+      "starter": null,
+      "referenceSolution": "s = \"商品A\"\nprint(s[1:3])\n",
+      "expectedOutput": "品A",
+      "stdin": null,
+      "explanation": "切片 s[a:b] 包含 a 而不包含 b，省略终点表示到末尾。切片返回新字符串，不改变原字符串；字符位置必须依据当前文本计算。",
+      "templateId": "py-s1-slice-tail",
+      "params": {
+        "s": "商品A"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.873Z",
+        "hash": "1345326f307ae5de"
+      }
+    },
+    {
+      "id": "bank-py-s1-slice-tail-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们有一串字：`毛线球`\n\n请你写个程序，把这串字的**后两个字**打印出来。\n\n（我们只要后两个字，前面那个字不要）",
+      "starter": null,
+      "referenceSolution": "s = \"毛线球\"\nprint(s[1:3])\n",
+      "expectedOutput": "线球",
+      "stdin": null,
+      "explanation": "`s[1:3]` 的意思是「从**下标 1** 开始取，取到**下标 3 之前**为止」 —— 左边算数、右边不算数，所以拿到的是下标 1 和 2 这两个字。\n\n下标是**从 0 开始数**的：`毛线球` 的 0 号是第一个字、1 号是第二个、2 号是第三个。想拿后两个字，就从 1 取到 3 之前，正好两个。\n\n（也可以写 `s[-2:]`：**负数下标从末尾倒着数**，-1 是最后一个。两种写法结果一样，选顺手的就好）",
+      "templateId": "py-s1-slice-tail",
+      "params": {
+        "s": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "0af185c41469e748"
+      }
+    },
+    {
+      "id": "bank-py-s1-slice-tail-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们有一串字：`商品肉`\n\n请你写个程序，把这串字的**后两个字**打印出来。\n\n（我们只要后两个字，前面那个字不要）",
+      "starter": null,
+      "referenceSolution": "s = \"商品肉\"\nprint(s[1:3])\n",
+      "expectedOutput": "品肉",
+      "stdin": null,
+      "explanation": "切片 s[a:b] 包含 a 而不包含 b，省略终点表示到末尾。切片返回新字符串，不改变原字符串；字符位置必须依据当前文本计算。",
+      "templateId": "py-s1-slice-tail",
+      "params": {
+        "s": "商品肉"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.873Z",
+        "hash": "a8bfff710d1c6ba6"
+      }
+    },
+    {
+      "id": "bank-py-s1-upper-no-paren-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们把招牌 `MiAi` 存进了变量 `s`，想打印它**全部变成大写**的样子。\n\n可这段代码打印出来的东西怪怪的，我们看不懂……你帮我们改对。",
+      "brokenCode": "s = \"MiAi\"\nprint(s.upper)\n",
+      "referenceFix": "s = \"MiAi\"\nprint(s.upper())\n",
+      "expectedOutput": "MIAI",
+      "stdin": null,
+      "explanation": "末尾上那**一对小括号**不能丢！`s.upper` 只是把**函数本身**拿了出来（等于举着函数给你看一眼），**没有施展**；加上那对小括号，才是「请它下手」。所以屏幕上冒出来的是一句「这是 `str` 身上的一件 `upper` 函数」—— 它**没报错**，只是答非所问。\n\n写自带的函数，记这个形状：**先点名字，再甩一对小括号**。\n\n（这也是今天最阴的一个坑：忘了括号不报错，只是结果不对。看到屏幕上冒出一串你看不懂的说明文字，先回头看看括号在不在。）",
+      "templateId": "py-s1-upper-no-paren",
+      "params": {
+        "s": "MiAi"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "a4d9f6734c0e1856"
+      }
+    },
+    {
+      "id": "bank-py-s1-upper-no-paren-002",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们把招牌 `FishBowl` 存进了变量 `s`，想打印它**全部变成大写**的样子。\n\n可这段代码打印出来的东西怪怪的，我们看不懂……你帮我们改对。",
+      "brokenCode": "s = \"FishBowl\"\nprint(s.upper)\n",
+      "referenceFix": "s = \"FishBowl\"\nprint(s.upper())\n",
+      "expectedOutput": "FISHBOWL",
+      "stdin": null,
+      "explanation": "末尾上那**一对小括号**不能丢！`s.upper` 只是把**函数本身**拿了出来（等于举着函数给你看一眼），**没有施展**；加上那对小括号，才是「请它下手」。所以屏幕上冒出来的是一句「这是 `str` 身上的一件 `upper` 函数」—— 它**没报错**，只是答非所问。\n\n写自带的函数，记这个形状：**先点名字，再甩一对小括号**。\n\n（这也是今天最阴的一个坑：忘了括号不报错，只是结果不对。看到屏幕上冒出一串你看不懂的说明文字，先回头看看括号在不在。）",
+      "templateId": "py-s1-upper-no-paren",
+      "params": {
+        "s": "FishBowl"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.457Z",
+        "hash": "4831bbacdd88a306"
+      }
+    }
+  ]
+}

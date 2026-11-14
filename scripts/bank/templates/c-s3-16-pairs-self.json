@@ -1,0 +1,25 @@
+{
+  "templateId": "c-s3-16-pairs-self",
+  "lang": "c",
+  "stage": 3,
+  "lessonId": "c-stage3-16",
+  "type": "codefix",
+  "concept": [
+    "数圈数",
+    "两两都比一遍",
+    "内层从后面那一个起步",
+    "自己跟自己不算一对"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 8,
+      "max": 9
+    }
+  },
+  "stemTemplate": "我们要数「**每一个元素都跟它后面每一个比一次**」一共比了多少下。本子上摆着 **{n} 只元素**。\n\n可这一个方法报出来的数**老是偏大**：它把「一个元素跟它自己」也算成了一对，每一个元素都白白多比了一回。编译器一次没吭，跑起来也不摔。\n\n请你把 `pairs` 这一个方法改对（`main` 里那几行别动）。改好之后该印一行，只有一个数：**每一对元素只算一次**，一个不多、一个不少。\n\n拿个小本子验一下：本子只有 **4 只元素**的时候，它该印\n\n```text\n6\n```",
+  "brokenCodeTemplate": "#include <stdio.h>\n\n/* 数一数「两两都比一遍」一共比了多少下 */\nlong long pairs(int n) {\n    long long rounds = 0;\n    for (int i = 0; i < n; i++) {\n        for (int j = i; j < n; j++) {\n            rounds = rounds + 1;\n        }\n    }\n    return rounds;\n}\n\nint main(void) {\n    printf(\"%lld\\n\", pairs({n}));\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\n/* 数一数「两两都比一遍」一共比了多少下 */\nlong long pairs(int n) {\n    long long rounds = 0;\n    for (int i = 0; i < n; i++) {\n        for (int j = i + 1; j < n; j++) {\n            rounds = rounds + 1;\n        }\n    }\n    return rounds;\n}\n\nint main(void) {\n    printf(\"%lld\\n\", pairs({n}));\n    return 0;\n}\n",
+  "explanationTemplate": "毛病在**内层从哪一个起步**：`j = i` 的意思是「从第 i 只元素**自己**开始跟」，可自己跟自己本来就不算一对 —— 每个元素都白比了一回，{n} 只元素就白比了 {n} 回，答出来的数自然偏大。\n\n```text\nfor (int i = 0; i < n; i++) {\n    for (int j = i + 1; j < n; j++) {\n        rounds = rounds + 1;\n    }\n}\n```\n\n内层要从 **`i + 1`** 起步，才是「跟**后面**的每一个比一次」。\n\n⚠️ 顺带记牢一件事：`j = i` 只是**每个多算一次**，`j = 0` 才是**整个翻倍** —— 后者会让同一对元素被数两遍（你比它一次，它又比你一次）。这两个毛病只差一个字，数一数圈子就能分清。"
+}

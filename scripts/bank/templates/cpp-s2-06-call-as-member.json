@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s2-06-call-as-member",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-06",
+  "type": "codefix",
+  "concept": [
+    "开后门的是外面那一手",
+    "调用方式不写那个对象",
+    "报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "fish": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    },
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们给类定义里写了一行后门，外面那个念账的函数也写好了。\n\n可 `main` 里称呼它的那一句，编译器说类定义上根本没有这一手。\n\n你帮我们把那句调用方式改对。**类定义两栏、后门那一行、外面那个函数的身子，一个字都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    Cat c1(\"{name}\", {fish});\n    c1.showAccount(c1);\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    Cat c1(\"{name}\", {fish});\n    showAccount(c1);\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:19:8: error: 'class Cat' has no member named 'showAccount'`\n\n用自然语言解释：**「`Cat` 这张类定义上，没有叫 `showAccount` 的那一格本事。」**\n\n根子在这件事上：**后门那一行给的是一张通行证，不是工牌。** 拿到通行证的函数，身份上**还是外面的一手**——它看得见盒子里的一切，可它并没有变成类定义上的函数。\n\n姿势的差别只有一处：\n\n- **类定义上的函数**是「哪个对象 · 函数名」——先说哪个对象，再调用函数名。\n- **开后门的函数**是「函数名(哪个对象)」——前面**不写那个对象**，把对象当料递进去。\n\n所以这一句写成 `showAccount(c1);` 就对了。以后看到 `has no member named`，先想一想：我们手里这一手，**到底是不是类定义上的函数**。"
+}

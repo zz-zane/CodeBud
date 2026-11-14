@@ -1,0 +1,39 @@
+{
+  "templateId": "java-s1-try-uncaught-parse",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-14",
+  "type": "codefix",
+  "concept": [
+    "翻车",
+    "断气",
+    "try",
+    "catch"
+  ],
+  "instances": 2,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "",
+        "三个对象"
+      ]
+    },
+    "word2": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "一打数据"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{word}\n",
+    "sampleText": "{word2}\n"
+  },
+  "stemTemplate": "纸条上递来的**不是数字**，我们却拿它去变数字 —— 程序当场**断气**，最后那句「记账结束」一个字都没印出来。\n\n你帮我们把这一路车接住：变了不成就印一句 `这串字变不成数字`，然后**照常**把 `记账结束` 印出来。\n\n比如纸条上递来的是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一串字**，也一样不是数字。）",
+  "brokenCodeTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        int n = Integer.parseInt(word);\n        System.out.println(\"读到了 \" + n + \" 条\");\n        System.out.println(\"记账结束\");\n    }\n}\n",
+  "referenceFixTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String word = sc.next();\n        try {\n            int n = Integer.parseInt(word);\n            System.out.println(\"读到了 \" + n + \" 条\");\n        } catch (NumberFormatException e) {\n            System.out.println(\"这串字变不成数字\");\n        }\n        System.out.println(\"记账结束\");\n    }\n}\n",
+  "explanationTemplate": "捕获与实际抛出异常匹配的 NumberFormatException，保留 finally 的收尾行为。不能用删除解析操作或删除异常分支来让程序表面通过。"
+}

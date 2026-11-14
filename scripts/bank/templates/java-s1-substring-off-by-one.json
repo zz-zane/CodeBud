@@ -1,0 +1,49 @@
+{
+  "templateId": "java-s1-substring-off-by-one",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-11",
+  "type": "codefix",
+  "concept": [
+    "substring",
+    "编号从 0 数起",
+    "差一个",
+    "Scanner"
+  ],
+  "instances": 2,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "数据到手",
+        "计算机的工作区"
+      ]
+    },
+    "n": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    },
+    "word2": {
+      "kind": "pick",
+      "values": [
+        "李四的毛线球",
+        "张三的数据容器"
+      ]
+    },
+    "n2": {
+      "kind": "int",
+      "min": 4,
+      "max": 5
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{word} {n}\n",
+    "sampleText": "{word2} {n2}\n"
+  },
+  "stemTemplate": "纸条上给**一串字**和一个数 `n` 。我们想掏出这串字**最前面那 `n` 颗**字符印出来 —— 掏是掏出来了，可**每次都多一颗**。\n\n你帮我们把多出来的那颗找回来，留着原来的样子别动（读纸条、掏字符这两步都不用改）。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一串字**，所以别把答案写死）",
+  "brokenCodeTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(0, n + 1));\n    }\n}\n",
+  "referenceFixTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int n = sc.nextInt();\n        System.out.println(s.substring(0, n));\n    }\n}\n",
+  "explanationTemplate": "substring 的终点是排他边界。修复时按目标片段确定起止位置，不把“最后一个下标”直接等同于“substring 的终点”。"
+}

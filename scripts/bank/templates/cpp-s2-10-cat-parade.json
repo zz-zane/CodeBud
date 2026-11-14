@@ -1,0 +1,46 @@
+{
+  "templateId": "cpp-s2-10-cat-parade",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-10",
+  "type": "codewrite",
+  "concept": [
+    "一份对象的名单",
+    "挨个顺着名称调用",
+    "各对象做出各对象的动作"
+  ],
+  "instances": 6,
+  "params": {
+    "orangeName": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    },
+    "tabbyName": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    },
+    "blackName": {
+      "kind": "pick",
+      "values": [
+        "煤球",
+        "黑豆"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 3,
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们手上要**一份写着「对象」的名单**，挨个调用一次，各对象做出各对象的动作。输入接口会递进来**三个数**（一行一个）：学生甲、学生乙、学生丁各记录了几条。\n\n请你这么办：\n\n1. **画老类定义** `Cat`：够得着的那一档的 `name`（一串字）和 `fish`（一个整数），构造函数把两样填上；再画一个方法 `speak`，印一行 `X：`，**挂上那个三个字母的招牌**（这一手是要被改写的）。\n2. **画三张照它画下来的类定义**，每张把 `speak` **改写成自己的版本**（改写那一手都挂上 `override`）：\n   - `OrangeCat` → `X：我们是学生甲，处理了 N 条，！`\n   - `TabbyCat` → `X：我们是学生乙，处理了 N 条，呜`\n   - `BlackCat` → `X：我们是学生丁，处理了 N 条，嗷`\n3. 在 `main` 里：读进三个数 → 生三个对象（名字分别是 `{orangeName}`、`{tabbyName}`、`{blackName}`）→ 把三个对象的**门牌地址**放进一排写着「对象」的名称里 → **用跑圈的办法顺着名称挨个调用一次**。\n\n也就是说：我们从头到尾**只拿着一张「对象」的名单**，引用的是同一句话，各对象自己决定调用出什么。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外三个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    virtual void speak() const {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass OrangeCat : public Cat {\npublic:\n    OrangeCat(string n, int f) : Cat(n, f) {}\n    void speak() const override {\n        cout << name << \"：我们是学生甲，处理了 \" << fish << \" 条，！\" << endl;\n    }\n};\n\nclass TabbyCat : public Cat {\npublic:\n    TabbyCat(string n, int f) : Cat(n, f) {}\n    void speak() const override {\n        cout << name << \"：我们是学生乙，处理了 \" << fish << \" 条，呜\" << endl;\n    }\n};\n\nclass BlackCat : public Cat {\npublic:\n    BlackCat(string n, int f) : Cat(n, f) {}\n    void speak() const override {\n        cout << name << \"：我们是学生丁，处理了 \" << fish << \" 条，嗷\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    OrangeCat o(\"{orangeName}\", a);\n    TabbyCat t(\"{tabbyName}\", b);\n    BlackCat k(\"{blackName}\", c);\n\n    Cat* cats[3];\n    cats[0] = &o;\n    cats[1] = &t;\n    cats[2] = &k;\n\n    for (int i = 0; i < 3; i++) {\n        cats[i]->speak();\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "这一题是本课最重要的手感：**我们手上只有一份「对象」的名单，引用的是同一句话，各对象做出各对象的动作。**\n\n- 那一排名称 `Cat* cats[3]` 上，每一张写的都是「对象」，可它们指的分别是学生甲、学生乙、学生丁。名称只记录地址，**不记录屋里住的是谁**（这是第一阶段就讲过的事）。\n- `cats[i]->speak()` 是**顺着名称调用** —— 继续调用的那一刻，程序才低头看一眼「这家住的到底是哪位」，再决定跑哪一版。这就是「**等真跑起来再看**」的意思。\n- **那一排名称我们一份都没写错**：三张类定义都是照着 `Cat` 画下来的，所以三个对象都能站进「对象」的位置。上一课那句「**子对象本来就是对象**」在这里就是钥匙。\n\n⚠️ 三处最容易摔的地方：\n\n1. **老类定义那一手必须挂 `virtual`。** 不挂的话，编译器在翻译阶段就把话说死了：名称上写的是「对象」，就指到老类定义那一版上去，根本不会低头看屋里住的是谁 —— 三行全会变成平平无奇的「名字：」。\n2. **改写的那三手必须和基类那一手一字不差**（名字、料、行尾的 `const`）。差一个字就成了「另外长了一手新的」，名称上写「对象」的时候照样跑老类定义那一版。三手都挂 `override`，打错字当场就会被拦下。\n3. **别把 `&o` / `&t` / `&k` 的门牌地址写错位置。** `cats[0]` 对应的是名字在第一位的那个对象，行顺序要对上。\n\n这一手最值钱的地方在**往后**：哪天我们再画一张学生丁类定义、把 `speak` 改写掉，就能直接塞进这排名称里 —— 输出那一段一个字都不用动。"
+}

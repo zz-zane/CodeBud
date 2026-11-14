@@ -1,0 +1,566 @@
+{
+  "lessonId": "python-stage2-14",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-py-s2-organize-isfile-skip-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们这个抽屉里，除了两样东西，还**躺着一个抽屉**（程序里已经搭好了）。\n\n这一段要给东西重新编号：数据加两位号，后缀原样接回去。它**跑得顺顺的、一句错都不报**，可印出来一看，**那个抽屉被当成东西一起改了名**，现在它混在东西堆里，我们再想往里头放点什么都找不到门了。\n\n你帮我们改对。要求：\n\n1. **只动东西**：抽屉的名字要**原样**留在印出来的那一行里。\n2. **只许加一处把关的**（一处就够，加在绕圈开头），别处一个字都不许改。\n3. 编号的排法（从 1 起、两位、不够补 0）不许改 —— 编号**只数真正的那些东西**。",
+      "brokenCode": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"里屋\"), exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    序号 = 序号 + 1\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"数据{序号:02d}{后缀}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "referenceFix": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"里屋\"), exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    完整路径 = os.path.join(工作台, 名字)\n    if not os.path.isfile(完整路径):\n        continue\n    序号 = 序号 + 1\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(完整路径, os.path.join(工作台, f\"数据{序号:02d}{后缀}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['数据01.txt', '数据02.jpg', '里屋']",
+      "stdin": null,
+      "explanation": "遍历目录时先用 is_file 等方式区分文件和目录，不应把目录当作普通文件处理。输出排序按当前文件名进行；改名后应重新计算顺序，但不能改变过滤条件。",
+      "templateId": "py-s2-organize-isfile-skip",
+      "params": {
+        "d": "里屋",
+        "x": "jpg"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.876Z",
+        "hash": "87ab1e118d6c149d"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-isfile-skip-003",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们这个抽屉里，除了两样东西，还**躺着一个抽屉**（程序里已经搭好了）。\n\n这一段要给东西重新编号：数据加两位号，后缀原样接回去。它**跑得顺顺的、一句错都不报**，可印出来一看，**那个抽屉被当成东西一起改了名**，现在它混在东西堆里，我们再想往里头放点什么都找不到门了。\n\n你帮我们改对。要求：\n\n1. **只动东西**：抽屉的名字要**原样**留在印出来的那一行里。\n2. **只许加一处把关的**（一处就够，加在绕圈开头），别处一个字都不许改。\n3. 编号的排法（从 1 起、两位、不够补 0）不许改 —— 编号**只数真正的那些东西**。",
+      "brokenCode": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"小变量\"), exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.png\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    序号 = 序号 + 1\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"数据{序号:02d}{后缀}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "referenceFix": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"小变量\"), exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.png\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    完整路径 = os.path.join(工作台, 名字)\n    if not os.path.isfile(完整路径):\n        continue\n    序号 = 序号 + 1\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(完整路径, os.path.join(工作台, f\"数据{序号:02d}{后缀}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['小变量', '数据01.txt', '数据02.png']",
+      "stdin": null,
+      "explanation": "`os.listdir(抽屉)` 报出来的是这一层**所有的名字**，里头**既有东西、也有抽屉** —— 它不替我们分这个，所以我们得**自己问一句**。\n\n开头的把关就是干这个的：`os.path.isfile(完整路径)` 是「**它是东西，还是抽屉**」。是抽屉就 `continue` —— 这一圈到此为止，名字不动，编号也不加，直接走下一圈。少了这一句，抽屉就跟着东西一起被改了名，而且**改得还挺顺**（给抽屉改名一点也不报错），等我们发现的时候它已经混进东西堆里了。\n\n⚠️ 那个 `序号 = 序号 + 1` 的位置很讲究：它得摆在把关**后面**。摆在前面的话，抽屉也会占掉一个号 —— 东西的编号就跳号了（我们这里会从 02 起跳，而不是 01）。\n\n⚠️ 还有一条顺手的好习惯：把关的那一句先算出**完整路径**，后面搬家的时候**直接用这一个**。同一件事算两遍，早晚会有一遍写歪 —— 而这里写歪的后果是「问的是这个、动的是那个」，跑起来不报错，但动的跟你以为的不是同一样东西。",
+      "templateId": "py-s2-organize-isfile-skip",
+      "params": {
+        "d": "小变量",
+        "x": "png"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "13fe149a24e2a299"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-join-missing-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想把抽屉里每一样东西都改成「原来的名字 + 一个新记号」的样子。\n\n它**跑得顺顺的，一句错都不报**，可印出来一看，**抽屉是空的** —— 东西全不见了。\n\n（它们其实没丢，只是跑到**程序当时站着的地方**去了，那是另一个位置。）\n\n你帮我们改对。要求：\n\n1. 改完之后，印出来的那一行里**两样东西都在**，名字后面都多了那一截记号。\n2. **只许动搬家那一句的后半截**，前面铺东西的几句、还有拆名字的那一句，一个字都不许改。\n3. 记号那一道（`·新`）不许换。",
+      "brokenCode": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), f\"{主体}·新{后缀}\")\n\nprint(sorted(os.listdir(工作台)))\n",
+      "referenceFix": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"{主体}·新{后缀}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['对象1·新.txt', '鱼·新.jpg']",
+      "stdin": null,
+      "explanation": "毛病出在「**新名字**」这一截上：我们只写了名字本身（`对象1·新.txt` 这种），**没写它在哪个抽屉里**。\n\n要记住一句：**名字和位置是两件事**。`对象1.txt` 只是个名字，不带上抽屉的名字，它就只是「有一个东西叫这个名」—— 而我们当时正站在别的地方，于是搬过去的东西就落到了**我们站着的地方**，抽屉里自然空了。\n\n把抽屉名和名字拼起来这件事，**交给 `os.path.join(抽屉, 名字)` 去办**，别自己拿加号拼：不同的系统用的分隔号不一样，手拼的那一版在自己机器上跑得好好的，换个地方就找不着东西了。我们前面的搬家都把两边拼好了 —— 老位置拼了，新位置也**得**拼，两边一样长才算对齐。\n\n⚠️ 查这种毛病有个快法子：**盯着「搬家」那一句的两个位置**看 —— 它要的是**两个位置**，不是「一个位置 + 一个名字」。一眼扫过去，两边谁少写了抽屉名，立刻就看出来了。打印出来的那一行（空空的）也早就提醒我们了：抽屉没动过，说明东西**根本没搬进来**，而不是搬错了名字。\n\n⚠️ 顺带记一条：这一句搬家**不报错**，因为程序站着的地方也是个正经位置，写过去完全合法。所以「它有没有报错」在这里一点用都没有 —— **要拿印出来的结果去对**。",
+      "templateId": "py-s2-organize-join-missing",
+      "params": {
+        "m": "·新"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "30872a846a45f750"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-join-missing-001",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想把抽屉里每一样东西都改成「原来的名字 + 一个新记号」的样子。\n\n它**跑得顺顺的，一句错都不报**，可印出来一看，**抽屉是空的** —— 东西全不见了。\n\n（它们其实没丢，只是跑到**程序当时站着的地方**去了，那是另一个位置。）\n\n你帮我们改对。要求：\n\n1. 改完之后，印出来的那一行里**两样东西都在**，名字后面都多了那一截记号。\n2. **只许动搬家那一句的后半截**，前面铺东西的几句、还有拆名字的那一句，一个字都不许改。\n3. 记号那一道（`·改`）不许换。",
+      "brokenCode": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), f\"{主体}·改{后缀}\")\n\nprint(sorted(os.listdir(工作台)))\n",
+      "referenceFix": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"{主体}·改{后缀}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['对象1·改.txt', '鱼·改.jpg']",
+      "stdin": null,
+      "explanation": "毛病出在「**新名字**」这一截上：我们只写了名字本身（`对象1·新.txt` 这种），**没写它在哪个抽屉里**。\n\n要记住一句：**名字和位置是两件事**。`对象1.txt` 只是个名字，不带上抽屉的名字，它就只是「有一个东西叫这个名」—— 而我们当时正站在别的地方，于是搬过去的东西就落到了**我们站着的地方**，抽屉里自然空了。\n\n把抽屉名和名字拼起来这件事，**交给 `os.path.join(抽屉, 名字)` 去办**，别自己拿加号拼：不同的系统用的分隔号不一样，手拼的那一版在自己机器上跑得好好的，换个地方就找不着东西了。我们前面的搬家都把两边拼好了 —— 老位置拼了，新位置也**得**拼，两边一样长才算对齐。\n\n⚠️ 查这种毛病有个快法子：**盯着「搬家」那一句的两个位置**看 —— 它要的是**两个位置**，不是「一个位置 + 一个名字」。一眼扫过去，两边谁少写了抽屉名，立刻就看出来了。打印出来的那一行（空空的）也早就提醒我们了：抽屉没动过，说明东西**根本没搬进来**，而不是搬错了名字。\n\n⚠️ 顺带记一条：这一句搬家**不报错**，因为程序站着的地方也是个正经位置，写过去完全合法。所以「它有没有报错」在这里一点用都没有 —— **要拿印出来的结果去对**。",
+      "templateId": "py-s2-organize-join-missing",
+      "params": {
+        "m": "·改"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "94dfdfc13b98405a"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-pick-photo-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给一堆照片**重新编号**，别的便条**一根手指都不碰**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`。\n2. **读进来三行**，一行一个名字；把这三行各自做成一张**便条**放进 `小工作台`（内容随便写一个字，**判分不看**）。\n3. 把抽屉里**以 `.jpg` 收尾**的那些**重新编号**：第一个叫 `照片01.jpg`，第二个叫 `照片02.jpg`，往后照这个规矩排（两位号，不够的左边补 0），**后缀还是 `.jpg`**。编号的顺序按**老名字排好序**来算。\n4. 不是 `.jpg` 收尾的**原样不动**。\n5. 最后把抽屉里的名字**排好序**印一行出来（就是 `sorted` 印出来的那一排的样子）。\n\n我们想练的是 `名字.endswith(...)` 配 `os.rename`，请照这个来。\n\n比如外面给的是\n\n风景.jpg\n海豹.jpg\n咪爱.txt\n\n就要输出\n\n['咪爱.txt', '照片01.jpg', '照片02.jpg']\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".jpg\"):\n        continue\n    序号 = 序号 + 1\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"照片{序号:02d}.jpg\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['note.txt', '照片01.jpg', '照片02.jpg']",
+      "stdin": "IMG_01.jpg\nIMG_05.jpg\nnote.txt\n",
+      "explanation": "这一段是「**只挑一种**」的写法：`名字.endswith(\".jpg\")` 问的是「**这段字是不是以它收尾**」，是就 `True`。反过来写 `if not 名字.endswith(\".jpg\"): continue` 就是「**不是就跳过这一圈**」—— 比把整段缩进塞进一个 `if` 里少一层，读起来顺得多。\n\n`continue` 是「**这一圈到此为止，走下一圈**」，所以它底下的两行（报数、搬家）只有选中的那些才会走到 —— 这正是我们要的「别的便条一根手指都不碰」。\n\n⚠️ 有一个坑必须躲开：`for 名字 in sorted(os.listdir(工作台))` 里那一排名字，是**转圈一开始就报好的**（`listdir` 交出来的是一个当场定死的柜子）。所以我们一边转圈一边改名是安全的 —— 改过的新名字**不在这一排里**，不会被回头再改一次。要是写成「每圈都重新报一遍」，那 `照片01.jpg` 也会符合 `.jpg` 收尾，就会被**再改一次名**，越改越乱。\n\n⚠️ 还有一条关系到这里：编号靠的是 `序号 = 序号 + 1` **而不是那一排里第几个**。因为跳过的那些不能占号 —— 便条摆在照片中间时，用「第几个」编号会让照片的号跳着走（01、03 这样）。口径是**只数选中的**，这一点写歪了**不报错**，只是印出来的号不对劲。",
+      "templateId": "py-s2-organize-pick-photo",
+      "params": {
+        "k1": "IMG_01.jpg",
+        "k2": "IMG_05.jpg",
+        "k3": "note.txt",
+        "s1": "风景.jpg",
+        "s2": "海豹.jpg",
+        "s3": "咪爱.txt"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "64c1b99e8b45aa23"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-pick-photo-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给一堆照片**重新编号**，别的便条**一根手指都不碰**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`。\n2. **读进来三行**，一行一个名字；把这三行各自做成一张**便条**放进 `小工作台`（内容随便写一个字，**判分不看**）。\n3. 把抽屉里**以 `.jpg` 收尾**的那些**重新编号**：第一个叫 `照片01.jpg`，第二个叫 `照片02.jpg`，往后照这个规矩排（两位号，不够的左边补 0），**后缀还是 `.jpg`**。编号的顺序按**老名字排好序**来算。\n4. 不是 `.jpg` 收尾的**原样不动**。\n5. 最后把抽屉里的名字**排好序**印一行出来（就是 `sorted` 印出来的那一排的样子）。\n\n我们想练的是 `名字.endswith(...)` 配 `os.rename`，请照这个来。\n\n比如外面给的是\n\n风景.jpg\n海豹.jpg\n咪爱.txt\n\n就要输出\n\n['咪爱.txt', '照片01.jpg', '照片02.jpg']\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".jpg\"):\n        continue\n    序号 = 序号 + 1\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"照片{序号:02d}.jpg\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['照片01.jpg', '照片02.jpg', '记.txt']",
+      "stdin": "IMG_01.jpg\nIMG_05.jpg\n记.txt\n",
+      "explanation": "这一段是「**只挑一种**」的写法：`名字.endswith(\".jpg\")` 问的是「**这段字是不是以它收尾**」，是就 `True`。反过来写 `if not 名字.endswith(\".jpg\"): continue` 就是「**不是就跳过这一圈**」—— 比把整段缩进塞进一个 `if` 里少一层，读起来顺得多。\n\n`continue` 是「**这一圈到此为止，走下一圈**」，所以它底下的两行（报数、搬家）只有选中的那些才会走到 —— 这正是我们要的「别的便条一根手指都不碰」。\n\n⚠️ 有一个坑必须躲开：`for 名字 in sorted(os.listdir(工作台))` 里那一排名字，是**转圈一开始就报好的**（`listdir` 交出来的是一个当场定死的柜子）。所以我们一边转圈一边改名是安全的 —— 改过的新名字**不在这一排里**，不会被回头再改一次。要是写成「每圈都重新报一遍」，那 `照片01.jpg` 也会符合 `.jpg` 收尾，就会被**再改一次名**，越改越乱。\n\n⚠️ 还有一条关系到这里：编号靠的是 `序号 = 序号 + 1` **而不是那一排里第几个**。因为跳过的那些不能占号 —— 便条摆在照片中间时，用「第几个」编号会让照片的号跳着走（01、03 这样）。口径是**只数选中的**，这一点写歪了**不报错**，只是印出来的号不对劲。",
+      "templateId": "py-s2-organize-pick-photo",
+      "params": {
+        "k1": "IMG_01.jpg",
+        "k2": "IMG_05.jpg",
+        "k3": "记.txt",
+        "s1": "风景.jpg",
+        "s2": "海豹.jpg",
+        "s3": "咪爱.txt"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "a7287d3f252e17d8"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-pick-photo-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给一堆照片**重新编号**，别的便条**一根手指都不碰**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`。\n2. **读进来三行**，一行一个名字；把这三行各自做成一张**便条**放进 `小工作台`（内容随便写一个字，**判分不看**）。\n3. 把抽屉里**以 `.jpg` 收尾**的那些**重新编号**：第一个叫 `照片01.jpg`，第二个叫 `照片02.jpg`，往后照这个规矩排（两位号，不够的左边补 0），**后缀还是 `.jpg`**。编号的顺序按**老名字排好序**来算。\n4. 不是 `.jpg` 收尾的**原样不动**。\n5. 最后把抽屉里的名字**排好序**印一行出来（就是 `sorted` 印出来的那一排的样子）。\n\n我们想练的是 `名字.endswith(...)` 配 `os.rename`，请照这个来。\n\n比如外面给的是\n\n风景.jpg\n海豹.jpg\n咪爱.txt\n\n就要输出\n\n['咪爱.txt', '照片01.jpg', '照片02.jpg']\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".jpg\"):\n        continue\n    序号 = 序号 + 1\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"照片{序号:02d}.jpg\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['照片01.jpg', '照片02.jpg', '记.txt']",
+      "stdin": "IMG_01.jpg\nIMG_07.jpg\n记.txt\n",
+      "explanation": "这一段是「**只挑一种**」的写法：`名字.endswith(\".jpg\")` 问的是「**这段字是不是以它收尾**」，是就 `True`。反过来写 `if not 名字.endswith(\".jpg\"): continue` 就是「**不是就跳过这一圈**」—— 比把整段缩进塞进一个 `if` 里少一层，读起来顺得多。\n\n`continue` 是「**这一圈到此为止，走下一圈**」，所以它底下的两行（报数、搬家）只有选中的那些才会走到 —— 这正是我们要的「别的便条一根手指都不碰」。\n\n⚠️ 有一个坑必须躲开：`for 名字 in sorted(os.listdir(工作台))` 里那一排名字，是**转圈一开始就报好的**（`listdir` 交出来的是一个当场定死的柜子）。所以我们一边转圈一边改名是安全的 —— 改过的新名字**不在这一排里**，不会被回头再改一次。要是写成「每圈都重新报一遍」，那 `照片01.jpg` 也会符合 `.jpg` 收尾，就会被**再改一次名**，越改越乱。\n\n⚠️ 还有一条关系到这里：编号靠的是 `序号 = 序号 + 1` **而不是那一排里第几个**。因为跳过的那些不能占号 —— 便条摆在照片中间时，用「第几个」编号会让照片的号跳着走（01、03 这样）。口径是**只数选中的**，这一点写歪了**不报错**，只是印出来的号不对劲。",
+      "templateId": "py-s2-organize-pick-photo",
+      "params": {
+        "k1": "IMG_01.jpg",
+        "k2": "IMG_07.jpg",
+        "k3": "记.txt",
+        "s1": "风景.jpg",
+        "s2": "海豹.jpg",
+        "s3": "咪爱.txt"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "0d1a156da92a8f47"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-pick-photo-004",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给一堆照片**重新编号**，别的便条**一根手指都不碰**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`。\n2. **读进来三行**，一行一个名字；把这三行各自做成一张**便条**放进 `小工作台`（内容随便写一个字，**判分不看**）。\n3. 把抽屉里**以 `.jpg` 收尾**的那些**重新编号**：第一个叫 `照片01.jpg`，第二个叫 `照片02.jpg`，往后照这个规矩排（两位号，不够的左边补 0），**后缀还是 `.jpg`**。编号的顺序按**老名字排好序**来算。\n4. 不是 `.jpg` 收尾的**原样不动**。\n5. 最后把抽屉里的名字**排好序**印一行出来（就是 `sorted` 印出来的那一排的样子）。\n\n我们想练的是 `名字.endswith(...)` 配 `os.rename`，请照这个来。\n\n比如外面给的是\n\n风景.jpg\n海豹.jpg\n咪爱.txt\n\n就要输出\n\n['咪爱.txt', '照片01.jpg', '照片02.jpg']\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".jpg\"):\n        continue\n    序号 = 序号 + 1\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"照片{序号:02d}.jpg\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['note.txt', '照片01.jpg', '照片02.jpg']",
+      "stdin": "IMG_02.jpg\nIMG_05.jpg\nnote.txt\n",
+      "explanation": "这一段是「**只挑一种**」的写法：`名字.endswith(\".jpg\")` 问的是「**这段字是不是以它收尾**」，是就 `True`。反过来写 `if not 名字.endswith(\".jpg\"): continue` 就是「**不是就跳过这一圈**」—— 比把整段缩进塞进一个 `if` 里少一层，读起来顺得多。\n\n`continue` 是「**这一圈到此为止，走下一圈**」，所以它底下的两行（报数、搬家）只有选中的那些才会走到 —— 这正是我们要的「别的便条一根手指都不碰」。\n\n⚠️ 有一个坑必须躲开：`for 名字 in sorted(os.listdir(工作台))` 里那一排名字，是**转圈一开始就报好的**（`listdir` 交出来的是一个当场定死的柜子）。所以我们一边转圈一边改名是安全的 —— 改过的新名字**不在这一排里**，不会被回头再改一次。要是写成「每圈都重新报一遍」，那 `照片01.jpg` 也会符合 `.jpg` 收尾，就会被**再改一次名**，越改越乱。\n\n⚠️ 还有一条关系到这里：编号靠的是 `序号 = 序号 + 1` **而不是那一排里第几个**。因为跳过的那些不能占号 —— 便条摆在照片中间时，用「第几个」编号会让照片的号跳着走（01、03 这样）。口径是**只数选中的**，这一点写歪了**不报错**，只是印出来的号不对劲。",
+      "templateId": "py-s2-organize-pick-photo",
+      "params": {
+        "k1": "IMG_02.jpg",
+        "k2": "IMG_05.jpg",
+        "k3": "note.txt",
+        "s1": "风景.jpg",
+        "s2": "海豹.jpg",
+        "s3": "咪爱.txt"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "6f710ca8cd569446"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-pick-photo-006",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给一堆照片**重新编号**，别的便条**一根手指都不碰**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`。\n2. **读进来三行**，一行一个名字；把这三行各自做成一张**便条**放进 `小工作台`（内容随便写一个字，**判分不看**）。\n3. 把抽屉里**以 `.jpg` 收尾**的那些**重新编号**：第一个叫 `照片01.jpg`，第二个叫 `照片02.jpg`，往后照这个规矩排（两位号，不够的左边补 0），**后缀还是 `.jpg`**。编号的顺序按**老名字排好序**来算。\n4. 不是 `.jpg` 收尾的**原样不动**。\n5. 最后把抽屉里的名字**排好序**印一行出来（就是 `sorted` 印出来的那一排的样子）。\n\n我们想练的是 `名字.endswith(...)` 配 `os.rename`，请照这个来。\n\n比如外面给的是\n\n风景.jpg\n海豹.jpg\n咪爱.txt\n\n就要输出\n\n['咪爱.txt', '照片01.jpg', '照片02.jpg']\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".jpg\"):\n        continue\n    序号 = 序号 + 1\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"照片{序号:02d}.jpg\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['note.txt', '照片01.jpg', '照片02.jpg']",
+      "stdin": "IMG_02.jpg\nIMG_07.jpg\nnote.txt\n",
+      "explanation": "这一段是「**只挑一种**」的写法：`名字.endswith(\".jpg\")` 问的是「**这段字是不是以它收尾**」，是就 `True`。反过来写 `if not 名字.endswith(\".jpg\"): continue` 就是「**不是就跳过这一圈**」—— 比把整段缩进塞进一个 `if` 里少一层，读起来顺得多。\n\n`continue` 是「**这一圈到此为止，走下一圈**」，所以它底下的两行（报数、搬家）只有选中的那些才会走到 —— 这正是我们要的「别的便条一根手指都不碰」。\n\n⚠️ 有一个坑必须躲开：`for 名字 in sorted(os.listdir(工作台))` 里那一排名字，是**转圈一开始就报好的**（`listdir` 交出来的是一个当场定死的柜子）。所以我们一边转圈一边改名是安全的 —— 改过的新名字**不在这一排里**，不会被回头再改一次。要是写成「每圈都重新报一遍」，那 `照片01.jpg` 也会符合 `.jpg` 收尾，就会被**再改一次名**，越改越乱。\n\n⚠️ 还有一条关系到这里：编号靠的是 `序号 = 序号 + 1` **而不是那一排里第几个**。因为跳过的那些不能占号 —— 便条摆在照片中间时，用「第几个」编号会让照片的号跳着走（01、03 这样）。口径是**只数选中的**，这一点写歪了**不报错**，只是印出来的号不对劲。",
+      "templateId": "py-s2-organize-pick-photo",
+      "params": {
+        "k1": "IMG_02.jpg",
+        "k2": "IMG_07.jpg",
+        "k3": "note.txt",
+        "s1": "风景.jpg",
+        "s2": "海豹.jpg",
+        "s3": "咪爱.txt"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "8153bc64c257e5fe"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-pick-photo-007",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给一堆照片**重新编号**，别的便条**一根手指都不碰**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`。\n2. **读进来三行**，一行一个名字；把这三行各自做成一张**便条**放进 `小工作台`（内容随便写一个字，**判分不看**）。\n3. 把抽屉里**以 `.jpg` 收尾**的那些**重新编号**：第一个叫 `照片01.jpg`，第二个叫 `照片02.jpg`，往后照这个规矩排（两位号，不够的左边补 0），**后缀还是 `.jpg`**。编号的顺序按**老名字排好序**来算。\n4. 不是 `.jpg` 收尾的**原样不动**。\n5. 最后把抽屉里的名字**排好序**印一行出来（就是 `sorted` 印出来的那一排的样子）。\n\n我们想练的是 `名字.endswith(...)` 配 `os.rename`，请照这个来。\n\n比如外面给的是\n\n风景.jpg\n海豹.jpg\n咪爱.txt\n\n就要输出\n\n['咪爱.txt', '照片01.jpg', '照片02.jpg']\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".jpg\"):\n        continue\n    序号 = 序号 + 1\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"照片{序号:02d}.jpg\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['照片01.jpg', '照片02.jpg', '记.txt']",
+      "stdin": "IMG_02.jpg\nIMG_07.jpg\n记.txt\n",
+      "explanation": "这一段是「**只挑一种**」的写法：`名字.endswith(\".jpg\")` 问的是「**这段字是不是以它收尾**」，是就 `True`。反过来写 `if not 名字.endswith(\".jpg\"): continue` 就是「**不是就跳过这一圈**」—— 比把整段缩进塞进一个 `if` 里少一层，读起来顺得多。\n\n`continue` 是「**这一圈到此为止，走下一圈**」，所以它底下的两行（报数、搬家）只有选中的那些才会走到 —— 这正是我们要的「别的便条一根手指都不碰」。\n\n⚠️ 有一个坑必须躲开：`for 名字 in sorted(os.listdir(工作台))` 里那一排名字，是**转圈一开始就报好的**（`listdir` 交出来的是一个当场定死的柜子）。所以我们一边转圈一边改名是安全的 —— 改过的新名字**不在这一排里**，不会被回头再改一次。要是写成「每圈都重新报一遍」，那 `照片01.jpg` 也会符合 `.jpg` 收尾，就会被**再改一次名**，越改越乱。\n\n⚠️ 还有一条关系到这里：编号靠的是 `序号 = 序号 + 1` **而不是那一排里第几个**。因为跳过的那些不能占号 —— 便条摆在照片中间时，用「第几个」编号会让照片的号跳着走（01、03 这样）。口径是**只数选中的**，这一点写歪了**不报错**，只是印出来的号不对劲。",
+      "templateId": "py-s2-organize-pick-photo",
+      "params": {
+        "k1": "IMG_02.jpg",
+        "k2": "IMG_07.jpg",
+        "k3": "记.txt",
+        "s1": "风景.jpg",
+        "s2": "海豹.jpg",
+        "s3": "咪爱.txt"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "22a3498344eec40b"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-rename-loses-ext-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们要给抽屉里那些以 `.txt` 收尾的东西**重新编号**，编成「数据 + 两位号」的样子，别的一根手指都不动。\n\n它**跑得顺顺的，一句错都不报**，可改完之后抽屉里那几样东西**打不开了** —— 名字后面那半截不见了。\n\n你帮我们改对。要求：\n\n1. 改完印出来的那一行里，**每一样东西后面那半截都得还在**（原来的那半截是什么，改完还是什么）。\n2. 前面铺东西的那几句、还有挑选的那一句，**一个字都不许动**。\n3. 编号的排法（从 1 起、两位、不够补 0）也不许改。",
+      "brokenCode": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"对象2.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".txt\"):\n        continue\n    序号 = 序号 + 1\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"数据{序号:02d}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "referenceFix": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"对象2.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".txt\"):\n        continue\n    序号 = 序号 + 1\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"数据{序号:02d}\" + 后缀))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['数据01.txt', '数据02.txt', '鱼.jpg']",
+      "stdin": null,
+      "explanation": "重命名时应保留原文件扩展名，并检查目标名称是否冲突。排序后的输出反映重命名完成后的实际目录内容，不是创建顺序。",
+      "templateId": "py-s2-organize-rename-loses-ext",
+      "params": {
+        "e": ".txt"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.876Z",
+        "hash": "b529bb200d34284c"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-rename-loses-ext-001",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们要给抽屉里那些以 `.jpg` 收尾的东西**重新编号**，编成「数据 + 两位号」的样子，别的一根手指都不动。\n\n它**跑得顺顺的，一句错都不报**，可改完之后抽屉里那几样东西**打不开了** —— 名字后面那半截不见了。\n\n你帮我们改对。要求：\n\n1. 改完印出来的那一行里，**每一样东西后面那半截都得还在**（原来的那半截是什么，改完还是什么）。\n2. 前面铺东西的那几句、还有挑选的那一句，**一个字都不许动**。\n3. 编号的排法（从 1 起、两位、不够补 0）也不许改。",
+      "brokenCode": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"对象2.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".jpg\"):\n        continue\n    序号 = 序号 + 1\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"数据{序号:02d}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "referenceFix": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"对象2.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\".jpg\"):\n        continue\n    序号 = 序号 + 1\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"数据{序号:02d}\" + 后缀))\n\nprint(sorted(os.listdir(工作台)))\n",
+      "expectedOutput": "['对象1.txt', '对象2.txt', '数据01.jpg']",
+      "stdin": null,
+      "explanation": "这一段**一个字都不报错** —— 名字确实改了，抽屉里也确实有新名字，可那些东西**已经不是原来那种东西了**。\n\n前面那句话里，名字由**两截**拼成：主体（`数据` 加两位号）和后缀（`.txt` 这种）。我们写新名字的时候只写了前面那半截，后缀就**整个丢了**：`.txt` 的那张便条还好，顶多打不开；`.jpg` 的那种丢了后缀，看图的东西就再也不认得它是图了。\n\n改法就是把后缀**接回去**：先用 `os.path.splitext(名字)` 把名字拆成**主体**和**后缀**两样，拆出来的后缀带着那个小数点，连同它一起拼进新名字里。我们这里顺手把拆出来的主体扔掉不用（新名字的编号重排了），但**拆这一步不能省**，因为后缀只能从老名字里拿。\n\n⚠️ 特别注意：铺东西的那一句和挑选的那一句**动不得** —— 挑选用的是老名字以 `.jpg` 收尾，这一句是对的；毛病只在**造新名字**那一步。改代码之前先看清楚**是哪一步丢的东西**，别把好好的那两句也改了。\n\n⚠️ 还有一条对照：这一段丢的是后缀，程序**照跑照印**；要是把后缀拼错了位置（比如拼到主体前面去），印出来的名字会立刻不一样、一眼就能看出来 —— 所以查这种毛病，**盯着印出来的那一行**比盯着代码快得多。",
+      "templateId": "py-s2-organize-rename-loses-ext",
+      "params": {
+        "e": ".jpg"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "f7628defcf5ae63d"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-report-kind-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要往抽屉里铺三张便条，铺完再报一遍：里面每一样到底是**东西**还是**抽屉**。\n\n请你写个程序：\n\n1. 先搭一个抽屉，名字叫 `小工作台`；抽屉里面**再搭一个空的小抽屉**，名字叫 `里屋`（空抽屉里什么都不放）。\n2. **读进来三行**，一行一个名字。把这三行各自做成一张**便条**放进 `小工作台`，便条里随便写一个字就成（写什么**判分不看**）。\n3. 最后把 `小工作台` 里的名字**排好序**报一遍，**一行一个**：\n   - 是**东西**的，印 `东西：` **直接**接名字（中间不空格）；\n   - 是**抽屉**的，印 `抽屉：` **直接**接名字。\n\n我们想练的是 `os.listdir` 配「它是东西还是抽屉」那一问，请照这个来。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.jpg\n虾条.md\n\n就要输出\n\n东西：海豹.txt\n东西：虾条.md\n抽屉：里屋\n东西：鲸鱼.jpg\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"里屋\"), exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    if os.path.isfile(os.path.join(工作台, 名字)):\n        print(f\"东西：{名字}\")\n    else:\n        print(f\"抽屉：{名字}\")\n",
+      "expectedOutput": "东西：对象1.txt\n东西：收据.md\n抽屉：里屋\n东西：鱼.jpg",
+      "stdin": "对象1.txt\n鱼.jpg\n收据.md\n",
+      "explanation": "先判断路径是文件还是目录，再生成对应报告行。排序规则基于当前名称，修改示例名称可能改变输出顺序，但不应改变文件类型判断。",
+      "templateId": "py-s2-organize-report-kind",
+      "params": {
+        "d": "里屋",
+        "k1": "对象1.txt",
+        "k2": "鱼.jpg",
+        "k3": "收据.md",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.jpg",
+        "s3": "虾条.md"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.876Z",
+        "hash": "902064ebcccb7883"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-report-kind-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要往抽屉里铺三张便条，铺完再报一遍：里面每一样到底是**东西**还是**抽屉**。\n\n请你写个程序：\n\n1. 先搭一个抽屉，名字叫 `小工作台`；抽屉里面**再搭一个空的小抽屉**，名字叫 `里屋`（空抽屉里什么都不放）。\n2. **读进来三行**，一行一个名字。把这三行各自做成一张**便条**放进 `小工作台`，便条里随便写一个字就成（写什么**判分不看**）。\n3. 最后把 `小工作台` 里的名字**排好序**报一遍，**一行一个**：\n   - 是**东西**的，印 `东西：` **直接**接名字（中间不空格）；\n   - 是**抽屉**的，印 `抽屉：` **直接**接名字。\n\n我们想练的是 `os.listdir` 配「它是东西还是抽屉」那一问，请照这个来。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.jpg\n虾条.md\n\n就要输出\n\n东西：海豹.txt\n东西：虾条.md\n抽屉：里屋\n东西：鲸鱼.jpg\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"里屋\"), exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    if os.path.isfile(os.path.join(工作台, 名字)):\n        print(f\"东西：{名字}\")\n    else:\n        print(f\"抽屉：{名字}\")\n",
+      "expectedOutput": "东西：便条.md\n东西：对象1.txt\n抽屉：里屋\n东西：鱼.png",
+      "stdin": "对象1.txt\n鱼.png\n便条.md\n",
+      "explanation": "这道题练的是「**动手之前先问一句**」。\n\n`os.listdir(抽屉)` 报出来的是这一层**所有的名字** —— 里头**既有东西、也有抽屉**，它不替我们分。要分清楚，得拿完整位置问一句 `os.path.isfile(完整位置)`：是东西就给 `True`，是抽屉就给 `False`。\n\n⚠️ 注意这里问的是**完整位置**，不是名字本身：`isfile(\"对象1.txt\")` 问的是「**我们站的这个地方**有没有这样东西」—— 程序站着的地方和抽屉不是同一个地方，所以把抽屉名省掉再问，答案多半是「没有」，然后每一样都被当成抽屉。**问位置，别问名字**，这是这段最容易写歪的一处。\n\n⚠️ 还有一条顺带练的：`sorted(...)` 排在 **`os.listdir` 的外面**。抽屉里的东西本来是按系统的心情排的，我们自己排一下，印出来才**每次都一样** —— 少了这一步，同一段代码在别人机器上印出来的顺序可能就跟我们的不一样了。\n\n⚠️ 最后记一句本课的规矩：搭抽屉用 `os.makedirs(位置, exist_ok=True)`。那个 `exist_ok=True` 是「**已经有了就拉倒，别报错**」—— 少了它，抽屉已经在了再搭一次会当场翻脸。",
+      "templateId": "py-s2-organize-report-kind",
+      "params": {
+        "d": "里屋",
+        "k1": "对象1.txt",
+        "k2": "鱼.png",
+        "k3": "便条.md",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.jpg",
+        "s3": "虾条.md"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "f57669d7ade1461c"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-report-kind-006",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要往抽屉里铺三张便条，铺完再报一遍：里面每一样到底是**东西**还是**抽屉**。\n\n请你写个程序：\n\n1. 先搭一个抽屉，名字叫 `小工作台`；抽屉里面**再搭一个空的小抽屉**，名字叫 `里屋`（空抽屉里什么都不放）。\n2. **读进来三行**，一行一个名字。把这三行各自做成一张**便条**放进 `小工作台`，便条里随便写一个字就成（写什么**判分不看**）。\n3. 最后把 `小工作台` 里的名字**排好序**报一遍，**一行一个**：\n   - 是**东西**的，印 `东西：` **直接**接名字（中间不空格）；\n   - 是**抽屉**的，印 `抽屉：` **直接**接名字。\n\n我们想练的是 `os.listdir` 配「它是东西还是抽屉」那一问，请照这个来。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.jpg\n虾条.md\n\n就要输出\n\n东西：海豹.txt\n东西：虾条.md\n抽屉：里屋\n东西：鲸鱼.jpg\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"里屋\"), exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    if os.path.isfile(os.path.join(工作台, 名字)):\n        print(f\"东西：{名字}\")\n    else:\n        print(f\"抽屉：{名字}\")\n",
+      "expectedOutput": "东西：对象2.txt\n东西：收据.md\n抽屉：里屋\n东西：鱼.png",
+      "stdin": "对象2.txt\n鱼.png\n收据.md\n",
+      "explanation": "先判断路径是文件还是目录，再生成对应报告行。排序规则基于当前名称，修改示例名称可能改变输出顺序，但不应改变文件类型判断。",
+      "templateId": "py-s2-organize-report-kind",
+      "params": {
+        "d": "里屋",
+        "k1": "对象2.txt",
+        "k2": "鱼.png",
+        "k3": "收据.md",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.jpg",
+        "s3": "虾条.md"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.876Z",
+        "hash": "8f27a1471ceb6ec7"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-report-kind-009",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要往抽屉里铺三张便条，铺完再报一遍：里面每一样到底是**东西**还是**抽屉**。\n\n请你写个程序：\n\n1. 先搭一个抽屉，名字叫 `小工作台`；抽屉里面**再搭一个空的小抽屉**，名字叫 `小变量`（空抽屉里什么都不放）。\n2. **读进来三行**，一行一个名字。把这三行各自做成一张**便条**放进 `小工作台`，便条里随便写一个字就成（写什么**判分不看**）。\n3. 最后把 `小工作台` 里的名字**排好序**报一遍，**一行一个**：\n   - 是**东西**的，印 `东西：` **直接**接名字（中间不空格）；\n   - 是**抽屉**的，印 `抽屉：` **直接**接名字。\n\n我们想练的是 `os.listdir` 配「它是东西还是抽屉」那一问，请照这个来。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.jpg\n虾条.md\n\n就要输出\n\n抽屉：小变量\n东西：海豹.txt\n东西：虾条.md\n东西：鲸鱼.jpg\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"小变量\"), exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    if os.path.isfile(os.path.join(工作台, 名字)):\n        print(f\"东西：{名字}\")\n    else:\n        print(f\"抽屉：{名字}\")\n",
+      "expectedOutput": "东西：便条.md\n东西：对象1.txt\n抽屉：小变量\n东西：鱼.jpg",
+      "stdin": "对象1.txt\n鱼.jpg\n便条.md\n",
+      "explanation": "先判断路径是文件还是目录，再生成对应报告行。排序规则基于当前名称，修改示例名称可能改变输出顺序，但不应改变文件类型判断。",
+      "templateId": "py-s2-organize-report-kind",
+      "params": {
+        "d": "小变量",
+        "k1": "对象1.txt",
+        "k2": "鱼.jpg",
+        "k3": "便条.md",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.jpg",
+        "s3": "虾条.md"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.876Z",
+        "hash": "e891990a2c1e492d"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-report-kind-012",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要往抽屉里铺三张便条，铺完再报一遍：里面每一样到底是**东西**还是**抽屉**。\n\n请你写个程序：\n\n1. 先搭一个抽屉，名字叫 `小工作台`；抽屉里面**再搭一个空的小抽屉**，名字叫 `小变量`（空抽屉里什么都不放）。\n2. **读进来三行**，一行一个名字。把这三行各自做成一张**便条**放进 `小工作台`，便条里随便写一个字就成（写什么**判分不看**）。\n3. 最后把 `小工作台` 里的名字**排好序**报一遍，**一行一个**：\n   - 是**东西**的，印 `东西：` **直接**接名字（中间不空格）；\n   - 是**抽屉**的，印 `抽屉：` **直接**接名字。\n\n我们想练的是 `os.listdir` 配「它是东西还是抽屉」那一问，请照这个来。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.jpg\n虾条.md\n\n就要输出\n\n抽屉：小变量\n东西：海豹.txt\n东西：虾条.md\n东西：鲸鱼.jpg\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"小变量\"), exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    if os.path.isfile(os.path.join(工作台, 名字)):\n        print(f\"东西：{名字}\")\n    else:\n        print(f\"抽屉：{名字}\")\n",
+      "expectedOutput": "东西：对象2.txt\n抽屉：小变量\n东西：收据.md\n东西：鱼.jpg",
+      "stdin": "对象2.txt\n鱼.jpg\n收据.md\n",
+      "explanation": "先判断路径是文件还是目录，再生成对应报告行。排序规则基于当前名称，修改示例名称可能改变输出顺序，但不应改变文件类型判断。",
+      "templateId": "py-s2-organize-report-kind",
+      "params": {
+        "d": "小变量",
+        "k1": "对象2.txt",
+        "k2": "鱼.jpg",
+        "k3": "收据.md",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.jpg",
+        "s3": "虾条.md"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.876Z",
+        "hash": "2ece615b42a5f37e"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-report-kind-015",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要往抽屉里铺三张便条，铺完再报一遍：里面每一样到底是**东西**还是**抽屉**。\n\n请你写个程序：\n\n1. 先搭一个抽屉，名字叫 `小工作台`；抽屉里面**再搭一个空的小抽屉**，名字叫 `小变量`（空抽屉里什么都不放）。\n2. **读进来三行**，一行一个名字。把这三行各自做成一张**便条**放进 `小工作台`，便条里随便写一个字就成（写什么**判分不看**）。\n3. 最后把 `小工作台` 里的名字**排好序**报一遍，**一行一个**：\n   - 是**东西**的，印 `东西：` **直接**接名字（中间不空格）；\n   - 是**抽屉**的，印 `抽屉：` **直接**接名字。\n\n我们想练的是 `os.listdir` 配「它是东西还是抽屉」那一问，请照这个来。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.jpg\n虾条.md\n\n就要输出\n\n抽屉：小变量\n东西：海豹.txt\n东西：虾条.md\n东西：鲸鱼.jpg\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"小变量\"), exist_ok=True)\nfor _ in range(3):\n    名字 = input()\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\nfor 名字 in sorted(os.listdir(工作台)):\n    if os.path.isfile(os.path.join(工作台, 名字)):\n        print(f\"东西：{名字}\")\n    else:\n        print(f\"抽屉：{名字}\")\n",
+      "expectedOutput": "东西：便条.md\n东西：对象2.txt\n抽屉：小变量\n东西：鱼.png",
+      "stdin": "对象2.txt\n鱼.png\n便条.md\n",
+      "explanation": "先判断路径是文件还是目录，再生成对应报告行。排序规则基于当前名称，修改示例名称可能改变输出顺序，但不应改变文件类型判断。",
+      "templateId": "py-s2-organize-report-kind",
+      "params": {
+        "d": "小变量",
+        "k1": "对象2.txt",
+        "k2": "鱼.png",
+        "k3": "便条.md",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.jpg",
+        "s3": "虾条.md"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.876Z",
+        "hash": "d8be1fd1058aedb4"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-walk-count-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把这个抽屉**一层层**数一遍 —— 小抽屉里的那些**也算数**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`；里面**再搭一个小抽屉**，名字叫 `里屋`。\n2. **读进来三行**，一行一个名字。**头两行**各做一张便条，放进 `小工作台`；**第三行**做一张便条，放进 `里屋` 那个小抽屉里（便条里随便写一个字，**判分不看**）。\n3. 从头到尾**一层层逛一遍**；每逛到一层印一行：`本层有子抽屉 ` 接**这一层里小抽屉的个数**接 ` 个，文件 ` 接**这一层文件名排好序的那一排**（就是 `sorted` 印出来的那个样子，连方括号一起）。\n4. 最后印一行：`一共 ` 接**总共数到几个文件**接 ` 个文件`。\n\n我们想练的是 `os.walk`，请照这个来 —— 别自己写两层绕圈。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.md\n虾条.jpg\n\n就要输出\n\n本层有子抽屉 1 个，文件 ['海豹.txt', '鲸鱼.md']\n本层有子抽屉 0 个，文件 ['虾条.jpg']\n一共 3 个文件\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"里屋\"), exist_ok=True)\n名字们 = []\nfor _ in range(3):\n    名字们.append(input())\nfor 名字 in [名字们[0], 名字们[1], os.path.join(\"里屋\", 名字们[2])]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n全部文件 = 0\nfor 当前层, 子文件夹们, 文件们 in os.walk(工作台):\n    print(\"本层有子抽屉\", len(子文件夹们), \"个，文件\", sorted(文件们))\n    全部文件 = 全部文件 + len(文件们)\nprint(\"一共\", 全部文件, \"个文件\")\n",
+      "expectedOutput": "本层有子抽屉 1 个，文件 ['便条.txt', '收据.md']\n本层有子抽屉 0 个，文件 ['图.jpg']\n一共 3 个文件",
+      "stdin": "便条.txt\n收据.md\n图.jpg\n",
+      "explanation": "`os.walk(抽屉)` 和 `os.listdir` 最大的不同是：它**一层层往里走**，我们**不用自己写两层绕圈**。每逛到一层，它就交出**三样**东西 —— 这一层的完整位置、这一层里的**子抽屉们**、这一层里的**文件们**。三个名字用逗号接住，就用上了前两个不要的那个位置（我们这里只数后面两样）。\n\n写法上有个小差别要认：`len(子文件夹们)` 是**这一层里子抽屉的个数**，它只数**这一层**的，不往里数；而 `全部文件 = 全部文件 + len(文件们)` 是在**每一层都累加一次**，逛完自然就是总数 —— 这就是为什么它写在转圈**里面**。\n\n⚠️ 印 `文件们` 的时候我们套了一层 `sorted(...)`。原因和上一段一样：抽屉里的东西本来是按系统的心情排的，我们自己排一下，**每层印出来的顺序**才每次都一样 —— 少了它，同一段代码换台机器印出来的结果可能就对不上了。\n\n⚠️ 还有一条对照：`os.listdir` 只报**这一层**的名字，而且报出来的是名字（不带位置）；`os.walk` 是**一路走到底**，还顺手把每一层的位置给你。想数总数、想找某个藏在小抽屉深处的便条，用 `walk` 省掉一整层绕圈；只想看眼前这一层，`listdir` 就够了。",
+      "templateId": "py-s2-organize-walk-count",
+      "params": {
+        "d": "里屋",
+        "k1": "便条.txt",
+        "k2": "收据.md",
+        "k3": "图.jpg",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.md",
+        "s3": "虾条.jpg"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "c300fb0bd58a37ff"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-walk-count-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把这个抽屉**一层层**数一遍 —— 小抽屉里的那些**也算数**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`；里面**再搭一个小抽屉**，名字叫 `里屋`。\n2. **读进来三行**，一行一个名字。**头两行**各做一张便条，放进 `小工作台`；**第三行**做一张便条，放进 `里屋` 那个小抽屉里（便条里随便写一个字，**判分不看**）。\n3. 从头到尾**一层层逛一遍**；每逛到一层印一行：`本层有子抽屉 ` 接**这一层里小抽屉的个数**接 ` 个，文件 ` 接**这一层文件名排好序的那一排**（就是 `sorted` 印出来的那个样子，连方括号一起）。\n4. 最后印一行：`一共 ` 接**总共数到几个文件**接 ` 个文件`。\n\n我们想练的是 `os.walk`，请照这个来 —— 别自己写两层绕圈。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.md\n虾条.jpg\n\n就要输出\n\n本层有子抽屉 1 个，文件 ['海豹.txt', '鲸鱼.md']\n本层有子抽屉 0 个，文件 ['虾条.jpg']\n一共 3 个文件\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"里屋\"), exist_ok=True)\n名字们 = []\nfor _ in range(3):\n    名字们.append(input())\nfor 名字 in [名字们[0], 名字们[1], os.path.join(\"里屋\", 名字们[2])]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n全部文件 = 0\nfor 当前层, 子文件夹们, 文件们 in os.walk(工作台):\n    print(\"本层有子抽屉\", len(子文件夹们), \"个，文件\", sorted(文件们))\n    全部文件 = 全部文件 + len(文件们)\nprint(\"一共\", 全部文件, \"个文件\")\n",
+      "expectedOutput": "本层有子抽屉 1 个，文件 ['便条.txt', '账单.md']\n本层有子抽屉 0 个，文件 ['画.png']\n一共 3 个文件",
+      "stdin": "便条.txt\n账单.md\n画.png\n",
+      "explanation": "`os.walk(抽屉)` 和 `os.listdir` 最大的不同是：它**一层层往里走**，我们**不用自己写两层绕圈**。每逛到一层，它就交出**三样**东西 —— 这一层的完整位置、这一层里的**子抽屉们**、这一层里的**文件们**。三个名字用逗号接住，就用上了前两个不要的那个位置（我们这里只数后面两样）。\n\n写法上有个小差别要认：`len(子文件夹们)` 是**这一层里子抽屉的个数**，它只数**这一层**的，不往里数；而 `全部文件 = 全部文件 + len(文件们)` 是在**每一层都累加一次**，逛完自然就是总数 —— 这就是为什么它写在转圈**里面**。\n\n⚠️ 印 `文件们` 的时候我们套了一层 `sorted(...)`。原因和上一段一样：抽屉里的东西本来是按系统的心情排的，我们自己排一下，**每层印出来的顺序**才每次都一样 —— 少了它，同一段代码换台机器印出来的结果可能就对不上了。\n\n⚠️ 还有一条对照：`os.listdir` 只报**这一层**的名字，而且报出来的是名字（不带位置）；`os.walk` 是**一路走到底**，还顺手把每一层的位置给你。想数总数、想找某个藏在小抽屉深处的便条，用 `walk` 省掉一整层绕圈；只想看眼前这一层，`listdir` 就够了。",
+      "templateId": "py-s2-organize-walk-count",
+      "params": {
+        "d": "里屋",
+        "k1": "便条.txt",
+        "k2": "账单.md",
+        "k3": "画.png",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.md",
+        "s3": "虾条.jpg"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "944437177b0a6ecc"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-walk-count-006",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把这个抽屉**一层层**数一遍 —— 小抽屉里的那些**也算数**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`；里面**再搭一个小抽屉**，名字叫 `里屋`。\n2. **读进来三行**，一行一个名字。**头两行**各做一张便条，放进 `小工作台`；**第三行**做一张便条，放进 `里屋` 那个小抽屉里（便条里随便写一个字，**判分不看**）。\n3. 从头到尾**一层层逛一遍**；每逛到一层印一行：`本层有子抽屉 ` 接**这一层里小抽屉的个数**接 ` 个，文件 ` 接**这一层文件名排好序的那一排**（就是 `sorted` 印出来的那个样子，连方括号一起）。\n4. 最后印一行：`一共 ` 接**总共数到几个文件**接 ` 个文件`。\n\n我们想练的是 `os.walk`，请照这个来 —— 别自己写两层绕圈。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.md\n虾条.jpg\n\n就要输出\n\n本层有子抽屉 1 个，文件 ['海豹.txt', '鲸鱼.md']\n本层有子抽屉 0 个，文件 ['虾条.jpg']\n一共 3 个文件\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"里屋\"), exist_ok=True)\n名字们 = []\nfor _ in range(3):\n    名字们.append(input())\nfor 名字 in [名字们[0], 名字们[1], os.path.join(\"里屋\", 名字们[2])]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n全部文件 = 0\nfor 当前层, 子文件夹们, 文件们 in os.walk(工作台):\n    print(\"本层有子抽屉\", len(子文件夹们), \"个，文件\", sorted(文件们))\n    全部文件 = 全部文件 + len(文件们)\nprint(\"一共\", 全部文件, \"个文件\")\n",
+      "expectedOutput": "本层有子抽屉 1 个，文件 ['纸条.txt', '账单.md']\n本层有子抽屉 0 个，文件 ['图.jpg']\n一共 3 个文件",
+      "stdin": "纸条.txt\n账单.md\n图.jpg\n",
+      "explanation": "`os.walk(抽屉)` 和 `os.listdir` 最大的不同是：它**一层层往里走**，我们**不用自己写两层绕圈**。每逛到一层，它就交出**三样**东西 —— 这一层的完整位置、这一层里的**子抽屉们**、这一层里的**文件们**。三个名字用逗号接住，就用上了前两个不要的那个位置（我们这里只数后面两样）。\n\n写法上有个小差别要认：`len(子文件夹们)` 是**这一层里子抽屉的个数**，它只数**这一层**的，不往里数；而 `全部文件 = 全部文件 + len(文件们)` 是在**每一层都累加一次**，逛完自然就是总数 —— 这就是为什么它写在转圈**里面**。\n\n⚠️ 印 `文件们` 的时候我们套了一层 `sorted(...)`。原因和上一段一样：抽屉里的东西本来是按系统的心情排的，我们自己排一下，**每层印出来的顺序**才每次都一样 —— 少了它，同一段代码换台机器印出来的结果可能就对不上了。\n\n⚠️ 还有一条对照：`os.listdir` 只报**这一层**的名字，而且报出来的是名字（不带位置）；`os.walk` 是**一路走到底**，还顺手把每一层的位置给你。想数总数、想找某个藏在小抽屉深处的便条，用 `walk` 省掉一整层绕圈；只想看眼前这一层，`listdir` 就够了。",
+      "templateId": "py-s2-organize-walk-count",
+      "params": {
+        "d": "里屋",
+        "k1": "纸条.txt",
+        "k2": "账单.md",
+        "k3": "图.jpg",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.md",
+        "s3": "虾条.jpg"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "1e95838f3ccc09ac"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-walk-count-009",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把这个抽屉**一层层**数一遍 —— 小抽屉里的那些**也算数**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`；里面**再搭一个小抽屉**，名字叫 `小变量`。\n2. **读进来三行**，一行一个名字。**头两行**各做一张便条，放进 `小工作台`；**第三行**做一张便条，放进 `小变量` 那个小抽屉里（便条里随便写一个字，**判分不看**）。\n3. 从头到尾**一层层逛一遍**；每逛到一层印一行：`本层有子抽屉 ` 接**这一层里小抽屉的个数**接 ` 个，文件 ` 接**这一层文件名排好序的那一排**（就是 `sorted` 印出来的那个样子，连方括号一起）。\n4. 最后印一行：`一共 ` 接**总共数到几个文件**接 ` 个文件`。\n\n我们想练的是 `os.walk`，请照这个来 —— 别自己写两层绕圈。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.md\n虾条.jpg\n\n就要输出\n\n本层有子抽屉 1 个，文件 ['海豹.txt', '鲸鱼.md']\n本层有子抽屉 0 个，文件 ['虾条.jpg']\n一共 3 个文件\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"小变量\"), exist_ok=True)\n名字们 = []\nfor _ in range(3):\n    名字们.append(input())\nfor 名字 in [名字们[0], 名字们[1], os.path.join(\"小变量\", 名字们[2])]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n全部文件 = 0\nfor 当前层, 子文件夹们, 文件们 in os.walk(工作台):\n    print(\"本层有子抽屉\", len(子文件夹们), \"个，文件\", sorted(文件们))\n    全部文件 = 全部文件 + len(文件们)\nprint(\"一共\", 全部文件, \"个文件\")\n",
+      "expectedOutput": "本层有子抽屉 1 个，文件 ['便条.txt', '收据.md']\n本层有子抽屉 0 个，文件 ['画.png']\n一共 3 个文件",
+      "stdin": "便条.txt\n收据.md\n画.png\n",
+      "explanation": "`os.walk(抽屉)` 和 `os.listdir` 最大的不同是：它**一层层往里走**，我们**不用自己写两层绕圈**。每逛到一层，它就交出**三样**东西 —— 这一层的完整位置、这一层里的**子抽屉们**、这一层里的**文件们**。三个名字用逗号接住，就用上了前两个不要的那个位置（我们这里只数后面两样）。\n\n写法上有个小差别要认：`len(子文件夹们)` 是**这一层里子抽屉的个数**，它只数**这一层**的，不往里数；而 `全部文件 = 全部文件 + len(文件们)` 是在**每一层都累加一次**，逛完自然就是总数 —— 这就是为什么它写在转圈**里面**。\n\n⚠️ 印 `文件们` 的时候我们套了一层 `sorted(...)`。原因和上一段一样：抽屉里的东西本来是按系统的心情排的，我们自己排一下，**每层印出来的顺序**才每次都一样 —— 少了它，同一段代码换台机器印出来的结果可能就对不上了。\n\n⚠️ 还有一条对照：`os.listdir` 只报**这一层**的名字，而且报出来的是名字（不带位置）；`os.walk` 是**一路走到底**，还顺手把每一层的位置给你。想数总数、想找某个藏在小抽屉深处的便条，用 `walk` 省掉一整层绕圈；只想看眼前这一层，`listdir` 就够了。",
+      "templateId": "py-s2-organize-walk-count",
+      "params": {
+        "d": "小变量",
+        "k1": "便条.txt",
+        "k2": "收据.md",
+        "k3": "画.png",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.md",
+        "s3": "虾条.jpg"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "2f654df2d2c31715"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-walk-count-012",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把这个抽屉**一层层**数一遍 —— 小抽屉里的那些**也算数**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`；里面**再搭一个小抽屉**，名字叫 `小变量`。\n2. **读进来三行**，一行一个名字。**头两行**各做一张便条，放进 `小工作台`；**第三行**做一张便条，放进 `小变量` 那个小抽屉里（便条里随便写一个字，**判分不看**）。\n3. 从头到尾**一层层逛一遍**；每逛到一层印一行：`本层有子抽屉 ` 接**这一层里小抽屉的个数**接 ` 个，文件 ` 接**这一层文件名排好序的那一排**（就是 `sorted` 印出来的那个样子，连方括号一起）。\n4. 最后印一行：`一共 ` 接**总共数到几个文件**接 ` 个文件`。\n\n我们想练的是 `os.walk`，请照这个来 —— 别自己写两层绕圈。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.md\n虾条.jpg\n\n就要输出\n\n本层有子抽屉 1 个，文件 ['海豹.txt', '鲸鱼.md']\n本层有子抽屉 0 个，文件 ['虾条.jpg']\n一共 3 个文件\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"小变量\"), exist_ok=True)\n名字们 = []\nfor _ in range(3):\n    名字们.append(input())\nfor 名字 in [名字们[0], 名字们[1], os.path.join(\"小变量\", 名字们[2])]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n全部文件 = 0\nfor 当前层, 子文件夹们, 文件们 in os.walk(工作台):\n    print(\"本层有子抽屉\", len(子文件夹们), \"个，文件\", sorted(文件们))\n    全部文件 = 全部文件 + len(文件们)\nprint(\"一共\", 全部文件, \"个文件\")\n",
+      "expectedOutput": "本层有子抽屉 1 个，文件 ['收据.md', '纸条.txt']\n本层有子抽屉 0 个，文件 ['图.jpg']\n一共 3 个文件",
+      "stdin": "纸条.txt\n收据.md\n图.jpg\n",
+      "explanation": "`os.walk(抽屉)` 和 `os.listdir` 最大的不同是：它**一层层往里走**，我们**不用自己写两层绕圈**。每逛到一层，它就交出**三样**东西 —— 这一层的完整位置、这一层里的**子抽屉们**、这一层里的**文件们**。三个名字用逗号接住，就用上了前两个不要的那个位置（我们这里只数后面两样）。\n\n写法上有个小差别要认：`len(子文件夹们)` 是**这一层里子抽屉的个数**，它只数**这一层**的，不往里数；而 `全部文件 = 全部文件 + len(文件们)` 是在**每一层都累加一次**，逛完自然就是总数 —— 这就是为什么它写在转圈**里面**。\n\n⚠️ 印 `文件们` 的时候我们套了一层 `sorted(...)`。原因和上一段一样：抽屉里的东西本来是按系统的心情排的，我们自己排一下，**每层印出来的顺序**才每次都一样 —— 少了它，同一段代码换台机器印出来的结果可能就对不上了。\n\n⚠️ 还有一条对照：`os.listdir` 只报**这一层**的名字，而且报出来的是名字（不带位置）；`os.walk` 是**一路走到底**，还顺手把每一层的位置给你。想数总数、想找某个藏在小抽屉深处的便条，用 `walk` 省掉一整层绕圈；只想看眼前这一层，`listdir` 就够了。",
+      "templateId": "py-s2-organize-walk-count",
+      "params": {
+        "d": "小变量",
+        "k1": "纸条.txt",
+        "k2": "收据.md",
+        "k3": "图.jpg",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.md",
+        "s3": "虾条.jpg"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "9078543c6739953a"
+      }
+    },
+    {
+      "id": "bank-py-s2-organize-walk-count-015",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把这个抽屉**一层层**数一遍 —— 小抽屉里的那些**也算数**。\n\n请你写个程序：\n\n1. 搭一个抽屉，名字叫 `小工作台`；里面**再搭一个小抽屉**，名字叫 `小变量`。\n2. **读进来三行**，一行一个名字。**头两行**各做一张便条，放进 `小工作台`；**第三行**做一张便条，放进 `小变量` 那个小抽屉里（便条里随便写一个字，**判分不看**）。\n3. 从头到尾**一层层逛一遍**；每逛到一层印一行：`本层有子抽屉 ` 接**这一层里小抽屉的个数**接 ` 个，文件 ` 接**这一层文件名排好序的那一排**（就是 `sorted` 印出来的那个样子，连方括号一起）。\n4. 最后印一行：`一共 ` 接**总共数到几个文件**接 ` 个文件`。\n\n我们想练的是 `os.walk`，请照这个来 —— 别自己写两层绕圈。\n\n比如外面给的是\n\n海豹.txt\n鲸鱼.md\n虾条.jpg\n\n就要输出\n\n本层有子抽屉 1 个，文件 ['海豹.txt', '鲸鱼.md']\n本层有子抽屉 0 个，文件 ['虾条.jpg']\n一共 3 个文件\n\n（判分用的是**另外三个名字**，一个都不一样，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"小变量\"), exist_ok=True)\n名字们 = []\nfor _ in range(3):\n    名字们.append(input())\nfor 名字 in [名字们[0], 名字们[1], os.path.join(\"小变量\", 名字们[2])]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n全部文件 = 0\nfor 当前层, 子文件夹们, 文件们 in os.walk(工作台):\n    print(\"本层有子抽屉\", len(子文件夹们), \"个，文件\", sorted(文件们))\n    全部文件 = 全部文件 + len(文件们)\nprint(\"一共\", 全部文件, \"个文件\")\n",
+      "expectedOutput": "本层有子抽屉 1 个，文件 ['纸条.txt', '账单.md']\n本层有子抽屉 0 个，文件 ['画.png']\n一共 3 个文件",
+      "stdin": "纸条.txt\n账单.md\n画.png\n",
+      "explanation": "`os.walk(抽屉)` 和 `os.listdir` 最大的不同是：它**一层层往里走**，我们**不用自己写两层绕圈**。每逛到一层，它就交出**三样**东西 —— 这一层的完整位置、这一层里的**子抽屉们**、这一层里的**文件们**。三个名字用逗号接住，就用上了前两个不要的那个位置（我们这里只数后面两样）。\n\n写法上有个小差别要认：`len(子文件夹们)` 是**这一层里子抽屉的个数**，它只数**这一层**的，不往里数；而 `全部文件 = 全部文件 + len(文件们)` 是在**每一层都累加一次**，逛完自然就是总数 —— 这就是为什么它写在转圈**里面**。\n\n⚠️ 印 `文件们` 的时候我们套了一层 `sorted(...)`。原因和上一段一样：抽屉里的东西本来是按系统的心情排的，我们自己排一下，**每层印出来的顺序**才每次都一样 —— 少了它，同一段代码换台机器印出来的结果可能就对不上了。\n\n⚠️ 还有一条对照：`os.listdir` 只报**这一层**的名字，而且报出来的是名字（不带位置）；`os.walk` 是**一路走到底**，还顺手把每一层的位置给你。想数总数、想找某个藏在小抽屉深处的便条，用 `walk` 省掉一整层绕圈；只想看眼前这一层，`listdir` 就够了。",
+      "templateId": "py-s2-organize-walk-count",
+      "params": {
+        "d": "小变量",
+        "k1": "纸条.txt",
+        "k2": "账单.md",
+        "k3": "画.png",
+        "s1": "海豹.txt",
+        "s2": "鲸鱼.md",
+        "s3": "虾条.jpg"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.487Z",
+        "hash": "64ccb983d5120cae"
+      }
+    }
+  ]
+}

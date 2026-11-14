@@ -1,0 +1,35 @@
+{
+  "templateId": "c-s1-func-void-value-assign",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-12",
+  "type": "codefix",
+  "concept": [
+    "void",
+    "return",
+    "函数头",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "三花"
+      ]
+    },
+    "words": {
+      "kind": "pick",
+      "values": [
+        "问候完了",
+        "招呼打完啦"
+      ]
+    }
+  },
+  "stemTemplate": "我们写了一个方法 `greet` 专门打招呼，它只要传入进去一个对象的名字就行，打完招呼就收工、**不返回任何东西回来**。\n\n我们想在 `main` 里这么用它：先调用 `greet` 跟 `{name}` 打个招呼，然后再印一行 `{words}`。\n\n可编译器念到称呼它的那一行就停下了，说我们想接的东西**根本不存在**……\n\n你帮我们看看是哪儿写岔了，把它改好。改好之后，程序应该**先**印 `你好，{name}`、**再**印 `{words}`。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nvoid greet(char name[]) {\n    printf(\"你好，%s\\n\", name);\n}\n\nint main(void) {\n    int x = greet(\"{name}\");\n    printf(\"{words}\\n\");\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nvoid greet(char name[]) {\n    printf(\"你好，%s\\n\", name);\n}\n\nint main(void) {\n    greet(\"{name}\");\n    printf(\"{words}\\n\");\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: void value not ignored as it ought to be`，翻过来就是 **「这一个方法什么都没返回，你想接也接不到东西。」**\n\n钥匙在函数**最前面那个词**上，它说的是「这招返回什么回来」：\n\n- 头一个词写 `void` → 这招只管干活，**不返回东西回来**；\n- 头一个词写 `int` → 这招干完会返回**一个整数**，称呼它的时候可以伸手接住。\n\n`greet` 的头一个词是 `void`，它只负责印那一行，返回的只有空气。可我们写的是 `int x = greet(...);` —— 让一个空变量往元素里放东西，编译器当然不干。\n\n最省事的修法：**把 `int x = ` 那半截去掉**，写成 `greet(\"{name}\");` —— 单纯称呼它一次，不接东西。\n\n（要是真想接点什么回来，那就得改函数头：把 `void` 换成 `int`，身体里再加一句 `return 某个整数;`。这两个动作必须**成对**，改一个不改另一个，还是要被退回来。）"
+}

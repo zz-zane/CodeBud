@@ -1,0 +1,47 @@
+{
+  "templateId": "py-s1-input-prompt",
+  "lang": "python",
+  "stage": 1,
+  "lessonId": "python-stage1-05",
+  "type": "codewrite",
+  "concept": [
+    "input",
+    "提示词",
+    "不换行等待"
+  ],
+  "instances": 6,
+  "params": {
+    "ask": {
+      "kind": "pick",
+      "values": [
+        "你是谁？",
+        "报上名来？",
+        "哪个对象呀？"
+      ]
+    },
+    "greet": {
+      "kind": "pick",
+      "values": [
+        "你好",
+        "欢迎回来",
+        "晚上好"
+      ]
+    },
+    "guest": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stemTemplate": "我们想让点单机**先开口问一句**，再等客人报名字，最后打招呼。屏幕上从上往下是这样的：\n\n- 先出现 `{ask}` —— 问完**不许换行**，就地蹲着等；\n- 客人传入进名字之后，紧接着出现 `{greet}，` 接上名字、再接上 ``（**一个空格都不能有**）。\n\n比如输入是\n\n{sampleInput}\n\n就要输出\n\n{sampleOutput}\n\n（判分用的是**另外一个对象的名字**，所以别把答案写死）",
+  "referenceSolutionTemplate": "name = input(\"{ask}\")\nprint(\"{greet}，\", name, \"\", sep=\"\")\n",
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{guest}\n",
+    "sampleText": "计算机\n"
+  },
+  "explanationTemplate": "`input` 的括号里可以放一句话，那是**提示词**：程序先把这句话输出（好让你知道它在问什么），调用结束**不换行**，就蹲在那儿一动不动地等你敲字、按回车。\n\n所以提示词会**先出现在屏幕上**，它也算程序输出的一部分 —— 我们要的那一行，就是「提示词 + 招呼」连在一起的样子。\n\n（有个小地方要记住：提示词得待在括号里。要是把它写成单独一句 `print`，屏幕上就会多出一个换行，「紧紧挨着」这条就守不住了。）"
+}

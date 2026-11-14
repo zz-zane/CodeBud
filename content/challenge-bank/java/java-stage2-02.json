@@ -1,0 +1,366 @@
+{
+  "lessonId": "java-stage2-02",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s2-instanceof-report-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画一大一小两张类定义，还要**当面问问它们认不认亲**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Cat`：套在父类上，自己再带一盒数据数；初始化那一手收**名字和数据数两样**，名字那份**请父类去记**；把 `speak()` **盖掉、换上自己那版**（**名字 + `：我们有 ` + 数据数 + ` 条数据`**）。\n\n输入给程序的只有**一个数**：对象的数据数。程序该这么走：\n\n1. 读那个数；\n2. 照子类创建一个对象（名字用题目给的），数据数就用读到的这个数；\n3. 再照**父类直接**创建一个动物（名字也用题目给的）；\n4. 先调用对象那一个方法，再调用动物那一个方法；\n5. 最后印两行认亲的结果：`照类定义生的也是动物：` 后面接「对象是不是动物」，`照动物类定义生的不是对象：` 后面接「动物是不是对象」。\n\n小提示：认亲算出来的是 `true` / `false`，要把它跟前面那串字符串**拼在一起**印，记得给它**加一对小括号**。\n\n比如程序的输入是\n\n6\n\n程序就要返回\n\n张三：我们有 6 条数据\n计算机发出了一次叫\n照类定义生的也是动物：true\n照动物类定义生的不是对象：false\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：我们有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        Cat c = new Cat(\"张三\", fish);\n        Animal a = new Animal(\"计算机\");\n        c.speak();\n        a.speak();\n        System.out.println(\"照类定义生的也是动物：\" + (c instanceof Animal));\n        System.out.println(\"照动物类定义生的不是对象：\" + (a instanceof Cat));\n    }\n}\n",
+      "expectedOutput": "张三：我们有 4 条数据\n计算机发出了一次叫\n照类定义生的也是动物：true\n照动物类定义生的不是对象：false",
+      "stdin": "4\n",
+      "explanation": "这题的本体是最后那两行**认亲**。\n\n`c instanceof Animal` 读作「**`c` 是不是照 `Animal` 这张类定义（或者它的下游类定义）创建后的**」。`c` 是照 `Cat` 生的，而 `Cat` 套在 `Animal` 上面，所以它**也是**一个 `Animal` → `true`。\n\n反过来那句 `a instanceof Cat`：`a` 是**直接**照父类生的，它身上没有子类那一层，所以是 `false`。认亲只**从上往下**认，不能倒着认。\n\n两个小地方要注意：\n\n- **加括号**：认亲是拿「左边那整个东西」去比，我们要它比的是 `c`，不是前面那串字符串。加一对小括号把范围圈清楚，编译器才不会把整串字符串当成要比的东西。\n- **别把 `true` / `false` 写死**：那是本机算出来的结果，写死了换一组名字就对不上。\n\n另外两处是老朋友了：初始化那一手头一句的 `super(name);`（名字交给父类装），和挂着 `@Override` 的**盖掉、换自己那版**。**认亲的结果不会因为你盖掉了哪一个方法而变** —— 盖掉只换输出结果，不换亲缘。",
+      "templateId": "java-s2-instanceof-report",
+      "params": {
+        "name": "张三",
+        "other": "计算机"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "f418e70f38495f43"
+      }
+    },
+    {
+      "id": "bank-java-s2-instanceof-report-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画一大一小两张类定义，还要**当面问问它们认不认亲**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Cat`：套在父类上，自己再带一盒数据数；初始化那一手收**名字和数据数两样**，名字那份**请父类去记**；把 `speak()` **盖掉、换上自己那版**（**名字 + `：我们有 ` + 数据数 + ` 条数据`**）。\n\n输入给程序的只有**一个数**：对象的数据数。程序该这么走：\n\n1. 读那个数；\n2. 照子类创建一个对象（名字用题目给的），数据数就用读到的这个数；\n3. 再照**父类直接**创建一个动物（名字也用题目给的）；\n4. 先调用对象那一个方法，再调用动物那一个方法；\n5. 最后印两行认亲的结果：`照类定义生的也是动物：` 后面接「对象是不是动物」，`照动物类定义生的不是对象：` 后面接「动物是不是对象」。\n\n小提示：认亲算出来的是 `true` / `false`，要把它跟前面那串字符串**拼在一起**印，记得给它**加一对小括号**。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n张三：我们有 3 条数据\n河豚发出了一次叫\n照类定义生的也是动物：true\n照动物类定义生的不是对象：false\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：我们有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        Cat c = new Cat(\"张三\", fish);\n        Animal a = new Animal(\"河豚\");\n        c.speak();\n        a.speak();\n        System.out.println(\"照类定义生的也是动物：\" + (c instanceof Animal));\n        System.out.println(\"照动物类定义生的不是对象：\" + (a instanceof Cat));\n    }\n}\n",
+      "expectedOutput": "张三：我们有 9 条数据\n河豚发出了一次叫\n照类定义生的也是动物：true\n照动物类定义生的不是对象：false",
+      "stdin": "9\n",
+      "explanation": "这题的本体是最后那两行**认亲**。\n\n`c instanceof Animal` 读作「**`c` 是不是照 `Animal` 这张类定义（或者它的下游类定义）创建后的**」。`c` 是照 `Cat` 生的，而 `Cat` 套在 `Animal` 上面，所以它**也是**一个 `Animal` → `true`。\n\n反过来那句 `a instanceof Cat`：`a` 是**直接**照父类生的，它身上没有子类那一层，所以是 `false`。认亲只**从上往下**认，不能倒着认。\n\n两个小地方要注意：\n\n- **加括号**：认亲是拿「左边那整个东西」去比，我们要它比的是 `c`，不是前面那串字符串。加一对小括号把范围圈清楚，编译器才不会把整串字符串当成要比的东西。\n- **别把 `true` / `false` 写死**：那是本机算出来的结果，写死了换一组名字就对不上。\n\n另外两处是老朋友了：初始化那一手头一句的 `super(name);`（名字交给父类装），和挂着 `@Override` 的**盖掉、换自己那版**。**认亲的结果不会因为你盖掉了哪一个方法而变** —— 盖掉只换输出结果，不换亲缘。",
+      "templateId": "java-s2-instanceof-report",
+      "params": {
+        "name": "张三",
+        "other": "河豚"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "70c8e874a9fb5128"
+      }
+    },
+    {
+      "id": "bank-java-s2-instanceof-report-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画一大一小两张类定义，还要**当面问问它们认不认亲**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Cat`：套在父类上，自己再带一盒数据数；初始化那一手收**名字和数据数两样**，名字那份**请父类去记**；把 `speak()` **盖掉、换上自己那版**（**名字 + `：我们有 ` + 数据数 + ` 条数据`**）。\n\n输入给程序的只有**一个数**：对象的数据数。程序该这么走：\n\n1. 读那个数；\n2. 照子类创建一个对象（名字用题目给的），数据数就用读到的这个数；\n3. 再照**父类直接**创建一个动物（名字也用题目给的）；\n4. 先调用对象那一个方法，再调用动物那一个方法；\n5. 最后印两行认亲的结果：`照类定义生的也是动物：` 后面接「对象是不是动物」，`照动物类定义生的不是对象：` 后面接「动物是不是对象」。\n\n小提示：认亲算出来的是 `true` / `false`，要把它跟前面那串字符串**拼在一起**印，记得给它**加一对小括号**。\n\n比如程序的输入是\n\n7\n\n程序就要返回\n\n李四：我们有 7 条数据\n计算机发出了一次叫\n照类定义生的也是动物：true\n照动物类定义生的不是对象：false\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：我们有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        Cat c = new Cat(\"李四\", fish);\n        Animal a = new Animal(\"计算机\");\n        c.speak();\n        a.speak();\n        System.out.println(\"照类定义生的也是动物：\" + (c instanceof Animal));\n        System.out.println(\"照动物类定义生的不是对象：\" + (a instanceof Cat));\n    }\n}\n",
+      "expectedOutput": "李四：我们有 4 条数据\n计算机发出了一次叫\n照类定义生的也是动物：true\n照动物类定义生的不是对象：false",
+      "stdin": "4\n",
+      "explanation": "这题的本体是最后那两行**认亲**。\n\n`c instanceof Animal` 读作「**`c` 是不是照 `Animal` 这张类定义（或者它的下游类定义）创建后的**」。`c` 是照 `Cat` 生的，而 `Cat` 套在 `Animal` 上面，所以它**也是**一个 `Animal` → `true`。\n\n反过来那句 `a instanceof Cat`：`a` 是**直接**照父类生的，它身上没有子类那一层，所以是 `false`。认亲只**从上往下**认，不能倒着认。\n\n两个小地方要注意：\n\n- **加括号**：认亲是拿「左边那整个东西」去比，我们要它比的是 `c`，不是前面那串字符串。加一对小括号把范围圈清楚，编译器才不会把整串字符串当成要比的东西。\n- **别把 `true` / `false` 写死**：那是本机算出来的结果，写死了换一组名字就对不上。\n\n另外两处是老朋友了：初始化那一手头一句的 `super(name);`（名字交给父类装），和挂着 `@Override` 的**盖掉、换自己那版**。**认亲的结果不会因为你盖掉了哪一个方法而变** —— 盖掉只换输出结果，不换亲缘。",
+      "templateId": "java-s2-instanceof-report",
+      "params": {
+        "name": "李四",
+        "other": "计算机"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "4ec72b7521a656be"
+      }
+    },
+    {
+      "id": "bank-java-s2-instanceof-report-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画一大一小两张类定义，还要**当面问问它们认不认亲**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Cat`：套在父类上，自己再带一盒数据数；初始化那一手收**名字和数据数两样**，名字那份**请父类去记**；把 `speak()` **盖掉、换上自己那版**（**名字 + `：我们有 ` + 数据数 + ` 条数据`**）。\n\n输入给程序的只有**一个数**：对象的数据数。程序该这么走：\n\n1. 读那个数；\n2. 照子类创建一个对象（名字用题目给的），数据数就用读到的这个数；\n3. 再照**父类直接**创建一个动物（名字也用题目给的）；\n4. 先调用对象那一个方法，再调用动物那一个方法；\n5. 最后印两行认亲的结果：`照类定义生的也是动物：` 后面接「对象是不是动物」，`照动物类定义生的不是对象：` 后面接「动物是不是对象」。\n\n小提示：认亲算出来的是 `true` / `false`，要把它跟前面那串字符串**拼在一起**印，记得给它**加一对小括号**。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n李四：我们有 4 条数据\n河豚发出了一次叫\n照类定义生的也是动物：true\n照动物类定义生的不是对象：false\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：我们有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        Cat c = new Cat(\"李四\", fish);\n        Animal a = new Animal(\"河豚\");\n        c.speak();\n        a.speak();\n        System.out.println(\"照类定义生的也是动物：\" + (c instanceof Animal));\n        System.out.println(\"照动物类定义生的不是对象：\" + (a instanceof Cat));\n    }\n}\n",
+      "expectedOutput": "李四：我们有 3 条数据\n河豚发出了一次叫\n照类定义生的也是动物：true\n照动物类定义生的不是对象：false",
+      "stdin": "3\n",
+      "explanation": "这题的本体是最后那两行**认亲**。\n\n`c instanceof Animal` 读作「**`c` 是不是照 `Animal` 这张类定义（或者它的下游类定义）创建后的**」。`c` 是照 `Cat` 生的，而 `Cat` 套在 `Animal` 上面，所以它**也是**一个 `Animal` → `true`。\n\n反过来那句 `a instanceof Cat`：`a` 是**直接**照父类生的，它身上没有子类那一层，所以是 `false`。认亲只**从上往下**认，不能倒着认。\n\n两个小地方要注意：\n\n- **加括号**：认亲是拿「左边那整个东西」去比，我们要它比的是 `c`，不是前面那串字符串。加一对小括号把范围圈清楚，编译器才不会把整串字符串当成要比的东西。\n- **别把 `true` / `false` 写死**：那是本机算出来的结果，写死了换一组名字就对不上。\n\n另外两处是老朋友了：初始化那一手头一句的 `super(name);`（名字交给父类装），和挂着 `@Override` 的**盖掉、换自己那版**。**认亲的结果不会因为你盖掉了哪一个方法而变** —— 盖掉只换输出结果，不换亲缘。",
+      "templateId": "java-s2-instanceof-report",
+      "params": {
+        "name": "李四",
+        "other": "河豚"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "3fb897b282f68c69"
+      }
+    },
+    {
+      "id": "bank-java-s2-missing-super-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们照着父类画了一张子类，可**初始化那一手里忘了开口请父类出手** —— 编译器当场拦下它，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n张三：\n```\n\n子类上那招 `speak` 我们写得没错，别去动它。",
+      "brokenCode": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.speak();\n    }\n}\n",
+      "referenceFix": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.speak();\n    }\n}\n",
+      "expectedOutput": "张三：",
+      "stdin": null,
+      "explanation": "编译器的原话头一行是 **`constructor Animal in class Animal cannot be applied to given types;`**，底下还跟着三行「账本」：\n\n- `required: String` —— 父类初始化那一手**要**一样东西\n- `found: no arguments` —— 可子类一样都没给它\n- `reason: actual and formal argument lists differ in length` —— 对不上，是因为两边**料的数目**不一样\n\n为什么会算出这笔账？Java 有一条暗规矩：**子类的初始化那一手，第一句要不是 `super(...)`，编译器就自动替你补一句 `super()`** —— 也就是「请父类的**空手**那一手」。可父类上只有收名字的那一版、压根没有空手那一版，补进去当然对不上。\n\n正路只有一条：**在子类初始化那一手的头一句老老实实写 `super(name);`**，把父类要的料喂过去。位置也很讲究 —— 它必须是身子的**第一句**：父类还没收拾完，我们不能先动别的。\n\n改完就记住本课那句话：**父类的初始化那一手不会自己跑**，得子类开口请它。",
+      "templateId": "java-s2-missing-super",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "4c92b3c24f3f3597"
+      }
+    },
+    {
+      "id": "bank-java-s2-missing-super-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们照着父类画了一张子类，可**初始化那一手里忘了开口请父类出手** —— 编译器当场拦下它，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n李四：\n```\n\n子类上那招 `speak` 我们写得没错，别去动它。",
+      "brokenCode": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.speak();\n    }\n}\n",
+      "referenceFix": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.speak();\n    }\n}\n",
+      "expectedOutput": "李四：",
+      "stdin": null,
+      "explanation": "编译器的原话头一行是 **`constructor Animal in class Animal cannot be applied to given types;`**，底下还跟着三行「账本」：\n\n- `required: String` —— 父类初始化那一手**要**一样东西\n- `found: no arguments` —— 可子类一样都没给它\n- `reason: actual and formal argument lists differ in length` —— 对不上，是因为两边**料的数目**不一样\n\n为什么会算出这笔账？Java 有一条暗规矩：**子类的初始化那一手，第一句要不是 `super(...)`，编译器就自动替你补一句 `super()`** —— 也就是「请父类的**空手**那一手」。可父类上只有收名字的那一版、压根没有空手那一版，补进去当然对不上。\n\n正路只有一条：**在子类初始化那一手的头一句老老实实写 `super(name);`**，把父类要的料喂过去。位置也很讲究 —— 它必须是身子的**第一句**：父类还没收拾完，我们不能先动别的。\n\n改完就记住本课那句话：**父类的初始化那一手不会自己跑**，得子类开口请它。",
+      "templateId": "java-s2-missing-super",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "76a7e546652a55fa"
+      }
+    },
+    {
+      "id": "bank-java-s2-override-typo-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们写了一张子类，想在父类那一个方法之外**先请父类出一次、再补上我们自己那句**。可编译器把变量拍下来了，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这两行：\n\n```text\n张三发出了一次叫\n张三：\n```\n\n（第一行是父类那一版的样子，第二行才是我们补的那句。）",
+      "brokenCode": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speek() {\n        super.speak();\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.speak();\n    }\n}\n",
+      "referenceFix": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        super.speak();\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.speak();\n    }\n}\n",
+      "expectedOutput": "张三发出了一次叫\n张三：",
+      "stdin": null,
+      "explanation": "编译器的原话只有一句：**`method does not override or implement a method from a supertype`** —— 念起来是「我们这一手，上面**根本没有可盖的**」。\n\n它指的是那一行 `@Override`。这张小纸条的意思本来是「我们这一手是**故意**要盖掉上面某一版的」，可编译器拿着我们写下的名字往上找了一圈：**父类上压根没有叫这个名字的一手**，于是当场翻脸。\n\n症结就是**名字手滑多打了一个字母** —— 写成了 `speek`，而父类上叫 `speak`。名字不一样，编译器就当成「我们新写的一张方法」，新方法没有什么可盖的，`@Override` 那张纸条就成了假的。\n\n把名字改对之后，我们想要的行为才出得来：\n\n- `super.speak();` 请上一层把父类那一版跑一遍 → 印出第一行；\n- 接着我们自己那行印出第二行。\n\n**这张小纸条值钱就值在这儿**：要是没写 `@Override`，同一个拼写错会**安安静静地溜过去** —— 子类上多出一个方法没人调用得动的 `speek`，而 `main` 里调用 `speak` 走的还是父类那一版，程序一次不吭、结果就是不对。所以我们每次盖掉父类某一版，都写上它。\n\n顺手记：`super.speak()` 请的是**上一层那一版**，不是再调用一次自己 —— 写在盖掉的那一个方法里面也是安全的，不会绕回去。",
+      "templateId": "java-s2-override-typo",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "74bf46743f6397d6"
+      }
+    },
+    {
+      "id": "bank-java-s2-override-typo-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们写了一张子类，想在父类那一个方法之外**先请父类出一次、再补上我们自己那句**。可编译器把变量拍下来了，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这两行：\n\n```text\n李四发出了一次叫\n李四：\n```\n\n（第一行是父类那一版的样子，第二行才是我们补的那句。）",
+      "brokenCode": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speek() {\n        super.speak();\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.speak();\n    }\n}\n",
+      "referenceFix": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        super.speak();\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.speak();\n    }\n}\n",
+      "expectedOutput": "李四发出了一次叫\n李四：",
+      "stdin": null,
+      "explanation": "编译器的原话只有一句：**`method does not override or implement a method from a supertype`** —— 念起来是「我们这一手，上面**根本没有可盖的**」。\n\n它指的是那一行 `@Override`。这张小纸条的意思本来是「我们这一手是**故意**要盖掉上面某一版的」，可编译器拿着我们写下的名字往上找了一圈：**父类上压根没有叫这个名字的一手**，于是当场翻脸。\n\n症结就是**名字手滑多打了一个字母** —— 写成了 `speek`，而父类上叫 `speak`。名字不一样，编译器就当成「我们新写的一张方法」，新方法没有什么可盖的，`@Override` 那张纸条就成了假的。\n\n把名字改对之后，我们想要的行为才出得来：\n\n- `super.speak();` 请上一层把父类那一版跑一遍 → 印出第一行；\n- 接着我们自己那行印出第二行。\n\n**这张小纸条值钱就值在这儿**：要是没写 `@Override`，同一个拼写错会**安安静静地溜过去** —— 子类上多出一个方法没人调用得动的 `speek`，而 `main` 里调用 `speak` 走的还是父类那一版，程序一次不吭、结果就是不对。所以我们每次盖掉父类某一版，都写上它。\n\n顺手记：`super.speak()` 请的是**上一层那一版**，不是再调用一次自己 —— 写在盖掉的那一个方法里面也是安全的，不会绕回去。",
+      "templateId": "java-s2-override-typo",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "a32ee51bf7d0990c"
+      }
+    },
+    {
+      "id": "bank-java-s2-parent-private-field-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "父类把名字这盒家当**扣上了盖子**，另外留了一扇读它的小窗。子类套在它上面：初始化那一手里老老实实请了父类、也把数据数装好了 —— 可子类里那句印账的话过不了编译器这一关，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n张三 有 3 条数据\n```\n\n只改子类里伸手的那一处就好，父类我们一个字都不想动。",
+      "brokenCode": "class Animal {\n    private String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n}\n\nclass Cat extends Animal {\n    private int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    void report() {\n        System.out.println(this.name + \" 有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\", 3);\n        c.report();\n    }\n}\n",
+      "referenceFix": "class Animal {\n    private String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n}\n\nclass Cat extends Animal {\n    private int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    void report() {\n        System.out.println(getName() + \" 有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\", 3);\n        c.report();\n    }\n}\n",
+      "expectedOutput": "张三 有 3 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`name has private access in Animal`**。\n\n这句最容易被误会成「子类明明跟父类认了亲，怎么还碰不到」。答案就一句话：**认亲不等于拿到钥匙。** 盖子认的是「**哪张类定义写的方法**」，不是「谁跟谁认了亲」—— `name` 是 `Animal` 扣上的，`Cat` 里写的方法**照样在门外**。\n\n正路是走父类留的那扇小窗，把 `this.name` 换成 `getName()`：小窗的身子写在 `Animal` 里面，所以它拿得到那个名字；子类只管把接到的字符串用起来。\n\n顺手记一句本课的老话：**套类定义套来的是「会用」，不是「能改」**。父类盖上盖子，子类**同样**伸不进手 —— 上一课学的那套盖子，套了类定义也一样管用。",
+      "templateId": "java-s2-parent-private-field",
+      "params": {
+        "name": "张三",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "538dccac570c55c5"
+      }
+    },
+    {
+      "id": "bank-java-s2-parent-private-field-009",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "父类把名字这盒家当**扣上了盖子**，另外留了一扇读它的小窗。子类套在它上面：初始化那一手里老老实实请了父类、也把数据数装好了 —— 可子类里那句印账的话过不了编译器这一关，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n李四 有 7 条数据\n```\n\n只改子类里伸手的那一处就好，父类我们一个字都不想动。",
+      "brokenCode": "class Animal {\n    private String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n}\n\nclass Cat extends Animal {\n    private int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    void report() {\n        System.out.println(this.name + \" 有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\", 7);\n        c.report();\n    }\n}\n",
+      "referenceFix": "class Animal {\n    private String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    public String getName() {\n        return name;\n    }\n}\n\nclass Cat extends Animal {\n    private int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    void report() {\n        System.out.println(getName() + \" 有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\", 7);\n        c.report();\n    }\n}\n",
+      "expectedOutput": "李四 有 7 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`name has private access in Animal`**。\n\n这句最容易被误会成「子类明明跟父类认了亲，怎么还碰不到」。答案就一句话：**认亲不等于拿到钥匙。** 盖子认的是「**哪张类定义写的方法**」，不是「谁跟谁认了亲」—— `name` 是 `Animal` 扣上的，`Cat` 里写的方法**照样在门外**。\n\n正路是走父类留的那扇小窗，把 `this.name` 换成 `getName()`：小窗的身子写在 `Animal` 里面，所以它拿得到那个名字；子类只管把接到的字符串用起来。\n\n顺手记一句本课的老话：**套类定义套来的是「会用」，不是「能改」**。父类盖上盖子，子类**同样**伸不进手 —— 上一课学的那套盖子，套了类定义也一样管用。",
+      "templateId": "java-s2-parent-private-field",
+      "params": {
+        "name": "李四",
+        "n": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "e2e7bae0a1c0fd85"
+      }
+    },
+    {
+      "id": "bank-java-s2-super-chain-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画**一大一小两张类定义**，小的套在大的上面。\n\n父类 `Animal`：一盒名字家当；初始化那一手收一个名字并记下；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Cat`：套在 `Animal` 上，自己再带一盒数据数；初始化那一手收**名字和数据数两样** —— 名字这一份要**请父类去记**，然后才记自己的数据数；把 `speak()` **盖掉、换上自己那版**，一共两行：先请父类那一版跑一遍，再印 **名字 + `：我们有 ` + 数据数 + ` 条数据`**。\n\n输入给程序的只有**一个数**：对象的数据数。程序该这么走：读那个数 → 照子类创建一个对象（名字用题目给的）→ 调用一次 `speak()`。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n张三发出了一次叫\n张三：我们有 1 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    @Override\n    void speak() {\n        super.speak();\n        System.out.println(name + \"：我们有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        Cat c = new Cat(\"张三\", fish);\n        c.speak();\n    }\n}\n",
+      "expectedOutput": "张三发出了一次叫\n张三：我们有 9 条数据",
+      "stdin": "9\n",
+      "explanation": "这题把本课的**构造链**和 **`super.`** 两件事一次串完。\n\n**初始化那一手**：父类只有 `Animal(String name)` 这一版，所以子类自己写了初始化那一手之后，头一句必须 `super(name);` —— 名字这盒家当**只有父类装得进去**，子类是请它代劳。装完父类那份，才轮到自己那行 `this.fish = fish;`。\n\n**盖掉那一个方法**：`speak()` 上面挂 `@Override`，是告诉编译器「这一版是故意盖掉上一层那版的」。身子里的两句顺序就是印出来的顺序：\n\n- `super.speak();` —— 请上一层把它那版跑一遍，印出「发出了一次叫」；\n- 下一行才是我们补的「：我们有 N 条数据」。\n\n要是把这两句写反了，印出来的顺序就倒过来 —— **程序一次不吭，只是两行换了位置**，这类错只能靠对输出。\n\n顺手记：**父类一个字都没被改过**。`super.speak()` 只是「请它跑一趟」，不是盖掉它。",
+      "templateId": "java-s2-super-chain",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "be9920bd08bb0952"
+      }
+    },
+    {
+      "id": "bank-java-s2-super-chain-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画**一大一小两张类定义**，小的套在大的上面。\n\n父类 `Animal`：一盒名字家当；初始化那一手收一个名字并记下；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Cat`：套在 `Animal` 上，自己再带一盒数据数；初始化那一手收**名字和数据数两样** —— 名字这一份要**请父类去记**，然后才记自己的数据数；把 `speak()` **盖掉、换上自己那版**，一共两行：先请父类那一版跑一遍，再印 **名字 + `：我们有 ` + 数据数 + ` 条数据`**。\n\n输入给程序的只有**一个数**：对象的数据数。程序该这么走：读那个数 → 照子类创建一个对象（名字用题目给的）→ 调用一次 `speak()`。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n李四发出了一次叫\n李四：我们有 3 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    int fish;\n\n    Cat(String name, int fish) {\n        super(name);\n        this.fish = fish;\n    }\n\n    @Override\n    void speak() {\n        super.speak();\n        System.out.println(name + \"：我们有 \" + fish + \" 条数据\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int fish = sc.nextInt();\n        Cat c = new Cat(\"李四\", fish);\n        c.speak();\n    }\n}\n",
+      "expectedOutput": "李四发出了一次叫\n李四：我们有 6 条数据",
+      "stdin": "6\n",
+      "explanation": "这题把本课的**构造链**和 **`super.`** 两件事一次串完。\n\n**初始化那一手**：父类只有 `Animal(String name)` 这一版，所以子类自己写了初始化那一手之后，头一句必须 `super(name);` —— 名字这盒家当**只有父类装得进去**，子类是请它代劳。装完父类那份，才轮到自己那行 `this.fish = fish;`。\n\n**盖掉那一个方法**：`speak()` 上面挂 `@Override`，是告诉编译器「这一版是故意盖掉上一层那版的」。身子里的两句顺序就是印出来的顺序：\n\n- `super.speak();` —— 请上一层把它那版跑一遍，印出「发出了一次叫」；\n- 下一行才是我们补的「：我们有 N 条数据」。\n\n要是把这两句写反了，印出来的顺序就倒过来 —— **程序一次不吭，只是两行换了位置**，这类错只能靠对输出。\n\n顺手记：**父类一个字都没被改过**。`super.speak()` 只是「请它跑一趟」，不是盖掉它。",
+      "templateId": "java-s2-super-chain",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "66abba8d15a0b540"
+      }
+    },
+    {
+      "id": "bank-java-s2-two-children-speak-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画**一大两小三张类定义**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Dog` 和 `Fish` 都套在这张父类上，各自把 `speak()` **盖掉、换上自己那版**：\n\n- `Dog` 印 **名字 + `：汪！`**\n- `Fish` 印 **名字 + `：`**\n\n输入给程序的只有**一个数**。程序该这么走：读那个数 → 照三张类定义各创建一个（名字都用题目给的）→ **调用那么多声** `Dog` 那一个方法 → 再调用一次 `Fish` 的 → 最后调用一次父类**直接创建后**那个动物的。\n\n最后那一次是故意留的：**父类本身一个字都没被改过**，照它直接创建后的动物，调用还是老样子。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n大黄：汪！\n大黄：汪！\n大黄：汪！\n泡泡：\n计算机发出了一次叫\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Dog d = new Dog(\"大黄\");\n        Fish f = new Fish(\"泡泡\");\n        Animal a = new Animal(\"计算机\");\n        for (int i = 0; i < n; i++) {\n            d.speak();\n        }\n        f.speak();\n        a.speak();\n    }\n}\n",
+      "expectedOutput": "大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n泡泡：\n计算机发出了一次叫",
+      "stdin": "7\n",
+      "explanation": "这题练的是**「父类只画一遍，子类各改各的」**。\n\n三张类定义的关系：`Dog` 和 `Fish` 的类定义名后面都写着 `extends Animal`，所以「有名字、会出一次」这套设定**一个字都不用重抄**。两张子类只做了两件事：\n\n1. **初始化那一手各写一遍**，头一句都是 `super(name);` —— 把名字交给父类去装。要是有哪张子类漏了这一句，编译器就会拦下来说那一长串 `constructor ... cannot be applied to given types`。\n2. **把 `speak()` 盖掉、换上自己那版**，各自换成自己那种输出结果，头上都挂着 `@Override`。\n\n我们特意让 `main` 最后再调用一次**照父类直接创建后**的那个动物：它印的还是「发出了一次叫」。这说明**盖掉只盖住子类这条往下的路**，父类本身一根毛都没动。\n\n`main` 那边就是：读一个数当调用几声，生三个，然后照题目要求的顺序调用 —— `Dog` 调用够那么多声、`Fish` 一次、父类那个一次。**顺序和声数都得对**，少调用一次输出就对不上。",
+      "templateId": "java-s2-two-children-speak",
+      "params": {
+        "dog": "大黄",
+        "fishName": "泡泡",
+        "animalName": "计算机"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "564761d76350e16b"
+      }
+    },
+    {
+      "id": "bank-java-s2-two-children-speak-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画**一大两小三张类定义**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Dog` 和 `Fish` 都套在这张父类上，各自把 `speak()` **盖掉、换上自己那版**：\n\n- `Dog` 印 **名字 + `：汪！`**\n- `Fish` 印 **名字 + `：`**\n\n输入给程序的只有**一个数**。程序该这么走：读那个数 → 照三张类定义各创建一个（名字都用题目给的）→ **调用那么多声** `Dog` 那一个方法 → 再调用一次 `Fish` 的 → 最后调用一次父类**直接创建后**那个动物的。\n\n最后那一次是故意留的：**父类本身一个字都没被改过**，照它直接创建后的动物，调用还是老样子。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n大黄：汪！\n泡泡：\n河豚发出了一次叫\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Dog d = new Dog(\"大黄\");\n        Fish f = new Fish(\"泡泡\");\n        Animal a = new Animal(\"河豚\");\n        for (int i = 0; i < n; i++) {\n            d.speak();\n        }\n        f.speak();\n        a.speak();\n    }\n}\n",
+      "expectedOutput": "大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n泡泡：\n河豚发出了一次叫",
+      "stdin": "7\n",
+      "explanation": "这题练的是**「父类只画一遍，子类各改各的」**。\n\n三张类定义的关系：`Dog` 和 `Fish` 的类定义名后面都写着 `extends Animal`，所以「有名字、会出一次」这套设定**一个字都不用重抄**。两张子类只做了两件事：\n\n1. **初始化那一手各写一遍**，头一句都是 `super(name);` —— 把名字交给父类去装。要是有哪张子类漏了这一句，编译器就会拦下来说那一长串 `constructor ... cannot be applied to given types`。\n2. **把 `speak()` 盖掉、换上自己那版**，各自换成自己那种输出结果，头上都挂着 `@Override`。\n\n我们特意让 `main` 最后再调用一次**照父类直接创建后**的那个动物：它印的还是「发出了一次叫」。这说明**盖掉只盖住子类这条往下的路**，父类本身一根毛都没动。\n\n`main` 那边就是：读一个数当调用几声，生三个，然后照题目要求的顺序调用 —— `Dog` 调用够那么多声、`Fish` 一次、父类那个一次。**顺序和声数都得对**，少调用一次输出就对不上。",
+      "templateId": "java-s2-two-children-speak",
+      "params": {
+        "dog": "大黄",
+        "fishName": "泡泡",
+        "animalName": "河豚"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "82b24c86cb57de75"
+      }
+    },
+    {
+      "id": "bank-java-s2-two-children-speak-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画**一大两小三张类定义**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Dog` 和 `Fish` 都套在这张父类上，各自把 `speak()` **盖掉、换上自己那版**：\n\n- `Dog` 印 **名字 + `：汪！`**\n- `Fish` 印 **名字 + `：`**\n\n输入给程序的只有**一个数**。程序该这么走：读那个数 → 照三张类定义各创建一个（名字都用题目给的）→ **调用那么多声** `Dog` 那一个方法 → 再调用一次 `Fish` 的 → 最后调用一次父类**直接创建后**那个动物的。\n\n最后那一次是故意留的：**父类本身一个字都没被改过**，照它直接创建后的动物，调用还是老样子。\n\n比如程序的输入是\n\n8\n\n程序就要返回\n\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n金金：\n河豚发出了一次叫\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Dog d = new Dog(\"大黄\");\n        Fish f = new Fish(\"金金\");\n        Animal a = new Animal(\"河豚\");\n        for (int i = 0; i < n; i++) {\n            d.speak();\n        }\n        f.speak();\n        a.speak();\n    }\n}\n",
+      "expectedOutput": "大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n大黄：汪！\n金金：\n河豚发出了一次叫",
+      "stdin": "7\n",
+      "explanation": "这题练的是**「父类只画一遍，子类各改各的」**。\n\n三张类定义的关系：`Dog` 和 `Fish` 的类定义名后面都写着 `extends Animal`，所以「有名字、会出一次」这套设定**一个字都不用重抄**。两张子类只做了两件事：\n\n1. **初始化那一手各写一遍**，头一句都是 `super(name);` —— 把名字交给父类去装。要是有哪张子类漏了这一句，编译器就会拦下来说那一长串 `constructor ... cannot be applied to given types`。\n2. **把 `speak()` 盖掉、换上自己那版**，各自换成自己那种输出结果，头上都挂着 `@Override`。\n\n我们特意让 `main` 最后再调用一次**照父类直接创建后**的那个动物：它印的还是「发出了一次叫」。这说明**盖掉只盖住子类这条往下的路**，父类本身一根毛都没动。\n\n`main` 那边就是：读一个数当调用几声，生三个，然后照题目要求的顺序调用 —— `Dog` 调用够那么多声、`Fish` 一次、父类那个一次。**顺序和声数都得对**，少调用一次输出就对不上。",
+      "templateId": "java-s2-two-children-speak",
+      "params": {
+        "dog": "大黄",
+        "fishName": "金金",
+        "animalName": "河豚"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "3657baa42bf408ec"
+      }
+    },
+    {
+      "id": "bank-java-s2-two-children-speak-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画**一大两小三张类定义**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Dog` 和 `Fish` 都套在这张父类上，各自把 `speak()` **盖掉、换上自己那版**：\n\n- `Dog` 印 **名字 + `：汪！`**\n- `Fish` 印 **名字 + `：`**\n\n输入给程序的只有**一个数**。程序该这么走：读那个数 → 照三张类定义各创建一个（名字都用题目给的）→ **调用那么多声** `Dog` 那一个方法 → 再调用一次 `Fish` 的 → 最后调用一次父类**直接创建后**那个动物的。\n\n最后那一次是故意留的：**父类本身一个字都没被改过**，照它直接创建后的动物，调用还是老样子。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n旺财：汪！\n旺财：汪！\n泡泡：\n计算机发出了一次叫\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Dog d = new Dog(\"旺财\");\n        Fish f = new Fish(\"泡泡\");\n        Animal a = new Animal(\"计算机\");\n        for (int i = 0; i < n; i++) {\n            d.speak();\n        }\n        f.speak();\n        a.speak();\n    }\n}\n",
+      "expectedOutput": "旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n泡泡：\n计算机发出了一次叫",
+      "stdin": "4\n",
+      "explanation": "这题练的是**「父类只画一遍，子类各改各的」**。\n\n三张类定义的关系：`Dog` 和 `Fish` 的类定义名后面都写着 `extends Animal`，所以「有名字、会出一次」这套设定**一个字都不用重抄**。两张子类只做了两件事：\n\n1. **初始化那一手各写一遍**，头一句都是 `super(name);` —— 把名字交给父类去装。要是有哪张子类漏了这一句，编译器就会拦下来说那一长串 `constructor ... cannot be applied to given types`。\n2. **把 `speak()` 盖掉、换上自己那版**，各自换成自己那种输出结果，头上都挂着 `@Override`。\n\n我们特意让 `main` 最后再调用一次**照父类直接创建后**的那个动物：它印的还是「发出了一次叫」。这说明**盖掉只盖住子类这条往下的路**，父类本身一根毛都没动。\n\n`main` 那边就是：读一个数当调用几声，生三个，然后照题目要求的顺序调用 —— `Dog` 调用够那么多声、`Fish` 一次、父类那个一次。**顺序和声数都得对**，少调用一次输出就对不上。",
+      "templateId": "java-s2-two-children-speak",
+      "params": {
+        "dog": "旺财",
+        "fishName": "泡泡",
+        "animalName": "计算机"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "b541505eea825d52"
+      }
+    },
+    {
+      "id": "bank-java-s2-two-children-speak-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画**一大两小三张类定义**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Dog` 和 `Fish` 都套在这张父类上，各自把 `speak()` **盖掉、换上自己那版**：\n\n- `Dog` 印 **名字 + `：汪！`**\n- `Fish` 印 **名字 + `：`**\n\n输入给程序的只有**一个数**。程序该这么走：读那个数 → 照三张类定义各创建一个（名字都用题目给的）→ **调用那么多声** `Dog` 那一个方法 → 再调用一次 `Fish` 的 → 最后调用一次父类**直接创建后**那个动物的。\n\n最后那一次是故意留的：**父类本身一个字都没被改过**，照它直接创建后的动物，调用还是老样子。\n\n比如程序的输入是\n\n5\n\n程序就要返回\n\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n金金：\n计算机发出了一次叫\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Dog d = new Dog(\"旺财\");\n        Fish f = new Fish(\"金金\");\n        Animal a = new Animal(\"计算机\");\n        for (int i = 0; i < n; i++) {\n            d.speak();\n        }\n        f.speak();\n        a.speak();\n    }\n}\n",
+      "expectedOutput": "旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n金金：\n计算机发出了一次叫",
+      "stdin": "9\n",
+      "explanation": "这题练的是**「父类只画一遍，子类各改各的」**。\n\n三张类定义的关系：`Dog` 和 `Fish` 的类定义名后面都写着 `extends Animal`，所以「有名字、会出一次」这套设定**一个字都不用重抄**。两张子类只做了两件事：\n\n1. **初始化那一手各写一遍**，头一句都是 `super(name);` —— 把名字交给父类去装。要是有哪张子类漏了这一句，编译器就会拦下来说那一长串 `constructor ... cannot be applied to given types`。\n2. **把 `speak()` 盖掉、换上自己那版**，各自换成自己那种输出结果，头上都挂着 `@Override`。\n\n我们特意让 `main` 最后再调用一次**照父类直接创建后**的那个动物：它印的还是「发出了一次叫」。这说明**盖掉只盖住子类这条往下的路**，父类本身一根毛都没动。\n\n`main` 那边就是：读一个数当调用几声，生三个，然后照题目要求的顺序调用 —— `Dog` 调用够那么多声、`Fish` 一次、父类那个一次。**顺序和声数都得对**，少调用一次输出就对不上。",
+      "templateId": "java-s2-two-children-speak",
+      "params": {
+        "dog": "旺财",
+        "fishName": "金金",
+        "animalName": "计算机"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "6a9802f893acda8b"
+      }
+    },
+    {
+      "id": "bank-java-s2-two-children-speak-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要画**一大两小三张类定义**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Dog` 和 `Fish` 都套在这张父类上，各自把 `speak()` **盖掉、换上自己那版**：\n\n- `Dog` 印 **名字 + `：汪！`**\n- `Fish` 印 **名字 + `：`**\n\n输入给程序的只有**一个数**。程序该这么走：读那个数 → 照三张类定义各创建一个（名字都用题目给的）→ **调用那么多声** `Dog` 那一个方法 → 再调用一次 `Fish` 的 → 最后调用一次父类**直接创建后**那个动物的。\n\n最后那一次是故意留的：**父类本身一个字都没被改过**，照它直接创建后的动物，调用还是老样子。\n\n比如程序的输入是\n\n9\n\n程序就要返回\n\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n金金：\n河豚发出了一次叫\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Dog d = new Dog(\"旺财\");\n        Fish f = new Fish(\"金金\");\n        Animal a = new Animal(\"河豚\");\n        for (int i = 0; i < n; i++) {\n            d.speak();\n        }\n        f.speak();\n        a.speak();\n    }\n}\n",
+      "expectedOutput": "旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n旺财：汪！\n金金：\n河豚发出了一次叫",
+      "stdin": "7\n",
+      "explanation": "这题练的是**「父类只画一遍，子类各改各的」**。\n\n三张类定义的关系：`Dog` 和 `Fish` 的类定义名后面都写着 `extends Animal`，所以「有名字、会出一次」这套设定**一个字都不用重抄**。两张子类只做了两件事：\n\n1. **初始化那一手各写一遍**，头一句都是 `super(name);` —— 把名字交给父类去装。要是有哪张子类漏了这一句，编译器就会拦下来说那一长串 `constructor ... cannot be applied to given types`。\n2. **把 `speak()` 盖掉、换上自己那版**，各自换成自己那种输出结果，头上都挂着 `@Override`。\n\n我们特意让 `main` 最后再调用一次**照父类直接创建后**的那个动物：它印的还是「发出了一次叫」。这说明**盖掉只盖住子类这条往下的路**，父类本身一根毛都没动。\n\n`main` 那边就是：读一个数当调用几声，生三个，然后照题目要求的顺序调用 —— `Dog` 调用够那么多声、`Fish` 一次、父类那个一次。**顺序和声数都得对**，少调用一次输出就对不上。",
+      "templateId": "java-s2-two-children-speak",
+      "params": {
+        "dog": "旺财",
+        "fishName": "金金",
+        "animalName": "河豚"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.532Z",
+        "hash": "c50cef960eac9f36"
+      }
+    }
+  ]
+}

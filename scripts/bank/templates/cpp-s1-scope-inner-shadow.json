@@ -1,0 +1,33 @@
+{
+  "templateId": "cpp-s1-scope-inner-shadow",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-12",
+  "type": "codefix",
+  "concept": [
+    "内层遮住外层",
+    "多写的那个 int 就是另开一个新元素",
+    "编得过但印错的题"
+  ],
+  "instances": 2,
+  "params": {
+    "outer": {
+      "kind": "pick",
+      "values": [
+        "3",
+        "6"
+      ]
+    },
+    "inner": {
+      "kind": "pick",
+      "values": [
+        "20",
+        "40"
+      ]
+    }
+  },
+  "stemTemplate": "我们想把外面那个 `fish` 元素里的数**换成 {inner}**，再印出来。\n\n目前它里面保存的是 {outer}。\n\n这一回编译器**收下了源代码**，可跑出来印的是 {outer} —— 那不对。\n\n你帮我们把出问题的那一处改好：改完印出来的要是 {inner}。元素的名字、要印的那句话，都不用动。",
+  "brokenCodeTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = {outer};\n    {\n        int fish = {inner};\n    }\n    cout << fish << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = {outer};\n    {\n        fish = {inner};\n    }\n    cout << fish << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一题坏的地方**编得过**，所以屏幕上没有拦你的错误信息 —— 只有一句容易被划过去的黄字：\n\n`warning: unused variable 'fish' [-Wunused-variable]`\n\n「开的这个元素没人用」—— 这句话正是在提醒你：大括号里那句 `int fish = {inner};` **开的是一个新元素**，不是外面那个。\n\n同名的两个元素，规矩是**内层遮住外层**：大括号里写 `fish`，调用到的是**里面**那个；出了括号，里头那个就跟没开过一样 —— 所以最后印出来的还是外面的 {outer}。\n\n改法只有一处：把里层那个 `int` 去掉，写成 `fish = {inner};` —— 这一句改的是**外面**那个元素（里层调用得到外层），出了括号它还在，印出来就是 {inner}。\n\n⚠️ 记牢这一条：**在大括号里写名字，先看清楚是要用外面那个，还是要新开一个。**多写一个 `int`，就是另一个元素了。"
+}

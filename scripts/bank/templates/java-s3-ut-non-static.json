@@ -1,0 +1,33 @@
+{
+  "templateId": "java-s3-ut-non-static",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-20",
+  "type": "codefix",
+  "concept": [
+    "门口调用函数，函数得是整张类定义共用的",
+    "挂在某一个对象身上的函数，门口调用不到它",
+    "补上那个词就过去了"
+  ],
+  "instances": 2,
+  "params": {
+    "n1": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "煤球"
+      ]
+    },
+    "n2": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stemTemplate": "我们写了一个小体检台：有一个小元素记「查了几项」，每查过一项就往上加一笔。可那条记数的函数**漏了一个词**，门口调用不到它 —— 编译器把源代码退了回来，错误信息里写着 `non-static method 数一项(String) cannot be referenced from a static context`。\n\n请你把它改到能跑完、印出**三行**：\n\n```text\n这项查过：...\n这项查过：...\n一共查了 2 项\n```\n\n- 头两行报的是**这一项的名字**（我们写在门口那两行调用里了）；\n- 最后那一行报的是**一共查了几项**；\n- 那个小元素、门口那两行调用、两个名字，一个都别动。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+  "brokenCodeTemplate": "public class Main {\n    static int 查了几项 = 0;\n\n    void 数一项(String 名字) {\n        查了几项++;\n        System.out.println(\"这项查过：\" + 名字);\n    }\n\n    public static void main(String[] args) {\n        数一项(\"{n1}\");\n        数一项(\"{n2}\");\n        System.out.println(\"一共查了 \" + 查了几项 + \" 项\");\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    static int 查了几项 = 0;\n\n    static void 数一项(String 名字) {\n        查了几项++;\n        System.out.println(\"这项查过：\" + 名字);\n    }\n\n    public static void main(String[] args) {\n        数一项(\"{n1}\");\n        数一项(\"{n2}\");\n        System.out.println(\"一共查了 \" + 查了几项 + \" 项\");\n    }\n}\n",
+  "explanationTemplate": "**一、错误信息怎么念。** `non-static method 数一项(String) cannot be referenced from a static context` 说的是「**从门口调用，可这条函数是挂在某一个对象身上的**」。\n\n**二、门口和函数的区别在哪。** `main` 是**整张类定义共用的门口**，它输出的名字也得是整张类定义共用的那一份。那条函数前面少了 `static`，它就成了「挂在某一个对象身上」的那种 —— 门口手上根本没有那个对象，自然调用不出口。注意错误信息报的**不是**函数写错了，是**称呼它的那一行**调用不到它。\n\n**三、改法：补一个词。** 在那条函数前面加上 `static`，它就从「某一个对象的」变成「整张类定义共用的」。我们改完真跑过，屏幕上就是那三行：两行「这项查过：……」加一行「一共查了 2 项」。\n\n**四、为什么 `main` 自己也有那个词。** 因为 `main` 就是门口 —— 它被调用的时候，外面还没有任何一个对象。可以顺手记一句：**门口要调用得到的函数，前面都得有那个词。**"
+}

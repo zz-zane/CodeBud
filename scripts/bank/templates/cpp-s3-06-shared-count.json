@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s3-06-shared-count",
+  "lang": "cpp",
+  "stage": 3,
+  "lessonId": "cpp-stage3-06",
+  "type": "codewrite",
+  "concept": [
+    "几处共用一份",
+    "数人头",
+    "手放下不等于变量还了"
+  ],
+  "instances": 6,
+  "params": {
+    "x": {
+      "kind": "pick",
+      "values": [
+        3,
+        5,
+        7
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{x}\n",
+    "sampleText": "28\n"
+  },
+  "stemTemplate": "输入接口会给**一个数**（就一个）。\n\n请你写个程序：\n\n1. 请一块 `shared_ptr` 保存这个数（用那个「一趟把两件事都做了」的函数）；\n2. 印**一行**：现在有几个手拿着它（用那个**数人头**的函数）；\n3. 开一层**花括号**，里头请**另一块名称指着同一份**，再印**一行**有几个手；\n4. 出了花括号再印**一行**有几个手；\n5. 最后印**一行**那个数本身。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外一个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main() {\n    int v = 0;\n    cin >> v;\n\n    shared_ptr<int> a = make_shared<int>(v);\n    cout << a.use_count() << endl;\n    {\n        shared_ptr<int> b = a;\n        cout << a.use_count() << endl;\n    }\n    cout << a.use_count() << endl;\n    cout << *a << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "数人头那一个方法是 `use_count()`，念作「**现在有几个手指着这间变量**」。\n\n- 刚请来只有一个手 → 印 `1`；\n- 花括号里多了一块名称指着**同一份**（`shared_ptr` 是可以复制的，这是它和 `unique_ptr` 最大的不同）→ 两个手 → 印 `2`；\n- 那个手一放下（走出花括号）→ 回到一个手 → 印 `1`。\n\n⚠️ 第三个 `1` **不等于变量还了**：变量要等**最后一根手指**也松开（也就是 `main` 走完）才被返回。所以最后一行照样能拿 `a` 取货，印出传入进来的那个数（`*a`）。\n\n⚠️ 判分传入的数跟样例不一样，别写死。"
+}

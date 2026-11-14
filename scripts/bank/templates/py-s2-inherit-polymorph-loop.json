@@ -1,0 +1,32 @@
+{
+  "templateId": "py-s2-inherit-polymorph-loop",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-07",
+  "type": "codewrite",
+  "concept": [
+    "一次处理各对象各样",
+    "重写",
+    "继承"
+  ],
+  "instances": 6,
+  "params": {
+    "a": {
+      "kind": "pick",
+      "values": [
+        "Cat",
+        "Dog"
+      ]
+    },
+    "b": {
+      "kind": "pick",
+      "values": [
+        "Dog",
+        "Cat"
+      ]
+    }
+  },
+  "stemTemplate": "我们要一次处理、各对象各样。\n\n请你画三张类定义：\n\n1. 一张 `Animal` 父类，只有一个方法 `speak(self)`，印一行 `……`（就是两个省略号）\n2. 一张 `Cat` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 ``\n3. 一张 `Dog` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 `汪！`\n\n然后照这个顺序造三个：**先一个 `{a}`、再一个 `{b}`、最后再一个 `{a}`**，把它们排成一排。\n\n最后**用一个 `for` 挨个调用 `speak`** —— 引用的那一行里**不许看出它是对象还是狗**，就写「对着一个调用一次」。\n\n跑完印出来的三行，正好是这三个各自的那一次。",
+  "referenceSolutionTemplate": "class Animal:\n    def speak(self):\n        print(\"……\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(\"\")\n\n\nclass Dog(Animal):\n    def speak(self):\n        print(\"汪！\")\n\n\npets = [{a}(), {b}(), {a}()]\nfor pet in pets:\n    pet.speak()\n",
+  "explanationTemplate": "父类定义方法契约，子类重写提供具体行为。遍历实例列表时，通过相同的 speak 调用按对象实际类型执行相应实现；循环不需要用类型分支决定调用哪个实现。列表必须保存实例，而不是未实例化的类。"
+}

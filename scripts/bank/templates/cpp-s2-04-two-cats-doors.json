@@ -1,0 +1,39 @@
+{
+  "templateId": "cpp-s2-04-two-cats-doors",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-04",
+  "type": "codewrite",
+  "concept": [
+    "每个对象自己一份格子",
+    "门上只动被引用的那个对象",
+    "只给一个对象传入料"
+  ],
+  "instances": 6,
+  "params": {
+    "nameA": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    },
+    "nameB": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 3,
+    "min": 1,
+    "max": 6
+  },
+  "stemTemplate": "我们要生**两个**对象，各传入各的条数 —— 每个对象的两格都是自己的一份，门上改的也只能是自己那份。输入接口会递进来**三个数**（一行一个）：第一个的条数、第二只的条数、要传给**第一个**的那个量。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都盖上盖子**，只留门；写一个**构造函数**（两样都收）；\n2. 图上写**两道门**：`string getName() const`（问名字）、`int getFish() const`（问条数），还有一个方法 `void addFish(int n)`，把格子里的条数**加上**传入进来的那个量；\n3. `main` 里生**两个**实例：第一个叫 `{nameA}`、第二只叫 `{nameB}`，条数分别用**第一个数**和**第二个数**；\n4. 只给**第一个**调用一次 `addFish`（传入**第三个数**）；\n5. 最后**各印一行**：`XX 有 N 条`（第一个先印）。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外三个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void addFish(int n) {\n        fish = fish + n;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat c1(\"{nameA}\", a);\n    Cat c2(\"{nameB}\", b);\n    c1.addFish(c);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    cout << c2.getName() << \" 有 \" << c2.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一题的重点是**每个对象都有一份自己的格子**。\n\n- 类定义只有一张，函数只有一份，可是根据类创建出来的每个对象**各自**带着两格家常。所以 `c1` 和 `c2` 里的 `fish` 是两个互不打扰的数 —— 给 `c1` 加料，`c2` 那一格纹丝不动。\n- 函数被哪个对象调用，干的活就是那个对象的：`c1.addFish(c);` 里被改的只有 `c1` 那一格。\n- 门里的写法要**指名格子**（`fish = fish + n;`），而不是去动输入接口 —— 动了输入接口，格子就白改了。\n\n⚠️ 两格都盖上盖子以后，外面一个 `c1.fish` 的写法都不能用，取数只能走 `getFish()`、改数只能走 `addFish()`。\n\n⚠️ 印的时候是**各自取各自的数**：先印第一个（加过料的那个数），再印第二只（从头到尾没被碰过的那个数）。"
+}

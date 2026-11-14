@@ -1,0 +1,27 @@
+{
+  "templateId": "cpp-s2-03-const-object-call",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-03",
+  "type": "codefix",
+  "concept": [
+    "带封印的对象",
+    "只读函数末尾上的 const",
+    "编译期报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stemTemplate": "我们画了一张叫 `Cat` 的类定义，上面那一个方法只是印一行字，一个格子都没碰。`main` 里我们创建了一个**带封印的对象**，称呼它印那行字 —— 可信封递进去，编译器当场拦下。\n\n你帮我们改一处，让它跑起来、把那行字印出来。**`main` 里那两句一个都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void show() {\n        cout << name << \" 蹲在这儿\" << endl;\n    }\n};\n\nint main() {\n    const Cat c1(\"{name}\");\n    c1.show();\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void show() const {\n        cout << name << \" 蹲在这儿\" << endl;\n    }\n};\n\nint main() {\n    const Cat c1(\"{name}\");\n    c1.show();\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:18:12: error: passing 'const Cat' as 'this' argument discards qualifiers [-fpermissive]`\n\n用自然语言解释：**「你递进来的是一个带封印的对象，可这一个方法没说自己只看看 —— 封印不能丢，所以这活它接不了。」**\n\n这句话里有个熟面孔：`this`。每调用一次函数，编译器都会悄悄把**称呼它的那个对象**递进去；可带封印的对象递不出一个「随便你改」的自己，而这一个方法（末尾上没写 `const`）又没承诺过不动手，两边谈不拢，它就当场拦下。\n\n改法是在这一个方法的末尾上补一颗 `const`：`void show() const`。\n\n⚠️ 补之前先想清楚：**这一个方法真的只是看看吗？** 要是它本来就要往格子里写东西，那该拿掉的就不是这颗 `const`，而是那个对象身上的封印。"
+}

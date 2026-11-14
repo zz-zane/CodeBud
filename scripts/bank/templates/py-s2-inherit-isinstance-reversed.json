@@ -1,0 +1,26 @@
+{
+  "templateId": "py-s2-inherit-isinstance-reversed",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-07",
+  "type": "codefix",
+  "concept": [
+    "isinstance",
+    "认亲方向",
+    "TypeError"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "学生甲",
+        "学生乙"
+      ]
+    }
+  },
+  "stemTemplate": "我们画了两张类定义：`Animal` 父类，和照着它画的 `Cat` 子类。\n\n现在我们想确认一件事：**照 `Cat` 生的这个，是不是也算一个 `Animal`**。可写出来这一句一跑就报错。\n\n你帮我们**把用错的那一处改过来**，让它印出 `True`。\n\n⚠️ 我们问的就是「这个对象算不算动物」这一件事，**别改成问别的**。",
+  "brokenCodeTemplate": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n    pass\n\n\nc = Cat(\"{name}\")\nprint(isinstance(Animal, c))\n",
+  "referenceFixTemplate": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n    pass\n\n\nc = Cat(\"{name}\")\nprint(isinstance(c, Animal))\n",
+  "explanationTemplate": "毛病是**两格东西放反了**。\n\n`isinstance(...)` 的两个格有自己的分工，读法是固定的：\n\n1. **第一格：要认的那一个**（一个已经创建后的实例）\n2. **第二格：拿着比对的类定义**（类定义的名字）\n\n我们写成了 `isinstance(Animal, c)` —— 把类定义放第一格、把对象放第二格，等于拿着类定义去认对象。编译器第二格收不到一个类定义，只好翻脸：第二格必须是类定义（或者一排类定义）。\n\n⚠️ 认亲的结论是**从上往下认，不往上看**：`Cat` 是套在 `Animal` 上画的，所以照 `Cat` 生的那个**也**算 `Animal`（返回 `True`）；反过来，照 `Animal` 直接生的那个**不是** `Cat`（返回 `False`）。\n\n⚠️ 顺便记一句：这个 `isinstance(...)` 返回的是 `True` 或者 `False`，`print` 出来就是这两个词本身 —— 别自己手写一个 `True` 交差，那样什么都没验证。"
+}

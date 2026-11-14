@@ -1,0 +1,46 @@
+{
+  "templateId": "c-s2-struct-copy-cat",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-05",
+  "type": "codewrite",
+  "concept": [
+    "整只搬",
+    "副本",
+    "strcpy",
+    "结构体赋值"
+  ],
+  "instances": 6,
+  "params": {
+    "who": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "计算机"
+      ]
+    },
+    "who2": {
+      "kind": "pick",
+      "values": [
+        "假张三",
+        "冒牌货",
+        "影子对象"
+      ]
+    },
+    "f1": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    },
+    "f2": {
+      "kind": "int",
+      "min": 1,
+      "max": 3
+    }
+  },
+  "stemTemplate": "我们要试一件好玩的事：**整个对象能不能整个搬走**。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），然后在 `main` 里：\n\n1. 创建一个对象，名字叫 `{who}`、食量填 {f1}；\n2. 再生**第二个对象**，把第一个**整个搬**过去；\n3. 把搬过去的那个改一改：食量**再加上** {f2}，名字换成 `{who2}`；\n4. 报两行：`a：<名字> 处理了 <食量> 条` 和 `b：<名字> 处理了 <食量> 条`（`a` 是原来那个、`b` 是搬出来的那个）。\n\n改名字那一步用课文里那个抄字符串的函数。\n\n程序返回的应当是这样两行（`a` 那个一个字没动，`b` 那个加了 {f2} 条、名字也换了）：\n\n```\na：{who} 处理了 {f1} 条\nb：{who2} 处理了（{f1} 加 {f2} 之后的那个数）条\n```\n\n（判分用的是**另外一组名字和数**，所以别把答案写死）",
+  "starterTemplate": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n#include <string.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"{who}\", {f1}};\n    struct Cat b;\n\n    b = a;\n    b.fish = b.fish + {f2};\n    strcpy(b.name, \"{who2}\");\n\n    printf(\"a：%s 处理了 %d 条\\n\", a.name, a.fish);\n    printf(\"b：%s 处理了 %d 条\\n\", b.name, b.fish);\n    return 0;\n}\n",
+  "explanationTemplate": "这道题就为看清楚一件事：**整个对象可以整个搬，搬完是两个。**\n\n- `b = a;` 这一句是本课的甜头：编译器会替我们把 `a` 身上**每一个格子**都照着搬一份到 `b` 里 —— 连名字那一排元素都一颗一颗字符搬过去，不用我们自己写绕圈。\n- 搬完以后，`a` 和 `b` 是**两个各自独立的对象**。所以 `b.fish = b.fish + {f2};` 改的是 `b` 自己的食量，`a` 一点没动；`strcpy(b.name, \"{who2}\");` 换的是 `b` 自己的名字，`a` 的名字也一个字没变。\n- 最后两行印出来一对照，就看得很清楚了：原来那个还是 `{f1}`，搬出来那个变成加了 {f2} 之后的数、名字也换了。\n\n两个小地方顺手收下：\n\n- **改名字要用 `strcpy`**（住在 `string.h` 家里）。名字那格是一排元素，一整排元素不能整个换掉，只能一颗一颗抄过去 —— 这就是本课那道改错的题里编译器拦下来的那件事。\n- **食量那格是「一个元素」**，所以可以整个读写：`b.fish = b.fish + {f2};` 右边先把旧的读出来加上 {f2}，左边再把新数存回去。写成 `b.fish + {f2};` 就白算了。\n\n下一课我们要把这张「多出一个副本」的账算清楚：想让函数改到**本人**，光有类定义不够，还得给对象配一块名称。"
+}

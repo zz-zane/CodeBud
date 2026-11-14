@@ -1,0 +1,26 @@
+{
+  "templateId": "py-s2-organize-rename-loses-ext",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-14",
+  "type": "codefix",
+  "concept": [
+    "os.rename",
+    "后缀要接回去",
+    "splitext"
+  ],
+  "instances": 2,
+  "params": {
+    "e": {
+      "kind": "pick",
+      "values": [
+        ".txt",
+        ".jpg"
+      ]
+    }
+  },
+  "stemTemplate": "我们要给抽屉里那些以 `{e}` 收尾的东西**重新编号**，编成「数据 + 两位号」的样子，别的一根手指都不动。\n\n它**跑得顺顺的，一句错都不报**，可改完之后抽屉里那几样东西**打不开了** —— 名字后面那半截不见了。\n\n你帮我们改对。要求：\n\n1. 改完印出来的那一行里，**每一样东西后面那半截都得还在**（原来的那半截是什么，改完还是什么）。\n2. 前面铺东西的那几句、还有挑选的那一句，**一个字都不许动**。\n3. 编号的排法（从 1 起、两位、不够补 0）也不许改。",
+  "brokenCodeTemplate": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"对象2.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\"{e}\"):\n        continue\n    序号 = 序号 + 1\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"数据{序号:02d}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+  "referenceFixTemplate": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(工作台, exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"对象2.txt\", \"鱼.jpg\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    if not 名字.endswith(\"{e}\"):\n        continue\n    序号 = 序号 + 1\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"数据{序号:02d}\" + 后缀))\n\nprint(sorted(os.listdir(工作台)))\n",
+  "explanationTemplate": "重命名时应保留原文件扩展名，并检查目标名称是否冲突。排序后的输出反映重命名完成后的实际目录内容，不是创建顺序。"
+}

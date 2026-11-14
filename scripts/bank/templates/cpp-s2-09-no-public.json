@@ -1,0 +1,27 @@
+{
+  "templateId": "cpp-s2-09-no-public",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-09",
+  "type": "codefix",
+  "concept": [
+    "新类定义照着老类定义画",
+    "那一小段 public 不能省",
+    "够不着而不是私有"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们让新类定义照着老类定义画下来了，子类定义上还添了一手「摇末尾」。类定义里面怎么写都没问题。\n\n可工作区里那句改名字的话，编译器突然说**够不着**了。\n\n你帮我们改到能跑起来（子对象叫 {name}，先一次、再摇一次末尾）。**类定义上画的格子、函数、还有工作区里那几句调用方式，一个字都不用改 —— 只动照着画的那一行。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    void meow() const {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass Kitten : Cat {\npublic:\n    void wag() const {\n        cout << name << \" 开始学习\" << endl;\n    }\n};\n\nint main() {\n    Kitten k;\n    k.name = \"{name}\";\n    k.meow();\n    k.wag();\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    void meow() const {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass Kitten : public Cat {\npublic:\n    void wag() const {\n        cout << name << \" 开始学习\" << endl;\n    }\n};\n\nint main() {\n    Kitten k;\n    k.name = \"{name}\";\n    k.meow();\n    k.wag();\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:22:7: error: 'std::string Cat::name' is inaccessible within this context`\n\n注意它用的词是 **`inaccessible`（够不着）**，**不是**「私有」。这两个词长得像、意思差很远：\n\n- 说「私有」是那一格**本来就没开**；\n- 说「够不着」往往是**新类定义把基类给的东西收进了自己兜里**。\n\n这一格在老类定义上明明白白挂的是 `public`，我们一个字都没改它 —— 那为什么够不着了？因为照着画的那一行少写了 `public`：\n\n```text\nclass Kitten : Cat        ← 我们写的（漏了）\nclass Kitten : public Cat ← 正确写法\n```\n\n**漏掉这一小段的后果是**：老类定义给的公开东西（格子和函数）**全变成了新类定义自己的私事** —— 不只外面够不着，连我们自己都别想从外面碰。所以工作区里 `k.name = \"{name}\";` 这一句第一个被抓出来。\n\n这一跤有个很坑的地方：**它很安静。** 类定义里面怎么写都没问题，报错永远站在**外面那句**上。所以以后看到「够不着」，第一件事就是回头看看照着画的那一行有没有 `public` 。"
+}

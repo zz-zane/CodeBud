@@ -1,0 +1,3409 @@
+{
+  "id": "2022-12-1",
+  "title": "2022年12月第1套",
+  "year": 2022,
+  "month": 12,
+  "set": 1,
+  "status": "partial",
+  "issues": [
+    "严格质检：听力译文 0/7；匹配段落标签或答案待核查；疑似 OCR 乱码或英文粘连待核查。",
+    "翻译题干已据原卷文字层补回（2026-11-08）。",
+    "写作题干：已对照原卷页面图像核对（2026-11-08）。",
+    "听力解析：原为一句话摘要的题目，已追加依据听力原文自动定位的支持句（标注「自动匹配」，非官方解析，可能不准）；原摘要保留在 explanationOriginal。",
+    "阅读：长篇阅读匹配语句与仔细阅读题干/选项已对照原卷重新录入（此前缺失或与原卷不符）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "标准答案按解析册与原卷修正（2026-11-09）：Q28 F→E、Q29 A→K、Q35 C→O、Q44 O→C；原值存于 answerOriginal。",
+    "Section A 按原卷第 4 页重录（2026-11-09）：原提取稿的空格位置错位。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+      "title": "2022.12六级真题第1套答案及详解.pdf",
+      "url": "https://drive.google.com/file/d/1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd/view?usp=drivesdk"
+    },
+    {
+      "id": "1W62E_UmxMf5H7bLecu1RicWESNY9BWqa",
+      "title": "2022.12六级真题第1套听力.mp3",
+      "url": "https://drive.google.com/file/d/1W62E_UmxMf5H7bLecu1RicWESNY9BWqa/view?usp=drivesdk"
+    },
+    {
+      "id": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+      "title": "2022.12六级真题第1套.pdf",
+      "url": "https://drive.google.com/file/d/1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy/view?usp=drivesdk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “With the application of information technology in education, college students can now learn in more diverse and efficient ways.” You can make statements, give reasons, or cite examples to develop your essay. You should write at least 150 words but no more than 200 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-prompt-block",
+          "title": "写作题目要求",
+          "text": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “With the application of information technology in education, college students can now learn in more diverse and efficient ways.” You can make statements, give reasons, or cite examples to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-12-1-writing",
+          "number": 0,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “With the application of information technology in education, college students can now learn in more diverse and efficient ways.” You can make statements, give reasons, or cite examples to develop your essay. You should write at least 150 words but no more than 200 words.",
+          "blockId": "writing-prompt-block",
+          "options": [],
+          "answer": "The Use of information Technology in Education\n【 1 】 With the application of information technology in\neducation. college students can now learn in more diverse and\nefficient ways. 【 2 】 Advances in technology have literally\ntransformed the way in which students learn and study.\n【 3 】 In the first place. information technology has\nenabled the use of audio and video materials as teaching aids. which can enhance students. understanding of the subject.\n【 4 】 Furthermore. the databases and libraries are available at\nan affordable price. allowing learners to access a wide range\nof educational resources 【 5 】 In addition to the diversified\nmaterials. online resources provide students with instant\naccess tO a variety Of information about any subject. Gone are\nthe days when students spent long days studying in the library\nfor a research paper. Now. the availability of e-books and\npast examination papers IS now just a few clicks away. These\nmaterials can all be used tO supplement lessons taken in the\nclassroom efficiently. 【 6 】 As a result of the integration of information\ntechnology intO education' learmng process has been made\nmore efficient. effective and diverse. Thus. college students\nshould be proactive in adapting to the various learmng styles\nand make use of them effectively.\nPart\nSection A",
+          "explanation": "【审题思路】\n\n\n【全文翻译】\n\n\n【点评与要点】\n精彩点评\n【1】引出话题 : 随着信息技术在教育中的应用，大学生现在可以以更加多样和有效的方式学习。\n【2】进一步指出技术的进步确实改变了学生们学习的方式。\n【3】【4】【5】分别使用 \"ln the first place'\n和“ln addition\nFurthermore . to . “.”具体阐述信息技术使学生学习方式更多样，更高效。\n【6】用“小 a result of. · ·”总结全文，再次强调信息技术对教育的影响，呼吁学生要积极主动地适应这些变化。\n话题词汇 : diverse 多种多样的\nenhance 增强\nefficiency 效，率\ngrasp 理解\naccess to 接触“. “. 的机会\ndistance learning 远程学习\nonline forum 在线论坛\ninformation retrieval 信息检索",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear long conversations, passages and recordings of talks.",
+      "audio": {
+        "src": "source-media/2022年12月第1套/2022.12六级真题第1套听力.mp3",
+        "sourceId": "1W62E_UmxMf5H7bLecu1RicWESNY9BWqa",
+        "sharedWith": []
+      },
+      "blocks": [
+        {
+          "id": "listening-conv-1",
+          "title": "Section A Conversation One",
+          "text": "M: How's your dissertation going? I'm proofreading my first draft and will submit it to my professor tomorrow. W: Oh. (I)I haven't even started writing mine yet. so I'm really worried about finishing by the end of next\nsemester\nM: You mean you haven't even begun yours yet? The final draft is due in five months. W: Of course I've started it. but I can't get to the writing yet as I haven't found enough resources to use. SO I'm\nstill researching the topic. M: Maybe the problem is the way you're doing your research. (2)1 started by talking to my professor about\nwhere to look for information. And based on that. I found books in the library and a lot of reputable\njournal articles on the lnternet. ': I've tried all that. but don. t have enough to write the dissertation as my department's minimum length is 70\npages. I think the problem is that my topic isn't viable. (3)And honestly. my professor did warn me at the\nbeginning that I might not be able to find enough material. But I was so interested in the topic that I didn. t\nlet his advice to turn me.\nM.. Mell. I suggest you find a new topic. After all. our professors are here to guide us. so it's best to listen to\nthem.\nW: In retrospect. I wish I had listened to him. but I didn. t. And now I don. t want to give my topic as I've\nalready invested SO much trme and energy. M: If you re committed to your current topic. maybe you could make some adjustments rather than abandon it\ncompletely.. Mhat is your topic?\n': It's \"Depictions of Feminimty and Folklore from the South of the Country ”\nM: That's pretty narrow. You could find more material if you made the topic broader. maybe by including\nother kinds of depictions . W : ( 4 ) Broadening the topic is a great idea. I'II start by including folklore from other reyons of the country . 答案详解",
+          "source": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1,
+              2
+            ]
+          },
+          "transcript": "M: How's your dissertation going? I'm proofreading my first draft and will submit it to my professor tomorrow. W: Oh. (I)I haven't even started writing mine yet. so I'm really worried about finishing by the end of next\nsemester\nM: You mean you haven't even begun yours yet? The final draft is due in five months. W: Of course I've started it. but I can't get to the writing yet as I haven't found enough resources to use. SO I'm\nstill researching the topic. M: Maybe the problem is the way you're doing your research. (2)1 started by talking to my professor about\nwhere to look for information. And based on that. I found books in the library and a lot of reputable\njournal articles on the lnternet. ': I've tried all that. but don. t have enough to write the dissertation as my department's minimum length is 70\npages. I think the problem is that my topic isn't viable. (3)And honestly. my professor did warn me at the\nbeginning that I might not be able to find enough material. But I was so interested in the topic that I didn. t\nlet his advice to turn me.\nM.. Mell. I suggest you find a new topic. After all. our professors are here to guide us. so it's best to listen to\nthem.\nW: In retrospect. I wish I had listened to him. but I didn. t. And now I don. t want to give my topic as I've\nalready invested SO much trme and energy. M: If you re committed to your current topic. maybe you could make some adjustments rather than abandon it\ncompletely.. Mhat is your topic?\n': It's \"Depictions of Feminimty and Folklore from the South of the Country ”\nM: That's pretty narrow. You could find more material if you made the topic broader. maybe by including\nother kinds of depictions . W : ( 4 ) Broadening the topic is a great idea. I'II start by including folklore from other reyons of the country . 答案详解"
+        },
+        {
+          "id": "listening-conv-2",
+          "title": "Section A Conversation Two",
+          "text": "W : Today, on B00 Talk . we are lucky enough to host John Robbins and discuss his new book . W . m “ i 閤\nand How We C 尤 0 Weight . (5-1)John isn . t just a respected writer ； he . s also one of the rare\ncelebrity authors writing about science tOday.\nM: Thanks for having me, Rebecca. but I'm hardly a celebrity. ': That's very modest of you to say. ( 5. 2 ) considering that your four books have sold a total of seven million\ncopies worldwide. and they've been translated into 12 different languages.. Mhat makes people so\nfascinated with your work?\nM: (6)Well. people read my books because more than 60 ％ of Americans are overweight or obese. And other\ncountries are facing similar problems. Basically. we all want to know hOW to fix things.\nW: We certainly do. I've read your new book and it's fabulous. especially when it comes to the way you make\ndifficult science easy for laymen to understand. That's no small achievement.\nM: I'm glad to hear you find my work accessible. because I was worried when I wrote it that discussing the\nscience might make the book more suited for a specialist audience . ( 7 ) My . . 些上些墊 § 一旦些旦一匹 ！ 里 ！ y\nfor the medical community. But this time. I want to help ordinary people take control of their weight. W: And how do you suggest they do that? Can you us the basics of your advice for people who want to lose\nweight?\nM: Briefly. (8)1 argue that every person needs to consider their metabolism and eat what surts their body's\nneeds. I don. t advocate one single diet. Some people should eat more carbohydrates than others. And\ndifferent people need different amounts of protein and fat. W: But you do have some recommendations for everyone' including eating ten servings of vegetables and three\nof fruit a day.. Me II talk about those recommendations next. but now we need to take a short break for a\nmessage from our sponsor . 答案详解",
+          "source": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              2,
+              3
+            ]
+          },
+          "transcript": "W : Today, on Boo Talk . we are lucky enough to host John Robbins and discuss his new book . W . m “ i 閤\nand How We C 尤 0 Weight . (5-1)John isn . t just a respected writer ； he . s also one of the rare\ncelebrity authors writing about science today.\nM: Thanks for having me, Rebecca. but I'm hardly a celebrity. ': That's very modest of you to say. ( 5. 2 ) considering that your four books have sold a total of seven million\ncopies worldwide. and they've been translated into 12 different languages.. Mhat makes people so\nfascinated with your work?\nM: (6)Well. people read my books because more than 60 ％ of Americans are overweight or obese. And other\ncountries are facing similar problems. Basically. we all want to know how to fix things.\nW: We certainly do. I've read your new book and it's fabulous. especially when it comes to the way you make\ndifficult science easy for laymen to understand. That's no small achievement.\nM: I'm glad to hear you find my work accessible. because I was worried when I wrote it that discussing the\nscience might make the book more suited for a specialist audience . ( 7 ) My . . 些上些墊 § 一旦些旦一匹 ！ 里 ！ y\nfor the medical community. But this time. I want to help ordinary people take control of their weight. W: And how do you suggest they do that? Can you us the basics of your advice for people who want to lose\nweight?\nM: Briefly. (8)1 argue that every person needs to consider their metabolism and eat what surts their body's\nneeds. I don. t advocate one single diet. Some people should eat more carbohydrates than others. And\ndifferent people need different amounts of protein and fat. W: But you do have some recommendations for everyone' including eating ten servings of vegetables and three\nof fruit a day.. Me II talk about those recommendations next. but now we need to take a short break for a\nmessage from our sponsor . 答案详解"
+        },
+        {
+          "id": "listening-pass-1",
+          "title": "Section B Passage One",
+          "text": "Stress is Often depicted as negative' but research shows that moderate amounts Of it can be beneficial for\nyour brain and your body. First. the benefits for the brain. Studies have shown that short periods of stress can actually bolster\ncognitive functiomng. (9)Researchers discovered that placing rats in a stressful situation for just a few hours\ndoubled the growth of new brain cells. The rats also did better on a memory test later on. Scientists think the\nsame thing happens in humans. But how does stress improve memory? It's simple. When your bram cells\nmultiply. your memory can lmprove. Viewed from a biological perspective. this makes sense, ( 10 ) because\nanimals that are better at remembering dangerous situations can avoid them in the future. If an animal\nencounters a predator and escapes. for example. it S important to remember where and when that encounter\nhappened. Experts assert that the same principle applies to humans.\nNow, let's turn to how stress benefits the body. This may come as a surprise to laymen. But experts say\nthat stress can keep you from getting sick. ( 11 ) Scientists concede that chronic stress can make you more prone\nto illness. But research shows that short periods Of stress can actually provide some protection against getting\nsick. because it increases your lmmune functioning. One study shows that rats that expenenced brief stress had\na surge of lmmune cell response. which makes the lmmune system better prepared to fight illness. For humans. there's even evidence that expenencing stress before getting vaccinated could help make vaccines more\neffective.",
+          "source": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              3,
+              4
+            ]
+          },
+          "transcript": "Stress is Often depicted as negative' but research shows that moderate amounts of it can be beneficial for\nyour brain and your body. First. the benefits for the brain. Studies have shown that short periods of stress can actually bolster\ncognitive functiomng. (9)Researchers discovered that placing rats in a stressful situation for just a few hours\ndoubled the growth of new brain cells. The rats also did better on a memory test later on. Scientists think the\nsame thing happens in humans. But how does stress improve memory? It's simple. When your bram cells\nmultiply. your memory can lmprove. Viewed from a biological perspective. this makes sense, ( 10 ) because\nanimals that are better at remembering dangerous situations can avoid them in the future. If an animal\nencounters a predator and escapes. for example. it's important to remember where and when that encounter\nhappened. Experts assert that the same principle applies to humans.\nNow, let's turn to how stress benefits the body. This may come as a surprise to laymen. But experts say\nthat stress can keep you from getting sick. ( 11 ) Scientists concede that chronic stress can make you more prone\nto illness. But research shows that short periods of stress can actually provide some protection against getting\nsick. because it increases your lmmune functioning. One study shows that rats that expenenced brief stress had\na surge of lmmune cell response. which makes the lmmune system better prepared to fight illness. For humans. there's even evidence that expenencing stress before getting vaccinated could help make vaccines more\neffective."
+        },
+        {
+          "id": "listening-pass-2",
+          "title": "Section B Passage Two",
+          "text": "(12)For many managers and people who work in leadership positions. dealing with emails is a dilemma. It's likely the unpredictable. uncontrollable and ongoing nature of day-to-day email in terms of volume. importance and urgency contributes to their levels of anxiety and to diminished leadership skills. That's because\nit S not unusual for many leaders to prioritize email management over people management. An obsession with\nmanaging their inbox prevents them from dealing with their employees. (13)As a result. they ignore the issues\nthat might only be mlld problems at first. until unfortunately. they inevitably transform into a major problem\nor crisis by virtue Of neglect. (14)As leaders. they are expected to motivate and inspire their team in pursuit Of\nlonger term strategic goals and also. less ambitiously but more practically. to monitor their daily output' to set\nclear expectations. and to give regular feedback. When presented with a choice between the appeal of their\ninbox and other more lmportant activities. many sacrifice the latter. Daily email demands have a negative\nimpact on their goal progress. This is because leaders must divert resources from other tasks to check. filter and\nrespond to emails. (15)The solution is cultivating self-control which is like a muscle—it can be strengthened or\nimproved over time through exercise. Some suggestions include making space in your diary for the only periods\nduring which you'll be checking emails. setting a timer for yourself so you don. t become distracted by your\ninbox for t00 long . turmng 0ff email alerts so you re not interrupted by them . 答案详解",
+          "source": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              4,
+              5
+            ]
+          },
+          "transcript": "(12)For many managers and people who work in leadership positions. dealing with emails is a dilemma. It's likely the unpredictable. uncontrollable and ongoing nature of day-to-day email in terms of volume. importance and urgency contributes to their levels of anxiety and to diminished leadership skills. That's because\nit's not unusual for many leaders to prioritize email management over people management. An obsession with\nmanaging their inbox prevents them from dealing with their employees. (13)As a result. they ignore the issues\nthat might only be mlld problems at first. until unfortunately. they inevitably transform into a major problem\nor crisis by virtue of neglect. (14)As leaders. they are expected to motivate and inspire their team in pursuit Of\nlonger term strategic goals and also. less ambitiously but more practically. to monitor their daily output' to set\nclear expectations. and to give regular feedback. When presented with a choice between the appeal of their\ninbox and other more lmportant activities. many sacrifice the latter. Daily email demands have a negative\nimpact on their goal progress. This is because leaders must divert resources from other tasks to check. filter and\nrespond to emails. (15)The solution is cultivating self-control which is like a muscle—it can be strengthened or\nimproved over time through exercise. Some suggestions include making space in your diary for the only periods\nduring which you'll be checking emails. setting a timer for yourself so you don. t become distracted by your\ninbox for too long . turmng off email alerts so you re not interrupted by them . 答案详解"
+        },
+        {
+          "id": "listening-rec-1",
+          "title": "Section C Recording One",
+          "text": "In last week's lecture. we talked about the problems caused by poor eating habits. focusing on how medical\nprofessionals are trying to solve these problems. Today. we'll contmue with the topic, but focus on research\nfrom a different field—marketing. Now. what can marketing tell us about improvmg nutrition? Well. ( 16 ) a team of markeüng professors has\nstudied the mportance of the visual aspect of food and how that influences food choices. Those marketing experts assert that the impact Of the appearance of fOOd is greater than we might\npresume . and nnght hold the key to encouragmg better eating . how important is the appearance of fo 〔 冠 ？\nResearch shows that just seeing an appealing photograph of a hamburger in an advertisement. for example.\ncan cause lndividuals to lmagine the taste or smell of that hamburger. This can make them more likely to\npurchase and consume it. Of course. that's the point Of advertisements. SO isn't that a good thing?\nWell. the marketing professors argue that this is actually a problem. because the combination of pleasing\naesthetics of and easy access to unhealthy foods. such as hamburgers and Pizza. may be contributing to a\nworldwide health crisis. In fact. statistics show that 39 ％ of all adults in the world weigh too much and another\n13 ％ are obese.\n( 17 ) Now. as we discussed last time. medical rofessionals have tried to fi t the obesit e idemic b\nfocusing on the nutrients found in different foods. emphasrzing things like carbohydrate. fat. sugar and calorie\ncontent. But they've had hmited success.\nThe marketing professors believe that the real solution to obesity is making food ok appealing and\nfocusing on the pleasure of both looking at and eating that food. That pleasure can be used as a tool to promote\nhealthy food choices. In fact. the research done by the team showed that associating healthy food with pleasant\nlmages. expenences and emotlons led to greater interest in purchasing or eating it. \"This is a better strategy. they claim. then reminding consumers that a certain food is good for them. But are they right?\nWell. the researchers cited a marketing campaign designed to reverse the sales decline of carrots. The\ncampaign didn't emphasize the carrots. healthy qualities. but embrace their beauty and the pleasure derived\nfrom eating them. For example. the ads focused on the bright. beautiful orange color and crisp texture of the\ncarrots. The campmgn led to an impressive increase in product sales of more than 10 ％. (18)The researchers\nbelieve that other companies could bolster sales of healthy foods with similar ads. depicting their products as\nattractive and a source Of pleasure . 答案详解",
+          "source": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              5,
+              6
+            ]
+          },
+          "transcript": "In last week's lecture. we talked about the problems caused by poor eating habits. focusing on how medical\nprofessionals are trying to solve these problems. Today. we'll contmue with the topic, but focus on research\nfrom a different field—marketing. Now. what can marketing tell us about improvmg nutrition? Well. ( 16 ) a team of markeüng professors has\nstudied the mportance of the visual aspect of food and how that influences food choices. Those marketing experts assert that the impact of the appearance of food is greater than we might\npresume . and nnght hold the key to encouragmg better eating . how important is the appearance of fo 〔 冠 ？\nResearch shows that just seeing an appealing photograph of a hamburger in an advertisement. for example.\ncan cause lndividuals to lmagine the taste or smell of that hamburger. This can make them more likely to\npurchase and consume it. Of course. that's the point of advertisements. SO isn't that a good thing?\nWell. the marketing professors argue that this is actually a problem. because the combination of pleasing\naesthetics of and easy access to unhealthy foods. such as hamburgers and Pizza. may be contributing to a\nworldwide health crisis. In fact. statistics show that 39 ％ of all adults in the world weigh too much and another\n13 ％ are obese.\n( 17 ) Now. as we discussed last time. medical rofessionals have tried to fi t the obesit e idemic b\nfocusing on the nutrients found in different foods. emphasrzing things like carbohydrate. fat. sugar and calorie\ncontent. But they've had hmited success.\nThe marketing professors believe that the real solution to obesity is making food ok appealing and\nfocusing on the pleasure of both looking at and eating that food. That pleasure can be used as a tool to promote\nhealthy food choices. In fact. the research done by the team showed that associating healthy food with pleasant\nImages. expenences and emotlons led to greater interest in purchasing or eating it. \"This is a better strategy. they claim. then reminding consumers that a certain food is good for them. But are they right?\nWell. the researchers cited a marketing campaign designed to reverse the sales decline of carrots. The\ncampaign didn't emphasize the carrots. healthy qualities. but embrace their beauty and the pleasure derived\nfrom eating them. For example. the ads focused on the bright. beautiful orange color and crisp texture of the\ncarrots. The campmgn led to an impressive increase in product sales of more than 10 ％. (18)The researchers\nbelieve that other companies could bolster sales of healthy foods with similar ads. depicting their products as\nattractive and a source of pleasure . 答案详解"
+        },
+        {
+          "id": "listening-rec-2",
+          "title": "Section C Recording Two",
+          "text": "The household cleaning products industry really began to take off in the 1950s. Prior to that resourceful\nhouseynves. who had grown up in a less prosperous era. relied on substances that they used in their kitchens\nsuch as vinegar used to clean windows. Today. the household cleaning products industry is worth billions of\ndollars a year and is dominated by large global compames. (19)In recent years. however. many countries have witnessed a surge in the number Of small businesses and\ncompames offering more environment-friendly cleaning products. and they're dOing good business. too. One\nreason for thiS iS that consumers are becoming more aware Of environment and sustainability issues. alSO\nwant to make their home a safe place. free from tOXic chemicals. The third reason is people's awareness Of a\nknowledge about technology has never been greater. (20)In the past. people might have been skeptical of a\nnew product claimed to be able to achieve amazing cleaning results. but they now have faith in technology's\nability to do what was once thought impossible. There is perhaps no better example of this than a patented cloth\nsold by one company. which remarkably uses only water rather than traditional cleaning products. The\ncompany claims its cloth lifts. traps and removes dirt and bacteria. And considering that people don't see these\nproducts in shops, or advertised on TV or in the press. it has been a pretty steep rise. Many of the people\nbehind these companies began testing the viability of their products by selling them at local markets. Then. in\nmany cases. (21)customers are doing the marketing for these products by leaving threads of comments on social\nmedia. praising their virtues. There are also TV shows and books dedicated to maintaining home tidlness and\ncleanliness and the benefits of having a clean home. Havmg a safe and clean home might be one thing people feel they can control in an increasingly out-of-control world. And there are social media celebrities. One\nwoman in Britain has become a social media sensation with more than tWO million followers for her cleaning\ntips page . 答案详解",
+          "source": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              6,
+              7
+            ]
+          },
+          "transcript": "The household cleaning products industry really began to take off in the 1950s. Prior to that resourceful\nhouseynves. who had grown up in a less prosperous era. relied on substances that they used in their kitchens\nsuch as vinegar used to clean windows. Today. the household cleaning products industry is worth billions of\ndollars a year and is dominated by large global compames. (19)In recent years. however. many countries have witnessed a surge in the number of small businesses and\ncompames offering more environment-friendly cleaning products. and they're doing good business. too. One\nreason for this is that consumers are becoming more aware of environment and sustainability issues. also\nwant to make their home a safe place. free from toxic chemicals. The third reason is people's awareness of a\nknowledge about technology has never been greater. (20)In the past. people might have been skeptical of a\nnew product claimed to be able to achieve amazing cleaning results. but they now have faith in technology's\nability to do what was once thought impossible. There is perhaps no better example of this than a patented cloth\nsold by one company. which remarkably uses only water rather than traditional cleaning products. The\ncompany claims its cloth lifts. traps and removes dirt and bacteria. And considering that people don't see these\nproducts in shops, or advertised on TV or in the press. it has been a pretty steep rise. Many of the people\nbehind these companies began testing the viability of their products by selling them at local markets. Then. in\nmany cases. (21)customers are doing the marketing for these products by leaving threads of comments on social\nmedia. praising their virtues. There are also TV shows and books dedicated to maintaining home tidlness and\ncleanliness and the benefits of having a clean home. Havmg a safe and clean home might be one thing people feel they can control in an increasingly out-of-control world. And there are social media celebrities. One\nwoman in Britain has become a social media sensation with more than two million followers for her cleaning\ntips page . 答案详解"
+        },
+        {
+          "id": "listening-rec-3",
+          "title": "Section C Recording Three",
+          "text": "Throwing spare change intO a fountain is a time-honored ritual: throw a penny intO the water. and your\nwish might come true. But all that money has to go somewhere. ( 22 ) Otherwise. the growing piles of pennies. quarters and euros could clog up the fountain's works. Today. I'm going to talk about where all the coins go.\nWell, the coins collected can go to all sorts of different places—from fountain maintenance to charity or\npublic service. ( 23 ) ln New York City. for example. coins collected from fountains In public parks often go\ntowards the fountains' maintenance itself. though entrepreneurs WhO don't mind getting their hands wet Often\nget to it first. There are over 50 beautiful, decorative display fountains in New York City parks. They are\ncleaned by the parks' staff every few weeks. But most of the coins have already been removed by\nentrepreneurial New Yorkers and there is not a significant amount left to be collected.\nOther cities. though. can pull in a much more serious haul. Take for example. Rome's famous Trevi\nfountain: for hundreds Of years. visitors have thrown COins over their shoulder intO the fountain to ensure that\nthey will return. SO many tourists toss in coms that Roman officials have the fountain cleaned every night . reportedly getting as much as $ 4 . 000 in loose change from around the world each day. ( 24 ) § !_eg_ 山 9 一里 9 gy\ncollected each night goes towards runmng a supermarket for the needy. And collecting that cash is serious\nbusiness. Roman officials have been known to be tough on anyone caught skimmmg coins from the fountain. ln\none case in 2005. police arrested four fountain cleaners after they were spotted slipping coins intO their own\npockets after collecting them. ( 25 ) Authorities finally caught one notorious thief named Thomas Morgan and\nbanned him from the fountain after he fished out thousands of dollars in change over 34 years using a magnetic\nstick. For the most part. money collected from privately-owned fountains in the United States also goes to\ncharity. The fountain in New York City's Bryant Park is owned and operated by a not-for-profit corporation. which puts the cash collected by cleaners towards the fountain s own maintenance. Tens of thousands of dollars\nin coins removed from wishing wells. fountains and ponds in Florida's Walt Disney WorId are donated each year\nto support foster children living in the state. Whether or not your wish comes true after tossmg a COin intO a\nfountain . you can rest assured knowing that the change is likely going to someone who needs it . 答案详解",
+          "source": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              7,
+              8
+            ]
+          },
+          "transcript": "Throwing spare change into a fountain is a time-honored ritual: throw a penny into the water. and your\nwish might come true. But all that money has to go somewhere. ( 22 ) Otherwise. the growing piles of pennies. quarters and euros could clog up the fountain's works. Today. I'm going to talk about where all the coins go.\nWell, the coins collected can go to all sorts of different places—from fountain maintenance to charity or\npublic service. ( 23 ) ln New York City. for example. coins collected from fountains In public parks often go\ntowards the fountains' maintenance itself. though entrepreneurs WhO don't mind getting their hands wet Often\nget to it first. There are over 50 beautiful, decorative display fountains in New York City parks. They are\ncleaned by the parks' staff every few weeks. But most of the coins have already been removed by\nentrepreneurial New Yorkers and there is not a significant amount left to be collected.\nOther cities. though. can pull in a much more serious haul. Take for example. Rome's famous Trevi\nfountain: for hundreds of years. visitors have thrown COins over their shoulder into the fountain to ensure that\nthey will return. SO many tourists toss in coms that Roman officials have the fountain cleaned every night . reportedly getting as much as $ 4 . 000 in loose change from around the world each day. ( 24 ) § !_eg_ 山 9 一里 9 gy\ncollected each night goes towards runmng a supermarket for the needy. And collecting that cash is serious\nbusiness. Roman officials have been known to be tough on anyone caught skimmmg coins from the fountain. ln\none case in 2005. police arrested four fountain cleaners after they were spotted slipping coins into their own\npockets after collecting them. ( 25 ) Authorities finally caught one notorious thief named Thomas Morgan and\nbanned him from the fountain after he fished out thousands of dollars in change over 34 years using a magnetic\nstick. For the most part. money collected from privately-owned fountains in the United States also goes to\ncharity. The fountain in New York City's Bryant Park is owned and operated by a not-for-profit corporation. which puts the cash collected by cleaners towards the fountains own maintenance. Tens of thousands of dollars\nin coins removed from wishing wells. fountains and ponds in Florida's Walt Disney WorId are donated each year\nto support foster children living in the state. Whether or not your wish comes true after tossmg a COin into a\nfountain . you can rest assured knowing that the change is likely going to someone who needs it . 答案详解"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-12-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "Question 1（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "She hasn't started writing it."
+            },
+            {
+              "key": "B",
+              "text": "She hasn't decided on a topic."
+            },
+            {
+              "key": "C",
+              "text": "She is proofreading the first draft."
+            },
+            {
+              "key": "D",
+              "text": "She is working on the references."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat does the woman say about her dissertation?\nA) 【精析】细节辨认题。对话一开始，男士询问女士的论文进度，女士在句 ( 1) 中回答说她还没开始写。\n因此答案为 A)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "Question 2（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He lent many books to the man for reference."
+            },
+            {
+              "key": "B",
+              "text": "He offered the man advice on resource hunting."
+            },
+            {
+              "key": "C",
+              "text": "He published a lot in a number of reputable journals."
+            },
+            {
+              "key": "D",
+              "text": "He told the man to be selective when using e-resources."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhat does the man say about his professor?\nB) 【精析】细节辨认题。句 ( 2 ) 中男士提到，他在开始写论文之前先和教授讨论了去哪里找资料的问题。\n基于这个讨论，他在图书馆找到了参考书，并在网上找到了大量知名期刊文章。因此答案为 B)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "Question 3（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He didn't think her dissertation top ic viable."
+            },
+            {
+              "key": "B",
+              "text": "He wasn't interested in her dissertation topic."
+            },
+            {
+              "key": "C",
+              "text": "He didn't want her to rush through her dissertation."
+            },
+            {
+              "key": "D",
+              "text": "He wasn't specific about the I ength of her dissertation"
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhat does the woman say about her professor?\nA) 【精析】细节辨认题。女士认为自己无法开始写论文是因为自己的题目不可行。根据句 ( 3 ) 可知，她的教授确实在一开始的时候提醒她可能会找不到足够的资料。因此答案为 A)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "Question 4（请根据录音作答）",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Change her research methodology."
+            },
+            {
+              "key": "B",
+              "text": "Narrow down her dissertation topic."
+            },
+            {
+              "key": "C",
+              "text": "Consult her professor more."
+            },
+            {
+              "key": "D",
+              "text": "Follow the man s advice."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat do we learn the woman will do to complete\nher dissertation?\nD) 【精析】细节推断题。男士认为女士的论文题目太过狭窄，如果将题目扩大可能会找到更多资料。根据句 ( 4 ) 可知，女士认为扩大题目是个好主意，她会将对其他地区的民间传说的描述囊括进来。由此可知，女士会听从男士的建议。因此答案为 D)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "fascinated with your work?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "He has translated 12 books."
+            },
+            {
+              "key": "B",
+              "text": "He is a well-known nutritionist."
+            },
+            {
+              "key": "C",
+              "text": "His books sell well worldwide."
+            },
+            {
+              "key": "D",
+              "text": "His latest book sold a million copies."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\n2 ) considering that your four books have sold a total of seven million\ncopies worldwide. and they've been translated into 12 different languages.. Mhat makes people so\nfascinated with your work?\nM: (6)Well. people read my books because more than 60 ％ of Americans are overweight or obese. And other\ncountries are facing similar problems. Basically. we all want to know how to fix things. 22",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "Question 6（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The desire of Americans to try exotic cuisines."
+            },
+            {
+              "key": "B",
+              "text": "The demand for information about food safety."
+            },
+            {
+              "key": "C",
+              "text": "The fact that over half of Americans are overweight"
+            },
+            {
+              "key": "D",
+              "text": "The fact that science books are difficult to read."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat has motivated the man to write his books?\nO 【精析】细节推断题。女士问男士是什么让人们对他的书作如此着迷。男士在句 ( 6 ) 中回答，人们读他的书是因为超过 60 ％ 的美国人超重或肥胖，其他国家也面临类似的问题。总的来说，大家都想知道如何解决问题。也就是说，超过一半美国人都超",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "Question 7（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The general public."
+            },
+            {
+              "key": "B",
+              "text": "Those who are overweight."
+            },
+            {
+              "key": "C",
+              "text": "Those who want to lose weight."
+            },
+            {
+              "key": "D",
+              "text": "The medical community."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWho does the man say his last ok was mainly\nwritten for?\nD) 【精析】细节辨认题。男士在句 ( 7 ) 中明确提到，他的上一部书主要是为医学界写的。因此答案为",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "Question 8（请根据录音作答）",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Switch to a vegetarian diet."
+            },
+            {
+              "key": "B",
+              "text": "Follow a personalized diet."
+            },
+            {
+              "key": "C",
+              "text": "Adhere to doctors' advice."
+            },
+            {
+              "key": "D",
+              "text": "Cut carbohydrate intake."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\n. Mhat does do?\nB) 【精析】细节推断题。句 ( 8 ) 中男士提到，他认为每个人都需要考虑自己的新陈代谢，吃适合自己身体需求的东西。他不提倡单一饮食。有些人应该比其他人摄人更多的碳水化合物。不同的人对蛋白质和脂肪的需求量不同。也就是说，男士建议人们遵循个性化饮食。因此答案为 B)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "Question 9（请根据录音作答）",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "The rate of the ir growth increased dramatically."
+            },
+            {
+              "key": "B",
+              "text": "The growth of the ir new brain cells doubled."
+            },
+            {
+              "key": "C",
+              "text": "They began to show signs of depression."
+            },
+            {
+              "key": "D",
+              "text": "They began to get irritated and restless."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhat did researchers discover about rats placed B) 【精析】细节辨认题。句 ( 9 ) 中提到，研究人员发现，将老鼠置于压力状态下几个小时就会使它们\nbriefly in a stressful situation?\n新的脑细胞的生长翻倍。因此答案为 B)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "Why do people tend to have clear memories of dangerous situations they have encountered?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "To avoid them in the future."
+            },
+            {
+              "key": "B",
+              "text": "To warn others against them."
+            },
+            {
+              "key": "C",
+              "text": "To make good sense of them."
+            },
+            {
+              "key": "D",
+              "text": "To reflect on their causes."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhy do people tend to have clear memories of\ndangerous situations they have encountered?\nA) 【精析】细节推断题。句 ( 10 ) 中提到，更善于记住危险情况的动物将来可以避开这些危险。例如，如果动物遇到捕食者并逃脱，记住这种遭遇发生的地点和时间是很重要的。专家断言，同样的原理也适用于人类。由此可知，人们对他们曾遇到过的危险情况有清晰的记忆是为了将来避开它们。因此答案为 A)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "problems?"
+        },
+        {
+          "id": "2022-12-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "Question 11（请根据录音作答）",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Produce a surprising healing effect."
+            },
+            {
+              "key": "B",
+              "text": "Weaken one's immunity in the long run."
+            },
+            {
+              "key": "C",
+              "text": "Make people more susceptible to illness."
+            },
+            {
+              "key": "D",
+              "text": "Provide protection against mental illnesses."
+            }
+          ],
+          "answer": "C",
+          "explanation": "11. C) 〖精析〗细节辨认题。句 ( 11 ) 中明确提到，科学家承认，长期的压力会让人更容易生病。因此答案为 C)。\n【原文定位·自动匹配】( 11 ) Scientists concede that chronic stress can make you more prone to illness.\n【正确选项】C) Make people more susceptible to illness.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "explanationOriginal": "11. C) 〖精析〗细节辨认题。句 ( 11 ) 中明确提到，科学家承认，长期的压力会让人更容易生病。因此答案为 C)。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-12-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "Question 12（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Placing the ir own interests over the ir staff's."
+            },
+            {
+              "key": "B",
+              "text": "Being overwhelmed by the ir daily routines."
+            },
+            {
+              "key": "C",
+              "text": "Lacking the ability to relate to the ir staff."
+            },
+            {
+              "key": "D",
+              "text": "Spend ing too much time handling email."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat does the speaker say is a common problem\nwith managers?\nD) 【精析】细节辨认题。句 ( 12 ) 中提到，对于许多管理者和担任领导职务的人来说，处理电子邮件让人左右为难。就数量，重要性和紧迫性而言，日常电子邮件的不可预测性，不可控制性和持续性可能导致他们的焦虑程度上升以及领导能力下降。\n因此答案为 D)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "What may happen when managers ignore minor problems?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Their leadership may be challenged."
+            },
+            {
+              "key": "B",
+              "text": "Their companies may go bankrupt."
+            },
+            {
+              "key": "C",
+              "text": "Unexpected events may occur."
+            },
+            {
+              "key": "D",
+              "text": "Major problems may result."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\n. Mhat may happen when managers ignore minor\nproblems?\nD) 【精析】细节推断题。根据句 ( 13 ) 可知，管理者们忽略了起初可能只是小问题的事情，直到这些事情不幸由于疏忽而不可避免地变成了重大问题或危机。也就是说，忽视小问题可能会导致重大问题。\n因此答案为 D)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "stemOriginalOCR": "problems?"
+        },
+        {
+          "id": "2022-12-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "Question 14（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Keep an eye on their employees."
+            },
+            {
+              "key": "B",
+              "text": "Motivate and inspire their team."
+            },
+            {
+              "key": "C",
+              "text": "Sacrifice some of the immediate goals."
+            },
+            {
+              "key": "D",
+              "text": "Have greater ambition in overall planning."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\n. Mhat are leaders expected to do in pursuing their\nstrategic goals?\nB) 【精析】细节辨认题。句 ( 14 ) 中提到，作为领导者，他们应该激励自己的团队去追求长期战略卩标，应该少些雄心而更实际地监控团队的日常产出，设定明确的预期并定期提供反馈。因此答案为 B)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "Question 15（请根据录音作答）",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cultivate self-control."
+            },
+            {
+              "key": "B",
+              "text": "Filter their email boxes."
+            },
+            {
+              "key": "C",
+              "text": "Respond only after work."
+            },
+            {
+              "key": "D",
+              "text": "Check only when necessary."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nHow can a manager best avoid being distracted\nby email?\nA) 【精析】细节辨认题。短文中提到，领导者必须从其他任务中转移资源来查看，过滤和回复电子邮件。根据句 ( 15 ) 可知，这一问题的解决方法是培养自制力，就像肌肉一样一一一随着时间的推移，肌肉可以通过锻炼得到加强或改善。因此答案",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "Question 16（请根据录音作答）",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "The key to increasing healthy food supply."
+            },
+            {
+              "key": "B",
+              "text": "The best way to mprove marketing research"
+            },
+            {
+              "key": "C",
+              "text": "The impact of advertisements on consumption"
+            },
+            {
+              "key": "D",
+              "text": "The importance of the appearance of food."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat does the speaker say a team of marketing\nprofessors has studied?\nD) 【精析】细节辨认题。句 ( 16 ) 中提到，一个营销教授团队研究了食物视觉方面的重要性以及它如何影响食物选择。因此答案为 D)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "Question 17（请根据录音作答）",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "By focusing on the nutrients in different foods."
+            },
+            {
+              "key": "B",
+              "text": "By emphas iz ing the diversity of food."
+            },
+            {
+              "key": "C",
+              "text": "By stre s s ing pleasing aesthetics of food."
+            },
+            {
+              "key": "D",
+              "text": "By winning the support of marketing professors."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nHow have medical professionals tried to fight\nobesity?\nA) 【精析】细节辨认题。根据句 ( 17 ) 可知，医疗专业人员试图通过关注不同食物中的营养成分和强调碳水化合物，脂肪，糖和卡路里等的含量来对抗肥胖流行病。因此答案为 A)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "Question 18（请根据录音作答）",
+          "blockId": "listening-rec-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They can attract customers with the healthy qualities of the ir products."
+            },
+            {
+              "key": "B",
+              "text": "They can boost sales of healthy foods by making them visually appealing."
+            },
+            {
+              "key": "C",
+              "text": "They can turn to marketing professors for advice."
+            },
+            {
+              "key": "D",
+              "text": "They can rely on advertising for sales promotion"
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhat can Other companies learn from the\nexample of the carrot promotion campaign?\nB) 【精析】细节辨认题。讲座中提到了一个通过强调胡萝卜的外观和口感而成功将胡萝卜的销售量提高的案例。句 ( 18 ) 中讲话者提到，研究人员认为，其他公司可以通过类似的广告来增加健康食品的销量，将他们的产品描述为有吸引力和快乐的源泉。因此答案为 B)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "Question 19（请根据录音作答）",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It has witne s s ed a spectacular surge in demand."
+            },
+            {
+              "key": "B",
+              "text": "It has met much criticism from environment a lists."
+            },
+            {
+              "key": "C",
+              "text": "It has seen more small businesses offering enuronment-friendly products."
+            },
+            {
+              "key": "D",
+              "text": "It has experience d increasingly fierce c ompetition among global companies."
+            }
+          ],
+          "answer": "C",
+          "explanation": "答案：C\nWhat does the speaker say about the cleaning\nproducts industry in recent years?\nC) 【精析】细节辨认题。句 ( 19 ) 中提到，近年来，许多国家提供更多环保清洁产品的小公司的数量激增，而且他们的生意也做得很好。因此答案为 0。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "Question 20（请根据录音作答）",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Consumers now know much more about technology."
+            },
+            {
+              "key": "B",
+              "text": "The ir mass production has s harply reduced the price."
+            },
+            {
+              "key": "C",
+              "text": "Consumers tend to favor all that is novel."
+            },
+            {
+              "key": "D",
+              "text": "Their quality has been greatly improved."
+            }
+          ],
+          "answer": "A",
+          "explanation": "答案：A\nWhy are newly developed cleaning products\nselling well?\nA) 【精析】细节推断题。根据句 ( 20 ) 可知，过去，人们可能会对声称能够达到惊人的清洁效果的新产品持怀疑态度，但他们现在相信技术有能力完成曾经被认为不可能的事情。也就是说，消费者现在对技术有了更多的了解，所以新兴清洁产品会畅销。因此答案为 A)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "Question 21（请根据录音作答）",
+          "blockId": "listening-rec-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Purchasing only this kind of products for home cleaning."
+            },
+            {
+              "key": "B",
+              "text": "Writing positive comments about them on social media."
+            },
+            {
+              "key": "C",
+              "text": "Demonstrating on TV how effective the s e products are."
+            },
+            {
+              "key": "D",
+              "text": "Telling one another about the ir incomparable virtues."
+            }
+          ],
+          "answer": "B",
+          "explanation": "答案：B\nWhat are some customers doing to help promote\nnon-traditional cleaning products?\nB) 【精析】细节辨认题。根据句 ( (1) 可知，顾客通过在社交媒体上留言 ( 称赞它们的优点 ) 来为这些产品进行营销。因此答案为 B)O",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "What problem might be caused by the growing piles of coins in fountains?",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "increasing cleaners ' workload."
+            },
+            {
+              "key": "B",
+              "text": "Blocking the fountains' works."
+            },
+            {
+              "key": "C",
+              "text": "Breaking a time-honored ritual."
+            },
+            {
+              "key": "D",
+              "text": "PoIIuting the fountains' water."
+            }
+          ],
+          "answer": "B",
+          "explanation": "讲话者说，越来越多的硬币可能会堵塞喷泉装置。\n【原文定位·自动匹配】( 22 ) Otherwise. the growing piles of pennies. quarters and euros could clog up the fountain's works.\n【正确选项】B) Blocking the fountains' works.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "explanationOriginalOCR": "答案：C\nWhat problem might be caused by the growmg\ncollected from New York City s park fountains ？\npiles of coins in fountains ？\n0 【 精析 】 细节辨认题 。 句 ( 23 ) 中明确提到 . 在纽约\nB) 【 精析 】 细节推断题 。 讲座开头提到 . 将零钱扔进市 . 从公园里的喷泉中收集的硬币通常用于喷泉喷泉是一种历史悠久的仪式 : 把一便士扔进水里 . 的维护 。 因此答案为 C) 。\n你的愿望可能会实现 。 但这些钱都得去往别处 。\n24 . What do we learn about the money collected\n根据句 ( 22 ) 可知 . 否则的话 . 越来越多的便士 . 美\nfrom Rome S Trevi Founta1n ？\n分和欧元可能",
+          "stemOriginalOCR": "听力理解第 22 题",
+          "verificationNote": "已核对 G 盘本卷题目选项及解析；未逐题人工核听录音。",
+          "explanationOriginal": "讲话者说，越来越多的硬币可能会堵塞喷泉装置。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-12-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "What does the speaker say about the coins collected from New York City’s park fountains?",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are occasionally retrieved by curious tourists."
+            },
+            {
+              "key": "B",
+              "text": "They are regularly donated to charity organizations."
+            },
+            {
+              "key": "C",
+              "text": "They are mostly used for the fountains ' maintenanc e."
+            },
+            {
+              "key": "D",
+              "text": "They are usually used as wages for fountain cleaners."
+            }
+          ],
+          "answer": "C",
+          "explanation": "讲话者说，从纽约市公园喷泉中收集的硬币通常用于喷泉本身的维护。\n【原文定位·自动匹配】( 23 ) ln New York City. for example. coins collected from fountains In public parks often go towards the fountains' maintenance itself. though entrepreneurs WhO don't mind getting their hands wet Often get to it first.\n【正确选项】C) They are mostly used for the fountains ' maintenanc e.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "explanationOriginalOCR": "答案：D\n. Mhat does the speaker say about the coins\n游客把硬币扔进罗马著名的特雷维喷泉 . 罗马官\n22 年 12 月六级真题第 1 套详解 . 共 15 页\n\n员要求每晚都要清理喷泉 . 据报道 . 每天都会收集到高达 4 000 美元的世界各地的零钱 。 根据句\n( 24 ) 可知 . 每天晚上收集到的大部分钱都用于一家为有需要的人经营的超市 。 因此答案为 C) 。\n25 . What does the speaker say about Thomas\nD) 【 精析 】 细节辨认题 。 句 ( 25 ) 中提到 . 当局最终抓住了一个名叫托马斯 。 摩根的臭名昭著的小偷 . 并禁止他进人喷泉 . 因为他用一根磁力棒在至少\n34 年的时间里从喷泉中捞出了数千美元的零钱 。\n因此答案为 D) 。\nMorgan ？\nPart\nSection A",
+          "stemOriginalOCR": "听力理解第 23 题",
+          "verificationNote": "已核对 G 盘本卷题目选项及解析；未逐题人工核听录音。",
+          "explanationOriginal": "讲话者说，从纽约市公园喷泉中收集的硬币通常用于喷泉本身的维护。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-12-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "What do we learn about the money collected from Rome’s Trevi Fountain?",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is invested in a series of businesses."
+            },
+            {
+              "key": "B",
+              "text": "It is used exclusively for its maintenance."
+            },
+            {
+              "key": "C",
+              "text": "It is used to run a supermarket for the needy."
+            },
+            {
+              "key": "D",
+              "text": "It is estimated to be about $ 40 000 a month"
+            }
+          ],
+          "answer": "C",
+          "explanation": "讲座提到，罗马特雷维喷泉每晚收集的大部分钱用于一家为有需要的人服务的超市。\n【原文定位·自动匹配】( 24 ) § !_eg_ 山 9 一里 9 gy collected each night goes towards runmng a supermarket for the needy.\n【正确选项】C) It is used to run a supermarket for the needy.\n【标注】依据听力原文自动定位（原文答案标记），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true,
+          "explanationOriginalOCR": "答案：C\nWhat do we learn about the money collected\n根据句 ( 22 ) 可知 . 否则的话 . 越来越多的便士 . 美\nfrom Rome S Trevi Founta1n ？\n分和欧元可能会堵塞喷泉装置 。 因此答案为 B) 。\nC) 【 精析 】 细节辨认题 。 讲座中提到 . 数百年来都有\n23 . . Mhat does the speaker say about the coins\n游客把硬币扔进罗马著名的特雷维喷泉 . 罗马官\n22 年 12 月六级真题第 1 套详解 . 共 15 页\n\n员要求每晚都要清理喷泉 . 据报道 . 每天都会收集到高达 4 000 美元的世界各地的零钱 。 根据句\n( 24 ) 可知 . 每天晚上收集到的大部分钱都用于一家为有需要的人经营的超市 。 因此答案为 C) 。",
+          "stemOriginalOCR": "听力理解第 24 题",
+          "explanationOriginal": "讲座提到，罗马特雷维喷泉每晚收集的大部分钱用于一家为有需要的人服务的超市。",
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "marker",
+            "score": 1.0
+          }
+        },
+        {
+          "id": "2022-12-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "Question 25（请根据录音作答）",
+          "blockId": "listening-rec-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "He was arrested for stealing money from four fountain cleaners."
+            },
+            {
+              "key": "B",
+              "text": "He was sentenced to 34 years mprisonment."
+            },
+            {
+              "key": "C",
+              "text": "He collected rare coins from around the world."
+            },
+            {
+              "key": "D",
+              "text": "He stole a lot of money from a fountain with a magnetic stick."
+            }
+          ],
+          "answer": "D",
+          "explanation": "答案：D\nWhat does the speaker say about Thomas\nD) 【精析】细节辨认题。句 ( 25 ) 中提到，当局最终抓住了一个名叫托马斯。摩根的臭名昭著的小偷，并禁止他进人喷泉，因为他用一根磁力棒在至少\n34 年的时间里从喷泉中捞出了数千美元的零钱。\n因此答案为 D)。\nMorgan?",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              2
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空短文",
+          "text": "During the summer, when I was a visiting poet at a residency out of state, an angry, confused woman wandered into my class and said: \"I have three guns and I want to use them.\" We all __(26)__. It wasn't clear if she had the guns, but we each know that, when we teach in America, we are already in danger.\n\nI was dizzy with fear. The woman, who later turned out to be a schizophrenic (精神分裂症患者) without __(27)__ to her medications, was, by some force, wrestled out and __(28)__ away, then put in a hospital for observation, in a step that was actually safer for everyone than any one of us pressing charges. My class went on; we talked about poems. But despite the fact that the rest of our days on campus passed __(29)__, I was rattled. I couldn't shake the sense that in this country we always live at __(30)__ risk.\n\nA few months later, crisis __(31)__ again. While my husband was locking his bike to drop off our 3-year-old daughter for her preschool-aged day camp, a different woman approached. Swiftly and for no __(32)__ reason, she bent down, picked up our daughter, and began to carry her down the street. It was so fast and confusing that my daughter __(33)__ cried. My husband, in a burst of speed, chased the woman and reclaimed our daughter. The woman, clearly confused, retreated into the public library. A __(34)__ of homeless people who generally know the other homeless in the area said they did not recognize the woman. The woman was so clearly unwell that when she was taken into custody she was incoherent. Heartbreakingly, she called our daughter by the name of someone else's child. Each part of the episode was as haunting as it was __(35)__.",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读短文",
+          "text": "This man is running 7 marathons on 7 continents in 7 days\nA) Michael Wardian pushed forward into the penetrating ℃ ／ (北极的) wind, fighting the urge to speed up. TOO much effort and he'd begin to sweat which he was told, would only increase the risk of 0 “ m (体温过低).\n\nB) At the 2014 North PoIe Marathon the temperature dipped to minus-22 degrees F, with a wind chill that made it feel even colder. AI ong the route, armed guards wandered the large sheets of floating ice to minimize the risk of polar bear attacks.\n\nC) 'I like to do stuff that scares me, ' Wardian said. With ice frozen to his beard Wardian crossed the finish line that April afternoon a winning time Of 4 hours 7 minutes and\n40 seconds almost two hours slower than his personal best over 26. 2 miles. The race for Wardian however, was less about the result than overcoming his aversion to the cold.\n\nD) In a few days, Wardian will once agmn compete in an unfamiliar territory and below-freezing temperature s. He will line up Monday in ” 陋 / ℃ “ (南极) for the first leg of the World Marathon Challenge—Joining 32 other adventures eekers on an unusual journey where participants travel through different time zones and climates to runs even marathons on seven contlnents in seven days.\n\nE) An elite ultra-runner Wardian has his sights on breaking the event's record average marathon time of 3. 32 25 set last January by U.S. Marine Corps captain Daniel Cartica.\nWardian a 42-year-old Arlington resident is a record-breaking racer known in the ultra- running community for seeking tough courses and setting world records. Last year, he ran 1 254. 65 miles in 47 races. The World Marathon Challenge, like most of\nWardian s running goals, will be about pushing his limits. \"I love diverse and unique challenges,' he said. \"I'm definitely interested in seeing what I can handle and what my body can accept. That drives me.\n\nF) Something about the way Richard Donovan carried himself appealed to Wardian\nPerhaps it was the sense of adventure Donovan displayed when they first met at the\n2010 50K Championships in Galway, lrel and where Donovan was the race director.\nThe two hit it Off and soon Wardian was participating in Donovan S events. It was at the North Pole Marathon a race that Donovan organizes, that Wardian first heard about the lrishman s plan for the World Marathon Challenge-a challenge that Donovan himself completed in 2009 and 2012. \"I knew that many people had a goal of running seven marathons on seven continents during any time period ” Donovan 50, said. \"I felt the natural extension to this idea would be to try to achieve it within a seven-day period.\n\nG) Wardian started saving for the trip in 2014 connecting with sponsors and getting approval from his wife, Jennifer before committing. Registration for the event costs\n36 000 euros, which covers international charter flights to each of the seven marathon locations: Union Glacier (Antarctica), Punta Arenas, Chile (South America), Miami\n(North America), Madrid (Europe), Marrake sh Morocco (Africa), Dubai (Asia) and\nSydney (Australia). The challenge is a te st of both physical strength and mental fitness.\nSleeping on a crammed plane, adjusting to different time zones and finding food to eat\n(Wardian is a vegetarian) would make it an exhausting trip over a month I et al one a week. 'The key to a race like this is getting comfortable be ing uncomfortabl e ' said\nBecca P izz i last year's women s champion The highs of the race are incredibly high and the I ows incredibly I ow\n\nH) S inc e turning it into an organized event in 2015, Donovan has attracted a variety of runners. This year's challenge will feature a far more elite field, which includes Ryan\nHaII Americas fastest marathon runner. Despite his proven track record, HaII said he has no time goals and that he still suffers from the same fatigue issues that forced him to\nleave the professional ranks in 20 巧. HaII plans to run with his friend Pastor Matthew\nBarnett of The Dream Center in Los Angel e s—one of the s ix American men who will be competing. 'I don't expect to run a step with Mike but I will be excited to see how he does,\" said the 34-year-old HaII, who began weight-lifting after retiring. 'lf I finish within an hour of him in each marathon I'd be surprised.\n\nI) Instead, 43-year-old Petr Vabrousek an elite Czech lronman champion, IS expected to\nbe Wardian's closest chall enger. TO others on the trip's imply finishing will be its own reward. Sinead Kane of ireland is aiming to become the first blind person to complete the challenge. And Beth Ann TeIford, a 47-year-old federal government worker from\nFairfax and the only American female in this years m ix, is using the event as a platform to rmse money for cancer research. lt's a cause With a personal connection to Telford who was diagnosed with brain cancer in 2004. \"DO ing something like this is definitely the harde st challenge that I've ever done except for the chemotherapy and brain surgery, she said. lt's go ing to raise awareness\nI just wanted to do something that is epic and this certainly is right up there. Wardian too, hopes his involvement will give him a platform to promote a cause. He recently became an ambassador for the United\nNations Women's HeForShe initiative to fight inequalities faced by women and girls worldwide.\n\nJ) On a chilly December afternoon Wardian wove through Washington s crowded sidewalks on the way home from his full-time Job as an international ship broker. His elastic, 6-foot frame bounced gently and efficiently off the ground with each step of the hilly six-mile trip back to Arlington This is a daily routine during the week for Wardian who started racing professionally in 2003 and runs seven days a week often multiple times a day. When he travels, he prefers to explore new places on his feet\n\nK) But in some ways, Wardian still has trouble thinking of himself as a runner For the majority of his childhood Wardian devoted his energy to becoming a Division I lacrosse (长曲棍球) player-a dream he realized when he was recruited to play at\nMichigan State University. 'Onc e he decides to do something, he just works at it until he does it ' Michael's younger s i ster Mariele said. \"Once he decides to do it it's usually something that's going to happen He's always been like that. He's a very motivated individual.\n\nL) It was only a year or so ago that Wardian realized that he had been a runner I onger than a lacrosse player It was not until he ran in the 2004 U.S. Olympic Marathon Trials-the first of three for Wardian-that he felt that he was a legitimate runner. Now more than 10\nyears and numerous ultra-marathon national titles and world records I ater he embraces that identity. Wardian wants to see how far his legs can take him one epic challenge at time. \"I want to always keep do ing things that are exciting, adventurous, different and most importantly, probably things I m not the best at ” Wardian said \"because if you re not seeking things out that are challenging and difficult for you, then you're not growing... So I hope maybe people see what I do, and say, 'Okay, I want to do something different or try something new … I m go ing to do something that scares me.\nThat's what I'm hoping people will take from it.",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Many people associate the ir self-worth with the ir work. The more successful the ir career the better they 化 el about themselves. Work-related self-esteem is therefore a worthy ideal to pursue with vigor, right? Well, not always. According to recent research in which psychologists interviewed 370 full-time workers over a period of three weeks, the reality is a little more complicated. And it involves negative as well as positive consequences.\nlt's natural to be drawn towards pleasure and to step away from pain In the workplace, if that pleasure comes from a triumph which swells our self-respect, people will try to\nrepeat the accomplishment. But repeating that accomplishment is Often not realistic, which can lead to severe negative emotional consequences When it doesn't reoccur ThiS form of motivation is widely regarded as a negative type of motivation. It can hinder Other more positive motivation types, such as completing a task purely because it's fulfilling or enjoyable\nWhat consumes the employee instead is a pressing need to 化 el mighty and sure of themselves. They then take on only tasks and objectives which serve that ego-driven need.\nAs a result to avoid feelings of shame and worthlessness associated with failure, they extend themselves to such a degree that there's a subsequent adverse effect on the ir well-being. This internal pressure to succeed at all costs demands a lot of effort. It depletes the ir energy, culm inating in dis proportion ate levels of damaging sentiment.\nThOse negative emotions mount into heightened anxiety, impacting the ir ability to make the most of the ir personal life. The ir desire to avoid feeling inferior ends up making them feel inferior when it comes to the ir diminished capacity for friendship and leisure.\nThey end up dissatisfied both at work and outside of it.\nBut thankfully, for tho s e people compelled almost entirely by this specific form of motivation the news isn't all bad or bad at all. The study also discovered several positive outcomes that can actually outweigh the harmful ones. Though the se types of employees are motivated by the desire to avoid negative consequences, they are also motivated by the excitement of pursumg emotional rewards. This excitement makes pursumg goals enjoyable and stimulates pleasure and pride that would result from success. An effect of the positive motivation is that it neutralizes the ex i stenc e of negative motivation.\nSure, it affects people's personal lives to what could be deemed an unhealthy extent because leisure activities are Often seen as a part of life that must be sacrificed to manage work and family demands. However the way people feel about the ir work has less to do\nwith whether they're motivated by the preservation of self-esteem but more with the fact that they re s imply motivated.",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "Degradation of the world's natural resources by humans IS rapidly outpacing the planet's ability to absorb the damage, a recent UN env lronmental study has found. The study concludes that without radical action the level of prosperity that millions of people in the developed world count on will be impossible to maintain or extend to poorer countries.\nWater scarcity is the curse of some of the poorest regions on Earth leaving developing countries mcreas ingly unable to feed themselves, and causing hard ship for millions of people. There appears little prospect of this desperate situation be ing remedied without radical action be ing taken. Water resources are under increasing threat from population gro 从眉 1 climate change, rapid urbanization rising levels of consumption and the degradation of lands that previously provided a natural replenishment (补充) of water resources.\nThe rate of damage to the natural environment was found to increase globally, despite concerted efforts to persuade government to take measures to improve the condition \"If current trends continue and the world fails to improve patterns of production and consumption then the state of the world's environment will continue to decline ' warned\nUN executive director Achim S te iner.\nHe said the tools for improving the environment for millions of people existed in developed countries, but were in danger of not be ing used.\nThe study found that basic measures to tackle some of the key causes of environmental damage were still not being taken. The s e included measures to reduce air pollution; to control the damage to marine ecosystems, which can have a huge effect on fish stocks on which hundreds of millions of people depend; and to curb the degradation of land where modem agricultural methods were pursued without regard to the I onger-term consequences.\nDespite the recent global agreement on cutting greenhouse gas emissions, global carbon output continues to rise. This will put a I ong-term strmn on the ability of developing economies to feed the ir own people. Climate change IS aggravated by the enussions of greenhouse gas e S from chemical and natural fertilisers used in agriculture which increased by more than a quarter between 2000 and 2010. Other problem areas identified in the report included glaciers, which provide vital water resources for millions of people, but which are s hrinking as the climate warms.\nIn rich countries, the s e problems have built up over decades and c enturie s while economic growth was pursued at the expense of the environment. Subsequent efforts to remedy the enuronment have met with partial success. But in developing countries, the path of future development has more potential to change, which has encouraged international institutions to devise more sustainabl e growth pathways that are supposed both to alleviate poverty and preserve the environment.",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              9
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-12-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "选词填空第 26 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【考点】动词辨析题。\n28 · 【考点】动词辨析题。\nF) 【语法判断】空格前面是第一人称代词 we 和限定\nE) 【语法判断】空格处前面为并列连词 and . and 前词 all . 后面直接句点结尾，可推断出空格处是一个面是一个动词的过去分词短语，说明空格处也应不及物动词。结合文章时态可知，空格处应为动该是一个动词的过去分词形式。\n词的过去式。\n【语义判断】空格所在句描述的是这个女人被摔倒\n【语义判断】空格所在句的前一句提到，有个女人在地，之后又被送进医院的一系列动作，由动作发表示自己有枪并且想要使用它们，由此可推断教生的先后顺序可推断出，女人在被送进医院之前室中的人都受到惊吓很害怕 . froze “( 因害怕等 ) 不应该是先被送出教室 . be escorted\" 被护送”是被动，停住；",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "选词填空第 27 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【考点】名词辨析题。\n29 · 【考点】副词辨析题。\nA) 【语法判断】空格前后的词分别为 without 和 to . K) 【语法判断】空格前面是谓语动词 passed . 且空格说明此处应是一个介词短语，可推断出空格处是所在句有主语，可推断出空格处是一个副词，用来一个名词。\n修饰动词 passedo\n【语义判断】空格所在句的意思是闯人教室的女人\n【语义判断】空格所在句描述的是这次危险事件结后来被证明患有精神分裂症，空格所在介词短语束后作者的状态 : 尽管我们在校园里的余下日子用来进一步描述提到的这个女人，介词 to 后面提\n. 我仍然很不安。 despite 引导让步过得到“药物” . 结合空格所在段内容可推断出这个女状语从句，说明前后语义有矛盾 . peacefully\" 平静人应该没有进行药物治疗。此处",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "选词填空第 28 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【考点】动词辨析题。\nF) 【语法判断】空格前面是第一人称代词 we 和限定\nE) 【语法判断】空格处前面为并列连词 and . and 前词 all . 后面直接句点结尾，可推断出空格处是一个面是一个动词的过去分词短语，说明空格处也应不及物动词。结合文章时态可知，空格处应为动该是一个动词的过去分词形式。\n词的过去式。\n【语义判断】空格所在句描述的是这个女人被摔倒\n【语义判断】空格所在句的前一句提到，有个女人在地，之后又被送进医院的一系列动作，由动作发表示自己有枪并且想要使用它们，由此可推断教生的先后顺序可推断出，女人在被送进医院之前室中的人都受到惊吓很害怕 . froze “( 因害怕等 ) 不应该是先被送出教室 . be escorted\" 被护送”是被动，停住；吓呆”符合语境，故答案为 F)",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "F"
+        },
+        {
+          "id": "2022-12-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "选词填空第 29 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【考点】副词辨析题。\nA) 【语法判断】空格前后的词分别为 without 和 to . K) 【语法判断】空格前面是谓语动词 passed . 且空格说明此处应是一个介词短语，可推断出空格处是所在句有主语，可推断出空格处是一个副词，用来一个名词。\n修饰动词 passedo\n【语义判断】空格所在句的意思是闯人教室的女人\n【语义判断】空格所在句描述的是这次危险事件结后来被证明患有精神分裂症，空格所在介词短语束后作者的状态 : 尽管我们在校园里的余下日子用来进一步描述提到的这个女人，介词 to 后面提\n. 我仍然很不安。 despite 引导让步过得到“药物” . 结合空格所在段内容可推断出这个女状语从句，说明前后语义有矛盾 . peacefully\" 平静人应该没有进行药物治疗。此处应指“未获得药地”与“不安",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "A"
+        },
+        {
+          "id": "2022-12-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "选词填空第 30 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【考点】形容词辨析题。\nG) 【语法判断】空格前面是介词 at . 后面是名词 risk . 说明空格处应填人一个形容词性的单词，来修饰名词 risko\n【语义判断】空格所在句意思是通过这次危险事件后，作者无法摆脱“我们总是处于危险中”的观念。\n由上文可知，在美国随时随地都可能遇到诸如此类的危险事件，说明这种风险发生率是很高的，此处侧重于风险的频率而非程度。由此确定 G)\nincredible 为答案。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "选词填空第 31 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "N",
+          "explanation": "【考点】动词辨析题。\nN) 【语法判断】空格前为名词 crisis . 空格后为程度副词 again . 且空格所在句没有谓语，可推知空格所在处应填人一个动词，再结合文章时态可知，该处应为动词的过去式。\n【语义判断】在动词过去式中 . struck 可以搭配主语 crisis . 且从后文的叙述可知，作者的丈夫和女儿也遭遇了危险事件 . struck “侵袭”符合语境，故答案为 N)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "选词填空第 32 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【考点】形容词辨析题。\nB) 【语法判断】空格前为介词 for 和限定词 no . 空格后为名词 reason . 说明空格处应填人一个形容词性的单词，来修饰名词 reasono\n【语义判断】空格所在句的意思是，没有什么原因，这个女人抱起我们的女儿就往街上走，后一句再次提及一切发生得太快且令人困惑，说明空格处填人的形容词应有“明确，清楚”的意思。由此确定 B) apparent 为答案。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "选词填空第 33 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【考点】副词辨析题。\nC) 【语法判断】空格前为 my daughter . 空格后为动词\ncried . 说明空格处应填人一个副词。\n【语义判断】空格所在句是一个“so . · · that . · ·”句型，后半句是前半句导致的结果，该句的意思是一切发生得太快，令人困惑，以至于我的女儿哭。遭遇被抢夺的危险，按照正常情况孩子肯定会哭，但是前面强调了事情发生得太突然，由此可推断作者的女儿应该还没来得及反应过来，所以此处应该是“没有哭” . C ) barely\" 几乎没有”符合语境，故为答案。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "选词填空第 34 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【考点】名词辨析题。\n【语法判断】空格前面是不定冠词 a . 后面是介词\nI)\nof . 说明空格处需填人一个单数名词。\n【语义判断】名词中 . network 是可数名词的单数形式且能与 a 搭配。此外，空格所在句的意思是这些无家可归的人通常也都认识这个地方其他同样无家可归的人，说明他们之间也相互联系，存在着一张关系网 (1) 符合句意，故为答案。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "选词填空第 35 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "access"
+            },
+            {
+              "key": "B",
+              "text": "apparent"
+            },
+            {
+              "key": "C",
+              "text": "barely"
+            },
+            {
+              "key": "D",
+              "text": "dedication"
+            },
+            {
+              "key": "E",
+              "text": "escorted"
+            },
+            {
+              "key": "F",
+              "text": "froze"
+            },
+            {
+              "key": "G",
+              "text": "incredible"
+            },
+            {
+              "key": "H",
+              "text": "indignant"
+            },
+            {
+              "key": "I",
+              "text": "network"
+            },
+            {
+              "key": "J",
+              "text": "overriding"
+            },
+            {
+              "key": "K",
+              "text": "peacefully"
+            },
+            {
+              "key": "L",
+              "text": "presumably"
+            },
+            {
+              "key": "M",
+              "text": "stifled"
+            },
+            {
+              "key": "N",
+              "text": "struck"
+            },
+            {
+              "key": "O",
+              "text": "terrifying"
+            }
+          ],
+          "answer": "O",
+          "explanation": "【考点】形容词辨析题。\n0 ) 【语法判断】空格前面是 it was . 可知空格处应填人一个形容词或动词的分词形式。\n【语义判断】空格所在句的意思是这段插曲的每一个部分都令人难以忘怀 . as 引导原因状语从句，解释难以忘怀的原因。备选项中的形容词\nterrifying 表示“可怕的” . 用在这里表示因为可怕，所以难以忘怀，符合语境，故答案为 O)O\n参考译文夏天，当我在州外驻留期间做访问诗人时，一个愤怒的，糊涂的女人走进我的课堂，说 : “我有三把枪，我想使用它们。”我们都愣住了。不清楚她是否有枪，但我们每个人都知道，在美国教书便意味着我们已经处于危险之中。\n我被吓得头晕目眩。那个女人后来被证明是一个未能获得药物治疗的精神分裂症患者，当时在某种力量的作用下，她被摔倒在地并护送离开 .",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "C"
+        },
+        {
+          "id": "2022-12-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "Wardian regards the various extraordinary challenges as a test of his physical endurance.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【定位】由题干中的 various 和 challenges 定位到文章 E ) 段。\nE) 【精析】同义转述题。 E ) 段倒数第二，三句提出，沃迪恩喜欢多样化和独一无二的挑战，他很想看看自己能应付什么，身体能接受什么，由此可知，题干是对该处信息的同义转述。题干中的 v 0\nextraordinary 对应原文中的 diverse and unique . 题干中的 a test of his physical endurance 是对原文中\nwhat 的转述，故答案为 E)O",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "Wardian hopes his participation in the seven-day marathon series will contribute to a worthy cause.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 Wardian hopes 和 cause 定位到 l) 段倒数第二句。\nD 【精析】同义转述题。 D 段倒数第二句提到，沃迪恩也希望他的参与能给他一个促进事业的平台。\n而结合前文，这是在讲述沃迪恩打算参加一个 7\n天马拉松系列赛的情况，题干是对该处信息的转述。题干中的 his participation 对应原文中的 his\ninvolvement . 题干中的 contribute to 是对原文中\ngive him a platform to promote 的同义转述，故答案为 l)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "Wardian is going to join over thirty other runners in a week-long marathon series.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 join . over thirty 和 week-long\n定位到文章 D) 段最后一句。\nD) 【精析】同义转述题。 D ) 段定位句提到，他将与 32\n名其他探险者一起踏上一段不同寻常的旅程，参与者在 7 天内穿越不同的时区和气候，在 7 大洲跑 7 场马拉松。可知题干是对定位句信息的转述。\n题干中的 over thirty other runners 对应原文中的\n32 other adventure seekers . 题干中的 a week-long\nmarathon series 是对原文中“ven marathons. . · in\nseven days”的同义转述，故答案为 D)O",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Over-exertion in extreme cold can lower one's body temperature to a dangerous point.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 over-exeruon 和 extreme cold\n定位到 A) 段。\nA) 【精析】细节归纳题。 A ) 段第一句提到北极刺骨的风，第二句又指出，沃迪恩被告知，如果他过度发力，会开始出汗，而这样只会增加体温过低的风险。可知题干是对本句的同义转述。题干中的\nover-exertion 对应原文中的 too much effort . 题干中的 lower one . s body temperature to a\ndangerous point 是对原文中 increase the risk of\nhypothermia 的转述，故答案为 A)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Wardian was very much impressed by a race director's sense of adventure.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【定位】由题干中的 race director 和 sense of\nadventure 定位到文章 F) 段前三句。\nF) 【精析】细节归纳题。 F ) 段第一句说，理查德。多诺万的举止吸引了沃迪恩，接着提到，吸引沃迪恩的就是他们在 2010 年的 50K 锦标赛上首次相遇时多诺万表现出来的冒险感，在爱尔兰戈尔韦举行的锦标赛上，多诺万担任比赛总监。可知题干是对该处信息的概括。题干中的 very much\nimpressed 对应原文中的 appealed to . 故答案",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "Once Wardian sets his mind on something, he is determined to make it happen.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【定位】由题干中的 determined 定位到 K ) 段倒数第三，四句。\nK) 【精析】同义转述题。 K ) 段定位句提到，妹妹玛丽勒评价沃迪恩时说，一旦他决定做某件事，他就会不懈努力，直至完成。一旦他决定这样做，通常都能实现。题干中的 sets his mind on something 对应原文中的 decides to do something . 题干中的\nmake it happen 对应原文中的 works at it until he\ndoes it 和 something that's going to happen . 故答案为 K)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "One top American marathoner quit his running career because of his physical condition.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【定位】由题干中的 one top American\nmarathoner 定位到文章 H ) 段第二，三句。\nH) 【精析】细节归纳题。 H ) 段定位句指出，今年的挑战赛特色是一个更为精英的圈子加人，其中包括美国最快的马拉松选手瑞安 · 霍尔。而随后一句中提到，霍尔因面临着疲劳问题，迫使他于 2015\n年离开了职业队伍。可知题干是对定位部分信息的概括归纳。题干中的 quit his running career 对应原文中的 leave the professional ranks . 题干中的 physical condition 对应原文中的 fatigue\n. 故答案为 H)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "To many of the week-long marathon participants, completing the race will be a success in itself.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "L",
+          "explanation": "【定位】由题干中的 completing the race 定位到文章 1) 段第二句。\n【精析】同义转述题。 1) 段定位句指出，对旅途中\nD\n的其他人来说，只要完成任务，这本身就是一种嘉奖了。根据前文，这里所说的旅途就是为期一周的马拉松赛事。题干中的“to many of the.•\nparticipants”对应原文中的 to others on the trip . 题干中的 a success 对应原文中的 reward . 题干中的 ln itself 对应原文中的“simply . · “its own” . 故答案为 l)。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "For Wardian, the marathon in the Arctic was more about how to triumph over the extreme cold.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 for Wardian 和 cold 定位到文章 c ) 段最后一句。\nO 【精析】同义转述题。前文提到沃迪恩是在北极参加马拉松，而 C ) 段的定位句提到，沃迪恩参加这次比赛，与其说是为了成绩，不如说是为了克服他对寒冷的厌恶。题干中的 the marathon in the\nArctic 对应定位句中的 the race . 题干中的 more\na 对应原文中的 less about the result than . 题干中的 triumph over the extreme cold 对应原文中的 overcoming his aversion to the cold, 故答案为 C)O",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "O"
+        },
+        {
+          "id": "2022-12-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "To participate in the seven-day marathon series, Wardian had to raise a lot of money and have his wife's support.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【定位】由题干中的 his wife 定位到文章 G ) 段第\nG) 【精析】细节归纳题。 G ) 段定位句提到，沃迪恩于\n2014 年开始为旅行存钱，与赞助商联系，并在承诺报名之前获得妻子詹妮弗的认可。题干中的 to\nparticipate in the seven-day marathon series 只扌，应原文中的 for the trip in 2014 . 题干中的 raise a lot\nof money 是对原文中 savrng 和 connecting with\nsponsors 的概括性转述，题干中的 have his wife . s\nsupport 扌应原二虻中的 getting approval from his\nwife . 故答案为 G)。\n参考译文这个人将在 7 天内在 7 大洲跑 7 场马拉松\nA) 迈克尔 · 沃",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What does the author say about the pursuit of work-related self-esteem?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It may result in negative motivation."
+            },
+            {
+              "key": "B",
+              "text": "It contributes to one's accomplishments."
+            },
+            {
+              "key": "C",
+              "text": "It can increase one's vigor as one keeps trying."
+            },
+            {
+              "key": "D",
+              "text": "It costs too much emotionally and psychologically."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 work-related self-esteem 定位到第一，二段。\nA) 【精析】事实细节题。文章首段指出，根据最近的研究，追求与工作相关的自尊会同时产生积极和消极的结果。第二段第二至四句又指出，如果人们因工作成就增强了自尊心而感到快乐，就会试 : 第 1 段点出主题 : 许多人将自我价值与工作联系在一起，这会同时产生消极和积极的结果。\n一 0 《第 2 一 4 段介绍了把增强自尊心作为工作动机带来的消极后果。\n. 第 5 段提到，根据最近的研究，将自尊心与工作挂钩也有积极的影响 . . 即对目标的追求可能会变成一种享受和快乐。\n: 第 6 段转而又指出，在这种动机驱使下去追求目标会对人们的个人生活\n: 产生不健康的影响。\n答案详解图重复这种",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What do employees tend to do in pursuing work-related self-esteem?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Take on tasks well beyond their actual capabilities."
+            },
+            {
+              "key": "B",
+              "text": "Strive to succeed at the expense of their well-being."
+            },
+            {
+              "key": "C",
+              "text": "Resort to all means regardless of the consequences."
+            },
+            {
+              "key": "D",
+              "text": "Exaggerate their sense of shame and worthlessness."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 employees 定位到第三段。\nB) 【精析】事实细节题。文章第三段第三，四句提到，为了避免与失败相关的羞耻感和无价值感，员工非常拼命，不惜一切代价获得成功，这不利于他们获得幸福。由此可知，员工在追求与工作相关的自尊时往往是以牺牲幸福为代价的，故答案\n【避错】文章第三段前两句指出，员工内心迫切想要感觉到自己的强大和自信，于是他们只完成那些满足自我驱动需求的任务和目标 . A ) 项“承担远远超出其实际能力的任务”不符合原文意思，故排除；文章第三段第四句提到，这些员工不惜一切代价想要获得成功，但这指的是他们不惜牺牲自己的幸福 . C ) 项的表述偏贬义，意思是员工可能会选择采取不光彩的手段来获得成功，不符合原文意思，故排除；第三段第三句提到，为了避免与失败相关的",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What do we learn about people over-concerned with work-related self-esteem?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They may often feel inferior to their colleagues."
+            },
+            {
+              "key": "B",
+              "text": "They cannot enjoy their personal life to the full."
+            },
+            {
+              "key": "C",
+              "text": "They are never satisfied with their achievements."
+            },
+            {
+              "key": "D",
+              "text": "They have their own view of friendship and leisure."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 over-concerned 和 work-\nrelated self-esteem 定位到第四段。\nB) 【精析】事实细节题。文章第四段第一句指出，这些负面情绪上升为高度焦虑，影响了他们尽情享受个人生活的能力。由此可知，这些员工过度关注与工作相关的自尊，以至于无法充分享受个人生活，故答案为 B)O\n【避错】第四段第二句提到，这些员工想要避免自卑的渴望最终却让他们在交友和休闲能力下降时感到自卑 . A ) 项将文章意思扩大到“常常觉得自己不如同事” . 不符合原文意思，故排除；第二段第二句指出，如果人们因工作成就增强了自尊而感到快乐，就会试图重复这种成就，这只是为了不断增强自尊，而非因为不满足于自己的成就 . c ) 项不符合原文意思，故排除；第四段第二句只提及他们在交友和休闲能力",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What is the good news we learn from the recent research?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "The pursuit of goals may turn out to be enjoyable and pleasant."
+            },
+            {
+              "key": "B",
+              "text": "The emotional rewards from goal pursuit are worth the pains taken."
+            },
+            {
+              "key": "C",
+              "text": "The negative consequences of goal pursuit can mostly be avoided."
+            },
+            {
+              "key": "D",
+              "text": "The goal of swelling self-esteem can be achieved if one keeps trying."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 good news 和 recent research\n定位到第五段。\nA) 【精析】事实细节题。第五段第二至四句提到，该研究还发现了几个积极的结果，那就是 : 尽管这种类型的员工的动机是避免消极后果，但他们也会被追求情感回报的兴奋感所激励。这种兴奋感使追求目标变得愉快，并激发了成功带来的快乐和自豪感。由此可知，研究新发现的好消息就是 : 追求目标也可能是一种享受和快乐，故答案为 A)。\n【避错】第五段第三句提到，尽管这种类型的员工的动机是避免消极后果，但他们也会被追求情感回报的兴奋感所激励，但这只是说明追求目标可以带来让人兴奋的情感回报，并未指出它因此而值得所付出的痛苦，故排除 B ) 项；第五段最后一句提到，积极动机有一个作用，即它可以抵消消极动机的存在，但这不能说明消极后",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What can we infer from the last paragraph?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Workers have to make sacrifices to preserve self-esteem."
+            },
+            {
+              "key": "B",
+              "text": "Self-esteem swells when workers are strongly motivated."
+            },
+            {
+              "key": "C",
+              "text": "Pursuit of goals affects people's personal lives to an unhealthy extent."
+            },
+            {
+              "key": "D",
+              "text": "People feel positive about their work as long as they are motivated."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 last paragraph 定位到最后\nD) 【精析】推理判断题。最后一段最后一句指出，人们对工作的感觉与他们是否受到维护自尊的激励关系不大，而更多与他们仅仅受到激励这一事实有关。说明人们是否能积极面对工作主要和他们受到激励有关，而具体这种激励是从何而来并不是很重要，由此可以推断，只要有激励，有动力，人们就会积极面对工作，故答案为 D)。\n【避错】文章最后一段第一句提到，这些员工往往认为必须牺牲掉休闲活动，从而满足工作和家庭的需求，从而维护和增强自尊，但这是员工的做法，而非一种被认同的观点 . A ) 项不符合题意，故排除；由文章第二段第二句可知，当员工获得巨大成就时自尊心会增强，但这并非最后一段所推断出的结论 . B ) 项不符合题意，故排除；文章最后一段第一句提",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What is the major finding of the UN environmental study?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Human activity has rendered Mother Earth almost uninhabitable."
+            },
+            {
+              "key": "B",
+              "text": "Humans are doing more damage to the earth than it can cope with."
+            },
+            {
+              "key": "C",
+              "text": "Environmental problems have considerably weakened human prosperity."
+            },
+            {
+              "key": "D",
+              "text": "Environmental damage is more serious in developed countries these days."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 UN environmental study 定位 O 【精析】事实细节题。文章第二段第二句指出，如果不采取激进的行动，这种令人绝望的情况几乎到第一段。\n无法得到改善。由此可知，如果不采取严厉措施 . B) 【精析】事实细节题。文章首段第一句指出，最近很难缓解缺水问题，故答案为 C)。\n一项联合国环境研究发现，人类对世界自然资源\n【避错】根据第二段第二句可知，如果采取严厉的的破坏正快速超过地球承受伤害的能力。由此可措施，缺水问题是可以得到缓解的，而非解决的希知，人类对地球造成的破坏已经超出了地球所能望渺茫 . A ) 项表述与原文矛盾，故排除；第二段第承受的范围，故答案为 B)。\n一句指出，缺水对于地球上一些最贫穷地区来说\n【避错】首段第二句指出，如果不采取激",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              10
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              13
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "C"
+        },
+        {
+          "id": "2022-12-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What is said about water scarcity in some of the poorest regions?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is getting so serious that there is little hope of solution."
+            },
+            {
+              "key": "B",
+              "text": "It largely accounts for their slow economic development."
+            },
+            {
+              "key": "C",
+              "text": "It can hardly be relieved if no drastic measures are taken."
+            },
+            {
+              "key": "D",
+              "text": "It is primarily caused by the acceleration of climate change."
+            }
+          ],
+          "answer": "C",
+          "explanation": "52. C) 〖精析〗事实细节题。文章第二段第二句指出，如果不采取激进的行动，这种令人绝望的情况几乎无法得到改善。由此可知，如果不采取严厉措施，很难缓解缺水问题，故答案为 C)。\n〖避错〗根据第二段第二句可知，如果采取严厉的措施，缺水问题是可以得到缓解的，而非解决的希望渺茫 . A ) 项表述与原文矛盾，故排除；第二段第一句指出，缺水对于地球上一些最贫穷地区来说无异于诅咒，使发展中国家越来越无法自给自足，造成数百万人贫困，但并没有说明缺水是贫穷地区经济发展缓慢的主要原因 . B ) 项为过度推理，故排除；本文第二段第三句指出，气候变化等几个因素造成了水资源问题，但并未说明气候变化加速是缺水的主要原因 . D ) 项表述与原文不符，故排除。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What does Achim Steiner say about the environmental condition?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It will deteriorate worldwide."
+            },
+            {
+              "key": "B",
+              "text": "It is attracting global attention."
+            },
+            {
+              "key": "C",
+              "text": "It is being slowly remedied globally."
+            },
+            {
+              "key": "D",
+              "text": "It will shrink the world's population."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 Achim Steiner 和\nenvironmental condition 定位到第三段。\nA) 【精析】推理判断题。文章第三段第二句指出，联合国执行主任阿希姆 · 施泰纳警告道 : “如果目前的趋势继续持续下去，并且全世界的生产方式和消费模式也不改进的话，那么全世界的环境将会继续恶化。”由此可知，阿希姆 · 施泰纳认为全球环境会继续恶化，故答案为 A)O\n【避错】阿希姆 · 施泰纳并未提及有关环境状况正引起全球的关注 . B ) 项为无中生有，故排除；第三段第一句指出，尽管人们齐心协力说服各国政府采取措施改善环境，但全球自然环境破坏的速度仍在加快，可知环境问题并没有在全球慢慢得到解决，故排除 C) 项；阿希姆 · 施泰纳并未提及全球人口的问题，故排除 D ) 项。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What is the dilemma developing countries face?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They cannot modernise farming without causing land degradation."
+            },
+            {
+              "key": "B",
+              "text": "They cannot promote industrialisation without polluting waterways."
+            },
+            {
+              "key": "C",
+              "text": "They cannot boost crop yields without causing greenhouse gas emissions."
+            },
+            {
+              "key": "D",
+              "text": "They cannot catch up with rich countries without sacrificing the environment."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 dilemma 和 developing\ncountries 定位到第六段。\n0 【精析】事实细节题。文章第六段第一至三句指出，全球碳排放量一直居高不下，这对发展中经济体养活本国人民将会造成长期的压力。在 2000\n年至 2010 年期间，农业生产中化学肥料和天然肥料的使用量增加了四分之一以上，其所产生的温室气体排放加剧了气候变化。由此可知，发展中国家要想提高作物产量，需要借助现代化农业手段，这一定会造成温室气体排放，故答案为 O。\n【避错】第五段指出，在一些追求采用现代农业方法而不计长期后果的地区，需要遏制土地退化问题 . A ) 项与原文相反，故排除；本文并未提及工业化和水污染的问题 . B ) 项为无中生有，故排除；最后一段第一句指出发达国家牺牲环境去追求经济增长，最后一",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-12-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What should developing countries do in their future development according to the passage?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They turn to developed countries for the assistance they need."
+            },
+            {
+              "key": "B",
+              "text": "They remedy environmental damage by slowing economic growth."
+            },
+            {
+              "key": "C",
+              "text": "They avoid damaging interference from international institutions."
+            },
+            {
+              "key": "D",
+              "text": "They improve people's livelihood without harming the environment."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 developing countries 和\nfuture development 定位到最后一段。\nD) 【精析】推理判断题。文章最后一段最后一句指出，在发展中国家，未来的发展道路充满了变数，这鼓励了国际机构设计更多的可持续增长途径，既能减少贫困，又能保护环境。由此可知，发展中国家要走可持续经济增长道路，在保护环境的前提下，发展经济，改善人们的生活，故答案为 D)。\n【避错】文中并未提及有关发展中国家向发达国家寻求援助的内容 . A ) 项为无中生有，故排除；最后一段最后一句指出，发展中国家要走可持续经济增长道路，兼顾经济和环境，并没有指出要通过减缓经济增长来弥补对环境的破坏 . B ) 项为过度推理，故排除；文章最后一段最后一句指出，在发展中国家，未来的发展道路",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "青藏高原（the Qinghai-Tibet Plateau）位于中国西南部，面积约230万平方公里，平均海拔4000米以上，被称为“世界屋脊”。青藏高原自然资源丰富，风景秀丽，拥有多种珍稀野生动物。\n青藏高原气温很低，形成了大面积高山冰川。这里是亚洲许多著名河流的源头，是中国和东南亚的主要淡水供应源。青藏高原对全球生态系统至关重要。\n由于气候变化的影响，青藏高原的冰川正在加速融化。中国一直在努力保护青藏高原的生态系统，草地覆盖率不断增加，许多濒危物种得到更为有效的保护。",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-12-1-translation",
+          "number": 56,
+          "kind": "translation",
+          "stem": "青藏高原（the Qinghai-Tibet Plateau）位于中国西南部，面积约230万平方公里，平均海拔4000米以上，被称为“世界屋脊”。青藏高原自然资源丰富，风景秀丽，拥有多种珍稀野生动物。\n青藏高原气温很低，形成了大面积高山冰川。这里是亚洲许多著名河流的源头，是中国和东南亚的主要淡水供应源。青藏高原对全球生态系统至关重要。\n由于气候变化的影响，青藏高原的冰川正在加速融化。中国一直在努力保护青藏高原的生态系统，草地覆盖率不断增加，许多濒危物种得到更为有效的保护。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "The Qinghai-Tibet Plateau is situated in the southwest of China, covering an area of about 2.3 million square kilometers, with an average altitude of over 4,000 meters. It is known as the \"Roof of the World\". The Qinghai-Tibet Plateau is abundant in natural resources, boasts beautiful scenery and has a variety of rare wild animals.\nThe low temperature of the plateau has created a large area of alpine glaciers. It is the source of many famous rivers in Asia and is the main source of fresh water supply in China and Southeast Asia. The Qinghai-Tibet Plateau is vital to the global ecosystem.\nGlaciers on the Qinghai-Tibet Plateau are melting at an accelerated rate due to climate change. China has been committed to protecting the ecosystem of the Qinghai-Tibet Plateau, with increasing grassland coverage and more effective protection of many endangered species.",
+          "explanation": "【参考译文】\n与难点注释\n1 . 第一句介绍青藏高原的基本地理信息。翻译“面积”和“海拔”时，可以选择像参考译文那样，处理为现在分词 covering 和介词 with . 分别作伴随状语；也可以将这两个分句合译为 with an area of about 2 . 3\nmillion square kilometers and an average altitude of over 4. 000\nmeterso 此外，本句中的四个分句逻辑关系紧密，可以选择将其合并翻译为一句，将其中描述地理位置的分句翻译为地点状语，将描述面积和海拔的分句翻译为定语从句，即“Located in the southwest of\nChina. the Qinghai-Tibet Plateau. which covers an area of about 2. 3\nmillion square kilometers and has an average altitude of over 4. 000\nmeters. is known as the ' Roof of the. Morld'.”\n2 . 第二句介绍青藏高原的自然资源，风景和野生动物。翻译时要特别注意的是，此句中“丰富”只是修饰自然资源，不能用来修饰风景，因此需要给“风景秀丽”单独搭配合适的动词，可以像参考译文那样处理为\nboasts。\n3 . 第三句指出，由于气温低，青藏高原形成大面积高山冰川。翻译时可以像参考译文那样，将“低气温”作为主语，将“形成 \" 处理为谓语；或者将“青藏高原气温很低”翻译为主句，将第二个分句翻译为现在分词形式，即 \"The temperature on the Qinghai-Tibet Plateau is very low,\nthus forming a large area of mountain glaciers.\n4 . 第四句指出，青藏高原是很多河流的源头，也是一个主要的淡水供应源。两个分句呈并列关系，可以翻译为 and 或 \"not only... but\nalso . . ·”连接的并列句。\n5 . 第五句指出青藏高原对全球生态系统的重要性。本句表达比较简短，可以直接将“青藏高原”作为主语来翻译，表示“至关重要”可灵活使用以上任意一种表达。\n6 . 第六句指出，青藏高原的冰川因气候变化加速融化。第一个分句说明原因，翻译时可以像参考译文那样，作为原因状语置于句末，更符合英文表达习惯；也可以选择将原因状语置于句首，并用逗号隔开，即 \"Due\nto climate change. glaciers on the Qinghai-Tibet Plateau are melting\nat an accelerated rate . 7 . 第七句指出，中国在保护青藏高原的生态系统方面取得了很大成效。\n本句共有三个分句，逻辑关系紧密，可以像参考译文那样，将第一个分句翻译为主句，将后面两个分句翻译为介词短语作结果状语的形式，把“增加”“得到保护”转换为名词来翻译，更符合英文表达习惯；也可以将第一个分句独立翻译，将后两个分句合并翻译，即“China has\nbeen workmg hard to protect the ecosystem of the Qinghai-Tibet\nPlateau. GrassIand coverage is increasing. and many endangered\nspecies are being protected more effectively.\n话题词汇\nYarlung Zangbu Grand Canyon 雅鲁藏布大峡谷\nPotala Palace 布达拉宫\nQinghai-Tibet Railway 青藏铁路\nTibet 西藏\npilgrimage 朝圣\n22 年 12 月六级真题第 1 套详解\nyak 牦牛\nbuttered tea 酥油茶\nplain 平原\nearthquake 地震\ndesert if i cation of land 土地沙化\nwater and soil loss 水土流失 .\n【难点解析】\n1 . 第一句介绍青藏高原的基本地理信息。翻译“面积”和“海拔”时，可以选择像参考译文那样，处理为现在分词 covering 和介词 with . 分别作伴随状语；也可以将这两个分句合译为 with an area of about 2 . 3\nmillion square kilometers and an average altitude of over 4. 000\nmeterso 此外，本句中的四个分句逻辑关系紧密，可以选择将其合并翻译为一句，将其中描述地理位置的分句翻译为地点状语，将描述面积和海拔的分句翻译为定语从句，即“Located in the southwest of\nChina. the Qinghai-Tibet Plateau. which covers an area of about 2. 3\nmillion square kilometers and has an average altitude of over 4. 000\nmeters. is known as the ' Roof of the. Morld'.”\n2 . 第二句介绍青藏高原的自然资源，风景和野生动物。翻译时要特别注意的是，此句中“丰富”只是修饰自然资源，不能用来修饰风景，因此需要给“风景秀丽”单独搭配合适的动词，可以像参考译文那样处理为\nboasts。\n3 . 第三句指出，由于气温低，青藏高原形成大面积高山冰川。翻译时可以像参考译文那样，将“低气温”作为主语，将“形成 \" 处理为谓语；或者将“青藏高原气温很低”翻译为主句，将第二个分句翻译为现在分词形式，即 \"The temperature on the Qinghai-Tibet Plateau is very low,\nthus forming a large area of mountain glaciers.\n4 . 第四句指出，青藏高原是很多河流的源头，也是一个主要的淡水供应源。两个分句呈并列关系，可以翻译为 and 或 \"not only... but\nalso . . ·”连接的并列句。\n5 . 第五句指出青藏高原对全球生态系统的重要性。本句表达比较简短，可以直接将“青藏高原”作为主语来翻译，表示“至关重要”可灵活使用以上任意一种表达。\n6 . 第六句指出，青藏高原的冰川因气候变化加速融化。第一个分句说明原因，翻译时可以像参考译文那样，作为原因状语置于句末，更符合英文表达习惯；也可以选择将原因状语置于句首，并用逗号隔开，即 \"Due\nto climate change. glaciers on the Qinghai-Tibet Plateau are melting\nat an accelerated rate . 7 . 第七句指出，中国在保护青藏高原的生态系统方面取得了很大成效。\n本句共有三个分句，逻辑关系紧密，可以像参考译文那样，将第一个分句翻译为主句，将后面两个分句翻译为介词短语作结果状语的形式，把“增加”“得到保护”转换为名词来翻译，更符合英文表达习惯；也可以将第一个分句独立翻译，将后两个分句合并翻译，即“China has\nbeen workmg hard to protect the ecosystem of the Qinghai-Tibet\nPlateau. GrassIand coverage is increasing. and many endangered\nspecies are being protected more effectively.\n话题词汇\nYarlung Zangbu Grand Canyon 雅鲁藏布大峡谷\nPotala Palace 布达拉宫\nQinghai-Tibet Railway 青藏铁路\nTibet 西藏\npilgrimage 朝圣\n22 年 12 月六级真题第 1 套详解\nyak 牦牛\nbuttered tea 酥油茶\nplain 平原\nearthquake 地震\ndesert if i cation of land 土地沙化\nwater and soil loss 水土流失 .",
+          "source": {
+            "fileId": "1ZGBUljnorjSrN7Gbc0zkFaxIILUJnWjy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "1LQ7oOTxflAWgxwwojfAEqmNlTLHFndFd",
+            "pages": [
+              8
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "与难点注释\n1 . 第一句介绍青藏高原的基本地理信息 。 翻译 “ 面积 ” 和 “ 海拔 ” 时 . 可以选择像参考译文那样 . 处理为现在分词 covering 和介词 with . 分别作伴随状语 ； 也可以将这两个分句合译为 with an area of about 2 . 3\nmillion square kilometers and an average altitude of over 4. 000\nmeterso 此外 . 本句中的四个分句逻辑关系紧密 . 可以选择将其合并翻译为一句 . 将其中描述地理位置的分句翻译为地点状语 . 将描述面积和海拔的分句翻译为定语从句 . 即 “ Located in the southwest of\nChina. the Qinghai-Tibet Plateau. which covers an area of about 2. 3\nmillion square kilometers and has an average altitude of over 4. 000\nmeters. is known as the ' Roof of the. Morld'. ”\n2 . 第二句介绍青藏高原的自然资源 . 风景和野生动物 。 翻译时要特别注意的是 . 此句中 “ 丰富 ” 只是修饰自然资源 . 不能用来修饰风景 . 因此需要给 “ 风景秀丽 ” 单独搭配合适的动词 . 可以像参考译文那样处理为\nboasts 。\n3 . 第三句指出 . 由于气温低 . 青藏高原形成大面积高山冰川 。 翻译时可以像参考译文那样 . 将 “ 低气温 ” 作为主语 . 将 “ 形成 \" 处理为谓语 ； 或者将 “ 青藏高原气温很低 ” 翻译为主句 . 将第二个分句翻译为现在分词形式 . 即 \"The temperature on the Qinghai-Tibet Plateau is very low,\nthus forming a large area Of mountain glaciers.\n4 . 第四句指出 . 青藏高原是很多河流的源头 . 也是一个主要的淡水供应源 。 两个分句呈并列关系 . 可以翻译为 and 或 \"not only... but\nalso . . · ” 连接的并列句 。\n5 . 第五句指出青藏高原对全球生态系统的重要性 。 本句表达比较简短 . 可以直接将 “ 青藏高原 ” 作为主语来翻译 . 表示 “ 至关重要 ” 可灵活使用以上任意一种表达 。\n6 . 第六句指出 . 青藏高原的冰川因气候变化加速融化 。 第一个分句说明原因 . 翻译时可以像参考译文那样 . 作为原因状语置于句末 . 更符合英文表达习惯 ； 也可以选择将原因状语置于句首 . 并用逗号隔开 . 即 \"Due\nto climate change. glaciers on the Qinghai-Tibet Plateau are melting\nat an accelerated rate . 7 . 第七句指出 . 中国在保护青藏高原的生态系统方面取得了很大成效 。\n本句共有三个分句 . 逻辑关系紧密 . 可以像参考译文那样 . 将第一个分句翻译为主句 . 将后面两个分句翻译为介词短语作结果状语的形式 . 把 “ 增加 ” “ 得到保护 ” 转换为名词来翻译 . 更符合英文表达习惯 ； 也可以将第一个分句独立翻译 . 将后两个分句合并翻译 . 即 “ China has\nbeen workmg hard to protect the ecosystem of the Qinghai-Tibet\nPlateau. GrassIand coverage is increasing. and many endangered\nspecies are being protected more effectively.\n话题词汇\nYarlung Zangbu Grand Canyon 雅鲁藏布大峡谷\nPotala Palace 布达拉宫\nQinghai-Tibet Railway 青藏铁路\nTibet 西藏\npilgrimage 朝圣\n22 年 12 月六级真题第 1 套详解\nyak 牦牛\nbuttered tea 酥油茶\nplain 平原\nearthquake 地震\ndesertification 0f land 土地沙化\nwater and soil loss 水土流失 . 共 15 页"
+        }
+      ]
+    }
+  ]
+}

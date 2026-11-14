@@ -1,0 +1,33 @@
+{
+  "templateId": "c-s2-challenge-record-bonus",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-15",
+  "type": "codefix",
+  "difficulty": "challenge",
+  "concept": [
+    "综合项目",
+    "类定义",
+    "借名称改原件",
+    "改了却没生效"
+  ],
+  "instances": 1,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 4,
+      "max": 6
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "head": "{n}\n",
+    "count": "{n}",
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们的通讯录换代了：每一号都画了一张**类定义**，上面有两格 —— 一格记它攒了几条数据，一格记奖励。\n\n规矩是：收到的一串数里，**攒得最多的那一号**发 10 条奖励（大家一样多的时候算最前面那一号）。程序把每一号的「攒了多少、奖励多少」都念一遍。\n\n现在的问题是：**奖励怎么都发不出去** —— 输出的每一行奖励都是 0 。我们明明看见它调用了一输出方法 `give_bonus` 呀……你帮我们看看，把它改对。\n\n比如程序的输入是\n\n{sampleInput}\n\n修好之后就要返回\n\n{sampleOutput}",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nstruct rec {\n    int fish;\n    int bonus;\n};\n\nvoid give_bonus(struct rec r, int k) {\n    r.bonus = r.bonus + k;\n}\n\nint main(void) {\n    struct rec list[8] = {0};\n    int n = 0;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &list[i].fish) != 1) {\n            return 1;\n        }\n    }\n\n    int top = 0;\n    for (int i = 1; i < n; i++) {\n        if (list[i].fish > list[top].fish) {\n            top = i;\n        }\n    }\n\n    give_bonus(list[top], 10);\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 号：%d 条，奖励 %d 条\\n\", i + 1, list[i].fish, list[i].bonus);\n    }\n\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nstruct rec {\n    int fish;\n    int bonus;\n};\n\nvoid give_bonus(struct rec *r, int k) {\n    r->bonus = r->bonus + k;\n}\n\nint main(void) {\n    struct rec list[8] = {0};\n    int n = 0;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &list[i].fish) != 1) {\n            return 1;\n        }\n    }\n\n    int top = 0;\n    for (int i = 1; i < n; i++) {\n        if (list[i].fish > list[top].fish) {\n            top = i;\n        }\n    }\n\n    give_bonus(&list[top], 10);\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 号：%d 条，奖励 %d 条\\n\", i + 1, list[i].fish, list[i].bonus);\n    }\n\n    return 0;\n}\n",
+  "explanationTemplate": "「调用了一输出方法，可原件没变」是这张类定义最经典的一跤。\n\n看这行：`give_bonus(list[top], 10);` —— 递过去的是一张**类定义的复印件**。C 里把整张类定义传给别人时，对方拿到的是**照抄的一份**：他在那份上写多少、改多少，跟我们手里这张原件一点关系都没有。所以奖励确实发了，发在了复印件上，散场就没了。\n\n要改，得让这一个方法拿到的是**原件的指针牌**，而不是复印件：\n\n1. 函数那一头把类定义换成「指向类定义的名称」：`void give_bonus(struct rec *r, int k)`；\n2. 函数里顺着名称取格子：`r->bonus = r->bonus + k;`（`r->bonus` 就是「顺着名称找到那一格」）；\n3. 称呼它的那一头**递名称**：`give_bonus(&list[top], 10);` —— 名字前面多一个 `&`，意思是「这是那一号的原件，名称拿去」。\n\n三处要一起改，少一处编译器就翻脸（类型对不上）。判据很好记：**「想改原件的事，递名称；只想看一眼的事，递复印件。」**"
+}

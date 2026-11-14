@@ -1,0 +1,91 @@
+{
+  "lessonId": "java-stage3-12",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们从三个不同的实例身上各照一次 X 光，照出来的三张「骨架图」是什么关系？",
+      "options": [
+        "三张是**同一张**——照出来的是那张类定义长什么样，不是某个对象现在什么样",
+        "三张各不相同，每个对象各有一张自己的",
+        "只有第一张有用，后面两张会把第一张盖掉",
+        "三张都是空白的，得先往上面写东西才有内容"
+      ],
+      "answer": 0,
+      "explanation": "课文里那句 `甲 == 乙` 印出来是 `true` 就是这个意思：`橘.getClass()` 照出来的、和 `子对象.class` 这张，**是同一张**。骨架图记的是「这张类定义上画着哪些骨头、哪些方法」，跟「这个对象现在叫什么、兜里有几根数据」没有关系。所以不管从几个实例身上照，拿回来的都是同一张；反过来，它在谁身上照的，也**不会**留在图上。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "`骨架图.getDeclaredFields()` 交回来的那一柜子里，保存的是什么？",
+      "options": [
+        "一根骨头一张牌（`Field`），牌上写着它的名字和它是哪一种",
+        "一根骨头上面直接写着它现在的值",
+        "一柜子整数，每根骨头占一格",
+        "一张已经印好的表，上面的行早就排好了顺序"
+      ],
+      "answer": 0,
+      "explanation": "交回来的是一柜子 `Field` —— 一根骨头一张**牌**，不是骨头的值。牌上能问出来的东西在课文那张表里写着：`getName()` 问名字，`getType().getSimpleName()` 问它是哪一种。想要值，得把实例递进去再调用 `骨头.get(橘)`。至于顺序：课文里特意说了「光片上的骨头顺序我们说了不算」，所以那张表是自己先给名字排排坐（`Collections.sort`）才印出来的。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们手上只有一个类定义，要接创建一个新对象，该按什么路子来？",
+      "options": [
+        "先在类定义上找到那间产房 `getDeclaredConstructor(...)`，再用 `newInstance(...)` 传入着接生",
+        "先 `newInstance(...)` 把对象接出来，再回头去类定义上找它属于哪间产房",
+        "不用产房，`getDeclaredFields()` 交回来的牌就能把对象接出来",
+        "必须先用 `setAccessible(true)` 把产房掀开，不然接不出来"
+      ],
+      "answer": 0,
+      "explanation": "课文第五节的顺序是两步：**先找产房、后接生**。找的时候括号里报的**不是值**，是样子的名字（`String.class`、`int.class`）；接生的时候 `newInstance(...)` 里才放真东西（`\"煤球\", 5`）。「不用产房，`getDeclaredFields()` 交回来的牌就能把对象接出来」那柜子牌只会读骨头，接不出对象；「必须先用 `setAccessible(true)` 把产房掀开，不然接不出来」也不对——我们课文里那间产房**没掀盖子就接生了**，那段代码跑起来印的是 `煤球 有 5 根数据`，`setAccessible(true)` 是第六节才用来碰私房骨头的。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "java",
+      "code": "import java.lang.reflect.Field;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 子对象 {\n        String 名字;\n        int 数据;\n    }\n\n    public static void main(String[] args) {\n        List<String> 骨头们 = new ArrayList<>();\n        for (Field 骨头 : 子对象.class.____()) {\n            骨头们.add(骨头.getType().getSimpleName() + \" \" + 骨头.____());\n        }\n        Collections.____(骨头们);\n        for (String 一行 : 骨头们) {\n            System.out.println(一行);\n        }\n    }\n}",
+      "stem": "这段代码缺了三处，把它补完整，让它跑起来印出这张表（两行）：第一行 `String 名字`，第二行 `int 数据`。",
+      "blanks": [
+        {
+          "answer": "getDeclaredFields",
+          "accept": []
+        },
+        {
+          "answer": "getName",
+          "accept": []
+        },
+        {
+          "answer": "sort",
+          "accept": []
+        }
+      ],
+      "explanation": "三处正好是课文第三节那三个动作：**第一处** `getDeclaredFields()` 是「读骨头」，交回来一柜子 `Field`；**第二处** `getName()` 是「问这根骨头叫什么」——同一张牌上还能问它是哪一种（`getType().getSimpleName()`）；**第三处** `Collections.sort(...)` 是「先给名字排排坐」——光片上的骨头顺序说了不算，不排就直接印，表上两行的先后就说不准了。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "java",
+      "code": "import java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    static class 子对象 {\n        void 打招呼() {\n        }\n\n        int 要数据(int 几根) {\n            return 几根 * 2;\n        }\n    }\n\n    public static void main(String[] args) {\n        List<String> 函数 = new ArrayList<>();\n        for (Method 一个方法 : 子对象.class.getDeclaredMethods()) {\n            函数.add(一个方法.getName() + \" \" + 一个方法.getParameterCount());\n        }\n        Collections.sort(函数);\n        for (String 一行 : 函数) {\n            System.out.println(一行);\n        }\n    }\n}",
+      "stem": "这段代码的输出是什么？（两行，一行一个方法）",
+      "answer": "打招呼 0\n要数据 1",
+      "accept": [
+        "打招呼 0\n要数据 1\n"
+      ],
+      "explanation": "照 X 光读方法，交回来一柜子 `Method`：`getName()` 问名字，`getParameterCount()` 问「这一个方法要传入几样东西」。类定义上自己写的方法就两招：`打招呼()` 一样东西都不收，所以印 `打招呼 0`；`要数据(int 几根)` 收一样，所以印 `要数据 1`。排排坐之后 `打招呼` 在前、`要数据` 在后 —— 表上只有我们自己写的这两招，从上一代传下来的那些不在这张表里。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "java",
+      "code": "import java.lang.reflect.Field;\n\npublic class Main {\n    static class 子对象 {\n        private String 名字 = \"张三\";\n        private int 数据 = 3;\n    }\n\n    public static void main(String[] args) throws Exception {\n        子对象 橘 = new 子对象();\n        Field 骨头 = 子对象.class.getDeclaredField(\"数据\");\n        骨头.setAccessible(true);\n        骨头.set(橘, 8);\n        System.out.println(骨头.get(橘));\n        System.out.println(橘.名字);\n    }\n}",
+      "stem": "这段代码的输出是什么？（两行）",
+      "answer": "8\n张三",
+      "accept": [
+        "8\n张三\n"
+      ],
+      "explanation": "两行是这么来的：`骨头.set(橘, 8)` 把这个对象的**私房骨头** `数据` 改成了 8，所以第一行印 `8`，读的正是改完之后的值。第二行印 `张三` —— 我们只改了 `数据` 那根，`名字` 那根原封没动。注意 `setAccessible(true)` 那句不能省：骨头上贴着「只给我们看」的标签，不掀盖子就读不动它。"
+    }
+  ]
+}

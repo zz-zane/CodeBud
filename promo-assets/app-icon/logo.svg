@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- CodeBud：赤陶底（App 主色 #b34b28）+ 米白图形。尖括号 < > 夹着一株新芽 -->
+  <rect width="512" height="512" rx="116" fill="#b34b28"/>
+  <g fill="#fcfcfb">
+    <path d="M256 262C256 180 312 118 396 118C396 204 342 262 256 262Z"/>
+    <path d="M256 300C256 240 214 196 148 196C148 258 190 300 256 300Z"/>
+  </g>
+  <g fill="none" stroke="#fcfcfb" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 250V410"/>
+    <path d="M176 326L130 368L176 410"/>
+    <path d="M336 326L382 368L336 410"/>
+  </g>
+</svg>

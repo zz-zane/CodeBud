@@ -1,0 +1,26 @@
+{
+  "templateId": "cpp-s2-14-kitten-no-base-ctor",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-14",
+  "type": "codefix",
+  "concept": [
+    "子对象初始化时先把料递回老类定义那一手",
+    "次序不能颠倒",
+    "漏了那一手编译器拦下"
+  ],
+  "instances": 2,
+  "params": {
+    "d": {
+      "kind": "pick",
+      "values": [
+        20,
+        35
+      ]
+    }
+  },
+  "stemTemplate": "我们给托儿所添一张**子类定义**：照着对象那张画下来，自己多记一格「初始化多少天」。\n\n可这个子对象初始化的时候，我们**忘了先把名字和岁数递回给老类定义那一手**，编译器当场拦下。你帮我们把漏掉的那一处补上，让屏幕上印出 **我是棉花，今年 1 岁** 和 **棉花 初始化 {d} 天啦** 这两行。类定义上别的几行、`main` 里那几句都不用动。",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\n    int age;\npublic:\n    Cat(string n, int a) : name(n), age(a) {}\n    void greet() {\n        cout << \"我是\" << name << \"，今年 \" << age << \" 岁\" << endl;\n    }\n};\n\nclass Kitten : public Cat {\nprotected:\n    int days;\npublic:\n    Kitten(string n, int a, int d) : days(d) {}\n    void showDays() {\n        cout << name << \" 初始化 \" << days << \" 天啦\" << endl;\n    }\n};\n\nint main() {\n    Kitten k(\"棉花\", 1, {d});\n    k.greet();\n    k.showDays();\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\n    int age;\npublic:\n    Cat(string n, int a) : name(n), age(a) {}\n    void greet() {\n        cout << \"我是\" << name << \"，今年 \" << age << \" 岁\" << endl;\n    }\n};\n\nclass Kitten : public Cat {\nprotected:\n    int days;\npublic:\n    Kitten(string n, int a, int d) : Cat(n, a), days(d) {}\n    void showDays() {\n        cout << name << \" 初始化 \" << days << \" 天啦\" << endl;\n    }\n};\n\nint main() {\n    Kitten k(\"棉花\", 1, {d});\n    k.greet();\n    k.showDays();\n    return 0;\n}\n",
+  "explanationTemplate": "我们在本机真跑过没补的版本，编译器的原话是这一句：\n\n```text\nmain.cpp:20:44: error: no matching function for call to 'Cat::Cat()'\n```\n\n念作：「**你没给老类定义传入料，它不知道该拿什么初始化。**」\n\n道理是：**名字和岁数这两格是老类定义的**，子类定义够得着、可它自己名下没有 —— 得由老类定义那一手去装。修法就是**把料递回去**：\n\n```text\nKitten(string n, int a, int d) : Cat(n, a), days(d)\n```\n\n补完之后我们真跑过：屏幕上印 `我是棉花，今年 1 岁`，再印 `棉花 初始化 {d} 天啦`。\n\n⚠️ 三条钉住：\n\n1. **次序是「基类先初始化、子对象后初始化」。** 递回老类定义那一手要写在**最前面**，自己多出来的那一格跟在它后面。\n2. **递料那一下写的是类定义名 + 一对圆括号**（`Cat(n, a)`）—— 不是 `name(n)`、也不是把老类定义那两格直接当自己的格子写。\n3. **老类定义那两格得让子对象够得着。** 我们挂的是 `protected:`；挂成 `private:` 的话，子对象这一手 `showDays()` 里那句 `name` 会被拦下（原话是 `error: 'std::string Cat::name' is private within this context`，我们在课文摔法一里真跑过）。"
+}

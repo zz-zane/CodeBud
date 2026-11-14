@@ -1,0 +1,87 @@
+{
+  "lessonId": "java-stage2-02",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们写下一句 `class Cat extends Animal`，这句的意思是____。",
+      "options": [
+        "照着 `Animal` 那个父类再定义一个 `Cat` 子类，父类的字段和函数子类天生就会",
+        "把 `Animal` 那张类定义改个名字，从此它就叫 `Cat` 了",
+        "照 `Animal` 创建一个实例，名字就取作 `Cat`",
+        "让 `Animal` 反过来照着 `Cat` 画"
+      ],
+      "answer": 0,
+      "explanation": "`extends` 后面跟着的那张类定义是**上游**，这句读作「照它画」。画完以后，父类上的家当和方法子类一个字都不用重抄，天生就会 —— 这正是套类定义最省事的地方。改名字、生实例、反过来认亲，都不是这一句干的事。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "子类自己写了初始化那一手，它的**第一句**必须写什么？",
+      "options": [
+        "`super(name);` —— 请上一层把它那版跑一遍，把料喂过去",
+        "什么都不用写，父类那版会自己跑起来",
+        "先写一句 `@Override` 打头",
+        "`this.super(name);`"
+      ],
+      "answer": 0,
+      "explanation": "父类的初始化那一手**不会自己跑**。子类的第一句要是不写 `super(...)`，编译器会替你插一句「请父类的空手那一版」，可父类上常常压根没有空手那一版 —— 于是当场撞 `constructor ... cannot be applied to given types`。`@Override` 是对函数用的纸条，写在初始化那一手身上没有意义；`this.super` 也不是 Java 里的写法。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "在子类上重写一个方法的时候，我们为什么要写 `@Override`？",
+      "options": [
+        "告诉编译器「我们这个方法是故意盖掉上面那一版的」，名字写错了它会当场提醒",
+        "写上它这一个方法会跑得更快",
+        "它会把父类上那一版删掉",
+        "带上它以后，只有子类能调用这一个方法"
+      ],
+      "answer": 0,
+      "explanation": "`@Override` 是一张写给编译器的小纸条：我们这一手**是故意要盖掉上面某一个类定义上的同一个方法**。有了它，万一名字手滑写错（比如写成 `speek`），编译器会当场告诉你「根本没有这一手可盖」；不写的话它就当你在画一个方法全新的，那个错就悄悄溜过去了。它不改速度、不删东西、也不管谁调用得动。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "java",
+      "code": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n}\n\nclass Cat ____ Animal {\n    Cat(String name) {\n        ____(name);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        System.out.println(c.name);\n    }\n}",
+      "stem": "我们要让子类照着父类画，初始化的时候还得把名字交给父类那一手 —— 两个空白处各填哪个小词？",
+      "blanks": [
+        {
+          "answer": "extends",
+          "accept": []
+        },
+        {
+          "answer": "super",
+          "accept": []
+        }
+      ],
+      "explanation": "第一处填 `extends`：类定义名后面跟上它，读作「照这张类定义再画一张」。第二处填 `super`：子类自己写了初始化那一手，第一句就得请上一层把它那版跑一遍，`super(name)` 就是把名字这盒家当交给它去装。两处都填对之后跑一遍，印出来是张三 —— 名字确实是父类那一手赋值的。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "java",
+      "code": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"安静地待着\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Animal(\"计算机\");\n        Animal b = new Cat(\"张三\");\n        a.speak();\n        b.speak();\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "计算机安静地待着\n张三：",
+      "accept": [
+        "计算机安静地待着\n张三：\n"
+      ],
+      "explanation": "`a` 是照父类直接生的，调用 `speak` 走的是父类那一版；`b` 虽然挂着一块 `Animal` 的名称，可它底下的实例是照 `Cat` 生的，引用的方法是子类重写过的那一版。所以两行输出不一样 —— 重写盖住的只是**这一条往下走的路**，父类自己一点没变。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "java",
+      "code": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        super.speak();\n        System.out.println(\"……然后补了一次\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.speak();\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "张三发出了一次叫\n……然后补了一次",
+      "accept": [
+        "张三发出了一次叫\n……然后补了一次\n"
+      ],
+      "explanation": "子类虽然把 `speak` 重写了，但身子里的第一句是 `super.speak();` —— 请上一层把它那版先跑一遍，所以先印出父类那句；跑完才轮到我们自己添的那一句。这正是「不是要换掉它，而是想在它干完之后再添一句」的写法。"
+    }
+  ]
+}

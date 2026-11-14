@@ -1,0 +1,29 @@
+{
+  "templateId": "c-s2-ptrarr-star-bracket",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-02",
+  "type": "codefix",
+  "concept": [
+    "方括号与星号",
+    "指针与数组",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "base": {
+      "kind": "int",
+      "min": 1,
+      "max": 4
+    },
+    "step": {
+      "kind": "int",
+      "min": 2,
+      "max": 5
+    }
+  },
+  "stemTemplate": "我们在架子上摆了 3 只元素：第 0 只元素里放着 {base} 条数据，往后每个元素都比前一个多 {step} 条。\n\n程序要把三个元素从第 0 只起一个一个报出来，格式是 `第 i 只：v`（`i` 是元素的编号，从 0 数起）。作者想用「**先把编号挪过去、再顺着拿**」的写法，也就是不用方括号的那种。\n\n可编译器一瞧见就不干了，把整段代码退了回来。你帮我们看看它为什么不高兴，把它改好。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[3];\n\n    for (int i = 0; i < 3; i++) {\n        bowls[i] = {base} + i * {step};\n    }\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"第 %d 只：%d\\n\", i, *bowls[i]);\n    }\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[3];\n\n    for (int i = 0; i < 3; i++) {\n        bowls[i] = {base} + i * {step};\n    }\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"第 %d 只：%d\\n\", i, *(bowls + i));\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: invalid type argument of unary '*' (have 'int')` —— 翻过来就是「**星号该处理一块名称，你传给它的却是一个元素里的数**」。\n\n关键在这一句：**`bowls[i]` 本来就已经是「第 i 只元素里的数」了。** 它和 `*(bowls + i)` 是**同一件事的两种写法** —— 方括号就是「挪过去、再顺着拿」的省字版。所以 `*bowls[i]` 等于「从一个元素里的数上，再顺着拿一次」：数身上没有地址，星号无从下手，编译器只能把它退回来。\n\n想用「先挪再拿」的写法，得把方括号**整个换掉**，变成 `*(bowls + i)`：先算 `bowls + i`（第 i 只的地址），外面的星号再去处理它。\n\n把这条收进兜里：**`bowls[i]` 和 `*(bowls + i)` 一模一样，一个星号加一对括号，正好换一个方括号。** 认准这一条，以后看见哪种写法都不会慌。"
+}

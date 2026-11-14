@@ -1,0 +1,87 @@
+{
+  "lessonId": "cpp-stage2-09",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们写下 `class Student : public Person`，子类定义里只添了一手 `study`。照 `Student` 创建后的张三，调用不调用得动老类定义上那一手 `introduce`？",
+      "options": [
+        "能调用 —— 老类上的格子和函数它自动全有，因为子类本来就有基类的类型",
+        "调用不动 —— 老类定义上的东西得一笔一画重抄到新类定义上",
+        "调用不动 —— 只有新类定义自己添的 `study` 才归它",
+        "得先在新类定义里把 `introduce` 再写一遍，才调用得动"
+      ],
+      "answer": 0,
+      "explanation": "`class Student : public Person` 这一行的意思就是「`Student` 这张类定义**照着 `Person` 画下来**」—— 老类定义上的格子（我们一行都没在新类定义上写过的 `name`）和函数（`introduce`）**自动全有**。所以只要把名字填进去，张三就提供输出方法；我们要做的只是往上添自己那点不一样（`study`）。反过来说也成立：张三是一个 `Student`，**同时也是一个 `Person`**，凡是能放对象的地方，放一个子对象同样成立。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "老类定义上装数据数的那一格挂着 `private:`，我们想在子类定义的 `eat` 里直接写 `fish = fish + 1;`。会怎样？",
+      "options": [
+        "编译器会拦下来，说那一格私有、这个位置够不着 —— 想用就得把那一格改成 `protected:`，或者由基类提供一个 public 函数替它动手",
+        "能过 —— 子类定义是老类定义亲手画出来的，带盖的格子自然也够得着",
+        "能过 —— 但只读得动，写不动",
+        "能过 —— 只要子类定义那一手写成 `public:`"
+      ],
+      "answer": 0,
+      "explanation": "子类定义**不是**老类定义自己。老类定义扣上盖子的格子，连照着它画下来的新类定义都碰不得 —— 编译器的原话是「私有，你现在站的这个地方够不着」。想在子类定义里直接用，只有两条路：**把那一格换成 `protected:`**（基类自己 + 照着画的类定义都够得着、外面够不着），或者**请老类定义给一手公开函数**替它动手（我们在课文里让 `Student` 印名字，走的就是老类定义给的 `showName()`）。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们把那一行写成了 `class Student : Person` —— 漏了那个 `public`。类定义里怎么写都看着挺对，可外面那句 `k.introduce()` 忽然不认了。编译器会说什么？",
+      "options": [
+        "「够不着」—— 老类定义给的公开东西全变成了子类定义自己的私事",
+        "「私有」—— 那一格在老类定义上本来就没开",
+        "「没有这个方法」—— 老类的函数没传下来",
+        "什么也不说，只是印出来是空的"
+      ],
+      "answer": 0,
+      "explanation": "这一跤的用词很讲究：编译器说的是**「够不着」（inaccessible）**，而不是「私有」。区别在于 —— 那一格在老类定义上本来就是公开的，是**子类定义少写了那个 `public`，等于把老类定义给的东西全收进了自己兜里**，所以外面的 `main` 再也够不着了。它还很安静：类定义里面怎么写都没问题，是外面那句 `k.introduce()` 突然不认了。看到「够不着」，第一件事就是回去看那一行有没有 `public` 。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Person {\nprotected:\n    string name;\npublic:\n    Person(string n) : name(n) {}\n    void introduce() const {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass Student : ____ Person {\npublic:\n    Student(string n) : ____(n) {}\n    void study() const {\n        cout << name << \" 开始学习\" << endl;\n    }\n};\n\nint main() {\n    Student k(\"张三\");\n    k.introduce();\n    k.study();\n    return 0;\n}",
+      "stem": "这段代码里有两处被我们挖空了（用 `____` 标出），补上之后它会印出「张三介绍自己：」和「张三 开始学习」。",
+      "blanks": [
+        {
+          "answer": "public",
+          "accept": []
+        },
+        {
+          "answer": "Person",
+          "accept": []
+        }
+      ],
+      "explanation": "第一处：那一行要写成「新类定义照着老类定义画下来」，前面那个词不能省 —— 少了它，老类定义给的公开东西全变成子类定义自己的私事，外面调用 `k.introduce()` 会说「够不着」。第二处：子类定义的构造函数后面要交代「先把料交给基类那一半」，照着基类那一半传下来的名字，就是老类定义的名字 `Person`，料就是那个 `n` 。补好之后，张三会调用出从基类那儿一并传下来的 `introduce`（印「张三介绍自己：」），再用自己添的 `study` 学习。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Person {\nprotected:\n    string name;\n    int fish;\npublic:\n    Person(string n, int f) : name(n), fish(f) {\n        cout << \"对象基类：\" << name << endl;\n    }\n    ~Person() {\n        cout << \"对象基类走了\" << endl;\n    }\n};\n\nclass Student : public Person {\npublic:\n    Student(string n, int f) : Person(n, f) {\n        cout << \"子对象：\" << name << \" \" << fish << \" 条\" << endl;\n    }\n    ~Student() {\n        cout << \"子对象走了\" << endl;\n    }\n};\n\nint main() {\n    Student k(\"张三\", 3);\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "对象基类：张三\n子对象：张三 3 条\n子对象走了\n对象基类走了",
+      "accept": [
+        "对象基类：张三\n子对象：张三 3 条\n子对象走了\n对象基类走了\n"
+      ],
+      "explanation": "照 `Student` 创建后的张三，身上是**基类那一半 + 子对象那一半**拼起来的一个实例。初始化的时候先搭基类那一半：`Student(string n, int f) : Person(n, f)` 里那一小段 `: Person(n, f)` 就是把料交给基类的构造函数，所以基类的函数先跑，印出「对象基类：张三」；基类那一半搭好了，我们这一半才开始，印出「子对象：张三 3 条」。收尾的时候顺序整个反过来：**子对象那一半先拆、对象基类那一半后拆** —— 所以 `~Student` 先印「子对象走了」，`~Person` 最后印「对象基类走了」。一句话：搭的时候先基类后子对象，拆的时候先子对象后基类。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Person {\n    string name;\nprotected:\n    int fish;\npublic:\n    Person(string n, int f) : name(n), fish(f) {}\n    void showName() const {\n        cout << \"我们是\" << name << \"\" << endl;\n    }\n};\n\nclass Student : public Person {\npublic:\n    Student(string n, int f) : Person(n, f) {}\n    void eat() {\n        fish = fish + 1;\n        cout << \"处理了一条，现在 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    Student k(\"张三\", 3);\n    k.showName();\n    k.eat();\n    k.eat();\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "我们是张三\n处理了一条，现在 4 条\n处理了一条，现在 5 条",
+      "accept": [
+        "我们是张三\n处理了一条，现在 4 条\n处理了一条，现在 5 条\n"
+      ],
+      "explanation": "先说 `k.showName()`：张三的名字那一格在老类定义上是**扣着盖子的**（只有 `Person` 自己的函数够得着），所以子类定义不能自己去碰它，但它**照样能调用老类定义给的这手公开函数** —— 张三本来就是对象嘛，于是印出「我们是张三」。再说 `k.eat()`：装数据数的那一格挂的是 `protected:`，**基类自己 + 照着画的新类定义**都够得着，所以子类定义里那句 `fish = fish + 1;` 是合法的。第一次：3 变 4；第二次是在**同一个张三**身上接着加，4 变 5 —— 所以两行分别是「处理了一条，现在 4 条」和「处理了一条，现在 5 条」。"
+    }
+  ]
+}

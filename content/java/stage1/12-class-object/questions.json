@@ -1,0 +1,85 @@
+{
+  "lessonId": "java-stage1-12",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们写下了 `class Cat` 一整块，里面有 `String name;` 和 `int fish;`。这一块干了什么？",
+      "options": [
+        "画了一张叫 `Cat` 的类定义 —— 类定义自己不是对象，不包含独立执行过程也不会处理数据",
+        "创建了一个叫 `Cat` 的实例，可以直接使唤",
+        "摆下了一块叫 `Cat` 的名称，装一串字",
+        "调用了一次 `Cat` 的函数"
+      ],
+      "answer": 0,
+      "explanation": "`class Cat` 这一整块是**类定义**，不是对象。它只画着「一个对象长什么样」：随身带哪两样家当、会做哪几个方法。实例得等我们照着它去生 —— 那是 `new Cat()` 干的事，创建后的每一个才是能使唤的（让它叫、给它记数据数）。类定义画好之后就静静躺在那儿，我们不 `new`，一个对象都不会出现。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们在 `main` 里写了 `Cat.meow();`，编译器拦下来说 `non-static method meow() cannot be referenced from a static context`。下面哪种改法是对的？",
+      "options": [
+        "先创建一个实例：`Cat c = new Cat();`，再写 `c.meow();`",
+        "把函数体里那句印字删掉，它就不拦了",
+        "在类定义 `Cat` 前面加一个 `static`",
+        "改成 `meow();`，不要前面的 `Cat.`"
+      ],
+      "answer": 0,
+      "explanation": "`meow()` 这一个方法前面没有 `static`，它就是**跟着每个实例走**的：要动的是「**这一个**对象」的名字。`Cat.meow();` 等于「连对象都没有就先调用一次」，编译器不知道该动谁，当然拦下。正路是先 `new` 一个出来、拿名称引用，再让这个对象自己调用：`Cat c = new Cat(); c.meow();`。删掉身子里的活没用 —— 编译器看的是打头那一行和方法挂在哪，不看身子；在类定义前面加 `static` 是改另一件事（而且那不是我们要的）；写成 `meow();` 更糟，连这一个方法在哪它都找不到，会撞上认不出名字的那句拦报。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们根据类创建了 `c1`、`c2` 两个实例，只给 `c1.fish` 记了 3 条。这时候 `c2.fish` 是几？",
+      "options": [
+        "`0` —— 那是它自己那份，我们没给它记过，刚创建后是默认值",
+        "`3` —— 类定义上的账两个对象共用",
+        "`null` —— 没记过就是什么都没有",
+        "编译当场拦下，因为 `c2` 的账没记过"
+      ],
+      "answer": 0,
+      "explanation": "**类定义只画了一份，实例字段是每个实例各自带一套**：`c1.fish` 和 `c2.fish` 是两块完全不同的名称，我们给 `c1` 记 3 条，`c2` 那份一点没动。而一个刚创建后、什么都没记过的对象，装数码的名称默认是 `0`（装一串字的名称才是 `null`）—— 所以 `c2.fish` 印出来是 `0`，不是 `3`、也不是 `null`，更不会拦下我们。"
+    },
+    {
+      "id": "q4",
+      "type": "code",
+      "lang": "java",
+      "code": "class Cat {\n    String name;\n    int fish;\n\n    void eat(int n) {\n        fish = fish + n;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c1 = new Cat();\n        c1.name = \"张三\";\n        Cat c2 = new Cat();\n        c2.name = \"李四\";\n\n        c1.eat(3);\n        c2.eat(5);\n        c1.eat(4);\n        System.out.println(c1.name + \" \" + c1.fish);\n        System.out.println(c2.name + \" \" + c2.fish);\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "张三 7\n李四 5",
+      "accept": [
+        "张三 7\n李四 5\n"
+      ],
+      "explanation": "类定义只有一张，实例生了两个。`eat` 那一个方法前面没有 `static`，所以它**跟着每个实例走**：`c1.eat(3)` 和 `c1.eat(4)` 动的是张三自己那份家当，3 加 4 得 `7`；`c2.eat(5)` 动的是李四自己那份，得 `5`。两个对象各记各的账，互不打扰，所以印出来是「张三 7」和「李四 5」。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "java",
+      "code": "class Cat {\n    String name;\n    int fish;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat();\n        System.out.println(c.fish);\n        System.out.println(c.name);\n        c.name = \"张三\";\n        c.meow();\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "0\nnull\n张三：",
+      "accept": [
+        "0\nnull\n张三：\n"
+      ],
+      "explanation": "刚根据类创建出来的实例，自带的名称**不是空的**：装数码的 `fish` 默认是 `0`，装一串字的 `name` 默认是 `null`（念「呐儿」，意思是里面什么都没有），所以前两行印的是 `0` 和 `null`。第三行给这个对象挂上名字「张三」，再让它调用一次 —— `meow` 里那句用的是**它自己**的名字，所以印出「张三：」。"
+    },
+    {
+      "id": "q6",
+      "type": "codefill",
+      "lang": "java",
+      "code": "class Cat {\n    String ____;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = ____ Cat();\n        c.name = \"张三\";\n        c.meow();\n    }\n}",
+      "stem": "我们这张类定义缺了两处：一处是实例字段的名字，一处是「根据类创建一个」的动作。补上两个空，让这段代码跑起来、屏幕上印出 `张三：`  —— 一个空填类定义里那件实例字段的名字（要和方法身子里的那一个一模一样），另一个空填「根据类创建实例」的那个动作。",
+      "blanks": [
+        {
+          "answer": "name"
+        },
+        {
+          "answer": "new"
+        }
+      ],
+      "explanation": "第一个空填 `name` —— 类定义上这件实例字段得和方法身子里那句**名字对得上**，不然方法引用的时候编译器认不出来。第二个空填 `new`：`Cat c = new Cat();` 就是「根据类创建一个实例，拿名称 `c` 引用它」—— 少了 `new`，名称就一直空着，编译器会拦下来说「可能还没装东西」。创建后之后再挂名字 `c.name = \"张三\";`，它输出就是「张三：」。"
+    }
+  ]
+}

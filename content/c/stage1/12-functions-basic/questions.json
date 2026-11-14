@@ -1,0 +1,98 @@
+{
+  "lessonId": "c-stage1-12",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们想登记一个方法，算两个整数的和、把结果返回。下面哪一种写法编译器能接受？",
+      "options": [
+        "`int add(int a, int b) { return a + b; }`",
+        "`int add(int a, b) { return a + b; }`",
+        "`void add(int a, int b) { return a + b; }`",
+        "`add(int a, int b) { return a + b; }`"
+      ],
+      "answer": 0,
+      "explanation": "`int add(int a, int b) { return a + b; }` 把三件事都说清楚了：最前面那个 `int` 说「这招返回一个整数」，而且**每个元素前面都写了类型**。`int add(int a, b) { return a + b; }` 漏掉了 `b` 的类型，编译器会说 `unknown type name 'b'` 当场退回；`void add(int a, int b) { return a + b; }` 头上写 `void` 是「不返回东西回来」，那就不能拿它当数字用；`add(int a, int b) { return a + b; }` 连返回什么回来都没说，编译器不知道这招该给你什么。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们登记了一个方法，却忘了在 `main` 里称呼它一次。程序跑起来会怎样？",
+      "options": [
+        "屏幕上一片安静，什么都不打印，也不报错",
+        "编译器会报错，说这个函数没被用到",
+        "函数会自己跑一遍，只是不打印结果",
+        "程序跑到一半会停住不动"
+      ],
+      "answer": 0,
+      "explanation": "**登记只管记下来，一步都不会动** —— 编译器心想「你让我记，我记下来了；你又没调用我，我干嘛要动」。所以它不报错、不警告，屏幕上就是安安静静，这也是最容易查不出来的坑：安静的时候先回头看看函数簿，我真的调用过它吗"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "一个方法摆了两个元素，施展的时候我们把两样数据**喂反了顺序**。会发生什么？",
+      "options": [
+        "编译器当场拦下，程序根本编不出来",
+        "它照样往下跑，只是印出来的东西换了位置",
+        "元素会自己调换过来，结果还是对的",
+        "程序会跑到那一行突然崩掉"
+      ],
+      "answer": 1,
+      "explanation": "元素是**照着名牌收东西**的，它不检查你传入的到底是不是那个意思。第一位传给第一个元素、第二位传给第二只元素 —— 顺序错了它也不吭声，只是老老实实按新的顺序印出来，结果就串了味。这种错不报错、最难找，所以要靠你自己把顺序记牢"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\n____ add(int a, int b) {\n    ____ a + b;\n}\n\nint main(void) {\n    printf(\"%d\\n\", add(3, 5));\n    return 0;\n}",
+      "stem": "下面这段代码想登记一个方法「算两个整数的和」并在 `main` 里称呼它。两个空该填什么？",
+      "blanks": [
+        {
+          "answer": "int"
+        },
+        {
+          "answer": "return"
+        }
+      ],
+      "explanation": "第一个空在函数头的最前面，要说清**这招返回什么回来** —— 这招会返回一个整数，所以写 `int`。第二只空在函数身体里，要把算好的和**返回称呼它的那个地方**，用的是 `return`。填完之后这招就算立起来了：喂 `3` 和 `5`，返回 `8`，屏幕上是 `8`"
+    },
+    {
+      "id": "q5",
+      "type": "codefill",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nvoid greet(void) {\n    printf(\"你好\\n\");\n}\n\nint main(void) {\n    printf(\"上课前\\n\");\n    ____;\n    printf(\"下课后\\n\");\n    return 0;\n}",
+      "stem": "下面这段代码登记了一个方法，却没有施展。`main` 里的空该填什么，才能让屏幕上按时序印出「上课前 / 你好 / 下课后」？",
+      "blanks": [
+        {
+          "answer": "greet()"
+        }
+      ],
+      "explanation": "登记只是把函数记在函数簿上，**要调用一次它才会动**。引用的写法是「函数名 + 一对小括号」再加一个分号，所以填 `greet()`。这一个方法头上写的是「不用喂」，所以括号里空着就行"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nint add(int a, int b) {\n    return a + b;\n}\n\nint main(void) {\n    printf(\"%d\\n\", add(2, 7));\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "9",
+      "accept": [
+        "9\n"
+      ],
+      "explanation": "`add` 是一个摆了两个元素的函数：称呼它的时候先把 `2` 传给第一个元素 `a`、`7` 传给第二只元素 `b`，它算完 `2 + 7 = 9`，用 `return` 把 `9` 返回称呼它的地方，正好落进打印的输入接口，屏幕上就是 `9`"
+    },
+    {
+      "id": "q7",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nvoid check(int n) {\n    if (n > 0) {\n        printf(\"还有数据\\n\");\n        return;\n    }\n    printf(\"元素空了\\n\");\n}\n\nint main(void) {\n    check(0);\n    check(3);\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "元素空了\n还有数据",
+      "accept": [
+        "元素空了\n还有数据\n"
+      ],
+      "explanation": "`return` 除了返回东西，还有**当场收工**的脾气。第一次调用 `check(0)`，眼色答「假」，跳过里面那一整块，直接印出「元素空了」；第二次调用 `check(3)`，眼色答「真」，先印「还有数据」，紧接着碰见 `return;` 就地收工，后面那句根本轮不到。所以两行是倒过来的顺序"
+    }
+  ]
+}

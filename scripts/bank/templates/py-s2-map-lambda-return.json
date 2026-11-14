@@ -1,0 +1,31 @@
+{
+  "templateId": "py-s2-map-lambda-return",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-11",
+  "type": "codefix",
+  "concept": [
+    "lambda",
+    "map",
+    "就地写一个方法"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 4
+    },
+    "k": {
+      "kind": "pick",
+      "values": [
+        2,
+        3
+      ]
+    }
+  },
+  "stemTemplate": "我们写了一段代码，想干的事只有一件：把 `1` 到 `{n}` 这一排数**挨个翻 {k} 倍**，收进柜子再印出来。\n\n可它**连跑都跑不起来** —— 编译器扫了一眼就翻了脸，一行结果都不肯给我们。\n\n你帮我们改对。要求：\n\n1. **只印一行**，就是收好的那一排。\n2. 还是要用 `map` 配**就地写的那一个方法**（不要换成绕圈写法），我们就想练这个。",
+  "brokenCodeTemplate": "结果 = map(lambda x: return x * {k}, range(1, {n} + 1))\nprint(list(结果))\n",
+  "referenceFixTemplate": "结果 = map(lambda x: x * {k}, range(1, {n} + 1))\nprint(list(结果))\n",
+  "explanationTemplate": "这一段的毛病**不是结果算错，是压根跑不起来**。\n\n`lambda` 只认**冒号后面那一个式子**：式子算出来是什么，它就返回什么 —— 所以它**写不下 `return`**。我们偏偏把 `return` 塞了进去，编译器一读就发现这句不合规矩，**整份档案一个字都不肯跑**。\n\n⚠️ 这正是 `lambda` 和 `def` 最容易记混的一处：\n\n- `def` 写出来的函数要把东西返回，**必须**写 `return`；\n- `lambda` 正好相反，**写了 `return` 反而错**，冒号后面的式子自己就是结果。\n\n改法就一个动作：把那个 `return` 删掉。删完之后 `lambda x: x * {k}` 读作「传入进来一个 `x`，返回 `x * {k}`」，`map` 把它挨个传给 `1` 到 `{n}` 这一排数，外面 `list` 一收，结果才看得见。\n\n⚠️ 顺带记牢 `map` 的脾气：它返回的是一个「会下一条的手」，**不套 `list` 是看不见结果的** —— 我们这里已经套好了，别把它拆掉。"
+}

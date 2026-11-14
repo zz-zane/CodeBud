@@ -1,0 +1,544 @@
+{
+  "lessonId": "c-stage2-04",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-c-s2-malloc-guard-assign-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们照着课文的样子租了几间变量，也照着写了那句「先看一眼名称是不是空的」。\n\n可这回程序**一跑到那儿就摔了** —— 屏幕上什么都没有，连第一个变量都没报出来，一个字都没留下。\n\n你帮我们看看是哪儿不对，把它改好。改好之后，程序应该从第 0 间开始一间一间报出来：`第 0 间：` 后面跟着那一间里放的数，一行一间，一共 3 行。",
+      "brokenCode": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n = 3;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms = NULL) {\n        printf(\"变量没租到\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 2;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n = 3;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        printf(\"变量没租到\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 2;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：2\n第 1 间：4\n第 2 间：6",
+      "stdin": null,
+      "explanation": "看两个等号的区别：\n\n- `rooms == NULL` 是**问一句**：「名称上是空的吗？」—— 问完名称一动没动。\n- `rooms = NULL` 是**动手**：「把名称擦成空的。」—— 它不管原来写着什么，直接把空处塞了进去。\n\n所以那句本意是「先看一眼」的话，实际干的是**把刚租到的名称当场擦掉**。名称一擦，那排变量就再也找不回来了；下一行还照着老地方伸手去摸，摸到的是空处 —— 程序当场摔掉，屏幕上一个字都来不及留。\n\n编译器其实瞧出不对劲了，可它只是嘀咕了一句：\n\n```text\nwarning: suggest parentheses around assignment used as truth value [-Wparentheses]\n```\n\n（「这句是写成了赋值吧？建议加对括号说清楚」）—— **嘀咕归嘀咕，它没拦着**。程序照样被放行，一直到跑起来才摔。\n\n凡是「只看一眼」的地方，两个等号一个都不能少。另外记个小经验：**摔的位置常常写错的地方往后一两行** —— 从摔倒的地方往回找，就能找着那句真正写错的。",
+      "templateId": "c-s2-malloc-guard-assign",
+      "params": {
+        "n": 3,
+        "step": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "80385d3e10731a41"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-guard-assign-023",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们照着课文的样子租了几间变量，也照着写了那句「先看一眼名称是不是空的」。\n\n可这回程序**一跑到那儿就摔了** —— 屏幕上什么都没有，连第一个变量都没报出来，一个字都没留下。\n\n你帮我们看看是哪儿不对，把它改好。改好之后，程序应该从第 0 间开始一间一间报出来：`第 0 间：` 后面跟着那一间里放的数，一行一间，一共 5 行。",
+      "brokenCode": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n = 5;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms = NULL) {\n        printf(\"变量没租到\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 9;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n = 5;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        printf(\"变量没租到\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 9;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：9\n第 1 间：18\n第 2 间：27\n第 3 间：36\n第 4 间：45",
+      "stdin": null,
+      "explanation": "看两个等号的区别：\n\n- `rooms == NULL` 是**问一句**：「名称上是空的吗？」—— 问完名称一动没动。\n- `rooms = NULL` 是**动手**：「把名称擦成空的。」—— 它不管原来写着什么，直接把空处塞了进去。\n\n所以那句本意是「先看一眼」的话，实际干的是**把刚租到的名称当场擦掉**。名称一擦，那排变量就再也找不回来了；下一行还照着老地方伸手去摸，摸到的是空处 —— 程序当场摔掉，屏幕上一个字都来不及留。\n\n编译器其实瞧出不对劲了，可它只是嘀咕了一句：\n\n```text\nwarning: suggest parentheses around assignment used as truth value [-Wparentheses]\n```\n\n（「这句是写成了赋值吧？建议加对括号说清楚」）—— **嘀咕归嘀咕，它没拦着**。程序照样被放行，一直到跑起来才摔。\n\n凡是「只看一眼」的地方，两个等号一个都不能少。另外记个小经验：**摔的位置常常写错的地方往后一两行** —— 从摔倒的地方往回找，就能找着那句真正写错的。",
+      "templateId": "c-s2-malloc-guard-assign",
+      "params": {
+        "n": 5,
+        "step": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "3b4966ec319c871c"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-measure-bowls-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们在窝里摆好了一排数组元素，一共 **5 只**，每个元素里放几条数据都写在代码里了：2、3、4、5、6。\n\n我们想**用尺子把这排元素量清楚** —— 报只数那一行，不许直接把 5 写上去，要量出来。\n\n请你写个程序：\n\n① 量出**这排元素一共占几格**、**一个元素占几格**；\n② 用这两个数量出**这排元素有几个**；\n③ 按这个格式一行一行报出来：\n\n```text\n这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n```\n\n④ 最后再一个一个报出来：`第 0 只：2 条数据` 这样，一行一个，一共 5 行。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {2, 3, 4, 5, 6};\n\n    int total_size = (int)sizeof(bowls);\n    int one_size = (int)sizeof(bowls[0]);\n    int count = total_size / one_size;\n\n    printf(\"这排元素一共占 %d 格\\n\", total_size);\n    printf(\"一个元素占 %d 格\\n\", one_size);\n    printf(\"这排元素有 %d 只\\n\", count);\n\n    for (int i = 0; i < count; i++) {\n        printf(\"第 %d 只：%d 条数据\\n\", i, bowls[i]);\n    }\n\n    return 0;\n}\n",
+      "expectedOutput": "这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n第 0 只：2 条数据\n第 1 只：3 条数据\n第 2 只：4 条数据\n第 3 只：5 条数据\n第 4 只：6 条数据",
+      "stdin": null,
+      "explanation": "这道题的尺子是**两把一起用**的：\n\n**① 量整排。** `sizeof(bowls)` 里的 `bowls` 是**一整排**（贴好编号的那种写法），量到的是这一排**总共占几格** —— 5 只元素、一个 4 格，所以是 20 格。\n\n**② 量一个。** `sizeof(bowls[0])` 量的是**一个元素**（第 0 只），得到 4 格。一排里每个一样大，量哪只都一样。\n\n**③ 除一下就是只数。** 20 ÷ 4 = 5。这两个量**必须都从同一排上取**：一个量整排、一个量单只，除出来才是「有几个」。\n\n⚠️ 这两个式子跟「拿一块名称去量」长得像，意思却完全不同 —— 量名称量到的永远是名称自己（8 格），和它指向的那排有多大**没关系**。所以尺子要量在**那一排本身**上，才量得出只数。\n\n尺子说的「格」就是**字节**：20 格、4 格这些数，正是租变量时「先量一间、再乘间数」用的同一把尺子。",
+      "templateId": "c-s2-malloc-measure-bowls",
+      "params": {
+        "v0": 2,
+        "v1": 3,
+        "v2": 4,
+        "v3": 5,
+        "v4": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "c5c2ce24ddc6b242"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-measure-bowls-048",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们在窝里摆好了一排数组元素，一共 **5 只**，每个元素里放几条数据都写在代码里了：2、4、6、6、6。\n\n我们想**用尺子把这排元素量清楚** —— 报只数那一行，不许直接把 5 写上去，要量出来。\n\n请你写个程序：\n\n① 量出**这排元素一共占几格**、**一个元素占几格**；\n② 用这两个数量出**这排元素有几个**；\n③ 按这个格式一行一行报出来：\n\n```text\n这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n```\n\n④ 最后再一个一个报出来：`第 0 只：2 条数据` 这样，一行一个，一共 5 行。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {2, 4, 6, 6, 6};\n\n    int total_size = (int)sizeof(bowls);\n    int one_size = (int)sizeof(bowls[0]);\n    int count = total_size / one_size;\n\n    printf(\"这排元素一共占 %d 格\\n\", total_size);\n    printf(\"一个元素占 %d 格\\n\", one_size);\n    printf(\"这排元素有 %d 只\\n\", count);\n\n    for (int i = 0; i < count; i++) {\n        printf(\"第 %d 只：%d 条数据\\n\", i, bowls[i]);\n    }\n\n    return 0;\n}\n",
+      "expectedOutput": "这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n第 0 只：2 条数据\n第 1 只：4 条数据\n第 2 只：6 条数据\n第 3 只：6 条数据\n第 4 只：6 条数据",
+      "stdin": null,
+      "explanation": "这道题的尺子是**两把一起用**的：\n\n**① 量整排。** `sizeof(bowls)` 里的 `bowls` 是**一整排**（贴好编号的那种写法），量到的是这一排**总共占几格** —— 5 只元素、一个 4 格，所以是 20 格。\n\n**② 量一个。** `sizeof(bowls[0])` 量的是**一个元素**（第 0 只），得到 4 格。一排里每个一样大，量哪只都一样。\n\n**③ 除一下就是只数。** 20 ÷ 4 = 5。这两个量**必须都从同一排上取**：一个量整排、一个量单只，除出来才是「有几个」。\n\n⚠️ 这两个式子跟「拿一块名称去量」长得像，意思却完全不同 —— 量名称量到的永远是名称自己（8 格），和它指向的那排有多大**没关系**。所以尺子要量在**那一排本身**上，才量得出只数。\n\n尺子说的「格」就是**字节**：20 格、4 格这些数，正是租变量时「先量一间、再乘间数」用的同一把尺子。",
+      "templateId": "c-s2-malloc-measure-bowls",
+      "params": {
+        "v0": 2,
+        "v1": 4,
+        "v2": 6,
+        "v3": 6,
+        "v4": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "185bc96bc75737fb"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-measure-bowls-097",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们在窝里摆好了一排数组元素，一共 **5 只**，每个元素里放几条数据都写在代码里了：3、3、5、7、7。\n\n我们想**用尺子把这排元素量清楚** —— 报只数那一行，不许直接把 5 写上去，要量出来。\n\n请你写个程序：\n\n① 量出**这排元素一共占几格**、**一个元素占几格**；\n② 用这两个数量出**这排元素有几个**；\n③ 按这个格式一行一行报出来：\n\n```text\n这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n```\n\n④ 最后再一个一个报出来：`第 0 只：3 条数据` 这样，一行一个，一共 5 行。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {3, 3, 5, 7, 7};\n\n    int total_size = (int)sizeof(bowls);\n    int one_size = (int)sizeof(bowls[0]);\n    int count = total_size / one_size;\n\n    printf(\"这排元素一共占 %d 格\\n\", total_size);\n    printf(\"一个元素占 %d 格\\n\", one_size);\n    printf(\"这排元素有 %d 只\\n\", count);\n\n    for (int i = 0; i < count; i++) {\n        printf(\"第 %d 只：%d 条数据\\n\", i, bowls[i]);\n    }\n\n    return 0;\n}\n",
+      "expectedOutput": "这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n第 0 只：3 条数据\n第 1 只：3 条数据\n第 2 只：5 条数据\n第 3 只：7 条数据\n第 4 只：7 条数据",
+      "stdin": null,
+      "explanation": "这道题的尺子是**两把一起用**的：\n\n**① 量整排。** `sizeof(bowls)` 里的 `bowls` 是**一整排**（贴好编号的那种写法），量到的是这一排**总共占几格** —— 5 只元素、一个 4 格，所以是 20 格。\n\n**② 量一个。** `sizeof(bowls[0])` 量的是**一个元素**（第 0 只），得到 4 格。一排里每个一样大，量哪只都一样。\n\n**③ 除一下就是只数。** 20 ÷ 4 = 5。这两个量**必须都从同一排上取**：一个量整排、一个量单只，除出来才是「有几个」。\n\n⚠️ 这两个式子跟「拿一块名称去量」长得像，意思却完全不同 —— 量名称量到的永远是名称自己（8 格），和它指向的那排有多大**没关系**。所以尺子要量在**那一排本身**上，才量得出只数。\n\n尺子说的「格」就是**字节**：20 格、4 格这些数，正是租变量时「先量一间、再乘间数」用的同一把尺子。",
+      "templateId": "c-s2-malloc-measure-bowls",
+      "params": {
+        "v0": 3,
+        "v1": 3,
+        "v2": 5,
+        "v3": 7,
+        "v4": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "65f63513565b30a4"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-measure-bowls-145",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们在窝里摆好了一排数组元素，一共 **5 只**，每个元素里放几条数据都写在代码里了：3、5、5、5、7。\n\n我们想**用尺子把这排元素量清楚** —— 报只数那一行，不许直接把 5 写上去，要量出来。\n\n请你写个程序：\n\n① 量出**这排元素一共占几格**、**一个元素占几格**；\n② 用这两个数量出**这排元素有几个**；\n③ 按这个格式一行一行报出来：\n\n```text\n这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n```\n\n④ 最后再一个一个报出来：`第 0 只：3 条数据` 这样，一行一个，一共 5 行。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {3, 5, 5, 5, 7};\n\n    int total_size = (int)sizeof(bowls);\n    int one_size = (int)sizeof(bowls[0]);\n    int count = total_size / one_size;\n\n    printf(\"这排元素一共占 %d 格\\n\", total_size);\n    printf(\"一个元素占 %d 格\\n\", one_size);\n    printf(\"这排元素有 %d 只\\n\", count);\n\n    for (int i = 0; i < count; i++) {\n        printf(\"第 %d 只：%d 条数据\\n\", i, bowls[i]);\n    }\n\n    return 0;\n}\n",
+      "expectedOutput": "这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n第 0 只：3 条数据\n第 1 只：5 条数据\n第 2 只：5 条数据\n第 3 只：5 条数据\n第 4 只：7 条数据",
+      "stdin": null,
+      "explanation": "这道题的尺子是**两把一起用**的：\n\n**① 量整排。** `sizeof(bowls)` 里的 `bowls` 是**一整排**（贴好编号的那种写法），量到的是这一排**总共占几格** —— 5 只元素、一个 4 格，所以是 20 格。\n\n**② 量一个。** `sizeof(bowls[0])` 量的是**一个元素**（第 0 只），得到 4 格。一排里每个一样大，量哪只都一样。\n\n**③ 除一下就是只数。** 20 ÷ 4 = 5。这两个量**必须都从同一排上取**：一个量整排、一个量单只，除出来才是「有几个」。\n\n⚠️ 这两个式子跟「拿一块名称去量」长得像，意思却完全不同 —— 量名称量到的永远是名称自己（8 格），和它指向的那排有多大**没关系**。所以尺子要量在**那一排本身**上，才量得出只数。\n\n尺子说的「格」就是**字节**：20 格、4 格这些数，正是租变量时「先量一间、再乘间数」用的同一把尺子。",
+      "templateId": "c-s2-malloc-measure-bowls",
+      "params": {
+        "v0": 3,
+        "v1": 5,
+        "v2": 5,
+        "v3": 5,
+        "v4": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "54abd6878aa7727b"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-measure-bowls-194",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们在窝里摆好了一排数组元素，一共 **5 只**，每个元素里放几条数据都写在代码里了：4、4、4、6、8。\n\n我们想**用尺子把这排元素量清楚** —— 报只数那一行，不许直接把 5 写上去，要量出来。\n\n请你写个程序：\n\n① 量出**这排元素一共占几格**、**一个元素占几格**；\n② 用这两个数量出**这排元素有几个**；\n③ 按这个格式一行一行报出来：\n\n```text\n这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n```\n\n④ 最后再一个一个报出来：`第 0 只：4 条数据` 这样，一行一个，一共 5 行。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {4, 4, 4, 6, 8};\n\n    int total_size = (int)sizeof(bowls);\n    int one_size = (int)sizeof(bowls[0]);\n    int count = total_size / one_size;\n\n    printf(\"这排元素一共占 %d 格\\n\", total_size);\n    printf(\"一个元素占 %d 格\\n\", one_size);\n    printf(\"这排元素有 %d 只\\n\", count);\n\n    for (int i = 0; i < count; i++) {\n        printf(\"第 %d 只：%d 条数据\\n\", i, bowls[i]);\n    }\n\n    return 0;\n}\n",
+      "expectedOutput": "这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n第 0 只：4 条数据\n第 1 只：4 条数据\n第 2 只：4 条数据\n第 3 只：6 条数据\n第 4 只：8 条数据",
+      "stdin": null,
+      "explanation": "这道题的尺子是**两把一起用**的：\n\n**① 量整排。** `sizeof(bowls)` 里的 `bowls` 是**一整排**（贴好编号的那种写法），量到的是这一排**总共占几格** —— 5 只元素、一个 4 格，所以是 20 格。\n\n**② 量一个。** `sizeof(bowls[0])` 量的是**一个元素**（第 0 只），得到 4 格。一排里每个一样大，量哪只都一样。\n\n**③ 除一下就是只数。** 20 ÷ 4 = 5。这两个量**必须都从同一排上取**：一个量整排、一个量单只，除出来才是「有几个」。\n\n⚠️ 这两个式子跟「拿一块名称去量」长得像，意思却完全不同 —— 量名称量到的永远是名称自己（8 格），和它指向的那排有多大**没关系**。所以尺子要量在**那一排本身**上，才量得出只数。\n\n尺子说的「格」就是**字节**：20 格、4 格这些数，正是租变量时「先量一间、再乘间数」用的同一把尺子。",
+      "templateId": "c-s2-malloc-measure-bowls",
+      "params": {
+        "v0": 4,
+        "v1": 4,
+        "v2": 4,
+        "v3": 6,
+        "v4": 8
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "c3ae894082e07d42"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-measure-bowls-242",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们在窝里摆好了一排数组元素，一共 **5 只**，每个元素里放几条数据都写在代码里了：4、5、6、7、8。\n\n我们想**用尺子把这排元素量清楚** —— 报只数那一行，不许直接把 5 写上去，要量出来。\n\n请你写个程序：\n\n① 量出**这排元素一共占几格**、**一个元素占几格**；\n② 用这两个数量出**这排元素有几个**；\n③ 按这个格式一行一行报出来：\n\n```text\n这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n```\n\n④ 最后再一个一个报出来：`第 0 只：4 条数据` 这样，一行一个，一共 5 行。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {4, 5, 6, 7, 8};\n\n    int total_size = (int)sizeof(bowls);\n    int one_size = (int)sizeof(bowls[0]);\n    int count = total_size / one_size;\n\n    printf(\"这排元素一共占 %d 格\\n\", total_size);\n    printf(\"一个元素占 %d 格\\n\", one_size);\n    printf(\"这排元素有 %d 只\\n\", count);\n\n    for (int i = 0; i < count; i++) {\n        printf(\"第 %d 只：%d 条数据\\n\", i, bowls[i]);\n    }\n\n    return 0;\n}\n",
+      "expectedOutput": "这排元素一共占 20 格\n一个元素占 4 格\n这排元素有 5 只\n第 0 只：4 条数据\n第 1 只：5 条数据\n第 2 只：6 条数据\n第 3 只：7 条数据\n第 4 只：8 条数据",
+      "stdin": null,
+      "explanation": "这道题的尺子是**两把一起用**的：\n\n**① 量整排。** `sizeof(bowls)` 里的 `bowls` 是**一整排**（贴好编号的那种写法），量到的是这一排**总共占几格** —— 5 只元素、一个 4 格，所以是 20 格。\n\n**② 量一个。** `sizeof(bowls[0])` 量的是**一个元素**（第 0 只），得到 4 格。一排里每个一样大，量哪只都一样。\n\n**③ 除一下就是只数。** 20 ÷ 4 = 5。这两个量**必须都从同一排上取**：一个量整排、一个量单只，除出来才是「有几个」。\n\n⚠️ 这两个式子跟「拿一块名称去量」长得像，意思却完全不同 —— 量名称量到的永远是名称自己（8 格），和它指向的那排有多大**没关系**。所以尺子要量在**那一排本身**上，才量得出只数。\n\n尺子说的「格」就是**字节**：20 格、4 格这些数，正是租变量时「先量一间、再乘间数」用的同一把尺子。",
+      "templateId": "c-s2-malloc-measure-bowls",
+      "params": {
+        "v0": 4,
+        "v1": 5,
+        "v2": 6,
+        "v3": 7,
+        "v4": 8
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "1b1a5cd184150df6"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-missing-include-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们照着课文的样子租了几间变量，想看看每间里放的是多少。可编译器一瞧见就不干了，把整段代码退了回来……\n\n你帮我们看看它为什么不高兴，把它改好。改好之后，程序应该从第 0 间开始一间一间报出来：`第 0 间：` 后面跟着那一间里放的数，一行一间。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int n = 3;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        printf(\"变量没租到\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 2;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n = 3;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        printf(\"变量没租到\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 2;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：2\n第 1 间：4\n第 2 间：6",
+      "stdin": null,
+      "explanation": "编译器抱怨的原话是 `implicit declaration of function 'malloc'`，翻过来就是「`malloc` 这个名字，我们没听谁提起过」。\n\n问题不在租变量那一行，而在**最上面请谁出场的那两行**：我们只把 `stdio.h` 请来了，`stdlib.h` 这位档案管理员压根没到场。可 `malloc` 和 `free` 正是住在它家里的 —— 门都没开，编译器当然不认识这两个名字。\n\n在最上面补一行，把 `stdlib.h` 请出来就好啦。\n\n顺带记住这一条：**报错里点名的那个名字，先去文件开头找一找。** 这回编译器其实把答案写在脸上了 —— 它下面那句 `note` 里，直接把该请谁的名字念了出来。",
+      "templateId": "c-s2-malloc-missing-include",
+      "params": {
+        "n": 3,
+        "step": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "382152efaf568b0a"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-missing-include-023",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们照着课文的样子租了几间变量，想看看每间里放的是多少。可编译器一瞧见就不干了，把整段代码退了回来……\n\n你帮我们看看它为什么不高兴，把它改好。改好之后，程序应该从第 0 间开始一间一间报出来：`第 0 间：` 后面跟着那一间里放的数，一行一间。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int n = 5;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        printf(\"变量没租到\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 9;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n = 5;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        printf(\"变量没租到\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 9;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：9\n第 1 间：18\n第 2 间：27\n第 3 间：36\n第 4 间：45",
+      "stdin": null,
+      "explanation": "编译器抱怨的原话是 `implicit declaration of function 'malloc'`，翻过来就是「`malloc` 这个名字，我们没听谁提起过」。\n\n问题不在租变量那一行，而在**最上面请谁出场的那两行**：我们只把 `stdio.h` 请来了，`stdlib.h` 这位档案管理员压根没到场。可 `malloc` 和 `free` 正是住在它家里的 —— 门都没开，编译器当然不认识这两个名字。\n\n在最上面补一行，把 `stdlib.h` 请出来就好啦。\n\n顺带记住这一条：**报错里点名的那个名字，先去文件开头找一找。** 这回编译器其实把答案写在脸上了 —— 它下面那句 `note` 里，直接把该请谁的名字念了出来。",
+      "templateId": "c-s2-malloc-missing-include",
+      "params": {
+        "n": 5,
+        "step": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "de3482b4f7339740"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-read-fill-report-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要开一场对象大会，来几个对象就发几条数据。这次一共要来 3 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 3 行数**（一行一个，是每个对象要几条数据）。给这些数**现要现租**一块地方，一间一间赋值；然后从第 0 间开始一间一间报出来；最后再单独报一行总数（所有数加起来）。\n\n用完了记得把租来的地方还回去。\n\n比如程序的输入是\n\n3\n3\n3\n7\n\n程序就要返回\n\n第 0 间：3 条数据\n第 1 间：3 条数据\n第 2 间：7 条数据\n一共 13 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d 条数据\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条数据\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：8 条数据\n第 1 间：3 条数据\n第 2 间：2 条数据\n一共 13 条数据",
+      "stdin": "3\n8\n3\n2\n",
+      "explanation": "这道题正好把这一课的四件事串了一遍：\n\n**① 先量一间，再乘间数。** 变量是论**字节**租的，所以不能只说「我们要 3 间」—— 得让编译器先拿尺子量出一间多大（`sizeof(int)`），再乘上间数。这两个顺序反了，意思就完全不同了。\n\n**② 租完先看一眼是不是空的。** 地方不是随时都有，`malloc` 返回的名称有可能是 `NULL`。空名称上什么都没有，直接伸手去摸就会摔 —— 所以摸之前先看一眼。\n\n**③ 名称拿到手，一间一间按编号摸。** `rooms[0]` 是第 0 间、`rooms[1]` 是第 1 间，和贴编号的数组元素一模一样；所以「读进来」和「赋值」这两步可以在同一个转圈里做完。\n\n**④ 用完了要还。** `free(rooms)` 把整排变量还给管理员，再把名称擦成 `NULL`，免得下次误以为它还能用。\n\n⚠️ 还回去之后那一排就**不是你的**了，别再去摸 —— 这一点下一课串链子的时候会天天用到。",
+      "templateId": "c-s2-malloc-read-fill-report",
+      "params": {
+        "n": 3,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "5f939f3a5aca557a"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-read-fill-report-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要开一场对象大会，来几个对象就发几条商品。这次一共要来 3 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 3 行数**（一行一个，是每个对象要几条商品）。给这些数**现要现租**一块地方，一间一间赋值；然后从第 0 间开始一间一间报出来；最后再单独报一行总数（所有数加起来）。\n\n用完了记得把租来的地方还回去。\n\n比如程序的输入是\n\n3\n4\n6\n6\n\n程序就要返回\n\n第 0 间：4 条商品\n第 1 间：6 条商品\n第 2 间：6 条商品\n一共 16 条商品\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d 条商品\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条商品\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：8 条商品\n第 1 间：6 条商品\n第 2 间：9 条商品\n一共 23 条商品",
+      "stdin": "3\n8\n6\n9\n",
+      "explanation": "这道题正好把这一课的四件事串了一遍：\n\n**① 先量一间，再乘间数。** 变量是论**字节**租的，所以不能只说「我们要 3 间」—— 得让编译器先拿尺子量出一间多大（`sizeof(int)`），再乘上间数。这两个顺序反了，意思就完全不同了。\n\n**② 租完先看一眼是不是空的。** 地方不是随时都有，`malloc` 返回的名称有可能是 `NULL`。空名称上什么都没有，直接伸手去摸就会摔 —— 所以摸之前先看一眼。\n\n**③ 名称拿到手，一间一间按编号摸。** `rooms[0]` 是第 0 间、`rooms[1]` 是第 1 间，和贴编号的数组元素一模一样；所以「读进来」和「赋值」这两步可以在同一个转圈里做完。\n\n**④ 用完了要还。** `free(rooms)` 把整排变量还给管理员，再把名称擦成 `NULL`，免得下次误以为它还能用。\n\n⚠️ 还回去之后那一排就**不是你的**了，别再去摸 —— 这一点下一课串链子的时候会天天用到。",
+      "templateId": "c-s2-malloc-read-fill-report",
+      "params": {
+        "n": 3,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "fa00a26447457f0f"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-read-fill-report-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要开一场对象大会，来几个对象就发几条数据。这次一共要来 4 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 4 行数**（一行一个，是每个对象要几条数据）。给这些数**现要现租**一块地方，一间一间赋值；然后从第 0 间开始一间一间报出来；最后再单独报一行总数（所有数加起来）。\n\n用完了记得把租来的地方还回去。\n\n比如程序的输入是\n\n4\n2\n3\n5\n4\n\n程序就要返回\n\n第 0 间：2 条数据\n第 1 间：3 条数据\n第 2 间：5 条数据\n第 3 间：4 条数据\n一共 14 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d 条数据\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条数据\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：1 条数据\n第 1 间：2 条数据\n第 2 间：2 条数据\n第 3 间：1 条数据\n一共 6 条数据",
+      "stdin": "4\n1\n2\n2\n1\n",
+      "explanation": "这道题正好把这一课的四件事串了一遍：\n\n**① 先量一间，再乘间数。** 变量是论**字节**租的，所以不能只说「我们要 4 间」—— 得让编译器先拿尺子量出一间多大（`sizeof(int)`），再乘上间数。这两个顺序反了，意思就完全不同了。\n\n**② 租完先看一眼是不是空的。** 地方不是随时都有，`malloc` 返回的名称有可能是 `NULL`。空名称上什么都没有，直接伸手去摸就会摔 —— 所以摸之前先看一眼。\n\n**③ 名称拿到手，一间一间按编号摸。** `rooms[0]` 是第 0 间、`rooms[1]` 是第 1 间，和贴编号的数组元素一模一样；所以「读进来」和「赋值」这两步可以在同一个转圈里做完。\n\n**④ 用完了要还。** `free(rooms)` 把整排变量还给管理员，再把名称擦成 `NULL`，免得下次误以为它还能用。\n\n⚠️ 还回去之后那一排就**不是你的**了，别再去摸 —— 这一点下一课串链子的时候会天天用到。",
+      "templateId": "c-s2-malloc-read-fill-report",
+      "params": {
+        "n": 4,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "995ece3cd76a5dc2"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-read-fill-report-004",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要开一场对象大会，来几个对象就发几条商品A。这次一共要来 4 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 4 行数**（一行一个，是每个对象要几条商品A）。给这些数**现要现租**一块地方，一间一间赋值；然后从第 0 间开始一间一间报出来；最后再单独报一行总数（所有数加起来）。\n\n用完了记得把租来的地方还回去。\n\n比如程序的输入是\n\n4\n6\n1\n3\n2\n\n程序就要返回\n\n第 0 间：6 条商品A\n第 1 间：1 条商品A\n第 2 间：3 条商品A\n第 3 间：2 条商品A\n一共 12 条商品A\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d 条商品A\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条商品A\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：5 条商品A\n第 1 间：6 条商品A\n第 2 间：2 条商品A\n第 3 间：8 条商品A\n一共 21 条商品A",
+      "stdin": "4\n5\n6\n2\n8\n",
+      "explanation": "这道题正好把这一课的四件事串了一遍：\n\n**① 先量一间，再乘间数。** 变量是论**字节**租的，所以不能只说「我们要 4 间」—— 得让编译器先拿尺子量出一间多大（`sizeof(int)`），再乘上间数。这两个顺序反了，意思就完全不同了。\n\n**② 租完先看一眼是不是空的。** 地方不是随时都有，`malloc` 返回的名称有可能是 `NULL`。空名称上什么都没有，直接伸手去摸就会摔 —— 所以摸之前先看一眼。\n\n**③ 名称拿到手，一间一间按编号摸。** `rooms[0]` 是第 0 间、`rooms[1]` 是第 1 间，和贴编号的数组元素一模一样；所以「读进来」和「赋值」这两步可以在同一个转圈里做完。\n\n**④ 用完了要还。** `free(rooms)` 把整排变量还给管理员，再把名称擦成 `NULL`，免得下次误以为它还能用。\n\n⚠️ 还回去之后那一排就**不是你的**了，别再去摸 —— 这一点下一课串链子的时候会天天用到。",
+      "templateId": "c-s2-malloc-read-fill-report",
+      "params": {
+        "n": 4,
+        "unit": "商品A"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "c0b538ed28f4f1bf"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-read-fill-report-005",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要开一场对象大会，来几个对象就发几条商品。这次一共要来 4 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 4 行数**（一行一个，是每个对象要几条商品）。给这些数**现要现租**一块地方，一间一间赋值；然后从第 0 间开始一间一间报出来；最后再单独报一行总数（所有数加起来）。\n\n用完了记得把租来的地方还回去。\n\n比如程序的输入是\n\n4\n6\n8\n4\n6\n\n程序就要返回\n\n第 0 间：6 条商品\n第 1 间：8 条商品\n第 2 间：4 条商品\n第 3 间：6 条商品\n一共 24 条商品\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d 条商品\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条商品\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：3 条商品\n第 1 间：3 条商品\n第 2 间：2 条商品\n第 3 间：2 条商品\n一共 10 条商品",
+      "stdin": "4\n3\n3\n2\n2\n",
+      "explanation": "这道题正好把这一课的四件事串了一遍：\n\n**① 先量一间，再乘间数。** 变量是论**字节**租的，所以不能只说「我们要 4 间」—— 得让编译器先拿尺子量出一间多大（`sizeof(int)`），再乘上间数。这两个顺序反了，意思就完全不同了。\n\n**② 租完先看一眼是不是空的。** 地方不是随时都有，`malloc` 返回的名称有可能是 `NULL`。空名称上什么都没有，直接伸手去摸就会摔 —— 所以摸之前先看一眼。\n\n**③ 名称拿到手，一间一间按编号摸。** `rooms[0]` 是第 0 间、`rooms[1]` 是第 1 间，和贴编号的数组元素一模一样；所以「读进来」和「赋值」这两步可以在同一个转圈里做完。\n\n**④ 用完了要还。** `free(rooms)` 把整排变量还给管理员，再把名称擦成 `NULL`，免得下次误以为它还能用。\n\n⚠️ 还回去之后那一排就**不是你的**了，别再去摸 —— 这一点下一课串链子的时候会天天用到。",
+      "templateId": "c-s2-malloc-read-fill-report",
+      "params": {
+        "n": 4,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "29fca9047a4e7489"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-read-fill-report-006",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要开一场对象大会，来几个对象就发几条数据。这次一共要来 5 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 5 行数**（一行一个，是每个对象要几条数据）。给这些数**现要现租**一块地方，一间一间赋值；然后从第 0 间开始一间一间报出来；最后再单独报一行总数（所有数加起来）。\n\n用完了记得把租来的地方还回去。\n\n比如程序的输入是\n\n5\n7\n4\n9\n4\n3\n\n程序就要返回\n\n第 0 间：7 条数据\n第 1 间：4 条数据\n第 2 间：9 条数据\n第 3 间：4 条数据\n第 4 间：3 条数据\n一共 27 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d 条数据\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条数据\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：9 条数据\n第 1 间：7 条数据\n第 2 间：3 条数据\n第 3 间：9 条数据\n第 4 间：4 条数据\n一共 32 条数据",
+      "stdin": "5\n9\n7\n3\n9\n4\n",
+      "explanation": "这道题正好把这一课的四件事串了一遍：\n\n**① 先量一间，再乘间数。** 变量是论**字节**租的，所以不能只说「我们要 5 间」—— 得让编译器先拿尺子量出一间多大（`sizeof(int)`），再乘上间数。这两个顺序反了，意思就完全不同了。\n\n**② 租完先看一眼是不是空的。** 地方不是随时都有，`malloc` 返回的名称有可能是 `NULL`。空名称上什么都没有，直接伸手去摸就会摔 —— 所以摸之前先看一眼。\n\n**③ 名称拿到手，一间一间按编号摸。** `rooms[0]` 是第 0 间、`rooms[1]` 是第 1 间，和贴编号的数组元素一模一样；所以「读进来」和「赋值」这两步可以在同一个转圈里做完。\n\n**④ 用完了要还。** `free(rooms)` 把整排变量还给管理员，再把名称擦成 `NULL`，免得下次误以为它还能用。\n\n⚠️ 还回去之后那一排就**不是你的**了，别再去摸 —— 这一点下一课串链子的时候会天天用到。",
+      "templateId": "c-s2-malloc-read-fill-report",
+      "params": {
+        "n": 5,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "aaa02cc192baad14"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-read-fill-report-008",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们要开一场对象大会，来几个对象就发几条商品。这次一共要来 5 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 5 行数**（一行一个，是每个对象要几条商品）。给这些数**现要现租**一块地方，一间一间赋值；然后从第 0 间开始一间一间报出来；最后再单独报一行总数（所有数加起来）。\n\n用完了记得把租来的地方还回去。\n\n比如程序的输入是\n\n5\n8\n7\n5\n2\n6\n\n程序就要返回\n\n第 0 间：8 条商品\n第 1 间：7 条商品\n第 2 间：5 条商品\n第 3 间：2 条商品\n第 4 间：6 条商品\n一共 28 条商品\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d 条商品\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条商品\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：2 条商品\n第 1 间：6 条商品\n第 2 间：4 条商品\n第 3 间：1 条商品\n第 4 间：9 条商品\n一共 22 条商品",
+      "stdin": "5\n2\n6\n4\n1\n9\n",
+      "explanation": "这道题正好把这一课的四件事串了一遍：\n\n**① 先量一间，再乘间数。** 变量是论**字节**租的，所以不能只说「我们要 5 间」—— 得让编译器先拿尺子量出一间多大（`sizeof(int)`），再乘上间数。这两个顺序反了，意思就完全不同了。\n\n**② 租完先看一眼是不是空的。** 地方不是随时都有，`malloc` 返回的名称有可能是 `NULL`。空名称上什么都没有，直接伸手去摸就会摔 —— 所以摸之前先看一眼。\n\n**③ 名称拿到手，一间一间按编号摸。** `rooms[0]` 是第 0 间、`rooms[1]` 是第 1 间，和贴编号的数组元素一模一样；所以「读进来」和「赋值」这两步可以在同一个转圈里做完。\n\n**④ 用完了要还。** `free(rooms)` 把整排变量还给管理员，再把名称擦成 `NULL`，免得下次误以为它还能用。\n\n⚠️ 还回去之后那一排就**不是你的**了，别再去摸 —— 这一点下一课串链子的时候会天天用到。",
+      "templateId": "c-s2-malloc-read-fill-report",
+      "params": {
+        "n": 5,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "cf4671411bd9e363"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-report-reversed-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**倒着发**数据：来几个对象就发几条，这回从最后一个倒着发回去。这次一共要来 3 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 3 行数**（一行一个，是每个对象要几条数据）。给它们**现要现租**一块地方，一间一间装好；然后**从最后一间往第 0 间倒着报**，最后再单独报一行总数。\n\n（先读完再报，就必须先把它们全都装起来 —— 这正是租变量的用处。）\n\n比如程序的输入是\n\n3\n5\n7\n5\n\n程序就要返回\n\n第 2 间：5 条数据\n第 1 间：7 条数据\n第 0 间：5 条数据\n一共 17 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = n - 1; i >= 0; i--) {\n        printf(\"第 %d 间：%d 条数据\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条数据\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 2 间：8 条数据\n第 1 间：1 条数据\n第 0 间：1 条数据\n一共 10 条数据",
+      "stdin": "3\n1\n1\n8\n",
+      "explanation": "这道题和课文里的例子只差一个地方：报的时候**转圈的起点和方向换了** —— 课文是从 0 往上数，这里是从 `n - 1` 起、每次往下退一格（`i--`），一直退到 0 才停。\n\n为什么要先读完整圈、再报？因为要报的时候，最后一个数得**还在手里**。要是一边读一边报，报出来的顺序就只能跟读进来的顺序一样；想**倒着**报，就非得**先把它们全都装起来**不可。这就是租变量存在的理由。\n\n两个容易踩的地方：\n\n- `int i = n - 1` 是**最后一间的编号**（编号从 0 起，所以最后一间是 `n - 1`，不是 `n`）。写成 `n` 就摸到变量隔壁去了。\n- 往下退的圈要写 `i >= 0`，写成 `i > 0` 会**少报第 0 间**——头一间恰恰是最容易漏的那个。\n\n用完还是老规矩：`free(rooms)` 还回去，再把名称擦成 `NULL`。",
+      "templateId": "c-s2-malloc-report-reversed",
+      "params": {
+        "n": 3,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.334Z",
+        "hash": "fca76a05deb316e4"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-report-reversed-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**倒着发**商品B：来几个对象就发几条，这回从最后一个倒着发回去。这次一共要来 3 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 3 行数**（一行一个，是每个对象要几条商品B）。给它们**现要现租**一块地方，一间一间装好；然后**从最后一间往第 0 间倒着报**，最后再单独报一行总数。\n\n（先读完再报，就必须先把它们全都装起来 —— 这正是租变量的用处。）\n\n比如程序的输入是\n\n3\n5\n4\n7\n\n程序就要返回\n\n第 2 间：7 条商品B\n第 1 间：4 条商品B\n第 0 间：5 条商品B\n一共 16 条商品B\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = n - 1; i >= 0; i--) {\n        printf(\"第 %d 间：%d 条商品B\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条商品B\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 2 间：1 条商品B\n第 1 间：9 条商品B\n第 0 间：9 条商品B\n一共 19 条商品B",
+      "stdin": "3\n9\n9\n1\n",
+      "explanation": "这道题和课文里的例子只差一个地方：报的时候**转圈的起点和方向换了** —— 课文是从 0 往上数，这里是从 `n - 1` 起、每次往下退一格（`i--`），一直退到 0 才停。\n\n为什么要先读完整圈、再报？因为要报的时候，最后一个数得**还在手里**。要是一边读一边报，报出来的顺序就只能跟读进来的顺序一样；想**倒着**报，就非得**先把它们全都装起来**不可。这就是租变量存在的理由。\n\n两个容易踩的地方：\n\n- `int i = n - 1` 是**最后一间的编号**（编号从 0 起，所以最后一间是 `n - 1`，不是 `n`）。写成 `n` 就摸到变量隔壁去了。\n- 往下退的圈要写 `i >= 0`，写成 `i > 0` 会**少报第 0 间**——头一间恰恰是最容易漏的那个。\n\n用完还是老规矩：`free(rooms)` 还回去，再把名称擦成 `NULL`。",
+      "templateId": "c-s2-malloc-report-reversed",
+      "params": {
+        "n": 3,
+        "unit": "商品B"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.335Z",
+        "hash": "4cd7824a8788b5ac"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-report-reversed-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**倒着发**数据：来几个对象就发几条，这回从最后一个倒着发回去。这次一共要来 4 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 4 行数**（一行一个，是每个对象要几条数据）。给它们**现要现租**一块地方，一间一间装好；然后**从最后一间往第 0 间倒着报**，最后再单独报一行总数。\n\n（先读完再报，就必须先把它们全都装起来 —— 这正是租变量的用处。）\n\n比如程序的输入是\n\n4\n8\n4\n8\n4\n\n程序就要返回\n\n第 3 间：4 条数据\n第 2 间：8 条数据\n第 1 间：4 条数据\n第 0 间：8 条数据\n一共 24 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = n - 1; i >= 0; i--) {\n        printf(\"第 %d 间：%d 条数据\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条数据\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 3 间：6 条数据\n第 2 间：1 条数据\n第 1 间：1 条数据\n第 0 间：7 条数据\n一共 15 条数据",
+      "stdin": "4\n7\n1\n1\n6\n",
+      "explanation": "这道题和课文里的例子只差一个地方：报的时候**转圈的起点和方向换了** —— 课文是从 0 往上数，这里是从 `n - 1` 起、每次往下退一格（`i--`），一直退到 0 才停。\n\n为什么要先读完整圈、再报？因为要报的时候，最后一个数得**还在手里**。要是一边读一边报，报出来的顺序就只能跟读进来的顺序一样；想**倒着**报，就非得**先把它们全都装起来**不可。这就是租变量存在的理由。\n\n两个容易踩的地方：\n\n- `int i = n - 1` 是**最后一间的编号**（编号从 0 起，所以最后一间是 `n - 1`，不是 `n`）。写成 `n` 就摸到变量隔壁去了。\n- 往下退的圈要写 `i >= 0`，写成 `i > 0` 会**少报第 0 间**——头一间恰恰是最容易漏的那个。\n\n用完还是老规矩：`free(rooms)` 还回去，再把名称擦成 `NULL`。",
+      "templateId": "c-s2-malloc-report-reversed",
+      "params": {
+        "n": 4,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.335Z",
+        "hash": "b0d30f1c9ddbec66"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-report-reversed-004",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**倒着发**毛线球：来几个对象就发几条，这回从最后一个倒着发回去。这次一共要来 4 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 4 行数**（一行一个，是每个对象要几条毛线球）。给它们**现要现租**一块地方，一间一间装好；然后**从最后一间往第 0 间倒着报**，最后再单独报一行总数。\n\n（先读完再报，就必须先把它们全都装起来 —— 这正是租变量的用处。）\n\n比如程序的输入是\n\n4\n7\n3\n8\n2\n\n程序就要返回\n\n第 3 间：2 条毛线球\n第 2 间：8 条毛线球\n第 1 间：3 条毛线球\n第 0 间：7 条毛线球\n一共 20 条毛线球\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = n - 1; i >= 0; i--) {\n        printf(\"第 %d 间：%d 条毛线球\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条毛线球\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 3 间：5 条毛线球\n第 2 间：3 条毛线球\n第 1 间：3 条毛线球\n第 0 间：4 条毛线球\n一共 15 条毛线球",
+      "stdin": "4\n4\n3\n3\n5\n",
+      "explanation": "这道题和课文里的例子只差一个地方：报的时候**转圈的起点和方向换了** —— 课文是从 0 往上数，这里是从 `n - 1` 起、每次往下退一格（`i--`），一直退到 0 才停。\n\n为什么要先读完整圈、再报？因为要报的时候，最后一个数得**还在手里**。要是一边读一边报，报出来的顺序就只能跟读进来的顺序一样；想**倒着**报，就非得**先把它们全都装起来**不可。这就是租变量存在的理由。\n\n两个容易踩的地方：\n\n- `int i = n - 1` 是**最后一间的编号**（编号从 0 起，所以最后一间是 `n - 1`，不是 `n`）。写成 `n` 就摸到变量隔壁去了。\n- 往下退的圈要写 `i >= 0`，写成 `i > 0` 会**少报第 0 间**——头一间恰恰是最容易漏的那个。\n\n用完还是老规矩：`free(rooms)` 还回去，再把名称擦成 `NULL`。",
+      "templateId": "c-s2-malloc-report-reversed",
+      "params": {
+        "n": 4,
+        "unit": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.335Z",
+        "hash": "c457eca1274e35b8"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-report-reversed-005",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**倒着发**商品B：来几个对象就发几条，这回从最后一个倒着发回去。这次一共要来 4 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 4 行数**（一行一个，是每个对象要几条商品B）。给它们**现要现租**一块地方，一间一间装好；然后**从最后一间往第 0 间倒着报**，最后再单独报一行总数。\n\n（先读完再报，就必须先把它们全都装起来 —— 这正是租变量的用处。）\n\n比如程序的输入是\n\n4\n7\n9\n9\n5\n\n程序就要返回\n\n第 3 间：5 条商品B\n第 2 间：9 条商品B\n第 1 间：9 条商品B\n第 0 间：7 条商品B\n一共 30 条商品B\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = n - 1; i >= 0; i--) {\n        printf(\"第 %d 间：%d 条商品B\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条商品B\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 3 间：8 条商品B\n第 2 间：7 条商品B\n第 1 间：8 条商品B\n第 0 间：3 条商品B\n一共 26 条商品B",
+      "stdin": "4\n3\n8\n7\n8\n",
+      "explanation": "这道题和课文里的例子只差一个地方：报的时候**转圈的起点和方向换了** —— 课文是从 0 往上数，这里是从 `n - 1` 起、每次往下退一格（`i--`），一直退到 0 才停。\n\n为什么要先读完整圈、再报？因为要报的时候，最后一个数得**还在手里**。要是一边读一边报，报出来的顺序就只能跟读进来的顺序一样；想**倒着**报，就非得**先把它们全都装起来**不可。这就是租变量存在的理由。\n\n两个容易踩的地方：\n\n- `int i = n - 1` 是**最后一间的编号**（编号从 0 起，所以最后一间是 `n - 1`，不是 `n`）。写成 `n` 就摸到变量隔壁去了。\n- 往下退的圈要写 `i >= 0`，写成 `i > 0` 会**少报第 0 间**——头一间恰恰是最容易漏的那个。\n\n用完还是老规矩：`free(rooms)` 还回去，再把名称擦成 `NULL`。",
+      "templateId": "c-s2-malloc-report-reversed",
+      "params": {
+        "n": 4,
+        "unit": "商品B"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.335Z",
+        "hash": "286aa9a8fbee7c83"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-report-reversed-006",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**倒着发**数据：来几个对象就发几条，这回从最后一个倒着发回去。这次一共要来 5 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 5 行数**（一行一个，是每个对象要几条数据）。给它们**现要现租**一块地方，一间一间装好；然后**从最后一间往第 0 间倒着报**，最后再单独报一行总数。\n\n（先读完再报，就必须先把它们全都装起来 —— 这正是租变量的用处。）\n\n比如程序的输入是\n\n5\n9\n4\n4\n8\n7\n\n程序就要返回\n\n第 4 间：7 条数据\n第 3 间：8 条数据\n第 2 间：4 条数据\n第 1 间：4 条数据\n第 0 间：9 条数据\n一共 32 条数据\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = n - 1; i >= 0; i--) {\n        printf(\"第 %d 间：%d 条数据\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条数据\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 4 间：6 条数据\n第 3 间：1 条数据\n第 2 间：8 条数据\n第 1 间：2 条数据\n第 0 间：8 条数据\n一共 25 条数据",
+      "stdin": "5\n8\n2\n8\n1\n6\n",
+      "explanation": "这道题和课文里的例子只差一个地方：报的时候**转圈的起点和方向换了** —— 课文是从 0 往上数，这里是从 `n - 1` 起、每次往下退一格（`i--`），一直退到 0 才停。\n\n为什么要先读完整圈、再报？因为要报的时候，最后一个数得**还在手里**。要是一边读一边报，报出来的顺序就只能跟读进来的顺序一样；想**倒着**报，就非得**先把它们全都装起来**不可。这就是租变量存在的理由。\n\n两个容易踩的地方：\n\n- `int i = n - 1` 是**最后一间的编号**（编号从 0 起，所以最后一间是 `n - 1`，不是 `n`）。写成 `n` 就摸到变量隔壁去了。\n- 往下退的圈要写 `i >= 0`，写成 `i > 0` 会**少报第 0 间**——头一间恰恰是最容易漏的那个。\n\n用完还是老规矩：`free(rooms)` 还回去，再把名称擦成 `NULL`。",
+      "templateId": "c-s2-malloc-report-reversed",
+      "params": {
+        "n": 5,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.335Z",
+        "hash": "facee3c7ad7ce240"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-report-reversed-008",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**倒着发**商品B：来几个对象就发几条，这回从最后一个倒着发回去。这次一共要来 5 只。\n\n请你写个程序：**先读进来一个数**（就是来几个对象），**再读进来 5 行数**（一行一个，是每个对象要几条商品B）。给它们**现要现租**一块地方，一间一间装好；然后**从最后一间往第 0 间倒着报**，最后再单独报一行总数。\n\n（先读完再报，就必须先把它们全都装起来 —— 这正是租变量的用处。）\n\n比如程序的输入是\n\n5\n1\n7\n8\n1\n7\n\n程序就要返回\n\n第 4 间：7 条商品B\n第 3 间：1 条商品B\n第 2 间：8 条商品B\n第 1 间：7 条商品B\n第 0 间：1 条商品B\n一共 24 条商品B\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int *rooms = (int *)malloc(sizeof(int) * n);\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &rooms[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = n - 1; i >= 0; i--) {\n        printf(\"第 %d 间：%d 条商品B\\n\", i, rooms[i]);\n        total += rooms[i];\n    }\n    printf(\"一共 %d 条商品B\\n\", total);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 4 间：4 条商品B\n第 3 间：4 条商品B\n第 2 间：9 条商品B\n第 1 间：5 条商品B\n第 0 间：9 条商品B\n一共 31 条商品B",
+      "stdin": "5\n9\n5\n9\n4\n4\n",
+      "explanation": "这道题和课文里的例子只差一个地方：报的时候**转圈的起点和方向换了** —— 课文是从 0 往上数，这里是从 `n - 1` 起、每次往下退一格（`i--`），一直退到 0 才停。\n\n为什么要先读完整圈、再报？因为要报的时候，最后一个数得**还在手里**。要是一边读一边报，报出来的顺序就只能跟读进来的顺序一样；想**倒着**报，就非得**先把它们全都装起来**不可。这就是租变量存在的理由。\n\n两个容易踩的地方：\n\n- `int i = n - 1` 是**最后一间的编号**（编号从 0 起，所以最后一间是 `n - 1`，不是 `n`）。写成 `n` 就摸到变量隔壁去了。\n- 往下退的圈要写 `i >= 0`，写成 `i > 0` 会**少报第 0 间**——头一间恰恰是最容易漏的那个。\n\n用完还是老规矩：`free(rooms)` 还回去，再把名称擦成 `NULL`。",
+      "templateId": "c-s2-malloc-report-reversed",
+      "params": {
+        "n": 5,
+        "unit": "商品B"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.335Z",
+        "hash": "c37725275cbd0ee2"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-sizeof-pointer-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们把「一间一间报出来」这一步打包成了一个方法，只把那排变量的名称喂了进去。\n\n可它报着报着就停了 —— 我们明明租了 3 间，它只报出来一个零头，剩下的一间都没提。它一个错都不报，安安静静就跑完了。\n\n你帮我们看看这一个方法哪里不对，把它改好。改好之后，程序应该从第 0 间开始一间一间报出来：`第 0 间：` 后面跟着那一间里放的数，一行一间，一共 3 行，一间都不许少。",
+      "brokenCode": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid show(int *rooms) {\n    int cnt = (int)(sizeof(rooms) / sizeof(rooms[0]));\n    for (int i = 0; i < cnt; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n}\n\nint main(void) {\n    int n = 3;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 2;\n    }\n\n    show(rooms);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid show(int *rooms, int n) {\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n}\n\nint main(void) {\n    int n = 3;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 2;\n    }\n\n    show(rooms, n);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：2\n第 1 间：4\n第 2 间：6",
+      "stdin": null,
+      "explanation": "这一个方法里的尺子**量错了东西**。\n\n`rooms` 是一块**名称**，上面写着那排变量的头一个编号 —— 它自己不是那排变量。所以 `sizeof(rooms)` 量到的是**名称占几格**（8 格，装一个编号用的），跟变量中还剩多少间毫无关系。\n\n`sizeof(rooms[0])` 量到的才是**一间占几格**（4 格）。8 除以 4 等于 2 —— 于是那一圈只转了两圈就停了，剩下的变量它连看都没看。\n\n课文里那句提醒说的正是这件事：**函数里量名称只有 8**。沿着名称能找到几间，名称上**没写着**这个数 —— 想知道，就得当成一样东西额外传入，也就是给它多加一个「几个」：`show(rooms, n)`。\n\n（顺带分清楚：只有写成一整排那种「贴好编号的元素」写法时，量整排、再除以量一个，才量得出只数。同样的两个公式，量名称就是量名称 —— 这题栽的就是这个跟头。）",
+      "templateId": "c-s2-malloc-sizeof-pointer",
+      "params": {
+        "n": 3,
+        "step": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.335Z",
+        "hash": "a5c38f315d087114"
+      }
+    },
+    {
+      "id": "bank-c-s2-malloc-sizeof-pointer-023",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们把「一间一间报出来」这一步打包成了一个方法，只把那排变量的名称喂了进去。\n\n可它报着报着就停了 —— 我们明明租了 5 间，它只报出来一个零头，剩下的一间都没提。它一个错都不报，安安静静就跑完了。\n\n你帮我们看看这一个方法哪里不对，把它改好。改好之后，程序应该从第 0 间开始一间一间报出来：`第 0 间：` 后面跟着那一间里放的数，一行一间，一共 5 行，一间都不许少。",
+      "brokenCode": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid show(int *rooms) {\n    int cnt = (int)(sizeof(rooms) / sizeof(rooms[0]));\n    for (int i = 0; i < cnt; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n}\n\nint main(void) {\n    int n = 5;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 9;\n    }\n\n    show(rooms);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid show(int *rooms, int n) {\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 间：%d\\n\", i, rooms[i]);\n    }\n}\n\nint main(void) {\n    int n = 5;\n    int *rooms = (int *)malloc(sizeof(int) * n);\n\n    if (rooms == NULL) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        rooms[i] = (i + 1) * 9;\n    }\n\n    show(rooms, n);\n\n    free(rooms);\n    rooms = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "第 0 间：9\n第 1 间：18\n第 2 间：27\n第 3 间：36\n第 4 间：45",
+      "stdin": null,
+      "explanation": "这一个方法里的尺子**量错了东西**。\n\n`rooms` 是一块**名称**，上面写着那排变量的头一个编号 —— 它自己不是那排变量。所以 `sizeof(rooms)` 量到的是**名称占几格**（8 格，装一个编号用的），跟变量中还剩多少间毫无关系。\n\n`sizeof(rooms[0])` 量到的才是**一间占几格**（4 格）。8 除以 4 等于 2 —— 于是那一圈只转了两圈就停了，剩下的变量它连看都没看。\n\n课文里那句提醒说的正是这件事：**函数里量名称只有 8**。沿着名称能找到几间，名称上**没写着**这个数 —— 想知道，就得当成一样东西额外传入，也就是给它多加一个「几个」：`show(rooms, n)`。\n\n（顺带分清楚：只有写成一整排那种「贴好编号的元素」写法时，量整排、再除以量一个，才量得出只数。同样的两个公式，量名称就是量名称 —— 这题栽的就是这个跟头。）",
+      "templateId": "c-s2-malloc-sizeof-pointer",
+      "params": {
+        "n": 5,
+        "step": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.335Z",
+        "hash": "f3d2440f3ce9e664"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "templateId": "c-s2-ptr-neighbor-diff",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-01",
+  "type": "codewrite",
+  "concept": [
+    "指针算术",
+    "相邻相减",
+    "括号"
+  ],
+  "instances": 6,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 4,
+      "max": 6
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "head": "{n}\n",
+    "count": "{n}",
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们把 {n} 只元素一字排开，元素里各放着几条数据。\n\n请你写个程序：先读进来一个数（元素的只数），再一行一个读进来 {n} 个数（就是每个元素里的数）。\n\n然后**从第 0 只元素开始，一个一个往后看相邻的两个**：每看一对就报一行，格式是 `第 i 只和第 j 只差 d` —— `i` 是前面那个的编号，`j` 是紧挨着它后面那个的编号，`d` 是**后面那个元素里的数减去前面那个元素里的数**。最后一个元素后面没有元素了，所以它不参与，一行都不报。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+  "starterTemplate": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[8];\n    int n;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int *p = bowls;\n    for (int i = 0; i + 1 < n; i++) {\n        printf(\"第 %d 只和第 %d 只差 %d\\n\", i, i + 1, *(p + 1) - *p);\n        p = p + 1;\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "这道题是给「星号只处理紧挨着它的那一样东西」这句话练手的。\n\n看 `*(p + 1) - *p` 这一小段，它是**两半**：\n\n- `*(p + 1)` —— 括号先把地址算好（「往后挪一个」），外面的星号才去处理它，拿到的是**后面那个**元素里的数；\n- `*p` —— 星号只处理 `p` 一个，拿到的是**当前这个**元素里的数。\n\n两半一减，就是相邻两个的差。要是把括号丢了写成 `*p + 1 - *p`，那就变成「当前这个的数加 1 再减当前这个的数」，答案永远是 1 —— 而且编译器一次都不会吭，这种坑只有你自己盯着括号。\n\n差是**可能为负**的：后面那个元素里的数比前面少的时候，印出来就是负数，那是对的，别去给它加绝对值。\n\n绕几圈？最后一个后面没有元素了，所以一共报 `n - 1` 行。参考解把停的条件写成 `i + 1 < n` —— 这句话的意思是「后面还有元素才继续」。"
+}

@@ -1,0 +1,26 @@
+{
+  "templateId": "cpp-s2-11-forgot-pure-zero",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-11",
+  "type": "codefix",
+  "concept": [
+    "忘了写 = 0",
+    "漏写也没人提醒",
+    "把招牌清成约定"
+  ],
+  "instances": 2,
+  "params": {
+    "catName": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们想让老类定义上那一手成为**一份约定**（照它画下来的都得自己会这一手），可我们把这一手**写成了一个有动作的普通函数**，而子类定义那一手又忘了补。\n\n结果：程序**照样跑完**，编译器**一个字都没说**，屏幕上印出来的是 `{catName}：……`，而不是 {catName} 自己那一版。\n\n你帮我们把印出来的话改成 {catName} 自己那一版（`X：`），并且**以后我们再定义一个类漏了这手，编译器能当场拦住我们**。**`main` 里那几句不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const {\n        cout << name << \"：……\" << endl;\n    }\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n};\n\nint main() {\n    Cat c(\"{catName}\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"{catName}\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+  "explanationTemplate": "这一题**一个报错都没有**。我们在本机跑过没修的版本，屏幕上是这一行：\n\n```text\n{catName}：……\n```\n\n程序跑得完完整整，编译器一次没吭。\n\n**根子不在子对象那一手，在老类定义那一手漏写了两个符号。** 老类定义上那一手写成了\n\n```text\nvirtual void speak() const {\n    cout << name << \"：……\" << endl;\n}\n```\n\n有动作、有身体 —— 那它就只是**一手普通的函数**，不是约定。而子类定义照着画下来，**想补就补、不补也行**：我们这一题正好忘了补，于是继续调用的时候，程序老老实实跑了老类定义那一版占位的「……」。\n\n**这就是「清成约定」那一步值钱的地方。** 修法是两处，缺一不可：\n\n1. **老类定义那一手清成约定**：把那一对大括号里的动作整个删掉，换成两个字符 ——\n\n```text\nvirtual void speak() const = 0;\n```\n\n2. **子对象那一手补上**：\n\n```text\nvoid speak() const override {\n    cout << name << \"：\" << endl;\n}\n```\n\n补完第一处，我们要是还漏着第二处，编译器当场就报 `cannot declare variable 'c' to be of abstract type 'Cat'` —— **它替我们记着这笔账**。这正是一句话的分别：\n\n> **老类定义给了动作，漏写是「看不出来」；老类定义只留招牌，漏写是「编不过」。**\n\n往后写类定义时请记牢：这一手**打算让照它画下来的都得自己会**，就一定要写 `= 0`；**不打算**这样（只是给个默认动作、谁想改就改），才可以留身体。两个都合法，但**意思完全不同** —— 我们这一课栽的就是把它们弄混了。"
+}

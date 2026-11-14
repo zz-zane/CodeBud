@@ -1,0 +1,33 @@
+{
+  "templateId": "cpp-s2-10-virtual-dtor",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-10",
+  "type": "codewrite",
+  "concept": [
+    "拆变量别只拆一半",
+    "析构函数也要挂招牌",
+    "数输出行数"
+  ],
+  "instances": 6,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 1,
+    "min": 2,
+    "max": 9
+  },
+  "stemTemplate": "上一课留了一个末尾：**老类定义的收尾动作一定要跑到。** 这一题就把它抓出来。输入接口会递进来**一个数**（子对象那一半自己管着几条数据）。\n\n请你这么办：\n\n1. **画老类定义** `Cat`：足够子对象用的那一档的 `name`（一串字）。构造函数填上名字并印一行 `先搭基类那一半：X`；析构函数印一行 `后拆基类那一半：X`。**收尾这一手也要挂上那个三个字母的招牌**。\n2. **让子类定义照它画下来**：叫 `Kitten`，自己添一栏 `fish`（一个整数）；构造函数先把名字交给基类，再印一行 `再初始化子类成员：X`；析构函数印一行 `先执行子类的清理：X，还回 N 条`。\n3. 在 `main` 里：读进那个数 → **先照 `Kitten` 创建一个子对象，把它的门牌地址交给一张写着「对象」的名称**，然后**顺着名称把这个对象拆掉**。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n**这一题请你数一数屏幕上有几行。** 要是收尾那一手漏了招牌，屏幕上会**少一行**，而且编译器一点也不吭声。\n\n（判分传入的是**另一个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\npublic:\n    Cat(string n) : name(n) {\n        cout << \"先搭基类那一半：\" << name << endl;\n    }\n    virtual ~Cat() {\n        cout << \"后拆基类那一半：\" << name << endl;\n    }\n};\n\nclass Kitten : public Cat {\n    int fish;\npublic:\n    Kitten(string n, int f) : Cat(n), fish(f) {\n        cout << \"再初始化子类成员：\" << name << endl;\n    }\n    ~Kitten() {\n        cout << \"先执行子类的清理：\" << name << \"，还回 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int f = 0;\n    cin >> f;\n\n    Cat* p = new Kitten(\"{name}\", f);\n    delete p;\n    return 0;\n}\n",
+  "explanationTemplate": "我们在本机跑过这一题（传入 5 时），屏幕上是四行：\n\n```text\n先搭基类那一半：张三\n再初始化子类成员：张三\n先执行子类的清理：张三，还回 5 条\n后拆基类那一半：张三\n```\n\n四行齐了，顺序还是上一课那句话，一个字没变：**搭的时候从基类往上搭，拆的时候从子对象往下拆。**\n\n关键在于**收尾那一手挂了招牌**（`virtual ~Cat()`）：\n\n- 我们手上那张名称上写的是「对象」，可它指向的是一个子对象；\n- 顺着名称拆的时候，程序低头看一眼**屋里住的是谁**，于是**从子对象那一半一直拆到基类那一半**；\n- 我们在子对象那一半里管着的那几条数据，也就跟着交代清楚了（第四行那句「还回 5 条」就是子对象那一半临走时印的）。\n\n⚠️ 要是收尾那一手漏了招牌呢？我们真跑过那一段：**屏幕上只剩三行**——「先执行子类的清理」那一行**根本没出现**，子对象那一半里的东西就这么留在原地；而且编译器**一个错都不报**。这种错只能靠**数输出行数**发现。\n\n规矩钉成一句话：\n\n> **只要老类定义上有一手挂了招牌，它的析构函数就也该挂上招牌。**\n\n这一条在后面尤其要命：子对象那一半里很可能保存上一课刚学会的「动态内存」—— 收尾没跑到，该变量就再也没人还了。"
+}

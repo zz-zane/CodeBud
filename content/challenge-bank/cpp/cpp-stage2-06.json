@@ -1,0 +1,423 @@
+{
+  "lessonId": "cpp-stage2-06",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s2-06-call-as-member-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给类定义里写了一行后门，外面那个念账的函数也写好了。\n\n可 `main` 里称呼它的那一句，编译器说类定义上根本没有这一手。\n\n你帮我们把那句调用方式改对。**类定义两栏、后门那一行、外面那个函数的身子，一个字都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    Cat c1(\"张三\", 2);\n    c1.showAccount(c1);\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    Cat c1(\"张三\", 2);\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "张三 的账上是 2 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:19:8: error: 'class Cat' has no member named 'showAccount'`\n\n用自然语言解释：**「`Cat` 这张类定义上，没有叫 `showAccount` 的那一格本事。」**\n\n根子在这件事上：**后门那一行给的是一张通行证，不是工牌。** 拿到通行证的函数，身份上**还是外面的一手**——它看得见盒子里的一切，可它并没有变成类定义上的函数。\n\n姿势的差别只有一处：\n\n- **类定义上的函数**是「哪个对象 · 函数名」——先说哪个对象，再调用函数名。\n- **开后门的函数**是「函数名(哪个对象)」——前面**不写那个对象**，把对象当料递进去。\n\n所以这一句写成 `showAccount(c1);` 就对了。以后看到 `has no member named`，先想一想：我们手里这一手，**到底是不是类定义上的函数**。",
+      "templateId": "cpp-s2-06-call-as-member",
+      "params": {
+        "fish": 2,
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.290Z",
+        "hash": "43a36d8c52853915"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-call-as-member-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给类定义里写了一行后门，外面那个念账的函数也写好了。\n\n可 `main` 里称呼它的那一句，编译器说类定义上根本没有这一手。\n\n你帮我们把那句调用方式改对。**类定义两栏、后门那一行、外面那个函数的身子，一个字都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    Cat c1(\"王五\", 3);\n    c1.showAccount(c1);\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    Cat c1(\"王五\", 3);\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "王五 的账上是 3 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:19:8: error: 'class Cat' has no member named 'showAccount'`\n\n用自然语言解释：**「`Cat` 这张类定义上，没有叫 `showAccount` 的那一格本事。」**\n\n根子在这件事上：**后门那一行给的是一张通行证，不是工牌。** 拿到通行证的函数，身份上**还是外面的一手**——它看得见盒子里的一切，可它并没有变成类定义上的函数。\n\n姿势的差别只有一处：\n\n- **类定义上的函数**是「哪个对象 · 函数名」——先说哪个对象，再调用函数名。\n- **开后门的函数**是「函数名(哪个对象)」——前面**不写那个对象**，把对象当料递进去。\n\n所以这一句写成 `showAccount(c1);` 就对了。以后看到 `has no member named`，先想一想：我们手里这一手，**到底是不是类定义上的函数**。",
+      "templateId": "cpp-s2-06-call-as-member",
+      "params": {
+        "fish": 3,
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.290Z",
+        "hash": "a3ab7004f30173a6"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-class-vet-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这回要开门给**一整张类定义**。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **画两张类定义**。第一张叫 `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上；在这个大括号里**加一行**，让**整张 `Vet` 类定义**都能进来。\n2. 第二张叫 `Vet`：里面画**一个方法** `checkup`，它接进来一个对象（`const Cat&`），直接读盒子里那两栏，印**一行**：\n\n```text\n对象大夫打开 XX 的盒子：N 条，处理得不错\n```\n\n3. 在 `main` 里创建一个对象：名字叫 `张三`，条数从输入接口读；再照 `Vet` 类定义生**一位**对象大夫，让这位给那个对象做检查。\n\n比如程序的输入是\n\n5\n\n程序就要返回\n\n对象大夫打开 张三 的盒子：5 条，处理得不错\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n};\n\nclass Vet {\npublic:\n    void checkup(const Cat& c) {\n        cout << \"对象大夫打开 \" << c.name << \" 的盒子：\" << c.fish << \" 条，处理得不错\" << endl;\n    }\n};\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"张三\", fish);\n    Vet v;\n    v.checkup(c1);\n    return 0;\n}\n",
+      "expectedOutput": "对象大夫打开 张三 的盒子：3 条，处理得不错",
+      "stdin": "3\n",
+      "explanation": "这一题练的是**给一整张类定义开门**。\n\n写法只有一处和上一次不同：那一行从「函数」换成了「类定义」——\n\n```text\nfriend class Vet;\n```\n\n意思是「**`Vet` 这张类定义画出来的每一手、画多少手都算数**」，不用一个一个函数写名字。对象大夫类定义里画的 `checkup` 于是够得到 `c.name` 和 `c.fish` 这两格带盖的。\n\n调用方式上有个区别值得记一下：\n\n- `checkup` 是**画在 `Vet` 类定义上的函数**，所以称呼它要「**哪位对象大夫 · 函数名**」——先根据类创建一位对象大夫（`Vet v;`），再 `v.checkup(c1);`。\n- 上一次那个开后门的函数**不是任何类定义上的函数**，所以称呼它不写前面的东西，直接把对象递进去。\n\n顺带把本课那条边界再钉一遍：**后门不传递**。`Vet` 开了门，不代表 `Vet` 里面的朋友、或者别的类定义也跟着进来了；要给谁就写谁的名字。",
+      "templateId": "cpp-s2-06-friend-class-vet",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.290Z",
+        "hash": "83f6ef596dc7ec8c"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-class-vet-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这回要开门给**一整张类定义**。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **画两张类定义**。第一张叫 `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上；在这个大括号里**加一行**，让**整张 `Vet` 类定义**都能进来。\n2. 第二张叫 `Vet`：里面画**一个方法** `checkup`，它接进来一个对象（`const Cat&`），直接读盒子里那两栏，印**一行**：\n\n```text\n对象大夫打开 XX 的盒子：N 条，处理得不错\n```\n\n3. 在 `main` 里创建一个对象：名字叫 `李四`，条数从输入接口读；再照 `Vet` 类定义生**一位**对象大夫，让这位给那个对象做检查。\n\n比如程序的输入是\n\n8\n\n程序就要返回\n\n对象大夫打开 李四 的盒子：8 条，处理得不错\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n};\n\nclass Vet {\npublic:\n    void checkup(const Cat& c) {\n        cout << \"对象大夫打开 \" << c.name << \" 的盒子：\" << c.fish << \" 条，处理得不错\" << endl;\n    }\n};\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"李四\", fish);\n    Vet v;\n    v.checkup(c1);\n    return 0;\n}\n",
+      "expectedOutput": "对象大夫打开 李四 的盒子：3 条，处理得不错",
+      "stdin": "3\n",
+      "explanation": "这一题练的是**给一整张类定义开门**。\n\n写法只有一处和上一次不同：那一行从「函数」换成了「类定义」——\n\n```text\nfriend class Vet;\n```\n\n意思是「**`Vet` 这张类定义画出来的每一手、画多少手都算数**」，不用一个一个函数写名字。对象大夫类定义里画的 `checkup` 于是够得到 `c.name` 和 `c.fish` 这两格带盖的。\n\n调用方式上有个区别值得记一下：\n\n- `checkup` 是**画在 `Vet` 类定义上的函数**，所以称呼它要「**哪位对象大夫 · 函数名**」——先根据类创建一位对象大夫（`Vet v;`），再 `v.checkup(c1);`。\n- 上一次那个开后门的函数**不是任何类定义上的函数**，所以称呼它不写前面的东西，直接把对象递进去。\n\n顺带把本课那条边界再钉一遍：**后门不传递**。`Vet` 开了门，不代表 `Vet` 里面的朋友、或者别的类定义也跟着进来了；要给谁就写谁的名字。",
+      "templateId": "cpp-s2-06-friend-class-vet",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.290Z",
+        "hash": "9de10e01f7a8dea7"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-class-vet-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "这回要开门给**一整张类定义**。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **画两张类定义**。第一张叫 `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上；在这个大括号里**加一行**，让**整张 `Vet` 类定义**都能进来。\n2. 第二张叫 `Vet`：里面画**一个方法** `checkup`，它接进来一个对象（`const Cat&`），直接读盒子里那两栏，印**一行**：\n\n```text\n对象大夫打开 XX 的盒子：N 条，处理得不错\n```\n\n3. 在 `main` 里创建一个对象：名字叫 `王五`，条数从输入接口读；再照 `Vet` 类定义生**一位**对象大夫，让这位给那个对象做检查。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n对象大夫打开 王五 的盒子：2 条，处理得不错\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n};\n\nclass Vet {\npublic:\n    void checkup(const Cat& c) {\n        cout << \"对象大夫打开 \" << c.name << \" 的盒子：\" << c.fish << \" 条，处理得不错\" << endl;\n    }\n};\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"王五\", fish);\n    Vet v;\n    v.checkup(c1);\n    return 0;\n}\n",
+      "expectedOutput": "对象大夫打开 王五 的盒子：6 条，处理得不错",
+      "stdin": "6\n",
+      "explanation": "这一题练的是**给一整张类定义开门**。\n\n写法只有一处和上一次不同：那一行从「函数」换成了「类定义」——\n\n```text\nfriend class Vet;\n```\n\n意思是「**`Vet` 这张类定义画出来的每一手、画多少手都算数**」，不用一个一个函数写名字。对象大夫类定义里画的 `checkup` 于是够得到 `c.name` 和 `c.fish` 这两格带盖的。\n\n调用方式上有个区别值得记一下：\n\n- `checkup` 是**画在 `Vet` 类定义上的函数**，所以称呼它要「**哪位对象大夫 · 函数名**」——先根据类创建一位对象大夫（`Vet v;`），再 `v.checkup(c1);`。\n- 上一次那个开后门的函数**不是任何类定义上的函数**，所以称呼它不写前面的东西，直接把对象递进去。\n\n顺带把本课那条边界再钉一遍：**后门不传递**。`Vet` 开了门，不代表 `Vet` 里面的朋友、或者别的类定义也跟着进来了；要给谁就写谁的名字。",
+      "templateId": "cpp-s2-06-friend-class-vet",
+      "params": {
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.290Z",
+        "hash": "0977cdb4128a7f3a"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-rename-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "上一题那扇后门只**看**账，这回我们要它**动**账。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **定义类** `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上。\n2. **在类定义里开两扇后门**（写两行 `friend`）：\n   - 一个方法叫 `showAccount`，接进来一个对象，印**一行**：\n\n```text\nXX 账上 N 条\n```\n\n   - 一个方法叫 `rename`，接进来一个对象和**一串新名字**，把对象的名字那一格**改成**新名字（这一个方法**不印东西**）。\n\n3. 在 `main` 里创建一个对象：名字叫 `张三`，条数从输入接口读。然后**按顺序**做三件事：调用 `showAccount` 看一遍账、调用 `rename` 把它改叫 `王五`、**再调用一次 `showAccount`** 看一遍账。\n\n比如程序的输入是\n\n6\n\n程序就要返回\n\n张三 账上 6 条\n王五 账上 6 条\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n    friend void rename(Cat& c, string newName);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 账上 \" << c.fish << \" 条\" << endl;\n}\n\nvoid rename(Cat& c, string newName) {\n    c.name = newName;\n}\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"张三\", fish);\n    showAccount(c1);\n    rename(c1, \"王五\");\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "张三 账上 3 条\n王五 账上 3 条",
+      "stdin": "3\n",
+      "explanation": "这一题要把「**后门给的是一整把钥匙**」看明白。\n\n通行证不是「借你看一眼」——它让这两招**够得到盒子里的一切**，读得到，**也写得进去**。所以 `rename` 那一句 `c.name = newName;` 是合法的：它站在门里面，改的是这个对象自己那一格。\n\n屏幕上的两行就是证据：\n\n- 第一行是改之前念的账，名字还是 `张三`；\n- 第二行是改之后念的，名字已经变成 `王五`；\n- **条数两行一模一样**——`rename` 只碰了名字那一格，别的什么都没动。\n\n两扇门的料写得不完全一样，这个差别也要看清：\n\n- `showAccount` 要的是 `const Cat&` —— 前面带 `const`，意思是**只看不改**，所以它进得来却动不了；\n- `rename` 要的是 `Cat&` —— 没有 `const`，意思是**这一手会改到这个对象**（`c1` 传进去之后，`c1` 本人变了）。\n\n⚠️ 别忘了这两行 `friend` 各管各的：我们写了两行，两招才都进得来。只写一行的话，另一个方法照样会被编译器拦下。",
+      "templateId": "cpp-s2-06-friend-rename",
+      "params": {
+        "name": "张三",
+        "newName": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "4817d9ec3df1e38b"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-rename-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "上一题那扇后门只**看**账，这回我们要它**动**账。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **定义类** `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上。\n2. **在类定义里开两扇后门**（写两行 `friend`）：\n   - 一个方法叫 `showAccount`，接进来一个对象，印**一行**：\n\n```text\nXX 账上 N 条\n```\n\n   - 一个方法叫 `rename`，接进来一个对象和**一串新名字**，把对象的名字那一格**改成**新名字（这一个方法**不印东西**）。\n\n3. 在 `main` 里创建一个对象：名字叫 `张三`，条数从输入接口读。然后**按顺序**做三件事：调用 `showAccount` 看一遍账、调用 `rename` 把它改叫 `三花`、**再调用一次 `showAccount`** 看一遍账。\n\n比如程序的输入是\n\n7\n\n程序就要返回\n\n张三 账上 7 条\n三花 账上 7 条\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n    friend void rename(Cat& c, string newName);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 账上 \" << c.fish << \" 条\" << endl;\n}\n\nvoid rename(Cat& c, string newName) {\n    c.name = newName;\n}\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"张三\", fish);\n    showAccount(c1);\n    rename(c1, \"三花\");\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "张三 账上 4 条\n三花 账上 4 条",
+      "stdin": "4\n",
+      "explanation": "这一题要把「**后门给的是一整把钥匙**」看明白。\n\n通行证不是「借你看一眼」——它让这两招**够得到盒子里的一切**，读得到，**也写得进去**。所以 `rename` 那一句 `c.name = newName;` 是合法的：它站在门里面，改的是这个对象自己那一格。\n\n屏幕上的两行就是证据：\n\n- 第一行是改之前念的账，名字还是 `张三`；\n- 第二行是改之后念的，名字已经变成 `三花`；\n- **条数两行一模一样**——`rename` 只碰了名字那一格，别的什么都没动。\n\n两扇门的料写得不完全一样，这个差别也要看清：\n\n- `showAccount` 要的是 `const Cat&` —— 前面带 `const`，意思是**只看不改**，所以它进得来却动不了；\n- `rename` 要的是 `Cat&` —— 没有 `const`，意思是**这一手会改到这个对象**（`c1` 传进去之后，`c1` 本人变了）。\n\n⚠️ 别忘了这两行 `friend` 各管各的：我们写了两行，两招才都进得来。只写一行的话，另一个方法照样会被编译器拦下。",
+      "templateId": "cpp-s2-06-friend-rename",
+      "params": {
+        "name": "张三",
+        "newName": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "26225771c47b51c6"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-rename-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "上一题那扇后门只**看**账，这回我们要它**动**账。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **定义类** `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上。\n2. **在类定义里开两扇后门**（写两行 `friend`）：\n   - 一个方法叫 `showAccount`，接进来一个对象，印**一行**：\n\n```text\nXX 账上 N 条\n```\n\n   - 一个方法叫 `rename`，接进来一个对象和**一串新名字**，把对象的名字那一格**改成**新名字（这一个方法**不印东西**）。\n\n3. 在 `main` 里创建一个对象：名字叫 `李四`，条数从输入接口读。然后**按顺序**做三件事：调用 `showAccount` 看一遍账、调用 `rename` 把它改叫 `王五`、**再调用一次 `showAccount`** 看一遍账。\n\n比如程序的输入是\n\n7\n\n程序就要返回\n\n李四 账上 7 条\n王五 账上 7 条\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n    friend void rename(Cat& c, string newName);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 账上 \" << c.fish << \" 条\" << endl;\n}\n\nvoid rename(Cat& c, string newName) {\n    c.name = newName;\n}\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"李四\", fish);\n    showAccount(c1);\n    rename(c1, \"王五\");\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "李四 账上 9 条\n王五 账上 9 条",
+      "stdin": "9\n",
+      "explanation": "这一题要把「**后门给的是一整把钥匙**」看明白。\n\n通行证不是「借你看一眼」——它让这两招**够得到盒子里的一切**，读得到，**也写得进去**。所以 `rename` 那一句 `c.name = newName;` 是合法的：它站在门里面，改的是这个对象自己那一格。\n\n屏幕上的两行就是证据：\n\n- 第一行是改之前念的账，名字还是 `李四`；\n- 第二行是改之后念的，名字已经变成 `王五`；\n- **条数两行一模一样**——`rename` 只碰了名字那一格，别的什么都没动。\n\n两扇门的料写得不完全一样，这个差别也要看清：\n\n- `showAccount` 要的是 `const Cat&` —— 前面带 `const`，意思是**只看不改**，所以它进得来却动不了；\n- `rename` 要的是 `Cat&` —— 没有 `const`，意思是**这一手会改到这个对象**（`c1` 传进去之后，`c1` 本人变了）。\n\n⚠️ 别忘了这两行 `friend` 各管各的：我们写了两行，两招才都进得来。只写一行的话，另一个方法照样会被编译器拦下。",
+      "templateId": "cpp-s2-06-friend-rename",
+      "params": {
+        "name": "李四",
+        "newName": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "65220d53269577cd"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-rename-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "上一题那扇后门只**看**账，这回我们要它**动**账。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **定义类** `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上。\n2. **在类定义里开两扇后门**（写两行 `friend`）：\n   - 一个方法叫 `showAccount`，接进来一个对象，印**一行**：\n\n```text\nXX 账上 N 条\n```\n\n   - 一个方法叫 `rename`，接进来一个对象和**一串新名字**，把对象的名字那一格**改成**新名字（这一个方法**不印东西**）。\n\n3. 在 `main` 里创建一个对象：名字叫 `李四`，条数从输入接口读。然后**按顺序**做三件事：调用 `showAccount` 看一遍账、调用 `rename` 把它改叫 `三花`、**再调用一次 `showAccount`** 看一遍账。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n李四 账上 4 条\n三花 账上 4 条\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n    friend void rename(Cat& c, string newName);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 账上 \" << c.fish << \" 条\" << endl;\n}\n\nvoid rename(Cat& c, string newName) {\n    c.name = newName;\n}\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"李四\", fish);\n    showAccount(c1);\n    rename(c1, \"三花\");\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "李四 账上 3 条\n三花 账上 3 条",
+      "stdin": "3\n",
+      "explanation": "这一题要把「**后门给的是一整把钥匙**」看明白。\n\n通行证不是「借你看一眼」——它让这两招**够得到盒子里的一切**，读得到，**也写得进去**。所以 `rename` 那一句 `c.name = newName;` 是合法的：它站在门里面，改的是这个对象自己那一格。\n\n屏幕上的两行就是证据：\n\n- 第一行是改之前念的账，名字还是 `李四`；\n- 第二行是改之后念的，名字已经变成 `三花`；\n- **条数两行一模一样**——`rename` 只碰了名字那一格，别的什么都没动。\n\n两扇门的料写得不完全一样，这个差别也要看清：\n\n- `showAccount` 要的是 `const Cat&` —— 前面带 `const`，意思是**只看不改**，所以它进得来却动不了；\n- `rename` 要的是 `Cat&` —— 没有 `const`，意思是**这一手会改到这个对象**（`c1` 传进去之后，`c1` 本人变了）。\n\n⚠️ 别忘了这两行 `friend` 各管各的：我们写了两行，两招才都进得来。只写一行的话，另一个方法照样会被编译器拦下。",
+      "templateId": "cpp-s2-06-friend-rename",
+      "params": {
+        "name": "李四",
+        "newName": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "a405a964ef20ef14"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-rename-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "上一题那扇后门只**看**账，这回我们要它**动**账。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **定义类** `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上。\n2. **在类定义里开两扇后门**（写两行 `friend`）：\n   - 一个方法叫 `showAccount`，接进来一个对象，印**一行**：\n\n```text\nXX 账上 N 条\n```\n\n   - 一个方法叫 `rename`，接进来一个对象和**一串新名字**，把对象的名字那一格**改成**新名字（这一个方法**不印东西**）。\n\n3. 在 `main` 里创建一个对象：名字叫 `王五`，条数从输入接口读。然后**按顺序**做三件事：调用 `showAccount` 看一遍账、调用 `rename` 把它改叫 `王五`、**再调用一次 `showAccount`** 看一遍账。\n\n比如程序的输入是\n\n9\n\n程序就要返回\n\n王五 账上 9 条\n王五 账上 9 条\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n    friend void rename(Cat& c, string newName);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 账上 \" << c.fish << \" 条\" << endl;\n}\n\nvoid rename(Cat& c, string newName) {\n    c.name = newName;\n}\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"王五\", fish);\n    showAccount(c1);\n    rename(c1, \"王五\");\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "王五 账上 5 条\n王五 账上 5 条",
+      "stdin": "5\n",
+      "explanation": "这一题要把「**后门给的是一整把钥匙**」看明白。\n\n通行证不是「借你看一眼」——它让这两招**够得到盒子里的一切**，读得到，**也写得进去**。所以 `rename` 那一句 `c.name = newName;` 是合法的：它站在门里面，改的是这个对象自己那一格。\n\n屏幕上的两行就是证据：\n\n- 第一行是改之前念的账，名字还是 `王五`；\n- 第二行是改之后念的，名字已经变成 `王五`；\n- **条数两行一模一样**——`rename` 只碰了名字那一格，别的什么都没动。\n\n两扇门的料写得不完全一样，这个差别也要看清：\n\n- `showAccount` 要的是 `const Cat&` —— 前面带 `const`，意思是**只看不改**，所以它进得来却动不了；\n- `rename` 要的是 `Cat&` —— 没有 `const`，意思是**这一手会改到这个对象**（`c1` 传进去之后，`c1` 本人变了）。\n\n⚠️ 别忘了这两行 `friend` 各管各的：我们写了两行，两招才都进得来。只写一行的话，另一个方法照样会被编译器拦下。",
+      "templateId": "cpp-s2-06-friend-rename",
+      "params": {
+        "name": "王五",
+        "newName": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "55fedcf9112f005e"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-rename-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "上一题那扇后门只**看**账，这回我们要它**动**账。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **定义类** `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上。\n2. **在类定义里开两扇后门**（写两行 `friend`）：\n   - 一个方法叫 `showAccount`，接进来一个对象，印**一行**：\n\n```text\nXX 账上 N 条\n```\n\n   - 一个方法叫 `rename`，接进来一个对象和**一串新名字**，把对象的名字那一格**改成**新名字（这一个方法**不印东西**）。\n\n3. 在 `main` 里创建一个对象：名字叫 `王五`，条数从输入接口读。然后**按顺序**做三件事：调用 `showAccount` 看一遍账、调用 `rename` 把它改叫 `三花`、**再调用一次 `showAccount`** 看一遍账。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n王五 账上 2 条\n三花 账上 2 条\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n    friend void rename(Cat& c, string newName);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 账上 \" << c.fish << \" 条\" << endl;\n}\n\nvoid rename(Cat& c, string newName) {\n    c.name = newName;\n}\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"王五\", fish);\n    showAccount(c1);\n    rename(c1, \"三花\");\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "王五 账上 5 条\n三花 账上 5 条",
+      "stdin": "5\n",
+      "explanation": "这一题要把「**后门给的是一整把钥匙**」看明白。\n\n通行证不是「借你看一眼」——它让这两招**够得到盒子里的一切**，读得到，**也写得进去**。所以 `rename` 那一句 `c.name = newName;` 是合法的：它站在门里面，改的是这个对象自己那一格。\n\n屏幕上的两行就是证据：\n\n- 第一行是改之前念的账，名字还是 `王五`；\n- 第二行是改之后念的，名字已经变成 `三花`；\n- **条数两行一模一样**——`rename` 只碰了名字那一格，别的什么都没动。\n\n两扇门的料写得不完全一样，这个差别也要看清：\n\n- `showAccount` 要的是 `const Cat&` —— 前面带 `const`，意思是**只看不改**，所以它进得来却动不了；\n- `rename` 要的是 `Cat&` —— 没有 `const`，意思是**这一手会改到这个对象**（`c1` 传进去之后，`c1` 本人变了）。\n\n⚠️ 别忘了这两行 `friend` 各管各的：我们写了两行，两招才都进得来。只写一行的话，另一个方法照样会被编译器拦下。",
+      "templateId": "cpp-s2-06-friend-rename",
+      "params": {
+        "name": "王五",
+        "newName": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "cf3ef54030d6209f"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-show-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要考你**开后门**。输入接口会递进来两样：先是一串字（对象的名字），再是一个数（条数）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏**都扣着盖子**（只有类定义自己的函数够得着）—— `name` 装一串字，`fish` 装一个整数；再画一个构造函数，把这两栏填上。\n2. **在类定义里开一扇后门**：写一行 `friend`，把**外面一个叫 `showAccount` 的函数**放进来。\n3. **在外面那个函数里**印一行，直接读盒子里那两栏：\n\n```text\nXX 的账上是 N 条数据\n```\n\n4. 在 `main` 里根据类创建一个对象（名字和条数都用输入接口递进来的），然后**把这个对象递给那一个方法**。\n\n比如程序的输入是\n\n小胖\n7\n\n程序就要返回\n\n小胖 的账上是 7 条数据\n\n（判分喂的是**另一个对象**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1(name, fish);\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "张三 的账上是 2 条数据",
+      "stdin": "张三\n2\n",
+      "explanation": "后门这一手，三件事要一起对上：\n\n1. **在类定义里写那一行**。位置在类定义的大括号里，字面就是 `friend void showAccount(const Cat& c);`。这一行是**类定义给出去的通行证**——从这一刻起，`showAccount` 够得到这张类定义创建后的每一个对象的**任何一格**，带盖的也不例外。\n2. **函数本身画在外面**。拿到通行证**不等于**它变成了类定义上的函数 —— 它还是外面的一手。所以类定义里只写一行「我们认识它」，函数的身子写在类定义外面。\n3. **称呼它的时候不写那个对象**。类定义上的函数是「哪个对象 · 函数名」；开后门的函数是「**函数名(哪个对象)**」——把对象当料递进去。写 `showAccount(c1);`。\n\n再补两句边界，都是本课强调过的：**后门是单向的**（我们给它开门，它不会把钥匙回赠给我们），**后门也不传递**（拿到通行证的只有它一个，它认识的朋友不算数）。\n\n⚠️ 还有一句最容易忘的：**别把 `friend` 那一行漏了**。漏了的话，哪怕函数的写法完全正确，编译器也会说那一格够不着。",
+      "templateId": "cpp-s2-06-friend-show",
+      "params": {
+        "name": "张三",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "bfeca0cad08a8625"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-show-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要考你**开后门**。输入接口会递进来两样：先是一串字（对象的名字），再是一个数（条数）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏**都扣着盖子**（只有类定义自己的函数够得着）—— `name` 装一串字，`fish` 装一个整数；再画一个构造函数，把这两栏填上。\n2. **在类定义里开一扇后门**：写一行 `friend`，把**外面一个叫 `showAccount` 的函数**放进来。\n3. **在外面那个函数里**印一行，直接读盒子里那两栏：\n\n```text\nXX 的账上是 N 条数据\n```\n\n4. 在 `main` 里根据类创建一个对象（名字和条数都用输入接口递进来的），然后**把这个对象递给那一个方法**。\n\n比如程序的输入是\n\n小胖\n7\n\n程序就要返回\n\n小胖 的账上是 7 条数据\n\n（判分喂的是**另一个对象**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1(name, fish);\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "张三 的账上是 4 条数据",
+      "stdin": "张三\n4\n",
+      "explanation": "后门这一手，三件事要一起对上：\n\n1. **在类定义里写那一行**。位置在类定义的大括号里，字面就是 `friend void showAccount(const Cat& c);`。这一行是**类定义给出去的通行证**——从这一刻起，`showAccount` 够得到这张类定义创建后的每一个对象的**任何一格**，带盖的也不例外。\n2. **函数本身画在外面**。拿到通行证**不等于**它变成了类定义上的函数 —— 它还是外面的一手。所以类定义里只写一行「我们认识它」，函数的身子写在类定义外面。\n3. **称呼它的时候不写那个对象**。类定义上的函数是「哪个对象 · 函数名」；开后门的函数是「**函数名(哪个对象)**」——把对象当料递进去。写 `showAccount(c1);`。\n\n再补两句边界，都是本课强调过的：**后门是单向的**（我们给它开门，它不会把钥匙回赠给我们），**后门也不传递**（拿到通行证的只有它一个，它认识的朋友不算数）。\n\n⚠️ 还有一句最容易忘的：**别把 `friend` 那一行漏了**。漏了的话，哪怕函数的写法完全正确，编译器也会说那一格够不着。",
+      "templateId": "cpp-s2-06-friend-show",
+      "params": {
+        "name": "张三",
+        "fish": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "233aada48327b065"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-show-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要考你**开后门**。输入接口会递进来两样：先是一串字（对象的名字），再是一个数（条数）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏**都扣着盖子**（只有类定义自己的函数够得着）—— `name` 装一串字，`fish` 装一个整数；再画一个构造函数，把这两栏填上。\n2. **在类定义里开一扇后门**：写一行 `friend`，把**外面一个叫 `showAccount` 的函数**放进来。\n3. **在外面那个函数里**印一行，直接读盒子里那两栏：\n\n```text\nXX 的账上是 N 条数据\n```\n\n4. 在 `main` 里根据类创建一个对象（名字和条数都用输入接口递进来的），然后**把这个对象递给那一个方法**。\n\n比如程序的输入是\n\n小胖\n7\n\n程序就要返回\n\n小胖 的账上是 7 条数据\n\n（判分喂的是**另一个对象**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1(name, fish);\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "李四 的账上是 2 条数据",
+      "stdin": "李四\n2\n",
+      "explanation": "后门这一手，三件事要一起对上：\n\n1. **在类定义里写那一行**。位置在类定义的大括号里，字面就是 `friend void showAccount(const Cat& c);`。这一行是**类定义给出去的通行证**——从这一刻起，`showAccount` 够得到这张类定义创建后的每一个对象的**任何一格**，带盖的也不例外。\n2. **函数本身画在外面**。拿到通行证**不等于**它变成了类定义上的函数 —— 它还是外面的一手。所以类定义里只写一行「我们认识它」，函数的身子写在类定义外面。\n3. **称呼它的时候不写那个对象**。类定义上的函数是「哪个对象 · 函数名」；开后门的函数是「**函数名(哪个对象)**」——把对象当料递进去。写 `showAccount(c1);`。\n\n再补两句边界，都是本课强调过的：**后门是单向的**（我们给它开门，它不会把钥匙回赠给我们），**后门也不传递**（拿到通行证的只有它一个，它认识的朋友不算数）。\n\n⚠️ 还有一句最容易忘的：**别把 `friend` 那一行漏了**。漏了的话，哪怕函数的写法完全正确，编译器也会说那一格够不着。",
+      "templateId": "cpp-s2-06-friend-show",
+      "params": {
+        "name": "李四",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "0ea251e9ea0a36ea"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-show-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要考你**开后门**。输入接口会递进来两样：先是一串字（对象的名字），再是一个数（条数）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏**都扣着盖子**（只有类定义自己的函数够得着）—— `name` 装一串字，`fish` 装一个整数；再画一个构造函数，把这两栏填上。\n2. **在类定义里开一扇后门**：写一行 `friend`，把**外面一个叫 `showAccount` 的函数**放进来。\n3. **在外面那个函数里**印一行，直接读盒子里那两栏：\n\n```text\nXX 的账上是 N 条数据\n```\n\n4. 在 `main` 里根据类创建一个对象（名字和条数都用输入接口递进来的），然后**把这个对象递给那一个方法**。\n\n比如程序的输入是\n\n小胖\n7\n\n程序就要返回\n\n小胖 的账上是 7 条数据\n\n（判分喂的是**另一个对象**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1(name, fish);\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "李四 的账上是 4 条数据",
+      "stdin": "李四\n4\n",
+      "explanation": "后门这一手，三件事要一起对上：\n\n1. **在类定义里写那一行**。位置在类定义的大括号里，字面就是 `friend void showAccount(const Cat& c);`。这一行是**类定义给出去的通行证**——从这一刻起，`showAccount` 够得到这张类定义创建后的每一个对象的**任何一格**，带盖的也不例外。\n2. **函数本身画在外面**。拿到通行证**不等于**它变成了类定义上的函数 —— 它还是外面的一手。所以类定义里只写一行「我们认识它」，函数的身子写在类定义外面。\n3. **称呼它的时候不写那个对象**。类定义上的函数是「哪个对象 · 函数名」；开后门的函数是「**函数名(哪个对象)**」——把对象当料递进去。写 `showAccount(c1);`。\n\n再补两句边界，都是本课强调过的：**后门是单向的**（我们给它开门，它不会把钥匙回赠给我们），**后门也不传递**（拿到通行证的只有它一个，它认识的朋友不算数）。\n\n⚠️ 还有一句最容易忘的：**别把 `friend` 那一行漏了**。漏了的话，哪怕函数的写法完全正确，编译器也会说那一格够不着。",
+      "templateId": "cpp-s2-06-friend-show",
+      "params": {
+        "name": "李四",
+        "fish": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "ffdb175f2e6b7aef"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-show-006",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要考你**开后门**。输入接口会递进来两样：先是一串字（对象的名字），再是一个数（条数）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏**都扣着盖子**（只有类定义自己的函数够得着）—— `name` 装一串字，`fish` 装一个整数；再画一个构造函数，把这两栏填上。\n2. **在类定义里开一扇后门**：写一行 `friend`，把**外面一个叫 `showAccount` 的函数**放进来。\n3. **在外面那个函数里**印一行，直接读盒子里那两栏：\n\n```text\nXX 的账上是 N 条数据\n```\n\n4. 在 `main` 里根据类创建一个对象（名字和条数都用输入接口递进来的），然后**把这个对象递给那一个方法**。\n\n比如程序的输入是\n\n小胖\n7\n\n程序就要返回\n\n小胖 的账上是 7 条数据\n\n（判分喂的是**另一个对象**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1(name, fish);\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "王五 的账上是 2 条数据",
+      "stdin": "王五\n2\n",
+      "explanation": "后门这一手，三件事要一起对上：\n\n1. **在类定义里写那一行**。位置在类定义的大括号里，字面就是 `friend void showAccount(const Cat& c);`。这一行是**类定义给出去的通行证**——从这一刻起，`showAccount` 够得到这张类定义创建后的每一个对象的**任何一格**，带盖的也不例外。\n2. **函数本身画在外面**。拿到通行证**不等于**它变成了类定义上的函数 —— 它还是外面的一手。所以类定义里只写一行「我们认识它」，函数的身子写在类定义外面。\n3. **称呼它的时候不写那个对象**。类定义上的函数是「哪个对象 · 函数名」；开后门的函数是「**函数名(哪个对象)**」——把对象当料递进去。写 `showAccount(c1);`。\n\n再补两句边界，都是本课强调过的：**后门是单向的**（我们给它开门，它不会把钥匙回赠给我们），**后门也不传递**（拿到通行证的只有它一个，它认识的朋友不算数）。\n\n⚠️ 还有一句最容易忘的：**别把 `friend` 那一行漏了**。漏了的话，哪怕函数的写法完全正确，编译器也会说那一格够不着。",
+      "templateId": "cpp-s2-06-friend-show",
+      "params": {
+        "name": "王五",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "acd172f3ba97a5d4"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-friend-show-008",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要考你**开后门**。输入接口会递进来两样：先是一串字（对象的名字），再是一个数（条数）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏**都扣着盖子**（只有类定义自己的函数够得着）—— `name` 装一串字，`fish` 装一个整数；再画一个构造函数，把这两栏填上。\n2. **在类定义里开一扇后门**：写一行 `friend`，把**外面一个叫 `showAccount` 的函数**放进来。\n3. **在外面那个函数里**印一行，直接读盒子里那两栏：\n\n```text\nXX 的账上是 N 条数据\n```\n\n4. 在 `main` 里根据类创建一个对象（名字和条数都用输入接口递进来的），然后**把这个对象递给那一个方法**。\n\n比如程序的输入是\n\n小胖\n7\n\n程序就要返回\n\n小胖 的账上是 7 条数据\n\n（判分喂的是**另一个对象**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1(name, fish);\n    showAccount(c1);\n    return 0;\n}\n",
+      "expectedOutput": "王五 的账上是 4 条数据",
+      "stdin": "王五\n4\n",
+      "explanation": "后门这一手，三件事要一起对上：\n\n1. **在类定义里写那一行**。位置在类定义的大括号里，字面就是 `friend void showAccount(const Cat& c);`。这一行是**类定义给出去的通行证**——从这一刻起，`showAccount` 够得到这张类定义创建后的每一个对象的**任何一格**，带盖的也不例外。\n2. **函数本身画在外面**。拿到通行证**不等于**它变成了类定义上的函数 —— 它还是外面的一手。所以类定义里只写一行「我们认识它」，函数的身子写在类定义外面。\n3. **称呼它的时候不写那个对象**。类定义上的函数是「哪个对象 · 函数名」；开后门的函数是「**函数名(哪个对象)**」——把对象当料递进去。写 `showAccount(c1);`。\n\n再补两句边界，都是本课强调过的：**后门是单向的**（我们给它开门，它不会把钥匙回赠给我们），**后门也不传递**（拿到通行证的只有它一个，它认识的朋友不算数）。\n\n⚠️ 还有一句最容易忘的：**别把 `friend` 那一行漏了**。漏了的话，哪怕函数的写法完全正确，编译器也会说那一格够不着。",
+      "templateId": "cpp-s2-06-friend-show",
+      "params": {
+        "name": "王五",
+        "fish": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "054c452d6d234176"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-key-not-lent-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给对象大夫那张类定义开了后门，对象大夫翻账本翻得好好的。\n\n现在来了个**学徒**，它也想瞄一眼盒子里的条数——可信封递进去，编译器还是说**够不着**。\n\n你帮我们改到能跑起来。**对象大夫那张类定义、还有工作区那段账，都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n};\n\nclass Vet {\n};\n\nclass Assistant {\npublic:\n    void peek(const Cat& c) {\n        cout << c.fish << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 2);\n    Assistant a;\n    a.peek(c1);\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n    friend class Assistant;\n};\n\nclass Vet {\n};\n\nclass Assistant {\npublic:\n    void peek(const Cat& c) {\n        cout << c.fish << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 2);\n    Assistant a;\n    a.peek(c1);\n    return 0;\n}\n",
+      "expectedOutput": "2",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:19:19: error: 'int Cat::fish' is private within this context`\n\n用自然语言解释：**「`cat` 盒子里的 `fish` 那一格，你现在站的这个地方够不着。」**\n\n我们明明开过后门了呀？——因为开的是**给对象大夫那张类定义的**，学徒不是对象大夫。这一条是刻意的：\n\n> **后门不传递。** 通行证不许转借：`Vet` 有，`Assistant` 没有。想让它进得来，就得在类定义里**再写一行**，把名字写清楚。\n\n要是通行证能转借，那我们开一次门就等于给全世界开门了——盖子也就白扣了。\n\n顺带记上另外两条边界：**后门是单向的**（我们给谁开门是我们单方面签的字，对方不会把它的钥匙回赠过来），**后门也不是工牌**（拿到通行证的函数身份上还是外面的一手）。\n\n想让这一位进来，解法就是在类定义里补上给它那一行。",
+      "templateId": "cpp-s2-06-key-not-lent",
+      "params": {
+        "fish": 2,
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "fef6357ef6dda763"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-key-not-lent-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给对象大夫那张类定义开了后门，对象大夫翻账本翻得好好的。\n\n现在来了个**学徒**，它也想瞄一眼盒子里的条数——可信封递进去，编译器还是说**够不着**。\n\n你帮我们改到能跑起来。**对象大夫那张类定义、还有工作区那段账，都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n};\n\nclass Vet {\n};\n\nclass Assistant {\npublic:\n    void peek(const Cat& c) {\n        cout << c.fish << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"王五\", 3);\n    Assistant a;\n    a.peek(c1);\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n    friend class Assistant;\n};\n\nclass Vet {\n};\n\nclass Assistant {\npublic:\n    void peek(const Cat& c) {\n        cout << c.fish << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"王五\", 3);\n    Assistant a;\n    a.peek(c1);\n    return 0;\n}\n",
+      "expectedOutput": "3",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:19:19: error: 'int Cat::fish' is private within this context`\n\n用自然语言解释：**「`cat` 盒子里的 `fish` 那一格，你现在站的这个地方够不着。」**\n\n我们明明开过后门了呀？——因为开的是**给对象大夫那张类定义的**，学徒不是对象大夫。这一条是刻意的：\n\n> **后门不传递。** 通行证不许转借：`Vet` 有，`Assistant` 没有。想让它进得来，就得在类定义里**再写一行**，把名字写清楚。\n\n要是通行证能转借，那我们开一次门就等于给全世界开门了——盖子也就白扣了。\n\n顺带记上另外两条边界：**后门是单向的**（我们给谁开门是我们单方面签的字，对方不会把它的钥匙回赠过来），**后门也不是工牌**（拿到通行证的函数身份上还是外面的一手）。\n\n想让这一位进来，解法就是在类定义里补上给它那一行。",
+      "templateId": "cpp-s2-06-key-not-lent",
+      "params": {
+        "fish": 3,
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "089cde43bfc93669"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-plate-outside-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们把类定义上的两栏都收进了带盖的那一档（只有类定义自己的函数够得着），构造函数也写好了。\n\n可 `main` 里那句直接去够盒子里的条数，编译器**不收**——它说那里是私事。\n\n你帮我们改成能跑的写法：**不要让类定义把盖子掀开**，让盒子里的东西还能被输出。**构造函数那一行别动，两个元素里的数也一个都不用改。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n};\n\nint main() {\n    Cat c1(\"张三\", 2);\n    cout << c1.fish << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    int howMany() const {\n        return fish;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 2);\n    cout << c1.howMany() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "2",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:14:16: error: 'int Cat::fish' is private within this context`\n\n后面还会跟一条 `note: declared private here`，指回类定义上画着那一栏的地方。用自然语言解释：**「`Cat` 这张类定义上的 `fish` 那一格是私有的，你站的这个地方够不着。」** 它连一行都没让程序跑起来——这是翻译阶段就拦下的错。\n\n这一题的关键是**别掀盖**。有一种改法是把那一栏挪到公开那一档去，那样确实能跑，可我们前面辛苦扣上的盖子就白扣了——外面谁都能伸手进来改它。\n\n正路是让**类定义自己开一个公开函数替它说话**：添一个方法 `howMany`，它站在类定义里面，够得到自己那一格；外面调用这一个方法就行。这一个方法只把它**读出来**，不给人改的机会——盖子还在。\n\n（本课后面还有另一条路：把后门开给**指名道姓的某一个对象**。两条路都对，区别是「谁都能问」还是「只给信得过的问」。）",
+      "templateId": "cpp-s2-06-plate-outside",
+      "params": {
+        "fish": 2,
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "fbfe89837863d9be"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-06-plate-outside-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们把类定义上的两栏都收进了带盖的那一档（只有类定义自己的函数够得着），构造函数也写好了。\n\n可 `main` 里那句直接去够盒子里的条数，编译器**不收**——它说那里是私事。\n\n你帮我们改成能跑的写法：**不要让类定义把盖子掀开**，让盒子里的东西还能被输出。**构造函数那一行别动，两个元素里的数也一个都不用改。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n};\n\nint main() {\n    Cat c1(\"王五\", 3);\n    cout << c1.fish << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    int howMany() const {\n        return fish;\n    }\n};\n\nint main() {\n    Cat c1(\"王五\", 3);\n    cout << c1.howMany() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "3",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:14:16: error: 'int Cat::fish' is private within this context`\n\n后面还会跟一条 `note: declared private here`，指回类定义上画着那一栏的地方。用自然语言解释：**「`Cat` 这张类定义上的 `fish` 那一格是私有的，你站的这个地方够不着。」** 它连一行都没让程序跑起来——这是翻译阶段就拦下的错。\n\n这一题的关键是**别掀盖**。有一种改法是把那一栏挪到公开那一档去，那样确实能跑，可我们前面辛苦扣上的盖子就白扣了——外面谁都能伸手进来改它。\n\n正路是让**类定义自己开一个公开函数替它说话**：添一个方法 `howMany`，它站在类定义里面，够得到自己那一格；外面调用这一个方法就行。这一个方法只把它**读出来**，不给人改的机会——盖子还在。\n\n（本课后面还有另一条路：把后门开给**指名道姓的某一个对象**。两条路都对，区别是「谁都能问」还是「只给信得过的问」。）",
+      "templateId": "cpp-s2-06-plate-outside",
+      "params": {
+        "fish": 3,
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.291Z",
+        "hash": "17a3ce60cf382bb3"
+      }
+    }
+  ]
+}

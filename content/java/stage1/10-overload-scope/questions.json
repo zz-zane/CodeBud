@@ -1,0 +1,85 @@
+{
+  "lessonId": "java-stage1-10",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们想让同一个招名写成两招不同的招，电脑靠什么把它们分开？",
+      "options": [
+        "靠输入接口不一样 —— 传入的料几样、每样什么类型",
+        "靠返回值不一样就行了",
+        "靠函数体里干的活不一样",
+        "在招名后面加个数字，写成 greet1、greet2"
+      ],
+      "answer": 0,
+      "explanation": "电脑挑招，只看**传入的东西**：先数一数几样料，再看每样是什么类型，对得上才是它要的那一个方法。返回值、身子里干的活，它一概不看 —— 所以「只有结果不一样」的两招会被编译器当成写重了，报一句 already defined。至于给招名加数字，那叫两个不同的名字，不是同一个名字的两种喂法，学员自己也记不住哪个是哪个。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们在方法里面摆了一块名称，方法跑完之后，站在 `main` 里还能调用到它吗？",
+      "options": [
+        "调用不到 —— 那个指针的作用域只有这个函数的函数体，函数一收工它就没了",
+        "能调用到，名称会一直留着，只是里面的数变成 0",
+        "能调用到，只要名字写对就行",
+        "要看那块名称保存的是数还是字符串"
+      ],
+      "answer": 0,
+      "explanation": "方法里摆的名称，地盘只有方法自己那对大括号：每调用一次方法，就在里面现摆一套崭新的名称，方法一收工整套撤走。所以站在 `main` 里调用方法里的名字，编译器会说 cannot find symbol —— 「这个名字我们没登记过」。它和名称里保存的是什么完全没关系，是**地盘**的事。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们写了 `for (int i = 0; i < 3; i++) {`，圈子跑完之后，在圈外印 `i`，会发生什么？",
+      "options": [
+        "编译当场拦下，说认不出 `i` 这个名字",
+        "印出 `3` —— 圈子跑完时 `i` 正好是 3",
+        "印出 `2` —— `i` 停在最后一个跑过的圈数上",
+        "编译能过，跑起来才炸"
+      ],
+      "answer": 0,
+      "explanation": "`i` 是在 `for` 的那对小括号里摆下的，它的地盘就是这一整个圈 —— 从 `for` 的圆括号一直管到圈身子那对花括号。圈跑完了，这块地盘也收了，站在圈外称呼它就撞上那句 cannot find symbol，而且是**编译当场拦下**，不会让它带着这个窟窿往下跑。想让圈数跑完之后还能用，就在圈**外面**先摆好名称、小括号里不要写 `int` 。"
+    },
+    {
+      "id": "q4",
+      "type": "code",
+      "lang": "java",
+      "code": "public class Main {\n    public static void add(int a, int b) {\n        System.out.println(\"整数版：\" + (a + b));\n    }\n\n    public static void add(double a, double b) {\n        System.out.println(\"小数版：\" + (a + b));\n    }\n\n    public static void main(String[] args) {\n        add(1, 2);\n        add(1.5, 2.5);\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "整数版：3\n小数版：4.0",
+      "accept": [
+        "整数版：3\n小数版：4.0\n"
+      ],
+      "explanation": "类定义上住着两招同名的 `add`，输入接口一个收两样整数、一个收两样小数。`add(1, 2)` 传入的两样都是整数，电脑挑走 `int` 那招，印出「整数版：3」；`add(1.5, 2.5)` 传入的两样带小数点，它挑走 `double` 那招，`1.5 + 2.5` 得 `4.0`，印出「小数版：4.0」。**招名一个没改，只是传入的料类型不一样**，这就是重载的用处。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "java",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int fish = 5;\n        if (fish > 0) {\n            int bonus = 2;\n            System.out.println(fish + bonus);\n        }\n        System.out.println(fish);\n    }\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "7\n5",
+      "accept": [
+        "7\n5\n"
+      ],
+      "explanation": "大括号一包，就是一层地盘。`fish` 摆在外面那层、`bonus` 摆在 `if` 里面那层：里层看得见外层，所以 `fish + bonus` 两个都够得着，印出 `7`；出来之后印的只有 `fish` 自己，还是 `5` —— 外层看不见里层的 `bonus`，那句要是写成 `System.out.println(bonus);` 就撞 cannot find symbol 了。"
+    },
+    {
+      "id": "q6",
+      "type": "codefill",
+      "lang": "java",
+      "code": "public class Main {\n    public static void add(int a, int b) {\n        System.out.println(a + b);\n    }\n\n    public static void add(int a, int b, ____ c) {\n        System.out.println(a + b + c);\n    }\n\n    public static void main(String[] args) {\n        add(1, 2);\n        add(1, 2, ____);\n    }\n}",
+      "stem": "我们把两招同名的 `add` 写了一半：第一个方法收两样料，第二招收三样料。补上两个空，让这段代码跑起来、屏幕上先印 `3` 再印 `6`  —— 一个空填第二招第三样料的**类型**，另一个空填 `main` 里第二声调用要喂的第**三个数**。",
+      "blanks": [
+        {
+          "answer": "int"
+        },
+        {
+          "answer": "3"
+        }
+      ],
+      "explanation": "第一个方法收两样整数、印 `1 + 2` 得 `3`；第二招收三样料，第三样也得是整数，所以第一个空填 `int` —— 三样料凑齐，`add(1, 2, 3)` 印出 `6`。第二个空要是填了别的数，屏幕上第二行就不是 `6` 了；而这些料**几样、每样什么类型**，正是电脑挑招用的那把尺子。"
+    }
+  ]
+}

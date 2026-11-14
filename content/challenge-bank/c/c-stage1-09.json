@@ -1,0 +1,488 @@
+{
+  "lessonId": "c-stage1-09",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-c-s1-array-assign-whole-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们想把 `b` 那排元素里的东西整排搬进 `a` 那排去。\n\n可这段代码编译器不肯收 —— 它指着搬东西那一行说，整排不能这么换。你帮我们看看它为什么不肯收，把它改好。改好之后，程序应该印出 `b` 那一排的三个数：7 4 2（中间用一个空格隔开）。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int a[3] = {1, 2, 3};\n    int b[3] = {7, 4, 2};\n\n    a = b;\n    printf(\"%d %d %d\\n\", a[0], a[1], a[2]);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int a[3] = {1, 2, 3};\n    int b[3] = {7, 4, 2};\n\n    for (int i = 0; i < 3; i++) {\n        a[i] = b[i];\n    }\n    printf(\"%d %d %d\\n\", a[0], a[1], a[2]);\n    return 0;\n}\n",
+      "expectedOutput": "7 4 2",
+      "stdin": null,
+      "explanation": "编译器的原话是：`main.c:7:7: error: assignment to expression with array type`。\n\n这句话的意思是：**「一整排」这种东西不能放在等号左边被整个换掉。**\n\n一排元素不是一个元素 —— 它是**钉在一块板上的三个元素**。等号那一套「计算右侧表达式并赋给左侧变量」的玩法在它身上用不上。想真的把 `b` 那排的内容搬进 `a`，只能**一个一个地搬**：\n\n用一个跑圈，让 `i` 从 0 走到 2，每圈做一次 `a[i] = b[i];` —— 报编号取元素、报编号装元素，这正是这一课学的「挨个走一遍」。搬完再印 `a`，它就成了 `b` 的样子（7 4 2）。\n\n⚠️ 顺带把这一条记牢：**报编号只动一个元素**（写 `a[1] = 99;` 只改 1 号元素），而**整排是不许整个换的**。这两件事看着像，编译器的态度完全不同。",
+      "templateId": "c-s1-array-assign-whole",
+      "params": {
+        "b1": 7,
+        "b2": 4,
+        "b3": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "56e78146d60cd87e"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-assign-whole-017",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们想把 `b` 那排元素里的东西整排搬进 `a` 那排去。\n\n可这段代码编译器不肯收 —— 它指着搬东西那一行说，整排不能这么换。你帮我们看看它为什么不肯收，把它改好。改好之后，程序应该印出 `b` 那一排的三个数：9 6 3（中间用一个空格隔开）。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int a[3] = {1, 2, 3};\n    int b[3] = {9, 6, 3};\n\n    a = b;\n    printf(\"%d %d %d\\n\", a[0], a[1], a[2]);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int a[3] = {1, 2, 3};\n    int b[3] = {9, 6, 3};\n\n    for (int i = 0; i < 3; i++) {\n        a[i] = b[i];\n    }\n    printf(\"%d %d %d\\n\", a[0], a[1], a[2]);\n    return 0;\n}\n",
+      "expectedOutput": "9 6 3",
+      "stdin": null,
+      "explanation": "编译器的原话是：`main.c:7:7: error: assignment to expression with array type`。\n\n这句话的意思是：**「一整排」这种东西不能放在等号左边被整个换掉。**\n\n一排元素不是一个元素 —— 它是**钉在一块板上的三个元素**。等号那一套「计算右侧表达式并赋给左侧变量」的玩法在它身上用不上。想真的把 `b` 那排的内容搬进 `a`，只能**一个一个地搬**：\n\n用一个跑圈，让 `i` 从 0 走到 2，每圈做一次 `a[i] = b[i];` —— 报编号取元素、报编号装元素，这正是这一课学的「挨个走一遍」。搬完再印 `a`，它就成了 `b` 的样子（9 6 3）。\n\n⚠️ 顺带把这一条记牢：**报编号只动一个元素**（写 `a[1] = 99;` 只改 1 号元素），而**整排是不许整个换的**。这两件事看着像，编译器的态度完全不同。",
+      "templateId": "c-s1-array-assign-whole",
+      "params": {
+        "b1": 9,
+        "b2": 6,
+        "b3": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "1a3a0a9aa0671e99"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-max-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 3 只元素，一个一个往里面装数据。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 3 行数**（一行一个，是每个元素里保存了几条数据）。把这些数一个元素一格地装进一排元素里，然后找出**装得最多的那一个**，把它的数报出来：`最多的那一个元素里有 %d 条数据`。\n\n（这排元素最多摆 5 只，今天只用了 3 只，而且每个元素里**至少有 1 条**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int big = bowls[0];\n    for (int i = 1; i < n; i++) {\n        if (bowls[i] > big) {\n            big = bowls[i];\n        }\n    }\n    printf(\"最多的那一个元素里有 %d 条数据\\n\", big);\n    return 0;\n}\n",
+      "expectedOutput": "最多的那一个元素里有 8 条数据",
+      "stdin": "3\n3\n7\n8\n",
+      "explanation": "找「最多的那一个」，用的是**打擂台**的老办法：\n\n1. **先请 0 号元素上台。** `int big = bowls[0];` —— 让它先当擂主。这里有个讲究：擂主要用**这排元素里真实存在的数**来起头，**不能洗成 0**。这道题每个元素至少 1 条，所以洗成 0 也碰巧对；可要是元素里全是 0 或者有负数，洗成 0 的擂主就会一直站在台上，答案就错了。\n2. **从 1 号元素开始，一个一个上来比。** 眼色写 `i < n`，`i` 从 1 走到 n 减一。\n3. **比擂主大就换它上台。** 一圈比一个，比完最后站在台上的就是最多的那一个。\n\n为什么从 **1** 号起、不是从 0 号起？因为 0 号已经在台上了 —— 让它跟自己比一场也不算错，只是白跑一圈。这种「差一位」的地方，写完之后在心里数一遍最稳。\n\n⚠️ 还有一条：这道题用到的是**一排元素**，所以「最多」是按**元素**比，不是把元素里的数加起来比。题目问的是哪只元素装得最多，答案就是那个元素里的条数。",
+      "templateId": "c-s1-array-max",
+      "params": {
+        "n": 3,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "5a74ea8000aa19a5"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-max-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 3 只元素，一个一个往里面装商品。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 3 行数**（一行一个，是每个元素里保存了几条商品）。把这些数一个元素一格地装进一排元素里，然后找出**装得最多的那一个**，把它的数报出来：`最多的那一个元素里有 %d 条商品`。\n\n（这排元素最多摆 5 只，今天只用了 3 只，而且每个元素里**至少有 1 条**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int big = bowls[0];\n    for (int i = 1; i < n; i++) {\n        if (bowls[i] > big) {\n            big = bowls[i];\n        }\n    }\n    printf(\"最多的那一个元素里有 %d 条商品\\n\", big);\n    return 0;\n}\n",
+      "expectedOutput": "最多的那一个元素里有 8 条商品",
+      "stdin": "3\n7\n8\n1\n",
+      "explanation": "找「最多的那一个」，用的是**打擂台**的老办法：\n\n1. **先请 0 号元素上台。** `int big = bowls[0];` —— 让它先当擂主。这里有个讲究：擂主要用**这排元素里真实存在的数**来起头，**不能洗成 0**。这道题每个元素至少 1 条，所以洗成 0 也碰巧对；可要是元素里全是 0 或者有负数，洗成 0 的擂主就会一直站在台上，答案就错了。\n2. **从 1 号元素开始，一个一个上来比。** 眼色写 `i < n`，`i` 从 1 走到 n 减一。\n3. **比擂主大就换它上台。** 一圈比一个，比完最后站在台上的就是最多的那一个。\n\n为什么从 **1** 号起、不是从 0 号起？因为 0 号已经在台上了 —— 让它跟自己比一场也不算错，只是白跑一圈。这种「差一位」的地方，写完之后在心里数一遍最稳。\n\n⚠️ 还有一条：这道题用到的是**一排元素**，所以「最多」是按**元素**比，不是把元素里的数加起来比。题目问的是哪只元素装得最多，答案就是那个元素里的条数。",
+      "templateId": "c-s1-array-max",
+      "params": {
+        "n": 3,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "1a8b7777ba33f9b4"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-max-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 4 只元素，一个一个往里面装数据。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 4 行数**（一行一个，是每个元素里保存了几条数据）。把这些数一个元素一格地装进一排元素里，然后找出**装得最多的那一个**，把它的数报出来：`最多的那一个元素里有 %d 条数据`。\n\n（这排元素最多摆 5 只，今天只用了 4 只，而且每个元素里**至少有 1 条**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int big = bowls[0];\n    for (int i = 1; i < n; i++) {\n        if (bowls[i] > big) {\n            big = bowls[i];\n        }\n    }\n    printf(\"最多的那一个元素里有 %d 条数据\\n\", big);\n    return 0;\n}\n",
+      "expectedOutput": "最多的那一个元素里有 9 条数据",
+      "stdin": "4\n4\n3\n9\n5\n",
+      "explanation": "找「最多的那一个」，用的是**打擂台**的老办法：\n\n1. **先请 0 号元素上台。** `int big = bowls[0];` —— 让它先当擂主。这里有个讲究：擂主要用**这排元素里真实存在的数**来起头，**不能洗成 0**。这道题每个元素至少 1 条，所以洗成 0 也碰巧对；可要是元素里全是 0 或者有负数，洗成 0 的擂主就会一直站在台上，答案就错了。\n2. **从 1 号元素开始，一个一个上来比。** 眼色写 `i < n`，`i` 从 1 走到 n 减一。\n3. **比擂主大就换它上台。** 一圈比一个，比完最后站在台上的就是最多的那一个。\n\n为什么从 **1** 号起、不是从 0 号起？因为 0 号已经在台上了 —— 让它跟自己比一场也不算错，只是白跑一圈。这种「差一位」的地方，写完之后在心里数一遍最稳。\n\n⚠️ 还有一条：这道题用到的是**一排元素**，所以「最多」是按**元素**比，不是把元素里的数加起来比。题目问的是哪只元素装得最多，答案就是那个元素里的条数。",
+      "templateId": "c-s1-array-max",
+      "params": {
+        "n": 4,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "711c3a6e20c55efa"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-max-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 4 只元素，一个一个往里面装商品。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 4 行数**（一行一个，是每个元素里保存了几条商品）。把这些数一个元素一格地装进一排元素里，然后找出**装得最多的那一个**，把它的数报出来：`最多的那一个元素里有 %d 条商品`。\n\n（这排元素最多摆 5 只，今天只用了 4 只，而且每个元素里**至少有 1 条**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int big = bowls[0];\n    for (int i = 1; i < n; i++) {\n        if (bowls[i] > big) {\n            big = bowls[i];\n        }\n    }\n    printf(\"最多的那一个元素里有 %d 条商品\\n\", big);\n    return 0;\n}\n",
+      "expectedOutput": "最多的那一个元素里有 9 条商品",
+      "stdin": "4\n9\n7\n7\n9\n",
+      "explanation": "找「最多的那一个」，用的是**打擂台**的老办法：\n\n1. **先请 0 号元素上台。** `int big = bowls[0];` —— 让它先当擂主。这里有个讲究：擂主要用**这排元素里真实存在的数**来起头，**不能洗成 0**。这道题每个元素至少 1 条，所以洗成 0 也碰巧对；可要是元素里全是 0 或者有负数，洗成 0 的擂主就会一直站在台上，答案就错了。\n2. **从 1 号元素开始，一个一个上来比。** 眼色写 `i < n`，`i` 从 1 走到 n 减一。\n3. **比擂主大就换它上台。** 一圈比一个，比完最后站在台上的就是最多的那一个。\n\n为什么从 **1** 号起、不是从 0 号起？因为 0 号已经在台上了 —— 让它跟自己比一场也不算错，只是白跑一圈。这种「差一位」的地方，写完之后在心里数一遍最稳。\n\n⚠️ 还有一条：这道题用到的是**一排元素**，所以「最多」是按**元素**比，不是把元素里的数加起来比。题目问的是哪只元素装得最多，答案就是那个元素里的条数。",
+      "templateId": "c-s1-array-max",
+      "params": {
+        "n": 4,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "cae1998b7f8d35aa"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-max-004",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 5 只元素，一个一个往里面装数据。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 5 行数**（一行一个，是每个元素里保存了几条数据）。把这些数一个元素一格地装进一排元素里，然后找出**装得最多的那一个**，把它的数报出来：`最多的那一个元素里有 %d 条数据`。\n\n（这排元素最多摆 5 只，今天只用了 5 只，而且每个元素里**至少有 1 条**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int big = bowls[0];\n    for (int i = 1; i < n; i++) {\n        if (bowls[i] > big) {\n            big = bowls[i];\n        }\n    }\n    printf(\"最多的那一个元素里有 %d 条数据\\n\", big);\n    return 0;\n}\n",
+      "expectedOutput": "最多的那一个元素里有 9 条数据",
+      "stdin": "5\n6\n5\n2\n9\n5\n",
+      "explanation": "找「最多的那一个」，用的是**打擂台**的老办法：\n\n1. **先请 0 号元素上台。** `int big = bowls[0];` —— 让它先当擂主。这里有个讲究：擂主要用**这排元素里真实存在的数**来起头，**不能洗成 0**。这道题每个元素至少 1 条，所以洗成 0 也碰巧对；可要是元素里全是 0 或者有负数，洗成 0 的擂主就会一直站在台上，答案就错了。\n2. **从 1 号元素开始，一个一个上来比。** 眼色写 `i < n`，`i` 从 1 走到 n 减一。\n3. **比擂主大就换它上台。** 一圈比一个，比完最后站在台上的就是最多的那一个。\n\n为什么从 **1** 号起、不是从 0 号起？因为 0 号已经在台上了 —— 让它跟自己比一场也不算错，只是白跑一圈。这种「差一位」的地方，写完之后在心里数一遍最稳。\n\n⚠️ 还有一条：这道题用到的是**一排元素**，所以「最多」是按**元素**比，不是把元素里的数加起来比。题目问的是哪只元素装得最多，答案就是那个元素里的条数。",
+      "templateId": "c-s1-array-max",
+      "params": {
+        "n": 5,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "56d2d154beab7c17"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-max-005",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 5 只元素，一个一个往里面装商品。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 5 行数**（一行一个，是每个元素里保存了几条商品）。把这些数一个元素一格地装进一排元素里，然后找出**装得最多的那一个**，把它的数报出来：`最多的那一个元素里有 %d 条商品`。\n\n（这排元素最多摆 5 只，今天只用了 5 只，而且每个元素里**至少有 1 条**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int big = bowls[0];\n    for (int i = 1; i < n; i++) {\n        if (bowls[i] > big) {\n            big = bowls[i];\n        }\n    }\n    printf(\"最多的那一个元素里有 %d 条商品\\n\", big);\n    return 0;\n}\n",
+      "expectedOutput": "最多的那一个元素里有 8 条商品",
+      "stdin": "5\n8\n1\n4\n1\n2\n",
+      "explanation": "找「最多的那一个」，用的是**打擂台**的老办法：\n\n1. **先请 0 号元素上台。** `int big = bowls[0];` —— 让它先当擂主。这里有个讲究：擂主要用**这排元素里真实存在的数**来起头，**不能洗成 0**。这道题每个元素至少 1 条，所以洗成 0 也碰巧对；可要是元素里全是 0 或者有负数，洗成 0 的擂主就会一直站在台上，答案就错了。\n2. **从 1 号元素开始，一个一个上来比。** 眼色写 `i < n`，`i` 从 1 走到 n 减一。\n3. **比擂主大就换它上台。** 一圈比一个，比完最后站在台上的就是最多的那一个。\n\n为什么从 **1** 号起、不是从 0 号起？因为 0 号已经在台上了 —— 让它跟自己比一场也不算错，只是白跑一圈。这种「差一位」的地方，写完之后在心里数一遍最稳。\n\n⚠️ 还有一条：这道题用到的是**一排元素**，所以「最多」是按**元素**比，不是把元素里的数加起来比。题目问的是哪只元素装得最多，答案就是那个元素里的条数。",
+      "templateId": "c-s1-array-max",
+      "params": {
+        "n": 5,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "3d8e131ac2f860db"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-off-by-one-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们摆了四个元素，想把它们一个一个报出来：第几个元素、里面有多少条。\n\n可这段代码只报了三个就收工了 —— 最后一个元素一句话都没说。你帮我们改对：**四个元素都要报到**，格式是一行一个元素，`第 %d 只元素里有 %d 条`。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int bowls[4] = {10, 20, 30, 40};\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"第 %d 只元素里有 %d 条\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int bowls[4] = {10, 20, 30, 40};\n\n    for (int i = 0; i < 4; i++) {\n        printf(\"第 %d 只元素里有 %d 条\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 只元素里有 10 条\n第 1 只元素里有 20 条\n第 2 只元素里有 30 条\n第 3 只元素里有 40 条",
+      "stdin": null,
+      "explanation": "这一课的规矩只有一句话，可它偏偏最容易摔：**一个元素一个编号，编号从 0 起，所以最大编号永远是元素数减一**。\n\n四个元素的编号是 0、1、2、3；而「有几个元素」数出来是 4。眼色写 `i < 3`，只放行了 0、1、2 —— 3 号那个元素压根没进过圈。\n\n**而且 C 一个字都不会提醒你。** 它既不会说「你少报了一个」，也不会说「这排元素有几个」—— 它只是安安静静地把圈跑完。所以遍历一排元素的时候，眼色写 `i < 元素数` 才是把每一个都走一遍。\n\n⚠️ 反方向也一样危险：写成 `i <= 4`（多走一圈），它会去摸编号 4 的那一格 —— **而那一格根本不属于这排元素**。C 依然一次不响，伸手就摸：摸到的是别人家的东西，印出来是什么谁也说不准，**同一段代码跑两次都可能不一样**。所以报编号之前，在心里数一遍：这排元素有几个格？最大编号是几？\n\n元素数不方便写死的时候，还能让编译器自己量：`sizeof(bowls) / sizeof(bowls[0])` 就是元素的只数。两条路随便走哪条，只要别差那一位。",
+      "templateId": "c-s1-array-off-by-one",
+      "params": {
+        "vals": "10, 20, 30, 40"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "c153caa2f9821e8b"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-off-by-one-002",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们摆了四个元素，想把它们一个一个报出来：第几个元素、里面有多少条。\n\n可这段代码只报了三个就收工了 —— 最后一个元素一句话都没说。你帮我们改对：**四个元素都要报到**，格式是一行一个元素，`第 %d 只元素里有 %d 条`。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int bowls[4] = {8, 16, 24, 32};\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"第 %d 只元素里有 %d 条\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int bowls[4] = {8, 16, 24, 32};\n\n    for (int i = 0; i < 4; i++) {\n        printf(\"第 %d 只元素里有 %d 条\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 只元素里有 8 条\n第 1 只元素里有 16 条\n第 2 只元素里有 24 条\n第 3 只元素里有 32 条",
+      "stdin": null,
+      "explanation": "这一课的规矩只有一句话，可它偏偏最容易摔：**一个元素一个编号，编号从 0 起，所以最大编号永远是元素数减一**。\n\n四个元素的编号是 0、1、2、3；而「有几个元素」数出来是 4。眼色写 `i < 3`，只放行了 0、1、2 —— 3 号那个元素压根没进过圈。\n\n**而且 C 一个字都不会提醒你。** 它既不会说「你少报了一个」，也不会说「这排元素有几个」—— 它只是安安静静地把圈跑完。所以遍历一排元素的时候，眼色写 `i < 元素数` 才是把每一个都走一遍。\n\n⚠️ 反方向也一样危险：写成 `i <= 4`（多走一圈），它会去摸编号 4 的那一格 —— **而那一格根本不属于这排元素**。C 依然一次不响，伸手就摸：摸到的是别人家的东西，印出来是什么谁也说不准，**同一段代码跑两次都可能不一样**。所以报编号之前，在心里数一遍：这排元素有几个格？最大编号是几？\n\n元素数不方便写死的时候，还能让编译器自己量：`sizeof(bowls) / sizeof(bowls[0])` 就是元素的只数。两条路随便走哪条，只要别差那一位。",
+      "templateId": "c-s1-array-off-by-one",
+      "params": {
+        "vals": "8, 16, 24, 32"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "a4ce549027dac87e"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-size-missing-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们想摆一排元素，往三个元素里各放一条数据，再把它们输出。\n\n可这段代码编译器不肯收 —— 它指着摆元素那一行说，这一排缺了个数。你帮我们看看它为什么不肯收，把它改好。改好之后，程序应该按 6、3、2 的顺序把三个元素里的东西输出（中间用一个空格隔开）。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int bowls[];\n\n    bowls[0] = 6;\n    bowls[1] = 3;\n    bowls[2] = 2;\n    printf(\"%d %d %d\\n\", bowls[0], bowls[1], bowls[2]);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int bowls[3];\n\n    bowls[0] = 6;\n    bowls[1] = 3;\n    bowls[2] = 2;\n    printf(\"%d %d %d\\n\", bowls[0], bowls[1], bowls[2]);\n    return 0;\n}\n",
+      "expectedOutput": "6 3 2",
+      "stdin": null,
+      "explanation": "编译器的原话是：`main.c:4:9: error: array size missing in 'bowls'`。\n\n翻过来就是：**`bowls` 这一排缺一个元素数。**\n\n方括号里空着是**有条件的**：只有你**同时用花括号把每个元素里的东西写出来**的时候，编译器才会替你数你写了几个、照那个数划地方（就像「方括号空着、值都写在花括号里」那种写法）。这一题里我们是先把「一排元素」摆好、再一个一个往里放的 —— 值还没露面，它就**不知道该划几个格**，只好拦下你。\n\n修法：在方括号里把元素数写出来（三个元素就写 `3`）。\n\n顺带记住这一条：**C 的这一排元素，元素数在写代码的时候就钉死了** —— 它不像 Python 那种列表，想多一个就回去改代码、再让编译器翻一遍。",
+      "templateId": "c-s1-array-size-missing",
+      "params": {
+        "a": 6,
+        "b": 3,
+        "c": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "de80dcc8220e06af"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-size-missing-026",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们想摆一排元素，往三个元素里各放一条数据，再把它们输出。\n\n可这段代码编译器不肯收 —— 它指着摆元素那一行说，这一排缺了个数。你帮我们看看它为什么不肯收，把它改好。改好之后，程序应该按 8、5、4 的顺序把三个元素里的东西输出（中间用一个空格隔开）。",
+      "brokenCode": "#include <stdio.h>\n\nint main(void) {\n    int bowls[];\n\n    bowls[0] = 8;\n    bowls[1] = 5;\n    bowls[2] = 4;\n    printf(\"%d %d %d\\n\", bowls[0], bowls[1], bowls[2]);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nint main(void) {\n    int bowls[3];\n\n    bowls[0] = 8;\n    bowls[1] = 5;\n    bowls[2] = 4;\n    printf(\"%d %d %d\\n\", bowls[0], bowls[1], bowls[2]);\n    return 0;\n}\n",
+      "expectedOutput": "8 5 4",
+      "stdin": null,
+      "explanation": "编译器的原话是：`main.c:4:9: error: array size missing in 'bowls'`。\n\n翻过来就是：**`bowls` 这一排缺一个元素数。**\n\n方括号里空着是**有条件的**：只有你**同时用花括号把每个元素里的东西写出来**的时候，编译器才会替你数你写了几个、照那个数划地方（就像「方括号空着、值都写在花括号里」那种写法）。这一题里我们是先把「一排元素」摆好、再一个一个往里放的 —— 值还没露面，它就**不知道该划几个格**，只好拦下你。\n\n修法：在方括号里把元素数写出来（三个元素就写 `3`）。\n\n顺带记住这一条：**C 的这一排元素，元素数在写代码的时候就钉死了** —— 它不像 Python 那种列表，想多一个就回去改代码、再让编译器翻一遍。",
+      "templateId": "c-s1-array-size-missing",
+      "params": {
+        "a": 8,
+        "b": 5,
+        "c": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "28ce062bd7e56d27"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-sum-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 3 只元素，一个一个往里面装数据。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 3 行数**（一行一个，是每个元素里保存了几条数据）。把这些数一个元素一格地装进一排元素里，然后把**这一排元素全加起来**，最后单独印一行总数：`一共 %d 条数据`。\n\n（这排元素最多摆 5 只，今天只用了 3 只。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        total = total + bowls[i];\n    }\n    printf(\"一共 %d 条数据\\n\", total);\n    return 0;\n}\n",
+      "expectedOutput": "一共 13 条数据",
+      "stdin": "3\n6\n3\n4\n",
+      "explanation": "「**跑圈 + 报编号**」是这一课最常用的搭法：`i` 从 0 走到元素数减一，每圈用 `bowls[i]` 摸到这一个元素 —— 装数的时候这么写，取数的时候也这么写。\n\n这道题分两趟走：**先装、再攒**。为什么不能一趟干完？其实也能 —— 每读一个数就顺手加进小元素里，一道圈就够了。分成两趟写，是因为「一排元素先摆好、之后再回头看它」这个形状在后面的题目里会一直用到。\n\n⚠️ 那个小元素 `int total = 0;` 有两个讲究：\n\n- **要洗成 0** —— 没洗过的元素里保存的是上一摊留下的东西，加进去的数就是错的。\n- **要摆在圈外面** —— 摆到圈里的话，每一圈都会被重新洗成 0，跑完只剩最后一个元素里那个数。\n\n顺带记一下：**元素的只数可以写死，也可以让编译器自己量**（`sizeof(bowls) / sizeof(bowls[0])`）。这道题的圈数跟着读进来的那个数走，两种写法都行；可要是元素数写错了，C 一样**一次不响**—— 写少了就少数一个，写多了就伸手摸到元素排外面去，摸到什么谁也说不准。",
+      "templateId": "c-s1-array-sum",
+      "params": {
+        "n": 3,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "7a9cc5500d5236a1"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-sum-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 3 只元素，一个一个往里面装商品。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 3 行数**（一行一个，是每个元素里保存了几条商品）。把这些数一个元素一格地装进一排元素里，然后把**这一排元素全加起来**，最后单独印一行总数：`一共 %d 条商品`。\n\n（这排元素最多摆 5 只，今天只用了 3 只。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        total = total + bowls[i];\n    }\n    printf(\"一共 %d 条商品\\n\", total);\n    return 0;\n}\n",
+      "expectedOutput": "一共 15 条商品",
+      "stdin": "3\n5\n7\n3\n",
+      "explanation": "「**跑圈 + 报编号**」是这一课最常用的搭法：`i` 从 0 走到元素数减一，每圈用 `bowls[i]` 摸到这一个元素 —— 装数的时候这么写，取数的时候也这么写。\n\n这道题分两趟走：**先装、再攒**。为什么不能一趟干完？其实也能 —— 每读一个数就顺手加进小元素里，一道圈就够了。分成两趟写，是因为「一排元素先摆好、之后再回头看它」这个形状在后面的题目里会一直用到。\n\n⚠️ 那个小元素 `int total = 0;` 有两个讲究：\n\n- **要洗成 0** —— 没洗过的元素里保存的是上一摊留下的东西，加进去的数就是错的。\n- **要摆在圈外面** —— 摆到圈里的话，每一圈都会被重新洗成 0，跑完只剩最后一个元素里那个数。\n\n顺带记一下：**元素的只数可以写死，也可以让编译器自己量**（`sizeof(bowls) / sizeof(bowls[0])`）。这道题的圈数跟着读进来的那个数走，两种写法都行；可要是元素数写错了，C 一样**一次不响**—— 写少了就少数一个，写多了就伸手摸到元素排外面去，摸到什么谁也说不准。",
+      "templateId": "c-s1-array-sum",
+      "params": {
+        "n": 3,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "bd7d7521ea346c93"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-sum-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 4 只元素，一个一个往里面装数据。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 4 行数**（一行一个，是每个元素里保存了几条数据）。把这些数一个元素一格地装进一排元素里，然后把**这一排元素全加起来**，最后单独印一行总数：`一共 %d 条数据`。\n\n（这排元素最多摆 5 只，今天只用了 4 只。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        total = total + bowls[i];\n    }\n    printf(\"一共 %d 条数据\\n\", total);\n    return 0;\n}\n",
+      "expectedOutput": "一共 23 条数据",
+      "stdin": "4\n8\n5\n1\n9\n",
+      "explanation": "「**跑圈 + 报编号**」是这一课最常用的搭法：`i` 从 0 走到元素数减一，每圈用 `bowls[i]` 摸到这一个元素 —— 装数的时候这么写，取数的时候也这么写。\n\n这道题分两趟走：**先装、再攒**。为什么不能一趟干完？其实也能 —— 每读一个数就顺手加进小元素里，一道圈就够了。分成两趟写，是因为「一排元素先摆好、之后再回头看它」这个形状在后面的题目里会一直用到。\n\n⚠️ 那个小元素 `int total = 0;` 有两个讲究：\n\n- **要洗成 0** —— 没洗过的元素里保存的是上一摊留下的东西，加进去的数就是错的。\n- **要摆在圈外面** —— 摆到圈里的话，每一圈都会被重新洗成 0，跑完只剩最后一个元素里那个数。\n\n顺带记一下：**元素的只数可以写死，也可以让编译器自己量**（`sizeof(bowls) / sizeof(bowls[0])`）。这道题的圈数跟着读进来的那个数走，两种写法都行；可要是元素数写错了，C 一样**一次不响**—— 写少了就少数一个，写多了就伸手摸到元素排外面去，摸到什么谁也说不准。",
+      "templateId": "c-s1-array-sum",
+      "params": {
+        "n": 4,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "5a8981234422fc21"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-sum-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 4 只元素，一个一个往里面装商品。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 4 行数**（一行一个，是每个元素里保存了几条商品）。把这些数一个元素一格地装进一排元素里，然后把**这一排元素全加起来**，最后单独印一行总数：`一共 %d 条商品`。\n\n（这排元素最多摆 5 只，今天只用了 4 只。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        total = total + bowls[i];\n    }\n    printf(\"一共 %d 条商品\\n\", total);\n    return 0;\n}\n",
+      "expectedOutput": "一共 23 条商品",
+      "stdin": "4\n2\n7\n7\n7\n",
+      "explanation": "「**跑圈 + 报编号**」是这一课最常用的搭法：`i` 从 0 走到元素数减一，每圈用 `bowls[i]` 摸到这一个元素 —— 装数的时候这么写，取数的时候也这么写。\n\n这道题分两趟走：**先装、再攒**。为什么不能一趟干完？其实也能 —— 每读一个数就顺手加进小元素里，一道圈就够了。分成两趟写，是因为「一排元素先摆好、之后再回头看它」这个形状在后面的题目里会一直用到。\n\n⚠️ 那个小元素 `int total = 0;` 有两个讲究：\n\n- **要洗成 0** —— 没洗过的元素里保存的是上一摊留下的东西，加进去的数就是错的。\n- **要摆在圈外面** —— 摆到圈里的话，每一圈都会被重新洗成 0，跑完只剩最后一个元素里那个数。\n\n顺带记一下：**元素的只数可以写死，也可以让编译器自己量**（`sizeof(bowls) / sizeof(bowls[0])`）。这道题的圈数跟着读进来的那个数走，两种写法都行；可要是元素数写错了，C 一样**一次不响**—— 写少了就少数一个，写多了就伸手摸到元素排外面去，摸到什么谁也说不准。",
+      "templateId": "c-s1-array-sum",
+      "params": {
+        "n": 4,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "24606d27285d2510"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-sum-004",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 5 只元素，一个一个往里面装数据。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 5 行数**（一行一个，是每个元素里保存了几条数据）。把这些数一个元素一格地装进一排元素里，然后把**这一排元素全加起来**，最后单独印一行总数：`一共 %d 条数据`。\n\n（这排元素最多摆 5 只，今天只用了 5 只。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        total = total + bowls[i];\n    }\n    printf(\"一共 %d 条数据\\n\", total);\n    return 0;\n}\n",
+      "expectedOutput": "一共 28 条数据",
+      "stdin": "5\n7\n7\n8\n2\n4\n",
+      "explanation": "「**跑圈 + 报编号**」是这一课最常用的搭法：`i` 从 0 走到元素数减一，每圈用 `bowls[i]` 摸到这一个元素 —— 装数的时候这么写，取数的时候也这么写。\n\n这道题分两趟走：**先装、再攒**。为什么不能一趟干完？其实也能 —— 每读一个数就顺手加进小元素里，一道圈就够了。分成两趟写，是因为「一排元素先摆好、之后再回头看它」这个形状在后面的题目里会一直用到。\n\n⚠️ 那个小元素 `int total = 0;` 有两个讲究：\n\n- **要洗成 0** —— 没洗过的元素里保存的是上一摊留下的东西，加进去的数就是错的。\n- **要摆在圈外面** —— 摆到圈里的话，每一圈都会被重新洗成 0，跑完只剩最后一个元素里那个数。\n\n顺带记一下：**元素的只数可以写死，也可以让编译器自己量**（`sizeof(bowls) / sizeof(bowls[0])`）。这道题的圈数跟着读进来的那个数走，两种写法都行；可要是元素数写错了，C 一样**一次不响**—— 写少了就少数一个，写多了就伸手摸到元素排外面去，摸到什么谁也说不准。",
+      "templateId": "c-s1-array-sum",
+      "params": {
+        "n": 5,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "fbb1aee10011552d"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-sum-005",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 5 只元素，一个一个往里面装商品。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 5 行数**（一行一个，是每个元素里保存了几条商品）。把这些数一个元素一格地装进一排元素里，然后把**这一排元素全加起来**，最后单独印一行总数：`一共 %d 条商品`。\n\n（这排元素最多摆 5 只，今天只用了 5 只。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < n; i++) {\n        total = total + bowls[i];\n    }\n    printf(\"一共 %d 条商品\\n\", total);\n    return 0;\n}\n",
+      "expectedOutput": "一共 17 条商品",
+      "stdin": "5\n2\n8\n3\n2\n2\n",
+      "explanation": "「**跑圈 + 报编号**」是这一课最常用的搭法：`i` 从 0 走到元素数减一，每圈用 `bowls[i]` 摸到这一个元素 —— 装数的时候这么写，取数的时候也这么写。\n\n这道题分两趟走：**先装、再攒**。为什么不能一趟干完？其实也能 —— 每读一个数就顺手加进小元素里，一道圈就够了。分成两趟写，是因为「一排元素先摆好、之后再回头看它」这个形状在后面的题目里会一直用到。\n\n⚠️ 那个小元素 `int total = 0;` 有两个讲究：\n\n- **要洗成 0** —— 没洗过的元素里保存的是上一摊留下的东西，加进去的数就是错的。\n- **要摆在圈外面** —— 摆到圈里的话，每一圈都会被重新洗成 0，跑完只剩最后一个元素里那个数。\n\n顺带记一下：**元素的只数可以写死，也可以让编译器自己量**（`sizeof(bowls) / sizeof(bowls[0])`）。这道题的圈数跟着读进来的那个数走，两种写法都行；可要是元素数写错了，C 一样**一次不响**—— 写少了就少数一个，写多了就伸手摸到元素排外面去，摸到什么谁也说不准。",
+      "templateId": "c-s1-array-sum",
+      "params": {
+        "n": 5,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "5dbd6c32cb42af44"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-walk-report-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 3 只元素，一个一个往里面装数据。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 3 行数**（一行一个，是每个元素里保存了几条数据）。把这些数**一个元素一格**地装进一排元素里，再从第 0 只开始一个一个报出来：一行一个元素，`第 %d 只元素里有 %d 条数据`。\n\n（这排元素最多摆 5 只，今天只用了 3 只 —— 报的时候**别多报**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 只元素里有 %d 条数据\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 只元素里有 2 条数据\n第 1 只元素里有 1 条数据\n第 2 只元素里有 6 条数据",
+      "stdin": "3\n2\n1\n6\n",
+      "explanation": "这一课的主角是**数组**。摆元素那一行是四块拼起来的：每个元素装什么形状、这排叫什么名字、方括号里一共摆几个、花括号里按顺序把每个元素里的东西写出来。\n\n这道题里有两个容易摔的地方：\n\n**① 元素数钉死了，编号从 0 起。** 这排摆了 5 只，可今天只用到 3 只 —— 所以转圈的眼色要写读进来的那个数。写成固定值 5 的话，会把没用过的元素也一起报出来（它们里面是摆元素时洗过的 0）。\n\n**② 读进来的数和赋值的格子可以对上号。** `i` 从 0 走到元素数减一，正好是这排元素的全部编号；每圈读一个数、装进这一个元素，读完也装完了 —— 用一个跑圈就能干完两件事。\n\n顺带记一句和 Python 很不一样的：**C 的这排元素想多一个，得回去改代码重新翻一遍**，它没有任何「加一格」的函数。",
+      "templateId": "c-s1-array-walk-report",
+      "params": {
+        "n": 3,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "ca88a9934a55c7a6"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-walk-report-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 3 只元素，一个一个往里面装商品。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 3 行数**（一行一个，是每个元素里保存了几条商品）。把这些数**一个元素一格**地装进一排元素里，再从第 0 只开始一个一个报出来：一行一个元素，`第 %d 只元素里有 %d 条商品`。\n\n（这排元素最多摆 5 只，今天只用了 3 只 —— 报的时候**别多报**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 只元素里有 %d 条商品\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 只元素里有 1 条商品\n第 1 只元素里有 9 条商品\n第 2 只元素里有 6 条商品",
+      "stdin": "3\n1\n9\n6\n",
+      "explanation": "这一课的主角是**数组**。摆元素那一行是四块拼起来的：每个元素装什么形状、这排叫什么名字、方括号里一共摆几个、花括号里按顺序把每个元素里的东西写出来。\n\n这道题里有两个容易摔的地方：\n\n**① 元素数钉死了，编号从 0 起。** 这排摆了 5 只，可今天只用到 3 只 —— 所以转圈的眼色要写读进来的那个数。写成固定值 5 的话，会把没用过的元素也一起报出来（它们里面是摆元素时洗过的 0）。\n\n**② 读进来的数和赋值的格子可以对上号。** `i` 从 0 走到元素数减一，正好是这排元素的全部编号；每圈读一个数、装进这一个元素，读完也装完了 —— 用一个跑圈就能干完两件事。\n\n顺带记一句和 Python 很不一样的：**C 的这排元素想多一个，得回去改代码重新翻一遍**，它没有任何「加一格」的函数。",
+      "templateId": "c-s1-array-walk-report",
+      "params": {
+        "n": 3,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "0abf8f1850422e76"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-walk-report-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 4 只元素，一个一个往里面装数据。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 4 行数**（一行一个，是每个元素里保存了几条数据）。把这些数**一个元素一格**地装进一排元素里，再从第 0 只开始一个一个报出来：一行一个元素，`第 %d 只元素里有 %d 条数据`。\n\n（这排元素最多摆 5 只，今天只用了 4 只 —— 报的时候**别多报**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 只元素里有 %d 条数据\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 只元素里有 4 条数据\n第 1 只元素里有 1 条数据\n第 2 只元素里有 2 条数据\n第 3 只元素里有 9 条数据",
+      "stdin": "4\n4\n1\n2\n9\n",
+      "explanation": "这一课的主角是**数组**。摆元素那一行是四块拼起来的：每个元素装什么形状、这排叫什么名字、方括号里一共摆几个、花括号里按顺序把每个元素里的东西写出来。\n\n这道题里有两个容易摔的地方：\n\n**① 元素数钉死了，编号从 0 起。** 这排摆了 5 只，可今天只用到 4 只 —— 所以转圈的眼色要写读进来的那个数。写成固定值 5 的话，会把没用过的元素也一起报出来（它们里面是摆元素时洗过的 0）。\n\n**② 读进来的数和赋值的格子可以对上号。** `i` 从 0 走到元素数减一，正好是这排元素的全部编号；每圈读一个数、装进这一个元素，读完也装完了 —— 用一个跑圈就能干完两件事。\n\n顺带记一句和 Python 很不一样的：**C 的这排元素想多一个，得回去改代码重新翻一遍**，它没有任何「加一格」的函数。",
+      "templateId": "c-s1-array-walk-report",
+      "params": {
+        "n": 4,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "21b2c66b6b8b9684"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-walk-report-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 4 只元素，一个一个往里面装商品。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 4 行数**（一行一个，是每个元素里保存了几条商品）。把这些数**一个元素一格**地装进一排元素里，再从第 0 只开始一个一个报出来：一行一个元素，`第 %d 只元素里有 %d 条商品`。\n\n（这排元素最多摆 5 只，今天只用了 4 只 —— 报的时候**别多报**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 只元素里有 %d 条商品\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 只元素里有 9 条商品\n第 1 只元素里有 6 条商品\n第 2 只元素里有 9 条商品\n第 3 只元素里有 5 条商品",
+      "stdin": "4\n9\n6\n9\n5\n",
+      "explanation": "这一课的主角是**数组**。摆元素那一行是四块拼起来的：每个元素装什么形状、这排叫什么名字、方括号里一共摆几个、花括号里按顺序把每个元素里的东西写出来。\n\n这道题里有两个容易摔的地方：\n\n**① 元素数钉死了，编号从 0 起。** 这排摆了 5 只，可今天只用到 4 只 —— 所以转圈的眼色要写读进来的那个数。写成固定值 5 的话，会把没用过的元素也一起报出来（它们里面是摆元素时洗过的 0）。\n\n**② 读进来的数和赋值的格子可以对上号。** `i` 从 0 走到元素数减一，正好是这排元素的全部编号；每圈读一个数、装进这一个元素，读完也装完了 —— 用一个跑圈就能干完两件事。\n\n顺带记一句和 Python 很不一样的：**C 的这排元素想多一个，得回去改代码重新翻一遍**，它没有任何「加一格」的函数。",
+      "templateId": "c-s1-array-walk-report",
+      "params": {
+        "n": 4,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "f5a788b8d3385eca"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-walk-report-004",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 5 只元素，一个一个往里面装数据。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 5 行数**（一行一个，是每个元素里保存了几条数据）。把这些数**一个元素一格**地装进一排元素里，再从第 0 只开始一个一个报出来：一行一个元素，`第 %d 只元素里有 %d 条数据`。\n\n（这排元素最多摆 5 只，今天只用了 5 只 —— 报的时候**别多报**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 只元素里有 %d 条数据\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 只元素里有 1 条数据\n第 1 只元素里有 6 条数据\n第 2 只元素里有 3 条数据\n第 3 只元素里有 5 条数据\n第 4 只元素里有 4 条数据",
+      "stdin": "5\n1\n6\n3\n5\n4\n",
+      "explanation": "这一课的主角是**数组**。摆元素那一行是四块拼起来的：每个元素装什么形状、这排叫什么名字、方括号里一共摆几个、花括号里按顺序把每个元素里的东西写出来。\n\n这道题里有两个容易摔的地方：\n\n**① 元素数钉死了，编号从 0 起。** 这排摆了 5 只，可今天只用到 5 只 —— 所以转圈的眼色要写读进来的那个数。写成固定值 5 的话，会把没用过的元素也一起报出来（它们里面是摆元素时洗过的 0）。\n\n**② 读进来的数和赋值的格子可以对上号。** `i` 从 0 走到元素数减一，正好是这排元素的全部编号；每圈读一个数、装进这一个元素，读完也装完了 —— 用一个跑圈就能干完两件事。\n\n顺带记一句和 Python 很不一样的：**C 的这排元素想多一个，得回去改代码重新翻一遍**，它没有任何「加一格」的函数。",
+      "templateId": "c-s1-array-walk-report",
+      "params": {
+        "n": 5,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "9abdf2a2bd28bb2c"
+      }
+    },
+    {
+      "id": "bank-c-s1-array-walk-report-005",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天摆了 5 只元素，一个一个往里面装商品。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 5 行数**（一行一个，是每个元素里保存了几条商品）。把这些数**一个元素一格**地装进一排元素里，再从第 0 只开始一个一个报出来：一行一个元素，`第 %d 只元素里有 %d 条商品`。\n\n（这排元素最多摆 5 只，今天只用了 5 只 —— 报的时候**别多报**。）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 只元素里有 %d 条商品\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+      "expectedOutput": "第 0 只元素里有 7 条商品\n第 1 只元素里有 4 条商品\n第 2 只元素里有 9 条商品\n第 3 只元素里有 3 条商品\n第 4 只元素里有 2 条商品",
+      "stdin": "5\n7\n4\n9\n3\n2\n",
+      "explanation": "这一课的主角是**数组**。摆元素那一行是四块拼起来的：每个元素装什么形状、这排叫什么名字、方括号里一共摆几个、花括号里按顺序把每个元素里的东西写出来。\n\n这道题里有两个容易摔的地方：\n\n**① 元素数钉死了，编号从 0 起。** 这排摆了 5 只，可今天只用到 5 只 —— 所以转圈的眼色要写读进来的那个数。写成固定值 5 的话，会把没用过的元素也一起报出来（它们里面是摆元素时洗过的 0）。\n\n**② 读进来的数和赋值的格子可以对上号。** `i` 从 0 走到元素数减一，正好是这排元素的全部编号；每圈读一个数、装进这一个元素，读完也装完了 —— 用一个跑圈就能干完两件事。\n\n顺带记一句和 Python 很不一样的：**C 的这排元素想多一个，得回去改代码重新翻一遍**，它没有任何「加一格」的函数。",
+      "templateId": "c-s1-array-walk-report",
+      "params": {
+        "n": 5,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.326Z",
+        "hash": "a1fe22e570d6724c"
+      }
+    }
+  ]
+}

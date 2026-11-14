@@ -1,0 +1,25 @@
+{
+  "templateId": "java-s2-generic-wrong-scale",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-10",
+  "type": "codefix",
+  "concept": [
+    "尺码填错",
+    "做错了当场就告诉我们",
+    "装数字的那张类定义",
+    "过不了源代码"
+  ],
+  "instances": 2,
+  "params": {
+    "v": {
+      "kind": "int",
+      "min": 6,
+      "max": 8
+    }
+  },
+  "stemTemplate": "我们这个柜子要保存的是**数字**，可名分那一行尖括号里的尺码填错了 —— 编译器当场就把源代码拦了下来，指着我们塞东西的那一行。\n\n请你帮我们改好，规矩是：\n\n1. **塞东西那一行一个字都不许动**（我们就是要塞那个数字）；\n2. 该改的是**名分那一行尖括号里的尺码**。\n\n改好之后，程序该印出这一行：\n\n```text\n第一格是 {v}\n```\n\n这题要体会的正是填尺码最值钱的地方：**错不再等到跑起来才炸，翻译源代码的时候就拦下了**。",
+  "brokenCodeTemplate": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> nums = new ArrayList<>();\n        nums.add({v});\n        System.out.println(\"第一格是 \" + nums.get(0));\n    }\n}\n",
+  "referenceFixTemplate": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>();\n        nums.add({v});\n        System.out.println(\"第一格是 \" + nums.get(0));\n    }\n}\n",
+  "explanationTemplate": "这一题是**好事**，值得我们高兴一下。\n\n编译器拦下来说的是：\n\n```text\nincompatible types: int cannot be converted to String\n```\n\n念起来是：**「这柜子填的尺码是字符串，你塞进来一个数字，尺寸对不上。」** 源代码末尾还跟了一行提示：\n\n```text\nNote: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n```\n\n那是编译器嫌候选说法太多、省着说的意思，**不是我们的错**。\n\n**为什么说这是好事？** 把本课第一节那个错摆在一起看就清楚了：\n\n| | 不填尺码 | 填了尺码 |\n|---|---|---|\n| 塞错东西 | **照塞不误**，什么都不说 | **翻译源代码的时候当场拦下** |\n| 取出来用 | 得自己贴标签，贴错就跑到那一步才炸 | 直接就是那个尺码，**不用贴标签** |\n| 什么时候发现错 | 跑到那一行 | 翻译源代码的时候 |\n\n同一件错事（往字符串的柜子里塞数字），不填尺码的时候**一点动静都没有**，非得等程序跑到取出来那一步才翻车；填了尺码，**在源代码那一关就拦住了** —— 我们连一次运行都不用白跑。\n\n**正路就是把尺码改成装数字的那张类定义：**\n\n```java\nList<Integer> nums = new ArrayList<>();\n```\n\n尖括号里那两块名称是**这份名分随身带着的尺码** —— 第一块说柜子该装什么，`new` 后面那对空尖括号是省事写法，意思是「跟左边一样」。改了这一处，塞数字就对得上了。\n\n（顺带记一句本课的硬规矩：尖括号里**只认实例那种**。光溜溜的 `int` 填不进去，必须填装数字的那张类定义 `Integer` —— 名分那一行要是写成 `List<int>`，编译器会另说一句话拦下来。）"
+}

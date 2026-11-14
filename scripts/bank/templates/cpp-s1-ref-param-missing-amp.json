@@ -1,0 +1,24 @@
+{
+  "templateId": "cpp-s1-ref-param-missing-amp",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-10",
+  "type": "codefix",
+  "concept": [
+    "收料用温柔版",
+    "& 小记号",
+    "外面的元素要真的动"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    }
+  },
+  "stemTemplate": "我们这一个方法想给**外面那个元素**加上 1：元素里本来有 {n} 条，调用结束这一个方法，元素里该有 {n} 加 1 条。\n\n可调用结束一看，元素里的数**一点没动**，印出来还是 {n}。它跑得起来，编译器一句原话都没有，就是外面的元素没被改到。\n\n你帮我们把这一个方法改对：调用结束之后，外面那个元素里的数要**真的多 1**。",
+  "brokenCodeTemplate": "#include <iostream>\nusing namespace std;\n\nvoid addOne(int n) {\n    n = n + 1;\n}\n\nint main() {\n    int fish = {n};\n\n    addOne(fish);\n    cout << fish << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\nusing namespace std;\n\nvoid addOne(int& n) {\n    n = n + 1;\n}\n\nint main() {\n    int fish = {n};\n\n    addOne(fish);\n    cout << fish << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "函数收料有两种收法，差别只在脑袋上那个**小记号**：\n\n- **不带记号**（我们原来那样：`void addOne(int n)`）—— 引用的时候，把外面那个元素里的数**照抄一份**递对函数。函数改的是**那张抄件**，改完抄件就扔了 —— 外面那个元素**一根毛都没动**。\n- **带上记号**（`void addOne(int& n)`）—— 那个 `&` 的意思是「**别抄了，就用外面那个元素本身**」。函数里写的 `n = n + 1;` 改的就是外面那个元素。\n\n一句话记牢：**想让函数改到外面的元素，脑袋上那个元素前面就得加 `&`。**\n\n⚠️ 这一题还是**一次不吭**：抄一份完全合规矩，编译器不觉得有任何问题 —— 它照常编译、照常跑，只是外面的元素没动。露馅的地方只有一个：**调用结束再看那个元素，数没变**。\n\n什么时候该抄、什么时候该用温柔版？想想你要的是什么：**只要数、不管外面那个元素**（比如求个和、算个平方）—— 抄一份更省事；**就是要改外面那个元素**（加一条、换个位）—— 脑袋上必须加 `&` 。"
+}

@@ -1,0 +1,38 @@
+{
+  "templateId": "c-s1-array-walk-report",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-09",
+  "type": "codewrite",
+  "concept": [
+    "摆一排元素",
+    "报编号取元素",
+    "编号从 0 起"
+  ],
+  "instances": 6,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    },
+    "unit": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "head": "{n}\n",
+    "count": "{n}",
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们今天摆了 {n} 只元素，一个一个往里面装{unit}。\n\n请你写个程序：**先从输入接口读进来一个数**（就是摆了几个元素），**再读进来 {n} 行数**（一行一个，是每个元素里保存了几条{unit}）。把这些数**一个元素一格**地装进一排元素里，再从第 0 只开始一个一个报出来：一行一个元素，`第 %d 只元素里有 %d 条{unit}`。\n\n（这排元素最多摆 5 只，今天只用了 {n} 只 —— 报的时候**别多报**。）",
+  "starterTemplate": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowls[5] = {0};\n    int n = 0;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowls[i]) != 1) {\n            return 1;\n        }\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"第 %d 只元素里有 %d 条{unit}\\n\", i, bowls[i]);\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "这一课的主角是**数组**。摆元素那一行是四块拼起来的：每个元素装什么形状、这排叫什么名字、方括号里一共摆几个、花括号里按顺序把每个元素里的东西写出来。\n\n这道题里有两个容易摔的地方：\n\n**① 元素数钉死了，编号从 0 起。** 这排摆了 5 只，可今天只用到 {n} 只 —— 所以转圈的眼色要写读进来的那个数。写成固定值 5 的话，会把没用过的元素也一起报出来（它们里面是摆元素时洗过的 0）。\n\n**② 读进来的数和赋值的格子可以对上号。** `i` 从 0 走到元素数减一，正好是这排元素的全部编号；每圈读一个数、装进这一个元素，读完也装完了 —— 用一个跑圈就能干完两件事。\n\n顺带记一句和 Python 很不一样的：**C 的这排元素想多一个，得回去改代码重新翻一遍**，它没有任何「加一格」的函数。"
+}

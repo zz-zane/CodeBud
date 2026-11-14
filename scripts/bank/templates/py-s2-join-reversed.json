@@ -1,0 +1,38 @@
+{
+  "templateId": "py-s2-join-reversed",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-01",
+  "type": "codefix",
+  "concept": [
+    "join",
+    "胶水在前柜子在后",
+    "AttributeError"
+  ],
+  "instances": 2,
+  "params": {
+    "cat": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四"
+      ]
+    },
+    "n": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    },
+    "dish": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品"
+      ]
+    }
+  },
+  "stemTemplate": "我们把三样东西已经装进储物柜了：柜子是 `parts`，里面按顺序保存「{cat}」「{n}」「{dish}」。我们想拿「、」当胶水，把三段粘回一条字符串，印出来该是 `{cat}、{n}、{dish}`。\n\n可这段代码**一跑就翻脸**，屏幕上蹦出一句 `AttributeError`。你帮我们找出毛病改对 —— 改完之后，打印出来的那行要跟上面长得一模一样，一个标点都不能差。",
+  "brokenCodeTemplate": "parts = [\"{cat}\", \"{n}\", \"{dish}\"]\nprint(parts.join(\"、\"))\n",
+  "referenceFixTemplate": "parts = [\"{cat}\", \"{n}\", \"{dish}\"]\nprint(\"、\".join(parts))\n",
+  "explanationTemplate": "`join` 的调用方式**和别的函数反着来**：胶水写**前面**（一对引号，引号里放要垫在中间的东西），再点 `join`，最后把储物柜放进括号里 —— `\"、\".join(parts)`。\n\n现在写的是 `parts.join(\"、\")`：柜子跑到了点号前面。**柜子身上根本没长 `join` 这一个方法**，所以编译器念到那儿就翻脸了，原话是 `AttributeError: 'list' object has no attribute 'join'` —— 意思是「这个柜子没有这一个方法」。\n\n错的不是胶水、也不是柜子，只是**两样东西站的位子反了**：点号前面那一位，得是**会这一个方法的那一个**（这里是那串胶水），需要被加工的东西反而站在括号里。\n\n（顺手记：胶水写 `\"、\"` 就垫顿号、写 `\"\"` 就什么都不垫、写 `\" + \"` 就连空格一起垫进去 —— 垫什么全看你引号里写什么。）"
+}

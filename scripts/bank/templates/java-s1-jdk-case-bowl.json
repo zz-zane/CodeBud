@@ -1,0 +1,28 @@
+{
+  "templateId": "java-s1-jdk-case-bowl",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-18",
+  "type": "codefix",
+  "concept": [
+    "大小写敏感",
+    "两个名字",
+    "already defined",
+    "静默出错"
+  ],
+  "instances": 2,
+  "params": {
+    "b": {
+      "kind": "pick",
+      "values": [
+        "17",
+        "21",
+        "23"
+      ]
+    }
+  },
+  "stemTemplate": "我们在本本上随手记下一个「JDK 大版本号」：**{b}**。源代码印出来该是：\n\n```text\n本本上记的版本：{b}\n```\n\n可这段源代码跑起来，编译器**一次都没吭**，账上却印着「本本上记的版本：0」—— 版本号压根没进来。你帮我们把账接对。",
+  "brokenCodeTemplate": "public class Main {\n    public static void main(String[] args) {\n        int version = 0;\n        int Version = {b};\n        System.out.println(\"本本上记的版本：\" + version);\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void main(String[] args) {\n        int version = {b};\n        System.out.println(\"本本上记的版本：\" + version);\n    }\n}\n",
+  "explanationTemplate": "编译器眼里，`version` 和 `Version` 是**两个完全不同的名字** —— 名字里的大小写，也是名字的一部分。源代码里先摆出来的 `version` 是一个元素；后头大写 `V` 开头的 `Version` 是**另一个新元素**：版本号 {b} 装进了新元素，印的却是旧元素，旧元素里躺着开局的 0。\n\n这类错最阴险的地方是：**编译器不报错，程序照样跑完** —— 屏幕上印出来的只是错的。所以运行结果对不上时，别先怀疑编译器，先眯起眼睛看清**名字里的大小写**。\n\n（顺手就能踩的坑：要是只把第二行的 `V` 改成小写、`int` 忘了删，立刻变成编译错误，原话是 `variable version is already defined in method main(String[])` —— 一块地盘里，同名的元素只能有一个。改的时候要么把版本号写进原来那个元素，要么把旧元素删掉，别留两个。）"
+}

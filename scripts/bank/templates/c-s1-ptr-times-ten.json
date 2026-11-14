@@ -1,0 +1,32 @@
+{
+  "templateId": "c-s1-ptr-times-ten",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-14",
+  "type": "codewrite",
+  "concept": [
+    "指针参数",
+    "&",
+    "解引用赋值",
+    "循环"
+  ],
+  "instances": 6,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "head": "{n}\n",
+    "count": "{n}",
+    "min": 1,
+    "max": 5
+  },
+  "stemTemplate": "我们想让一个方法顺着名称把元素里的数**翻成十倍**。\n\n请你写个程序：**先读进来一个数**（这次有几颗），**再读进来 {n} 行数**（一行一个，每颗上刻的数字，都在 1~5 之间）。\n\n先写一个方法 `treat`：头上摆一块**指整数元素的名称**（写成 `int *p`），身体里顺着名称把元素里的数乘 10、再顺着名称放回去。\n\n然后转 {n} 圈：每圈读进来一颗数，**把它的地址传给这一个方法**，再把改完之后的数印成一行。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+  "starterTemplate": "#include <stdio.h>\n\n// 在这里登记 treat 这一个方法（头里要摆一块指整数元素的名称）\n\nint main(void) {\n    int n;\n\n    // 先读「有几颗」\n\n    // 转 {n} 圈：每圈读一颗，把它的门牌号传给 treat，再把结果印出来\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nvoid treat(int *p) {\n    *p = *p * 10;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int i;\n    for (i = 0; i < n; i++) {\n        int x;\n        if (scanf(\"%d\", &x) != 1) {\n            return 1;\n        }\n        treat(&x);\n        printf(\"%d\\n\", x);\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "函数头里那块 `int *p` 收的是**地址**，所以称呼它的时候必须写 `treat(&x);`  —— `&` 就是去问 `x` 那个元素的地址。少写这个 `&`，编译器当场就拦（它会说「数字和名称不是一个形状」）。\n\n函数里那句 `*p = *p * 10;` 分两半看：\n\n1. 右边的 `*p` —— 顺着名称走到元素前，把里面的数**拿出来**；\n2. 左边的 `*p =` —— 算完再顺着**同一块名称**把新数**放回去**。\n\n拿和放走的是同一块名称，所以改的**就是你本人的那个元素** —— 回到 `main` 一印，真的是十倍的数。\n\n对照一下就更清楚了：要是函数头写成 `void treat(int p)`（没有那颗星），引用的时候写 `treat(x)`，那函数拿到的就是**抄件**，它在里面怎么折腾，你那个元素都纹丝不动。"
+}

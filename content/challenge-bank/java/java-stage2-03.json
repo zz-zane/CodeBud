@@ -1,0 +1,406 @@
+{
+  "lessonId": "java-stage2-03",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s2-abstract-instantiate-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们那张父类**只画了一半**：那一个方法 `speak` 只有个头、还没写完。子类倒是老老实实补上了。\n\n可我们在 `main` 里**照着父类直接创建了一个** —— 编译器把变量拍下来，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n张三：\n```\n\n名称那半边我们一个字都不想动，问题出在**生**的那半边。",
+      "brokenCode": "abstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Animal(\"张三\");\n        a.speak();\n    }\n}\n",
+      "referenceFix": "abstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Cat(\"张三\");\n        a.speak();\n    }\n}\n",
+      "expectedOutput": "张三：",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`Animal is abstract; cannot be instantiated`**，念起来是「`Animal` 是张**只画了一半的类定义**，不能拿来生实例」。\n\n有一条最容易走岔的地方：这句话**跟初始化那一手没关系**。我们第一反应往往是「是不是 `Animal(...)` 那一段写错了」—— 不是。构造链那套写法一个字都没毛病，问题在于**这张类定义本身就不许生**。\n\n为什么？看那一行 `abstract void speak();` —— 这一个方法**只有个头、没有身子**。要真让它创建对象来，回头调用一次「出声」，它该干什么？写那张类定义的人压根没说。编译器宁可不让你生，也不想让一个「不知道该干什么」的对象跑进院子里。\n\n正路有两条：\n\n- **换一张写得完的类定义来生**：`Animal a = new Cat(\"张三\");` —— 名称这半边照样写 `Animal`（照 `Cat` 生的对象本来就是动物，收得下），只是**生**的那一头交给子类。这也是本题的正解。\n- 或者把父类头上那个 `abstract` 拿掉、再把那一个方法补上身子 —— 可这就等于我们自己把「必须会出声」这条规矩撤了，这一课学的本事也就白学。\n\n顺手记：**名称上写的类定义名，和生的时候用的类定义名，本来就是两回事**。这一题正好把这一点演给我们看。",
+      "templateId": "java-s2-abstract-instantiate",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "a600cd180cd0c7d3"
+      }
+    },
+    {
+      "id": "bank-java-s2-abstract-instantiate-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们那张父类**只画了一半**：那一个方法 `speak` 只有个头、还没写完。子类倒是老老实实补上了。\n\n可我们在 `main` 里**照着父类直接创建了一个** —— 编译器把变量拍下来，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n李四：\n```\n\n名称那半边我们一个字都不想动，问题出在**生**的那半边。",
+      "brokenCode": "abstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Animal(\"李四\");\n        a.speak();\n    }\n}\n",
+      "referenceFix": "abstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Cat(\"李四\");\n        a.speak();\n    }\n}\n",
+      "expectedOutput": "李四：",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`Animal is abstract; cannot be instantiated`**，念起来是「`Animal` 是张**只画了一半的类定义**，不能拿来生实例」。\n\n有一条最容易走岔的地方：这句话**跟初始化那一手没关系**。我们第一反应往往是「是不是 `Animal(...)` 那一段写错了」—— 不是。构造链那套写法一个字都没毛病，问题在于**这张类定义本身就不许生**。\n\n为什么？看那一行 `abstract void speak();` —— 这一个方法**只有个头、没有身子**。要真让它创建对象来，回头调用一次「出声」，它该干什么？写那张类定义的人压根没说。编译器宁可不让你生，也不想让一个「不知道该干什么」的对象跑进院子里。\n\n正路有两条：\n\n- **换一张写得完的类定义来生**：`Animal a = new Cat(\"李四\");` —— 名称这半边照样写 `Animal`（照 `Cat` 生的对象本来就是动物，收得下），只是**生**的那一头交给子类。这也是本题的正解。\n- 或者把父类头上那个 `abstract` 拿掉、再把那一个方法补上身子 —— 可这就等于我们自己把「必须会出声」这条规矩撤了，这一课学的本事也就白学。\n\n顺手记：**名称上写的类定义名，和生的时候用的类定义名，本来就是两回事**。这一题正好把这一点演给我们看。",
+      "templateId": "java-s2-abstract-instantiate",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "0aab8f72f7b86f0e"
+      }
+    },
+    {
+      "id": "bank-java-s2-brand-name-limits-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们手里这块名称写的是 `Animal`，可底下装的明明是**一个对象**。对象会睡，我们就照着它调用了一输出方法 —— 编译器却说：**翻遍这块名称，没找着这一个方法**，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n张三睡着了，输出输出\n```\n\n方法我们都写好了，**别去改类定义**；要改的是 `main` 里那几行——我们得先跟它**认个亲**，再换一块名称才调用得动。",
+      "brokenCode": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Cat(\"张三\");\n        a.sleep();\n    }\n}\n",
+      "referenceFix": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Cat(\"张三\");\n        if (a instanceof Cat) {\n            Cat c = (Cat) a;\n            c.sleep();\n        }\n    }\n}\n",
+      "expectedOutput": "张三睡着了，输出输出",
+      "stdin": null,
+      "explanation": "编译器的原话分两截，第一截是 **`cannot find symbol`**（我们点了它**没有**的方法），底下那几行线索才是真值钱的：\n\n- `symbol: method sleep()` —— **我们在找哪一个方法**\n- `location: variable a of type Animal` —— **我们是在哪块名称上找的**\n\n最后这一行是本题的钥匙。Java 是**认字**的：我们在代码里调用得出哪些方法，**是照着名称上写的类定义名去查的**。名称写 `Animal`，那就只有 `Animal` 上也画着的方法调用得动 —— `sleep` 是子类才添上的，我们在 `Animal` 这张类定义上当然翻不到。\n\n**名称管的是「我们写得动哪些」，不是「底下那个实例会不会」。** 底下那个确实是对象、确实会睡，可我们手里的名称写的是父类。\n\n正路是那把老钥匙：**先认亲、再换名称**。\n\n```java\nif (a instanceof Cat) {\n    Cat c = (Cat) a;\n    c.sleep();\n}\n```\n\n- `a instanceof Cat` 问一句「我们手里这个到底是不是对象」；\n- `(Cat) a` 把这块名称**换一块写 `Cat` 的**（这一步叫向下转型），它照样指着原来那个实例，只是名称上的名字换了；\n- 换了名称再调用 `sleep`，编译器就找得到了。\n\n顺手记：**换名称之前一定要先问一句**。要是底下装的其实是狗，硬换名称再调用，就是另一种翻车法了。",
+      "templateId": "java-s2-brand-name-limits",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "291a8b1dc39f1d21"
+      }
+    },
+    {
+      "id": "bank-java-s2-brand-name-limits-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们手里这块名称写的是 `Animal`，可底下装的明明是**一个对象**。对象会睡，我们就照着它调用了一输出方法 —— 编译器却说：**翻遍这块名称，没找着这一个方法**，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n李四睡着了，输出输出\n```\n\n方法我们都写好了，**别去改类定义**；要改的是 `main` 里那几行——我们得先跟它**认个亲**，再换一块名称才调用得动。",
+      "brokenCode": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Cat(\"李四\");\n        a.sleep();\n    }\n}\n",
+      "referenceFix": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Cat(\"李四\");\n        if (a instanceof Cat) {\n            Cat c = (Cat) a;\n            c.sleep();\n        }\n    }\n}\n",
+      "expectedOutput": "李四睡着了，输出输出",
+      "stdin": null,
+      "explanation": "编译器的原话分两截，第一截是 **`cannot find symbol`**（我们点了它**没有**的方法），底下那几行线索才是真值钱的：\n\n- `symbol: method sleep()` —— **我们在找哪一个方法**\n- `location: variable a of type Animal` —— **我们是在哪块名称上找的**\n\n最后这一行是本题的钥匙。Java 是**认字**的：我们在代码里调用得出哪些方法，**是照着名称上写的类定义名去查的**。名称写 `Animal`，那就只有 `Animal` 上也画着的方法调用得动 —— `sleep` 是子类才添上的，我们在 `Animal` 这张类定义上当然翻不到。\n\n**名称管的是「我们写得动哪些」，不是「底下那个实例会不会」。** 底下那个确实是对象、确实会睡，可我们手里的名称写的是父类。\n\n正路是那把老钥匙：**先认亲、再换名称**。\n\n```java\nif (a instanceof Cat) {\n    Cat c = (Cat) a;\n    c.sleep();\n}\n```\n\n- `a instanceof Cat` 问一句「我们手里这个到底是不是对象」；\n- `(Cat) a` 把这块名称**换一块写 `Cat` 的**（这一步叫向下转型），它照样指着原来那个实例，只是名称上的名字换了；\n- 换了名称再调用 `sleep`，编译器就找得到了。\n\n顺手记：**换名称之前一定要先问一句**。要是底下装的其实是狗，硬换名称再调用，就是另一种翻车法了。",
+      "templateId": "java-s2-brand-name-limits",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "f6b90241dea70bf0"
+      }
+    },
+    {
+      "id": "bank-java-s2-brand-switch-down-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手里这块名称写的是 `Animal`，底下保存的是一个对象。对象除了出声还会睡 —— 可**名称上没有「睡」这一个方法**，直接调用会被编译器拦下来。\n\n要画的类定义：\n\n- 父类 `Animal`（这张**不是**半张，能直接生）：一盒名字家当、初始化那一手记名字、一个方法 `speak` 印 **名字 + `：……`**。\n- 子类 `Cat` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：`**），另外**自己新添一个方法** `sleep`，印 **名字 + `睡着了，输出输出`**。\n- 子类 `Dog` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：汪！`**），别的不添。\n\n`main` 里这么走：\n\n1. 读那个数；\n2. 创建一个对象装进写 `Animal` 的名称，再创建一个狗也装进写 `Animal` 的名称；\n3. 两块名称各调用一次 `speak`；\n4. 再**先认亲、后给对象换一块写 `Cat` 的名称**，调用那么多声 `sleep`。\n\n狗那块名称我们不碰，它**没有**睡这一个方法。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n张三：\n大黄：汪！\n张三睡着了，输出输出\n张三睡着了，输出输出\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Animal a = new Cat(\"张三\");\n        Animal b = new Dog(\"大黄\");\n        a.speak();\n        b.speak();\n        if (a instanceof Cat) {\n            Cat c = (Cat) a;\n            for (int i = 0; i < n; i++) {\n                c.sleep();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n大黄：汪！\n张三睡着了，输出输出\n张三睡着了，输出输出\n张三睡着了，输出输出",
+      "stdin": "3\n",
+      "explanation": "这题把上一课和这一课的两手接在一起用。\n\n**赋值的时候很容易。** 名称写 `Animal`，给的是对象和狗 —— 照 `Cat` 生的对象本来也是一个 `Animal`，收得下（这一步叫向上转型，随到随收）。\n\n**调用就分岔了。** Java 是**认字**的：我们调用得出哪些方法，**是照着名称上写的类定义名去查的**。两块名称都写 `Animal`，那就只有 `Animal` 上也画着的方法调用得动。\n\n- `a.speak();` 和 `b.speak();` 都找得到 —— 因为父类上有这一个方法。**至于输出是哪一次，由底下那个实例的类定义说了算**，所以一个一个汪。\n- `a.sleep();` 就调用不动了：父类上**没有**这一个方法，我们会撞上 `cannot find symbol`，底下还跟着一行 `location: variable a of type Animal` 告诉我们「你是在这块名称上找的」。\n\n**所以要先认亲、后换名称**：\n\n```java\nif (a instanceof Cat) {\n    Cat c = (Cat) a;\n    ...\n}\n```\n\n`a instanceof Cat` 问一句「我们手里这个到底是不是对象」，问准了再用 `(Cat) a` 换一块写 `Cat` 的名称。换名称**不会换掉底下那个实例**，只是名称上的名字换了 —— 换了之后，编译器才找得到 `sleep`。\n\n顺手记：**换名称之前必须先认亲**。要是我们把狗换成对象的名称再调用，那就是另一种翻车法了。",
+      "templateId": "java-s2-brand-switch-down",
+      "params": {
+        "name": "张三",
+        "dog": "大黄"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "e594f89784391c65"
+      }
+    },
+    {
+      "id": "bank-java-s2-brand-switch-down-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手里这块名称写的是 `Animal`，底下保存的是一个对象。对象除了出声还会睡 —— 可**名称上没有「睡」这一个方法**，直接调用会被编译器拦下来。\n\n要画的类定义：\n\n- 父类 `Animal`（这张**不是**半张，能直接生）：一盒名字家当、初始化那一手记名字、一个方法 `speak` 印 **名字 + `：……`**。\n- 子类 `Cat` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：`**），另外**自己新添一个方法** `sleep`，印 **名字 + `睡着了，输出输出`**。\n- 子类 `Dog` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：汪！`**），别的不添。\n\n`main` 里这么走：\n\n1. 读那个数；\n2. 创建一个对象装进写 `Animal` 的名称，再创建一个狗也装进写 `Animal` 的名称；\n3. 两块名称各调用一次 `speak`；\n4. 再**先认亲、后给对象换一块写 `Cat` 的名称**，调用那么多声 `sleep`。\n\n狗那块名称我们不碰，它**没有**睡这一个方法。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n张三：\n旺财：汪！\n张三睡着了，输出输出\n张三睡着了，输出输出\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Animal a = new Cat(\"张三\");\n        Animal b = new Dog(\"旺财\");\n        a.speak();\n        b.speak();\n        if (a instanceof Cat) {\n            Cat c = (Cat) a;\n            for (int i = 0; i < n; i++) {\n                c.sleep();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n旺财：汪！\n张三睡着了，输出输出\n张三睡着了，输出输出\n张三睡着了，输出输出\n张三睡着了，输出输出",
+      "stdin": "4\n",
+      "explanation": "这题把上一课和这一课的两手接在一起用。\n\n**赋值的时候很容易。** 名称写 `Animal`，给的是对象和狗 —— 照 `Cat` 生的对象本来也是一个 `Animal`，收得下（这一步叫向上转型，随到随收）。\n\n**调用就分岔了。** Java 是**认字**的：我们调用得出哪些方法，**是照着名称上写的类定义名去查的**。两块名称都写 `Animal`，那就只有 `Animal` 上也画着的方法调用得动。\n\n- `a.speak();` 和 `b.speak();` 都找得到 —— 因为父类上有这一个方法。**至于输出是哪一次，由底下那个实例的类定义说了算**，所以一个一个汪。\n- `a.sleep();` 就调用不动了：父类上**没有**这一个方法，我们会撞上 `cannot find symbol`，底下还跟着一行 `location: variable a of type Animal` 告诉我们「你是在这块名称上找的」。\n\n**所以要先认亲、后换名称**：\n\n```java\nif (a instanceof Cat) {\n    Cat c = (Cat) a;\n    ...\n}\n```\n\n`a instanceof Cat` 问一句「我们手里这个到底是不是对象」，问准了再用 `(Cat) a` 换一块写 `Cat` 的名称。换名称**不会换掉底下那个实例**，只是名称上的名字换了 —— 换了之后，编译器才找得到 `sleep`。\n\n顺手记：**换名称之前必须先认亲**。要是我们把狗换成对象的名称再调用，那就是另一种翻车法了。",
+      "templateId": "java-s2-brand-switch-down",
+      "params": {
+        "name": "张三",
+        "dog": "旺财"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "05e02e1d7698029c"
+      }
+    },
+    {
+      "id": "bank-java-s2-brand-switch-down-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手里这块名称写的是 `Animal`，底下保存的是一个对象。对象除了出声还会睡 —— 可**名称上没有「睡」这一个方法**，直接调用会被编译器拦下来。\n\n要画的类定义：\n\n- 父类 `Animal`（这张**不是**半张，能直接生）：一盒名字家当、初始化那一手记名字、一个方法 `speak` 印 **名字 + `：……`**。\n- 子类 `Cat` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：`**），另外**自己新添一个方法** `sleep`，印 **名字 + `睡着了，输出输出`**。\n- 子类 `Dog` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：汪！`**），别的不添。\n\n`main` 里这么走：\n\n1. 读那个数；\n2. 创建一个对象装进写 `Animal` 的名称，再创建一个狗也装进写 `Animal` 的名称；\n3. 两块名称各调用一次 `speak`；\n4. 再**先认亲、后给对象换一块写 `Cat` 的名称**，调用那么多声 `sleep`。\n\n狗那块名称我们不碰，它**没有**睡这一个方法。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n李四：\n大黄：汪！\n李四睡着了，输出输出\n李四睡着了，输出输出\n李四睡着了，输出输出\n李四睡着了，输出输出\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Animal a = new Cat(\"李四\");\n        Animal b = new Dog(\"大黄\");\n        a.speak();\n        b.speak();\n        if (a instanceof Cat) {\n            Cat c = (Cat) a;\n            for (int i = 0; i < n; i++) {\n                c.sleep();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n大黄：汪！\n李四睡着了，输出输出\n李四睡着了，输出输出\n李四睡着了，输出输出",
+      "stdin": "3\n",
+      "explanation": "这题把上一课和这一课的两手接在一起用。\n\n**赋值的时候很容易。** 名称写 `Animal`，给的是对象和狗 —— 照 `Cat` 生的对象本来也是一个 `Animal`，收得下（这一步叫向上转型，随到随收）。\n\n**调用就分岔了。** Java 是**认字**的：我们调用得出哪些方法，**是照着名称上写的类定义名去查的**。两块名称都写 `Animal`，那就只有 `Animal` 上也画着的方法调用得动。\n\n- `a.speak();` 和 `b.speak();` 都找得到 —— 因为父类上有这一个方法。**至于输出是哪一次，由底下那个实例的类定义说了算**，所以一个一个汪。\n- `a.sleep();` 就调用不动了：父类上**没有**这一个方法，我们会撞上 `cannot find symbol`，底下还跟着一行 `location: variable a of type Animal` 告诉我们「你是在这块名称上找的」。\n\n**所以要先认亲、后换名称**：\n\n```java\nif (a instanceof Cat) {\n    Cat c = (Cat) a;\n    ...\n}\n```\n\n`a instanceof Cat` 问一句「我们手里这个到底是不是对象」，问准了再用 `(Cat) a` 换一块写 `Cat` 的名称。换名称**不会换掉底下那个实例**，只是名称上的名字换了 —— 换了之后，编译器才找得到 `sleep`。\n\n顺手记：**换名称之前必须先认亲**。要是我们把狗换成对象的名称再调用，那就是另一种翻车法了。",
+      "templateId": "java-s2-brand-switch-down",
+      "params": {
+        "name": "李四",
+        "dog": "大黄"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "530f627be60fa331"
+      }
+    },
+    {
+      "id": "bank-java-s2-brand-switch-down-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们手里这块名称写的是 `Animal`，底下保存的是一个对象。对象除了出声还会睡 —— 可**名称上没有「睡」这一个方法**，直接调用会被编译器拦下来。\n\n要画的类定义：\n\n- 父类 `Animal`（这张**不是**半张，能直接生）：一盒名字家当、初始化那一手记名字、一个方法 `speak` 印 **名字 + `：……`**。\n- 子类 `Cat` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：`**），另外**自己新添一个方法** `sleep`，印 **名字 + `睡着了，输出输出`**。\n- 子类 `Dog` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：汪！`**），别的不添。\n\n`main` 里这么走：\n\n1. 读那个数；\n2. 创建一个对象装进写 `Animal` 的名称，再创建一个狗也装进写 `Animal` 的名称；\n3. 两块名称各调用一次 `speak`；\n4. 再**先认亲、后给对象换一块写 `Cat` 的名称**，调用那么多声 `sleep`。\n\n狗那块名称我们不碰，它**没有**睡这一个方法。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n李四：\n旺财：汪！\n李四睡着了，输出输出\n李四睡着了，输出输出\n李四睡着了，输出输出\n李四睡着了，输出输出\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Animal a = new Cat(\"李四\");\n        Animal b = new Dog(\"旺财\");\n        a.speak();\n        b.speak();\n        if (a instanceof Cat) {\n            Cat c = (Cat) a;\n            for (int i = 0; i < n; i++) {\n                c.sleep();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n旺财：汪！\n李四睡着了，输出输出\n李四睡着了，输出输出\n李四睡着了，输出输出",
+      "stdin": "3\n",
+      "explanation": "这题把上一课和这一课的两手接在一起用。\n\n**赋值的时候很容易。** 名称写 `Animal`，给的是对象和狗 —— 照 `Cat` 生的对象本来也是一个 `Animal`，收得下（这一步叫向上转型，随到随收）。\n\n**调用就分岔了。** Java 是**认字**的：我们调用得出哪些方法，**是照着名称上写的类定义名去查的**。两块名称都写 `Animal`，那就只有 `Animal` 上也画着的方法调用得动。\n\n- `a.speak();` 和 `b.speak();` 都找得到 —— 因为父类上有这一个方法。**至于输出是哪一次，由底下那个实例的类定义说了算**，所以一个一个汪。\n- `a.sleep();` 就调用不动了：父类上**没有**这一个方法，我们会撞上 `cannot find symbol`，底下还跟着一行 `location: variable a of type Animal` 告诉我们「你是在这块名称上找的」。\n\n**所以要先认亲、后换名称**：\n\n```java\nif (a instanceof Cat) {\n    Cat c = (Cat) a;\n    ...\n}\n```\n\n`a instanceof Cat` 问一句「我们手里这个到底是不是对象」，问准了再用 `(Cat) a` 换一块写 `Cat` 的名称。换名称**不会换掉底下那个实例**，只是名称上的名字换了 —— 换了之后，编译器才找得到 `sleep`。\n\n顺手记：**换名称之前必须先认亲**。要是我们把狗换成对象的名称再调用，那就是另一种翻车法了。",
+      "templateId": "java-s2-brand-switch-down",
+      "params": {
+        "name": "李四",
+        "dog": "旺财"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "3781ff9ffe43b4bf"
+      }
+    },
+    {
+      "id": "bank-java-s2-child-missing-override-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们的父类只画了一半，立了条规矩：**凡是往下画的，都得把 `speak` 补上**。子类套在父类上，初始化那一手也写了 —— 可我们**偏偏忘了补那一个方法**，编译器当场翻脸，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这两行：\n\n```text\n张三：\n张三睡着了，输出输出\n```\n\n（第二行那一个方法是父类上**本来就画完了的**，我们已经写好了，别去动它。）",
+      "brokenCode": "abstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.speak();\n        c.sleep();\n    }\n}\n",
+      "referenceFix": "abstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"张三\");\n        c.speak();\n        c.sleep();\n    }\n}\n",
+      "expectedOutput": "张三：\n张三睡着了，输出输出",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`Cat is not abstract and does not override abstract method speak() in Animal`**，念起来是：**「`Cat` 自己没写 `speak`，又不肯当半张类定义 —— 那它到底会不会出声？」**\n\n注意它点了两个名：`class Cat` 和 `abstract method speak() in Animal`。这两个名字合起来就是它的推理：\n\n- 父类上立过规矩：`speak` **必须**有；\n- 子类上没写这一个方法；\n- 子类头上也没写 `abstract`（等于说「我们这张是画完了的」）。\n\n画完了、却又少一个方法 —— 自相矛盾，所以编译器不许它初始化。\n\n它其实给了两条路，我们必须二选一：\n\n1. **把那一个方法补上**（绝大多数时候选这条）—— 在子类里写一版 `speak`，头上照旧挂 `@Override`。\n2. **自己头上也写 `abstract`** —— 意思是「我们这张也是半张，接着往下传」。可这样一来，我们就生不出实例了，总得有一个类定义把话说完。\n\n本题走第一条。补的时候有两点：`@Override` 别忘，**名字一个字母都不能错** —— 手滑写成 `speek`，编译器只会说「我们又画了一个方法新的」，而该补的那一个方法**还是空着**，这一趟就白改了。",
+      "templateId": "java-s2-child-missing-override",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "dd6ba18ab16be048"
+      }
+    },
+    {
+      "id": "bank-java-s2-child-missing-override-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们的父类只画了一半，立了条规矩：**凡是往下画的，都得把 `speak` 补上**。子类套在父类上，初始化那一手也写了 —— 可我们**偏偏忘了补那一个方法**，编译器当场翻脸，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这两行：\n\n```text\n李四：\n李四睡着了，输出输出\n```\n\n（第二行那一个方法是父类上**本来就画完了的**，我们已经写好了，别去动它。）",
+      "brokenCode": "abstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.speak();\n        c.sleep();\n    }\n}\n",
+      "referenceFix": "abstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n\n    void sleep() {\n        System.out.println(name + \"睡着了，输出输出\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"李四\");\n        c.speak();\n        c.sleep();\n    }\n}\n",
+      "expectedOutput": "李四：\n李四睡着了，输出输出",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`Cat is not abstract and does not override abstract method speak() in Animal`**，念起来是：**「`Cat` 自己没写 `speak`，又不肯当半张类定义 —— 那它到底会不会出声？」**\n\n注意它点了两个名：`class Cat` 和 `abstract method speak() in Animal`。这两个名字合起来就是它的推理：\n\n- 父类上立过规矩：`speak` **必须**有；\n- 子类上没写这一个方法；\n- 子类头上也没写 `abstract`（等于说「我们这张是画完了的」）。\n\n画完了、却又少一个方法 —— 自相矛盾，所以编译器不许它初始化。\n\n它其实给了两条路，我们必须二选一：\n\n1. **把那一个方法补上**（绝大多数时候选这条）—— 在子类里写一版 `speak`，头上照旧挂 `@Override`。\n2. **自己头上也写 `abstract`** —— 意思是「我们这张也是半张，接着往下传」。可这样一来，我们就生不出实例了，总得有一个类定义把话说完。\n\n本题走第一条。补的时候有两点：`@Override` 别忘，**名字一个字母都不能错** —— 手滑写成 `speek`，编译器只会说「我们又画了一个方法新的」，而该补的那一个方法**还是空着**，这一趟就白改了。",
+      "templateId": "java-s2-child-missing-override",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "de0943acf1cfff60"
+      }
+    },
+    {
+      "id": "bank-java-s2-count-the-cats-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里有一排宠物，名称一律写 `Animal`。现在我们想知道：**这一排里到底有几个对象？**\n\n要画的类定义：\n\n- 父类 `Animal`：一盒名字家当、初始化那一手记名字、一个方法 `speak` 印 **名字 + `：……`**。\n- 子类 `Cat` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：`**）。\n- 子类 `Dog` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：汪！`**）。\n\n程序的输入是**一个数 n**。`main` 里这么走：\n\n1. 读那个数；\n2. 摆一排**够装 n + 1 只**的名称（名称一律写 `Animal`）；\n3. 前面 n 个位置各装一个对象（名字用题目给的那个），最后第 n 个位置装一个狗；\n4. 从头到尾挨个调用一次 `speak`；\n5. 最后**用认亲数一数**这一排里有几个对象，印一行：`这一排里有 X 个对象`。\n\n认亲那一句问的是「我们手里这个**是不是照 `Cat` 那张类定义（或者它的下游）生的**」，数出来几个就是几个。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n张三：\n张三：\n张三：\n张三：\n大黄：汪！\n这一排里有 4 个对象\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Animal[] pets = new Animal[n + 1];\n        for (int i = 0; i < n; i++) {\n            pets[i] = new Cat(\"张三\");\n        }\n        pets[n] = new Dog(\"大黄\");\n        for (Animal pet : pets) {\n            pet.speak();\n        }\n        int cats = 0;\n        for (Animal pet : pets) {\n            if (pet instanceof Cat) {\n                cats++;\n            }\n        }\n        System.out.println(\"这一排里有 \" + cats + \" 个对象\");\n    }\n}\n",
+      "expectedOutput": "张三：\n张三：\n张三：\n大黄：汪！\n这一排里有 3 个对象",
+      "stdin": "3\n",
+      "explanation": "本题的新东西是**认亲能当问题问、也能当数数用**。\n\n`pet instanceof Cat` 算出来的是一句「是 / 不是」：\n\n- 我们手里这个**是照 `Cat` 那张类定义（或者更往下的类定义）生的** → `true`\n- **不是** → `false`\n\n所以把这一句放进圈子里的眼色位置，每对上一次就把计数器加一，走完一圈，数出来的就是**这一排里有几个对象**。狗身上问同样一句得到的是 `false`，它不会被算进去。\n\n另外两处是这一课的老朋友：\n\n**一、名称写 `Animal`，赋值的却有对象有狗。** 照 `Cat` 生的对象本来也是一个 `Animal`，收得下；这一手的好处是**我们不需要给对象狗各摆一排**，一排名称全装下。\n\n**二、调用一次 `speak`，各对象各样。** 圈子里写的是一句 `pet.speak();`，可对象印、狗印汪 —— 具体是哪一次，由**底下那个实例自己的类定义**决定。\n\n摆名称那一处也别忘了：保存了 n 个对象再加一个狗，一共是 **n + 1** 个位置。要是只摆 n 个，最后那个狗就没地方落脚了。",
+      "templateId": "java-s2-count-the-cats",
+      "params": {
+        "cat": "张三",
+        "dog": "大黄"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "f09ead071a47a837"
+      }
+    },
+    {
+      "id": "bank-java-s2-count-the-cats-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里有一排宠物，名称一律写 `Animal`。现在我们想知道：**这一排里到底有几个对象？**\n\n要画的类定义：\n\n- 父类 `Animal`：一盒名字家当、初始化那一手记名字、一个方法 `speak` 印 **名字 + `：……`**。\n- 子类 `Cat` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：`**）。\n- 子类 `Dog` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：汪！`**）。\n\n程序的输入是**一个数 n**。`main` 里这么走：\n\n1. 读那个数；\n2. 摆一排**够装 n + 1 只**的名称（名称一律写 `Animal`）；\n3. 前面 n 个位置各装一个对象（名字用题目给的那个），最后第 n 个位置装一个狗；\n4. 从头到尾挨个调用一次 `speak`；\n5. 最后**用认亲数一数**这一排里有几个对象，印一行：`这一排里有 X 个对象`。\n\n认亲那一句问的是「我们手里这个**是不是照 `Cat` 那张类定义（或者它的下游）生的**」，数出来几个就是几个。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n张三：\n张三：\n张三：\n旺财：汪！\n这一排里有 3 个对象\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Animal[] pets = new Animal[n + 1];\n        for (int i = 0; i < n; i++) {\n            pets[i] = new Cat(\"张三\");\n        }\n        pets[n] = new Dog(\"旺财\");\n        for (Animal pet : pets) {\n            pet.speak();\n        }\n        int cats = 0;\n        for (Animal pet : pets) {\n            if (pet instanceof Cat) {\n                cats++;\n            }\n        }\n        System.out.println(\"这一排里有 \" + cats + \" 个对象\");\n    }\n}\n",
+      "expectedOutput": "张三：\n张三：\n张三：\n张三：\n旺财：汪！\n这一排里有 4 个对象",
+      "stdin": "4\n",
+      "explanation": "本题的新东西是**认亲能当问题问、也能当数数用**。\n\n`pet instanceof Cat` 算出来的是一句「是 / 不是」：\n\n- 我们手里这个**是照 `Cat` 那张类定义（或者更往下的类定义）生的** → `true`\n- **不是** → `false`\n\n所以把这一句放进圈子里的眼色位置，每对上一次就把计数器加一，走完一圈，数出来的就是**这一排里有几个对象**。狗身上问同样一句得到的是 `false`，它不会被算进去。\n\n另外两处是这一课的老朋友：\n\n**一、名称写 `Animal`，赋值的却有对象有狗。** 照 `Cat` 生的对象本来也是一个 `Animal`，收得下；这一手的好处是**我们不需要给对象狗各摆一排**，一排名称全装下。\n\n**二、调用一次 `speak`，各对象各样。** 圈子里写的是一句 `pet.speak();`，可对象印、狗印汪 —— 具体是哪一次，由**底下那个实例自己的类定义**决定。\n\n摆名称那一处也别忘了：保存了 n 个对象再加一个狗，一共是 **n + 1** 个位置。要是只摆 n 个，最后那个狗就没地方落脚了。",
+      "templateId": "java-s2-count-the-cats",
+      "params": {
+        "cat": "张三",
+        "dog": "旺财"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "7929035f3d44a763"
+      }
+    },
+    {
+      "id": "bank-java-s2-count-the-cats-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里有一排宠物，名称一律写 `Animal`。现在我们想知道：**这一排里到底有几个对象？**\n\n要画的类定义：\n\n- 父类 `Animal`：一盒名字家当、初始化那一手记名字、一个方法 `speak` 印 **名字 + `：……`**。\n- 子类 `Cat` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：`**）。\n- 子类 `Dog` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：汪！`**）。\n\n程序的输入是**一个数 n**。`main` 里这么走：\n\n1. 读那个数；\n2. 摆一排**够装 n + 1 只**的名称（名称一律写 `Animal`）；\n3. 前面 n 个位置各装一个对象（名字用题目给的那个），最后第 n 个位置装一个狗；\n4. 从头到尾挨个调用一次 `speak`；\n5. 最后**用认亲数一数**这一排里有几个对象，印一行：`这一排里有 X 个对象`。\n\n认亲那一句问的是「我们手里这个**是不是照 `Cat` 那张类定义（或者它的下游）生的**」，数出来几个就是几个。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n李四：\n李四：\n李四：\n李四：\n大黄：汪！\n这一排里有 4 个对象\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Animal[] pets = new Animal[n + 1];\n        for (int i = 0; i < n; i++) {\n            pets[i] = new Cat(\"李四\");\n        }\n        pets[n] = new Dog(\"大黄\");\n        for (Animal pet : pets) {\n            pet.speak();\n        }\n        int cats = 0;\n        for (Animal pet : pets) {\n            if (pet instanceof Cat) {\n                cats++;\n            }\n        }\n        System.out.println(\"这一排里有 \" + cats + \" 个对象\");\n    }\n}\n",
+      "expectedOutput": "李四：\n李四：\n李四：\n大黄：汪！\n这一排里有 3 个对象",
+      "stdin": "3\n",
+      "explanation": "本题的新东西是**认亲能当问题问、也能当数数用**。\n\n`pet instanceof Cat` 算出来的是一句「是 / 不是」：\n\n- 我们手里这个**是照 `Cat` 那张类定义（或者更往下的类定义）生的** → `true`\n- **不是** → `false`\n\n所以把这一句放进圈子里的眼色位置，每对上一次就把计数器加一，走完一圈，数出来的就是**这一排里有几个对象**。狗身上问同样一句得到的是 `false`，它不会被算进去。\n\n另外两处是这一课的老朋友：\n\n**一、名称写 `Animal`，赋值的却有对象有狗。** 照 `Cat` 生的对象本来也是一个 `Animal`，收得下；这一手的好处是**我们不需要给对象狗各摆一排**，一排名称全装下。\n\n**二、调用一次 `speak`，各对象各样。** 圈子里写的是一句 `pet.speak();`，可对象印、狗印汪 —— 具体是哪一次，由**底下那个实例自己的类定义**决定。\n\n摆名称那一处也别忘了：保存了 n 个对象再加一个狗，一共是 **n + 1** 个位置。要是只摆 n 个，最后那个狗就没地方落脚了。",
+      "templateId": "java-s2-count-the-cats",
+      "params": {
+        "cat": "李四",
+        "dog": "大黄"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "9fc5a192efba6b44"
+      }
+    },
+    {
+      "id": "bank-java-s2-count-the-cats-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里有一排宠物，名称一律写 `Animal`。现在我们想知道：**这一排里到底有几个对象？**\n\n要画的类定义：\n\n- 父类 `Animal`：一盒名字家当、初始化那一手记名字、一个方法 `speak` 印 **名字 + `：……`**。\n- 子类 `Cat` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：`**）。\n- 子类 `Dog` 套在父类上：把 `speak` **盖掉、换上自己那版**（**名字 + `：汪！`**）。\n\n程序的输入是**一个数 n**。`main` 里这么走：\n\n1. 读那个数；\n2. 摆一排**够装 n + 1 只**的名称（名称一律写 `Animal`）；\n3. 前面 n 个位置各装一个对象（名字用题目给的那个），最后第 n 个位置装一个狗；\n4. 从头到尾挨个调用一次 `speak`；\n5. 最后**用认亲数一数**这一排里有几个对象，印一行：`这一排里有 X 个对象`。\n\n认亲那一句问的是「我们手里这个**是不是照 `Cat` 那张类定义（或者它的下游）生的**」，数出来几个就是几个。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n李四：\n李四：\n李四：\n旺财：汪！\n这一排里有 3 个对象\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：……\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Animal[] pets = new Animal[n + 1];\n        for (int i = 0; i < n; i++) {\n            pets[i] = new Cat(\"李四\");\n        }\n        pets[n] = new Dog(\"旺财\");\n        for (Animal pet : pets) {\n            pet.speak();\n        }\n        int cats = 0;\n        for (Animal pet : pets) {\n            if (pet instanceof Cat) {\n                cats++;\n            }\n        }\n        System.out.println(\"这一排里有 \" + cats + \" 个对象\");\n    }\n}\n",
+      "expectedOutput": "李四：\n李四：\n李四：\n李四：\n旺财：汪！\n这一排里有 4 个对象",
+      "stdin": "4\n",
+      "explanation": "本题的新东西是**认亲能当问题问、也能当数数用**。\n\n`pet instanceof Cat` 算出来的是一句「是 / 不是」：\n\n- 我们手里这个**是照 `Cat` 那张类定义（或者更往下的类定义）生的** → `true`\n- **不是** → `false`\n\n所以把这一句放进圈子里的眼色位置，每对上一次就把计数器加一，走完一圈，数出来的就是**这一排里有几个对象**。狗身上问同样一句得到的是 `false`，它不会被算进去。\n\n另外两处是这一课的老朋友：\n\n**一、名称写 `Animal`，赋值的却有对象有狗。** 照 `Cat` 生的对象本来也是一个 `Animal`，收得下；这一手的好处是**我们不需要给对象狗各摆一排**，一排名称全装下。\n\n**二、调用一次 `speak`，各对象各样。** 圈子里写的是一句 `pet.speak();`，可对象印、狗印汪 —— 具体是哪一次，由**底下那个实例自己的类定义**决定。\n\n摆名称那一处也别忘了：保存了 n 个对象再加一个狗，一共是 **n + 1** 个位置。要是只摆 n 个，最后那个狗就没地方落脚了。",
+      "templateId": "java-s2-count-the-cats",
+      "params": {
+        "cat": "李四",
+        "dog": "旺财"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "0940e216fa2c9604"
+      }
+    },
+    {
+      "id": "bank-java-s2-pet-parade-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里站着三个：一个对象、一个狗、一个鱼。**名称一律写 `Animal`**，三个都装进同一排名称里，挨个称呼它们出声。\n\n四张类定义这么画：\n\n- 父类 `Animal` 是**只画了一半的类定义**（头上要写 `abstract`）：一盒名字家当、初始化那一手记名字，还有一个方法 `speak` —— 但它**只有个头、没有身子**，谁往下画谁补。\n- 子类 `Cat` / `Dog` / `Fish` 各自套在父类上，把 `speak` 补上：对象印 **名字 + `：`**、狗印 **名字 + `：汪！`**、鱼印 **名字 + `：`**。\n\n程序的输入是**一个数**：调用几圈。每一圈从头到尾把三个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它是对象是狗 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n张三：\n大黄：汪！\n泡泡：\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nabstract class Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nabstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Animal[] pets = { new Cat(\"张三\"), new Dog(\"大黄\"), new Fish(\"泡泡\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Animal pet : pets) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n大黄：汪！\n泡泡：\n张三：\n大黄：汪！\n泡泡：",
+      "stdin": "2\n",
+      "explanation": "本题三处关节。\n\n**一、`abstract` 的分工。** 父类头上写 `abstract`，意思就是「这张类定义**不许直接拿来生**」；那一个方法 `abstract void speak();` **只有个头、以分号收尾** —— 分号后面**不能再跟一对花括号**，跟上了就成了「有身子的空方法」，意思完全不同。\n\n**二、子类必须补上那一个方法。** 三张子类各写一版 `speak`、头上都挂 `@Override`。有哪一张忘了补，编译器就会说那一句 `... is not abstract and does not override abstract method ...`。\n\n**三、一句顶三句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道手里这个到底是谁**。Java 会**照着底下那个实例自己的类定义**去找这一个方法：是对象就、是狗就汪、是鱼就。\n\n这份省心就是套类定义最值钱的地方：**往后院里再添一个鸭子，那个圈子一个字都不用改**，只要它照 `Animal` 画、自己补一版 `speak` 就行。\n\n外围那层圈子管的是「调用几圈」，内层管的是「一圈里挨个调用」—— 两层圈子的眼色和收尾都别写错，否则印出来的**行数**就不对了。",
+      "templateId": "java-s2-pet-parade",
+      "params": {
+        "cat": "张三",
+        "dog": "大黄",
+        "fishName": "泡泡"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "b62943be4f0abeff"
+      }
+    },
+    {
+      "id": "bank-java-s2-pet-parade-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里站着三个：一个对象、一个狗、一个鱼。**名称一律写 `Animal`**，三个都装进同一排名称里，挨个称呼它们出声。\n\n四张类定义这么画：\n\n- 父类 `Animal` 是**只画了一半的类定义**（头上要写 `abstract`）：一盒名字家当、初始化那一手记名字，还有一个方法 `speak` —— 但它**只有个头、没有身子**，谁往下画谁补。\n- 子类 `Cat` / `Dog` / `Fish` 各自套在父类上，把 `speak` 补上：对象印 **名字 + `：`**、狗印 **名字 + `：汪！`**、鱼印 **名字 + `：`**。\n\n程序的输入是**一个数**：调用几圈。每一圈从头到尾把三个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它是对象是狗 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n张三：\n大黄：汪！\n金金：\n张三：\n大黄：汪！\n金金：\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nabstract class Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nabstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Animal[] pets = { new Cat(\"张三\"), new Dog(\"大黄\"), new Fish(\"金金\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Animal pet : pets) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n大黄：汪！\n金金：",
+      "stdin": "1\n",
+      "explanation": "本题三处关节。\n\n**一、`abstract` 的分工。** 父类头上写 `abstract`，意思就是「这张类定义**不许直接拿来生**」；那一个方法 `abstract void speak();` **只有个头、以分号收尾** —— 分号后面**不能再跟一对花括号**，跟上了就成了「有身子的空方法」，意思完全不同。\n\n**二、子类必须补上那一个方法。** 三张子类各写一版 `speak`、头上都挂 `@Override`。有哪一张忘了补，编译器就会说那一句 `... is not abstract and does not override abstract method ...`。\n\n**三、一句顶三句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道手里这个到底是谁**。Java 会**照着底下那个实例自己的类定义**去找这一个方法：是对象就、是狗就汪、是鱼就。\n\n这份省心就是套类定义最值钱的地方：**往后院里再添一个鸭子，那个圈子一个字都不用改**，只要它照 `Animal` 画、自己补一版 `speak` 就行。\n\n外围那层圈子管的是「调用几圈」，内层管的是「一圈里挨个调用」—— 两层圈子的眼色和收尾都别写错，否则印出来的**行数**就不对了。",
+      "templateId": "java-s2-pet-parade",
+      "params": {
+        "cat": "张三",
+        "dog": "大黄",
+        "fishName": "金金"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "a2cfb17f03c79cf7"
+      }
+    },
+    {
+      "id": "bank-java-s2-pet-parade-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里站着三个：一个对象、一个狗、一个鱼。**名称一律写 `Animal`**，三个都装进同一排名称里，挨个称呼它们出声。\n\n四张类定义这么画：\n\n- 父类 `Animal` 是**只画了一半的类定义**（头上要写 `abstract`）：一盒名字家当、初始化那一手记名字，还有一个方法 `speak` —— 但它**只有个头、没有身子**，谁往下画谁补。\n- 子类 `Cat` / `Dog` / `Fish` 各自套在父类上，把 `speak` 补上：对象印 **名字 + `：`**、狗印 **名字 + `：汪！`**、鱼印 **名字 + `：`**。\n\n程序的输入是**一个数**：调用几圈。每一圈从头到尾把三个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它是对象是狗 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n张三：\n旺财：汪！\n金金：\n张三：\n旺财：汪！\n金金：\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nabstract class Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nabstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Animal[] pets = { new Cat(\"张三\"), new Dog(\"旺财\"), new Fish(\"金金\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Animal pet : pets) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n旺财：汪！\n金金：",
+      "stdin": "1\n",
+      "explanation": "本题三处关节。\n\n**一、`abstract` 的分工。** 父类头上写 `abstract`，意思就是「这张类定义**不许直接拿来生**」；那一个方法 `abstract void speak();` **只有个头、以分号收尾** —— 分号后面**不能再跟一对花括号**，跟上了就成了「有身子的空方法」，意思完全不同。\n\n**二、子类必须补上那一个方法。** 三张子类各写一版 `speak`、头上都挂 `@Override`。有哪一张忘了补，编译器就会说那一句 `... is not abstract and does not override abstract method ...`。\n\n**三、一句顶三句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道手里这个到底是谁**。Java 会**照着底下那个实例自己的类定义**去找这一个方法：是对象就、是狗就汪、是鱼就。\n\n这份省心就是套类定义最值钱的地方：**往后院里再添一个鸭子，那个圈子一个字都不用改**，只要它照 `Animal` 画、自己补一版 `speak` 就行。\n\n外围那层圈子管的是「调用几圈」，内层管的是「一圈里挨个调用」—— 两层圈子的眼色和收尾都别写错，否则印出来的**行数**就不对了。",
+      "templateId": "java-s2-pet-parade",
+      "params": {
+        "cat": "张三",
+        "dog": "旺财",
+        "fishName": "金金"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "988ecad063b95527"
+      }
+    },
+    {
+      "id": "bank-java-s2-pet-parade-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里站着三个：一个对象、一个狗、一个鱼。**名称一律写 `Animal`**，三个都装进同一排名称里，挨个称呼它们出声。\n\n四张类定义这么画：\n\n- 父类 `Animal` 是**只画了一半的类定义**（头上要写 `abstract`）：一盒名字家当、初始化那一手记名字，还有一个方法 `speak` —— 但它**只有个头、没有身子**，谁往下画谁补。\n- 子类 `Cat` / `Dog` / `Fish` 各自套在父类上，把 `speak` 补上：对象印 **名字 + `：`**、狗印 **名字 + `：汪！`**、鱼印 **名字 + `：`**。\n\n程序的输入是**一个数**：调用几圈。每一圈从头到尾把三个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它是对象是狗 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n李四：\n大黄：汪！\n泡泡：\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nabstract class Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nabstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Animal[] pets = { new Cat(\"李四\"), new Dog(\"大黄\"), new Fish(\"泡泡\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Animal pet : pets) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n大黄：汪！\n泡泡：\n李四：\n大黄：汪！\n泡泡：",
+      "stdin": "2\n",
+      "explanation": "本题三处关节。\n\n**一、`abstract` 的分工。** 父类头上写 `abstract`，意思就是「这张类定义**不许直接拿来生**」；那一个方法 `abstract void speak();` **只有个头、以分号收尾** —— 分号后面**不能再跟一对花括号**，跟上了就成了「有身子的空方法」，意思完全不同。\n\n**二、子类必须补上那一个方法。** 三张子类各写一版 `speak`、头上都挂 `@Override`。有哪一张忘了补，编译器就会说那一句 `... is not abstract and does not override abstract method ...`。\n\n**三、一句顶三句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道手里这个到底是谁**。Java 会**照着底下那个实例自己的类定义**去找这一个方法：是对象就、是狗就汪、是鱼就。\n\n这份省心就是套类定义最值钱的地方：**往后院里再添一个鸭子，那个圈子一个字都不用改**，只要它照 `Animal` 画、自己补一版 `speak` 就行。\n\n外围那层圈子管的是「调用几圈」，内层管的是「一圈里挨个调用」—— 两层圈子的眼色和收尾都别写错，否则印出来的**行数**就不对了。",
+      "templateId": "java-s2-pet-parade",
+      "params": {
+        "cat": "李四",
+        "dog": "大黄",
+        "fishName": "泡泡"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "e0d9c999e5ba59e5"
+      }
+    },
+    {
+      "id": "bank-java-s2-pet-parade-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里站着三个：一个对象、一个狗、一个鱼。**名称一律写 `Animal`**，三个都装进同一排名称里，挨个称呼它们出声。\n\n四张类定义这么画：\n\n- 父类 `Animal` 是**只画了一半的类定义**（头上要写 `abstract`）：一盒名字家当、初始化那一手记名字，还有一个方法 `speak` —— 但它**只有个头、没有身子**，谁往下画谁补。\n- 子类 `Cat` / `Dog` / `Fish` 各自套在父类上，把 `speak` 补上：对象印 **名字 + `：`**、狗印 **名字 + `：汪！`**、鱼印 **名字 + `：`**。\n\n程序的输入是**一个数**：调用几圈。每一圈从头到尾把三个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它是对象是狗 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n李四：\n旺财：汪！\n泡泡：\n李四：\n旺财：汪！\n泡泡：\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nabstract class Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nabstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Animal[] pets = { new Cat(\"李四\"), new Dog(\"旺财\"), new Fish(\"泡泡\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Animal pet : pets) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n旺财：汪！\n泡泡：",
+      "stdin": "1\n",
+      "explanation": "本题三处关节。\n\n**一、`abstract` 的分工。** 父类头上写 `abstract`，意思就是「这张类定义**不许直接拿来生**」；那一个方法 `abstract void speak();` **只有个头、以分号收尾** —— 分号后面**不能再跟一对花括号**，跟上了就成了「有身子的空方法」，意思完全不同。\n\n**二、子类必须补上那一个方法。** 三张子类各写一版 `speak`、头上都挂 `@Override`。有哪一张忘了补，编译器就会说那一句 `... is not abstract and does not override abstract method ...`。\n\n**三、一句顶三句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道手里这个到底是谁**。Java 会**照着底下那个实例自己的类定义**去找这一个方法：是对象就、是狗就汪、是鱼就。\n\n这份省心就是套类定义最值钱的地方：**往后院里再添一个鸭子，那个圈子一个字都不用改**，只要它照 `Animal` 画、自己补一版 `speak` 就行。\n\n外围那层圈子管的是「调用几圈」，内层管的是「一圈里挨个调用」—— 两层圈子的眼色和收尾都别写错，否则印出来的**行数**就不对了。",
+      "templateId": "java-s2-pet-parade",
+      "params": {
+        "cat": "李四",
+        "dog": "旺财",
+        "fishName": "泡泡"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "9d8eaa4bbea76d79"
+      }
+    },
+    {
+      "id": "bank-java-s2-pet-parade-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们院子里站着三个：一个对象、一个狗、一个鱼。**名称一律写 `Animal`**，三个都装进同一排名称里，挨个称呼它们出声。\n\n四张类定义这么画：\n\n- 父类 `Animal` 是**只画了一半的类定义**（头上要写 `abstract`）：一盒名字家当、初始化那一手记名字，还有一个方法 `speak` —— 但它**只有个头、没有身子**，谁往下画谁补。\n- 子类 `Cat` / `Dog` / `Fish` 各自套在父类上，把 `speak` 补上：对象印 **名字 + `：`**、狗印 **名字 + `：汪！`**、鱼印 **名字 + `：`**。\n\n程序的输入是**一个数**：调用几圈。每一圈从头到尾把三个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它是对象是狗 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n李四：\n旺财：汪！\n金金：\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\nabstract class Animal {\n\n}\n\nclass Cat extends Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\nabstract class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    abstract void speak();\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Animal[] pets = { new Cat(\"李四\"), new Dog(\"旺财\"), new Fish(\"金金\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Animal pet : pets) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n旺财：汪！\n金金：\n李四：\n旺财：汪！\n金金：",
+      "stdin": "2\n",
+      "explanation": "本题三处关节。\n\n**一、`abstract` 的分工。** 父类头上写 `abstract`，意思就是「这张类定义**不许直接拿来生**」；那一个方法 `abstract void speak();` **只有个头、以分号收尾** —— 分号后面**不能再跟一对花括号**，跟上了就成了「有身子的空方法」，意思完全不同。\n\n**二、子类必须补上那一个方法。** 三张子类各写一版 `speak`、头上都挂 `@Override`。有哪一张忘了补，编译器就会说那一句 `... is not abstract and does not override abstract method ...`。\n\n**三、一句顶三句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道手里这个到底是谁**。Java 会**照着底下那个实例自己的类定义**去找这一个方法：是对象就、是狗就汪、是鱼就。\n\n这份省心就是套类定义最值钱的地方：**往后院里再添一个鸭子，那个圈子一个字都不用改**，只要它照 `Animal` 画、自己补一版 `speak` 就行。\n\n外围那层圈子管的是「调用几圈」，内层管的是「一圈里挨个调用」—— 两层圈子的眼色和收尾都别写错，否则印出来的**行数**就不对了。",
+      "templateId": "java-s2-pet-parade",
+      "params": {
+        "cat": "李四",
+        "dog": "旺财",
+        "fishName": "金金"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.533Z",
+        "hash": "ca59c91ecb4f6808"
+      }
+    }
+  ]
+}

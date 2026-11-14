@@ -1,0 +1,37 @@
+{
+  "templateId": "py-s2-inherit-override-speak",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-07",
+  "type": "codewrite",
+  "concept": [
+    "继承",
+    "重写",
+    "isinstance"
+  ],
+  "instances": 6,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "计算机",
+        "学生甲"
+      ]
+    },
+    "sname": {
+      "kind": "pick",
+      "values": [
+        "学生乙",
+        "小学生戊"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{name}\n",
+    "sampleText": "{sname}\n"
+  },
+  "stemTemplate": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上；再有一个方法 `speak(self)`，印出名字，后面**直接接上** `发出了一次叫`（中间不加空格）。\n2. 一张 `Cat` 子类，**照着 `Animal` 画**，并且把 `speak` **盖掉、换自己那版**：印出名字，后面接 `：`。\n\n然后**读一行名字**，用这个名字：\n\n- 照 `Animal` 直接造一个，称呼它的 `speak`\n- 再照 `Cat` 造一个，称呼它的 `speak`\n- 最后印一行 `isinstance(这个对象, Animal)` 的结果\n\n比如输入是\n\n{sampleInput}\n\n就要输出\n\n{sampleOutput}\n\n（判分用的是**另外一个名字**，所以别把答案写死）",
+  "referenceSolutionTemplate": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        print(self.name + \"发出了一次叫\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(self.name + \"：\")\n\n\nname = input()\na = Animal(name)\nc = Cat(name)\na.speak()\nc.speak()\nprint(isinstance(c, Animal))\n",
+  "explanationTemplate": "三个地方要盯住：\n\n- **`class Cat(Animal):`** —— 名字后面那对小括号里填**父类的名字**，读作「照 `Animal` 那张类定义，再画一张 `Cat`」。这一写，父类上的说明和函数子类**天生就会**：我们在子类里根本没写 `__init__`，可名字照样传入得进去。\n- **盖掉、换自己那版** —— 子类上把 `speak` 又写了一遍（名字一样、传入的东西也一样），于是**子类这一版就把父类那一版盖住了**。照 `Cat` 生的那个走的是「名字：」，照 `Animal` 生的父类那个，还是老老实实印「发出了一次叫」。这叫**盖住只盖住这一条下游的路**，父类本身一个字都没被改。\n- **`isinstance(这个对象, 一个类定义)`** —— 读作「这个对象是不是照这张类定义（**或它的下游类定义**）创建后的」。`Cat` 是套在 `Animal` 上画的，所以照 `Cat` 创建后的那个**也算**一个 `Animal`，返回 `True`。\n\n⚠️ 反过来可就不成立了：照 `Animal` 直接生的那个**不是** `Cat`。认亲是**从上往下认，不往上看** —— 子类认父类这门亲，父类不认子类。"
+}

@@ -1,0 +1,404 @@
+{
+  "lessonId": "cpp-stage1-09",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s1-func-below-main-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们写好了自报家门的一个方法，要在主程序里连调用三遍：\n\n```\n我们来啦\n我们来啦\n我们来啦\n```\n\n可这段代码**翻不过去** —— 编译器在主程序里就被拦住了，那三声一次都没输出。\n\n你帮我们改一改，让它翻得过去、跑起来，印出来的正好是上面那三行。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    meow();\n    meow();\n    meow();\n    return 0;\n}\n\nvoid meow() {\n    cout << \"我们来啦\" << endl;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nvoid meow() {\n    cout << \"我们来啦\" << endl;\n}\n\nint main() {\n    meow();\n    meow();\n    meow();\n    return 0;\n}\n",
+      "expectedOutput": "我们来啦\n我们来啦\n我们来啦",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: 'meow' was not declared in this scope`，用自然语言解释：**「`meow` 这个名字，我们在登记簿上没找着。」**\n\n它念代码是**从上往下**念的：念到主程序里那三声 `meow();` 的时候，下面那一整招**还没登场** —— 没见过这个名字，只好把我们拦下。\n\n两条路都对：\n\n1. **把整招搬到主程序上面**（我们给的改法走的是这条）—— 最简单，一眼就顺。\n2. **在主程序上面挂一块招牌**：先写一行 `void meow();` 报个信「这招待会儿会来、收几份料、返回什么」，真函数还留在下面。\n\n⚠️ 挂招牌的规矩：**招牌只写脑袋、不写身子**，脑袋末尾别忘了分号。别把整招收进来 —— 收进来的只是「报名」，不是真身。\n\n本课记住一句话就够了：**函数要么写在前面，要么先挂招牌** —— 编译器不认「等等，下面还有」这种话。",
+      "templateId": "cpp-s1-func-below-main",
+      "params": {
+        "greet": "我们来啦"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.280Z",
+        "hash": "67f9a5dd5802ab84"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-below-main-002",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们写好了自报家门的一个方法，要在主程序里连调用三遍：\n\n```\n处理完成\n处理完成\n处理完成\n```\n\n可这段代码**翻不过去** —— 编译器在主程序里就被拦住了，那三声一次都没输出。\n\n你帮我们改一改，让它翻得过去、跑起来，印出来的正好是上面那三行。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    meow();\n    meow();\n    meow();\n    return 0;\n}\n\nvoid meow() {\n    cout << \"处理完成\" << endl;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nvoid meow() {\n    cout << \"处理完成\" << endl;\n}\n\nint main() {\n    meow();\n    meow();\n    meow();\n    return 0;\n}\n",
+      "expectedOutput": "处理完成\n处理完成\n处理完成",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: 'meow' was not declared in this scope`，用自然语言解释：**「`meow` 这个名字，我们在登记簿上没找着。」**\n\n它念代码是**从上往下**念的：念到主程序里那三声 `meow();` 的时候，下面那一整招**还没登场** —— 没见过这个名字，只好把我们拦下。\n\n两条路都对：\n\n1. **把整招搬到主程序上面**（我们给的改法走的是这条）—— 最简单，一眼就顺。\n2. **在主程序上面挂一块招牌**：先写一行 `void meow();` 报个信「这招待会儿会来、收几份料、返回什么」，真函数还留在下面。\n\n⚠️ 挂招牌的规矩：**招牌只写脑袋、不写身子**，脑袋末尾别忘了分号。别把整招收进来 —— 收进来的只是「报名」，不是真身。\n\n本课记住一句话就够了：**函数要么写在前面，要么先挂招牌** —— 编译器不认「等等，下面还有」这种话。",
+      "templateId": "cpp-s1-func-below-main",
+      "params": {
+        "greet": "处理完成"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.280Z",
+        "hash": "a32b8e7449c4e9bc"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-feed-loop-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法管发货，名字叫 `feed`：**收两份料** —— 一根字符串（领鱼的对象）、一个数（领几条）。收齐了就**一条一行**地印，印够那个数为止，每行都是 `X 领到一条数据`。\n\n输入接口会**先给一根字符串、再给一个数**（中间用空格隔开；名字是英文字母或中文都行）。请你写个程序：把这两样读进来、调用一次这一个方法，让它自己印。\n\n比如程序的输入是\n\n带鱼 5\n\n程序就要返回\n\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n\nint main() {\n    string name;\n    int count = 0;\n    cin >> name >> count;\n\n    feed(name, count);\n    return 0;\n}\n",
+      "expectedOutput": "计算机 领到一条数据\n计算机 领到一条数据",
+      "stdin": "计算机 2\n",
+      "explanation": "这一题把「写函数」和「跑圈」合在一起了。函数的身子是一个跑圈：\n\n```\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n```\n\n三个细节：\n\n1. **脑袋上的 `void`**：这一个方法**只干活、不返回东西回来** —— 它把活干在屏幕上，称呼它的人不需要拿什么。这一题印东西的活全在函数的圈里，主程序只管读两份料、调用一次。\n2. **两份料都用上了**：`count` 管**印几行**（跑圈的圈数），`name` 管**每行印谁**。收进来的料要真的用上 —— 摆着不用的元素等于白收。\n3. **跑圈从 0 起到 `i < count`**：正好 `count` 圈。写 `i <= count` 就会多印一行（这是本课之前那个坑的老面孔）。\n\n写这一类函数的顺序建议照抄：**先想脑袋（收什么料、要不要返回）→ 再想身子（几行活、要不要跑圈）→ 最后看主程序有没有把料喂够。**\n\n⚠️ 函数摆在主程序**上面** —— 写在下面编译器念不到。",
+      "templateId": "cpp-s1-func-feed-loop",
+      "params": {
+        "name": "计算机",
+        "count": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "95e8af1bc5976037"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-feed-loop-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法管发货，名字叫 `feed`：**收两份料** —— 一根字符串（领鱼的对象）、一个数（领几条）。收齐了就**一条一行**地印，印够那个数为止，每行都是 `X 领到一条数据`。\n\n输入接口会**先给一根字符串、再给一个数**（中间用空格隔开；名字是英文字母或中文都行）。请你写个程序：把这两样读进来、调用一次这一个方法，让它自己印。\n\n比如程序的输入是\n\n带鱼 5\n\n程序就要返回\n\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n\nint main() {\n    string name;\n    int count = 0;\n    cin >> name >> count;\n\n    feed(name, count);\n    return 0;\n}\n",
+      "expectedOutput": "计算机 领到一条数据\n计算机 领到一条数据\n计算机 领到一条数据",
+      "stdin": "计算机 3\n",
+      "explanation": "这一题把「写函数」和「跑圈」合在一起了。函数的身子是一个跑圈：\n\n```\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n```\n\n三个细节：\n\n1. **脑袋上的 `void`**：这一个方法**只干活、不返回东西回来** —— 它把活干在屏幕上，称呼它的人不需要拿什么。这一题印东西的活全在函数的圈里，主程序只管读两份料、调用一次。\n2. **两份料都用上了**：`count` 管**印几行**（跑圈的圈数），`name` 管**每行印谁**。收进来的料要真的用上 —— 摆着不用的元素等于白收。\n3. **跑圈从 0 起到 `i < count`**：正好 `count` 圈。写 `i <= count` 就会多印一行（这是本课之前那个坑的老面孔）。\n\n写这一类函数的顺序建议照抄：**先想脑袋（收什么料、要不要返回）→ 再想身子（几行活、要不要跑圈）→ 最后看主程序有没有把料喂够。**\n\n⚠️ 函数摆在主程序**上面** —— 写在下面编译器念不到。",
+      "templateId": "cpp-s1-func-feed-loop",
+      "params": {
+        "name": "计算机",
+        "count": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "d3f83cc376c51330"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-feed-loop-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法管发货，名字叫 `feed`：**收两份料** —— 一根字符串（领鱼的对象）、一个数（领几条）。收齐了就**一条一行**地印，印够那个数为止，每行都是 `X 领到一条数据`。\n\n输入接口会**先给一根字符串、再给一个数**（中间用空格隔开；名字是英文字母或中文都行）。请你写个程序：把这两样读进来、调用一次这一个方法，让它自己印。\n\n比如程序的输入是\n\n带鱼 5\n\n程序就要返回\n\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n\nint main() {\n    string name;\n    int count = 0;\n    cin >> name >> count;\n\n    feed(name, count);\n    return 0;\n}\n",
+      "expectedOutput": "小黄鱼 领到一条数据\n小黄鱼 领到一条数据",
+      "stdin": "小黄鱼 2\n",
+      "explanation": "这一题把「写函数」和「跑圈」合在一起了。函数的身子是一个跑圈：\n\n```\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n```\n\n三个细节：\n\n1. **脑袋上的 `void`**：这一个方法**只干活、不返回东西回来** —— 它把活干在屏幕上，称呼它的人不需要拿什么。这一题印东西的活全在函数的圈里，主程序只管读两份料、调用一次。\n2. **两份料都用上了**：`count` 管**印几行**（跑圈的圈数），`name` 管**每行印谁**。收进来的料要真的用上 —— 摆着不用的元素等于白收。\n3. **跑圈从 0 起到 `i < count`**：正好 `count` 圈。写 `i <= count` 就会多印一行（这是本课之前那个坑的老面孔）。\n\n写这一类函数的顺序建议照抄：**先想脑袋（收什么料、要不要返回）→ 再想身子（几行活、要不要跑圈）→ 最后看主程序有没有把料喂够。**\n\n⚠️ 函数摆在主程序**上面** —— 写在下面编译器念不到。",
+      "templateId": "cpp-s1-func-feed-loop",
+      "params": {
+        "name": "小黄鱼",
+        "count": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "115b5e40edf6c674"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-feed-loop-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要自己写一个方法管发货，名字叫 `feed`：**收两份料** —— 一根字符串（领鱼的对象）、一个数（领几条）。收齐了就**一条一行**地印，印够那个数为止，每行都是 `X 领到一条数据`。\n\n输入接口会**先给一根字符串、再给一个数**（中间用空格隔开；名字是英文字母或中文都行）。请你写个程序：把这两样读进来、调用一次这一个方法，让它自己印。\n\n比如程序的输入是\n\n带鱼 5\n\n程序就要返回\n\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n带鱼 领到一条数据\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n\nint main() {\n    string name;\n    int count = 0;\n    cin >> name >> count;\n\n    feed(name, count);\n    return 0;\n}\n",
+      "expectedOutput": "小黄鱼 领到一条数据\n小黄鱼 领到一条数据\n小黄鱼 领到一条数据",
+      "stdin": "小黄鱼 3\n",
+      "explanation": "这一题把「写函数」和「跑圈」合在一起了。函数的身子是一个跑圈：\n\n```\nvoid feed(string name, int count) {\n    for (int i = 0; i < count; i++) {\n        cout << name << \" 领到一条数据\" << endl;\n    }\n}\n```\n\n三个细节：\n\n1. **脑袋上的 `void`**：这一个方法**只干活、不返回东西回来** —— 它把活干在屏幕上，称呼它的人不需要拿什么。这一题印东西的活全在函数的圈里，主程序只管读两份料、调用一次。\n2. **两份料都用上了**：`count` 管**印几行**（跑圈的圈数），`name` 管**每行印谁**。收进来的料要真的用上 —— 摆着不用的元素等于白收。\n3. **跑圈从 0 起到 `i < count`**：正好 `count` 圈。写 `i <= count` 就会多印一行（这是本课之前那个坑的老面孔）。\n\n写这一类函数的顺序建议照抄：**先想脑袋（收什么料、要不要返回）→ 再想身子（几行活、要不要跑圈）→ 最后看主程序有没有把料喂够。**\n\n⚠️ 函数摆在主程序**上面** —— 写在下面编译器念不到。",
+      "templateId": "cpp-s1-func-feed-loop",
+      "params": {
+        "name": "小黄鱼",
+        "count": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "6411b90308ec3c0f"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-overload-more-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给一个名字配**两招**，名字都叫 `more`：\n\n- 喂**一个数**进去 → 返回**它的两倍**（喂 4 进去返回 8）；\n- 喂**一根字符串**进去 → 返回**它自己接自己两遍**（喂 `miai` 进去返回 `miaimiaimiai` 那样）。\n\n输入接口会**先给一个数、再给一根英文字符串**（中间用空格隔开）。请你写个程序：两样都读进来，**各调用一次那一个方法**，一行印一个——第一行印两倍的那个数，第二行印接两遍的那根字符串。\n\n比如程序的输入是\n\n9 cat\n\n程序就要返回\n\n18\ncatcat\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint more(int n) {\n    return n * 2;\n}\n\nstring more(string s) {\n    return s + s;\n}\n\nint main() {\n    int n = 0;\n    string w;\n    cin >> n >> w;\n\n    cout << more(n) << endl;\n    cout << more(w) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "6\nmiaimiai",
+      "stdin": "3 miai\n",
+      "explanation": "**同一个名字，可以挂好几个方法** —— 只要它们收的料不一样，编译器就分得清。\n\n它是怎么分的？**看你传入的是什么东西**：\n\n- 传入一个数 → 它找那个收整数的 `more`；\n- 传入一根字符串（`string`）→ 它找那个收字符串的 `more`。\n\n所以这两招的脑袋长得不一样（一个收 `int`、一个收 `string`），**名字却可以都叫 `more`** —— 引用的时候不用起两个名字，写的人省事、读的人也省事：一看就知道「这两件事是同一类事，只是料的类型不同」。\n\n⚠️ 三条规矩记一下：\n\n- **收的料必须真的不一样** —— 两招名字一样、收的料也一样，编译器就分不清该调用哪个了；\n- **光靠「返回的东西不同」不够** —— 它不看返回的，只看**收什么料**；\n- 这一题两招里都用了 `return`：一个方法返回数、一个方法返回字符串，**返回的类型和脑袋上写的一致**。\n\n什么时候值得这么写？**干的是同一件事、只是料的类型不同**的时候 —— 比如「都是把它翻倍」：数翻倍是乘 2，字符串翻倍是接两遍。",
+      "templateId": "cpp-s1-func-overload-more",
+      "params": {
+        "n": 3,
+        "word": "miai"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "2288429f023a6337"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-overload-more-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给一个名字配**两招**，名字都叫 `more`：\n\n- 喂**一个数**进去 → 返回**它的两倍**（喂 4 进去返回 8）；\n- 喂**一根字符串**进去 → 返回**它自己接自己两遍**（喂 `miai` 进去返回 `miaimiaimiai` 那样）。\n\n输入接口会**先给一个数、再给一根英文字符串**（中间用空格隔开）。请你写个程序：两样都读进来，**各调用一次那一个方法**，一行印一个——第一行印两倍的那个数，第二行印接两遍的那根字符串。\n\n比如程序的输入是\n\n9 cat\n\n程序就要返回\n\n18\ncatcat\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint more(int n) {\n    return n * 2;\n}\n\nstring more(string s) {\n    return s + s;\n}\n\nint main() {\n    int n = 0;\n    string w;\n    cin >> n >> w;\n\n    cout << more(n) << endl;\n    cout << more(w) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "6\nfishfish",
+      "stdin": "3 fish\n",
+      "explanation": "**同一个名字，可以挂好几个方法** —— 只要它们收的料不一样，编译器就分得清。\n\n它是怎么分的？**看你传入的是什么东西**：\n\n- 传入一个数 → 它找那个收整数的 `more`；\n- 传入一根字符串（`string`）→ 它找那个收字符串的 `more`。\n\n所以这两招的脑袋长得不一样（一个收 `int`、一个收 `string`），**名字却可以都叫 `more`** —— 引用的时候不用起两个名字，写的人省事、读的人也省事：一看就知道「这两件事是同一类事，只是料的类型不同」。\n\n⚠️ 三条规矩记一下：\n\n- **收的料必须真的不一样** —— 两招名字一样、收的料也一样，编译器就分不清该调用哪个了；\n- **光靠「返回的东西不同」不够** —— 它不看返回的，只看**收什么料**；\n- 这一题两招里都用了 `return`：一个方法返回数、一个方法返回字符串，**返回的类型和脑袋上写的一致**。\n\n什么时候值得这么写？**干的是同一件事、只是料的类型不同**的时候 —— 比如「都是把它翻倍」：数翻倍是乘 2，字符串翻倍是接两遍。",
+      "templateId": "cpp-s1-func-overload-more",
+      "params": {
+        "n": 3,
+        "word": "fish"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "c6fe83844c689944"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-overload-more-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给一个名字配**两招**，名字都叫 `more`：\n\n- 喂**一个数**进去 → 返回**它的两倍**（喂 4 进去返回 8）；\n- 喂**一根字符串**进去 → 返回**它自己接自己两遍**（喂 `miai` 进去返回 `miaimiaimiai` 那样）。\n\n输入接口会**先给一个数、再给一根英文字符串**（中间用空格隔开）。请你写个程序：两样都读进来，**各调用一次那一个方法**，一行印一个——第一行印两倍的那个数，第二行印接两遍的那根字符串。\n\n比如程序的输入是\n\n9 cat\n\n程序就要返回\n\n18\ncatcat\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint more(int n) {\n    return n * 2;\n}\n\nstring more(string s) {\n    return s + s;\n}\n\nint main() {\n    int n = 0;\n    string w;\n    cin >> n >> w;\n\n    cout << more(n) << endl;\n    cout << more(w) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "8\nmiaimiai",
+      "stdin": "4 miai\n",
+      "explanation": "**同一个名字，可以挂好几个方法** —— 只要它们收的料不一样，编译器就分得清。\n\n它是怎么分的？**看你传入的是什么东西**：\n\n- 传入一个数 → 它找那个收整数的 `more`；\n- 传入一根字符串（`string`）→ 它找那个收字符串的 `more`。\n\n所以这两招的脑袋长得不一样（一个收 `int`、一个收 `string`），**名字却可以都叫 `more`** —— 引用的时候不用起两个名字，写的人省事、读的人也省事：一看就知道「这两件事是同一类事，只是料的类型不同」。\n\n⚠️ 三条规矩记一下：\n\n- **收的料必须真的不一样** —— 两招名字一样、收的料也一样，编译器就分不清该调用哪个了；\n- **光靠「返回的东西不同」不够** —— 它不看返回的，只看**收什么料**；\n- 这一题两招里都用了 `return`：一个方法返回数、一个方法返回字符串，**返回的类型和脑袋上写的一致**。\n\n什么时候值得这么写？**干的是同一件事、只是料的类型不同**的时候 —— 比如「都是把它翻倍」：数翻倍是乘 2，字符串翻倍是接两遍。",
+      "templateId": "cpp-s1-func-overload-more",
+      "params": {
+        "n": 4,
+        "word": "miai"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "ea947ced71faa941"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-overload-more-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给一个名字配**两招**，名字都叫 `more`：\n\n- 喂**一个数**进去 → 返回**它的两倍**（喂 4 进去返回 8）；\n- 喂**一根字符串**进去 → 返回**它自己接自己两遍**（喂 `miai` 进去返回 `miaimiaimiai` 那样）。\n\n输入接口会**先给一个数、再给一根英文字符串**（中间用空格隔开）。请你写个程序：两样都读进来，**各调用一次那一个方法**，一行印一个——第一行印两倍的那个数，第二行印接两遍的那根字符串。\n\n比如程序的输入是\n\n9 cat\n\n程序就要返回\n\n18\ncatcat\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint more(int n) {\n    return n * 2;\n}\n\nstring more(string s) {\n    return s + s;\n}\n\nint main() {\n    int n = 0;\n    string w;\n    cin >> n >> w;\n\n    cout << more(n) << endl;\n    cout << more(w) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "8\nfishfish",
+      "stdin": "4 fish\n",
+      "explanation": "**同一个名字，可以挂好几个方法** —— 只要它们收的料不一样，编译器就分得清。\n\n它是怎么分的？**看你传入的是什么东西**：\n\n- 传入一个数 → 它找那个收整数的 `more`；\n- 传入一根字符串（`string`）→ 它找那个收字符串的 `more`。\n\n所以这两招的脑袋长得不一样（一个收 `int`、一个收 `string`），**名字却可以都叫 `more`** —— 引用的时候不用起两个名字，写的人省事、读的人也省事：一看就知道「这两件事是同一类事，只是料的类型不同」。\n\n⚠️ 三条规矩记一下：\n\n- **收的料必须真的不一样** —— 两招名字一样、收的料也一样，编译器就分不清该调用哪个了；\n- **光靠「返回的东西不同」不够** —— 它不看返回的，只看**收什么料**；\n- 这一题两招里都用了 `return`：一个方法返回数、一个方法返回字符串，**返回的类型和脑袋上写的一致**。\n\n什么时候值得这么写？**干的是同一件事、只是料的类型不同**的时候 —— 比如「都是把它翻倍」：数翻倍是乘 2，字符串翻倍是接两遍。",
+      "templateId": "cpp-s1-func-overload-more",
+      "params": {
+        "n": 4,
+        "word": "fish"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "73ba15433761c5b4"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-overload-more-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给一个名字配**两招**，名字都叫 `more`：\n\n- 喂**一个数**进去 → 返回**它的两倍**（喂 4 进去返回 8）；\n- 喂**一根字符串**进去 → 返回**它自己接自己两遍**（喂 `miai` 进去返回 `miaimiaimiai` 那样）。\n\n输入接口会**先给一个数、再给一根英文字符串**（中间用空格隔开）。请你写个程序：两样都读进来，**各调用一次那一个方法**，一行印一个——第一行印两倍的那个数，第二行印接两遍的那根字符串。\n\n比如程序的输入是\n\n9 cat\n\n程序就要返回\n\n18\ncatcat\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint more(int n) {\n    return n * 2;\n}\n\nstring more(string s) {\n    return s + s;\n}\n\nint main() {\n    int n = 0;\n    string w;\n    cin >> n >> w;\n\n    cout << more(n) << endl;\n    cout << more(w) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "10\nmiaimiai",
+      "stdin": "5 miai\n",
+      "explanation": "**同一个名字，可以挂好几个方法** —— 只要它们收的料不一样，编译器就分得清。\n\n它是怎么分的？**看你传入的是什么东西**：\n\n- 传入一个数 → 它找那个收整数的 `more`；\n- 传入一根字符串（`string`）→ 它找那个收字符串的 `more`。\n\n所以这两招的脑袋长得不一样（一个收 `int`、一个收 `string`），**名字却可以都叫 `more`** —— 引用的时候不用起两个名字，写的人省事、读的人也省事：一看就知道「这两件事是同一类事，只是料的类型不同」。\n\n⚠️ 三条规矩记一下：\n\n- **收的料必须真的不一样** —— 两招名字一样、收的料也一样，编译器就分不清该调用哪个了；\n- **光靠「返回的东西不同」不够** —— 它不看返回的，只看**收什么料**；\n- 这一题两招里都用了 `return`：一个方法返回数、一个方法返回字符串，**返回的类型和脑袋上写的一致**。\n\n什么时候值得这么写？**干的是同一件事、只是料的类型不同**的时候 —— 比如「都是把它翻倍」：数翻倍是乘 2，字符串翻倍是接两遍。",
+      "templateId": "cpp-s1-func-overload-more",
+      "params": {
+        "n": 5,
+        "word": "miai"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "1fa6ee2058652ee9"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-overload-more-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给一个名字配**两招**，名字都叫 `more`：\n\n- 喂**一个数**进去 → 返回**它的两倍**（喂 4 进去返回 8）；\n- 喂**一根字符串**进去 → 返回**它自己接自己两遍**（喂 `miai` 进去返回 `miaimiaimiai` 那样）。\n\n输入接口会**先给一个数、再给一根英文字符串**（中间用空格隔开）。请你写个程序：两样都读进来，**各调用一次那一个方法**，一行印一个——第一行印两倍的那个数，第二行印接两遍的那根字符串。\n\n比如程序的输入是\n\n9 cat\n\n程序就要返回\n\n18\ncatcat\n\n（判分喂的是**另外两份**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint more(int n) {\n    return n * 2;\n}\n\nstring more(string s) {\n    return s + s;\n}\n\nint main() {\n    int n = 0;\n    string w;\n    cin >> n >> w;\n\n    cout << more(n) << endl;\n    cout << more(w) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "10\nfishfish",
+      "stdin": "5 fish\n",
+      "explanation": "**同一个名字，可以挂好几个方法** —— 只要它们收的料不一样，编译器就分得清。\n\n它是怎么分的？**看你传入的是什么东西**：\n\n- 传入一个数 → 它找那个收整数的 `more`；\n- 传入一根字符串（`string`）→ 它找那个收字符串的 `more`。\n\n所以这两招的脑袋长得不一样（一个收 `int`、一个收 `string`），**名字却可以都叫 `more`** —— 引用的时候不用起两个名字，写的人省事、读的人也省事：一看就知道「这两件事是同一类事，只是料的类型不同」。\n\n⚠️ 三条规矩记一下：\n\n- **收的料必须真的不一样** —— 两招名字一样、收的料也一样，编译器就分不清该调用哪个了；\n- **光靠「返回的东西不同」不够** —— 它不看返回的，只看**收什么料**；\n- 这一题两招里都用了 `return`：一个方法返回数、一个方法返回字符串，**返回的类型和脑袋上写的一致**。\n\n什么时候值得这么写？**干的是同一件事、只是料的类型不同**的时候 —— 比如「都是把它翻倍」：数翻倍是乘 2，字符串翻倍是接两遍。",
+      "templateId": "cpp-s1-func-overload-more",
+      "params": {
+        "n": 5,
+        "word": "fish"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "52ad85c6cc339fac"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-sum-to-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要**自己写一个方法**，名字叫 `sumTo`：喂一个数进去，它把从 1 加到那个数、一路加出来的总数**返回**（喂 4 进去，返回的就是 1 加 2 加 3 加 4）。\n\n输入接口会传入一个数。请你写个程序：**读进来一个数、把这一个方法调用、把它返回的数印出来**，印成一行 `1 到 X 一共 Y 条数据`（X 是传入的那个数，Y 是返回的总数）。\n\n比如程序的输入是\n\n8\n\n程序就要返回\n\n1 到 8 一共 36 条数据\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint sumTo(int n) {\n    int total = 0;\n    for (int i = 1; i <= n; i++) {\n        total = total + i;\n    }\n    return total;\n}\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    cout << \"1 到 \" << n << \" 一共 \" << sumTo(n) << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "1 到 4 一共 10 条数据",
+      "stdin": "4\n",
+      "explanation": "这一题把上一课的「小元素累加」**搬进了一个方法里**。拆开看三块：\n\n1. **脑袋**：`int sumTo(int n)` —— 前面那个 `int` 是「这一个方法会返回一个整数」，括号里那个元素是**收料**的地方。\n2. **身子**：摆一个小元素装总数（初值 0），跑圈把 1 到 n 一路加进去。\n3. **返回**：`return total;` —— 这一个方法的**最后一句**，把加出来的数交给称呼它的人。\n\n主程序那头，`sumTo(n)` 这个位置**就等于那个返回的数** —— 所以它能直接塞进印的那一行里，跟塞一个普通的元素没区别。\n\n⚠️ 两件最容易栽的事：\n\n- **函数要写在主程序上面**（写在下面就翻不过去，本课另一道题就是这个坑）；\n- **收了料就得返回**：`return` 那一行别忘，而且它返回的东西要和脑袋上说的类型对得上（说了 `int` 就得返回一个整数）。\n\n自己写函数的顺序可以照这个念：**脑袋（收什么、返回什么）→ 身子（干活）→ 末尾（return）。**",
+      "templateId": "cpp-s1-func-sum-to",
+      "params": {
+        "n": 4,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "e54e6040cb612f7e"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-sum-to-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要**自己写一个方法**，名字叫 `sumTo`：喂一个数进去，它把从 1 加到那个数、一路加出来的总数**返回**（喂 4 进去，返回的就是 1 加 2 加 3 加 4）。\n\n输入接口会传入一个数。请你写个程序：**读进来一个数、把这一个方法调用、把它返回的数印出来**，印成一行 `1 到 X 一共 Y 条商品`（X 是传入的那个数，Y 是返回的总数）。\n\n比如程序的输入是\n\n8\n\n程序就要返回\n\n1 到 8 一共 36 条商品\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint sumTo(int n) {\n    int total = 0;\n    for (int i = 1; i <= n; i++) {\n        total = total + i;\n    }\n    return total;\n}\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    cout << \"1 到 \" << n << \" 一共 \" << sumTo(n) << \" 条商品\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "1 到 4 一共 10 条商品",
+      "stdin": "4\n",
+      "explanation": "这一题把上一课的「小元素累加」**搬进了一个方法里**。拆开看三块：\n\n1. **脑袋**：`int sumTo(int n)` —— 前面那个 `int` 是「这一个方法会返回一个整数」，括号里那个元素是**收料**的地方。\n2. **身子**：摆一个小元素装总数（初值 0），跑圈把 1 到 n 一路加进去。\n3. **返回**：`return total;` —— 这一个方法的**最后一句**，把加出来的数交给称呼它的人。\n\n主程序那头，`sumTo(n)` 这个位置**就等于那个返回的数** —— 所以它能直接塞进印的那一行里，跟塞一个普通的元素没区别。\n\n⚠️ 两件最容易栽的事：\n\n- **函数要写在主程序上面**（写在下面就翻不过去，本课另一道题就是这个坑）；\n- **收了料就得返回**：`return` 那一行别忘，而且它返回的东西要和脑袋上说的类型对得上（说了 `int` 就得返回一个整数）。\n\n自己写函数的顺序可以照这个念：**脑袋（收什么、返回什么）→ 身子（干活）→ 末尾（return）。**",
+      "templateId": "cpp-s1-func-sum-to",
+      "params": {
+        "n": 4,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "66a93b07b7490811"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-sum-to-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要**自己写一个方法**，名字叫 `sumTo`：喂一个数进去，它把从 1 加到那个数、一路加出来的总数**返回**（喂 4 进去，返回的就是 1 加 2 加 3 加 4）。\n\n输入接口会传入一个数。请你写个程序：**读进来一个数、把这一个方法调用、把它返回的数印出来**，印成一行 `1 到 X 一共 Y 条数据`（X 是传入的那个数，Y 是返回的总数）。\n\n比如程序的输入是\n\n8\n\n程序就要返回\n\n1 到 8 一共 36 条数据\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint sumTo(int n) {\n    int total = 0;\n    for (int i = 1; i <= n; i++) {\n        total = total + i;\n    }\n    return total;\n}\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    cout << \"1 到 \" << n << \" 一共 \" << sumTo(n) << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "1 到 5 一共 15 条数据",
+      "stdin": "5\n",
+      "explanation": "这一题把上一课的「小元素累加」**搬进了一个方法里**。拆开看三块：\n\n1. **脑袋**：`int sumTo(int n)` —— 前面那个 `int` 是「这一个方法会返回一个整数」，括号里那个元素是**收料**的地方。\n2. **身子**：摆一个小元素装总数（初值 0），跑圈把 1 到 n 一路加进去。\n3. **返回**：`return total;` —— 这一个方法的**最后一句**，把加出来的数交给称呼它的人。\n\n主程序那头，`sumTo(n)` 这个位置**就等于那个返回的数** —— 所以它能直接塞进印的那一行里，跟塞一个普通的元素没区别。\n\n⚠️ 两件最容易栽的事：\n\n- **函数要写在主程序上面**（写在下面就翻不过去，本课另一道题就是这个坑）；\n- **收了料就得返回**：`return` 那一行别忘，而且它返回的东西要和脑袋上说的类型对得上（说了 `int` 就得返回一个整数）。\n\n自己写函数的顺序可以照这个念：**脑袋（收什么、返回什么）→ 身子（干活）→ 末尾（return）。**",
+      "templateId": "cpp-s1-func-sum-to",
+      "params": {
+        "n": 5,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "c256494241a4a74b"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-sum-to-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要**自己写一个方法**，名字叫 `sumTo`：喂一个数进去，它把从 1 加到那个数、一路加出来的总数**返回**（喂 4 进去，返回的就是 1 加 2 加 3 加 4）。\n\n输入接口会传入一个数。请你写个程序：**读进来一个数、把这一个方法调用、把它返回的数印出来**，印成一行 `1 到 X 一共 Y 条商品`（X 是传入的那个数，Y 是返回的总数）。\n\n比如程序的输入是\n\n8\n\n程序就要返回\n\n1 到 8 一共 36 条商品\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\nusing namespace std;\n\nint sumTo(int n) {\n    int total = 0;\n    for (int i = 1; i <= n; i++) {\n        total = total + i;\n    }\n    return total;\n}\n\nint main() {\n    int n = 0;\n    cin >> n;\n\n    cout << \"1 到 \" << n << \" 一共 \" << sumTo(n) << \" 条商品\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "1 到 5 一共 15 条商品",
+      "stdin": "5\n",
+      "explanation": "这一题把上一课的「小元素累加」**搬进了一个方法里**。拆开看三块：\n\n1. **脑袋**：`int sumTo(int n)` —— 前面那个 `int` 是「这一个方法会返回一个整数」，括号里那个元素是**收料**的地方。\n2. **身子**：摆一个小元素装总数（初值 0），跑圈把 1 到 n 一路加进去。\n3. **返回**：`return total;` —— 这一个方法的**最后一句**，把加出来的数交给称呼它的人。\n\n主程序那头，`sumTo(n)` 这个位置**就等于那个返回的数** —— 所以它能直接塞进印的那一行里，跟塞一个普通的元素没区别。\n\n⚠️ 两件最容易栽的事：\n\n- **函数要写在主程序上面**（写在下面就翻不过去，本课另一道题就是这个坑）；\n- **收了料就得返回**：`return` 那一行别忘，而且它返回的东西要和脑袋上说的类型对得上（说了 `int` 就得返回一个整数）。\n\n自己写函数的顺序可以照这个念：**脑袋（收什么、返回什么）→ 身子（干活）→ 末尾（return）。**",
+      "templateId": "cpp-s1-func-sum-to",
+      "params": {
+        "n": 5,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "26539799537c4775"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-too-few-args-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们这一个方法管发货：**收两份料** —— 收一个名字（领鱼的对象）、再收一个数（领几条）。收齐了就印一行 `计算机 领到 3 条数据`。\n\n可这段代码**翻不过去** —— 编译器一看到称呼它那一行就把它拦下了。你帮我们把缺的那份料补上，让它翻得过去、跑起来，印出来的东西是：\n\n`计算机 领到 3 条数据`",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    cout << name << \" 领到 \" << count << \" 条数据\" << endl;\n}\n\nint main() {\n    feed(\"计算机\");\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    cout << name << \" 领到 \" << count << \" 条数据\" << endl;\n}\n\nint main() {\n    feed(\"计算机\", 3);\n    return 0;\n}\n",
+      "expectedOutput": "计算机 领到 3 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: too few arguments to function 'void feed(std::string, int)'`，用自然语言解释：**「喂的料太少了 —— 这一个方法等着两份，你只给了一份。」**（它还把这一个方法的招牌原样念了出来：`void feed(std::string, int)`，一眼就能看出它等着「一根字符串 + 一个数」。）\n\n这一个方法脑袋上写着**两个元素**，称呼它的时候就得**喂够两份**：写成 `feed(\"计算机\", 3);`，中间用逗号隔开、顺序照着脑袋上的来。\n\n⚠️ 顺带把两个数字记清楚：\n\n- 料**少**了是 `too few arguments`（我们这一题）；\n- 料**多**了也拦 —— 输出的是 `too many arguments`。\n\n一句话：**脑袋上摆几个元素，称呼它的时候就喂几份料**，一个不多、一个不少，类型也要对上。",
+      "templateId": "cpp-s1-func-too-few-args",
+      "params": {
+        "name": "计算机",
+        "count": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "7d2512609dcb2772"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-too-few-args-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们这一个方法管发货：**收两份料** —— 收一个名字（领鱼的对象）、再收一个数（领几条）。收齐了就印一行 `小黄鱼 领到 5 条数据`。\n\n可这段代码**翻不过去** —— 编译器一看到称呼它那一行就把它拦下了。你帮我们把缺的那份料补上，让它翻得过去、跑起来，印出来的东西是：\n\n`小黄鱼 领到 5 条数据`",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    cout << name << \" 领到 \" << count << \" 条数据\" << endl;\n}\n\nint main() {\n    feed(\"小黄鱼\");\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    cout << name << \" 领到 \" << count << \" 条数据\" << endl;\n}\n\nint main() {\n    feed(\"小黄鱼\", 5);\n    return 0;\n}\n",
+      "expectedOutput": "小黄鱼 领到 5 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: too few arguments to function 'void feed(std::string, int)'`，用自然语言解释：**「喂的料太少了 —— 这一个方法等着两份，你只给了一份。」**（它还把这一个方法的招牌原样念了出来：`void feed(std::string, int)`，一眼就能看出它等着「一根字符串 + 一个数」。）\n\n这一个方法脑袋上写着**两个元素**，称呼它的时候就得**喂够两份**：写成 `feed(\"小黄鱼\", 5);`，中间用逗号隔开、顺序照着脑袋上的来。\n\n⚠️ 顺带把两个数字记清楚：\n\n- 料**少**了是 `too few arguments`（我们这一题）；\n- 料**多**了也拦 —— 输出的是 `too many arguments`。\n\n一句话：**脑袋上摆几个元素，称呼它的时候就喂几份料**，一个不多、一个不少，类型也要对上。",
+      "templateId": "cpp-s1-func-too-few-args",
+      "params": {
+        "name": "小黄鱼",
+        "count": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "7f0b82342b802105"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-wrong-formula-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们这一个方法叫平方：**喂一个数进去，返回它自己乘自己**。\n\n主程序里喂了两个数，各调用一次，一行返回一个：\n\n- 喂 3，该返回 3 乘 3\n- 喂 5，该返回 5 乘 5\n\n可这段代码返回的两个数**都不对**。它跑得起来，编译器一句原话都没有，就是返回的数不对。\n\n你帮我们改对这一个方法：该乘的就乘，别算成别的。主程序那两行一个字都不用动。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint square(int n) {\n    return n + n;\n}\n\nint main() {\n    cout << square(3) << endl;\n    cout << square(5) << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint square(int n) {\n    return n * n;\n}\n\nint main() {\n    cout << square(3) << endl;\n    cout << square(5) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "9\n25",
+      "stdin": null,
+      "explanation": "问题就出在函数里那一行 `return n + n;`：它把传入的数**自己加了自己**（`n + n`），而我们要的是**自己乘自己**（`n * n`）。加法和乘法是两码事：`5 + 5` 是 10，`5 * 5` 是 25。\n\n改法只有一处：`return n + n;` 换成 `return n * n;`。主程序那两行一个字都不用动 —— 传入的还是那两个数，**返回的东西变了**。\n\n⚠️ 这一题最该记住的是**它一次不吭**：`n + n` 写得完全合规矩，编译器看不出任何毛病 —— 它只认「写法对不对」，**不认「你心里想的是哪个算式」**。返回的数不对，机器永远不会告诉你。\n\n所以写完一个方法，习惯性做一件事：**拿一个心里有数的小数传入，自己先算一遍**。像喂 3 该返回 9、喂 4 该返回 16 —— 一对就露馅了。\n\n顺带认一下 `return` 的脾气：**它一执行，整招就当场收工** —— 写在它后面的句子一句都不会跑。所以它该摆在「活干完了、要把结果交出去」的那个位置上。",
+      "templateId": "cpp-s1-func-wrong-formula",
+      "params": {
+        "a": 3,
+        "b": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "a941346a23c17f9b"
+      }
+    },
+    {
+      "id": "bank-cpp-s1-func-wrong-formula-003",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们这一个方法叫平方：**喂一个数进去，返回它自己乘自己**。\n\n主程序里喂了两个数，各调用一次，一行返回一个：\n\n- 喂 4，该返回 4 乘 4\n- 喂 6，该返回 6 乘 6\n\n可这段代码返回的两个数**都不对**。它跑得起来，编译器一句原话都没有，就是返回的数不对。\n\n你帮我们改对这一个方法：该乘的就乘，别算成别的。主程序那两行一个字都不用动。",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nint square(int n) {\n    return n + n;\n}\n\nint main() {\n    cout << square(4) << endl;\n    cout << square(6) << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nint square(int n) {\n    return n * n;\n}\n\nint main() {\n    cout << square(4) << endl;\n    cout << square(6) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "16\n36",
+      "stdin": null,
+      "explanation": "问题就出在函数里那一行 `return n + n;`：它把传入的数**自己加了自己**（`n + n`），而我们要的是**自己乘自己**（`n * n`）。加法和乘法是两码事：`5 + 5` 是 10，`5 * 5` 是 25。\n\n改法只有一处：`return n + n;` 换成 `return n * n;`。主程序那两行一个字都不用动 —— 传入的还是那两个数，**返回的东西变了**。\n\n⚠️ 这一题最该记住的是**它一次不吭**：`n + n` 写得完全合规矩，编译器看不出任何毛病 —— 它只认「写法对不对」，**不认「你心里想的是哪个算式」**。返回的数不对，机器永远不会告诉你。\n\n所以写完一个方法，习惯性做一件事：**拿一个心里有数的小数传入，自己先算一遍**。像喂 3 该返回 9、喂 4 该返回 16 —— 一对就露馅了。\n\n顺带认一下 `return` 的脾气：**它一执行，整招就当场收工** —— 写在它后面的句子一句都不会跑。所以它该摆在「活干完了、要把结果交出去」的那个位置上。",
+      "templateId": "cpp-s1-func-wrong-formula",
+      "params": {
+        "a": 4,
+        "b": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.281Z",
+        "hash": "fd517da039ee90e8"
+      }
+    }
+  ]
+}

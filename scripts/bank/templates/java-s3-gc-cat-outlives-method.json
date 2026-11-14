@@ -1,0 +1,31 @@
+{
+  "templateId": "java-s3-gc-cat-outlives-method",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-18",
+  "type": "codewrite",
+  "concept": [
+    "函数收工元素就端走了",
+    "返回的那个盒子还活着",
+    "每调用一次都是新的一个"
+  ],
+  "instances": 6,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四"
+      ]
+    },
+    "n": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    }
+  },
+  "stemTemplate": "我们要亲眼看看「函数收工、盒子还在」到底成不成立。请你写个程序，照这个次序做：\n\n1. 在类定义旁边写一个方法 `创建一个对象`：函数里 `new` 一个名字叫 `{name}` 的对象，然后**把它读取**，交给调用这一个方法的那个手；\n2. 在 main 里调用这一个方法 **{n} 遍**：每一遍都伸一个手**接住**返回的那个，从 1 开始编号，印一行 `第 i 只：` 后面接**那一个的名字**；\n3. 全部调用结束，再印一行 `一共接住：` 后面接**一共接住了几个**，再接一个 ` 只`。\n\n（这一题**不需要输入**；调用几遍、对象叫什么名字，我们都在上面报给你了。）",
+  "starterTemplate": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n\nclass Cat {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n}\n",
+  "referenceSolutionTemplate": "public class Main {\n    static Cat 创建一个对象() {\n        Cat 屋里那个 = new Cat(\"{name}\");\n        return 屋里那个;\n    }\n\n    public static void main(String[] args) {\n        int 调用几次 = {n};\n        int 接住 = 0;\n        for (int i = 1; i <= 调用几次; i++) {\n            Cat 外面拿着的 = 创建一个对象();\n            接住 = 接住 + 1;\n            System.out.println(\"第 \" + i + \" 只：\" + 外面拿着的.name);\n        }\n        System.out.println(\"一共接住：\" + 接住 + \" 只\");\n    }\n}\n\nclass Cat {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n}\n",
+  "explanationTemplate": "**一、函数里的元素，收工就端走了。** 函数里那个对象本来是生在**函数自己的元素**里的；这一个方法一跑完，元素就没了。它之所以还能在外面报出名字，全靠你多做的那一步：**把名称返回**（`return 屋里那个;`），外面那个手接住它，它就还是「够得着」的。\n\n**二、每一遍都是新的一个。** 调用了 {n} 遍，`new` 就执行了 {n} 次 —— 每次都是一个**新的盒子**，只是名字一样。所以 `第 1 只` 和 `第 2 只` 报出来的名字相同，**盒子却不是同一个**。要是拿 `==` 去比这两个，印出来会是 false —— 课文第一节那段真跑讲的就是这件事。\n\n**三、为什么要另起一格记账。** 「接住了几个」这件事，得自己拿一格数着：每接住一个加 1，转够了再报。它和「这几个叫什么名字」是两回事 —— 名字一样不代表只有一个。\n\n**四、这一题真正想让你记住的。** 盒子活多久**不由函数决定，由名称决定**：函数收工只端走了元素，只要有一条路子通到外面，盒子就一直在院子里待着。"
+}

@@ -1,0 +1,34 @@
+{
+  "templateId": "py-s3-pat-observer-overwrite",
+  "lang": "python",
+  "stage": 3,
+  "lessonId": "python-stage3-14",
+  "type": "codefix",
+  "concept": [
+    "观察者",
+    "订上来的名单要攒着",
+    "覆盖写成重设",
+    "一次处理各对象各样"
+  ],
+  "instances": 2,
+  "params": {
+    "dish1": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品A"
+      ]
+    },
+    "dish2": {
+      "kind": "pick",
+      "values": [
+        "商品",
+        "商品"
+      ]
+    }
+  },
+  "stemTemplate": "处理铃那边立了一条规矩：**谁想听处理，自己订上来**。我们订了两个对象上去，结果摇铃的时候**只有后订的那个听见了**。\n\n它跑出来只有两行：\n\n```text\n李四 冲向 {dish1}\n李四 冲向 {dish2}\n```\n\n先订的张三一次没听着。你要的该是**四行**：\n\n```text\n张三 冲向 {dish1}\n李四 冲向 {dish1}\n张三 冲向 {dish2}\n李四 冲向 {dish2}\n```\n\n你改铃里面那一处，让订上来的都算数。对象那两张类定义和最后摇铃那几行都不用动。",
+  "brokenCodeTemplate": "class 处理铃:\n    def __init__(self):\n        self.听众 = []\n\n    def 订上(self, 对象):\n        self.听众 = [对象]\n\n    def 摇铃(self, 菜名):\n        for 对象 in self.听众:\n            对象.听见了(菜名)\n\n\nclass 对象:\n    def __init__(self, 名字):\n        self.名字 = 名字\n\n    def 听见了(self, 菜名):\n        print(self.名字, \"冲向\", 菜名)\n\n\n铃 = 处理铃()\n铃.订上(对象(\"张三\"))\n铃.订上(对象(\"李四\"))\n铃.摇铃(\"{dish1}\")\n铃.摇铃(\"{dish2}\")\n",
+  "referenceFixTemplate": "class 处理铃:\n    def __init__(self):\n        self.听众 = []\n\n    def 订上(self, 对象):\n        self.听众.append(对象)\n\n    def 摇铃(self, 菜名):\n        for 对象 in self.听众:\n            对象.听见了(菜名)\n\n\nclass 对象:\n    def __init__(self, 名字):\n        self.名字 = 名字\n\n    def 听见了(self, 菜名):\n        print(self.名字, \"冲向\", 菜名)\n\n\n铃 = 处理铃()\n铃.订上(对象(\"张三\"))\n铃.订上(对象(\"李四\"))\n铃.摇铃(\"{dish1}\")\n铃.摇铃(\"{dish2}\")\n",
+  "explanationTemplate": "错在铃里面那一行：我们写的是一句「**把名单整个换成这一个**」，而不是「**把这一个添到名单上**」。\n\n```text\nself.听众 = [对象]      ← 每订一个，前面订的全被挤掉了\nself.听众.append(对象)  ← 添上去，前面订的还在\n```\n\n所以先订的张三被后订的李四**顶掉了**，摇铃的时候名单上只剩一个。\n\n我们把这两行的区别念给你听：\n\n- 等号那一行念作「名单**就是**这一个」—— 是**重设**；\n- `append` 那一行念作「名单**再添**这一个」—— 是**攒着**。\n\n⚠️ 这一处特别容易看走眼，因为那行字本身一点毛病没有，程序也不报错 —— 它只是**悄悄少通知了一个**。你要是心里没有「该有四行」这个预期，根本发现不了。\n\n最后看一眼铃的规矩：它**不知道**每个对象听见了会做什么，只负责挨个调用一句 `听见了`。所以明天添一个新对象，**铃那边一个字都不用改**，她自己订上来就行 —— 这就是这一课那句「改一处」。"
+}

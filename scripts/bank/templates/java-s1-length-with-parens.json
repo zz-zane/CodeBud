@@ -1,0 +1,26 @@
+{
+  "templateId": "java-s1-length-with-parens",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-08",
+  "type": "codefix",
+  "concept": [
+    "一排元素",
+    ".length",
+    "光秃秃没括号"
+  ],
+  "instances": 2,
+  "params": {
+    "m": {
+      "kind": "pick",
+      "values": [
+        "3",
+        "5"
+      ]
+    }
+  },
+  "stemTemplate": "我们照纸条上写的 **{m}** 摆了一排空元素 —— `new int[{m}]` 就是「给我们摆一排 {m} 只空元素」的意思。\n\n我们还想随口报一句「这一排一共几个元素」。可这段代码**连编译器那一关都没过去**，屏幕上只吐出一串错误信息，一个元素都没摆成。\n\n你帮我们看看是哪个字多写了，把它改好。",
+  "brokenCodeTemplate": "public class Main {\n    public static void main(String[] args) {\n        int[] bowls = new int[{m}];\n        bowls[0] = 3;\n\n        System.out.println(\"这一排一共 \" + bowls.length() + \" 只元素\");\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void main(String[] args) {\n        int[] bowls = new int[{m}];\n        bowls[0] = 3;\n\n        System.out.println(\"这一排一共 \" + bowls.length + \" 只元素\");\n    }\n}\n",
+  "explanationTemplate": "这里绊的是我们特意埋的一个不一致：**问「一排元素有几个」和「一串字符串有多长」，写法不一样。**\n\n- **一排元素**：`bowls.length` —— 光秃秃的，**不带小括号**。它是个**现成的数**，挂在这一排元素身上，伸手就能拿到，不是要你调用一次才给的活儿。\n- **一串字符串**：`word.length()` —— **带一对小括号**。\n\n我们手滑给它添了括号，编译器当场就把这行拦下了，错误信息大意是：**「`bowls` 身上没有这么个带括号的 `length()` 。」**（那行原文里的 `cannot find symbol` 就是「我们不认识这个写法」，后面还跟着 `method length()` 和 `location: variable bowls of type int[]`，明明白白指着是哪一排元素。）\n\n所以这段代码**一个字都没跑起来**。这种手滑有个好处：编译器会当场拦住，不会让你带着错往下跑，比越界那种跑起来才炸的省心多了。"
+}

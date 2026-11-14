@@ -1,0 +1,3766 @@
+{
+  "id": "2025-06-1",
+  "title": "2025年6月 第1套",
+  "year": 2025,
+  "month": 6,
+  "set": 1,
+  "status": "partial",
+  "issues": [
+    "解析册第 10、13、17、21、25 页开始印有五段英文听力，原文与逐句讲解交错；尚未完整提取，不能认定原卷缺失。",
+    "尚缺完整英文原文的 5 段已提供 G 盘音频机器转写草稿，未经逐句核验，不计入完整原文统计。",
+    "严格质检：听力原文 2/7；疑似 OCR 乱码或英文粘连待核查。",
+    "写作题干已清理（2026-11-08）：去除版面残片、补齐指令。2025-06 版面原为扫描件，据 OCR 可读部分复原。",
+    "翻译题干已据原卷文字层补回（2026-11-08）。",
+    "听力解析：原为一句话摘要的题目，已追加依据听力原文自动定位的支持句（标注「自动匹配」，非官方解析，可能不准）；原摘要保留在 explanationOriginal。",
+    "听力解析：原「未能定位」题已按解析摘要与原文对照选句补回（语义匹配/答案标记，未经录音核听，非官方）。",
+    "长篇阅读匹配：选项范围已按材料实际段落标识校正（去掉不存在的段落、补回缺失的段落）。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz",
+      "title": "2025年6月六级音频1.MP3",
+      "url": "https://drive.google.com/file/d/186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz/view?usp=drivesdk"
+    },
+    {
+      "id": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+      "title": "2025.06英语六级解析第1套.pdf",
+      "url": "https://drive.google.com/file/d/1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD/view?usp=drivesdk"
+    },
+    {
+      "id": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+      "title": "2025.06六级真题第1套.pdf",
+      "url": "https://drive.google.com/file/d/1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi/view?usp=drivesdk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “With the increasing application of AI technology, there is a growing concern that it may negatively impact human creativity.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. You should copy the sentence given in quotes at the beginning of your essay.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “With the increasing application of AI technology, there is a growing concern that it may negatively impact human creativity.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. You should copy the sentence given in quotes at the beginning of your essay.",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              14
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-06-1-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write an essay that begins with the sentence “With the increasing application of AI technology, there is a growing concern that it may negatively impact human creativity.” You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. You should copy the sentence given in quotes at the beginning of your essay.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "With the increasing application of AI technology, there IS a growmg concern that it may negatively impact\nhuman creativity. AdmittedIy, this concern hlds some\ntruth. The allure of AI lies in its ability to generate\nvarious contents such a S essays and storres within\nseconds. When people grow accustomed trelying on AI\nfor ideas, they could indeed gradually lose the incentive tthink independently.\nHowever, AI can be a helpful tool when used\nproperly and wisely. For example, designers c a n u s e\nAl-powered drawing tls tget basic composition ideas.\nWhile Al generates simple patterns quickly, designers\ncultural\nstyles, incorporate their umque arttst1C\nunderstandings and emotional expressrons mt() the works, creating masterpteces that Al alone could never achieve.\nIn writing, Al may offer story outlines, but it, s the\nwriter S personal experiences, profound thoughts and\nemotional insights that breathe life intthe narratlves.\nIn these scenarios, AI expands creative possibilities\nrather than replacing human ingenuity.\nEssentially, AI is merely an instrument. As long as\nwe rationally tap intits potential, it will serve as a powerful\nassistant tsti mulate human creativity. After all, the\nessence f creativity resides in human S ability tthink, feel\na nd innovate, which no technology can replace.",
+          "explanation": "5 年 6 月大学英语六级考试真题答案与详解（第 1 套）\nPart I Writing\nAI 技术应用对人类创造力的影响\n、审题引导\n提取指令信息\nto write an essay that\nbegins\nwith\nthe\nsentence With the\nincreasing application Of\nAI technology, there is a\ngrowing concern that it\nmay negatively impact\nhuman creativity.\n解读指令信息\n题目给出了\n开篇句，结合\n句意可提炼\n出写作主题：\nAI 技术应用\n对人类创造\n力的影响。\n提示可采用\nYou can make comments，的行文方式：\nClte examples@ or use\nyour personal expenences\nto develop your essay.\n、词汇准备\n． 发表评论；\n． 举出例证；\nO 讲述个人\n经历。\n提示写作思路\n本套题目要求围绕“AI 技术应用对人类创造力的影响”展开写\n作。开篇应借题干给出的句子引出话题，可简要指出“AI 技术应用\n可能对人类创造力产生消极影响”这一忧虑有其合理性。主体段可\n参照题干给出的提示行文，既可对这一现象发表评论（可基于开篇所\n述现象深入分析人工智能对人类创造力的消极影响，也可辩证转折\n指出 AI 技术在合理使用下反而会反哺创造力），也可举出例证（以典\n型个体的具体做法为例，或引用统计数据、新闻报道等），还可讲述自\n己的亲身经历（如介绍自己如何在 AI 的协助下创造性地解决问题）。\n结尾段可先总结指出 AI 技术对人类创造力的影响取决于人类的使\n用方式，再针对如何合理使用 AI 提出建议，并发出呼吁。\n论证方式：正反论证（分别说明过度依赖 AI 对人类创造力带来\n的消极影响和合理使用 AI 所带来的积极影响）、举例论证（借人们熟\n知的生活领域和应用场景说明 AI 对人类创造力的影响）等。\n高分点拨：本篇话题贴近现实，题目也提示了可采用的行文方\n式，下笔不难。但若想写得出彩，在发表评论时可更加深入（如延伸\n到“人机关系的本质”“人类创造力的独特性”“AI 训练数据的局限性\n导致的创新瓶颈”等），在举例时所涉领域可更加多元（如教育、设计、\n编程、艺术等）。\n“人工智能对人类创造力的消极 / 积极影响”\n相关的词汇及表达\nlure users rnto over-reliance 诱使用户过度依赖\nfoster intellectual laziness 助长思维惰性\nstifle original thought 扼杀原创思维\n· to come up With new ideas\nhelp insmre.\n有助于激发，一 · · 产生新的想法\nserve as a wellspring of insmratton\n成为灵感的源泉\nexpand creative possibilities by liberating\nhumans from repetitive and time—consuming\ntasks 通过将人类从重复、耗时的任务中解放\n出来，拓展创意的可能性\n、写作提纲\n“如何合理使用人工智能”相关的词汇及表达\nembrace a collaborative mindset 秉持协作心态\nview Al as a complementary tool rather than a substitute for human\nthinking 将人工智能视为辅助工具，而非人类思考的替代品\ncombine AI， s power with human magination 将人工智能的力\n量与人类的想象力相结合\nharness AI, S potential to enhance, not diminish, our creative\ncapabilities 充分利用人工智能的潜力来增强而非削弱我们的\n创造能力\ndelegate tedious tasks to Al while reserving our minds for\ndeeper creative exploration 将繁琐的任务交给人工智能处理，\n而将我们的精力留出来用于更深入的创意探索\n第一段：引出争议话题“AI 可能对人类的创造力产生消极影响”，承认此担忧有一定道理并说明原因。\n第二段：转折指出 AI 若能合理运用会成为人类的辅助工具，并举例论证。\n第三段：总结全文，强调 AI 若能合理使用，可以拓展创意可能性，而非取代人类的创意。\n1\n四、下笔成文\n参考范文\n0） With the increasing application of AI technology,\nthere IS a growmg concern that it may negatively impact\nhuman creativity. 0） AdmittedIy, this concern holds some\ntruth. ． The allure of AI lies in its ability to generate\nvarious contents such a S essays and storres within\nseconds. @〗When people grow accustomed to relying on AI\nfor ideas, they could indeed gradually lose the incentive to\nthink independently.\n． However, AI can be a helpful tool when used\nproperly and wisely. @） For example, designers c a n u s e\nAl-powered drawing tools to get basic composition ideas.\nOWhile Al generates simple patterns quickly, designers\ncultural\nstyles,\nincorporate their umque arttst1C\nunder standings and emotional expressrons mt() the works,\ncreating masterpteces that Al alone could never achieve.\nOIn writing, Al may offer story outlines, but it's the\nwriters personal experiences, profound thoughts and\nemotional insights that breathe life into the narratlves.\nOln these scenarios, AI expands creative possibilities\nrather than replacing human ingenuity.\n． Essentially, AI is merely an instrument. OAs long as\nwe rationally tap into its potential, it will serve as a powerful\nassistant to stimulate human creativity. OAfter all, the\nessence of creativity resides in humans ability to think, feel\na nd innovate, which no technology can replace.\n· 词汇注释 ·， /\n参考译文\nO 随着人工智能技术的广泛应用，人\n们越来越担心它可能会对人类的创造力\n产生负面影响。 ． 诚然，这种担忧有一定\n的道理。 ． 人工智能的诱惑力在于它能\n在数秒内生成文章、故事等各种内容。\nO 当人们越发习惯于依赖人工智能来获\n取想法时，他们确实可能会逐渐失去独立\n思考的动力。\n． 然而，当人工智能被合理且明智地\n使用时，它可以成为有用的工具。 ． 例\n如，设计师可以使用人工智能绘图工具来\n获取基础构图思路。 ． 尽管人工智能可\n以快速生成简单图案，但设计师会将他们\n独特的艺术风格、文化理解和情感表达融\n入作品中，创作出人工智能单凭自身无法\n企及的杰作。 O 在写作方面，人工智能可\n能会提供故事大纲，但正是作者的个人经\n历、深刻的思想和情感洞察力赋予了叙事\n以生命。 O 在这些情况下，人工智能拓展\n了创意的可能性，而非取代人类的创造力。\n． 从本质上讲，人工智能只是一种工\n具。 ． 只要我们合理挖掘其潜力，它就会\n成为激发人类创造力的强大助手。 O 毕\n竟，创造力的本质在于人类的思考、感受和\n创新能力，这是任何技术都无法替代的。\nadmittedly Cod'm1t1dIil ad. 诚然；无可否认\nallure Co'luo(r)] 诱惑力；吸引力\n(be) accustomed to. · · 习惯于\nincentive C1n sentlv] 动力；鼓励\ncomposition ClkDmpolz1Jn] （绘画\npattern [ pætn] 图案；花样\n一、录音分析\n0\n、摄影的）构图\nincorporate CIn'ko： pare lt ] 使并入；将“， · · · 包括在内\nbreathe life into sth( 给某事物）带来起色，注入活力\nscenario Csa'na:riauJ” · 可能发生的事态；场景\ningenuity C11nd30'nju:ati]” · 独创力；创造力\nta p into 开发；利用\nstimulate C'sUmjule1t] 促进；激发\nPart Listening Comprehension\nSection A\nConversation One 电脑维修\n1 M： GOOd morning！ My name is BO b Fetterman. I, m the computer technician.\n2-W： Didn't I call for you last week?\n3 一 M： Maybe， I work for Alpha Maintenance. I imagtne someone fro rn your office called our central office\nand I, m the engtneer designated to your case.\n男士自我介绍，女士提出质疑，男士委婉回应。话语标记词： My name is. 一 Dldn t I. 一 Maybe， I work for.\n礻亥 ' 心讠吾义词： the computer technician、 last week、 designated to your caseo\n· and I, m the engineer.\nlmagine.\n2",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              14
+            ]
+          },
+          "answerSource": {
+            "fileId": "186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz",
+            "pages": [
+              1,
+              2
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear long conversations, passages and talks.",
+      "audio": {
+        "src": "source-media/2025年06月第1套/2025年6月六级音频1.MP3",
+        "sourceId": "186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz",
+        "sharedWith": []
+      },
+      "blocks": [
+        {
+          "id": "listening-part-1",
+          "title": "Conversation One",
+          "text": "",
+          "transcript": "1 M ： GOOd morning ！ My name is BO b Fetterman. I, m the computer technician.\n\n2-W ： Didn't I call for you last week?\n\n3 一 M ： Maybe ， I work for Alpha Maintenance. I imagtne someone fro rn your office called our central office and I ， m the engtneer designated to your case.\n\n4 W · Yeah, I spoke to a lady there last Tuesday, which is now ten days ago. I made it clear it was an urgent matter and please send someone as soon as possible. Couldn't YOu or someone else have come sooner?\n\n5-M ： I, m sorry but I, m not in charge of scheduling or logistics. I simply do not know. AII I can tell you is I got the call this week and came as soon as I could.\n\n6 、 ： I see. WeII, I'll have YOu know, my manager is rather indignant that it's taking YOu this long to come. I understand that it might not your fault, but nevertheless, you should know what the feeling is around here.\n\n7 一 M ： I understand and I ， m sorry for any inconvemence. I ， 11 try to resolve your computer problem as swiftly and optimally as I can. What and where is the issue ？\n\n8-W ： It's this machine right here. It was running slow for a while, I guess, and gradually got worse and worse. Last Tuesday, it Just stopped workmg all together. If you switch it on, you will see what I mean.\n\n9 一 M ： Okay. Do YOu know if it ， s backed up ？\n\n10 一 W ： Backed up ？\n\n11 一 M ： I mean do you know if its contents have been copied and saved somewhere else.\n\n12-W ： I don't know.\n\n13 一 M ： 、 vell ， depending on the enst-ung operative scenarto ， if I need to WIPe the system directories clean in order to reconfigure default protocols ， then my first intervention should be to intrlcately retrleve aii inventorles that I can. Otherwise ， al 1 data that was stored on its hard drive will be forever lost.\n\n14 一 W ，  My manager would know. Let me go get him.",
+          "translation": "男 ： 早上好 ！ 我叫鲍勃 · 费特曼 ， 是电脑技术员 。\n女 ： 我上周是不是打电话找过你们 ？\n男 ： 有可能 ， 我在阿尔法维修公司工作 。 我猜是你们办公室有人给我们总部打了电话 ， 所以我被指派来处理你\n们的问题 。\n女 ： 对 ， 我上周二和你们公司的一位女士通过电话 ， 到现在已经十天了 。 我当时明确说这是紧急事项 ， 请尽快\n派人来 。 你或者其他人就不能早点来吗 ？\n男 ： 抱歉 ， 但我不负责调度或后勤安排 。 我确实不清楚 。 我只能告诉您 ， 我这周一接到电话后就尽快赶来了 。\n女 ： 我明白 。 对了 ， 我得告诉你 ， 我们经理对你们拖了这么久才来相当气愤 。 我知道这可能不是你的错 ， 但还\n是应该让你知道我们这儿的感受 。\n男 ： 我明白 ， 也为给你们带来的不便道歉 。 我会尽量快速且妥善地解决你们的电脑问题 。 具体是什么问题 ？\n问题出在哪儿 ？\n女 ： 就是这台机器 。 我觉得它运行很慢有一阵子了 ， 而且越来越糟 。 上周二它彻底罢工 。 你如果开机 ， 就会明\n白我在说什么 。\n男 ： 好的 。 你知道数据有没有备份吗 ？\n女 ： 备份 ？\n男 ： 我的意思是 ， 你知道里面的内容有没有被复制到其他地方进行保存吗 ？\n女 ： 我不知道 。\n男 ： 是这样的 ， 根据后续操作情况 ， 如果我需要清空系统目录以重新配置默认协议 ， 那我的第一步操作就应该\n是细致检索所有可获取的库存数据 。 如果不备份的话 ， 电脑硬盘上存储的所有数据都将永久丢失 。\n女 ： 我们经理应该知道 。 我去叫他来 。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        },
+        {
+          "id": "listening-part-2",
+          "title": "Conversation Two",
+          "text": "",
+          "transcript": "1 一 M ： Have you glven more thoughts to studying law ？\n\n2 W ： I've been thinking about it a lot. Yes. In fact, this is why I wished to speak to you. I wanted to hear more about what it's like.\n\n3 一 M ： A career in law is a beautiful thing ， my optnron. Many people will say It ， s a boring field ， but I disagree. The thing is ， there are many different branches of law and many different jobs.\n\n4 一 ： You are involved with buildings and construction ， right ？\n\n5 M ： Correct. I, m a solicitor specialimng in real estate. Most of my work involves mediating land disputes.\n\n6 一 ： Do you mind giving me an example ？\n\n7 一在 ： Sure. SO in ma ny cases ， I am employed to arbitrate between two clashing parties. Let ， s say ， for example ， there are two landowners WhO are ln a thorny disagreement about something like the borders of their adjacent plots. Someone may employ me to break the deadlock and resolve the dispute. Often my work involves negotratlng agreements ， plain and simple.\n\n8-W ： So you are saying that a lot of what you do is fix people's legal issues like YOu try to find a solution that benefits everyone and that prevents a problem from escalating.\n\n9-M ： Exactly. WeII put. You need to remember that courts—like all bureaucracles, really—can be very messy, frustrating and expensrve. For this reason, it's usually better to resolve problems outside of court whenever possible.\n\n10 W ： I see. So besides knowing the law inside out, you need good people skills, right?\n\n11 一 M ： Of course ， any Job that involves people reqmres good interpersonal skills ， @and any law professional needs to be very eloquent at articulating that argument.\n\n12 W ： Right. So I've been thinking about studying criminal law. I think it sounds very interesting.\n\n13 一在 ： Hmm ， yes. I ， d say there ， s more money property law ， but the stakes are higher in criminal law. I can see how you would find it more interesting.",
+          "translation": "男 ： 你有没有更深入地考虑过学法律 ？\n女 ： 我一直在考虑这件事 。 是的 。 事实上 ， 这也是我想要和您谈谈的原因 。 我想多了解一下这方面的情况 。\n男 ： 在我看来 ， 从事法律职业是一件美好的事情 。 很多人会说这是个枯燥的领域 ， 但我不这样认为 。 关键在\n于 ， 法律有很多不同的分支 ， 也有很多不同的工作 。\n女 ： 您从事的是建筑工程方面的法律事务 ， 对吧 ？\n男 ： 没错 。 我是一名专门从事房地产事务的律师 。 我的大部分工作都涉及调解土地纠纷 。\n女 ： 您介意给我举个例子吗 ？\n男 ： 当然不介意 。 在很多情况下 ， 我受雇在两个冲突方之间进行仲裁 。 举个例子 ， 比如有两位土地所有者在相\n邻地块的边界问题上产生难解难分的分歧 ， 有人可能会雇我来打破僵局 、 解决纠纷 。 通常 ， 我的工作就是\n协商达成协议 ， 就这么简单 。\n女 ： 所以您是说 ， 您的很大一部分工作是解决人们的法律问题 ， 比如努力找到一个对各方都有利的解决方案 ，\n9\n防止问题升级 。\n男 ： 正是这样 。 说得很好 。 你要记住 ， 法院一一一其实就像所有的官僚机构一样\n而且费用高昂 。 正因如此 ， 只要有可能 ， 通常最好在法庭之外解决问题 。\n女 ： 我明白了 。 那么除了精通法律之外 ， 还需要有良好的人际交往能力 ， 对吧 ？\n可能会非常混乱 、 令人沮丧\n男 ： 当然 ， 任何涉及与人打交道的工作都需要良好的人际交往能力 ， 而且任何法律专业人士都需要清晰有力地\n阐述自己的论点\n女 ： 没错 。 所以我在考虑学习刑法 。 我觉得它听起来很有趣 。\n男 ： 嗯 ， 是的 。 我得说物产法领域更赚钱 ， 但刑法的利害关系更重大 。 我能理解你为何会觉得它更有趣 。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          }
+        },
+        {
+          "id": "listening-part-3",
+          "title": "Passage One",
+          "text": "",
+          "transcript": "",
+          "translation": "当一个人试图提取某段记忆时 ， 大脑会迅速筛查内部已存储的所有内容以便找到相关信息 。 然而 ， 随着\n年龄的增长 ， 我们中的大多数人在追忆往事时会遇到困难 。\n在 2 月 11 日发表于 《 认知科学趋势 》 期刊的一篇综述中 ， 研究人员对这一现象可能会发生的原因提出了\n一种解释 ： 老年人的大脑会为累积的知识分配更多空间 ， 因此在尝试提取记忆时 ， 需要处理更多信息\n尽管这些丰富的既有知识可能会使记忆的提取更有挑战性 ， 但研究人员指出 ， 它也具有积极的一面\n这种生活经验有助于创造力和决策 。\n研究人员塔里克 · 阿米尔 、 约尔丹娜 · 温和林恩 · 哈舍分析了多项行为学和脑成像研究 ， 这些研究表明 ，\n老年人难以抑制不再相关的信息 ， 他们在搜索特定记忆时 ， 往往会连带提取出其他不相关的记忆 。 研究还发\n现 ， 在执行认知任务时 ， 老年人比年轻人更依赖既有知识 。\n尽管研究人员主要关注的是这些杂乱而又密集的记忆可能带来的困难 ， 但他们也强调 ， 在某些情境下 ， 此\n类记忆模式可能有益 。 研究人员指出 ： “ 有证据表明 ， 老年人展现出了保持完好 、 甚至时有增强的创造力 ， 这得\n益于他们丰富的记忆储备 。 ” 他们进一步提出假设 ： 老年人在进行决策时 ， 能够借助他们长期累积的智慧 ， 从自\n身既有的知识中受益 。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              13
+            ]
+          },
+          "transcriptDraft": "When a person tries to access a memory, their brains quickly examine everything stored in it to find the relevant information. But as we age, many of us have difficulty retrieving memories. In a review published in the journal Trends in Cognitive Sciences On February 11th, researchers propose an explanation for why this might be happening. The brains of older adults allocate more space to accumulated knowledge and have more material to navigate when attempting to access memories. While this wealth of prior knowledge can make memory retrieval challenging, the researchers say it has its upsides. This life experience can aid with creativity and decision making. Tarrick, Amher, Dredana, Win, and Lynn Hasher, looked at several behavioral and brain imaging studies, which show that older adults have difficulty suppressing information that is no longer relevant, and that when searching for a specific memory, they often retrieve other irrelevant memories along with it. The studies also showed that when given a cognitive task, older adults rely more heavily on previous knowledge than younger adults do. While the researchers focus primarily on the difficulties that these disorderly crowded memories may pose, they also highlight a few situations in which these same memory patterns may be useful. Evidence suggests that older adults show preserved and at times enhanced creativity as a function of enriched memories the researchers They further hypothesize that older adults may be well served by their prior knowledge when it comes to decision-making, where they can pull on their accumulated wisdom.",
+          "transcriptDraftSource": {
+            "fileId": "186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz",
+            "startSeconds": 288.23,
+            "endSeconds": 405.83,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-part-4",
+          "title": "Passage Two",
+          "text": "",
+          "transcript": "",
+          "translation": "如今美国的工作至少存在四个主要问题 。\n首先 ， 工作可能会使人产生疏离感 。 劳动者往往无法掌控他们自己的工作方式 、 工作时间 、 所生产的商品\n和提供的服务的用途 ， 以及工作所获利润的去向 。\n其次 ， 劳动者的全部价值未得到充分回报 。 实际工资没有跟上生产率的步伐 ， 这加剧了经济不平等 ， 并且\n导致劳动者的收入占比下降 。\n第三 ， 人们常处于时间匮乏之中 。 在美国 ， 尽管生产率一直在提高 ， 但全职员工平均每天工作 & 72 小时 。\n长时间工作会让人产生时间匮乏感 ， 这会对心理健康产生不利影响 。\n第四 ， 自动化让就业和工资都受到了威胁 。 从理论上讲 ， 技术创新本可以把人们从每周 40 小时的工作时\n长中解放出来 。 但除非对工作结构进行改革 ， 否则自动化只会对工资施加下行压力 ， 并进一步减少工作机会 。\n那么 ， 可以做些什么来缓解这些问题呢 ？ 对于如何达成最佳解决方案 ， 存在着一些相互对立的愿景 。 其\n中一种愿景被称为 “ 后工作 ” 立场 。 后工作理论家认为 ， 工作不应在我们的生活中占据核心地位 ， 也不应占据\n我们如此多的时间 。 他们主张 ， 尽管从事一些工作可能是必要的 ， 但人生的意义 、 目标和我们的社会价值存在\n于在职场之外所建立并维系起来的社区和人际关系之中 。 因此 ， 生活本身应被视为目的 。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              16,
+              17
+            ]
+          },
+          "transcriptDraft": "There are at least four major problems with work in America today. First, work can be alienating. Workers are often not in control of how they work, when they work, what is done with the goods and services they produce, and what is done with the profits made from their work. Second, workers are not paid the full value of their labour. Real wages have not kept pace with productivity, driving economic inequality and a decline in labour's share of income. Third, people are time poor in the US. Every time employees work an average of 8.72 hours per day, despite productivity increases. Long working hours contribute to the feeling of time poverty, which has an adverse effect on psychological well-being. Fourth, automation puts jobs and wages at risk. Technological innovation could in theory liberate people from the 40-hour work week, but but unless changes are made to the structure of work, automation will simply exert downward pressure on wages and further diminish work opportunities. So what can be done to alleviate these problems? There are competing visions of the best way to arrive at a solution. One vision is what's known as the post-work position. The post-work theorists believe that work should not hold a central position in our lives or take up so much of our time. They assert that, although doing some work might be necessary, meaning, purpose and social value reside in the communities and relationships built and sustained outside of the workplace, thus, life should be seen as an end in itself.",
+          "transcriptDraftSource": {
+            "fileId": "186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz",
+            "startSeconds": 429.53,
+            "endSeconds": 544.23,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-part-5",
+          "title": "Recording One",
+          "text": "",
+          "transcript": "",
+          "translation": "最近的研究表明 ： 除智商外 ， 自制力和毅力同样能够提升学业成果 。 甚至于我们个人对于努力的看法也\n20\n会影响学业成果 。 认为 “ 努力铸就成就 ” 的孩子优于那些相信 “ 能力是一种固定不变的特质 ” 的孩子 。\n鉴于毅力与学业成功之间的关联 ， 童年时期与努力相关的抉择就显得尤为重要 。 然而 ， 探究幼儿是如何\n学会何为值得付出努力之事的研究却相对较少 。\n众所周知 ， 嬰儿是社会世界的敏锐观察者 。 但他们并非只是漫不经心地观察 ； 他们如同小小的学习机器 。\n仅凭寥寥数例 ， 他们便能归纳出因果关系和社会角色等抽象概念 。 甚至 15 个月大的嬰儿在此类任务中的表\n现都能胜过高级计算机 。\n那么 ， 当涉及 “ 努力 ” 这一概念时 ， 嬰儿是否也能从少量示例中归纳出广泛性的 、 概括性的结论呢 ？ 若答案\n是肯定的 ， 那么毅力或许就不单纯只是一种性格特质了 。 或许它可根据社会情境灵活变通和调整适应 。\n为探究这一问题 ， 我们向 15 个月大的嬰儿展示了以下两种情形之一 ： 其一 ， 一位实验者费力达成两个不\n同的目标 ； 其二 ， 一位实验者毫不费力地达成每个目标 。\n随后 ， 我们向嬰儿展示了一款新型 “ 音乐 ” 玩具 ， 玩具看似可以通过按压顶部的一个大按钮来启动 。 （ 这个\n按钮也确实可以按下 ， 但实际上不会激活任何功能 。 ） 在嬰儿视线之外 ， 我们通过一个隐藏按钮启动了这款音\n乐玩具 ， 这样嬰儿们就能够听到玩具播放的音乐声 。 我们把玩具交给嬰儿们后就离开了房间 。 随后 ， 由完全\n不知晓每个嬰儿属于哪种实验条件的分析人员观看实验录像 ， 统计嬰儿按压按钮尝试启动玩具的次数 。\n在一项研究及其预先注册的重复实验中 ， 目睹 “ 成人坚持并成功 ” 组的嬰儿 ， 按压按钮的次数接近观察 “ 成人轻\n松成功 ” 组嬰儿的两倍 。 换言之 ， 嬰儿在观看了仅仅两个 “ 成人努力致胜 ” 的示例后 ， 就领悟到了努力是有价值的 。\n这一发现让人兴奋的部分原因在于 ： 嬰儿并非单纯模仿成人的行为 ， 而是将努力的价值类推到了一项全\n新的任务中 。 实验者从未演示过按压按钮或尝试播放音乐的动作 ， 嬰儿却能从不同的努力行为示例中学习\n到 ， 要启动这个新玩具或许也需要坚持不懈地努力 。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              20,
+              21
+            ]
+          },
+          "transcriptDraft": "Recent studies show that self-control and persistence increase academic outcomes independent of IQ. Even our personal beliefs about efforts can affect academic outcomes. Children who think effort leads to achievement outperform those who believe ability is a fixed trait. Given the link between persistence and academic success, decisions about effort are particularly important in childhood, yet relatively little research has explored how young children learn what's worth the effort. We all know that infants are keen observers of the social world, but they're not just idly watching. They are tiny learning machines. They can generalise such abstract concepts as causal relationships and social roles from just a few examples. Even a 15-month-old infant can outperform a high-level computer in such tasks. Could infants This also made broad, generalizable inferences from a few examples when it comes to effort. If so, there may be persistence isn't simply a character trait. Maybe it's flexible and adaptable based on social context. To explore this question, we showed 15-month-old babies one of two things. An experimenter working hard to achieve two different goals or an experimenter who effortlessly reached each goal. Then, we introduced the baby to a novel music toy that seemed as if it could be activated by pushing a big button on top. The button could be pressed down but didn't actually activate anything. Out of sight of the babies, we turned on the music toy with a hidden button so that they heard the toy making music. We gave the babies the music toy and left the room. Then analysts who didn't know which condition each baby was in watched videotapes of the experiment and counted how many times babies tried to activate the toy by pressing the button. Across one study and a pre-registered duplication, babies who had seen an adult persist and succeed pushed the button about twice as many times as those who saw an adult effortlessly succeed. In other words, babies learned that effort was valuable after watching just two examples of an adult working hard and succeeding. Part of what's exciting about this finding is that the babies didn't just imitate the adult's actions, instead they generalized the value of effort to a novel task. The experimenter never demonstrated pushing a button or trying to make music. Instead, the babies learned from different examples of effortful actions that the new toy probably also required persistence.",
+          "transcriptDraftSource": {
+            "fileId": "186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz",
+            "startSeconds": 572.05,
+            "endSeconds": 753.05,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-part-6",
+          "title": "Recording Two",
+          "text": "",
+          "transcript": "",
+          "translation": "如果习惯性迟到已支配你的生活 ， 并已成为你个人的最典型的特征 ， 那么你很可能正因此错失工作邀约 、\n休闲机会 、 交朋结友乃至更多 。 倘若你在自己的生活中频频迟到 ， 那么是时候做好行程规划 ， 将守时列为优先\n事项 ， 并设法处理任何潜在的事由 。\n当你必须准时到达某处 ， 赴约时不妨试着提前 15 到 30 分钟到达 。 如果你总是迟到 ， 这就意味着你必定\n未能考虑到自己一贯在做的某些事情 。 通过预留额外的到达时间来应对这一情况 ， 并监测自己是否真的能够\n提前到达 。 你或许会发现 ： “ 早 ” 动身才能让你恰好准时到达 。\n设置双重闹钟 。 第一个闹钟提醒你该停下手头的事情了 ； 第二个闹钟则意味着你该出门了 。 请务必遵守闹钟\n的提示 ！ 第一个闹钟一响 ， 立即停止正在做的事 ； 如果是之后还会继续处理的事情 （ 例如一个工作项目 ） ， 就做个记\n录 ， 提醒自己是在哪里中断的 。 带齐所需物品 、 并确保你知道如何去自己将要去的地方 。 争取在第二个闹钟响起前\n24\n你已出门上路 。 此方法只有在你认真对待闹钟的情况下才有效 ， 因此请务必一听到闹钟就立刻行动起来 。\n提前为当天做好准备 。 在每场活动前 ， 将所有笔记和资料整理妥当 ， 到了真要走的当天 ， 你只需拿上它们便可出\n发 。 如果晨起对你总是一件难事 ， 那就尽量在前一晚多做准备 ： 睡前将第二天要穿的衣服摆好 ， 收整好随身背包 。\n学会在各项任务和会议之间预留时间 。 在没有中间间隔的情况下从一个会议切换到另一个会议 ， 人很快\n就会感到难以承受 。 而如果你把自己的日程排得过满 ， 一旦遇到突发状况 ， 你就会迟到 。 这段时间既可作为\n一个供你喘息的空间 ， 还能充当活动之间的缓冲区 ， 哪怕在前一场会议中稍有延误 ， 你也能 “ 借用 \" 此段时间做\n到仍能按时赶赴下一场会议 。 估算各项活动之间的中转时间 ， 并额外预留 10 到 30 分钟 ， 以应对突发延误 。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              24,
+              25
+            ]
+          },
+          "transcriptDraft": "If chronic lateness has taken over your life and turned into a defining trait of who you are, it's likely that you're losing out on job offers, recreational opportunities, friendships, and more. If you are showing up late to your own life, get organized, prioritize punctuality, and address any underlying causes. When you have to be somewhere, try to arrive 15-30 minutes before you need to. If you always run late, that means you must be failing to account for something you always do. Anticipate that by giving yourself extra time to arrive. track of whether or not you actually do arrive early. You might find that leaving early gets you to places exactly on time. Set two alarms. Set one alarm that lets you know it's time to drop what you're doing and a second alarm that means you need to walk out the door. Obey the alarms. As soon as the first alarm goes off, stop what you're doing. If it's something you'll be coming back to like a project for work. Make a note to remind yourself where you left off. Grab everything you need and make sure you know how to get where you're going. Aim to be out the door and on your way before the second alarm rings. This will only work if you take the alarms seriously. So make sure you react as soon as you hear them. for the day ahead. Have all of your notes and materials organized well in advance of each event, so that all you have to do is grab them and go when it's the actual day. If mornings are a struggle for you, do as much as you can to ready yourself the night before. Before you go to bed, lay out your clothes and pack your bag for the next day. to leave time in between tasks and meetings. It soon becomes unbearable to shift between one meeting and another, without space in between. If you over-schedule yourself, however, you'll arrive late as soon as you hit a bump. As well as giving you space, this time also acts as a buffer between events, which can be borrowed from, should you be held up in a prior meeting, allowing you to still get to the next one on time. Calculate transit time between activities and then add 10 to 30 minutes for unexpected delays.",
+          "transcriptDraftSource": {
+            "fileId": "186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz",
+            "startSeconds": 778.65,
+            "endSeconds": 936.37,
+            "verified": false
+          }
+        },
+        {
+          "id": "listening-part-7",
+          "title": "Recording Three",
+          "text": "",
+          "transcript": "",
+          "translation": "你觉得波士顿人热情好客吗 ？ 你觉得其他城市更有礼貌 ， 还是更不礼貌 ？ 不同的城市给游客的感觉各不\n相同 。 有些城市友好开放 ， 有些则显得拘谨疏离 。 波士顿常常给人一种匆忙 、 甚至有点无礼的印象 。 这是一\n些游客的说法 。 一项研究发现 ， 与美国其他城市的居民相比 ， 这里的人更不愿意主动帮助陌生人 。\n下次你到波士顿时 ， 不妨仔细观察一下 ， 你可能会看到以下这些情景 ： 地铁站里 ， 尽管禁烟提示频频不断 ，\n仍有人吸烟 ； 人行道上 ， 尽管信号灯提示禁止通行 ， 仍有人无视来往车辆 ， 照旧穿行 ； 司机们飙车鸣笛 ， 不时恶\n语相向 ； 还有些司机懒得找车位 ， 直接打双闪停在马路中央 。\n有时候 ， 波士顿人似乎只是太忙而无暇顾及礼貌 。 为什么这个城市会这样 ？ 美国前众议员切斯特 · 阿特\n金斯认为 ， 这是因为身为清教徒的开城元勋们本身就缺乏耐心 、 脾气暴躁 ， 没时间以礼待人 。 他认为这种文化\n28\n一直延续至今 。\n波士顿学院的托马斯 · 奥康纳教授认为 ， 一个促成因素是波士顿的历史一一一在这座城市 ， 每一批新移民\n都曾遭遇猜忌和排斥 。 他认为 ， 这让波士顿形成了一种排外和内敛的特质 。 他说 ， 在这里 “ 陌生人之间相互问\n候 ” 的观念并不符合当地文化 。 人们会和认识的人开启对话 ， 但不会主动和陌生人搭讪 。\n马萨诸塞大学阿默斯特分校的新闻学教授拉尔夫 · 怀特海德则认为 ， 这是因为波士顿的上流社会曾借礼仪来\n划分阶层一一他们对礼仪表现得自命不凡 。 他说 ， 这种 “ 正统波士顿人 ” 让其他人对礼仪产生了鄙夷心理 。\n有人说 ， 波士顿就是这样 ， 这座城市永远也不会改变 。 不过 ， 其他以 “ 更粗鲁 ” 著称的城市正在努力改变自\n己的形象 。 巴黎就是一个例子 ， 那里的人们正试图变得更加友好 ； 纽约市也是如此 ， 该市正在努力劝说地铁乘\n客更为文明礼让 。 如果这些城市都能努力改变 ， 也许波士顿也应该尝试一下 。\nPart Reading Comprehension",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              28,
+              29
+            ]
+          },
+          "transcriptDraft": "Do you think Bostonians put out the welcome mat? Do you find other cities to be more or less polite? Different cities have different fields for visitors. Some are friendly and open. Some are formal and distant. Boston tends to seem hurried, and sometimes a little rude. That's what some tourists have said. One study found that people here are less willing to volunteer to help strangers than those residents of other US cities. Take a closer look next time you're in Boston, and here are some of the things you'll probably see. People smoking in the subway stations despite the frequent reminders not to do so, but Estrians walking when the crosswalk lights say not to do so, ignoring the cars. Car drivers speeding, making a loud noise with the horn and occasionally cursing at each other. Drives who can't be bothered to find a place to park, but instead simply turn on their blinker and stop in the middle of the street. Bostonians seem like they're just too busy to be polite. Why is their city like that? Former US representative, Chester Atkins says it's because the Puritan founding fathers were themselves impatient and bad-tempered and had little time for courtesy. That culture has carried down to the present day he believes. Boston College Professor Thomas O'Connor thinks a contributing factor is Boston's history as a city where each new group of immigrants was treated with suspicion and exclusion. That's given Boston a sense of clannishness and reserve he thinks. The idea of a stranger greeting another stranger is simply not part of the local culture he says. People will begin a conversation with someone they know but not with a stranger. Ralph Whitehead, a professor of journalism at the University of Massachusetts at Amherst thinks it's because Boston's upper class used manners to make class distinctions. By being snobbish about manners, proper Bostonians made other people scornful of courtesy, he says. Some say that's just the way Boston is, and that the city will never change. Still, other cities with reputations for worse rudeness are trying hard to change their images. Paris is one example where people are trying to be friendly. New York City is another. There, the city is trying to persuade subway riders to be more considerate. If those cities can make the effort, maybe Boston should as well.",
+          "transcriptDraftSource": {
+            "fileId": "186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz",
+            "startSeconds": 960.87,
+            "endSeconds": 1124.47,
+            "verified": false
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-06-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "Question 1 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Met the computer technician."
+            },
+            {
+              "key": "B",
+              "text": "Told the man about her trouble."
+            },
+            {
+              "key": "C",
+              "text": "Call the man's company."
+            },
+            {
+              "key": "D",
+              "text": "Visit Alpha Maintenance."
+            }
+          ],
+          "answer": "C",
+          "explanation": "第 2、 3 段说明女士上周曾给男士所在公司打过电话。第 4 段 ． 句女士则明确表示上周二\n她与男士所在公司的一位女士通过电话（there 指男士所在公司）， C 项正确。 A 项利用首段的 the computer\ntechnician 设置干扰，但首段说明的是“女士现在正见电脑技术员”，但题干询问的是上周二的事情。 B 项源自\n第 4 段 O 句女士所述“我当时明确说这是紧急事项，你们尽快派人来”，但由 ． 句可知，这位女士上周二是与男\n士公司的一位女性通过电话说明此信息。 D 项由第 3 段碎片信息 Alpha Maintenance 捏造而来，对话中只能\n说明女士上周给阿尔法维修公司打了电话，并未提及女士前去拜访",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "Question 2 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Consulted someone in charge."
+            },
+            {
+              "key": "B",
+              "text": "Came as soon as possible."
+            },
+            {
+              "key": "C",
+              "text": "Informed the central office at once."
+            },
+            {
+              "key": "D",
+              "text": "Designated an engineer to the case."
+            }
+          ],
+          "answer": "B",
+          "explanation": "第 5 段 ． 句中，男士表明“我这周接到电话后就尽快赶来了（came as soon as I could)”， B\n项符合文意。 A 项由第 5 段 ． 句 I， m not in charge of( 我并不负责，一）过度引申而来，对话中并未提到男士咨\n询了负责人。 C 项由第 3 段 O 句碎片信息 central office 捏造而来，由该句整体可知真实情形为“女士给男士公\n司总部打了报修电话后，总部派男士来处理女士的问题”，故应是“总部通知男士”，而非“男士通知总部”。 D\n项利用第 3 段 O 句中的碎片信息 designated to your case 设置干扰，但该内容表明“男士是被总部派来处理问\n题的技术员”，而非“男士指派技术员去处理问题”",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "Question 3 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Frustration."
+            },
+            {
+              "key": "B",
+              "text": "Intimidation."
+            },
+            {
+              "key": "C",
+              "text": "Desperation."
+            },
+            {
+              "key": "D",
+              "text": "Indignation."
+            }
+          ],
+          "answer": "D",
+          "explanation": "第 6 段 O 句女士先指出，她的经理因为男士拖延了这么久才来十分生气（rather\nindignant)，随后 ． 句指出，虽然并不全是男士的过错，但有必要提醒他周围人对此事的态度，可见 D 项正确。\nA 项 Frustration( 懊恼；沮丧） B 项 lntimidation( 吓倒；吓怕）以及 C 项 Desperation( 绝望；走投无路）由前文所\n述“女士公司碰到了紧急情形，但维修人员迟迟不来”主观臆断而来，对话中均无据可依。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              5
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "Question 4 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Whether the content has been backed up."
+            },
+            {
+              "key": "B",
+              "text": "Whether they can find someone else."
+            },
+            {
+              "key": "C",
+              "text": "Whether all data stored on the hard drive has got lost."
+            },
+            {
+              "key": "D",
+              "text": "Whether they need to wipe the system directories clean."
+            }
+          ],
+          "answer": "A",
+          "explanation": "第 9 段男士询问女士“电脑内容是否已备份”，第 10 段女士反问备份是什么，第 11 段男士\n解释“备份”的含义，第 12 段女士表明自己不知道，第 14 段女士则表示“经理会知道”，综合可知，女士的经理\n会知道“电脑中的内容是否做了备份”， A 项正确。 B 项由第 4 段 ． 句女士的反问“你或者其他人就不能早点\n5\n来吗 \" 以及第六段女士所述“我的经理对此十分愤怒 \" 主观臆断而来，对话中并未提及经理要求换人处理问题。\nC 项利用第 13 段 O 句所述“否则，硬盘里存储的所有数据都会永久丢失”设置干扰，但此处为男士对维修中可\n能出现情况的假设“如果不在维修电脑前进行数据备份，那数据可能永久丢失 \"，并非经理掌握的事实信息“硬\n盘上存储的数据是否已全部丢失”。 D 项利用第 13 段 ． 句碎片信息 wipe the system directories clean 设置干\n扰，但这是技术人员根据操作场景可能采取的维修操作，同样并非经理掌握的事实信息。\n三、",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              5,
+              6
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "Question 5 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It's boring."
+            },
+            {
+              "key": "B",
+              "text": "It's challenging."
+            },
+            {
+              "key": "C",
+              "text": "It's a beautiful thing."
+            },
+            {
+              "key": "D",
+              "text": "It's unlike most jobs."
+            }
+          ],
+          "answer": "A",
+          "explanation": "第 3 段中男士首先表达自己对法律职业的观点“从事法律职业是一件很美好的事情”，后\n引出其他很多人的看法“法律行业是一个枯燥乏味的行业”，题干 + A 项与此观点契合，故正确。 B 项结合常\n识形成干扰，但原文中并未提及此意。 C 项是男士本人对从事法律职业的看法，而不是“很多人”的看法。 D\n项利用原文段末提及的 many different jobs 捏造干扰，原文意在强调“法律职业工作内容的多样性”，而非强调\n其“不同于大多数工作”，选项将“内部多样性”曲解为“与其他职业的差异”",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              8,
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "Question 6 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Arbitrating between disagreeing solicitors."
+            },
+            {
+              "key": "B",
+              "text": "Preventing disputes from escalating."
+            },
+            {
+              "key": "C",
+              "text": "Buying and selling property."
+            },
+            {
+              "key": "D",
+              "text": "Mediating land disputes."
+            }
+          ],
+          "answer": "D",
+          "explanation": "第 5 段男士回答女士的问题，介绍自己的职业是“房地产事务律师”和工作内容“主要负\n责解决土地纠纷”，题干 + D 项契合原文，故正确。 A 项利用第 5 段的 solicitor 和第 7 段的 arbitrate between\ntwo clashing parties 混淆主体形成干扰，将纠纷主体从“有冲突的当事人（如土地所有者）”偷换为“律师”\nB 项内容为第 8 段女士总结男士的工作内容，而非男士直接陈述的工作内容。 C 项干扰源自第五段 I， m a\nsolicitor specializing in real estate，男士提及自己“是一名从事房地产事务的律师”，并非直接参与“房产买卖”",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "Question 7 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Courts are intended for fixing major legal disputes"
+            },
+            {
+              "key": "B",
+              "text": "Courts are getting too bureaucratic to function."
+            },
+            {
+              "key": "C",
+              "text": "Courts can be frustrating and expensive."
+            },
+            {
+              "key": "D",
+              "text": "Courts can be frightemng and arbitrary."
+            }
+          ],
+          "answer": "C",
+          "explanation": "第 9 段中男士明确提到法庭像所有的官僚机构一样，可能会非常混乱、令人沮丧且费用\n高昂 (very messy， frustrating and expensive)。因此，他建议尽可能在法庭之外解决问题，故 C 项正确。 A 项\n将第 8 段女士总结男士的主要工作内容 (fix people's legal issues）与常识结合形成干扰，但男士并未提及法院\n设立的初衷或职能。 B 项对第 9 段中出现的 like all bureaucracies 断章取义，原文男士类比官僚机构旨在论证\n“混乱、令人沮丧且费用高昂”，并未提及法庭“过于官僚化而无法正常运作”。 D 项\n法庭可能存在的情况\n干扰源自第 9 段的 frustrating 和第 7 段的 arbitrate，利用形近词诱导考生产生错误联想。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "Question 8 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The ability to make arguments in a unique way."
+            },
+            {
+              "key": "B",
+              "text": "The skill of preventing conflicts between parties concerned."
+            },
+            {
+              "key": "C",
+              "text": "The skill of foreseeing any potential stakes in their work."
+            },
+            {
+              "key": "D",
+              "text": "The ability to express themselves clearly and forcefully."
+            }
+          ],
+          "answer": "D",
+          "explanation": "第 10 段中男士提及“任何法律专业人士都需要清晰有力地阐述自己的论点”， D 项是对\n原文 be very eloquent at articulating that argument 的同义改写，故正确 A 项中 in a unique way 在对话中无\n据可依。 B 项利用第 7 段的 two clashing parties 和第 8 段的 prevents a problem from escalating 杂糅捏造干\n扰，试图将男士的具体工作内容与对法律专业人士的普遍要求混淆。 C 项干扰源自第 13 段 the stakes are\nhigher in criminal law 中的 stakes 一词，但这句话是对刑法特征的描述，而非对法律专业人士的要求。\n三、",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              9
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "Question 9 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They looked into the relationship between one's prior knowledge and creativity"
+            },
+            {
+              "key": "B",
+              "text": "They offered novel ways to help older adults to keep their memories from aging"
+            },
+            {
+              "key": "C",
+              "text": "They proposed an explanation for old people's difficulty in retrieving memones."
+            },
+            {
+              "key": "D",
+              "text": "They advanced a new mo del concerning human information storage and retrieval."
+            }
+          ],
+          "answer": "C",
+          "explanation": "解析指出，研究人员综述了解释老年人提取记忆困难的可能原因，因此选 C。\n【原文定位·自动匹配】But as we age, many of us have difficulty retrieving memories.\n【正确选项】C) They proposed an explanation for old people's difficulty in retrieving memones.\n【标注】依据听力原文自动定位（与正确选项词汇匹配约 38%，匹配度较低，定位仅供参考）（原文为机器转写草稿），非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "type": "auto-locate-from-transcript",
+            "how": "overlap",
+            "score": 0.39
+          },
+          "explanationOriginal": "解析指出，研究人员综述了解释老年人提取记忆困难的可能原因，因此选 C。",
+          "explanationSourceOriginal": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              12
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "Question 10 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Young adults rely on memory while older adults keep notes as a remmdler"
+            },
+            {
+              "key": "B",
+              "text": "Older adults often retnev e irrelevant memories along with what they want."
+            },
+            {
+              "key": "C",
+              "text": "Young adults accumulate knowledge much more quickly than older adults"
+            },
+            {
+              "key": "D",
+              "text": "Older adults generally perform cognitive tasks much slower than young adults"
+            }
+          ],
+          "answer": "B",
+          "explanation": "。 IV 段指出，多项行为学和脑成像研究表明老年人在搜索特定记忆时，往往会连带回忆起\n其他不相关的记忆。可见 B 项正确。 A、 C、 D 项在一定程度上均是利用文中碎片字词如 rely on/rely more\nheavily on、 accumulated knowledge、 cognitive task 与常识“年轻人记忆力好、记忆速度快、知识积累也快，记忆\n力不好的老年人得靠备忘录来记事 \" 结合捏造而出，但文中并未提及任何有关“记笔记备忘 \" “记忆速度 \" “知识\n积累速度”的信息",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              12
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "Question 11 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They show preserved, and sometimes enhanced, creativity."
+            },
+            {
+              "key": "B",
+              "text": "They frequently suffer from di s orderly crowded memones"
+            },
+            {
+              "key": "C",
+              "text": "They C an rely on their accumulated wisdom in an emergency"
+            },
+            {
+              "key": "D",
+              "text": "They may well be served by forgetting their prior knowledge"
+            }
+          ],
+          "answer": "A",
+          "explanation": "。 V 段 O 句指出“有证据表明，老年人展现出了保持完好、甚至时有增强的创造力 \"，故 A 项\n契合文意。 B 项借 V 段 ． 句所述“这些杂乱而又密集的记忆可能带来的困难”设置干扰，但这是研究人员主要\n关注的现象，并非“证据表明 \" 的结论，且文中表述“带来的困难 \" 中立，而选项表述“遭受困扰 \" 偏负面。 C 项将\n老年人决策时“能够借助他们长期累积的智慧 \" 与文中未出现的“紧急情况 \" 杂糅捏造，但短文中无此表述。 D\n项将 V 段末句表述老年人能“从自身既有知识中受益”反向曲解为老年人“通过忘既有知识而受益”\n12",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              12,
+              13
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "Question 12 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are actually proud of the goods and services they produce"
+            },
+            {
+              "key": "B",
+              "text": "They are worried ab out being alienated from the outside world."
+            },
+            {
+              "key": "C",
+              "text": "They are rarely in control of many things related to their wo"
+            },
+            {
+              "key": "D",
+              "text": "They are longing to share the profit made from their work"
+            }
+          ],
+          "answer": "C",
+          "explanation": "短文指出，劳动者常无法控制自己的工作方式、时间、产品用途和利润去向，因此选 C。\n【原文定位·语义匹配】Workers are often not in control of how they work, when they work, what is done with the goods and services they produce, and what is done with the profits made from their work.\n【正确选项】C) They are rarely in control of many things related to their wo\n【标注】依据听力原文与解析摘要对照人工选句；原文为机器转写草稿，未经录音核听，非官方解析，可能不准，请听录音核对。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              15
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "type": "semantic-match",
+            "by": "claude-relocate",
+            "date": "2026-11-09",
+            "bag": 1.0,
+            "tri": 1.0
+          },
+          "explanationOriginal": "短文指出，劳动者常无法控制自己的工作方式、时间、产品用途和利润去向，因此选 C。",
+          "explanationSourceOriginal": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              15
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "Question 13 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "The steady decrease in productivity"
+            },
+            {
+              "key": "B",
+              "text": "The adverse effect on physical health."
+            },
+            {
+              "key": "C",
+              "text": "The feeling of being time poor."
+            },
+            {
+              "key": "D",
+              "text": "Then sing economic inequality"
+            }
+          ],
+          "answer": "C",
+          "explanation": "IV 段 ． 句指出，长时间工作会让人产生时间匮乏感，这会对心理健康产生不利影响， C 项契合\n文意。 A 项利用 IV 段 O 句 productivfty 并结合常识设置干扰，但 ． 句整体文意为“生产率其实一直在提高，只是劳动\n者的工作时长居高不下”，并未提及“长时间工作会导致生产率持续下降”。 B 项将 IV 段 ． 句“对心理健康\n（psychological wel 卜 being) 的不利影响”窜改为“对身体健康（physical health) 的不利影响”。 D 项张冠李戴，“加剧经济\n不平等”为 III 段中“实际工资没有跟上生产率的步伐”的后果，而非题干所问的“长时间工作”的后果。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              16
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "Question 14 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "It alters the structure of work."
+            },
+            {
+              "key": "B",
+              "text": "It puts jobs and wages at risk."
+            },
+            {
+              "key": "C",
+              "text": "It liberates people from tedious and laborious work"
+            },
+            {
+              "key": "D",
+              "text": "It creates new work opportunities in the IT industry"
+            }
+          ],
+          "answer": "B",
+          "explanation": "V 段 ． 句指出，自动化让就业和工资都受到了威胁， B 项正确。 A 项利用 V 段 ． 句中的\nchanges are made to the structure of work 设置干扰，但忽视了句子的逻辑连接词 (unless)，此处为对自动化如\n何才能利好于劳动者的情况假设，并非事实信息。 C 项利用 V 段 Ø 句所述设置干扰，错误原因与 A 项类似，同\n样忽视了 ． 句之间通过 could in theory. · · But unless.\n· automation will simply. · · 构成的“理论一现实”转\n折对比关系，技术创新是本可以把人们从枯燥繁重的劳动中解放出来，但现实并没有。 D 项由 V 段 ． 句中的\n碎片信息 work opportunities 捏造而来，但原文并未专门提及自动化对 IT 行业的影响，且原文信息为“自动化\n会减少工作机会”，而非“创造新的工作机会”",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              16
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "Question 15 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-4",
+          "options": [
+            {
+              "key": "A",
+              "text": "Finding meaning in work."
+            },
+            {
+              "key": "B",
+              "text": "Prioriüzing life over work"
+            },
+            {
+              "key": "C",
+              "text": "improving relationships in the community."
+            },
+            {
+              "key": "D",
+              "text": "Realizing one's social value in the workplace"
+            }
+          ],
+          "answer": "B",
+          "explanation": "VI 段@句指出，后工作理论家认为，工作不应在我们的生活中占据核心地位，也不应占据\n我们如此多的时间， ． 句进一步指出，尽管做一些工作可能是必要的，但人生的意义、目标和我们的社会价值\n存在于在职场之外，@ 句总结指出，生活本身应被视为目的，换言之，后工作理论家认为生活比工作更重要，\nB 项正确。 A 项由 VI 段 ． 句中的碎片信息 meaning 捏造而来，但结合 ． 句整体可知， A 项所述与原文相悖。\nC 项利用 VI 段 ． 句的碎片信息 the communities and relationships 捏造而来，但由 ． 句整体可知，后工作理论家\n意在强调“维系工作之外的社区和人际关系”，而非建议“改善社区中的人际关系”。 D 项同样利用 VI 段 ． 句中\n的碎片信息 social value 设置干扰，错误原因与 A 项相似，与原文信息“在生活中实现个人价值”相悖。\n三、",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              16
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "Question 16 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-5",
+          "options": [
+            {
+              "key": "A",
+              "text": "Affect our attitude to novel tasks."
+            },
+            {
+              "key": "B",
+              "text": "Distinguish us in the social world."
+            },
+            {
+              "key": "C",
+              "text": "Outweigh IQ in importance."
+            },
+            {
+              "key": "D",
+              "text": "Impact academic achievements."
+            }
+          ],
+          "answer": "D",
+          "explanation": "题干 + D 项契合 I 段 O 句所述研究发现“甚至我们个人对于努力的看法也会影响学业成\n果”，选项中的 lmpact 和 achievements 分别同义改写原文中的 affect 和 outcomeso A 项利用 I 段 O 句的\naffect 及末段的 novel task 捏造而来，将影响对象由“学业成果”偷换为“我们对新任务的态度”； B 项利用录音\n两次出现的 outperform 及 III 段 ． 句的 the social world 设置干扰，将影响范围由“学业表现”夸大至“我们在整\n个社会世界中的表现”； C 项利用 I 段 ． 句的 IQ 设置干扰，将文意由“自制力和毅力同智商一样，也能提升学\n业成果”篡改为“个人对努力的看法在重要性上超过智商”。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              20
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "Question 17 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-5",
+          "options": [
+            {
+              "key": "A",
+              "text": "By pressing a hidden button."
+            },
+            {
+              "key": "B",
+              "text": "By pu shmg a big button on top."
+            },
+            {
+              "key": "C",
+              "text": "By pressing two buttons at the same time."
+            },
+            {
+              "key": "D",
+              "text": "By helping the babies push the right button"
+            }
+          ],
+          "answer": "A",
+          "explanation": "VI 段 ． 句指出“在嬰儿视线之外，我们通过一个隐藏按钮启动了这款音乐玩具”，题干 + A\n项与此契合。 B 项利用录音中提及的“顶部大按钮”设障，但录音明确指出“玩具顶部的大按钮看似能开启玩具，\n实际并无任何激活功能”； C 项利用录音中提及的“顶部大按钮”与“隐藏按钮”捏造而来，实际录音提到“启动音\n乐玩具只需按压一个隐藏按钮，顶部大按钮虽可按压但无任何激活功能”； D 项基于“隐藏按钮是正确启动方式”\n设障，将按压按钮的操作主体由“研究人员”偷换为“嬰儿们”，并添加“帮助”这一录音并未提及的动作。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              20
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "Question 18 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-5",
+          "options": [
+            {
+              "key": "A",
+              "text": "Perform difficult tasks succe s s 11y Just by observing how adults acted."
+            },
+            {
+              "key": "B",
+              "text": "Make generalizable inferences about persistence from a few examples."
+            },
+            {
+              "key": "C",
+              "text": "Adapt themselves to different social contexts"
+            },
+            {
+              "key": "D",
+              "text": "Work hard to interact with experimenters"
+            }
+          ],
+          "answer": "B",
+          "explanation": "段 O ． 句指出“实验者从未演示过按压按钮或尝试播放音乐的动作，嬰儿却能从不同的\n努力行为示例中学习到，要启动这个新玩具或许也需要坚持不懈地努力”，由此可知，在实验中嬰儿仅凭少量示\n例便能推断出做事需要毅力的结论，故 B 项正确。 A 项将嬰儿“反复按压无效按钮的行为（反映其通过观察而习\n得的坚持不懈 / 努力）”偷换为“成功完成困难任务（直接完成具体的任务）”； C 项将 IV ． 句所述“毅力或会随社会\n情境灵活调整”窜改为“嬰儿能主动适应不同社会情境 \"； D 项将嬰儿努力尝试互动的对象由“音乐玩具”偷换为\n“实验人员”，实际上实验全程未提及嬰儿与实验人员有过任何互动行为，嬰儿仅自主尝试按压玩具顶部按钮。\n三、",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              20
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "Question 19 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-6",
+          "options": [
+            {
+              "key": "A",
+              "text": "Offering advice on overcoming habitual lateness"
+            },
+            {
+              "key": "B",
+              "text": "Exemplifying various recreational opportunities."
+            },
+            {
+              "key": "C",
+              "text": "Scrutimzing individuals, defimng traits"
+            },
+            {
+              "key": "D",
+              "text": "Suggesting ways for setting priorities"
+            }
+          ],
+          "answer": "A",
+          "explanation": "首段首句指出习惯性迟到对生活方方面面的负面影响， O 句给出三个改进习惯性迟到的\n总体方向“做好行程规划，将守时列为优先事项，并设法处理任何潜在的事由 (get organized、 prioritize\npunctuality、 address any underlying causes)，再结合随后录音中多处出现的具体建议，如 try to arrive 15 to 30\nminutes before you need to、 Set two alarms、 Prepare for the day ahead 等，可确定报告目的为“提供克服习惯性\n迟到的建议”， A 项正确。 B、 C 项分别对首段首句中的 recreational opportunities、 defining trait 断章取义：录音\n中只是指出“你很可能因为习惯性迟到错失工作邀约、休闲机会等”，并未对“休闲机会”和“个人的最典型特\n征”展开讨论，故排除。 D 项利用首段句中的 prioritize 设置干扰，但录音中只是指出“应将守时列为优先事\n项”，并未展开讨论“确定多种事物优先顺序的方法”，故排除。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              24
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "Question 20 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-6",
+          "options": [
+            {
+              "key": "A",
+              "text": "Make the breakfast simpler."
+            },
+            {
+              "key": "B",
+              "text": "Take the alarms seriously."
+            },
+            {
+              "key": "C",
+              "text": "Ready yourself in the early dawn."
+            },
+            {
+              "key": "D",
+              "text": "Get prepared the night before."
+            }
+          ],
+          "answer": "D",
+          "explanation": "第四段 ． 句针对“晨起困难”提出具体建议：尽量在前一晚多做准备（do as much a s you\ncan to ready yourself the night before)， D 项与此一致，故正确。 A 项利用常识“简化早餐能够腾出更多时间以\n避免迟到”设置干扰，但这一建议在录音中未被提及。 B 项利用第三段@ 句中的 take the alarms seriously 设\n置干扰，但题干所问是针对“晨起困难”的相关建议，该项答非所问。 C 项通过窜改第四段 ． 句中的时间状语\nthe night before 为 in the early dawn 来设置干扰，与原文信息不符。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              24
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "Question 21 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-6",
+          "options": [
+            {
+              "key": "A",
+              "text": "Finish the prior task 30 minutes earlier."
+            },
+            {
+              "key": "B",
+              "text": "Keep ourselves from hitting a bump."
+            },
+            {
+              "key": "C",
+              "text": "Leave time in between activities."
+            },
+            {
+              "key": "D",
+              "text": "Try to avoid possible hold-ups."
+            }
+          ],
+          "answer": "C",
+          "explanation": "第五段首句提出建议“在各项任务和会议之间预留时间”， ． 句则指出“估算活动之间的\n中转时间，并额外预留 10 到 30 分钟来应对突发延误”， c 项与此对应，故正确。 A 项杂糅录音中词汇 the\nprior、 task、 30 minutes earlier 设障，但录音中并未提及“提前 30 分钟结束前一任务”，故排除。 B 项利用第五\n段 ． 句的 hit a bump 设置干扰，但录音中只是指出“如果时间安排太紧，则一旦遇到障碍 / 突发状况便会迟\n到”，并未提及“突发状况可被避免”。 D 项利用第五段@ 句的 be held up 设置干扰，但与 C 项类似，录音中只\n提及“如果在前一场会议中出现延误，那借用会议之间额外的预留时间，也仍能按时赶赴下一场会议”，并未说\n明“可能出现的延误能被避免”\n三、",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              24
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "Question 22 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "Their lifestyles vary."
+            },
+            {
+              "key": "B",
+              "text": "Their traits vary."
+            },
+            {
+              "key": "C",
+              "text": "They have different customs."
+            },
+            {
+              "key": "D",
+              "text": "They have different feels."
+            }
+          ],
+          "answer": "D",
+          "explanation": "I 段明确提及“不同城市给游客的感受各不相同：有的友好开放、有的拘谨疏离、有的匆\n忙无礼”， D 项精准复现原文信息，故正确。 A、 B、 C 项均利用常识“不同城市的生活方式、风俗习惯、特征特点\n不同”设置干扰，但在录音中无据可依。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              27,
+              28
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "Question 23 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are not as willing to help strangers."
+            },
+            {
+              "key": "B",
+              "text": "They are not as patient with one another."
+            },
+            {
+              "key": "C",
+              "text": "They violate traffic rules more frequently."
+            },
+            {
+              "key": "D",
+              "text": "They become more easily irritated in public."
+            }
+          ],
+          "answer": "A",
+          "explanation": "I 段末句援引研究发现指出“与美国其他城市的居民相比，这里的人更不愿意主动帮助\n陌生人”， A 项对其进行同义改写，故正确。 B、 D 项利用本段@ 句的 seem hurried and sometimes a little rude\n形成干扰，但这是波士顿这座城市给游客的印象“匆忙中透露着点无礼”，无法由此推出“波士顿人对彼此缺乏\n耐心 / 在公共场合更容易发怒”，且这也不属于研究发现的相关内容。 C 项干扰源自 II 段所述波士顿的街景\n“有人乱穿马路、司机乱飙车鸣笛、乱停车等”，但无法由此推出“波士顿比美国其他城市更频繁地违反交规”，\n这同样也不属于研究发现的相关内容。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              28
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "Question 24 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "It was practiced by Boston's founding fathers"
+            },
+            {
+              "key": "B",
+              "text": "It is not deemed exotic by Proper Bostonians."
+            },
+            {
+              "key": "C",
+              "text": "It was adopted by Boston's upper class."
+            },
+            {
+              "key": "D",
+              "text": "It is not part Of Boston's local culture."
+            }
+          ],
+          "answer": "D",
+          "explanation": "IV 段整段介绍托马斯 · 奥康纳对“波士顿人匆忙且略带无礼”这一形象的看法，并于 ． 句\n明确指出“陌生人之间互相问候”这种观念并不属于波士顿当地文化，题干 + D 项与此契合，故正确。 A 项利\n用 III 段 ． 句美国前众议院切斯特 · 阿特金斯观点内所涉人物信息 Puritan Founding Fathers 设置干扰， B、 C\n项则利用 V 段 ． 句拉尔夫 · 怀特海德教授观点内所涉人物信息 Boston s upper class、 Proper Bostonians 捏\n造干扰，但前者仅指出“开城元勋们没耐心、没时间以礼待人”，后者仅指出“波士顿上流社会曾靠礼仪来划分\n阶层，这些以礼仪居高自傲的 ' 正统波士顿人，使得其他民众对礼仪产生鄙夷心理”，两者均用以说明“波士顿\n人匆忙且略显无礼”的形象，而非“陌生人之间互相问候”这一观念。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              3,
+              4,
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              28
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2025-06-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "Question 25 (扫描件 OCR 提取录音作答题目)",
+          "blockId": "listening-part-7",
+          "options": [
+            {
+              "key": "A",
+              "text": "Stick to its own way of showing courtesy to strangers."
+            },
+            {
+              "key": "B",
+              "text": "Follow the examples set by Paris and New York City."
+            },
+            {
+              "key": "C",
+              "text": "Learn from the world's major cities in promoting tourism."
+            },
+            {
+              "key": "D",
+              "text": "Take pride in its history and adhere to its cultural tradition."
+            }
+          ],
+          "answer": "B",
+          "explanation": "VI 段 ． 至 ． 句提到“巴黎和纽约正在努力改变，波士顿也应该效仿”， B 项与此契合。 A 项利用\n本段首句所述他人看法 the city WIII never change 设置干扰，但这也仅仅是用于说明“波士顿人仍将继续匆忙且略带\n无礼”，而非“按自己方式向陌生人以礼相待”。 C 项利用本段 ． 至 ． 句设置干扰，将“改变待人态度”偷换为“促进旅\n游业”，且将“巴黎和纽约”扩大为“世界主要城市”。 D 项利用 IV 段 ． 句提及的 Boston' s hi story 设置干扰，但录音中并\n未提及“以历史为傲”或“坚守传统”，反而暗示应改变现有文化中的不足（如不愿帮助陌生人）。",
+          "source": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              28
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "In her second year, CharIene Duong learned of the use of poisonous, synthetic pesticides on her college campus. Shocked but not surprised, she knew she had to do s omethmg. Along with a couple of classmates, Charlene did a quick web search and discovered a small but growing movement led by the organization, Herbicide-Free Campus (HFC), to rid college campuses of artificial 记 “ (灭草剂). They were __(26)__\nLike many, Charlene expenences climate anxiety 一 a __(27)__ “ of a climate catastrophe 一 and was, at the time, 10 oking for an __(28)__ When she discovered the HFC movement, she said she felt she “ had found a specific area to focus on that still into the larger picture of fighting for a healthier, safer, cleaner __(29)__ for all. ”\nToxic herbicide use in university land care is not unique. MOSt institutions of higher education rely on synthetic pesticides and fertilizers to achieve __(30)__ goals. Having a “ beautiful ” campus means green and perfectly maintained lawns along with flower beds and paved sidewalks. But these\n__(31)__ managed campuses can come at a COSt: increased cancer risk\n__(32)__ waterways, poisoned wildlife and lifeless soil.\nPesticide use on college campuses also contributes to our global climate crisis. The use of chemicals to get rid of insects or unwanted plant life can increase indirect __(33)__\nas they can include petroleum —based ingredients. Pesticide use also decreases the life in soil\n__(34)__ the ability\nof soils to absorb carbon or retain water and thus reducing campuses ' ability to recover quickly\n什 om climate —related extreme weather events 1 e droughts and floods.\nInstead of using toxic chemicals, students working with HFC help out with __(35)__ the campus grounds\n' This work reminds me to be in the present moment as I play my role in reducing herbicide use and keeping my campus safe and healthy, ” says Charlene.",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇匹配文章",
+          "text": "A) Librarians ow the value of their community services, and their patrons appreciate 山 e 计\nimportance as well. But in an increasingly digital world, we see the role of libraries as community and cultural centers at times undervalued. When shrinking municipal budgets combine with the non stop technologic al revolution, public library services that focus on building communities face-to-face, inspiring and educating patrons about art, literature, and music, and helping patrons engage in civil discourse can seem old -fashioned. But it is precisely those shrinking budgets and the assault of technologically mediated life that make public libranes' cultural and community offerings more important than ever.\n\nB) Many people point out the value public libraries bring to 山 e 计 communities. More than just books and banks of computers, libraries are still places where individuals gather to explore,\ninteract, and imagine. Some of the specific ways in which libraries add value to our communities and serve as cultural centers for our patrons are community builders, centers for the arts, and champions of youth. Libraries serve in these capacities and are more than Just about information.\n\nC) As community builders libraries are engaged in incredible work. From tiny public libraries to\nhuge city institutions with multiple branches, libraries across the United States are building community and supp 01üng local culture in exciting ways. These are inspiring and hopefully will encourage librarians interested in community services and cultural outreach to make connections with each other, share ideas, and build partnerships. Supporters of libraries as community builders claim that unless you are out there changing neighborhoods, you are not completing the work you are to do. Strengthening neighborhoods and championing the cultural lives of communities are big responsibilities\n\nD) Place-based economic development stresses the importance of offering attractive, functional and community-based places, such as libraries, in town squares and depressed neighborhoods\nLike a major department store in a mall, libraries attract large numbers of people, creating economic opportunities for numerous businesses and organizations in the surrounding area.\nLarge cities, medium-sized ones, and even small towns have successfully transformed their libraries into the 况 (枢纽) of vibrant neighborhoods.\n\nE) As key municipal agencies, and focal points for community education, libraries are major players in creating livable, environmentally friendly cities and towns. The Urban Libraries\nCouncil released a report detailing the unique ways in which librane s can further sustainability at the local level. Beyond ensunng that library construction projects consider environmental impact, libraries can take a lead in supporting local foods and craftsmen, like the Peabody lnstitute Library' s partnenng with local busmesses to pioneer a farmers ' market in their courtyard, or the Richmond Public Library' s seed lendmg library which “ nurtures locally-adapted plant varieties, and fo sters community “ e (韧性), self-reliance and a culture of sharing.\n\nF) Archives preserve historic artifacts, oral histories, digital history projects, and scholarly writings relevant to the community, including minority groups. Communities lucky enough to have archivists have a great advantage when it comes to organizing historical records and artifacts. An organized archive is a place where people can research their ancestry and immigration history,\ndo environmental research and more. An archivist is an advocate for preservation WhO, among\nOther things, coordinates the restoration of maps and paintings, the digitization of vital records and the creation of oral hl story projects. With projects like the Massachussets Memones Road\nShow and the Veterans Hi story Project, evidence of the importance of archives is everywhere\n\nG) In the words of Robert Putnam, “ People may go to the library looking mainly for information,\nbut they find each other there. ” New moms connect at baby story-times; elderly people, often facing difficult life transitions, attend events and find that they make new friends; teenagers meet up in libraries, teen spaces after SChOOl; and readers discuss current events in the periodicals room. In libraries, community -building connections are happening all the time.\n\nH) As Keith Richards said, “ The public library is the great equalizer. \" Despite the rising costs of concert and theater tickets, public library events (including concerts, author visits, and gallery displays) are often offered free of charge, enabling people of any income level to attend. №\naddition, library book groups low people to explore and discuss the literary arts, and the Great\nStories Club infroduces at-risk youth to literature. The best part: it, s 詛 free and open to the public.\n\nI) In a time when education is increasingly expensive, public libraries provide information and educational opportunities free for all people, regardless of their socio-economic status. Offered by libraries across the country, American Library Association's Let's Talk about It programs are wonderful examples of scholar-facilitated learning opportunities in libraries. In addition, many libraries present classes and discussion programs, and some even provide online continuing education courses such as the Universal Class database\n\nJ) Librarians know that patrons aren't Just information consumers, they're information producers\nPatrons use the library to gam knowledge in order to create their own new and independent works. increasing numbers of libraries provide spaces and services that meet the needs of people who want to learn how to edit Wikipedia, set up blogs or podcasts, create their own magazines,\nand so much more. Many libraries offer or writing workshops and groups, and some provide music practice rooms for patrons. Programs like ImagmOn in Charlotte, North Carolina, provide exciting models that take community partnership, creativity, and creation to a new level.\n\nK) The decline of civil discourse stems in part 什 om the fact that it is so easy for people to watch in both the vn•tual and real worlds 一 only with news about, buy products 什 om, and engage those of similar backgrounds and ideologie s. Public libraries, through such pro grams as The\nHuman Library and Socrates Café, can help build small c ommunifies of difference that encourage people to interact with and learn 什 om each other through dialogue. By both actively promoting civil dis course through these programs, and modeling and upholding the principles of free inqmry and expression for all, libraries help individuals rediscover the importance of and mcreased need for CiVil discourse in American life.\n\nL) Free tutoring, homework help programs, and summer reading programs for kids and teens help bridge the economic divide that impacts students' academic performance. The cost of hiring a pnvate tutor is well beyond what many library patrons can afford, so libraries offer homework help and tutoring online, by phone, in person, and even through social media and homework apps. Annual summer reading programs also have a positive impact on student performance and, according to a 2010 study conducted by Dominican Umversity's Graduate School of\nLibrary and information Science, students, reading skills get a boost 什 om these popular natlonwide events.\n\nM) Through library collections, programs, and physical spaces, children learn to share, to be eng aged in their communities, to participate in the arts, and to explore their immediate world and the world at large. There are surely endless examples of innovative library services for children, including the Middle Country Public Library's Nature Explorium, which engages children in learning about the natural world.\n\nN) The se examples are just a few of the many amazing things that public libraries around the\nUnited States (and the world) are doing to build and maintain strong community connections\nWe encourage you to try some of these ideas in your own libraries, and we hope that these ideas will help you be better able to convince your community leaders of the important role that public libraries play in communities large and small.",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Nationally, one in six children miss 巧 or more days of school in a year. Education officials have deplored aii this missed instruction.\nThese chronic ally absent students suffer academcally because of all the classroom instruction they out on. In 20 巧, the U. S. secretary of education responded to this cnsis, urgmg communities to support every student to attend every day and be successful in school. HIS open letter stated that mssing 10 ％ of school days in a year for any reason excu sed or unexcused\nIS a primary cause of low academic achievement.\nWorrying about whether children attend school makes sense. After all, if students don't show up, teachers can't teach them\nBut what if Amenca's attendance crisis is ab out much more than students mls sing class? What if, instead, it is a reflection of family and community crises these students face such as being\n可 ected 什 om the family apartment, fearing for their safety in their neighborhood or suffenng an illne s s?\nAS social scientists we investigated how excu sed and unexcu sed absences relate to children's academic achievement.\nWe find that absences excu sed by a parent do little to harm children's learning. In fact,\nbut 15 to 18 excu sed absences 一 have test scores equal to children With no UneXCUS ed absences their peers WhO have no absences.\nMeanwhile, the average child With even JLlSt one unexcused absence does much worse academcally than peers with none\nWe believe unexcused absence is a strong signal of the many challenges children and families face, including economic and medical hardships. Unexcu sed absences can be a powerful signal of how those out- of- school challenges affect children's academic progress.\nOur evidence suggests unexcu sed absences are problematic, but for a different reason than people often t. Absence 什 om school, and especially unexcu sed absence, matters mainly as a signal of many cnses children and their families may be facing. It matters less as a cause of lower student achievement due to missed instruction.\nHow we choose to 山 i of school absences matters for educational policy. School attendance policies typically hold schools and families accountable for the days children, regardless of whether they were excused or unexcused absences.\nThese policies assume that missing school for any reason harms children academcally because they are missing classroom instruction. They also assume that's schools will be able to effectively intervene by reducing student absences. We find neither to be the case.\nAs a result, these attendance policies end up disproportionately punishing families dealing with out-of-school crises in their lives and pressuring schools who serve them to get students to school more Often\nWe instead suggest usmg unexcu sed absence 什 om school as a signal to channel resources to the children and families who need them most.",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "After earmng a bachelor's degree, I was determined to do what I love. I headed straight to\ngraduate school to investigate the social problems that fascinated me\nFor almost a decade, ] [ told every one I enco 皿 tered that they should do the same. “ Follow your\n6. 10\npassion, ” I counseled. “ You can figure out the employment stuff later.\nIt wasn' t until I began to research this widely accepted career advice that I understood how problematic it really was\nAs a sociologist, I interviewed college students and professional workers to learn what it really meant to pursue their dreams, which I will refer to here as the passion principle. I was stunned by what I found out about this principle in the research for my new book.\nSurveys show the Amencan public has long held the passion principle in high regard as a career decision-making priority. And its popularity is even stronger among those facing Job instability\nAdvocates of the passion principle found it compelling because they believed that following one's passion can provide workers with both the motivation necessary to work hard and a place to find fulfillment\nYet, what I found is that following one's passion does not necessarily lead to fulfillment, but is one of the most powerful cultural forces perpetuating overwork. I also found that promoting the pursuit of one's passion helps perpetuate social inequalities due to the fact that not everyone has the same economic resources to allow them to pursue their passion With ease.\nWhile the passion pnnciple is broadly popular, not everyone has the necessary resources to turn their passion into a stable, good-paying Job. Passion-seekers 什 om wealthy families are better able to walt until a job they are passionate ab out comes along without worrying about student loans in the meantime. They are also better situated to take unpaid internshlps to get their foot in the do or while their parents pay their rent. And they often have access to parents' social networks to help them find jobs. Surveys revealed that working-class and first-generation college graduates, regardless of their career field, are more likely than their wealthler peers to end up in low-paying unskilled jobs when they pursue their passion.\nColleges, workplaces and career counselors who promote the “ follow your passion \" path for everyone, without leveling the playing field, help perpetuate socioeconomic inequalities among career aspirants\nlt' s not Just well-off passion-seekers who benefit 什 om the passion principle. Employers of passionate workers do, too. Potential employers showed greater interest in passionate applicants in part because they believed the applicants would work hard at their jobs without expecting an increase in pay. They even sacrifice a good salary, job stability and leisure time to work in a Job they love.",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              12,
+              13
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-06-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "J",
+          "explanation": "[ 确定词性 ] 空格位于第一段@句系动词之后。空格词可能为过去分词，与 were 构成被动态谓语，\n也可能为形容词 / 副词 / 名词 / 现在分词，在句中作表语。\n[ 锁定答案 ] 空格句中 They 指代“查伦和几位同学”， were\n描述其行为或感受。上文指出，查伦得\n知其大学校园使用了有毒的合成杀虫剂后，和几位同学一起上网搜索，发现了 H FC 领导的、旨在清除校园灭\n草剂的运动；下文提到，查伦和同学们认可 HFC 运动并参与其中 (found a specific area to focus on. ·\n· workmg\n应表示查伦和几位同学对 HFC 运动非常认可 / 很感兴趣 / 跃跃欲试， J）\nwith HFC. 一）。可推知， were\nintrigued 符合此意",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              30
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              30
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "B",
+          "explanation": "[ 确定词性 ] 第二段 ． 句以 and 连接两个并列的谓语部分 experiences. · · 及 was. · · looking for.\n位于谓语部分 1 中， a\nfear of a c imate catastrophe 充当 climate anxiety 的同位语空格前是不定冠词\na，空格后是名词 fear，故空格词应为形容词 / 名词 / 过去分词 / 现在分词，作定语修饰 fearo\n[ 锁定答案 ] 空格句指出，同许多人一样，查伦也有气候焦虑，当时正在 · “\n空格所在部分“一种\n对于气候灾难的忧虑”是对“气候焦虑”的阐释说明。结合常识“气候问题存在已久且愈演愈烈”可推断，空格\n词应能体现对于气候灾难的忧虑存在已久或程度很重， B） chronic\" 长期的；难以治愈（或根除）的”契合此意，\n\n且能与后半句 at the time 形成时间上的对比，体现“长久深陷焦虑，当时正积极采取行动”之意",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              30,
+              31
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              30,
+              31
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "L",
+          "explanation": "[ 确定词性 ] 空格位于第二段 ． 句的谓语部分 2 中。空格前为不定冠词 an 且 was looking for 之后需接名\n词作介词 for 的宾语，故空格词应为名词单数\n[ 锁定答案 ] 第二段 ． 句指出，查伦长期对气候灾难感到忧虑，当时正在寻找\n。 O 句继而指出，她\n发现了 HFC 运动，觉得自己找到了一个可以专注的领域。由 was looking for. · · discovered. 一 had found. ·\n系列顺承动作可推知“HFC 运动”正是查伦寻找的东西，再联系上文所述“HFC 运动的目标是清除校园里的\n人工灭草剂，保护环境”可判定，查伦寻找的是保护环境缓解 / 宣泄自身气候焦虑的途径， L） outlet 正确。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              31
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              31
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "F",
+          "explanation": "[ 确定词性 ] 空格位于第二段 O 句中限定 a specific area 的定语从句 (that. · ·）中，该从句的结构为 that( 引\n导词，指代 a specific area) +still fi t into( 谓语 )+the larger picture( 宾语） +of fighting for. · · （宾语的后置定\n语），而 a healthier， safer， cleaner\nfor all 则充当 fighting for 的宾语。空格前为不定冠词 a 和形容词\nhealthier， safer， cleaner，空格后为介词短语 for all （作空格词的后置定语），故空格词应为名词单数\n[ 锁定答案 ] 由空格句所述“查伦发现 HFC 运动时，觉得自己找到了一个可以专注的领域”可知， a specific\narea 指向“清除校园里的人工灭草剂 \" 这一环保细分领域，而空格所在从句用以修饰 a specific area，指出“这个\n这一更宏大的图景相契合”。不难推知，空格词应表\n领域还与为所有人争取更健康、更安全、更清洁的\n示 ' 环境 / 校园环境，， F) environment 正确",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              31
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              31
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "A",
+          "explanation": "[ 确定词性 ] 空格位于第三段 O 句中，该句结构完整： Most institutions of higher education( 主语 )+rely on\ngoals 应作目的状语，空格\n（谓语） +synthetic pesticides and fertilizers( 宾语）。不定式短语 to achieve\n词位于不定式 to achieve 和其宾语 go 小的中间，可能为副词，修饰 to achieve，也可能为形容词 / 名词 / 过去分\n词 / 现在分词，修饰 go 小。\n[ 锁定答案 ] 空格句指出，大多数高等教育机构都依赖合成杀虫剂和化肥来实现\n目标。下一句继\n而做出阐释，拥有“美丽 \" 的校园意味着既要有花坛和铺砌过的人行道，也要有绿意盎然、养护完美的草坪。根\n据常识“合成杀虫剂和化肥一般用来养护草坪、花坛”可推知，高等教育机构的最终目标是“美化校园”，空格词\n应与 beautiful 近义，指向“美丽的 / 美观的 / 美化的”等意， A) aesthetic 正确",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              31,
+              32
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              31,
+              32
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "D",
+          "explanation": "[ 确定词性 ] 空格位于第三段@ 句的主语部分 these\nmanaged campuses，其中限定词 these 及\nmanage 均用以修饰中心词 campuses, 故空格词应为副词，进一步修饰 managedo\n[ 锁定答案 ] 空格句中 these\nmanaged campuses 回指“依赖合成杀虫剂和化肥管护的校园”，而由\n第三段 ． Ø 句 not unique、 Most 可知，这种管护方式是常规操作，故空格词应表示“常规的 / 惯用的”等意， D)\nconventionally、正确",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              32
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              32
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "C",
+          "explanation": "[ 确定词性 ] 空格位于第三段@ 句冒号后 cost 的同位语部分， and 并列衔接 increased cancer risk、\nwaterways、 poisoned wildlife 及 lifeless soil。空格后为名词 waterways，故空格词应为形容词 / 名词 / 过去分\n词 / 现在分词，作定语修饰 waterwayso\n[ 锁定答案 ] 空格句先指出，依赖合成杀虫剂和化肥管护校园可能要付出代价；随后列举具体代价：增加\n的癌症风险，\n水道，受到毒害的野生动物和了无生机的土壤。因此，空格词应为能修饰水道的负向词且\n体现健康或生态代价，唯有 C) contaminated 契合",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              32
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              32
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "E",
+          "explanation": "[ 确定词性 ] 空格位于第四段 O 句的主句中，主句结构为 The use of chemicals to..， life （主语） + can\nmcrease( 谓语）十 indirect\n（宾语）。空格前为形容词 indirect，故空格词应为名词 / 动名词\n[ 锁定答案 ] 第四段 ． 句概述指出，使用杀虫剂会加剧全球气候危机。空格句作以阐释，使用化学药剂来\n消灭昆虫或去除杂草会增加间接\n，因为这些药剂可能含有石油基成分。 as 表明主从句间因果关系，结\n合常识“石油基成分会增加温室气体排放，进而加剧气候危机”可推出，空格词应表示“排放物 / 散发物”等意，\nE) emissrons 正确",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              32
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              32
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "G",
+          "explanation": "[ 确定词性 ] 空格所在句结构为 Pesticide use also decreases the life in soil( 主干）+\nthe ability of\nsoils.\n． and thus reducing campuses' ability.\n· （结果状语）。 and 提示状语中的两部分内容形式并列，参考\nreducing 可知空格词应为现在分词\n[ 锁定答案 ] 空格句指出，使用杀虫剂会使土壤中的生物减少，\n土壤吸收碳或保持水分的能力，进\n而降低校园从干旱、洪水等气候相关的极端天气事件中快速恢复的能力。 thus 提示状语部分内部的因果逻\n辑，根据结果“校园从干旱、洪水快速恢复的能力降低”可反推出原因“土壤 · 一“保持水分的能力减弱”；另夕卜，\n结合常识“土壤中的微生物有固碳保水的作用 \" 也可推知“土壤中的生物减少将导致其吸收碳或保持水分的能\n力减弱”。因此，空格词应表示 ' 减弱 / 削弱 / 降低 \" 等意， G) hampering 正确",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              32
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              32
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "aesthetic"
+            },
+            {
+              "key": "B",
+              "text": "chronic"
+            },
+            {
+              "key": "C",
+              "text": "contaminated"
+            },
+            {
+              "key": "D",
+              "text": "conventionally"
+            },
+            {
+              "key": "E",
+              "text": "emissions"
+            },
+            {
+              "key": "F",
+              "text": "environment"
+            },
+            {
+              "key": "G",
+              "text": "hampering"
+            },
+            {
+              "key": "H",
+              "text": "incidentally"
+            },
+            {
+              "key": "I",
+              "text": "infringement"
+            },
+            {
+              "key": "J",
+              "text": "intrigued"
+            },
+            {
+              "key": "K",
+              "text": "juvenile"
+            },
+            {
+              "key": "L",
+              "text": "outlet"
+            },
+            {
+              "key": "M",
+              "text": "rotating"
+            },
+            {
+              "key": "N",
+              "text": "vibrations"
+            },
+            {
+              "key": "O",
+              "text": "weeding"
+            }
+          ],
+          "answer": "O",
+          "explanation": "[ 确定词性 ] 空格位于第五段的独句中，该句主干部分结构完整： students working with HFC （主语） +\nthe campus grounds 应作状语，修饰 help outo 空格前为介词 with，空\nhelp out （谓语）。介词短语 with\nthe campus grounds 作介词 with 的宾语）。\n格后为名词 the campus grounds，故空格词应为动名词（\nthe campus grounds 与 using toxic\n[ 锁定答案 ] 空格句内表取舍的 lnstead of 提示 help out with 35\nchemicals 语义相对，结合上文所述使用有毒化学药剂的目的是“消灭昆虫或去除杂草”，可推知学生们的做法\n是“亲手帮忙杀虫或除草”，空格词应体现“给 · ““· 杀虫或除草 \" 之意， 0） weeding 正确",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              33
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              33
+            ]
+          },
+          "optionsSource": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "People going to the library in search of information can build c onnections with each other there",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "G",
+          "explanation": "G 段 ． 句引用罗伯特 · 帕特南的话，指出“人们走进图书馆或许主要是为了寻找信\n\n息，但他们在那里找到了彼此”， O 句具体以新手妈妈、老者、青少年、读者为例阐释 ． 句， ． 句总结“图书馆里，\n这种社群联结无时无刻不在发生”。试题是结合段意对 ． 句的近义替换，其中 People going to the library in\nsearch of information 对应 ． 句中的 People. · · go to the library looking. · · for information，而 build connections\nwith each other there 明确 ． 句中 find each other there 的实质内涵（呼应 O ． 句中的 connect、 make new\nfriends、 meet up、 discuss、 community-building connections)。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              39,
+              40
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              39,
+              40
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "According to advocates of libraries as community builders, librarians are not doing their Job well if they do not change their communities",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "C",
+          "explanation": "c 段@ 句指出“将图书馆视为社区创建者 \" 这一理念的支持者的观点：只有切实改变\n社区，才算完成应尽的职责。试题是对该句的同义转述，其中 According to advocates of libraries a s\ncommunity builders 只于，应 Supporters of libraries a S community builders claim that，而 librarians are not\ndoing. · · well if they do not. · · ． 是一对 unless you are. · · you are not completing. · ． 的同义改写",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "With the costs of education c ontinually rising, public libraries remain places where all people can have access to education",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "I",
+          "explanation": "I 段 ． 句指出，在这个教育成本不断攀升的时代，公共图书馆却为所有人一一一无论其\n社会经济地位如何一一一无偿提供知识与教育机会。试题是对该句的同义替换， With the costs of education\ncontinually rismg、是一对 0）句 ln a time when education is mcreasingly expensive 的同义替扌奂， all people can have\n· free for all people， regardless of. · · 的概括， remain 显化 ． 句中“教育成本\naccess to educatlon ． 是 ． 只于 provide.\n不断攀升 vs 公共图书馆免费提供教育资源”隐含的对比，凸显公共图书馆的价值所在。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Libraries draw large crowds, thus creating lots of business opportunities in neighboring areas",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "D 段 O 句指出“犹如商场里的核心百货商店，图书馆能吸引大量人流，为周边区域的\n众多企业和组织创造经济机遇”试题与该句文意相符，其中 draw large crowds、 creating..\nbusiness\nopportunltles ln neighboring areas ． 分 · 另刂 ． 是 · 只于 attract large numbers of people、 creatlng economic\n· in the surrounding area 的同义替换， thus 体现两个影响之间的因果逻辑关联\nopportunities.",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "With the world more and more digitalized, people sometimes underestimate the role of libraries as community and cultural centers",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "A",
+          "explanation": "A 段 O 句指出，在日益数字化的世界里，图书馆作为社区和文化中心的作用时常被低\n估。试题是对该句的同义转述， With the world more and more digitalized 对应 O 句中 in an mcreasingly digital\nworld，而 people sometimes underestmate the role of libraries as. · · 是对 O 句中\nW e see the role of libraries\n· at times undervalued 的同义改写",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "Various programs organized by public libraries for children and adolescents help narrow the gap between students from varying economic backgrounds",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "L",
+          "explanation": "L 段 ． 句指出，面向青少年提供的免费课业辅导、作业帮项目和暑期阅读计划有助弥\n合影响学生学业表现的经济鸿沟。试题是对该句的概括总结， Various programs organized by public libraries\nfor children and adolescents 概括 ． 句 Free tutoring. · · for kids and teens 所指，并明确这类项目的举办者为\n“丿公、共图书 ． 馆”， help narrow the gap between students from varymg economic backgrounds 契，合 (D 句 help\nbridge the economic divide that impacts students academic performance ． 又 ． 思",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "In an organized archive, people can do research on their family history and find out how their ancestors came to settle in the new land.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "F 段 ． 句指出，一个管理有序的档案馆能让人们在此研究家族谱系与移民历史，开展\n环境研究等各类工作。试题契合该句文意，其中 do research on their family history and find out how their\nancestors came to settle in the new land ． 是 ． 只于 research their ancestry and immigration history 的讠羊细阐",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "Public libraries organize cultural events, often allowing people of different income levels to attend free of charge",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "H",
+          "explanation": "H 段指出，图书馆举办名家讲座、作家见面会和艺术展等活动，而且经常免费开放，使不同收入水平的人都能参与。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "Besides being an information provider, the library performs many other important services for the community",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "B",
+          "explanation": "B 段 ． 句暗示“图书馆为社区做出贡献”， O 句指出“图书馆不只是藏书与电脑的集结\n之地，更是一起探索新知、交流思想、激发想象的聚集之所”， ． 句具体举例图书馆的功能“充当社区建设者、艺\n术中心以及青少年成长守护者”，@句总结“图书馆的作用并非只是传递信息，它以多重身份服务社会”。试题\n是结合本段文意对@ 句的同义替换， ·\n· lmportant servtces for the community 明石角 serve in these\n· performs many other. · ·、是 · 只寸 more than just about\ncapacities 的内涵， Besides being a n informatlon provider.\ninformation 的同义改写",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              40
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Public libraries can help build small communities of people with different backgrounds and ideologies",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "K",
+          "explanation": "K 段句指出，通过“人类图书馆 \" 和“苏格拉底咖啡馆 \" 等项目，公共图书馆能够帮助\n建立起鼓励人们通过对话彼此交流、互相学习的多元小型社区。试题与该句信息对应， small communities of\npeople with different backgrounds and ideologies 准确既 small communities of difference that encourage\npeople to interact with and learn from each other through dialogue 的内涵",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              41
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              41
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What does the U.S. secretary of education say in his open letter?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is of vital importance to respond promptly to the school absence crisis 。"
+            },
+            {
+              "key": "B",
+              "text": "The academc performance of chromcally absent students is deplorable."
+            },
+            {
+              "key": "C",
+              "text": "LOW academic achievement is mainly attributed to school absences"
+            },
+            {
+              "key": "D",
+              "text": "The effect of school absences on Amencan education is womsome."
+            }
+          ],
+          "answer": "C",
+          "explanation": "0 第二段 ． 句明确美国教育部长在公开信中所提出的观点：出于各种原因而一年缺课 10 ％\n是造成学业成绩不佳的一个主要原因。可见 C 项正确，其中 X is mainly attributed to Y 契合 Y is a primary\ncause of X 所述因果逻辑。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              42
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              42
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What do the authors find ab out scho 01 absences?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Excused school absences have little impact on children's learning"
+            },
+            {
+              "key": "B",
+              "text": "There is li le difference between unexcu sed and excu sed absences"
+            },
+            {
+              "key": "C",
+              "text": "Excused absences lead to comparatively better school performance"
+            },
+            {
+              "key": "D",
+              "text": "Unexcused absences are a big challenge to both schools and families"
+            }
+          ],
+          "answer": "A",
+          "explanation": "。第六段先明确研究发现“由家长请假的缺课对孩子学习造成的危害微乎其微”，继而补充指\n出“有多次因故缺课（但没有无故缺课）的孩子的考试成绩与未缺课的同学相当”。可见，因故缺课 / 由家长请假\n的缺课对孩子的学业影响极小， A 项正确，其中， · · have little impact on. · · 同义改写 ． · · do little to harm. ·",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              43
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              43
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What do the authors believe concerning unexcu sed school absences?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are likely to cause a decrease in students, academic achievements due to missed instruction."
+            },
+            {
+              "key": "B",
+              "text": "They point directly to many of the out-of-school challenges confronting children and their families"
+            },
+            {
+              "key": "C",
+              "text": "They are matters the Amencan government typically ignores when formulating educational policies"
+            },
+            {
+              "key": "D",
+              "text": "They give a clear signal to children and their families of the crises they are likely to face in the future."
+            }
+          ],
+          "answer": "B",
+          "explanation": "O 第八段直接阐述作者们的观点“无故缺课是孩子及其家庭面临诸多挑战的强烈信号，能\n有力地表明校外挑战是如何影响孩子学业进步的”，也即“无故缺课有力表明学生及其家庭面临诸多校外挑\n战”可见 B 项正确， point directly to 与 is a strong signal of、 can be a powerful signal of 含义相符",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              44
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              44
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What is the assumption underlying education policies in the U.S.?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Children's academc performance depends on reducing the number of absences"
+            },
+            {
+              "key": "B",
+              "text": "S schools can boost children's academic performance by effective intervention"
+            },
+            {
+              "key": "C",
+              "text": "Schools as well as families should be held responsible for out-of-school crises"
+            },
+            {
+              "key": "D",
+              "text": "Children's academc performance is cio sely related to the quality of instruction"
+            }
+          ],
+          "answer": "B",
+          "explanation": "O 第十一段 ． 句介绍现行出勤政策的两项假定：一、缺课会对孩子的学业造成损害，二\n学校能够通过减少学生缺课次数进行有效干预。综合可知，教育政策的假定是“学校可以采取有效干预，改善\n孩子的学业表现”， B 项正确。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              45
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              45
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What do the authors suggest doing regarding school absences?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Identifying the underlying causes."
+            },
+            {
+              "key": "B",
+              "text": "Reframing school attendance policies."
+            },
+            {
+              "key": "C",
+              "text": "Directing resources to helping needy children."
+            },
+            {
+              "key": "D",
+              "text": "Pressuring schools to reduce unexcused ones."
+            }
+          ],
+          "answer": "C",
+          "explanation": "。前文指出“无故缺课是孩子及其家庭正面临诸多经济及医疗挑战的信号”，第十三段继而\n提议“将无故缺课作为一种信号，把资源输送给最需要它们的孩子及其家庭”， C 项符合文意。 Directing\nresources to. · 只于，应 channel resources to\n· ． ·， needy children 对应 the children. · · wl 旧 need them most。",
+          "source": {
+            "fileId": "1Y-ziyHwllVXv-Sbdi4ueLrL9w68gOUTi",
+            "pages": [
+              11
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              46
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              46
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What did the author advise people do for almost a decade?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Figure out what is the most fascinating job."
+            },
+            {
+              "key": "B",
+              "text": "Follow widely accepted career counsel."
+            },
+            {
+              "key": "C",
+              "text": "Pursue their careers With passion."
+            },
+            {
+              "key": "D",
+              "text": "Do whatever they are zealous for."
+            }
+          ],
+          "answer": "D",
+          "explanation": "O 第二段介绍作者在近十年里对所有人的建议“追随你的激情，就业问题以后再考虑 \"。 D\n项与之对应，其中 Do whatever they are zealous for 是对第二段 O 句 FoIIow your passion 的同义改写",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              47
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              47
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "How did the author feel about the passion principle through hl s research?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "He was astonished by its consequences"
+            },
+            {
+              "key": "B",
+              "text": "He was further convinced of its soundness. 6. 11"
+            },
+            {
+              "key": "C",
+              "text": "He was actually right to follow it through"
+            },
+            {
+              "key": "D",
+              "text": "He was struck by its broad popularity"
+            }
+          ],
+          "answer": "A",
+          "explanation": "O 第四段句指出，作者在为新书做研究时，对“热情原则” (this principle 回指 ． 句的 the\npassion principle) 的有关发现感到震惊。 A 项是对该句的近义改写，其中 astonished 对应句中的 stunnedo",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              48
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              48
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What is important to turning one's passion into a stable, good-paying job?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Willingne s s to take unpaid internships and low-paying jobs."
+            },
+            {
+              "key": "B",
+              "text": "Full acadenuc preparedness and sound career counseling"
+            },
+            {
+              "key": "C",
+              "text": "Hard work and sacrifice of leisure time."
+            },
+            {
+              "key": "D",
+              "text": "Financial backing and social connections"
+            }
+          ],
+          "answer": "D",
+          "explanation": "O 第八段 ． 句指出，虽然“热情原则，，广受欢迎，但并非每个人都有足够的资源将自己的热\n情转化为一份稳定且高薪的工作； O 至 ． 句对比“富裕家庭逐梦者 \" 和“工薪阶层 / 第一代大学生逐梦者 \"，论证\n指出经济支持与人脉资源能让人轻松追逐热情，而缺乏相关资源的逐梦者则可能最终只能从事低薪低技能岗\n位。 D 项与文意相符，其中 Financial backing and social connections 是对 ． 句中关键信息 necessary resources\n的具体解释。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              49
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              49
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What happens when everyone IS encouraged to follow their passion?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Many more career aspirants end up unemployed"
+            },
+            {
+              "key": "B",
+              "text": "People are less concerned with socioeconomic inequality"
+            },
+            {
+              "key": "C",
+              "text": "Socioeconomic inequality is likely to persist."
+            },
+            {
+              "key": "D",
+              "text": "Career counselors are going to lose credibility"
+            }
+          ],
+          "answer": "C",
+          "explanation": "O 第九段指出，当大学、用人单位和职业指导者鼓励所有人去追随热情却没有创造公平的\n竞争环境时，这会加剧职场逐梦者之间的社会经济不平等， c 项正确。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              50
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              50
+            ]
+          }
+        },
+        {
+          "id": "2025-06-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What does the author say about employers of passionate workers?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They provide these workers with job stability and a good salary."
+            },
+            {
+              "key": "B",
+              "text": "They exploit these workers, passion to benefit themselves"
+            },
+            {
+              "key": "C",
+              "text": "They level the playing field for these workers to reach their goals"
+            },
+            {
+              "key": "D",
+              "text": "They encourage these workers to realize their aspirations. 6 。 12"
+            }
+          ],
+          "answer": "B",
+          "explanation": "O 末段 ． 0 句指出，富裕家庭的热情追随者和雇用充满热情的员工的雇主都是“热情原则”\n的受益者； ．@ 句说明雇主倾向于招聘有职业抱负的人的原因：这类员工往往愿意不计报酬、努力工作，甚至\n主动牺牲高薪与工作稳定性。 B 项精准概括了原文中雇主利用员工的职业热情实现的利益最大化。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              50
+            ]
+          },
+          "verified": true,
+          "explanationSource": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              50
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "天宫空间站（Tiangong space station）是中国首个太空实验室，拥有110多立方米使用空间，可驻留三名宇航员，在距地球表面400-450公里的轨道上运行。天宫空间站已实施180多个科学研究与应用项目，涉及空间生命科学、太空医学、空间材料科学等领域。天宫空间站的研究成果在我国得到了广泛应用，产生了显著的经济效益。例如，太空育种创造的直接经济效益高达数千亿元。这不仅标志中国在航天技术上取得了巨大进步，也表明中国为全球的太空研究和应用做出了重大贡献。",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              13
+            ]
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2025-06-1-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "天宫空间站（Tiangong space station）是中国首个太空实验室，拥有110多立方米使用空间，可驻留三名宇航员，在距地球表面400-450公里的轨道上运行。天宫空间站已实施180多个科学研究与应用项目，涉及空间生命科学、太空医学、空间材料科学等领域。天宫空间站的研究成果在我国得到了广泛应用，产生了显著的经济效益。例如，太空育种创造的直接经济效益高达数千亿元。这不仅标志中国在航天技术上取得了巨大进步，也表明中国为全球的太空研究和应用做出了重大贡献。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "Tiangong Space Station, China, s first space laboratory, boasts over 110 cubic meters of habitable volume that can accommodate three astronauts, and operates In an orbit 400 to 450 kilometers above the Earth's surface. The station has carried out more than 180 scientific research and application projects, spanning fields such a S space life science, space medicine, and space materials science. research outcomes of the Tiangong Space Station have found extensive application in China, generating remarkable economic benefits. For instance, space-bred crops have yielded direct economic benefits amounting to hundreds of billions of yuan. This no t only marks a monumental advancement in China, s aerospace technology' but also demonstrates China, s great contributions to glObal space exploration and utilization.",
+          "explanation": "leveling the playing field 设置干扰，但文中并未提及“主为这些员工实现目标创造公平环境”，相反提及“雇\n主未能为逐梦者创造公平的竞争环境”。 D 项利用末段 ． 句所述“雇主对充满热情的求职者表现出更大的兴\n趣”设置干扰，原文强调雇主是出于自身利益考量才倾向招聘有职业热情的人，并非真心助力员工实现理想。\n[ 提炼思路 ] 本题考查事实细节，虽易于定位，但定位句因存在省略结构，理解时需结合上下文补充完整\n语义：首先根据省略表达 do， too，可知其指代前文 benefit from the passion principle, 即雇主与富裕家庭的追\n梦者同属“热情原则”受益者；进一步结合 ．@ 句可知，雇主倾向于招聘充满热情的求职者是因为这些员工愿\n意努力工作且不要求加薪（可低成本获取高价值劳动力）”，即雇主可以利用这些员工的热情为自己谋取利益\n最大化， B 项与之相符。 A、 C 项均利用文中细节设置干扰， D 项则扭曲文意，均可排除。\nPart IV Translation\n天宫空间站\n一、参考译文\nTiangong Space Station, China's first space laboratory, boasts over 110 cubic meters of habitable volume\nthat can accommodate three astronauts, and operates In an orbit 400 to 450 kilometers above the Earth's\nsurface. The station has carried out more than 180 scientific research and application projects, spanning fields\nsuch a S space life science, space medicine, and space materials science. research outcomes of the\nTiangong Space Station have found extenstve application in China, generating remarkable economic benefits.\nFor instance, space-bred crops have yielded direct economic benefits amounting to hundreds of billions Of\nyuan. This not only marks a monumental advancement in China's aerospace technology' but also demonstrates\nChina's great contributions to global space exploratton and utilization.\n二、精析精译\n1. 天宫空间站（Tiangong Space Station）是中国首个太空实验室，拥有 110 多立方米使用空间，可驻留三名\n宇航员，在距地球表面 400 · 450 公里的轨道上运行。\n[ 词汇准备 ] 太空实验室 space laboratory 拥有 have； boast 立方米 cubic meters 使用空间 living\nspace； habitable volume 驻留 accommodate 宇航员 astronaut 距地球表面 ·\nsurface 公里 kilometer 轨道 orbit 运行 operate\n· above the Earth, s\n[ 句子解析 ] 本句包含四个小句，围绕天宫空间站的核心属性展开，分别说明其“身份定位、使用空间、驻\n留能力、轨道参数 \" 四个方面的信息。第一个小句中“是中国首个太空实验室”说明空间站的身份定位，可处理\n为主语“天宫空间站”的同位语，整体译为 Tiangong Space Station， China， s first space laboratoryo 第二个小句\n“拥有 110 多立方米使用空间”可译为 boasts over 110 cubic meters of habitable volumeo 第三个小句“可驻留\n三名宇航员”描述空间站的驻留能力，实为对第二个小句的补充说明，为凸显逻辑关系，可将其译为定语从句\nthat can accommodate three astronauts 修饰 habitable volumeo 第四个小句“在 · 一“轨道上运行”既可处理为\n并列分句 and operates in an orbit，也可译为伴随状语 operating in an orbit，以凸显句式多样化；“距地球表面\n400 一 450 公里”可译为后置定语 400 to 450 kilometers above the Earth， s surfaceo\n2 · 天宫空间站已实施 180 多个科学研究与应用项目，涉及空间生命科学、太空医学、空间材料科学等领域。\n[ 词汇准备 ] 实施 carry out； implement 科学研究 scientific research 应用项目 application project 涉\n六间材料科学 space materials\n六间生命科学 space life science 太空医学 space medicine 工\n，及 · cover； ． 廴\nsclence 领域 field； area\n[ 句子解析 ] 本句包含两个小句，说明空间站的科研成果。第一个小句的主语与上句主语一致，为避免重\n复累赘，可简译为 The station；谓语部分“已实施 180 多个科学研究与应用项目”可译为 has carried out more\nthan 180 scientific research and application projectso 第二个小句“涉及 · 一，，等领域”是对第一个小句的宾语\n“180 多个科学研究与应用项目”的补充说明，可译为伴随状语 spanning fields such as. 冖，也可简译为地点状\n51\n，“空间生命科学、太空医学、空间材料科学”可译为 space life science， space medicine，\n讠吾 in areas such a S\nand space materials sctenceo\n3 · 天宫空间站的研究成果在我国得到了广泛应用，产生了显著的经济效益。\n[ 词汇准备 ] 研究成果 research outcomes； research achievements 广泛应用 be widely applied； find\nextensive application 产生 yield； generate 显著的经济效益 remarkable/significant economic benefits\n[ 句子解析 ] 本句包含两个小句，概述研究成果的总体效用。第一个小句的主语“天宫空间站的研究成\n果”可译为 The research outcomes of the Tiangong Space Station，谓语部分“在我国得到了广泛应用”既可译为\n被动态结构 have been widely applied in China，也可译为动宾结构 have found extensive application in Chinao\n第二个小句说明研究成果得到广泛应用所带来的经济效益，可译为现在分词结构作结果状语 generating\nremarkable economic benefitso\n4 · 例如，太空育种创造的直接经济效益高达数千亿元。\n[ 词汇准备 ] 太空育种 space-bred crops 创造 create； yield 直接 direct 高达 reach up to； amount to\n数千亿元 hundreds of billions of yuan\n[ 句子解析 ] 本句举例论证空间站研究成果带来的经济效益。句首衔接词“例如”可译为 For example 或\nFor instanceo “太空育种创造的直接经济效益”可译为句子的主干 space-bred crops have yielded d i rect economic\nbenefits，“高达数千亿元”是对“直接经济效益”的具体描述，可译为现在分词结构 amount ing to hundreds of\nbillions of yuan 或介词短语 of hundreds of billions of yuan 作 direct economics benefits 的后置定语\n5 · 这不仅标志中国在航天技术上取得了巨大进步，也表明中国为全球的太空研究和应用做出了重大贡献。\n[ 词汇准备 ] 标志 signify； mark 航天技术 aerospace technology 巨大进步 a substantial/monumental\nadvancement； tremendous progress ． 表明 indicate； demonstrate 全歹求的 global 太空研究和应用 space\nresearch and applications； space exploratlon and utilization ． 重 ． ． 大《贡献 · great/significant contributions\n[ 句子解析 ] 本句指出“空间站研究结果及其应用”的历史意义。句子主干为“这不仅 · 一， · 也，一 · ·”的递进\n结构，可译为 This not only. · ． but also. · ·。前半句中“标志中国在 · 一 · · 上取得了巨大进步”既可译为“谓语 +\n宾语从句”结构 signifies that China has made tremendous progress 一，也可译为动宾短语 marks a\nmonumental advancement in China， s. 一；“航天技术”可译为 aerospace technologyo 同理，后半句“表明中国为\n做出了重大贡献”既可译为“谓语 + 宾语从句”结构 indicates/demonstrates that China has made\nsignificant contributions to. ·，也可讠爷为动宾豆语 demonstrates China， s great contributions to. 一；“全的太\n空研究和应用”可译为 global space exploration and utilizationo\n重难点词汇短语\n使用空间\n可驻留三名宇航员\n太空育种\n5 2\n高分翻译\nhabitable volume\ncan accommodate three astronauts\nspace-bred crops\n低分翻译\nusable space\ncan let three astronauts stay\nspace planting",
+          "source": {
+            "fileId": "1bhO26h_JwaVu9j0xrPRNesjd5QaRGfFD",
+            "pages": [
+              13
+            ]
+          },
+          "answerSource": {
+            "fileId": "186ZLiWU--XbYXp4cgNOLY3DXqdk08Hkz",
+            "pages": [
+              52
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "Tiangong Space Station, China, s first space laboratory, boasts over 110 cubic meters Of habitable volume\nthat can accommodate three astronauts, and operates In an orbit 400 tO 450 kilometers above the Earth's\nsurface. The station has carried out more than 180 scientific research and application projects, spanning fields\nsuch a S space life science, space medicine, and space materials science. research outcomes Of the\nTiangong Space Station have found extenstve application in China, generating remarkable economic benefits.\nFor instance, space-bred crops have yielded direct economic benefits amounting tO hundreds Of billions Of\nyuan. This no t only marks a monumental advancement in China, s aerospace technology' but also demonstrates\nChina, s great contributions tO glObal space exploratton and utilization."
+        }
+      ]
+    }
+  ]
+}

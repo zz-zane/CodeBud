@@ -1,0 +1,34 @@
+{
+  "templateId": "py-s2-fstring-colon",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-01",
+  "type": "codefix",
+  "concept": [
+    "f-string",
+    "冒号是分界线",
+    "SyntaxError"
+  ],
+  "instances": 2,
+  "params": {
+    "dish": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品",
+        "鱼丸"
+      ]
+    },
+    "p": {
+      "kind": "pick",
+      "values": [
+        "3.14159",
+        "2.71828"
+      ]
+    }
+  },
+  "stemTemplate": "我们想给价目牌上的价格**留两位小数**：变量 `price` 里保存 {p}，这颗数拖着一长串小数末尾，摆上名称只该留**小数点后两位**（多出来的末尾收掉），前面写货名 {dish}、后面跟一个空格和「元」两个字。\n\n可这段代码**压根跑不起来** —— 编译器连第一句都没念完就翻脸了。你帮我们找出毛病改对：改完之后跑一遍，印出来的那行要照上面说的样子长。",
+  "brokenCodeTemplate": "price = {p}\nprint(f\"{dish} {price.2f} 元\")\n",
+  "referenceFixTemplate": "price = {p}\nprint(f\"{dish} {price:.2f} 元\")\n",
+  "explanationTemplate": "花括号里那串打扮的规矩，是**从冒号开始**的：冒号左边写「谁」（这里是 `price`），冒号右边写「怎么打扮」（这里是 `.2f`，留两位小数）。\n\n现在冒号被漏掉了，花括号里直接写着 `price` 点 `2f` —— 编译器念到中间那个点就念不下去了，它的原话是：\n\n```text\nSyntaxError: invalid decimal literal\n```\n\n这是**最严重的一档**：程序压根没开始跑，一行都不会印出来（比印错还麻烦，印错至少还能看见东西）。\n\n改法就是把那个冒号补回去 —— 在 `price` 和 `.2f` 中间加上冒号，把「谁」和「怎么打扮」分开。记住这一条口诀：**先冒号，再打扮**；写完每一条 f-string 都回头看一眼：名字和打扮之间，那个冒号在不在？\n\n（还有一件记牢：打扮只管**印出来的样子**。{p} 印成了两位小数，变量中装的还是原来那个长末尾的数 —— 真要把它改短，得另外动手。）"
+}

@@ -1,0 +1,29 @@
+{
+  "templateId": "c-s1-str-sizeof-not-strlen",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-11",
+  "type": "codefix",
+  "concept": [
+    "strlen",
+    "sizeof",
+    "暗号",
+    "\\0"
+  ],
+  "instances": 2,
+  "params": {
+    "w": {
+      "kind": "pick",
+      "values": [
+        "cat",
+        "fish",
+        "张三",
+        "计算机"
+      ]
+    }
+  },
+  "stemTemplate": "我们想让程序先印一遍名称上的字，再印一行这串字的**真字符**颗数。名称上写的是 `{w}`。\n\n可它印出来的颗数**总是比我们数出来的多一颗**……\n\n你帮我们看看是哪儿数岔了，把它改好。改好之后，第一行是名称上的字，第二行是它真字符的颗数（**末尾那颗看不见的暗号不算**）。",
+  "brokenCodeTemplate": "#include <stdio.h>\n#include <string.h>\n\nint main(void) {\n    char word[] = \"{w}\";\n\n    printf(\"%s\\n\", word);\n    printf(\"%d\\n\", (int)sizeof(word));\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n#include <string.h>\n\nint main(void) {\n    char word[] = \"{w}\";\n\n    printf(\"%s\\n\", word);\n    printf(\"%d\\n\", (int)strlen(word));\n    return 0;\n}\n",
+  "explanationTemplate": "这两个数永远差 **1**，差别就在末尾站岗的那颗暗号上。\n\n**`sizeof(word)` 量的是「这排元素一共几个」** —— 名称上的字用掉几个元素，再加上末尾给暗号留的那一个，全都算进去。所以它报出来的永远是「真字符 + 1」。\n\n**`strlen(word)` 数的是「字符串上有几颗字符」** —— 它从第一颗开始往外念，一撞上暗号就闭嘴，所以暗号**不算数**。\n\n一句话记住：**`sizeof` 量地方，`strlen` 数字符。** 一个字之差，答案永远差 1。\n\n（顺便对一下课文里那句话：`char word[] = \"cat\";` 是**四个元素** —— 三颗字符加一颗暗号。所以题面里那个「多出来的一颗」就是它。）"
+}

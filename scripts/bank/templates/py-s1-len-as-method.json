@@ -1,0 +1,27 @@
+{
+  "templateId": "py-s1-len-as-method",
+  "lang": "python",
+  "stage": 1,
+  "lessonId": "python-stage1-04",
+  "type": "codefix",
+  "concept": [
+    "len",
+    "外援函数",
+    "AttributeError"
+  ],
+  "instances": 2,
+  "params": {
+    "s": {
+      "kind": "pick",
+      "values": [
+        "字符串",
+        "商品罐头盒",
+        "毛线球"
+      ]
+    }
+  },
+  "stemTemplate": "我们手里有一条字符串 `{s}`，想数一数它一共有几颗，把数目打印出来。\n\n可这段代码一跑就报错了……你帮我们改对。",
+  "brokenCodeTemplate": "s = \"{s}\"\nprint(s.len())\n",
+  "referenceFixTemplate": "s = \"{s}\"\nprint(len(s))\n",
+  "explanationTemplate": "Python 字符串长度使用内置函数 len(s)，不是 s.len()。结果统计字符串的 Unicode 码点数；本例不把引号计入内容，也不能沿用旧示例的长度。"
+}

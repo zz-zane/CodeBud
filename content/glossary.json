@@ -1,0 +1,471 @@
+{
+  "version": 3,
+  "note": "标准编程术语唯一来源。cat 字段保留旧数据结构兼容，值为标准术语，不用于比喻命名。生成内容必须使用标准术语与中性例子。",
+  "terms": [
+    {
+      "key": "variable",
+      "originals": [
+        "变量"
+      ],
+      "cat": "变量",
+      "example": "变量是程序中用于关联和访问值的名称；赋值会更新该名称所关联的值。"
+    },
+    {
+      "key": "function",
+      "originals": [
+        "函数"
+      ],
+      "cat": "函数",
+      "example": "函数是一段可调用的代码，可接收参数并返回结果。对象所属的函数通常称为方法。",
+      "scanExcludes": {
+        "lookBehind": [
+          "造",
+          "构"
+        ]
+      }
+    },
+    {
+      "key": "parameter",
+      "originals": [
+        "参数"
+      ],
+      "cat": "参数",
+      "example": "参数是函数或方法定义中用于接收调用者所传实参的名称。",
+      "scanExcludes": {
+        "lookAhead": [
+          "列",
+          "表"
+        ]
+      }
+    },
+    {
+      "key": "return-value",
+      "originals": [
+        "返回值"
+      ],
+      "cat": "返回值",
+      "example": "返回值是函数或方法执行 return 后交给调用方的结果。"
+    },
+    {
+      "key": "io",
+      "originals": [
+        "输入输出"
+      ],
+      "cat": "输入输出",
+      "example": "输入用于接收外部数据，输出用于向屏幕、文件或其他目标发送结果。"
+    },
+    {
+      "key": "array",
+      "originals": [
+        "数组"
+      ],
+      "cat": "数组",
+      "example": "数组按索引组织同类型元素，通常占用连续存储空间。"
+    },
+    {
+      "key": "string",
+      "originals": [
+        "字符串"
+      ],
+      "cat": "字符串",
+      "example": "字符串表示有序的字符序列，具体编码和可变性取决于语言。"
+    },
+    {
+      "key": "list",
+      "originals": [
+        "列表"
+      ],
+      "cat": "列表",
+      "example": "列表是按顺序组织元素的容器；Python 列表支持动态调整长度。",
+      "scanExcludes": {
+        "lookBehind": [
+          "数",
+          "化"
+        ]
+      }
+    },
+    {
+      "key": "loop",
+      "originals": [
+        "循环"
+      ],
+      "cat": "循环",
+      "example": "循环按照条件重复执行一段代码，直到条件不满足或执行退出语句。"
+    },
+    {
+      "key": "conditional",
+      "originals": [
+        "条件判断"
+      ],
+      "cat": "条件判断",
+      "example": "条件判断依据布尔条件选择要执行的分支。"
+    },
+    {
+      "key": "sort",
+      "originals": [
+        "排序"
+      ],
+      "cat": "排序",
+      "example": "排序按照指定的比较规则重新组织元素的顺序。"
+    },
+    {
+      "key": "class",
+      "originals": [
+        "类"
+      ],
+      "cat": "类",
+      "example": "类定义对象的属性和行为；对象是类的实例。",
+      "scanExcludes": {
+        "lookBehind": [
+          "人",
+          "分",
+          "种",
+          "之",
+          "同",
+          "归",
+          "门",
+          "鱼",
+          "肉",
+          "那",
+          "这",
+          "各",
+          "此",
+          "一",
+          "二",
+          "三",
+          "四",
+          "五",
+          "六",
+          "七",
+          "八",
+          "九",
+          "十",
+          "两",
+          "几",
+          "多"
+        ],
+        "lookAhead": [
+          "型",
+          "别",
+          "目",
+          "似",
+          "句",
+          "操",
+          "错"
+        ]
+      }
+    },
+    {
+      "key": "object",
+      "originals": [
+        "对象"
+      ],
+      "cat": "对象",
+      "example": "对象包含状态，并通过所属类型定义的操作参与程序执行。"
+    },
+    {
+      "key": "encapsulation",
+      "originals": [
+        "封装"
+      ],
+      "cat": "封装",
+      "example": "封装把相关数据和行为组织在一起，并通过访问控制维护内部约束。"
+    },
+    {
+      "key": "inheritance",
+      "originals": [
+        "继承"
+      ],
+      "cat": "继承",
+      "example": "继承允许子类复用和扩展父类定义的成员与行为。"
+    },
+    {
+      "key": "parent-class",
+      "originals": [
+        "父类"
+      ],
+      "cat": "父类",
+      "example": "父类是被其他类继承的类型。"
+    },
+    {
+      "key": "subclass",
+      "originals": [
+        "子类"
+      ],
+      "cat": "子类",
+      "example": "子类是继承父类并可扩展或重写其行为的类型。"
+    },
+    {
+      "key": "polymorphism",
+      "originals": [
+        "多态"
+      ],
+      "cat": "多态",
+      "example": "多态使同一接口调用能够根据对象的实际类型执行不同实现。"
+    },
+    {
+      "key": "override",
+      "originals": [
+        "重写"
+      ],
+      "cat": "重写",
+      "example": "重写是子类提供与继承方法相对应的新实现。",
+      "scanExcludes": {
+        "lookBehind": [
+          "掉"
+        ]
+      }
+    },
+    {
+      "key": "interface",
+      "originals": [
+        "接口"
+      ],
+      "cat": "接口",
+      "example": "接口规定调用者可以依赖的操作契约。"
+    },
+    {
+      "key": "friend",
+      "originals": [
+        "友元"
+      ],
+      "cat": "友元",
+      "example": "C++ 友元允许指定函数或类访问该类的非公有成员。"
+    },
+    {
+      "key": "template",
+      "originals": [
+        "模板",
+        "泛型"
+      ],
+      "cat": "模板 / 泛型",
+      "example": "C++ 模板和 Java 泛型用于编写可适用于多种类型的代码，二者机制不同。"
+    },
+    {
+      "key": "constructor",
+      "originals": [
+        "构造函数"
+      ],
+      "cat": "构造函数",
+      "example": "构造函数或构造方法负责初始化新创建的对象。"
+    },
+    {
+      "key": "destructor",
+      "originals": [
+        "析构函数"
+      ],
+      "cat": "析构函数",
+      "example": "C++ 析构函数在对象生命周期结束时执行清理操作。"
+    },
+    {
+      "key": "initializer-list",
+      "originals": [
+        "初始化列表"
+      ],
+      "cat": "初始化列表",
+      "example": "C++ 构造函数初始化列表在构造函数体执行前初始化基类和成员。"
+    },
+    {
+      "key": "static-member",
+      "originals": [
+        "静态成员"
+      ],
+      "cat": "静态成员",
+      "example": "静态成员属于类本身，而不是某个对象的独立状态。"
+    },
+    {
+      "key": "instance-member",
+      "originals": [
+        "实例成员"
+      ],
+      "cat": "实例成员",
+      "example": "实例成员与具体对象关联，不同对象可以持有不同的成员值。"
+    },
+    {
+      "key": "decorator",
+      "originals": [
+        "装饰器"
+      ],
+      "cat": "装饰器",
+      "example": "Python 装饰器接收可调用对象并返回用于替代它的对象，以扩展行为。"
+    },
+    {
+      "key": "unit-test",
+      "originals": [
+        "单元测试"
+      ],
+      "cat": "单元测试",
+      "example": "单元测试通过可重复的输入与断言验证独立代码单元的行为。"
+    },
+    {
+      "key": "debug",
+      "originals": [
+        "调试"
+      ],
+      "cat": "调试",
+      "example": "调试通过复现问题、检查程序状态和定位原因来修复错误。"
+    },
+    {
+      "key": "regex",
+      "originals": [
+        "正则"
+      ],
+      "cat": "正则",
+      "example": "正则表达式使用模式描述文本匹配规则。"
+    },
+    {
+      "key": "pointer",
+      "originals": [
+        "指针",
+        "引用"
+      ],
+      "cat": "指针 / 引用",
+      "example": "指针保存地址；引用用于关联已有对象。不同语言的引用机制不完全相同。",
+      "scanExcludes": {
+        "lookAhead": [
+          "语"
+        ]
+      }
+    },
+    {
+      "key": "reference-semantics",
+      "originals": [
+        "引用语义"
+      ],
+      "cat": "引用语义",
+      "example": "引用语义下，多个名称或引用可以关联同一个对象。"
+    },
+    {
+      "key": "value-semantics",
+      "originals": [
+        "值语义"
+      ],
+      "cat": "值语义",
+      "example": "值语义下，复制产生独立的值；其内部资源复制规则由类型决定。"
+    },
+    {
+      "key": "dynamic-memory",
+      "originals": [
+        "动态内存"
+      ],
+      "cat": "动态内存",
+      "example": "动态内存是在运行期间申请并按语言规则释放或回收的存储空间。"
+    },
+    {
+      "key": "linked-list",
+      "originals": [
+        "链表"
+      ],
+      "cat": "链表",
+      "example": "链表由节点组成，每个节点保存数据和连接其他节点的引用或指针。"
+    },
+    {
+      "key": "stack",
+      "originals": [
+        "堆栈"
+      ],
+      "cat": "堆栈",
+      "example": "栈遵循后进先出规则；程序调用栈还用于组织函数调用的执行状态。"
+    },
+    {
+      "key": "queue",
+      "originals": [
+        "队列"
+      ],
+      "cat": "队列",
+      "example": "队列遵循先进先出规则。"
+    },
+    {
+      "key": "binary-tree",
+      "originals": [
+        "二叉树"
+      ],
+      "cat": "二叉树",
+      "example": "二叉树的每个节点最多具有两个子节点。"
+    },
+    {
+      "key": "recursion",
+      "originals": [
+        "递归"
+      ],
+      "cat": "递归",
+      "example": "递归通过函数调用自身或间接调用自身解决规模更小的同类问题。"
+    },
+    {
+      "key": "base-case",
+      "originals": [
+        "base case",
+        "基线条件"
+      ],
+      "cat": "base case / 基线条件",
+      "example": "基线条件是不再递归调用而能直接给出结果的条件。"
+    },
+    {
+      "key": "thread",
+      "originals": [
+        "线程"
+      ],
+      "cat": "线程",
+      "example": "线程是进程中的执行单元，多线程可以并发执行任务。"
+    },
+    {
+      "key": "network",
+      "originals": [
+        "网络编程"
+      ],
+      "cat": "网络编程",
+      "example": "网络编程通过通信协议在不同进程或主机之间交换数据。"
+    },
+    {
+      "key": "reflection",
+      "originals": [
+        "反射"
+      ],
+      "cat": "反射",
+      "example": "反射允许程序在运行时检查类型信息，并在语言支持的范围内访问成员。"
+    },
+    {
+      "key": "design-pattern",
+      "originals": [
+        "设计模式"
+      ],
+      "cat": "设计模式",
+      "example": "设计模式总结常见软件设计问题的可复用解决思路。"
+    },
+    {
+      "key": "gc",
+      "originals": [
+        "内存回收",
+        "垃圾回收"
+      ],
+      "cat": "内存回收 / 垃圾回收",
+      "example": "垃圾回收自动识别并回收不再可达对象占用的内存，具体时机由运行时决定。"
+    },
+    {
+      "key": "compiler",
+      "originals": [
+        "编译器",
+        "解释器"
+      ],
+      "cat": "编译器 / 解释器",
+      "example": "编译器把源代码转换为目标表示；解释器执行源代码或中间表示。"
+    },
+    {
+      "key": "pseudocode",
+      "originals": [
+        "伪代码"
+      ],
+      "cat": "伪代码",
+      "example": "伪代码使用清晰的步骤表达算法，不要求遵守某一种语言的完整语法。"
+    },
+    {
+      "key": "flowchart",
+      "originals": [
+        "流程图"
+      ],
+      "cat": "流程图",
+      "example": "流程图使用约定图形和连线表达处理步骤、分支和控制流。"
+    }
+  ],
+  "style": "professional"
+}

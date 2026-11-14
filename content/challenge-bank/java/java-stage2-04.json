@@ -1,0 +1,422 @@
+{
+  "lessonId": "java-stage2-04",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s2-contract-not-kept-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "院子里的机器人铁也想要一块能上架子的名称，我们就让它认下了那份约定。它认得挺痛快，写也写了 —— 可编译器翻开一看，还是把变量拍下来了。\n\n修好之后，程序该印出这一行：\n\n```text\n铁：嘀嘀\n```\n\n它印东西那一下本身没写错，别去动 `System.out.println` 那一行。",
+      "brokenCode": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void say() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"铁\");\n        s.speak();\n    }\n}\n",
+      "referenceFix": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void speak() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"铁\");\n        s.speak();\n    }\n}\n",
+      "expectedOutput": "铁：嘀嘀",
+      "stdin": null,
+      "explanation": "编译器说的是 **`Robot is not abstract and does not override abstract method speak() in Speaker`** —— 「你认下了约定，可约定里点名要的那一手，我没在你身上找着」。\n\n这里有意思的地方是：我们明明**写了一张行为**，报错却说「没补上」。因为认下约定的规矩不是「写点像样的东西」，而是**照着约定的名头一字不差地补** —— 约定里写的是 `speak`，你补的这一手叫 `say`，在编译器眼里这是两件**互不相干**的事：约定的那一手仍是一片空白，你新写的那一手则是搭不上任何约定的散件。\n\n报错里那两个字 `abstract` 别被它唬住 —— 编译器用的是同一句现成的话，凡是「认下了却没补全」都这么念，跟我们上一课那张只画了一半的类定义共用一套说法。\n\n改法就一处：把 `say` 改成 `speak`（你要是舍不得 `say`，留着它、另写一手 `speak` 也行，只是 `say` 从此没人调用，我们劝你别留）。改完再看一眼 `main` 里那句 `s.speak();` —— 它一直没写错，是底下**没人接得住**它。",
+      "templateId": "java-s2-contract-not-kept",
+      "params": {
+        "robot": "铁",
+        "cry": "嘀嘀"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "8daa3f78a10ff260"
+      }
+    },
+    {
+      "id": "bank-java-s2-contract-not-kept-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "院子里的机器人阿铁也想要一块能上架子的名称，我们就让它认下了那份约定。它认得挺痛快，写也写了 —— 可编译器翻开一看，还是把变量拍下来了。\n\n修好之后，程序该印出这一行：\n\n```text\n阿铁：哔啵\n```\n\n它印东西那一下本身没写错，别去动 `System.out.println` 那一行。",
+      "brokenCode": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void say() {\n        System.out.println(name + \"：哔啵\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"阿铁\");\n        s.speak();\n    }\n}\n",
+      "referenceFix": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void speak() {\n        System.out.println(name + \"：哔啵\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"阿铁\");\n        s.speak();\n    }\n}\n",
+      "expectedOutput": "阿铁：哔啵",
+      "stdin": null,
+      "explanation": "编译器说的是 **`Robot is not abstract and does not override abstract method speak() in Speaker`** —— 「你认下了约定，可约定里点名要的那一手，我没在你身上找着」。\n\n这里有意思的地方是：我们明明**写了一张行为**，报错却说「没补上」。因为认下约定的规矩不是「写点像样的东西」，而是**照着约定的名头一字不差地补** —— 约定里写的是 `speak`，你补的这一手叫 `say`，在编译器眼里这是两件**互不相干**的事：约定的那一手仍是一片空白，你新写的那一手则是搭不上任何约定的散件。\n\n报错里那两个字 `abstract` 别被它唬住 —— 编译器用的是同一句现成的话，凡是「认下了却没补全」都这么念，跟我们上一课那张只画了一半的类定义共用一套说法。\n\n改法就一处：把 `say` 改成 `speak`（你要是舍不得 `say`，留着它、另写一手 `speak` 也行，只是 `say` 从此没人调用，我们劝你别留）。改完再看一眼 `main` 里那句 `s.speak();` —— 它一直没写错，是底下**没人接得住**它。",
+      "templateId": "java-s2-contract-not-kept",
+      "params": {
+        "robot": "阿铁",
+        "cry": "哔啵"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "6e49e200a34b2b13"
+      }
+    },
+    {
+      "id": "bank-java-s2-contract-vs-parent-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "这次我们写了张新类定义，想让院子里的铁照着约定补一手 —— 结果编译器连第一道门都没让它过，报错里提到「这儿不该有这个东西」。\n\n修好之后，程序该印出这一行：\n\n```text\n铁：嘀嘀\n```\n\n那份约定我们一个字都不想动，问题只出在**类定义自己开头那一句**。",
+      "brokenCode": "interface Speaker {\n    void speak();\n}\n\nclass Robot extends Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void speak() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"铁\");\n        s.speak();\n    }\n}\n",
+      "referenceFix": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void speak() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"铁\");\n        s.speak();\n    }\n}\n",
+      "expectedOutput": "铁：嘀嘀",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`no interface expected here`**，直译过来是「这儿不该出现一份约定」。\n\n这句话的位置很值钱：它指的不是约定那半边，也不是补的那一手，而是**类定义开头那一句**。一读就明白 —— 我们在那句里写的是 `extends`，而 `extends` 这个词是要用来接**长辈**的（上一课那张只画了一半的类定义，或者更早那些类定义）。约定不是长辈：它不在家谱上，也不给谁传家当，它只是一份**写满了名头的清单**。拿着 `extends` 去接一份清单，编译器当然要问一句「这儿怎么冒出个约定来？」\n\n记住这个分工：`extends` 后面跟**长辈**，`implements` 后面跟**约定**（可以跟好几份，用逗号隔开）；两边都有的时候，先 `extends` 后 `implements`，前后不能颠倒。\n\n改法就一个词：把 `extends` 换成 `implements`。补的那一手一个字都不用动 —— 它本来就没写错。",
+      "templateId": "java-s2-contract-vs-parent",
+      "params": {
+        "robot": "铁",
+        "cry": "嘀嘀"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "1bfbb4ccf5e8d732"
+      }
+    },
+    {
+      "id": "bank-java-s2-contract-vs-parent-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "这次我们写了张新类定义，想让院子里的阿铁照着约定补一手 —— 结果编译器连第一道门都没让它过，报错里提到「这儿不该有这个东西」。\n\n修好之后，程序该印出这一行：\n\n```text\n阿铁：哔啵\n```\n\n那份约定我们一个字都不想动，问题只出在**类定义自己开头那一句**。",
+      "brokenCode": "interface Speaker {\n    void speak();\n}\n\nclass Robot extends Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void speak() {\n        System.out.println(name + \"：哔啵\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"阿铁\");\n        s.speak();\n    }\n}\n",
+      "referenceFix": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void speak() {\n        System.out.println(name + \"：哔啵\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"阿铁\");\n        s.speak();\n    }\n}\n",
+      "expectedOutput": "阿铁：哔啵",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`no interface expected here`**，直译过来是「这儿不该出现一份约定」。\n\n这句话的位置很值钱：它指的不是约定那半边，也不是补的那一手，而是**类定义开头那一句**。一读就明白 —— 我们在那句里写的是 `extends`，而 `extends` 这个词是要用来接**长辈**的（上一课那张只画了一半的类定义，或者更早那些类定义）。约定不是长辈：它不在家谱上，也不给谁传家当，它只是一份**写满了名头的清单**。拿着 `extends` 去接一份清单，编译器当然要问一句「这儿怎么冒出个约定来？」\n\n记住这个分工：`extends` 后面跟**长辈**，`implements` 后面跟**约定**（可以跟好几份，用逗号隔开）；两边都有的时候，先 `extends` 后 `implements`，前后不能颠倒。\n\n改法就一个词：把 `extends` 换成 `implements`。补的那一手一个字都不用动 —— 它本来就没写错。",
+      "templateId": "java-s2-contract-vs-parent",
+      "params": {
+        "robot": "阿铁",
+        "cry": "哔啵"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "2ea436ae601452bf"
+      }
+    },
+    {
+      "id": "bank-java-s2-default-helper-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "这一回我们要让「约定里**写好了的**那一手」和「自己**盖掉重画的那版**」同台演一遍。\n\n要立的东西：\n\n- 一份约定 `Greeter`：一手 `void greet();`（**只有名头**、没有身子），**外加一手 `default` 的 `greetMany()`** —— 它带身子，身子就是**连着调用 2 遍 `greet`**。\n- 类定义 `Cat`：认下这份约定，**只补 `greet`** —— 印 **名字 + `：`**。`greetMany` 它**白拿**，自己一个字都不写。\n- 类定义 `Robot`：认下这份约定，补 `greet` —— 印 **名字 + `：` + 它平时那声叫**；**另外把 `greetMany` 盖成自己那版** —— 它嫌吵，只调用**一遍**。\n\n`main` 里这么走：读一个数（调用几轮）。每一轮先把对象那块名称调用一次 `greetMany()`，再把机器那块名称调用一次 `greetMany()`。\n\n所以每一轮里，对象该连着印 **2** 行，机器只印 **一行**。\n\n两条叮嘱：白拿的那一手**不许在 `Cat` 里再写一遍**（写了就不叫白拿了）；盖掉的那一手头上照旧挂 `@Override`。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n张三：\n张三：\n铁：嘀嘀\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Greeter {\n\n}\n\nclass Cat implements Greeter {\n\n}\n\nclass Robot implements Greeter {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Greeter {\n    void greet();\n\n    default void greetMany() {\n        for (int i = 0; i < 2; i++) {\n            greet();\n        }\n    }\n}\n\nclass Cat implements Greeter {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Greeter {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n\n    @Override\n    public void greetMany() {\n        greet();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Greeter cat = new Cat(\"张三\");\n        Greeter robot = new Robot(\"铁\");\n        for (int r = 0; r < rounds; r++) {\n            cat.greetMany();\n            robot.greetMany();\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n张三：\n铁：嘀嘀\n张三：\n张三：\n铁：嘀嘀",
+      "stdin": "2\n",
+      "explanation": "本题的关节是 `default` 那一手 —— 约定里**第一次**出现了「带着身子」的方法。\n\n**一、`default` 是什么意思。** 约定上列着的名头，平时**一律只有名头**，谁认下谁自己补。`default` 是例外：这一手**在约定里就把身子写好了**，认下它的人**不用补**，白拿。\n\n**二、白拿的那边一个字都不写。** `Cat` 里只该有 `greet` 一手 —— `greetMany` 是它从未写过的，可你照样调用得动，调用着调用着就把 `greet` 连着调用了 2 遍。这两层是**分工**的：约定里写好的那一手负责「调用几遍」，`Cat` 自己补的那一手负责「这一次是什么样」。\n\n**三、嫌吵的就自己盖一版。** `Robot` 把 `greetMany` 盖成了自己那版：只说一遍。盖掉之后，**约定里那版对它就不作数了** —— 引用的是它自己这一版。头上的 `@Override` 照旧挂着，编译器会替你盯着「名头对不对得上」。\n\n**四、为什么大家愿意白拿。** 往后院里再添三个会出声的，只要它们补一手 `greet`，「连着调用好几遍」这件事**一处都不用再写**。约定把「怎么调用」钉死一处，各对象只写「自己那一次」—— 这就是它比上一课那张半张类定义更省心的地方。\n\n注意一处：`default` 那一手也是**谁都能调用**的，认下它的人盖那一手时别把 `public` 漏了，不然又是 `attempting to assign weaker access privileges` 那句老话。",
+      "templateId": "java-s2-default-helper",
+      "params": {
+        "cat": "张三",
+        "robot": "铁",
+        "cry": "嘀嘀",
+        "times": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "e2dc740dd3307ce3"
+      }
+    },
+    {
+      "id": "bank-java-s2-default-helper-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "这一回我们要让「约定里**写好了的**那一手」和「自己**盖掉重画的那版**」同台演一遍。\n\n要立的东西：\n\n- 一份约定 `Greeter`：一手 `void greet();`（**只有名头**、没有身子），**外加一手 `default` 的 `greetMany()`** —— 它带身子，身子就是**连着调用 3 遍 `greet`**。\n- 类定义 `Cat`：认下这份约定，**只补 `greet`** —— 印 **名字 + `：`**。`greetMany` 它**白拿**，自己一个字都不写。\n- 类定义 `Robot`：认下这份约定，补 `greet` —— 印 **名字 + `：` + 它平时那声叫**；**另外把 `greetMany` 盖成自己那版** —— 它嫌吵，只调用**一遍**。\n\n`main` 里这么走：读一个数（调用几轮）。每一轮先把对象那块名称调用一次 `greetMany()`，再把机器那块名称调用一次 `greetMany()`。\n\n所以每一轮里，对象该连着印 **3** 行，机器只印 **一行**。\n\n两条叮嘱：白拿的那一手**不许在 `Cat` 里再写一遍**（写了就不叫白拿了）；盖掉的那一手头上照旧挂 `@Override`。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n张三：\n张三：\n张三：\n铁：哔啵\n张三：\n张三：\n张三：\n铁：哔啵\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Greeter {\n\n}\n\nclass Cat implements Greeter {\n\n}\n\nclass Robot implements Greeter {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Greeter {\n    void greet();\n\n    default void greetMany() {\n        for (int i = 0; i < 3; i++) {\n            greet();\n        }\n    }\n}\n\nclass Cat implements Greeter {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Greeter {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：哔啵\");\n    }\n\n    @Override\n    public void greetMany() {\n        greet();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Greeter cat = new Cat(\"张三\");\n        Greeter robot = new Robot(\"铁\");\n        for (int r = 0; r < rounds; r++) {\n            cat.greetMany();\n            robot.greetMany();\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n张三：\n张三：\n铁：哔啵",
+      "stdin": "1\n",
+      "explanation": "本题的关节是 `default` 那一手 —— 约定里**第一次**出现了「带着身子」的方法。\n\n**一、`default` 是什么意思。** 约定上列着的名头，平时**一律只有名头**，谁认下谁自己补。`default` 是例外：这一手**在约定里就把身子写好了**，认下它的人**不用补**，白拿。\n\n**二、白拿的那边一个字都不写。** `Cat` 里只该有 `greet` 一手 —— `greetMany` 是它从未写过的，可你照样调用得动，调用着调用着就把 `greet` 连着调用了 3 遍。这两层是**分工**的：约定里写好的那一手负责「调用几遍」，`Cat` 自己补的那一手负责「这一次是什么样」。\n\n**三、嫌吵的就自己盖一版。** `Robot` 把 `greetMany` 盖成了自己那版：只说一遍。盖掉之后，**约定里那版对它就不作数了** —— 引用的是它自己这一版。头上的 `@Override` 照旧挂着，编译器会替你盯着「名头对不对得上」。\n\n**四、为什么大家愿意白拿。** 往后院里再添三个会出声的，只要它们补一手 `greet`，「连着调用好几遍」这件事**一处都不用再写**。约定把「怎么调用」钉死一处，各对象只写「自己那一次」—— 这就是它比上一课那张半张类定义更省心的地方。\n\n注意一处：`default` 那一手也是**谁都能调用**的，认下它的人盖那一手时别把 `public` 漏了，不然又是 `attempting to assign weaker access privileges` 那句老话。",
+      "templateId": "java-s2-default-helper",
+      "params": {
+        "cat": "张三",
+        "robot": "铁",
+        "cry": "哔啵",
+        "times": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "442a3657bd81ef36"
+      }
+    },
+    {
+      "id": "bank-java-s2-default-helper-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "这一回我们要让「约定里**写好了的**那一手」和「自己**盖掉重画的那版**」同台演一遍。\n\n要立的东西：\n\n- 一份约定 `Greeter`：一手 `void greet();`（**只有名头**、没有身子），**外加一手 `default` 的 `greetMany()`** —— 它带身子，身子就是**连着调用 2 遍 `greet`**。\n- 类定义 `Cat`：认下这份约定，**只补 `greet`** —— 印 **名字 + `：`**。`greetMany` 它**白拿**，自己一个字都不写。\n- 类定义 `Robot`：认下这份约定，补 `greet` —— 印 **名字 + `：` + 它平时那声叫**；**另外把 `greetMany` 盖成自己那版** —— 它嫌吵，只调用**一遍**。\n\n`main` 里这么走：读一个数（调用几轮）。每一轮先把对象那块名称调用一次 `greetMany()`，再把机器那块名称调用一次 `greetMany()`。\n\n所以每一轮里，对象该连着印 **2** 行，机器只印 **一行**。\n\n两条叮嘱：白拿的那一手**不许在 `Cat` 里再写一遍**（写了就不叫白拿了）；盖掉的那一手头上照旧挂 `@Override`。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n张三：\n张三：\n阿铁：哔啵\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Greeter {\n\n}\n\nclass Cat implements Greeter {\n\n}\n\nclass Robot implements Greeter {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Greeter {\n    void greet();\n\n    default void greetMany() {\n        for (int i = 0; i < 2; i++) {\n            greet();\n        }\n    }\n}\n\nclass Cat implements Greeter {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Greeter {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：哔啵\");\n    }\n\n    @Override\n    public void greetMany() {\n        greet();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Greeter cat = new Cat(\"张三\");\n        Greeter robot = new Robot(\"阿铁\");\n        for (int r = 0; r < rounds; r++) {\n            cat.greetMany();\n            robot.greetMany();\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n张三：\n阿铁：哔啵\n张三：\n张三：\n阿铁：哔啵",
+      "stdin": "2\n",
+      "explanation": "本题的关节是 `default` 那一手 —— 约定里**第一次**出现了「带着身子」的方法。\n\n**一、`default` 是什么意思。** 约定上列着的名头，平时**一律只有名头**，谁认下谁自己补。`default` 是例外：这一手**在约定里就把身子写好了**，认下它的人**不用补**，白拿。\n\n**二、白拿的那边一个字都不写。** `Cat` 里只该有 `greet` 一手 —— `greetMany` 是它从未写过的，可你照样调用得动，调用着调用着就把 `greet` 连着调用了 2 遍。这两层是**分工**的：约定里写好的那一手负责「调用几遍」，`Cat` 自己补的那一手负责「这一次是什么样」。\n\n**三、嫌吵的就自己盖一版。** `Robot` 把 `greetMany` 盖成了自己那版：只说一遍。盖掉之后，**约定里那版对它就不作数了** —— 引用的是它自己这一版。头上的 `@Override` 照旧挂着，编译器会替你盯着「名头对不对得上」。\n\n**四、为什么大家愿意白拿。** 往后院里再添三个会出声的，只要它们补一手 `greet`，「连着调用好几遍」这件事**一处都不用再写**。约定把「怎么调用」钉死一处，各对象只写「自己那一次」—— 这就是它比上一课那张半张类定义更省心的地方。\n\n注意一处：`default` 那一手也是**谁都能调用**的，认下它的人盖那一手时别把 `public` 漏了，不然又是 `attempting to assign weaker access privileges` 那句老话。",
+      "templateId": "java-s2-default-helper",
+      "params": {
+        "cat": "张三",
+        "robot": "阿铁",
+        "cry": "哔啵",
+        "times": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "087b98d8e6f4f900"
+      }
+    },
+    {
+      "id": "bank-java-s2-default-helper-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "这一回我们要让「约定里**写好了的**那一手」和「自己**盖掉重画的那版**」同台演一遍。\n\n要立的东西：\n\n- 一份约定 `Greeter`：一手 `void greet();`（**只有名头**、没有身子），**外加一手 `default` 的 `greetMany()`** —— 它带身子，身子就是**连着调用 3 遍 `greet`**。\n- 类定义 `Cat`：认下这份约定，**只补 `greet`** —— 印 **名字 + `：`**。`greetMany` 它**白拿**，自己一个字都不写。\n- 类定义 `Robot`：认下这份约定，补 `greet` —— 印 **名字 + `：` + 它平时那声叫**；**另外把 `greetMany` 盖成自己那版** —— 它嫌吵，只调用**一遍**。\n\n`main` 里这么走：读一个数（调用几轮）。每一轮先把对象那块名称调用一次 `greetMany()`，再把机器那块名称调用一次 `greetMany()`。\n\n所以每一轮里，对象该连着印 **3** 行，机器只印 **一行**。\n\n两条叮嘱：白拿的那一手**不许在 `Cat` 里再写一遍**（写了就不叫白拿了）；盖掉的那一手头上照旧挂 `@Override`。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n李四：\n李四：\n李四：\n铁：嘀嘀\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Greeter {\n\n}\n\nclass Cat implements Greeter {\n\n}\n\nclass Robot implements Greeter {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Greeter {\n    void greet();\n\n    default void greetMany() {\n        for (int i = 0; i < 3; i++) {\n            greet();\n        }\n    }\n}\n\nclass Cat implements Greeter {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Greeter {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n\n    @Override\n    public void greetMany() {\n        greet();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Greeter cat = new Cat(\"李四\");\n        Greeter robot = new Robot(\"铁\");\n        for (int r = 0; r < rounds; r++) {\n            cat.greetMany();\n            robot.greetMany();\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n李四：\n李四：\n铁：嘀嘀\n李四：\n李四：\n李四：\n铁：嘀嘀",
+      "stdin": "2\n",
+      "explanation": "本题的关节是 `default` 那一手 —— 约定里**第一次**出现了「带着身子」的方法。\n\n**一、`default` 是什么意思。** 约定上列着的名头，平时**一律只有名头**，谁认下谁自己补。`default` 是例外：这一手**在约定里就把身子写好了**，认下它的人**不用补**，白拿。\n\n**二、白拿的那边一个字都不写。** `Cat` 里只该有 `greet` 一手 —— `greetMany` 是它从未写过的，可你照样调用得动，调用着调用着就把 `greet` 连着调用了 3 遍。这两层是**分工**的：约定里写好的那一手负责「调用几遍」，`Cat` 自己补的那一手负责「这一次是什么样」。\n\n**三、嫌吵的就自己盖一版。** `Robot` 把 `greetMany` 盖成了自己那版：只说一遍。盖掉之后，**约定里那版对它就不作数了** —— 引用的是它自己这一版。头上的 `@Override` 照旧挂着，编译器会替你盯着「名头对不对得上」。\n\n**四、为什么大家愿意白拿。** 往后院里再添三个会出声的，只要它们补一手 `greet`，「连着调用好几遍」这件事**一处都不用再写**。约定把「怎么调用」钉死一处，各对象只写「自己那一次」—— 这就是它比上一课那张半张类定义更省心的地方。\n\n注意一处：`default` 那一手也是**谁都能调用**的，认下它的人盖那一手时别把 `public` 漏了，不然又是 `attempting to assign weaker access privileges` 那句老话。",
+      "templateId": "java-s2-default-helper",
+      "params": {
+        "cat": "李四",
+        "robot": "铁",
+        "cry": "嘀嘀",
+        "times": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "9f54a87afe9d89f0"
+      }
+    },
+    {
+      "id": "bank-java-s2-default-helper-012",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "这一回我们要让「约定里**写好了的**那一手」和「自己**盖掉重画的那版**」同台演一遍。\n\n要立的东西：\n\n- 一份约定 `Greeter`：一手 `void greet();`（**只有名头**、没有身子），**外加一手 `default` 的 `greetMany()`** —— 它带身子，身子就是**连着调用 2 遍 `greet`**。\n- 类定义 `Cat`：认下这份约定，**只补 `greet`** —— 印 **名字 + `：`**。`greetMany` 它**白拿**，自己一个字都不写。\n- 类定义 `Robot`：认下这份约定，补 `greet` —— 印 **名字 + `：` + 它平时那声叫**；**另外把 `greetMany` 盖成自己那版** —— 它嫌吵，只调用**一遍**。\n\n`main` 里这么走：读一个数（调用几轮）。每一轮先把对象那块名称调用一次 `greetMany()`，再把机器那块名称调用一次 `greetMany()`。\n\n所以每一轮里，对象该连着印 **2** 行，机器只印 **一行**。\n\n两条叮嘱：白拿的那一手**不许在 `Cat` 里再写一遍**（写了就不叫白拿了）；盖掉的那一手头上照旧挂 `@Override`。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n李四：\n李四：\n阿铁：嘀嘀\n李四：\n李四：\n阿铁：嘀嘀\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Greeter {\n\n}\n\nclass Cat implements Greeter {\n\n}\n\nclass Robot implements Greeter {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Greeter {\n    void greet();\n\n    default void greetMany() {\n        for (int i = 0; i < 2; i++) {\n            greet();\n        }\n    }\n}\n\nclass Cat implements Greeter {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Greeter {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n\n    @Override\n    public void greetMany() {\n        greet();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Greeter cat = new Cat(\"李四\");\n        Greeter robot = new Robot(\"阿铁\");\n        for (int r = 0; r < rounds; r++) {\n            cat.greetMany();\n            robot.greetMany();\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n李四：\n阿铁：嘀嘀",
+      "stdin": "1\n",
+      "explanation": "本题的关节是 `default` 那一手 —— 约定里**第一次**出现了「带着身子」的方法。\n\n**一、`default` 是什么意思。** 约定上列着的名头，平时**一律只有名头**，谁认下谁自己补。`default` 是例外：这一手**在约定里就把身子写好了**，认下它的人**不用补**，白拿。\n\n**二、白拿的那边一个字都不写。** `Cat` 里只该有 `greet` 一手 —— `greetMany` 是它从未写过的，可你照样调用得动，调用着调用着就把 `greet` 连着调用了 2 遍。这两层是**分工**的：约定里写好的那一手负责「调用几遍」，`Cat` 自己补的那一手负责「这一次是什么样」。\n\n**三、嫌吵的就自己盖一版。** `Robot` 把 `greetMany` 盖成了自己那版：只说一遍。盖掉之后，**约定里那版对它就不作数了** —— 引用的是它自己这一版。头上的 `@Override` 照旧挂着，编译器会替你盯着「名头对不对得上」。\n\n**四、为什么大家愿意白拿。** 往后院里再添三个会出声的，只要它们补一手 `greet`，「连着调用好几遍」这件事**一处都不用再写**。约定把「怎么调用」钉死一处，各对象只写「自己那一次」—— 这就是它比上一课那张半张类定义更省心的地方。\n\n注意一处：`default` 那一手也是**谁都能调用**的，认下它的人盖那一手时别把 `public` 漏了，不然又是 `attempting to assign weaker access privileges` 那句老话。",
+      "templateId": "java-s2-default-helper",
+      "params": {
+        "cat": "李四",
+        "robot": "阿铁",
+        "cry": "嘀嘀",
+        "times": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "6a0f80d5d25e92a5"
+      }
+    },
+    {
+      "id": "bank-java-s2-default-helper-015",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "这一回我们要让「约定里**写好了的**那一手」和「自己**盖掉重画的那版**」同台演一遍。\n\n要立的东西：\n\n- 一份约定 `Greeter`：一手 `void greet();`（**只有名头**、没有身子），**外加一手 `default` 的 `greetMany()`** —— 它带身子，身子就是**连着调用 3 遍 `greet`**。\n- 类定义 `Cat`：认下这份约定，**只补 `greet`** —— 印 **名字 + `：`**。`greetMany` 它**白拿**，自己一个字都不写。\n- 类定义 `Robot`：认下这份约定，补 `greet` —— 印 **名字 + `：` + 它平时那声叫**；**另外把 `greetMany` 盖成自己那版** —— 它嫌吵，只调用**一遍**。\n\n`main` 里这么走：读一个数（调用几轮）。每一轮先把对象那块名称调用一次 `greetMany()`，再把机器那块名称调用一次 `greetMany()`。\n\n所以每一轮里，对象该连着印 **3** 行，机器只印 **一行**。\n\n两条叮嘱：白拿的那一手**不许在 `Cat` 里再写一遍**（写了就不叫白拿了）；盖掉的那一手头上照旧挂 `@Override`。\n\n比如程序的输入是\n\n2\n\n程序就要返回\n\n李四：\n李四：\n李四：\n阿铁：哔啵\n李四：\n李四：\n李四：\n阿铁：哔啵\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Greeter {\n\n}\n\nclass Cat implements Greeter {\n\n}\n\nclass Robot implements Greeter {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Greeter {\n    void greet();\n\n    default void greetMany() {\n        for (int i = 0; i < 3; i++) {\n            greet();\n        }\n    }\n}\n\nclass Cat implements Greeter {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Greeter {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void greet() {\n        System.out.println(name + \"：哔啵\");\n    }\n\n    @Override\n    public void greetMany() {\n        greet();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Greeter cat = new Cat(\"李四\");\n        Greeter robot = new Robot(\"阿铁\");\n        for (int r = 0; r < rounds; r++) {\n            cat.greetMany();\n            robot.greetMany();\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n李四：\n李四：\n阿铁：哔啵",
+      "stdin": "1\n",
+      "explanation": "本题的关节是 `default` 那一手 —— 约定里**第一次**出现了「带着身子」的方法。\n\n**一、`default` 是什么意思。** 约定上列着的名头，平时**一律只有名头**，谁认下谁自己补。`default` 是例外：这一手**在约定里就把身子写好了**，认下它的人**不用补**，白拿。\n\n**二、白拿的那边一个字都不写。** `Cat` 里只该有 `greet` 一手 —— `greetMany` 是它从未写过的，可你照样调用得动，调用着调用着就把 `greet` 连着调用了 3 遍。这两层是**分工**的：约定里写好的那一手负责「调用几遍」，`Cat` 自己补的那一手负责「这一次是什么样」。\n\n**三、嫌吵的就自己盖一版。** `Robot` 把 `greetMany` 盖成了自己那版：只说一遍。盖掉之后，**约定里那版对它就不作数了** —— 引用的是它自己这一版。头上的 `@Override` 照旧挂着，编译器会替你盯着「名头对不对得上」。\n\n**四、为什么大家愿意白拿。** 往后院里再添三个会出声的，只要它们补一手 `greet`，「连着调用好几遍」这件事**一处都不用再写**。约定把「怎么调用」钉死一处，各对象只写「自己那一次」—— 这就是它比上一课那张半张类定义更省心的地方。\n\n注意一处：`default` 那一手也是**谁都能调用**的，认下它的人盖那一手时别把 `public` 漏了，不然又是 `attempting to assign weaker access privileges` 那句老话。",
+      "templateId": "java-s2-default-helper",
+      "params": {
+        "cat": "李四",
+        "robot": "阿铁",
+        "cry": "哔啵",
+        "times": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "4e95c73fdcd68bd8"
+      }
+    },
+    {
+      "id": "bank-java-s2-iface-weaker-access-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们立了一份约定，也让机器人认下了它；那一手也老老实实写出来了 —— 可编译器还是把变量拍下来，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n铁：嘀嘀\n```\n\n约定那半边我们一个字都不想动，问题出在**认下约定的那半边**。",
+      "brokenCode": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"铁\");\n        s.speak();\n    }\n}\n",
+      "referenceFix": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void speak() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"铁\");\n        s.speak();\n    }\n}\n",
+      "expectedOutput": "铁：嘀嘀",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`speak() in Robot cannot implement speak() in Speaker`**，底下还跟了一句 **`attempting to assign weaker access privileges; was public`** —— 念起来是「约定上写的可是**谁都能调用**这一手，你补的这版怎么缩手缩脚的？」\n\n这是最容易走岔的一处：看报错里有 `speak` 两个字，我们第一反应往往是「是不是名字打错了」—— 不是。名字一个字都没错，错的是**招牌**。\n\n为什么约定这么较真？约定是立给**所有人**看的，所以约定上列着的每一手，天生就带着一块「**谁都能调用**」的招牌（`public`）。你补的时候漏了它，等于悄悄把这块招牌摘了 —— 同一件事，在约定那边是「谁都能调用」，到你手里变成「只有自家院子里能调用」，编译器不许你把范围改小，宁可先不让你过。\n\n改法就一个字：在 `void speak()` 前面加上 `public`。加完再想一层 —— 这是**约定**特有的规矩：认得下的东西，就得按它写的招牌来。往后只要撞上 `attempting to assign weaker access privileges`，先别怀疑代码写错了，先看**哪一手的招牌比别人小**。",
+      "templateId": "java-s2-iface-weaker-access",
+      "params": {
+        "robot": "铁",
+        "cry": "嘀嘀"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.534Z",
+        "hash": "a54c97f8888aba42"
+      }
+    },
+    {
+      "id": "bank-java-s2-iface-weaker-access-003",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们立了一份约定，也让机器人认下了它；那一手也老老实实写出来了 —— 可编译器还是把变量拍下来，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n阿铁：哔啵\n```\n\n约定那半边我们一个字都不想动，问题出在**认下约定的那半边**。",
+      "brokenCode": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"：哔啵\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"阿铁\");\n        s.speak();\n    }\n}\n",
+      "referenceFix": "interface Speaker {\n    void speak();\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    public void speak() {\n        System.out.println(name + \"：哔啵\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Speaker s = new Robot(\"阿铁\");\n        s.speak();\n    }\n}\n",
+      "expectedOutput": "阿铁：哔啵",
+      "stdin": null,
+      "explanation": "编译器的原话是 **`speak() in Robot cannot implement speak() in Speaker`**，底下还跟了一句 **`attempting to assign weaker access privileges; was public`** —— 念起来是「约定上写的可是**谁都能调用**这一手，你补的这版怎么缩手缩脚的？」\n\n这是最容易走岔的一处：看报错里有 `speak` 两个字，我们第一反应往往是「是不是名字打错了」—— 不是。名字一个字都没错，错的是**招牌**。\n\n为什么约定这么较真？约定是立给**所有人**看的，所以约定上列着的每一手，天生就带着一块「**谁都能调用**」的招牌（`public`）。你补的时候漏了它，等于悄悄把这块招牌摘了 —— 同一件事，在约定那边是「谁都能调用」，到你手里变成「只有自家院子里能调用」，编译器不许你把范围改小，宁可先不让你过。\n\n改法就一个字：在 `void speak()` 前面加上 `public`。加完再想一层 —— 这是**约定**特有的规矩：认得下的东西，就得按它写的招牌来。往后只要撞上 `attempting to assign weaker access privileges`，先别怀疑代码写错了，先看**哪一手的招牌比别人小**。",
+      "templateId": "java-s2-iface-weaker-access",
+      "params": {
+        "robot": "阿铁",
+        "cry": "哔啵"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.535Z",
+        "hash": "431644e8db534d6b"
+      }
+    },
+    {
+      "id": "bank-java-s2-parade-by-contract-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "院子里的两个 —— 一个对象、一台机器 —— 我们要让它们**同台演一遍**：名称一律写 `Speaker`，两个都装进同一排名称，挨个调用出声。\n\n要立的东西：\n\n- 一份约定 `Speaker`：里面就一手 `void speak();`（只有名头、没有身子）。\n- 类定义 `Cat`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：`**。\n- 类定义 `Robot`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：` + 它平时那声叫**。\n\n程序的输入是**一个数**：调用几轮。每一轮从头到尾把两个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它手里是谁 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n张三：\n铁：嘀嘀\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Speaker {\n\n}\n\nclass Cat implements Speaker {\n\n}\n\nclass Robot implements Speaker {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Speaker {\n    void speak();\n}\n\nclass Cat implements Speaker {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Speaker[] crowd = { new Cat(\"张三\"), new Robot(\"铁\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Speaker pet : crowd) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n铁：嘀嘀\n张三：\n铁：嘀嘀",
+      "stdin": "2\n",
+      "explanation": "本题的关节在「**认下约定**」这四个字上。\n\n**一、约定那一手只有名头。** `void speak();` 用**分号收尾**，后面**不能**跟花括号 —— 跟上了就不是约定了，那是「写好了的一手」，编译器会当成别的东西看。\n\n**二、补的时候招牌不能小。** 两张类定义里补的两手都得写成 `public void speak()`。约定上的名头天生是**谁都能调用**的，你要是漏了 `public`，编译器会说 `attempting to assign weaker access privileges` —— 它的意思不是「你写错了」，是「你把范围改小了，我不认」。\n\n**三、一句顶两句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道**手里是谁。Java 会照着**底下那个实例自己的类定义**去找这一手：是对象就、是机器就出它那声叫。\n\n这份省心正是约定最值钱的地方：**往后院里再添一个会出声的（哪怕是把水壶），这两个圈子一个字都不用改** —— 只要它认下 `Speaker`、自己补一版 `speak` 就行。\n\n外围那层圈子管「调用几轮」，内层管「一轮里挨个调用」，两层的收尾都别写错，不然印出来的**行数**就不对了。",
+      "templateId": "java-s2-parade-by-contract",
+      "params": {
+        "cat": "张三",
+        "robot": "铁",
+        "cry": "嘀嘀"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.535Z",
+        "hash": "48f54b1516594259"
+      }
+    },
+    {
+      "id": "bank-java-s2-parade-by-contract-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "院子里的两个 —— 一个对象、一台机器 —— 我们要让它们**同台演一遍**：名称一律写 `Speaker`，两个都装进同一排名称，挨个调用出声。\n\n要立的东西：\n\n- 一份约定 `Speaker`：里面就一手 `void speak();`（只有名头、没有身子）。\n- 类定义 `Cat`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：`**。\n- 类定义 `Robot`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：` + 它平时那声叫**。\n\n程序的输入是**一个数**：调用几轮。每一轮从头到尾把两个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它手里是谁 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n张三：\n铁：哔啵\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Speaker {\n\n}\n\nclass Cat implements Speaker {\n\n}\n\nclass Robot implements Speaker {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Speaker {\n    void speak();\n}\n\nclass Cat implements Speaker {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：哔啵\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Speaker[] crowd = { new Cat(\"张三\"), new Robot(\"铁\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Speaker pet : crowd) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n铁：哔啵\n张三：\n铁：哔啵\n张三：\n铁：哔啵",
+      "stdin": "3\n",
+      "explanation": "本题的关节在「**认下约定**」这四个字上。\n\n**一、约定那一手只有名头。** `void speak();` 用**分号收尾**，后面**不能**跟花括号 —— 跟上了就不是约定了，那是「写好了的一手」，编译器会当成别的东西看。\n\n**二、补的时候招牌不能小。** 两张类定义里补的两手都得写成 `public void speak()`。约定上的名头天生是**谁都能调用**的，你要是漏了 `public`，编译器会说 `attempting to assign weaker access privileges` —— 它的意思不是「你写错了」，是「你把范围改小了，我不认」。\n\n**三、一句顶两句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道**手里是谁。Java 会照着**底下那个实例自己的类定义**去找这一手：是对象就、是机器就出它那声叫。\n\n这份省心正是约定最值钱的地方：**往后院里再添一个会出声的（哪怕是把水壶），这两个圈子一个字都不用改** —— 只要它认下 `Speaker`、自己补一版 `speak` 就行。\n\n外围那层圈子管「调用几轮」，内层管「一轮里挨个调用」，两层的收尾都别写错，不然印出来的**行数**就不对了。",
+      "templateId": "java-s2-parade-by-contract",
+      "params": {
+        "cat": "张三",
+        "robot": "铁",
+        "cry": "哔啵"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.535Z",
+        "hash": "9bc08707df1ead35"
+      }
+    },
+    {
+      "id": "bank-java-s2-parade-by-contract-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "院子里的两个 —— 一个对象、一台机器 —— 我们要让它们**同台演一遍**：名称一律写 `Speaker`，两个都装进同一排名称，挨个调用出声。\n\n要立的东西：\n\n- 一份约定 `Speaker`：里面就一手 `void speak();`（只有名头、没有身子）。\n- 类定义 `Cat`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：`**。\n- 类定义 `Robot`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：` + 它平时那声叫**。\n\n程序的输入是**一个数**：调用几轮。每一轮从头到尾把两个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它手里是谁 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n张三：\n阿铁：哔啵\n张三：\n阿铁：哔啵\n张三：\n阿铁：哔啵\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Speaker {\n\n}\n\nclass Cat implements Speaker {\n\n}\n\nclass Robot implements Speaker {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Speaker {\n    void speak();\n}\n\nclass Cat implements Speaker {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：哔啵\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Speaker[] crowd = { new Cat(\"张三\"), new Robot(\"阿铁\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Speaker pet : crowd) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "张三：\n阿铁：哔啵",
+      "stdin": "1\n",
+      "explanation": "本题的关节在「**认下约定**」这四个字上。\n\n**一、约定那一手只有名头。** `void speak();` 用**分号收尾**，后面**不能**跟花括号 —— 跟上了就不是约定了，那是「写好了的一手」，编译器会当成别的东西看。\n\n**二、补的时候招牌不能小。** 两张类定义里补的两手都得写成 `public void speak()`。约定上的名头天生是**谁都能调用**的，你要是漏了 `public`，编译器会说 `attempting to assign weaker access privileges` —— 它的意思不是「你写错了」，是「你把范围改小了，我不认」。\n\n**三、一句顶两句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道**手里是谁。Java 会照着**底下那个实例自己的类定义**去找这一手：是对象就、是机器就出它那声叫。\n\n这份省心正是约定最值钱的地方：**往后院里再添一个会出声的（哪怕是把水壶），这两个圈子一个字都不用改** —— 只要它认下 `Speaker`、自己补一版 `speak` 就行。\n\n外围那层圈子管「调用几轮」，内层管「一轮里挨个调用」，两层的收尾都别写错，不然印出来的**行数**就不对了。",
+      "templateId": "java-s2-parade-by-contract",
+      "params": {
+        "cat": "张三",
+        "robot": "阿铁",
+        "cry": "哔啵"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.535Z",
+        "hash": "f093a4cfea71b404"
+      }
+    },
+    {
+      "id": "bank-java-s2-parade-by-contract-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "院子里的两个 —— 一个对象、一台机器 —— 我们要让它们**同台演一遍**：名称一律写 `Speaker`，两个都装进同一排名称，挨个调用出声。\n\n要立的东西：\n\n- 一份约定 `Speaker`：里面就一手 `void speak();`（只有名头、没有身子）。\n- 类定义 `Cat`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：`**。\n- 类定义 `Robot`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：` + 它平时那声叫**。\n\n程序的输入是**一个数**：调用几轮。每一轮从头到尾把两个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它手里是谁 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n李四：\n铁：嘀嘀\n李四：\n铁：嘀嘀\n李四：\n铁：嘀嘀\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Speaker {\n\n}\n\nclass Cat implements Speaker {\n\n}\n\nclass Robot implements Speaker {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Speaker {\n    void speak();\n}\n\nclass Cat implements Speaker {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Speaker[] crowd = { new Cat(\"李四\"), new Robot(\"铁\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Speaker pet : crowd) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n铁：嘀嘀\n李四：\n铁：嘀嘀",
+      "stdin": "2\n",
+      "explanation": "本题的关节在「**认下约定**」这四个字上。\n\n**一、约定那一手只有名头。** `void speak();` 用**分号收尾**，后面**不能**跟花括号 —— 跟上了就不是约定了，那是「写好了的一手」，编译器会当成别的东西看。\n\n**二、补的时候招牌不能小。** 两张类定义里补的两手都得写成 `public void speak()`。约定上的名头天生是**谁都能调用**的，你要是漏了 `public`，编译器会说 `attempting to assign weaker access privileges` —— 它的意思不是「你写错了」，是「你把范围改小了，我不认」。\n\n**三、一句顶两句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道**手里是谁。Java 会照着**底下那个实例自己的类定义**去找这一手：是对象就、是机器就出它那声叫。\n\n这份省心正是约定最值钱的地方：**往后院里再添一个会出声的（哪怕是把水壶），这两个圈子一个字都不用改** —— 只要它认下 `Speaker`、自己补一版 `speak` 就行。\n\n外围那层圈子管「调用几轮」，内层管「一轮里挨个调用」，两层的收尾都别写错，不然印出来的**行数**就不对了。",
+      "templateId": "java-s2-parade-by-contract",
+      "params": {
+        "cat": "李四",
+        "robot": "铁",
+        "cry": "嘀嘀"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.535Z",
+        "hash": "f0adf4bfef21541b"
+      }
+    },
+    {
+      "id": "bank-java-s2-parade-by-contract-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "院子里的两个 —— 一个对象、一台机器 —— 我们要让它们**同台演一遍**：名称一律写 `Speaker`，两个都装进同一排名称，挨个调用出声。\n\n要立的东西：\n\n- 一份约定 `Speaker`：里面就一手 `void speak();`（只有名头、没有身子）。\n- 类定义 `Cat`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：`**。\n- 类定义 `Robot`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：` + 它平时那声叫**。\n\n程序的输入是**一个数**：调用几轮。每一轮从头到尾把两个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它手里是谁 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n李四：\n阿铁：嘀嘀\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Speaker {\n\n}\n\nclass Cat implements Speaker {\n\n}\n\nclass Robot implements Speaker {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Speaker {\n    void speak();\n}\n\nclass Cat implements Speaker {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：嘀嘀\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Speaker[] crowd = { new Cat(\"李四\"), new Robot(\"阿铁\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Speaker pet : crowd) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n阿铁：嘀嘀\n李四：\n阿铁：嘀嘀\n李四：\n阿铁：嘀嘀",
+      "stdin": "3\n",
+      "explanation": "本题的关节在「**认下约定**」这四个字上。\n\n**一、约定那一手只有名头。** `void speak();` 用**分号收尾**，后面**不能**跟花括号 —— 跟上了就不是约定了，那是「写好了的一手」，编译器会当成别的东西看。\n\n**二、补的时候招牌不能小。** 两张类定义里补的两手都得写成 `public void speak()`。约定上的名头天生是**谁都能调用**的，你要是漏了 `public`，编译器会说 `attempting to assign weaker access privileges` —— 它的意思不是「你写错了」，是「你把范围改小了，我不认」。\n\n**三、一句顶两句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道**手里是谁。Java 会照着**底下那个实例自己的类定义**去找这一手：是对象就、是机器就出它那声叫。\n\n这份省心正是约定最值钱的地方：**往后院里再添一个会出声的（哪怕是把水壶），这两个圈子一个字都不用改** —— 只要它认下 `Speaker`、自己补一版 `speak` 就行。\n\n外围那层圈子管「调用几轮」，内层管「一轮里挨个调用」，两层的收尾都别写错，不然印出来的**行数**就不对了。",
+      "templateId": "java-s2-parade-by-contract",
+      "params": {
+        "cat": "李四",
+        "robot": "阿铁",
+        "cry": "嘀嘀"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.535Z",
+        "hash": "7edeccdbce387359"
+      }
+    },
+    {
+      "id": "bank-java-s2-parade-by-contract-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "院子里的两个 —— 一个对象、一台机器 —— 我们要让它们**同台演一遍**：名称一律写 `Speaker`，两个都装进同一排名称，挨个调用出声。\n\n要立的东西：\n\n- 一份约定 `Speaker`：里面就一手 `void speak();`（只有名头、没有身子）。\n- 类定义 `Cat`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：`**。\n- 类定义 `Robot`：**认下这份约定**，把 `speak` 补上 —— 印 **名字 + `：` + 它平时那声叫**。\n\n程序的输入是**一个数**：调用几轮。每一轮从头到尾把两个挨个调用一遍，一次一行。\n\n我们只写**一句** `pet.speak();`，写的时候压根不管它手里是谁 —— 各对象各样，交给它自己决定。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n李四：\n阿铁：哔啵\n李四：\n阿铁：哔啵\n李四：\n阿铁：哔啵\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Speaker {\n\n}\n\nclass Cat implements Speaker {\n\n}\n\nclass Robot implements Speaker {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Speaker {\n    void speak();\n}\n\nclass Cat implements Speaker {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\nclass Robot implements Speaker {\n    String name;\n\n    Robot(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：哔啵\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int rounds = sc.nextInt();\n        Speaker[] crowd = { new Cat(\"李四\"), new Robot(\"阿铁\") };\n        for (int r = 0; r < rounds; r++) {\n            for (Speaker pet : crowd) {\n                pet.speak();\n            }\n        }\n    }\n}\n",
+      "expectedOutput": "李四：\n阿铁：哔啵\n李四：\n阿铁：哔啵",
+      "stdin": "2\n",
+      "explanation": "本题的关节在「**认下约定**」这四个字上。\n\n**一、约定那一手只有名头。** `void speak();` 用**分号收尾**，后面**不能**跟花括号 —— 跟上了就不是约定了，那是「写好了的一手」，编译器会当成别的东西看。\n\n**二、补的时候招牌不能小。** 两张类定义里补的两手都得写成 `public void speak()`。约定上的名头天生是**谁都能调用**的，你要是漏了 `public`，编译器会说 `attempting to assign weaker access privileges` —— 它的意思不是「你写错了」，是「你把范围改小了，我不认」。\n\n**三、一句顶两句。** `main` 里那个圈子写的是 `pet.speak();` —— 写这一行的人**压根不知道**手里是谁。Java 会照着**底下那个实例自己的类定义**去找这一手：是对象就、是机器就出它那声叫。\n\n这份省心正是约定最值钱的地方：**往后院里再添一个会出声的（哪怕是把水壶），这两个圈子一个字都不用改** —— 只要它认下 `Speaker`、自己补一版 `speak` 就行。\n\n外围那层圈子管「调用几轮」，内层管「一轮里挨个调用」，两层的收尾都别写错，不然印出来的**行数**就不对了。",
+      "templateId": "java-s2-parade-by-contract",
+      "params": {
+        "cat": "李四",
+        "robot": "阿铁",
+        "cry": "哔啵"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.535Z",
+        "hash": "8b5ba58717793d6e"
+      }
+    },
+    {
+      "id": "bank-java-s2-two-contracts-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "上一节讲过：一个对象可以**一口气认下好几份**约定 —— 这回就让它真的当一回「**既能出声、又会走路**」的对象。\n\n要立的东西：\n\n- 约定 `Speaker`：一手 `void speak();`（只有名头）。\n- 约定 `Walker`：一手 `void walk(int laps);`（只有名头 —— 括号里那个 `laps` 是「走几圈」，称呼它的人得传入一个数）。\n- 类定义 `Cat`：**一口气认下这两份约定**（两名字中间用逗号隔开），两手都补上：\n  - `speak` 印 **名字 + `：`**；\n  - `walk` 印 **名字 + `绕工作区走了一圈`**，传入几圈就印**几行**。\n\n`main` 里这么走：读一个数（走几圈），生**一个**对象，然后给它两块名称 —— 一块写 `Speaker`、一块写 `Walker`，**两块名称底下保存的是同一个对象**。先拿出声那块名称调用一次 `speak`，再拿走路那块名称调用一次 `walk`，把那个数传入进去。\n\n对象就是这一个，别生两个。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n张三：\n张三绕工作区走了一圈\n张三绕工作区走了一圈\n张三绕工作区走了一圈\n张三绕工作区走了一圈\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Speaker {\n\n}\n\ninterface Walker {\n\n}\n\nclass Cat implements Speaker, Walker {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Speaker {\n    void speak();\n}\n\ninterface Walker {\n    void walk(int laps);\n}\n\nclass Cat implements Speaker, Walker {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：\");\n    }\n\n    @Override\n    public void walk(int laps) {\n        for (int i = 0; i < laps; i++) {\n            System.out.println(name + \"绕工作区走了一圈\");\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int laps = sc.nextInt();\n        Cat c = new Cat(\"张三\");\n        Speaker s = c;\n        Walker w = c;\n        s.speak();\n        w.walk(laps);\n    }\n}\n",
+      "expectedOutput": "张三：\n张三绕工作区走了一圈\n张三绕工作区走了一圈\n张三绕工作区走了一圈\n张三绕工作区走了一圈\n张三绕工作区走了一圈",
+      "stdin": "5\n",
+      "explanation": "本题练的是「**一个对象，两份约定**」。\n\n**一、认下好几份怎么写。** 类定义开头那一句里，两份约定的名字用**逗号**隔开：`implements Speaker, Walker`。这么一写，对象就得**两份都补全**：`speak` 和 `walk` 一个都不能少，少一个编译器就会说 `... does not override abstract method ...`。\n\n**二、两块名称各管一手。** 我们只创建了一个对象，却给了它两块名称：\n\n```java\nCat c = new Cat(\"张三\");\nSpeaker s = c;\nWalker w = c;\n```\n\n这不是生了两个 —— 底下的对象**从头到尾只有一个**，只是它同时挂着两块名称。**名称写什么名字，我们才调用得动什么**：拿 `s` 调用 `speak` 行、调用 `walk` 不行；拿 `w` 调用 `walk` 行、调用 `speak` 不行。真要两边都调用，就把名称**认亲换一块**（上一节那手）。\n\n**三、约定的名头里可以带传入。** `void walk(int laps);` 这手是要喂一个数的，所以补的时候**名头要一字不差**：`public void walk(int laps)` —— 少写那个数、或者换个数名，都算**没补上**，又是那句 `does not override`。\n\n**四、为什么这么分。** 我们想把「会出声」和「会走路」分成两件事：出声的约定管出声、走路的约定管走路。往后院里来一个**只会走路的**（比如一个小鸭子），按 `Walker` 画就行，它**不必**被迫学一次叫 —— 拆成几份小约定，各家只认自己那份，这就是它跟「一张父类全包」的差别。",
+      "templateId": "java-s2-two-contracts",
+      "params": {
+        "cat": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.535Z",
+        "hash": "e9737aed957e8149"
+      }
+    },
+    {
+      "id": "bank-java-s2-two-contracts-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "上一节讲过：一个对象可以**一口气认下好几份**约定 —— 这回就让它真的当一回「**既能出声、又会走路**」的对象。\n\n要立的东西：\n\n- 约定 `Speaker`：一手 `void speak();`（只有名头）。\n- 约定 `Walker`：一手 `void walk(int laps);`（只有名头 —— 括号里那个 `laps` 是「走几圈」，称呼它的人得传入一个数）。\n- 类定义 `Cat`：**一口气认下这两份约定**（两名字中间用逗号隔开），两手都补上：\n  - `speak` 印 **名字 + `：`**；\n  - `walk` 印 **名字 + `绕工作区走了一圈`**，传入几圈就印**几行**。\n\n`main` 里这么走：读一个数（走几圈），生**一个**对象，然后给它两块名称 —— 一块写 `Speaker`、一块写 `Walker`，**两块名称底下保存的是同一个对象**。先拿出声那块名称调用一次 `speak`，再拿走路那块名称调用一次 `walk`，把那个数传入进去。\n\n对象就是这一个，别生两个。\n\n比如程序的输入是\n\n5\n\n程序就要返回\n\n李四：\n李四绕工作区走了一圈\n李四绕工作区走了一圈\n李四绕工作区走了一圈\n李四绕工作区走了一圈\n李四绕工作区走了一圈\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\ninterface Speaker {\n\n}\n\ninterface Walker {\n\n}\n\nclass Cat implements Speaker, Walker {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\ninterface Speaker {\n    void speak();\n}\n\ninterface Walker {\n    void walk(int laps);\n}\n\nclass Cat implements Speaker, Walker {\n    String name;\n\n    Cat(String name) {\n        this.name = name;\n    }\n\n    @Override\n    public void speak() {\n        System.out.println(name + \"：\");\n    }\n\n    @Override\n    public void walk(int laps) {\n        for (int i = 0; i < laps; i++) {\n            System.out.println(name + \"绕工作区走了一圈\");\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int laps = sc.nextInt();\n        Cat c = new Cat(\"李四\");\n        Speaker s = c;\n        Walker w = c;\n        s.speak();\n        w.walk(laps);\n    }\n}\n",
+      "expectedOutput": "李四：\n李四绕工作区走了一圈\n李四绕工作区走了一圈\n李四绕工作区走了一圈\n李四绕工作区走了一圈",
+      "stdin": "4\n",
+      "explanation": "本题练的是「**一个对象，两份约定**」。\n\n**一、认下好几份怎么写。** 类定义开头那一句里，两份约定的名字用**逗号**隔开：`implements Speaker, Walker`。这么一写，对象就得**两份都补全**：`speak` 和 `walk` 一个都不能少，少一个编译器就会说 `... does not override abstract method ...`。\n\n**二、两块名称各管一手。** 我们只创建了一个对象，却给了它两块名称：\n\n```java\nCat c = new Cat(\"张三\");\nSpeaker s = c;\nWalker w = c;\n```\n\n这不是生了两个 —— 底下的对象**从头到尾只有一个**，只是它同时挂着两块名称。**名称写什么名字，我们才调用得动什么**：拿 `s` 调用 `speak` 行、调用 `walk` 不行；拿 `w` 调用 `walk` 行、调用 `speak` 不行。真要两边都调用，就把名称**认亲换一块**（上一节那手）。\n\n**三、约定的名头里可以带传入。** `void walk(int laps);` 这手是要喂一个数的，所以补的时候**名头要一字不差**：`public void walk(int laps)` —— 少写那个数、或者换个数名，都算**没补上**，又是那句 `does not override`。\n\n**四、为什么这么分。** 我们想把「会出声」和「会走路」分成两件事：出声的约定管出声、走路的约定管走路。往后院里来一个**只会走路的**（比如一个小鸭子），按 `Walker` 画就行，它**不必**被迫学一次叫 —— 拆成几份小约定，各家只认自己那份，这就是它跟「一张父类全包」的差别。",
+      "templateId": "java-s2-two-contracts",
+      "params": {
+        "cat": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.535Z",
+        "hash": "b739c7ce62f6f4da"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "templateId": "c-s1-scope-out-of-reach",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-13",
+  "type": "codefix",
+  "concept": [
+    "作用域",
+    "函数里的元素",
+    "编译错误",
+    "大缸"
+  ],
+  "instances": 2,
+  "params": {
+    "v": {
+      "kind": "int",
+      "min": 3,
+      "max": 7
+    }
+  },
+  "stemTemplate": "我们写了两块地方：一个方法 `make` 负责把 `{v}` 记下来，`main` 负责把它印出来。\n\n可编译器念着念着就卡住了，说有个名字它压根不认识……\n\n你帮我们看看问题出在哪儿，把它改好。改好之后，程序应该印出 `{v}`。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nvoid make(void) {\n    int n = {v};\n}\n\nint main(void) {\n    make();\n    printf(\"%d\\n\", n);\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint n = 0;\n\nvoid make(void) {\n    n = {v};\n}\n\nint main(void) {\n    make();\n    printf(\"%d\\n\", n);\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: 'n' undeclared (first use in this function)`，翻过来就是 **「`n` 这个名字，我们在登记簿上没找着。」**\n\n`n` 那个元素是摆在 `make` 该变量子**里面**的 —— 它只在那一个方法里活着，函数一收工，元素就撤走了。站在 `main` 里称呼它，等于跑到别人家门口调用自身家对象的名字，谁也听不懂。\n\n想让两块地方都能看见它，有两条路：\n\n- **把它摆到大门口**：写在所有函数的外面（大缸），这样两个函数都能伸手够到；我们上头给的改法走的就是这条。\n- **让函数把它返回**：`make` 头上改成 `int`，身体里用 `return` 把值交出去，`main` 里伸手接住。\n\n哪条都对 —— 判分只看屏幕上印出来的数对不对。\n\n（顺带认识一下那个大缸的脾气：不写初值的时候编译器会自动给它装 0。这一条**只对门口的大缸成立**，函数里的元素可没这待遇。）"
+}

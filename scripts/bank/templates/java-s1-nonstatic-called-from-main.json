@@ -1,0 +1,27 @@
+{
+  "templateId": "java-s1-nonstatic-called-from-main",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-09",
+  "type": "codefix",
+  "concept": [
+    "方法",
+    "static",
+    "调用不出来",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "你好",
+        "早啊"
+      ]
+    }
+  },
+  "stemTemplate": "我们打包了今天的头一个方法 `greet()` ：调用一次，它就念一句「{word}」。\n\n可这段代码**连编译器那一关都没过去** —— 错误信息说这一个方法「调用不出来」，我们站在 `main` 里调用了半天，它一次都不应。\n\n你帮我们看看这一个方法打头那行**少挂了什么**，把它补上。改好之后，`main` 里调用一次就该印出「{word}」。",
+  "brokenCodeTemplate": "public class Main {\n    public void greet() {\n        System.out.println(\"{word}\");\n    }\n\n    public static void main(String[] args) {\n        greet();\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void greet() {\n        System.out.println(\"{word}\");\n    }\n\n    public static void main(String[] args) {\n        greet();\n    }\n}\n",
+  "explanationTemplate": "我们这一个方法身上**没挂 `static`**，而称呼它的地方是 `main` —— **`main` 身上是挂着 `static` 的**。两边不配套，编译器当场就把这一行拦下了，错误信息大意是：**「没挂 `static` 的招，站在没挂 `static` 的地方调用不出来。」**（那行原文里的 `non-static method greet() cannot be referenced from a static context` 就是这个意思。）\n\n`static` 这个记号的意思是「**不用先按类定义创建一个实例，直接调用就行**」。我们的土规矩先记成一句：**今天写的每一个方法都跟着 `main` 挂上 `static`** —— 挂了 `static` 的招，直接调用同样挂了 `static` 的招，两边都省事。\n\n补上 `static` 之后这一个方法就能调用了：**调用一次只干一遍，干完回来接着跑下一句**。"
+}

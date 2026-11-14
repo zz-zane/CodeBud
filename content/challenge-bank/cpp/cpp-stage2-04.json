@@ -1,0 +1,391 @@
+{
+  "lessonId": "cpp-stage2-04",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s2-04-count-vs-print-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想看清楚**问数的门**和**只印字的函数**差在哪儿。输入接口会递进来**一个数**（一行）：这个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都盖上盖子**，只留门；写一个**构造函数**（两样都收）；\n2. 图上写**两招**：\n   - `int getFish() const` —— 问数的门：状态里只有一句 `return`，把格子里的数**返回**；\n   - `void show() const` —— 只印字的函数：印一行 `XX 有 N 条`。\n3. `main` 里创建一个叫 `张三` 的对象，条数用递进来的那个数；先调用一次 `show`；\n4. 最后再印**一行**：`下一次是 N 条` —— 这里的 `N` 是**格子里那个数加一**（用问数的门把数拿到手，加一，再印出来）。\n\n比如程序的输入是\n\n6\n\n程序就要返回\n\n张三 有 6 条\n下一次是 7 条\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    int getFish() const {\n        return fish;\n    }\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1(\"张三\", a);\n    c1.show();\n    cout << \"下一次是 \" << c1.getFish() + 1 << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 9 条\n下一次是 10 条",
+      "stdin": "9\n",
+      "explanation": "这两招的区别就在**前面那个词**：\n\n- `int getFish() const` —— 前面写的是 `int`，意思是「这一个方法会把一个整数**返回**」。状态里那句 `return fish;` 就是它返回出去的东西。所以称呼它的人可以拿着这个数**去算**（比如加一）、去印、去存起来。\n- `void show() const` —— 前面写的是 `void`，意思是「只干活、什么都不返回」。它把一行字印完就收工了，称呼它的人手里还是空的 —— 所以 `show` 只能自己调用一句，不能塞进输出箭头的右边。\n\n⚠️ 最后一行的那个数是**加过一**的：先拿 `getFish()` 把格子里的数拿到手，再加一，再印。格子里的数本身**没有被改**（这一题里我们一个格子都没动），所以被改的只有印出来的那一行。\n\n⚠️ 两格都盖上盖子以后，`show` 里面要用 `name` 和 `fish` 是没问题的（它是类定义自己的函数，碰自己类定义上的格子随便碰），可**外面**就只能走门了。",
+      "templateId": "cpp-s2-04-count-vs-print",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "860c37ad5b10a178"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-count-vs-print-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想看清楚**问数的门**和**只印字的函数**差在哪儿。输入接口会递进来**一个数**（一行）：这个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都盖上盖子**，只留门；写一个**构造函数**（两样都收）；\n2. 图上写**两招**：\n   - `int getFish() const` —— 问数的门：状态里只有一句 `return`，把格子里的数**返回**；\n   - `void show() const` —— 只印字的函数：印一行 `XX 有 N 条`。\n3. `main` 里创建一个叫 `王五` 的对象，条数用递进来的那个数；先调用一次 `show`；\n4. 最后再印**一行**：`下一次是 N 条` —— 这里的 `N` 是**格子里那个数加一**（用问数的门把数拿到手，加一，再印出来）。\n\n比如程序的输入是\n\n9\n\n程序就要返回\n\n王五 有 9 条\n下一次是 10 条\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    int getFish() const {\n        return fish;\n    }\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1(\"王五\", a);\n    c1.show();\n    cout << \"下一次是 \" << c1.getFish() + 1 << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 有 2 条\n下一次是 3 条",
+      "stdin": "2\n",
+      "explanation": "这两招的区别就在**前面那个词**：\n\n- `int getFish() const` —— 前面写的是 `int`，意思是「这一个方法会把一个整数**返回**」。状态里那句 `return fish;` 就是它返回出去的东西。所以称呼它的人可以拿着这个数**去算**（比如加一）、去印、去存起来。\n- `void show() const` —— 前面写的是 `void`，意思是「只干活、什么都不返回」。它把一行字印完就收工了，称呼它的人手里还是空的 —— 所以 `show` 只能自己调用一句，不能塞进输出箭头的右边。\n\n⚠️ 最后一行的那个数是**加过一**的：先拿 `getFish()` 把格子里的数拿到手，再加一，再印。格子里的数本身**没有被改**（这一题里我们一个格子都没动），所以被改的只有印出来的那一行。\n\n⚠️ 两格都盖上盖子以后，`show` 里面要用 `name` 和 `fish` 是没问题的（它是类定义自己的函数，碰自己类定义上的格子随便碰），可**外面**就只能走门了。",
+      "templateId": "cpp-s2-04-count-vs-print",
+      "params": {
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "551d0c4ec2df8bb9"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-count-vs-print-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想看清楚**问数的门**和**只印字的函数**差在哪儿。输入接口会递进来**一个数**（一行）：这个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都盖上盖子**，只留门；写一个**构造函数**（两样都收）；\n2. 图上写**两招**：\n   - `int getFish() const` —— 问数的门：状态里只有一句 `return`，把格子里的数**返回**；\n   - `void show() const` —— 只印字的函数：印一行 `XX 有 N 条`。\n3. `main` 里创建一个叫 `李四` 的对象，条数用递进来的那个数；先调用一次 `show`；\n4. 最后再印**一行**：`下一次是 N 条` —— 这里的 `N` 是**格子里那个数加一**（用问数的门把数拿到手，加一，再印出来）。\n\n比如程序的输入是\n\n9\n\n程序就要返回\n\n李四 有 9 条\n下一次是 10 条\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    int getFish() const {\n        return fish;\n    }\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1(\"李四\", a);\n    c1.show();\n    cout << \"下一次是 \" << c1.getFish() + 1 << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "李四 有 5 条\n下一次是 6 条",
+      "stdin": "5\n",
+      "explanation": "这两招的区别就在**前面那个词**：\n\n- `int getFish() const` —— 前面写的是 `int`，意思是「这一个方法会把一个整数**返回**」。状态里那句 `return fish;` 就是它返回出去的东西。所以称呼它的人可以拿着这个数**去算**（比如加一）、去印、去存起来。\n- `void show() const` —— 前面写的是 `void`，意思是「只干活、什么都不返回」。它把一行字印完就收工了，称呼它的人手里还是空的 —— 所以 `show` 只能自己调用一句，不能塞进输出箭头的右边。\n\n⚠️ 最后一行的那个数是**加过一**的：先拿 `getFish()` 把格子里的数拿到手，再加一，再印。格子里的数本身**没有被改**（这一题里我们一个格子都没动），所以被改的只有印出来的那一行。\n\n⚠️ 两格都盖上盖子以后，`show` 里面要用 `name` 和 `fish` 是没问题的（它是类定义自己的函数，碰自己类定义上的格子随便碰），可**外面**就只能走门了。",
+      "templateId": "cpp-s2-04-count-vs-print",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "c4b1cb0358e1ed6f"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-door-no-guard-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给类定义开了一道**改数的门** `void setFish(int f)`：把对象的条数改成传入进来的那个数。可这道门上我们**忘了立规矩** —— 有人递进来一个荒唐的数，它就照单全收。\n\n你帮我们把规矩立到门上：**递进来的数要是负数，就一个格子都不许动、也一个字都不许印**，条数保持原来的。**`main` 里那几句不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        fish = f;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 1);\n    c1.setFish(-4);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        if (f < 0) {\n            return;\n        }\n        fish = f;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 1);\n    c1.setFish(-4);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 1 条",
+      "stdin": null,
+      "explanation": "这一题**没有任何报错** —— 它编得过、跑得动，编译器最啰嗦的那一档念叨（`-Wall`）也一个字没说（我们拿它真跑过一遍，才敢这么写）。\n\n问题出在门里那句 `fish = f;`：它把递进来的数**原样**装进格子。盖子只管「**谁能伸手**」，不管伸进来的手**递的是什么** —— 所以盖上盖子挡不住这个荒唐的数，它安安静静地住进了格子里，印出来的条数就成了负数。\n\n规矩得**我们亲手写进门里**：\n\n`if (f < 0) {`\n`    return;`\n`}`\n\n念作「递进来的数是个负数？那我们就不改了，空手退出去。」函数前面写的是 `void`（只干活、不返回东西回来），所以退出去的时候一个光秃秃的 `return;` 就够了。\n\n⚠️ 这一题要求被挡下来的那一次**什么都不印** —— 别在门上顺手加一句「不许倒扣」，那会把印出来的行数弄多一行。规矩立好了，格子里还是原来那个数。",
+      "templateId": "cpp-s2-04-door-no-guard",
+      "params": {
+        "name": "张三",
+        "n": 1,
+        "neg": -4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "0966a64e5ad771d7"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-door-no-guard-023",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们给类定义开了一道**改数的门** `void setFish(int f)`：把对象的条数改成传入进来的那个数。可这道门上我们**忘了立规矩** —— 有人递进来一个荒唐的数，它就照单全收。\n\n你帮我们把规矩立到门上：**递进来的数要是负数，就一个格子都不许动、也一个字都不许印**，条数保持原来的。**`main` 里那几句不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        fish = f;\n    }\n};\n\nint main() {\n    Cat c1(\"王五\", 4);\n    c1.setFish(-2);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        if (f < 0) {\n            return;\n        }\n        fish = f;\n    }\n};\n\nint main() {\n    Cat c1(\"王五\", 4);\n    c1.setFish(-2);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 有 4 条",
+      "stdin": null,
+      "explanation": "这一题**没有任何报错** —— 它编得过、跑得动，编译器最啰嗦的那一档念叨（`-Wall`）也一个字没说（我们拿它真跑过一遍，才敢这么写）。\n\n问题出在门里那句 `fish = f;`：它把递进来的数**原样**装进格子。盖子只管「**谁能伸手**」，不管伸进来的手**递的是什么** —— 所以盖上盖子挡不住这个荒唐的数，它安安静静地住进了格子里，印出来的条数就成了负数。\n\n规矩得**我们亲手写进门里**：\n\n`if (f < 0) {`\n`    return;`\n`}`\n\n念作「递进来的数是个负数？那我们就不改了，空手退出去。」函数前面写的是 `void`（只干活、不返回东西回来），所以退出去的时候一个光秃秃的 `return;` 就够了。\n\n⚠️ 这一题要求被挡下来的那一次**什么都不印** —— 别在门上顺手加一句「不许倒扣」，那会把印出来的行数弄多一行。规矩立好了，格子里还是原来那个数。",
+      "templateId": "cpp-s2-04-door-no-guard",
+      "params": {
+        "name": "王五",
+        "n": 4,
+        "neg": -2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "053146d872bdafee"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-guarded-door-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想给对象开一道**改数的门** —— 谁能改、改成多少，都得从这道门上过。输入接口会递进来**两个数**（一行一个）：这个对象一开始的条数、要传入进来的那个数。\n\n门上的规矩是这样的：\n\n- 递进来的数是**负数** —— 一个格子都不许动，先印一行 `不许倒扣`，然后这道门就收工（后面的印字那一步照样要走）；\n- 别的情况 —— 把格子里的条数改成递进来的那个数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都要盖上盖子**，只在图上留门；写一个**构造函数**（两样都收）；\n2. 图上写**三道门**：`string getName() const`（问名字）、`int getFish() const`（问条数）、`void setFish(int f)`（改条数，规矩就立在这一道门里）；\n3. `main` 里创建一个叫 `张三` 的对象，条数用**第一个数**；调用一次 `setFish`（传入**第二个数**）；\n4. 最后印**一行**：`XX 有 N 条`（`XX` 是名字，`N` 是走完上面那些之后的条数）。\n\n比如程序的输入是\n\n3\n5\n\n程序就要返回\n\n张三 有 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        if (f < 0) {\n            cout << \"不许倒扣\" << endl;\n            return;\n        }\n        fish = f;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"张三\", a);\n    c1.setFish(b);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "不许倒扣\n张三 有 6 条",
+      "stdin": "6\n-3\n",
+      "explanation": "这一题的重点是**盖子配门**。\n\n- 两格家常都写上 `private:`，外面就一个格子都碰不着了 —— 想拿数、想改数，都得站到门前面。\n- 问数的门状态里只有一句 `return`：它把格子里的东西**原样读取**。名字那道门前面写 `string`，因为它返回的是一串字；条数那道门前面写 `int`。\n- 改数的门前面写的是 `void` —— 它只干活、不返回东西回来，所以退出去的时候写一个光秃秃的 `return;` 就够了。\n\n**规矩必须立在门里**，这是这一课最值钱的一句话：盖子只管「谁能伸手」，管不了伸进来的手**递的是什么**。所以「负数不许」这条规矩只能写成门里那两句：\n\n`if (f < 0) {`\n`    cout << \"不许倒扣\" << endl;`\n`    return;`\n`}`\n\n⚠️ 被挡下来的那一次，条数**保持原样**（一格都没动），然后 `main` 里那一行照样要印 —— 所以判分喂负数的那一组，前面会多出一行「不许倒扣」。\n\n⚠️ 别忘了两件事：门里改的必须是 `fish` 那一格（不是输入接口）；盖上盖子以后，外面那些 `c1.fish` 的写法一个都不能用了。",
+      "templateId": "cpp-s2-04-guarded-door",
+      "params": {
+        "name": "张三",
+        "a": 6,
+        "neg": -3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "23e704c96b4e7b2d"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-guarded-door-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想给对象开一道**改数的门** —— 谁能改、改成多少，都得从这道门上过。输入接口会递进来**两个数**（一行一个）：这个对象一开始的条数、要传入进来的那个数。\n\n门上的规矩是这样的：\n\n- 递进来的数是**负数** —— 一个格子都不许动，先印一行 `不许倒扣`，然后这道门就收工（后面的印字那一步照样要走）；\n- 别的情况 —— 把格子里的条数改成递进来的那个数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都要盖上盖子**，只在图上留门；写一个**构造函数**（两样都收）；\n2. 图上写**三道门**：`string getName() const`（问名字）、`int getFish() const`（问条数）、`void setFish(int f)`（改条数，规矩就立在这一道门里）；\n3. `main` 里创建一个叫 `张三` 的对象，条数用**第一个数**；调用一次 `setFish`（传入**第二个数**）；\n4. 最后印**一行**：`XX 有 N 条`（`XX` 是名字，`N` 是走完上面那些之后的条数）。\n\n比如程序的输入是\n\n3\n5\n\n程序就要返回\n\n张三 有 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        if (f < 0) {\n            cout << \"不许倒扣\" << endl;\n            return;\n        }\n        fish = f;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"张三\", a);\n    c1.setFish(b);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "不许倒扣\n张三 有 9 条",
+      "stdin": "9\n-3\n",
+      "explanation": "这一题的重点是**盖子配门**。\n\n- 两格家常都写上 `private:`，外面就一个格子都碰不着了 —— 想拿数、想改数，都得站到门前面。\n- 问数的门状态里只有一句 `return`：它把格子里的东西**原样读取**。名字那道门前面写 `string`，因为它返回的是一串字；条数那道门前面写 `int`。\n- 改数的门前面写的是 `void` —— 它只干活、不返回东西回来，所以退出去的时候写一个光秃秃的 `return;` 就够了。\n\n**规矩必须立在门里**，这是这一课最值钱的一句话：盖子只管「谁能伸手」，管不了伸进来的手**递的是什么**。所以「负数不许」这条规矩只能写成门里那两句：\n\n`if (f < 0) {`\n`    cout << \"不许倒扣\" << endl;`\n`    return;`\n`}`\n\n⚠️ 被挡下来的那一次，条数**保持原样**（一格都没动），然后 `main` 里那一行照样要印 —— 所以判分喂负数的那一组，前面会多出一行「不许倒扣」。\n\n⚠️ 别忘了两件事：门里改的必须是 `fish` 那一格（不是输入接口）；盖上盖子以后，外面那些 `c1.fish` 的写法一个都不能用了。",
+      "templateId": "cpp-s2-04-guarded-door",
+      "params": {
+        "name": "张三",
+        "a": 9,
+        "neg": -3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "2173129f31f9e5e6"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-guarded-door-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想给对象开一道**改数的门** —— 谁能改、改成多少，都得从这道门上过。输入接口会递进来**两个数**（一行一个）：这个对象一开始的条数、要传入进来的那个数。\n\n门上的规矩是这样的：\n\n- 递进来的数是**负数** —— 一个格子都不许动，先印一行 `不许倒扣`，然后这道门就收工（后面的印字那一步照样要走）；\n- 别的情况 —— 把格子里的条数改成递进来的那个数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都要盖上盖子**，只在图上留门；写一个**构造函数**（两样都收）；\n2. 图上写**三道门**：`string getName() const`（问名字）、`int getFish() const`（问条数）、`void setFish(int f)`（改条数，规矩就立在这一道门里）；\n3. `main` 里创建一个叫 `李四` 的对象，条数用**第一个数**；调用一次 `setFish`（传入**第二个数**）；\n4. 最后印**一行**：`XX 有 N 条`（`XX` 是名字，`N` 是走完上面那些之后的条数）。\n\n比如程序的输入是\n\n3\n5\n\n程序就要返回\n\n李四 有 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        if (f < 0) {\n            cout << \"不许倒扣\" << endl;\n            return;\n        }\n        fish = f;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"李四\", a);\n    c1.setFish(b);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "不许倒扣\n李四 有 6 条",
+      "stdin": "6\n-3\n",
+      "explanation": "这一题的重点是**盖子配门**。\n\n- 两格家常都写上 `private:`，外面就一个格子都碰不着了 —— 想拿数、想改数，都得站到门前面。\n- 问数的门状态里只有一句 `return`：它把格子里的东西**原样读取**。名字那道门前面写 `string`，因为它返回的是一串字；条数那道门前面写 `int`。\n- 改数的门前面写的是 `void` —— 它只干活、不返回东西回来，所以退出去的时候写一个光秃秃的 `return;` 就够了。\n\n**规矩必须立在门里**，这是这一课最值钱的一句话：盖子只管「谁能伸手」，管不了伸进来的手**递的是什么**。所以「负数不许」这条规矩只能写成门里那两句：\n\n`if (f < 0) {`\n`    cout << \"不许倒扣\" << endl;`\n`    return;`\n`}`\n\n⚠️ 被挡下来的那一次，条数**保持原样**（一格都没动），然后 `main` 里那一行照样要印 —— 所以判分喂负数的那一组，前面会多出一行「不许倒扣」。\n\n⚠️ 别忘了两件事：门里改的必须是 `fish` 那一格（不是输入接口）；盖上盖子以后，外面那些 `c1.fish` 的写法一个都不能用了。",
+      "templateId": "cpp-s2-04-guarded-door",
+      "params": {
+        "name": "李四",
+        "a": 6,
+        "neg": -3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "7ceb6b767a4ab771"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-guarded-door-007",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想给对象开一道**改数的门** —— 谁能改、改成多少，都得从这道门上过。输入接口会递进来**两个数**（一行一个）：这个对象一开始的条数、要传入进来的那个数。\n\n门上的规矩是这样的：\n\n- 递进来的数是**负数** —— 一个格子都不许动，先印一行 `不许倒扣`，然后这道门就收工（后面的印字那一步照样要走）；\n- 别的情况 —— 把格子里的条数改成递进来的那个数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都要盖上盖子**，只在图上留门；写一个**构造函数**（两样都收）；\n2. 图上写**三道门**：`string getName() const`（问名字）、`int getFish() const`（问条数）、`void setFish(int f)`（改条数，规矩就立在这一道门里）；\n3. `main` 里创建一个叫 `李四` 的对象，条数用**第一个数**；调用一次 `setFish`（传入**第二个数**）；\n4. 最后印**一行**：`XX 有 N 条`（`XX` 是名字，`N` 是走完上面那些之后的条数）。\n\n比如程序的输入是\n\n3\n5\n\n程序就要返回\n\n李四 有 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        if (f < 0) {\n            cout << \"不许倒扣\" << endl;\n            return;\n        }\n        fish = f;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"李四\", a);\n    c1.setFish(b);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "不许倒扣\n李四 有 9 条",
+      "stdin": "9\n-5\n",
+      "explanation": "这一题的重点是**盖子配门**。\n\n- 两格家常都写上 `private:`，外面就一个格子都碰不着了 —— 想拿数、想改数，都得站到门前面。\n- 问数的门状态里只有一句 `return`：它把格子里的东西**原样读取**。名字那道门前面写 `string`，因为它返回的是一串字；条数那道门前面写 `int`。\n- 改数的门前面写的是 `void` —— 它只干活、不返回东西回来，所以退出去的时候写一个光秃秃的 `return;` 就够了。\n\n**规矩必须立在门里**，这是这一课最值钱的一句话：盖子只管「谁能伸手」，管不了伸进来的手**递的是什么**。所以「负数不许」这条规矩只能写成门里那两句：\n\n`if (f < 0) {`\n`    cout << \"不许倒扣\" << endl;`\n`    return;`\n`}`\n\n⚠️ 被挡下来的那一次，条数**保持原样**（一格都没动），然后 `main` 里那一行照样要印 —— 所以判分喂负数的那一组，前面会多出一行「不许倒扣」。\n\n⚠️ 别忘了两件事：门里改的必须是 `fish` 那一格（不是输入接口）；盖上盖子以后，外面那些 `c1.fish` 的写法一个都不能用了。",
+      "templateId": "cpp-s2-04-guarded-door",
+      "params": {
+        "name": "李四",
+        "a": 9,
+        "neg": -5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "cdd5a0ff5140fd93"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-guarded-door-009",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想给对象开一道**改数的门** —— 谁能改、改成多少，都得从这道门上过。输入接口会递进来**两个数**（一行一个）：这个对象一开始的条数、要传入进来的那个数。\n\n门上的规矩是这样的：\n\n- 递进来的数是**负数** —— 一个格子都不许动，先印一行 `不许倒扣`，然后这道门就收工（后面的印字那一步照样要走）；\n- 别的情况 —— 把格子里的条数改成递进来的那个数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都要盖上盖子**，只在图上留门；写一个**构造函数**（两样都收）；\n2. 图上写**三道门**：`string getName() const`（问名字）、`int getFish() const`（问条数）、`void setFish(int f)`（改条数，规矩就立在这一道门里）；\n3. `main` 里创建一个叫 `三花` 的对象，条数用**第一个数**；调用一次 `setFish`（传入**第二个数**）；\n4. 最后印**一行**：`XX 有 N 条`（`XX` 是名字，`N` 是走完上面那些之后的条数）。\n\n比如程序的输入是\n\n3\n5\n\n程序就要返回\n\n三花 有 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        if (f < 0) {\n            cout << \"不许倒扣\" << endl;\n            return;\n        }\n        fish = f;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"三花\", a);\n    c1.setFish(b);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "不许倒扣\n三花 有 6 条",
+      "stdin": "6\n-5\n",
+      "explanation": "这一题的重点是**盖子配门**。\n\n- 两格家常都写上 `private:`，外面就一个格子都碰不着了 —— 想拿数、想改数，都得站到门前面。\n- 问数的门状态里只有一句 `return`：它把格子里的东西**原样读取**。名字那道门前面写 `string`，因为它返回的是一串字；条数那道门前面写 `int`。\n- 改数的门前面写的是 `void` —— 它只干活、不返回东西回来，所以退出去的时候写一个光秃秃的 `return;` 就够了。\n\n**规矩必须立在门里**，这是这一课最值钱的一句话：盖子只管「谁能伸手」，管不了伸进来的手**递的是什么**。所以「负数不许」这条规矩只能写成门里那两句：\n\n`if (f < 0) {`\n`    cout << \"不许倒扣\" << endl;`\n`    return;`\n`}`\n\n⚠️ 被挡下来的那一次，条数**保持原样**（一格都没动），然后 `main` 里那一行照样要印 —— 所以判分喂负数的那一组，前面会多出一行「不许倒扣」。\n\n⚠️ 别忘了两件事：门里改的必须是 `fish` 那一格（不是输入接口）；盖上盖子以后，外面那些 `c1.fish` 的写法一个都不能用了。",
+      "templateId": "cpp-s2-04-guarded-door",
+      "params": {
+        "name": "三花",
+        "a": 6,
+        "neg": -5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "a943333c656f1ccd"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-guarded-door-011",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想给对象开一道**改数的门** —— 谁能改、改成多少，都得从这道门上过。输入接口会递进来**两个数**（一行一个）：这个对象一开始的条数、要传入进来的那个数。\n\n门上的规矩是这样的：\n\n- 递进来的数是**负数** —— 一个格子都不许动，先印一行 `不许倒扣`，然后这道门就收工（后面的印字那一步照样要走）；\n- 别的情况 —— 把格子里的条数改成递进来的那个数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都要盖上盖子**，只在图上留门；写一个**构造函数**（两样都收）；\n2. 图上写**三道门**：`string getName() const`（问名字）、`int getFish() const`（问条数）、`void setFish(int f)`（改条数，规矩就立在这一道门里）；\n3. `main` 里创建一个叫 `三花` 的对象，条数用**第一个数**；调用一次 `setFish`（传入**第二个数**）；\n4. 最后印**一行**：`XX 有 N 条`（`XX` 是名字，`N` 是走完上面那些之后的条数）。\n\n比如程序的输入是\n\n3\n5\n\n程序就要返回\n\n三花 有 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void setFish(int f) {\n        if (f < 0) {\n            cout << \"不许倒扣\" << endl;\n            return;\n        }\n        fish = f;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"三花\", a);\n    c1.setFish(b);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "不许倒扣\n三花 有 9 条",
+      "stdin": "9\n-5\n",
+      "explanation": "这一题的重点是**盖子配门**。\n\n- 两格家常都写上 `private:`，外面就一个格子都碰不着了 —— 想拿数、想改数，都得站到门前面。\n- 问数的门状态里只有一句 `return`：它把格子里的东西**原样读取**。名字那道门前面写 `string`，因为它返回的是一串字；条数那道门前面写 `int`。\n- 改数的门前面写的是 `void` —— 它只干活、不返回东西回来，所以退出去的时候写一个光秃秃的 `return;` 就够了。\n\n**规矩必须立在门里**，这是这一课最值钱的一句话：盖子只管「谁能伸手」，管不了伸进来的手**递的是什么**。所以「负数不许」这条规矩只能写成门里那两句：\n\n`if (f < 0) {`\n`    cout << \"不许倒扣\" << endl;`\n`    return;`\n`}`\n\n⚠️ 被挡下来的那一次，条数**保持原样**（一格都没动），然后 `main` 里那一行照样要印 —— 所以判分喂负数的那一组，前面会多出一行「不许倒扣」。\n\n⚠️ 别忘了两件事：门里改的必须是 `fish` 那一格（不是输入接口）；盖上盖子以后，外面那些 `c1.fish` 的写法一个都不能用了。",
+      "templateId": "cpp-s2-04-guarded-door",
+      "params": {
+        "name": "三花",
+        "a": 9,
+        "neg": -5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "77ea3d53030bd1cb"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-outside-peek-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们把两格家常都盖上盖子（`private:`），只在类定义上留了一道**问数的门**。可 `main` 里我们还照着老习惯伸手去摸 `c1.name` —— 编译器当场拦下。\n\n你帮我们改**一处**，让程序跑起来、印出这一行：`XX 有 N 条`（`XX` 是这个对象的名字，`N` 是它自己的条数）。**类定义上那几个方法一个都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 1);\n    cout << c1.name << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 1);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 1 条",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:24:16: error: 'std::string Cat::name' is private within this context`\n`main.cpp:7:12: note: declared private here`\n\n用自然语言解释：**「`name` 是 `Cat` 的 `private` 格子，你现在站的这个地方碰不着它 —— 它是在第 7 行被盖上盖子的。」**（`context` 就是「你现在站的这个地方」。）\n\n注意被拦下的是**伸手那一下**，不是那条数据：格子里的东西好好的，只是不该这么拿。类定义上明明已经有一道问数的门 `getName()`，站到门前面去就行 —— 把那一处 `c1.name` 换成 `c1.getName()`，程序立刻顺着跑，印出来的还是同样的名字。\n\n⚠️ 顺带记住更容易踩的那一半：**读取**和**改动**是两道不同的门。这一题只用到问数的门；要是题目要你**改**格子，那就得另开一道改数的门（`setName` 之类）。",
+      "templateId": "cpp-s2-04-outside-peek",
+      "params": {
+        "name": "张三",
+        "n": 1
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "e4033eb945deb725"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-outside-peek-011",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们把两格家常都盖上盖子（`private:`），只在类定义上留了一道**问数的门**。可 `main` 里我们还照着老习惯伸手去摸 `c1.name` —— 编译器当场拦下。\n\n你帮我们改**一处**，让程序跑起来、印出这一行：`XX 有 N 条`（`XX` 是这个对象的名字，`N` 是它自己的条数）。**类定义上那几个方法一个都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n};\n\nint main() {\n    Cat c1(\"三花\", 4);\n    cout << c1.name << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n};\n\nint main() {\n    Cat c1(\"三花\", 4);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "三花 有 4 条",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:24:16: error: 'std::string Cat::name' is private within this context`\n`main.cpp:7:12: note: declared private here`\n\n用自然语言解释：**「`name` 是 `Cat` 的 `private` 格子，你现在站的这个地方碰不着它 —— 它是在第 7 行被盖上盖子的。」**（`context` 就是「你现在站的这个地方」。）\n\n注意被拦下的是**伸手那一下**，不是那条数据：格子里的东西好好的，只是不该这么拿。类定义上明明已经有一道问数的门 `getName()`，站到门前面去就行 —— 把那一处 `c1.name` 换成 `c1.getName()`，程序立刻顺着跑，印出来的还是同样的名字。\n\n⚠️ 顺带记住更容易踩的那一半：**读取**和**改动**是两道不同的门。这一题只用到问数的门；要是题目要你**改**格子，那就得另开一道改数的门（`setName` 之类）。",
+      "templateId": "cpp-s2-04-outside-peek",
+      "params": {
+        "name": "三花",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "851d571dcb63e84f"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-two-cats-doors-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要生**两个**对象，各喂各的条数 —— 每个对象的两格都是自己的一份，门上改的也只能是自己那份。输入接口会递进来**三个数**（一行一个）：第一个的条数、第二只的条数、要传给**第一个**的那个量。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都盖上盖子**，只留门；写一个**构造函数**（两样都收）；\n2. 图上写**两道门**：`string getName() const`（问名字）、`int getFish() const`（问条数），还有一个方法 `void addFish(int n)`，把格子里的条数**加上**传入进来的那个量；\n3. `main` 里生**两个**实例：第一个叫 `张三`、第二只叫 `李四`，条数分别用**第一个数**和**第二个数**；\n4. 只给**第一个**调用一次 `addFish`（传入**第三个数**）；\n5. 最后**各印一行**：`XX 有 N 条`（第一个先印）。\n\n比如程序的输入是\n\n2\n6\n5\n\n程序就要返回\n\n张三 有 7 条\n李四 有 6 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void addFish(int n) {\n        fish = fish + n;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat c1(\"张三\", a);\n    Cat c2(\"李四\", b);\n    c1.addFish(c);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    cout << c2.getName() << \" 有 \" << c2.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 3 条\n李四 有 1 条",
+      "stdin": "2\n1\n1\n",
+      "explanation": "这一题的重点是**每个对象都有一份自己的格子**。\n\n- 类定义只有一张，函数只有一份，可是根据类创建出来的每个对象**各自**带着两格家常。所以 `c1` 和 `c2` 里的 `fish` 是两个互不打扰的数 —— 给 `c1` 加料，`c2` 那一格纹丝不动。\n- 函数被哪个对象调用，干的活就是那个对象的：`c1.addFish(c);` 里被改的只有 `c1` 那一格。\n- 门里的写法要**指名格子**（`fish = fish + n;`），而不是去动输入接口 —— 动了输入接口，格子就白改了。\n\n⚠️ 两格都盖上盖子以后，外面一个 `c1.fish` 的写法都不能用，取数只能走 `getFish()`、改数只能走 `addFish()`。\n\n⚠️ 印的时候是**各自取各自的数**：先印第一个（加过料的那个数），再印第二只（从头到尾没被碰过的那个数）。",
+      "templateId": "cpp-s2-04-two-cats-doors",
+      "params": {
+        "nameA": "张三",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "cf3889e8aa66311c"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-two-cats-doors-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要生**两个**对象，各喂各的条数 —— 每个对象的两格都是自己的一份，门上改的也只能是自己那份。输入接口会递进来**三个数**（一行一个）：第一个的条数、第二只的条数、要传给**第一个**的那个量。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都盖上盖子**，只留门；写一个**构造函数**（两样都收）；\n2. 图上写**两道门**：`string getName() const`（问名字）、`int getFish() const`（问条数），还有一个方法 `void addFish(int n)`，把格子里的条数**加上**传入进来的那个量；\n3. `main` 里生**两个**实例：第一个叫 `张三`、第二只叫 `三花`，条数分别用**第一个数**和**第二个数**；\n4. 只给**第一个**调用一次 `addFish`（传入**第三个数**）；\n5. 最后**各印一行**：`XX 有 N 条`（第一个先印）。\n\n比如程序的输入是\n\n4\n3\n5\n\n程序就要返回\n\n张三 有 9 条\n三花 有 3 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void addFish(int n) {\n        fish = fish + n;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat c1(\"张三\", a);\n    Cat c2(\"三花\", b);\n    c1.addFish(c);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    cout << c2.getName() << \" 有 \" << c2.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 7 条\n三花 有 3 条",
+      "stdin": "6\n3\n1\n",
+      "explanation": "这一题的重点是**每个对象都有一份自己的格子**。\n\n- 类定义只有一张，函数只有一份，可是根据类创建出来的每个对象**各自**带着两格家常。所以 `c1` 和 `c2` 里的 `fish` 是两个互不打扰的数 —— 给 `c1` 加料，`c2` 那一格纹丝不动。\n- 函数被哪个对象调用，干的活就是那个对象的：`c1.addFish(c);` 里被改的只有 `c1` 那一格。\n- 门里的写法要**指名格子**（`fish = fish + n;`），而不是去动输入接口 —— 动了输入接口，格子就白改了。\n\n⚠️ 两格都盖上盖子以后，外面一个 `c1.fish` 的写法都不能用，取数只能走 `getFish()`、改数只能走 `addFish()`。\n\n⚠️ 印的时候是**各自取各自的数**：先印第一个（加过料的那个数），再印第二只（从头到尾没被碰过的那个数）。",
+      "templateId": "cpp-s2-04-two-cats-doors",
+      "params": {
+        "nameA": "张三",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "4310b74711f885b9"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-two-cats-doors-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要生**两个**对象，各喂各的条数 —— 每个对象的两格都是自己的一份，门上改的也只能是自己那份。输入接口会递进来**三个数**（一行一个）：第一个的条数、第二只的条数、要传给**第一个**的那个量。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都盖上盖子**，只留门；写一个**构造函数**（两样都收）；\n2. 图上写**两道门**：`string getName() const`（问名字）、`int getFish() const`（问条数），还有一个方法 `void addFish(int n)`，把格子里的条数**加上**传入进来的那个量；\n3. `main` 里生**两个**实例：第一个叫 `王五`、第二只叫 `李四`，条数分别用**第一个数**和**第二个数**；\n4. 只给**第一个**调用一次 `addFish`（传入**第三个数**）；\n5. 最后**各印一行**：`XX 有 N 条`（第一个先印）。\n\n比如程序的输入是\n\n5\n1\n3\n\n程序就要返回\n\n王五 有 8 条\n李四 有 1 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void addFish(int n) {\n        fish = fish + n;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat c1(\"王五\", a);\n    Cat c2(\"李四\", b);\n    c1.addFish(c);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    cout << c2.getName() << \" 有 \" << c2.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 有 12 条\n李四 有 6 条",
+      "stdin": "6\n6\n6\n",
+      "explanation": "这一题的重点是**每个对象都有一份自己的格子**。\n\n- 类定义只有一张，函数只有一份，可是根据类创建出来的每个对象**各自**带着两格家常。所以 `c1` 和 `c2` 里的 `fish` 是两个互不打扰的数 —— 给 `c1` 加料，`c2` 那一格纹丝不动。\n- 函数被哪个对象调用，干的活就是那个对象的：`c1.addFish(c);` 里被改的只有 `c1` 那一格。\n- 门里的写法要**指名格子**（`fish = fish + n;`），而不是去动输入接口 —— 动了输入接口，格子就白改了。\n\n⚠️ 两格都盖上盖子以后，外面一个 `c1.fish` 的写法都不能用，取数只能走 `getFish()`、改数只能走 `addFish()`。\n\n⚠️ 印的时候是**各自取各自的数**：先印第一个（加过料的那个数），再印第二只（从头到尾没被碰过的那个数）。",
+      "templateId": "cpp-s2-04-two-cats-doors",
+      "params": {
+        "nameA": "王五",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "bc7b5a577781a3ee"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-two-cats-doors-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要生**两个**对象，各喂各的条数 —— 每个对象的两格都是自己的一份，门上改的也只能是自己那份。输入接口会递进来**三个数**（一行一个）：第一个的条数、第二只的条数、要传给**第一个**的那个量。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两格家常 —— `name` 装一串字、`fish` 装一个整数；**两格都盖上盖子**，只留门；写一个**构造函数**（两样都收）；\n2. 图上写**两道门**：`string getName() const`（问名字）、`int getFish() const`（问条数），还有一个方法 `void addFish(int n)`，把格子里的条数**加上**传入进来的那个量；\n3. `main` 里生**两个**实例：第一个叫 `王五`、第二只叫 `三花`，条数分别用**第一个数**和**第二个数**；\n4. 只给**第一个**调用一次 `addFish`（传入**第三个数**）；\n5. 最后**各印一行**：`XX 有 N 条`（第一个先印）。\n\n比如程序的输入是\n\n6\n2\n1\n\n程序就要返回\n\n王五 有 7 条\n三花 有 2 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    string getName() const {\n        return name;\n    }\n\n    int getFish() const {\n        return fish;\n    }\n\n    void addFish(int n) {\n        fish = fish + n;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat c1(\"王五\", a);\n    Cat c2(\"三花\", b);\n    c1.addFish(c);\n    cout << c1.getName() << \" 有 \" << c1.getFish() << \" 条\" << endl;\n    cout << c2.getName() << \" 有 \" << c2.getFish() << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 有 4 条\n三花 有 2 条",
+      "stdin": "2\n2\n2\n",
+      "explanation": "这一题的重点是**每个对象都有一份自己的格子**。\n\n- 类定义只有一张，函数只有一份，可是根据类创建出来的每个对象**各自**带着两格家常。所以 `c1` 和 `c2` 里的 `fish` 是两个互不打扰的数 —— 给 `c1` 加料，`c2` 那一格纹丝不动。\n- 函数被哪个对象调用，干的活就是那个对象的：`c1.addFish(c);` 里被改的只有 `c1` 那一格。\n- 门里的写法要**指名格子**（`fish = fish + n;`），而不是去动输入接口 —— 动了输入接口，格子就白改了。\n\n⚠️ 两格都盖上盖子以后，外面一个 `c1.fish` 的写法都不能用，取数只能走 `getFish()`、改数只能走 `addFish()`。\n\n⚠️ 印的时候是**各自取各自的数**：先印第一个（加过料的那个数），再印第二只（从头到尾没被碰过的那个数）。",
+      "templateId": "cpp-s2-04-two-cats-doors",
+      "params": {
+        "nameA": "王五",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "c57b060da723cf88"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-void-door-in-cout-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想把格子里的数**返回**给别人用，可这道门我们写歪了：它变成了「只在自己状态里印字、什么都不返回」的那种函数。`main` 里我们还把它塞在输出箭头的右边，想让它返回个数回来印 —— 编译器当场拦下。\n\n你帮我们改**一处**，让程序跑起来、印出一行 `我们的账：N`（`N` 就是格子里的条数）。**`main` 里那一句不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void getFish() const {\n        cout << \"格子里的数是 \" << fish << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 2);\n    cout << \"我们的账：\" << c1.getFish() << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    int getFish() const {\n        return fish;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 2);\n    cout << \"我们的账：\" << c1.getFish() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "我们的账：2",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:20:26: error: no match for 'operator<<' (operand types are 'std::basic_ostream<char>' and 'void')`\n\n用自然语言解释：**「你要我把一个 `void` 印出来 —— 可 `void` 的意思是『啥都没返回』，它装不进输出箭头的右半边。」**\n\n这一个方法的真正毛病在**前面那个词**：写 `void` 就是「只干活、不返回东西回来」，写 `int` 才是「干完活返回一个整数回来」。称呼它的人想拿这个数去印、去算，函数前面就必须写清楚会返回什么，状态里还要有一句 `return fish;` 把它返回出去。\n\n改法是把前面那个词换成 `int`，再把状态里那行印字换成一句 `return fish;`。改完它就从「只会自己印字的函数」变成了一道**真正的问数的门**。\n\n⚠️ 看到 `no match for 'operator<<'` 就先低头看看箭头右边那一个方法**前面写的是什么** —— 写了 `void` 的函数只能自己调用，不能塞进箭头里。",
+      "templateId": "cpp-s2-04-void-door-in-cout",
+      "params": {
+        "name": "张三",
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "05129469124b0239"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-04-void-door-in-cout-007",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想把格子里的数**返回**给别人用，可这道门我们写歪了：它变成了「只在自己状态里印字、什么都不返回」的那种函数。`main` 里我们还把它塞在输出箭头的右边，想让它返回个数回来印 —— 编译器当场拦下。\n\n你帮我们改**一处**，让程序跑起来、印出一行 `我们的账：N`（`N` 就是格子里的条数）。**`main` 里那一句不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void getFish() const {\n        cout << \"格子里的数是 \" << fish << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"王五\", 5);\n    cout << \"我们的账：\" << c1.getFish() << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprivate:\n    string name;\n    int fish;\n\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    int getFish() const {\n        return fish;\n    }\n};\n\nint main() {\n    Cat c1(\"王五\", 5);\n    cout << \"我们的账：\" << c1.getFish() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "我们的账：5",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:20:26: error: no match for 'operator<<' (operand types are 'std::basic_ostream<char>' and 'void')`\n\n用自然语言解释：**「你要我把一个 `void` 印出来 —— 可 `void` 的意思是『啥都没返回』，它装不进输出箭头的右半边。」**\n\n这一个方法的真正毛病在**前面那个词**：写 `void` 就是「只干活、不返回东西回来」，写 `int` 才是「干完活返回一个整数回来」。称呼它的人想拿这个数去印、去算，函数前面就必须写清楚会返回什么，状态里还要有一句 `return fish;` 把它返回出去。\n\n改法是把前面那个词换成 `int`，再把状态里那行印字换成一句 `return fish;`。改完它就从「只会自己印字的函数」变成了一道**真正的问数的门**。\n\n⚠️ 看到 `no match for 'operator<<'` 就先低头看看箭头右边那一个方法**前面写的是什么** —— 写了 `void` 的函数只能自己调用，不能塞进箭头里。",
+      "templateId": "cpp-s2-04-void-door-in-cout",
+      "params": {
+        "name": "王五",
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.289Z",
+        "hash": "a7fda6b4b293eb10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "lessonId": "c-stage1-13",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们调用了一个方法，把一条数据喂了进去，函数里那个元素被改成了别的数。我们自己那个元素会怎样？",
+      "options": [
+        "一点都不变，因为传入的是抄件",
+        "跟着一起变，因为两边其实是同一个元素",
+        "会变成 0",
+        "要等函数整个跑完才跟着变"
+      ],
+      "answer": 0,
+      "explanation": "单个的小东西传入函数，编译器是**抄一张纸条**投进去的：函数里那个元素保存的是纸条，改纸条改不到你本人那个元素。所以函数里怎么折腾，你外面那个元素都稳稳当当。不过有一点要记牢 —— **整排的元素是例外**，那个交出去的是「元素架在哪儿」，改了你外面真的会变"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们把一句 `int fishCount = 0;` 写在了**所有函数的外面**。这个摆在大门口的大缸，谁能动它？",
+      "options": [
+        "下面的每一个函数都能看见、都能改",
+        "只有 `main` 能看见、能动",
+        "只有写在它后面那一个方法能看见",
+        "谁都不能改，只能读一读"
+      ],
+      "answer": 0,
+      "explanation": "写在外面的大缸是**大家共用的**：下面每一个函数都能看见它、都能往里伸手。所以调用一个方法加一点，大缸就慢慢攒起来了。不过方便是有代价的 —— 谁改的、什么时候改的，你根本追不到，所以**能用函数里的元素就别放大缸**"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们在一个函数里摆了一个元素，函数跑完了。这时候在 `main` 里调用这个元素的名字，会怎样？",
+      "options": [
+        "编译器会说这个名字没登记过，程序根本编不出来",
+        "能拿到元素里最后剩下的那个数",
+        "能拿到 0",
+        "会拿到一个碰巧剩下的数"
+      ],
+      "answer": 0,
+      "explanation": "函数里的元素，**只在函数里活着**：每调用一次函数就现摆一套崭新的元素，函数一收工，整套元素立刻撤走。跑到外面去称呼它的名字，编译器只会回你一句 `undeclared`（我们没登记过这个名字）—— 这种错**在翻译阶段就被拦下了**，程序压根生不出来，跟跑到一半才炸完全是两回事。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nint fishCount = 0;\n\nvoid addOne(void) {\n    ____ = ____ + 1;\n}\n\nint main(void) {\n    addOne();\n    addOne();\n    addOne();\n    printf(\"%d\\n\", fishCount);\n    return 0;\n}",
+      "stem": "这一个方法想往门口的大缸里放一条数据。两个空该填什么？",
+      "blanks": [
+        {
+          "answer": "fishCount"
+        },
+        {
+          "answer": "fishCount"
+        }
+      ],
+      "explanation": "两个空填的都是大缸的名字 `fishCount`。大缸是写在所有函数外面的，函数里**不用重新交代它保存的是什么** —— 直接引用名称就能用；后面那句 `+ 1` 是**读出大缸现在的数、加一、再放回去**。调用三次，大缸里就攒到 `3` 了"
+    },
+    {
+      "id": "q5",
+      "type": "codefill",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nvoid feed(int n) {\n    n = 100;\n}\n\nint main(void) {\n    int fish = 5;\n    ____;\n    printf(\"%d\\n\", fish);\n    return 0;\n}",
+      "stem": "我们想调用 `feed` 这一个方法，把 `fish` 传入。空里该填什么？",
+      "blanks": [
+        {
+          "answer": "feed(fish)"
+        }
+      ],
+      "explanation": "填 `feed(fish)` —— 呼声写法就是「函数名 + 一对小括号」，要把东西传入就写在小括号里，最后别忘了分号。填完跑一遍，屏幕上印的是 `5`：函数里把纸条改成了 `100`，你那个 `fish` 元素**一点没动**。这正是这一课最要紧的一条"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nint fish = 10;\n\nvoid take(int n) {\n    n = n - 1;\n    printf(\"函数里：%d\\n\", n);\n}\n\nint main(void) {\n    int fish = 3;\n    take(fish);\n    printf(\"main 里：%d\\n\", fish);\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "函数里：2\nmain 里：3",
+      "accept": [
+        "函数里：2\nmain 里：3\n"
+      ],
+      "explanation": "这一段里藏着两件事。第一件：传入 `take` 的是 `3` 的**抄件**，函数里减成了 `2`，`main` 里那个还是 `3`。第二件：`main` 自己也摆了一个叫 `fish` 的元素，它**把外面大缸里那个 10 挡在后头**了 —— 从 `int fish = 3;` 那一行起，这条街上再说 `fish`，指的都是自己这个元素。名字一样，可不代表是同一个元素"
+    },
+    {
+      "id": "q7",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nint total = 100;\n\nvoid spend(int amount) {\n    total = total - amount;\n}\n\nint main(void) {\n    spend(30);\n    spend(20);\n    printf(\"%d\\n\", total);\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "50",
+      "accept": [
+        "50\n"
+      ],
+      "explanation": "这个函数里**一个 `return` 都没有**，可大缸真的被改到了 —— 因为 `total` 写在所有函数外面，是大家共用的大缸，函数里伸手就能改到它本身。调用两趟：`100 - 30 - 20`，屏幕上就是 `50`。这里和「传入的抄件」正好是一对：函数里那个元素改了不算数，大缸改了**算数**"
+    }
+  ]
+}

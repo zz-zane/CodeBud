@@ -1,0 +1,85 @@
+{
+  "lessonId": "python-stage2-07",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们想让 `Cat` 这张子类照着 `Animal` 那张父类画，下面哪一句写对了？",
+      "options": [
+        "`class Cat(Animal):`",
+        "`class Cat: Animal`",
+        "`class Animal(Cat):`",
+        "`class Cat extends Animal:`"
+      ],
+      "answer": 0,
+      "explanation": "照哪张类定义画，写在**类定义名后面那对小括号里**：`class Cat(Animal):` 读作「照 `Animal` 那张类定义，再画一张 `Cat` 类定义」。`class Cat: Animal` 把括号挪错了位置，解释器不认；`class Animal(Cat):` 把两张类定义**说反了**——写成照 `Cat` 画 `Animal`，那就成了子对象是父对象的基类，越套越乱；`extends` 是别的语言定义类时的说法，Python 这边只认小括号。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "子类自己写了 `__init__` 之后，想请上一层类定义把它那一版先跑一遍、把名字放进变量，该写哪一句？",
+      "options": [
+        "`super().__init__(name)`",
+        "`self.__init__(name)`",
+        "`Animal.__init__()`",
+        "`Cat.__init__(name)`"
+      ],
+      "answer": 0,
+      "explanation": "子类**自己写了** `__init__`，就等于把父类那一版盖住了，名字不会自己进变量——得我们用 `super()` 把上一层请回来干。`super()` 读作「**上一层类定义**」，后面**不用喂 `self`**：我们正站在哪张子类上，Python 自己清楚，它会替我们把 `self` 递过去。写成 `self.__init__(name)` 等于原地调用自身，转着圈把同一段重跑一遍；写成 `Animal.__init__()` 又把 `self` 漏了，变量还是建不起来。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们只写了一句 `pet.speak()`，跑起来却是对象就、是狗就汪。这靠的是什么？",
+      "options": [
+        "`pet` 名字底下保存一个实例，Python 照着**那个实例自己的类定义**去找 `speak`，写代码的人不用管它是谁",
+        "我们必须先用 `if` 判断它是哪个类的实例，再分别调用不同的函数",
+        "`speak` 会自动把每张类定义上的输出结果全都印出来",
+        "只有那一排里的第一个宠物能叫，后面的会被跳过"
+      ],
+      "answer": 0,
+      "explanation": "同一句话各对象各样的道理很朴素：`pet` 这个名字底下**保存的是一个实例**，它自己知道自己是照哪张类定义生的。调用 `pet.speak()` 的时候，Python 是照**那个实例自己的类定义**去找这一个方法——不是照 `Animal` 父类找，也不是照我们写代码时脑子里想的那张找。所以我们只管写「调用 `speak`」，具体还是汪，交给那个会自己决定；往后添一个鸭子，底下那一行也一个字不用改。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "stem": "下面这段代码里，`Cat` 这张子类想照着 `Animal` 那张父类画。空里该填什么？",
+      "lang": "python",
+      "code": "class Animal:\n    def speak(self):\n        print(\"……\")\n\nclass Cat(____):\n    def speak(self):\n        print(\"\")\n\nCat().speak()\n",
+      "blanks": [
+        {
+          "answer": "Animal",
+          "accept": [
+            "Animal"
+          ]
+        }
+      ],
+      "explanation": "照哪张类定义画，就把那张**父类的名字填进类定义名后面的小括号里**，所以空里填 `Animal` 。填进去之后，`Animal` 上的说明和函数 `Cat` 天生就会，我们只需要在子类上重写想改的那一个方法。要是填 `Cat` 自己，那就成了「照着自己画自己」，解释器会当场翻脸。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "python",
+      "code": "class Animal:\n    def speak(self):\n        print(\"……\")\n\nclass Cat(Animal):\n    def speak(self):\n        print(\"\")\n\nclass Dog(Animal):\n    def speak(self):\n        print(\"汪！\")\n\nfor pet in [Cat(), Dog()]:\n    pet.speak()\n",
+      "stem": "这段代码的输出是什么？",
+      "answer": "\n汪！",
+      "accept": [
+        "\n汪！\n"
+      ],
+      "explanation": "`Cat` 和 `Dog` 都照 `Animal` 画，各自又把 `speak` 重写了一遍，所以对象输出是「喵！」、狗输出是「汪！」。底下那个 `for` 里只有一句 `pet.speak()`，它压根不知道这一圈轮到的是谁——是对象就用 `Cat` 那一版，是狗就用 `Dog` 那一版，Python 照着**那个实例自己的类定义**去找这一个方法。只有两句 `print`，所以正好两行输出。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "python",
+      "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Cat(Animal):\n    def __init__(self, name, fish):\n        super().__init__(name)\n        self.fish = fish\n\nc = Cat(\"学生甲\", 3)\nprint(c.name)\nprint(c.fish)\n",
+      "stem": "这段代码的输出是什么？",
+      "answer": "学生甲\n3",
+      "accept": [
+        "学生甲\n3\n"
+      ],
+      "explanation": "`Cat` 给子类单独写了一段 `__init__`，一写就把父类那一版盖住了，所以名字得靠 `super().__init__(name)` 请上一层先放进去。跑一遍看：`Cat(\"学生甲\", 3)` 先传入「学生甲」和 `3`，`super()` 把「学生甲」放进 `self.name`，接着 `self.fish = fish` 把 `3` 放进 `self.fish`。最后两行各报一格变量，自然是先印 `学生甲`、再印 `3`。要是把 `super()` 那一句删掉，`self.name` 这个变量根本没被建起来，第一行就会当场翻脸。"
+    }
+  ]
+}

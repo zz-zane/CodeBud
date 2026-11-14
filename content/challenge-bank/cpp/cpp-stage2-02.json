@@ -1,0 +1,337 @@
+{
+  "lessonId": "cpp-stage2-02",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s2-02-birth-and-farewell-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让对象在**初始化**和**离开**的那一刻各印一行，看看它们到底什么时候来、什么时候走。这道题**没有输入接口**，程序从头到尾自己跑完。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，一格 `name`（一串字）；写一个**构造函数** `Cat(string n)`，用初始化列表把名字装好，并在状态里印**一行**：\n\n```text\nXX 初始化啦\n```\n\n2. 再写一个**析构函数** `~Cat()`，印**一行**：\n\n```text\nXX 睡着啦\n```\n\n3. `main` 里按这个顺序养对象（仔仔细细看那对大括号）：\n   - 先在**外面**创建一个叫 `张三` 的对象；\n   - 再写**一对大括号**，把第二只叫 `李四` 的对象养在里面；\n   - 那对大括号**结束之后**，印一行 `里屋空了`。\n\n4. 整段跑完应该印出**五行**字。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {\n        cout << name << \" 初始化啦\" << endl;\n    }\n    ~Cat() {\n        cout << name << \" 睡着啦\" << endl;\n    }\n};\n\nint main() {\n    Cat a(\"张三\");\n    {\n        Cat b(\"李四\");\n    }\n    cout << \"里屋空了\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 初始化啦\n李四 初始化啦\n李四 睡着啦\n里屋空了\n张三 睡着啦",
+      "stdin": null,
+      "explanation": "这一题要看清两件事。\n\n**第一件：构造函数是按创建对象的先后跑的。** 外面那个先创建后，里屋那个后创建后，所以先印外面的、再印里屋的。\n\n**第二件：谁走出自己所在的那对大括号，谁就被自动收走**，而且**倒着收**：里屋那个后进去，就先出来。所以「睡着啦」那一行出现在**「里屋空了」之前** —— 因为大括号是在印那一行**之前**结束的。\n\n外面那个住在外屋，要等 `main` 那对大括号结束才走，所以它是**最后**一个，那一行排在最后面。\n\n⚠️ 我们一句都没调用 `~Cat()`，两行「睡着啦」都是它自己跑出来的 —— 析构函数**没有人称呼它**，这也是它脑袋上不能有输入接口的原因。",
+      "templateId": "cpp-s2-02-birth-and-farewell",
+      "params": {
+        "nameA": "张三",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "6f08614f830ca459"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-birth-and-farewell-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让对象在**初始化**和**离开**的那一刻各印一行，看看它们到底什么时候来、什么时候走。这道题**没有输入接口**，程序从头到尾自己跑完。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，一格 `name`（一串字）；写一个**构造函数** `Cat(string n)`，用初始化列表把名字装好，并在状态里印**一行**：\n\n```text\nXX 初始化啦\n```\n\n2. 再写一个**析构函数** `~Cat()`，印**一行**：\n\n```text\nXX 睡着啦\n```\n\n3. `main` 里按这个顺序养对象（仔仔细细看那对大括号）：\n   - 先在**外面**创建一个叫 `张三` 的对象；\n   - 再写**一对大括号**，把第二只叫 `三花` 的对象养在里面；\n   - 那对大括号**结束之后**，印一行 `里屋空了`。\n\n4. 整段跑完应该印出**五行**字。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {\n        cout << name << \" 初始化啦\" << endl;\n    }\n    ~Cat() {\n        cout << name << \" 睡着啦\" << endl;\n    }\n};\n\nint main() {\n    Cat a(\"张三\");\n    {\n        Cat b(\"三花\");\n    }\n    cout << \"里屋空了\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 初始化啦\n三花 初始化啦\n三花 睡着啦\n里屋空了\n张三 睡着啦",
+      "stdin": null,
+      "explanation": "这一题要看清两件事。\n\n**第一件：构造函数是按创建对象的先后跑的。** 外面那个先创建后，里屋那个后创建后，所以先印外面的、再印里屋的。\n\n**第二件：谁走出自己所在的那对大括号，谁就被自动收走**，而且**倒着收**：里屋那个后进去，就先出来。所以「睡着啦」那一行出现在**「里屋空了」之前** —— 因为大括号是在印那一行**之前**结束的。\n\n外面那个住在外屋，要等 `main` 那对大括号结束才走，所以它是**最后**一个，那一行排在最后面。\n\n⚠️ 我们一句都没调用 `~Cat()`，两行「睡着啦」都是它自己跑出来的 —— 析构函数**没有人称呼它**，这也是它脑袋上不能有输入接口的原因。",
+      "templateId": "cpp-s2-02-birth-and-farewell",
+      "params": {
+        "nameA": "张三",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "c12f35c6d27610a8"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-birth-and-farewell-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让对象在**初始化**和**离开**的那一刻各印一行，看看它们到底什么时候来、什么时候走。这道题**没有输入接口**，程序从头到尾自己跑完。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，一格 `name`（一串字）；写一个**构造函数** `Cat(string n)`，用初始化列表把名字装好，并在状态里印**一行**：\n\n```text\nXX 初始化啦\n```\n\n2. 再写一个**析构函数** `~Cat()`，印**一行**：\n\n```text\nXX 睡着啦\n```\n\n3. `main` 里按这个顺序养对象（仔仔细细看那对大括号）：\n   - 先在**外面**创建一个叫 `王五` 的对象；\n   - 再写**一对大括号**，把第二只叫 `李四` 的对象养在里面；\n   - 那对大括号**结束之后**，印一行 `里屋空了`。\n\n4. 整段跑完应该印出**五行**字。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {\n        cout << name << \" 初始化啦\" << endl;\n    }\n    ~Cat() {\n        cout << name << \" 睡着啦\" << endl;\n    }\n};\n\nint main() {\n    Cat a(\"王五\");\n    {\n        Cat b(\"李四\");\n    }\n    cout << \"里屋空了\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 初始化啦\n李四 初始化啦\n李四 睡着啦\n里屋空了\n王五 睡着啦",
+      "stdin": null,
+      "explanation": "这一题要看清两件事。\n\n**第一件：构造函数是按创建对象的先后跑的。** 外面那个先创建后，里屋那个后创建后，所以先印外面的、再印里屋的。\n\n**第二件：谁走出自己所在的那对大括号，谁就被自动收走**，而且**倒着收**：里屋那个后进去，就先出来。所以「睡着啦」那一行出现在**「里屋空了」之前** —— 因为大括号是在印那一行**之前**结束的。\n\n外面那个住在外屋，要等 `main` 那对大括号结束才走，所以它是**最后**一个，那一行排在最后面。\n\n⚠️ 我们一句都没调用 `~Cat()`，两行「睡着啦」都是它自己跑出来的 —— 析构函数**没有人称呼它**，这也是它脑袋上不能有输入接口的原因。",
+      "templateId": "cpp-s2-02-birth-and-farewell",
+      "params": {
+        "nameA": "王五",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "6c9d4400f0046165"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-birth-and-farewell-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让对象在**初始化**和**离开**的那一刻各印一行，看看它们到底什么时候来、什么时候走。这道题**没有输入接口**，程序从头到尾自己跑完。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，一格 `name`（一串字）；写一个**构造函数** `Cat(string n)`，用初始化列表把名字装好，并在状态里印**一行**：\n\n```text\nXX 初始化啦\n```\n\n2. 再写一个**析构函数** `~Cat()`，印**一行**：\n\n```text\nXX 睡着啦\n```\n\n3. `main` 里按这个顺序养对象（仔仔细细看那对大括号）：\n   - 先在**外面**创建一个叫 `王五` 的对象；\n   - 再写**一对大括号**，把第二只叫 `三花` 的对象养在里面；\n   - 那对大括号**结束之后**，印一行 `里屋空了`。\n\n4. 整段跑完应该印出**五行**字。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {\n        cout << name << \" 初始化啦\" << endl;\n    }\n    ~Cat() {\n        cout << name << \" 睡着啦\" << endl;\n    }\n};\n\nint main() {\n    Cat a(\"王五\");\n    {\n        Cat b(\"三花\");\n    }\n    cout << \"里屋空了\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 初始化啦\n三花 初始化啦\n三花 睡着啦\n里屋空了\n王五 睡着啦",
+      "stdin": null,
+      "explanation": "这一题要看清两件事。\n\n**第一件：构造函数是按创建对象的先后跑的。** 外面那个先创建后，里屋那个后创建后，所以先印外面的、再印里屋的。\n\n**第二件：谁走出自己所在的那对大括号，谁就被自动收走**，而且**倒着收**：里屋那个后进去，就先出来。所以「睡着啦」那一行出现在**「里屋空了」之前** —— 因为大括号是在印那一行**之前**结束的。\n\n外面那个住在外屋，要等 `main` 那对大括号结束才走，所以它是**最后**一个，那一行排在最后面。\n\n⚠️ 我们一句都没调用 `~Cat()`，两行「睡着啦」都是它自己跑出来的 —— 析构函数**没有人称呼它**，这也是它脑袋上不能有输入接口的原因。",
+      "templateId": "cpp-s2-02-birth-and-farewell",
+      "params": {
+        "nameA": "王五",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "c1743d595c99d24d"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-const-needs-list-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想养一个**初始化以后再也不能改**条数的对象：那一格加了封印，写成 `const int fish;`，构造函数也写好了，想让它一初始化就把条数赋值。\n\n可信封递进去，编译器拦下来说这一格装不进去。\n\n你帮我们改一处，让它跑起来、把那一行印对。**`main` 里那几句一个都不用动。**",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nclass Cat {\npublic:\n    const int fish;\n\n    Cat(int f) {\n        fish = f;\n    }\n\n    void show() const {\n        cout << \"我们有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(3);\n    c1.show();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nclass Cat {\npublic:\n    const int fish;\n\n    Cat(int f) : fish(f) {}\n\n    void show() const {\n        cout << \"我们有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(3);\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "我们有 3 条数据",
+      "stdin": null,
+      "explanation": "编译器一口气说了三句，我们挑两句最要紧的抄在这儿：\n\n`main.cpp:8:5: error: uninitialized const member in 'const int' [-fpermissive]`\n\n`main.cpp:9:14: error: assignment of read-only member 'Cat::fish'`\n\n第一句说「这一格到初始化为止还空着」，第二句说「这是只读的格子，不许赋值」。两句合起来就是本课那条规矩：**带封印的格子只能靠初始化列表装**。\n\n状态里那两行是「先接住料、再往格子里塞」—— 对普通格子没问题，对**带封印的格子**就晚了：它必须在大括号里那几行**之前**就装好。\n\n改法是把 `fish = f;` 从状态里挪到脑袋后面的清单上，整招缩成一行：\n\n`Cat(int f) : fish(f) {}`\n\n以后看到 `read-only member` 或者 `uninitialized const member`，先看这一格是不是带了封印、再看初始化列表里有没有它。",
+      "templateId": "cpp-s2-02-const-needs-list",
+      "params": {
+        "fish": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "e5881c35de5671e5"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-const-needs-list-001",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想养一个**初始化以后再也不能改**条数的对象：那一格加了封印，写成 `const int fish;`，构造函数也写好了，想让它一初始化就把条数赋值。\n\n可信封递进去，编译器拦下来说这一格装不进去。\n\n你帮我们改一处，让它跑起来、把那一行印对。**`main` 里那几句一个都不用动。**",
+      "brokenCode": "#include <iostream>\nusing namespace std;\n\nclass Cat {\npublic:\n    const int fish;\n\n    Cat(int f) {\n        fish = f;\n    }\n\n    void show() const {\n        cout << \"我们有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(4);\n    c1.show();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\nusing namespace std;\n\nclass Cat {\npublic:\n    const int fish;\n\n    Cat(int f) : fish(f) {}\n\n    void show() const {\n        cout << \"我们有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(4);\n    c1.show();\n    return 0;\n}\n",
+      "expectedOutput": "我们有 4 条数据",
+      "stdin": null,
+      "explanation": "编译器一口气说了三句，我们挑两句最要紧的抄在这儿：\n\n`main.cpp:8:5: error: uninitialized const member in 'const int' [-fpermissive]`\n\n`main.cpp:9:14: error: assignment of read-only member 'Cat::fish'`\n\n第一句说「这一格到初始化为止还空着」，第二句说「这是只读的格子，不许赋值」。两句合起来就是本课那条规矩：**带封印的格子只能靠初始化列表装**。\n\n状态里那两行是「先接住料、再往格子里塞」—— 对普通格子没问题，对**带封印的格子**就晚了：它必须在大括号里那几行**之前**就装好。\n\n改法是把 `fish = f;` 从状态里挪到脑袋后面的清单上，整招缩成一行：\n\n`Cat(int f) : fish(f) {}`\n\n以后看到 `read-only member` 或者 `uninitialized const member`，先看这一格是不是带了封印、再看初始化列表里有没有它。",
+      "templateId": "cpp-s2-02-const-needs-list",
+      "params": {
+        "fish": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "5e59da2fd3ec907c"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-ctor-void-return-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们照课文画了一张叫 `Cat` 的类定义，想让对象一初始化就把名字装好 —— 构造函数的状态里也写好了 `name = n;`。\n\n可信封递进去，编译器当场拦下、一行都不让跑。\n\n你帮我们改一处，让它跑起来、把那一行印对。**类定义上已有的部分一个都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    void Cat(string n) {\n        name = n;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\");\n    cout << c1.name << \" 蹦出来了\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) {\n        name = n;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\");\n    cout << c1.name << \" 蹦出来了\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 蹦出来了",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:9:5: error: return type specification for constructor invalid`\n\n用自然语言解释：**「构造函数的脑袋上不许写返回什么的类型。」** 它是在翻译阶段就拦下的，程序根本没跑起来。\n\n我们当时想的是「函数都爱在脑袋上写个类型，我们也写一个总没错吧」—— 错就错在**构造函数不是被谁调用去干活的普通函数**：它只管在对象落地那一刻把自己那几格装好，压根不存在「返回什么」。所以它的脑袋上除了「收什么料」，别的什么都不该有。\n\n改法就是把那个 `void` **删掉**。看到报错里出现 `constructor` 这个词，就去检查脑袋上是不是多写了点什么 —— 这是它最常复发的病。",
+      "templateId": "cpp-s2-02-ctor-void-return",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "5dc5200e5c146a07"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-ctor-void-return-002",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们照课文画了一张叫 `Cat` 的类定义，想让对象一初始化就把名字装好 —— 构造函数的状态里也写好了 `name = n;`。\n\n可信封递进去，编译器当场拦下、一行都不让跑。\n\n你帮我们改一处，让它跑起来、把那一行印对。**类定义上已有的部分一个都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    void Cat(string n) {\n        name = n;\n    }\n};\n\nint main() {\n    Cat c1(\"王五\");\n    cout << c1.name << \" 蹦出来了\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) {\n        name = n;\n    }\n};\n\nint main() {\n    Cat c1(\"王五\");\n    cout << c1.name << \" 蹦出来了\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 蹦出来了",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:9:5: error: return type specification for constructor invalid`\n\n用自然语言解释：**「构造函数的脑袋上不许写返回什么的类型。」** 它是在翻译阶段就拦下的，程序根本没跑起来。\n\n我们当时想的是「函数都爱在脑袋上写个类型，我们也写一个总没错吧」—— 错就错在**构造函数不是被谁调用去干活的普通函数**：它只管在对象落地那一刻把自己那几格装好，压根不存在「返回什么」。所以它的脑袋上除了「收什么料」，别的什么都不该有。\n\n改法就是把那个 `void` **删掉**。看到报错里出现 `constructor` 这个词，就去检查脑袋上是不是多写了点什么 —— 这是它最常复发的病。",
+      "templateId": "cpp-s2-02-ctor-void-return",
+      "params": {
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "ae8b7ef82be2f033"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-default-and-full-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让类定义上挂**两套初始化法**：一套什么都不喂也能生，一套把名字和条数都传入。输入接口会递进来**一个数**（一行）：有名字那个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上挂**两套**初始化法：\n   - **不带料**的那套：名字装「无名」、条数装 0；\n   - **两样都要**的那套：名字和条数都由输入接口给（用初始化列表装）。\n2. 类定义上再写一个方法 `show`，称呼它的时候印**一行**：`名字：N 条`（中间是中文冒号，条数后面跟一个空格加「条」）；\n3. `main` 里按这个顺序生两个对象、各调用一次 `show`：\n   - 先来一个**什么都没喂**的（用不带料那套）；\n   - 再来一个叫 `张三` 的，条数用输入接口递进来的那个数。\n\n比如程序的输入是\n\n1\n\n程序就要返回\n\n无名：0 条\n张三：1 条\n\n（判分喂的是**另外一个数**，别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat() : name(\"无名\"), fish(0) {}\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \"：\" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1;\n    Cat c2(\"张三\", a);\n    c1.show();\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "无名：0 条\n张三：4 条",
+      "stdin": "4\n",
+      "explanation": "同一个类定义上可以挂**不止一套**初始化法，编译器看你**喂了几样料、喂的是什么**，就去挑对得上的那一套。\n\n- `Cat c1;` —— 一样料都没喂 → 跑的是**不带料**那套，于是名字格装「无名」、条数格装 0。**这就是「刚初始化别空着」的正解**：上一课那个名字格空空的对象，从此有救啦。\n- `Cat c2(\"张三\", a);` —— 一串字加一个整数 → 跑**两样都要**那套。\n\n⚠️ 判分喂的量和题面示例**不一样**，所以条数必须真的从输入接口读进来（`cin >> a;`），不能写成固定数字。\n\n⚠️ 两套初始化法都别写返回什么的类型 —— 构造函数的脑袋上除了「收什么料」什么都不写，这是本课第一条约定的规矩。",
+      "templateId": "cpp-s2-02-default-and-full",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "528aa8ace3553c7f"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-default-and-full-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让类定义上挂**两套初始化法**：一套什么都不喂也能生，一套把名字和条数都传入。输入接口会递进来**一个数**（一行）：有名字那个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上挂**两套**初始化法：\n   - **不带料**的那套：名字装「无名」、条数装 0；\n   - **两样都要**的那套：名字和条数都由输入接口给（用初始化列表装）。\n2. 类定义上再写一个方法 `show`，称呼它的时候印**一行**：`名字：N 条`（中间是中文冒号，条数后面跟一个空格加「条」）；\n3. `main` 里按这个顺序生两个对象、各调用一次 `show`：\n   - 先来一个**什么都没喂**的（用不带料那套）；\n   - 再来一个叫 `李四` 的，条数用输入接口递进来的那个数。\n\n比如程序的输入是\n\n6\n\n程序就要返回\n\n无名：0 条\n李四：6 条\n\n（判分喂的是**另外一个数**，别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat() : name(\"无名\"), fish(0) {}\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \"：\" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1;\n    Cat c2(\"李四\", a);\n    c1.show();\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "无名：0 条\n李四：2 条",
+      "stdin": "2\n",
+      "explanation": "同一个类定义上可以挂**不止一套**初始化法，编译器看你**喂了几样料、喂的是什么**，就去挑对得上的那一套。\n\n- `Cat c1;` —— 一样料都没喂 → 跑的是**不带料**那套，于是名字格装「无名」、条数格装 0。**这就是「刚初始化别空着」的正解**：上一课那个名字格空空的对象，从此有救啦。\n- `Cat c2(\"李四\", a);` —— 一串字加一个整数 → 跑**两样都要**那套。\n\n⚠️ 判分喂的量和题面示例**不一样**，所以条数必须真的从输入接口读进来（`cin >> a;`），不能写成固定数字。\n\n⚠️ 两套初始化法都别写返回什么的类型 —— 构造函数的脑袋上除了「收什么料」什么都不写，这是本课第一条约定的规矩。",
+      "templateId": "cpp-s2-02-default-and-full",
+      "params": {
+        "name": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "d9e09976082b9314"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-default-and-full-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让类定义上挂**两套初始化法**：一套什么都不喂也能生，一套把名字和条数都传入。输入接口会递进来**一个数**（一行）：有名字那个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上挂**两套**初始化法：\n   - **不带料**的那套：名字装「无名」、条数装 0；\n   - **两样都要**的那套：名字和条数都由输入接口给（用初始化列表装）。\n2. 类定义上再写一个方法 `show`，称呼它的时候印**一行**：`名字：N 条`（中间是中文冒号，条数后面跟一个空格加「条」）；\n3. `main` 里按这个顺序生两个对象、各调用一次 `show`：\n   - 先来一个**什么都没喂**的（用不带料那套）；\n   - 再来一个叫 `王五` 的，条数用输入接口递进来的那个数。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n无名：0 条\n王五：3 条\n\n（判分喂的是**另外一个数**，别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat() : name(\"无名\"), fish(0) {}\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \"：\" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1;\n    Cat c2(\"王五\", a);\n    c1.show();\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "无名：0 条\n王五：1 条",
+      "stdin": "1\n",
+      "explanation": "同一个类定义上可以挂**不止一套**初始化法，编译器看你**喂了几样料、喂的是什么**，就去挑对得上的那一套。\n\n- `Cat c1;` —— 一样料都没喂 → 跑的是**不带料**那套，于是名字格装「无名」、条数格装 0。**这就是「刚初始化别空着」的正解**：上一课那个名字格空空的对象，从此有救啦。\n- `Cat c2(\"王五\", a);` —— 一串字加一个整数 → 跑**两样都要**那套。\n\n⚠️ 判分喂的量和题面示例**不一样**，所以条数必须真的从输入接口读进来（`cin >> a;`），不能写成固定数字。\n\n⚠️ 两套初始化法都别写返回什么的类型 —— 构造函数的脑袋上除了「收什么料」什么都不写，这是本课第一条约定的规矩。",
+      "templateId": "cpp-s2-02-default-and-full",
+      "params": {
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "b8936003aa583609"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-dtor-no-param-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画了一张叫 `Cat` 的类定义：构造函数把名字装好，析构函数负责在对象走的时候印一行「收摊啦」。\n\n画完我们瞧着析构函数那个空空的脑袋有点不放心，就顺手给它也开了一个输入接口 —— 结果编译器当场拦下，一行都不让跑。\n\n你帮我们改一处，让它跑起来、把那行字印出来。**除了析构函数的脑袋，别的地方都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    ~Cat(string tail) {\n        cout << name << \" 收摊啦\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\");\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    ~Cat() {\n        cout << name << \" 收摊啦\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\");\n    return 0;\n}\n",
+      "expectedOutput": "张三 收摊啦",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:11:5: error: destructors may not have parameters`\n\n用自然语言解释：**「析构函数的脑袋上不许有输入接口。」**\n\n为什么？因为**没有人称呼它** —— 它是大括号一结束就自己跑的那一趟。既然没人调用，也就没人给它递料，那么开一个输入接口就只能是个误会。\n\n改法就是把那一对括号里的东西**清空**：`~Cat()`。\n\n顺带认个亲：构造函数也不写返回什么，析构函数也不收料 —— 这两招都不是被调用去干活的普通函数，它们只在自己该来的那一刻自己跑。",
+      "templateId": "cpp-s2-02-dtor-no-param",
+      "params": {
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "499e69c63daa359a"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-dtor-no-param-001",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画了一张叫 `Cat` 的类定义：构造函数把名字装好，析构函数负责在对象走的时候印一行「收摊啦」。\n\n画完我们瞧着析构函数那个空空的脑袋有点不放心，就顺手给它也开了一个输入接口 —— 结果编译器当场拦下，一行都不让跑。\n\n你帮我们改一处，让它跑起来、把那行字印出来。**除了析构函数的脑袋，别的地方都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    ~Cat(string tail) {\n        cout << name << \" 收摊啦\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"三花\");\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    ~Cat() {\n        cout << name << \" 收摊啦\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"三花\");\n    return 0;\n}\n",
+      "expectedOutput": "三花 收摊啦",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:11:5: error: destructors may not have parameters`\n\n用自然语言解释：**「析构函数的脑袋上不许有输入接口。」**\n\n为什么？因为**没有人称呼它** —— 它是大括号一结束就自己跑的那一趟。既然没人调用，也就没人给它递料，那么开一个输入接口就只能是个误会。\n\n改法就是把那一对括号里的东西**清空**：`~Cat()`。\n\n顺带认个亲：构造函数也不写返回什么，析构函数也不收料 —— 这两招都不是被调用去干活的普通函数，它们只在自己该来的那一刻自己跑。",
+      "templateId": "cpp-s2-02-dtor-no-param",
+      "params": {
+        "name": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "b064838dde5b4503"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-two-cats-list-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让每个对象**一初始化就带着**自己的名字和条数。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样料都收，用**初始化列表**把这俩装进格子）；再写一个方法 `show`，称呼它的时候印**一行**：\n\n```text\nXX 有 N 条数据\n```\n\n2. 根据类创建**两个**实例：第一个叫 `张三`、第二只叫 `李四`，条数用输入接口递进来的那两个；\n3. **各调用一次** `show`，第一个先调用。\n\n比如程序的输入是\n\n4\n1\n\n程序就要返回\n\n张三 有 4 条数据\n李四 有 1 条数据\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"张三\", a);\n    Cat c2(\"李四\", b);\n    c1.show();\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 2 条数据\n李四 有 4 条数据",
+      "stdin": "2\n4\n",
+      "explanation": "这一题的重点是**创建对象的时候就把料传入**。\n\n- 构造函数的脑袋上写的是「收什么料」：`Cat(string n, int f)` 意思是「生这个对象的时候，要递进来一串字和一个整数」。它们**没有先后之外的讲究** —— 喂料的顺序得跟脑袋上写的顺序对上。\n- 脑袋后面那一小段 `: name(n), fish(f)` 是**初始化列表**：它在大括号里那几行**之前**执行，也就是实例刚落地、东西就已经在格子里了。\n- 创建对象那一句把两件事合成了一件：`Cat c1(\"张三\", a);` —— 一边创建 `c1`，一边把名字和条数递给初始化的那一刻。\n\n⚠️ 别写成 `Cat c1;` 再往格子里塞 —— 那是上一课的写法，这一课要的是「一初始化就带着」。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。",
+      "templateId": "cpp-s2-02-two-cats-list",
+      "params": {
+        "nameA": "张三",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "831d29768f5224b7"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-two-cats-list-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让每个对象**一初始化就带着**自己的名字和条数。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样料都收，用**初始化列表**把这俩装进格子）；再写一个方法 `show`，称呼它的时候印**一行**：\n\n```text\nXX 有 N 条数据\n```\n\n2. 根据类创建**两个**实例：第一个叫 `张三`、第二只叫 `三花`，条数用输入接口递进来的那两个；\n3. **各调用一次** `show`，第一个先调用。\n\n比如程序的输入是\n\n5\n1\n\n程序就要返回\n\n张三 有 5 条数据\n三花 有 1 条数据\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"张三\", a);\n    Cat c2(\"三花\", b);\n    c1.show();\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 1 条数据\n三花 有 3 条数据",
+      "stdin": "1\n3\n",
+      "explanation": "这一题的重点是**创建对象的时候就把料传入**。\n\n- 构造函数的脑袋上写的是「收什么料」：`Cat(string n, int f)` 意思是「生这个对象的时候，要递进来一串字和一个整数」。它们**没有先后之外的讲究** —— 喂料的顺序得跟脑袋上写的顺序对上。\n- 脑袋后面那一小段 `: name(n), fish(f)` 是**初始化列表**：它在大括号里那几行**之前**执行，也就是实例刚落地、东西就已经在格子里了。\n- 创建对象那一句把两件事合成了一件：`Cat c1(\"张三\", a);` —— 一边创建 `c1`，一边把名字和条数递给初始化的那一刻。\n\n⚠️ 别写成 `Cat c1;` 再往格子里塞 —— 那是上一课的写法，这一课要的是「一初始化就带着」。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。",
+      "templateId": "cpp-s2-02-two-cats-list",
+      "params": {
+        "nameA": "张三",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "c8d20fac68730cff"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-two-cats-list-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让每个对象**一初始化就带着**自己的名字和条数。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样料都收，用**初始化列表**把这俩装进格子）；再写一个方法 `show`，称呼它的时候印**一行**：\n\n```text\nXX 有 N 条数据\n```\n\n2. 根据类创建**两个**实例：第一个叫 `王五`、第二只叫 `李四`，条数用输入接口递进来的那两个；\n3. **各调用一次** `show`，第一个先调用。\n\n比如程序的输入是\n\n5\n1\n\n程序就要返回\n\n王五 有 5 条数据\n李四 有 1 条数据\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"王五\", a);\n    Cat c2(\"李四\", b);\n    c1.show();\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "王五 有 5 条数据\n李四 有 3 条数据",
+      "stdin": "5\n3\n",
+      "explanation": "这一题的重点是**创建对象的时候就把料传入**。\n\n- 构造函数的脑袋上写的是「收什么料」：`Cat(string n, int f)` 意思是「生这个对象的时候，要递进来一串字和一个整数」。它们**没有先后之外的讲究** —— 喂料的顺序得跟脑袋上写的顺序对上。\n- 脑袋后面那一小段 `: name(n), fish(f)` 是**初始化列表**：它在大括号里那几行**之前**执行，也就是实例刚落地、东西就已经在格子里了。\n- 创建对象那一句把两件事合成了一件：`Cat c1(\"王五\", a);` —— 一边创建 `c1`，一边把名字和条数递给初始化的那一刻。\n\n⚠️ 别写成 `Cat c1;` 再往格子里塞 —— 那是上一课的写法，这一课要的是「一初始化就带着」。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。",
+      "templateId": "cpp-s2-02-two-cats-list",
+      "params": {
+        "nameA": "王五",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "052c72a6b6495395"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-02-two-cats-list-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让每个对象**一初始化就带着**自己的名字和条数。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样料都收，用**初始化列表**把这俩装进格子）；再写一个方法 `show`，称呼它的时候印**一行**：\n\n```text\nXX 有 N 条数据\n```\n\n2. 根据类创建**两个**实例：第一个叫 `王五`、第二只叫 `三花`，条数用输入接口递进来的那两个；\n3. **各调用一次** `show`，第一个先调用。\n\n比如程序的输入是\n\n3\n3\n\n程序就要返回\n\n王五 有 3 条数据\n三花 有 3 条数据\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"王五\", a);\n    Cat c2(\"三花\", b);\n    c1.show();\n    c2.show();\n    return 0;\n}\n",
+      "expectedOutput": "王五 有 2 条数据\n三花 有 2 条数据",
+      "stdin": "2\n2\n",
+      "explanation": "这一题的重点是**创建对象的时候就把料传入**。\n\n- 构造函数的脑袋上写的是「收什么料」：`Cat(string n, int f)` 意思是「生这个对象的时候，要递进来一串字和一个整数」。它们**没有先后之外的讲究** —— 喂料的顺序得跟脑袋上写的顺序对上。\n- 脑袋后面那一小段 `: name(n), fish(f)` 是**初始化列表**：它在大括号里那几行**之前**执行，也就是实例刚落地、东西就已经在格子里了。\n- 创建对象那一句把两件事合成了一件：`Cat c1(\"王五\", a);` —— 一边创建 `c1`，一边把名字和条数递给初始化的那一刻。\n\n⚠️ 别写成 `Cat c1;` 再往格子里塞 —— 那是上一课的写法，这一课要的是「一初始化就带着」。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。",
+      "templateId": "cpp-s2-02-two-cats-list",
+      "params": {
+        "nameA": "王五",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.288Z",
+        "hash": "5e59ecab3f2b13f9"
+      }
+    }
+  ]
+}

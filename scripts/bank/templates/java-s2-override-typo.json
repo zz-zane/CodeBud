@@ -1,0 +1,27 @@
+{
+  "templateId": "java-s2-override-typo",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-02",
+  "type": "codefix",
+  "concept": [
+    "重写",
+    "@Override",
+    "super.speak",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四"
+      ]
+    }
+  },
+  "stemTemplate": "我们写了一张子类，想在父类那一个方法之外**先请父类出一次、再补上我们自己那句**。可编译器把变量拍下来了，程序**一趟都没跑起来**。\n\n请你帮我们改好。改好之后，程序该印出这两行：\n\n```text\n{name}发出了一次叫\n{name}：\n```\n\n（第一行是父类那一版的样子，第二行才是我们补的那句。）",
+  "brokenCodeTemplate": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speek() {\n        super.speak();\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"{name}\");\n        c.speak();\n    }\n}\n",
+  "referenceFixTemplate": "class Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Cat extends Animal {\n    Cat(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        super.speak();\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat(\"{name}\");\n        c.speak();\n    }\n}\n",
+  "explanationTemplate": "编译器的原话只有一句：**`method does not override or implement a method from a supertype`** —— 念起来是「我们这一手，上面**根本没有可盖的**」。\n\n它指的是那一行 `@Override`。这张小纸条的意思本来是「我们这一手是**故意**要盖掉上面某一版的」，可编译器拿着我们写下的名字往上找了一圈：**父类上压根没有叫这个名字的一手**，于是当场翻脸。\n\n症结就是**名字手滑多打了一个字母** —— 写成了 `speek`，而父类上叫 `speak`。名字不一样，编译器就当成「我们新写的一张函数」，新函数没有什么可盖的，`@Override` 那张纸条就成了假的。\n\n把名字改对之后，我们想要的行为才出得来：\n\n- `super.speak();` 请上一层把父类那一版跑一遍 → 印出第一行；\n- 接着我们自己那行印出第二行。\n\n**这张小纸条值钱就值在这儿**：要是没写 `@Override`，同一个拼写错会**安安静静地溜过去** —— 子类上多出一个方法没人调用得动的 `speek`，而 `main` 里调用 `speak` 走的还是父类那一版，程序一次不吭、结果就是不对。所以我们每次盖掉父类某一版，都写上它。\n\n顺手记：`super.speak()` 请的是**上一层那一版**，不是再调用一次自己 —— 写在盖掉的那一个方法里面也是安全的，不会绕回去。"
+}

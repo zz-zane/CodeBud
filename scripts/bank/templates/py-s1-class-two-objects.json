@@ -1,0 +1,34 @@
+{
+  "templateId": "py-s1-class-two-objects",
+  "lang": "python",
+  "stage": 1,
+  "lessonId": "python-stage1-14",
+  "type": "codefix",
+  "concept": [
+    "实例属性",
+    "类属性",
+    "创建对象",
+    "self"
+  ],
+  "instances": 2,
+  "params": {
+    "n1": {
+      "kind": "pick",
+      "values": [
+        "计算机",
+        "小鳕鱼"
+      ]
+    },
+    "n2": {
+      "kind": "pick",
+      "values": [
+        "毛线球",
+        "商品B"
+      ]
+    }
+  },
+  "stemTemplate": "我们按同一个类定义造了**两个**对象，一个叫「{n1}」，一个叫「{n2}」。\n\n可是不管问哪一个，它都报同一个名字……你帮我们改对，让两个各报各的。",
+  "brokenCodeTemplate": "class Cat:\n    def __init__(self, name):\n        Cat.name = name\n\na = Cat(\"{n1}\")\nb = Cat(\"{n2}\")\nprint(a.name)\nprint(b.name)\n",
+  "referenceFixTemplate": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\na = Cat(\"{n1}\")\nb = Cat(\"{n2}\")\nprint(a.name)\nprint(b.name)\n",
+  "explanationTemplate": "`Cat.name = name` 是往**类定义**上写名字，而不是往**这一个对象**身上写。\n\n类定义只有一张，两个对象共用它 —— 所以给第二只起名的时候，把第一个留在类定义上的名字**盖掉了**。于是两个对象问出来的是同一个（最后写上去的）名字。\n\n`self.name = name` 才是往**当前这一个**身上写。每 `Cat(...)` 一次就多一个**自己的**寄存柜，名字各存各的，谁也不会盖谁。\n\n（一句话记住：`Cat.xxx` 是**全类定义共用**的一格，`self.xxx` 是**每个对象一个**的一格。要让每个对象各有一份，就必须用 `self.`。）"
+}

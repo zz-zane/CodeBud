@@ -1,0 +1,47 @@
+{
+  "templateId": "java-s3-anno-method-table",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-13",
+  "type": "codewrite",
+  "concept": [
+    "自己画的纸条要留到跑的时候才读得到",
+    "getAnnotation 交回来的是一张纸条或 null",
+    "没贴纸条的函数也要有一行"
+  ],
+  "instances": 6,
+  "params": {
+    "m1": {
+      "kind": "pick",
+      "values": [
+        "打招呼",
+        "招手"
+      ]
+    },
+    "m2": {
+      "kind": "pick",
+      "values": [
+        "睡觉",
+        "暂停"
+      ]
+    },
+    "a1": {
+      "kind": "pick",
+      "values": [
+        "处理了",
+        "应当开始处理"
+      ]
+    },
+    "a2": {
+      "kind": "pick",
+      "values": [
+        "别烦我",
+        "困了"
+      ]
+    }
+  },
+  "stemTemplate": "我们手上有一个类定义（代码里那张 `子对象`），类定义上画了三个方法，其中两招头上贴了纸条。\n\n要列一张**纸条表**：\n\n1. 三个方法一个方法不落，每行写 `函数名：` 后面跟着纸条上写的那串字；**没贴纸条的那一个方法**写 `函数名：没贴纸条`；\n2. **顺序不能靠光片** —— 把这几行塞进一个柜子，整行交给 `Collections.sort` 排一遍再印；\n3. 三行印完就结束，不要再印别的东西。\n\n填 `main` 里空着的那一段就行，**类定义和纸条一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+  "starterTemplate": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"{a1}\")\n        void {m1}() {\n        }\n\n        @纸条(\"{a2}\")\n        void {m2}() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+  "referenceSolutionTemplate": "import java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\nimport java.lang.reflect.Method;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.METHOD)\n    @interface 纸条 {\n        String value();\n    }\n\n    static class 子对象 {\n        @纸条(\"{a1}\")\n        void {m1}() {\n        }\n\n        @纸条(\"{a2}\")\n        void {m2}() {\n        }\n\n        void 洗脸() {\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> 表 = new ArrayList<>();\n        for (Method 一个方法 : 子对象.class.getDeclaredMethods()) {\n            纸条 小纸条 = 一个方法.getAnnotation(纸条.class);\n            表.add(一个方法.getName() + \"：\" + (小纸条 == null ? \"没贴纸条\" : 小纸条.value()));\n        }\n        Collections.sort(表);\n        for (String 一行 : 表) {\n            System.out.println(一行);\n        }\n    }\n}\n",
+  "explanationTemplate": "反射取得的方法集合不保证原始枚举顺序。按题目指定的方法名规则排序后，再读取注解并输出；没有注解的方法按约定输出默认信息。改名会影响排序，但不应改变注解读取规则。"
+}

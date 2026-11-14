@@ -1,0 +1,33 @@
+{
+  "templateId": "cpp-s2-05-static-this",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-05",
+  "type": "codefix",
+  "concept": [
+    "挂在类定义上的函数",
+    "称呼它的时候没有「我们自己」",
+    "this 在它状态里是空的"
+  ],
+  "instances": 2,
+  "params": {
+    "nameA": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    },
+    "nameB": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stemTemplate": "我们写了一个**挂在类定义上**的函数 `static int howMany()`，用来报「一共初始化了几个」。状态里我们顺手写了那句平时常用的「我们自己那一格」的写法 —— 编译器当场拦下。\n\n你帮我们改**一处**，让它跑起来、印出这两行：先一行 `一共初始化了 2 只`，再一行 `第一个叫 XX`（`XX` 是第一个对象的名字）。**`main` 里那几句和类定义上别的地方都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    static int count;\n    string name;\n\n    Cat(string n) : name(n) {\n        count = count + 1;\n    }\n\n    static int howMany() {\n        return this->count;\n    }\n};\n\nint Cat::count = 0;\n\nint main() {\n    Cat a(\"{nameA}\");\n    Cat b(\"{nameB}\");\n    cout << \"一共初始化了 \" << Cat::howMany() << \" 只\" << endl;\n    cout << \"第一个叫 \" << a.name << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    static int count;\n    string name;\n\n    Cat(string n) : name(n) {\n        count = count + 1;\n    }\n\n    static int howMany() {\n        return count;\n    }\n};\n\nint Cat::count = 0;\n\nint main() {\n    Cat a(\"{nameA}\");\n    Cat b(\"{nameB}\");\n    cout << \"一共初始化了 \" << Cat::howMany() << \" 只\" << endl;\n    cout << \"第一个叫 \" << a.name << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:15:16: error: 'this' is unavailable for static member functions`\n\n念作：**「挂在类定义上的函数里，没有『我们自己』这个东西 —— `this` 在这儿是空的。」**\n\n`this` 是每调用一次函数时悄悄递进来的**那个对象** —— 上一课学的。可在**挂在类定义上**的函数里，称呼它的时候根本不需要先有一个对象，也就不可能有什么递进来，所以 `this` 在这里没有意义，编译器直接不许写。\n\n改法：把 `return this->count;` 写成 `return count;` 就行。共用的那一格只有一份，不需要指名道姓地找「哪个对象的」——挂着类定义名去念它（`Cat::count`）本来也一样。\n\n⚠️ 这一条和「碰每个对象自己的格子」是同一个毛病的两种样子：根子都在「称呼它的时候手里没有对象」。看到 `is unavailable for static member functions`，先找那一个方法前面是不是带着挂在类定义上的标记。"
+}

@@ -1,0 +1,234 @@
+{
+  "lessonId": "java-stage1-17",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s1-rec-countdown-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要自己写一个方法，名字叫 `countDown`：**喂一个数进去，它从那个数一路往下报到 1**，最后再调用一句 `到站` 收工。\n\n输入接口会传入一个数（报到几）。请你写个程序：**读进来那个数、把这一个方法调用**，让它一路印下来。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n往下 3\n往下 2\n往下 1\n到站\n\n（判分喂的是**另外一个数**，所以别把答案写死）\n\n⚠️ 这一个方法的名字、脑袋上那几样记号，我们都定死了：就得叫 `countDown`、就得是**不用先造实例就能调用**的那一种。",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void countDown(int n) {\n        if (n == 0) {\n            System.out.println(\"到站\");\n            return;\n        }\n        System.out.println(\"往下 \" + n);\n        countDown(n - 1);\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n\n        countDown(n);\n    }\n}\n",
+      "expectedOutput": "往下 4\n往下 3\n往下 2\n往下 1\n到站",
+      "stdin": "4\n",
+      "explanation": "自己写一个方法递归函数，照这三块念就行：\n\n1. **脑袋**：`public static void countDown(int n)` —— 它只负责印、不返回东西，所以那一格写 `void`。**脑袋上那个 `static` 记号别落下**：门口那一个方法要直接称呼它，少了它编译器当场就拦（课文第四节那道题就是这个坑）。\n2. **刹车**（第一件事就写它）：`if (n == 0)` 那一格 —— 调用一句 `到站`、再 `return;` 散会，**不再往下调用自身**。\n3. **身子**：先印一句、再把**少一圈的自己**调用（`countDown(n - 1);`）。\n\n⚠️ 这一题最容易栽的是**印的那句放在哪儿**。我们要的是「从大到小」，所以印的那句必须写在**调用自身之前**（去程）—— 要是写在后面，就会变成从小到大，正好反过来。\n\n再记一条：**`void` 方法里的 `return;` 是「本招到此为止」**，不是「返回点什么」。所以刹车那一格写完 `return;` 就够，别多写。\n\n最后自己验一遍：**拿最小的数推**。喂 1 进去，应该是「往下 1」，再加一句收工那句话；喂 0 进去，应该只剩收工那一句 —— 推得动，说明刹车摆对了。",
+      "templateId": "java-s1-rec-countdown",
+      "params": {
+        "stop": "到站"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "89736c80f42dc487"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-countdown-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要自己写一个方法，名字叫 `countDown`：**喂一个数进去，它从那个数一路往下报到 1**，最后再调用一句 `到底啦` 收工。\n\n输入接口会传入一个数（报到几）。请你写个程序：**读进来那个数、把这一个方法调用**，让它一路印下来。\n\n比如程序的输入是\n\n5\n\n程序就要返回\n\n往下 5\n往下 4\n往下 3\n往下 2\n往下 1\n到底啦\n\n（判分喂的是**另外一个数**，所以别把答案写死）\n\n⚠️ 这一个方法的名字、脑袋上那几样记号，我们都定死了：就得叫 `countDown`、就得是**不用先造实例就能调用**的那一种。",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void countDown(int n) {\n        if (n == 0) {\n            System.out.println(\"到底啦\");\n            return;\n        }\n        System.out.println(\"往下 \" + n);\n        countDown(n - 1);\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n\n        countDown(n);\n    }\n}\n",
+      "expectedOutput": "往下 4\n往下 3\n往下 2\n往下 1\n到底啦",
+      "stdin": "4\n",
+      "explanation": "自己写一个方法递归函数，照这三块念就行：\n\n1. **脑袋**：`public static void countDown(int n)` —— 它只负责印、不返回东西，所以那一格写 `void`。**脑袋上那个 `static` 记号别落下**：门口那一个方法要直接称呼它，少了它编译器当场就拦（课文第四节那道题就是这个坑）。\n2. **刹车**（第一件事就写它）：`if (n == 0)` 那一格 —— 调用一句 `到底啦`、再 `return;` 散会，**不再往下调用自身**。\n3. **身子**：先印一句、再把**少一圈的自己**调用（`countDown(n - 1);`）。\n\n⚠️ 这一题最容易栽的是**印的那句放在哪儿**。我们要的是「从大到小」，所以印的那句必须写在**调用自身之前**（去程）—— 要是写在后面，就会变成从小到大，正好反过来。\n\n再记一条：**`void` 方法里的 `return;` 是「本招到此为止」**，不是「返回点什么」。所以刹车那一格写完 `return;` 就够，别多写。\n\n最后自己验一遍：**拿最小的数推**。喂 1 进去，应该是「往下 1」，再加一句收工那句话；喂 0 进去，应该只剩收工那一句 —— 推得动，说明刹车摆对了。",
+      "templateId": "java-s1-rec-countdown",
+      "params": {
+        "stop": "到底啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "3929eb4eac912e2e"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-digits-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要自己写一个方法，名字叫 `digits`：**喂一个数进去，它数一数这个数一共有几位，把位数返回**（喂 7 进去返回 1，喂 1234 进去返回 4）。\n\n请你写个程序：**读进来一个数、把这一个方法调用、把它返回的位数印出来**。屏幕上只要一行，形如 `X 一共有 Y 位数`（X 是传入的数，Y 是返回的位数）。\n\n比如程序的输入是\n\n7373\n\n程序就要返回\n\n7373 一共有 4 位数\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static int digits(int n) {\n        if (n < 10) {\n            return 1;\n        }\n        return 1 + digits(n / 10);\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n\n        System.out.println(n + \" 一共有 \" + digits(n) + \" 位数\");\n    }\n}\n",
+      "expectedOutput": "1552 一共有 4 位数",
+      "stdin": "1552\n",
+      "explanation": "这一个方法最妙的地方在**往下引用的那一步**：`1 + digits(n / 10)`。\n\n它的意思是一句话：**「把这最后一位砍掉，剩下那份有几位，我就比它多一位。」** 摊开看（喂 1234）：\n\n```\ndigits(1234) = 1 + digits(123) = 1 + 1 + digits(12) = 1 + 1 + 1 + digits(1)\n```\n\n- **往下引用的那一步**：砍掉最后一位（`n / 10`）—— 一定比原来**小**，所以走得下去，不会原地转圈；\n- **刹车那一格**：`if (n < 10)` —— 只剩一位的那种数，不用再数了，直接返回 **1**。\n\n⚠️ 这一题最值得记的是**刹车摆在哪一格**。要是照抄前面那道题的 `if (n == 0)`，喂 5 进去会一路 5、0、0、0 …… **永远停不下来**，最后把那一摞元素摞爆（跑起来才断气，编译器一个字都不会说）。\n\n**刹车不是「照着别的题抄一格」，它是「这一条链子最小的那一头长什么样」** —— 数位数的链子，最小那一头是「一位数」，不是「0」。\n\n最后自己验一遍：喂 7 该返回 1，喂 10 该返回 2，喂 999 该返回 3。三个数对得上就对了。",
+      "templateId": "java-s1-rec-digits",
+      "params": {
+        "tail": ""
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "392557d0228d0549"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-digits-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要自己写一个方法，名字叫 `digits`：**喂一个数进去，它数一数这个数一共有几位，把位数返回**（喂 7 进去返回 1，喂 1234 进去返回 4）。\n\n请你写个程序：**读进来一个数、把这一个方法调用、把它返回的位数印出来**。屏幕上只要一行，形如 `X 一共有 Y 位数啦`（X 是传入的数，Y 是返回的位数）。\n\n比如程序的输入是\n\n3315\n\n程序就要返回\n\n3315 一共有 4 位数啦\n\n（判分喂的是**另外一个数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static int digits(int n) {\n        if (n < 10) {\n            return 1;\n        }\n        return 1 + digits(n / 10);\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n\n        System.out.println(n + \" 一共有 \" + digits(n) + \" 位数啦\");\n    }\n}\n",
+      "expectedOutput": "8091 一共有 4 位数啦",
+      "stdin": "8091\n",
+      "explanation": "这一个方法最妙的地方在**往下引用的那一步**：`1 + digits(n / 10)`。\n\n它的意思是一句话：**「把这最后一位砍掉，剩下那份有几位，我就比它多一位。」** 摊开看（喂 1234）：\n\n```\ndigits(1234) = 1 + digits(123) = 1 + 1 + digits(12) = 1 + 1 + 1 + digits(1)\n```\n\n- **往下引用的那一步**：砍掉最后一位（`n / 10`）—— 一定比原来**小**，所以走得下去，不会原地转圈；\n- **刹车那一格**：`if (n < 10)` —— 只剩一位的那种数，不用再数了，直接返回 **1**。\n\n⚠️ 这一题最值得记的是**刹车摆在哪一格**。要是照抄前面那道题的 `if (n == 0)`，喂 5 进去会一路 5、0、0、0 …… **永远停不下来**，最后把那一摞元素摞爆（跑起来才断气，编译器一个字都不会说）。\n\n**刹车不是「照着别的题抄一格」，它是「这一条链子最小的那一头长什么样」** —— 数位数的链子，最小那一头是「一位数」，不是「0」。\n\n最后自己验一遍：喂 7 该返回 1，喂 10 该返回 2，喂 999 该返回 3。三个数对得上就对了。",
+      "templateId": "java-s1-rec-digits",
+      "params": {
+        "tail": "啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "c726307d48a62ace"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-fact-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要自己写一个方法，名字叫 `fact`：**喂一个数进去，它把 1 一路乘到那个数，把乘出来的积返回**（喂 4 进去返回 1×2×3×4）。这个积在对象界有个正式名字叫**阶乘**。\n\n请你写个程序：**读进来一个数、把这一个方法调用、把它返回的积印出来**。屏幕上要有两行：\n\n1. 第一行调用一句 `我们算好了`；\n2. 第二行是 `X 的阶乘是 Y`（X 是传入的数，Y 是返回的积）。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n我们算好了\n4 的阶乘是 24\n\n（判分喂的是**另外一个数**，所以别把答案写死）\n\n⚠️ 这一个方法的名字 `fact`、以及脑袋上那几样记号，我们都定死了：它得是**不用先造实例就能调用**的那一种。装积的那个元素，我们建议你挑**能装得下更大数**的那一款。",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static long fact(int n) {\n        if (n == 0) {\n            return 1;\n        }\n        return n * fact(n - 1);\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n\n        System.out.println(\"我们算好了\");\n        System.out.println(n + \" 的阶乘是 \" + fact(n));\n    }\n}\n",
+      "expectedOutput": "我们算好了\n6 的阶乘是 720",
+      "stdin": "6\n",
+      "explanation": "这一题的往下调用那一步是**乘法**：`n * fact(n - 1)`。摊开看：\n\n```\nfact(5) = 5 * fact(4) = 5 * 4 * fact(3) = 5 * 4 * 3 * 2 * 1 * fact(0)\n```\n\n看最后那一小截 —— 又是那句老话：**刹车那一层返回多少，整个积就跟着乘多少**。这里它必须返回 **1**（乘 1 等于什么都没乘）。要是想当然地跟着求和那题写成返回 0，整个积会**一下子变成 0** —— 任何数乘 0 都是 0 。\n\n**「刹车那一层返回什么」是这类方法里最需要动脑的一格**，而它只有一条判据：**把最小的情况代进去，让整个式子成立**。\n\n- 求和：最小是「一条都不加」，返回 **0**；\n- 求积：最小是「什么都不乘」，返回 **1**。\n\n⚠️ 再说脑袋上那个元素：我们写的是 `long`，它是「能装下的数比 `int` 大得多」的那种元素。阶乘长起来快得吓人 —— 课文第五节里你见过，喂到 13 就把 `int` 撑破了，返回一个负数，**而编译器一次不吭**。这一题喂的数不大，两种元素都装得下，但顺手挑大的那款是个好习惯。\n\n写完自己验一遍：喂 1 该返回 1，喂 3 该返回 6，喂 5 该返回 120。三个数对得上，这一个方法就是对的。",
+      "templateId": "java-s1-rec-fact",
+      "params": {
+        "hello": "我们算好了"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "f7384bc604651ce8"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-fact-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要自己写一个方法，名字叫 `fact`：**喂一个数进去，它把 1 一路乘到那个数，把乘出来的积返回**（喂 4 进去返回 1×2×3×4）。这个积在对象界有个正式名字叫**阶乘**。\n\n请你写个程序：**读进来一个数、把这一个方法调用、把它返回的积印出来**。屏幕上要有两行：\n\n1. 第一行调用一句 `我们数完啦`；\n2. 第二行是 `X 的阶乘是 Y`（X 是传入的数，Y 是返回的积）。\n\n比如程序的输入是\n\n4\n\n程序就要返回\n\n我们数完啦\n4 的阶乘是 24\n\n（判分喂的是**另外一个数**，所以别把答案写死）\n\n⚠️ 这一个方法的名字 `fact`、以及脑袋上那几样记号，我们都定死了：它得是**不用先造实例就能调用**的那一种。装积的那个元素，我们建议你挑**能装得下更大数**的那一款。",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static long fact(int n) {\n        if (n == 0) {\n            return 1;\n        }\n        return n * fact(n - 1);\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n\n        System.out.println(\"我们数完啦\");\n        System.out.println(n + \" 的阶乘是 \" + fact(n));\n    }\n}\n",
+      "expectedOutput": "我们数完啦\n6 的阶乘是 720",
+      "stdin": "6\n",
+      "explanation": "这一题的往下调用那一步是**乘法**：`n * fact(n - 1)`。摊开看：\n\n```\nfact(5) = 5 * fact(4) = 5 * 4 * fact(3) = 5 * 4 * 3 * 2 * 1 * fact(0)\n```\n\n看最后那一小截 —— 又是那句老话：**刹车那一层返回多少，整个积就跟着乘多少**。这里它必须返回 **1**（乘 1 等于什么都没乘）。要是想当然地跟着求和那题写成返回 0，整个积会**一下子变成 0** —— 任何数乘 0 都是 0 。\n\n**「刹车那一层返回什么」是这类方法里最需要动脑的一格**，而它只有一条判据：**把最小的情况代进去，让整个式子成立**。\n\n- 求和：最小是「一条都不加」，返回 **0**；\n- 求积：最小是「什么都不乘」，返回 **1**。\n\n⚠️ 再说脑袋上那个元素：我们写的是 `long`，它是「能装下的数比 `int` 大得多」的那种元素。阶乘长起来快得吓人 —— 课文第五节里你见过，喂到 13 就把 `int` 撑破了，返回一个负数，**而编译器一次不吭**。这一题喂的数不大，两种元素都装得下，但顺手挑大的那款是个好习惯。\n\n写完自己验一遍：喂 1 该返回 1，喂 3 该返回 6，喂 5 该返回 120。三个数对得上，这一个方法就是对的。",
+      "templateId": "java-s1-rec-fact",
+      "params": {
+        "hello": "我们数完啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "48cfdf4ed735c490"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-no-brake-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们写了个递归函数 `sumTo`：喂一个数进去，它把 **1 一路加到那个数**，加出来的总数返回（喂 4 进去，返回的就是 1+2+3+4）。\n\n喂 4 进去，它该返回 **1 加到 4 的总数**。\n\n可这一份源代码**根本交不出东西**：屏幕上一条输出都没有，只有编译器甩出来的最后一句大实话 —— 跑着跑着，它把自己那摞元素摞爆了。\n\n你帮我们改好：改完跑起来，屏幕上正好是 1 加到 4 的总数，多一条都不行。",
+      "brokenCode": "public class Main {\n    public static int sumTo(int n) {\n        return n + sumTo(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sumTo(4));\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static int sumTo(int n) {\n        if (n == 0) {\n            return 0;\n        }\n        return n + sumTo(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sumTo(4));\n    }\n}\n",
+      "expectedOutput": "10",
+      "stdin": null,
+      "explanation": "坏的地方是**少了一整块**：这一个方法里没有「什么时候停」那一句。\n\n递推那一步（`n + sumTo(n - 1)`）写得完全正确 —— 可它是「调用结束下一位、等它把结果返回」的意思，而下一位又会去调用下下一位……**永远没有人调用停**。于是每一位都得在摞顶上再放一个元素（记着「等会儿回到哪儿」），元素越摞越高，最后把地方摞爆：屏幕上一条输出都没有，只留下最后那一句 `Exception in thread \"main\" java.lang.StackOverflowError`。\n\n⚠️ 最要命的是**编译器一个字都没说**：这份源代码它翻得干干净净（我们真跑过，编译那一步屏幕上零输出），连个提醒都没有。**「翻得过去」和「跑得下去」是两件事。**\n\n补法就是给这一个方法安上刹车，摆在**最先被问到**的地方：\n\n1. **刹车那一格**：先写下「最小的那一种情况」。1 一路加到 0，一条都没加，所以刹车该**返回 0**；\n2. **然后才是递推那一格**：传入的数，加上「**少一圈的自己**」返回的东西。\n\n自己验一遍的办法很朴素：**拿最小的数代进去**。喂 1 进去该返回 1，式子写的是 `1 + sumTo(0)` —— 一减就知道刹车那格只能是 0 。\n\n再往深想一层「为什么它跑着跑着就断气」：每一位调用结束下一位都得在那儿等着，谁也没算完；等的那件事要一摞元素来记，元素摞到地方不够 —— 那就是那句大实话的意思。**写这一个方法，第一件事永远是先想清楚什么时候停。**",
+      "templateId": "java-s1-rec-no-brake",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "87cac5d26fd74370"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-no-brake-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们写了个递归函数 `sumTo`：喂一个数进去，它把 **1 一路加到那个数**，加出来的总数返回（喂 4 进去，返回的就是 1+2+3+4）。\n\n喂 5 进去，它该返回 **1 加到 5 的总数**。\n\n可这一份源代码**根本交不出东西**：屏幕上一条输出都没有，只有编译器甩出来的最后一句大实话 —— 跑着跑着，它把自己那摞元素摞爆了。\n\n你帮我们改好：改完跑起来，屏幕上正好是 1 加到 5 的总数，多一条都不行。",
+      "brokenCode": "public class Main {\n    public static int sumTo(int n) {\n        return n + sumTo(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sumTo(5));\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static int sumTo(int n) {\n        if (n == 0) {\n            return 0;\n        }\n        return n + sumTo(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sumTo(5));\n    }\n}\n",
+      "expectedOutput": "15",
+      "stdin": null,
+      "explanation": "坏的地方是**少了一整块**：这一个方法里没有「什么时候停」那一句。\n\n递推那一步（`n + sumTo(n - 1)`）写得完全正确 —— 可它是「调用结束下一位、等它把结果返回」的意思，而下一位又会去调用下下一位……**永远没有人调用停**。于是每一位都得在摞顶上再放一个元素（记着「等会儿回到哪儿」），元素越摞越高，最后把地方摞爆：屏幕上一条输出都没有，只留下最后那一句 `Exception in thread \"main\" java.lang.StackOverflowError`。\n\n⚠️ 最要命的是**编译器一个字都没说**：这份源代码它翻得干干净净（我们真跑过，编译那一步屏幕上零输出），连个提醒都没有。**「翻得过去」和「跑得下去」是两件事。**\n\n补法就是给这一个方法安上刹车，摆在**最先被问到**的地方：\n\n1. **刹车那一格**：先写下「最小的那一种情况」。1 一路加到 0，一条都没加，所以刹车该**返回 0**；\n2. **然后才是递推那一格**：传入的数，加上「**少一圈的自己**」返回的东西。\n\n自己验一遍的办法很朴素：**拿最小的数代进去**。喂 1 进去该返回 1，式子写的是 `1 + sumTo(0)` —— 一减就知道刹车那格只能是 0 。\n\n再往深想一层「为什么它跑着跑着就断气」：每一位调用结束下一位都得在那儿等着，谁也没算完；等的那件事要一摞元素来记，元素摞到地方不够 —— 那就是那句大实话的意思。**写这一个方法，第一件事永远是先想清楚什么时候停。**",
+      "templateId": "java-s1-rec-no-brake",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "1367744e0ae6e00e"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-not-static-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们写了个递归函数 `sumTo`：喂一个数进去，它把 **1 一路加到那个数**，加出来的总数返回。刹车、递推那两格我们都写对了 —— 喂 4 进去，它该返回 1 加到 4 的总数。\n\n可这一份源代码**编译器压根不肯翻**：屏幕上什么都不会有，它只甩回来一句错。\n\n你帮我们改好：改完跑起来，屏幕上正好是 1 加到 4 的总数。**方法身子里的句子一行都不用动**，动的是别处的一个记号。",
+      "brokenCode": "public class Main {\n    public int sumTo(int n) {\n        if (n == 0) {\n            return 0;\n        }\n        return n + sumTo(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sumTo(4));\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static int sumTo(int n) {\n        if (n == 0) {\n            return 0;\n        }\n        return n + sumTo(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sumTo(4));\n    }\n}\n",
+      "expectedOutput": "10",
+      "stdin": null,
+      "explanation": "编译器的原话是 `non-static method sumTo(int) cannot be referenced from a static context`，用自然语言解释：**「这一个方法没挂那个记号，站在没挂记号的地方就调用不动它。」**\n\n看它是怎么把这一个方法逼到墙角的：\n\n- `main` 是**站在类定义门口**的那一个方法（入口那一个方法天生就挂着那个记号，不用你写）；\n- 门口这一个方法里调用了一句 `sumTo(4)`；\n- 可 `sumTo` 自己**没挂那个记号** —— 它得先根据类创建出一个实例、再由那个对象来调用。\n\n门口那一位手里一个对象都没有，这一调用自然调用不动。\n\n⚠️ 注意它卡的是**调用这一下**，**不是「方法不能调用自身」**：方法在身子里面调用自身，脑袋上那个记号是刚才就登记好的，一点都不算没登记。所以这一题修的是**脑袋上少了一个记号**，不是递推写错了。\n\n改法只有一处：给 `sumTo` 打头那一行补上 `static`，跟 `main` 保持一致。补完两边都是「站在类定义门口、不用先造实例就能调用」的招，调用顺顺当当。\n\n**记一条：方法能调用自身，跟它能不能被门口那一个方法直接调用，是两件不同的事。** 前者看名字有没有登记，后者看那个记号挂没挂。这一题的坑，就是后一件。写递归函数时，脑袋上该挂的记号一个都别落下。",
+      "templateId": "java-s1-rec-not-static",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "40ca5e81321ccb82"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-not-static-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们写了个递归函数 `sumTo`：喂一个数进去，它把 **1 一路加到那个数**，加出来的总数返回。刹车、递推那两格我们都写对了 —— 喂 5 进去，它该返回 1 加到 5 的总数。\n\n可这一份源代码**编译器压根不肯翻**：屏幕上什么都不会有，它只甩回来一句错。\n\n你帮我们改好：改完跑起来，屏幕上正好是 1 加到 5 的总数。**方法身子里的句子一行都不用动**，动的是别处的一个记号。",
+      "brokenCode": "public class Main {\n    public int sumTo(int n) {\n        if (n == 0) {\n            return 0;\n        }\n        return n + sumTo(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sumTo(5));\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static int sumTo(int n) {\n        if (n == 0) {\n            return 0;\n        }\n        return n + sumTo(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(sumTo(5));\n    }\n}\n",
+      "expectedOutput": "15",
+      "stdin": null,
+      "explanation": "编译器的原话是 `non-static method sumTo(int) cannot be referenced from a static context`，用自然语言解释：**「这一个方法没挂那个记号，站在没挂记号的地方就调用不动它。」**\n\n看它是怎么把这一个方法逼到墙角的：\n\n- `main` 是**站在类定义门口**的那一个方法（入口那一个方法天生就挂着那个记号，不用你写）；\n- 门口这一个方法里调用了一句 `sumTo(5)`；\n- 可 `sumTo` 自己**没挂那个记号** —— 它得先根据类创建出一个实例、再由那个对象来调用。\n\n门口那一位手里一个对象都没有，这一调用自然调用不动。\n\n⚠️ 注意它卡的是**调用这一下**，**不是「方法不能调用自身」**：方法在身子里面调用自身，脑袋上那个记号是刚才就登记好的，一点都不算没登记。所以这一题修的是**脑袋上少了一个记号**，不是递推写错了。\n\n改法只有一处：给 `sumTo` 打头那一行补上 `static`，跟 `main` 保持一致。补完两边都是「站在类定义门口、不用先造实例就能调用」的招，调用顺顺当当。\n\n**记一条：方法能调用自身，跟它能不能被门口那一个方法直接调用，是两件不同的事。** 前者看名字有没有登记，后者看那个记号挂没挂。这一题的坑，就是后一件。写递归函数时，脑袋上该挂的记号一个都别落下。",
+      "templateId": "java-s1-rec-not-static",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "35bed8f2d597c8ac"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-print-order-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这一个方法叫 `show`：喂一个数进去，屏幕上要出现 **3 加 1 行**，而且顺序是定死的 —— **第一行**先调用一次 `到站`，接下来**从小到大**一行一个数：`1`、`2`、……、一直到 `3`。\n\n可它现在印出来**整个是反的** —— 数从大变到小，`到站` 还跑到了最后一行。\n\n你帮我们改好：改完跑起来，印出来正好是上面那个顺序。**只动印那一句的位置**，`main` 里那一行不用碰。",
+      "brokenCode": "public class Main {\n    public static void show(int n) {\n        if (n == 0) {\n            System.out.println(\"到站\");\n            return;\n        }\n        System.out.println(n);\n        show(n - 1);\n    }\n\n    public static void main(String[] args) {\n        show(3);\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void show(int n) {\n        if (n == 0) {\n            System.out.println(\"到站\");\n            return;\n        }\n        show(n - 1);\n        System.out.println(n);\n    }\n\n    public static void main(String[] args) {\n        show(3);\n    }\n}\n",
+      "expectedOutput": "到站\n1\n2\n3",
+      "stdin": null,
+      "explanation": "改法只有一处：把 `System.out.println(n);` 这一句**挪到 `show(n - 1);` 后面**。\n\n这一挪，挪的其实是**它属于去程还是回程**：\n\n- 写在调用自身**之前** → 这一层还没往下走就先印了 → 印出来是**从大到小**（去程）；\n- 写在调用自身**之后** → 得等里面那一层全干完、才轮到这一层开口 → 印出来是**从小到大**（回程）。\n\n最里面那一层（`n == 0`）说了句 `到站` 就收工，**它是唯一一个不再往下引用的**，所以它一定是第一个开口的 —— 要它排在最前面，它印的那句就别挪（`n == 0` 那里本来就在调用自身之前）。\n\n⚠️ 这种顺序题**不用整条链子算一遍**，看一眼就够了：**印的那句在「调用自身」的上边还是下边**。上边 = 去程（大 → 小），下边 = 回程（小 → 大）。这一眼，比死算 3 遍快得多，也不会算错。\n\n顺带记住：**「先调用自身」和「先干活」的先后，就是递归函数里那个「顺序」的全部含义。** 排错了不是乱序，是**正好反过来**。",
+      "templateId": "java-s1-rec-print-order",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "9c6e1c254fcd453e"
+      }
+    },
+    {
+      "id": "bank-java-s1-rec-print-order-001",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这一个方法叫 `show`：喂一个数进去，屏幕上要出现 **4 加 1 行**，而且顺序是定死的 —— **第一行**先调用一次 `到站`，接下来**从小到大**一行一个数：`1`、`2`、……、一直到 `4`。\n\n可它现在印出来**整个是反的** —— 数从大变到小，`到站` 还跑到了最后一行。\n\n你帮我们改好：改完跑起来，印出来正好是上面那个顺序。**只动印那一句的位置**，`main` 里那一行不用碰。",
+      "brokenCode": "public class Main {\n    public static void show(int n) {\n        if (n == 0) {\n            System.out.println(\"到站\");\n            return;\n        }\n        System.out.println(n);\n        show(n - 1);\n    }\n\n    public static void main(String[] args) {\n        show(4);\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void show(int n) {\n        if (n == 0) {\n            System.out.println(\"到站\");\n            return;\n        }\n        show(n - 1);\n        System.out.println(n);\n    }\n\n    public static void main(String[] args) {\n        show(4);\n    }\n}\n",
+      "expectedOutput": "到站\n1\n2\n3\n4",
+      "stdin": null,
+      "explanation": "改法只有一处：把 `System.out.println(n);` 这一句**挪到 `show(n - 1);` 后面**。\n\n这一挪，挪的其实是**它属于去程还是回程**：\n\n- 写在调用自身**之前** → 这一层还没往下走就先印了 → 印出来是**从大到小**（去程）；\n- 写在调用自身**之后** → 得等里面那一层全干完、才轮到这一层开口 → 印出来是**从小到大**（回程）。\n\n最里面那一层（`n == 0`）说了句 `到站` 就收工，**它是唯一一个不再往下引用的**，所以它一定是第一个开口的 —— 要它排在最前面，它印的那句就别挪（`n == 0` 那里本来就在调用自身之前）。\n\n⚠️ 这种顺序题**不用整条链子算一遍**，看一眼就够了：**印的那句在「调用自身」的上边还是下边**。上边 = 去程（大 → 小），下边 = 回程（小 → 大）。这一眼，比死算 4 遍快得多，也不会算错。\n\n顺带记住：**「先调用自身」和「先干活」的先后，就是递归函数里那个「顺序」的全部含义。** 排错了不是乱序，是**正好反过来**。",
+      "templateId": "java-s1-rec-print-order",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.528Z",
+        "hash": "f9cb7f1f5d91b73a"
+      }
+    }
+  ]
+}

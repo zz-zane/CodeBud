@@ -1,0 +1,24 @@
+{
+  "templateId": "py-s2-deco-shell-no-args",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-09",
+  "type": "codefix",
+  "concept": [
+    "*args",
+    "壳接不住",
+    "TypeError"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 8
+    }
+  },
+  "stemTemplate": "我们给 `翻三倍` 这一个方法套了一层特效：壳里先印一句 `要开演了`，再调用里面那一个方法。\n\n可这一段一跑就报错 —— 编译器说「怎么多出来一个东西」。我们要的是印出 `要开演了` 和 `{n}` 的三倍这两行。\n\n你帮我们改对。\n\n⚠️ 壳的名字 `包装`、那句 `print(\"要开演了\")`、外面最后那行 `print(翻三倍({n}))`，都**不许改** —— 毛病出在壳怎么**接东西**上。",
+  "brokenCodeTemplate": "import functools\n\n\ndef 记一笔(fn):\n    @functools.wraps(fn)\n    def 包装():\n        print(\"要开演了\")\n        return fn()\n\n    return 包装\n\n\n@记一笔\ndef 翻三倍(n):\n    return n * 3\n\n\nprint(翻三倍({n}))\n",
+  "referenceFixTemplate": "import functools\n\n\ndef 记一笔(fn):\n    @functools.wraps(fn)\n    def 包装(*args, **kwargs):\n        print(\"要开演了\")\n        return fn(*args, **kwargs)\n\n    return 包装\n\n\n@记一笔\ndef 翻三倍(n):\n    return n * 3\n\n\nprint(翻三倍({n}))\n",
+  "explanationTemplate": "毛病是**壳的括号是空的**。\n\n套上特效之后，外面引用的 `翻三倍({n})` 其实是在调用**壳**。可壳写成了 `def 包装():` —— 它一个数据都不收。外面递过来一个 `{n}`，壳接不住，只好当场翻脸：这个位置收不了东西。\n\n要记住：**壳是替里面那一个方法接东西的**，所以它得按里面那一个方法的需要来收：\n\n- `def 包装(*args, **kwargs):` —— 星号那两位读作「**把外面传入进来的东西，原封不动全都接住**」。一个收「按位置排好的」，一个收「按标签点名的」，合起来就是**来多少收多少**。有了它，里面那一个方法想收几个都行，我们不用挨个改壳。\n- `return fn(*args, **kwargs)` —— 把接住的东西**原样传入**给里面那一个方法，再把它返回值**原样返回**。\n\n⚠️ 两处**必须一起改**：光加 `*args, **kwargs` 而里面还是 `fn()`，里面那一个方法就收不到数据，照样翻脸，只是翻脸的位置换到里面去了。\n\n⚠️ 还有个特别绕的点：报错里点名的**不是壳，而是 `翻三倍`** —— 因为 `@functools.wraps(fn)` 给壳贴了标签，报错时它自称 `翻三倍`。所以看到报错说是 `翻三倍` 接不住东西，别一头雾水 「`翻三倍` 明明只收一个呀」，要想到**真正收东西的是壳**。"
+}

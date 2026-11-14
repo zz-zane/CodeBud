@@ -1,0 +1,33 @@
+{
+  "templateId": "cpp-s2-06-friend-class-vet",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-06",
+  "type": "codewrite",
+  "concept": [
+    "整张类定义开门",
+    "后门不传递",
+    "带盖的格子照样能读"
+  ],
+  "instances": 6,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 1,
+    "min": 2,
+    "max": 9
+  },
+  "stemTemplate": "这回要开门给**一整张类定义**。输入接口会递进来**一个数**（条数）。\n\n请你这么办：\n\n1. **画两张类定义**。第一张叫 `Cat`：两栏都扣着盖子 —— `name` 装一串字，`fish` 装一个整数，再画一个构造函数把两栏填上；在这个大括号里**加一行**，让**整张 `Vet` 类定义**都能进来。\n2. 第二张叫 `Vet`：里面画**一个方法** `checkup`，它接进来一个对象（`const Cat&`），直接读盒子里那两栏，印**一行**：\n\n```text\n对象大夫打开 XX 的盒子：N 条，处理得不错\n```\n\n3. 在 `main` 里创建一个对象：名字叫 `{name}`，条数从输入接口读；再照 `Vet` 类定义生**一位**对象大夫，让这位给那个对象做检查。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另一个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend class Vet;\n};\n\nclass Vet {\npublic:\n    void checkup(const Cat& c) {\n        cout << \"对象大夫打开 \" << c.name << \" 的盒子：\" << c.fish << \" 条，处理得不错\" << endl;\n    }\n};\n\nint main() {\n    int fish = 0;\n    cin >> fish;\n\n    Cat c1(\"{name}\", fish);\n    Vet v;\n    v.checkup(c1);\n    return 0;\n}\n",
+  "explanationTemplate": "这一题练的是**给一整张类定义开门**。\n\n写法只有一处和上一次不同：那一行从「函数」换成了「类定义」——\n\n```text\nfriend class Vet;\n```\n\n意思是「**`Vet` 这张类定义画出来的每一手、画多少手都算数**」，不用一个一个函数写名字。对象大夫类定义里画的 `checkup` 于是够得到 `c.name` 和 `c.fish` 这两格带盖的。\n\n调用方式上有个区别值得记一下：\n\n- `checkup` 是**画在 `Vet` 类定义上的函数**，所以称呼它要「**哪位对象大夫 · 函数名**」——先根据类创建一位对象大夫（`Vet v;`），再 `v.checkup(c1);`。\n- 上一次那个开后门的函数**不是任何类定义上的函数**，所以称呼它不写前面的东西，直接把对象递进去。\n\n顺带把本课那条边界再钉一遍：**后门不传递**。`Vet` 开了门，不代表 `Vet` 里面的朋友、或者别的类定义也跟着进来了；要给谁就写谁的名字。"
+}

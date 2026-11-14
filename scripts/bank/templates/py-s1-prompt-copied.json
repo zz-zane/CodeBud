@@ -1,0 +1,28 @@
+{
+  "templateId": "py-s1-prompt-copied",
+  "lang": "python",
+  "stage": 1,
+  "lessonId": "python-stage1-02",
+  "type": "codefix",
+  "concept": [
+    "REPL",
+    ">>>",
+    "文件与摊子的差别",
+    "SyntaxError"
+  ],
+  "instances": 2,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "你好",
+        "处理完成",
+        "问答摊开张啦"
+      ]
+    }
+  },
+  "stemTemplate": "我们在问答摊上敲了一句 `print(\"{word}\")`，它当场就回了我们；我们觉得好用，连着前面那个记号一起抄进了 `hello.py` 里。\n\n结果编译器一读文件就卡住了……你帮我们把文件改回**能跑**的样子，让屏幕上出现 `{word}`。",
+  "brokenCodeTemplate": ">>> print(\"{word}\")\n",
+  "referenceFixTemplate": "print(\"{word}\")\n",
+  "explanationTemplate": "那个 `>>>` 是**问答摊递话筒的记号**，是对象自己冒出来的，**不是代码的一部分**。文件里的每一行都该是我们自己敲的代码，编译器根本不认识这三个字符，念到它就卡住（报的是 `SyntaxError`）。\n\n改法很简单：把记号删掉，只留下 `print(...)` 这一行。\n\n（记一句就够：**带记号的句子是「我们跟它说的话」，不带记号的句子才是「要它做的事」**。摊子上的照片抄进文件之前，先把记号擦掉。）"
+}

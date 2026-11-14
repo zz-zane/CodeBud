@@ -1,0 +1,101 @@
+{
+  "lessonId": "c-stage1-11",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们说过，字符串的末尾一定要多挂一颗看不见的字符。这颗字符写出来是下面哪一个？",
+      "options": [
+        "`\\0`",
+        "`\\n`",
+        "`%s`",
+        "`%c`"
+      ],
+      "answer": 0,
+      "explanation": "末尾那颗编号为 0 的字符写作 `\\0`，`%s` 就是靠它知道念到哪一颗该停嘴的。`\\n` 是换行符，管的是「另起一行」；`%s` 和 `%c` 都是打印用的占位符，它们压根不住在字符串里"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "想把一整条字符串一口气打印出来，占位符该用哪一个？",
+      "options": [
+        "`%c`",
+        "`%s`",
+        "`%d`",
+        "`%f`"
+      ],
+      "answer": 1,
+      "explanation": "`%c` 一次只印一颗字符，`%d` 印整数、`%f` 印小数 —— 要一口气把整条字符串输出，只有 `%s` 干得了这活儿。我们教你一句口诀：`%c` 一颗，`%s` 一串。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "两条字符串里装的字符一模一样，下面哪一句能正确判断出「它们内容相同」？",
+      "options": [
+        "`if (a == b)`",
+        "`if (strcmp(a, b) == 0)`",
+        "`if (strlen(a) == strlen(b))`",
+        "`if (a = b)`"
+      ],
+      "answer": 1,
+      "explanation": "`a == b` 比的是**两张名称**，不是元素里的字符 —— 两条字符串摆在不同地方，它八成会说「不一样」。`strlen` 只能比「谁长」，`cat` 和 `dog` 长短一样，照样会骗过它。`a = b` 更是把「比一比」写成了「倒过去」，摆明是写错了。只有 `strcmp(a, b) == 0` 是一颗一颗对着比，完全一样才返回 `0` "
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nint main(void) {\n    char word[____];\n\n    word[0] = 'c';\n    word[1] = 'a';\n    word[2] = 't';\n    word[____] = '\\0';\n\n    printf(\"%s\\n\", word);\n    return 0;\n}",
+      "stem": "下面这段代码想亲手串出字符串 `cat`，还要在末尾挂上暗号。两个空该填什么？",
+      "blanks": [
+        {
+          "answer": "4"
+        },
+        {
+          "answer": "3"
+        }
+      ],
+      "explanation": "三颗字符 `c`、`a`、`t` 住的是编号 0、1、2 的元素，暗号**也要占一个元素**，所以排在编号 3 —— 一共得摆 4 只元素。要是只摆 3 只，暗号就没地方挂了，`%s` 会一路念到你根本没摆元素的地方去，输出什么每次都不一样，这一条我们在课文里专门警告过"
+    },
+    {
+      "id": "q5",
+      "type": "codefill",
+      "lang": "c",
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main(void) {\n    char a[] = \"cat\";\n    char b[] = \"cat\";\n\n    if (____(a, b) == ____) {\n        printf(\"一样\\n\");\n    }\n    return 0;\n}",
+      "stem": "下面这段代码想判断两条字符串装的东西是不是一样。两个空该填什么？",
+      "blanks": [
+        {
+          "answer": "strcmp"
+        },
+        {
+          "answer": "0"
+        }
+      ],
+      "explanation": "比字符串只有一条路：把两条字符串交给 `strcmp` 一颗一颗对着比，**完全一样它返回 0**，所以判「一样」要写 `== 0` 。这一个方法住在 `string.h` 家，文件最上面那句请它出场的开头可不能漏 —— 漏了编译器会说「这个名字我们没听说过」"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main(void) {\n    char word[] = \"fish\";\n    printf(\"%d\\n\", (int)strlen(word));\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "4",
+      "accept": [
+        "4\n"
+      ],
+      "explanation": "`strlen` 数的是**真字符的颗数**，末尾那颗暗号不算数。`fish` 是 f、i、s、h 四颗字符，所以报 `4` —— 而它实际占掉的是五个元素，第五个装暗号。"
+    },
+    {
+      "id": "q7",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n#include <string.h>\n\nint main(void) {\n    char a[] = \"cat\";\n    char b[] = \"cat\";\n    printf(\"%d\\n\", strcmp(a, b));\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "0",
+      "accept": [
+        "0\n"
+      ],
+      "explanation": "`strcmp` 把两条字符串一颗一颗对着比：`a` 和 `b` 装的都是 `cat`，一模一样，它就返回 `0` 。所以判「一样」写 `strcmp(a, b) == 0` 正好合适 —— 反过来，光看输出 `0` 也别误会成「长度是 0」，它说的是「一颗都不差」"
+    }
+  ]
+}

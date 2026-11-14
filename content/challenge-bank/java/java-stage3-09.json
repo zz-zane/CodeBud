@@ -1,0 +1,422 @@
+{
+  "lessonId": "java-stage3-09",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s3-09-main-also-works-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们派一个对象去数鱼，**派出去之后我们自己也没闲着** —— 自己也数自己的那几格。两边都数完了，我们再报数。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（名字＋要数几条＋数到多少），那段活就是**转圈**把自己那一格数够；\n2. 创建一个对象，名字叫 `张三`，要数 2 条；\n3. **派它出去**（不是自己动手）；派完我们接着往下走：**自己也转圈**数 3 条，数在我们在 `main` 里另开的一个格子里；\n4. **站在门口等对象回来**；\n5. 回来之后印三行：\n   - `张三数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - `我们数到：` 后面接**我们自己数出来的**条数，再跟一个 ` 条`；\n   - `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"张三\", 2);\n\n        一个.start();\n\n        int 我们的数 = 0;\n        for (int i = 0; i < 3; i++) {\n            我们的数 = 我们的数 + 1;\n        }\n\n        一个.join();\n\n        System.out.println(\"张三数到：\" + 一个.数到 + \" 条\");\n        System.out.println(\"我们数到：\" + 我们的数 + \" 条\");\n        System.out.println(\"一共：\" + (一个.数到 + 我们的数) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "张三数到：2 条\n我们数到：3 条\n一共：5 条",
+      "stdin": null,
+      "explanation": "**一、派出去之后，我们这条线继续往下走。** `一个.start()` 一调用就当「它出去干活了」，下面那几行是我们**自己**在干 —— 两路同时进行，这就是「同时派好几个对象」的样子：对象数对象的，我们数我们的。\n\n**二、我们那一格是我们自己的。** `我们的数` 摆在 `main` 里，是另开的一格；那个对象的 `数到` 摆在类定义上，是它自己的一份。两个格子互不相干，各数各的，谁也动不了谁。\n\n**三、报数之前一定要 `join()`。** 不等就报，对象那边可能还没数完 —— 报出来的数就说不准了。`join()` 就是「站门口等它回来」，回来了才报。\n\n**四、谁快谁慢由机器定，报出来的内容却是稳的。** 我们自己在数、对象也在数，两边谁先数完说不准；但报数发生在 `join()` 之后，所以三行的内容跟快慢无关。\n\n**五、等，不等于闲着。** 我们也可以是干活的那一方：派完对象自己接着数。但只要还要读对象那边的结果，`join()` 就不能少 —— 想怎么等，都绕不开这一次。",
+      "templateId": "java-s3-09-main-also-works",
+      "params": {
+        "n1": "张三",
+        "c1": 2,
+        "c3": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "79c2df983c8b3769"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-main-also-works-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们派一个对象去数鱼，**派出去之后我们自己也没闲着** —— 自己也数自己的那几格。两边都数完了，我们再报数。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（名字＋要数几条＋数到多少），那段活就是**转圈**把自己那一格数够；\n2. 创建一个对象，名字叫 `张三`，要数 3 条；\n3. **派它出去**（不是自己动手）；派完我们接着往下走：**自己也转圈**数 3 条，数在我们在 `main` 里另开的一个格子里；\n4. **站在门口等对象回来**；\n5. 回来之后印三行：\n   - `张三数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - `我们数到：` 后面接**我们自己数出来的**条数，再跟一个 ` 条`；\n   - `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"张三\", 3);\n\n        一个.start();\n\n        int 我们的数 = 0;\n        for (int i = 0; i < 3; i++) {\n            我们的数 = 我们的数 + 1;\n        }\n\n        一个.join();\n\n        System.out.println(\"张三数到：\" + 一个.数到 + \" 条\");\n        System.out.println(\"我们数到：\" + 我们的数 + \" 条\");\n        System.out.println(\"一共：\" + (一个.数到 + 我们的数) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "张三数到：3 条\n我们数到：3 条\n一共：6 条",
+      "stdin": null,
+      "explanation": "**一、派出去之后，我们这条线继续往下走。** `一个.start()` 一调用就当「它出去干活了」，下面那几行是我们**自己**在干 —— 两路同时进行，这就是「同时派好几个对象」的样子：对象数对象的，我们数我们的。\n\n**二、我们那一格是我们自己的。** `我们的数` 摆在 `main` 里，是另开的一格；那个对象的 `数到` 摆在类定义上，是它自己的一份。两个格子互不相干，各数各的，谁也动不了谁。\n\n**三、报数之前一定要 `join()`。** 不等就报，对象那边可能还没数完 —— 报出来的数就说不准了。`join()` 就是「站门口等它回来」，回来了才报。\n\n**四、谁快谁慢由机器定，报出来的内容却是稳的。** 我们自己在数、对象也在数，两边谁先数完说不准；但报数发生在 `join()` 之后，所以三行的内容跟快慢无关。\n\n**五、等，不等于闲着。** 我们也可以是干活的那一方：派完对象自己接着数。但只要还要读对象那边的结果，`join()` 就不能少 —— 想怎么等，都绕不开这一次。",
+      "templateId": "java-s3-09-main-also-works",
+      "params": {
+        "n1": "张三",
+        "c1": 3,
+        "c3": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "0ac01b72bb8360c5"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-main-also-works-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们派一个对象去数鱼，**派出去之后我们自己也没闲着** —— 自己也数自己的那几格。两边都数完了，我们再报数。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（名字＋要数几条＋数到多少），那段活就是**转圈**把自己那一格数够；\n2. 创建一个对象，名字叫 `张三`，要数 4 条；\n3. **派它出去**（不是自己动手）；派完我们接着往下走：**自己也转圈**数 4 条，数在我们在 `main` 里另开的一个格子里；\n4. **站在门口等对象回来**；\n5. 回来之后印三行：\n   - `张三数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - `我们数到：` 后面接**我们自己数出来的**条数，再跟一个 ` 条`；\n   - `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"张三\", 4);\n\n        一个.start();\n\n        int 我们的数 = 0;\n        for (int i = 0; i < 4; i++) {\n            我们的数 = 我们的数 + 1;\n        }\n\n        一个.join();\n\n        System.out.println(\"张三数到：\" + 一个.数到 + \" 条\");\n        System.out.println(\"我们数到：\" + 我们的数 + \" 条\");\n        System.out.println(\"一共：\" + (一个.数到 + 我们的数) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "张三数到：4 条\n我们数到：4 条\n一共：8 条",
+      "stdin": null,
+      "explanation": "**一、派出去之后，我们这条线继续往下走。** `一个.start()` 一调用就当「它出去干活了」，下面那几行是我们**自己**在干 —— 两路同时进行，这就是「同时派好几个对象」的样子：对象数对象的，我们数我们的。\n\n**二、我们那一格是我们自己的。** `我们的数` 摆在 `main` 里，是另开的一格；那个对象的 `数到` 摆在类定义上，是它自己的一份。两个格子互不相干，各数各的，谁也动不了谁。\n\n**三、报数之前一定要 `join()`。** 不等就报，对象那边可能还没数完 —— 报出来的数就说不准了。`join()` 就是「站门口等它回来」，回来了才报。\n\n**四、谁快谁慢由机器定，报出来的内容却是稳的。** 我们自己在数、对象也在数，两边谁先数完说不准；但报数发生在 `join()` 之后，所以三行的内容跟快慢无关。\n\n**五、等，不等于闲着。** 我们也可以是干活的那一方：派完对象自己接着数。但只要还要读对象那边的结果，`join()` 就不能少 —— 想怎么等，都绕不开这一次。",
+      "templateId": "java-s3-09-main-also-works",
+      "params": {
+        "n1": "张三",
+        "c1": 4,
+        "c3": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "09cda19fd6e65cf4"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-main-also-works-010",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们派一个对象去数鱼，**派出去之后我们自己也没闲着** —— 自己也数自己的那几格。两边都数完了，我们再报数。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（名字＋要数几条＋数到多少），那段活就是**转圈**把自己那一格数够；\n2. 创建一个对象，名字叫 `李四`，要数 2 条；\n3. **派它出去**（不是自己动手）；派完我们接着往下走：**自己也转圈**数 4 条，数在我们在 `main` 里另开的一个格子里；\n4. **站在门口等对象回来**；\n5. 回来之后印三行：\n   - `李四数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - `我们数到：` 后面接**我们自己数出来的**条数，再跟一个 ` 条`；\n   - `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"李四\", 2);\n\n        一个.start();\n\n        int 我们的数 = 0;\n        for (int i = 0; i < 4; i++) {\n            我们的数 = 我们的数 + 1;\n        }\n\n        一个.join();\n\n        System.out.println(\"李四数到：\" + 一个.数到 + \" 条\");\n        System.out.println(\"我们数到：\" + 我们的数 + \" 条\");\n        System.out.println(\"一共：\" + (一个.数到 + 我们的数) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "李四数到：2 条\n我们数到：4 条\n一共：6 条",
+      "stdin": null,
+      "explanation": "**一、派出去之后，我们这条线继续往下走。** `一个.start()` 一调用就当「它出去干活了」，下面那几行是我们**自己**在干 —— 两路同时进行，这就是「同时派好几个对象」的样子：对象数对象的，我们数我们的。\n\n**二、我们那一格是我们自己的。** `我们的数` 摆在 `main` 里，是另开的一格；那个对象的 `数到` 摆在类定义上，是它自己的一份。两个格子互不相干，各数各的，谁也动不了谁。\n\n**三、报数之前一定要 `join()`。** 不等就报，对象那边可能还没数完 —— 报出来的数就说不准了。`join()` 就是「站门口等它回来」，回来了才报。\n\n**四、谁快谁慢由机器定，报出来的内容却是稳的。** 我们自己在数、对象也在数，两边谁先数完说不准；但报数发生在 `join()` 之后，所以三行的内容跟快慢无关。\n\n**五、等，不等于闲着。** 我们也可以是干活的那一方：派完对象自己接着数。但只要还要读对象那边的结果，`join()` 就不能少 —— 想怎么等，都绕不开这一次。",
+      "templateId": "java-s3-09-main-also-works",
+      "params": {
+        "n1": "李四",
+        "c1": 2,
+        "c3": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "d0fb938e210dc2a0"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-main-also-works-014",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们派一个对象去数鱼，**派出去之后我们自己也没闲着** —— 自己也数自己的那几格。两边都数完了，我们再报数。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（名字＋要数几条＋数到多少），那段活就是**转圈**把自己那一格数够；\n2. 创建一个对象，名字叫 `李四`，要数 3 条；\n3. **派它出去**（不是自己动手）；派完我们接着往下走：**自己也转圈**数 5 条，数在我们在 `main` 里另开的一个格子里；\n4. **站在门口等对象回来**；\n5. 回来之后印三行：\n   - `李四数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - `我们数到：` 后面接**我们自己数出来的**条数，再跟一个 ` 条`；\n   - `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"李四\", 3);\n\n        一个.start();\n\n        int 我们的数 = 0;\n        for (int i = 0; i < 5; i++) {\n            我们的数 = 我们的数 + 1;\n        }\n\n        一个.join();\n\n        System.out.println(\"李四数到：\" + 一个.数到 + \" 条\");\n        System.out.println(\"我们数到：\" + 我们的数 + \" 条\");\n        System.out.println(\"一共：\" + (一个.数到 + 我们的数) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "李四数到：3 条\n我们数到：5 条\n一共：8 条",
+      "stdin": null,
+      "explanation": "**一、派出去之后，我们这条线继续往下走。** `一个.start()` 一调用就当「它出去干活了」，下面那几行是我们**自己**在干 —— 两路同时进行，这就是「同时派好几个对象」的样子：对象数对象的，我们数我们的。\n\n**二、我们那一格是我们自己的。** `我们的数` 摆在 `main` 里，是另开的一格；那个对象的 `数到` 摆在类定义上，是它自己的一份。两个格子互不相干，各数各的，谁也动不了谁。\n\n**三、报数之前一定要 `join()`。** 不等就报，对象那边可能还没数完 —— 报出来的数就说不准了。`join()` 就是「站门口等它回来」，回来了才报。\n\n**四、谁快谁慢由机器定，报出来的内容却是稳的。** 我们自己在数、对象也在数，两边谁先数完说不准；但报数发生在 `join()` 之后，所以三行的内容跟快慢无关。\n\n**五、等，不等于闲着。** 我们也可以是干活的那一方：派完对象自己接着数。但只要还要读对象那边的结果，`join()` 就不能少 —— 想怎么等，都绕不开这一次。",
+      "templateId": "java-s3-09-main-also-works",
+      "params": {
+        "n1": "李四",
+        "c1": 3,
+        "c3": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "80ac742ae0266bb8"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-main-also-works-017",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们派一个对象去数鱼，**派出去之后我们自己也没闲着** —— 自己也数自己的那几格。两边都数完了，我们再报数。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（名字＋要数几条＋数到多少），那段活就是**转圈**把自己那一格数够；\n2. 创建一个对象，名字叫 `李四`，要数 4 条；\n3. **派它出去**（不是自己动手）；派完我们接着往下走：**自己也转圈**数 5 条，数在我们在 `main` 里另开的一个格子里；\n4. **站在门口等对象回来**；\n5. 回来之后印三行：\n   - `李四数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - `我们数到：` 后面接**我们自己数出来的**条数，再跟一个 ` 条`；\n   - `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"李四\", 4);\n\n        一个.start();\n\n        int 我们的数 = 0;\n        for (int i = 0; i < 5; i++) {\n            我们的数 = 我们的数 + 1;\n        }\n\n        一个.join();\n\n        System.out.println(\"李四数到：\" + 一个.数到 + \" 条\");\n        System.out.println(\"我们数到：\" + 我们的数 + \" 条\");\n        System.out.println(\"一共：\" + (一个.数到 + 我们的数) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "李四数到：4 条\n我们数到：5 条\n一共：9 条",
+      "stdin": null,
+      "explanation": "**一、派出去之后，我们这条线继续往下走。** `一个.start()` 一调用就当「它出去干活了」，下面那几行是我们**自己**在干 —— 两路同时进行，这就是「同时派好几个对象」的样子：对象数对象的，我们数我们的。\n\n**二、我们那一格是我们自己的。** `我们的数` 摆在 `main` 里，是另开的一格；那个对象的 `数到` 摆在类定义上，是它自己的一份。两个格子互不相干，各数各的，谁也动不了谁。\n\n**三、报数之前一定要 `join()`。** 不等就报，对象那边可能还没数完 —— 报出来的数就说不准了。`join()` 就是「站门口等它回来」，回来了才报。\n\n**四、谁快谁慢由机器定，报出来的内容却是稳的。** 我们自己在数、对象也在数，两边谁先数完说不准；但报数发生在 `join()` 之后，所以三行的内容跟快慢无关。\n\n**五、等，不等于闲着。** 我们也可以是干活的那一方：派完对象自己接着数。但只要还要读对象那边的结果，`join()` 就不能少 —— 想怎么等，都绕不开这一次。",
+      "templateId": "java-s3-09-main-also-works",
+      "params": {
+        "n1": "李四",
+        "c1": 4,
+        "c3": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "79e6260c7d1fe59a"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-no-start-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们写了一段派对象的活，跑起来**一个字都不红**，纸上却只有一行：\n\n```text\n家什收好了\n```\n\n那个对象一次没吭。\n\n你帮我们看看**漏了哪一步**，把它补上 —— 补好之后该印出：\n\n```text\n张三捞到 2 条\n家什收好了\n```\n\n（这一题**不需要输入**。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"张三\", 2);\n\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"张三\", 2);\n\n        一个.start();\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三捞到 2 条\n家什收好了",
+      "stdin": null,
+      "explanation": "**一、对象没出去，是少了一次 `start()`。** `new Cat(...)` 只是「照类定义画出一个对象」，它还站在原地；`一个.start()` 才是「派它出去开跑」。少了这一次，那段活**一辈子没人干** —— 而且一个字都不红。\n\n**二、`join()` 也拦不住这件事。** `join()` 是「站门口等它干完」：对象压根没出去，等到的自然是「它早就没在跑了」，于是直接往下走 —— 我们这一等白等了。\n\n**三、补上的这一步要摆在 `join()` 前面。** 先派出去、再等它回来；颠倒过来就是另一种白等。\n\n**四、这一处跟「直接调用 `run()`」正好配成一对。** 调用 `run()` 是「活干了、没派对象」；这里是「对象画好了、没派」。两处都**不红不响**，只有看印出来的东西才认得出来 —— 所以这两句写完，先低头看一眼输出。",
+      "templateId": "java-s3-09-no-start",
+      "params": {
+        "n1": "张三",
+        "c1": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "762501eebb2b3a58"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-no-start-005",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们写了一段派对象的活，跑起来**一个字都不红**，纸上却只有一行：\n\n```text\n家什收好了\n```\n\n那个对象一次没吭。\n\n你帮我们看看**漏了哪一步**，把它补上 —— 补好之后该印出：\n\n```text\n李四捞到 4 条\n家什收好了\n```\n\n（这一题**不需要输入**。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"李四\", 4);\n\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"李四\", 4);\n\n        一个.start();\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四捞到 4 条\n家什收好了",
+      "stdin": null,
+      "explanation": "**一、对象没出去，是少了一次 `start()`。** `new Cat(...)` 只是「照类定义画出一个对象」，它还站在原地；`一个.start()` 才是「派它出去开跑」。少了这一次，那段活**一辈子没人干** —— 而且一个字都不红。\n\n**二、`join()` 也拦不住这件事。** `join()` 是「站门口等它干完」：对象压根没出去，等到的自然是「它早就没在跑了」，于是直接往下走 —— 我们这一等白等了。\n\n**三、补上的这一步要摆在 `join()` 前面。** 先派出去、再等它回来；颠倒过来就是另一种白等。\n\n**四、这一处跟「直接调用 `run()`」正好配成一对。** 调用 `run()` 是「活干了、没派对象」；这里是「对象画好了、没派」。两处都**不红不响**，只有看印出来的东西才认得出来 —— 所以这两句写完，先低头看一眼输出。",
+      "templateId": "java-s3-09-no-start",
+      "params": {
+        "n1": "李四",
+        "c1": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "d99acbd0eb42cac6"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-run-then-start-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们只打算派**一个**对象去捞一趟，结果纸上印了**两行一模一样的话**：\n\n```text\n张三捞到 2 条（这一路是：main）\n张三捞到 2 条（这一路是：Thread-0）\n家什收好了\n```\n\n我们自己这一路叫 `main`；一个对象出去干了活，报出来的该是 `Thread-0`。\n\n你帮我们看看**哪一句是多余的**，把它去掉 —— 去掉之后该印出：\n\n```text\n张三捞到 2 条（这一路是：Thread-0）\n家什收好了\n```\n\n（这一题**不需要输入**。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"张三\", 2);\n\n        一个.run();\n        一个.start();\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条（这一路是：\" + Thread.currentThread().getName() + \"）\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"张三\", 2);\n\n        一个.start();\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条（这一路是：\" + Thread.currentThread().getName() + \"）\");\n    }\n}\n",
+      "expectedOutput": "张三捞到 2 条（这一路是：Thread-0）\n家什收好了",
+      "stdin": null,
+      "explanation": "**一、`run()` 是那段活本身，`start()` 才是派对象。** 两个都写，这段活就干了两趟：头一趟是母对象照着类定义**自己动手**（所以报 `main`），第二趟才是那个对象干的（所以报 `Thread-0`）。\n\n**二、头一趟也一个字都不红。** 直接调用 `run()` 不红不响、活照干 —— 这正是它坑人的地方：我们以为自己派了对象，其实只是在原地自己动手。\n\n**三、改法就是去掉 `一个.run();` 那一句。** 留下 `一个.start();` 和 `一个.join();` 才是「派一个对象去干、站门口等它回来」；要是留错了那一句（只留 `run()`），纸上就只有 `main` 那一行，名字对不上。\n\n**四、名字是认人的钩子。** `Thread.currentThread().getName()` 问的是「现在这一句是谁在干」：我们自己报 `main`，派出去的对象报 `Thread-0`。往后想确认「到底派出去没有」，就看这一处。",
+      "templateId": "java-s3-09-run-then-start",
+      "params": {
+        "n1": "张三",
+        "c1": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "c384c3eeb7f292bc"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-run-then-start-005",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们只打算派**一个**对象去捞一趟，结果纸上印了**两行一模一样的话**：\n\n```text\n李四捞到 4 条（这一路是：main）\n李四捞到 4 条（这一路是：Thread-0）\n家什收好了\n```\n\n我们自己这一路叫 `main`；一个对象出去干了活，报出来的该是 `Thread-0`。\n\n你帮我们看看**哪一句是多余的**，把它去掉 —— 去掉之后该印出：\n\n```text\n李四捞到 4 条（这一路是：Thread-0）\n家什收好了\n```\n\n（这一题**不需要输入**。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"李四\", 4);\n\n        一个.run();\n        一个.start();\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条（这一路是：\" + Thread.currentThread().getName() + \"）\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"李四\", 4);\n\n        一个.start();\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条（这一路是：\" + Thread.currentThread().getName() + \"）\");\n    }\n}\n",
+      "expectedOutput": "李四捞到 4 条（这一路是：Thread-0）\n家什收好了",
+      "stdin": null,
+      "explanation": "**一、`run()` 是那段活本身，`start()` 才是派对象。** 两个都写，这段活就干了两趟：头一趟是母对象照着类定义**自己动手**（所以报 `main`），第二趟才是那个对象干的（所以报 `Thread-0`）。\n\n**二、头一趟也一个字都不红。** 直接调用 `run()` 不红不响、活照干 —— 这正是它坑人的地方：我们以为自己派了对象，其实只是在原地自己动手。\n\n**三、改法就是去掉 `一个.run();` 那一句。** 留下 `一个.start();` 和 `一个.join();` 才是「派一个对象去干、站门口等它回来」；要是留错了那一句（只留 `run()`），纸上就只有 `main` 那一行，名字对不上。\n\n**四、名字是认人的钩子。** `Thread.currentThread().getName()` 问的是「现在这一句是谁在干」：我们自己报 `main`，派出去的对象报 `Thread-0`。往后想确认「到底派出去没有」，就看这一处。",
+      "templateId": "java-s3-09-run-then-start",
+      "params": {
+        "n1": "李四",
+        "c1": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "2b92f354c9afc5bf"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-runnable-crew-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要派 **3 个对象**去干活。这一次我们**不想为每一个都新画一张对象的类定义** —— 手上只有**一段「捞鱼」的活**，想把它**塞给几个现成的对象**。\n\n程序的输入是：**第一行一个整数 n**，**后面跟 n 行**，一行一个整数，就是第 1 只、第 2 只……第 n 个对象要捞的条数。\n\n请你写个程序，照这个次序做：\n\n1. 把那段活画成一张**「一段活」的类定义**（`implements Runnable`）；类定义上带三样东西：自己是**第几个**、**要捞几条**、还有母对象那边**先备好的一个能装 n 个整数的收货格子**（整队共用这一个）；\n2. 那段活做的事是：从 0 开始**转圈**加到「要捞几条」，把结果放进收货格子里**对应自己号数**的那一格（第 1 只放第 1 格）；\n3. 照传入进来的数，一个一个把这段活**塞进一个现成的对象**里，凑成 3 只的一队；\n4. 整队一起**派出去**；\n5. **站在门口等整队都回来**；\n6. 回来之后按次序印 n 行：`第 k 只：x 条`（k 从 1 数起，x 是收货格子里第 k 号保存的数）；\n7. 最后印一行 `一共：` 后面接 n 个加起来的总数，再跟一个 ` 条`。\n\n比如程序的输入是\n\n```text\n3\n7\n9\n5\n```\n\n程序就要返回\n\n```text\n第 1 只：7 条\n第 2 只：9 条\n第 3 只：5 条\n一共：21 条\n```\n\n（判分的时候喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] 条数们 = new int[n];\n        for (int i = 0; i < n; i++) {\n            条数们[i] = sc.nextInt();\n        }\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] 条数们 = new int[n];\n        for (int i = 0; i < n; i++) {\n            条数们[i] = sc.nextInt();\n        }\n\n        int[] 收货格子 = new int[n];\n        Thread[] 一队 = new Thread[n];\n        for (int i = 0; i < n; i++) {\n            一队[i] = new Thread(new FishJob(i + 1, 条数们[i], 收货格子));\n        }\n        for (int i = 0; i < n; i++) {\n            一队[i].start();\n        }\n        for (int i = 0; i < n; i++) {\n            一队[i].join();\n        }\n\n        int 一共 = 0;\n        for (int i = 0; i < n; i++) {\n            System.out.println(\"第 \" + (i + 1) + \" 只：\" + 收货格子[i] + \" 条\");\n            一共 = 一共 + 收货格子[i];\n        }\n        System.out.println(\"一共：\" + 一共 + \" 条\");\n    }\n}\n\nclass FishJob implements Runnable {\n    int 第几个;\n    int 要捞;\n    int[] 收货格子;\n\n    FishJob(int 第几个, int 要捞, int[] 收货格子) {\n        this.第几个 = 第几个;\n        this.要捞 = 要捞;\n        this.收货格子 = 收货格子;\n    }\n\n    public void run() {\n        int 数到 = 0;\n        for (int i = 0; i < 要捞; i++) {\n            数到 = 数到 + 1;\n        }\n        收货格子[第几个 - 1] = 数到;\n    }\n}\n",
+      "expectedOutput": "第 1 只：5 条\n第 2 只：1 条\n第 3 只：4 条\n一共：10 条",
+      "stdin": "3\n5\n1\n4\n",
+      "explanation": "**一、`implements Runnable` 的类定义写的是「一段活」，不是「一个对象」。** 它自己不会跑，得**塞给一个对象** —— `new Thread(new FishJob(...))` —— 那个对象才有名字、才能 `start()`。好处是**同一段活塞给几个对象都行**，不用为每一个新画一张对象的类定义。\n\n**二、每个对象拿的是自己那一份。** 第几个、要捞几条都是塞进去的，所以 3 个对象各干各的，各把自己那一号填上；收货格子是几个对象共用的**同一排**，各填各的格。\n\n**三、整队派出去、整队等回来。** 两句 `for` 转圈：一句把整队 `start()`，一句把整队 `join()`。少派几个，那几号就是空的；不等就收货，谁写完了说不准。\n\n**四、报数在全部 `join()` 之后，所以内容是稳的。** 谁先捞完、谁后捞完由机器定；我们等的是**整队**，回来之后才一行一行报。顺带一句：等到它们都回来了，每一个填进格子里的东西我们这边才一定看得见。\n\n**五、号数和条数各管一件事。** 报第 k 行的时候，`k` 是我们数的号数，`x` 是那一号格子里保存的数 —— 两样都别写死，让程序自己读出来。",
+      "templateId": "java-s3-09-runnable-crew",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "0f48f872c8e8ded4"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-runnable-crew-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要派 **4 个对象**去干活。这一次我们**不想为每一个都新画一张对象的类定义** —— 手上只有**一段「捞鱼」的活**，想把它**塞给几个现成的对象**。\n\n程序的输入是：**第一行一个整数 n**，**后面跟 n 行**，一行一个整数，就是第 1 只、第 2 只……第 n 个对象要捞的条数。\n\n请你写个程序，照这个次序做：\n\n1. 把那段活画成一张**「一段活」的类定义**（`implements Runnable`）；类定义上带三样东西：自己是**第几个**、**要捞几条**、还有母对象那边**先备好的一个能装 n 个整数的收货格子**（整队共用这一个）；\n2. 那段活做的事是：从 0 开始**转圈**加到「要捞几条」，把结果放进收货格子里**对应自己号数**的那一格（第 1 只放第 1 格）；\n3. 照传入进来的数，一个一个把这段活**塞进一个现成的对象**里，凑成 4 只的一队；\n4. 整队一起**派出去**；\n5. **站在门口等整队都回来**；\n6. 回来之后按次序印 n 行：`第 k 只：x 条`（k 从 1 数起，x 是收货格子里第 k 号保存的数）；\n7. 最后印一行 `一共：` 后面接 n 个加起来的总数，再跟一个 ` 条`。\n\n比如程序的输入是\n\n```text\n4\n2\n8\n4\n5\n```\n\n程序就要返回\n\n```text\n第 1 只：2 条\n第 2 只：8 条\n第 3 只：4 条\n第 4 只：5 条\n一共：19 条\n```\n\n（判分的时候喂的是**另一组数**，所以别把答案写死）",
+      "starter": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] 条数们 = new int[n];\n        for (int i = 0; i < n; i++) {\n            条数们[i] = sc.nextInt();\n        }\n\n    }\n}\n",
+      "referenceSolution": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] 条数们 = new int[n];\n        for (int i = 0; i < n; i++) {\n            条数们[i] = sc.nextInt();\n        }\n\n        int[] 收货格子 = new int[n];\n        Thread[] 一队 = new Thread[n];\n        for (int i = 0; i < n; i++) {\n            一队[i] = new Thread(new FishJob(i + 1, 条数们[i], 收货格子));\n        }\n        for (int i = 0; i < n; i++) {\n            一队[i].start();\n        }\n        for (int i = 0; i < n; i++) {\n            一队[i].join();\n        }\n\n        int 一共 = 0;\n        for (int i = 0; i < n; i++) {\n            System.out.println(\"第 \" + (i + 1) + \" 只：\" + 收货格子[i] + \" 条\");\n            一共 = 一共 + 收货格子[i];\n        }\n        System.out.println(\"一共：\" + 一共 + \" 条\");\n    }\n}\n\nclass FishJob implements Runnable {\n    int 第几个;\n    int 要捞;\n    int[] 收货格子;\n\n    FishJob(int 第几个, int 要捞, int[] 收货格子) {\n        this.第几个 = 第几个;\n        this.要捞 = 要捞;\n        this.收货格子 = 收货格子;\n    }\n\n    public void run() {\n        int 数到 = 0;\n        for (int i = 0; i < 要捞; i++) {\n            数到 = 数到 + 1;\n        }\n        收货格子[第几个 - 1] = 数到;\n    }\n}\n",
+      "expectedOutput": "第 1 只：3 条\n第 2 只：8 条\n第 3 只：9 条\n第 4 只：8 条\n一共：28 条",
+      "stdin": "4\n3\n8\n9\n8\n",
+      "explanation": "**一、`implements Runnable` 的类定义写的是「一段活」，不是「一个对象」。** 它自己不会跑，得**塞给一个对象** —— `new Thread(new FishJob(...))` —— 那个对象才有名字、才能 `start()`。好处是**同一段活塞给几个对象都行**，不用为每一个新画一张对象的类定义。\n\n**二、每个对象拿的是自己那一份。** 第几个、要捞几条都是塞进去的，所以 4 个对象各干各的，各把自己那一号填上；收货格子是几个对象共用的**同一排**，各填各的格。\n\n**三、整队派出去、整队等回来。** 两句 `for` 转圈：一句把整队 `start()`，一句把整队 `join()`。少派几个，那几号就是空的；不等就收货，谁写完了说不准。\n\n**四、报数在全部 `join()` 之后，所以内容是稳的。** 谁先捞完、谁后捞完由机器定；我们等的是**整队**，回来之后才一行一行报。顺带一句：等到它们都回来了，每一个填进格子里的东西我们这边才一定看得见。\n\n**五、号数和条数各管一件事。** 报第 k 行的时候，`k` 是我们数的号数，`x` 是那一号格子里保存的数 —— 两样都别写死，让程序自己读出来。",
+      "templateId": "java-s3-09-runnable-crew",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "824971476ea493e2"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-start-twice-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们派一个对象去捞了一趟，还想让它再捞一趟，就又调用了一句 `一个.start();`。\n\n结果头一趟干得好好的，第二句当场翻了脸：\n\n```text\nException in thread \"main\" java.lang.IllegalThreadStateException\n```\n\n读作「**这个对象的状态不对，不许再派**」—— 它已经干完、结束了。\n\n你帮我们改一改：想再捞一趟，得**另派一个新的对象**。改好之后该印出：\n\n```text\n张三捞到 2 条\n张三捞到 2 条\n家什收好了\n```\n\n（这一题**不需要输入**。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"张三\", 2);\n\n        一个.start();\n        一个.join();\n        一个.start();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"张三\", 2);\n\n        一个.start();\n        一个.join();\n\n        Cat 第二只 = new Cat(\"张三\", 2);\n        第二只.start();\n        第二只.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+      "expectedOutput": "张三捞到 2 条\n张三捞到 2 条\n家什收好了",
+      "stdin": null,
+      "explanation": "**一、一个对象只有一辈子。** `new` 出来是「还没动」，`start()` 之后「出去干活」，那段 `run()` 跑完它就**结束了** —— 结束了的对象不能重新开跑，这是机器定死的规矩，所以第二次 `start()` 当场红。\n\n**二、它红得早、红得清楚。** 头一趟该印的还是印了，翻脸的是第二次那一句 —— 本课里「不红不响」的坑不少，这一处正好相反：它当场把话说清楚。\n\n**三、想再干一趟，就另画一个。** `new Cat(...)` 之后再 `start()`，新对象干新的一趟；指望叫醒同一个，只会再撞上那句错误信息。\n\n**四、两行印字的先后为什么是稳的。** 两趟之间都夹着 `join()`：每派一个就站门口等它回来，所以先印哪一行、后印哪一行、最后那句 `家什收好了` 摆在哪儿，都是定死的。",
+      "templateId": "java-s3-09-start-twice",
+      "params": {
+        "n1": "张三",
+        "c1": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "a157dcd2db58dc09"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-start-twice-005",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们派一个对象去捞了一趟，还想让它再捞一趟，就又调用了一句 `一个.start();`。\n\n结果头一趟干得好好的，第二句当场翻了脸：\n\n```text\nException in thread \"main\" java.lang.IllegalThreadStateException\n```\n\n读作「**这个对象的状态不对，不许再派**」—— 它已经干完、结束了。\n\n你帮我们改一改：想再捞一趟，得**另派一个新的对象**。改好之后该印出：\n\n```text\n李四捞到 4 条\n李四捞到 4 条\n家什收好了\n```\n\n（这一题**不需要输入**。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"李四\", 4);\n\n        一个.start();\n        一个.join();\n        一个.start();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"李四\", 4);\n\n        一个.start();\n        一个.join();\n\n        Cat 第二只 = new Cat(\"李四\", 4);\n        第二只.start();\n        第二只.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+      "expectedOutput": "李四捞到 4 条\n李四捞到 4 条\n家什收好了",
+      "stdin": null,
+      "explanation": "**一、一个对象只有一辈子。** `new` 出来是「还没动」，`start()` 之后「出去干活」，那段 `run()` 跑完它就**结束了** —— 结束了的对象不能重新开跑，这是机器定死的规矩，所以第二次 `start()` 当场红。\n\n**二、它红得早、红得清楚。** 头一趟该印的还是印了，翻脸的是第二次那一句 —— 本课里「不红不响」的坑不少，这一处正好相反：它当场把话说清楚。\n\n**三、想再干一趟，就另画一个。** `new Cat(...)` 之后再 `start()`，新对象干新的一趟；指望叫醒同一个，只会再撞上那句错误信息。\n\n**四、两行印字的先后为什么是稳的。** 两趟之间都夹着 `join()`：每派一个就站门口等它回来，所以先印哪一行、后印哪一行、最后那句 `家什收好了` 摆在哪儿，都是定死的。",
+      "templateId": "java-s3-09-start-twice",
+      "params": {
+        "n1": "李四",
+        "c1": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "e191a6e08e73489b"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-two-cats-own-slot-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要派**两个**对象各数各的鱼：两个对象用**同一类型定义**，类定义上除了名字，还带一格「要数几条」、一格「数到多少」。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（`extends Thread`），名字＋那两格都摆在类定义上；类定义上那段活是：**转圈**，每一圈把「数到多少」加 1，转够「要数几条」那么多圈；\n2. 生两个对象，名字分别叫 `张三` 和 `团子`，一个要数 2 条、一个要数 3 条；\n3. 两个都**派出去**（不是自己动手），然后**站在门口等两个都回来**；\n4. 回来之后印三行：\n   - `张三数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - 第二行照着上面来，换成 `团子`；\n   - 第三行 `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 甲 = new Cat(\"张三\", 2);\n        Cat 乙 = new Cat(\"团子\", 3);\n\n        甲.start();\n        乙.start();\n\n        甲.join();\n        乙.join();\n\n        System.out.println(甲.名字 + \"数到：\" + 甲.数到 + \" 条\");\n        System.out.println(乙.名字 + \"数到：\" + 乙.数到 + \" 条\");\n        System.out.println(\"一共：\" + (甲.数到 + 乙.数到) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "张三数到：2 条\n团子数到：3 条\n一共：5 条",
+      "stdin": null,
+      "explanation": "**一、每个对象的格子各有一份。** `名字`、`要数`、`数到` 都摆在类定义上，所以每创建一个对象就多一份自己的 —— 张三那个数张三的，李四那个数李四的，两个各数各的，谁也踩不到谁。\n\n**二、「派出去」那一次不能省。** 两个都 `start()` 才是真派出去：这一次调用结束，我们这条线继续往下走，两个对象各自也在往下走。\n\n**三、报数之前先等它们都回来。** 两句 `join()` 就是「站门口等两个都回来」：等回来了才报数，报到的那两格一定已经数满了。少了这两句，报出来的数就说不准 —— 对象还没数完，我们就已经报出去了。\n\n**四、谁先数完说不准，报出来的内容却是稳的。** 两个对象谁先跑完由机器定；我们是**等两个都回来**才印的，所以三行的内容跟先后无关。\n\n**五、「一共」是我们自己加的。** `甲.数到 + 乙.数到` 读的是两个各自的格子，加起来才是总数 —— 别去问「第三个对象」，这儿没有第三个。",
+      "templateId": "java-s3-09-two-cats-own-slot",
+      "params": {
+        "n1": "张三",
+        "n2": "团子",
+        "c1": 2,
+        "c2": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "44251ec0b66e24f3"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-two-cats-own-slot-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要派**两个**对象各数各的鱼：两个对象用**同一类型定义**，类定义上除了名字，还带一格「要数几条」、一格「数到多少」。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（`extends Thread`），名字＋那两格都摆在类定义上；类定义上那段活是：**转圈**，每一圈把「数到多少」加 1，转够「要数几条」那么多圈；\n2. 生两个对象，名字分别叫 `张三` 和 `团子`，一个要数 4 条、一个要数 4 条；\n3. 两个都**派出去**（不是自己动手），然后**站在门口等两个都回来**；\n4. 回来之后印三行：\n   - `张三数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - 第二行照着上面来，换成 `团子`；\n   - 第三行 `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 甲 = new Cat(\"张三\", 4);\n        Cat 乙 = new Cat(\"团子\", 4);\n\n        甲.start();\n        乙.start();\n\n        甲.join();\n        乙.join();\n\n        System.out.println(甲.名字 + \"数到：\" + 甲.数到 + \" 条\");\n        System.out.println(乙.名字 + \"数到：\" + 乙.数到 + \" 条\");\n        System.out.println(\"一共：\" + (甲.数到 + 乙.数到) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "张三数到：4 条\n团子数到：4 条\n一共：8 条",
+      "stdin": null,
+      "explanation": "**一、每个对象的格子各有一份。** `名字`、`要数`、`数到` 都摆在类定义上，所以每创建一个对象就多一份自己的 —— 张三那个数张三的，李四那个数李四的，两个各数各的，谁也踩不到谁。\n\n**二、「派出去」那一次不能省。** 两个都 `start()` 才是真派出去：这一次调用结束，我们这条线继续往下走，两个对象各自也在往下走。\n\n**三、报数之前先等它们都回来。** 两句 `join()` 就是「站门口等两个都回来」：等回来了才报数，报到的那两格一定已经数满了。少了这两句，报出来的数就说不准 —— 对象还没数完，我们就已经报出去了。\n\n**四、谁先数完说不准，报出来的内容却是稳的。** 两个对象谁先跑完由机器定；我们是**等两个都回来**才印的，所以三行的内容跟先后无关。\n\n**五、「一共」是我们自己加的。** `甲.数到 + 乙.数到` 读的是两个各自的格子，加起来才是总数 —— 别去问「第三个对象」，这儿没有第三个。",
+      "templateId": "java-s3-09-two-cats-own-slot",
+      "params": {
+        "n1": "张三",
+        "n2": "团子",
+        "c1": 4,
+        "c2": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "f2337824d7a09e8d"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-two-cats-own-slot-014",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要派**两个**对象各数各的鱼：两个对象用**同一类型定义**，类定义上除了名字，还带一格「要数几条」、一格「数到多少」。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（`extends Thread`），名字＋那两格都摆在类定义上；类定义上那段活是：**转圈**，每一圈把「数到多少」加 1，转够「要数几条」那么多圈；\n2. 生两个对象，名字分别叫 `张三` 和 `计算机`，一个要数 3 条、一个要数 5 条；\n3. 两个都**派出去**（不是自己动手），然后**站在门口等两个都回来**；\n4. 回来之后印三行：\n   - `张三数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - 第二行照着上面来，换成 `计算机`；\n   - 第三行 `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 甲 = new Cat(\"张三\", 3);\n        Cat 乙 = new Cat(\"计算机\", 5);\n\n        甲.start();\n        乙.start();\n\n        甲.join();\n        乙.join();\n\n        System.out.println(甲.名字 + \"数到：\" + 甲.数到 + \" 条\");\n        System.out.println(乙.名字 + \"数到：\" + 乙.数到 + \" 条\");\n        System.out.println(\"一共：\" + (甲.数到 + 乙.数到) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "张三数到：3 条\n计算机数到：5 条\n一共：8 条",
+      "stdin": null,
+      "explanation": "**一、每个对象的格子各有一份。** `名字`、`要数`、`数到` 都摆在类定义上，所以每创建一个对象就多一份自己的 —— 张三那个数张三的，李四那个数李四的，两个各数各的，谁也踩不到谁。\n\n**二、「派出去」那一次不能省。** 两个都 `start()` 才是真派出去：这一次调用结束，我们这条线继续往下走，两个对象各自也在往下走。\n\n**三、报数之前先等它们都回来。** 两句 `join()` 就是「站门口等两个都回来」：等回来了才报数，报到的那两格一定已经数满了。少了这两句，报出来的数就说不准 —— 对象还没数完，我们就已经报出去了。\n\n**四、谁先数完说不准，报出来的内容却是稳的。** 两个对象谁先跑完由机器定；我们是**等两个都回来**才印的，所以三行的内容跟先后无关。\n\n**五、「一共」是我们自己加的。** `甲.数到 + 乙.数到` 读的是两个各自的格子，加起来才是总数 —— 别去问「第三个对象」，这儿没有第三个。",
+      "templateId": "java-s3-09-two-cats-own-slot",
+      "params": {
+        "n1": "张三",
+        "n2": "计算机",
+        "c1": 3,
+        "c2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "e7b7c2720769856f"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-two-cats-own-slot-021",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要派**两个**对象各数各的鱼：两个对象用**同一类型定义**，类定义上除了名字，还带一格「要数几条」、一格「数到多少」。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（`extends Thread`），名字＋那两格都摆在类定义上；类定义上那段活是：**转圈**，每一圈把「数到多少」加 1，转够「要数几条」那么多圈；\n2. 生两个对象，名字分别叫 `李四` 和 `团子`，一个要数 3 条、一个要数 3 条；\n3. 两个都**派出去**（不是自己动手），然后**站在门口等两个都回来**；\n4. 回来之后印三行：\n   - `李四数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - 第二行照着上面来，换成 `团子`；\n   - 第三行 `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 甲 = new Cat(\"李四\", 3);\n        Cat 乙 = new Cat(\"团子\", 3);\n\n        甲.start();\n        乙.start();\n\n        甲.join();\n        乙.join();\n\n        System.out.println(甲.名字 + \"数到：\" + 甲.数到 + \" 条\");\n        System.out.println(乙.名字 + \"数到：\" + 乙.数到 + \" 条\");\n        System.out.println(\"一共：\" + (甲.数到 + 乙.数到) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "李四数到：3 条\n团子数到：3 条\n一共：6 条",
+      "stdin": null,
+      "explanation": "**一、每个对象的格子各有一份。** `名字`、`要数`、`数到` 都摆在类定义上，所以每创建一个对象就多一份自己的 —— 张三那个数张三的，李四那个数李四的，两个各数各的，谁也踩不到谁。\n\n**二、「派出去」那一次不能省。** 两个都 `start()` 才是真派出去：这一次调用结束，我们这条线继续往下走，两个对象各自也在往下走。\n\n**三、报数之前先等它们都回来。** 两句 `join()` 就是「站门口等两个都回来」：等回来了才报数，报到的那两格一定已经数满了。少了这两句，报出来的数就说不准 —— 对象还没数完，我们就已经报出去了。\n\n**四、谁先数完说不准，报出来的内容却是稳的。** 两个对象谁先跑完由机器定；我们是**等两个都回来**才印的，所以三行的内容跟先后无关。\n\n**五、「一共」是我们自己加的。** `甲.数到 + 乙.数到` 读的是两个各自的格子，加起来才是总数 —— 别去问「第三个对象」，这儿没有第三个。",
+      "templateId": "java-s3-09-two-cats-own-slot",
+      "params": {
+        "n1": "李四",
+        "n2": "团子",
+        "c1": 3,
+        "c2": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "1c55c73b764551d8"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-two-cats-own-slot-028",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要派**两个**对象各数各的鱼：两个对象用**同一类型定义**，类定义上除了名字，还带一格「要数几条」、一格「数到多少」。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（`extends Thread`），名字＋那两格都摆在类定义上；类定义上那段活是：**转圈**，每一圈把「数到多少」加 1，转够「要数几条」那么多圈；\n2. 生两个对象，名字分别叫 `李四` 和 `计算机`，一个要数 2 条、一个要数 4 条；\n3. 两个都**派出去**（不是自己动手），然后**站在门口等两个都回来**；\n4. 回来之后印三行：\n   - `李四数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - 第二行照着上面来，换成 `计算机`；\n   - 第三行 `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 甲 = new Cat(\"李四\", 2);\n        Cat 乙 = new Cat(\"计算机\", 4);\n\n        甲.start();\n        乙.start();\n\n        甲.join();\n        乙.join();\n\n        System.out.println(甲.名字 + \"数到：\" + 甲.数到 + \" 条\");\n        System.out.println(乙.名字 + \"数到：\" + 乙.数到 + \" 条\");\n        System.out.println(\"一共：\" + (甲.数到 + 乙.数到) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "李四数到：2 条\n计算机数到：4 条\n一共：6 条",
+      "stdin": null,
+      "explanation": "**一、每个对象的格子各有一份。** `名字`、`要数`、`数到` 都摆在类定义上，所以每创建一个对象就多一份自己的 —— 张三那个数张三的，李四那个数李四的，两个各数各的，谁也踩不到谁。\n\n**二、「派出去」那一次不能省。** 两个都 `start()` 才是真派出去：这一次调用结束，我们这条线继续往下走，两个对象各自也在往下走。\n\n**三、报数之前先等它们都回来。** 两句 `join()` 就是「站门口等两个都回来」：等回来了才报数，报到的那两格一定已经数满了。少了这两句，报出来的数就说不准 —— 对象还没数完，我们就已经报出去了。\n\n**四、谁先数完说不准，报出来的内容却是稳的。** 两个对象谁先跑完由机器定；我们是**等两个都回来**才印的，所以三行的内容跟先后无关。\n\n**五、「一共」是我们自己加的。** `甲.数到 + 乙.数到` 读的是两个各自的格子，加起来才是总数 —— 别去问「第三个对象」，这儿没有第三个。",
+      "templateId": "java-s3-09-two-cats-own-slot",
+      "params": {
+        "n1": "李四",
+        "n2": "计算机",
+        "c1": 2,
+        "c2": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "a253e0fdafaa0822"
+      }
+    },
+    {
+      "id": "bank-java-s3-09-two-cats-own-slot-035",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要派**两个**对象各数各的鱼：两个对象用**同一类型定义**，类定义上除了名字，还带一格「要数几条」、一格「数到多少」。\n\n请你写个程序，照这个次序做：\n\n1. 画一张「会干活的对象」的类定义（`extends Thread`），名字＋那两格都摆在类定义上；类定义上那段活是：**转圈**，每一圈把「数到多少」加 1，转够「要数几条」那么多圈；\n2. 生两个对象，名字分别叫 `李四` 和 `计算机`，一个要数 4 条、一个要数 5 条；\n3. 两个都**派出去**（不是自己动手），然后**站在门口等两个都回来**；\n4. 回来之后印三行：\n   - `李四数到：` 后面接**那一个自己数出来的**条数，再跟一个 ` 条`；\n   - 第二行照着上面来，换成 `计算机`；\n   - 第三行 `一共：` 后面接**两个加起来**的条数，再跟一个 ` 条`。\n\n（这一题**不需要输入**，要数几条我们已经在上面报给你了。）",
+      "starter": "public class Main {\n    public static void main(String[] args) throws Exception {\n\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 甲 = new Cat(\"李四\", 4);\n        Cat 乙 = new Cat(\"计算机\", 5);\n\n        甲.start();\n        乙.start();\n\n        甲.join();\n        乙.join();\n\n        System.out.println(甲.名字 + \"数到：\" + 甲.数到 + \" 条\");\n        System.out.println(乙.名字 + \"数到：\" + 乙.数到 + \" 条\");\n        System.out.println(\"一共：\" + (甲.数到 + 乙.数到) + \" 条\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 要数;\n    int 数到 = 0;\n\n    Cat(String 名字, int 要数) {\n        this.名字 = 名字;\n        this.要数 = 要数;\n    }\n\n    public void run() {\n        for (int i = 0; i < 要数; i++) {\n            数到 = 数到 + 1;\n        }\n    }\n}\n",
+      "expectedOutput": "李四数到：4 条\n计算机数到：5 条\n一共：9 条",
+      "stdin": null,
+      "explanation": "**一、每个对象的格子各有一份。** `名字`、`要数`、`数到` 都摆在类定义上，所以每创建一个对象就多一份自己的 —— 张三那个数张三的，李四那个数李四的，两个各数各的，谁也踩不到谁。\n\n**二、「派出去」那一次不能省。** 两个都 `start()` 才是真派出去：这一次调用结束，我们这条线继续往下走，两个对象各自也在往下走。\n\n**三、报数之前先等它们都回来。** 两句 `join()` 就是「站门口等两个都回来」：等回来了才报数，报到的那两格一定已经数满了。少了这两句，报出来的数就说不准 —— 对象还没数完，我们就已经报出去了。\n\n**四、谁先数完说不准，报出来的内容却是稳的。** 两个对象谁先跑完由机器定；我们是**等两个都回来**才印的，所以三行的内容跟先后无关。\n\n**五、「一共」是我们自己加的。** `甲.数到 + 乙.数到` 读的是两个各自的格子，加起来才是总数 —— 别去问「第三个对象」，这儿没有第三个。",
+      "templateId": "java-s3-09-two-cats-own-slot",
+      "params": {
+        "n1": "李四",
+        "n2": "计算机",
+        "c1": 4,
+        "c2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.561Z",
+        "hash": "854a4a6b11152a01"
+      }
+    }
+  ]
+}

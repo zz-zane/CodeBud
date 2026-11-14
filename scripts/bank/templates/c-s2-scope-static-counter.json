@@ -1,0 +1,33 @@
+{
+  "templateId": "c-s2-scope-static-counter",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-10",
+  "type": "codewrite",
+  "concept": [
+    "static",
+    "函数自己的固定格子",
+    "初值只算一次",
+    "记得住"
+  ],
+  "instances": 6,
+  "params": {
+    "times": {
+      "kind": "int",
+      "min": 3,
+      "max": 4
+    },
+    "word": {
+      "kind": "pick",
+      "values": [
+        "编号",
+        "号码",
+        "序号"
+      ]
+    }
+  },
+  "stemTemplate": "我们要一个方法 `next_id`：称呼它一次就报一个 `{word}`，**第一次报 1，之后每调用一次就大 1**。\n\n两条要求写死：\n\n1. 这一个方法**不收任何传入**；\n2. 记编号的那个元素**不许摆在外面**（外面一个元素都不许放）—— 它得是**这招自己的**，调用结束了还记得住。\n\n`main` 里会把 `next_id` 调用 {times} 次，每调用一次印一行 `{word} <编号>`。",
+  "starterTemplate": "#include <stdio.h>\n\nvoid next_id(void) {\n\n}\n\nint main(void) {\n    for (int i = 0; i < {times}; i = i + 1) {\n        next_id();\n    }\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nvoid next_id(void) {\n    static int id = 0;\n\n    id = id + 1;\n    printf(\"{word} %d\\n\", id);\n}\n\nint main(void) {\n    for (int i = 0; i < {times}; i = i + 1) {\n        next_id();\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "这题的关键全在那个元素身上。\n\n**函数里普通的元素，每次进门都是新发的。** 我们真跑过一遍对照：写成 `int id = 0;`，调用三回报出来的是三个 1 —— 因为每次进门都新摆一个保存了 0 的元素，加完一、印完、出门，那个元素就没了；下一回再来，又是一个新的 0。\n\n**加上 `static` 就换了性质：** 那个元素变成**这一个方法自己的固定格子**，只在**第一次**调用到这儿的时候准备一次，之后每一次进门用的都还是它。所以初值 `0` 只算一遍，报出来就是 1、2、3……\n\n```c\nstatic int id = 0;\n```\n\n口诀收好：**函数里的 `static` 元素 = 只发一次、永远留着。**\n\n顺便，我们把那个元素的初值改成 100 真跑过一遍：报出来是 101、102、103、104……（调用几次就往下数几个）—— 看得很清楚，**那句初值只在第一次生效**，后面的每一次都只是接着往下加。"
+}

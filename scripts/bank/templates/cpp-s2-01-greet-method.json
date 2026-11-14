@@ -1,0 +1,39 @@
+{
+  "templateId": "cpp-s2-01-greet-method",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-01",
+  "type": "codewrite",
+  "concept": [
+    "类定义里写一个方法",
+    "函数里说自己那两格",
+    "两个对象调用同一个方法"
+  ],
+  "instances": 6,
+  "params": {
+    "nameA": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    },
+    "nameB": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 2,
+    "min": 1,
+    "max": 5
+  },
+  "stemTemplate": "我们想让每个对象都会**打招呼**。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `greet`，称呼它的时候印**一行**：\n\n```text\n我们是XX，当前记录了 N 条，见到你真好\n```\n\n2. 根据类创建**两个**实例：第一个叫 `{nameA}`、第二只叫 `{nameB}`，条数用输入接口递进来的那两个；\n3. **各调用一次** `greet`，第一个先调用。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外两个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void greet() {\n        cout << \"我们是\" << name << \"，当前记录了 \" << fish << \" 条，见到你真好\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"{nameA}\";\n    c1.fish = a;\n    c2.name = \"{nameB}\";\n    c2.fish = b;\n\n    c1.greet();\n    c2.greet();\n    return 0;\n}\n",
+  "explanationTemplate": "这一题的重点在**函数里那两句话说的是谁**。\n\n函数画在类定义里面，它里面写的 `name`、`fish` **不带任何前缀**——那意思是「**施展这一个方法的那个对象**自己的那两格」。所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字和各自的条数。\n\n- 引用的写法是「**哪个对象 · 函数名**」：`c1.greet();` 让第一个调用，`c2.greet();` 让第二只调用。**先说哪个对象，再调用函数名** —— 和上一阶段调用函数只多了前面那一段。\n- 函数写一次，两个对象都能用。以后想改台词，改类定义里那一处就行，两个一起变——这正是本课嫌「抄自己」的好处。\n\n⚠️ 写到函数里的时候，**别在 `name` 前面又补一句 `c1.`**：函数里面说 `name` 就是自己那一格，写了前缀反而找不到东西。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。"
+}

@@ -1,0 +1,85 @@
+{
+  "lessonId": "python-stage2-08",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们想让 `print(a)` 印出自己写好的一句话，而不是那串谁也不认识的怪字。类定义里该加哪一个方法？",
+      "options": [
+        "`__str__`",
+        "`__print__`",
+        "`__show__`",
+        "`__init__`"
+      ],
+      "answer": 0,
+      "explanation": "「这个对象被 `print` 的时候该长什么样」这个时刻，Python 会替你引用的是 `__str__` 。名字里那个 `str` 就是「话」的意思：它得把要说的话**返回**（用 `return`），Python 再拿这句话去印。`__print__`、`__show__` 都是我们自己编的名字，解释器的规矩册里没有这两条，写了等于没写；`__init__` 管的是**创建对象那一刻**，和打印不沾边——而且它早就写过了。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们写了一句 `a + b`，类定义上 `def __add__(self, other):` 里面的 `self` 和 `other` 分别是谁？",
+      "options": [
+        "`self` 是 `+` 左边那个 `a`，`other` 是右边那个 `b`",
+        "`self` 是右边那个 `b`，`other` 是左边那个 `a`",
+        "两个都指 `a`",
+        "`self` 指类定义，`other` 指实例"
+      ],
+      "answer": 0,
+      "explanation": "`+` 的左边摆着谁，Python 就调用谁的 `__add__`：我们写 `a + b`，背地里发生的是 `a.__add__(b)`，所以 `self` 接住的是**左边那个 `a`**，`other` 接住的是**右边那个 `b`**。这也是为什么它必须用 `self.n + other.n` —— 两个变量分属两个元素，写反了我们就会得到一份乱七八糟的结果。记不住就把这两个名字念一遍：自己、另一个。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "类定义上**没有**写 `__eq__` 的时候，两个分别创建后的、装的数据数都是 3 的元素，用 `==` 比一比会得到什么？",
+      "options": [
+        "`False` —— Python 默认只比「是不是同一个元素」，两个分别创建后的当然不是同一个",
+        "`True` —— 两个元素装的数一样，Python 会自动看出来",
+        "报错 —— 说这两个元素之间不能用 `==`",
+        "`None` —— 比不出结果"
+      ],
+      "answer": 0,
+      "explanation": "不写 `__eq__`，Python 就按它出厂时的老规矩办：**只比是不是同一个元素**（也就是同一个变量住址）。`Bowl(3)` 和 `Bowl(3)` 是照着类定义**分别创建后**的两个，住址各不相同，所以哪怕装的数一模一样，比的也是 `False`。想让「装的数一样就算相等」，就得自己把 `__eq__` 写上，把比较改成比里面的数。报错是不会的——`==` 这种比法 Python 本来就会，只是它默认按老规矩比。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "stem": "我们想让两个元素能用 `+` 加起来，类定义上那个空该填哪一个方法的名字？",
+      "lang": "python",
+      "code": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def ____(self, other):\n        return Bowl(self.n + other.n)\n\na = Bowl(3)\nb = Bowl(4)\nprint(a + b)\n",
+      "blanks": [
+        {
+          "answer": "__add__",
+          "accept": [
+            "__add__"
+          ]
+        }
+      ],
+      "explanation": "「`+` 的左边摆着这个元素」这个时刻，Python 替你引用的函数叫 `__add__`，所以空里填 `__add__` 。名字是**前后各两条下划线**夹起来的，一共四条，少一条它就不算魔法方法、Python 永远不会替你调用。填好之后，我们写 `a + b` 就等于让 Python 背地里去调用 `a.__add__(b)`，`self` 接住 `a`、`other` 接住 `b`，返回一个新元素。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "python",
+      "code": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return f\"保存了 {self.n} 条数据\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\nprint(Bowl(3) + Bowl(4))\n",
+      "stem": "这段代码的输出是什么？",
+      "answer": "保存了 7 条数据",
+      "accept": [
+        "保存了 7 条数据\n"
+      ],
+      "explanation": "一层层拆开看：最里面 `Bowl(3) + Bowl(4)`，`+` 左边摆着那个装 3 条的元素，Python 就称呼它的 `__add__`，`self.n + other.n` 是 3 + 4 = 7，返回**一个新元素**，保存 7 条。接着 `print(...)` 接住这个新元素，Python 又去称呼它的 `__str__`，返回「保存了 7 条数据」这句话，于是印出来的就是这一行。两个时刻前后接力：先用 `__add__` 算出新元素，再用 `__str__` 把新元素说成一句话。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "python",
+      "code": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __len__(self):\n        return self.n\n\n    def __eq__(self, other):\n        return self.n == other.n\n\nprint(len(Bowl(5)))\nprint(Bowl(5) == Bowl(5))\n",
+      "stem": "这段代码的输出是什么？",
+      "answer": "5\nTrue",
+      "accept": [
+        "5\nTrue\n"
+      ],
+      "explanation": "第一行 `len(Bowl(5))`：`len(...)` 套在元素上的时候，Python 替你调用 `__len__`，它返回 `self.n`，也就是 `5`，所以印出 `5` 。第二行 `Bowl(5) == Bowl(5)`：`==` 两边摆着两个元素，Python 调用左边那个的 `__eq__`，`self.n == other.n` 是 5 == 5，返回 `True`。这里比的**是两个数字**，数字的 `==` Python 天生就认，不会回头再调用 `__eq__`，所以不会转圈圈。"
+    }
+  ]
+}

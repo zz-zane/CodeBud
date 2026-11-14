@@ -1,0 +1,414 @@
+{
+  "lessonId": "python-stage2-07",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-py-s2-inherit-isinstance-reversed-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画了两张类定义：`Animal` 父类，和照着它画的 `Cat` 子类。\n\n现在我们想确认一件事：**照 `Cat` 生的这个，是不是也算一个 `Animal`**。可写出来这一句一跑就报错。\n\n你帮我们**把用错的那一处改过来**，让它印出 `True`。\n\n⚠️ 我们问的就是「这个对象算不算动物」这一件事，**别改成问别的**。",
+      "brokenCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n    pass\n\n\nc = Cat(\"学生甲\")\nprint(isinstance(Animal, c))\n",
+      "referenceFix": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n    pass\n\n\nc = Cat(\"学生甲\")\nprint(isinstance(c, Animal))\n",
+      "expectedOutput": "True",
+      "stdin": null,
+      "explanation": "毛病是**两格东西放反了**。\n\n`isinstance(...)` 的两个格有自己的分工，读法是固定的：\n\n1. **第一格：要认的那一个**（一个已经创建后的实例）\n2. **第二格：拿着比对的类定义**（类定义的名字）\n\n我们写成了 `isinstance(Animal, c)` —— 把类定义放第一格、把对象放第二格，等于拿着类定义去认对象。解释器第二格收不到一个类定义，只好翻脸：第二格必须是类定义（或者一排类定义）。\n\n⚠️ 认亲的结论是**从上往下认，不往上看**：`Cat` 是套在 `Animal` 上画的，所以照 `Cat` 生的那个**也**算 `Animal`（返回 `True`）；反过来，照 `Animal` 直接生的那个**不是** `Cat`（返回 `False`）。\n\n⚠️ 顺便记一句：这个 `isinstance(...)` 返回的是 `True` 或者 `False`，`print` 出来就是这两个词本身 —— 别自己手写一个 `True` 交差，那样什么都没验证。",
+      "templateId": "py-s2-inherit-isinstance-reversed",
+      "params": {
+        "name": "学生甲"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "1c8dde4e090a149f"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-isinstance-reversed-001",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画了两张类定义：`Animal` 父类，和照着它画的 `Cat` 子类。\n\n现在我们想确认一件事：**照 `Cat` 生的这个，是不是也算一个 `Animal`**。可写出来这一句一跑就报错。\n\n你帮我们**把用错的那一处改过来**，让它印出 `True`。\n\n⚠️ 我们问的就是「这个对象算不算动物」这一件事，**别改成问别的**。",
+      "brokenCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n    pass\n\n\nc = Cat(\"学生乙\")\nprint(isinstance(Animal, c))\n",
+      "referenceFix": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n    pass\n\n\nc = Cat(\"学生乙\")\nprint(isinstance(c, Animal))\n",
+      "expectedOutput": "True",
+      "stdin": null,
+      "explanation": "毛病是**两格东西放反了**。\n\n`isinstance(...)` 的两个格有自己的分工，读法是固定的：\n\n1. **第一格：要认的那一个**（一个已经创建后的实例）\n2. **第二格：拿着比对的类定义**（类定义的名字）\n\n我们写成了 `isinstance(Animal, c)` —— 把类定义放第一格、把对象放第二格，等于拿着类定义去认对象。解释器第二格收不到一个类定义，只好翻脸：第二格必须是类定义（或者一排类定义）。\n\n⚠️ 认亲的结论是**从上往下认，不往上看**：`Cat` 是套在 `Animal` 上画的，所以照 `Cat` 生的那个**也**算 `Animal`（返回 `True`）；反过来，照 `Animal` 直接生的那个**不是** `Cat`（返回 `False`）。\n\n⚠️ 顺便记一句：这个 `isinstance(...)` 返回的是 `True` 或者 `False`，`print` 出来就是这两个词本身 —— 别自己手写一个 `True` 交差，那样什么都没验证。",
+      "templateId": "py-s2-inherit-isinstance-reversed",
+      "params": {
+        "name": "学生乙"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "66fd2c03e45c1eea"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-override-speak-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上；再有一个方法 `speak(self)`，印出名字，后面**直接接上** `发出了一次叫`（中间不加空格）。\n2. 一张 `Cat` 子类，**照着 `Animal` 画**，并且把 `speak` **盖掉、换自己那版**：印出名字，后面接 `：`。\n\n然后**读一行名字**，用这个名字：\n\n- 照 `Animal` 直接造一个，称呼它的 `speak`\n- 再照 `Cat` 造一个，称呼它的 `speak`\n- 最后印一行 `isinstance(这个对象, Animal)` 的结果\n\n比如输入是\n\n学生乙\n\n就要输出\n\n学生乙发出了一次叫\n学生乙：\nTrue\n\n（判分用的是**另外一个名字**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        print(self.name + \"发出了一次叫\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(self.name + \"：\")\n\n\nname = input()\na = Animal(name)\nc = Cat(name)\na.speak()\nc.speak()\nprint(isinstance(c, Animal))\n",
+      "expectedOutput": "计算机发出了一次叫\n计算机：\nTrue",
+      "stdin": "计算机\n",
+      "explanation": "三个地方要盯住：\n\n- **`class Cat(Animal):`** —— 名字后面那对小括号里填**父类的名字**，读作「照 `Animal` 那张类定义，再画一张 `Cat`」。这一写，父类上的说明和函数子类**天生就会**：我们在子类里根本没写 `__init__`，可名字照样喂得进去。\n- **盖掉、换自己那版** —— 子类上把 `speak` 又写了一遍（名字一样、传入的东西也一样），于是**子类这一版就把父类那一版盖住了**。照 `Cat` 生的那个走的是「名字：」，照 `Animal` 生的父类那个，还是老老实实印「发出了一次叫」。这叫**盖住只盖住这一条下游的路**，父类本身一个字都没被改。\n- **`isinstance(这个对象, 一个类定义)`** —— 读作「这个对象是不是照这张类定义（**或它的下游类定义**）创建后的」。`Cat` 是套在 `Animal` 上画的，所以照 `Cat` 创建后的那个**也算**一个 `Animal`，返回 `True`。\n\n⚠️ 反过来可就不成立了：照 `Animal` 直接生的那个**不是** `Cat`。认亲是**从上往下认，不往上看** —— 子类认父类这门亲，父类不认子类。",
+      "templateId": "py-s2-inherit-override-speak",
+      "params": {
+        "name": "计算机",
+        "sname": "学生乙"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "abc04580f71156c1"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-override-speak-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上；再有一个方法 `speak(self)`，印出名字，后面**直接接上** `发出了一次叫`（中间不加空格）。\n2. 一张 `Cat` 子类，**照着 `Animal` 画**，并且把 `speak` **盖掉、换自己那版**：印出名字，后面接 `：`。\n\n然后**读一行名字**，用这个名字：\n\n- 照 `Animal` 直接造一个，称呼它的 `speak`\n- 再照 `Cat` 造一个，称呼它的 `speak`\n- 最后印一行 `isinstance(这个对象, Animal)` 的结果\n\n比如输入是\n\n小学生戊\n\n就要输出\n\n小学生戊发出了一次叫\n小学生戊：\nTrue\n\n（判分用的是**另外一个名字**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        print(self.name + \"发出了一次叫\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(self.name + \"：\")\n\n\nname = input()\na = Animal(name)\nc = Cat(name)\na.speak()\nc.speak()\nprint(isinstance(c, Animal))\n",
+      "expectedOutput": "计算机发出了一次叫\n计算机：\nTrue",
+      "stdin": "计算机\n",
+      "explanation": "三个地方要盯住：\n\n- **`class Cat(Animal):`** —— 名字后面那对小括号里填**父类的名字**，读作「照 `Animal` 那张类定义，再画一张 `Cat`」。这一写，父类上的说明和函数子类**天生就会**：我们在子类里根本没写 `__init__`，可名字照样喂得进去。\n- **盖掉、换自己那版** —— 子类上把 `speak` 又写了一遍（名字一样、传入的东西也一样），于是**子类这一版就把父类那一版盖住了**。照 `Cat` 生的那个走的是「名字：」，照 `Animal` 生的父类那个，还是老老实实印「发出了一次叫」。这叫**盖住只盖住这一条下游的路**，父类本身一个字都没被改。\n- **`isinstance(这个对象, 一个类定义)`** —— 读作「这个对象是不是照这张类定义（**或它的下游类定义**）创建后的」。`Cat` 是套在 `Animal` 上画的，所以照 `Cat` 创建后的那个**也算**一个 `Animal`，返回 `True`。\n\n⚠️ 反过来可就不成立了：照 `Animal` 直接生的那个**不是** `Cat`。认亲是**从上往下认，不往上看** —— 子类认父类这门亲，父类不认子类。",
+      "templateId": "py-s2-inherit-override-speak",
+      "params": {
+        "name": "计算机",
+        "sname": "小学生戊"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "44ab585d4942498b"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-override-speak-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上；再有一个方法 `speak(self)`，印出名字，后面**直接接上** `发出了一次叫`（中间不加空格）。\n2. 一张 `Cat` 子类，**照着 `Animal` 画**，并且把 `speak` **盖掉、换自己那版**：印出名字，后面接 `：`。\n\n然后**读一行名字**，用这个名字：\n\n- 照 `Animal` 直接造一个，称呼它的 `speak`\n- 再照 `Cat` 造一个，称呼它的 `speak`\n- 最后印一行 `isinstance(这个对象, Animal)` 的结果\n\n比如输入是\n\n学生乙\n\n就要输出\n\n学生乙发出了一次叫\n学生乙：\nTrue\n\n（判分用的是**另外一个名字**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        print(self.name + \"发出了一次叫\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(self.name + \"：\")\n\n\nname = input()\na = Animal(name)\nc = Cat(name)\na.speak()\nc.speak()\nprint(isinstance(c, Animal))\n",
+      "expectedOutput": "学生甲发出了一次叫\n学生甲：\nTrue",
+      "stdin": "学生甲\n",
+      "explanation": "三个地方要盯住：\n\n- **`class Cat(Animal):`** —— 名字后面那对小括号里填**父类的名字**，读作「照 `Animal` 那张类定义，再画一张 `Cat`」。这一写，父类上的说明和函数子类**天生就会**：我们在子类里根本没写 `__init__`，可名字照样喂得进去。\n- **盖掉、换自己那版** —— 子类上把 `speak` 又写了一遍（名字一样、传入的东西也一样），于是**子类这一版就把父类那一版盖住了**。照 `Cat` 生的那个走的是「名字：」，照 `Animal` 生的父类那个，还是老老实实印「发出了一次叫」。这叫**盖住只盖住这一条下游的路**，父类本身一个字都没被改。\n- **`isinstance(这个对象, 一个类定义)`** —— 读作「这个对象是不是照这张类定义（**或它的下游类定义**）创建后的」。`Cat` 是套在 `Animal` 上画的，所以照 `Cat` 创建后的那个**也算**一个 `Animal`，返回 `True`。\n\n⚠️ 反过来可就不成立了：照 `Animal` 直接生的那个**不是** `Cat`。认亲是**从上往下认，不往上看** —— 子类认父类这门亲，父类不认子类。",
+      "templateId": "py-s2-inherit-override-speak",
+      "params": {
+        "name": "学生甲",
+        "sname": "学生乙"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "1feb1b29699c215c"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-override-speak-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上；再有一个方法 `speak(self)`，印出名字，后面**直接接上** `发出了一次叫`（中间不加空格）。\n2. 一张 `Cat` 子类，**照着 `Animal` 画**，并且把 `speak` **盖掉、换自己那版**：印出名字，后面接 `：`。\n\n然后**读一行名字**，用这个名字：\n\n- 照 `Animal` 直接造一个，称呼它的 `speak`\n- 再照 `Cat` 造一个，称呼它的 `speak`\n- 最后印一行 `isinstance(这个对象, Animal)` 的结果\n\n比如输入是\n\n小学生戊\n\n就要输出\n\n小学生戊发出了一次叫\n小学生戊：\nTrue\n\n（判分用的是**另外一个名字**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        print(self.name + \"发出了一次叫\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(self.name + \"：\")\n\n\nname = input()\na = Animal(name)\nc = Cat(name)\na.speak()\nc.speak()\nprint(isinstance(c, Animal))\n",
+      "expectedOutput": "学生甲发出了一次叫\n学生甲：\nTrue",
+      "stdin": "学生甲\n",
+      "explanation": "三个地方要盯住：\n\n- **`class Cat(Animal):`** —— 名字后面那对小括号里填**父类的名字**，读作「照 `Animal` 那张类定义，再画一张 `Cat`」。这一写，父类上的说明和函数子类**天生就会**：我们在子类里根本没写 `__init__`，可名字照样喂得进去。\n- **盖掉、换自己那版** —— 子类上把 `speak` 又写了一遍（名字一样、传入的东西也一样），于是**子类这一版就把父类那一版盖住了**。照 `Cat` 生的那个走的是「名字：」，照 `Animal` 生的父类那个，还是老老实实印「发出了一次叫」。这叫**盖住只盖住这一条下游的路**，父类本身一个字都没被改。\n- **`isinstance(这个对象, 一个类定义)`** —— 读作「这个对象是不是照这张类定义（**或它的下游类定义**）创建后的」。`Cat` 是套在 `Animal` 上画的，所以照 `Cat` 创建后的那个**也算**一个 `Animal`，返回 `True`。\n\n⚠️ 反过来可就不成立了：照 `Animal` 直接生的那个**不是** `Cat`。认亲是**从上往下认，不往上看** —— 子类认父类这门亲，父类不认子类。",
+      "templateId": "py-s2-inherit-override-speak",
+      "params": {
+        "name": "学生甲",
+        "sname": "小学生戊"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "985b8864119f791a"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-pass-missing-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画了一张 `Animal` 父类（管着名字），又照着它画了一张 `Cat` 子类 —— 子类这会儿**什么都不想加**，白着就行。\n\n可这段代码一跑就报错，解释器说那张类定义里**少了点东西**。你帮我们改对，让它最后印出 `学生甲`。\n\n⚠️ `Animal` 那张父类**一个字都不许改**，`Cat` 子类**照着 `Animal` 画**这件事也不能改。",
+      "brokenCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n\n\nc = Cat(\"学生甲\")\nprint(c.name)\n",
+      "referenceFix": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n    pass\n\n\nc = Cat(\"学生甲\")\nprint(c.name)\n",
+      "expectedOutput": "学生甲",
+      "stdin": null,
+      "explanation": "毛病是**类定义里面一个字都没有**。\n\nPython 有个死规矩：一个类定义（还有一个方法函数）**底下必须缩进着写点什么**。子类是照 `Animal` 画的没错，可它自己**一行内容都没有** —— 解释器读到这儿就不知道「刚才那句 `class Cat(Animal):` 要管到哪儿」，只好当场拦下，报的是「这张类定义后面少了缩进的内容」。\n\n修法就是补一个 `pass`，读作「**这里先空着**」。它是一句空话，什么都不干，但它在语法上**算一行内容**，于是类定义就站得住了。\n\n⚠️ `pass` 里那四个字母别写错，也**不能只写一个注释充数** —— 注释不算内容，类定义照样立不起来。\n\n⚠️ 顺带记住：子类白着**不代表它什么都没有**。`__init__` 父类上有，子类**天生就会** —— 所以 `Cat(\"学生甲\")` 照样能把名字传入，`c.name` 也照样取得出来。这正是套类定义最省事的地方。\n\n⚠️ 什么时候用得上 `pass`：类定义一时没东西可加的时候、或者一个方法函数先占个位以后再写的时候。它只是占位，别拿它当「把东西删掉」的手段。",
+      "templateId": "py-s2-inherit-pass-missing",
+      "params": {
+        "name": "学生甲"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "8bd0486521a13a55"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-pass-missing-002",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画了一张 `Animal` 父类（管着名字），又照着它画了一张 `Cat` 子类 —— 子类这会儿**什么都不想加**，白着就行。\n\n可这段代码一跑就报错，解释器说那张类定义里**少了点东西**。你帮我们改对，让它最后印出 `小花对象`。\n\n⚠️ `Animal` 那张父类**一个字都不许改**，`Cat` 子类**照着 `Animal` 画**这件事也不能改。",
+      "brokenCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n\n\nc = Cat(\"小花对象\")\nprint(c.name)\n",
+      "referenceFix": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Cat(Animal):\n    pass\n\n\nc = Cat(\"小花对象\")\nprint(c.name)\n",
+      "expectedOutput": "小花对象",
+      "stdin": null,
+      "explanation": "毛病是**类定义里面一个字都没有**。\n\nPython 有个死规矩：一个类定义（还有一个方法函数）**底下必须缩进着写点什么**。子类是照 `Animal` 画的没错，可它自己**一行内容都没有** —— 解释器读到这儿就不知道「刚才那句 `class Cat(Animal):` 要管到哪儿」，只好当场拦下，报的是「这张类定义后面少了缩进的内容」。\n\n修法就是补一个 `pass`，读作「**这里先空着**」。它是一句空话，什么都不干，但它在语法上**算一行内容**，于是类定义就站得住了。\n\n⚠️ `pass` 里那四个字母别写错，也**不能只写一个注释充数** —— 注释不算内容，类定义照样立不起来。\n\n⚠️ 顺带记住：子类白着**不代表它什么都没有**。`__init__` 父类上有，子类**天生就会** —— 所以 `Cat(\"小花对象\")` 照样能把名字传入，`c.name` 也照样取得出来。这正是套类定义最省事的地方。\n\n⚠️ 什么时候用得上 `pass`：类定义一时没东西可加的时候、或者一个方法函数先占个位以后再写的时候。它只是占位，别拿它当「把东西删掉」的手段。",
+      "templateId": "py-s2-inherit-pass-missing",
+      "params": {
+        "name": "小花对象"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "711f943c1c9f918d"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-polymorph-loop-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要一次处理、各对象各样。\n\n请你画三张类定义：\n\n1. 一张 `Animal` 父类，只有一个方法 `speak(self)`，印一行 `……`（就是两个省略号）\n2. 一张 `Cat` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 ``\n3. 一张 `Dog` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 `汪！`\n\n然后照这个顺序造三个：**先一个 `Cat`、再一个 `Dog`、最后再一个 `Cat`**，把它们排成一排。\n\n最后**用一个 `for` 挨个调用 `speak`** —— 引用的那一行里**不许看出它是对象还是狗**，就写「对着一个调用一次」。\n\n跑完印出来的三行，正好是这三个各自的那一次。",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def speak(self):\n        print(\"……\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(\"\")\n\n\nclass Dog(Animal):\n    def speak(self):\n        print(\"汪！\")\n\n\npets = [Cat(), Dog(), Cat()]\nfor pet in pets:\n    pet.speak()\n",
+      "expectedOutput": "\n汪！\n",
+      "stdin": null,
+      "explanation": "这一题考的是那个最省心的地方：**写 `for` 的时候，我们压根不知道下一个是谁**。\n\n`for pet in pets:` 里那个 `pet` 每一轮抓到的都是**一个实例**（照哪张类定义生的，它自己知道）。调用 `pet.speak()` 的时候，Python 是**照着那个实例自己的类定义**去找这一个方法的 —— 不是照着 `Animal` 父类找，也不是照着写代码时脑子里想的那张找。\n\n于是同一句 `pet.speak()`：是对象就、是狗就汪，**各对象各样**。\n\n⚠️ 关键在于**每张子类都自己把 `speak` 盖了一遍**。要是子类里没写，那三个输出的都会是父类那一版（三行 `……`）—— 一样能跑，就是没了「各样」。\n\n⚠️ 还有一个容易写错的地方：`pets` 那一排保存的是**三个已经创建后的**（`Cat()`、`Dog()` 后面都带着小括号）。写成 `pets = [Cat, Dog, Cat]` 装的就是**三张类定义本身**，`for` 里调用 `pet.speak()` 会当场报错说这招用不了。",
+      "templateId": "py-s2-inherit-polymorph-loop",
+      "params": {
+        "a": "Cat",
+        "b": "Dog"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "3fe942bc70993e91"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-polymorph-loop-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要一次处理、各对象各样。\n\n请你画三张类定义：\n\n1. 一张 `Animal` 父类，只有一个方法 `speak(self)`，印一行 `……`（就是两个省略号）\n2. 一张 `Cat` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 ``\n3. 一张 `Dog` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 `汪！`\n\n然后照这个顺序造三个：**先一个 `Cat`、再一个 `Cat`、最后再一个 `Cat`**，把它们排成一排。\n\n最后**用一个 `for` 挨个调用 `speak`** —— 引用的那一行里**不许看出它是对象还是狗**，就写「对着一个调用一次」。\n\n跑完印出来的三行，正好是这三个各自的那一次。",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def speak(self):\n        print(\"……\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(\"操作完成\")\n\n\nclass Dog(Animal):\n    def speak(self):\n        print(\"汪！\")\n\n\npets = [Cat(), Cat(), Cat()]\nfor pet in pets:\n    pet.speak()\n",
+      "expectedOutput": "操作完成\n操作完成\n操作完成",
+      "stdin": null,
+      "explanation": "父类定义方法契约，子类重写提供具体行为。遍历实例列表时，通过相同的 speak 调用按对象实际类型执行相应实现；循环不需要用类型分支决定调用哪个实现。列表必须保存实例，而不是未实例化的类。",
+      "templateId": "py-s2-inherit-polymorph-loop",
+      "params": {
+        "a": "Cat",
+        "b": "Cat"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.874Z",
+        "hash": "10768d30edcbcc32"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-polymorph-loop-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要一次处理、各对象各样。\n\n请你画三张类定义：\n\n1. 一张 `Animal` 父类，只有一个方法 `speak(self)`，印一行 `……`（就是两个省略号）\n2. 一张 `Cat` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 ``\n3. 一张 `Dog` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 `汪！`\n\n然后照这个顺序造三个：**先一个 `Dog`、再一个 `Dog`、最后再一个 `Dog`**，把它们排成一排。\n\n最后**用一个 `for` 挨个调用 `speak`** —— 引用的那一行里**不许看出它是对象还是狗**，就写「对着一个调用一次」。\n\n跑完印出来的三行，正好是这三个各自的那一次。",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def speak(self):\n        print(\"……\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(\"\")\n\n\nclass Dog(Animal):\n    def speak(self):\n        print(\"汪！\")\n\n\npets = [Dog(), Dog(), Dog()]\nfor pet in pets:\n    pet.speak()\n",
+      "expectedOutput": "汪！\n汪！\n汪！",
+      "stdin": null,
+      "explanation": "这一题考的是那个最省心的地方：**写 `for` 的时候，我们压根不知道下一个是谁**。\n\n`for pet in pets:` 里那个 `pet` 每一轮抓到的都是**一个实例**（照哪张类定义生的，它自己知道）。调用 `pet.speak()` 的时候，Python 是**照着那个实例自己的类定义**去找这一个方法的 —— 不是照着 `Animal` 父类找，也不是照着写代码时脑子里想的那张找。\n\n于是同一句 `pet.speak()`：是对象就、是狗就汪，**各对象各样**。\n\n⚠️ 关键在于**每张子类都自己把 `speak` 盖了一遍**。要是子类里没写，那三个输出的都会是父类那一版（三行 `……`）—— 一样能跑，就是没了「各样」。\n\n⚠️ 还有一个容易写错的地方：`pets` 那一排保存的是**三个已经创建后的**（`Cat()`、`Dog()` 后面都带着小括号）。写成 `pets = [Cat, Dog, Cat]` 装的就是**三张类定义本身**，`for` 里调用 `pet.speak()` 会当场报错说这招用不了。",
+      "templateId": "py-s2-inherit-polymorph-loop",
+      "params": {
+        "a": "Dog",
+        "b": "Dog"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "d6eaa8c21bc5d567"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-polymorph-loop-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要一次处理、各对象各样。\n\n请你画三张类定义：\n\n1. 一张 `Animal` 父类，只有一个方法 `speak(self)`，印一行 `……`（就是两个省略号）\n2. 一张 `Cat` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 ``\n3. 一张 `Dog` 子类，照着 `Animal` 画，把 `speak` **盖成自己那版**，印 `汪！`\n\n然后照这个顺序造三个：**先一个 `Dog`、再一个 `Cat`、最后再一个 `Dog`**，把它们排成一排。\n\n最后**用一个 `for` 挨个调用 `speak`** —— 引用的那一行里**不许看出它是对象还是狗**，就写「对着一个调用一次」。\n\n跑完印出来的三行，正好是这三个各自的那一次。",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def speak(self):\n        print(\"……\")\n\n\nclass Cat(Animal):\n    def speak(self):\n        print(\"\")\n\n\nclass Dog(Animal):\n    def speak(self):\n        print(\"汪！\")\n\n\npets = [Dog(), Cat(), Dog()]\nfor pet in pets:\n    pet.speak()\n",
+      "expectedOutput": "汪！\n\n汪！",
+      "stdin": null,
+      "explanation": "这一题考的是那个最省心的地方：**写 `for` 的时候，我们压根不知道下一个是谁**。\n\n`for pet in pets:` 里那个 `pet` 每一轮抓到的都是**一个实例**（照哪张类定义生的，它自己知道）。调用 `pet.speak()` 的时候，Python 是**照着那个实例自己的类定义**去找这一个方法的 —— 不是照着 `Animal` 父类找，也不是照着写代码时脑子里想的那张找。\n\n于是同一句 `pet.speak()`：是对象就、是狗就汪，**各对象各样**。\n\n⚠️ 关键在于**每张子类都自己把 `speak` 盖了一遍**。要是子类里没写，那三个输出的都会是父类那一版（三行 `……`）—— 一样能跑，就是没了「各样」。\n\n⚠️ 还有一个容易写错的地方：`pets` 那一排保存的是**三个已经创建后的**（`Cat()`、`Dog()` 后面都带着小括号）。写成 `pets = [Cat, Dog, Cat]` 装的就是**三张类定义本身**，`for` 里调用 `pet.speak()` 会当场报错说这招用不了。",
+      "templateId": "py-s2-inherit-polymorph-loop",
+      "params": {
+        "a": "Dog",
+        "b": "Cat"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "5bfb7347f50f32bf"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-super-init-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上。\n2. 一张 `Fish` 子类，照着 `Animal` 画，但**自己盖了一版 `__init__`** —— 除了名字，还要多存一样：本鱼有几斤数据。\n3. 子类上再写一个方法 `speak(self)`，印出一行：名字后面接 `：，本鱼有 `，再接上斤数，最后接 ` 斤`（斤数前后**各有一个空格**，别漏）。\n\n然后**读两行**：第一行是名字，第二行是一个整数（斤数）。用它们造一条数据，称呼它的 `speak`。\n\n比如输入是\n\n鲸鱼\n7\n\n就要输出\n\n鲸鱼：，本鱼有 7 斤\n\n（判分用的是**另外一组**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        super().__init__(name)\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nname = input()\nfat = int(input())\nf = Fish(name, fat)\nf.speak()\n",
+      "expectedOutput": "计算机：，本鱼有 3 斤",
+      "stdin": "计算机\n3\n",
+      "explanation": "这一题的关键在**子类自己写了 `__init__`** 这件事上。\n\n父类上原本有那么一段（把名字存好）。子类**只要自己写了** `__init__`，就**把父类那一版整个盖住了** —— 于是「把名字存好」这一步**不会自动发生**了，得我们自己请回来干。\n\n请的办法就是开头那一句 `super().__init__(name)` —— 读作「**先请上一层类定义，把它那版 `__init__` 跑一遍**」。`super()` 就是「上一层」的意思。\n\n⚠️ `super()` 后面**不用喂 `self`**。你站在哪张子类上，Python 自己清楚，它会替你把 `self` 递过去。写成 `super(self)` 反而会被当场拦下。\n\n⚠️ 顺序很讲究：**先请上一层把名字放好，再存自己那一样**。要是漏了 `super()` 这句，名字那个变量**压根没被建起来** —— 程序在调用 `speak` 的那一刻才翻脸说「没有 name 这样东西」，报错位置离真正的毛病远得很，最难查。\n\n⚠️ 别忘了第二行读进来的是**一串字**，要转成整数才能拿去拼：我们这里用 `str(...)` 往回接，或者用别的方式也都行，只要拼出来的字一模一样。",
+      "templateId": "py-s2-inherit-super-init",
+      "params": {
+        "name": "计算机",
+        "fish": 3,
+        "sname": "鲸鱼",
+        "sfish": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "ad8c54101731d750"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-super-init-007",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上。\n2. 一张 `Fish` 子类，照着 `Animal` 画，但**自己盖了一版 `__init__`** —— 除了名字，还要多存一样：本鱼有几斤数据。\n3. 子类上再写一个方法 `speak(self)`，印出一行：名字后面接 `：，本鱼有 `，再接上斤数，最后接 ` 斤`（斤数前后**各有一个空格**，别漏）。\n\n然后**读两行**：第一行是名字，第二行是一个整数（斤数）。用它们造一条数据，称呼它的 `speak`。\n\n比如输入是\n\n鲸鱼\n8\n\n就要输出\n\n鲸鱼：，本鱼有 8 斤\n\n（判分用的是**另外一组**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        super().__init__(name)\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nname = input()\nfat = int(input())\nf = Fish(name, fat)\nf.speak()\n",
+      "expectedOutput": "计算机：，本鱼有 4 斤",
+      "stdin": "计算机\n4\n",
+      "explanation": "这一题的关键在**子类自己写了 `__init__`** 这件事上。\n\n父类上原本有那么一段（把名字存好）。子类**只要自己写了** `__init__`，就**把父类那一版整个盖住了** —— 于是「把名字存好」这一步**不会自动发生**了，得我们自己请回来干。\n\n请的办法就是开头那一句 `super().__init__(name)` —— 读作「**先请上一层类定义，把它那版 `__init__` 跑一遍**」。`super()` 就是「上一层」的意思。\n\n⚠️ `super()` 后面**不用喂 `self`**。你站在哪张子类上，Python 自己清楚，它会替你把 `self` 递过去。写成 `super(self)` 反而会被当场拦下。\n\n⚠️ 顺序很讲究：**先请上一层把名字放好，再存自己那一样**。要是漏了 `super()` 这句，名字那个变量**压根没被建起来** —— 程序在调用 `speak` 的那一刻才翻脸说「没有 name 这样东西」，报错位置离真正的毛病远得很，最难查。\n\n⚠️ 别忘了第二行读进来的是**一串字**，要转成整数才能拿去拼：我们这里用 `str(...)` 往回接，或者用别的方式也都行，只要拼出来的字一模一样。",
+      "templateId": "py-s2-inherit-super-init",
+      "params": {
+        "name": "计算机",
+        "fish": 4,
+        "sname": "鲸鱼",
+        "sfish": 8
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "32085318ffd33398"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-super-init-014",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上。\n2. 一张 `Fish` 子类，照着 `Animal` 画，但**自己盖了一版 `__init__`** —— 除了名字，还要多存一样：本鱼有几斤数据。\n3. 子类上再写一个方法 `speak(self)`，印出一行：名字后面接 `：，本鱼有 `，再接上斤数，最后接 ` 斤`（斤数前后**各有一个空格**，别漏）。\n\n然后**读两行**：第一行是名字，第二行是一个整数（斤数）。用它们造一条数据，称呼它的 `speak`。\n\n比如输入是\n\n鲸鱼\n9\n\n就要输出\n\n鲸鱼：，本鱼有 9 斤\n\n（判分用的是**另外一组**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        super().__init__(name)\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nname = input()\nfat = int(input())\nf = Fish(name, fat)\nf.speak()\n",
+      "expectedOutput": "计算机：，本鱼有 5 斤",
+      "stdin": "计算机\n5\n",
+      "explanation": "这一题的关键在**子类自己写了 `__init__`** 这件事上。\n\n父类上原本有那么一段（把名字存好）。子类**只要自己写了** `__init__`，就**把父类那一版整个盖住了** —— 于是「把名字存好」这一步**不会自动发生**了，得我们自己请回来干。\n\n请的办法就是开头那一句 `super().__init__(name)` —— 读作「**先请上一层类定义，把它那版 `__init__` 跑一遍**」。`super()` 就是「上一层」的意思。\n\n⚠️ `super()` 后面**不用喂 `self`**。你站在哪张子类上，Python 自己清楚，它会替你把 `self` 递过去。写成 `super(self)` 反而会被当场拦下。\n\n⚠️ 顺序很讲究：**先请上一层把名字放好，再存自己那一样**。要是漏了 `super()` 这句，名字那个变量**压根没被建起来** —— 程序在调用 `speak` 的那一刻才翻脸说「没有 name 这样东西」，报错位置离真正的毛病远得很，最难查。\n\n⚠️ 别忘了第二行读进来的是**一串字**，要转成整数才能拿去拼：我们这里用 `str(...)` 往回接，或者用别的方式也都行，只要拼出来的字一模一样。",
+      "templateId": "py-s2-inherit-super-init",
+      "params": {
+        "name": "计算机",
+        "fish": 5,
+        "sname": "鲸鱼",
+        "sfish": 9
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "3029e9cdb53657ba"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-super-init-021",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上。\n2. 一张 `Fish` 子类，照着 `Animal` 画，但**自己盖了一版 `__init__`** —— 除了名字，还要多存一样：本鱼有几斤数据。\n3. 子类上再写一个方法 `speak(self)`，印出一行：名字后面接 `：，本鱼有 `，再接上斤数，最后接 ` 斤`（斤数前后**各有一个空格**，别漏）。\n\n然后**读两行**：第一行是名字，第二行是一个整数（斤数）。用它们造一条数据，称呼它的 `speak`。\n\n比如输入是\n\n小黄鱼\n7\n\n就要输出\n\n小黄鱼：，本鱼有 7 斤\n\n（判分用的是**另外一组**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        super().__init__(name)\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nname = input()\nfat = int(input())\nf = Fish(name, fat)\nf.speak()\n",
+      "expectedOutput": "小鳕鱼：，本鱼有 3 斤",
+      "stdin": "小鳕鱼\n3\n",
+      "explanation": "这一题的关键在**子类自己写了 `__init__`** 这件事上。\n\n父类上原本有那么一段（把名字存好）。子类**只要自己写了** `__init__`，就**把父类那一版整个盖住了** —— 于是「把名字存好」这一步**不会自动发生**了，得我们自己请回来干。\n\n请的办法就是开头那一句 `super().__init__(name)` —— 读作「**先请上一层类定义，把它那版 `__init__` 跑一遍**」。`super()` 就是「上一层」的意思。\n\n⚠️ `super()` 后面**不用喂 `self`**。你站在哪张子类上，Python 自己清楚，它会替你把 `self` 递过去。写成 `super(self)` 反而会被当场拦下。\n\n⚠️ 顺序很讲究：**先请上一层把名字放好，再存自己那一样**。要是漏了 `super()` 这句，名字那个变量**压根没被建起来** —— 程序在调用 `speak` 的那一刻才翻脸说「没有 name 这样东西」，报错位置离真正的毛病远得很，最难查。\n\n⚠️ 别忘了第二行读进来的是**一串字**，要转成整数才能拿去拼：我们这里用 `str(...)` 往回接，或者用别的方式也都行，只要拼出来的字一模一样。",
+      "templateId": "py-s2-inherit-super-init",
+      "params": {
+        "name": "小鳕鱼",
+        "fish": 3,
+        "sname": "小黄鱼",
+        "sfish": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "889091e57184c367"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-super-init-028",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上。\n2. 一张 `Fish` 子类，照着 `Animal` 画，但**自己盖了一版 `__init__`** —— 除了名字，还要多存一样：本鱼有几斤数据。\n3. 子类上再写一个方法 `speak(self)`，印出一行：名字后面接 `：，本鱼有 `，再接上斤数，最后接 ` 斤`（斤数前后**各有一个空格**，别漏）。\n\n然后**读两行**：第一行是名字，第二行是一个整数（斤数）。用它们造一条数据，称呼它的 `speak`。\n\n比如输入是\n\n小黄鱼\n8\n\n就要输出\n\n小黄鱼：，本鱼有 8 斤\n\n（判分用的是**另外一组**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        super().__init__(name)\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nname = input()\nfat = int(input())\nf = Fish(name, fat)\nf.speak()\n",
+      "expectedOutput": "小鳕鱼：，本鱼有 4 斤",
+      "stdin": "小鳕鱼\n4\n",
+      "explanation": "这一题的关键在**子类自己写了 `__init__`** 这件事上。\n\n父类上原本有那么一段（把名字存好）。子类**只要自己写了** `__init__`，就**把父类那一版整个盖住了** —— 于是「把名字存好」这一步**不会自动发生**了，得我们自己请回来干。\n\n请的办法就是开头那一句 `super().__init__(name)` —— 读作「**先请上一层类定义，把它那版 `__init__` 跑一遍**」。`super()` 就是「上一层」的意思。\n\n⚠️ `super()` 后面**不用喂 `self`**。你站在哪张子类上，Python 自己清楚，它会替你把 `self` 递过去。写成 `super(self)` 反而会被当场拦下。\n\n⚠️ 顺序很讲究：**先请上一层把名字放好，再存自己那一样**。要是漏了 `super()` 这句，名字那个变量**压根没被建起来** —— 程序在调用 `speak` 的那一刻才翻脸说「没有 name 这样东西」，报错位置离真正的毛病远得很，最难查。\n\n⚠️ 别忘了第二行读进来的是**一串字**，要转成整数才能拿去拼：我们这里用 `str(...)` 往回接，或者用别的方式也都行，只要拼出来的字一模一样。",
+      "templateId": "py-s2-inherit-super-init",
+      "params": {
+        "name": "小鳕鱼",
+        "fish": 4,
+        "sname": "小黄鱼",
+        "sfish": 8
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "c681cd4b678ddb63"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-super-init-035",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要画两张类定义：\n\n1. 一张 `Animal` 父类：`__init__` 把名字存到**这个动物自己**身上。\n2. 一张 `Fish` 子类，照着 `Animal` 画，但**自己盖了一版 `__init__`** —— 除了名字，还要多存一样：本鱼有几斤数据。\n3. 子类上再写一个方法 `speak(self)`，印出一行：名字后面接 `：，本鱼有 `，再接上斤数，最后接 ` 斤`（斤数前后**各有一个空格**，别漏）。\n\n然后**读两行**：第一行是名字，第二行是一个整数（斤数）。用它们造一条数据，称呼它的 `speak`。\n\n比如输入是\n\n小黄鱼\n9\n\n就要输出\n\n小黄鱼：，本鱼有 9 斤\n\n（判分用的是**另外一组**，所以别把答案写死）",
+      "starter": null,
+      "referenceSolution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        super().__init__(name)\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nname = input()\nfat = int(input())\nf = Fish(name, fat)\nf.speak()\n",
+      "expectedOutput": "小鳕鱼：，本鱼有 5 斤",
+      "stdin": "小鳕鱼\n5\n",
+      "explanation": "这一题的关键在**子类自己写了 `__init__`** 这件事上。\n\n父类上原本有那么一段（把名字存好）。子类**只要自己写了** `__init__`，就**把父类那一版整个盖住了** —— 于是「把名字存好」这一步**不会自动发生**了，得我们自己请回来干。\n\n请的办法就是开头那一句 `super().__init__(name)` —— 读作「**先请上一层类定义，把它那版 `__init__` 跑一遍**」。`super()` 就是「上一层」的意思。\n\n⚠️ `super()` 后面**不用喂 `self`**。你站在哪张子类上，Python 自己清楚，它会替你把 `self` 递过去。写成 `super(self)` 反而会被当场拦下。\n\n⚠️ 顺序很讲究：**先请上一层把名字放好，再存自己那一样**。要是漏了 `super()` 这句，名字那个变量**压根没被建起来** —— 程序在调用 `speak` 的那一刻才翻脸说「没有 name 这样东西」，报错位置离真正的毛病远得很，最难查。\n\n⚠️ 别忘了第二行读进来的是**一串字**，要转成整数才能拿去拼：我们这里用 `str(...)` 往回接，或者用别的方式也都行，只要拼出来的字一模一样。",
+      "templateId": "py-s2-inherit-super-init",
+      "params": {
+        "name": "小鳕鱼",
+        "fish": 5,
+        "sname": "小黄鱼",
+        "sfish": 9
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "2ca00760d880915c"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-super-missing-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画了两张类定义：一张 `Animal`（有名字），一张照它画的 `Fish`。\n\n子类上我们**自己盖了一版 `__init__`** —— 除了名字，还要多存一样「本鱼有几斤」；`speak` 也盖了一版。\n\n可这段代码一跑就报错。你帮我们改对，让它印出这样的一行：\n\n```text\n计算机：，本鱼有 3 斤\n```\n\n⚠️ 两段已经写好的东西**一个字都不许改**：`Animal` 那张父类，还有 `speak` 里印的那句话。",
+      "brokenCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nf = Fish(\"计算机\", 3)\nf.speak()\n",
+      "referenceFix": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        super().__init__(name)\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nf = Fish(\"计算机\", 3)\nf.speak()\n",
+      "expectedOutput": "计算机：，本鱼有 3 斤",
+      "stdin": null,
+      "explanation": "毛病出在子类**自己写了 `__init__`** 这件事上。\n\n父类上那一段（把名字放进变量）本来是子类天生就会的。可**子类只要自己写了一版 `__init__`，父类那一版就被整个盖住了** —— 于是「把名字放好」这一步**没有人干**，`self.name` 这个变量压根没建起来。\n\n所以程序能一路跑到 `speak`，直到那里去取 `self.name` 才翻脸：`'Fish' object has no attribute 'name'`（这条鱼身上没有 `name` 这样东西）。\n\n⚠️ **报错位置离真正的毛病很远** —— 报的是取名字的那一行，可错的是建变量的那一段。这是套类定义最容易栽的坑。\n\n修法是在子类的 `__init__` 里**先请上一层类定义把它那版跑一遍**：`super().__init__(name)`。几点要记牢：\n\n- `super()` 就是「**上一层类定义**」的意思，写在子类里面。\n- 它后面**不用喂 `self`**，Python 自己会递过去。\n- 这一句要放在**存自己那一样之前** —— 顺序反了不影响这个例子，但先请完上一层再动自己的变量，才是不会出事的那一种写法。",
+      "templateId": "py-s2-inherit-super-missing",
+      "params": {
+        "name": "计算机",
+        "fat": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "2a236888505aa08f"
+      }
+    },
+    {
+      "id": "bank-py-s2-inherit-super-missing-013",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画了两张类定义：一张 `Animal`（有名字），一张照它画的 `Fish`。\n\n子类上我们**自己盖了一版 `__init__`** —— 除了名字，还要多存一样「本鱼有几斤」；`speak` 也盖了一版。\n\n可这段代码一跑就报错。你帮我们改对，让它印出这样的一行：\n\n```text\n小鳕鱼：，本鱼有 9 斤\n```\n\n⚠️ 两段已经写好的东西**一个字都不许改**：`Animal` 那张父类，还有 `speak` 里印的那句话。",
+      "brokenCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nf = Fish(\"小鳕鱼\", 9)\nf.speak()\n",
+      "referenceFix": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n\nclass Fish(Animal):\n    def __init__(self, name, fat):\n        super().__init__(name)\n        self.fat = fat\n\n    def speak(self):\n        print(self.name + \"：，本鱼有 \" + str(self.fat) + \" 斤\")\n\n\nf = Fish(\"小鳕鱼\", 9)\nf.speak()\n",
+      "expectedOutput": "小鳕鱼：，本鱼有 9 斤",
+      "stdin": null,
+      "explanation": "毛病出在子类**自己写了 `__init__`** 这件事上。\n\n父类上那一段（把名字放进变量）本来是子类天生就会的。可**子类只要自己写了一版 `__init__`，父类那一版就被整个盖住了** —— 于是「把名字放好」这一步**没有人干**，`self.name` 这个变量压根没建起来。\n\n所以程序能一路跑到 `speak`，直到那里去取 `self.name` 才翻脸：`'Fish' object has no attribute 'name'`（这条鱼身上没有 `name` 这样东西）。\n\n⚠️ **报错位置离真正的毛病很远** —— 报的是取名字的那一行，可错的是建变量的那一段。这是套类定义最容易栽的坑。\n\n修法是在子类的 `__init__` 里**先请上一层类定义把它那版跑一遍**：`super().__init__(name)`。几点要记牢：\n\n- `super()` 就是「**上一层类定义**」的意思，写在子类里面。\n- 它后面**不用喂 `self`**，Python 自己会递过去。\n- 这一句要放在**存自己那一样之前** —— 顺序反了不影响这个例子，但先请完上一层再动自己的变量，才是不会出事的那一种写法。",
+      "templateId": "py-s2-inherit-super-missing",
+      "params": {
+        "name": "小鳕鱼",
+        "fat": 9
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.478Z",
+        "hash": "32f42329cd693bff"
+      }
+    }
+  ]
+}

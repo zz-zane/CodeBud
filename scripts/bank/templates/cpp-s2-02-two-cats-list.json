@@ -1,0 +1,39 @@
+{
+  "templateId": "cpp-s2-02-two-cats-list",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-02",
+  "type": "codewrite",
+  "concept": [
+    "构造函数收两样料",
+    "初始化列表",
+    "两个对象各印一行"
+  ],
+  "instances": 6,
+  "params": {
+    "nameA": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    },
+    "nameB": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 2,
+    "min": 1,
+    "max": 5
+  },
+  "stemTemplate": "我们想让每个对象**一初始化就带着**自己的名字和条数。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样料都收，用**初始化列表**把这俩装进格子）；再写一个方法 `show`，称呼它的时候印**一行**：\n\n```text\nXX 有 N 条数据\n```\n\n2. 根据类创建**两个**实例：第一个叫 `{nameA}`、第二只叫 `{nameB}`，条数用输入接口递进来的那两个；\n3. **各调用一次** `show`，第一个先调用。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外两个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1(\"{nameA}\", a);\n    Cat c2(\"{nameB}\", b);\n    c1.show();\n    c2.show();\n    return 0;\n}\n",
+  "explanationTemplate": "这一题的重点是**生对象的时候就把料传入进去**。\n\n- 构造函数的脑袋上写的是「收什么料」：`Cat(string n, int f)` 意思是「生这个对象的时候，要递进来一串字和一个整数」。它们**没有先后之外的讲究** —— 传入料的顺序得跟脑袋上写的顺序对上。\n- 脑袋后面那一小段 `: name(n), fish(f)` 是**初始化列表**：它在大括号里那几行**之前**执行，也就是实例刚落地、东西就已经在格子里了。\n- 生对象那一句把两件事合成了一件：`Cat c1(\"{nameA}\", a);` —— 一边创建 `c1`，一边把名字和条数递给初始化的那一刻。\n\n⚠️ 别写成 `Cat c1;` 再往格子里塞 —— 那是上一课的写法，这一课要的是「一初始化就带着」。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。"
+}

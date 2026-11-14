@@ -1,0 +1,24 @@
+{
+  "repository": "Caho1/open-claude-ui",
+  "commit": "c1f923ae0051a871941b98a0e2e3183a545e6a85",
+  "files": [
+    "AGENTS.md",
+    "LICENSE",
+    "README.md",
+    "code-examples/CdsButton.tsx",
+    "code-examples/ClaudeDesktopHeader.tsx",
+    "code-examples/ClaudeMotionPresets.ts",
+    "code-examples/CodeBlock.tsx",
+    "code-examples/ContainerResponsiveBar.tsx",
+    "code-examples/SegmentedControl.tsx",
+    "code-examples/cds-pure.css",
+    "code-examples/cds-theme.css",
+    "docs/claude-components-storybook.html",
+    "docs/v1/01-设计哲学与设计令牌体系.md",
+    "docs/v1/02-基础原子组件与交互控件.md",
+    "docs/v1/06-系统级桌面架构与协作拓扑.md",
+    "docs/v1/08-AI-Agent-前端-UI-与动效开发指南.md",
+    "docs/v2/03-架构重构与对比分析.md",
+    "docs/v2/04-系统底座全景解密.md"
+  ]
+}

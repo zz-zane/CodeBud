@@ -1,0 +1,37 @@
+{
+  "templateId": "cpp-s2-06-friend-show",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-06",
+  "type": "codewrite",
+  "concept": [
+    "盒子扣着盖子",
+    "开后门的函数",
+    "指名道姓给一个对象"
+  ],
+  "instances": 6,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    },
+    "fish": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{name}\n{fish}\n",
+    "sampleText": "小胖\n7\n"
+  },
+  "stemTemplate": "我们要考你**开后门**。输入接口会递进来两样：先是一串字（对象的名字），再是一个数（条数）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏**都扣着盖子**（只有类定义自己的函数够得着）—— `name` 装一串字，`fish` 装一个整数；再画一个构造函数，把这两栏填上。\n2. **在类定义里开一扇后门**：写一行 `friend`，把**外面一个叫 `showAccount` 的函数**放进来。\n3. **在外面那个函数里**印一行，直接读盒子里那两栏：\n\n```text\nXX 的账上是 N 条数据\n```\n\n4. 在 `main` 里根据类创建实例对象（名字和条数都用输入接口递进来的），然后**把这个对象递给那一个方法**。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另一个对象**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    friend void showAccount(const Cat& c);\n};\n\nvoid showAccount(const Cat& c) {\n    cout << c.name << \" 的账上是 \" << c.fish << \" 条数据\" << endl;\n}\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1(name, fish);\n    showAccount(c1);\n    return 0;\n}\n",
+  "explanationTemplate": "后门这一手，三件事要一起对上：\n\n1. **在类定义里写那一行**。位置在类定义的大括号里，字面就是 `friend void showAccount(const Cat& c);`。这一行是**类定义给出去的通行证**——从这一刻起，`showAccount` 够得到这张类定义创建后的每一个对象的**任何一格**，带盖的也不例外。\n2. **函数本身画在外面**。拿到通行证**不等于**它变成了类定义上的函数 —— 它还是外面的一手。所以类定义里只写一行「我们认识它」，函数的身子写在类定义外面。\n3. **称呼它的时候不写那个对象**。类定义上的函数是「哪个对象 · 函数名」；开后门的函数是「**函数名(哪个对象)**」——把对象当料递进去。写 `showAccount(c1);`。\n\n再补两句边界，都是本课强调过的：**后门是单向的**（我们给它开门，它不会把钥匙回赠给我们），**后门也不传递**（拿到通行证的只有它一个，它认识的朋友不算数）。\n\n⚠️ 还有一句最容易忘的：**别把 `friend` 那一行漏了**。漏了的话，哪怕函数的写法完全正确，编译器也会说那一格够不着。"
+}

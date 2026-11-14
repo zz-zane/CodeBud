@@ -1,0 +1,433 @@
+{
+  "lessonId": "c-stage2-06",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-c-s2-structptr-best-cat-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们摆了**五个对象**，名字按顺序是张三、李四、计算机、三花、墨墨。今天来了几个对象要报食量：第一行是一个数 `n`，后面**一行一个**，一共 n 个数，按顺序对上前 n 个对象。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），摆好这一排五个对象，把读进来的数一个只填进对应那个对象的格子里。然后**用一块名称**从排头走一圈，找出处理得最多的那个 —— 如果并列，报**靠前**的那个（也就是只在新的一个**严格更多**时才换名称）。\n\n最后印一行：`<名字> 处理得最多，<食量> 条`。\n\n比如程序的输入是\n\n3\n2\n8\n5\n\n程序就要返回\n\n李四 处理得最多，8 条\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[5] = {\n        {\"张三\", 0},\n        {\"李四\", 0},\n        {\"计算机\", 0},\n        {\"三花\", 0},\n        {\"墨墨\", 0}\n    };\n    int n;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &cats[i].fish) != 1) {\n            return 1;\n        }\n    }\n\n    struct Cat *best = cats;\n    for (struct Cat *p = cats; p < cats + n; p++) {\n        if (p->fish > best->fish) {\n            best = p;\n        }\n    }\n\n    printf(\"%s 处理得最多，%d 条\\n\", best->name, best->fish);\n    return 0;\n}\n",
+      "expectedOutput": "张三 处理得最多，7 条",
+      "stdin": "3\n7\n4\n7\n",
+      "explanation": "这道题是本课两样本事的合成：**一块名称走一圈**，外加本课开头那道题里「挑冠军」的老套路。\n\n**① 一块名称负责走，另一块名称负责记。**\n\n```c\nstruct Cat *best = cats;\nfor (struct Cat *p = cats; p < cats + n; p++) {\n```\n\n`p` 是**走的那块** —— 每转一圈 `p++` 往前挪一个。`best` 是**记的那块** —— 它记着「到目前为止处理得最多的那个住哪」。两块名称各干各的，缺了哪块都不行：少了 `p` 走不动，少了 `best` 就记不住。\n\n**② 走一圈的路怎么画？** `for (struct Cat *p = cats; p < cats + n; p++)`。这里借的正是第二课那条规矩：`cats` 是排头那块地址，`cats + n` 就是绕过 n 只之后的地址，`p < cats + n` 读作「还没走过头」。\n\n**③ 并列为什么取靠前的？** 因为这里写的是**严格更多**才换：\n\n```c\nif (p->fish > best->fish)\n```\n\n用的是一根尖朝右的 `>`，不是 `>=`。所以后面那个跟当前冠军打平的时候，`best` 一个字都不动，还是指着靠前那个。题目要求「并列报靠前的」，这一根尖的方向就是答案。\n\n**④ 最后报的时候不用再加星。** `best->name` 读的是那块名称指着的那个对象的名字。名称本身就是地址，直接顺着它进门就行。",
+      "templateId": "c-s2-structptr-best-cat",
+      "params": {
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "f7365438be312851"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-best-cat-001",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们摆了**五个对象**，名字按顺序是张三、李四、计算机、三花、墨墨。今天来了几个对象要报食量：第一行是一个数 `n`，后面**一行一个**，一共 n 个数，按顺序对上前 n 个对象。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），摆好这一排五个对象，把读进来的数一个只填进对应那个对象的格子里。然后**用一块名称**从排头走一圈，找出处理得最多的那个 —— 如果并列，报**靠前**的那个（也就是只在新的一个**严格更多**时才换名称）。\n\n最后印一行：`<名字> 处理得最多，<食量> 条`。\n\n比如程序的输入是\n\n4\n3\n1\n9\n6\n\n程序就要返回\n\n计算机 处理得最多，9 条\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[5] = {\n        {\"张三\", 0},\n        {\"李四\", 0},\n        {\"计算机\", 0},\n        {\"三花\", 0},\n        {\"墨墨\", 0}\n    };\n    int n;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &cats[i].fish) != 1) {\n            return 1;\n        }\n    }\n\n    struct Cat *best = cats;\n    for (struct Cat *p = cats; p < cats + n; p++) {\n        if (p->fish > best->fish) {\n            best = p;\n        }\n    }\n\n    printf(\"%s 处理得最多，%d 条\\n\", best->name, best->fish);\n    return 0;\n}\n",
+      "expectedOutput": "李四 处理得最多，4 条",
+      "stdin": "4\n3\n4\n3\n1\n",
+      "explanation": "这道题是本课两样本事的合成：**一块名称走一圈**，外加本课开头那道题里「挑冠军」的老套路。\n\n**① 一块名称负责走，另一块名称负责记。**\n\n```c\nstruct Cat *best = cats;\nfor (struct Cat *p = cats; p < cats + n; p++) {\n```\n\n`p` 是**走的那块** —— 每转一圈 `p++` 往前挪一个。`best` 是**记的那块** —— 它记着「到目前为止处理得最多的那个住哪」。两块名称各干各的，缺了哪块都不行：少了 `p` 走不动，少了 `best` 就记不住。\n\n**② 走一圈的路怎么画？** `for (struct Cat *p = cats; p < cats + n; p++)`。这里借的正是第二课那条规矩：`cats` 是排头那块地址，`cats + n` 就是绕过 n 只之后的地址，`p < cats + n` 读作「还没走过头」。\n\n**③ 并列为什么取靠前的？** 因为这里写的是**严格更多**才换：\n\n```c\nif (p->fish > best->fish)\n```\n\n用的是一根尖朝右的 `>`，不是 `>=`。所以后面那个跟当前冠军打平的时候，`best` 一个字都不动，还是指着靠前那个。题目要求「并列报靠前的」，这一根尖的方向就是答案。\n\n**④ 最后报的时候不用再加星。** `best->name` 读的是那块名称指着的那个对象的名字。名称本身就是地址，直接顺着它进门就行。",
+      "templateId": "c-s2-structptr-best-cat",
+      "params": {
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "93d2c55c4aef0e6f"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-best-cat-002",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们摆了**五个对象**，名字按顺序是张三、李四、计算机、三花、墨墨。今天来了几个对象要报食量：第一行是一个数 `n`，后面**一行一个**，一共 n 个数，按顺序对上前 n 个对象。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），摆好这一排五个对象，把读进来的数一个只填进对应那个对象的格子里。然后**用一块名称**从排头走一圈，找出处理得最多的那个 —— 如果并列，报**靠前**的那个（也就是只在新的一个**严格更多**时才换名称）。\n\n最后印一行：`<名字> 处理得最多，<食量> 条`。\n\n比如程序的输入是\n\n5\n7\n9\n8\n7\n7\n\n程序就要返回\n\n李四 处理得最多，9 条\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[5] = {\n        {\"张三\", 0},\n        {\"李四\", 0},\n        {\"计算机\", 0},\n        {\"三花\", 0},\n        {\"墨墨\", 0}\n    };\n    int n;\n\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n    for (int i = 0; i < n; i++) {\n        if (scanf(\"%d\", &cats[i].fish) != 1) {\n            return 1;\n        }\n    }\n\n    struct Cat *best = cats;\n    for (struct Cat *p = cats; p < cats + n; p++) {\n        if (p->fish > best->fish) {\n            best = p;\n        }\n    }\n\n    printf(\"%s 处理得最多，%d 条\\n\", best->name, best->fish);\n    return 0;\n}\n",
+      "expectedOutput": "李四 处理得最多，6 条",
+      "stdin": "5\n2\n6\n3\n6\n6\n",
+      "explanation": "这道题是本课两样本事的合成：**一块名称走一圈**，外加本课开头那道题里「挑冠军」的老套路。\n\n**① 一块名称负责走，另一块名称负责记。**\n\n```c\nstruct Cat *best = cats;\nfor (struct Cat *p = cats; p < cats + n; p++) {\n```\n\n`p` 是**走的那块** —— 每转一圈 `p++` 往前挪一个。`best` 是**记的那块** —— 它记着「到目前为止处理得最多的那个住哪」。两块名称各干各的，缺了哪块都不行：少了 `p` 走不动，少了 `best` 就记不住。\n\n**② 走一圈的路怎么画？** `for (struct Cat *p = cats; p < cats + n; p++)`。这里借的正是第二课那条规矩：`cats` 是排头那块地址，`cats + n` 就是绕过 n 只之后的地址，`p < cats + n` 读作「还没走过头」。\n\n**③ 并列为什么取靠前的？** 因为这里写的是**严格更多**才换：\n\n```c\nif (p->fish > best->fish)\n```\n\n用的是一根尖朝右的 `>`，不是 `>=`。所以后面那个跟当前冠军打平的时候，`best` 一个字都不动，还是指着靠前那个。题目要求「并列报靠前的」，这一根尖的方向就是答案。\n\n**④ 最后报的时候不用再加星。** `best->name` 读的是那块名称指着的那个对象的名字。名称本身就是地址，直接顺着它进门就行。",
+      "templateId": "c-s2-structptr-best-cat",
+      "params": {
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "702d580dd3ef9209"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-feed-by-pointer-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们有一个对象（名字 `张三`、食量 2），要请一个方法给它添 3 条数据。\n\n请你写一个方法：头上收**一块指着对象的名称**、再加一个「要添几条」。函数里把这个对象的食量**加上**那个数 —— 改的是**本人**，不往回带任何东西（所以这一个方法头上是 `void`）。\n\n`main` 里：生好那个对象，先报一行 `张三 处理了 2 条`；再调用这一个方法（引用的时候别忘了把名称的**地址**递过去）；最后报第二行 `喂过之后 张三 处理了 <加完之后的数> 条`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nvoid feed(struct Cat *c, int n) {\n    c->fish = c->fish + n;\n}\n\nint main(void) {\n    struct Cat a = {\"张三\", 2};\n\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    feed(&a, 3);\n    printf(\"喂过之后 %s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "expectedOutput": "张三 处理了 2 条\n喂过之后 张三 处理了 5 条",
+      "stdin": null,
+      "explanation": "这道题是上一课那个「多出一个副本」的账，现在来还。\n\n**① 为什么非得递名称？** 上一课看过：函数头上直接写 `struct Cat c` 的话，编译器会**照着抄一份副本**再交对函数。函数里改得再热闹，改的都是那份副本，`main` 里本人该多少还是多少 —— 这跟递一条字符串过去是一样的规矩。\n\n想让函数改到**本人**，就得跟递一排元素那样：**把地址递过去**。名称的记号是在类定义后面加一颗星：\n\n```c\nvoid feed(struct Cat *c, int n)\n```\n\n**② 函数里进门用箭头。** `c` 现在是一块名称，不是对象，所以进门不能用点号，得用 `c->fish`。整句 `c->fish = c->fish + n;` 读作「顺着名称进那个对象的 `fish` 格，读出旧的、加上 n、再写回去」。\n\n**③ 引用的时候别忘了取地址。**\n\n```c\nfeed(&a, 3);\n```\n\n那个 `&a` 不能漏 —— 跟 `scanf(\"%d\", &a.fish)` 里那个 `&` 是同一件事：函数要的是「对象在哪儿」，我们得把地址给它。漏了 `&` 的话，是把整个对象又抄了一份递过去，本课就白学了。\n\n**一句话收口：类定义后面加星，函数就能改本人；引用的时候加 `&`，把地址递过去。**",
+      "templateId": "c-s2-structptr-feed-by-pointer",
+      "params": {
+        "who": "张三",
+        "f1": 2,
+        "f2": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "47f2fc1c47e9a576"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-feed-by-pointer-005",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们有一个对象（名字 `张三`、食量 3），要请一个方法给它添 5 条数据。\n\n请你写一个方法：头上收**一块指着对象的名称**、再加一个「要添几条」。函数里把这个对象的食量**加上**那个数 —— 改的是**本人**，不往回带任何东西（所以这一个方法头上是 `void`）。\n\n`main` 里：生好那个对象，先报一行 `张三 处理了 3 条`；再调用这一个方法（引用的时候别忘了把名称的**地址**递过去）；最后报第二行 `喂过之后 张三 处理了 <加完之后的数> 条`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nvoid feed(struct Cat *c, int n) {\n    c->fish = c->fish + n;\n}\n\nint main(void) {\n    struct Cat a = {\"张三\", 3};\n\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    feed(&a, 5);\n    printf(\"喂过之后 %s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "expectedOutput": "张三 处理了 3 条\n喂过之后 张三 处理了 8 条",
+      "stdin": null,
+      "explanation": "这道题是上一课那个「多出一个副本」的账，现在来还。\n\n**① 为什么非得递名称？** 上一课看过：函数头上直接写 `struct Cat c` 的话，编译器会**照着抄一份副本**再交对函数。函数里改得再热闹，改的都是那份副本，`main` 里本人该多少还是多少 —— 这跟递一条字符串过去是一样的规矩。\n\n想让函数改到**本人**，就得跟递一排元素那样：**把地址递过去**。名称的记号是在类定义后面加一颗星：\n\n```c\nvoid feed(struct Cat *c, int n)\n```\n\n**② 函数里进门用箭头。** `c` 现在是一块名称，不是对象，所以进门不能用点号，得用 `c->fish`。整句 `c->fish = c->fish + n;` 读作「顺着名称进那个对象的 `fish` 格，读出旧的、加上 n、再写回去」。\n\n**③ 引用的时候别忘了取地址。**\n\n```c\nfeed(&a, 5);\n```\n\n那个 `&a` 不能漏 —— 跟 `scanf(\"%d\", &a.fish)` 里那个 `&` 是同一件事：函数要的是「对象在哪儿」，我们得把地址给它。漏了 `&` 的话，是把整个对象又抄了一份递过去，本课就白学了。\n\n**一句话收口：类定义后面加星，函数就能改本人；引用的时候加 `&`，把地址递过去。**",
+      "templateId": "c-s2-structptr-feed-by-pointer",
+      "params": {
+        "who": "张三",
+        "f1": 3,
+        "f2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "1cbe5cef88b76748"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-feed-by-pointer-010",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们有一个对象（名字 `李四`、食量 2），要请一个方法给它添 4 条数据。\n\n请你写一个方法：头上收**一块指着对象的名称**、再加一个「要添几条」。函数里把这个对象的食量**加上**那个数 —— 改的是**本人**，不往回带任何东西（所以这一个方法头上是 `void`）。\n\n`main` 里：生好那个对象，先报一行 `李四 处理了 2 条`；再调用这一个方法（引用的时候别忘了把名称的**地址**递过去）；最后报第二行 `喂过之后 李四 处理了 <加完之后的数> 条`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nvoid feed(struct Cat *c, int n) {\n    c->fish = c->fish + n;\n}\n\nint main(void) {\n    struct Cat a = {\"李四\", 2};\n\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    feed(&a, 4);\n    printf(\"喂过之后 %s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "expectedOutput": "李四 处理了 2 条\n喂过之后 李四 处理了 6 条",
+      "stdin": null,
+      "explanation": "这道题是上一课那个「多出一个副本」的账，现在来还。\n\n**① 为什么非得递名称？** 上一课看过：函数头上直接写 `struct Cat c` 的话，编译器会**照着抄一份副本**再交对函数。函数里改得再热闹，改的都是那份副本，`main` 里本人该多少还是多少 —— 这跟递一条字符串过去是一样的规矩。\n\n想让函数改到**本人**，就得跟递一排元素那样：**把地址递过去**。名称的记号是在类定义后面加一颗星：\n\n```c\nvoid feed(struct Cat *c, int n)\n```\n\n**② 函数里进门用箭头。** `c` 现在是一块名称，不是对象，所以进门不能用点号，得用 `c->fish`。整句 `c->fish = c->fish + n;` 读作「顺着名称进那个对象的 `fish` 格，读出旧的、加上 n、再写回去」。\n\n**③ 引用的时候别忘了取地址。**\n\n```c\nfeed(&a, 4);\n```\n\n那个 `&a` 不能漏 —— 跟 `scanf(\"%d\", &a.fish)` 里那个 `&` 是同一件事：函数要的是「对象在哪儿」，我们得把地址给它。漏了 `&` 的话，是把整个对象又抄了一份递过去，本课就白学了。\n\n**一句话收口：类定义后面加星，函数就能改本人；引用的时候加 `&`，把地址递过去。**",
+      "templateId": "c-s2-structptr-feed-by-pointer",
+      "params": {
+        "who": "李四",
+        "f1": 2,
+        "f2": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "f446663ae6ccac0e"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-feed-by-pointer-016",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们有一个对象（名字 `李四`、食量 4），要请一个方法给它添 4 条数据。\n\n请你写一个方法：头上收**一块指着对象的名称**、再加一个「要添几条」。函数里把这个对象的食量**加上**那个数 —— 改的是**本人**，不往回带任何东西（所以这一个方法头上是 `void`）。\n\n`main` 里：生好那个对象，先报一行 `李四 处理了 4 条`；再调用这一个方法（引用的时候别忘了把名称的**地址**递过去）；最后报第二行 `喂过之后 李四 处理了 <加完之后的数> 条`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nvoid feed(struct Cat *c, int n) {\n    c->fish = c->fish + n;\n}\n\nint main(void) {\n    struct Cat a = {\"李四\", 4};\n\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    feed(&a, 4);\n    printf(\"喂过之后 %s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "expectedOutput": "李四 处理了 4 条\n喂过之后 李四 处理了 8 条",
+      "stdin": null,
+      "explanation": "这道题是上一课那个「多出一个副本」的账，现在来还。\n\n**① 为什么非得递名称？** 上一课看过：函数头上直接写 `struct Cat c` 的话，编译器会**照着抄一份副本**再交对函数。函数里改得再热闹，改的都是那份副本，`main` 里本人该多少还是多少 —— 这跟递一条字符串过去是一样的规矩。\n\n想让函数改到**本人**，就得跟递一排元素那样：**把地址递过去**。名称的记号是在类定义后面加一颗星：\n\n```c\nvoid feed(struct Cat *c, int n)\n```\n\n**② 函数里进门用箭头。** `c` 现在是一块名称，不是对象，所以进门不能用点号，得用 `c->fish`。整句 `c->fish = c->fish + n;` 读作「顺着名称进那个对象的 `fish` 格，读出旧的、加上 n、再写回去」。\n\n**③ 引用的时候别忘了取地址。**\n\n```c\nfeed(&a, 4);\n```\n\n那个 `&a` 不能漏 —— 跟 `scanf(\"%d\", &a.fish)` 里那个 `&` 是同一件事：函数要的是「对象在哪儿」，我们得把地址给它。漏了 `&` 的话，是把整个对象又抄了一份递过去，本课就白学了。\n\n**一句话收口：类定义后面加星，函数就能改本人；引用的时候加 `&`，把地址递过去。**",
+      "templateId": "c-s2-structptr-feed-by-pointer",
+      "params": {
+        "who": "李四",
+        "f1": 4,
+        "f2": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "da696e20f1a4a26e"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-feed-by-pointer-021",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们有一个对象（名字 `计算机`、食量 3），要请一个方法给它添 3 条数据。\n\n请你写一个方法：头上收**一块指着对象的名称**、再加一个「要添几条」。函数里把这个对象的食量**加上**那个数 —— 改的是**本人**，不往回带任何东西（所以这一个方法头上是 `void`）。\n\n`main` 里：生好那个对象，先报一行 `计算机 处理了 3 条`；再调用这一个方法（引用的时候别忘了把名称的**地址**递过去）；最后报第二行 `喂过之后 计算机 处理了 <加完之后的数> 条`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nvoid feed(struct Cat *c, int n) {\n    c->fish = c->fish + n;\n}\n\nint main(void) {\n    struct Cat a = {\"计算机\", 3};\n\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    feed(&a, 3);\n    printf(\"喂过之后 %s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "expectedOutput": "计算机 处理了 3 条\n喂过之后 计算机 处理了 6 条",
+      "stdin": null,
+      "explanation": "这道题是上一课那个「多出一个副本」的账，现在来还。\n\n**① 为什么非得递名称？** 上一课看过：函数头上直接写 `struct Cat c` 的话，编译器会**照着抄一份副本**再交对函数。函数里改得再热闹，改的都是那份副本，`main` 里本人该多少还是多少 —— 这跟递一条字符串过去是一样的规矩。\n\n想让函数改到**本人**，就得跟递一排元素那样：**把地址递过去**。名称的记号是在类定义后面加一颗星：\n\n```c\nvoid feed(struct Cat *c, int n)\n```\n\n**② 函数里进门用箭头。** `c` 现在是一块名称，不是对象，所以进门不能用点号，得用 `c->fish`。整句 `c->fish = c->fish + n;` 读作「顺着名称进那个对象的 `fish` 格，读出旧的、加上 n、再写回去」。\n\n**③ 引用的时候别忘了取地址。**\n\n```c\nfeed(&a, 3);\n```\n\n那个 `&a` 不能漏 —— 跟 `scanf(\"%d\", &a.fish)` 里那个 `&` 是同一件事：函数要的是「对象在哪儿」，我们得把地址给它。漏了 `&` 的话，是把整个对象又抄了一份递过去，本课就白学了。\n\n**一句话收口：类定义后面加星，函数就能改本人；引用的时候加 `&`，把地址递过去。**",
+      "templateId": "c-s2-structptr-feed-by-pointer",
+      "params": {
+        "who": "计算机",
+        "f1": 3,
+        "f2": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "647a1ee0382cb4ca"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-feed-by-pointer-026",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们有一个对象（名字 `计算机`、食量 4），要请一个方法给它添 5 条数据。\n\n请你写一个方法：头上收**一块指着对象的名称**、再加一个「要添几条」。函数里把这个对象的食量**加上**那个数 —— 改的是**本人**，不往回带任何东西（所以这一个方法头上是 `void`）。\n\n`main` 里：生好那个对象，先报一行 `计算机 处理了 4 条`；再调用这一个方法（引用的时候别忘了把名称的**地址**递过去）；最后报第二行 `喂过之后 计算机 处理了 <加完之后的数> 条`。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nvoid feed(struct Cat *c, int n) {\n    c->fish = c->fish + n;\n}\n\nint main(void) {\n    struct Cat a = {\"计算机\", 4};\n\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    feed(&a, 5);\n    printf(\"喂过之后 %s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "expectedOutput": "计算机 处理了 4 条\n喂过之后 计算机 处理了 9 条",
+      "stdin": null,
+      "explanation": "这道题是上一课那个「多出一个副本」的账，现在来还。\n\n**① 为什么非得递名称？** 上一课看过：函数头上直接写 `struct Cat c` 的话，编译器会**照着抄一份副本**再交对函数。函数里改得再热闹，改的都是那份副本，`main` 里本人该多少还是多少 —— 这跟递一条字符串过去是一样的规矩。\n\n想让函数改到**本人**，就得跟递一排元素那样：**把地址递过去**。名称的记号是在类定义后面加一颗星：\n\n```c\nvoid feed(struct Cat *c, int n)\n```\n\n**② 函数里进门用箭头。** `c` 现在是一块名称，不是对象，所以进门不能用点号，得用 `c->fish`。整句 `c->fish = c->fish + n;` 读作「顺着名称进那个对象的 `fish` 格，读出旧的、加上 n、再写回去」。\n\n**③ 引用的时候别忘了取地址。**\n\n```c\nfeed(&a, 5);\n```\n\n那个 `&a` 不能漏 —— 跟 `scanf(\"%d\", &a.fish)` 里那个 `&` 是同一件事：函数要的是「对象在哪儿」，我们得把地址给它。漏了 `&` 的话，是把整个对象又抄了一份递过去，本课就白学了。\n\n**一句话收口：类定义后面加星，函数就能改本人；引用的时候加 `&`，把地址递过去。**",
+      "templateId": "c-s2-structptr-feed-by-pointer",
+      "params": {
+        "who": "计算机",
+        "f1": 4,
+        "f2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "262596a481a50b82"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-malloc-cat-000",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**现租一个对象**：不用在 `main` 里提前生好，直接跟大变量要一块刚够一个对象住的地方，让名称指着它。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），然后：\n\n1. 跟变量要一块地方，**大小正好是一个对象**（别写死数字，用「量一下一个对象多大」那个函数）；要完**先看看有没有租到** —— 没租到就印一行 `变量没租到` 然后收工；\n2. 把名字填成 `张三`（用抄字符串那一个方法）、食量填成 3；\n3. 印一行 `张三 有 3 条`；\n4. 用完把地方**还回去**，名称也擦干净（让它指着空）。\n\n变量那头（`malloc`/`free`）住在 `stdlib.h` 家里，抄字符串的函数住在 `string.h` 家里。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat *p = (struct Cat *)malloc(sizeof(struct Cat));\n\n    if (p == NULL) {\n        printf(\"变量没租到\\n\");\n        return 0;\n    }\n\n    strcpy(p->name, \"张三\");\n    p->fish = 3;\n    printf(\"%s 有 %d 条\\n\", p->name, p->fish);\n\n    free(p);\n    p = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 3 条",
+      "stdin": null,
+      "explanation": "一块地能不能住下一个对象，得先**量一下**。\n\n**① 量一个对象多大：`sizeof(struct Cat)`。** 这是编译器替我们算的：把类定义上每一个格子各占多大加起来。自己拿计算器去凑数字（写 `sizeof(char)*20 + sizeof(int)` 之类）看着聪明，可类定义一改就全错，还是让编译器去量最稳。\n\n**② 补写「这块地方按一个对象来读」。** 变量那头只管给一块地，它不知道我们要住对象还是住别的，所以交回来的是一块**说不清是什么**的地址。要给名称配上记号，得自己补一句：\n\n```c\n(struct Cat *)malloc(sizeof(struct Cat))\n```\n\n前面那对括号加类定义记号，读作「**这块地，按一个对象来读**」。少了它编译器会拦你（说不清的东西配不上带记号的名称）。\n\n**③ 要完先看租没租到。** 变量也可能两手一摊（比如地方不够），那时候拿回来的地址是 `NULL`（空名称）。不先检查就顺着空名称进门，程序当场就倒 —— 所以 `if (p == NULL)` 那一步不是客套话，是真要做的事。\n\n**④ 用完记得还。** `free(p);` 把地方交回变量，`p = NULL;` 是把名称擦干净。擦这一下很像多此一举，可它是个好习惯：空名称再被谁拿去用，好歹是当场倒下、一眼看得见，比悄悄写到别人家地里强得多。",
+      "templateId": "c-s2-structptr-malloc-cat",
+      "params": {
+        "who": "张三",
+        "f1": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "713577823cd619ae"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-malloc-cat-003",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**现租一个对象**：不用在 `main` 里提前生好，直接跟大变量要一块刚够一个对象住的地方，让名称指着它。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），然后：\n\n1. 跟变量要一块地方，**大小正好是一个对象**（别写死数字，用「量一下一个对象多大」那个函数）；要完**先看看有没有租到** —— 没租到就印一行 `变量没租到` 然后收工；\n2. 把名字填成 `张三`（用抄字符串那一个方法）、食量填成 6；\n3. 印一行 `张三 有 6 条`；\n4. 用完把地方**还回去**，名称也擦干净（让它指着空）。\n\n变量那头（`malloc`/`free`）住在 `stdlib.h` 家里，抄字符串的函数住在 `string.h` 家里。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat *p = (struct Cat *)malloc(sizeof(struct Cat));\n\n    if (p == NULL) {\n        printf(\"变量没租到\\n\");\n        return 0;\n    }\n\n    strcpy(p->name, \"张三\");\n    p->fish = 6;\n    printf(\"%s 有 %d 条\\n\", p->name, p->fish);\n\n    free(p);\n    p = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "张三 有 6 条",
+      "stdin": null,
+      "explanation": "一块地能不能住下一个对象，得先**量一下**。\n\n**① 量一个对象多大：`sizeof(struct Cat)`。** 这是编译器替我们算的：把类定义上每一个格子各占多大加起来。自己拿计算器去凑数字（写 `sizeof(char)*20 + sizeof(int)` 之类）看着聪明，可类定义一改就全错，还是让编译器去量最稳。\n\n**② 补写「这块地方按一个对象来读」。** 变量那头只管给一块地，它不知道我们要住对象还是住别的，所以交回来的是一块**说不清是什么**的地址。要给名称配上记号，得自己补一句：\n\n```c\n(struct Cat *)malloc(sizeof(struct Cat))\n```\n\n前面那对括号加类定义记号，读作「**这块地，按一个对象来读**」。少了它编译器会拦你（说不清的东西配不上带记号的名称）。\n\n**③ 要完先看租没租到。** 变量也可能两手一摊（比如地方不够），那时候拿回来的地址是 `NULL`（空名称）。不先检查就顺着空名称进门，程序当场就倒 —— 所以 `if (p == NULL)` 那一步不是客套话，是真要做的事。\n\n**④ 用完记得还。** `free(p);` 把地方交回变量，`p = NULL;` 是把名称擦干净。擦这一下很像多此一举，可它是个好习惯：空名称再被谁拿去用，好歹是当场倒下、一眼看得见，比悄悄写到别人家地里强得多。",
+      "templateId": "c-s2-structptr-malloc-cat",
+      "params": {
+        "who": "张三",
+        "f1": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "fa8d447ca30802c2"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-malloc-cat-006",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**现租一个对象**：不用在 `main` 里提前生好，直接跟大变量要一块刚够一个对象住的地方，让名称指着它。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），然后：\n\n1. 跟变量要一块地方，**大小正好是一个对象**（别写死数字，用「量一下一个对象多大」那个函数）；要完**先看看有没有租到** —— 没租到就印一行 `变量没租到` 然后收工；\n2. 把名字填成 `李四`（用抄字符串那一个方法）、食量填成 4；\n3. 印一行 `李四 有 4 条`；\n4. 用完把地方**还回去**，名称也擦干净（让它指着空）。\n\n变量那头（`malloc`/`free`）住在 `stdlib.h` 家里，抄字符串的函数住在 `string.h` 家里。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat *p = (struct Cat *)malloc(sizeof(struct Cat));\n\n    if (p == NULL) {\n        printf(\"变量没租到\\n\");\n        return 0;\n    }\n\n    strcpy(p->name, \"李四\");\n    p->fish = 4;\n    printf(\"%s 有 %d 条\\n\", p->name, p->fish);\n\n    free(p);\n    p = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "李四 有 4 条",
+      "stdin": null,
+      "explanation": "一块地能不能住下一个对象，得先**量一下**。\n\n**① 量一个对象多大：`sizeof(struct Cat)`。** 这是编译器替我们算的：把类定义上每一个格子各占多大加起来。自己拿计算器去凑数字（写 `sizeof(char)*20 + sizeof(int)` 之类）看着聪明，可类定义一改就全错，还是让编译器去量最稳。\n\n**② 补写「这块地方按一个对象来读」。** 变量那头只管给一块地，它不知道我们要住对象还是住别的，所以交回来的是一块**说不清是什么**的地址。要给名称配上记号，得自己补一句：\n\n```c\n(struct Cat *)malloc(sizeof(struct Cat))\n```\n\n前面那对括号加类定义记号，读作「**这块地，按一个对象来读**」。少了它编译器会拦你（说不清的东西配不上带记号的名称）。\n\n**③ 要完先看租没租到。** 变量也可能两手一摊（比如地方不够），那时候拿回来的地址是 `NULL`（空名称）。不先检查就顺着空名称进门，程序当场就倒 —— 所以 `if (p == NULL)` 那一步不是客套话，是真要做的事。\n\n**④ 用完记得还。** `free(p);` 把地方交回变量，`p = NULL;` 是把名称擦干净。擦这一下很像多此一举，可它是个好习惯：空名称再被谁拿去用，好歹是当场倒下、一眼看得见，比悄悄写到别人家地里强得多。",
+      "templateId": "c-s2-structptr-malloc-cat",
+      "params": {
+        "who": "李四",
+        "f1": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "dfb5b4391face8c7"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-malloc-cat-008",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**现租一个对象**：不用在 `main` 里提前生好，直接跟大变量要一块刚够一个对象住的地方，让名称指着它。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），然后：\n\n1. 跟变量要一块地方，**大小正好是一个对象**（别写死数字，用「量一下一个对象多大」那个函数）；要完**先看看有没有租到** —— 没租到就印一行 `变量没租到` 然后收工；\n2. 把名字填成 `李四`（用抄字符串那一个方法）、食量填成 6；\n3. 印一行 `李四 有 6 条`；\n4. 用完把地方**还回去**，名称也擦干净（让它指着空）。\n\n变量那头（`malloc`/`free`）住在 `stdlib.h` 家里，抄字符串的函数住在 `string.h` 家里。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat *p = (struct Cat *)malloc(sizeof(struct Cat));\n\n    if (p == NULL) {\n        printf(\"变量没租到\\n\");\n        return 0;\n    }\n\n    strcpy(p->name, \"李四\");\n    p->fish = 6;\n    printf(\"%s 有 %d 条\\n\", p->name, p->fish);\n\n    free(p);\n    p = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "李四 有 6 条",
+      "stdin": null,
+      "explanation": "一块地能不能住下一个对象，得先**量一下**。\n\n**① 量一个对象多大：`sizeof(struct Cat)`。** 这是编译器替我们算的：把类定义上每一个格子各占多大加起来。自己拿计算器去凑数字（写 `sizeof(char)*20 + sizeof(int)` 之类）看着聪明，可类定义一改就全错，还是让编译器去量最稳。\n\n**② 补写「这块地方按一个对象来读」。** 变量那头只管给一块地，它不知道我们要住对象还是住别的，所以交回来的是一块**说不清是什么**的地址。要给名称配上记号，得自己补一句：\n\n```c\n(struct Cat *)malloc(sizeof(struct Cat))\n```\n\n前面那对括号加类定义记号，读作「**这块地，按一个对象来读**」。少了它编译器会拦你（说不清的东西配不上带记号的名称）。\n\n**③ 要完先看租没租到。** 变量也可能两手一摊（比如地方不够），那时候拿回来的地址是 `NULL`（空名称）。不先检查就顺着空名称进门，程序当场就倒 —— 所以 `if (p == NULL)` 那一步不是客套话，是真要做的事。\n\n**④ 用完记得还。** `free(p);` 把地方交回变量，`p = NULL;` 是把名称擦干净。擦这一下很像多此一举，可它是个好习惯：空名称再被谁拿去用，好歹是当场倒下、一眼看得见，比悄悄写到别人家地里强得多。",
+      "templateId": "c-s2-structptr-malloc-cat",
+      "params": {
+        "who": "李四",
+        "f1": 6
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "f9ded8d4c191ac7c"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-malloc-cat-011",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**现租一个对象**：不用在 `main` 里提前生好，直接跟大变量要一块刚够一个对象住的地方，让名称指着它。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），然后：\n\n1. 跟变量要一块地方，**大小正好是一个对象**（别写死数字，用「量一下一个对象多大」那个函数）；要完**先看看有没有租到** —— 没租到就印一行 `变量没租到` 然后收工；\n2. 把名字填成 `计算机`（用抄字符串那一个方法）、食量填成 4；\n3. 印一行 `计算机 有 4 条`；\n4. 用完把地方**还回去**，名称也擦干净（让它指着空）。\n\n变量那头（`malloc`/`free`）住在 `stdlib.h` 家里，抄字符串的函数住在 `string.h` 家里。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat *p = (struct Cat *)malloc(sizeof(struct Cat));\n\n    if (p == NULL) {\n        printf(\"变量没租到\\n\");\n        return 0;\n    }\n\n    strcpy(p->name, \"计算机\");\n    p->fish = 4;\n    printf(\"%s 有 %d 条\\n\", p->name, p->fish);\n\n    free(p);\n    p = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "计算机 有 4 条",
+      "stdin": null,
+      "explanation": "一块地能不能住下一个对象，得先**量一下**。\n\n**① 量一个对象多大：`sizeof(struct Cat)`。** 这是编译器替我们算的：把类定义上每一个格子各占多大加起来。自己拿计算器去凑数字（写 `sizeof(char)*20 + sizeof(int)` 之类）看着聪明，可类定义一改就全错，还是让编译器去量最稳。\n\n**② 补写「这块地方按一个对象来读」。** 变量那头只管给一块地，它不知道我们要住对象还是住别的，所以交回来的是一块**说不清是什么**的地址。要给名称配上记号，得自己补一句：\n\n```c\n(struct Cat *)malloc(sizeof(struct Cat))\n```\n\n前面那对括号加类定义记号，读作「**这块地，按一个对象来读**」。少了它编译器会拦你（说不清的东西配不上带记号的名称）。\n\n**③ 要完先看租没租到。** 变量也可能两手一摊（比如地方不够），那时候拿回来的地址是 `NULL`（空名称）。不先检查就顺着空名称进门，程序当场就倒 —— 所以 `if (p == NULL)` 那一步不是客套话，是真要做的事。\n\n**④ 用完记得还。** `free(p);` 把地方交回变量，`p = NULL;` 是把名称擦干净。擦这一下很像多此一举，可它是个好习惯：空名称再被谁拿去用，好歹是当场倒下、一眼看得见，比悄悄写到别人家地里强得多。",
+      "templateId": "c-s2-structptr-malloc-cat",
+      "params": {
+        "who": "计算机",
+        "f1": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "118137be34cd6943"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-malloc-cat-014",
+      "type": "codewrite",
+      "lang": "c",
+      "stem": "我们今天想**现租一个对象**：不用在 `main` 里提前生好，直接跟大变量要一块刚够一个对象住的地方，让名称指着它。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），然后：\n\n1. 跟变量要一块地方，**大小正好是一个对象**（别写死数字，用「量一下一个对象多大」那个函数）；要完**先看看有没有租到** —— 没租到就印一行 `变量没租到` 然后收工；\n2. 把名字填成 `计算机`（用抄字符串那一个方法）、食量填成 7；\n3. 印一行 `计算机 有 7 条`；\n4. 用完把地方**还回去**，名称也擦干净（让它指着空）。\n\n变量那头（`malloc`/`free`）住在 `stdlib.h` 家里，抄字符串的函数住在 `string.h` 家里。",
+      "starter": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat *p = (struct Cat *)malloc(sizeof(struct Cat));\n\n    if (p == NULL) {\n        printf(\"变量没租到\\n\");\n        return 0;\n    }\n\n    strcpy(p->name, \"计算机\");\n    p->fish = 7;\n    printf(\"%s 有 %d 条\\n\", p->name, p->fish);\n\n    free(p);\n    p = NULL;\n    return 0;\n}\n",
+      "expectedOutput": "计算机 有 7 条",
+      "stdin": null,
+      "explanation": "一块地能不能住下一个对象，得先**量一下**。\n\n**① 量一个对象多大：`sizeof(struct Cat)`。** 这是编译器替我们算的：把类定义上每一个格子各占多大加起来。自己拿计算器去凑数字（写 `sizeof(char)*20 + sizeof(int)` 之类）看着聪明，可类定义一改就全错，还是让编译器去量最稳。\n\n**② 补写「这块地方按一个对象来读」。** 变量那头只管给一块地，它不知道我们要住对象还是住别的，所以交回来的是一块**说不清是什么**的地址。要给名称配上记号，得自己补一句：\n\n```c\n(struct Cat *)malloc(sizeof(struct Cat))\n```\n\n前面那对括号加类定义记号，读作「**这块地，按一个对象来读**」。少了它编译器会拦你（说不清的东西配不上带记号的名称）。\n\n**③ 要完先看租没租到。** 变量也可能两手一摊（比如地方不够），那时候拿回来的地址是 `NULL`（空名称）。不先检查就顺着空名称进门，程序当场就倒 —— 所以 `if (p == NULL)` 那一步不是客套话，是真要做的事。\n\n**④ 用完记得还。** `free(p);` 把地方交回变量，`p = NULL;` 是把名称擦干净。擦这一下很像多此一举，可它是个好习惯：空名称再被谁拿去用，好歹是当场倒下、一眼看得见，比悄悄写到别人家地里强得多。",
+      "templateId": "c-s2-structptr-malloc-cat",
+      "params": {
+        "who": "计算机",
+        "f1": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "ae4f80fabf80544f"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-star-dot-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们给一个对象（名字 `张三`、食量 2）配了一块**指着它的名称**，程序要用这块名称把那两格东西报出来，印一行 `张三 处理了 2 条`。\n\n名字那格写得没错，可食量那格编译器一瞧见就不干了，把整段代码退了回来 —— 它不光拦下，还在底下画了个小箭头把答案指给我们看。你帮我们看看它说的是什么意思，把程序改好。",
+      "brokenCode": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"张三\", 2};\n    struct Cat *p = &a;\n\n    printf(\"%s 处理了 %d 条\\n\", (*p).name, *p.fish);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"张三\", 2};\n    struct Cat *p = &a;\n\n    printf(\"%s 处理了 %d 条\\n\", (*p).name, p->fish);\n    return 0;\n}\n",
+      "expectedOutput": "张三 处理了 2 条",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: 'p' is a pointer; did you mean to use '->'?` —— 它反问了我们一句：「**`p` 是一块名称呀，你是不是想用 `->`？**」底下还真画了一根小箭头指着 `->`，等于把答案写在卷子上了。\n\n为什么会这样？因为 C 的排队规矩里，**点号 `.` 排在星星 `*` 前面**。你写的 `*p.fish` 会被它读成「先算 `p.fish`，再给结果加颗星」—— 可 `p` 是块名称，名称哪来的 `fish` 格？于是它猜：你其实是想**顺着名称进那一格**吧。\n\n顺着名称进门有两种写法，**意思一模一样**：\n\n- `(*p).fish` —— 先把名称指向的那个对象拿出来（那对括号不能省！），再进它的 `fish` 格；\n- `p->fish` —— 上面那种的省字版，一根小箭头，读作「顺着名称过去，进那一格」。\n\n所以这句话钉死两件事：**名称上进门用 `->`，实例上进门用 `.`。** 同一个格子的两种写法之间，差的就是那对括号和那根箭头。",
+      "templateId": "c-s2-structptr-star-dot",
+      "params": {
+        "who": "张三",
+        "f1": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "3492e08be9348810"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-star-dot-008",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们给一个对象（名字 `计算机`、食量 4）配了一块**指着它的名称**，程序要用这块名称把那两格东西报出来，印一行 `计算机 处理了 4 条`。\n\n名字那格写得没错，可食量那格编译器一瞧见就不干了，把整段代码退了回来 —— 它不光拦下，还在底下画了个小箭头把答案指给我们看。你帮我们看看它说的是什么意思，把程序改好。",
+      "brokenCode": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"计算机\", 4};\n    struct Cat *p = &a;\n\n    printf(\"%s 处理了 %d 条\\n\", (*p).name, *p.fish);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"计算机\", 4};\n    struct Cat *p = &a;\n\n    printf(\"%s 处理了 %d 条\\n\", (*p).name, p->fish);\n    return 0;\n}\n",
+      "expectedOutput": "计算机 处理了 4 条",
+      "stdin": null,
+      "explanation": "编译器的原话是 `error: 'p' is a pointer; did you mean to use '->'?` —— 它反问了我们一句：「**`p` 是一块名称呀，你是不是想用 `->`？**」底下还真画了一根小箭头指着 `->`，等于把答案写在卷子上了。\n\n为什么会这样？因为 C 的排队规矩里，**点号 `.` 排在星星 `*` 前面**。你写的 `*p.fish` 会被它读成「先算 `p.fish`，再给结果加颗星」—— 可 `p` 是块名称，名称哪来的 `fish` 格？于是它猜：你其实是想**顺着名称进那一格**吧。\n\n顺着名称进门有两种写法，**意思一模一样**：\n\n- `(*p).fish` —— 先把名称指向的那个对象拿出来（那对括号不能省！），再进它的 `fish` 格；\n- `p->fish` —— 上面那种的省字版，一根小箭头，读作「顺着名称过去，进那一格」。\n\n所以这句话钉死两件事：**名称上进门用 `->`，实例上进门用 `.`。** 同一个格子的两种写法之间，差的就是那对括号和那根箭头。",
+      "templateId": "c-s2-structptr-star-dot",
+      "params": {
+        "who": "计算机",
+        "f1": 4
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "eda2f903d50d1e0b"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-uninit-pointer-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们创建了一个对象（名字 `张三`、食量 2），又想借一块名称把食量改成 5，最后报一行 `张三 处理了 5 条`。\n\n这段代码编译器**没拦**，只是嘟囔了一句警告，然后程序一跑就倒了（什么都没印出来）。你帮我们看看名称那边差了什么，把它改好。",
+      "brokenCode": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"张三\", 2};\n    struct Cat *p;\n\n    p->fish = 5;\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"张三\", 2};\n    struct Cat *p = &a;\n\n    p->fish = 5;\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "expectedOutput": "张三 处理了 5 条",
+      "stdin": null,
+      "explanation": "编译器当时的嘟囔是 `warning: 'p' is used uninitialized [-Wuninitialized]` —— 翻过来就是：「**这块名称 `p` 没插到任何地方，你就拿它进门了。**」\n\n把名称这件事想清楚就不难懂了：\n\n```c\nstruct Cat *p;\n```\n\n这一句只是**画了一块空名称**，上面一个字没写。它不是地址，是一块没插的名称。接着那句 `p->fish = 5;` 的意思是「顺着名称过去，把 `fish` 格改掉」—— 可名称没插，那我们顺着它走到哪去了？走到一个**谁也不知道的地方**去了。往那儿写数，程序当然当场倒下。\n\n修法就一个字的事：**名称创建后的时候就得插上。**\n\n```c\nstruct Cat *p = &a;\n```\n\n`&a` 就是「对象 `a` 住哪儿」那块地址 —— 跟学 `scanf` 时写的 `&a.fish` 是同一个 `&`，只是这回问的是**整个对象**的门牌。插好之后，`p->fish` 写进去的才是 `a` 自己的食量。\n\n**记住这句：名称不是对象。** `struct Cat *p;` 只是画了块名称，一个对象都没生，必须再让名称指着某只**已经生好的**对象（`p = &a;`）或者指着一排对象里的某一个（`p = cats;`）才管用。",
+      "templateId": "c-s2-structptr-uninit-pointer",
+      "params": {
+        "who": "张三",
+        "f1": 2,
+        "f2": 5
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "3de91ea085e2c08b"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-uninit-pointer-026",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们创建了一个对象（名字 `计算机`、食量 4），又想借一块名称把食量改成 7，最后报一行 `计算机 处理了 7 条`。\n\n这段代码编译器**没拦**，只是嘟囔了一句警告，然后程序一跑就倒了（什么都没印出来）。你帮我们看看名称那边差了什么，把它改好。",
+      "brokenCode": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"计算机\", 4};\n    struct Cat *p;\n\n    p->fish = 7;\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"计算机\", 4};\n    struct Cat *p = &a;\n\n    p->fish = 7;\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}\n",
+      "expectedOutput": "计算机 处理了 7 条",
+      "stdin": null,
+      "explanation": "编译器当时的嘟囔是 `warning: 'p' is used uninitialized [-Wuninitialized]` —— 翻过来就是：「**这块名称 `p` 没插到任何地方，你就拿它进门了。**」\n\n把名称这件事想清楚就不难懂了：\n\n```c\nstruct Cat *p;\n```\n\n这一句只是**画了一块空名称**，上面一个字没写。它不是地址，是一块没插的名称。接着那句 `p->fish = 7;` 的意思是「顺着名称过去，把 `fish` 格改掉」—— 可名称没插，那我们顺着它走到哪去了？走到一个**谁也不知道的地方**去了。往那儿写数，程序当然当场倒下。\n\n修法就一个字的事：**名称创建后的时候就得插上。**\n\n```c\nstruct Cat *p = &a;\n```\n\n`&a` 就是「对象 `a` 住哪儿」那块地址 —— 跟学 `scanf` 时写的 `&a.fish` 是同一个 `&`，只是这回问的是**整个对象**的门牌。插好之后，`p->fish` 写进去的才是 `a` 自己的食量。\n\n**记住这句：名称不是对象。** `struct Cat *p;` 只是画了块名称，一个对象都没生，必须再让名称指着某只**已经生好的**对象（`p = &a;`）或者指着一排对象里的某一个（`p = cats;`）才管用。",
+      "templateId": "c-s2-structptr-uninit-pointer",
+      "params": {
+        "who": "计算机",
+        "f1": 4,
+        "f2": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "b46809264de97bfa"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-walk-no-advance-000",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们摆了**一排三个对象**：张三处理 1 条、李四处理 4 条、计算机处理 7 条。现在拿一块名称从排头出发，走一圈把三个对象连同总账一起报出来：\n\n```\n张三 处理了 1 条\n李四 处理了 4 条\n计算机 处理了 7 条\n一共 1 + 4 + 7 条\n```\n\n（最后那一行里的加号当然要自己算出来，写成 `一共 {} 条` 那样。）\n\n这段代码编译器**一个字都没说**，程序也跑起来了 —— 可返回的东西不对。你帮我们看看是哪一步出了岔子，把它改好。",
+      "brokenCode": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[3] = {\n        {\"张三\", 1},\n        {\"李四\", 4},\n        {\"计算机\", 7}\n    };\n    struct Cat *p = cats;\n    int total = 0;\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s 处理了 %d 条\\n\", p->name, p->fish);\n        total = total + p->fish;\n    }\n    printf(\"一共 %d 条\\n\", total);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[3] = {\n        {\"张三\", 1},\n        {\"李四\", 4},\n        {\"计算机\", 7}\n    };\n    struct Cat *p = cats;\n    int total = 0;\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s 处理了 %d 条\\n\", p->name, p->fish);\n        total = total + p->fish;\n        p++;\n    }\n    printf(\"一共 %d 条\\n\", total);\n    return 0;\n}\n",
+      "expectedOutput": "张三 处理了 1 条\n李四 处理了 4 条\n计算机 处理了 7 条\n一共 12 条",
+      "stdin": null,
+      "explanation": "这是本课最阴的一个坑：**编译安然无事、跑起来也不崩，只是答案不对。**\n\n`for (int i = 0; i < 3; i++)` 这句看着很齐整 —— `i` 从 0 数到 2，转三圈，圈数一点没错。可是圈数对，**名称不动也没用**：`p` 一直指着排头那个张三，所以转三圈就印了三遍张三，总账也变成 `3 × 1`。\n\n对照上一课的写法就清楚了：**绕圈的是 `i`，可我们真正在读的是 `p` 指的那个对象。** 每转一圈，除了把 `i` 加一，还得让名称自己往前挪一个：\n\n```c\np++;\n```\n\n一句就够。挪完这一圈，下一圈进来时 `p` 才指着李四，再下一圈才是计算机。\n\n顺便认一下这种坑的脸：**编译器不管「意思对不对」，它只管「字写没写规矩」。** 名称不动它挑不出毛病，得靠我们自己走一遍例子 —— 你在纸上把三圈里 `p` 指谁写下来，一眼就看见那个张三重复了三次。",
+      "templateId": "c-s2-structptr-walk-no-advance",
+      "params": {
+        "f1": 1,
+        "f2": 4,
+        "f3": 7
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "5740976960da9949"
+      }
+    },
+    {
+      "id": "bank-c-s2-structptr-walk-no-advance-026",
+      "type": "codefix",
+      "lang": "c",
+      "stem": "我们摆了**一排三个对象**：张三处理 3 条、李四处理 6 条、计算机处理 9 条。现在拿一块名称从排头出发，走一圈把三个对象连同总账一起报出来：\n\n```\n张三 处理了 3 条\n李四 处理了 6 条\n计算机 处理了 9 条\n一共 3 + 6 + 9 条\n```\n\n（最后那一行里的加号当然要自己算出来，写成 `一共 {} 条` 那样。）\n\n这段代码编译器**一个字都没说**，程序也跑起来了 —— 可返回的东西不对。你帮我们看看是哪一步出了岔子，把它改好。",
+      "brokenCode": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[3] = {\n        {\"张三\", 3},\n        {\"李四\", 6},\n        {\"计算机\", 9}\n    };\n    struct Cat *p = cats;\n    int total = 0;\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s 处理了 %d 条\\n\", p->name, p->fish);\n        total = total + p->fish;\n    }\n    printf(\"一共 %d 条\\n\", total);\n    return 0;\n}\n",
+      "referenceFix": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[3] = {\n        {\"张三\", 3},\n        {\"李四\", 6},\n        {\"计算机\", 9}\n    };\n    struct Cat *p = cats;\n    int total = 0;\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s 处理了 %d 条\\n\", p->name, p->fish);\n        total = total + p->fish;\n        p++;\n    }\n    printf(\"一共 %d 条\\n\", total);\n    return 0;\n}\n",
+      "expectedOutput": "张三 处理了 3 条\n李四 处理了 6 条\n计算机 处理了 9 条\n一共 18 条",
+      "stdin": null,
+      "explanation": "这是本课最阴的一个坑：**编译安然无事、跑起来也不崩，只是答案不对。**\n\n`for (int i = 0; i < 3; i++)` 这句看着很齐整 —— `i` 从 0 数到 2，转三圈，圈数一点没错。可是圈数对，**名称不动也没用**：`p` 一直指着排头那个张三，所以转三圈就印了三遍张三，总账也变成 `3 × 3`。\n\n对照上一课的写法就清楚了：**绕圈的是 `i`，可我们真正在读的是 `p` 指的那个对象。** 每转一圈，除了把 `i` 加一，还得让名称自己往前挪一个：\n\n```c\np++;\n```\n\n一句就够。挪完这一圈，下一圈进来时 `p` 才指着李四，再下一圈才是计算机。\n\n顺便认一下这种坑的脸：**编译器不管「意思对不对」，它只管「字写没写规矩」。** 名称不动它挑不出毛病，得靠我们自己走一遍例子 —— 你在纸上把三圈里 `p` 指谁写下来，一眼就看见那个张三重复了三次。",
+      "templateId": "c-s2-structptr-walk-no-advance",
+      "params": {
+        "f1": 3,
+        "f2": 6,
+        "f3": 9
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.336Z",
+        "hash": "5683cedf8681ef59"
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+/*
+ * 页面排版的统一规则：内容直接放在画布上，只有能点的东西才有框。
+ * 一行标题 + 右侧图标操作；列表用细线分行；空状态只留图标、一句话、一个按钮。
+ */
+.pg { display: flex; flex-direction: column; gap: var(--mi-sp-8); width: 100%; max-width: var(--mi-page-max); margin-inline: auto; min-width: 0; }
+.pg-head { display: flex; align-items: center; justify-content: space-between; gap: var(--mi-sp-3); flex-wrap: wrap; min-height: var(--mi-ctl); }
+/* 标题到首块 24，块与块 32：flex gap 取 32，标题行往回收 8 */
+.pg > .pg-head { margin-bottom: calc(var(--mi-sp-6) - var(--mi-sp-8)); }
+#app .claude-app-container main.content .pg-title { margin: 0; font-family: var(--mi-font-serif); font-size: var(--mi-fs-title); font-weight: var(--mi-fw-medium); line-height: var(--mi-lh-title); color: var(--mi-text); }
+.pg-actions { display: flex; align-items: center; gap: var(--mi-sp-2); flex-wrap: wrap; }
+.pg-section { display: flex; flex-direction: column; gap: var(--mi-sp-3); min-width: 0; }
+.pg-section-title { display: flex; align-items: center; gap: var(--mi-sp-2); margin: 0; font-size: var(--mi-fs-section); line-height: var(--mi-lh-title); font-weight: var(--mi-fw-medium); color: var(--mi-text); }
+.pg-count { font-size: var(--mi-fs-caption); font-weight: 400; color: var(--mi-text-3); font-variant-numeric: tabular-nums; }
+
+/* 列表行 */
+.pg-rows { display: flex; flex-direction: column; min-width: 0; }
+.pg-row { display: flex; align-items: center; gap: var(--mi-sp-3); min-height: var(--mi-row-h); padding: var(--mi-sp-2) 0; box-sizing: border-box; border-bottom: 1px solid var(--mi-border); min-width: 0; }
+.pg-row:last-child { border-bottom: 0; }
+.pg-row-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--mi-sp-1); }
+.pg-row-icon { color: var(--mi-text-3); }
+.pg-meta { display: flex; align-items: center; flex-wrap: wrap; gap: var(--mi-sp-1) var(--mi-sp-3); font-size: var(--mi-fs-caption); color: var(--mi-text-3); min-width: 0; }
+.pg-meta-item { display: inline-flex; align-items: center; gap: var(--mi-sp-1); min-width: 0; }
+/* 行内操作平时收起，悬停或键盘聚焦时出现 */
+.pg-row-actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+@media (hover: hover) {
+  .pg-row .pg-row-actions.reveal { opacity: 0; transition: opacity var(--cds-dur-fast, .12s) ease; }
+  .pg-row:hover .pg-row-actions.reveal, .pg-row:focus-within .pg-row-actions.reveal { opacity: 1; }
+}
+
+/* 图标按钮：无框，悬停才有底；必须带 title 和 aria-label */
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: var(--mi-icon-btn); height: var(--mi-icon-btn); padding: 0; border: 0; border-radius: var(--mi-radius-ctl); background: transparent; color: var(--mi-text-2); cursor: pointer; font: var(--mi-fs-label) var(--mi-font-family); }
+.icon-btn:hover:not(:disabled) { background: var(--cds-fill-ghost-hover); color: var(--mi-text); }
+.icon-btn.active { color: var(--mi-blue-deep); }
+.icon-btn.danger:hover:not(:disabled) { color: var(--mi-error-deep); }
+.icon-btn:disabled { opacity: .4; cursor: not-allowed; }
+.icon-btn:focus-visible { outline: 2px solid var(--mi-blue-deep); outline-offset: 1px; }
+
+/* MiButton 只放图标时收成方形 */
+#app .mi-btn.icon-only { width: var(--mi-icon-btn); padding: 0; }
+#app .mi-btn.icon-only.sm { width: var(--mi-ctl-sm); }
+
+/* 筛选小片：图标 + 文字 + 数字 */
+.pg-chips { display: flex; align-items: center; gap: var(--mi-sp-1); flex-wrap: wrap; min-width: 0; }
+.pg-chip { display: inline-flex; align-items: center; gap: var(--mi-sp-2); height: var(--mi-ctl-sm); padding: 0 var(--mi-sp-3); border: 0; border-radius: var(--mi-radius-ctl); background: transparent; color: var(--mi-text-2); font: var(--mi-fs-label) var(--mi-font-family); cursor: pointer; white-space: nowrap; }
+.pg-chip:hover { background: var(--cds-fill-ghost-hover); color: var(--mi-text); }
+.pg-chip.active { background: var(--mi-blue-light); color: var(--mi-text); font-weight: 500; }
+.pg-chip:focus-visible { outline: 2px solid var(--mi-blue-deep); outline-offset: 1px; }
+.pg-chip .pg-count { font-weight: 400; }
+
+/* 带放大镜的搜索框 */
+.pg-search { position: relative; display: flex; align-items: center; flex: 1; min-width: 140px; color: var(--mi-text-3); }
+.pg-search > .mi-icon { position: absolute; left: 10px; pointer-events: none; }
+.pg-search > input { width: 100%; height: var(--mi-ctl); padding: 0 var(--mi-sp-3) 0 32px; box-sizing: border-box; border: 1px solid var(--mi-border); border-radius: var(--mi-radius-ctl); background: var(--mi-bg); color: var(--mi-text); font: var(--mi-fs-label) var(--mi-font-family); outline: none; }
+.pg-search > input:focus { border-color: var(--mi-blue-deep); }
+
+/* 空状态 */
+.pg-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--mi-sp-3); padding: var(--mi-sp-12) var(--mi-sp-4); text-align: center; font-size: var(--mi-fs-label); color: var(--mi-text-3); }
+.pg-empty p { margin: 0; }
+
+/* 一块只有一个主操作的横行工具条 */
+.pg-toolbar { display: flex; align-items: center; justify-content: space-between; gap: var(--mi-sp-3); flex-wrap: wrap; min-height: var(--mi-ctl); }
+
+/* 学习空间里的原生按钮，外观与 MiButton 一致（选择器被回归测试依赖，保留类名） */
+button.mi-btn-primary, button.mi-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: var(--mi-sp-2); flex-shrink: 0; height: var(--mi-ctl); padding: 0 var(--mi-sp-3); border: 0; border-radius: var(--mi-radius-ctl); font: var(--mi-fs-label) var(--mi-font-family); white-space: nowrap; cursor: pointer; user-select: none; }
+button.mi-btn-primary { background: var(--mi-blue-deep); color: var(--mi-btn-primary-text); font-weight: 500; }
+button.mi-btn-primary:hover:not(:disabled) { background: var(--mi-blue-ink); }
+button.mi-btn-secondary { background: var(--cds-fill-secondary); color: var(--mi-text); }
+button.mi-btn-secondary:hover:not(:disabled) { background: var(--cds-fill-secondary-hover); }
+button.mi-btn-primary:disabled, button.mi-btn-secondary:disabled { opacity: .4; cursor: not-allowed; }
+
+/* 提示条 */
+.mi-alert-error, .mi-alert-success { display: flex; align-items: center; justify-content: space-between; gap: var(--mi-sp-2); padding: var(--mi-sp-2) var(--mi-sp-3); border-radius: var(--mi-radius-ctl); font-size: var(--mi-fs-label); word-break: break-word; }
+.mi-alert-error { color: var(--mi-error-deep); background: var(--mi-error-fill); }
+.mi-alert-success { color: var(--mi-success-deep); background: var(--mi-success-fill); }
+.alert-close-btn { display: inline-flex; flex-shrink: 0; padding: 2px; border: 0; background: transparent; color: inherit; cursor: pointer; }
+
+@media (prefers-reduced-motion: reduce) { .pg-row .pg-row-actions.reveal { transition: none; } }
+.remote-note { font-size: var(--mi-fs-label); color: var(--mi-text-3); }

@@ -1,0 +1,39 @@
+{
+  "templateId": "cpp-s2-03-outside-rename",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-03",
+  "type": "codewrite",
+  "concept": [
+    "状态写在类定义外面",
+    "类定义里先打个招呼",
+    "this 改名字"
+  ],
+  "instances": 6,
+  "params": {
+    "oldName": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    },
+    "newName": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 1,
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们想把两招的**状态都写在类定义外面**，省得类定义长得没边。输入接口会递进来**一个数**（一行）：这个对象的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字、`fish` 装一个整数；类定义上写一个**构造函数**（两样都收，用初始化列表装好）；\n2. 类定义里**只报名字**地写下两招（末尾带上分号）：一个方法 `rename`，收一串字；一个方法 `show`，末尾上带 `const`；\n3. 这两招的**状态都写在类定义外面** —— 名字前面记得挂上「这是哪张类定义上的」那一小段。`rename` 的状态里要**指名道姓**地把格子改成传入进来的那个名字；\n4. `main` 里创建一个叫 `{oldName}` 的对象，条数用输入接口递进来的那个数；把它**改名**成 `{newName}`；\n5. 最后调用一次 `show`，印**一行**：`XX 有 N 条`。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分传入的是**另外一个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void rename(string name);\n    void show() const;\n};\n\nvoid Cat::rename(string name) {\n    this->name = name;\n}\n\nvoid Cat::show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    int a = 0;\n    cin >> a;\n\n    Cat c1(\"{oldName}\", a);\n    c1.rename(\"{newName}\");\n    c1.show();\n    return 0;\n}\n",
+  "explanationTemplate": "这一题的重点是**函数住在哪儿**。\n\n类定义里那两行 `void rename(string name);` 和 `void show() const;` **只报名字、不带状态**，末尾的分号也别丢 —— 它是在跟编译器打个招呼：「有这么两招，状态回头再写。」\n\n真正的状态写在类定义外面，**函数名前面必须挂上 `Cat::`**，念作「这是 `Cat` 这张类定义上的」。少了它，编译器就不认识这两招了（它会说 `non-member function`）。\n\n改名那一个方法还有个小机关：输入接口也叫 `name`，和格子同名，所以碰格子必须**指名道姓**写 `this->name` —— 光写 `name` 改的只是输入接口自己，名字一点都不会变，而且**不会报错**。\n\n⚠️ 印那一行的时候，`name` 那两格里保存的是**改过之后**的新名字。"
+}

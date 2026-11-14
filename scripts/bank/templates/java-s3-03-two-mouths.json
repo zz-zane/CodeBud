@@ -1,0 +1,26 @@
+{
+  "templateId": "java-s3-03-two-mouths",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-03",
+  "type": "codefix",
+  "concept": [
+    "一张嘴的约定才挂得上一小截",
+    "约定上写了两件事就挂不上",
+    "翻译源代码时就拦下"
+  ],
+  "instances": 2,
+  "params": {
+    "w": {
+      "kind": "pick",
+      "values": [
+        "",
+        "呜"
+      ]
+    }
+  },
+  "stemTemplate": "我们写了一份**约定**，上面写着两件事要做：先跟人调用一次、再翻个身。\n\n我们想省掉那些客套，只把**要做的第一件事**当场写一小截交出去（本课第二节那种写法）。可翻译源代码的时候就红了，一行都没跑 —— 错误信息说这份约定不认我们这一小截。\n\n你帮我们把这份约定改成**一小截挂得上去**的样子。我们只用得上它要做的第一件事，第二件事从头到尾没人调用过。\n\n改好之后它该印出**一行**：就是我们让它引用的那一次。那一次和印的动作**一个字都别改**。\n\n（这一题**不需要输入**，程序自己就能跑。）",
+  "brokenCodeTemplate": "interface TwoThings {\n    void say();\n\n    void turn();\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        TwoThings t = () -> System.out.println(\"{w}\");\n        t.say();\n    }\n}\n",
+  "referenceFixTemplate": "interface TwoThings {\n    void say();\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        TwoThings t = () -> System.out.println(\"{w}\");\n        t.say();\n    }\n}\n",
+  "explanationTemplate": "lambda 的目标类型必须是函数式接口，即只有一个相关抽象方法契约。两个独立抽象方法不能由单个 lambda 实现；保留实际使用的方法，并按题意删除未使用的方法，或在需要全部方法时使用完整实现类。"
+}

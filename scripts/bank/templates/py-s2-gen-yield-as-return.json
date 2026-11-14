@@ -1,0 +1,40 @@
+{
+  "templateId": "py-s2-gen-yield-as-return",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-10",
+  "type": "codefix",
+  "concept": [
+    "yield",
+    "return",
+    "收摊"
+  ],
+  "instances": 2,
+  "params": {
+    "a": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "小银鱼"
+      ]
+    },
+    "b": {
+      "kind": "pick",
+      "values": [
+        "商品",
+        "鸡肉条"
+      ]
+    },
+    "c": {
+      "kind": "pick",
+      "values": [
+        "商品",
+        "小虾米"
+      ]
+    }
+  },
+  "stemTemplate": "我们想让 `数数据()` 一样一样递出三样东西：`{a}`、`{b}`、`{c}` —— 外面连着印三次 `next`，就该印出三行。\n\n可这一段跑到**第二行**就翻脸了。你帮我们改对。\n\n⚠️ 这三样东西、它们的**先后顺序**、还有那三行 `print(next(it))`，都**不许改**。",
+  "brokenCodeTemplate": "def 数数据():\n    return \"{a}\"\n    yield \"{b}\"\n    yield \"{c}\"\n\n\nit = iter(数数据())\nprint(next(it))\nprint(next(it))\nprint(next(it))\n",
+  "referenceFixTemplate": "def 数数据():\n    yield \"{a}\"\n    yield \"{b}\"\n    yield \"{c}\"\n\n\nit = iter(数数据())\nprint(next(it))\nprint(next(it))\nprint(next(it))\n",
+  "explanationTemplate": "这一处**最容易误判**：第一行印得好好的，翻脸的是第二行，我们会以为「后面两样写坏了」，其实**第一行就把话说完了**。\n\n- 函数里一出现 `yield`，这一个方法就**变了性质**：称呼它的时候它**不马上跑**，而是返回一个「**会下一条的手**」。\n- **每调用一次 `next`，它才从上次停下的地方接着往下跑**，跑到下一个 `yield` 就停住，把 `yield` 后面那一样递出来。\n- `return` 的脾气正好相反：它是「**我们干完收摊，整招就这一回**」。\n\n所以写成 `return \"{a}\"` 的话：第一次 `next` 继续调用，函数一路跑到 `return`，把 `{a}` 递出来的**同时也整招收摊了** —— 后面那两行 `yield` 再也轮不到。第二次再调用 `next`，手上已经没有下一条，只好甩出那个信号 `StopIteration`。\n\n⚠️ 改法就一个字：把 `return` 换成 `yield`。**递一样东西出去，不等于干完收摊** —— 前者是「待会儿还回来接着干」，后者是「就这一回」。\n\n⚠️ 顺带记牢：`StopIteration` 不是程序坏掉，而是这套机制**故意**留的信号，意思就一句「我们这儿没有下一条了」。`for` 之所以能安安静静走完不翻脸，就是因为它**背后悄悄接住了这个信号**。"
+}

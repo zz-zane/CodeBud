@@ -1,0 +1,40 @@
+{
+  "templateId": "py-s3-thread-missing-args",
+  "lang": "python",
+  "stage": 3,
+  "lessonId": "python-stage3-03",
+  "type": "codefix",
+  "concept": [
+    "threading.Thread",
+    "args 传入",
+    "子对象拿不到东西就干不了活"
+  ],
+  "instances": 2,
+  "params": {
+    "n1": {
+      "kind": "pick",
+      "values": [
+        2,
+        6
+      ]
+    },
+    "n2": {
+      "kind": "pick",
+      "values": [
+        3,
+        7
+      ]
+    },
+    "n3": {
+      "kind": "pick",
+      "values": [
+        4,
+        5
+      ]
+    }
+  },
+  "stemTemplate": "我们还是请三个子对象帮忙把三个元素里的数**翻个倍**，写进结果柜里**属于自己**的那一格。\n\n这回更奇怪了：我们这边**退出码还是 `0`**，看着就像跑完了 —— 可屏幕并不干净：印出来的三个数**全是 0**、柜子里一个数都没记上，旁边还挂着**三片错误信息**。你帮我们看看问题出在哪，把它改好。\n\n改好之后，程序应该把三个元素翻倍后的数**各印一行**：先印第一个元素的、再印第二只元素的、最后第三个元素的。",
+  "brokenCodeTemplate": "import threading\n\n元素 = [{n1}, {n2}, {n3}]\n结果 = [0, 0, 0]\n\n\ndef 翻倍(序号, 数):\n    结果[序号] = 数 * 2\n\n\n对象 = []\nfor i in range(3):\n    一个对象 = threading.Thread(target=翻倍)\n    对象.append(一个对象)\n\nfor 一个对象 in 对象:\n    一个对象.start()\n\nfor 一个对象 in 对象:\n    一个对象.join()\n\nfor 一个数 in 结果:\n    print(一个数)\n",
+  "referenceFixTemplate": "import threading\n\n元素 = [{n1}, {n2}, {n3}]\n结果 = [0, 0, 0]\n\n\ndef 翻倍(序号, 数):\n    结果[序号] = 数 * 2\n\n\n对象 = []\nfor i in range(3):\n    一个对象 = threading.Thread(target=翻倍, args=(i, 元素[i]))\n    对象.append(一个对象)\n\nfor 一个对象 in 对象:\n    一个对象.start()\n\nfor 一个对象 in 对象:\n    一个对象.join()\n\nfor 一个数 in 结果:\n    print(一个数)\n",
+  "explanationTemplate": "`Thread` 那行只说了「**叫哪一手活儿来干**」（`target`），可那一手活儿**要用到的东西**得另外**传入**给它 —— 就是 `args`。\n\n我们这次光点了函数的名字，忘了传入：子对象被叫醒之后一伸手，发现手里**空空的**，它自己那一手活儿要两个东西（写哪一格、翻哪个数），一个都没拿到，只好当场撂挑子。\n\n⚠️ 最坑的地方在这儿：它撂挑子是**在它自己那边**发生的 —— 我们这边照常往下走（`join()` 等回来的，是一个「已经结束、其实什么也没干」的对象），柜子里三格还是原来的 `0`，**退出码也还是 `0`**。可它**绝不是「安安静静」**：三个子对象各留下一片错误信息，原话是 `TypeError: 翻倍() missing 2 required positional arguments: '序号' and '数'`，而且它明说了这是**在子对象自己那边**摔的。**看退出码以为一切正常，看屏幕才知道三次全摔了** —— 「跑得起来」和「跑得对」是两件事，这道理在这一课里会一直出现。\n\n顺便记一个特别容易错的写法：`args=(i, 元素[i])` 里最后**那个逗号**不能省。写成 `args=(i)` 的话，它不是「一串里只有一个」，它就**等于** `i` 本身 —— 编译器会说「这根本不是一串东西」，照样传入不进去（我们真试过：`args` 写成一个光秃秃的整数时，子对象一样是空着手被叫醒的）。"
+}

@@ -1,0 +1,34 @@
+{
+  "templateId": "py-s3-sqlite-one-row",
+  "lang": "python",
+  "stage": 3,
+  "lessonId": "python-stage3-08",
+  "type": "codefix",
+  "concept": [
+    "fetchone 只返回一口",
+    "fetchall / 一行一行返回",
+    "SELECT 的结果要全输出"
+  ],
+  "instances": 2,
+  "params": {
+    "x1": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    },
+    "x2": {
+      "kind": "int",
+      "min": 5,
+      "max": 7
+    },
+    "x3": {
+      "kind": "int",
+      "min": 8,
+      "max": 10
+    }
+  },
+  "stemTemplate": "我们的变量中记着三格货。下面这段程序**跑得起来、一个字都不报错**，可它只念了**最上面那一格**就收嘴了 —— 剩下那两格，它一个字都没提。\n\n请你把它修好。修好之后，它要把三格货**从多到少**一格一行全输出，每行的格式是 `名字：N 条`（名字和 N 中间是一个全角冒号）。\n\n⚠️ 开表、记货、盖章、还有摆先后的那句都是好的，别动它们；药只在**念账那两行**里。",
+  "brokenCodeTemplate": "import sqlite3\n\ncon = sqlite3.connect(\"库存.db\")\ncur = con.cursor()\ncur.execute(\"CREATE TABLE 库存 (名字 TEXT, 条数 INTEGER)\")\ncur.executemany(\"INSERT INTO 库存 VALUES (?, ?)\", [(\"原味\", {x1}), (\"海苔味\", {x2}), (\"麻辣味\", {x3})])\ncon.commit()\n\ncur.execute(\"SELECT 名字, 条数 FROM 库存 ORDER BY 条数 DESC\")\n一行 = cur.fetchone()\nprint(一行[0] + \"：\" + str(一行[1]) + \" 条\")\ncon.close()\n",
+  "referenceFixTemplate": "import sqlite3\n\ncon = sqlite3.connect(\"库存.db\")\ncur = con.cursor()\ncur.execute(\"CREATE TABLE 库存 (名字 TEXT, 条数 INTEGER)\")\ncur.executemany(\"INSERT INTO 库存 VALUES (?, ?)\", [(\"原味\", {x1}), (\"海苔味\", {x2}), (\"麻辣味\", {x3})])\ncon.commit()\n\ncur.execute(\"SELECT 名字, 条数 FROM 库存 ORDER BY 条数 DESC\")\nfor 名字, 条数 in cur:\n    print(名字 + \"：\" + str(条数) + \" 条\")\ncon.close()\n",
+  "explanationTemplate": "这道题差的是**「返回一口」和「整盘端走」**。\n\n`cur.fetchone()` 的意思是**只返回一口**：把端出来的最上面那一行递给我们，然后就停在那个位置了。后面两格还乖乖待在盘子里，没人去拿 —— 所以屏幕上只有一行。程序不摔、不响，只是**少念了两行**，这种毛病最容易漏过去。\n\n想全输出，有两条好走的路：\n\n① **一盘端走**：`cur.fetchall()` 把剩下的行一口气全返回，我们再挨个念一遍。它省事，可货多的时候**整套都堆在一个变量里**，占地方。\n② **返回一行、办一行**（我们最常用）：`for 名字, 条数 in cur:` —— 每转一回返回一行，那一行里两格分别接到 `名字` 和 `条数` 两个小变量中，当场念掉。货多货少都不怕，变量里一次只拿一行。\n\n两种写法都对，判分只看屏幕上印出来的字。\n\n⚠️ 顺带记一条：`ORDER BY 条数 DESC` 那句是好的，它管的是**谁先谁后**，别顺手删了 —— 删掉之后行序就没人保证了：今天在你机器上它碰巧按进货的先后给你，换一台机器、换一个版本就未必，而你会以为自己的程序坏了。\n\n⚠️ 还有：`fetchone()` 在**盘子空了**的时候返回的是一样「什么都没有」的东西，再去取它里面的格子会当场摔。所以真要一口一口返回，得先看看返回的是不是空的（比如 `while True:` 里返回一口、空就收手）。"
+}

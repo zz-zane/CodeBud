@@ -1,0 +1,31 @@
+{
+  "templateId": "java-s3-09-no-start",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-09",
+  "type": "codefix",
+  "concept": [
+    "对象画好了没派出去",
+    "少一次 start",
+    "不红不响的静"
+  ],
+  "instances": 2,
+  "params": {
+    "n1": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四"
+      ]
+    },
+    "c1": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    }
+  },
+  "stemTemplate": "我们写了一段派对象的活，跑起来**一个字都不红**，纸上却只有一行：\n\n```text\n家什收好了\n```\n\n那个对象一次没吭。\n\n你帮我们看看**漏了哪一步**，把它补上 —— 补好之后该印出：\n\n```text\n{n1}捞到 {c1} 条\n家什收好了\n```\n\n（这一题**不需要输入**。）",
+  "brokenCodeTemplate": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"{n1}\", {c1});\n\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Cat 一个 = new Cat(\"{n1}\", {c1});\n\n        一个.start();\n        一个.join();\n\n        System.out.println(\"家什收好了\");\n    }\n}\n\nclass Cat extends Thread {\n    String 名字;\n    int 条数;\n\n    Cat(String 名字, int 条数) {\n        this.名字 = 名字;\n        this.条数 = 条数;\n    }\n\n    public void run() {\n        System.out.println(名字 + \"捞到 \" + 条数 + \" 条\");\n    }\n}\n",
+  "explanationTemplate": "**一、对象没出去，是少了一次 `start()`。** `new Cat(...)` 只是「照类定义画出一个对象」，它还站在原地；`一个.start()` 才是「派它出去开跑」。少了这一次，那段活**一辈子没人干** —— 而且一个字都不红。\n\n**二、`join()` 也拦不住这件事。** `join()` 是「站门口等它干完」：对象压根没出去，等到的自然是「它早就没在跑了」，于是直接往下走 —— 我们这一等白等了。\n\n**三、补上的这一步要摆在 `join()` 前面。** 先派出去、再等它回来；颠倒过来就是另一种白等。\n\n**四、这一处跟「直接调用 `run()`」正好配成一对。** 调用 `run()` 是「活干了、没派对象」；这里是「对象画好了、没派」。两处都**不红不响**，只有看印出来的东西才认得出来 —— 所以这两句写完，先低头看一眼输出。"
+}

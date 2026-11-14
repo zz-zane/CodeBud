@@ -1,0 +1,33 @@
+{
+  "templateId": "cpp-s2-10-virtual-two-yells",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-10",
+  "type": "codewrite",
+  "concept": [
+    "一次处理各对象各样",
+    "名称上写对象",
+    "老类定义那一手挂 virtual"
+  ],
+  "instances": 6,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 1,
+    "min": 2,
+    "max": 9
+  },
+  "stemTemplate": "我们要看清一件事：**同一个学生甲，用两种名字调用，结果一不一样**。输入接口会递进来**一个数**（这个对象记录了多少条）。\n\n请你这么办：\n\n1. **画老类定义** `Cat`：一栏够得着的那一档的 `name`（一串字），一个构造函数；再画一个方法 `speak`，印一行 `X：`。这一手要让子类定义能改写它，所以**要挂上那个三个字母的招牌**。\n2. **让学生甲类定义照它画下来**：叫 `OrangeCat`，自己添一栏 `fish`（一个整数，构造函数里一并填上）；把 `speak` **改写成自己的版本**，印一行 `X：我们是学生甲，处理了 N 条，！`。改写那一手请挂上护身符 `override`。\n3. 在 `main` 里：读进那个数 → 创建一个学生甲 → **拿一张写着「对象」的名称指向它**（用「不必还的名字」那种写法）→ **先顺着名称调用一次、再用学生甲自己的名字调用一次**，两声前面各印一句前缀：\n\n```text\n名称写「对象」，输出：<台词>\n写「学生甲」的名字，输出：<台词>\n```\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n**两行会一模一样** —— 那正是我们要的效果：名称写的是谁不重要，继续调用的那一刻看的是**屋里住的是谁**。\n\n（判分传入的是**另一个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\nprotected:\n    string name;\npublic:\n    Cat(string n) : name(n) {}\n    virtual void speak() const {\n        cout << name << \"：\" << endl;\n    }\n};\n\nclass OrangeCat : public Cat {\n    int fish;\npublic:\n    OrangeCat(string n, int f) : Cat(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：我们是学生甲，处理了 \" << fish << \" 条，！\" << endl;\n    }\n};\n\nint main() {\n    int f = 0;\n    cin >> f;\n\n    OrangeCat o(\"{name}\", f);\n    Cat& r = o;\n    cout << \"名称写「对象」，输出：\";\n    r.speak();\n    cout << \"写「学生甲」的名字，输出：\";\n    o.speak();\n    return 0;\n}\n",
+  "explanationTemplate": "我们在本机跑过这一题（传入 4 时），屏幕上两行是：\n\n```text\n名称写「对象」，输出：张三：我们是学生甲，处理了 4 条，！\n写「学生甲」的名字，输出：张三：我们是学生甲，处理了 4 条，！\n```\n\n**两行一模一样**，这就是本课要的效果：我们手里那张名称上写的是「对象」，可它指向的是学生甲 —— 继续调用的那一刻，程序低头看了一眼**屋里住的是谁**，于是跑了学生甲那一版。\n\n两根关键线各说一句：\n\n1. **`virtual` 挂在老类定义那一手的开头**（`virtual void speak() const`）。它说的是「**这一手后续课程将进一步说明。着定死，等真跑起来再看手里到底是哪个对象**」。\n2. **改写的那一份请挂 `override`**。它是护身符：名字、料、`const` 要和老类定义**一字不差**，差一个字就变成「另外长了一手新的」而不是改写 —— 挂着 `override` 的时候，编译器会当场把这种错拦下来。\n\n⚠️ 三件容易摔的事，我们替你钉住：\n\n- **只有老类定义那一手需要挂 `virtual`。** 子类定义改写出来的那份**自动也是「会看屋里住的是谁」的**，不用再挂。往子对象那一手上挂、老类定义不挂，是不管用的。\n- **挂 `virtual` 的那一手不能是 `private`。** 子类定义得看得见它，才谈得上改写 —— 所以老类定义那一格挂的是「照着画的类定义也够得着」的那一档。\n- **只有顺着名称（或「不必还的名字」）调用，才会回头看一眼屋里住的是谁。** 手里拿着一个实打实的实例（像 `o.speak()`），那本来就是它自己那一版，跟 `virtual` 没关系 —— 所以这一题两行都是学生甲版，不是因为第二行也「回头看了一眼屋里住的是谁」，而是因为它本来就是学生甲。"
+}

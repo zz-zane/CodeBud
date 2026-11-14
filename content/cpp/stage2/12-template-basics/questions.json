@@ -1,0 +1,103 @@
+{
+  "lessonId": "cpp-stage2-12",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "类定义最上面那一行 `template <typename T>`，它在跟编译器说什么？",
+      "options": [
+        "这张类定义上**留了一个空位**、代号叫 `T` —— 这一款到底是什么，留给塞料的人定",
+        "把这张类定义的名字改叫 `T`",
+        "告诉编译器这一段先别看、直接跳过去",
+        "让这张类定义只能给整数用"
+      ],
+      "answer": 0,
+      "explanation": "那一行是**立空位**的：它说「这张类定义上有一个位子空着，代号 `T`」。`T` 到底是整数、小数还是字符串，我们不写死 —— 塞料的时候才定。所以同一个类定义能裁出好几款：塞整数裁整数版、塞小数裁小数版。**空位是它可以「量体裁衣」的根子**，也是我们少画好几张类定义的原因。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们写了一张加法类定义，然后调用了一句 `add(1, 2.5)`。编译器的原话是哪一句？",
+      "options": [
+        "`error: no matching function for call to 'add(int, double)'`",
+        "`error: 'T' does not name a type`",
+        "`error: call of overloaded 'add(int&, double&)' is ambiguous`",
+        "`error: cannot declare variable 'a' to be of abstract type 'add'`"
+      ],
+      "answer": 0,
+      "explanation": "编译器的原话是 `error: no matching function for call to 'add(int, double)'` —— 念作：「**这一次 `add` 要的是同一种料，可你一手递整数、一手递小数，我们不知道那个空位该裁成哪一款。**」后面还会跟一串 `candidate` 和 `template argument deduction/substitution failed`，说的都是同一件事：照这张类定义裁不出这么一个版本。修法两条：把料凑成同一款（`add(1.0, 2.5)`），或者我们自己点名（`add<double>(1, 2.5)`）。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们这辈子只给整数比大小，**一款料**。这时候该不该画一张留空位的类定义？",
+      "options": [
+        "不用画 —— 直接写死整数那一款更好读；多一层空位反而让读的人多绕一圈",
+        "一定要画，类定义越多越显得专业",
+        "必须画，不然编译器不给跑",
+        "整数塞不进留空位的类定义里"
+      ],
+      "answer": 0,
+      "explanation": "**留空位是为了「好几款料共用一套动作」这件事。** 只有一款料的话，空位就没活干了：我们多写一行立空位、读的人多看一层，谁也白得不着。这时候直接写死那一款，反而最短最好读。留空位的类定义该上场的时候只有一个：**同一套动作，料有好几款** —— 比大小、换位、挑最大的，都是它的主场。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\n____\nT bigger(T a, T b) {\n    return a > b ? a : b;\n}\n\nint main() {\n    cout << bigger(3, 5) << endl;\n    return 0;\n}",
+      "stem": "我们这张比大小的类定义上，**立空位的那一行被挖掉了**（用 `____` 标出）。补上之后，这一次 `bigger(3, 5)` 才调用得动。",
+      "blanks": [
+        {
+          "answer": "template <typename T>",
+          "accept": [
+            "template<typename T>",
+            "template <class T>"
+          ]
+        }
+      ],
+      "explanation": "补的是 `template <typename T>` 这一行 —— **先立空位，再定义类**。不补它，编译器看到的是「`T` 这个名字我们没见过」，它报的原话就是 `error: 'T' does not name a type`；紧接着还会报一句这一次调用不着了。补上之后，类定义上就有了一个代号 `T` 的空位，`bigger(3, 5)` 塞进去的是两个整数，编译器自己就把它裁成整数那一版。"
+    },
+    {
+      "id": "q5",
+      "type": "codefill",
+      "lang": "cpp",
+      "code": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nvoid swap2(____) {\n    T t = a;\n    a = b;\n    b = t;\n}\n\nint main() {\n    int x = 3;\n    int y = 5;\n    swap2(x, y);\n    cout << x << \" \" << y << endl;\n    return 0;\n}",
+      "stem": "这张「换个个儿」的类定义，我们把**两个塞料的写法整段挖掉**了（用 `____` 标出）。补上之后，屏幕上要出现 `5 3` —— 真身真的被换过来那种。",
+      "blanks": [
+        {
+          "answer": "T& a, T& b",
+          "accept": [
+            "T &a, T &b",
+            "T&a, T&b"
+          ]
+        }
+      ],
+      "explanation": "补的是 `T& a, T& b` —— **那个 `&` 一个都不能漏**。漏了它写成 `T a, T b`，我们在本机真跑过：程序照样跑完、编译器一个错都不报，可屏幕上印出来的是 `3 5` —— **换了个寂寞**，因为类定义里换的是照料的样子又抄的两份，`x` 和 `y` 这两个真身从头到尾没被人碰过。补上 `&` 之后，屏幕上才是 `5 3` 。留空位的只是「料的款式」，这件事跟空位没关系 —— 上一课的规矩照样管用。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nT bigger(T a, T b) {\n    return a > b ? a : b;\n}\n\nint main() {\n    cout << bigger(9, 4) << endl;\n    cout << bigger(1.5, 1.25) << endl;\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "9\n1.5",
+      "accept": [
+        "9\n1.5\n"
+      ],
+      "explanation": "两次输出用的**是同一个类定义**，我们一次都没说那个空位是谁：第一次塞进去两个整数，编译器按料裁成整数版，印出 `9`；第二声塞进去两个小数，同一个类定义又裁成小数版，印出 `1.5` 。**一段动作，两款料，两个答案** —— 这就是留空位那张类定义最值钱的地方。"
+    },
+    {
+      "id": "q7",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nT bigger(T a, T b) {\n    return a > b ? a : b;\n}\n\nint main() {\n    cout << bigger<int>(1.5, 2.5) << endl;\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "2",
+      "accept": [
+        "2\n"
+      ],
+      "explanation": "这一次我们**自己点了名**：尖括号里写着整数，所以 `1.5` 和 `2.5` 都被**悄悄改成整数**才传入 —— 一个 `1`、一个 `2`，比出来是 `2`，屏幕上就是 `2` 。**这一路一个错都不报、一个警告都没有**：我们一点名，编译器就照着点名那一款把料硬塞进去，不再替我们核实料对不对了。要是我们不点名、让它按料自己猜，塞两个小数进去本来能裁出小数那一版；可我们说了算的款是整数，那 `2.5` 就白丢了。"
+    }
+  ]
+}

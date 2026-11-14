@@ -1,0 +1,24 @@
+{
+  "templateId": "c-s2-rec-declared-after-main",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-11",
+  "type": "codefix",
+  "concept": [
+    "先打招呼",
+    "函数写在main后面",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    }
+  },
+  "stemTemplate": "我们写了个递归调用的函数 `sum`：算 1 加到 {n} 的和，`main` 里把它印出来。跑出来应当是 `{n} 之前的和是 <算出来的数>`。\n\n可编译器把整段代码退了回来，还说了一句 `sum` 没见过。**这个函数明明是写了的呀** —— 你帮我们看看它到底卡在哪一步，把它改好（别去改函数里面，函数本身是好的）。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nint main(void) {\n    printf(\"{n} 之前的和是 %d\\n\", sum({n}));\n    return 0;\n}\n\nint sum(int n) {\n    if (n == 0) {\n        return 0;\n    }\n    return n + sum(n - 1);\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nint sum(int n) {\n    if (n == 0) {\n        return 0;\n    }\n    return n + sum(n - 1);\n}\n\nint main(void) {\n    printf(\"{n} 之前的和是 %d\\n\", sum({n}));\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: implicit declaration of function 'sum' [-Wimplicit-function-declaration]` —— 翻过来就是「**`sum` 这个函数我们没见过就先用上了**」。\n\n为什么会这样？因为编译器是**从上往下读**的。它读到 `main` 里那句 `sum({n})` 的时候，`sum` 那一整段还写在下面呢 —— 在它眼里，这个名字到此刻为止根本没出现过。\n\n**注意它卡的不是「自己调用自身」那一步。** 函数在自己的身体里调用自身，那个名字在函数头上就登记过了，一点都不算没见过。它卡的只是 `main` 称呼它的**这一次**。所以本课要分清两件事：**「能不能调用自身」和「先打过招呼」，是两回事。**\n\n改法很朴素：**把整个函数搬到 `main` 前面去**（我们就是这么改的）。另一种同样好的写法是在 `main` 前面先写一行「招牌」——只报名字和形状、不带身体，比如 `int sum(int n);`，那样函数本身留在后面也认得。\n\n这条规矩在写递归函数时格外容易踩到：因为它体量大、我们常常顺手就写在后面了。**写之前先在纸上摆好顺序：先函数、后 `main`。**"
+}

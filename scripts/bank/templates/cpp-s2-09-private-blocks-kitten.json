@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s2-09-private-blocks-kitten",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-09",
+  "type": "codefix",
+  "concept": [
+    "老类定义扣盖子的格子",
+    "照着画的类定义也够不着",
+    "报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "fish": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    },
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们的老类定义上有一格数据数，扣着盖子；子类定义照着它画下来，自己添了一手「处理一条」，里面直接去动那一格。\n\n编译器说子对象够不着。\n\n你帮我们改到能跑起来（{name} 一开始有 {fish} 条，处理完成一条印出现在几条）。**子对象那一段的写法是对的，别在那里绕圈子 —— 要动的是老类定义上那一格的身份。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n};\n\nclass Kitten : public Cat {\npublic:\n    Kitten(string n, int f) : Cat(n, f) {}\n    void eat() {\n        fish = fish + 1;\n        cout << \"处理了一条，现在 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    Kitten k(\"{name}\", {fish});\n    k.eat();\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\nprotected:\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n};\n\nclass Kitten : public Cat {\npublic:\n    Kitten(string n, int f) : Cat(n, f) {}\n    void eat() {\n        fish = fish + 1;\n        cout << \"处理了一条，现在 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    Kitten k(\"{name}\", {fish});\n    k.eat();\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:16:9: error: 'int Cat::fish' is private within this context`\n\n用自然语言解释：**「私有，你现在站的这个地方够不着。」** 这里要说清一件反直觉的事：**子类定义不是老类定义自己。** 老类定义扣上盖子的格子，**连亲生孩子都碰不得**。\n\n三种盖子的老规矩摆出来对一下：\n\n| 标签 | 谁够得着 |\n|---|---|\n| `private:` | **只有类定义自己的函数**够得着 |\n| `protected:` | 类定义自己的函数 + **照着它画下来的新类定义**够得着 |\n| `public:` | 谁都够得着 |\n\n所以改法就是**把那一格从 `private:` 挪到 `protected:`** —— 这正是 `protected` 存在的理由：它管的正是「**基类自己 + 照着画的类定义**」这一对，而外面的 `main` 仍然够不着（这一点很重要，盖子没白扣）。\n\n另一条同样能跑的改法：**老类定义提供一个公开函数替子对象动手**（比如老类定义里添一个方法 `feedOne`，里面那句就是 `fish = fish + 1;`），子对象那一手去称呼它。这条路保住了「谁都不能直接碰那一格」，只是在老类定义里多写一手。两条路都对，我们这里挑了最省的 `protected`。\n\n⚠️ 顺手记一条边界：**别把老类定义的格子一股脑全改成 `protected:`。** 老类定义扣盖子的用意还在 —— 只有「照着画的类定义确实要用」的那几格才该挪。"
+}

@@ -1,0 +1,35 @@
+{
+  "templateId": "c-s2-struct-total-overwrite",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-05",
+  "type": "codefix",
+  "concept": [
+    "结构体数组",
+    "点号",
+    "累加写成覆盖",
+    "跑得起来但结果错"
+  ],
+  "instances": 2,
+  "params": {
+    "f1": {
+      "kind": "int",
+      "min": 1,
+      "max": 3
+    },
+    "f2": {
+      "kind": "int",
+      "min": 4,
+      "max": 6
+    },
+    "f3": {
+      "kind": "int",
+      "min": 7,
+      "max": 9
+    }
+  },
+  "stemTemplate": "我们摆了**一排三个对象**，名字分别是张三、李四、计算机，今天的食量依次是 {f1}、{f2}、{f3}。\n\n程序要把这三个对象一个一个报出来（格式 `名字 处理了 几条 条`），最后再报一行总数 `一共 几条 条`。\n\n前面三行都对，最后那行总数不对 —— 编译器一次没吭，代码照样跑完了。你帮我们看看是哪儿写歪了。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[3] = {\n        {\"张三\", {f1}},\n        {\"李四\", {f2}},\n        {\"计算机\", {f3}}\n    };\n    int total = 0;\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s 处理了 %d 条\\n\", cats[i].name, cats[i].fish);\n        total = cats[i].fish;\n    }\n    printf(\"一共 %d 条\\n\", total);\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[3] = {\n        {\"张三\", {f1}},\n        {\"李四\", {f2}},\n        {\"计算机\", {f3}}\n    };\n    int total = 0;\n\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s 处理了 %d 条\\n\", cats[i].name, cats[i].fish);\n        total = total + cats[i].fish;\n    }\n    printf(\"一共 %d 条\\n\", total);\n    return 0;\n}\n",
+  "explanationTemplate": "错的就一个等号。\n\n- 写 `total = cats[i].fish;` 的意思是「**把 `total` 换成**这一个对象的食量」—— 每走一个，前一个的账就被盖掉了。三趟走完，`total` 里只剩**最后一个**的 {f3}。\n- 要的是 `total = total + cats[i].fish;` —— 「**把这一个的食量加到 `total` 里**」。等号右边先用旧的 `total` 加上这一个，算完了再存回 `total`。三趟走完才是 {f1} + {f2} + {f3}。\n\n**「算总账」和「记最后一笔」长得只差一个 `total +`，结果差一整排元素**，这一课往后每道题都会用到，收下。\n\n⚠️ 这种错编译器是**不会出声**的：`total = cats[i].fish;` 语法上一点毛病都没有，它看不出你心里的意思是「累加」。我们真跑过这一版，`-Wall` 开着，一个字都没说，程序跑得顺顺当当、前三行全对 —— 只有最后那行悄悄错了。\n\n顺带认一认本课的两个记号：`cats[i]` 先挑出**第 i 个对象**（一个实例），再用**点号**进它的 `name` 或者 `fish` 格。`cats` 是一排对象的名字，所以 `cats[i].name` 读作「第 i 个对象的名字」——先挑对象、再进格，这个顺序别弄反。"
+}

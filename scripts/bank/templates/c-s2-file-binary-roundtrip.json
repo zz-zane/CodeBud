@@ -1,0 +1,31 @@
+{
+  "templateId": "c-s2-file-binary-roundtrip",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-13",
+  "type": "codewrite",
+  "concept": [
+    "fwrite",
+    "fread",
+    "原样搬元素",
+    "打开方式带b"
+  ],
+  "instances": 6,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 4
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": "{n}",
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "前面那些函数写的都是**给人看的字**。这一道要搬的是**一整排元素里装的东西**：原样存进去、原样取回来。\n\n请你写一段程序，按这个顺序做：\n\n1. 准备好一排刚好 n 只的元素，把 n 个数从键盘上读进来（一行一个）；\n2. 以**原样搬**的方式拉开一本叫 `dangan.bin` 的册子（打开方式别忘了那个表示「原样搬」的字母）；拉不开就印一行 `打不开` 收工；\n3. 用「整排元素原样搬」那招把这排元素搬进册子，关上抽屉；\n4. 另准备一排同样大小的元素、**先都填成 0**；再以原样读的方式拉开册子，拉不开就印一行 `读不到` 收工；\n5. 读回来的时候，那一个方法**会返回一个数**：这一趟真搬到了几个 —— 把它印成一行 `读回来 <几> 个数`；\n6. 最后把这排元素里的数**一行一个**印出来。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+  "starterTemplate": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nint main(void) {\n    int bowl[{n}];\n\n    for (int i = 0; i < {n}; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    FILE *fp = fopen(\"dangan.bin\", \"wb\");\n    if (fp == NULL) {\n        printf(\"打不开\\n\");\n        return 0;\n    }\n    fwrite(bowl, sizeof(int), {n}, fp);\n    fclose(fp);\n\n    int back[{n}];\n    for (int i = 0; i < {n}; i++) {\n        back[i] = 0;\n    }\n\n    fp = fopen(\"dangan.bin\", \"rb\");\n    if (fp == NULL) {\n        printf(\"读不到\\n\");\n        return 0;\n    }\n    int got = (int)fread(back, sizeof(int), {n}, fp);\n    fclose(fp);\n\n    printf(\"读回来 %d 个数\\n\", got);\n    for (int i = 0; i < {n}; i++) {\n        printf(\"%d\\n\", back[i]);\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "搬整排元素的四样传入，一个都不能少：\n\n| 传入 | 是什么 |\n|---|---|\n| `bowl` | **从哪儿搬**（那一排元素） |\n| `sizeof(int)` | **每个元素多大** |\n| `{n}` | **搬几个** |\n| `fp` | **搬到哪本册子上** |\n\n`fread` 是反着来的一套，四样传入一个不多一个不少。**它返回的是一个数：这一趟真搬到了几个** —— 我们把它印出来，正是因为它是「搬成功了没有」的凭据。搬回来几个元素，它就报几。\n\n**那个 `b` 是什么意思？** 打开方式后面多一个 `b`（`\"wb\"`、`\"rb\"`），意思是「**这是原样搬的，不是给对象看的字**」，所以叫**二进制**。要是用 `\"w\"` 打开一本二进制册子、再拿记事本去看，你会看到一堆莫名其妙的符号 —— 那很正常：**那本册子本来就不是写给眼睛看的。**\n\n**为什么这排元素要先填成 0？** 这是个保险动作：万一册子只搬回来一部分（比如写的时候只写了两个），剩下那些元素里是什么就说不清了。先填 0，读回来一看便知。当然我们这道题写几个就搬几个，`got` 报的一定是 {n}。\n\n**它和 `fprintf` 那一族的分工**，一句话记牢：\n\n- **写给眼睛看的**（账本、名单）用 `fprintf` + `fgets` —— 一行一行，人能读；\n- **原样搬元素里的东西**用 `fwrite` + `fread` —— 打开方式记得带 `b`。\n\n（还有个老规矩：这一家子 `FILE`、`fopen`、`fwrite`、`fclose` 全都住在 `stdio.h` 家里，文件头上那一行 `#include` 不能缺。）"
+}

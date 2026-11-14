@@ -1,0 +1,32 @@
+{
+  "templateId": "py-s2-dunder-bowl-str-add",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-08",
+  "type": "codewrite",
+  "concept": [
+    "__str__",
+    "__add__",
+    "新元素"
+  ],
+  "instances": 6,
+  "params": {
+    "unit": {
+      "kind": "pick",
+      "values": [
+        "条数据",
+        "颗商品",
+        "块商品"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 2,
+    "min": 2,
+    "max": 9
+  },
+  "stemTemplate": "我们想要一个元素，还得给这个元素两种本事：\n\n1. `print(元素)` 的时候，印出来长这样：`保存了 3 {unit}`（「保存了」后面一个空格，数字和量词之间一个空格）。\n2. 两个元素用 `+` 加起来的时候，得到的是一个**新元素**，里面保存两个元素**合起来**的数。\n\n请你画好这张类定义，然后**读两行整数**（一行一个，先读到的是 `a`，后读到的是 `b`），分别拿来造两个元素，最后**印两行**：\n\n1. 第一个元素被 `print` 出来的样子\n2. 两个元素 `+` 起来并成的那个**新元素**被 `print` 出来的样子\n\n比如输入是\n\n{sampleInput}\n\n就要输出\n\n{sampleOutput}\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+  "referenceSolutionTemplate": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" {unit}\"\n\n    def __add__(self, other):\n        return Bowl(self.n + other.n)\n\n\na = Bowl(int(input()))\nb = Bowl(int(input()))\nprint(a)\nprint(a + b)\n",
+  "explanationTemplate": "这是**两个手同时开工**的一个类定义，两招各管一个时刻。\n\n- **`__str__` 的时刻**：`print(元素)` 的时候。Python 先悄悄调用一遍 `元素.__str__()`，**拿它返回的那句话**去印。所以这一个方法要 `return` 一句话，**不是自己 `print`** —— 只印不返回的话，Python 拿不到话，当场翻脸。\n- **`__add__` 的时刻**：`+` 的**左边**摆着这个元素的时候。我们写 `a + b`，Python 背地里引用的是 `a.__add__(b)`：`self` 是左边那个，`other` 是右边那个。\n\n⚠️ **`__add__` 返回的是一个新元素** —— 所以最后 `return` 的那一句是 `Bowl(self.n + other.n)`，把两边的数加起来，**再造一个新的**。原来那两个一点没变，好好的。想让 `a` 自己也变，得自己写 `a = a + b` 重新接住。\n\n⚠️ **`print(a + b)` 能印出「保存了…」，是我们写的两招接力跑的结果**：`+` 先调用 `__add__` 拿到新元素，`print` 再调用新元素的 `__str__` 拿话去印。一句话没写对，最后印出来的就不是我们要的样子。\n\n⚠️ 还有一件小事很扎眼：数字要接在话后面，必须自己用 `str(self.n)` 把它变成字，两段之间那个空格也得自己补 —— 少了它，印出来会挨在一起。"
+}

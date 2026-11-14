@@ -1,0 +1,98 @@
+{
+  "lessonId": "common-29",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们在 `Game` 这张类定义里写了一行 `static int plays = 0;` —— 「一共开过几局」就记在它身上。这一份数是挂在谁身上的？",
+      "options": [
+        "挂在整张类定义上：不管生了几局，全院共用这一份",
+        "挂在最先初始化的那一局身上：谁先来就归谁",
+        "每一局各挂一份，各记各的",
+        "谁也不挂：它就是块临时砖，跑完就没"
+      ],
+      "answer": 0,
+      "explanation": "「静态成员」就是**静态成员**的意思 —— 它不属于任何一局，属于整张类定义；读它写它都拿类定义名（`Game.plays`）。要是每局各挂一份，那「一共开过几局」就永远数不对：谁去数，数出来的都只是自己那一份。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们写了两句：`Game.plays` 和 `game.fish`。这两句分别是拿什么名字去念的？",
+      "options": [
+        "`Game.plays` 拿类定义名念，念的是类定义上那一份；`game.fish` 拿实例名念，念的是这一局自己的账",
+        "两句都是拿实例名念，只是写法长短不一样",
+        "`Game.plays` 拿实例名念，`game.fish` 拿类定义名念",
+        "两句都是拿类定义名念，`game` 只是个凑巧的名字"
+      ],
+      "answer": 0,
+      "explanation": "大小写不是随便打的：`Game` 那张类定义上的东西拿类定义名念（Java 写 `Game.plays`、C++ 写 `Game::plays`），每一局自己带的那一份拿实例名念（`game.fish`）。这两句打在**两个不同的东西**上 —— 少看一眼大小写，意思就跑到对面去了。"
+    },
+    {
+      "id": "q3",
+      "type": "fill",
+      "stem": "术语表里的说法：**静态成员**叫静态成员；**实例成员**叫____成员。（两个字）",
+      "answer": "实例",
+      "accept": [
+        "实例"
+      ],
+      "explanation": "空白填**实例**：「实例成员」叫**实例成员**。根据类创建出来的每一个，就是一个**实例** —— 名字、这一局的账跟着实例走；计数器、常量这种画在类定义上的，才加 `static`。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "java",
+      "code": "class Game {\n    ____ int plays = 0;              // 一共开过几次，画在类定义上\n\n    void play(int got) {\n        plays = plays + 1;           // 每跑一次，类定义上那份加一\n        System.out.println(\"抓到 \" + got + \" 条\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Game a = new Game();\n        Game b = new Game();\n        a.play(2);\n        b.play(5);\n        System.out.println(____.plays);\n    }\n}",
+      "stem": "两处挖空了：①让 `plays` 画在类定义上；②念类定义上那一份的时候，前面站谁的名字。补齐之后，最后一行会印出 `2` 。",
+      "blanks": [
+        {
+          "answer": "static",
+          "accept": []
+        },
+        {
+          "answer": "Game",
+          "accept": []
+        }
+      ],
+      "explanation": "第一空填 `static`：`plays` 是「一共」的数 —— 不属于任何一局，该画在类定义上，两局才共数同一份。第二空填类定义名 `Game`：共用的那份一律拿类定义名念（`Game.plays`），读代码的人一眼就知道「这不是哪一局自己的东西」。跑一遍看看：`a.play(2)` 加到 1、`b.play(5)` 又加到 2 —— 两个不同的真游戏动的是**同一份**，所以是 2。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "java",
+      "code": "class Cat {\n    String name;\n    static int count = 0;\n\n    Cat(String name) {\n        this.name = name;\n        count = count + 1;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat(\"张三\");\n        Cat b = new Cat(\"李四\");\n        System.out.println(a.name + \" \" + b.name + \" \" + Cat.count);\n    }\n}",
+      "stem": "同一个类，我们连调用了两声 `new`。这段代码的输出是什么？",
+      "answer": "张三 李四 2",
+      "accept": [
+        "张三 李四 2\n"
+      ],
+      "explanation": "照同一个类定义连调用两声 `new`，张三、李四两个各站起来一个，各带各的名字 —— 一个类能造几个对象？想造几个造几个。`count` 不一样：它画在类定义上（`static`），每创建一个都去**同一份**上加一，生了两个所以是 2。两个数的来路分清：名字拿实例名念，`count` 拿类定义名念。"
+    },
+    {
+      "id": "q6",
+      "type": "choice",
+      "stem": "我们写了一个 all-static 的类：账 `static int fish`、抓一圈 `static void play(...)`、跑整局 `static void run(...)`，main 里从头到尾称呼它们，一局都没 `new` 过。按本课的判据句，下面哪一句判得对？",
+      "options": [
+        "`fish`、`play`、`run` 三处都该改回实例成员 —— 它们是「一局自己的活」，该跟着每一局走；只剩入口（`main`）留 `static`",
+        "全都不该改：能跑的程序就是好程序",
+        "只有 `fish` 该改，函数留在类级别更省事",
+        "`main` 也该改成实例成员，跟着 `new` 出来的对象走"
+      ],
+      "answer": 0,
+      "explanation": "fish、play、run若表示某一局的状态与操作，应作为实例成员，让不同Game对象分别保存各自的状态。传统静态main入口负责创建Game实例并调用run。static适合类级别共享的数据或不依赖实例状态的操作；能否运行不是判断成员是否应静态的唯一依据。"
+    },
+    {
+      "id": "q7",
+      "type": "choice",
+      "stem": "我们在类定义的函数里碰了某个实例自己的格子，编译器或解释器当场拦下：`non-static variable fish cannot be referenced from a static context`。按本课立下的规矩，正解是什么？",
+      "options": [
+        "把这一个方法也交还给实例：去掉函数的 `static`，先 `new` 一个、再拿实例名称呼它 —— 错的是「这招站在没有对象的地方」，不是「格子没加 static」",
+        "给 `fish` 补上 `static`，编译能过就行",
+        "在这招里再 `new` 一个新的，用新的那个的格子凑合",
+        "把 `main` 那一行的 `static` 删掉"
+      ],
+      "answer": 0,
+      "explanation": "编译器或解释器那句话翻过来是：「你现在站的这招旁边没有实例，够不着人家的格子」。错在**这活站错了地方** —— 它本来就是「一局自己的活」，正解是把函数也交还给实例（去掉 `static`、拿实例名调用）。给 `fish` 贴 `static` 是让所有实例共用一本账，编译是过了，数却全乱了 —— 「编译不过」不是加 `static` 的信号。「在这招里再 `new` 一个新的，用新的那个的格子凑合」更离谱：账算到新对象头上，原来那个白抓。「把 `main` 那一行的 `static` 删掉」更不行：程序不再满足本例所用的传统Java入口签名。"
+    }
+  ]
+}

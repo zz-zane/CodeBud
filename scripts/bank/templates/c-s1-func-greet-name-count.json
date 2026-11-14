@@ -1,0 +1,45 @@
+{
+  "templateId": "c-s1-func-greet-name-count",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-12",
+  "type": "codewrite",
+  "concept": [
+    "函数头",
+    "参数",
+    "char数组元素",
+    "调用两次"
+  ],
+  "instances": 6,
+  "params": {
+    "name1": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "三花"
+      ]
+    },
+    "count1": {
+      "kind": "int",
+      "min": 1,
+      "max": 3
+    },
+    "name2": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    },
+    "count2": {
+      "kind": "int",
+      "min": 4,
+      "max": 6
+    }
+  },
+  "stemTemplate": "我们要给两个对象发今天的数据。\n\n请你写个程序：先写一个方法 `greet`，传入进去**一个对象的名字**（一串字）和**今天发几条数据**（整数），它就印一行，样子是「名字、`，今天有 `、条数、` 条数据`」。\n\n然后在 `main` 里调用**两次**：第一次传入 `{name1}` 和 `{count1}`，第二次传入 `{name2}` 和 `{count2}`。\n\n程序跑完应该返回两行。",
+  "starterTemplate": "#include <stdio.h>\n\n// 在这里登记 greet 这一个方法\n\nint main(void) {\n    // 调用两次\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nvoid greet(char name[], int count) {\n    printf(\"%s，今天有 %d 条数据\\n\", name, count);\n}\n\nint main(void) {\n    greet(\"{name1}\", {count1});\n    greet(\"{name2}\", {count2});\n    return 0;\n}\n",
+  "explanationTemplate": "函数头从左往右读三件事：**最前面那个词**（这招返回什么回来，`void` 就是不返回东西）、**名字**、**括号里摆的元素**。\n\n括号里摆了**两个**元素，称呼它的时候就得传入**两样**、并且**按顺序一一对应**：第一位传给第一个元素，第二位传给第二只元素。所以 `greet(\"{name1}\", {count1})` 里，`\"{name1}\"` 落进 `name`、`{count1}` 落进 `count`。\n\n还有 C 的硬规矩：**每摆一个元素，都要在元素前面写清楚它装什么类型。**\n\n- `char name[]` —— 收到的是**一串字**（方括号里空着，意思是「长度交给调用我的人定」）；\n- `int count` —— 收到的是**一个整数**。\n\n一个都不能省，省了编译器当场就会问「这个名字我们没听说过」。\n\n最后一件容易忽略的事：函数里的 `name` 和 `count` 是**函数自己内部的叫法**，函数一跑完那两个元素就收起来了，跟外面的变量互不打扰 —— 所以 `main` 里那两个元素就算也叫 `name`，也是另外两个，谁也碰不到谁。"
+}

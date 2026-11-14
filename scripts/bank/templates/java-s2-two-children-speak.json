@@ -1,0 +1,47 @@
+{
+  "templateId": "java-s2-two-children-speak",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-02",
+  "type": "codewrite",
+  "concept": [
+    "继承",
+    "重写",
+    "@Override",
+    "Scanner"
+  ],
+  "instances": 6,
+  "params": {
+    "dog": {
+      "kind": "pick",
+      "values": [
+        "大黄",
+        "旺财"
+      ]
+    },
+    "fishName": {
+      "kind": "pick",
+      "values": [
+        "泡泡",
+        "金金"
+      ]
+    },
+    "animalName": {
+      "kind": "pick",
+      "values": [
+        "计算机",
+        "河豚"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": "1",
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们要画**一大两小三张类定义**。\n\n父类 `Animal`：一盒名字家当；初始化那一手记下名字；一个方法 `speak()`，印 **名字 + `发出了一次叫`**。\n\n子类 `Dog` 和 `Fish` 都套在这张父类上，各自把 `speak()` **盖掉、换上自己那版**：\n\n- `Dog` 印 **名字 + `：汪！`**\n- `Fish` 印 **名字 + `：`**\n\n输入给程序的只有**一个数**。程序该这么走：读那个数 → 照三张类定义各创建一个（名字都用题目给的）→ **调用那么多声** `Dog` 那一个方法 → 再调用一次 `Fish` 的 → 最后调用一次父类**直接创建后**那个动物的。\n\n最后那一次是故意留的：**父类本身一个字都没被改过**，照它直接创建后的动物，调用还是老样子。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+  "starterTemplate": "import java.util.Scanner;\n\nclass Animal {\n\n}\n\nclass Dog extends Animal {\n\n}\n\nclass Fish extends Animal {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n    }\n}\n",
+  "referenceSolutionTemplate": "import java.util.Scanner;\n\nclass Animal {\n    String name;\n\n    Animal(String name) {\n        this.name = name;\n    }\n\n    void speak() {\n        System.out.println(name + \"发出了一次叫\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：汪！\");\n    }\n}\n\nclass Fish extends Animal {\n    Fish(String name) {\n        super(name);\n    }\n\n    @Override\n    void speak() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        Dog d = new Dog(\"{dog}\");\n        Fish f = new Fish(\"{fishName}\");\n        Animal a = new Animal(\"{animalName}\");\n        for (int i = 0; i < n; i++) {\n            d.speak();\n        }\n        f.speak();\n        a.speak();\n    }\n}\n",
+  "explanationTemplate": "这题练的是**「父类只画一遍，子类各改各的」**。\n\n三张类定义的关系：`Dog` 和 `Fish` 的类定义名后面都写着 `extends Animal`，所以「有名字、会出一次」这套设定**一个字都不用重抄**。两张子类只做了两件事：\n\n1. **初始化那一手各写一遍**，头一句都是 `super(name);` —— 把名字交给父类去装。要是有哪张子类漏了这一句，编译器就会拦下来说那一长串 `constructor ... cannot be applied to given types`。\n2. **把 `speak()` 盖掉、换上自己那版**，各自换成自己那种输出结果，头上都挂着 `@Override`。\n\n我们特意让 `main` 最后再调用一次**照父类直接创建后**的那个动物：它印的还是「发出了一次叫」。这说明**盖掉只盖住子类这条往下的路**，父类本身一根毛都没动。\n\n`main` 那边就是：读一个数当调用几声，生三个，然后照题目要求的顺序调用 —— `Dog` 调用够那么多声、`Fish` 一次、父类那个一次。**顺序和声数都得对**，少调用一次输出就对不上。"
+}

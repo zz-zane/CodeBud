@@ -1,0 +1,27 @@
+{
+  "templateId": "c-s2-fptr-shape-mismatch",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-12",
+  "type": "codefix",
+  "concept": [
+    "函数指针",
+    "长相要对得上",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "unit": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品A",
+        "商品"
+      ]
+    }
+  },
+  "stemTemplate": "我们有一个方法 `hello`：**不传入、也不返回**，只是印一句 `你好`。\n\n现在想摆一个元素装它的名称，然后调用一次。程序该印两行：先一句 `你好`，再一句 `名称调用结束了，{unit}已经备好`。\n\n可编译器把整段代码退了回来，说**长相对不上**。你帮我们把这个元素和引用的那一次都改对（函数 `hello` 本身一个字都不用改）。",
+  "brokenCodeTemplate": "#include <stdio.h>\n\nvoid hello(void) {\n    printf(\"你好\\n\");\n}\n\nint main(void) {\n    int (*p)(int) = hello;\n    printf(\"%d\\n\", p(1));\n    printf(\"名称调用结束了，{unit}已经备好\\n\");\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <stdio.h>\n\nvoid hello(void) {\n    printf(\"你好\\n\");\n}\n\nint main(void) {\n    void (*p)(void) = hello;\n    p();\n    printf(\"名称调用结束了，{unit}已经备好\\n\");\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: initialization of 'int (*)(int)' from incompatible pointer type 'void (*)(void)' [-Wincompatible-pointer-types]` —— 翻过来就一句：**长相对不上**。\n\n它把两边都念了一遍：\n\n- **左边这个元素（`int (*p)(int)`）**要保存的是「**传入一个整数、返回一个整数**」的名称；\n- **右边的 `hello`** 是「**不传入、也不返回**」的函数。\n\n两边的长相不一样，它就不许你把它们放进同一个元素里。所以要改的地方是**元素和调用方式**，不是函数本身：\n\n```c\nvoid (*p)(void) = hello;\np();\n```\n\n`void (*p)(void)` 读起来还是从里往外：最右边 `(void)` 是「不传入」，最左边 `void` 是「不返回」，中间 `(*p)` 是那个元素。引用的时候也**不用给传入**，所以写 `p();` 就完了。\n\n**为什么原来的写法连调用都是错的？** 因为元素按旧长相说好了「要传入一个整数」，我们就顺手写了 `p(1)`、还想用 `%d` 把「返回的整数」印出来 —— 可 `hello` 根本不返回东西。牵一发动全身：**名称的长相说的是「这招长什么样」的承诺，承诺错了，后面每一处都跟着错。**\n\n最后收一句让人安心的：这类错**根本跑不起来**。编译器在翻的阶段就把它拦下了，你不可能带着它上考场 —— 这正是 C 让人放心的地方。"
+}

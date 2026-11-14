@@ -1,0 +1,38 @@
+{
+  "templateId": "py-s3-ut-two-cases",
+  "lang": "python",
+  "stage": 3,
+  "lessonId": "python-stage3-11",
+  "type": "codewrite",
+  "concept": [
+    "unittest.TestCase",
+    "assertEqual",
+    "assertRaises",
+    "TestResult"
+  ],
+  "instances": 6,
+  "params": {
+    "a": {
+      "kind": "int",
+      "min": 6,
+      "max": 8
+    },
+    "b": {
+      "kind": "int",
+      "min": 2,
+      "max": 3
+    },
+    "unit": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品A",
+        "商品"
+      ]
+    }
+  },
+  "stemTemplate": "我们的「平分」函数已经在文件里了（**一个字都不许改**）：正常的分整数商，**对象数是 0 的时候它会抛 `ValueError`**。\n\n请你给它写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张已有实现对象画好的类定义来画。\n2. 里面写**两个**项目，名字都以 `test` 开头：\n   - 一个查**正常值**：`平分({a}, {b})` 该等于 `{a} // {b}`；\n   - 一个查**边界**：拿 `{a}` 份{unit}和 **0 个对象**去传入它，它该拒绝干活（用 `assertRaises(ValueError, 平分, {a}, 0)`）。\n3. 跑的时候开一本体检本子（`unittest.TestResult()`），用它把 `平分体检` 跑一遍。\n4. 最后印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+  "starterTemplate": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 下面这张体检单和跑它的那几行，交给你\n",
+  "referenceSolutionTemplate": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_正常(self):\n        self.assertEqual(平分({a}, {b}), {a} // {b})\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分, {a}, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+  "explanationTemplate": "这张单子要的三件事，一件比一件值钱。\n\n**① 单子照类定义画。** 括号里那个 `unittest.TestCase` 不是传入的东西，它的意思是「我们照这张类定义画」。照它画出来的单子自带一整套家伙事：怎么跑项目、怎么记成绩、怎么印报告 —— 你只管写判据。\n\n**② 项目名以 `test` 开头，不然它压根不跑。** 这不是风格建议，是筛选的规矩：编译器扫单子的时候只拎 `test` 开头的那种，别的它不认。\n\n**③ 正常值和边界值各一张。** 这是这次体检单的重点：只写「正常情况」的话，函数坏在边界上你永远发现不了。我们这次就是被「没有对象」那一项救回来的 —— 它逼着你想清楚「对象数是 0 的时候，我们到底要它怎么办」。你想的答案是「拒绝干活」，于是用 `assertRaises` 把这句话写成了可判的。\n\n最后那个体检本子（`TestResult()`）是报告底下的账房：跑完以后 `testsRun` 是跑了几个项目、`failures` 和 `errors` 是挂掉的清单、`wasSuccessful()` 一句话告诉你全不全绿。"
+}

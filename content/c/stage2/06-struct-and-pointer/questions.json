@@ -1,0 +1,87 @@
+{
+  "lessonId": "c-stage2-06",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们写了一张收名称的函数 `void feed(struct Cat *c, int n)`，在 `main` 里递的是 `feed(&a, 5);`。函数里那一句把 `c->fish` 改掉之后，外面那个 `a` 会跟着变吗？",
+      "options": [
+        "会变 —— 递进去的是名称，顺着名称改的正是外面那个本对象",
+        "不会变 —— 函数拿到的永远是外部变量的副本",
+        "只在函数里面变，一出函数就还原",
+        "要看函数里有没有写 `free`"
+      ],
+      "answer": 0,
+      "explanation": "函数头上那半句写的是 `struct Cat *c`，收的是**名称**而不是整个对象，所以 `main` 里要递 `&a` 进去。顺着名称进去改，改的就是外面那个本对象。上一课那种「收一整个对象」的函数拿到的才是副本 —— **递名称 = 改本人，递整只 = 改副本**，这一对差别往后天天要用。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们已经用 `cats[0]` 这种写法把第一个对象**拿出来了**，这会儿想进它的 `fish` 那一格，该用箭头还是点号？",
+      "options": [
+        "点号 —— 拿出来的是实例，进实例的格用点号",
+        "箭头 —— 只要跟一排对象打交道就得用箭头",
+        "两种写法随便用，编译器都认",
+        "要看这个对象是不是现要现租来的"
+      ],
+      "answer": 0,
+      "explanation": "`cats[0]` 这一步已经把第一个对象**本身**拿在手上了，手上是个实例，进门当然用点号（课文里那两句就是 `cats[0].fish` / `cats[1].fish`）。箭头是留给名称的：手上捏的是名称，才用 `->`。**箭头配名称，点号配实例** —— 这条应验过好几回了。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们手滑写成 `*p.fish`，编译器报的是 `'p' is a pointer; did you mean to use '->'?`。它凭什么猜到我们想写的是箭头？",
+      "options": [
+        "因为点号排在星星前面，这一句会被读成先取 `p.fish` —— 可名称身上没有那一格",
+        "因为它看见我们上一行忘了写分号",
+        "因为这块名称还没指任何地方",
+        "因为 `malloc` 前面少了那半句补写类型的写法"
+      ],
+      "answer": 0,
+      "explanation": "C 的排队规矩里**点号排在星星前面**，所以 `*p.fish` 会被读成「先取 `p.fish`、再给结果加颗星」。可 `p` 是一块名称，名称身上根本没有 `fish` 那一格 —— 编译器于是就猜：你其实是想顺着名称进那一格吧？它还顺手在底下把 `->` 指给你看。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "c",
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat *p = (struct Cat *)____(sizeof(struct Cat));\n\n    if (p == NULL) {\n        printf(\"变量没租到\\n\");\n        return 1;\n    }\n    p->____ = 7;\n    printf(\"%d\\n\", p->fish);\n    free(p);\n    p = NULL;\n    return 0;\n}",
+      "stem": "这段代码里有两处被我们挖空了（用 `____` 标出），补上之后它会印出 `7` 。",
+      "blanks": [
+        {
+          "answer": "malloc",
+          "accept": []
+        },
+        {
+          "answer": "fish",
+          "accept": []
+        }
+      ],
+      "explanation": "第一处是伸手租变量的那一个方法，先拿尺子量一个类定义多大（`sizeof(struct Cat)`）再租这么多格。第二处：我们要往这个租来的对象身上填数据数，填的是 `fish` 那一格，所以底下那句才读得出来 7。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nvoid feed(struct Cat *c, int n) {\n    c->fish = c->fish + n;\n}\n\nint main(void) {\n    struct Cat a = {\"张三\", 3};\n\n    feed(&a, 5);\n    printf(\"%s 处理了 %d 条\\n\", a.name, a.fish);\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "张三 处理了 8 条",
+      "accept": [
+        "张三 处理了 8 条\n"
+      ],
+      "explanation": "函数收的是名称，`main` 里递的是 `&a`，所以函数里那句 `c->fish = c->fish + n;` 改到的正是外面那个张三。3 加上 5 就是 8 —— 递名称改的是本人，改完再回头念 `a.fish`，读到的是改过之后的值。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[3] = {\n        {\"张三\", 3},\n        {\"李四\", 5},\n        {\"计算机\", 9}\n    };\n    struct Cat *p = cats;\n    int total = 0;\n\n    for (int i = 0; i < 3; i++) {\n        total = total + p->fish;\n        p++;\n    }\n    printf(\"一共 %d 条\\n\", total);\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "一共 17 条",
+      "accept": [
+        "一共 17 条\n"
+      ],
+      "explanation": "一排对象的名字交出来的时候，交的就是**第一个对象的地址**，所以名称一创建后就指着第一个。`p++` 让名称往后挪，挪的距离是一整个对象那么宽，三趟正好把三个都走过一遍；`total` 一路加的是 3、5、9，加起来 17。"
+    }
+  ]
+}

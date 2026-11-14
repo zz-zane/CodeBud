@@ -1,0 +1,33 @@
+{
+  "templateId": "cpp-s2-03-this-shadow",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-03",
+  "type": "codefix",
+  "concept": [
+    "输入接口和格子同名",
+    "不写 this 就够不到格子",
+    "跑得成功但结果全错"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "三花"
+      ]
+    },
+    "newName": {
+      "kind": "pick",
+      "values": [
+        "王五",
+        "李四"
+      ]
+    }
+  },
+  "stemTemplate": "我们画了一张叫 `Cat` 的类定义，上面有一个方法 `rename`，用来给对象改名字 —— 输入接口我们图省事也叫 `name`。\n\n`main` 里引用的是「改名」，可印出来还是老名字：**它跑得成功、也没报错，就是活干歪了。**\n\n你帮我们改一处，让它真的把名字改掉。**`main` 里那几句和类定义上别的地方都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void rename(string name) {\n        name = name;\n    }\n};\n\nint main() {\n    Cat c1(\"{name}\");\n    c1.rename(\"{newName}\");\n    cout << \"现在叫 \" << c1.name << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    void rename(string name) {\n        this->name = name;\n    }\n};\n\nint main() {\n    Cat c1(\"{name}\");\n    c1.rename(\"{newName}\");\n    cout << \"现在叫 \" << c1.name << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一题**没有报错** —— 编译器放它一路跑到底，屏幕上安安静静（我们拿最啰嗦的那档念叨真跑过，它一个字都没说）。\n\n问题在状态里那一句 `name = name;`：函数里站着**两个 `name`**，一个是输入接口，一个是格子，而规矩是「**近的那个赢**」—— 所以这一句念作「把输入接口装进输入接口里」，格子从头到尾没被碰过。调用「改名叫王五」，名字格里保存的还是原来那个。\n\n改法是指名道姓：\n\n`this->name = name;`\n\n`this` 是每调用一次函数时悄悄递进来的**那个对象**，`this->name` 就是「我们自己那一格 `name`」。\n\n⚠️ 这一类错最值得记住的不是怎么改，而是它**不吵不闹**：没有报错、没有警告，只有印出来的结果悄悄不对。所以自己写函数时，只要输入接口和格子同名，格子那一侧就必须写 `this->`。"
+}

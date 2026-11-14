@@ -1,0 +1,94 @@
+{
+  "lessonId": "python-stage3-04",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们叫了三个对象一起算数据，结果一点都没变快。这是为什么？",
+      "options": [
+        "因为解释器脖子上只有一枚金铃铛，同一时刻只有一个线程能执行 Python 代码",
+        "因为那三个对象都在偷偷暂停",
+        "因为数据太重了，对象变量抬不动",
+        "因为算数据这种活必须由父对象亲手来做"
+      ],
+      "answer": 0,
+      "explanation": "金铃铛的规矩是「同一时刻，只允许一个对象摇着铃铛执行 Python 代码」。算数据是纯计算 —— 对象得一直攥着铃铛不放，所以三个对象只能排队轮着来，叫再多也只是排更长的队。想真正同时算，就得**多开几个对象**，每个对象有自己的金铃铛。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "哪种活儿，叫上多线程执行能真的变快？",
+      "options": [
+        "等工作区回信、等文件读完这种「等」的活",
+        "把十亿条数据的重量加起来这种「算」的活",
+        "两种都能变快，对象多就是快",
+        "两种都不行，叫了也白叫"
+      ],
+      "answer": 0,
+      "explanation": "对象在「等」的时候会**主动松开金铃铛**，别的对象正好接手 —— 所以等回信、读文件这类活，叫上一队对象很划算。而「算」的活，对象的手一直不离铃铛，别的对象插不上手，只能排队。抓住这一条，以后选哪路帮手就不会抓瞎了。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "新开的一个对象算出了结果，我们想在自己这边拿到它，该怎么办？",
+      "options": [
+        "让新对象把成果 `put` 进筐里，我们再 `get` 出来",
+        "直接伸手去新对象的变量中拿就行",
+        "新对象算完会自动把成果塞回我们的变量",
+        "不用管，成果自己会飘回来"
+      ],
+      "answer": 0,
+      "explanation": "每个对象都有**自己的变量**，我们这边看不见它那边保存了什么。想让成果回来，就得让新对象主动递出来：把结果 `put` 进那个「队列」的筐（`Queue`），我们再伸手 `get` 出来 —— 不递出来，它是回不来的。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "python",
+      "code": "from multiprocessing import Process, Queue\n\n\ndef work(queue, n):\n    queue.put((n, n * n))\n\n\n____\n    queue = Queue()\n    jobs = [Process(target=work, args=(queue, n)) for n in [2, 3, 4]]\n    for job in jobs:\n        job.start()\n    for job in jobs:\n        job.join()\n    results = [queue.get() for _ in jobs]\n    for n, value in ____(results):\n        print(f\"{n} 的平方是 {value}\")\n",
+      "stem": "这段代码派出三个新对象各算一个平方，再由父对象排好队统一印出来。请把两个空补上：第一个空要填上 Windows 上那层必不可少的保护罩，第二个空让父对象把成果按编号排好队。",
+      "blanks": [
+        {
+          "answer": "if __name__ == '__main__':",
+          "accept": [
+            "if __name__ == \"__main__\":",
+            "if __name__=='__main__':",
+            "if __name__==\"__main__\":"
+          ]
+        },
+        {
+          "answer": "sorted",
+          "accept": []
+        }
+      ],
+      "explanation": "`if __name__ == '__main__':` 这层保护罩只管一件事：新对象是照着剧本重新初始化的，它一初始化会把剧本从头念一遍；开对象的台词关在保护罩里，新对象念到这儿就会绕过去，不会一个接一个地开下去。第二个空要用 `sorted` 把「编号 + 成果」按编号排好 —— 三个对象谁先送回来纯属运气，排好队再印，输出才每次都一样。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "python",
+      "code": "from multiprocessing import Pool\n\n\ndef double(n):\n    return n * 2\n\n\nif __name__ == '__main__':\n    pool = Pool(2)\n    print(pool.map(double, [1, 2, 3]))\n    pool.close()\n    pool.join()\n",
+      "stem": "这段代码的输出是什么？（提示：`map` 会把成果按你给进去的顺序交回来）",
+      "answer": "[2, 4, 6]",
+      "accept": [
+        "[2, 4, 6]\n"
+      ],
+      "explanation": "`pool.map(double, [1, 2, 3])` 的意思是：把 1、2、3 挨个传给 `double`，再把成果按原顺序收回来 —— 1 乘 2 得 2、2 乘 2 得 4、3 乘 2 得 6，凑成一整柜 `[2, 4, 6]` 印出来。就算池子里两个对象是同时开工的，交回来的顺序照样是你给进去的顺序，不会乱。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "python",
+      "code": "from multiprocessing import Process, Queue\n\nfish = [\"计算机\"]\n\n\ndef add_two(queue):\n    fish.append(\"数据\")\n    fish.append(\"数据\")\n    queue.put(len(fish))\n\n\nif __name__ == '__main__':\n    queue = Queue()\n    p = Process(target=add_two, args=(queue,))\n    p.start()\n    p.join()\n    print(f\"新对象那边 {queue.get()} 条，我们这边 {len(fish)} 条\")\n",
+      "stem": "这段代码的输出是什么？",
+      "answer": "新对象那边 3 条，我们这边 1 条",
+      "accept": [
+        "新对象那边 3 条，我们这边 1 条\n",
+        "新对象那边 3 条, 我们这边 1 条",
+        "新对象那边 3 条,我们这边 1 条",
+        "新对象那边3条，我们这边1条"
+      ],
+      "explanation": "新对象初始化的时候，它自己那个变量中也照着剧本摆好了 1 条计算机，它又往里塞了 2 条数据，所以它那边数出来是 3 条。而我们这个变量**一个字都没被动过** —— 它加的是它自己那间，我们这边还是孤零零 1 条，所以印出来是「新对象那边 3 条，我们这边 1 条」。"
+    }
+  ]
+}

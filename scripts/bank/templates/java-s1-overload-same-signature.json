@@ -1,0 +1,39 @@
+{
+  "templateId": "java-s1-overload-same-signature",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-10",
+  "type": "codefix",
+  "concept": [
+    "重载",
+    "签名",
+    "输入接口",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "name1": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四"
+      ]
+    },
+    "name2": {
+      "kind": "pick",
+      "values": [
+        "王五",
+        "雪球"
+      ]
+    },
+    "n": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    }
+  },
+  "stemTemplate": "我们要给「打招呼」备**三副面孔** —— 三个方法同叫 `greet`，传入的料不一样：\n\n- 空手调用一次，印 `你好`\n- 传入一个名字，印 `你好，{name1}`\n- 传入一个名字再加一个数据数，印 `你好，{name2}，今天 {n} 条`\n\n`main` 里三声我们都调用好了，可这张类定义**编译器压根没收**：它说有一个方法「写重了」，还说 `main` 里有一句它挑不出该用哪一个方法。\n\n你帮我们看看是哪一个方法跟哪一个方法撞上了，把撞上的那一个方法改成它本来该有的样子 —— 三副面孔一副都不许丢。改好之后，屏幕上该是这三行：\n\n```text\n你好\n你好，{name1}\n你好，{name2}，今天 {n} 条\n```\n\n（`main` 里那三句原本就是照三副面孔写的，一句都不用动）",
+  "brokenCodeTemplate": "public class Main {\n    public static void greet() {\n        System.out.println(\"你好\");\n    }\n\n    public static void greet(String name) {\n        System.out.println(\"你好，\" + name + \"\");\n    }\n\n    public static void greet(String who) {\n        System.out.println(\"你好，\" + who + \"\");\n    }\n\n    public static void main(String[] args) {\n        greet();\n        greet(\"{name1}\");\n        greet(\"{name2}\", {n});\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void greet() {\n        System.out.println(\"你好\");\n    }\n\n    public static void greet(String name) {\n        System.out.println(\"你好，\" + name + \"\");\n    }\n\n    public static void greet(String who, int fish) {\n        System.out.println(\"你好，\" + who + \"，今天 \" + fish + \" 条\");\n    }\n\n    public static void main(String[] args) {\n        greet();\n        greet(\"{name1}\");\n        greet(\"{name2}\", {n});\n    }\n}\n",
+  "explanationTemplate": "编译器的原话是 `method greet(String) is already defined in class Main` —— 念起来就是「`greet(String)` 这一个方法在 `Main` 里已经写过了」。\n\n电脑认一个方法，靠的只有**两样**：招名 + 输入接口（几样料、每样什么料）。这两样合起来叫这一个方法的**签名**。我们那两招都叫 `greet`、都收一样 `String` 的料，签名一模一样 —— 这时候：\n\n- **料叫什么名字不算数**：一个叫 `name`、一个叫 `who`，编译器不管。\n- **身子里的干法不算数**：两招印的字不一样，它也不管。\n\n所以第二招想变成「收名字 + 数据数」那一副面孔，输入接口就得**真的多出一样料**：`greet(String who, int fish)`。多出这一样之后，三个方法的签名各不相同，编译器一眼分得清谁是谁。\n\n下面那句 `no suitable method found for greet(String,int)` 是同一件事的另一面：签名里根本没有「收两样料」的 `greet`（编译器还贴心地列了一遍 `method Main.greet() is not applicable`、`method Main.greet(String) is not applicable` —— 两招它都数过，个数对不上），而我们在 `main` 里传入了两样。它不是新毛病，上面那一处改好，它自己就消了。"
+}

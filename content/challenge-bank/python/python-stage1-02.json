@@ -1,0 +1,512 @@
+{
+  "lessonId": "python-stage1-02",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-py-s1-file-needs-print-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们在问答摊上敲了 `2 + 3`，它当场就把答案念了出来 —— 在摊子上偷这个懒是合法的。\n\n现在我们把同一个算式搬进**文件**里，屏幕上却一个字都没有。请你写一段文件代码，跑出来是这样两行：\n\n第一行：这个算式算出来的**答案**\n\n第二行：我们学会啦",
+      "starter": null,
+      "referenceSolution": "print(2 + 3)\nprint(\"我们学会啦\")\n",
+      "expectedOutput": "5\n我们学会啦",
+      "stdin": null,
+      "explanation": "摊子和文件，规矩不一样：**摊子**是你敲什么都当场回你（所以不写 `print` 也能看见答案）；**文件**里没人替你开口，想要它出声，就得把算式装进 `print(...)` 的括号里。\n\n顺带记一句：算式只要写在**引号外面**，电脑就会真的把它算出来再印（`print(2 + 3)` 印出的是算好的数，不是这一串符号）；写在引号**里面**的话，它就照抄不误。\n\n（这两行的顺序也是我们说了算的：写在前面的先出声。）",
+      "templateId": "py-s1-file-needs-print",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "note": "我们学会啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "3e7e4f13c9358fb8"
+      }
+    },
+    {
+      "id": "bank-py-s1-file-needs-print-015",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们在问答摊上敲了 `3 + 3`，它当场就把答案念了出来 —— 在摊子上偷这个懒是合法的。\n\n现在我们把同一个算式搬进**文件**里，屏幕上却一个字都没有。请你写一段文件代码，跑出来是这样两行：\n\n第一行：这个算式算出来的**答案**\n\n第二行：我们学会啦",
+      "starter": null,
+      "referenceSolution": "print(3 + 3)\nprint(\"我们学会啦\")\n",
+      "expectedOutput": "6\n我们学会啦",
+      "stdin": null,
+      "explanation": "摊子和文件，规矩不一样：**摊子**是你敲什么都当场回你（所以不写 `print` 也能看见答案）；**文件**里没人替你开口，想要它出声，就得把算式装进 `print(...)` 的括号里。\n\n顺带记一句：算式只要写在**引号外面**，电脑就会真的把它算出来再印（`print(3 + 3)` 印出的是算好的数，不是这一串符号）；写在引号**里面**的话，它就照抄不误。\n\n（这两行的顺序也是我们说了算的：写在前面的先出声。）",
+      "templateId": "py-s1-file-needs-print",
+      "params": {
+        "a": 3,
+        "b": 3,
+        "note": "我们学会啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "72cffc7c66ae789b"
+      }
+    },
+    {
+      "id": "bank-py-s1-file-needs-print-030",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们在问答摊上敲了 `4 + 3`，它当场就把答案念了出来 —— 在摊子上偷这个懒是合法的。\n\n现在我们把同一个算式搬进**文件**里，屏幕上却一个字都没有。请你写一段文件代码，跑出来是这样两行：\n\n第一行：这个算式算出来的**答案**\n\n第二行：我们学会啦",
+      "starter": null,
+      "referenceSolution": "print(4 + 3)\nprint(\"我们学会啦\")\n",
+      "expectedOutput": "7\n我们学会啦",
+      "stdin": null,
+      "explanation": "摊子和文件，规矩不一样：**摊子**是你敲什么都当场回你（所以不写 `print` 也能看见答案）；**文件**里没人替你开口，想要它出声，就得把算式装进 `print(...)` 的括号里。\n\n顺带记一句：算式只要写在**引号外面**，电脑就会真的把它算出来再印（`print(4 + 3)` 印出的是算好的数，不是这一串符号）；写在引号**里面**的话，它就照抄不误。\n\n（这两行的顺序也是我们说了算的：写在前面的先出声。）",
+      "templateId": "py-s1-file-needs-print",
+      "params": {
+        "a": 4,
+        "b": 3,
+        "note": "我们学会啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "5b1cf7f43ab8211e"
+      }
+    },
+    {
+      "id": "bank-py-s1-file-needs-print-044",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们在问答摊上敲了 `4 + 7`，它当场就把答案念了出来 —— 在摊子上偷这个懒是合法的。\n\n现在我们把同一个算式搬进**文件**里，屏幕上却一个字都没有。请你写一段文件代码，跑出来是这样两行：\n\n第一行：这个算式算出来的**答案**\n\n第二行：答案端上来啦",
+      "starter": null,
+      "referenceSolution": "print(4 + 7)\nprint(\"答案端上来啦\")\n",
+      "expectedOutput": "11\n答案端上来啦",
+      "stdin": null,
+      "explanation": "摊子和文件，规矩不一样：**摊子**是你敲什么都当场回你（所以不写 `print` 也能看见答案）；**文件**里没人替你开口，想要它出声，就得把算式装进 `print(...)` 的括号里。\n\n顺带记一句：算式只要写在**引号外面**，电脑就会真的把它算出来再印（`print(4 + 7)` 印出的是算好的数，不是这一串符号）；写在引号**里面**的话，它就照抄不误。\n\n（这两行的顺序也是我们说了算的：写在前面的先出声。）",
+      "templateId": "py-s1-file-needs-print",
+      "params": {
+        "a": 4,
+        "b": 7,
+        "note": "答案端上来啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "7d3394e22325cd25"
+      }
+    },
+    {
+      "id": "bank-py-s1-file-needs-print-059",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们在问答摊上敲了 `5 + 7`，它当场就把答案念了出来 —— 在摊子上偷这个懒是合法的。\n\n现在我们把同一个算式搬进**文件**里，屏幕上却一个字都没有。请你写一段文件代码，跑出来是这样两行：\n\n第一行：这个算式算出来的**答案**\n\n第二行：答案端上来啦",
+      "starter": null,
+      "referenceSolution": "print(5 + 7)\nprint(\"答案端上来啦\")\n",
+      "expectedOutput": "12\n答案端上来啦",
+      "stdin": null,
+      "explanation": "摊子和文件，规矩不一样：**摊子**是你敲什么都当场回你（所以不写 `print` 也能看见答案）；**文件**里没人替你开口，想要它出声，就得把算式装进 `print(...)` 的括号里。\n\n顺带记一句：算式只要写在**引号外面**，电脑就会真的把它算出来再印（`print(5 + 7)` 印出的是算好的数，不是这一串符号）；写在引号**里面**的话，它就照抄不误。\n\n（这两行的顺序也是我们说了算的：写在前面的先出声。）",
+      "templateId": "py-s1-file-needs-print",
+      "params": {
+        "a": 5,
+        "b": 7,
+        "note": "答案端上来啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "c1763230b95dae96"
+      }
+    },
+    {
+      "id": "bank-py-s1-file-needs-print-074",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们在问答摊上敲了 `6 + 7`，它当场就把答案念了出来 —— 在摊子上偷这个懒是合法的。\n\n现在我们把同一个算式搬进**文件**里，屏幕上却一个字都没有。请你写一段文件代码，跑出来是这样两行：\n\n第一行：这个算式算出来的**答案**\n\n第二行：答案端上来啦",
+      "starter": null,
+      "referenceSolution": "print(6 + 7)\nprint(\"答案端上来啦\")\n",
+      "expectedOutput": "13\n答案端上来啦",
+      "stdin": null,
+      "explanation": "摊子和文件，规矩不一样：**摊子**是你敲什么都当场回你（所以不写 `print` 也能看见答案）；**文件**里没人替你开口，想要它出声，就得把算式装进 `print(...)` 的括号里。\n\n顺带记一句：算式只要写在**引号外面**，电脑就会真的把它算出来再印（`print(6 + 7)` 印出的是算好的数，不是这一串符号）；写在引号**里面**的话，它就照抄不误。\n\n（这两行的顺序也是我们说了算的：写在前面的先出声。）",
+      "templateId": "py-s1-file-needs-print",
+      "params": {
+        "a": 6,
+        "b": 7,
+        "note": "答案端上来啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "e4e61b60b61c98b8"
+      }
+    },
+    {
+      "id": "bank-py-s1-four-lines-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给今天的加餐写一张**菜单**，一共四行，请你写程序把它打出来：\n\n第一行\n\n今日菜单\n\n第二行\n\n数据 2 份\n\n第三行\n\n----------\n\n第四行\n\n请慢用\n\n四行一个都不能少、顺序也不能变",
+      "starter": null,
+      "referenceSolution": "print(\"今日菜单\")\nprint(\"数据 2 份\")\nprint(\"----------\")\nprint(\"请慢用\")\n",
+      "expectedOutput": "今日菜单\n数据 2 份\n----------\n请慢用",
+      "stdin": null,
+      "explanation": "四行就是**四个 `print`**，从上往下依次执行 —— 解释器读一行、做一行，所以你的 `print` 写在前面，那一行就先出来。\n\n第三行那排横线是**一整串字**，用引号整个括起来当一句话打印就好，不用去数它有几个字符。",
+      "templateId": "py-s1-four-lines",
+      "params": {
+        "dish": "数据",
+        "bowl": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "df16696ca5326847"
+      }
+    },
+    {
+      "id": "bank-py-s1-four-lines-006",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给今天的加餐写一张**菜单**，一共四行，请你写程序把它打出来：\n\n第一行\n\n今日菜单\n\n第二行\n\n数据 8 份\n\n第三行\n\n----------\n\n第四行\n\n请慢用\n\n四行一个都不能少、顺序也不能变",
+      "starter": null,
+      "referenceSolution": "print(\"今日菜单\")\nprint(\"数据 8 份\")\nprint(\"----------\")\nprint(\"请慢用\")\n",
+      "expectedOutput": "今日菜单\n数据 8 份\n----------\n请慢用",
+      "stdin": null,
+      "explanation": "四行就是**四个 `print`**，从上往下依次执行 —— 解释器读一行、做一行，所以你的 `print` 写在前面，那一行就先出来。\n\n第三行那排横线是**一整串字**，用引号整个括起来当一句话打印就好，不用去数它有几个字符。",
+      "templateId": "py-s1-four-lines",
+      "params": {
+        "dish": "数据",
+        "bowl": 8
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "491f81cdcdd7ef0e"
+      }
+    },
+    {
+      "id": "bank-py-s1-four-lines-012",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给今天的加餐写一张**菜单**，一共四行，请你写程序把它打出来：\n\n第一行\n\n今日菜单\n\n第二行\n\n商品A 6 份\n\n第三行\n\n----------\n\n第四行\n\n请慢用\n\n四行一个都不能少、顺序也不能变",
+      "starter": null,
+      "referenceSolution": "print(\"今日菜单\")\nprint(\"商品A 6 份\")\nprint(\"----------\")\nprint(\"请慢用\")\n",
+      "expectedOutput": "今日菜单\n商品A 6 份\n----------\n请慢用",
+      "stdin": null,
+      "explanation": "四行就是**四个 `print`**，从上往下依次执行 —— 解释器读一行、做一行，所以你的 `print` 写在前面，那一行就先出来。\n\n第三行那排横线是**一整串字**，用引号整个括起来当一句话打印就好，不用去数它有几个字符。",
+      "templateId": "py-s1-four-lines",
+      "params": {
+        "dish": "商品A",
+        "bowl": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "1d53d4407d19b952"
+      }
+    },
+    {
+      "id": "bank-py-s1-four-lines-016",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给今天的加餐写一张**菜单**，一共四行，请你写程序把它打出来：\n\n第一行\n\n今日菜单\n\n第二行\n\n毛线球 2 份\n\n第三行\n\n----------\n\n第四行\n\n请慢用\n\n四行一个都不能少、顺序也不能变",
+      "starter": null,
+      "referenceSolution": "print(\"今日菜单\")\nprint(\"毛线球 2 份\")\nprint(\"----------\")\nprint(\"请慢用\")\n",
+      "expectedOutput": "今日菜单\n毛线球 2 份\n----------\n请慢用",
+      "stdin": null,
+      "explanation": "四行就是**四个 `print`**，从上往下依次执行 —— 解释器读一行、做一行，所以你的 `print` 写在前面，那一行就先出来。\n\n第三行那排横线是**一整串字**，用引号整个括起来当一句话打印就好，不用去数它有几个字符。",
+      "templateId": "py-s1-four-lines",
+      "params": {
+        "dish": "毛线球",
+        "bowl": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "8b7a2a6b07ce74d0"
+      }
+    },
+    {
+      "id": "bank-py-s1-four-lines-019",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给今天的加餐写一张**菜单**，一共四行，请你写程序把它打出来：\n\n第一行\n\n今日菜单\n\n第二行\n\n毛线球 5 份\n\n第三行\n\n----------\n\n第四行\n\n请慢用\n\n四行一个都不能少、顺序也不能变",
+      "starter": null,
+      "referenceSolution": "print(\"今日菜单\")\nprint(\"毛线球 5 份\")\nprint(\"----------\")\nprint(\"请慢用\")\n",
+      "expectedOutput": "今日菜单\n毛线球 5 份\n----------\n请慢用",
+      "stdin": null,
+      "explanation": "四行就是**四个 `print`**，从上往下依次执行 —— 解释器读一行、做一行，所以你的 `print` 写在前面，那一行就先出来。\n\n第三行那排横线是**一整串字**，用引号整个括起来当一句话打印就好，不用去数它有几个字符。",
+      "templateId": "py-s1-four-lines",
+      "params": {
+        "dish": "毛线球",
+        "bowl": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "c080d4c5de5f49da"
+      }
+    },
+    {
+      "id": "bank-py-s1-four-lines-025",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给今天的加餐写一张**菜单**，一共四行，请你写程序把它打出来：\n\n第一行\n\n今日菜单\n\n第二行\n\n商品鸡肉 3 份\n\n第三行\n\n----------\n\n第四行\n\n请慢用\n\n四行一个都不能少、顺序也不能变",
+      "starter": null,
+      "referenceSolution": "print(\"今日菜单\")\nprint(\"商品鸡肉 3 份\")\nprint(\"----------\")\nprint(\"请慢用\")\n",
+      "expectedOutput": "今日菜单\n商品鸡肉 3 份\n----------\n请慢用",
+      "stdin": null,
+      "explanation": "四行就是**四个 `print`**，从上往下依次执行 —— 解释器读一行、做一行，所以你的 `print` 写在前面，那一行就先出来。\n\n第三行那排横线是**一整串字**，用引号整个括起来当一句话打印就好，不用去数它有几个字符。",
+      "templateId": "py-s1-four-lines",
+      "params": {
+        "dish": "商品鸡肉",
+        "bowl": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "f180e22e3a632fab"
+      }
+    },
+    {
+      "id": "bank-py-s1-four-lines-031",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要给今天的加餐写一张**菜单**，一共四行，请你写程序把它打出来：\n\n第一行\n\n今日菜单\n\n第二行\n\n商品鸡肉 9 份\n\n第三行\n\n----------\n\n第四行\n\n请慢用\n\n四行一个都不能少、顺序也不能变",
+      "starter": null,
+      "referenceSolution": "print(\"今日菜单\")\nprint(\"商品鸡肉 9 份\")\nprint(\"----------\")\nprint(\"请慢用\")\n",
+      "expectedOutput": "今日菜单\n商品鸡肉 9 份\n----------\n请慢用",
+      "stdin": null,
+      "explanation": "四行就是**四个 `print`**，从上往下依次执行 —— 解释器读一行、做一行，所以你的 `print` 写在前面，那一行就先出来。\n\n第三行那排横线是**一整串字**，用引号整个括起来当一句话打印就好，不用去数它有几个字符。",
+      "templateId": "py-s1-four-lines",
+      "params": {
+        "dish": "商品鸡肉",
+        "bowl": 9
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "86b2e5fdadf0e20f"
+      }
+    },
+    {
+      "id": "bank-py-s1-misspelled-print-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们在软件里敲了一行代码，解释器说它**不认识一个词**……\n\n你帮我们看看是哪个词把它难住了 —— 改好之后它应该打印出 `你好`。",
+      "brokenCode": "prnt(\"你好\")\n",
+      "referenceFix": "print(\"你好\")\n",
+      "expectedOutput": "你好",
+      "stdin": null,
+      "explanation": "是 `print` 拼错啦，少了一个 `i` ！\n\n解释器是**一行一行往下读**的：读到 `prnt` 这个它从没见过的名字，它就停下来抱怨「我不认识它」。报错里那句 `NameError` 就是这个意思 —— **名字**不对。\n\n（所以看到 `NameError` 先别慌，多半是单词拼错了，或者引号把名字关进一串字里了。）",
+      "templateId": "py-s1-misspelled-print",
+      "params": {
+        "greet": "你好"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "9e30d86bd8d4e0c5"
+      }
+    },
+    {
+      "id": "bank-py-s1-misspelled-print-002",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们在软件里敲了一行代码，解释器说它**不认识一个词**……\n\n你帮我们看看是哪个词把它难住了 —— 改好之后它应该打印出 `欢迎回来`。",
+      "brokenCode": "prnt(\"欢迎回来\")\n",
+      "referenceFix": "print(\"欢迎回来\")\n",
+      "expectedOutput": "欢迎回来",
+      "stdin": null,
+      "explanation": "是 `print` 拼错啦，少了一个 `i` ！\n\n解释器是**一行一行往下读**的：读到 `prnt` 这个它从没见过的名字，它就停下来抱怨「我不认识它」。报错里那句 `NameError` 就是这个意思 —— **名字**不对。\n\n（所以看到 `NameError` 先别慌，多半是单词拼错了，或者引号把名字关进一串字里了。）",
+      "templateId": "py-s1-misspelled-print",
+      "params": {
+        "greet": "欢迎回来"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "a3b57a46df3c5314"
+      }
+    },
+    {
+      "id": "bank-py-s1-no-print-call-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们把这句话写进了 `hello.py`，调用解释器跑了一遍 —— 屏幕上**一个字都没有**，可它也没报错。\n\n我们想让文件跑完之后稳稳地出现 `你好` 这一行。你帮我们改对。",
+      "brokenCode": "\"你好\"\n",
+      "referenceFix": "print(\"你好\")\n",
+      "expectedOutput": "你好",
+      "stdin": null,
+      "explanation": "文件里的程序，**只有你明确写出 `print` 的那一句**才会上屏幕。这一行只写了「你好」这几个字：解释器老老实实把它读成了一段话，可**没人要它输出**，所以屏幕安安静静 —— 而且它一次不吭，连错都不报，最难发现的就是这种。\n\n问答摊上可不是这样：摊子的规矩是「你说了什么，我们都当场回你」，所以在摊子里敲一句话就能看见它。文件里没有这个规矩，**想看见就得自己开口**。\n\n（下次遇到「代码写好了，屏幕上却什么都没有」，第一个要检查的就是：这一句前面有没有 `print`。）",
+      "templateId": "py-s1-no-print-call",
+      "params": {
+        "word": "你好"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "8f295fffe5ef0cf9"
+      }
+    },
+    {
+      "id": "bank-py-s1-no-print-call-002",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们把这句话写进了 `hello.py`，调用解释器跑了一遍 —— 屏幕上**一个字都没有**，可它也没报错。\n\n我们想让文件跑完之后稳稳地出现 `我们在等你` 这一行。你帮我们改对。",
+      "brokenCode": "\"我们在等你\"\n",
+      "referenceFix": "print(\"我们在等你\")\n",
+      "expectedOutput": "我们在等你",
+      "stdin": null,
+      "explanation": "文件里的程序，**只有你明确写出 `print` 的那一句**才会上屏幕。这一行只写了「我们在等你」这几个字：解释器老老实实把它读成了一段话，可**没人要它输出**，所以屏幕安安静静 —— 而且它一次不吭，连错都不报，最难发现的就是这种。\n\n问答摊上可不是这样：摊子的规矩是「你说了什么，我们都当场回你」，所以在摊子里敲一句话就能看见它。文件里没有这个规矩，**想看见就得自己开口**。\n\n（下次遇到「代码写好了，屏幕上却什么都没有」，第一个要检查的就是：这一句前面有没有 `print`。）",
+      "templateId": "py-s1-no-print-call",
+      "params": {
+        "word": "我们在等你"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "418ef472e876bb8f"
+      }
+    },
+    {
+      "id": "bank-py-s1-prompt-copied-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们在问答摊上敲了一句 `print(\"你好\")`，它当场就回了我们；我们觉得好用，连着前面那个记号一起抄进了 `hello.py` 里。\n\n结果解释器一读文件就卡住了……你帮我们把文件改回**能跑**的样子，让屏幕上出现 `你好`。",
+      "brokenCode": ">>> print(\"你好\")\n",
+      "referenceFix": "print(\"你好\")\n",
+      "expectedOutput": "你好",
+      "stdin": null,
+      "explanation": "那个 `>>>` 是**问答摊递话筒的记号**，是对象自己冒出来的，**不是代码的一部分**。文件里的每一行都该是我们自己敲的代码，解释器根本不认识这三个字符，念到它就卡住（报的是 `SyntaxError`）。\n\n改法很简单：把记号删掉，只留下 `print(...)` 这一行。\n\n（记一句就够：**带记号的句子是「我们跟它说的话」，不带记号的句子才是「要它做的事」**。摊子上的照片抄进文件之前，先把记号擦掉。）",
+      "templateId": "py-s1-prompt-copied",
+      "params": {
+        "word": "你好"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "8c1e366da9094772"
+      }
+    },
+    {
+      "id": "bank-py-s1-prompt-copied-002",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们在问答摊上敲了一句 `print(\"问答摊开张啦\")`，它当场就回了我们；我们觉得好用，连着前面那个记号一起抄进了 `hello.py` 里。\n\n结果解释器一读文件就卡住了……你帮我们把文件改回**能跑**的样子，让屏幕上出现 `问答摊开张啦`。",
+      "brokenCode": ">>> print(\"问答摊开张啦\")\n",
+      "referenceFix": "print(\"问答摊开张啦\")\n",
+      "expectedOutput": "问答摊开张啦",
+      "stdin": null,
+      "explanation": "那个 `>>>` 是**问答摊递话筒的记号**，是对象自己冒出来的，**不是代码的一部分**。文件里的每一行都该是我们自己敲的代码，解释器根本不认识这三个字符，念到它就卡住（报的是 `SyntaxError`）。\n\n改法很简单：把记号删掉，只留下 `print(...)` 这一行。\n\n（记一句就够：**带记号的句子是「我们跟它说的话」，不带记号的句子才是「要它做的事」**。摊子上的照片抄进文件之前，先把记号擦掉。）",
+      "templateId": "py-s1-prompt-copied",
+      "params": {
+        "word": "问答摊开张啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "849e57447810711d"
+      }
+    },
+    {
+      "id": "bank-py-s1-repl-transcript-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把问答摊上的一次对话**拍照存进文件**，跑出来要**从上往下**四行：\n\n第一行：原样这一串：`>>> 2 + 3`\n\n第二行：这个算式的**答案**（就是摊子当场念给你的那个数）\n\n第三行：我们学会啦\n\n第四行：原样这一串：`>>> 再见`\n\n（我们提醒一句：第一行里那个记号是**要印出来的字**，不是让你照摊子的规矩抄；第四行同理。）",
+      "starter": null,
+      "referenceSolution": "print(\">>> 2 + 3\")\nprint(2 + 3)\nprint(\"我们学会啦\")\nprint(\">>> 再见\")\n",
+      "expectedOutput": ">>> 2 + 3\n5\n我们学会啦\n>>> 再见",
+      "stdin": null,
+      "explanation": "关键只有一条界线：**引号里面的是「字」，引号外面的是「活」**。\n\n第一行整个待在引号里，所以连那个记号带算式，电脑一个字都不改，照抄着输出；第二行写在引号外面，电脑就先算再念，输出的是算好的数。\n\n（这正是摊子和文件的区别：摊子上敲 `2 + 3` 就能看见答案，是因为**摊子替你调用了 `print`**；文件里没有这一手，得你自己写上去。）",
+      "templateId": "py-s1-repl-transcript",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "note": "我们学会啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "9c3a73fc59156ac2"
+      }
+    },
+    {
+      "id": "bank-py-s1-repl-transcript-015",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把问答摊上的一次对话**拍照存进文件**，跑出来要**从上往下**四行：\n\n第一行：原样这一串：`>>> 3 + 3`\n\n第二行：这个算式的**答案**（就是摊子当场念给你的那个数）\n\n第三行：我们学会啦\n\n第四行：原样这一串：`>>> 再见`\n\n（我们提醒一句：第一行里那个记号是**要印出来的字**，不是让你照摊子的规矩抄；第四行同理。）",
+      "starter": null,
+      "referenceSolution": "print(\">>> 3 + 3\")\nprint(3 + 3)\nprint(\"我们学会啦\")\nprint(\">>> 再见\")\n",
+      "expectedOutput": ">>> 3 + 3\n6\n我们学会啦\n>>> 再见",
+      "stdin": null,
+      "explanation": "关键只有一条界线：**引号里面的是「字」，引号外面的是「活」**。\n\n第一行整个待在引号里，所以连那个记号带算式，电脑一个字都不改，照抄着输出；第二行写在引号外面，电脑就先算再念，输出的是算好的数。\n\n（这正是摊子和文件的区别：摊子上敲 `3 + 3` 就能看见答案，是因为**摊子替你调用了 `print`**；文件里没有这一手，得你自己写上去。）",
+      "templateId": "py-s1-repl-transcript",
+      "params": {
+        "a": 3,
+        "b": 3,
+        "note": "我们学会啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "d212d93f87070b4e"
+      }
+    },
+    {
+      "id": "bank-py-s1-repl-transcript-030",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把问答摊上的一次对话**拍照存进文件**，跑出来要**从上往下**四行：\n\n第一行：原样这一串：`>>> 4 + 3`\n\n第二行：这个算式的**答案**（就是摊子当场念给你的那个数）\n\n第三行：我们学会啦\n\n第四行：原样这一串：`>>> 再见`\n\n（我们提醒一句：第一行里那个记号是**要印出来的字**，不是让你照摊子的规矩抄；第四行同理。）",
+      "starter": null,
+      "referenceSolution": "print(\">>> 4 + 3\")\nprint(4 + 3)\nprint(\"我们学会啦\")\nprint(\">>> 再见\")\n",
+      "expectedOutput": ">>> 4 + 3\n7\n我们学会啦\n>>> 再见",
+      "stdin": null,
+      "explanation": "关键只有一条界线：**引号里面的是「字」，引号外面的是「活」**。\n\n第一行整个待在引号里，所以连那个记号带算式，电脑一个字都不改，照抄着输出；第二行写在引号外面，电脑就先算再念，输出的是算好的数。\n\n（这正是摊子和文件的区别：摊子上敲 `4 + 3` 就能看见答案，是因为**摊子替你调用了 `print`**；文件里没有这一手，得你自己写上去。）",
+      "templateId": "py-s1-repl-transcript",
+      "params": {
+        "a": 4,
+        "b": 3,
+        "note": "我们学会啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "7412ba1e1dc72834"
+      }
+    },
+    {
+      "id": "bank-py-s1-repl-transcript-044",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把问答摊上的一次对话**拍照存进文件**，跑出来要**从上往下**四行：\n\n第一行：原样这一串：`>>> 4 + 7`\n\n第二行：这个算式的**答案**（就是摊子当场念给你的那个数）\n\n第三行：收摊回家\n\n第四行：原样这一串：`>>> 再见`\n\n（我们提醒一句：第一行里那个记号是**要印出来的字**，不是让你照摊子的规矩抄；第四行同理。）",
+      "starter": null,
+      "referenceSolution": "print(\">>> 4 + 7\")\nprint(4 + 7)\nprint(\"收摊回家\")\nprint(\">>> 再见\")\n",
+      "expectedOutput": ">>> 4 + 7\n11\n收摊回家\n>>> 再见",
+      "stdin": null,
+      "explanation": "关键只有一条界线：**引号里面的是「字」，引号外面的是「活」**。\n\n第一行整个待在引号里，所以连那个记号带算式，电脑一个字都不改，照抄着输出；第二行写在引号外面，电脑就先算再念，输出的是算好的数。\n\n（这正是摊子和文件的区别：摊子上敲 `4 + 7` 就能看见答案，是因为**摊子替你调用了 `print`**；文件里没有这一手，得你自己写上去。）",
+      "templateId": "py-s1-repl-transcript",
+      "params": {
+        "a": 4,
+        "b": 7,
+        "note": "收摊回家"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "63ca28e1246cf984"
+      }
+    },
+    {
+      "id": "bank-py-s1-repl-transcript-059",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把问答摊上的一次对话**拍照存进文件**，跑出来要**从上往下**四行：\n\n第一行：原样这一串：`>>> 5 + 7`\n\n第二行：这个算式的**答案**（就是摊子当场念给你的那个数）\n\n第三行：收摊回家\n\n第四行：原样这一串：`>>> 再见`\n\n（我们提醒一句：第一行里那个记号是**要印出来的字**，不是让你照摊子的规矩抄；第四行同理。）",
+      "starter": null,
+      "referenceSolution": "print(\">>> 5 + 7\")\nprint(5 + 7)\nprint(\"收摊回家\")\nprint(\">>> 再见\")\n",
+      "expectedOutput": ">>> 5 + 7\n12\n收摊回家\n>>> 再见",
+      "stdin": null,
+      "explanation": "关键只有一条界线：**引号里面的是「字」，引号外面的是「活」**。\n\n第一行整个待在引号里，所以连那个记号带算式，电脑一个字都不改，照抄着输出；第二行写在引号外面，电脑就先算再念，输出的是算好的数。\n\n（这正是摊子和文件的区别：摊子上敲 `5 + 7` 就能看见答案，是因为**摊子替你调用了 `print`**；文件里没有这一手，得你自己写上去。）",
+      "templateId": "py-s1-repl-transcript",
+      "params": {
+        "a": 5,
+        "b": 7,
+        "note": "收摊回家"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "770c72710004758c"
+      }
+    },
+    {
+      "id": "bank-py-s1-repl-transcript-074",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想把问答摊上的一次对话**拍照存进文件**，跑出来要**从上往下**四行：\n\n第一行：原样这一串：`>>> 6 + 7`\n\n第二行：这个算式的**答案**（就是摊子当场念给你的那个数）\n\n第三行：收摊回家\n\n第四行：原样这一串：`>>> 再见`\n\n（我们提醒一句：第一行里那个记号是**要印出来的字**，不是让你照摊子的规矩抄；第四行同理。）",
+      "starter": null,
+      "referenceSolution": "print(\">>> 6 + 7\")\nprint(6 + 7)\nprint(\"收摊回家\")\nprint(\">>> 再见\")\n",
+      "expectedOutput": ">>> 6 + 7\n13\n收摊回家\n>>> 再见",
+      "stdin": null,
+      "explanation": "关键只有一条界线：**引号里面的是「字」，引号外面的是「活」**。\n\n第一行整个待在引号里，所以连那个记号带算式，电脑一个字都不改，照抄着输出；第二行写在引号外面，电脑就先算再念，输出的是算好的数。\n\n（这正是摊子和文件的区别：摊子上敲 `6 + 7` 就能看见答案，是因为**摊子替你调用了 `print`**；文件里没有这一手，得你自己写上去。）",
+      "templateId": "py-s1-repl-transcript",
+      "params": {
+        "a": 6,
+        "b": 7,
+        "note": "收摊回家"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.455Z",
+        "hash": "317593d12245829a"
+      }
+    }
+  ]
+}

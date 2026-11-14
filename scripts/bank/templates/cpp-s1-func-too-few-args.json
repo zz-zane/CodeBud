@@ -1,0 +1,30 @@
+{
+  "templateId": "cpp-s1-func-too-few-args",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-09",
+  "type": "codefix",
+  "concept": [
+    "函数要几份料就传入几份",
+    "too few arguments"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "计算机",
+        "小黄鱼"
+      ]
+    },
+    "count": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    }
+  },
+  "stemTemplate": "我们这一个方法管发货：**收两份料** —— 收一个名字（领鱼的对象）、再收一个数（领几条）。收齐了就印一行 `{name} 领到 {count} 条数据`。\n\n可这段代码**翻不过去** —— 编译器一看到称呼它那一行就把它拦下了。你帮我们把缺的那份料补上，让它翻得过去、跑起来，印出来的东西是：\n\n`{name} 领到 {count} 条数据`",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    cout << name << \" 领到 \" << count << \" 条数据\" << endl;\n}\n\nint main() {\n    feed(\"{name}\");\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid feed(string name, int count) {\n    cout << name << \" 领到 \" << count << \" 条数据\" << endl;\n}\n\nint main() {\n    feed(\"{name}\", {count});\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是 `error: too few arguments to function 'void feed(std::string, int)'`，用自然语言解释：**「传入的料太少了 —— 这一个方法等着两份，你只给了一份。」**（它还把这一个方法的招牌原样念了出来：`void feed(std::string, int)`，一眼就能看出它等着「一根字符串 + 一个数」。）\n\n这一个方法脑袋上写着**两个元素**，称呼它的时候就得**传入够两份**：写成 `feed(\"{name}\", {count});`，中间用逗号隔开、顺序照着脑袋上的来。\n\n⚠️ 顺带把两个数字记清楚：\n\n- 料**少**了是 `too few arguments`（我们这一题）；\n- 料**多**了也拦 —— 输出的是 `too many arguments`。\n\n一句话：**脑袋上摆几个元素，称呼它的时候就传入几份料**，一个不多、一个不少，类型也要对上。"
+}

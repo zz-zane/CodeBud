@@ -1,0 +1,24 @@
+{
+  "templateId": "py-s1-while-condition",
+  "lang": "python",
+  "stage": 1,
+  "lessonId": "python-stage1-08",
+  "type": "codefix",
+  "concept": [
+    "while",
+    "眼色",
+    "逻辑错误"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 2,
+      "max": 5
+    }
+  },
+  "stemTemplate": "我们的规矩是「**元素里还有，就接着发**」：元素里现在有 {n} 条数据，每发一条就少一条，**发到 0 为止**，最后再印一句「发完啦」。\n\n每发一条印一行，一行是「元素里还有 几条 条」—— 先印这句话、空一格、条数、空一格、再印「条」。\n\n可它一条都没发出去……你帮我们改对。",
+  "brokenCodeTemplate": "fish = {n}\nwhile fish < 0:\n    print(\"元素里还有\", fish, \"条\")\n    fish = fish - 1\nprint(\"发完啦\")\n",
+  "referenceFixTemplate": "fish = {n}\nwhile fish > 0:\n    print(\"元素里还有\", fish, \"条\")\n    fish = fish - 1\nprint(\"发完啦\")\n",
+  "explanationTemplate": "`while` 是**先看眼色、再做活儿**：每跑一圈之前，先瞄一眼 `while` 后面那句问话 —— 答「真」才继续跑。\n\n这次的问话问的是「比 0 **小**吗」。元素里明明是 {n} 条、比 0 大，第一次瞄眼色就答了假，于是**一圈都没跑**，程序直接轮到圈外那句，屏幕上只剩下最后那句「发完啦」。\n\n把它反过来问「比 0 **大**吗」，就能一圈一圈发下去了。\n\n（顺带盯一眼圈里那句 `fish = fish - 1` —— 它负责让眼色**早晚有一天变成假**，可别丢。丢了它，`fish` 永远不变，这个圈就停不下来了。）"
+}

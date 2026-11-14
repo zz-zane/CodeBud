@@ -1,0 +1,25 @@
+{
+  "templateId": "java-s1-string-into-int",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-03",
+  "type": "codefix",
+  "concept": [
+    "int",
+    "双引号",
+    "incompatible types",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 2,
+      "max": 9
+    }
+  },
+  "stemTemplate": "我们开了一间装整数的小变量，想把 {n} 条数据赋值。可编译器当场把它拦下了，说 `incompatible types`（名称和东西对不上）……\n\n你帮我们看看是哪儿对不上，把它改好 —— 改好之后，程序应该把变量中装的那个数输出。",
+  "brokenCodeTemplate": "public class Main {\n    public static void main(String[] args) {\n        int fish = \"{n}\";\n        System.out.println(fish);\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void main(String[] args) {\n        int fish = {n};\n        System.out.println(fish);\n    }\n}\n",
+  "explanationTemplate": "问题出在 `{n}` 外面那**一双双引号**上。\n\n带上引号，它就是**字符串**（一串字），不是一个数 —— 哪怕里头写的是数字，Java 也只当它是「字」。我们把这串字符串往写着 `int` 的小变量中塞，编译器当然不干：名称说好装整数，你怎么递了串字符串进来？\n\n报错那句 `incompatible types: String cannot be converted to int` 说得更直白：「带双引号的这串东西，变不成整数。」\n\n改法：**把那双引号摘掉**。光秃秃的 `{n}` 才是一个数，`int` 的小变量才肯收。\n\n（顺带记一句：这种错是**编译**那一步就报出来的 —— 程序根本生不出来，一个字都还没跑。这正是 Java「规矩多、但稳当」的底气。）"
+}

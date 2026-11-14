@@ -1,0 +1,91 @@
+{
+  "lessonId": "cpp-stage2-02",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们把构造函数写成了 `void Cat(string n)`，编译器当场拦下，报的原话里有 `return type specification for constructor invalid`。看到这一句，该动手改哪儿？",
+      "options": [
+        "把脑袋上那个 `void` 删掉 —— 初始化函数的脑袋上不写返回什么",
+        "把函数名 `Cat` 改掉，别跟类重名",
+        "在状态里补一句 `return 0;`，把东西返回",
+        "回到 `main` 里改成先写 `Cat c1;`，再往格子里塞料"
+      ],
+      "answer": 0,
+      "explanation": "报错里那个 `constructor` 说的就是构造函数，`return type specification` 说的是「你给它写了个返回什么的类型」。构造函数**不是**被谁调用去干活的普通函数，所以脑袋上除了「收什么料」之外什么都不能写 —— 删掉 `void` 就通了。改名没用（认领暗号的规矩就是跟类定义同名），`return 0;` 也没用（它压根不返回东西回来），`main` 里那句更是没毛病。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们在里屋那对大括号里生了 `b`、`c` 两个对象，屋外还有一个 `a`。里屋那对大括号结束的那一刻，谁先被收走？",
+      "options": [
+        "`c` 先走 —— 里屋里的对象后来的先走，接着才轮到 `b`；`a` 得等 `main` 结束",
+        "`a` 先走 —— 它是最先初始化的那一个",
+        "`b` 先走 —— 它是里屋里最先初始化的那一个",
+        "三个一起走 —— 收尾的那一刻不分先后"
+      ],
+      "answer": 0,
+      "explanation": "谁**走出**自己所在的那对大括号，谁就被自动收走，而且**倒着收**：里屋里的对象后进去的先出来，先走的是 `c`、然后是 `b`（它俩都在里屋）。`a` 住在外屋，得等 `main` 那对大括号结束才走，所以它是最后一个。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们要一格叫 `fish` 的格子「初始化以后再也不能改」，于是给它加了封印，写成 `const int fish;`。这一格该怎么装东西进去？",
+      "options": [
+        "只能写在初始化列表里 —— `Cat(int f) : fish(f) {}`",
+        "在初始化函数状态里写 `fish = f;` 一样能装",
+        "先空着，等 `main` 里再写 `c1.fish = 3;` 赋值",
+        "加了封印的格子装不进去东西，只能一直是 0"
+      ],
+      "answer": 0,
+      "explanation": "带封印的格子只认初始化列表：`Cat(int f) : fish(f) {}`。我们要是在状态里写 `fish = f;`，编译器会说 `read-only member`（只读的格子不许赋值），再补一句 note 告诉你「这一格该在清单里装好」。至于 `main` 里那句，同样是赋值，一样会被拦；而「一直是 0」也不对 —— 它只是**初始化那一刻**装，装好之后就锁上，不是永远空着。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(____), fish(____) {}\n\n    void show() const {\n        cout << name << \" 有 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"张三\", 3);\n    c1.____();\n    return 0;\n}",
+      "stem": "这段代码里有三处被我们挖空了（用 `____` 标出），补上之后它会印出「张三 有 3 条数据」。",
+      "blanks": [
+        {
+          "answer": "n",
+          "accept": []
+        },
+        {
+          "answer": "f",
+          "accept": []
+        },
+        {
+          "answer": "show",
+          "accept": []
+        }
+      ],
+      "explanation": "初始化列表念作「用 `n` 去装 `name`、用 `f` 去装 `fish`」—— 括号里放的是收进来的那份料，所以两格分别填 `n` 和 `f` 。最后一处是把函数输出的写法：先说哪个对象、再写函数名，连起来念「让 `c1` 这一个施展 `show`」。"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat() : name(\"无名\"), fish(0) {}\n    Cat(string n) : name(n), fish(0) {}\n    Cat(string n, int f) : name(n), fish(f) {}\n\n    void show() const {\n        cout << name << \"：\" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    Cat a;\n    Cat b(\"李四\");\n    a.show();\n    b.show();\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "无名：0 条\n李四：0 条",
+      "accept": [
+        "无名：0 条\n李四：0 条\n"
+      ],
+      "explanation": "`Cat a;` 一样料都没喂，跑的是不带料的那套：名字「无名」、条数 0 。`Cat b(\"李四\");` 只喂了一根字符串，跑的是 `Cat(string n)` 那套 —— 它照样把名字接住了，但那份料里没有条数，所以条数还是 0。两套初始化法各管各的，编译器看你喂了什么就挑哪一套。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {\n        cout << name << \" 来了\" << endl;\n    }\n    ~Cat() {\n        cout << name << \" 走了\" << endl;\n    }\n};\n\nint main() {\n    Cat a(\"张三\");\n    {\n        Cat b(\"李四\");\n        Cat c(\"王五\");\n        cout << \"三个都在\" << endl;\n    }\n    cout << \"里屋空了\" << endl;\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "张三 来了\n李四 来了\n王五 来了\n三个都在\n王五 走了\n李四 走了\n里屋空了\n张三 走了",
+      "accept": [
+        "张三 来了\n李四 来了\n王五 来了\n三个都在\n王五 走了\n李四 走了\n里屋空了\n张三 走了\n"
+      ],
+      "explanation": "构造函数是按创建对象的先后跑的：张三、李四、王五，所以前三行排着队出来。里屋那对大括号一结束，里屋里那两个立刻被倒着收走 —— 后进去的 `c` 先走，接着 `b`，于是「王五 走了」排在「李四 走了」前面。`a` 住在外屋，得等 `main` 结束，所以它是最后一个。"
+    }
+  ]
+}

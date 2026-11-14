@@ -1,0 +1,444 @@
+{
+  "lessonId": "python-stage1-01",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-py-s1-hello-print-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "来写我们的第一个程序\n\n让它打印**两行**：\n\n第一行是\n\n我最喜欢数据！\n\n第二行是\n\n你也来一口吗？\n\n（一个字都不能差，解释器是按字符比的）",
+      "starter": null,
+      "referenceSolution": "print(\"我最喜欢数据！\")\nprint(\"你也来一口吗？\")\n",
+      "expectedOutput": "我最喜欢数据！\n你也来一口吗？",
+      "stdin": null,
+      "explanation": "两行就是**两个 `print`**  —— 一个 `print` 打印一行，写两句就打印两行，顺序就是从上往下。\n\n要打印的字得用**引号**括起来（半角单引号 `'` 和双引号 `\"` 都行）。引号里的东西会**原样**打到屏幕上，连标点都不改 —— 所以中英文标点千万别敲错位置。",
+      "templateId": "py-s1-hello-print",
+      "params": {
+        "thing": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.451Z",
+        "hash": "08a2631f558438f1"
+      }
+    },
+    {
+      "id": "bank-py-s1-hello-print-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "来写我们的第一个程序\n\n让它打印**两行**：\n\n第一行是\n\n我最喜欢商品A！\n\n第二行是\n\n你也来一口吗？\n\n（一个字都不能差，解释器是按字符比的）",
+      "starter": null,
+      "referenceSolution": "print(\"我最喜欢商品A！\")\nprint(\"你也来一口吗？\")\n",
+      "expectedOutput": "我最喜欢商品A！\n你也来一口吗？",
+      "stdin": null,
+      "explanation": "两行就是**两个 `print`**  —— 一个 `print` 打印一行，写两句就打印两行，顺序就是从上往下。\n\n要打印的字得用**引号**括起来（半角单引号 `'` 和双引号 `\"` 都行）。引号里的东西会**原样**打到屏幕上，连标点都不改 —— 所以中英文标点千万别敲错位置。",
+      "templateId": "py-s1-hello-print",
+      "params": {
+        "thing": "商品A"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "48a78fad98bb9bac"
+      }
+    },
+    {
+      "id": "bank-py-s1-hello-print-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "来写我们的第一个程序\n\n让它打印**两行**：\n\n第一行是\n\n我最喜欢毛线球！\n\n第二行是\n\n你也来一口吗？\n\n（一个字都不能差，解释器是按字符比的）",
+      "starter": null,
+      "referenceSolution": "print(\"我最喜欢毛线球！\")\nprint(\"你也来一口吗？\")\n",
+      "expectedOutput": "我最喜欢毛线球！\n你也来一口吗？",
+      "stdin": null,
+      "explanation": "两行就是**两个 `print`**  —— 一个 `print` 打印一行，写两句就打印两行，顺序就是从上往下。\n\n要打印的字得用**引号**括起来（半角单引号 `'` 和双引号 `\"` 都行）。引号里的东西会**原样**打到屏幕上，连标点都不改 —— 所以中英文标点千万别敲错位置。",
+      "templateId": "py-s1-hello-print",
+      "params": {
+        "thing": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "bdd4f428250f7729"
+      }
+    },
+    {
+      "id": "bank-py-s1-hello-print-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "来写我们的第一个程序\n\n让它打印**两行**：\n\n第一行是\n\n我最喜欢商品鸡肉！\n\n第二行是\n\n你也来一口吗？\n\n（一个字都不能差，解释器是按字符比的）",
+      "starter": null,
+      "referenceSolution": "print(\"我最喜欢商品鸡肉！\")\nprint(\"你也来一口吗？\")\n",
+      "expectedOutput": "我最喜欢商品鸡肉！\n你也来一口吗？",
+      "stdin": null,
+      "explanation": "两行就是**两个 `print`**  —— 一个 `print` 打印一行，写两句就打印两行，顺序就是从上往下。\n\n要打印的字得用**引号**括起来（半角单引号 `'` 和双引号 `\"` 都行）。引号里的东西会**原样**打到屏幕上，连标点都不改 —— 所以中英文标点千万别敲错位置。",
+      "templateId": "py-s1-hello-print",
+      "params": {
+        "thing": "商品鸡肉"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "ebc482cb41c19b0b"
+      }
+    },
+    {
+      "id": "bank-py-s1-lines-order-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想跟计算机打个招呼再道个别：屏幕上要**先**出现 `早安`，**再**出现 `晚安`。\n\n可这两句话印出来是反着来的……你帮我们改对。",
+      "brokenCode": "print(\"晚安\")\nprint(\"早安\")\n",
+      "referenceFix": "print(\"早安\")\nprint(\"晚安\")\n",
+      "expectedOutput": "早安\n晚安",
+      "stdin": null,
+      "explanation": "电脑念代码是**从上往下一行一行**来的 —— 谁写在前面，谁就先出声。这两行只是站错了位子，把它们上下换个位置就对啦。\n\n这种毛病**不会报错**：程序跑得好好的，解释器一次不吭，只是输出的顺序不对。所以看不出来的时候，要把屏幕上的字跟心里那句「应该先 A 再 B」对一对。\n\n（反过来也一样：想让哪句话后出声，就把它往下面挪。）",
+      "templateId": "py-s1-lines-order",
+      "params": {
+        "first": "早安",
+        "second": "晚安"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "0d4bb45afde4b2e3"
+      }
+    },
+    {
+      "id": "bank-py-s1-lines-order-008",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想跟计算机打个招呼再道个别：屏幕上要**先**出现 `处理完成`，**再**出现 `收摊啦`。\n\n可这两句话印出来是反着来的……你帮我们改对。",
+      "brokenCode": "print(\"收摊啦\")\nprint(\"处理完成\")\n",
+      "referenceFix": "print(\"处理完成\")\nprint(\"收摊啦\")\n",
+      "expectedOutput": "处理完成\n收摊啦",
+      "stdin": null,
+      "explanation": "电脑念代码是**从上往下一行一行**来的 —— 谁写在前面，谁就先出声。这两行只是站错了位子，把它们上下换个位置就对啦。\n\n这种毛病**不会报错**：程序跑得好好的，解释器一次不吭，只是输出的顺序不对。所以看不出来的时候，要把屏幕上的字跟心里那句「应该先 A 再 B」对一对。\n\n（反过来也一样：想让哪句话后出声，就把它往下面挪。）",
+      "templateId": "py-s1-lines-order",
+      "params": {
+        "first": "处理完成",
+        "second": "收摊啦"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "fd0404126a00d821"
+      }
+    },
+    {
+      "id": "bank-py-s1-missing-paren-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们照着课文敲下了第一个程序，解释器立刻就生气了……\n\n可我们盯着看了半天，`print` 明明写对了呀？你帮我们找找哪里不对 —— 改好之后它应该打印出 `我最喜欢数据！`。",
+      "brokenCode": "print(\"我最喜欢数据！\"\n",
+      "referenceFix": "print(\"我最喜欢数据！\")\n",
+      "expectedOutput": "我最喜欢数据！",
+      "stdin": null,
+      "explanation": "是**右括号**！`print(` 开了个头，后面少了 `)` 来收尾。\n\n括号和引号都得**成对**出现：开一个就要关一个，而且不能交叉。少了右边那个，解释器读到这行末尾也没等到闭合，只好不高兴地报 `SyntaxError`。\n\n（这种错叫**语法错误**：程序连第一步都没迈出去。它的报错里会写着 `line 1`，那就是它摔倒在第几行。）",
+      "templateId": "py-s1-missing-paren",
+      "params": {
+        "thing": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "9cb0ddd34b1103be"
+      }
+    },
+    {
+      "id": "bank-py-s1-missing-paren-002",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们照着课文敲下了第一个程序，解释器立刻就生气了……\n\n可我们盯着看了半天，`print` 明明写对了呀？你帮我们找找哪里不对 —— 改好之后它应该打印出 `我最喜欢毛线球！`。",
+      "brokenCode": "print(\"我最喜欢毛线球！\"\n",
+      "referenceFix": "print(\"我最喜欢毛线球！\")\n",
+      "expectedOutput": "我最喜欢毛线球！",
+      "stdin": null,
+      "explanation": "是**右括号**！`print(` 开了个头，后面少了 `)` 来收尾。\n\n括号和引号都得**成对**出现：开一个就要关一个，而且不能交叉。少了右边那个，解释器读到这行末尾也没等到闭合，只好不高兴地报 `SyntaxError`。\n\n（这种错叫**语法错误**：程序连第一步都没迈出去。它的报错里会写着 `line 1`，那就是它摔倒在第几行。）",
+      "templateId": "py-s1-missing-paren",
+      "params": {
+        "thing": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "c88d7d8eb36244b1"
+      }
+    },
+    {
+      "id": "bank-py-s1-print-oneline-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "对象点单铺要挂一块名称，我们想让它**原样**输出这一行字：\n\n我们想要2条数据，3个也行，。\n\n请你写个程序，运行之后屏幕上出现的就是这一行。\n\n⚠️ 看仔细：这一行里**一个空格都没有**，数字跟字是紧紧挨着的。`2` 和 `3` 是名称上写着的字，不是要你去算的算式。",
+      "starter": null,
+      "referenceSolution": "print(\"我们想要2条数据，3个也行，。\")\n",
+      "expectedOutput": "我们想要2条数据，3个也行，。",
+      "stdin": null,
+      "explanation": "名称上的字是**一整句话**，所以它要整个待在**一对引号**里：引号圈到哪儿，电脑就念到哪儿，里面的数字它**不会拿去算**，照抄就好。\n\n要是把数字写到引号外面去（分好几样传给 `print`），`print` 会在每两样中间**垫上一个空格**，屏幕上的样子就跟名称对不上了 —— 而它不会报错，只会安安静静地印错。所以「一个字都不能差」的句子，最稳的办法是**连数字一起整个塞进引号里**。",
+      "templateId": "py-s1-print-oneline",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "dish": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "e38d7fe021371919"
+      }
+    },
+    {
+      "id": "bank-py-s1-print-oneline-009",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "对象点单铺要挂一块名称，我们想让它**原样**输出这一行字：\n\n我们想要2条数据，6个也行，。\n\n请你写个程序，运行之后屏幕上出现的就是这一行。\n\n⚠️ 看仔细：这一行里**一个空格都没有**，数字跟字是紧紧挨着的。`2` 和 `6` 是名称上写着的字，不是要你去算的算式。",
+      "starter": null,
+      "referenceSolution": "print(\"我们想要2条数据，6个也行，。\")\n",
+      "expectedOutput": "我们想要2条数据，6个也行，。",
+      "stdin": null,
+      "explanation": "名称上的字是**一整句话**，所以它要整个待在**一对引号**里：引号圈到哪儿，电脑就念到哪儿，里面的数字它**不会拿去算**，照抄就好。\n\n要是把数字写到引号外面去（分好几样传给 `print`），`print` 会在每两样中间**垫上一个空格**，屏幕上的样子就跟名称对不上了 —— 而它不会报错，只会安安静静地印错。所以「一个字都不能差」的句子，最稳的办法是**连数字一起整个塞进引号里**。",
+      "templateId": "py-s1-print-oneline",
+      "params": {
+        "a": 2,
+        "b": 6,
+        "dish": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "4d69e58bd2d65ef1"
+      }
+    },
+    {
+      "id": "bank-py-s1-print-oneline-019",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "对象点单铺要挂一块名称，我们想让它**原样**输出这一行字：\n\n我们想要3条商品A，5个也行，。\n\n请你写个程序，运行之后屏幕上出现的就是这一行。\n\n⚠️ 看仔细：这一行里**一个空格都没有**，数字跟字是紧紧挨着的。`3` 和 `5` 是名称上写着的字，不是要你去算的算式。",
+      "starter": null,
+      "referenceSolution": "print(\"我们想要3条商品A，5个也行，。\")\n",
+      "expectedOutput": "我们想要3条商品A，5个也行，。",
+      "stdin": null,
+      "explanation": "名称上的字是**一整句话**，所以它要整个待在**一对引号**里：引号圈到哪儿，电脑就念到哪儿，里面的数字它**不会拿去算**，照抄就好。\n\n要是把数字写到引号外面去（分好几样传给 `print`），`print` 会在每两样中间**垫上一个空格**，屏幕上的样子就跟名称对不上了 —— 而它不会报错，只会安安静静地印错。所以「一个字都不能差」的句子，最稳的办法是**连数字一起整个塞进引号里**。",
+      "templateId": "py-s1-print-oneline",
+      "params": {
+        "a": 3,
+        "b": 5,
+        "dish": "商品A"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "f5f1903bdf434ccc"
+      }
+    },
+    {
+      "id": "bank-py-s1-print-oneline-028",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "对象点单铺要挂一块名称，我们想让它**原样**输出这一行字：\n\n我们想要4条商品A，4个也行，。\n\n请你写个程序，运行之后屏幕上出现的就是这一行。\n\n⚠️ 看仔细：这一行里**一个空格都没有**，数字跟字是紧紧挨着的。`4` 和 `4` 是名称上写着的字，不是要你去算的算式。",
+      "starter": null,
+      "referenceSolution": "print(\"我们想要4条商品A，4个也行，。\")\n",
+      "expectedOutput": "我们想要4条商品A，4个也行，。",
+      "stdin": null,
+      "explanation": "名称上的字是**一整句话**，所以它要整个待在**一对引号**里：引号圈到哪儿，电脑就念到哪儿，里面的数字它**不会拿去算**，照抄就好。\n\n要是把数字写到引号外面去（分好几样传给 `print`），`print` 会在每两样中间**垫上一个空格**，屏幕上的样子就跟名称对不上了 —— 而它不会报错，只会安安静静地印错。所以「一个字都不能差」的句子，最稳的办法是**连数字一起整个塞进引号里**。",
+      "templateId": "py-s1-print-oneline",
+      "params": {
+        "a": 4,
+        "b": 4,
+        "dish": "商品A"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "4792b12625b648e3"
+      }
+    },
+    {
+      "id": "bank-py-s1-print-oneline-038",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "对象点单铺要挂一块名称，我们想让它**原样**输出这一行字：\n\n我们想要5条毛线球，3个也行，。\n\n请你写个程序，运行之后屏幕上出现的就是这一行。\n\n⚠️ 看仔细：这一行里**一个空格都没有**，数字跟字是紧紧挨着的。`5` 和 `3` 是名称上写着的字，不是要你去算的算式。",
+      "starter": null,
+      "referenceSolution": "print(\"我们想要5条毛线球，3个也行，。\")\n",
+      "expectedOutput": "我们想要5条毛线球，3个也行，。",
+      "stdin": null,
+      "explanation": "名称上的字是**一整句话**，所以它要整个待在**一对引号**里：引号圈到哪儿，电脑就念到哪儿，里面的数字它**不会拿去算**，照抄就好。\n\n要是把数字写到引号外面去（分好几样传给 `print`），`print` 会在每两样中间**垫上一个空格**，屏幕上的样子就跟名称对不上了 —— 而它不会报错，只会安安静静地印错。所以「一个字都不能差」的句子，最稳的办法是**连数字一起整个塞进引号里**。",
+      "templateId": "py-s1-print-oneline",
+      "params": {
+        "a": 5,
+        "b": 3,
+        "dish": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "c8c979900531eeef"
+      }
+    },
+    {
+      "id": "bank-py-s1-print-oneline-047",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "对象点单铺要挂一块名称，我们想让它**原样**输出这一行字：\n\n我们想要5条毛线球，6个也行，。\n\n请你写个程序，运行之后屏幕上出现的就是这一行。\n\n⚠️ 看仔细：这一行里**一个空格都没有**，数字跟字是紧紧挨着的。`5` 和 `6` 是名称上写着的字，不是要你去算的算式。",
+      "starter": null,
+      "referenceSolution": "print(\"我们想要5条毛线球，6个也行，。\")\n",
+      "expectedOutput": "我们想要5条毛线球，6个也行，。",
+      "stdin": null,
+      "explanation": "名称上的字是**一整句话**，所以它要整个待在**一对引号**里：引号圈到哪儿，电脑就念到哪儿，里面的数字它**不会拿去算**，照抄就好。\n\n要是把数字写到引号外面去（分好几样传给 `print`），`print` 会在每两样中间**垫上一个空格**，屏幕上的样子就跟名称对不上了 —— 而它不会报错，只会安安静静地印错。所以「一个字都不能差」的句子，最稳的办法是**连数字一起整个塞进引号里**。",
+      "templateId": "py-s1-print-oneline",
+      "params": {
+        "a": 5,
+        "b": 6,
+        "dish": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "a1dad9b569b7075e"
+      }
+    },
+    {
+      "id": "bank-py-s1-quote-missing-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想让电脑输出「数据」这几个字，就敲了这么一行。\n\n可解释器一看见它就不乐意了，当场甩了个错出来……你帮我们改对，让它把 `数据` 原样输出。",
+      "brokenCode": "print(数据)\n",
+      "referenceFix": "print(\"数据\")\n",
+      "expectedOutput": "数据",
+      "stdin": null,
+      "explanation": "**引号**没写！括号里光秃秃的一个词，电脑不把它当「一句话」，而是当成**一个名字**去找 —— 它会扭头问「架子上有没有叫 数据 的东西呀」，翻了一圈没找着，只好报 `NameError` 给你看。\n\n给这几个字套上一对引号，它就从「一个名字」变回「一句话」了：引号圈住的是**要念的内容**，引号自己不会被输出。\n\n（这条界线要记牢：**加引号是内容，不加引号是名字**。往后天天要用到它。）",
+      "templateId": "py-s1-quote-missing",
+      "params": {
+        "thing": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "2e7e4730fe9ae69d"
+      }
+    },
+    {
+      "id": "bank-py-s1-quote-missing-003",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想让电脑输出「商品鸡肉」这几个字，就敲了这么一行。\n\n可解释器一看见它就不乐意了，当场甩了个错出来……你帮我们改对，让它把 `商品鸡肉` 原样输出。",
+      "brokenCode": "print(商品鸡肉)\n",
+      "referenceFix": "print(\"商品鸡肉\")\n",
+      "expectedOutput": "商品鸡肉",
+      "stdin": null,
+      "explanation": "**引号**没写！括号里光秃秃的一个词，电脑不把它当「一句话」，而是当成**一个名字**去找 —— 它会扭头问「架子上有没有叫 商品鸡肉 的东西呀」，翻了一圈没找着，只好报 `NameError` 给你看。\n\n给这几个字套上一对引号，它就从「一个名字」变回「一句话」了：引号圈住的是**要念的内容**，引号自己不会被输出。\n\n（这条界线要记牢：**加引号是内容，不加引号是名字**。往后天天要用到它。）",
+      "templateId": "py-s1-quote-missing",
+      "params": {
+        "thing": "商品鸡肉"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "a59d8d66a56967d6"
+      }
+    },
+    {
+      "id": "bank-py-s1-say-again-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要写一张小小的欢迎牌，屏幕上要**从上往下**出现三行：\n\n第一行：你好\n\n第二行：数据\n\n第三行：你好\n\n（看清楚，第一行和第三行是**同一句话**，它要出现两次。）",
+      "starter": null,
+      "referenceSolution": "print(\"你好\")\nprint(\"数据\")\nprint(\"你好\")\n",
+      "expectedOutput": "你好\n数据\n你好",
+      "stdin": null,
+      "explanation": "屏幕上要出现三行，就写**三个 `print`** 。电脑是一行一行往下念的：写在前面的先出声，写在后面的后出声，所以你写的顺序就是它出声的顺序。\n\n今天学的招数里还没有「让它自己重复」这一手，所以同一句话想出现两次，最直接的办法就是**再写一遍**。\n\n（第一行和第三行看起来像少写了内容，其实是对的 —— 你只是把同一句留给它念了两次。）",
+      "templateId": "py-s1-say-again",
+      "params": {
+        "greet": "你好",
+        "thing": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "d03fc431562d9e56"
+      }
+    },
+    {
+      "id": "bank-py-s1-say-again-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要写一张小小的欢迎牌，屏幕上要**从上往下**出现三行：\n\n第一行：你好\n\n第二行：毛线球\n\n第三行：你好\n\n（看清楚，第一行和第三行是**同一句话**，它要出现两次。）",
+      "starter": null,
+      "referenceSolution": "print(\"你好\")\nprint(\"毛线球\")\nprint(\"你好\")\n",
+      "expectedOutput": "你好\n毛线球\n你好",
+      "stdin": null,
+      "explanation": "屏幕上要出现三行，就写**三个 `print`** 。电脑是一行一行往下念的：写在前面的先出声，写在后面的后出声，所以你写的顺序就是它出声的顺序。\n\n今天学的招数里还没有「让它自己重复」这一手，所以同一句话想出现两次，最直接的办法就是**再写一遍**。\n\n（第一行和第三行看起来像少写了内容，其实是对的 —— 你只是把同一句留给它念了两次。）",
+      "templateId": "py-s1-say-again",
+      "params": {
+        "greet": "你好",
+        "thing": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "fecdca04972a8c6b"
+      }
+    },
+    {
+      "id": "bank-py-s1-say-again-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要写一张小小的欢迎牌，屏幕上要**从上往下**出现三行：\n\n第一行：早上好\n\n第二行：数据\n\n第三行：早上好\n\n（看清楚，第一行和第三行是**同一句话**，它要出现两次。）",
+      "starter": null,
+      "referenceSolution": "print(\"早上好\")\nprint(\"数据\")\nprint(\"早上好\")\n",
+      "expectedOutput": "早上好\n数据\n早上好",
+      "stdin": null,
+      "explanation": "屏幕上要出现三行，就写**三个 `print`** 。电脑是一行一行往下念的：写在前面的先出声，写在后面的后出声，所以你写的顺序就是它出声的顺序。\n\n今天学的招数里还没有「让它自己重复」这一手，所以同一句话想出现两次，最直接的办法就是**再写一遍**。\n\n（第一行和第三行看起来像少写了内容，其实是对的 —— 你只是把同一句留给它念了两次。）",
+      "templateId": "py-s1-say-again",
+      "params": {
+        "greet": "早上好",
+        "thing": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "ec37b0ce65abd07d"
+      }
+    },
+    {
+      "id": "bank-py-s1-say-again-005",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要写一张小小的欢迎牌，屏幕上要**从上往下**出现三行：\n\n第一行：早上好\n\n第二行：毛线球\n\n第三行：早上好\n\n（看清楚，第一行和第三行是**同一句话**，它要出现两次。）",
+      "starter": null,
+      "referenceSolution": "print(\"早上好\")\nprint(\"毛线球\")\nprint(\"早上好\")\n",
+      "expectedOutput": "早上好\n毛线球\n早上好",
+      "stdin": null,
+      "explanation": "屏幕上要出现三行，就写**三个 `print`** 。电脑是一行一行往下念的：写在前面的先出声，写在后面的后出声，所以你写的顺序就是它出声的顺序。\n\n今天学的招数里还没有「让它自己重复」这一手，所以同一句话想出现两次，最直接的办法就是**再写一遍**。\n\n（第一行和第三行看起来像少写了内容，其实是对的 —— 你只是把同一句留给它念了两次。）",
+      "templateId": "py-s1-say-again",
+      "params": {
+        "greet": "早上好",
+        "thing": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "32ffb019c367815f"
+      }
+    },
+    {
+      "id": "bank-py-s1-say-again-006",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要写一张小小的欢迎牌，屏幕上要**从上往下**出现三行：\n\n第一行：欢迎回来\n\n第二行：数据\n\n第三行：欢迎回来\n\n（看清楚，第一行和第三行是**同一句话**，它要出现两次。）",
+      "starter": null,
+      "referenceSolution": "print(\"欢迎回来\")\nprint(\"数据\")\nprint(\"欢迎回来\")\n",
+      "expectedOutput": "欢迎回来\n数据\n欢迎回来",
+      "stdin": null,
+      "explanation": "屏幕上要出现三行，就写**三个 `print`** 。电脑是一行一行往下念的：写在前面的先出声，写在后面的后出声，所以你写的顺序就是它出声的顺序。\n\n今天学的招数里还没有「让它自己重复」这一手，所以同一句话想出现两次，最直接的办法就是**再写一遍**。\n\n（第一行和第三行看起来像少写了内容，其实是对的 —— 你只是把同一句留给它念了两次。）",
+      "templateId": "py-s1-say-again",
+      "params": {
+        "greet": "欢迎回来",
+        "thing": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "783124c96c3681f9"
+      }
+    },
+    {
+      "id": "bank-py-s1-say-again-008",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们要写一张小小的欢迎牌，屏幕上要**从上往下**出现三行：\n\n第一行：欢迎回来\n\n第二行：毛线球\n\n第三行：欢迎回来\n\n（看清楚，第一行和第三行是**同一句话**，它要出现两次。）",
+      "starter": null,
+      "referenceSolution": "print(\"欢迎回来\")\nprint(\"毛线球\")\nprint(\"欢迎回来\")\n",
+      "expectedOutput": "欢迎回来\n毛线球\n欢迎回来",
+      "stdin": null,
+      "explanation": "屏幕上要出现三行，就写**三个 `print`** 。电脑是一行一行往下念的：写在前面的先出声，写在后面的后出声，所以你写的顺序就是它出声的顺序。\n\n今天学的招数里还没有「让它自己重复」这一手，所以同一句话想出现两次，最直接的办法就是**再写一遍**。\n\n（第一行和第三行看起来像少写了内容，其实是对的 —— 你只是把同一句留给它念了两次。）",
+      "templateId": "py-s1-say-again",
+      "params": {
+        "greet": "欢迎回来",
+        "thing": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.454Z",
+        "hash": "a1c28750c3b8920b"
+      }
+    }
+  ]
+}

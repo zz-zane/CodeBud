@@ -1,0 +1,39 @@
+{
+  "templateId": "java-s1-trim-not-caught",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-11",
+  "type": "codefix",
+  "concept": [
+    "trim",
+    "缸是焊住的",
+    "接住结果",
+    "Scanner"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四"
+      ]
+    },
+    "name2": {
+      "kind": "pick",
+      "values": [
+        "王五",
+        "雪球"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "  {name}  \n",
+    "sampleText": "  {name2}  \n"
+  },
+  "stemTemplate": "递纸条的家伙手抖了 —— 名字**两头各带了两个空格**。我们想把它掐干净再印出来，掐空白那一个方法也调用过了，可印出来两边还是空空的。\n\n你帮我们把两头的空白掐掉，印成 `[名字]` 的样子（两边那对方括号要留着，那是我们看空格用的）。\n\n比如纸条上递来的是（两头的空格也算纸条的一部分）：\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一个名字**。）",
+  "brokenCodeTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.nextLine();\n        s.trim();\n        System.out.println(\"[\" + s + \"]\");\n    }\n}\n",
+  "referenceFixTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.nextLine();\n        System.out.println(\"[\" + s.trim() + \"]\");\n    }\n}\n",
+  "explanationTemplate": "**缸是焊住的**：`trim()` 从来不改原来那个缸，它只是**另做一个掐干净的新缸**返回。我们调用结束那一句**没接住**这个结果 —— 新缸飘走了，`s` 还是原来那个带空格的，当然印出来一颗空格不少。\n\n正路两条，意思一样：\n\n- 用名称把新缸接住：先 `s = s.trim();` 再印 `s`（这是把名称从旧缸上摘下来、挂到新缸上）；\n- 或者当场用掉结果：`System.out.println(\"[\" + s.trim() + \"]\");`\n\n这种错**不报错、不提醒**，屏幕上安安静静，编译器一个字都不说 —— 只能靠自己记住那一句：**这串东西的函数不改原件、只返回新的**。所以调用结束要么**接住它**，要么**当场用掉它**，调用一次丢一次等于白调用。"
+}

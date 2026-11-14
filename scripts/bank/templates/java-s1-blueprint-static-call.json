@@ -1,0 +1,27 @@
+{
+  "templateId": "java-s1-blueprint-static-call",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-12",
+  "type": "codefix",
+  "concept": [
+    "类定义与实例",
+    "static",
+    "非静态方法",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四"
+      ]
+    }
+  },
+  "stemTemplate": "我们照着类定义调用了一次 `meow()`，编译器压根不认：原话里有一句 `cannot be referenced from a static context`，说这一个方法**站在 `main` 里调用不动**。\n\n你帮我们按类定义的正路改好：先根据类创建实例实例、给它挂上名字 `{name}`，再让**这一个**自己调用。\n\n改好之后，屏幕上该是这一行：\n\n```text\n{name}：\n```",
+  "brokenCodeTemplate": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat.meow();\n    }\n}\n",
+  "referenceFixTemplate": "class Cat {\n    String name;\n\n    void meow() {\n        System.out.println(name + \"：\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat c = new Cat();\n        c.name = \"{name}\";\n        c.meow();\n    }\n}\n",
+  "explanationTemplate": "原话是 `non-static method meow() cannot be referenced from a static context` —— 「`meow()` 这一个方法不是 `static` 的，站在 `static` 的地方调用不动它。」\n\n两边各有各的道理，凑一块儿就撞：\n\n- `meow()` 画在类定义上、**跟着每一个实例走** —— 它身子里那句 `name`，动的是「**这一个**对象」的家当。可 `Cat.meow()` 这么调用，连对象都还没创建后，编译器不知道它要动谁的名字。\n- `main` 前面那个 `static` 是另一层意思：它**不跟着任何一个实例走**，电脑一开演就从它开始。我们站的这块地方是 `static` 的，所以调用不动「一个还不存在的对象」的函数。\n\n正路只有一条：**先创建一个实例，再让这个对象自己调用** —— `Cat c = new Cat();` 生对象、`c.name = \"{name}\";` 挂名字、`c.meow();` 让它自己叫。\n\n`c.meow()` 和 `Cat.meow()` 只差一个字，意思差得远：前者是「**{name}**，叫一次」，后者是「**对象这个类型**，叫一次」—— 后者连是谁都没说清。"
+}

@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s2-08-by-value-copy",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-08",
+  "type": "codewrite",
+  "concept": [
+    "按值递料会偷偷照抄",
+    "照抄一幕看得见",
+    "数输出行数"
+  ],
+  "instances": 6,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 1,
+    "min": 2,
+    "max": 9
+  },
+  "stemTemplate": "我们要**亲眼看见**「偷偷照抄」发生在哪一刻。输入接口会递进来**一个数**（盒子里装几条）。\n\n请你这么办：\n\n1. **定义类** `FishBox`：一栏带盖的名称 `int* p`。三手都要带上台词：\n   - **构造函数**：`new` 一个变量把数放进去，印一行 `租下一格变量，放进 N 条`；\n   - **照抄函数**（自己写的那一份，另租一间、搬内容）：印一行 `另租一格，搬进 N 条`；\n   - **析构函数**：先印一行 `归还这一格变量`，再 `delete`。\n   - 再画一个公开函数 `get` 把屋里的数返回。\n2. **在类定义外面画一个方法 `show`**：它的料是 `FishBox`，**前面不带那个「不必还的名字」记号**（按值），里面印一行 `{name} 的盒子里 N 条`。\n3. 在 `main` 里：读进那个数 → 创建一个盒子 → **调用一次** `show`。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n**这一题请你数一数屏幕上有几行**，还要看清每一行是**哪一步**印的。\n\n（判分传入的是**另一个数**，所以别把答案写死）",
+  "starterTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <iostream>\nusing namespace std;\n\nclass FishBox {\n    int* p;\npublic:\n    FishBox(int v) {\n        p = new int(v);\n        cout << \"租下一格变量，放进 \" << *p << \" 条\" << endl;\n    }\n    FishBox(const FishBox& other) {\n        p = new int(*other.p);\n        cout << \"另租一格，搬进 \" << *p << \" 条\" << endl;\n    }\n    ~FishBox() {\n        cout << \"归还这一格变量\" << endl;\n        delete p;\n    }\n    int get() const { return *p; }\n};\n\nvoid show(FishBox b) {\n    cout << \"{name} 的盒子里 \" << b.get() << \" 条\" << endl;\n}\n\nint main() {\n    int v = 0;\n    cin >> v;\n\n    FishBox a(v);\n    show(a);\n    return 0;\n}\n",
+  "explanationTemplate": "我们在本机跑过这一题，输出是**五行**（传入 5 时）：\n\n```text\n租下一格变量，放进 5 条\n另租一格，搬进 5 条\n{name} 的盒子里 5 条\n归还这一格变量\n归还这一格变量\n```\n\n对着这五行数一数，我们瞒着你干的事就露馅了：\n\n- 第 1 行是 `main` 里生 `a` —— 租了一个变量；\n- 第 2 行**我们根本没写**。它从哪来的？**调用 `show` 的时候偷偷照抄了一个盒子。** `show` 的料是**按值**的，编译器就得先造一份这个料的复印件 —— 而造复印件，走的就是我们写的那份照抄函数，于是「另租一格、搬进内容」这一步被调用了起来。\n- 第 4 行是 `show` 里那个**复印件**走了（函数调用结束，它的料就该还）；\n- 第 5 行是 `main` 里那个 `a` 走了。**两个盒子各还各的**，所以收尾时有两个「归还」，谁也不撞谁。\n\n⚠️ 这一课最该记住的一句话就在这儿：\n\n> **料写成「按值」，每调用一次就要照抄一个盒子。**\n\n要是我们**只想看看、不想抄一份**，料的写法就得换成「**不必还的名字**」：`void show(const FishBox& b)` —— 那时候屏幕上就只剩三行（租、看、还），中间那两行全不见了。\n\n这也是我们要你亲手写一遍「按值」的原因：**这件事藏在你不注意的地方** —— 你没在 `main` 里写任何照抄的话，它自己就发生了。"
+}

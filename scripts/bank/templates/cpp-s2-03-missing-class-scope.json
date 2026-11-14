@@ -1,0 +1,32 @@
+{
+  "templateId": "cpp-s2-03-missing-class-scope",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-03",
+  "type": "codefix",
+  "concept": [
+    "状态写在类定义外面",
+    "名字前挂上类定义名",
+    "编译期报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "王五"
+      ]
+    },
+    "fish": {
+      "kind": "int",
+      "min": 3,
+      "max": 4
+    }
+  },
+  "stemTemplate": "我们想把函数 `show` 的状态写在类定义外面，省得类定义太长 —— 类定义里也留好了只报名字的那一行。\n\n可信封递进去，编译器当场拦下，一行都不让跑。\n\n你帮我们改一处，让它跑起来、把那一行印对。**状态里那几行和 `main` 里那几句一个都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void show() const;\n};\n\nvoid show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    Cat c1(\"{name}\", {fish});\n    c1.show();\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    Cat(string n, int f) : name(n), fish(f) {}\n    void show() const;\n};\n\nvoid Cat::show() const {\n    cout << name << \" 有 \" << fish << \" 条\" << endl;\n}\n\nint main() {\n    Cat c1(\"{name}\", {fish});\n    c1.show();\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:14:13: error: non-member function 'void show()' cannot have cv-qualifier`\n\n用自然语言解释：**「这不是哪张类定义上的函数，它凭什么叫自己只读？」** 底下还会跟着两句，说 `name`、`fish` 这两个名字「没见过」—— 因为离开类定义之后，编译器压根不知道进哪张类定义去找那几格。\n\n根子在这儿：**状态写在类定义外面时，函数名前面必须挂上「这是哪张类定义上的」那一小段** —— 在本课里就是 `Cat::`。挂上它，编译器才把外面这一个方法认回类定义里去；没挂，它就只当门口来了个谁也不认识的野函数。\n\n改法就是那一小段：`void Cat::show() const`。\n\n以后看到 `non-member function`，第一件事就是检查函数名前面是不是漏了它。"
+}

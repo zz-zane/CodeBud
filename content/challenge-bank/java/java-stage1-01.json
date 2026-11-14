@@ -1,0 +1,482 @@
+{
+  "lessonId": "java-stage1-01",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s1-fullwidth-semicolon-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这份源代码里混进了一颗「怪字符」……编译器说 `illegal character`（这颗字符我们不认），就不肯往下翻了。\n\n你帮我们把它揪出来、改好 —— 改好之后，程序应该把这句输出：\n\n晒数据喽",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"晒数据喽\")；\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"晒数据喽\");\n    }\n}\n",
+      "expectedOutput": "晒数据喽",
+      "stdin": null,
+      "explanation": "这次编译器挑的不是我们写的**话**，而是那句话末尾的**句号**。\n\nJava 认的分号只有**英文**的那一颗 `;`。我们（准确说，是我们手上的中文输入法）打出来的是「；」—— 它和英文分号长得像双胞胎，可在 Java 眼里完全是两颗不同的字符，所以报错写着 `illegal character`（**不合法的字符**），后面还把那颗字符的编号原样印了出来。\n\n⚠️ 这一档错最会骗眼睛：**长得像，却不是同一个**。中文输入法底下的「，」「；」「“」「”」「（）」全是这样，Java 一颗都不认。\n\n改法：把那颗删掉，**把输入法切回英文**，重新敲一个 `;`。顺手养个习惯 —— 写完一行回头瞄一眼输入法，能省下不少抓耳挠腮。\n\n（报错里那句 `Main.java:3` 是在说「出问题的是第 3 行」，下面那个小箭头指的就是它觉得不对劲的地方。）",
+      "templateId": "java-s1-fullwidth-semicolon",
+      "params": {
+        "msg": "晒数据喽"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "c9ace1e9796954d8"
+      }
+    },
+    {
+      "id": "bank-java-s1-fullwidth-semicolon-002",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这份源代码里混进了一颗「怪字符」……编译器说 `illegal character`（这颗字符我们不认），就不肯往下翻了。\n\n你帮我们把它揪出来、改好 —— 改好之后，程序应该把这句输出：\n\n元素底舔干净了",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"元素底舔干净了\")；\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"元素底舔干净了\");\n    }\n}\n",
+      "expectedOutput": "元素底舔干净了",
+      "stdin": null,
+      "explanation": "这次编译器挑的不是我们写的**话**，而是那句话末尾的**句号**。\n\nJava 认的分号只有**英文**的那一颗 `;`。我们（准确说，是我们手上的中文输入法）打出来的是「；」—— 它和英文分号长得像双胞胎，可在 Java 眼里完全是两颗不同的字符，所以报错写着 `illegal character`（**不合法的字符**），后面还把那颗字符的编号原样印了出来。\n\n⚠️ 这一档错最会骗眼睛：**长得像，却不是同一个**。中文输入法底下的「，」「；」「“」「”」「（）」全是这样，Java 一颗都不认。\n\n改法：把那颗删掉，**把输入法切回英文**，重新敲一个 `;`。顺手养个习惯 —— 写完一行回头瞄一眼输入法，能省下不少抓耳挠腮。\n\n（报错里那句 `Main.java:3` 是在说「出问题的是第 3 行」，下面那个小箭头指的就是它觉得不对劲的地方。）",
+      "templateId": "java-s1-fullwidth-semicolon",
+      "params": {
+        "msg": "元素底舔干净了"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "b998e601bb7818e9"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-each-twice-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们今天想让程序把这两句话**各念两遍**：\n\n一句话是 编译\n\n另一句是 输出\n\n输出的顺序是：编译、输出、编译、输出 —— 一共**四行**，一句一行，别把两句并到同一行里去。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"翻稿子\");\n        System.out.println(\"输出\");\n        System.out.println(\"翻稿子\");\n        System.out.println(\"输出\");\n    }\n}\n",
+      "expectedOutput": "翻稿子\n输出\n翻稿子\n输出",
+      "stdin": null,
+      "explanation": "机器不会自己「再来一遍」 —— **它只做你写下来的事**。想让同一句话出现两次，就得老老实实**写两遍**：四行，就是四句 `println`。\n\n所以这道题看着傻，其实是在把一件要紧的事钉进脑子里：屏幕上出现的每一行，背后都有一句你亲手写的命令。\n\n等以后我们教你「绕圈圈」的写法，才有一句顶十句的本事 —— 今天先把这四行写全。",
+      "templateId": "java-s1-print-each-twice",
+      "params": {
+        "a": "翻稿子",
+        "b": "输出"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "15103db15c0f5890"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-each-twice-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们今天想让程序把这两句话**各念两遍**：\n\n一句话是 编译\n\n另一句是 \n\n输出的顺序是：编译、、编译、 —— 一共**四行**，一句一行，别把两句并到同一行里去。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"翻稿子\");\n        System.out.println(\"\");\n        System.out.println(\"翻稿子\");\n        System.out.println(\"\");\n    }\n}\n",
+      "expectedOutput": "翻稿子\n\n翻稿子\n",
+      "stdin": null,
+      "explanation": "机器不会自己「再来一遍」 —— **它只做你写下来的事**。想让同一句话出现两次，就得老老实实**写两遍**：四行，就是四句 `println`。\n\n所以这道题看着傻，其实是在把一件要紧的事钉进脑子里：屏幕上出现的每一行，背后都有一句你亲手写的命令。\n\n等以后我们教你「绕圈圈」的写法，才有一句顶十句的本事 —— 今天先把这四行写全。",
+      "templateId": "java-s1-print-each-twice",
+      "params": {
+        "a": "翻稿子",
+        "b": ""
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "b44995fef0c632d3"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-each-twice-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们今天想让程序把这两句话**各念两遍**：\n\n一句话是 拿数据\n\n另一句是 输出\n\n输出的顺序是：拿数据、输出、拿数据、输出 —— 一共**四行**，一句一行，别把两句并到同一行里去。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"拿数据\");\n        System.out.println(\"输出\");\n        System.out.println(\"拿数据\");\n        System.out.println(\"输出\");\n    }\n}\n",
+      "expectedOutput": "拿数据\n输出\n拿数据\n输出",
+      "stdin": null,
+      "explanation": "机器不会自己「再来一遍」 —— **它只做你写下来的事**。想让同一句话出现两次，就得老老实实**写两遍**：四行，就是四句 `println`。\n\n所以这道题看着傻，其实是在把一件要紧的事钉进脑子里：屏幕上出现的每一行，背后都有一句你亲手写的命令。\n\n等以后我们教你「绕圈圈」的写法，才有一句顶十句的本事 —— 今天先把这四行写全。",
+      "templateId": "java-s1-print-each-twice",
+      "params": {
+        "a": "拿数据",
+        "b": "输出"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "b8c538691bba090f"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-each-twice-005",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们今天想让程序把这两句话**各念两遍**：\n\n一句话是 拿数据\n\n另一句是 \n\n输出的顺序是：拿数据、、拿数据、 —— 一共**四行**，一句一行，别把两句并到同一行里去。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"拿数据\");\n        System.out.println(\"\");\n        System.out.println(\"拿数据\");\n        System.out.println(\"\");\n    }\n}\n",
+      "expectedOutput": "拿数据\n\n拿数据\n",
+      "stdin": null,
+      "explanation": "机器不会自己「再来一遍」 —— **它只做你写下来的事**。想让同一句话出现两次，就得老老实实**写两遍**：四行，就是四句 `println`。\n\n所以这道题看着傻，其实是在把一件要紧的事钉进脑子里：屏幕上出现的每一行，背后都有一句你亲手写的命令。\n\n等以后我们教你「绕圈圈」的写法，才有一句顶十句的本事 —— 今天先把这四行写全。",
+      "templateId": "java-s1-print-each-twice",
+      "params": {
+        "a": "拿数据",
+        "b": ""
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "b7949bc9d891edbc"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-each-twice-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们今天想让程序把这两句话**各念两遍**：\n\n一句话是 处理完成\n\n另一句是 输出\n\n输出的顺序是：处理完成、输出、处理完成、输出 —— 一共**四行**，一句一行，别把两句并到同一行里去。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"处理完成\");\n        System.out.println(\"输出\");\n        System.out.println(\"处理完成\");\n        System.out.println(\"输出\");\n    }\n}\n",
+      "expectedOutput": "处理完成\n输出\n处理完成\n输出",
+      "stdin": null,
+      "explanation": "机器不会自己「再来一遍」 —— **它只做你写下来的事**。想让同一句话出现两次，就得老老实实**写两遍**：四行，就是四句 `println`。\n\n所以这道题看着傻，其实是在把一件要紧的事钉进脑子里：屏幕上出现的每一行，背后都有一句你亲手写的命令。\n\n等以后我们教你「绕圈圈」的写法，才有一句顶十句的本事 —— 今天先把这四行写全。",
+      "templateId": "java-s1-print-each-twice",
+      "params": {
+        "a": "处理完成",
+        "b": "输出"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "d7fce3a8bb6ed3b6"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-each-twice-008",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们今天想让程序把这两句话**各念两遍**：\n\n一句话是 处理完成\n\n另一句是 \n\n输出的顺序是：处理完成、、处理完成、 —— 一共**四行**，一句一行，别把两句并到同一行里去。",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"处理完成\");\n        System.out.println(\"\");\n        System.out.println(\"处理完成\");\n        System.out.println(\"\");\n    }\n}\n",
+      "expectedOutput": "处理完成\n\n处理完成\n",
+      "stdin": null,
+      "explanation": "机器不会自己「再来一遍」 —— **它只做你写下来的事**。想让同一句话出现两次，就得老老实实**写两遍**：四行，就是四句 `println`。\n\n所以这道题看着傻，其实是在把一件要紧的事钉进脑子里：屏幕上出现的每一行，背后都有一句你亲手写的命令。\n\n等以后我们教你「绕圈圈」的写法，才有一句顶十句的本事 —— 今天先把这四行写全。",
+      "templateId": "java-s1-print-each-twice",
+      "params": {
+        "a": "处理完成",
+        "b": ""
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "3e840e2d8456ab84"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-text-and-number-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要报一报今天的收成，让它念**三行**：\n\n第一行\n\n数据有\n\n第二行\n\n2\n\n第三行\n\n条\n\n三行一个都不能少、顺序也不能变\n\n（第二行就是一个**光秃秃的数字**。数字本来就不用引号，直接念得出来 —— 这道题想让你亲手试一次。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"数据有\");\n        System.out.println(2);\n        System.out.println(\"条\");\n    }\n}\n",
+      "expectedOutput": "数据有\n2\n条",
+      "stdin": null,
+      "explanation": "这道题把两种念法摆在一起，正好看清那条分界：**带引号的是「一句话」，光秃秃的是「一个数」。**\n\n`数据有` 和 `条` 都是一句话，得用引号圈起来；中间那个 `2` 是个数字，**不用引号**也照样念得出来。\n\n（要是给数字也套上引号，Java 不会生气 —— 它会把 `2` 当成一句话原样输出，屏幕上看着一模一样。两种都行，但你要**知道它们是两回事**：一个念的是字，一个念的是数。）\n\n三行就是三句，从上往下一句一句念，别把顺序写反了。",
+      "templateId": "java-s1-print-text-and-number",
+      "params": {
+        "thing": "数据",
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "009bca2515efaef1"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-text-and-number-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要报一报今天的收成，让它念**三行**：\n\n第一行\n\n数据有\n\n第二行\n\n4\n\n第三行\n\n条\n\n三行一个都不能少、顺序也不能变\n\n（第二行就是一个**光秃秃的数字**。数字本来就不用引号，直接念得出来 —— 这道题想让你亲手试一次。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"数据有\");\n        System.out.println(4);\n        System.out.println(\"条\");\n    }\n}\n",
+      "expectedOutput": "数据有\n4\n条",
+      "stdin": null,
+      "explanation": "这道题把两种念法摆在一起，正好看清那条分界：**带引号的是「一句话」，光秃秃的是「一个数」。**\n\n`数据有` 和 `条` 都是一句话，得用引号圈起来；中间那个 `4` 是个数字，**不用引号**也照样念得出来。\n\n（要是给数字也套上引号，Java 不会生气 —— 它会把 `4` 当成一句话原样输出，屏幕上看着一模一样。两种都行，但你要**知道它们是两回事**：一个念的是字，一个念的是数。）\n\n三行就是三句，从上往下一句一句念，别把顺序写反了。",
+      "templateId": "java-s1-print-text-and-number",
+      "params": {
+        "thing": "数据",
+        "n": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "aa353f663a49b1c5"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-text-and-number-004",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要报一报今天的收成，让它念**三行**：\n\n第一行\n\n商品A有\n\n第二行\n\n2\n\n第三行\n\n条\n\n三行一个都不能少、顺序也不能变\n\n（第二行就是一个**光秃秃的数字**。数字本来就不用引号，直接念得出来 —— 这道题想让你亲手试一次。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"商品A有\");\n        System.out.println(2);\n        System.out.println(\"条\");\n    }\n}\n",
+      "expectedOutput": "商品A有\n2\n条",
+      "stdin": null,
+      "explanation": "这道题把两种念法摆在一起，正好看清那条分界：**带引号的是「一句话」，光秃秃的是「一个数」。**\n\n`商品A有` 和 `条` 都是一句话，得用引号圈起来；中间那个 `2` 是个数字，**不用引号**也照样念得出来。\n\n（要是给数字也套上引号，Java 不会生气 —— 它会把 `2` 当成一句话原样输出，屏幕上看着一模一样。两种都行，但你要**知道它们是两回事**：一个念的是字，一个念的是数。）\n\n三行就是三句，从上往下一句一句念，别把顺序写反了。",
+      "templateId": "java-s1-print-text-and-number",
+      "params": {
+        "thing": "商品A",
+        "n": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "912507e30f45af46"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-text-and-number-007",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要报一报今天的收成，让它念**三行**：\n\n第一行\n\n商品A有\n\n第二行\n\n5\n\n第三行\n\n条\n\n三行一个都不能少、顺序也不能变\n\n（第二行就是一个**光秃秃的数字**。数字本来就不用引号，直接念得出来 —— 这道题想让你亲手试一次。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"商品A有\");\n        System.out.println(5);\n        System.out.println(\"条\");\n    }\n}\n",
+      "expectedOutput": "商品A有\n5\n条",
+      "stdin": null,
+      "explanation": "这道题把两种念法摆在一起，正好看清那条分界：**带引号的是「一句话」，光秃秃的是「一个数」。**\n\n`商品A有` 和 `条` 都是一句话，得用引号圈起来；中间那个 `5` 是个数字，**不用引号**也照样念得出来。\n\n（要是给数字也套上引号，Java 不会生气 —— 它会把 `5` 当成一句话原样输出，屏幕上看着一模一样。两种都行，但你要**知道它们是两回事**：一个念的是字，一个念的是数。）\n\n三行就是三句，从上往下一句一句念，别把顺序写反了。",
+      "templateId": "java-s1-print-text-and-number",
+      "params": {
+        "thing": "商品A",
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "475dfbe3c313b80d"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-text-and-number-009",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要报一报今天的收成，让它念**三行**：\n\n第一行\n\n商品有\n\n第二行\n\n3\n\n第三行\n\n条\n\n三行一个都不能少、顺序也不能变\n\n（第二行就是一个**光秃秃的数字**。数字本来就不用引号，直接念得出来 —— 这道题想让你亲手试一次。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"商品有\");\n        System.out.println(3);\n        System.out.println(\"条\");\n    }\n}\n",
+      "expectedOutput": "商品有\n3\n条",
+      "stdin": null,
+      "explanation": "这道题把两种念法摆在一起，正好看清那条分界：**带引号的是「一句话」，光秃秃的是「一个数」。**\n\n`商品有` 和 `条` 都是一句话，得用引号圈起来；中间那个 `3` 是个数字，**不用引号**也照样念得出来。\n\n（要是给数字也套上引号，Java 不会生气 —— 它会把 `3` 当成一句话原样输出，屏幕上看着一模一样。两种都行，但你要**知道它们是两回事**：一个念的是字，一个念的是数。）\n\n三行就是三句，从上往下一句一句念，别把顺序写反了。",
+      "templateId": "java-s1-print-text-and-number",
+      "params": {
+        "thing": "商品",
+        "n": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "c2c9b7e50ae0407e"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-text-and-number-011",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要报一报今天的收成，让它念**三行**：\n\n第一行\n\n商品有\n\n第二行\n\n5\n\n第三行\n\n条\n\n三行一个都不能少、顺序也不能变\n\n（第二行就是一个**光秃秃的数字**。数字本来就不用引号，直接念得出来 —— 这道题想让你亲手试一次。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"商品有\");\n        System.out.println(5);\n        System.out.println(\"条\");\n    }\n}\n",
+      "expectedOutput": "商品有\n5\n条",
+      "stdin": null,
+      "explanation": "这道题把两种念法摆在一起，正好看清那条分界：**带引号的是「一句话」，光秃秃的是「一个数」。**\n\n`商品有` 和 `条` 都是一句话，得用引号圈起来；中间那个 `5` 是个数字，**不用引号**也照样念得出来。\n\n（要是给数字也套上引号，Java 不会生气 —— 它会把 `5` 当成一句话原样输出，屏幕上看着一模一样。两种都行，但你要**知道它们是两回事**：一个念的是字，一个念的是数。）\n\n三行就是三句，从上往下一句一句念，别把顺序写反了。",
+      "templateId": "java-s1-print-text-and-number",
+      "params": {
+        "thing": "商品",
+        "n": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "2eb36f2f4909d0e2"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-two-lines-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "来写我们的第一个 Java 程序\n\n让它念**两行**，一个字都不能差：\n\n第一行\n\n你好，！\n\n第二行\n\n你也来一口吗？\n\n（类定义就叫 `Main`，入口那一行照课文抄；两行的**先后**也不能错。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"你好，！\");\n        System.out.println(\"你也来一口吗？\");\n    }\n}\n",
+      "expectedOutput": "你好，！\n你也来一口吗？",
+      "stdin": null,
+      "explanation": "两行就是**两句 `System.out.println(...)`**  —— 写一句就执行一行，写两句就念两行，顺序就是从上往下。\n\n每一行要念的字，都用**英文双引号**圈起来：引号里的东西会**原样**输出去，连标点都不改，所以别把中英文标点敲错了位置。\n\n最后别忘了行尾那颗**英文分号** `;` —— 它是 Java 的句号，每句话说完都得点上，刚上手最容易漏的就是它。",
+      "templateId": "java-s1-print-two-lines",
+      "params": {
+        "a": "你好，！",
+        "b": "你也来一口吗？"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "f463405adc0500d1"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-two-lines-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "来写我们的第一个 Java 程序\n\n让它念**两行**，一个字都不能差：\n\n第一行\n\n你好，！\n\n第二行\n\n主人今天好吗？\n\n（类定义就叫 `Main`，入口那一行照课文抄；两行的**先后**也不能错。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"你好，！\");\n        System.out.println(\"主人今天好吗？\");\n    }\n}\n",
+      "expectedOutput": "你好，！\n主人今天好吗？",
+      "stdin": null,
+      "explanation": "两行就是**两句 `System.out.println(...)`**  —— 写一句就执行一行，写两句就念两行，顺序就是从上往下。\n\n每一行要念的字，都用**英文双引号**圈起来：引号里的东西会**原样**输出去，连标点都不改，所以别把中英文标点敲错了位置。\n\n最后别忘了行尾那颗**英文分号** `;` —— 它是 Java 的句号，每句话说完都得点上，刚上手最容易漏的就是它。",
+      "templateId": "java-s1-print-two-lines",
+      "params": {
+        "a": "你好，！",
+        "b": "主人今天好吗？"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "bfa45de5d8f461b8"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-two-lines-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "来写我们的第一个 Java 程序\n\n让它念**两行**，一个字都不能差：\n\n第一行\n\n我们回来啦！\n\n第二行\n\n你也来一口吗？\n\n（类定义就叫 `Main`，入口那一行照课文抄；两行的**先后**也不能错。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"我们回来啦！\");\n        System.out.println(\"你也来一口吗？\");\n    }\n}\n",
+      "expectedOutput": "我们回来啦！\n你也来一口吗？",
+      "stdin": null,
+      "explanation": "两行就是**两句 `System.out.println(...)`**  —— 写一句就执行一行，写两句就念两行，顺序就是从上往下。\n\n每一行要念的字，都用**英文双引号**圈起来：引号里的东西会**原样**输出去，连标点都不改，所以别把中英文标点敲错了位置。\n\n最后别忘了行尾那颗**英文分号** `;` —— 它是 Java 的句号，每句话说完都得点上，刚上手最容易漏的就是它。",
+      "templateId": "java-s1-print-two-lines",
+      "params": {
+        "a": "我们回来啦！",
+        "b": "你也来一口吗？"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "42ff32f421cd55dc"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-two-lines-005",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "来写我们的第一个 Java 程序\n\n让它念**两行**，一个字都不能差：\n\n第一行\n\n我们回来啦！\n\n第二行\n\n主人今天好吗？\n\n（类定义就叫 `Main`，入口那一行照课文抄；两行的**先后**也不能错。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"我们回来啦！\");\n        System.out.println(\"主人今天好吗？\");\n    }\n}\n",
+      "expectedOutput": "我们回来啦！\n主人今天好吗？",
+      "stdin": null,
+      "explanation": "两行就是**两句 `System.out.println(...)`**  —— 写一句就执行一行，写两句就念两行，顺序就是从上往下。\n\n每一行要念的字，都用**英文双引号**圈起来：引号里的东西会**原样**输出去，连标点都不改，所以别把中英文标点敲错了位置。\n\n最后别忘了行尾那颗**英文分号** `;` —— 它是 Java 的句号，每句话说完都得点上，刚上手最容易漏的就是它。",
+      "templateId": "java-s1-print-two-lines",
+      "params": {
+        "a": "我们回来啦！",
+        "b": "主人今天好吗？"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "9046d9b323ba7347"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-two-lines-006",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "来写我们的第一个 Java 程序\n\n让它念**两行**，一个字都不能差：\n\n第一行\n\n处理完成！\n\n第二行\n\n你也来一口吗？\n\n（类定义就叫 `Main`，入口那一行照课文抄；两行的**先后**也不能错。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"处理完成！\");\n        System.out.println(\"你也来一口吗？\");\n    }\n}\n",
+      "expectedOutput": "处理完成！\n你也来一口吗？",
+      "stdin": null,
+      "explanation": "两行就是**两句 `System.out.println(...)`**  —— 写一句就执行一行，写两句就念两行，顺序就是从上往下。\n\n每一行要念的字，都用**英文双引号**圈起来：引号里的东西会**原样**输出去，连标点都不改，所以别把中英文标点敲错了位置。\n\n最后别忘了行尾那颗**英文分号** `;` —— 它是 Java 的句号，每句话说完都得点上，刚上手最容易漏的就是它。",
+      "templateId": "java-s1-print-two-lines",
+      "params": {
+        "a": "处理完成！",
+        "b": "你也来一口吗？"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.515Z",
+        "hash": "205e9fe71b610fe8"
+      }
+    },
+    {
+      "id": "bank-java-s1-print-two-lines-008",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "来写我们的第一个 Java 程序\n\n让它念**两行**，一个字都不能差：\n\n第一行\n\n处理完成！\n\n第二行\n\n主人今天好吗？\n\n（类定义就叫 `Main`，入口那一行照课文抄；两行的**先后**也不能错。）",
+      "starter": "public class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"处理完成！\");\n        System.out.println(\"主人今天好吗？\");\n    }\n}\n",
+      "expectedOutput": "处理完成！\n主人今天好吗？",
+      "stdin": null,
+      "explanation": "两行就是**两句 `System.out.println(...)`**  —— 写一句就执行一行，写两句就念两行，顺序就是从上往下。\n\n每一行要念的字，都用**英文双引号**圈起来：引号里的东西会**原样**输出去，连标点都不改，所以别把中英文标点敲错了位置。\n\n最后别忘了行尾那颗**英文分号** `;` —— 它是 Java 的句号，每句话说完都得点上，刚上手最容易漏的就是它。",
+      "templateId": "java-s1-print-two-lines",
+      "params": {
+        "a": "处理完成！",
+        "b": "主人今天好吗？"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.516Z",
+        "hash": "1d50a1a0e8bdd68b"
+      }
+    },
+    {
+      "id": "bank-java-s1-println-order-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们想让程序**先**念一句、**再**念另一句，可它输出的顺序跟我们想的不一样。\n\n你帮我们调一调，让它先念这句：\n\n拿数据\n\n再念这句：\n\n放进元素里\n\n（它是**跑得起来**的 —— 屏幕上也有字，只是先后不对。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"放进元素里\");\n        System.out.println(\"拿数据\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"拿数据\");\n        System.out.println(\"放进元素里\");\n    }\n}\n",
+      "expectedOutput": "拿数据\n放进元素里",
+      "stdin": null,
+      "explanation": "编译器干活有个死规矩：**从上往下一行一行做**，谁写在前面谁先出声。两句话的先后，就是它们在源代码里**上下**的先后。\n\n所以想让 `拿数据` 先出来，就得让那一行**写在上面**；现在它被压在下面，当然就晚了一步。把两行调个个儿，顺序立刻就对了。\n\n⚠️ 这道题属于另一种错：**它不翻脸**。程序跑得好好的，一句报错都没有，屏幕上照样有字 —— 只是出来的东西跟我们想要的不一样。往后写程序，**报错会自己找上门，顺序错了只能自己盯着输出看**，这两种都得会查。",
+      "templateId": "java-s1-println-order",
+      "params": {
+        "first": "拿数据",
+        "second": "放进元素里"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.516Z",
+        "hash": "2b924db4998cb3f1"
+      }
+    },
+    {
+      "id": "bank-java-s1-println-order-008",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们想让程序**先**念一句、**再**念另一句，可它输出的顺序跟我们想的不一样。\n\n你帮我们调一调，让它先念这句：\n\n倒元素水\n\n再念这句：\n\n搁在门口\n\n（它是**跑得起来**的 —— 屏幕上也有字，只是先后不对。）",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"搁在门口\");\n        System.out.println(\"倒元素水\");\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"倒元素水\");\n        System.out.println(\"搁在门口\");\n    }\n}\n",
+      "expectedOutput": "倒元素水\n搁在门口",
+      "stdin": null,
+      "explanation": "编译器干活有个死规矩：**从上往下一行一行做**，谁写在前面谁先出声。两句话的先后，就是它们在源代码里**上下**的先后。\n\n所以想让 `倒元素水` 先出来，就得让那一行**写在上面**；现在它被压在下面，当然就晚了一步。把两行调个个儿，顺序立刻就对了。\n\n⚠️ 这道题属于另一种错：**它不翻脸**。程序跑得好好的，一句报错都没有，屏幕上照样有字 —— 只是出来的东西跟我们想要的不一样。往后写程序，**报错会自己找上门，顺序错了只能自己盯着输出看**，这两种都得会查。",
+      "templateId": "java-s1-println-order",
+      "params": {
+        "first": "倒元素水",
+        "second": "搁在门口"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.516Z",
+        "hash": "d1ce7a5224aa539c"
+      }
+    },
+    {
+      "id": "bank-java-s1-unquoted-name-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们想让程序念一句话，可编译器一脸茫然，丢下一句 `cannot find symbol`（找不到这个符号）就愣在那儿了……\n\n你帮我们看看它为什么找不到，把它改好。改好之后，程序应该把这句原样输出：\n\n拿数据",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(拿数据);\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"拿数据\");\n    }\n}\n",
+      "expectedOutput": "拿数据",
+      "stdin": null,
+      "explanation": "`cannot find symbol` 翻过来就是「**我们不认识这个名字**」。\n\nJava 对引号特别较真，这条分界要记牢：**引号里的是「一句话」，不带引号的是「一个名字」。** 我们这行把要念的字写成了光秃秃的 `拿数据` —— 编译器于是把它当成一个**名字**去找：先看有没有哪张类定义叫这个名字，再看有没有哪个变量叫这个名字，翻遍了都没找着，只好报错。\n\n报错还会多贴两行给你看：一行说它要找的是个**名字**（`variable`），名字就叫 `拿数据`；另一行说它是在哪儿找的（`class Main`）。**报错指的那一行，正是你「用」它的那一行** —— 顺着这行往回读，就能看出问题出在哪儿。\n\n改法只有一步：给这句话套上**一双英文双引号**，它就从「一个名字」变回「一句话」，编译器照着念就好。",
+      "templateId": "java-s1-unquoted-name",
+      "params": {
+        "msg": "拿数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.516Z",
+        "hash": "dfe31468229b8d47"
+      }
+    },
+    {
+      "id": "bank-java-s1-unquoted-name-002",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们想让程序念一句话，可编译器一脸茫然，丢下一句 `cannot find symbol`（找不到这个符号）就愣在那儿了……\n\n你帮我们看看它为什么找不到，把它改好。改好之后，程序应该把这句原样输出：\n\n叫",
+      "brokenCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(叫);\n    }\n}\n",
+      "referenceFix": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"叫\");\n    }\n}\n",
+      "expectedOutput": "叫",
+      "stdin": null,
+      "explanation": "`cannot find symbol` 翻过来就是「**我们不认识这个名字**」。\n\nJava 对引号特别较真，这条分界要记牢：**引号里的是「一句话」，不带引号的是「一个名字」。** 我们这行把要念的字写成了光秃秃的 `叫` —— 编译器于是把它当成一个**名字**去找：先看有没有哪张类定义叫这个名字，再看有没有哪个变量叫这个名字，翻遍了都没找着，只好报错。\n\n报错还会多贴两行给你看：一行说它要找的是个**名字**（`variable`），名字就叫 `叫`；另一行说它是在哪儿找的（`class Main`）。**报错指的那一行，正是你「用」它的那一行** —— 顺着这行往回读，就能看出问题出在哪儿。\n\n改法只有一步：给这句话套上**一双英文双引号**，它就从「一个名字」变回「一句话」，编译器照着念就好。",
+      "templateId": "java-s1-unquoted-name",
+      "params": {
+        "msg": "叫"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.516Z",
+        "hash": "5ea0f4b1aef749fd"
+      }
+    }
+  ]
+}

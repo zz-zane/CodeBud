@@ -1,0 +1,29 @@
+/* Reading preference is a font-size multiplier, never a page/browser zoom.
+ * Keep frames, controls and coordinates in normal CSS pixels. Each text zone below
+ * consumes the multiplier once; nested CodeMirror/quiz/demo content cannot compound it. */
+:root { --mi-zoom: 1; }
+
+/* Lesson prose and rendered code. Code headers/copy controls keep their UI size. */
+#app .claude-app-container .lesson-page .markdown-body { font-size: calc(var(--mi-fs-read) * var(--mi-zoom)); }
+#app .claude-app-container .lesson-page .markdown-body h1 { font-size: calc(var(--mi-fs-title) * var(--mi-zoom)); }
+#app .claude-app-container .lesson-page .markdown-body h2 { font-size: calc(var(--mi-fs-read) * 1.25 * var(--mi-zoom)); }
+#app .claude-app-container .lesson-page .markdown-body h3 { font-size: calc(var(--mi-fs-read) * var(--mi-zoom)); }
+#app .claude-app-container .lesson-page .markdown-body h4 { font-size: calc(var(--mi-fs-read) * var(--mi-zoom)); }
+#app .claude-app-container .lesson-page .markdown-body :is(table,code:not(.hljs)) { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }
+#app .claude-app-container .lesson-page .markdown-body code.hljs { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }
+#app .claude-app-container .lesson-page .markdown-body :is(.code-copy,.code-lang) { font-size: var(--mi-fs-body); }
+
+/* Editors scale glyphs, not their viewport, controls or input coordinate system. */
+body .mi-code-editor .cm-editor { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }
+body :is(.runner-panel,.quiz-run) :is(.out-text,.wc-body,.ec-explain,.ec-fix) { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }
+
+/* Compare and demos are siblings of prose, not nested scaled containers. */
+#app .compare-col pre { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }
+#app .demo :is(.demo-line,.demo-src,.demo-ln) { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }
+#app .demo :is(.demo-say-text,.demo-bubble-text,.demo-var-val) { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }
+
+/* Quiz dialog frame, toolbar and actions stay fixed; only reading/answer text scales. */
+body .quiz-panel :is(.stem-text,.opt-text,.opt-letter) { font-size: calc(var(--mi-fs-read) * var(--mi-zoom)); }
+body .quiz-panel :is(.explain-text,.code-answer,.fill-answer,.blank-answer) { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }
+body .quiz-panel .code-view code.hljs { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }
+body .quiz-panel :is(.quiz-fill,.quiz-code,.blank-row) .mi-input { font-size: calc(var(--mi-fs-body) * var(--mi-zoom)); }

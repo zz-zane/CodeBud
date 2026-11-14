@@ -1,0 +1,520 @@
+{
+  "lessonId": "python-stage1-14",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-py-s1-class-eat-self-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想给类定义加一个方法「处理数据」 —— 它处理的是**自己**那份数。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再画一个方法 `eat(self, n)`：把 n 条**加进这个对象自己**那份数里，并印一行「（名字） 又处理了 （n） 条，今天一共 （加完之后的总数） 条」；\n3. 照着同一个类定义造**两个**对象：一个叫「计算机」、当前记录了 1 条；另一个叫「张三」、当前记录了 4 条；\n4. 先让「计算机」处理 2 条，再让「张三」处理 1 条；\n5. 最后把两个对象**各自**那份数各印一行（先「计算机」的、再「张三」的）。",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def eat(self, n):\n        self.fish = self.fish + n\n        print(self.name, \"又处理了\", n, \"条，今天一共\", self.fish, \"条\")\n\na = Cat(\"计算机\", 1)\nb = Cat(\"张三\", 4)\na.eat(2)\nb.eat(1)\nprint(a.fish)\nprint(b.fish)\n",
+      "expectedOutput": "计算机 又处理了 2 条，今天一共 3 条\n张三 又处理了 1 条，今天一共 5 条\n3\n5",
+      "stdin": null,
+      "explanation": "关键那一行是 `self.fish = self.fish + n` ，两个 `self.fish` 说的都是**这个对象自己**那一格：等号右边先把旧的数取出来、加上 n，等号左边再把结果放回**同一格**。\n\n方法里的 `self` 就是「**正在做这件事的那一个**」：调用 `a.eat(...)` 的时候它指 `a`，调用 `b.eat(...)` 的时候它指 `b`。所以两个对象各改各的格子，最后那两行数字（「计算机」那份 1 加上 2、「张三」那份 4 加上 1）就是**各带各的一份**的证据 —— 一个处理数据，另一个身上那个数**纹丝不动**。\n\n（顺手记一条规矩：要动这个对象自己那一格，**等号左边也得带 `self.`**。不带的那一个只是函数里那个名字本身，跟对象身上那份不是同一样东西 —— 对象身上什么都没留下，出了这一个方法这个名字也就没了。）",
+      "templateId": "py-s1-class-eat-self",
+      "params": {
+        "n1": "计算机",
+        "f1": 1,
+        "k1": 2,
+        "n2": "张三",
+        "f2": 4,
+        "k2": 1
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "fa598e2c37055e8a"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-eat-self-013",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想给类定义加一个方法「处理数据」 —— 它处理的是**自己**那份数。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再画一个方法 `eat(self, n)`：把 n 条**加进这个对象自己**那份数里，并印一行「（名字） 又处理了 （n） 条，今天一共 （加完之后的总数） 条」；\n3. 照着同一个类定义造**两个**对象：一个叫「计算机」、当前记录了 1 条；另一个叫「三花」、当前记录了 4 条；\n4. 先让「计算机」处理 3 条，再让「三花」处理 2 条；\n5. 最后把两个对象**各自**那份数各印一行（先「计算机」的、再「三花」的）。",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def eat(self, n):\n        self.fish = self.fish + n\n        print(self.name, \"又处理了\", n, \"条，今天一共\", self.fish, \"条\")\n\na = Cat(\"计算机\", 1)\nb = Cat(\"三花\", 4)\na.eat(3)\nb.eat(2)\nprint(a.fish)\nprint(b.fish)\n",
+      "expectedOutput": "计算机 又处理了 3 条，今天一共 4 条\n三花 又处理了 2 条，今天一共 6 条\n4\n6",
+      "stdin": null,
+      "explanation": "关键那一行是 `self.fish = self.fish + n` ，两个 `self.fish` 说的都是**这个对象自己**那一格：等号右边先把旧的数取出来、加上 n，等号左边再把结果放回**同一格**。\n\n方法里的 `self` 就是「**正在做这件事的那一个**」：调用 `a.eat(...)` 的时候它指 `a`，调用 `b.eat(...)` 的时候它指 `b`。所以两个对象各改各的格子，最后那两行数字（「计算机」那份 1 加上 3、「三花」那份 4 加上 2）就是**各带各的一份**的证据 —— 一个处理数据，另一个身上那个数**纹丝不动**。\n\n（顺手记一条规矩：要动这个对象自己那一格，**等号左边也得带 `self.`**。不带的那一个只是函数里那个名字本身，跟对象身上那份不是同一样东西 —— 对象身上什么都没留下，出了这一个方法这个名字也就没了。）",
+      "templateId": "py-s1-class-eat-self",
+      "params": {
+        "n1": "计算机",
+        "f1": 1,
+        "k1": 3,
+        "n2": "三花",
+        "f2": 4,
+        "k2": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "67da534ff5f3d4bf"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-eat-self-025",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想给类定义加一个方法「处理数据」 —— 它处理的是**自己**那份数。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再画一个方法 `eat(self, n)`：把 n 条**加进这个对象自己**那份数里，并印一行「（名字） 又处理了 （n） 条，今天一共 （加完之后的总数） 条」；\n3. 照着同一个类定义造**两个**对象：一个叫「计算机」、当前记录了 2 条；另一个叫「张三」、当前记录了 4 条；\n4. 先让「计算机」处理 3 条，再让「张三」处理 2 条；\n5. 最后把两个对象**各自**那份数各印一行（先「计算机」的、再「张三」的）。",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def eat(self, n):\n        self.fish = self.fish + n\n        print(self.name, \"又处理了\", n, \"条，今天一共\", self.fish, \"条\")\n\na = Cat(\"计算机\", 2)\nb = Cat(\"张三\", 4)\na.eat(3)\nb.eat(2)\nprint(a.fish)\nprint(b.fish)\n",
+      "expectedOutput": "计算机 又处理了 3 条，今天一共 5 条\n张三 又处理了 2 条，今天一共 6 条\n5\n6",
+      "stdin": null,
+      "explanation": "关键那一行是 `self.fish = self.fish + n` ，两个 `self.fish` 说的都是**这个对象自己**那一格：等号右边先把旧的数取出来、加上 n，等号左边再把结果放回**同一格**。\n\n方法里的 `self` 就是「**正在做这件事的那一个**」：调用 `a.eat(...)` 的时候它指 `a`，调用 `b.eat(...)` 的时候它指 `b`。所以两个对象各改各的格子，最后那两行数字（「计算机」那份 2 加上 3、「张三」那份 4 加上 2）就是**各带各的一份**的证据 —— 一个处理数据，另一个身上那个数**纹丝不动**。\n\n（顺手记一条规矩：要动这个对象自己那一格，**等号左边也得带 `self.`**。不带的那一个只是函数里那个名字本身，跟对象身上那份不是同一样东西 —— 对象身上什么都没留下，出了这一个方法这个名字也就没了。）",
+      "templateId": "py-s1-class-eat-self",
+      "params": {
+        "n1": "计算机",
+        "f1": 2,
+        "k1": 3,
+        "n2": "张三",
+        "f2": 4,
+        "k2": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "056bc2b0437c79fe"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-eat-self-038",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想给类定义加一个方法「处理数据」 —— 它处理的是**自己**那份数。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再画一个方法 `eat(self, n)`：把 n 条**加进这个对象自己**那份数里，并印一行「（名字） 又处理了 （n） 条，今天一共 （加完之后的总数） 条」；\n3. 照着同一个类定义造**两个**对象：一个叫「小鳕鱼」、当前记录了 1 条；另一个叫「三花」、当前记录了 5 条；\n4. 先让「小鳕鱼」处理 2 条，再让「三花」处理 1 条；\n5. 最后把两个对象**各自**那份数各印一行（先「小鳕鱼」的、再「三花」的）。",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def eat(self, n):\n        self.fish = self.fish + n\n        print(self.name, \"又处理了\", n, \"条，今天一共\", self.fish, \"条\")\n\na = Cat(\"小鳕鱼\", 1)\nb = Cat(\"三花\", 5)\na.eat(2)\nb.eat(1)\nprint(a.fish)\nprint(b.fish)\n",
+      "expectedOutput": "小鳕鱼 又处理了 2 条，今天一共 3 条\n三花 又处理了 1 条，今天一共 6 条\n3\n6",
+      "stdin": null,
+      "explanation": "关键那一行是 `self.fish = self.fish + n` ，两个 `self.fish` 说的都是**这个对象自己**那一格：等号右边先把旧的数取出来、加上 n，等号左边再把结果放回**同一格**。\n\n方法里的 `self` 就是「**正在做这件事的那一个**」：调用 `a.eat(...)` 的时候它指 `a`，调用 `b.eat(...)` 的时候它指 `b`。所以两个对象各改各的格子，最后那两行数字（「小鳕鱼」那份 1 加上 2、「三花」那份 5 加上 1）就是**各带各的一份**的证据 —— 一个处理数据，另一个身上那个数**纹丝不动**。\n\n（顺手记一条规矩：要动这个对象自己那一格，**等号左边也得带 `self.`**。不带的那一个只是函数里那个名字本身，跟对象身上那份不是同一样东西 —— 对象身上什么都没留下，出了这一个方法这个名字也就没了。）",
+      "templateId": "py-s1-class-eat-self",
+      "params": {
+        "n1": "小鳕鱼",
+        "f1": 1,
+        "k1": 2,
+        "n2": "三花",
+        "f2": 5,
+        "k2": 1
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "e87e052e30c1f8cd"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-eat-self-050",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想给类定义加一个方法「处理数据」 —— 它处理的是**自己**那份数。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再画一个方法 `eat(self, n)`：把 n 条**加进这个对象自己**那份数里，并印一行「（名字） 又处理了 （n） 条，今天一共 （加完之后的总数） 条」；\n3. 照着同一个类定义造**两个**对象：一个叫「小鳕鱼」、当前记录了 2 条；另一个叫「张三」、当前记录了 5 条；\n4. 先让「小鳕鱼」处理 2 条，再让「张三」处理 1 条；\n5. 最后把两个对象**各自**那份数各印一行（先「小鳕鱼」的、再「张三」的）。",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def eat(self, n):\n        self.fish = self.fish + n\n        print(self.name, \"又处理了\", n, \"条，今天一共\", self.fish, \"条\")\n\na = Cat(\"小鳕鱼\", 2)\nb = Cat(\"张三\", 5)\na.eat(2)\nb.eat(1)\nprint(a.fish)\nprint(b.fish)\n",
+      "expectedOutput": "小鳕鱼 又处理了 2 条，今天一共 4 条\n张三 又处理了 1 条，今天一共 6 条\n4\n6",
+      "stdin": null,
+      "explanation": "关键那一行是 `self.fish = self.fish + n` ，两个 `self.fish` 说的都是**这个对象自己**那一格：等号右边先把旧的数取出来、加上 n，等号左边再把结果放回**同一格**。\n\n方法里的 `self` 就是「**正在做这件事的那一个**」：调用 `a.eat(...)` 的时候它指 `a`，调用 `b.eat(...)` 的时候它指 `b`。所以两个对象各改各的格子，最后那两行数字（「小鳕鱼」那份 2 加上 2、「张三」那份 5 加上 1）就是**各带各的一份**的证据 —— 一个处理数据，另一个身上那个数**纹丝不动**。\n\n（顺手记一条规矩：要动这个对象自己那一格，**等号左边也得带 `self.`**。不带的那一个只是函数里那个名字本身，跟对象身上那份不是同一样东西 —— 对象身上什么都没留下，出了这一个方法这个名字也就没了。）",
+      "templateId": "py-s1-class-eat-self",
+      "params": {
+        "n1": "小鳕鱼",
+        "f1": 2,
+        "k1": 2,
+        "n2": "张三",
+        "f2": 5,
+        "k2": 1
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "e01f5a90c32c4243"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-eat-self-063",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想给类定义加一个方法「处理数据」 —— 它处理的是**自己**那份数。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再画一个方法 `eat(self, n)`：把 n 条**加进这个对象自己**那份数里，并印一行「（名字） 又处理了 （n） 条，今天一共 （加完之后的总数） 条」；\n3. 照着同一个类定义造**两个**对象：一个叫「小鳕鱼」、当前记录了 2 条；另一个叫「三花」、当前记录了 5 条；\n4. 先让「小鳕鱼」处理 3 条，再让「三花」处理 2 条；\n5. 最后把两个对象**各自**那份数各印一行（先「小鳕鱼」的、再「三花」的）。",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def eat(self, n):\n        self.fish = self.fish + n\n        print(self.name, \"又处理了\", n, \"条，今天一共\", self.fish, \"条\")\n\na = Cat(\"小鳕鱼\", 2)\nb = Cat(\"三花\", 5)\na.eat(3)\nb.eat(2)\nprint(a.fish)\nprint(b.fish)\n",
+      "expectedOutput": "小鳕鱼 又处理了 3 条，今天一共 5 条\n三花 又处理了 2 条，今天一共 7 条\n5\n7",
+      "stdin": null,
+      "explanation": "关键那一行是 `self.fish = self.fish + n` ，两个 `self.fish` 说的都是**这个对象自己**那一格：等号右边先把旧的数取出来、加上 n，等号左边再把结果放回**同一格**。\n\n方法里的 `self` 就是「**正在做这件事的那一个**」：调用 `a.eat(...)` 的时候它指 `a`，调用 `b.eat(...)` 的时候它指 `b`。所以两个对象各改各的格子，最后那两行数字（「小鳕鱼」那份 2 加上 3、「三花」那份 5 加上 2）就是**各带各的一份**的证据 —— 一个处理数据，另一个身上那个数**纹丝不动**。\n\n（顺手记一条规矩：要动这个对象自己那一格，**等号左边也得带 `self.`**。不带的那一个只是函数里那个名字本身，跟对象身上那份不是同一样东西 —— 对象身上什么都没留下，出了这一个方法这个名字也就没了。）",
+      "templateId": "py-s1-class-eat-self",
+      "params": {
+        "n1": "小鳕鱼",
+        "f1": 2,
+        "k1": 3,
+        "n2": "三花",
+        "f2": 5,
+        "k2": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "cca04642f602d5c5"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-method-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "请你照类定义造一个对象：\n\n1. 画一张 `Cat` 类\n2. `__init__` 里把名字存到**这个对象自己**身上\n3. 再写一个方法 `eat(self, food)`，打印一行：`名字 处理 食物`（中间各一个空格）\n\n然后读入两行：第一行是对象的名字，第二行是它处理的东西；用这个名字造出对象，调用 `eat`。\n\n比如输入是\n\n毛线球\n鳕数据\n\n就要输出\n\n毛线球 处理 鳕数据\n\n（判分用的是另外一组名字）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\n    def eat(self, food):\n        print(self.name + \" 处理 \" + food)\n\n\nname = input()\nfood = input()\ncat = Cat(name)\ncat.eat(food)\n",
+      "expectedOutput": "计算机 处理 数据",
+      "stdin": "计算机\n数据\n",
+      "explanation": "三个地方要盯住：\n\n- `__init__` 的第一个空位必须是 `self`，而且**存名字要写 `self.name = name`**（不带 self 的话名字会存进空位里，出了这一个方法就没了）\n- 方法 `eat` 的第一个空位也必须是 `self`（Python 会自动把「这个对象」塞进去，你不用在调用时传）\n- 调用是 `cat.eat(food)` —— **只传食物**。写成 `cat.eat(cat, food)` 会报东西喂多了，因为 `cat` 已经通过点号进去了\n\n（`self` 不是 Python 的关键字，它只是个约定俗成的名字。但你写成别的，所有人都会看不懂 —— 这个约定别破。）",
+      "templateId": "py-s1-class-method",
+      "params": {
+        "name": "计算机",
+        "food": "数据",
+        "sn": "毛线球",
+        "sf": "鳕数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "d09d4df99885f96c"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-method-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "请你照类定义造一个对象：\n\n1. 画一张 `Cat` 类\n2. `__init__` 里把名字存到**这个对象自己**身上\n3. 再写一个方法 `eat(self, food)`，打印一行：`名字 处理 食物`（中间各一个空格）\n\n然后读入两行：第一行是对象的名字，第二行是它处理的东西；用这个名字造出对象，调用 `eat`。\n\n比如输入是\n\n商品B\n商品C\n\n就要输出\n\n商品B 处理 商品C\n\n（判分用的是另外一组名字）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\n    def eat(self, food):\n        print(self.name + \" 处理 \" + food)\n\n\nname = input()\nfood = input()\ncat = Cat(name)\ncat.eat(food)\n",
+      "expectedOutput": "计算机 处理 数据",
+      "stdin": "计算机\n数据\n",
+      "explanation": "三个地方要盯住：\n\n- `__init__` 的第一个空位必须是 `self`，而且**存名字要写 `self.name = name`**（不带 self 的话名字会存进空位里，出了这一个方法就没了）\n- 方法 `eat` 的第一个空位也必须是 `self`（Python 会自动把「这个对象」塞进去，你不用在调用时传）\n- 调用是 `cat.eat(food)` —— **只传食物**。写成 `cat.eat(cat, food)` 会报东西喂多了，因为 `cat` 已经通过点号进去了\n\n（`self` 不是 Python 的关键字，它只是个约定俗成的名字。但你写成别的，所有人都会看不懂 —— 这个约定别破。）",
+      "templateId": "py-s1-class-method",
+      "params": {
+        "name": "计算机",
+        "food": "数据",
+        "sn": "商品B",
+        "sf": "商品C"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "fe6f29f10d9693a7"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-method-006",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "请你照类定义造一个对象：\n\n1. 画一张 `Cat` 类\n2. `__init__` 里把名字存到**这个对象自己**身上\n3. 再写一个方法 `eat(self, food)`，打印一行：`名字 处理 食物`（中间各一个空格）\n\n然后读入两行：第一行是对象的名字，第二行是它处理的东西；用这个名字造出对象，调用 `eat`。\n\n比如输入是\n\n商品B\n鳕数据\n\n就要输出\n\n商品B 处理 鳕数据\n\n（判分用的是另外一组名字）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\n    def eat(self, food):\n        print(self.name + \" 处理 \" + food)\n\n\nname = input()\nfood = input()\ncat = Cat(name)\ncat.eat(food)\n",
+      "expectedOutput": "计算机 处理 商品A",
+      "stdin": "计算机\n商品A\n",
+      "explanation": "三个地方要盯住：\n\n- `__init__` 的第一个空位必须是 `self`，而且**存名字要写 `self.name = name`**（不带 self 的话名字会存进空位里，出了这一个方法就没了）\n- 方法 `eat` 的第一个空位也必须是 `self`（Python 会自动把「这个对象」塞进去，你不用在调用时传）\n- 调用是 `cat.eat(food)` —— **只传食物**。写成 `cat.eat(cat, food)` 会报东西喂多了，因为 `cat` 已经通过点号进去了\n\n（`self` 不是 Python 的关键字，它只是个约定俗成的名字。但你写成别的，所有人都会看不懂 —— 这个约定别破。）",
+      "templateId": "py-s1-class-method",
+      "params": {
+        "name": "计算机",
+        "food": "商品A",
+        "sn": "商品B",
+        "sf": "鳕数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "f284dde052ae2f13"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-method-009",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "请你照类定义造一个对象：\n\n1. 画一张 `Cat` 类\n2. `__init__` 里把名字存到**这个对象自己**身上\n3. 再写一个方法 `eat(self, food)`，打印一行：`名字 处理 食物`（中间各一个空格）\n\n然后读入两行：第一行是对象的名字，第二行是它处理的东西；用这个名字造出对象，调用 `eat`。\n\n比如输入是\n\n毛线球\n商品C\n\n就要输出\n\n毛线球 处理 商品C\n\n（判分用的是另外一组名字）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\n    def eat(self, food):\n        print(self.name + \" 处理 \" + food)\n\n\nname = input()\nfood = input()\ncat = Cat(name)\ncat.eat(food)\n",
+      "expectedOutput": "小鳕鱼 处理 数据",
+      "stdin": "小鳕鱼\n数据\n",
+      "explanation": "三个地方要盯住：\n\n- `__init__` 的第一个空位必须是 `self`，而且**存名字要写 `self.name = name`**（不带 self 的话名字会存进空位里，出了这一个方法就没了）\n- 方法 `eat` 的第一个空位也必须是 `self`（Python 会自动把「这个对象」塞进去，你不用在调用时传）\n- 调用是 `cat.eat(food)` —— **只传食物**。写成 `cat.eat(cat, food)` 会报东西喂多了，因为 `cat` 已经通过点号进去了\n\n（`self` 不是 Python 的关键字，它只是个约定俗成的名字。但你写成别的，所有人都会看不懂 —— 这个约定别破。）",
+      "templateId": "py-s1-class-method",
+      "params": {
+        "name": "小鳕鱼",
+        "food": "数据",
+        "sn": "毛线球",
+        "sf": "商品C"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "3d883cb2f8d200ff"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-method-012",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "请你照类定义造一个对象：\n\n1. 画一张 `Cat` 类\n2. `__init__` 里把名字存到**这个对象自己**身上\n3. 再写一个方法 `eat(self, food)`，打印一行：`名字 处理 食物`（中间各一个空格）\n\n然后读入两行：第一行是对象的名字，第二行是它处理的东西；用这个名字造出对象，调用 `eat`。\n\n比如输入是\n\n毛线球\n鳕数据\n\n就要输出\n\n毛线球 处理 鳕数据\n\n（判分用的是另外一组名字）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\n    def eat(self, food):\n        print(self.name + \" 处理 \" + food)\n\n\nname = input()\nfood = input()\ncat = Cat(name)\ncat.eat(food)\n",
+      "expectedOutput": "小鳕鱼 处理 商品A",
+      "stdin": "小鳕鱼\n商品A\n",
+      "explanation": "三个地方要盯住：\n\n- `__init__` 的第一个空位必须是 `self`，而且**存名字要写 `self.name = name`**（不带 self 的话名字会存进空位里，出了这一个方法就没了）\n- 方法 `eat` 的第一个空位也必须是 `self`（Python 会自动把「这个对象」塞进去，你不用在调用时传）\n- 调用是 `cat.eat(food)` —— **只传食物**。写成 `cat.eat(cat, food)` 会报东西喂多了，因为 `cat` 已经通过点号进去了\n\n（`self` 不是 Python 的关键字，它只是个约定俗成的名字。但你写成别的，所有人都会看不懂 —— 这个约定别破。）",
+      "templateId": "py-s1-class-method",
+      "params": {
+        "name": "小鳕鱼",
+        "food": "商品A",
+        "sn": "毛线球",
+        "sf": "鳕数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "f2b73fc7aa7fc2f5"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-method-015",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "请你照类定义造一个对象：\n\n1. 画一张 `Cat` 类\n2. `__init__` 里把名字存到**这个对象自己**身上\n3. 再写一个方法 `eat(self, food)`，打印一行：`名字 处理 食物`（中间各一个空格）\n\n然后读入两行：第一行是对象的名字，第二行是它处理的东西；用这个名字造出对象，调用 `eat`。\n\n比如输入是\n\n商品B\n商品C\n\n就要输出\n\n商品B 处理 商品C\n\n（判分用的是另外一组名字）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\n    def eat(self, food):\n        print(self.name + \" 处理 \" + food)\n\n\nname = input()\nfood = input()\ncat = Cat(name)\ncat.eat(food)\n",
+      "expectedOutput": "小鳕鱼 处理 商品A",
+      "stdin": "小鳕鱼\n商品A\n",
+      "explanation": "三个地方要盯住：\n\n- `__init__` 的第一个空位必须是 `self`，而且**存名字要写 `self.name = name`**（不带 self 的话名字会存进空位里，出了这一个方法就没了）\n- 方法 `eat` 的第一个空位也必须是 `self`（Python 会自动把「这个对象」塞进去，你不用在调用时传）\n- 调用是 `cat.eat(food)` —— **只传食物**。写成 `cat.eat(cat, food)` 会报东西喂多了，因为 `cat` 已经通过点号进去了\n\n（`self` 不是 Python 的关键字，它只是个约定俗成的名字。但你写成别的，所有人都会看不懂 —— 这个约定别破。）",
+      "templateId": "py-s1-class-method",
+      "params": {
+        "name": "小鳕鱼",
+        "food": "商品A",
+        "sn": "商品B",
+        "sf": "商品C"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "c661433cd565d438"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-no-instance-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画好了一张类，类定义上写着：每个对象都有名字、都有当前记录了几条，还会一次报数。\n\n可我们照着类定义调用了半天函数，屏幕上却冒出一句看不懂的话……你帮我们改对，让它印出一行「计算机 当前记录了 2 条数据」。",
+      "brokenCode": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def meow(self):\n        print(self.name, \"当前记录了\", self.fish, \"条数据\")\n\ncat1.meow()\n",
+      "referenceFix": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def meow(self):\n        print(self.name, \"当前记录了\", self.fish, \"条数据\")\n\ncat1 = Cat(\"计算机\", 2)\ncat1.meow()\n",
+      "expectedOutput": "计算机 当前记录了 2 条数据",
+      "stdin": null,
+      "explanation": "教训：**类定义不是对象**。`class Cat:` 这一段画完之后，元素边**一个活的都没有** —— 类定义只是一张纸，上面写再多轮廓，也不会自己冒出对象来。\n\n所以调用 `cat1.meow()` 的时候，解释器一愣：`cat1` 是谁？它从来没被创建后过。报的是 `NameError: name 'cat1' is not defined` —— 意思是「**这个名字压根还没建起来**」。\n\n真正让对象出现的是**根据类创建实例**那一句：`cat1 = Cat(\"计算机\", 2)`。生的时候把名字和条数传入，`__init__` 就替这个新对象把它们挂到身上；生完再调用函数，它才认得出自己是哪只。\n\n（顺手分辨：`NameError` 说的是「这个名字还没建起来」；而上一课名牌柜那种「柜子里没挂过这块名牌」是另一回事 —— 那是东西**建起来了、但里面没这一格**。两句报错长得像，意思不一样。）",
+      "templateId": "py-s1-class-no-instance",
+      "params": {
+        "name": "计算机",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "b69fa55f1fc280b1"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-no-instance-008",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画好了一张类，类定义上写着：每个对象都有名字、都有当前记录了几条，还会一次报数。\n\n可我们照着类定义调用了半天函数，屏幕上却冒出一句看不懂的话……你帮我们改对，让它印出一行「三花 当前记录了 4 条数据」。",
+      "brokenCode": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def meow(self):\n        print(self.name, \"当前记录了\", self.fish, \"条数据\")\n\ncat1.meow()\n",
+      "referenceFix": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def meow(self):\n        print(self.name, \"当前记录了\", self.fish, \"条数据\")\n\ncat1 = Cat(\"三花\", 4)\ncat1.meow()\n",
+      "expectedOutput": "三花 当前记录了 4 条数据",
+      "stdin": null,
+      "explanation": "教训：**类定义不是对象**。`class Cat:` 这一段画完之后，元素边**一个活的都没有** —— 类定义只是一张纸，上面写再多轮廓，也不会自己冒出对象来。\n\n所以调用 `cat1.meow()` 的时候，解释器一愣：`cat1` 是谁？它从来没被创建后过。报的是 `NameError: name 'cat1' is not defined` —— 意思是「**这个名字压根还没建起来**」。\n\n真正让对象出现的是**根据类创建实例**那一句：`cat1 = Cat(\"三花\", 4)`。生的时候把名字和条数传入，`__init__` 就替这个新对象把它们挂到身上；生完再调用函数，它才认得出自己是哪只。\n\n（顺手分辨：`NameError` 说的是「这个名字还没建起来」；而上一课名牌柜那种「柜子里没挂过这块名牌」是另一回事 —— 那是东西**建起来了、但里面没这一格**。两句报错长得像，意思不一样。）",
+      "templateId": "py-s1-class-no-instance",
+      "params": {
+        "name": "三花",
+        "fish": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "ebbc91b66fcb433f"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-self-attr-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画了张类，想给它起名叫「计算机」，再问问它叫什么。\n\n可代码一跑就说这个对象**没有名字**……你帮我们改对，让它把名字打印出来。",
+      "brokenCode": "class Cat:\n    def __init__(self, name):\n        name = name\n\nc = Cat(\"计算机\")\nprint(c.name)\n",
+      "referenceFix": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\nc = Cat(\"计算机\")\nprint(c.name)\n",
+      "expectedOutput": "计算机",
+      "stdin": null,
+      "explanation": "`name = name` 这一行做的事是：**把空位 `name` 里的东西又存回了空位 `name`** —— 等号两边说的是同一个东西，等于什么都没干。外面那句 `print(c.name)` 找的却是**这个对象自己身上**的 `name`，当然找不到。\n\n名字得**挂在对象身上**才算数，写法就是 `self.name = name`：\n\n- `self` = 「这个对象自己」\n- `self.name` = 「这个对象身上叫 name 的那一格」\n- 右边那个没带 `self` 的 `name` = 递进来的那个东西\n\n（同一行里两个 `name` 长得一模一样、意思完全不同 —— 这是 `self` 最容易绊人的地方。养成习惯：**赋值给实例属性时，等号左边一定要带 `self.`**。）",
+      "templateId": "py-s1-class-self-attr",
+      "params": {
+        "name": "计算机"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "a940f0d02b7cdf1d"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-self-attr-002",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们画了张类，想给它起名叫「毛线球」，再问问它叫什么。\n\n可代码一跑就说这个对象**没有名字**……你帮我们改对，让它把名字打印出来。",
+      "brokenCode": "class Cat:\n    def __init__(self, name):\n        name = name\n\nc = Cat(\"毛线球\")\nprint(c.name)\n",
+      "referenceFix": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\nc = Cat(\"毛线球\")\nprint(c.name)\n",
+      "expectedOutput": "毛线球",
+      "stdin": null,
+      "explanation": "`name = name` 这一行做的事是：**把空位 `name` 里的东西又存回了空位 `name`** —— 等号两边说的是同一个东西，等于什么都没干。外面那句 `print(c.name)` 找的却是**这个对象自己身上**的 `name`，当然找不到。\n\n名字得**挂在对象身上**才算数，写法就是 `self.name = name`：\n\n- `self` = 「这个对象自己」\n- `self.name` = 「这个对象身上叫 name 的那一格」\n- 右边那个没带 `self` 的 `name` = 递进来的那个东西\n\n（同一行里两个 `name` 长得一模一样、意思完全不同 —— 这是 `self` 最容易绊人的地方。养成习惯：**赋值给实例属性时，等号左边一定要带 `self.`**。）",
+      "templateId": "py-s1-class-self-attr",
+      "params": {
+        "name": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "d5fcfbe93d4e1930"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-str-print-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想让**打印一个对象**的时候好看一点：直接把对象交给 `print`，屏幕上就该是一行「对象 计算机，当前记录了 2 条数据」，而不是那串谁也不认识的怪字。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再给类定义画一个方法 **`__str__`** —— 这一个方法**自己不印**，而是把那句话**返回**；\n3. 最后照类定义造一个对象（名字「计算机」、今天 2 条），**直接把这个对象交给 `print`**，不要另外写打印的函数。\n\n（`__str__` 前后各是**两条下划线**，一共四个。）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def __str__(self):\n        return \"对象 \" + self.name + \"，当前记录了 \" + str(self.fish) + \" 条数据\"\n\ncat1 = Cat(\"计算机\", 2)\nprint(cat1)\n",
+      "expectedOutput": "对象 计算机，当前记录了 2 条数据",
+      "stdin": null,
+      "explanation": "`__str__` 是「**这个对象该怎么被打印成一句话**」的那一个方法。它的脾气和别的函数不一样：\n\n- 它**自己不打印**，而是把要说的话**返回**（`return`）；\n- 以后谁把这个对象交给 `print`，Python 就**先替你把这一个方法跑一遍**，拿它返回的那句话去印。\n\n不写这一个方法的时候，`print(cat1)` 印出来的是那串夹着 `__main__`、`Cat`、`object`、`0x` 加一串地址的怪字 —— 它说的是「这个对象现在住在电脑的哪个角落」，**每跑一次都不一样**，那是给电脑看的住址，不是给对象看的名字。\n\n写的时候留意两处：\n\n1. 名字前后各是**两条下划线**，一共四个，少一个都不行；\n2. 函数名是 `__str__`，它和 `__init__` 一样**画在类定义里面**，要缩进。\n\n（拼那句话的时候，条数是数字、要跟字符串接在一起，所以得先转一下：`str(self.fish)`。另外留个心：`__str__` 里要的是**一整句返回**，所以得用加号把几段拼成一句；要是顺手写成 `print(...)` 那种逗号隔开的写法，函数就变成「印完两手空空」，交给 `print` 的时候屏幕上会出现 `None`。）",
+      "templateId": "py-s1-class-str-print",
+      "params": {
+        "name": "计算机",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.466Z",
+        "hash": "aa61de1ca9a858cf"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-str-print-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想让**打印一个对象**的时候好看一点：直接把对象交给 `print`，屏幕上就该是一行「对象 计算机，当前记录了 4 条数据」，而不是那串谁也不认识的怪字。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再给类定义画一个方法 **`__str__`** —— 这一个方法**自己不印**，而是把那句话**返回**；\n3. 最后照类定义造一个对象（名字「计算机」、今天 4 条），**直接把这个对象交给 `print`**，不要另外写打印的函数。\n\n（`__str__` 前后各是**两条下划线**，一共四个。）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def __str__(self):\n        return \"对象 \" + self.name + \"，当前记录了 \" + str(self.fish) + \" 条数据\"\n\ncat1 = Cat(\"计算机\", 4)\nprint(cat1)\n",
+      "expectedOutput": "对象 计算机，当前记录了 4 条数据",
+      "stdin": null,
+      "explanation": "`__str__` 是「**这个对象该怎么被打印成一句话**」的那一个方法。它的脾气和别的函数不一样：\n\n- 它**自己不打印**，而是把要说的话**返回**（`return`）；\n- 以后谁把这个对象交给 `print`，Python 就**先替你把这一个方法跑一遍**，拿它返回的那句话去印。\n\n不写这一个方法的时候，`print(cat1)` 印出来的是那串夹着 `__main__`、`Cat`、`object`、`0x` 加一串地址的怪字 —— 它说的是「这个对象现在住在电脑的哪个角落」，**每跑一次都不一样**，那是给电脑看的住址，不是给对象看的名字。\n\n写的时候留意两处：\n\n1. 名字前后各是**两条下划线**，一共四个，少一个都不行；\n2. 函数名是 `__str__`，它和 `__init__` 一样**画在类定义里面**，要缩进。\n\n（拼那句话的时候，条数是数字、要跟字符串接在一起，所以得先转一下：`str(self.fish)`。另外留个心：`__str__` 里要的是**一整句返回**，所以得用加号把几段拼成一句；要是顺手写成 `print(...)` 那种逗号隔开的写法，函数就变成「印完两手空空」，交给 `print` 的时候屏幕上会出现 `None`。）",
+      "templateId": "py-s1-class-str-print",
+      "params": {
+        "name": "计算机",
+        "fish": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.467Z",
+        "hash": "5562129ebd6c98d1"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-str-print-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想让**打印一个对象**的时候好看一点：直接把对象交给 `print`，屏幕上就该是一行「对象 张三，当前记录了 2 条数据」，而不是那串谁也不认识的怪字。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再给类定义画一个方法 **`__str__`** —— 这一个方法**自己不印**，而是把那句话**返回**；\n3. 最后照类定义造一个对象（名字「张三」、今天 2 条），**直接把这个对象交给 `print`**，不要另外写打印的函数。\n\n（`__str__` 前后各是**两条下划线**，一共四个。）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def __str__(self):\n        return \"对象 \" + self.name + \"，当前记录了 \" + str(self.fish) + \" 条数据\"\n\ncat1 = Cat(\"张三\", 2)\nprint(cat1)\n",
+      "expectedOutput": "对象 张三，当前记录了 2 条数据",
+      "stdin": null,
+      "explanation": "`__str__` 是「**这个对象该怎么被打印成一句话**」的那一个方法。它的脾气和别的函数不一样：\n\n- 它**自己不打印**，而是把要说的话**返回**（`return`）；\n- 以后谁把这个对象交给 `print`，Python 就**先替你把这一个方法跑一遍**，拿它返回的那句话去印。\n\n不写这一个方法的时候，`print(cat1)` 印出来的是那串夹着 `__main__`、`Cat`、`object`、`0x` 加一串地址的怪字 —— 它说的是「这个对象现在住在电脑的哪个角落」，**每跑一次都不一样**，那是给电脑看的住址，不是给对象看的名字。\n\n写的时候留意两处：\n\n1. 名字前后各是**两条下划线**，一共四个，少一个都不行；\n2. 函数名是 `__str__`，它和 `__init__` 一样**画在类定义里面**，要缩进。\n\n（拼那句话的时候，条数是数字、要跟字符串接在一起，所以得先转一下：`str(self.fish)`。另外留个心：`__str__` 里要的是**一整句返回**，所以得用加号把几段拼成一句；要是顺手写成 `print(...)` 那种逗号隔开的写法，函数就变成「印完两手空空」，交给 `print` 的时候屏幕上会出现 `None`。）",
+      "templateId": "py-s1-class-str-print",
+      "params": {
+        "name": "张三",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.467Z",
+        "hash": "68dd08fe7c8b055d"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-str-print-005",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想让**打印一个对象**的时候好看一点：直接把对象交给 `print`，屏幕上就该是一行「对象 张三，当前记录了 4 条数据」，而不是那串谁也不认识的怪字。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再给类定义画一个方法 **`__str__`** —— 这一个方法**自己不印**，而是把那句话**返回**；\n3. 最后照类定义造一个对象（名字「张三」、今天 4 条），**直接把这个对象交给 `print`**，不要另外写打印的函数。\n\n（`__str__` 前后各是**两条下划线**，一共四个。）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def __str__(self):\n        return \"对象 \" + self.name + \"，当前记录了 \" + str(self.fish) + \" 条数据\"\n\ncat1 = Cat(\"张三\", 4)\nprint(cat1)\n",
+      "expectedOutput": "对象 张三，当前记录了 4 条数据",
+      "stdin": null,
+      "explanation": "`__str__` 是「**这个对象该怎么被打印成一句话**」的那一个方法。它的脾气和别的函数不一样：\n\n- 它**自己不打印**，而是把要说的话**返回**（`return`）；\n- 以后谁把这个对象交给 `print`，Python 就**先替你把这一个方法跑一遍**，拿它返回的那句话去印。\n\n不写这一个方法的时候，`print(cat1)` 印出来的是那串夹着 `__main__`、`Cat`、`object`、`0x` 加一串地址的怪字 —— 它说的是「这个对象现在住在电脑的哪个角落」，**每跑一次都不一样**，那是给电脑看的住址，不是给对象看的名字。\n\n写的时候留意两处：\n\n1. 名字前后各是**两条下划线**，一共四个，少一个都不行；\n2. 函数名是 `__str__`，它和 `__init__` 一样**画在类定义里面**，要缩进。\n\n（拼那句话的时候，条数是数字、要跟字符串接在一起，所以得先转一下：`str(self.fish)`。另外留个心：`__str__` 里要的是**一整句返回**，所以得用加号把几段拼成一句；要是顺手写成 `print(...)` 那种逗号隔开的写法，函数就变成「印完两手空空」，交给 `print` 的时候屏幕上会出现 `None`。）",
+      "templateId": "py-s1-class-str-print",
+      "params": {
+        "name": "张三",
+        "fish": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.467Z",
+        "hash": "fdc14a698fbbc0d0"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-str-print-006",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想让**打印一个对象**的时候好看一点：直接把对象交给 `print`，屏幕上就该是一行「对象 三花，当前记录了 2 条数据」，而不是那串谁也不认识的怪字。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再给类定义画一个方法 **`__str__`** —— 这一个方法**自己不印**，而是把那句话**返回**；\n3. 最后照类定义造一个对象（名字「三花」、今天 2 条），**直接把这个对象交给 `print`**，不要另外写打印的函数。\n\n（`__str__` 前后各是**两条下划线**，一共四个。）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def __str__(self):\n        return \"对象 \" + self.name + \"，当前记录了 \" + str(self.fish) + \" 条数据\"\n\ncat1 = Cat(\"三花\", 2)\nprint(cat1)\n",
+      "expectedOutput": "对象 三花，当前记录了 2 条数据",
+      "stdin": null,
+      "explanation": "`__str__` 是「**这个对象该怎么被打印成一句话**」的那一个方法。它的脾气和别的函数不一样：\n\n- 它**自己不打印**，而是把要说的话**返回**（`return`）；\n- 以后谁把这个对象交给 `print`，Python 就**先替你把这一个方法跑一遍**，拿它返回的那句话去印。\n\n不写这一个方法的时候，`print(cat1)` 印出来的是那串夹着 `__main__`、`Cat`、`object`、`0x` 加一串地址的怪字 —— 它说的是「这个对象现在住在电脑的哪个角落」，**每跑一次都不一样**，那是给电脑看的住址，不是给对象看的名字。\n\n写的时候留意两处：\n\n1. 名字前后各是**两条下划线**，一共四个，少一个都不行；\n2. 函数名是 `__str__`，它和 `__init__` 一样**画在类定义里面**，要缩进。\n\n（拼那句话的时候，条数是数字、要跟字符串接在一起，所以得先转一下：`str(self.fish)`。另外留个心：`__str__` 里要的是**一整句返回**，所以得用加号把几段拼成一句；要是顺手写成 `print(...)` 那种逗号隔开的写法，函数就变成「印完两手空空」，交给 `print` 的时候屏幕上会出现 `None`。）",
+      "templateId": "py-s1-class-str-print",
+      "params": {
+        "name": "三花",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.467Z",
+        "hash": "7c351b76b0a237b6"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-str-print-008",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们想让**打印一个对象**的时候好看一点：直接把对象交给 `print`，屏幕上就该是一行「对象 三花，当前记录了 4 条数据」，而不是那串谁也不认识的怪字。\n\n请你写一张 `Cat` 类：\n\n1. `__init__` 收两样 —— 名字、当前记录了几条，都存进**这个对象自己**身上；\n2. 再给类定义画一个方法 **`__str__`** —— 这一个方法**自己不印**，而是把那句话**返回**；\n3. 最后照类定义造一个对象（名字「三花」、今天 4 条），**直接把这个对象交给 `print`**，不要另外写打印的函数。\n\n（`__str__` 前后各是**两条下划线**，一共四个。）",
+      "starter": null,
+      "referenceSolution": "class Cat:\n    def __init__(self, name, fish):\n        self.name = name\n        self.fish = fish\n\n    def __str__(self):\n        return \"对象 \" + self.name + \"，当前记录了 \" + str(self.fish) + \" 条数据\"\n\ncat1 = Cat(\"三花\", 4)\nprint(cat1)\n",
+      "expectedOutput": "对象 三花，当前记录了 4 条数据",
+      "stdin": null,
+      "explanation": "`__str__` 是「**这个对象该怎么被打印成一句话**」的那一个方法。它的脾气和别的函数不一样：\n\n- 它**自己不打印**，而是把要说的话**返回**（`return`）；\n- 以后谁把这个对象交给 `print`，Python 就**先替你把这一个方法跑一遍**，拿它返回的那句话去印。\n\n不写这一个方法的时候，`print(cat1)` 印出来的是那串夹着 `__main__`、`Cat`、`object`、`0x` 加一串地址的怪字 —— 它说的是「这个对象现在住在电脑的哪个角落」，**每跑一次都不一样**，那是给电脑看的住址，不是给对象看的名字。\n\n写的时候留意两处：\n\n1. 名字前后各是**两条下划线**，一共四个，少一个都不行；\n2. 函数名是 `__str__`，它和 `__init__` 一样**画在类定义里面**，要缩进。\n\n（拼那句话的时候，条数是数字、要跟字符串接在一起，所以得先转一下：`str(self.fish)`。另外留个心：`__str__` 里要的是**一整句返回**，所以得用加号把几段拼成一句；要是顺手写成 `print(...)` 那种逗号隔开的写法，函数就变成「印完两手空空」，交给 `print` 的时候屏幕上会出现 `None`。）",
+      "templateId": "py-s1-class-str-print",
+      "params": {
+        "name": "三花",
+        "fish": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.467Z",
+        "hash": "ed9c725ea3573616"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-two-objects-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们按同一个类定义造了**两个**对象，一个叫「计算机」，一个叫「毛线球」。\n\n可是不管问哪一个，它都报同一个名字……你帮我们改对，让两个各报各的。",
+      "brokenCode": "class Cat:\n    def __init__(self, name):\n        Cat.name = name\n\na = Cat(\"计算机\")\nb = Cat(\"毛线球\")\nprint(a.name)\nprint(b.name)\n",
+      "referenceFix": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\na = Cat(\"计算机\")\nb = Cat(\"毛线球\")\nprint(a.name)\nprint(b.name)\n",
+      "expectedOutput": "计算机\n毛线球",
+      "stdin": null,
+      "explanation": "`Cat.name = name` 是往**类定义**上写名字，而不是往**这一个对象**身上写。\n\n类定义只有一张，两个对象共用它 —— 所以给第二只起名的时候，把第一个留在类定义上的名字**盖掉了**。于是两个对象问出来的是同一个（最后写上去的）名字。\n\n`self.name = name` 才是往**当前这一个**身上写。每 `Cat(...)` 一次就多一个**自己的**寄存柜，名字各存各的，谁也不会盖谁。\n\n（一句话记住：`Cat.xxx` 是**全类定义共用**的一格，`self.xxx` 是**每个对象一个**的一格。要让每个对象各有一份，就必须用 `self.`。）",
+      "templateId": "py-s1-class-two-objects",
+      "params": {
+        "n1": "计算机",
+        "n2": "毛线球"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.467Z",
+        "hash": "23af9430f4474741"
+      }
+    },
+    {
+      "id": "bank-py-s1-class-two-objects-003",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们按同一个类定义造了**两个**对象，一个叫「小鳕鱼」，一个叫「商品B」。\n\n可是不管问哪一个，它都报同一个名字……你帮我们改对，让两个各报各的。",
+      "brokenCode": "class Cat:\n    def __init__(self, name):\n        Cat.name = name\n\na = Cat(\"小鳕鱼\")\nb = Cat(\"商品B\")\nprint(a.name)\nprint(b.name)\n",
+      "referenceFix": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\na = Cat(\"小鳕鱼\")\nb = Cat(\"商品B\")\nprint(a.name)\nprint(b.name)\n",
+      "expectedOutput": "小鳕鱼\n商品B",
+      "stdin": null,
+      "explanation": "`Cat.name = name` 是往**类定义**上写名字，而不是往**这一个对象**身上写。\n\n类定义只有一张，两个对象共用它 —— 所以给第二只起名的时候，把第一个留在类定义上的名字**盖掉了**。于是两个对象问出来的是同一个（最后写上去的）名字。\n\n`self.name = name` 才是往**当前这一个**身上写。每 `Cat(...)` 一次就多一个**自己的**寄存柜，名字各存各的，谁也不会盖谁。\n\n（一句话记住：`Cat.xxx` 是**全类定义共用**的一格，`self.xxx` 是**每个对象一个**的一格。要让每个对象各有一份，就必须用 `self.`。）",
+      "templateId": "py-s1-class-two-objects",
+      "params": {
+        "n1": "小鳕鱼",
+        "n2": "商品B"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.467Z",
+        "hash": "d6e48e3653e5adfd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+  "lessonId": "cpp-stage3-02",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s3-02-find-position-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，空格隔开）：一长一短。\n\n请你写个程序：在**长的那段里找短的那段**，然后印**一行** ——\n\n- 找着了：印**它从第几个格后面开始**（就是那枚编号）；\n- 一个都没找着：印 `没有`。\n\n比如程序的输入是\n\n商品B大礼包 商品\n\n程序就要返回\n\n0\n\n（判分喂的是**另外两段字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"\";\n    string t = \"\";\n    cin >> s >> t;\n\n    if (s.find(t) == string::npos) {\n        cout << \"没有\" << endl;\n    } else {\n        cout << s.find(t) << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "没有",
+      "stdin": "字符串 干项\n",
+      "explanation": "std::string 在本例保存 UTF-8 字节序列，size 与 find 的位置以字节计，不直接表示汉字数量。连接、查找和长度都应按当前文本计算；未找到时与 string::npos 比较。",
+      "templateId": "cpp-s3-02-find-position",
+      "params": {
+        "s1": "字符串",
+        "s2": "干项"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.871Z",
+        "hash": "f8cc84436d99ffb8"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-find-position-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，空格隔开）：一长一短。\n\n请你写个程序：在**长的那段里找短的那段**，然后印**一行** ——\n\n- 找着了：印**它从第几个格后面开始**（就是那枚编号）；\n- 一个都没找着：印 `没有`。\n\n比如程序的输入是\n\n商品B大礼包 商品\n\n程序就要返回\n\n0\n\n（判分喂的是**另外两段字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"\";\n    string t = \"\";\n    cin >> s >> t;\n\n    if (s.find(t) == string::npos) {\n        cout << \"没有\" << endl;\n    } else {\n        cout << s.find(t) << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "没有",
+      "stdin": "字符串 三连\n",
+      "explanation": "这一题的重点是**「没找着」怎么判**。\n\n`s.find(t)` 有两种结果：\n\n- 找着了 —— 返回一枚**编号**（那一小段是从第几个格后面开始的，**从 0 数起**）；\n- 没找着 —— 返回一枚特别的记号 `string::npos`（念作「**没有这个位置**」）。\n\n所以这一题**不能直接把它印出来**：得先问一句它是不是那枚记号。写法就是把两者比一比：\n\n`if (s.find(t) == string::npos)`\n\n念作「返回的**就是**『没找着』」—— 那就印 `没有`；不然就把编号印出来。\n\n⚠️ 别拿编号大小当「有没有找着」的判据：**开头那一段的编号就是 0**，`0 > 0` 是假的 —— 拿 `> 0` 去判，顶在最开头的那一段会被判成没找着。\n\n⚠️ 编号是**格**数出来的，一个汉字占 3 个格 —— 样例里那个数就是这么来的，别自己拿「第几个字」去凑。",
+      "templateId": "cpp-s3-02-find-position",
+      "params": {
+        "s1": "字符串",
+        "s2": "三连"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "2af038036618bd15"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-find-position-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，空格隔开）：一长一短。\n\n请你写个程序：在**长的那段里找短的那段**，然后印**一行** ——\n\n- 找着了：印**它从第几个格后面开始**（就是那枚编号）；\n- 一个都没找着：印 `没有`。\n\n比如程序的输入是\n\n商品B大礼包 商品\n\n程序就要返回\n\n0\n\n（判分喂的是**另外两段字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"\";\n    string t = \"\";\n    cin >> s >> t;\n\n    if (s.find(t) == string::npos) {\n        cout << \"没有\" << endl;\n    } else {\n        cout << s.find(t) << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "没有",
+      "stdin": "商品B大礼包 干项\n",
+      "explanation": "这一题的重点是**「没找着」怎么判**。\n\n`s.find(t)` 有两种结果：\n\n- 找着了 —— 返回一枚**编号**（那一小段是从第几个格后面开始的，**从 0 数起**）；\n- 没找着 —— 返回一枚特别的记号 `string::npos`（念作「**没有这个位置**」）。\n\n所以这一题**不能直接把它印出来**：得先问一句它是不是那枚记号。写法就是把两者比一比：\n\n`if (s.find(t) == string::npos)`\n\n念作「返回的**就是**『没找着』」—— 那就印 `没有`；不然就把编号印出来。\n\n⚠️ 别拿编号大小当「有没有找着」的判据：**开头那一段的编号就是 0**，`0 > 0` 是假的 —— 拿 `> 0` 去判，顶在最开头的那一段会被判成没找着。\n\n⚠️ 编号是**格**数出来的，一个汉字占 3 个格 —— 样例里那个数就是这么来的，别自己拿「第几个字」去凑。",
+      "templateId": "cpp-s3-02-find-position",
+      "params": {
+        "s1": "商品B大礼包",
+        "s2": "干项"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "fab39af9b44abf4e"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-find-position-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，空格隔开）：一长一短。\n\n请你写个程序：在**长的那段里找短的那段**，然后印**一行** ——\n\n- 找着了：印**它从第几个格后面开始**（就是那枚编号）；\n- 一个都没找着：印 `没有`。\n\n比如程序的输入是\n\n商品B大礼包 商品\n\n程序就要返回\n\n0\n\n（判分喂的是**另外两段字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"\";\n    string t = \"\";\n    cin >> s >> t;\n\n    if (s.find(t) == string::npos) {\n        cout << \"没有\" << endl;\n    } else {\n        cout << s.find(t) << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "没有",
+      "stdin": "商品B大礼包 三连\n",
+      "explanation": "这一题的重点是**「没找着」怎么判**。\n\n`s.find(t)` 有两种结果：\n\n- 找着了 —— 返回一枚**编号**（那一小段是从第几个格后面开始的，**从 0 数起**）；\n- 没找着 —— 返回一枚特别的记号 `string::npos`（念作「**没有这个位置**」）。\n\n所以这一题**不能直接把它印出来**：得先问一句它是不是那枚记号。写法就是把两者比一比：\n\n`if (s.find(t) == string::npos)`\n\n念作「返回的**就是**『没找着』」—— 那就印 `没有`；不然就把编号印出来。\n\n⚠️ 别拿编号大小当「有没有找着」的判据：**开头那一段的编号就是 0**，`0 > 0` 是假的 —— 拿 `> 0` 去判，顶在最开头的那一段会被判成没找着。\n\n⚠️ 编号是**格**数出来的，一个汉字占 3 个格 —— 样例里那个数就是这么来的，别自己拿「第几个字」去凑。",
+      "templateId": "cpp-s3-02-find-position",
+      "params": {
+        "s1": "商品B大礼包",
+        "s2": "三连"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "477c2f7733958c57"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-find-position-006",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，空格隔开）：一长一短。\n\n请你写个程序：在**长的那段里找短的那段**，然后印**一行** ——\n\n- 找着了：印**它从第几个格后面开始**（就是那枚编号）；\n- 一个都没找着：印 `没有`。\n\n比如程序的输入是\n\n商品B大礼包 商品\n\n程序就要返回\n\n0\n\n（判分喂的是**另外两段字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"\";\n    string t = \"\";\n    cin >> s >> t;\n\n    if (s.find(t) == string::npos) {\n        cout << \"没有\" << endl;\n    } else {\n        cout << s.find(t) << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "没有",
+      "stdin": "商品三连 干项\n",
+      "explanation": "这一题的重点是**「没找着」怎么判**。\n\n`s.find(t)` 有两种结果：\n\n- 找着了 —— 返回一枚**编号**（那一小段是从第几个格后面开始的，**从 0 数起**）；\n- 没找着 —— 返回一枚特别的记号 `string::npos`（念作「**没有这个位置**」）。\n\n所以这一题**不能直接把它印出来**：得先问一句它是不是那枚记号。写法就是把两者比一比：\n\n`if (s.find(t) == string::npos)`\n\n念作「返回的**就是**『没找着』」—— 那就印 `没有`；不然就把编号印出来。\n\n⚠️ 别拿编号大小当「有没有找着」的判据：**开头那一段的编号就是 0**，`0 > 0` 是假的 —— 拿 `> 0` 去判，顶在最开头的那一段会被判成没找着。\n\n⚠️ 编号是**格**数出来的，一个汉字占 3 个格 —— 样例里那个数就是这么来的，别自己拿「第几个字」去凑。",
+      "templateId": "cpp-s3-02-find-position",
+      "params": {
+        "s1": "商品三连",
+        "s2": "干项"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "3d66f1743647b57c"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-find-position-008",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，空格隔开）：一长一短。\n\n请你写个程序：在**长的那段里找短的那段**，然后印**一行** ——\n\n- 找着了：印**它从第几个格后面开始**（就是那枚编号）；\n- 一个都没找着：印 `没有`。\n\n比如程序的输入是\n\n商品B大礼包 商品\n\n程序就要返回\n\n0\n\n（判分喂的是**另外两段字**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"\";\n    string t = \"\";\n    cin >> s >> t;\n\n    if (s.find(t) == string::npos) {\n        cout << \"没有\" << endl;\n    } else {\n        cout << s.find(t) << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "6",
+      "stdin": "商品三连 三连\n",
+      "explanation": "std::string 在本例保存 UTF-8 字节序列，size 与 find 的位置以字节计，不直接表示汉字数量。连接、查找和长度都应按当前文本计算；未找到时与 string::npos 比较。",
+      "templateId": "cpp-s3-02-find-position",
+      "params": {
+        "s1": "商品三连",
+        "s2": "三连"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.871Z",
+        "hash": "fbb3abaae9eae95f"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-find-zero-miss-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "字符串 s 为“示例文本”，目标子串 t 为“示例”，匹配恰好位于字节下标 0。请修复把下标 0 当作未找到的判断，存在子串时输出“找到了”，不存在时输出“没有”。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"示例文本\";\n    string t = \"示例\";\n\n    if (s.find(t) > 0) {\n        cout << \"找到了\" << endl;\n    } else {\n        cout << \"没有\" << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"示例文本\";\n    string t = \"示例\";\n\n    if (s.find(t) != string::npos) {\n        cout << \"找到了\" << endl;\n    } else {\n        cout << \"没有\" << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "找到了",
+      "stdin": null,
+      "explanation": "string::find 返回匹配的起始字节位置，位置 0 是合法结果；未找到返回 string::npos。应与 npos 比较，不能用结果大于 0 判断是否找到。",
+      "templateId": "cpp-s3-02-find-zero-miss",
+      "params": {
+        "w": "数据",
+        "tail": "项链"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.871Z",
+        "hash": "8182af9b56c4c674"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-find-zero-miss-003",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们在一串字里找一小段字：那段字**明明就顶在最开头**，程序却说没找着。\n\n你帮我们把它改对：**只要那段字出现过，就该印「找到了」** —— 不管它出现在最开头还是中间。印字那几句不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"商品B大礼包\";\n    string t = \"商品B\";\n\n    if (s.find(t) > 0) {\n        cout << \"找到了\" << endl;\n    } else {\n        cout << \"没有\" << endl;\n    }\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"商品B大礼包\";\n    string t = \"商品B\";\n\n    if (s.find(t) != string::npos) {\n        cout << \"找到了\" << endl;\n    } else {\n        cout << \"没有\" << endl;\n    }\n    return 0;\n}\n",
+      "expectedOutput": "找到了",
+      "stdin": null,
+      "explanation": "这一题的坑全在「**开头**」这两个字上。\n\n`find` 找着了的时候，返回的是一枚**编号**：那一段字是从第几个格后面开始的（编号从 0 数起）。**顶在最开头的那一段，编号就是 0**。\n\n我们写的 `> 0` 念作「编号比 0 大」—— 于是「在开头」这一种被我们自己判成了没找着。**编译器一个字都不说**：编得过、跑得完，只是悄悄判反了一种情况。\n\n正确写法是**拿它和那枚「没找着」的记号比**：\n\n`if (s.find(t) != string::npos)`\n\n念作「返回的**不是**『没找着』」—— 那就是找着了，编号是几都不影响。\n\n⚠️ 别写成 `>= 0`：编号没有负的，这句话**永远成立**，等于这门功课白写。\n\n⚠️ 也别拿 `== 0` 当「找着了」：那个认最开头那一段，中间的又漏了 —— 和原来的毛病刚好反过来。",
+      "templateId": "cpp-s3-02-find-zero-miss",
+      "params": {
+        "w": "商品B",
+        "tail": "大礼包"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "dc179fb551597a30"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-join-and-size-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，中间用空格隔开）。\n\n请你写个程序：\n\n1. 把它们**接成一串** —— 第一段在前、第二段在后，中间**什么都不要加**；\n2. 印**两行**：第一行是接好的那串字；第二行是**这串字一共占几个格**（用它自己那个问长度的招）。\n\n比如程序的输入是\n\n商品 商品\n\n程序就要返回\n\n商品商品\n12\n\n（判分喂的是**另外两段字**，所以别把答案写死）\n\n⚠️ 一个汉字占的**不是** 1 个格 —— 到底占几个，看样例返回的那个数。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    string s = a + b;\n    cout << s << endl;\n    cout << s.size() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数据条\n9",
+      "stdin": "数据 条\n",
+      "explanation": "std::string 在本例保存 UTF-8 字节序列，size 与 find 的位置以字节计，不直接表示汉字数量。连接、查找和长度都应按当前文本计算；未找到时与 string::npos 比较。",
+      "templateId": "cpp-s3-02-join-and-size",
+      "params": {
+        "w1": "数据",
+        "w2": "条"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.871Z",
+        "hash": "7b112b2e0007512f"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-join-and-size-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，中间用空格隔开）。\n\n请你写个程序：\n\n1. 把它们**接成一串** —— 第一段在前、第二段在后，中间**什么都不要加**；\n2. 印**两行**：第一行是接好的那串字；第二行是**这串字一共占几个格**（用它自己那个问长度的招）。\n\n比如程序的输入是\n\n商品 商品\n\n程序就要返回\n\n商品商品\n12\n\n（判分喂的是**另外两段字**，所以别把答案写死）\n\n⚠️ 一个汉字占的**不是** 1 个格 —— 到底占几个，看样例返回的那个数。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    string s = a + b;\n    cout << s << endl;\n    cout << s.size() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数据咕噜酱\n15",
+      "stdin": "数据 咕噜酱\n",
+      "explanation": "std::string 在本例保存 UTF-8 字节序列，size 与 find 的位置以字节计，不直接表示汉字数量。连接、查找和长度都应按当前文本计算；未找到时与 string::npos 比较。",
+      "templateId": "cpp-s3-02-join-and-size",
+      "params": {
+        "w1": "数据",
+        "w2": "咕噜酱"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.871Z",
+        "hash": "0066e55c70498744"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-join-and-size-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，中间用空格隔开）。\n\n请你写个程序：\n\n1. 把它们**接成一串** —— 第一段在前、第二段在后，中间**什么都不要加**；\n2. 印**两行**：第一行是接好的那串字；第二行是**这串字一共占几个格**（用它自己那个问长度的招）。\n\n比如程序的输入是\n\n商品 商品\n\n程序就要返回\n\n商品商品\n12\n\n（判分喂的是**另外两段字**，所以别把答案写死）\n\n⚠️ 一个汉字占的**不是** 1 个格 —— 到底占几个，看样例返回的那个数。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    string s = a + b;\n    cout << s << endl;\n    cout << s.size() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "商品条\n9",
+      "stdin": "商品 条\n",
+      "explanation": "std::string 在本例保存 UTF-8 字节序列，size 与 find 的位置以字节计，不直接表示汉字数量。连接、查找和长度都应按当前文本计算；未找到时与 string::npos 比较。",
+      "templateId": "cpp-s3-02-join-and-size",
+      "params": {
+        "w1": "商品",
+        "w2": "条"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.871Z",
+        "hash": "e904d7cf5cf10328"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-join-and-size-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，中间用空格隔开）。\n\n请你写个程序：\n\n1. 把它们**接成一串** —— 第一段在前、第二段在后，中间**什么都不要加**；\n2. 印**两行**：第一行是接好的那串字；第二行是**这串字一共占几个格**（用它自己那个问长度的招）。\n\n比如程序的输入是\n\n商品 商品\n\n程序就要返回\n\n商品商品\n12\n\n（判分喂的是**另外两段字**，所以别把答案写死）\n\n⚠️ 一个汉字占的**不是** 1 个格 —— 到底占几个，看样例返回的那个数。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    string s = a + b;\n    cout << s << endl;\n    cout << s.size() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "商品咕噜酱\n15",
+      "stdin": "商品 咕噜酱\n",
+      "explanation": "std::string 在本例保存 UTF-8 字节序列，size 与 find 的位置以字节计，不直接表示汉字数量。连接、查找和长度都应按当前文本计算；未找到时与 string::npos 比较。",
+      "templateId": "cpp-s3-02-join-and-size",
+      "params": {
+        "w1": "商品",
+        "w2": "咕噜酱"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.872Z",
+        "hash": "3fc32a894b2a080a"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-join-and-size-006",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，中间用空格隔开）。\n\n请你写个程序：\n\n1. 把它们**接成一串** —— 第一段在前、第二段在后，中间**什么都不要加**；\n2. 印**两行**：第一行是接好的那串字；第二行是**这串字一共占几个格**（用它自己那个问长度的招）。\n\n比如程序的输入是\n\n商品 商品\n\n程序就要返回\n\n商品商品\n12\n\n（判分喂的是**另外两段字**，所以别把答案写死）\n\n⚠️ 一个汉字占的**不是** 1 个格 —— 到底占几个，看样例返回的那个数。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    string s = a + b;\n    cout << s << endl;\n    cout << s.size() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "商品B条\n10",
+      "stdin": "商品B 条\n",
+      "explanation": "std::string 在本例保存 UTF-8 字节序列，size 与 find 的位置以字节计，不直接表示汉字数量。连接、查找和长度都应按当前文本计算；未找到时与 string::npos 比较。",
+      "templateId": "cpp-s3-02-join-and-size",
+      "params": {
+        "w1": "商品B",
+        "w2": "条"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.871Z",
+        "hash": "26b59024c0f13fc8"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-join-and-size-008",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两段小字**（一行，中间用空格隔开）。\n\n请你写个程序：\n\n1. 把它们**接成一串** —— 第一段在前、第二段在后，中间**什么都不要加**；\n2. 印**两行**：第一行是接好的那串字；第二行是**这串字一共占几个格**（用它自己那个问长度的招）。\n\n比如程序的输入是\n\n商品 商品\n\n程序就要返回\n\n商品商品\n12\n\n（判分喂的是**另外两段字**，所以别把答案写死）\n\n⚠️ 一个汉字占的**不是** 1 个格 —— 到底占几个，看样例返回的那个数。",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    string s = a + b;\n    cout << s << endl;\n    cout << s.size() << endl;\n    return 0;\n}\n",
+      "expectedOutput": "商品B咕噜酱\n16",
+      "stdin": "商品B 咕噜酱\n",
+      "explanation": "std::string 在本例保存 UTF-8 字节序列，size 与 find 的位置以字节计，不直接表示汉字数量。连接、查找和长度都应按当前文本计算；未找到时与 string::npos 比较。",
+      "templateId": "cpp-s3-02-join-and-size",
+      "params": {
+        "w1": "商品B",
+        "w2": "咕噜酱"
+      },
+      "verified": {
+        "at": "2026-10-27T13:20:58.872Z",
+        "hash": "e4165f6fbdcfa9b5"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-plus-discarded-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想让 `s` 后面**接上** `t` 里的字，于是写了一句接字的。可跑完一看，`s` **一点没变**。\n\n你帮我们把它改对：**让 `s` 自己变成「原来的 `s` 后面接上 `t`」**。起名字和印字那几句都不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"数据\";\n    string t = \"条\";\n\n    s + t;\n\n    cout << s << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"数据\";\n    string t = \"条\";\n\n    s = s + t;\n\n    cout << s << endl;\n    return 0;\n}\n",
+      "expectedOutput": "数据条",
+      "stdin": null,
+      "explanation": "这一题编译器**不拦你**：编得过、跑得完，只是白算了一场。不过「不拦」不等于「什么都没说」—— 我们在命令行里编它的时候，它是**嘀咕了一句**的，原话是 `warning: ignoring return value of '... operator+(...)', declared with attribute 'nodiscard' [-Wunused-result]`（「这个 `+` 做出来的东西没人接，白做了」）。**念归念，它照样放行**。\n\n问题在这一句：`s + t;`。那个 `+` 的意思是「**另做一串新的**」：它把两串字接成**新的一串**，原来的 `s`、`t` 都没被动过。而这一句做出来的新字**谁也没接住**，转身就没了 —— 印出来的当然还是原来的 `s`。\n\n要改动 `s` 本身，就得**把做出来的那串交回去**：\n\n`s = s + t;`\n\n念作「把（`s` 后面接上 `t`）做出来的那串新的，交回给 `s`」。等号左边永远是**收下东西的那个名字**。\n\n⚠️ 谁在前谁在后是有讲究的：这一题要的是 `s` 在前、`t` 在后；写成 `s = t + s;` 印出来就换了个顺序。\n\n⚠️ 还有一个很常见的坑：起名字的时候直接写 `string s = s + t;` —— 那时候 `s` 还没创建后，编译器不认这个名字。这一题的名字已经起好了，改中间那一句就行。",
+      "templateId": "cpp-s3-02-plus-discarded",
+      "params": {
+        "w1": "数据",
+        "w2": "条"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "187a99300e3059e0"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-plus-discarded-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想让 `s` 后面**接上** `t` 里的字，于是写了一句接字的。可跑完一看，`s` **一点没变**。\n\n你帮我们把它改对：**让 `s` 自己变成「原来的 `s` 后面接上 `t`」**。起名字和印字那几句都不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"商品B\";\n    string t = \"大礼包\";\n\n    s + t;\n\n    cout << s << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string s = \"商品B\";\n    string t = \"大礼包\";\n\n    s = s + t;\n\n    cout << s << endl;\n    return 0;\n}\n",
+      "expectedOutput": "商品B大礼包",
+      "stdin": null,
+      "explanation": "这一题编译器**不拦你**：编得过、跑得完，只是白算了一场。不过「不拦」不等于「什么都没说」—— 我们在命令行里编它的时候，它是**嘀咕了一句**的，原话是 `warning: ignoring return value of '... operator+(...)', declared with attribute 'nodiscard' [-Wunused-result]`（「这个 `+` 做出来的东西没人接，白做了」）。**念归念，它照样放行**。\n\n问题在这一句：`s + t;`。那个 `+` 的意思是「**另做一串新的**」：它把两串字接成**新的一串**，原来的 `s`、`t` 都没被动过。而这一句做出来的新字**谁也没接住**，转身就没了 —— 印出来的当然还是原来的 `s`。\n\n要改动 `s` 本身，就得**把做出来的那串交回去**：\n\n`s = s + t;`\n\n念作「把（`s` 后面接上 `t`）做出来的那串新的，交回给 `s`」。等号左边永远是**收下东西的那个名字**。\n\n⚠️ 谁在前谁在后是有讲究的：这一题要的是 `s` 在前、`t` 在后；写成 `s = t + s;` 印出来就换了个顺序。\n\n⚠️ 还有一个很常见的坑：起名字的时候直接写 `string s = s + t;` —— 那时候 `s` 还没创建后，编译器不认这个名字。这一题的名字已经起好了，改中间那一句就行。",
+      "templateId": "cpp-s3-02-plus-discarded",
+      "params": {
+        "w1": "商品B",
+        "w2": "大礼包"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "4384f6383c8884bd"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-stoi-sum-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个数**（一行，中间用空格隔开）。\n\n请你写个程序：把这两段数字转成**能算的数**再加起来，然后印**两行**：\n\n1. 第一行：加出来的**和**；\n2. 第二行：**和后面接上 `条`**（中间没有空格）。\n\n比如程序的输入是\n\n23 68\n\n程序就要返回\n\n91\n91条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    int total = stoi(a) + stoi(b);\n    cout << total << endl;\n    cout << to_string(total) + \"条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "19\n19条",
+      "stdin": "12 7\n",
+      "explanation": "这一题藏着一个很容易踩的坑：**传入进来的数字，到手其实是「一串字」**。\n\n所以想直接拿它们做加法，编译器会当场拦下 —— 它的原话里有 `cannot convert`，念作「**这个转换我做不了**」：一串字变不成能算的数。\n\n正确的走法是**先转再加**：\n\n- `stoi(a)` 把一串数字**转成能算的数**（念作「**string to int**」—— 把一串字变成整数）；\n- 转好之后 `+` 才是算术的加。\n\n⚠️ 要是直接 `a + b`，那是**接字**不是加法：`\"12\"` 接上 `\"7\"` 得到的是 `127`，而 12 加 7 是 19 —— 这俩长得都能看，可意思完全不一样。\n\n⚠️ 第二行要把**数**和 `条` 接在一起，得先把数**变回一串字**：`to_string(total)`。顺序是**先变再接**；直接拿 `total + \"条\"` 这种写法，编译器也不认。",
+      "templateId": "cpp-s3-02-stoi-sum",
+      "params": {
+        "a": 12,
+        "b": 7,
+        "unit": "条"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "cfc338d1ed9d59aa"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-stoi-sum-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个数**（一行，中间用空格隔开）。\n\n请你写个程序：把这两段数字转成**能算的数**再加起来，然后印**两行**：\n\n1. 第一行：加出来的**和**；\n2. 第二行：**和后面接上 `罐`**（中间没有空格）。\n\n比如程序的输入是\n\n23 68\n\n程序就要返回\n\n91\n91罐\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    int total = stoi(a) + stoi(b);\n    cout << total << endl;\n    cout << to_string(total) + \"罐\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "38\n38罐",
+      "stdin": "12 26\n",
+      "explanation": "这一题藏着一个很容易踩的坑：**传入进来的数字，到手其实是「一串字」**。\n\n所以想直接拿它们做加法，编译器会当场拦下 —— 它的原话里有 `cannot convert`，念作「**这个转换我做不了**」：一串字变不成能算的数。\n\n正确的走法是**先转再加**：\n\n- `stoi(a)` 把一串数字**转成能算的数**（念作「**string to int**」—— 把一串字变成整数）；\n- 转好之后 `+` 才是算术的加。\n\n⚠️ 要是直接 `a + b`，那是**接字**不是加法：`\"12\"` 接上 `\"7\"` 得到的是 `127`，而 12 加 7 是 19 —— 这俩长得都能看，可意思完全不一样。\n\n⚠️ 第二行要把**数**和 `罐` 接在一起，得先把数**变回一串字**：`to_string(total)`。顺序是**先变再接**；直接拿 `total + \"罐\"` 这种写法，编译器也不认。",
+      "templateId": "cpp-s3-02-stoi-sum",
+      "params": {
+        "a": 12,
+        "b": 26,
+        "unit": "罐"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "7e44c3a4f9245897"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-stoi-sum-007",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个数**（一行，中间用空格隔开）。\n\n请你写个程序：把这两段数字转成**能算的数**再加起来，然后印**两行**：\n\n1. 第一行：加出来的**和**；\n2. 第二行：**和后面接上 `罐`**（中间没有空格）。\n\n比如程序的输入是\n\n23 68\n\n程序就要返回\n\n91\n91罐\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    int total = stoi(a) + stoi(b);\n    cout << total << endl;\n    cout << to_string(total) + \"罐\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "41\n41罐",
+      "stdin": "34 7\n",
+      "explanation": "这一题藏着一个很容易踩的坑：**传入进来的数字，到手其实是「一串字」**。\n\n所以想直接拿它们做加法，编译器会当场拦下 —— 它的原话里有 `cannot convert`，念作「**这个转换我做不了**」：一串字变不成能算的数。\n\n正确的走法是**先转再加**：\n\n- `stoi(a)` 把一串数字**转成能算的数**（念作「**string to int**」—— 把一串字变成整数）；\n- 转好之后 `+` 才是算术的加。\n\n⚠️ 要是直接 `a + b`，那是**接字**不是加法：`\"12\"` 接上 `\"7\"` 得到的是 `127`，而 12 加 7 是 19 —— 这俩长得都能看，可意思完全不一样。\n\n⚠️ 第二行要把**数**和 `罐` 接在一起，得先把数**变回一串字**：`to_string(total)`。顺序是**先变再接**；直接拿 `total + \"罐\"` 这种写法，编译器也不认。",
+      "templateId": "cpp-s3-02-stoi-sum",
+      "params": {
+        "a": 34,
+        "b": 7,
+        "unit": "罐"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "140e4963190feabc"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-stoi-sum-010",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个数**（一行，中间用空格隔开）。\n\n请你写个程序：把这两段数字转成**能算的数**再加起来，然后印**两行**：\n\n1. 第一行：加出来的**和**；\n2. 第二行：**和后面接上 `条`**（中间没有空格）。\n\n比如程序的输入是\n\n23 68\n\n程序就要返回\n\n91\n91条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    int total = stoi(a) + stoi(b);\n    cout << total << endl;\n    cout << to_string(total) + \"条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "115\n115条",
+      "stdin": "34 81\n",
+      "explanation": "这一题藏着一个很容易踩的坑：**传入进来的数字，到手其实是「一串字」**。\n\n所以想直接拿它们做加法，编译器会当场拦下 —— 它的原话里有 `cannot convert`，念作「**这个转换我做不了**」：一串字变不成能算的数。\n\n正确的走法是**先转再加**：\n\n- `stoi(a)` 把一串数字**转成能算的数**（念作「**string to int**」—— 把一串字变成整数）；\n- 转好之后 `+` 才是算术的加。\n\n⚠️ 要是直接 `a + b`，那是**接字**不是加法：`\"12\"` 接上 `\"7\"` 得到的是 `127`，而 12 加 7 是 19 —— 这俩长得都能看，可意思完全不一样。\n\n⚠️ 第二行要把**数**和 `条` 接在一起，得先把数**变回一串字**：`to_string(total)`。顺序是**先变再接**；直接拿 `total + \"条\"` 这种写法，编译器也不认。",
+      "templateId": "cpp-s3-02-stoi-sum",
+      "params": {
+        "a": 34,
+        "b": 81,
+        "unit": "条"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "817c1a43a8c4cac9"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-stoi-sum-014",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个数**（一行，中间用空格隔开）。\n\n请你写个程序：把这两段数字转成**能算的数**再加起来，然后印**两行**：\n\n1. 第一行：加出来的**和**；\n2. 第二行：**和后面接上 `条`**（中间没有空格）。\n\n比如程序的输入是\n\n23 68\n\n程序就要返回\n\n91\n91条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    int total = stoi(a) + stoi(b);\n    cout << total << endl;\n    cout << to_string(total) + \"条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "83\n83条",
+      "stdin": "57 26\n",
+      "explanation": "这一题藏着一个很容易踩的坑：**传入进来的数字，到手其实是「一串字」**。\n\n所以想直接拿它们做加法，编译器会当场拦下 —— 它的原话里有 `cannot convert`，念作「**这个转换我做不了**」：一串字变不成能算的数。\n\n正确的走法是**先转再加**：\n\n- `stoi(a)` 把一串数字**转成能算的数**（念作「**string to int**」—— 把一串字变成整数）；\n- 转好之后 `+` 才是算术的加。\n\n⚠️ 要是直接 `a + b`，那是**接字**不是加法：`\"12\"` 接上 `\"7\"` 得到的是 `127`，而 12 加 7 是 19 —— 这俩长得都能看，可意思完全不一样。\n\n⚠️ 第二行要把**数**和 `条` 接在一起，得先把数**变回一串字**：`to_string(total)`。顺序是**先变再接**；直接拿 `total + \"条\"` 这种写法，编译器也不认。",
+      "templateId": "cpp-s3-02-stoi-sum",
+      "params": {
+        "a": 57,
+        "b": 26,
+        "unit": "条"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "41c988208114d6b3"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-stoi-sum-017",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "输入接口会递进来**两个数**（一行，中间用空格隔开）。\n\n请你写个程序：把这两段数字转成**能算的数**再加起来，然后印**两行**：\n\n1. 第一行：加出来的**和**；\n2. 第二行：**和后面接上 `罐`**（中间没有空格）。\n\n比如程序的输入是\n\n23 68\n\n程序就要返回\n\n91\n91罐\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"\";\n    string b = \"\";\n    cin >> a >> b;\n\n    int total = stoi(a) + stoi(b);\n    cout << total << endl;\n    cout << to_string(total) + \"罐\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "138\n138罐",
+      "stdin": "57 81\n",
+      "explanation": "这一题藏着一个很容易踩的坑：**传入进来的数字，到手其实是「一串字」**。\n\n所以想直接拿它们做加法，编译器会当场拦下 —— 它的原话里有 `cannot convert`，念作「**这个转换我做不了**」：一串字变不成能算的数。\n\n正确的走法是**先转再加**：\n\n- `stoi(a)` 把一串数字**转成能算的数**（念作「**string to int**」—— 把一串字变成整数）；\n- 转好之后 `+` 才是算术的加。\n\n⚠️ 要是直接 `a + b`，那是**接字**不是加法：`\"12\"` 接上 `\"7\"` 得到的是 `127`，而 12 加 7 是 19 —— 这俩长得都能看，可意思完全不一样。\n\n⚠️ 第二行要把**数**和 `罐` 接在一起，得先把数**变回一串字**：`to_string(total)`。顺序是**先变再接**；直接拿 `total + \"罐\"` 这种写法，编译器也不认。",
+      "templateId": "cpp-s3-02-stoi-sum",
+      "params": {
+        "a": 57,
+        "b": 81,
+        "unit": "罐"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "6157fe332fb64ae0"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-substr-swapped-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们把**两段小字**接成了一串：`a` 在前、`b` 在后，中间没有空格。我们想印出**后面那一半**（就是 `b` 那几个字），可印出来的却是中间夹着的一小段。\n\n你帮我们把它改对：**印出后半段**。接字那一句和印字那两句都不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"cat\";\n    string b = \"fish\";\n    string s = a + b;\n\n    cout << s.substr(b.size(), a.size()) << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"cat\";\n    string b = \"fish\";\n    string s = a + b;\n\n    cout << s.substr(a.size(), b.size()) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "fish",
+      "stdin": null,
+      "explanation": "这一题错在取一小段的**两个输入接口写反了**。\n\n取一小段那一句处理两个数，**顺序是死的**：第一个是**起点**（从第几个格后面开始，编号从 0 数起），第二个是**要几个格**。念作「从哪儿起、要几个」。\n\n我们写成了 `s.substr(b.size(), a.size())`：起点错成了 `b` 的长度、要几个错成了 `a` 的长度，于是印出来的是夹在中间的一小段。\n\n要印**后面那一半**：\n\n- 起点是**前半段那几个字的长度** —— 后半段正是从那儿开始的；\n- 要几个，是**后半段自己的长度**。\n\n两个输入接口**换回来**就对了。\n\n⚠️ 第二个输入接口是「**要几个**」，不是「**到第几个为止**」—— 这是这一课最容易记反的一处。写成「到第几个为止」的那种数，有时候碰巧看着也对（要多了它会自动停在那串字的末尾），于是错误被藏住了。\n\n⚠️ 两段字接起来之后，后半段的起点**不是 0** —— 0 永远是最开头那一格。",
+      "templateId": "cpp-s3-02-substr-swapped",
+      "params": {
+        "a": "cat",
+        "b": "fish"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "8eb65ab8d427eeb8"
+      }
+    },
+    {
+      "id": "bank-cpp-s3-02-substr-swapped-003",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们把**两段小字**接成了一串：`a` 在前、`b` 在后，中间没有空格。我们想印出**后面那一半**（就是 `b` 那几个字），可印出来的却是中间夹着的一小段。\n\n你帮我们把它改对：**印出后半段**。接字那一句和印字那两句都不用动。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"dog\";\n    string b = \"bird\";\n    string s = a + b;\n\n    cout << s.substr(b.size(), a.size()) << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string a = \"dog\";\n    string b = \"bird\";\n    string s = a + b;\n\n    cout << s.substr(a.size(), b.size()) << endl;\n    return 0;\n}\n",
+      "expectedOutput": "bird",
+      "stdin": null,
+      "explanation": "这一题错在取一小段的**两个输入接口写反了**。\n\n取一小段那一句处理两个数，**顺序是死的**：第一个是**起点**（从第几个格后面开始，编号从 0 数起），第二个是**要几个格**。念作「从哪儿起、要几个」。\n\n我们写成了 `s.substr(b.size(), a.size())`：起点错成了 `b` 的长度、要几个错成了 `a` 的长度，于是印出来的是夹在中间的一小段。\n\n要印**后面那一半**：\n\n- 起点是**前半段那几个字的长度** —— 后半段正是从那儿开始的；\n- 要几个，是**后半段自己的长度**。\n\n两个输入接口**换回来**就对了。\n\n⚠️ 第二个输入接口是「**要几个**」，不是「**到第几个为止**」—— 这是这一课最容易记反的一处。写成「到第几个为止」的那种数，有时候碰巧看着也对（要多了它会自动停在那串字的末尾），于是错误被藏住了。\n\n⚠️ 两段字接起来之后，后半段的起点**不是 0** —— 0 永远是最开头那一格。",
+      "templateId": "cpp-s3-02-substr-swapped",
+      "params": {
+        "a": "dog",
+        "b": "bird"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.301Z",
+        "hash": "6d93e500587179a2"
+      }
+    }
+  ]
+}

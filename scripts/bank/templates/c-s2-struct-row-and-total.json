@@ -1,0 +1,33 @@
+{
+  "templateId": "c-s2-struct-row-and-total",
+  "lang": "c",
+  "stage": 2,
+  "lessonId": "c-stage2-05",
+  "type": "codewrite",
+  "concept": [
+    "结构体数组",
+    "点号",
+    "累加"
+  ],
+  "instances": 6,
+  "params": {
+    "unit": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品A",
+        "商品"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "count": 3,
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们摆了一排**三个对象**，名字按顺序是张三、李四、计算机。它们今天各记录了几条{unit}，要从键盘上一个个读进来（一行一个，一共三行）。\n\n请你先定义一个类（一个对象有什么：一个名字、一个食量），然后在 `main` 里**摆一排三个对象**：名字一次填好，食量先占个位、等读进来再盖上去。\n\n接着把三个对象一个一个报出来，格式是 `<名字> 处理了 <食量> 条{unit}`，一个一行；最后再报一行 `一共 <总数> 条{unit}`。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+  "starterTemplate": "#include <stdio.h>\n\nint main(void) {\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[3] = {\n        {\"张三\", 0},\n        {\"李四\", 0},\n        {\"计算机\", 0}\n    };\n\n    for (int i = 0; i < 3; i++) {\n        if (scanf(\"%d\", &cats[i].fish) != 1) {\n            return 1;\n        }\n    }\n\n    int total = 0;\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s 处理了 %d 条{unit}\\n\", cats[i].name, cats[i].fish);\n        total = total + cats[i].fish;\n    }\n    printf(\"一共 %d 条{unit}\\n\", total);\n    return 0;\n}\n",
+  "explanationTemplate": "这道题练的是**一排对象**，跟「一排元素」是同一套本事，只是每一个身上多带了几个格子。\n\n**① 一排对象怎么摆？** 名字交出来的时候，正好可以**一次填好一排**（下面按排版换行写，真写的时候花括号位置不影响意思）：\n\n```c\nstruct Cat cats[3] =\n{\n    {\n        \"张三\", 0\n    },\n    {\n        \"李四\", 0\n    },\n    {\n        \"计算机\", 0\n    }\n};\n```\n\n外面那层花括号是「这一排」，里面每一小对是「一个对象身上的格子」。这是 C 给类定义留的甜头：**摆一排的时候可以一次填完，不用一格一格赋值。** 食量先填 0 占个位 —— 反正下一步就读进来盖掉它。\n\n**② 读进来的时候要问地址。** `scanf(\"%d\", &cats[i].fish)`：先挑出第 i 个对象，再进它的 `fish` 格 —— 那是一个元素，所以前面得写 `&`。（对照着记：`cats[i].name` 是一排元素的名字，读它的时候**不用**写 `&`。）\n\n**③ 跑圈一个只报、顺路算总账。** 走一圈同时干两件事：印这一个，再把它的食量加进 `total`。这里最容易写歪的就是那句累加 —— 一定要写成 `total = total + cats[i].fish;`，写成 `total = cats[i].fish;` 的话，前面几个的账会被一个只盖掉，最后只剩最后一个的数。\n\n**④ 点号的顺序别弄反。** `cats[i].name` 读作「先挑出第 i 个对象，再进它的名字格」。写成 `cats.name[i]` 编译器会拦你 —— 因为 `cats` 是**一排对象**，不是一个对象，它身上没有 `name` 这格。"
+}

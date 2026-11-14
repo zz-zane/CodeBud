@@ -1,0 +1,31 @@
+{
+  "templateId": "java-s3-03-old-style-cat",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-03",
+  "type": "codewrite",
+  "concept": [
+    "当场造一个只会这两手的对象",
+    "两张嘴的约定接不了那一小截",
+    "老写法在这个场合还得用"
+  ],
+  "instances": 6,
+  "params": {
+    "w": {
+      "kind": "pick",
+      "values": [
+        "变量",
+        "毛线球柜子"
+      ]
+    },
+    "c": {
+      "kind": "int",
+      "min": 3,
+      "max": 4
+    }
+  },
+  "stemTemplate": "我们手上有一份**约定**，上面写着**两件事**要做（源代码里已经写好了，一个字都不许改）：先自报家门、再报件数。前面还有一个方法 `run`，它收下一个对象之后，会把这两件事**按顺序**各调用一次（这一个方法也不许改）。\n\n请你**当场造一个只会这两手的对象**，交给 `run`：\n\n- 自报家门那一手，印 `这个是 ` 加上源代码里那个名字；\n- 报件数那一手，印 `一共 ` 加上那个数、再加上 ` 件`。\n\n这份约定上写着**两件事**，所以「当场写一小截」那一路**接不了** —— 只能用**老写法**（本课第一节那种，当场把它创建后、把两件事都填上）。\n\n比如那个对象叫 `{w}`、件数是 `{c}`，印出来就该是\n\n```text\n这个是 {w}\n一共 {c} 件\n```\n\n（这一题**不需要输入**，名字和件数都写在源代码里了。）",
+  "starterTemplate": "interface Report {\n    void name();\n\n    void count();\n}\n\npublic class Main {\n    static void run(Report r) {\n        r.name();\n        r.count();\n    }\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+  "referenceSolutionTemplate": "interface Report {\n    void name();\n\n    void count();\n}\n\npublic class Main {\n    static void run(Report r) {\n        r.name();\n        r.count();\n    }\n\n    public static void main(String[] args) {\n        Report r = new Report() {\n            public void name() {\n                System.out.println(\"这个是 {w}\");\n            }\n\n            public void count() {\n                System.out.println(\"一共 {c} 件\");\n            }\n        };\n        run(r);\n    }\n}\n",
+  "explanationTemplate": "**一、为什么这一小截接不了这活儿。** 这份约定上写着**两件事**：自报家门、报件数。我们要是写 `() -> ...`，写下来的只是**一件事**，编译器根本分不清我们填的是哪一件 —— 它当场就会退稿（`is not a functional interface`，课文里那句话）。**那一小截的本事就是「只填一件事」**，这不是它不好用，是它天生管一件事。\n\n**二、所以这里还得用老写法：当场造一个对象。** `new Report() ...` 读作「照这份约定，现在就创建一个」；大括号里把**两件事**一件一件填上。这个对象创建后就为了干这两手活儿，我们照样不用给它起名字，造完随手交出去。\n\n**三、交出去之后 `run` 才动它。** 注意顺序：对象是**先造好**的，`run` 拿到它之后按约定上写的顺序各调用一次。所以印出来的两行顺序是定死的——**先自报家门，再报件数**，跟我们填哪只手先写没有关系。\n\n**四、填的时候别漏。** 约定上有两张嘴，老写法里**两张都得填上**，少填一张翻译源代码时就红。这正是那一小截省掉的那点啰嗦：省下的是「造对象的架子」，代价是**只接得了一件事**。要办的事多了，架子就还得搭起来。"
+}

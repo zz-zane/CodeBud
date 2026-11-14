@@ -1,0 +1,364 @@
+{
+  "lessonId": "cpp-stage2-11",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s2-11-copy-abstract-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们创建了一个实例 张三，想让它也能站着那张写着「提供输出方法的动物」的名称。\n\n编译器当场把我们拦下了，说**这张类定义生不出真身**。可我们要的明明只是「让名称指着这个对象」呀。\n\n你帮我们改一处，让这个 张三 能被那张名称指着、调用一次能叫出它自己那一版（`X：`）。**子类定义和那句输出都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"张三\");\n    Animal a = c;\n    a.speak();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"张三\");\n    Animal& a = c;\n    a.speak();\n    return 0;\n}\n",
+      "expectedOutput": "张三：",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`error: cannot construct an object of abstract type 'Animal'`\n\n念作：**「你这个写法是要**照这张类定义创建一具真身**出来，可它是抽象类定义，生不出来。」**\n\n**我们压根没想创建一个新动物 —— 我们只想让名称指着那个已经存在的实例。** 可 `Animal a = c;` 这个写法，电脑读到的是「拿 `c` 的样子，造一个新的 `Animal` 出来」：它要在 `a` 这一格里**放一具实打实的真身**。而抽象类定义那一手只挂了招牌、没有动作，真要造出来，我们调用一次它该叫成什么？**没有答案** —— 所以编译器不许造。\n\n修法只有**一个字符**：在中间补一个 `&`。\n\n```text\nAnimal& a = c;\n```\n\n补上之后，`a` 就不再是「一具新造的真身」，而是**一张写着「提供输出方法的动物」的名称**，指着屋里那个实例（第 2 阶段的「不必还的名字」那一课讲过这件事）。继续调用的那一刻，程序低头看一眼屋里住的是谁，于是印出来的是 张三 自己那一版。\n\n⚠️ 一句话钉住：**抽象类定义能被指着，不能被照出来。**\n\n- 想**指着**一个已有的对象 → `Animal& a = c;` 或者 `Animal* p = &c;`，都是一个 `&` 的事。\n- 想**照出来**创建一个 → 不行。真想生，就得照一张**不抽象**的类定义（比如 `Cat`），或者把招牌上那几手补完。\n\n我们第一次栽在这一题上的时候，盯着一屏幕的 `abstract type` 找了半天 —— 心里想的全是「我又没想生动物」，而那一行写的恰恰就是「造一个新的」这个意思。**报错没错，是我们的写法说的不是我们想的。**",
+      "templateId": "cpp-s2-11-copy-abstract",
+      "params": {
+        "catName": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "85cdd249026cf4f2"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-copy-abstract-001",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们创建了一个实例 王五，想让它也能站着那张写着「提供输出方法的动物」的名称。\n\n编译器当场把我们拦下了，说**这张类定义生不出真身**。可我们要的明明只是「让名称指着这个对象」呀。\n\n你帮我们改一处，让这个 王五 能被那张名称指着、调用一次能叫出它自己那一版（`X：`）。**子类定义和那句输出都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"王五\");\n    Animal a = c;\n    a.speak();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"王五\");\n    Animal& a = c;\n    a.speak();\n    return 0;\n}\n",
+      "expectedOutput": "王五：",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`error: cannot construct an object of abstract type 'Animal'`\n\n念作：**「你这个写法是要**照这张类定义创建一具真身**出来，可它是抽象类定义，生不出来。」**\n\n**我们压根没想创建一个新动物 —— 我们只想让名称指着那个已经存在的实例。** 可 `Animal a = c;` 这个写法，电脑读到的是「拿 `c` 的样子，造一个新的 `Animal` 出来」：它要在 `a` 这一格里**放一具实打实的真身**。而抽象类定义那一手只挂了招牌、没有动作，真要造出来，我们调用一次它该叫成什么？**没有答案** —— 所以编译器不许造。\n\n修法只有**一个字符**：在中间补一个 `&`。\n\n```text\nAnimal& a = c;\n```\n\n补上之后，`a` 就不再是「一具新造的真身」，而是**一张写着「提供输出方法的动物」的名称**，指着屋里那个实例（第 2 阶段的「不必还的名字」那一课讲过这件事）。继续调用的那一刻，程序低头看一眼屋里住的是谁，于是印出来的是 王五 自己那一版。\n\n⚠️ 一句话钉住：**抽象类定义能被指着，不能被照出来。**\n\n- 想**指着**一个已有的对象 → `Animal& a = c;` 或者 `Animal* p = &c;`，都是一个 `&` 的事。\n- 想**照出来**创建一个 → 不行。真想生，就得照一张**不抽象**的类定义（比如 `Cat`），或者把招牌上那几手补完。\n\n我们第一次栽在这一题上的时候，盯着一屏幕的 `abstract type` 找了半天 —— 心里想的全是「我又没想生动物」，而那一行写的恰恰就是「造一个新的」这个意思。**报错没错，是我们的写法说的不是我们想的。**",
+      "templateId": "cpp-s2-11-copy-abstract",
+      "params": {
+        "catName": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "3a861706a15009c9"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-feed-by-contract-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要写一个**普通的函数**，它不关心你是一个对象还是一条数据，只要求你**答应了那份约定**。输入接口会递进来**两个数**（一行一个）：对象和鱼各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：只有一手 `speak()`（只挂招牌、不写动作），再加一个析构函数 `virtual ~Speaker() {}`。\n2. **画两个照它画下来的**，各添一栏 `name`（一串字）和一个整数 `fish`，构造函数把两样填上，并把 `speak` 补成自己的版本（挂 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n3. **写一个普通函数** `void rollCall(const Speaker& s)`：先印一行 `点名：`，再让 `s` 调用一次（`s.speak();`）。注意**它收的是一张写着「提供输出方法的」的名称，收不到真身** —— 所以要用「不必还的名字」那种写法。\n4. 在 `main` 里：读进两个数 → 创建一个对象（`张三`）和一条数据（`计算机`）→ **把两个依次传入那个普通函数**。\n\n比如程序的输入是\n\n8\n9\n\n程序就要返回\n\n点名：\n张三：本对象处理了 8 条\n点名：\n计算机：本对象处理了 9 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nvoid rollCall(const Speaker& s) {\n    cout << \"点名：\" << endl;\n    s.speak();\n}\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat cat(\"张三\", a);\n    Fish fish(\"计算机\", b);\n\n    rollCall(cat);\n    rollCall(fish);\n    return 0;\n}\n",
+      "expectedOutput": "点名：\n张三：本对象处理了 6 条\n点名：\n计算机：本对象处理了 7 条",
+      "stdin": "6\n7\n",
+      "explanation": "我们在本机跑过这一题，屏幕上四行是：\n\n```text\n点名：\n张三：本对象处理了 8 条\n点名：\n计算机：本对象处理了 9 条\n```\n\n**关键在那个普通函数的写法**：\n\n```text\nvoid rollCall(const Speaker& s)\n```\n\n它收的塞料是**一张写着「提供输出方法的」的名称**（「不必还的名字」那种写法，`&` 不能漏），也**只能是名称**：约定那张类定义生不出真身，收真身就编不过。所以我们传入的对象和鱼，都是**被名称指着**进去的。\n\n进去之后发生两件事，正是这一题要教的：\n\n1. **`s.speak()` 会低头看屋里住的是谁。** 所以同一句 `s.speak()`，接待对象的时候印对象那一版，接待鱼的时候印鱼那一版 —— 而这个普通函数**根本不认识 `Cat` 和 `Fish` 这两个名字**，它俩是在它写完之后才画的类定义。\n2. **这个普通函数一个字都不用改，就能接待第二种、第三种「提供输出方法的」。** 往后我们画一个鸭子、让它照约定补上那一手，`rollCall` 里**一行都不用动**。\n\n⚠️ 两处容易摔的地方：\n\n- **塞料前面的 `&` 不能漏。** 掉了它就变成「照约定类定义造一具真身」—— 我们实测过，原话是 `error: cannot declare parameter 's' to be of abstract type 'Speaker'`：约定那张类定义生不出真身（真身是「屋里住的那个」，不是「约定」本身）。\n- **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们实测是**当场拦下**：`error: initializer specified for non-virtual method`。而真正阴的那种写法是：老类定义那一手**带着动作、又没挂 `virtual`** —— 那样程序照样跑完、**一个错都不报**，可 `s.speak()` 会一律跑老类定义那一版，跟屋里住的是谁没关系。\n\n一句话收住这一题：**约定能当塞料收** —— 收进来的是名称，屋里住的是谁，继续调用才知道。",
+      "templateId": "cpp-s2-11-feed-by-contract",
+      "params": {
+        "catName": "张三",
+        "fishName": "计算机"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "e1148d0b71e0575c"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-feed-by-contract-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要写一个**普通的函数**，它不关心你是一个对象还是一条数据，只要求你**答应了那份约定**。输入接口会递进来**两个数**（一行一个）：对象和鱼各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：只有一手 `speak()`（只挂招牌、不写动作），再加一个析构函数 `virtual ~Speaker() {}`。\n2. **画两个照它画下来的**，各添一栏 `name`（一串字）和一个整数 `fish`，构造函数把两样填上，并把 `speak` 补成自己的版本（挂 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n3. **写一个普通函数** `void rollCall(const Speaker& s)`：先印一行 `点名：`，再让 `s` 调用一次（`s.speak();`）。注意**它收的是一张写着「提供输出方法的」的名称，收不到真身** —— 所以要用「不必还的名字」那种写法。\n4. 在 `main` 里：读进两个数 → 创建一个对象（`张三`）和一条数据（`胖头鱼`）→ **把两个依次传入那个普通函数**。\n\n比如程序的输入是\n\n9\n1\n\n程序就要返回\n\n点名：\n张三：本对象处理了 9 条\n点名：\n胖头鱼：本对象处理了 1 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nvoid rollCall(const Speaker& s) {\n    cout << \"点名：\" << endl;\n    s.speak();\n}\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat cat(\"张三\", a);\n    Fish fish(\"胖头鱼\", b);\n\n    rollCall(cat);\n    rollCall(fish);\n    return 0;\n}\n",
+      "expectedOutput": "点名：\n张三：本对象处理了 2 条\n点名：\n胖头鱼：本对象处理了 5 条",
+      "stdin": "2\n5\n",
+      "explanation": "我们在本机跑过这一题，屏幕上四行是：\n\n```text\n点名：\n张三：本对象处理了 9 条\n点名：\n胖头鱼：本对象处理了 1 条\n```\n\n**关键在那个普通函数的写法**：\n\n```text\nvoid rollCall(const Speaker& s)\n```\n\n它收的塞料是**一张写着「提供输出方法的」的名称**（「不必还的名字」那种写法，`&` 不能漏），也**只能是名称**：约定那张类定义生不出真身，收真身就编不过。所以我们传入的对象和鱼，都是**被名称指着**进去的。\n\n进去之后发生两件事，正是这一题要教的：\n\n1. **`s.speak()` 会低头看屋里住的是谁。** 所以同一句 `s.speak()`，接待对象的时候印对象那一版，接待鱼的时候印鱼那一版 —— 而这个普通函数**根本不认识 `Cat` 和 `Fish` 这两个名字**，它俩是在它写完之后才画的类定义。\n2. **这个普通函数一个字都不用改，就能接待第二种、第三种「提供输出方法的」。** 往后我们画一个鸭子、让它照约定补上那一手，`rollCall` 里**一行都不用动**。\n\n⚠️ 两处容易摔的地方：\n\n- **塞料前面的 `&` 不能漏。** 掉了它就变成「照约定类定义造一具真身」—— 我们实测过，原话是 `error: cannot declare parameter 's' to be of abstract type 'Speaker'`：约定那张类定义生不出真身（真身是「屋里住的那个」，不是「约定」本身）。\n- **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们实测是**当场拦下**：`error: initializer specified for non-virtual method`。而真正阴的那种写法是：老类定义那一手**带着动作、又没挂 `virtual`** —— 那样程序照样跑完、**一个错都不报**，可 `s.speak()` 会一律跑老类定义那一版，跟屋里住的是谁没关系。\n\n一句话收住这一题：**约定能当塞料收** —— 收进来的是名称，屋里住的是谁，继续调用才知道。",
+      "templateId": "cpp-s2-11-feed-by-contract",
+      "params": {
+        "catName": "张三",
+        "fishName": "胖头鱼"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "8549aa05f7fd8714"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-feed-by-contract-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要写一个**普通的函数**，它不关心你是一个对象还是一条数据，只要求你**答应了那份约定**。输入接口会递进来**两个数**（一行一个）：对象和鱼各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：只有一手 `speak()`（只挂招牌、不写动作），再加一个析构函数 `virtual ~Speaker() {}`。\n2. **画两个照它画下来的**，各添一栏 `name`（一串字）和一个整数 `fish`，构造函数把两样填上，并把 `speak` 补成自己的版本（挂 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n3. **写一个普通函数** `void rollCall(const Speaker& s)`：先印一行 `点名：`，再让 `s` 调用一次（`s.speak();`）。注意**它收的是一张写着「提供输出方法的」的名称，收不到真身** —— 所以要用「不必还的名字」那种写法。\n4. 在 `main` 里：读进两个数 → 创建一个对象（`王五`）和一条数据（`计算机`）→ **把两个依次传入那个普通函数**。\n\n比如程序的输入是\n\n6\n7\n\n程序就要返回\n\n点名：\n王五：本对象处理了 6 条\n点名：\n计算机：本对象处理了 7 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nvoid rollCall(const Speaker& s) {\n    cout << \"点名：\" << endl;\n    s.speak();\n}\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat cat(\"王五\", a);\n    Fish fish(\"计算机\", b);\n\n    rollCall(cat);\n    rollCall(fish);\n    return 0;\n}\n",
+      "expectedOutput": "点名：\n王五：本对象处理了 3 条\n点名：\n计算机：本对象处理了 7 条",
+      "stdin": "3\n7\n",
+      "explanation": "我们在本机跑过这一题，屏幕上四行是：\n\n```text\n点名：\n王五：本对象处理了 6 条\n点名：\n计算机：本对象处理了 7 条\n```\n\n**关键在那个普通函数的写法**：\n\n```text\nvoid rollCall(const Speaker& s)\n```\n\n它收的塞料是**一张写着「提供输出方法的」的名称**（「不必还的名字」那种写法，`&` 不能漏），也**只能是名称**：约定那张类定义生不出真身，收真身就编不过。所以我们传入的对象和鱼，都是**被名称指着**进去的。\n\n进去之后发生两件事，正是这一题要教的：\n\n1. **`s.speak()` 会低头看屋里住的是谁。** 所以同一句 `s.speak()`，接待对象的时候印对象那一版，接待鱼的时候印鱼那一版 —— 而这个普通函数**根本不认识 `Cat` 和 `Fish` 这两个名字**，它俩是在它写完之后才画的类定义。\n2. **这个普通函数一个字都不用改，就能接待第二种、第三种「提供输出方法的」。** 往后我们画一个鸭子、让它照约定补上那一手，`rollCall` 里**一行都不用动**。\n\n⚠️ 两处容易摔的地方：\n\n- **塞料前面的 `&` 不能漏。** 掉了它就变成「照约定类定义造一具真身」—— 我们实测过，原话是 `error: cannot declare parameter 's' to be of abstract type 'Speaker'`：约定那张类定义生不出真身（真身是「屋里住的那个」，不是「约定」本身）。\n- **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们实测是**当场拦下**：`error: initializer specified for non-virtual method`。而真正阴的那种写法是：老类定义那一手**带着动作、又没挂 `virtual`** —— 那样程序照样跑完、**一个错都不报**，可 `s.speak()` 会一律跑老类定义那一版，跟屋里住的是谁没关系。\n\n一句话收住这一题：**约定能当塞料收** —— 收进来的是名称，屋里住的是谁，继续调用才知道。",
+      "templateId": "cpp-s2-11-feed-by-contract",
+      "params": {
+        "catName": "王五",
+        "fishName": "计算机"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "ed470d46ef1a3c65"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-feed-by-contract-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要写一个**普通的函数**，它不关心你是一个对象还是一条数据，只要求你**答应了那份约定**。输入接口会递进来**两个数**（一行一个）：对象和鱼各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：只有一手 `speak()`（只挂招牌、不写动作），再加一个析构函数 `virtual ~Speaker() {}`。\n2. **画两个照它画下来的**，各添一栏 `name`（一串字）和一个整数 `fish`，构造函数把两样填上，并把 `speak` 补成自己的版本（挂 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n3. **写一个普通函数** `void rollCall(const Speaker& s)`：先印一行 `点名：`，再让 `s` 调用一次（`s.speak();`）。注意**它收的是一张写着「提供输出方法的」的名称，收不到真身** —— 所以要用「不必还的名字」那种写法。\n4. 在 `main` 里：读进两个数 → 创建一个对象（`王五`）和一条数据（`胖头鱼`）→ **把两个依次传入那个普通函数**。\n\n比如程序的输入是\n\n5\n3\n\n程序就要返回\n\n点名：\n王五：本对象处理了 5 条\n点名：\n胖头鱼：本对象处理了 3 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nvoid rollCall(const Speaker& s) {\n    cout << \"点名：\" << endl;\n    s.speak();\n}\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat cat(\"王五\", a);\n    Fish fish(\"胖头鱼\", b);\n\n    rollCall(cat);\n    rollCall(fish);\n    return 0;\n}\n",
+      "expectedOutput": "点名：\n王五：本对象处理了 9 条\n点名：\n胖头鱼：本对象处理了 1 条",
+      "stdin": "9\n1\n",
+      "explanation": "我们在本机跑过这一题，屏幕上四行是：\n\n```text\n点名：\n王五：本对象处理了 5 条\n点名：\n胖头鱼：本对象处理了 3 条\n```\n\n**关键在那个普通函数的写法**：\n\n```text\nvoid rollCall(const Speaker& s)\n```\n\n它收的塞料是**一张写着「提供输出方法的」的名称**（「不必还的名字」那种写法，`&` 不能漏），也**只能是名称**：约定那张类定义生不出真身，收真身就编不过。所以我们传入的对象和鱼，都是**被名称指着**进去的。\n\n进去之后发生两件事，正是这一题要教的：\n\n1. **`s.speak()` 会低头看屋里住的是谁。** 所以同一句 `s.speak()`，接待对象的时候印对象那一版，接待鱼的时候印鱼那一版 —— 而这个普通函数**根本不认识 `Cat` 和 `Fish` 这两个名字**，它俩是在它写完之后才画的类定义。\n2. **这个普通函数一个字都不用改，就能接待第二种、第三种「提供输出方法的」。** 往后我们画一个鸭子、让它照约定补上那一手，`rollCall` 里**一行都不用动**。\n\n⚠️ 两处容易摔的地方：\n\n- **塞料前面的 `&` 不能漏。** 掉了它就变成「照约定类定义造一具真身」—— 我们实测过，原话是 `error: cannot declare parameter 's' to be of abstract type 'Speaker'`：约定那张类定义生不出真身（真身是「屋里住的那个」，不是「约定」本身）。\n- **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们实测是**当场拦下**：`error: initializer specified for non-virtual method`。而真正阴的那种写法是：老类定义那一手**带着动作、又没挂 `virtual`** —— 那样程序照样跑完、**一个错都不报**，可 `s.speak()` 会一律跑老类定义那一版，跟屋里住的是谁没关系。\n\n一句话收住这一题：**约定能当塞料收** —— 收进来的是名称，屋里住的是谁，继续调用才知道。",
+      "templateId": "cpp-s2-11-feed-by-contract",
+      "params": {
+        "catName": "王五",
+        "fishName": "胖头鱼"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "e7428087882b9b03"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-forgot-pure-zero-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想让老类定义上那一手成为**一份约定**（照它画下来的都得自己会这一手），可我们把这一手**写成了一个有动作的普通函数**，而子类定义那一手又忘了补。\n\n结果：程序**照样跑完**，编译器**一个字都没说**，屏幕上印出来的是 `张三：……`，而不是 张三 自己那一版。\n\n你帮我们把印出来的话改成 张三 自己那一版（`X：`），并且**以后我们再定义一个类漏了这手，编译器能当场拦住我们**。**`main` 里那几句不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const {\n        cout << name << \"：……\" << endl;\n    }\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n};\n\nint main() {\n    Cat c(\"张三\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"张三\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+      "expectedOutput": "张三：",
+      "stdin": null,
+      "explanation": "这一题**一个报错都没有**。我们在本机跑过没修的版本，屏幕上是这一行：\n\n```text\n张三：……\n```\n\n程序跑得完完整整，编译器一次没吭。\n\n**根子不在子对象那一手，在老类定义那一手漏写了两个符号。** 老类定义上那一手写成了\n\n```text\nvirtual void speak() const {\n    cout << name << \"：……\" << endl;\n}\n```\n\n有动作、有身体 —— 那它就只是**一手普通的函数**，不是约定。而子类定义照着画下来，**想补就补、不补也行**：我们这一题正好忘了补，于是继续调用的时候，程序老老实实跑了老类定义那一版占位的「……」。\n\n**这就是「清成约定」那一步值钱的地方。** 修法是两处，缺一不可：\n\n1. **老类定义那一手清成约定**：把那一对大括号里的动作整个删掉，换成两个字符 ——\n\n```text\nvirtual void speak() const = 0;\n```\n\n2. **子对象那一手补上**：\n\n```text\nvoid speak() const override {\n    cout << name << \"：\" << endl;\n}\n```\n\n补完第一处，我们要是还漏着第二处，编译器当场就报 `cannot declare variable 'c' to be of abstract type 'Cat'` —— **它替我们记着这笔账**。这正是一句话的分别：\n\n> **老类定义给了动作，漏写是「看不出来」；老类定义只留招牌，漏写是「编不过」。**\n\n往后写类定义时请记牢：这一手**打算让照它画下来的都得自己会**，就一定要写 `= 0`；**不打算**这样（只是给个默认动作、谁想改就改），才可以留身体。两个都合法，但**意思完全不同** —— 我们这一课栽的就是把它们弄混了。",
+      "templateId": "cpp-s2-11-forgot-pure-zero",
+      "params": {
+        "catName": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "e0ffcd74528d56cd"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-forgot-pure-zero-001",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想让老类定义上那一手成为**一份约定**（照它画下来的都得自己会这一手），可我们把这一手**写成了一个有动作的普通函数**，而子类定义那一手又忘了补。\n\n结果：程序**照样跑完**，编译器**一个字都没说**，屏幕上印出来的是 `王五：……`，而不是 王五 自己那一版。\n\n你帮我们把印出来的话改成 王五 自己那一版（`X：`），并且**以后我们再定义一个类漏了这手，编译器能当场拦住我们**。**`main` 里那几句不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const {\n        cout << name << \"：……\" << endl;\n    }\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n};\n\nint main() {\n    Cat c(\"王五\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"王五\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+      "expectedOutput": "王五：",
+      "stdin": null,
+      "explanation": "这一题**一个报错都没有**。我们在本机跑过没修的版本，屏幕上是这一行：\n\n```text\n王五：……\n```\n\n程序跑得完完整整，编译器一次没吭。\n\n**根子不在子对象那一手，在老类定义那一手漏写了两个符号。** 老类定义上那一手写成了\n\n```text\nvirtual void speak() const {\n    cout << name << \"：……\" << endl;\n}\n```\n\n有动作、有身体 —— 那它就只是**一手普通的函数**，不是约定。而子类定义照着画下来，**想补就补、不补也行**：我们这一题正好忘了补，于是继续调用的时候，程序老老实实跑了老类定义那一版占位的「……」。\n\n**这就是「清成约定」那一步值钱的地方。** 修法是两处，缺一不可：\n\n1. **老类定义那一手清成约定**：把那一对大括号里的动作整个删掉，换成两个字符 ——\n\n```text\nvirtual void speak() const = 0;\n```\n\n2. **子对象那一手补上**：\n\n```text\nvoid speak() const override {\n    cout << name << \"：\" << endl;\n}\n```\n\n补完第一处，我们要是还漏着第二处，编译器当场就报 `cannot declare variable 'c' to be of abstract type 'Cat'` —— **它替我们记着这笔账**。这正是一句话的分别：\n\n> **老类定义给了动作，漏写是「看不出来」；老类定义只留招牌，漏写是「编不过」。**\n\n往后写类定义时请记牢：这一手**打算让照它画下来的都得自己会**，就一定要写 `= 0`；**不打算**这样（只是给个默认动作、谁想改就改），才可以留身体。两个都合法，但**意思完全不同** —— 我们这一课栽的就是把它们弄混了。",
+      "templateId": "cpp-s2-11-forgot-pure-zero",
+      "params": {
+        "catName": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "144328a8de8b7d88"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-kitten-not-done-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画了一张**抽象类定义** `Animal`，那一手 `speak` 只挂了招牌（`= 0`）、没写动作；子类定义 `Cat` 照着它画了下来。\n\n编译器当场把我们拦下了，说这一格要的是一个**实例**，可我们手上这张**生不出实例**。\n\n你帮我们把子对象那一手补上，让它能生、叫出 张三 自己那一版台词（`X：`）。**别的都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n};\n\nint main() {\n    Cat c(\"张三\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"张三\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+      "expectedOutput": "张三：",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`error: cannot declare variable 'c' to be of abstract type 'Cat'`\n\n念作：**「`c` 这一格要的是一个实例，可 `Cat` 身上还挂着没干完的活，它生不出真身。」** 后面还跟一句 `note`，把我们漏掉的那一手名字原样输出 —— 那正是我们该去看的地方。\n\n**为什么是 `Cat` 而不是 `Animal` 被点名？** 因为老类定义那一手挂着 `= 0`，是**一份约定**：说好会这一手的，都得真的会。子类定义照着画了下来，就等于答应了这份约定 —— 可它没把活干完，于是**它自己也成了生不出真身的那一张**。\n\n修法就是在子类定义里，把招牌上那一手**原样补上**：\n\n```text\nvoid speak() const override {\n    cout << name << \"：\" << endl;\n}\n```\n\n三样要和老类定义那一手**一字不差**（名字、料、行尾的 `const`），末尾再挂上 `override` 当护身符 —— 名字打错的时候编译器会当场拦住我们。\n\n补完之后，我们手上那张名称上写的还是「提供输出方法的动物」，可屋里住的是一个实例，继续调用的那一刻会低头看一眼屋里住的是谁，所以印出来的是子对象自己那一版。\n\n⚠️ 这一条规矩请记牢：**只要老类定义上挂着 `= 0` 的那一手，照它画下来的就一手都不能漏。** 漏了的好处是**编译器会替我们记着** —— 它当场拦下，绝不放我们带着半成品上街。",
+      "templateId": "cpp-s2-11-kitten-not-done",
+      "params": {
+        "catName": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "d2c93759352138b3"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-kitten-not-done-001",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画了一张**抽象类定义** `Animal`，那一手 `speak` 只挂了招牌（`= 0`）、没写动作；子类定义 `Cat` 照着它画了下来。\n\n编译器当场把我们拦下了，说这一格要的是一个**实例**，可我们手上这张**生不出实例**。\n\n你帮我们把子对象那一手补上，让它能生、叫出 王五 自己那一版台词（`X：`）。**别的都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n};\n\nint main() {\n    Cat c(\"王五\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"王五\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+      "expectedOutput": "王五：",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`error: cannot declare variable 'c' to be of abstract type 'Cat'`\n\n念作：**「`c` 这一格要的是一个实例，可 `Cat` 身上还挂着没干完的活，它生不出真身。」** 后面还跟一句 `note`，把我们漏掉的那一手名字原样输出 —— 那正是我们该去看的地方。\n\n**为什么是 `Cat` 而不是 `Animal` 被点名？** 因为老类定义那一手挂着 `= 0`，是**一份约定**：说好会这一手的，都得真的会。子类定义照着画了下来，就等于答应了这份约定 —— 可它没把活干完，于是**它自己也成了生不出真身的那一张**。\n\n修法就是在子类定义里，把招牌上那一手**原样补上**：\n\n```text\nvoid speak() const override {\n    cout << name << \"：\" << endl;\n}\n```\n\n三样要和老类定义那一手**一字不差**（名字、料、行尾的 `const`），末尾再挂上 `override` 当护身符 —— 名字打错的时候编译器会当场拦住我们。\n\n补完之后，我们手上那张名称上写的还是「提供输出方法的动物」，可屋里住的是一个实例，继续调用的那一刻会低头看一眼屋里住的是谁，所以印出来的是子对象自己那一版。\n\n⚠️ 这一条规矩请记牢：**只要老类定义上挂着 `= 0` 的那一手，照它画下来的就一手都不能漏。** 漏了的好处是**编译器会替我们记着** —— 它当场拦下，绝不放我们带着半成品上街。",
+      "templateId": "cpp-s2-11-kitten-not-done",
+      "params": {
+        "catName": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "e861c1986f1939a6"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-speaker-roster-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要办一场**点名大会**：名单上写的是「提供输出方法的」，站上去的却是一个对象、一条计算机、一个小狗 —— 它们**互不相干**（没有谁是谁的基类），可都答应了同一份约定。输入接口会递进来**三个数**（一行一个）：这三个各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：身上**只有**一手 `speak()`，它只挂招牌、不写动作；再加一个析构函数 `virtual ~Speaker() {}`。**这张类定义上不许有别的栏位、也不许有别的函数** —— 它就是一份干干净净的约定。\n2. **画三张照它画下来的类定义**，每张自己添一栏 `name`（一串字）和一个整数 `fish`（记录了几条），构造函数把两样填上；再把 `speak` 补成自己的版本（补的那一手挂上 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n   - `Dog` → `X：汪！本对象处理了 N 条`\n3. 在 `main` 里：读进三个数 → 生三个（名字分别是 `张三`、`计算机`、`旺财`）→ 把它们放进**一排写着 `Speaker` 的名称**里 → **用跑圈的办法挨个调用一次**。\n\n也就是说：我们手上来回只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。\n\n比如程序的输入是\n\n1\n9\n9\n\n程序就要返回\n\n张三：本对象处理了 1 条\n计算机：本对象处理了 9 条\n旺财：汪！本对象处理了 9 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Dog : public Speaker {\n    string name;\n    int fish;\npublic:\n    Dog(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：汪！本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat cat(\"张三\", a);\n    Fish fish(\"计算机\", b);\n    Dog dog(\"旺财\", c);\n\n    Speaker* roster[3];\n    roster[0] = &cat;\n    roster[1] = &fish;\n    roster[2] = &dog;\n\n    for (int i = 0; i < 3; i++) {\n        roster[i]->speak();\n    }\n    return 0;\n}\n",
+      "expectedOutput": "张三：本对象处理了 8 条\n计算机：本对象处理了 1 条\n旺财：汪！本对象处理了 9 条",
+      "stdin": "8\n1\n9\n",
+      "explanation": "这一题是本课最重要的手感：**我们手上只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。**\n\n- 那一排名称 `Speaker* roster[3]` 上，每一张写的都是「提供输出方法的」，可它们指的分别是对象、计算机、小狗。**名称上写的是「你会不会这几手」，不是「你是谁家的孩子」** —— 这是这一课和上一课最大的分别。\n- `roster[i]->speak()` 是**顺着名称调用** —— 继续调用的那一刻，程序才低头看一眼屋里住的是谁，再决定跑哪一版。\n- **三个互不相干，却都能站进这排名称**：它们没有谁是谁的基类，只是各自照 `Speaker` 画了下来、把那一手补上了。**「说好会这几手的，都得能用这几手」** —— 这一排名称正是这句话的实测。\n\n⚠️ 三处最容易摔的地方：\n\n1. **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们在本机真试过：编译器**当场拦下**，原话是 `error: initializer specified for non-virtual method` —— 光有 `= 0` 这一个记号，它不认这是约定。真正阴的是另一种写法：老类定义那一手**带着动作、又没挂 `virtual`**（照它画下来的那份同名一手也不能挂 `override`，挂了反而编不过）—— 那时候程序照样跑完、**一个错都不报**，可顺着名称调用会一律跑老类定义那一版。我们实测的这一版印出来的是老类定义那句占位的话，而不是三个各叫各的。\n2. **约定类定义上不许有栏位。** 我们这一课的约定之所以干净，正因为它只有那一手 + 收尾。要是添了一栏数据，每一张照它画下来的都得先想办法把那一栏填上，那就不再是「会这几手就行」的约定了。\n3. **补写的那三手必须和老类定义一字不差**（名字、料、行尾的 `const`），末尾都挂 `override` —— 打错字的时候编译器当场拦下。\n\n这一手最值钱的地方在**往后**：哪天我们再画一个鸭子、让它照 `Speaker` 补上那一手，就能直接塞进这排名称里 —— 输出那一段一个字都不用动。",
+      "templateId": "cpp-s2-11-speaker-roster",
+      "params": {
+        "catName": "张三",
+        "fishName": "计算机",
+        "dogName": "旺财"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "ded1fedd3d04ee51"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-speaker-roster-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要办一场**点名大会**：名单上写的是「提供输出方法的」，站上去的却是一个对象、一条计算机、一个小狗 —— 它们**互不相干**（没有谁是谁的基类），可都答应了同一份约定。输入接口会递进来**三个数**（一行一个）：这三个各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：身上**只有**一手 `speak()`，它只挂招牌、不写动作；再加一个析构函数 `virtual ~Speaker() {}`。**这张类定义上不许有别的栏位、也不许有别的函数** —— 它就是一份干干净净的约定。\n2. **画三张照它画下来的类定义**，每张自己添一栏 `name`（一串字）和一个整数 `fish`（记录了几条），构造函数把两样填上；再把 `speak` 补成自己的版本（补的那一手挂上 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n   - `Dog` → `X：汪！本对象处理了 N 条`\n3. 在 `main` 里：读进三个数 → 生三个（名字分别是 `张三`、`计算机`、`大黄`）→ 把它们放进**一排写着 `Speaker` 的名称**里 → **用跑圈的办法挨个调用一次**。\n\n也就是说：我们手上来回只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。\n\n比如程序的输入是\n\n9\n3\n2\n\n程序就要返回\n\n张三：本对象处理了 9 条\n计算机：本对象处理了 3 条\n大黄：汪！本对象处理了 2 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Dog : public Speaker {\n    string name;\n    int fish;\npublic:\n    Dog(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：汪！本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat cat(\"张三\", a);\n    Fish fish(\"计算机\", b);\n    Dog dog(\"大黄\", c);\n\n    Speaker* roster[3];\n    roster[0] = &cat;\n    roster[1] = &fish;\n    roster[2] = &dog;\n\n    for (int i = 0; i < 3; i++) {\n        roster[i]->speak();\n    }\n    return 0;\n}\n",
+      "expectedOutput": "张三：本对象处理了 7 条\n计算机：本对象处理了 2 条\n大黄：汪！本对象处理了 4 条",
+      "stdin": "7\n2\n4\n",
+      "explanation": "这一题是本课最重要的手感：**我们手上只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。**\n\n- 那一排名称 `Speaker* roster[3]` 上，每一张写的都是「提供输出方法的」，可它们指的分别是对象、计算机、小狗。**名称上写的是「你会不会这几手」，不是「你是谁家的孩子」** —— 这是这一课和上一课最大的分别。\n- `roster[i]->speak()` 是**顺着名称调用** —— 继续调用的那一刻，程序才低头看一眼屋里住的是谁，再决定跑哪一版。\n- **三个互不相干，却都能站进这排名称**：它们没有谁是谁的基类，只是各自照 `Speaker` 画了下来、把那一手补上了。**「说好会这几手的，都得能用这几手」** —— 这一排名称正是这句话的实测。\n\n⚠️ 三处最容易摔的地方：\n\n1. **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们在本机真试过：编译器**当场拦下**，原话是 `error: initializer specified for non-virtual method` —— 光有 `= 0` 这一个记号，它不认这是约定。真正阴的是另一种写法：老类定义那一手**带着动作、又没挂 `virtual`**（照它画下来的那份同名一手也不能挂 `override`，挂了反而编不过）—— 那时候程序照样跑完、**一个错都不报**，可顺着名称调用会一律跑老类定义那一版。我们实测的这一版印出来的是老类定义那句占位的话，而不是三个各叫各的。\n2. **约定类定义上不许有栏位。** 我们这一课的约定之所以干净，正因为它只有那一手 + 收尾。要是添了一栏数据，每一张照它画下来的都得先想办法把那一栏填上，那就不再是「会这几手就行」的约定了。\n3. **补写的那三手必须和老类定义一字不差**（名字、料、行尾的 `const`），末尾都挂 `override` —— 打错字的时候编译器当场拦下。\n\n这一手最值钱的地方在**往后**：哪天我们再画一个鸭子、让它照 `Speaker` 补上那一手，就能直接塞进这排名称里 —— 输出那一段一个字都不用动。",
+      "templateId": "cpp-s2-11-speaker-roster",
+      "params": {
+        "catName": "张三",
+        "fishName": "计算机",
+        "dogName": "大黄"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "969472c5427ba8a4"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-speaker-roster-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要办一场**点名大会**：名单上写的是「提供输出方法的」，站上去的却是一个对象、一条计算机、一个小狗 —— 它们**互不相干**（没有谁是谁的基类），可都答应了同一份约定。输入接口会递进来**三个数**（一行一个）：这三个各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：身上**只有**一手 `speak()`，它只挂招牌、不写动作；再加一个析构函数 `virtual ~Speaker() {}`。**这张类定义上不许有别的栏位、也不许有别的函数** —— 它就是一份干干净净的约定。\n2. **画三张照它画下来的类定义**，每张自己添一栏 `name`（一串字）和一个整数 `fish`（记录了几条），构造函数把两样填上；再把 `speak` 补成自己的版本（补的那一手挂上 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n   - `Dog` → `X：汪！本对象处理了 N 条`\n3. 在 `main` 里：读进三个数 → 生三个（名字分别是 `张三`、`胖头鱼`、`大黄`）→ 把它们放进**一排写着 `Speaker` 的名称**里 → **用跑圈的办法挨个调用一次**。\n\n也就是说：我们手上来回只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。\n\n比如程序的输入是\n\n4\n8\n9\n\n程序就要返回\n\n张三：本对象处理了 4 条\n胖头鱼：本对象处理了 8 条\n大黄：汪！本对象处理了 9 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Dog : public Speaker {\n    string name;\n    int fish;\npublic:\n    Dog(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：汪！本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat cat(\"张三\", a);\n    Fish fish(\"胖头鱼\", b);\n    Dog dog(\"大黄\", c);\n\n    Speaker* roster[3];\n    roster[0] = &cat;\n    roster[1] = &fish;\n    roster[2] = &dog;\n\n    for (int i = 0; i < 3; i++) {\n        roster[i]->speak();\n    }\n    return 0;\n}\n",
+      "expectedOutput": "张三：本对象处理了 5 条\n胖头鱼：本对象处理了 5 条\n大黄：汪！本对象处理了 9 条",
+      "stdin": "5\n5\n9\n",
+      "explanation": "这一题是本课最重要的手感：**我们手上只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。**\n\n- 那一排名称 `Speaker* roster[3]` 上，每一张写的都是「提供输出方法的」，可它们指的分别是对象、计算机、小狗。**名称上写的是「你会不会这几手」，不是「你是谁家的孩子」** —— 这是这一课和上一课最大的分别。\n- `roster[i]->speak()` 是**顺着名称调用** —— 继续调用的那一刻，程序才低头看一眼屋里住的是谁，再决定跑哪一版。\n- **三个互不相干，却都能站进这排名称**：它们没有谁是谁的基类，只是各自照 `Speaker` 画了下来、把那一手补上了。**「说好会这几手的，都得能用这几手」** —— 这一排名称正是这句话的实测。\n\n⚠️ 三处最容易摔的地方：\n\n1. **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们在本机真试过：编译器**当场拦下**，原话是 `error: initializer specified for non-virtual method` —— 光有 `= 0` 这一个记号，它不认这是约定。真正阴的是另一种写法：老类定义那一手**带着动作、又没挂 `virtual`**（照它画下来的那份同名一手也不能挂 `override`，挂了反而编不过）—— 那时候程序照样跑完、**一个错都不报**，可顺着名称调用会一律跑老类定义那一版。我们实测的这一版印出来的是老类定义那句占位的话，而不是三个各叫各的。\n2. **约定类定义上不许有栏位。** 我们这一课的约定之所以干净，正因为它只有那一手 + 收尾。要是添了一栏数据，每一张照它画下来的都得先想办法把那一栏填上，那就不再是「会这几手就行」的约定了。\n3. **补写的那三手必须和老类定义一字不差**（名字、料、行尾的 `const`），末尾都挂 `override` —— 打错字的时候编译器当场拦下。\n\n这一手最值钱的地方在**往后**：哪天我们再画一个鸭子、让它照 `Speaker` 补上那一手，就能直接塞进这排名称里 —— 输出那一段一个字都不用动。",
+      "templateId": "cpp-s2-11-speaker-roster",
+      "params": {
+        "catName": "张三",
+        "fishName": "胖头鱼",
+        "dogName": "大黄"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "1b388e943c9bd0e3"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-speaker-roster-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要办一场**点名大会**：名单上写的是「提供输出方法的」，站上去的却是一个对象、一条计算机、一个小狗 —— 它们**互不相干**（没有谁是谁的基类），可都答应了同一份约定。输入接口会递进来**三个数**（一行一个）：这三个各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：身上**只有**一手 `speak()`，它只挂招牌、不写动作；再加一个析构函数 `virtual ~Speaker() {}`。**这张类定义上不许有别的栏位、也不许有别的函数** —— 它就是一份干干净净的约定。\n2. **画三张照它画下来的类定义**，每张自己添一栏 `name`（一串字）和一个整数 `fish`（记录了几条），构造函数把两样填上；再把 `speak` 补成自己的版本（补的那一手挂上 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n   - `Dog` → `X：汪！本对象处理了 N 条`\n3. 在 `main` 里：读进三个数 → 生三个（名字分别是 `王五`、`计算机`、`旺财`）→ 把它们放进**一排写着 `Speaker` 的名称**里 → **用跑圈的办法挨个调用一次**。\n\n也就是说：我们手上来回只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。\n\n比如程序的输入是\n\n4\n2\n3\n\n程序就要返回\n\n王五：本对象处理了 4 条\n计算机：本对象处理了 2 条\n旺财：汪！本对象处理了 3 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Dog : public Speaker {\n    string name;\n    int fish;\npublic:\n    Dog(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：汪！本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat cat(\"王五\", a);\n    Fish fish(\"计算机\", b);\n    Dog dog(\"旺财\", c);\n\n    Speaker* roster[3];\n    roster[0] = &cat;\n    roster[1] = &fish;\n    roster[2] = &dog;\n\n    for (int i = 0; i < 3; i++) {\n        roster[i]->speak();\n    }\n    return 0;\n}\n",
+      "expectedOutput": "王五：本对象处理了 2 条\n计算机：本对象处理了 7 条\n旺财：汪！本对象处理了 3 条",
+      "stdin": "2\n7\n3\n",
+      "explanation": "这一题是本课最重要的手感：**我们手上只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。**\n\n- 那一排名称 `Speaker* roster[3]` 上，每一张写的都是「提供输出方法的」，可它们指的分别是对象、计算机、小狗。**名称上写的是「你会不会这几手」，不是「你是谁家的孩子」** —— 这是这一课和上一课最大的分别。\n- `roster[i]->speak()` 是**顺着名称调用** —— 继续调用的那一刻，程序才低头看一眼屋里住的是谁，再决定跑哪一版。\n- **三个互不相干，却都能站进这排名称**：它们没有谁是谁的基类，只是各自照 `Speaker` 画了下来、把那一手补上了。**「说好会这几手的，都得能用这几手」** —— 这一排名称正是这句话的实测。\n\n⚠️ 三处最容易摔的地方：\n\n1. **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们在本机真试过：编译器**当场拦下**，原话是 `error: initializer specified for non-virtual method` —— 光有 `= 0` 这一个记号，它不认这是约定。真正阴的是另一种写法：老类定义那一手**带着动作、又没挂 `virtual`**（照它画下来的那份同名一手也不能挂 `override`，挂了反而编不过）—— 那时候程序照样跑完、**一个错都不报**，可顺着名称调用会一律跑老类定义那一版。我们实测的这一版印出来的是老类定义那句占位的话，而不是三个各叫各的。\n2. **约定类定义上不许有栏位。** 我们这一课的约定之所以干净，正因为它只有那一手 + 收尾。要是添了一栏数据，每一张照它画下来的都得先想办法把那一栏填上，那就不再是「会这几手就行」的约定了。\n3. **补写的那三手必须和老类定义一字不差**（名字、料、行尾的 `const`），末尾都挂 `override` —— 打错字的时候编译器当场拦下。\n\n这一手最值钱的地方在**往后**：哪天我们再画一个鸭子、让它照 `Speaker` 补上那一手，就能直接塞进这排名称里 —— 输出那一段一个字都不用动。",
+      "templateId": "cpp-s2-11-speaker-roster",
+      "params": {
+        "catName": "王五",
+        "fishName": "计算机",
+        "dogName": "旺财"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "7b60dc765a43a403"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-speaker-roster-006",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要办一场**点名大会**：名单上写的是「提供输出方法的」，站上去的却是一个对象、一条计算机、一个小狗 —— 它们**互不相干**（没有谁是谁的基类），可都答应了同一份约定。输入接口会递进来**三个数**（一行一个）：这三个各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：身上**只有**一手 `speak()`，它只挂招牌、不写动作；再加一个析构函数 `virtual ~Speaker() {}`。**这张类定义上不许有别的栏位、也不许有别的函数** —— 它就是一份干干净净的约定。\n2. **画三张照它画下来的类定义**，每张自己添一栏 `name`（一串字）和一个整数 `fish`（记录了几条），构造函数把两样填上；再把 `speak` 补成自己的版本（补的那一手挂上 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n   - `Dog` → `X：汪！本对象处理了 N 条`\n3. 在 `main` 里：读进三个数 → 生三个（名字分别是 `王五`、`胖头鱼`、`旺财`）→ 把它们放进**一排写着 `Speaker` 的名称**里 → **用跑圈的办法挨个调用一次**。\n\n也就是说：我们手上来回只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。\n\n比如程序的输入是\n\n1\n3\n8\n\n程序就要返回\n\n王五：本对象处理了 1 条\n胖头鱼：本对象处理了 3 条\n旺财：汪！本对象处理了 8 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Dog : public Speaker {\n    string name;\n    int fish;\npublic:\n    Dog(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：汪！本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat cat(\"王五\", a);\n    Fish fish(\"胖头鱼\", b);\n    Dog dog(\"旺财\", c);\n\n    Speaker* roster[3];\n    roster[0] = &cat;\n    roster[1] = &fish;\n    roster[2] = &dog;\n\n    for (int i = 0; i < 3; i++) {\n        roster[i]->speak();\n    }\n    return 0;\n}\n",
+      "expectedOutput": "王五：本对象处理了 3 条\n胖头鱼：本对象处理了 7 条\n旺财：汪！本对象处理了 3 条",
+      "stdin": "3\n7\n3\n",
+      "explanation": "这一题是本课最重要的手感：**我们手上只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。**\n\n- 那一排名称 `Speaker* roster[3]` 上，每一张写的都是「提供输出方法的」，可它们指的分别是对象、计算机、小狗。**名称上写的是「你会不会这几手」，不是「你是谁家的孩子」** —— 这是这一课和上一课最大的分别。\n- `roster[i]->speak()` 是**顺着名称调用** —— 继续调用的那一刻，程序才低头看一眼屋里住的是谁，再决定跑哪一版。\n- **三个互不相干，却都能站进这排名称**：它们没有谁是谁的基类，只是各自照 `Speaker` 画了下来、把那一手补上了。**「说好会这几手的，都得能用这几手」** —— 这一排名称正是这句话的实测。\n\n⚠️ 三处最容易摔的地方：\n\n1. **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们在本机真试过：编译器**当场拦下**，原话是 `error: initializer specified for non-virtual method` —— 光有 `= 0` 这一个记号，它不认这是约定。真正阴的是另一种写法：老类定义那一手**带着动作、又没挂 `virtual`**（照它画下来的那份同名一手也不能挂 `override`，挂了反而编不过）—— 那时候程序照样跑完、**一个错都不报**，可顺着名称调用会一律跑老类定义那一版。我们实测的这一版印出来的是老类定义那句占位的话，而不是三个各叫各的。\n2. **约定类定义上不许有栏位。** 我们这一课的约定之所以干净，正因为它只有那一手 + 收尾。要是添了一栏数据，每一张照它画下来的都得先想办法把那一栏填上，那就不再是「会这几手就行」的约定了。\n3. **补写的那三手必须和老类定义一字不差**（名字、料、行尾的 `const`），末尾都挂 `override` —— 打错字的时候编译器当场拦下。\n\n这一手最值钱的地方在**往后**：哪天我们再画一个鸭子、让它照 `Speaker` 补上那一手，就能直接塞进这排名称里 —— 输出那一段一个字都不用动。",
+      "templateId": "cpp-s2-11-speaker-roster",
+      "params": {
+        "catName": "王五",
+        "fishName": "胖头鱼",
+        "dogName": "旺财"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "fe1ea1a382342e34"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-speaker-roster-007",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要办一场**点名大会**：名单上写的是「提供输出方法的」，站上去的却是一个对象、一条计算机、一个小狗 —— 它们**互不相干**（没有谁是谁的基类），可都答应了同一份约定。输入接口会递进来**三个数**（一行一个）：这三个各记录了几条数据。\n\n请你这么办：\n\n1. **画那张约定类定义** `Speaker`：身上**只有**一手 `speak()`，它只挂招牌、不写动作；再加一个析构函数 `virtual ~Speaker() {}`。**这张类定义上不许有别的栏位、也不许有别的函数** —— 它就是一份干干净净的约定。\n2. **画三张照它画下来的类定义**，每张自己添一栏 `name`（一串字）和一个整数 `fish`（记录了几条），构造函数把两样填上；再把 `speak` 补成自己的版本（补的那一手挂上 `override`）：\n   - `Cat` → `X：本对象处理了 N 条`\n   - `Fish` → `X：本对象处理了 N 条`\n   - `Dog` → `X：汪！本对象处理了 N 条`\n3. 在 `main` 里：读进三个数 → 生三个（名字分别是 `王五`、`胖头鱼`、`大黄`）→ 把它们放进**一排写着 `Speaker` 的名称**里 → **用跑圈的办法挨个调用一次**。\n\n也就是说：我们手上来回只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。\n\n比如程序的输入是\n\n4\n9\n3\n\n程序就要返回\n\n王五：本对象处理了 4 条\n胖头鱼：本对象处理了 9 条\n大黄：汪！本对象处理了 3 条\n\n（判分喂的是**另外三个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Speaker {\npublic:\n    virtual void speak() const = 0;\n    virtual ~Speaker() {}\n};\n\nclass Cat : public Speaker {\n    string name;\n    int fish;\npublic:\n    Cat(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Fish : public Speaker {\n    string name;\n    int fish;\npublic:\n    Fish(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nclass Dog : public Speaker {\n    string name;\n    int fish;\npublic:\n    Dog(string n, int f) : name(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：汪！本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    int c = 0;\n    cin >> a >> b >> c;\n\n    Cat cat(\"王五\", a);\n    Fish fish(\"胖头鱼\", b);\n    Dog dog(\"大黄\", c);\n\n    Speaker* roster[3];\n    roster[0] = &cat;\n    roster[1] = &fish;\n    roster[2] = &dog;\n\n    for (int i = 0; i < 3; i++) {\n        roster[i]->speak();\n    }\n    return 0;\n}\n",
+      "expectedOutput": "王五：本对象处理了 5 条\n胖头鱼：本对象处理了 2 条\n大黄：汪！本对象处理了 3 条",
+      "stdin": "5\n2\n3\n",
+      "explanation": "这一题是本课最重要的手感：**我们手上只有一份「提供输出方法的」名单，引用的是同一句话，三个各叫各的。**\n\n- 那一排名称 `Speaker* roster[3]` 上，每一张写的都是「提供输出方法的」，可它们指的分别是对象、计算机、小狗。**名称上写的是「你会不会这几手」，不是「你是谁家的孩子」** —— 这是这一课和上一课最大的分别。\n- `roster[i]->speak()` 是**顺着名称调用** —— 继续调用的那一刻，程序才低头看一眼屋里住的是谁，再决定跑哪一版。\n- **三个互不相干，却都能站进这排名称**：它们没有谁是谁的基类，只是各自照 `Speaker` 画了下来、把那一手补上了。**「说好会这几手的，都得能用这几手」** —— 这一排名称正是这句话的实测。\n\n⚠️ 三处最容易摔的地方：\n\n1. **约定那一手要写成 `virtual` 和 `= 0` 两块记号都齐全。** 只写 `= 0` 漏掉 `virtual`，我们在本机真试过：编译器**当场拦下**，原话是 `error: initializer specified for non-virtual method` —— 光有 `= 0` 这一个记号，它不认这是约定。真正阴的是另一种写法：老类定义那一手**带着动作、又没挂 `virtual`**（照它画下来的那份同名一手也不能挂 `override`，挂了反而编不过）—— 那时候程序照样跑完、**一个错都不报**，可顺着名称调用会一律跑老类定义那一版。我们实测的这一版印出来的是老类定义那句占位的话，而不是三个各叫各的。\n2. **约定类定义上不许有栏位。** 我们这一课的约定之所以干净，正因为它只有那一手 + 收尾。要是添了一栏数据，每一张照它画下来的都得先想办法把那一栏填上，那就不再是「会这几手就行」的约定了。\n3. **补写的那三手必须和老类定义一字不差**（名字、料、行尾的 `const`），末尾都挂 `override` —— 打错字的时候编译器当场拦下。\n\n这一手最值钱的地方在**往后**：哪天我们再画一个鸭子、让它照 `Speaker` 补上那一手，就能直接塞进这排名称里 —— 输出那一段一个字都不用动。",
+      "templateId": "cpp-s2-11-speaker-roster",
+      "params": {
+        "catName": "王五",
+        "fishName": "胖头鱼",
+        "dogName": "大黄"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "0822e948796b960e"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-two-calls-on-abstract-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要看清一件事：**抽象类定义身上不是每一手都「只挂招牌」** —— 它还有实打实的数据、和一整手写全了的普通函数。输入接口会递进来**一个数**（这个对象记录了几条数据）。\n\n请你这么办：\n\n1. **画老类定义** `Animal`：够得着的那一档的 `name`（一串字），构造函数把名字填上；再写两手：\n   - 一手 `speak()`：**只挂招牌、不写动作**（照它画下来的必须自己会这一手）；\n   - 一手 `showName()`：**动作写全了的普通函数**，印一行 `我们叫 X`。\n2. **让子类定义照它画下来**：叫 `Kitten`，自己添一栏 `fish`（一个整数，构造函数里一并填上）；把 `speak` 补成自己的版本（挂 `override`），印一行 `X：本对象处理了 N 条`。\n3. 在 `main` 里：读进那个数 → 创建一个子对象 → **拿一张写着 `Animal` 的名称指着它**（「不必还的名字」那种写法）→ **顺着名称调用两声**：先调用 `showName()`、再调用 `speak()`。\n\n比如程序的输入是\n\n8\n\n程序就要返回\n\n我们叫 张三\n张三：本对象处理了 8 条\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n    void showName() const {\n        cout << \"我们叫 \" << name << endl;\n    }\n};\n\nclass Kitten : public Animal {\n    int fish;\npublic:\n    Kitten(string n, int f) : Animal(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int f = 0;\n    cin >> f;\n\n    Kitten k(\"张三\", f);\n    Animal& r = k;\n    r.showName();\n    r.speak();\n    return 0;\n}\n",
+      "expectedOutput": "我们叫 张三\n张三：本对象处理了 5 条",
+      "stdin": "5\n",
+      "explanation": "我们在本机跑过这一题，屏幕上两行是：\n\n```text\n我们叫 张三\n张三：本对象处理了 8 条\n```\n\n**两行的来路完全不一样**，这正是这一课要钉住的那件事：\n\n- **第一行 `r.showName()`** —— 这一手是**动作写全了的普通函数**，不是只挂招牌那一手。所以名称上写的是 `Animal`，跑的就是老类定义那一版。我们连子类定义里要不要盖它一版都没提 —— 因为「只挂招牌」这件事**只属于挂了 `= 0` 的那几手**，别的函数一概是普通的。\n- **第二行 `r.speak()`** —— 这一手挂着 `= 0`，是那份约定。名称上写的是谁不重要，继续调用的那一刻低头看屋里住的是谁，于是跑的是子对象自己那一版，连它自己添的那一栏 `fish` 都印了出来。\n\n⚠️ 三件事我们替你钉住：\n\n1. **`= 0` 是逐手的，不是整张类定义的。** 一个类定义上有一手挂了招牌，它就成了生不出真身的那一张；可**身上其余的东西一点没变** —— 数据还是数据，普通函数还是普通函数。\n2. **抽象类定义上照样可以有实打实的数据。** 我们这一题的 `name` 就是实打实的一栏，子类定义一个字都不用盖，白得一份。**这正是它和「一份干干净净的约定」的分别**：约定那张类定义上什么都不许有。\n3. **`Animal& r = k;` 的那个 `&` 不能漏。** 漏了就变成「照抽象类定义造一具真身」，编译器当场拦下。\n\n一句话收住：**挂着 `= 0` 的那一手才是约定，其余的都是白送的。**",
+      "templateId": "cpp-s2-11-two-calls-on-abstract",
+      "params": {
+        "catName": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "b096839a423f452d"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-11-two-calls-on-abstract-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要看清一件事：**抽象类定义身上不是每一手都「只挂招牌」** —— 它还有实打实的数据、和一整手写全了的普通函数。输入接口会递进来**一个数**（这个对象记录了几条数据）。\n\n请你这么办：\n\n1. **画老类定义** `Animal`：够得着的那一档的 `name`（一串字），构造函数把名字填上；再写两手：\n   - 一手 `speak()`：**只挂招牌、不写动作**（照它画下来的必须自己会这一手）；\n   - 一手 `showName()`：**动作写全了的普通函数**，印一行 `我们叫 X`。\n2. **让子类定义照它画下来**：叫 `Kitten`，自己添一栏 `fish`（一个整数，构造函数里一并填上）；把 `speak` 补成自己的版本（挂 `override`），印一行 `X：本对象处理了 N 条`。\n3. 在 `main` 里：读进那个数 → 创建一个子对象 → **拿一张写着 `Animal` 的名称指着它**（「不必还的名字」那种写法）→ **顺着名称调用两声**：先调用 `showName()`、再调用 `speak()`。\n\n比如程序的输入是\n\n3\n\n程序就要返回\n\n我们叫 王五\n王五：本对象处理了 3 条\n\n（判分喂的是**另一个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n    void showName() const {\n        cout << \"我们叫 \" << name << endl;\n    }\n};\n\nclass Kitten : public Animal {\n    int fish;\npublic:\n    Kitten(string n, int f) : Animal(n), fish(f) {}\n    void speak() const override {\n        cout << name << \"：本对象处理了 \" << fish << \" 条\" << endl;\n    }\n};\n\nint main() {\n    int f = 0;\n    cin >> f;\n\n    Kitten k(\"王五\", f);\n    Animal& r = k;\n    r.showName();\n    r.speak();\n    return 0;\n}\n",
+      "expectedOutput": "我们叫 王五\n王五：本对象处理了 1 条",
+      "stdin": "1\n",
+      "explanation": "我们在本机跑过这一题，屏幕上两行是：\n\n```text\n我们叫 王五\n王五：本对象处理了 3 条\n```\n\n**两行的来路完全不一样**，这正是这一课要钉住的那件事：\n\n- **第一行 `r.showName()`** —— 这一手是**动作写全了的普通函数**，不是只挂招牌那一手。所以名称上写的是 `Animal`，跑的就是老类定义那一版。我们连子类定义里要不要盖它一版都没提 —— 因为「只挂招牌」这件事**只属于挂了 `= 0` 的那几手**，别的函数一概是普通的。\n- **第二行 `r.speak()`** —— 这一手挂着 `= 0`，是那份约定。名称上写的是谁不重要，继续调用的那一刻低头看屋里住的是谁，于是跑的是子对象自己那一版，连它自己添的那一栏 `fish` 都印了出来。\n\n⚠️ 三件事我们替你钉住：\n\n1. **`= 0` 是逐手的，不是整张类定义的。** 一个类定义上有一手挂了招牌，它就成了生不出真身的那一张；可**身上其余的东西一点没变** —— 数据还是数据，普通函数还是普通函数。\n2. **抽象类定义上照样可以有实打实的数据。** 我们这一题的 `name` 就是实打实的一栏，子类定义一个字都不用盖，白得一份。**这正是它和「一份干干净净的约定」的分别**：约定那张类定义上什么都不许有。\n3. **`Animal& r = k;` 的那个 `&` 不能漏。** 漏了就变成「照抽象类定义造一具真身」，编译器当场拦下。\n\n一句话收住：**挂着 `= 0` 的那一手才是约定，其余的都是白送的。**",
+      "templateId": "cpp-s2-11-two-calls-on-abstract",
+      "params": {
+        "catName": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.295Z",
+        "hash": "17f62c556e3cfb74"
+      }
+    }
+  ]
+}

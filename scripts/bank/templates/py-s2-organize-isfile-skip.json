@@ -1,0 +1,33 @@
+{
+  "templateId": "py-s2-organize-isfile-skip",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-14",
+  "type": "codefix",
+  "concept": [
+    "os.path.isfile",
+    "抽屉要挑出来",
+    "continue"
+  ],
+  "instances": 2,
+  "params": {
+    "d": {
+      "kind": "pick",
+      "values": [
+        "里屋",
+        "小变量"
+      ]
+    },
+    "x": {
+      "kind": "pick",
+      "values": [
+        "jpg",
+        "png"
+      ]
+    }
+  },
+  "stemTemplate": "我们这个抽屉里，除了两样东西，还**躺着一个抽屉**（程序里已经搭好了）。\n\n这一段要给东西重新编号：数据加两位号，后缀原样接回去。它**跑得顺顺的、一句错都不报**，可印出来一看，**那个抽屉被当成东西一起改了名**，现在它混在东西堆里，我们再想往里头放点什么都找不到门了。\n\n你帮我们改对。要求：\n\n1. **只动东西**：抽屉的名字要**原样**留在印出来的那一行里。\n2. **只许加一处把关的**（一处就够，加在绕圈开头），别处一个字都不许改。\n3. 编号的排法（从 1 起、两位、不够补 0）不许改 —— 编号**只数真正的那些东西**。",
+  "brokenCodeTemplate": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"{d}\"), exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.{x}\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    序号 = 序号 + 1\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(os.path.join(工作台, 名字), os.path.join(工作台, f\"数据{序号:02d}{后缀}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+  "referenceFixTemplate": "import os\n\n工作台 = \"小工作台\"\nos.makedirs(os.path.join(工作台, \"{d}\"), exist_ok=True)\nfor 名字 in [\"对象1.txt\", \"鱼.{x}\"]:\n    with open(os.path.join(工作台, 名字), \"w\", encoding=\"utf-8\") as 档案:\n        档案.write(\"x\")\n\n序号 = 0\nfor 名字 in sorted(os.listdir(工作台)):\n    完整路径 = os.path.join(工作台, 名字)\n    if not os.path.isfile(完整路径):\n        continue\n    序号 = 序号 + 1\n    主体, 后缀 = os.path.splitext(名字)\n    os.rename(完整路径, os.path.join(工作台, f\"数据{序号:02d}{后缀}\"))\n\nprint(sorted(os.listdir(工作台)))\n",
+  "explanationTemplate": "遍历目录时先用 is_file 等方式区分文件和目录，不应把目录当作普通文件处理。输出排序按当前文件名进行；改名后应重新计算顺序，但不能改变过滤条件。"
+}

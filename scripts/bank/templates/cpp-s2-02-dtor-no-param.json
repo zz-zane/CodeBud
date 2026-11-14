@@ -1,0 +1,26 @@
+{
+  "templateId": "cpp-s2-02-dtor-no-param",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-02",
+  "type": "codefix",
+  "concept": [
+    "析构函数的脑袋",
+    "它不收料",
+    "编译期报错现场"
+  ],
+  "instances": 2,
+  "params": {
+    "name": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "三花"
+      ]
+    }
+  },
+  "stemTemplate": "我们画了一张叫 `Cat` 的类定义：构造函数把名字装好，析构函数负责在对象走的时候印一行「收摊啦」。\n\n画完我们瞧着析构函数那个空空的脑袋有点不放心，就顺手给它也开了一个输入接口 —— 结果编译器当场拦下，一行都不让跑。\n\n你帮我们改一处，让它跑起来、把那行字印出来。**除了析构函数的脑袋，别的地方都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    ~Cat(string tail) {\n        cout << name << \" 收摊啦\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"{name}\");\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n\n    Cat(string n) : name(n) {}\n\n    ~Cat() {\n        cout << name << \" 收摊啦\" << endl;\n    }\n};\n\nint main() {\n    Cat c1(\"{name}\");\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`main.cpp:11:5: error: destructors may not have parameters`\n\n用自然语言解释：**「析构函数的脑袋上不许有输入接口。」**\n\n为什么？因为**没有人称呼它** —— 它是大括号一结束就自己跑的那一趟。既然没人调用，也就没人给它递料，那么开一个输入接口就只能是个误会。\n\n改法就是把那一对括号里的东西**清空**：`~Cat()`。\n\n顺带认个亲：构造函数也不写返回什么，析构函数也不收料 —— 这两招都不是被调用去干活的普通函数，它们只在自己该来的那一刻自己跑。"
+}

@@ -1,0 +1,82 @@
+{
+  "lessonId": "c-stage2-05",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们写下一段 `struct Cat` 类定义：花括号里两行，一行放名字、一行放食量，末尾还有一个分号。写完这一段，我们手里有什么？",
+      "options": [
+        "一个类定义 —— 它说明「照它创建后的对象该有哪几样」，自己不是一个对象",
+        "一个名叫 `Cat` 的对象，已经可以往里记名字和食量了",
+        "一排能装 20 个对象的元素",
+        "两个元素，一个叫 `name`、一个叫 `fish`"
+      ],
+      "answer": 0,
+      "explanation": "类定义只管说明「一个对象有什么」，它自己不占对象的位置 —— 你不能往类定义上写「张三当前记录了三条」。要真有一个对象，得再写一句 `struct Cat a;` 根据类创建。至于名字那一格：`char name[20]` 是**一排**字符元素（一条字符串的家），不是一个元素，所以它是一条字符串住进了类定义里，不是「20 个对象」"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "类定义的名字叫 `Cat`。我们想照它创建一个名叫 `a` 的对象，下面哪种写法对？",
+      "options": [
+        "`struct Cat a;`",
+        "`Cat a;`",
+        "`struct a Cat;`",
+        "`a = struct Cat;`"
+      ],
+      "answer": 0,
+      "explanation": "在 C 里，类定义的名字前面**永远要带上 `struct` 这个记号**。写成 `Cat a;` 的话，编译器会报 `unknown type name 'Cat'; use 'struct' keyword to refer to the type` —— 它不光说「不认识这个名字」，还会顺手提醒你把 `struct` 补上。创建对象、摆一排对象、写在函数头上，处处都要带着它"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们创建了一个对象 `a`，想给它起名字叫「张三」。下面哪一句能成？",
+      "options": [
+        "`strcpy(a.name, \"张三\");`",
+        "`a.name = \"张三\";`",
+        "`a.name = '张三';`",
+        "`a = \"张三\";`"
+      ],
+      "answer": 0,
+      "explanation": "名字那一格是**一排字符元素**（一条字符串的家），不是一个普通的元素。上一课讲过：一排元素不能整个换掉，只能一颗一颗搬进去 —— 而 `strcpy` 正是会干这件事的那位档案管理员，它住在 `string.h` 家，所以文件头上要请它出场。`a.name = \"张三\";` 会被拦下；`'张三'` 那种单引号写法只能夹**一颗**字符，也装不下一个名字。初始化的时候用花括号 `{\"张三\", 3}` 一次填好倒是允许的，那是另一种写法"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[2] = {\n        {\"张三\", 3},\n        {\"李四\", 5}\n    };\n    int total = 0;\n\n    for (int i = 0; i < 2; i++) {\n        total = total + cats[i].____;\n    }\n    printf(\"%d\\n\", total);\n    return 0;\n}",
+      "stem": "我们摆了一排两个对象，想把两个对象的食量加起来。空里该填哪一样成员？",
+      "blanks": [
+        {
+          "answer": "fish"
+        }
+      ],
+      "explanation": "填 `fish` —— 那个小元素保存的是「当前记录了几条」，正是要加的东西。`cats[i].fish` 读作「第 `i` 个对象的食量」：先报编号拿到对象，再用点号进它那一格。加起来是 3 + 5 = 8，所以印出 `8`。要是填了 `name`，那加的就是一排元素的位置了，跟数据没关系，而且也会被编译器拦下"
+    },
+    {
+      "id": "q5",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat a = {\"张三\", 3};\n    struct Cat b;\n\n    b = a;\n    b.fish = 99;\n    printf(\"%d\\n\", a.fish);\n    printf(\"%d\\n\", b.fish);\n    return 0;\n}",
+      "stem": "这段代码印出什么？",
+      "answer": "3\n99",
+      "accept": [
+        "3\n99\n"
+      ],
+      "explanation": "`b = a;` 把 `a` 这个对象身上**每一格**都抄进了 `b` —— 名字也一颗一颗字符搬了过去。所以 `b` 是独立的一个对象，改它的食量只改它自己：`b.fish` 印出 `99`，而 `a.fish` 一动不动，还是 `3`。这正是本课说的「整个对象可以整个搬」，也是它比一排元素方便的地方 —— 换成两排元素写 `a = b;`，编译器当场就拦下了"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "c",
+      "code": "#include <stdio.h>\n\nstruct Cat {\n    char name[20];\n    int fish;\n};\n\nint main(void) {\n    struct Cat cats[3] = {\n        {\"张三\", 2},\n        {\"李四\", 4},\n        {\"计算机\", 6}\n    };\n\n    printf(\"%s\\n\", cats[2].name);\n    printf(\"%d\\n\", cats[0].fish + cats[1].fish);\n    return 0;\n}",
+      "stem": "这段代码印出什么？",
+      "answer": "计算机\n6",
+      "accept": [
+        "计算机\n6\n"
+      ],
+      "explanation": "编号从 0 开始，所以 `cats[2]` 是**第三个对象**，它的名字是 `计算机`，用 `%s` 印一整条字符串。第二行把第一个对象的 `2` 和第二个对象的 `4` 加起来，印出 `6` —— 取用的时候是「先报编号拿到对象，再用点号进那一格」，两层一叠就是 `cats[i].fish` "
+    }
+  ]
+}

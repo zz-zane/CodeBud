@@ -1,0 +1,97 @@
+{
+  "lessonId": "cpp-stage1-10",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "choice",
+      "stem": "我们写了一个方法 `void addOne(int n)`，里面只有一句 `n = n + 1;`。在 `main` 里备一个 `int fish = 3;`，调用一句 `addOne(fish);`，再把 `fish` 印出来。屏幕上会是什么？",
+      "options": [
+        "3",
+        "4",
+        "8",
+        "说不准，得看运气"
+      ],
+      "answer": 0,
+      "explanation": "把一个元素递对函数的时候，编译器默认**照原样复印一份**再递进去。函数里那个 `n` 是一张复印件，怎么改都传不出来，所以外面那个元素还是 3。想让它真的加上 1，得在料那一头写上那个小记号。"
+    },
+    {
+      "id": "q2",
+      "type": "choice",
+      "stem": "我们想让函数**直接摸到外面那个元素**、改了就真的改掉。料那一头该怎么写？",
+      "options": [
+        "`int n`",
+        "`int& n`",
+        "`& int n`",
+        "`int n&`"
+      ],
+      "answer": 1,
+      "explanation": "记号要**紧紧贴在前头那个装数的名字后面**写：`int& n` —— 意思是「别复印了，我们要直接摸原件」。写成 `int n` 就是复印一份，函数里改了也传不出来；记号摆到别的位置上，编译器也不认。"
+    },
+    {
+      "id": "q3",
+      "type": "choice",
+      "stem": "我们写了 `int a = 1;`、`int b = 2;`、`int& r = a;` 三行，然后又写了一句 `r = b;`。跑完以后 `a` 是几？",
+      "options": [
+        "2",
+        "1",
+        "说不准",
+        "会当场报错"
+      ],
+      "answer": 0,
+      "explanation": "那个小记号绑好之后是**一辈子不换**的。所以 `r = b;` 不是「把 `r` 改绑到 `b` 上」—— 它真正干的事是：把 `b` 的值**抄进 `r` 那个元素**。而 `r` 就是 `a`，所以 `a` 也变成了 2 。"
+    },
+    {
+      "id": "q4",
+      "type": "codefill",
+      "lang": "cpp",
+      "stem": "下面这段想让 `other` 成为 `fish` 那个元素的第二个名字。把缺的两个符号补上：",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 3;\n    int ____ other ____ fish;\n\n    other = 10;\n    cout << fish << endl;\n    return 0;\n}",
+      "blanks": [
+        {
+          "answer": "&"
+        },
+        {
+          "answer": "="
+        }
+      ],
+      "explanation": "第一个空填 `&`：记号要紧跟在前头那个装数的名字后面，说的是「`other` 不是一个新元素，是给 `fish` 再挂上的一个名字」。第二个空填 `=`：开张时必须**当场绑好**它绑的是哪只元素，写成 `int& other;` 那种空着的，编译器会报 `not initialized`。填好之后改 `other` 就是改 `fish`，印出来是 10 。"
+    },
+    {
+      "id": "q5",
+      "type": "codefill",
+      "lang": "cpp",
+      "stem": "下面这一个方法想**真的把外面那个元素加上 1**。把缺的两处补上：",
+      "code": "#include <iostream>\nusing namespace std;\n\nvoid addOne(int____ n) {\n    n = n ____ 1;\n}\n\nint main() {\n    int fish = 3;\n    addOne(fish);\n    cout << fish << endl;\n    return 0;\n}",
+      "blanks": [
+        {
+          "answer": "&"
+        },
+        {
+          "answer": "+"
+        }
+      ],
+      "explanation": "第一个空填 `&`：记号贴在装数的名字后面，这一个方法就**不复印了**，函数里的 `n` 直接变成外面那个元素的另一个名字。第二个空填 `+`：`n = n + 1;` 把那个元素加 1 —— 因为摸的是原件，`main` 里那句印出来就是 4。要是把记号删掉，印出来还是 3 。"
+    },
+    {
+      "id": "q6",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\nusing namespace std;\n\nvoid swapTwo(int& a, int& b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}\n\nint main() {\n    int x = 3;\n    int y = 8;\n    swapTwo(x, y);\n    cout << x << endl;\n    cout << y << endl;\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "8\n3",
+      "accept": [],
+      "explanation": "两样料都写上了那个小记号，所以函数里的 `a`、`b` 就是外面 `x`、`y` 的另一个名字。函数里那一套「借一个临时元素、把两边的货你来我往倒一遍」，倒的就是外面那两个元素 —— 印出来 `x` 成了 8、`y` 成了 3。要是两个记号都漏了，印出来还是 3 和 8 。"
+    },
+    {
+      "id": "q7",
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int fish = 3;\n    int& other = fish;\n\n    other = other + 2;\n    cout << fish << endl;\n    return 0;\n}",
+      "stem": "这段代码的输出是什么？",
+      "answer": "5",
+      "accept": [],
+      "explanation": "`other` 不是一个新元素，它是 `fish` 那个元素的另一个名字。`other = other + 2;` 就是把那个元素从 3 改成 5，所以印 `fish` 出来也是 5 —— 一根魔杖，两个名字，一个元素。"
+    }
+  ]
+}

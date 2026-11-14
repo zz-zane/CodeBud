@@ -1,0 +1,427 @@
+{
+  "lessonId": "python-stage1-12",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-py-s1-func-call-order-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们要把三样东西报对函数：名字、几岁、住哪儿。名字照旧**排队**喂，后两样想**点名**喂（这样就不怕记岔位子）。\n\n可这段代码**还没开跑就被退单了**，解释器指着调用函数的那一行摇头……你帮我们改对，让它印出「（名字） 今年 （岁数） 岁，住在 （住处）」这样的话。",
+      "brokenCode": "def intro(name, age, city):\n    print(name, \"今年\", age, \"岁，住在\", city)\n\nintro(age=3, \"张三\", \"工作区\")\n",
+      "referenceFix": "def intro(name, age, city):\n    print(name, \"今年\", age, \"岁，住在\", city)\n\nintro(\"张三\", age=3, city=\"工作区\")\n",
+      "expectedOutput": "张三 今年 3 岁，住在 工作区",
+      "stdin": null,
+      "explanation": "解释器读一眼调用函数的那一行就把单子退回来了，报的是 `SyntaxError: positional argument follows keyword argument` —— 用自然语言解释：**点名环节开始之后，又冒出一个没点名的。**\n\n它为什么拦？因为 `age=3` 一出现，它就当「从这儿起改成点名了」。后面再冒出一个没点名的 `\"张三\"`，它不知道该把这份东西排在第几个位子上 —— 排在 `age` 前面吗？可 `age` 已经被点走了呀。分不清，索性不许你写。\n\n规矩和函数头上那条是一家人：**自带存货的排最后，没点名的排前面。** 改法就是把没点名的挪到最前头：`intro(\"张三\", age=3, city=\"工作区\")` —— 前面排队、后面点名，混着来完全没问题。\n\n（顺手认个脾气：这一类错是解释器**读一眼就退单**，你写的代码一个字都不会跑。）",
+      "templateId": "py-s1-func-call-order",
+      "params": {
+        "name": "张三",
+        "age": 3,
+        "city": "工作区"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.464Z",
+        "hash": "5f76ccf0085088e6"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-call-order-026",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们要把三样东西报对函数：名字、几岁、住哪儿。名字照旧**排队**喂，后两样想**点名**喂（这样就不怕记岔位子）。\n\n可这段代码**还没开跑就被退单了**，解释器指着调用函数的那一行摇头……你帮我们改对，让它印出「（名字） 今年 （岁数） 岁，住在 （住处）」这样的话。",
+      "brokenCode": "def intro(name, age, city):\n    print(name, \"今年\", age, \"岁，住在\", city)\n\nintro(age=5, \"三花\", \"纸箱\")\n",
+      "referenceFix": "def intro(name, age, city):\n    print(name, \"今年\", age, \"岁，住在\", city)\n\nintro(\"三花\", age=5, city=\"纸箱\")\n",
+      "expectedOutput": "三花 今年 5 岁，住在 纸箱",
+      "stdin": null,
+      "explanation": "解释器读一眼调用函数的那一行就把单子退回来了，报的是 `SyntaxError: positional argument follows keyword argument` —— 用自然语言解释：**点名环节开始之后，又冒出一个没点名的。**\n\n它为什么拦？因为 `age=5` 一出现，它就当「从这儿起改成点名了」。后面再冒出一个没点名的 `\"三花\"`，它不知道该把这份东西排在第几个位子上 —— 排在 `age` 前面吗？可 `age` 已经被点走了呀。分不清，索性不许你写。\n\n规矩和函数头上那条是一家人：**自带存货的排最后，没点名的排前面。** 改法就是把没点名的挪到最前头：`intro(\"三花\", age=5, city=\"纸箱\")` —— 前面排队、后面点名，混着来完全没问题。\n\n（顺手认个脾气：这一类错是解释器**读一眼就退单**，你写的代码一个字都不会跑。）",
+      "templateId": "py-s1-func-call-order",
+      "params": {
+        "name": "三花",
+        "age": 5,
+        "city": "纸箱"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.464Z",
+        "hash": "06d39d66abbb2590"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-default-order-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想让打招呼的函数带一句「默认台词」：不特别交代的话，就说「你好」。\n\n可这段代码**连编都编不过**，解释器指着第一行就摇头……你帮我们改对，让它打印出 `计算机，你好`。",
+      "brokenCode": "def greet(msg=\"你好\", name):\n    print(name + \"，\" + msg)\n\ngreet(\"计算机\")\n",
+      "referenceFix": "def greet(name, msg=\"你好\"):\n    print(name + \"，\" + msg)\n\ngreet(\"计算机\")\n",
+      "expectedOutput": "计算机，你好",
+      "stdin": null,
+      "explanation": "Python 有一条**位置**上的规矩：**带默认值的空位，必须排在没默认值的后面**。\n\n理由是「数数」：调用的时候东西是**按顺序**一个个塞进空位的。要是 `msg` 排在前面又可以不填，Python 就不知道 `\"计算机\"` 该塞给谁了 —— 是给 `msg`，还是跳过它给 `name`？规矩存在，就是为了让这件事永远不用猜。\n\n所以写法是把**一定有**的放前面（`name`），**可以没有**的放后面（`msg=\"...\"`）。这条错了连编译都过不去，报错原文里就有 `non-default argument follows default argument`。",
+      "templateId": "py-s1-func-default-order",
+      "params": {
+        "who": "计算机",
+        "msg": "你好"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.464Z",
+        "hash": "4c749d193e046c2b"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-default-order-003",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们想让打招呼的函数带一句「默认台词」：不特别交代的话，就说「早上好」。\n\n可这段代码**连编都编不过**，解释器指着第一行就摇头……你帮我们改对，让它打印出 `小鳕鱼，早上好`。",
+      "brokenCode": "def greet(msg=\"早上好\", name):\n    print(name + \"，\" + msg)\n\ngreet(\"小鳕鱼\")\n",
+      "referenceFix": "def greet(name, msg=\"早上好\"):\n    print(name + \"，\" + msg)\n\ngreet(\"小鳕鱼\")\n",
+      "expectedOutput": "小鳕鱼，早上好",
+      "stdin": null,
+      "explanation": "Python 有一条**位置**上的规矩：**带默认值的空位，必须排在没默认值的后面**。\n\n理由是「数数」：调用的时候东西是**按顺序**一个个塞进空位的。要是 `msg` 排在前面又可以不填，Python 就不知道 `\"小鳕鱼\"` 该塞给谁了 —— 是给 `msg`，还是跳过它给 `name`？规矩存在，就是为了让这件事永远不用猜。\n\n所以写法是把**一定有**的放前面（`name`），**可以没有**的放后面（`msg=\"...\"`）。这条错了连编译都过不去，报错原文里就有 `non-default argument follows default argument`。",
+      "templateId": "py-s1-func-default-order",
+      "params": {
+        "who": "小鳕鱼",
+        "msg": "早上好"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.464Z",
+        "hash": "c117515d91e94754"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-default-used-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的报数函数要带一份**自带的数据**：函数名叫 `report`，接两样 —— 对象的名字，和今天领几条；**条数自带 3 条**。函数里印一行「（名字） 今天领了 （条数） 条」。\n\n写好之后，在外面调用三次（三次的名字都是「张三」）：\n\n1. 第一次**只报名字**，条数那份不喂，看函数自己端出什么；\n2. 第二次名字和条数**排队**传入，条数喂 4；\n3. 第三次名字照旧排队喂，条数**点上名字**改成 7。\n\n屏幕上最后就是**三行**。",
+      "starter": null,
+      "referenceSolution": "def report(cat, count=3):\n    print(cat, \"今天领了\", count, \"条\")\n\nreport(\"张三\")\nreport(\"张三\", 4)\nreport(\"张三\", count=7)\n",
+      "expectedOutput": "张三 今天领了 3 条\n张三 今天领了 4 条\n张三 今天领了 7 条",
+      "stdin": null,
+      "explanation": "自带的数据，写法就是在函数头上写 `名字=一份值`：`def report(cat, count=3):` 里的 `count=3` 就是它。\n\n它的脾气只有一条：**你喂了就听你的，不喂就听函数的。**\n\n- 第一次只报了名字，条数那一格空着 —— 函数把它自己带的 `3` 端了出来；\n- 第二次排队喂了 4，自带的那份**被顶掉**，改成用你喂的；\n- 第三次用点名的姿势 `count=7`，同样把它顶掉 —— 名字那条照旧排队喂，**只改想改的那一条**，这就叫混着来。\n\n（排位规矩别忘了：带自带的必须排在没自带的**后面** —— 上面 `cat` 在前、`count=3` 在后，正是这个次序。）",
+      "templateId": "py-s1-func-default-used",
+      "params": {
+        "cat": "张三",
+        "k": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.464Z",
+        "hash": "9ecf91fb2eab7619"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-default-used-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的报数函数要带一份**自带的数据**：函数名叫 `report`，接两样 —— 对象的名字，和今天领几条；**条数自带 3 条**。函数里印一行「（名字） 今天领了 （条数） 条」。\n\n写好之后，在外面调用三次（三次的名字都是「张三」）：\n\n1. 第一次**只报名字**，条数那份不喂，看函数自己端出什么；\n2. 第二次名字和条数**排队**传入，条数喂 6；\n3. 第三次名字照旧排队喂，条数**点上名字**改成 7。\n\n屏幕上最后就是**三行**。",
+      "starter": null,
+      "referenceSolution": "def report(cat, count=3):\n    print(cat, \"今天领了\", count, \"条\")\n\nreport(\"张三\")\nreport(\"张三\", 6)\nreport(\"张三\", count=7)\n",
+      "expectedOutput": "张三 今天领了 3 条\n张三 今天领了 6 条\n张三 今天领了 7 条",
+      "stdin": null,
+      "explanation": "自带的数据，写法就是在函数头上写 `名字=一份值`：`def report(cat, count=3):` 里的 `count=3` 就是它。\n\n它的脾气只有一条：**你喂了就听你的，不喂就听函数的。**\n\n- 第一次只报了名字，条数那一格空着 —— 函数把它自己带的 `3` 端了出来；\n- 第二次排队喂了 6，自带的那份**被顶掉**，改成用你喂的；\n- 第三次用点名的姿势 `count=7`，同样把它顶掉 —— 名字那条照旧排队喂，**只改想改的那一条**，这就叫混着来。\n\n（排位规矩别忘了：带自带的必须排在没自带的**后面** —— 上面 `cat` 在前、`count=3` 在后，正是这个次序。）",
+      "templateId": "py-s1-func-default-used",
+      "params": {
+        "cat": "张三",
+        "k": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.464Z",
+        "hash": "1cb1377cb5565b49"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-default-used-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的报数函数要带一份**自带的数据**：函数名叫 `report`，接两样 —— 对象的名字，和今天领几条；**条数自带 3 条**。函数里印一行「（名字） 今天领了 （条数） 条」。\n\n写好之后，在外面调用三次（三次的名字都是「计算机」）：\n\n1. 第一次**只报名字**，条数那份不喂，看函数自己端出什么；\n2. 第二次名字和条数**排队**传入，条数喂 4；\n3. 第三次名字照旧排队喂，条数**点上名字**改成 7。\n\n屏幕上最后就是**三行**。",
+      "starter": null,
+      "referenceSolution": "def report(cat, count=3):\n    print(cat, \"今天领了\", count, \"条\")\n\nreport(\"计算机\")\nreport(\"计算机\", 4)\nreport(\"计算机\", count=7)\n",
+      "expectedOutput": "计算机 今天领了 3 条\n计算机 今天领了 4 条\n计算机 今天领了 7 条",
+      "stdin": null,
+      "explanation": "自带的数据，写法就是在函数头上写 `名字=一份值`：`def report(cat, count=3):` 里的 `count=3` 就是它。\n\n它的脾气只有一条：**你喂了就听你的，不喂就听函数的。**\n\n- 第一次只报了名字，条数那一格空着 —— 函数把它自己带的 `3` 端了出来；\n- 第二次排队喂了 4，自带的那份**被顶掉**，改成用你喂的；\n- 第三次用点名的姿势 `count=7`，同样把它顶掉 —— 名字那条照旧排队喂，**只改想改的那一条**，这就叫混着来。\n\n（排位规矩别忘了：带自带的必须排在没自带的**后面** —— 上面 `cat` 在前、`count=3` 在后，正是这个次序。）",
+      "templateId": "py-s1-func-default-used",
+      "params": {
+        "cat": "计算机",
+        "k": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.464Z",
+        "hash": "bc1ada9b74325df1"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-default-used-005",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的报数函数要带一份**自带的数据**：函数名叫 `report`，接两样 —— 对象的名字，和今天领几条；**条数自带 3 条**。函数里印一行「（名字） 今天领了 （条数） 条」。\n\n写好之后，在外面调用三次（三次的名字都是「计算机」）：\n\n1. 第一次**只报名字**，条数那份不喂，看函数自己端出什么；\n2. 第二次名字和条数**排队**传入，条数喂 6；\n3. 第三次名字照旧排队喂，条数**点上名字**改成 7。\n\n屏幕上最后就是**三行**。",
+      "starter": null,
+      "referenceSolution": "def report(cat, count=3):\n    print(cat, \"今天领了\", count, \"条\")\n\nreport(\"计算机\")\nreport(\"计算机\", 6)\nreport(\"计算机\", count=7)\n",
+      "expectedOutput": "计算机 今天领了 3 条\n计算机 今天领了 6 条\n计算机 今天领了 7 条",
+      "stdin": null,
+      "explanation": "自带的数据，写法就是在函数头上写 `名字=一份值`：`def report(cat, count=3):` 里的 `count=3` 就是它。\n\n它的脾气只有一条：**你喂了就听你的，不喂就听函数的。**\n\n- 第一次只报了名字，条数那一格空着 —— 函数把它自己带的 `3` 端了出来；\n- 第二次排队喂了 6，自带的那份**被顶掉**，改成用你喂的；\n- 第三次用点名的姿势 `count=7`，同样把它顶掉 —— 名字那条照旧排队喂，**只改想改的那一条**，这就叫混着来。\n\n（排位规矩别忘了：带自带的必须排在没自带的**后面** —— 上面 `cat` 在前、`count=3` 在后，正是这个次序。）",
+      "templateId": "py-s1-func-default-used",
+      "params": {
+        "cat": "计算机",
+        "k": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.464Z",
+        "hash": "b1b19a28b4c8e298"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-default-used-006",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的报数函数要带一份**自带的数据**：函数名叫 `report`，接两样 —— 对象的名字，和今天领几条；**条数自带 3 条**。函数里印一行「（名字） 今天领了 （条数） 条」。\n\n写好之后，在外面调用三次（三次的名字都是「三花」）：\n\n1. 第一次**只报名字**，条数那份不喂，看函数自己端出什么；\n2. 第二次名字和条数**排队**传入，条数喂 4；\n3. 第三次名字照旧排队喂，条数**点上名字**改成 7。\n\n屏幕上最后就是**三行**。",
+      "starter": null,
+      "referenceSolution": "def report(cat, count=3):\n    print(cat, \"今天领了\", count, \"条\")\n\nreport(\"三花\")\nreport(\"三花\", 4)\nreport(\"三花\", count=7)\n",
+      "expectedOutput": "三花 今天领了 3 条\n三花 今天领了 4 条\n三花 今天领了 7 条",
+      "stdin": null,
+      "explanation": "自带的数据，写法就是在函数头上写 `名字=一份值`：`def report(cat, count=3):` 里的 `count=3` 就是它。\n\n它的脾气只有一条：**你喂了就听你的，不喂就听函数的。**\n\n- 第一次只报了名字，条数那一格空着 —— 函数把它自己带的 `3` 端了出来；\n- 第二次排队喂了 4，自带的那份**被顶掉**，改成用你喂的；\n- 第三次用点名的姿势 `count=7`，同样把它顶掉 —— 名字那条照旧排队喂，**只改想改的那一条**，这就叫混着来。\n\n（排位规矩别忘了：带自带的必须排在没自带的**后面** —— 上面 `cat` 在前、`count=3` 在后，正是这个次序。）",
+      "templateId": "py-s1-func-default-used",
+      "params": {
+        "cat": "三花",
+        "k": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "8e2a946b8e4039d1"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-default-used-008",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的报数函数要带一份**自带的数据**：函数名叫 `report`，接两样 —— 对象的名字，和今天领几条；**条数自带 3 条**。函数里印一行「（名字） 今天领了 （条数） 条」。\n\n写好之后，在外面调用三次（三次的名字都是「三花」）：\n\n1. 第一次**只报名字**，条数那份不喂，看函数自己端出什么；\n2. 第二次名字和条数**排队**传入，条数喂 6；\n3. 第三次名字照旧排队喂，条数**点上名字**改成 7。\n\n屏幕上最后就是**三行**。",
+      "starter": null,
+      "referenceSolution": "def report(cat, count=3):\n    print(cat, \"今天领了\", count, \"条\")\n\nreport(\"三花\")\nreport(\"三花\", 6)\nreport(\"三花\", count=7)\n",
+      "expectedOutput": "三花 今天领了 3 条\n三花 今天领了 6 条\n三花 今天领了 7 条",
+      "stdin": null,
+      "explanation": "自带的数据，写法就是在函数头上写 `名字=一份值`：`def report(cat, count=3):` 里的 `count=3` 就是它。\n\n它的脾气只有一条：**你喂了就听你的，不喂就听函数的。**\n\n- 第一次只报了名字，条数那一格空着 —— 函数把它自己带的 `3` 端了出来；\n- 第二次排队喂了 6，自带的那份**被顶掉**，改成用你喂的；\n- 第三次用点名的姿势 `count=7`，同样把它顶掉 —— 名字那条照旧排队喂，**只改想改的那一条**，这就叫混着来。\n\n（排位规矩别忘了：带自带的必须排在没自带的**后面** —— 上面 `cat` 在前、`count=3` 在后，正是这个次序。）",
+      "templateId": "py-s1-func-default-used",
+      "params": {
+        "cat": "三花",
+        "k": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "f45c316fcc9fca17"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-kwarg-order-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们要打印一句数据处理记录，格式是「**谁** 处理了 **几次** **什么**」。\n\n可这段代码跑起来了、**也没报错**，打出来的句子却是乱的……你帮我们改对。",
+      "brokenCode": "def feed(name, food, times):\n    print(name + \" 处理了 \" + str(times) + \" 次\" + food)\n\nfeed(\"数据\", \"计算机\", 2)\n",
+      "referenceFix": "def feed(name, food, times):\n    print(name + \" 处理了 \" + str(times) + \" 次\" + food)\n\nfeed(name=\"计算机\", food=\"数据\", times=2)\n",
+      "expectedOutput": "计算机 处理了 2 次数据",
+      "stdin": null,
+      "explanation": "这段代码**没有报错**，这恰恰是它最坏的地方 —— 它老老实实按你给的顺序把三样东西塞进了三个空位，只是塞错了人。\n\n要修有两种写法：\n\n① 把顺序摆对：`feed(\"计算机\", \"数据\", 2)`\n② **报出名字**：`feed(name=..., food=..., times=...)`\n\n② 比 ① 稳得多。顺序是一条**看不见**的约定 —— 函数表哪天加了个空位、或者你把两个实参对调一下，代码照跑不误，结果悄悄就错了。写成 `名字=值` 之后，**塞错空位这件事从「看不出来」变成「不可能」**：名字对不上，Python 当场就报错。\n\n（`name=` 这种写法就叫**点名传入**。它和排队传入能在同一次调用里混着用，但排队传入必须写在前面。）",
+      "templateId": "py-s1-func-kwarg-order",
+      "params": {
+        "who": "计算机",
+        "food": "数据",
+        "times": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "b53ac5f76a45c041"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-kwarg-order-011",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们要打印一句数据处理记录，格式是「**谁** 处理了 **几次** **什么**」。\n\n可这段代码跑起来了、**也没报错**，打出来的句子却是乱的……你帮我们改对。",
+      "brokenCode": "def feed(name, food, times):\n    print(name + \" 处理了 \" + str(times) + \" 次\" + food)\n\nfeed(\"商品A\", \"小鳕鱼\", 4)\n",
+      "referenceFix": "def feed(name, food, times):\n    print(name + \" 处理了 \" + str(times) + \" 次\" + food)\n\nfeed(name=\"小鳕鱼\", food=\"商品A\", times=4)\n",
+      "expectedOutput": "小鳕鱼 处理了 4 次商品A",
+      "stdin": null,
+      "explanation": "这段代码**没有报错**，这恰恰是它最坏的地方 —— 它老老实实按你给的顺序把三样东西塞进了三个空位，只是塞错了人。\n\n要修有两种写法：\n\n① 把顺序摆对：`feed(\"小鳕鱼\", \"商品A\", 4)`\n② **报出名字**：`feed(name=..., food=..., times=...)`\n\n② 比 ① 稳得多。顺序是一条**看不见**的约定 —— 函数表哪天加了个空位、或者你把两个实参对调一下，代码照跑不误，结果悄悄就错了。写成 `名字=值` 之后，**塞错空位这件事从「看不出来」变成「不可能」**：名字对不上，Python 当场就报错。\n\n（`name=` 这种写法就叫**点名传入**。它和排队传入能在同一次调用里混着用，但排队传入必须写在前面。）",
+      "templateId": "py-s1-func-kwarg-order",
+      "params": {
+        "who": "小鳕鱼",
+        "food": "商品A",
+        "times": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "c1896d5dcfb96844"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-multi-return-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们收了一堆数据，想知道**最多**的那条有几两、**最少**的有几两。\n\n请你写个程序：**写一个函数**，让它**一次把两个数都交出来**（最大的和最小的）；然后把这两个数打印在一行里，中间用空格隔开，**大的在前**。\n\n第一行是数据的条数 `n`，接下来 `n` 行才是每条几两。\n\n比如输入是\n\n3\n7\n1\n5\n\n就要输出\n\n7 1\n\n（判分用的是另外一组数）",
+      "starter": null,
+      "referenceSolution": "def big_small(nums):\n    return max(nums), min(nums)\n\nn = int(input())\nnums = []\nfor _ in range(n):\n    nums.append(int(input()))\n\nbig, small = big_small(nums)\nprint(big, small)\n",
+      "expectedOutput": "8 6",
+      "stdin": "3\n6\n8\n8\n",
+      "explanation": "`return max(nums), min(nums)` 这一句**看着像还了两个东西**，其实 Python 里真正发生的是：先把它俩**打包成一个元组**（`(9, 1)`），再整个递出来。\n\n外面 `big, small = big_small(nums)` 是**拆包**：左边摆几个名字，右边那个元组就自动拆成几份。两边个数对不上会当场报错，所以这个错法不会悄悄溜过去。\n\n（`print(big, small)` 会自动在中间补一个空格 —— 这正是题面要的格式，不用自己拼。）",
+      "templateId": "py-s1-func-multi-return",
+      "params": {
+        "unused": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "3d9b0bf43928bf8d"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-multi-return-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们收了一堆数据，想知道**最多**的那条有几两、**最少**的有几两。\n\n请你写个程序：**写一个函数**，让它**一次把两个数都交出来**（最大的和最小的）；然后把这两个数打印在一行里，中间用空格隔开，**大的在前**。\n\n第一行是数据的条数 `n`，接下来 `n` 行才是每条几两。\n\n比如输入是\n\n4\n4\n4\n1\n9\n\n就要输出\n\n9 1\n\n（判分用的是另外一组数）",
+      "starter": null,
+      "referenceSolution": "def big_small(nums):\n    return max(nums), min(nums)\n\nn = int(input())\nnums = []\nfor _ in range(n):\n    nums.append(int(input()))\n\nbig, small = big_small(nums)\nprint(big, small)\n",
+      "expectedOutput": "9 1",
+      "stdin": "4\n5\n1\n1\n9\n",
+      "explanation": "`return max(nums), min(nums)` 这一句**看着像还了两个东西**，其实 Python 里真正发生的是：先把它俩**打包成一个元组**（`(9, 1)`），再整个递出来。\n\n外面 `big, small = big_small(nums)` 是**拆包**：左边摆几个名字，右边那个元组就自动拆成几份。两边个数对不上会当场报错，所以这个错法不会悄悄溜过去。\n\n（`print(big, small)` 会自动在中间补一个空格 —— 这正是题面要的格式，不用自己拼。）",
+      "templateId": "py-s1-func-multi-return",
+      "params": {
+        "unused": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "40bb0259241d85a6"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-multi-return-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们收了一堆数据，想知道**最多**的那条有几两、**最少**的有几两。\n\n请你写个程序：**写一个函数**，让它**一次把两个数都交出来**（最大的和最小的）；然后把这两个数打印在一行里，中间用空格隔开，**大的在前**。\n\n第一行是数据的条数 `n`，接下来 `n` 行才是每条几两。\n\n比如输入是\n\n5\n3\n8\n8\n2\n7\n\n就要输出\n\n8 2\n\n（判分用的是另外一组数）",
+      "starter": null,
+      "referenceSolution": "def big_small(nums):\n    return max(nums), min(nums)\n\nn = int(input())\nnums = []\nfor _ in range(n):\n    nums.append(int(input()))\n\nbig, small = big_small(nums)\nprint(big, small)\n",
+      "expectedOutput": "9 5",
+      "stdin": "5\n9\n7\n8\n8\n5\n",
+      "explanation": "`return max(nums), min(nums)` 这一句**看着像还了两个东西**，其实 Python 里真正发生的是：先把它俩**打包成一个元组**（`(9, 1)`），再整个递出来。\n\n外面 `big, small = big_small(nums)` 是**拆包**：左边摆几个名字，右边那个元组就自动拆成几份。两边个数对不上会当场报错，所以这个错法不会悄悄溜过去。\n\n（`print(big, small)` 会自动在中间补一个空格 —— 这正是题面要的格式，不用自己拼。）",
+      "templateId": "py-s1-func-multi-return",
+      "params": {
+        "unused": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "06688496f113de66"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-one-box-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的结账函数一次要交回**两样**：条数，和一共多少钱（条数 × 单价）。\n\n请你写一个方法 `bill`，接进来条数和单价，**用逗号一次把两样都交出去**（先条数、后总价），函数里**不要印任何东西**。\n\n然后在外面**只摆一个变量**去接 —— 接到的会是一整盒：\n\n1. 先把**整盒**原样印一行（屏幕上会带着圆括号和逗号）；\n2. 再把盒子里**第 0 格**、**第 1 格**各印一行。\n\n这次喂的条数是 2，单价是 3。所以屏幕上是**三行**。",
+      "starter": null,
+      "referenceSolution": "def bill(count, price):\n    total = count * price\n    return count, total\n\nbox = bill(2, 3)\nprint(box)\nprint(box[0])\nprint(box[1])\n",
+      "expectedOutput": "(2, 6)\n2\n6",
+      "stdin": null,
+      "explanation": "重头戏在 `return count, total` 这一句 —— **逗号是关键**：写成 `return count` 只交回一样，写成 `return count, total`，一趟就交回两样。\n\n但它的真身其实是**一整盒**（一对圆括号焊死的小盒子）：\n\n- 左边摆**一个**变量去接，接到的就是整盒 —— 所以 `print(box)` 印出来会**带着圆括号和逗号**，两样东西被一对圆括号抱着；\n- 盒子既然有格子，就能**报编号取**：`box[0]` 拿到条数，`box[1]` 拿到总价。\n\n（上一课见过的那种接法 —— 左边摆两个变量、让它当面拆成两份 —— 走的也是这一手：函数交回的永远是一整盒，**左边摆几个变量，它就当着你的面拆成几份**。只摆一个，就整盒端走。）",
+      "templateId": "py-s1-func-one-box",
+      "params": {
+        "count": 2,
+        "price": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "6a5cce681343ffc3"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-one-box-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的结账函数一次要交回**两样**：条数，和一共多少钱（条数 × 单价）。\n\n请你写一个方法 `bill`，接进来条数和单价，**用逗号一次把两样都交出去**（先条数、后总价），函数里**不要印任何东西**。\n\n然后在外面**只摆一个变量**去接 —— 接到的会是一整盒：\n\n1. 先把**整盒**原样印一行（屏幕上会带着圆括号和逗号）；\n2. 再把盒子里**第 0 格**、**第 1 格**各印一行。\n\n这次喂的条数是 2，单价是 5。所以屏幕上是**三行**。",
+      "starter": null,
+      "referenceSolution": "def bill(count, price):\n    total = count * price\n    return count, total\n\nbox = bill(2, 5)\nprint(box)\nprint(box[0])\nprint(box[1])\n",
+      "expectedOutput": "(2, 10)\n2\n10",
+      "stdin": null,
+      "explanation": "重头戏在 `return count, total` 这一句 —— **逗号是关键**：写成 `return count` 只交回一样，写成 `return count, total`，一趟就交回两样。\n\n但它的真身其实是**一整盒**（一对圆括号焊死的小盒子）：\n\n- 左边摆**一个**变量去接，接到的就是整盒 —— 所以 `print(box)` 印出来会**带着圆括号和逗号**，两样东西被一对圆括号抱着；\n- 盒子既然有格子，就能**报编号取**：`box[0]` 拿到条数，`box[1]` 拿到总价。\n\n（上一课见过的那种接法 —— 左边摆两个变量、让它当面拆成两份 —— 走的也是这一手：函数交回的永远是一整盒，**左边摆几个变量，它就当着你的面拆成几份**。只摆一个，就整盒端走。）",
+      "templateId": "py-s1-func-one-box",
+      "params": {
+        "count": 2,
+        "price": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "cbc5284faa7c5a68"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-one-box-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的结账函数一次要交回**两样**：条数，和一共多少钱（条数 × 单价）。\n\n请你写一个方法 `bill`，接进来条数和单价，**用逗号一次把两样都交出去**（先条数、后总价），函数里**不要印任何东西**。\n\n然后在外面**只摆一个变量**去接 —— 接到的会是一整盒：\n\n1. 先把**整盒**原样印一行（屏幕上会带着圆括号和逗号）；\n2. 再把盒子里**第 0 格**、**第 1 格**各印一行。\n\n这次喂的条数是 3，单价是 3。所以屏幕上是**三行**。",
+      "starter": null,
+      "referenceSolution": "def bill(count, price):\n    total = count * price\n    return count, total\n\nbox = bill(3, 3)\nprint(box)\nprint(box[0])\nprint(box[1])\n",
+      "expectedOutput": "(3, 9)\n3\n9",
+      "stdin": null,
+      "explanation": "重头戏在 `return count, total` 这一句 —— **逗号是关键**：写成 `return count` 只交回一样，写成 `return count, total`，一趟就交回两样。\n\n但它的真身其实是**一整盒**（一对圆括号焊死的小盒子）：\n\n- 左边摆**一个**变量去接，接到的就是整盒 —— 所以 `print(box)` 印出来会**带着圆括号和逗号**，两样东西被一对圆括号抱着；\n- 盒子既然有格子，就能**报编号取**：`box[0]` 拿到条数，`box[1]` 拿到总价。\n\n（上一课见过的那种接法 —— 左边摆两个变量、让它当面拆成两份 —— 走的也是这一手：函数交回的永远是一整盒，**左边摆几个变量，它就当着你的面拆成几份**。只摆一个，就整盒端走。）",
+      "templateId": "py-s1-func-one-box",
+      "params": {
+        "count": 3,
+        "price": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "8084e3ee2b7c4695"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-one-box-005",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的结账函数一次要交回**两样**：条数，和一共多少钱（条数 × 单价）。\n\n请你写一个方法 `bill`，接进来条数和单价，**用逗号一次把两样都交出去**（先条数、后总价），函数里**不要印任何东西**。\n\n然后在外面**只摆一个变量**去接 —— 接到的会是一整盒：\n\n1. 先把**整盒**原样印一行（屏幕上会带着圆括号和逗号）；\n2. 再把盒子里**第 0 格**、**第 1 格**各印一行。\n\n这次喂的条数是 3，单价是 5。所以屏幕上是**三行**。",
+      "starter": null,
+      "referenceSolution": "def bill(count, price):\n    total = count * price\n    return count, total\n\nbox = bill(3, 5)\nprint(box)\nprint(box[0])\nprint(box[1])\n",
+      "expectedOutput": "(3, 15)\n3\n15",
+      "stdin": null,
+      "explanation": "重头戏在 `return count, total` 这一句 —— **逗号是关键**：写成 `return count` 只交回一样，写成 `return count, total`，一趟就交回两样。\n\n但它的真身其实是**一整盒**（一对圆括号焊死的小盒子）：\n\n- 左边摆**一个**变量去接，接到的就是整盒 —— 所以 `print(box)` 印出来会**带着圆括号和逗号**，两样东西被一对圆括号抱着；\n- 盒子既然有格子，就能**报编号取**：`box[0]` 拿到条数，`box[1]` 拿到总价。\n\n（上一课见过的那种接法 —— 左边摆两个变量、让它当面拆成两份 —— 走的也是这一手：函数交回的永远是一整盒，**左边摆几个变量，它就当着你的面拆成几份**。只摆一个，就整盒端走。）",
+      "templateId": "py-s1-func-one-box",
+      "params": {
+        "count": 3,
+        "price": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "959dfd5b0eeaaf54"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-one-box-006",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的结账函数一次要交回**两样**：条数，和一共多少钱（条数 × 单价）。\n\n请你写一个方法 `bill`，接进来条数和单价，**用逗号一次把两样都交出去**（先条数、后总价），函数里**不要印任何东西**。\n\n然后在外面**只摆一个变量**去接 —— 接到的会是一整盒：\n\n1. 先把**整盒**原样印一行（屏幕上会带着圆括号和逗号）；\n2. 再把盒子里**第 0 格**、**第 1 格**各印一行。\n\n这次喂的条数是 4，单价是 3。所以屏幕上是**三行**。",
+      "starter": null,
+      "referenceSolution": "def bill(count, price):\n    total = count * price\n    return count, total\n\nbox = bill(4, 3)\nprint(box)\nprint(box[0])\nprint(box[1])\n",
+      "expectedOutput": "(4, 12)\n4\n12",
+      "stdin": null,
+      "explanation": "重头戏在 `return count, total` 这一句 —— **逗号是关键**：写成 `return count` 只交回一样，写成 `return count, total`，一趟就交回两样。\n\n但它的真身其实是**一整盒**（一对圆括号焊死的小盒子）：\n\n- 左边摆**一个**变量去接，接到的就是整盒 —— 所以 `print(box)` 印出来会**带着圆括号和逗号**，两样东西被一对圆括号抱着；\n- 盒子既然有格子，就能**报编号取**：`box[0]` 拿到条数，`box[1]` 拿到总价。\n\n（上一课见过的那种接法 —— 左边摆两个变量、让它当面拆成两份 —— 走的也是这一手：函数交回的永远是一整盒，**左边摆几个变量，它就当着你的面拆成几份**。只摆一个，就整盒端走。）",
+      "templateId": "py-s1-func-one-box",
+      "params": {
+        "count": 4,
+        "price": 3
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "76f464d09e974679"
+      }
+    },
+    {
+      "id": "bank-py-s1-func-one-box-008",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的结账函数一次要交回**两样**：条数，和一共多少钱（条数 × 单价）。\n\n请你写一个方法 `bill`，接进来条数和单价，**用逗号一次把两样都交出去**（先条数、后总价），函数里**不要印任何东西**。\n\n然后在外面**只摆一个变量**去接 —— 接到的会是一整盒：\n\n1. 先把**整盒**原样印一行（屏幕上会带着圆括号和逗号）；\n2. 再把盒子里**第 0 格**、**第 1 格**各印一行。\n\n这次喂的条数是 4，单价是 5。所以屏幕上是**三行**。",
+      "starter": null,
+      "referenceSolution": "def bill(count, price):\n    total = count * price\n    return count, total\n\nbox = bill(4, 5)\nprint(box)\nprint(box[0])\nprint(box[1])\n",
+      "expectedOutput": "(4, 20)\n4\n20",
+      "stdin": null,
+      "explanation": "重头戏在 `return count, total` 这一句 —— **逗号是关键**：写成 `return count` 只交回一样，写成 `return count, total`，一趟就交回两样。\n\n但它的真身其实是**一整盒**（一对圆括号焊死的小盒子）：\n\n- 左边摆**一个**变量去接，接到的就是整盒 —— 所以 `print(box)` 印出来会**带着圆括号和逗号**，两样东西被一对圆括号抱着；\n- 盒子既然有格子，就能**报编号取**：`box[0]` 拿到条数，`box[1]` 拿到总价。\n\n（上一课见过的那种接法 —— 左边摆两个变量、让它当面拆成两份 —— 走的也是这一手：函数交回的永远是一整盒，**左边摆几个变量，它就当着你的面拆成几份**。只摆一个，就整盒端走。）",
+      "templateId": "py-s1-func-one-box",
+      "params": {
+        "count": 4,
+        "price": 5
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.465Z",
+        "hash": "5e3949b717ed3fa0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "templateId": "py-s2-re-bracket-unpaired",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-12",
+  "type": "codefix",
+  "concept": [
+    "re.findall",
+    "方括号成对",
+    "花纹写坏"
+  ],
+  "instances": 2,
+  "params": {
+    "w": {
+      "kind": "pick",
+      "values": [
+        "商品数据工作区",
+        "鱼罐头商品C"
+      ]
+    }
+  },
+  "stemTemplate": "我们想在那串字里找**「对象」或者「鱼」** —— 这两个字随便哪一个，碰上一个就算**一块**，各算各的。\n\n我们的花纹刚写下去，编译器就**当场翻了脸**，说这花纹不合规矩，一块都没给我们捞。\n\n你帮我们改对。要求：\n\n1. **只印一行**，就是那个柜子。\n2. 花纹只差**一个记号**的开合，别整个推倒重来。\n3. 那串字一个字都不许动。",
+  "brokenCodeTemplate": "import re\n\n项链 = \"{w}\"\nprint(re.findall(r\"[对象鱼\", 项链))\n",
+  "referenceFixTemplate": "import re\n\n项链 = \"{w}\"\nprint(re.findall(r\"[对象鱼]\", 项链))\n",
+  "explanationTemplate": "正则表达式的方括号必须成对。字符类 [甲乙] 每次匹配甲或乙中的一个字符，不表示匹配整个“甲乙”子串。findall 按出现顺序返回全部匹配。"
+}

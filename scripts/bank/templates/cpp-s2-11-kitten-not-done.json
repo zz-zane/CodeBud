@@ -1,0 +1,26 @@
+{
+  "templateId": "cpp-s2-11-kitten-not-done",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-11",
+  "type": "codefix",
+  "concept": [
+    "招牌上的活必须干完",
+    "漏了一手就生不出来",
+    "编译器替我们记着"
+  ],
+  "instances": 2,
+  "params": {
+    "catName": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    }
+  },
+  "stemTemplate": "我们画了一张**抽象类定义** `Animal`，那一手 `speak` 只挂了招牌（`= 0`）、没写动作；子类定义 `Cat` 照着它画了下来。\n\n编译器当场把我们拦下了，说这一格要的是一个**实例**，可我们手上这张**生不出实例**。\n\n你帮我们把子对象那一手补上，让它能生、叫出 {catName} 自己那一版台词（`X：`）。**别的都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n};\n\nint main() {\n    Cat c(\"{catName}\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\nprotected:\n    string name;\npublic:\n    Animal(string n) : name(n) {}\n    virtual void speak() const = 0;\n};\n\nclass Cat : public Animal {\npublic:\n    Cat(string n) : Animal(n) {}\n    void speak() const override {\n        cout << name << \"：\" << endl;\n    }\n};\n\nint main() {\n    Cat c(\"{catName}\");\n    Animal& r = c;\n    r.speak();\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话是：\n\n`error: cannot declare variable 'c' to be of abstract type 'Cat'`\n\n念作：**「`c` 这一格要的是一个实例，可 `Cat` 身上还挂着没干完的活，它生不出真身。」** 后面还跟一句 `note`，把我们漏掉的那一手名字原样输出 —— 那正是我们该去看的地方。\n\n**为什么是 `Cat` 而不是 `Animal` 被点名？** 因为老类定义那一手挂着 `= 0`，是**一份约定**：说好会这一手的，都得真的会。子类定义照着画了下来，就等于答应了这份约定 —— 可它没把活干完，于是**它自己也成了生不出真身的那一张**。\n\n修法就是在子类定义里，把招牌上那一手**原样补上**：\n\n```text\nvoid speak() const override {\n    cout << name << \"：\" << endl;\n}\n```\n\n三样要和老类定义那一手**一字不差**（名字、料、行尾的 `const`），末尾再挂上 `override` 当护身符 —— 名字打错的时候编译器会当场拦住我们。\n\n补完之后，我们手上那张名称上写的还是「提供输出方法的动物」，可屋里住的是一个实例，继续调用的那一刻会低头看一眼屋里住的是谁，所以印出来的是子对象自己那一版。\n\n⚠️ 这一条规矩请记牢：**只要老类定义上挂着 `= 0` 的那一手，照它画下来的就一手都不能漏。** 漏了的好处是**编译器会替我们记着** —— 它当场拦下，绝不放我们带着半成品上街。"
+}

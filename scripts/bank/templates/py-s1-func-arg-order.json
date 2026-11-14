@@ -1,0 +1,33 @@
+{
+  "templateId": "py-s1-func-arg-order",
+  "lang": "python",
+  "stage": 1,
+  "lessonId": "python-stage1-11",
+  "type": "codefix",
+  "concept": [
+    "函数",
+    "位置参数",
+    "实参顺序",
+    "不报错的错"
+  ],
+  "instances": 2,
+  "params": {
+    "cat": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四",
+        "三花"
+      ]
+    },
+    "count": {
+      "kind": "int",
+      "min": 2,
+      "max": 4
+    }
+  },
+  "stemTemplate": "我们的记账函数是这么登记的：`def show_fish(name, count)` —— **第一个元素**接对象的名字，**第二只元素**接今天有几条数据。\n\n可我们使出来的时候，屏幕上那句话**张冠李戴**了：该报名字的位子上坐了条数，该报条数的位子上坐了名字，印出来成了叫对象看不懂的句子。\n\n你帮我们改对，让它印出「（名字） 今天有 （条数） 条数据」这样的话。",
+  "brokenCodeTemplate": "def show_fish(name, count):\n    print(name, \"今天有\", count, \"条数据\")\n\nshow_fish({count}, \"{cat}\")\n",
+  "referenceFixTemplate": "def show_fish(name, count):\n    print(name, \"今天有\", count, \"条数据\")\n\nshow_fish(\"{cat}\", {count})\n",
+  "explanationTemplate": "这一处**不报错**，只是印出来的话对不上号 —— 因为往函数里递东西的时候，**它们只认位子，不认名字**。\n\n函数表上第一个元素是 `name`、第二只元素是 `count`，那么外面递进来的第一样东西就落进 `name`、第二样落进 `count`。递的是 {count} 和「{cat}」，于是 `name` 接住了条数、`count` 接住了名字，两个位子上的东西**正好换了个座位**。\n\n（对照着认：**少递**一样东西，编译器当场翻脸报 `TypeError`；**递反**了顺序，它一次不吭 —— 从它那边看，东西的件数一点不差，也就没有理由拦你。所以「传入反了」这种错，只能靠你自己盯着句子的意思把它揪出来。）"
+}

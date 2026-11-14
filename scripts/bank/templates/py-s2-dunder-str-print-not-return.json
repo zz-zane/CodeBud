@@ -1,0 +1,24 @@
+{
+  "templateId": "py-s2-dunder-str-print-not-return",
+  "lang": "python",
+  "stage": 2,
+  "lessonId": "python-stage2-08",
+  "type": "codefix",
+  "concept": [
+    "__str__",
+    "返回",
+    "print"
+  ],
+  "instances": 2,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 8
+    }
+  },
+  "stemTemplate": "我们想在纸上写一句 `print(a)`，让屏幕上冒出「这个元素被说成什么样」的一句话 —— 具体就是：\n\n```text\n保存了 {n} 条数据\n```\n\n类定义上那一个方法我们已经写好了，可它一跑就报错。你帮我们改对。\n\n⚠️ 那句话**一个字都不许改**，`print(a)` 那一行也不许改成别的写法。",
+  "brokenCodeTemplate": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        print(\"保存了 \" + str(self.n) + \" 条数据\")\n\n\na = Bowl({n})\nprint(a)\n",
+  "referenceFixTemplate": "class Bowl:\n    def __init__(self, n):\n        self.n = n\n\n    def __str__(self):\n        return \"保存了 \" + str(self.n) + \" 条数据\"\n\n\na = Bowl({n})\nprint(a)\n",
+  "explanationTemplate": "毛病出在那一个方法的**最后一步**上：它把话**印出去了**，却没有**返回**。\n\n要看清这个坑，先记住 `__str__` 是干什么的：`print(a)` 的时候，Python 会先悄悄调用一遍 `a.__str__()`，**把它返回的那句话**拿去印。所以这一个方法的任务是**把话返回**（`return`），不是自己印。\n\n⚠️ 跑坏代码的时候你会看到一件很能说明问题的事：那句「保存了 {n} 条数据」**其实是印出来了的** —— 因为函数里的 `print` 真的执行了。可紧接着 Python 还是翻脸，说它返回的不是一句话。**印出来了 ≠ 返回了**，这就是这一课最要紧的分界。\n\n⚠️ 只印不返回的话，这一个方法实际返回的是个「空」（`None`）。Python 拿这个空去当一句话用，只能翻脸：`__str__ returned non-string`。\n\n⚠️ 顺带记一句：`__str__` 和 `__init__` 一样，**名字前后各是两条下划线**，一共四条。少一条它就只是个普通名字，Python 永远不会替你称呼它 —— 而程序**不报错**，你只会百思不得其解「怎么没生效」。"
+}

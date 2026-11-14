@@ -1,0 +1,362 @@
+{
+  "lessonId": "java-stage2-10",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-java-s2-diy-bowl-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**自己画一张泛型**，再拿它量出两个尺码不同的柜子。\n\n第一件事，定义类：\n\n1. 类定义叫 `Bowl`，名字后面挂一对尖括号、里面写个 `T`；\n2. 类定义里有一个**装东西的地方**，用 `T` 当它的名分；\n3. 类定义上挂两招：一个方法 `put` 收一件东西**存进去**，一个方法 `take` 把存着的那件**返回**；方法的名分也都跟着 `T` 走。\n\n第二件事，`main` 里用这张类定义量两个柜子：\n\n1. 一个尺码填成**字符串**，塞进 `数据`，印一行 `项链那个是 ` 接上返回的那件；\n2. 另一个尺码填成**装数字的那张类定义**，塞进 `6`，印一行 `数字那个是 ` 接上返回的那件、再接上逗号加「加一是」、再接上**加一之后**的结果，格式照 `数字那个是 6，加一是 7` 这样来。\n\n那个数字柜子返回的东西**直接就能做加法**，我们不用自己贴标签。\n\n这一题**不需要输入**，程序自己就能跑。",
+      "starter": "class Bowl<T> {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "class Bowl<T> {\n    private T thing;\n\n    void put(T thing) {\n        this.thing = thing;\n    }\n\n    T take() {\n        return thing;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Bowl<String> fish = new Bowl<>();\n        fish.put(\"数据\");\n        System.out.println(\"项链那个是 \" + fish.take());\n\n        Bowl<Integer> num = new Bowl<>();\n        num.put(6);\n        System.out.println(\"数字那个是 \" + num.take() + \"，加一是 \" + (num.take() + 1));\n    }\n}\n",
+      "expectedOutput": "项链那个是 数据\n数字那个是 6，加一是 7",
+      "stdin": null,
+      "explanation": "这题是本课的**正身**：类定义上留一块空尺码，用的时候再填。\n\n**一、类定义上那几个 `T` 是什么。** `class Bowl<T>` 里那个 `T` 就是**空着的尺码**。类定义上凡是写 `T` 的地方 —— 存东西那一处、`put` 收什么、`take` 返回什么 —— 都读作「**用的时候填什么，这里就是什么**」。它自己**不是**某种具体的东西，只是「这里会有一块尺码」的记号。\n\n**二、尺码怎么填。** `Bowl<String> fish = new Bowl<>();` 就是把尺码填成了字符串：这个柜子只装字符串。另一个填成 `Integer`（**装数字的那张类定义**，不是光溜溜的 `int`），于是：\n\n- `num.put(6)` 塞进去的光溜溜的数字，编译器会顺手根据类创建实例口袋赋值（上一课的装箱）；\n- **`num.take() + 1` 可以直接做加法** —— 因为 `take` 返回的时候，Java 已经知道它是数字，**不用我们再贴标签**。\n\n这一条正是本课最值钱的地方：不填尺码的那种**万能口袋**，取出来的时候我们得自己写一笔 `(Integer)` 去作保，作保落空就跑到那一步炸；填了尺码，作保的活儿编译器替我们干了。\n\n**三、为什么两招的名分都跟着 `T`。** 因为它们处理的就是**这个柜子里装的那种东西**。尺码一填，两招的名分当场跟着定下来：填字符串，`put` 就只收字符串；填数字，`take` 返回就是数字。\n\n**四、一对空尖括号是省事写法。** `new Bowl<>()` 里那对空尖括号的意思是「**跟左边一样**」—— 左边填的是什么尺码，新量的这个就是什么尺码，不用再抄一遍。\n\n同一个类定义，我们量了一个字符串的、一个数字的 —— 往后装别的尺码，还是这张类定义，一次都不用重画。",
+      "templateId": "java-s2-diy-bowl",
+      "params": {
+        "word": "数据",
+        "v": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.541Z",
+        "hash": "9c6a4025af577285"
+      }
+    },
+    {
+      "id": "bank-java-s2-diy-bowl-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**自己画一张泛型**，再拿它量出两个尺码不同的柜子。\n\n第一件事，定义类：\n\n1. 类定义叫 `Bowl`，名字后面挂一对尖括号、里面写个 `T`；\n2. 类定义里有一个**装东西的地方**，用 `T` 当它的名分；\n3. 类定义上挂两招：一个方法 `put` 收一件东西**存进去**，一个方法 `take` 把存着的那件**返回**；方法的名分也都跟着 `T` 走。\n\n第二件事，`main` 里用这张类定义量两个柜子：\n\n1. 一个尺码填成**字符串**，塞进 `数据`，印一行 `项链那个是 ` 接上返回的那件；\n2. 另一个尺码填成**装数字的那张类定义**，塞进 `7`，印一行 `数字那个是 ` 接上返回的那件、再接上逗号加「加一是」、再接上**加一之后**的结果，格式照 `数字那个是 6，加一是 7` 这样来。\n\n那个数字柜子返回的东西**直接就能做加法**，我们不用自己贴标签。\n\n这一题**不需要输入**，程序自己就能跑。",
+      "starter": "class Bowl<T> {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "class Bowl<T> {\n    private T thing;\n\n    void put(T thing) {\n        this.thing = thing;\n    }\n\n    T take() {\n        return thing;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Bowl<String> fish = new Bowl<>();\n        fish.put(\"数据\");\n        System.out.println(\"项链那个是 \" + fish.take());\n\n        Bowl<Integer> num = new Bowl<>();\n        num.put(7);\n        System.out.println(\"数字那个是 \" + num.take() + \"，加一是 \" + (num.take() + 1));\n    }\n}\n",
+      "expectedOutput": "项链那个是 数据\n数字那个是 7，加一是 8",
+      "stdin": null,
+      "explanation": "这题是本课的**正身**：类定义上留一块空尺码，用的时候再填。\n\n**一、类定义上那几个 `T` 是什么。** `class Bowl<T>` 里那个 `T` 就是**空着的尺码**。类定义上凡是写 `T` 的地方 —— 存东西那一处、`put` 收什么、`take` 返回什么 —— 都读作「**用的时候填什么，这里就是什么**」。它自己**不是**某种具体的东西，只是「这里会有一块尺码」的记号。\n\n**二、尺码怎么填。** `Bowl<String> fish = new Bowl<>();` 就是把尺码填成了字符串：这个柜子只装字符串。另一个填成 `Integer`（**装数字的那张类定义**，不是光溜溜的 `int`），于是：\n\n- `num.put(7)` 塞进去的光溜溜的数字，编译器会顺手根据类创建实例口袋赋值（上一课的装箱）；\n- **`num.take() + 1` 可以直接做加法** —— 因为 `take` 返回的时候，Java 已经知道它是数字，**不用我们再贴标签**。\n\n这一条正是本课最值钱的地方：不填尺码的那种**万能口袋**，取出来的时候我们得自己写一笔 `(Integer)` 去作保，作保落空就跑到那一步炸；填了尺码，作保的活儿编译器替我们干了。\n\n**三、为什么两招的名分都跟着 `T`。** 因为它们处理的就是**这个柜子里装的那种东西**。尺码一填，两招的名分当场跟着定下来：填字符串，`put` 就只收字符串；填数字，`take` 返回就是数字。\n\n**四、一对空尖括号是省事写法。** `new Bowl<>()` 里那对空尖括号的意思是「**跟左边一样**」—— 左边填的是什么尺码，新量的这个就是什么尺码，不用再抄一遍。\n\n同一个类定义，我们量了一个字符串的、一个数字的 —— 往后装别的尺码，还是这张类定义，一次都不用重画。",
+      "templateId": "java-s2-diy-bowl",
+      "params": {
+        "word": "数据",
+        "v": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.541Z",
+        "hash": "53aa2ed53705c3dc"
+      }
+    },
+    {
+      "id": "bank-java-s2-diy-bowl-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**自己画一张泛型**，再拿它量出两个尺码不同的柜子。\n\n第一件事，定义类：\n\n1. 类定义叫 `Bowl`，名字后面挂一对尖括号、里面写个 `T`；\n2. 类定义里有一个**装东西的地方**，用 `T` 当它的名分；\n3. 类定义上挂两招：一个方法 `put` 收一件东西**存进去**，一个方法 `take` 把存着的那件**返回**；方法的名分也都跟着 `T` 走。\n\n第二件事，`main` 里用这张类定义量两个柜子：\n\n1. 一个尺码填成**字符串**，塞进 `小黄鱼`，印一行 `项链那个是 ` 接上返回的那件；\n2. 另一个尺码填成**装数字的那张类定义**，塞进 `6`，印一行 `数字那个是 ` 接上返回的那件、再接上逗号加「加一是」、再接上**加一之后**的结果，格式照 `数字那个是 6，加一是 7` 这样来。\n\n那个数字柜子返回的东西**直接就能做加法**，我们不用自己贴标签。\n\n这一题**不需要输入**，程序自己就能跑。",
+      "starter": "class Bowl<T> {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "class Bowl<T> {\n    private T thing;\n\n    void put(T thing) {\n        this.thing = thing;\n    }\n\n    T take() {\n        return thing;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Bowl<String> fish = new Bowl<>();\n        fish.put(\"小黄鱼\");\n        System.out.println(\"项链那个是 \" + fish.take());\n\n        Bowl<Integer> num = new Bowl<>();\n        num.put(6);\n        System.out.println(\"数字那个是 \" + num.take() + \"，加一是 \" + (num.take() + 1));\n    }\n}\n",
+      "expectedOutput": "项链那个是 小黄鱼\n数字那个是 6，加一是 7",
+      "stdin": null,
+      "explanation": "这题是本课的**正身**：类定义上留一块空尺码，用的时候再填。\n\n**一、类定义上那几个 `T` 是什么。** `class Bowl<T>` 里那个 `T` 就是**空着的尺码**。类定义上凡是写 `T` 的地方 —— 存东西那一处、`put` 收什么、`take` 返回什么 —— 都读作「**用的时候填什么，这里就是什么**」。它自己**不是**某种具体的东西，只是「这里会有一块尺码」的记号。\n\n**二、尺码怎么填。** `Bowl<String> fish = new Bowl<>();` 就是把尺码填成了字符串：这个柜子只装字符串。另一个填成 `Integer`（**装数字的那张类定义**，不是光溜溜的 `int`），于是：\n\n- `num.put(6)` 塞进去的光溜溜的数字，编译器会顺手根据类创建实例口袋赋值（上一课的装箱）；\n- **`num.take() + 1` 可以直接做加法** —— 因为 `take` 返回的时候，Java 已经知道它是数字，**不用我们再贴标签**。\n\n这一条正是本课最值钱的地方：不填尺码的那种**万能口袋**，取出来的时候我们得自己写一笔 `(Integer)` 去作保，作保落空就跑到那一步炸；填了尺码，作保的活儿编译器替我们干了。\n\n**三、为什么两招的名分都跟着 `T`。** 因为它们处理的就是**这个柜子里装的那种东西**。尺码一填，两招的名分当场跟着定下来：填字符串，`put` 就只收字符串；填数字，`take` 返回就是数字。\n\n**四、一对空尖括号是省事写法。** `new Bowl<>()` 里那对空尖括号的意思是「**跟左边一样**」—— 左边填的是什么尺码，新量的这个就是什么尺码，不用再抄一遍。\n\n同一个类定义，我们量了一个字符串的、一个数字的 —— 往后装别的尺码，还是这张类定义，一次都不用重画。",
+      "templateId": "java-s2-diy-bowl",
+      "params": {
+        "word": "小黄鱼",
+        "v": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.541Z",
+        "hash": "4b24dd3d97e106c5"
+      }
+    },
+    {
+      "id": "bank-java-s2-diy-bowl-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要**自己画一张泛型**，再拿它量出两个尺码不同的柜子。\n\n第一件事，定义类：\n\n1. 类定义叫 `Bowl`，名字后面挂一对尖括号、里面写个 `T`；\n2. 类定义里有一个**装东西的地方**，用 `T` 当它的名分；\n3. 类定义上挂两招：一个方法 `put` 收一件东西**存进去**，一个方法 `take` 把存着的那件**返回**；方法的名分也都跟着 `T` 走。\n\n第二件事，`main` 里用这张类定义量两个柜子：\n\n1. 一个尺码填成**字符串**，塞进 `小黄鱼`，印一行 `项链那个是 ` 接上返回的那件；\n2. 另一个尺码填成**装数字的那张类定义**，塞进 `7`，印一行 `数字那个是 ` 接上返回的那件、再接上逗号加「加一是」、再接上**加一之后**的结果，格式照 `数字那个是 6，加一是 7` 这样来。\n\n那个数字柜子返回的东西**直接就能做加法**，我们不用自己贴标签。\n\n这一题**不需要输入**，程序自己就能跑。",
+      "starter": "class Bowl<T> {\n\n}\n\npublic class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "class Bowl<T> {\n    private T thing;\n\n    void put(T thing) {\n        this.thing = thing;\n    }\n\n    T take() {\n        return thing;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Bowl<String> fish = new Bowl<>();\n        fish.put(\"小黄鱼\");\n        System.out.println(\"项链那个是 \" + fish.take());\n\n        Bowl<Integer> num = new Bowl<>();\n        num.put(7);\n        System.out.println(\"数字那个是 \" + num.take() + \"，加一是 \" + (num.take() + 1));\n    }\n}\n",
+      "expectedOutput": "项链那个是 小黄鱼\n数字那个是 7，加一是 8",
+      "stdin": null,
+      "explanation": "这题是本课的**正身**：类定义上留一块空尺码，用的时候再填。\n\n**一、类定义上那几个 `T` 是什么。** `class Bowl<T>` 里那个 `T` 就是**空着的尺码**。类定义上凡是写 `T` 的地方 —— 存东西那一处、`put` 收什么、`take` 返回什么 —— 都读作「**用的时候填什么，这里就是什么**」。它自己**不是**某种具体的东西，只是「这里会有一块尺码」的记号。\n\n**二、尺码怎么填。** `Bowl<String> fish = new Bowl<>();` 就是把尺码填成了字符串：这个柜子只装字符串。另一个填成 `Integer`（**装数字的那张类定义**，不是光溜溜的 `int`），于是：\n\n- `num.put(7)` 塞进去的光溜溜的数字，编译器会顺手根据类创建实例口袋赋值（上一课的装箱）；\n- **`num.take() + 1` 可以直接做加法** —— 因为 `take` 返回的时候，Java 已经知道它是数字，**不用我们再贴标签**。\n\n这一条正是本课最值钱的地方：不填尺码的那种**万能口袋**，取出来的时候我们得自己写一笔 `(Integer)` 去作保，作保落空就跑到那一步炸；填了尺码，作保的活儿编译器替我们干了。\n\n**三、为什么两招的名分都跟着 `T`。** 因为它们处理的就是**这个柜子里装的那种东西**。尺码一填，两招的名分当场跟着定下来：填字符串，`put` 就只收字符串；填数字，`take` 返回就是数字。\n\n**四、一对空尖括号是省事写法。** `new Bowl<>()` 里那对空尖括号的意思是「**跟左边一样**」—— 左边填的是什么尺码，新量的这个就是什么尺码，不用再抄一遍。\n\n同一个类定义，我们量了一个字符串的、一个数字的 —— 往后装别的尺码，还是这张类定义，一次都不用重画。",
+      "templateId": "java-s2-diy-bowl",
+      "params": {
+        "word": "小黄鱼",
+        "v": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.541Z",
+        "hash": "60ddf855b7d6fa7a"
+      }
+    },
+    {
+      "id": "bank-java-s2-erasure-report-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要当面看看本课最后那件怪事：**两个尺码不同的柜子，居然是「同一种」**。\n\n`main` 里这么走：\n\n1. 拿两个柜子的名分：一个尺码填**字符串**、一个尺码填**装数字的那张类定义**；\n2. 字符串那个塞进 `数据`，数字那个塞进 `6`；\n3. 印三行：\n   - `两个柜子是同一种吗：` + 「**这两个柜子「是哪种柜子」是不是同一个**」；\n   - `项链那个里第一件是 ` + 字符串那个的第一格；\n   - `数字那个里第一件加一是 ` + （数字那个的第一格 **加一**）。\n\n最后那一处注意：**取出来直接就能加**，我们不用自己贴标签。\n\n这一题**不需要输入**，程序自己就能跑。",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> names = new ArrayList<>();\n        List<Integer> nums = new ArrayList<>();\n        names.add(\"数据\");\n        nums.add(6);\n        System.out.println(\"两个柜子是同一种吗：\" + (names.getClass() == nums.getClass()));\n        System.out.println(\"项链那个里第一件是 \" + names.get(0));\n        System.out.println(\"数字那个里第一件加一是 \" + (nums.get(0) + 1));\n    }\n}\n",
+      "expectedOutput": "两个柜子是同一种吗：true\n项链那个里第一件是 数据\n数字那个里第一件加一是 7",
+      "stdin": null,
+      "explanation": "这题三分之二在练「填了尺码的好处」，三分之一在演那件怪事。\n\n**一、`nums.get(0) + 1` 直接就能算。** 数字那个柜子的尺码填的是装数字的那张类定义，所以 `get` 返回的东西**本来就知道自己是数字** —— 加法直接做，我们不用写那一笔 `(Integer)` 去作保。这就是填尺码最实在的好处之一。\n\n**二、`getClass()` 和「是不是同一个」。** `names.getClass()` 问的是「**这个柜子是哪种柜子**」，`==` 问的是「**两边是不是同一个**」。两个合在一起：两个柜子「是哪种柜子」这一问，答案居然是一样的。\n\n**三、为什么会这样 —— 类型擦除。** 尺码是给**编译器在编译的时候**看的。翻完之后，尖括号里的东西**被擦掉了** —— 跑起来的时候，两个柜子都只是「一个 `ArrayList`」，柜子自己**不记得**里面保存的是什么。所以那一行印出来是 `true`。\n\n（这一处要说清楚：那一对小括号不能省。`+` 比比较先算，不加括号编译器会把前面那串字也一起拿进去比，意思就全变了。）\n\n**四、照着这一条记两件事。**\n\n- **好处**：带尖括号的名分**不会在跑的时候多花力气**，尺码只在翻译阶段站那一班岗。\n- **要留心的**：跑起来之后就**问不出**「这个柜子里保存的是什么尺码」了。所以 `new T()`、`new T[10]` 这种「跑的时候还想用尺码」的写法**根本不合法**，写出来编译器当场就拦 —— 那是它本来就做不到的事。\n\n一句话收尾：**尺码是翻译阶段站岗的，不是跑起来还揣在兜里的**。",
+      "templateId": "java-s2-erasure-report",
+      "params": {
+        "word": "数据",
+        "v": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.541Z",
+        "hash": "0f46af6e6e078f78"
+      }
+    },
+    {
+      "id": "bank-java-s2-erasure-report-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要当面看看本课最后那件怪事：**两个尺码不同的柜子，居然是「同一种」**。\n\n`main` 里这么走：\n\n1. 拿两个柜子的名分：一个尺码填**字符串**、一个尺码填**装数字的那张类定义**；\n2. 字符串那个塞进 `数据`，数字那个塞进 `7`；\n3. 印三行：\n   - `两个柜子是同一种吗：` + 「**这两个柜子「是哪种柜子」是不是同一个**」；\n   - `项链那个里第一件是 ` + 字符串那个的第一格；\n   - `数字那个里第一件加一是 ` + （数字那个的第一格 **加一**）。\n\n最后那一处注意：**取出来直接就能加**，我们不用自己贴标签。\n\n这一题**不需要输入**，程序自己就能跑。",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> names = new ArrayList<>();\n        List<Integer> nums = new ArrayList<>();\n        names.add(\"数据\");\n        nums.add(7);\n        System.out.println(\"两个柜子是同一种吗：\" + (names.getClass() == nums.getClass()));\n        System.out.println(\"项链那个里第一件是 \" + names.get(0));\n        System.out.println(\"数字那个里第一件加一是 \" + (nums.get(0) + 1));\n    }\n}\n",
+      "expectedOutput": "两个柜子是同一种吗：true\n项链那个里第一件是 数据\n数字那个里第一件加一是 8",
+      "stdin": null,
+      "explanation": "这题三分之二在练「填了尺码的好处」，三分之一在演那件怪事。\n\n**一、`nums.get(0) + 1` 直接就能算。** 数字那个柜子的尺码填的是装数字的那张类定义，所以 `get` 返回的东西**本来就知道自己是数字** —— 加法直接做，我们不用写那一笔 `(Integer)` 去作保。这就是填尺码最实在的好处之一。\n\n**二、`getClass()` 和「是不是同一个」。** `names.getClass()` 问的是「**这个柜子是哪种柜子**」，`==` 问的是「**两边是不是同一个**」。两个合在一起：两个柜子「是哪种柜子」这一问，答案居然是一样的。\n\n**三、为什么会这样 —— 类型擦除。** 尺码是给**编译器在编译的时候**看的。翻完之后，尖括号里的东西**被擦掉了** —— 跑起来的时候，两个柜子都只是「一个 `ArrayList`」，柜子自己**不记得**里面保存的是什么。所以那一行印出来是 `true`。\n\n（这一处要说清楚：那一对小括号不能省。`+` 比比较先算，不加括号编译器会把前面那串字也一起拿进去比，意思就全变了。）\n\n**四、照着这一条记两件事。**\n\n- **好处**：带尖括号的名分**不会在跑的时候多花力气**，尺码只在翻译阶段站那一班岗。\n- **要留心的**：跑起来之后就**问不出**「这个柜子里保存的是什么尺码」了。所以 `new T()`、`new T[10]` 这种「跑的时候还想用尺码」的写法**根本不合法**，写出来编译器当场就拦 —— 那是它本来就做不到的事。\n\n一句话收尾：**尺码是翻译阶段站岗的，不是跑起来还揣在兜里的**。",
+      "templateId": "java-s2-erasure-report",
+      "params": {
+        "word": "数据",
+        "v": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.541Z",
+        "hash": "4196b60db8de9e52"
+      }
+    },
+    {
+      "id": "bank-java-s2-erasure-report-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要当面看看本课最后那件怪事：**两个尺码不同的柜子，居然是「同一种」**。\n\n`main` 里这么走：\n\n1. 拿两个柜子的名分：一个尺码填**字符串**、一个尺码填**装数字的那张类定义**；\n2. 字符串那个塞进 `小黄鱼`，数字那个塞进 `6`；\n3. 印三行：\n   - `两个柜子是同一种吗：` + 「**这两个柜子「是哪种柜子」是不是同一个**」；\n   - `项链那个里第一件是 ` + 字符串那个的第一格；\n   - `数字那个里第一件加一是 ` + （数字那个的第一格 **加一**）。\n\n最后那一处注意：**取出来直接就能加**，我们不用自己贴标签。\n\n这一题**不需要输入**，程序自己就能跑。",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> names = new ArrayList<>();\n        List<Integer> nums = new ArrayList<>();\n        names.add(\"小黄鱼\");\n        nums.add(6);\n        System.out.println(\"两个柜子是同一种吗：\" + (names.getClass() == nums.getClass()));\n        System.out.println(\"项链那个里第一件是 \" + names.get(0));\n        System.out.println(\"数字那个里第一件加一是 \" + (nums.get(0) + 1));\n    }\n}\n",
+      "expectedOutput": "两个柜子是同一种吗：true\n项链那个里第一件是 小黄鱼\n数字那个里第一件加一是 7",
+      "stdin": null,
+      "explanation": "这题三分之二在练「填了尺码的好处」，三分之一在演那件怪事。\n\n**一、`nums.get(0) + 1` 直接就能算。** 数字那个柜子的尺码填的是装数字的那张类定义，所以 `get` 返回的东西**本来就知道自己是数字** —— 加法直接做，我们不用写那一笔 `(Integer)` 去作保。这就是填尺码最实在的好处之一。\n\n**二、`getClass()` 和「是不是同一个」。** `names.getClass()` 问的是「**这个柜子是哪种柜子**」，`==` 问的是「**两边是不是同一个**」。两个合在一起：两个柜子「是哪种柜子」这一问，答案居然是一样的。\n\n**三、为什么会这样 —— 类型擦除。** 尺码是给**编译器在编译的时候**看的。翻完之后，尖括号里的东西**被擦掉了** —— 跑起来的时候，两个柜子都只是「一个 `ArrayList`」，柜子自己**不记得**里面保存的是什么。所以那一行印出来是 `true`。\n\n（这一处要说清楚：那一对小括号不能省。`+` 比比较先算，不加括号编译器会把前面那串字也一起拿进去比，意思就全变了。）\n\n**四、照着这一条记两件事。**\n\n- **好处**：带尖括号的名分**不会在跑的时候多花力气**，尺码只在翻译阶段站那一班岗。\n- **要留心的**：跑起来之后就**问不出**「这个柜子里保存的是什么尺码」了。所以 `new T()`、`new T[10]` 这种「跑的时候还想用尺码」的写法**根本不合法**，写出来编译器当场就拦 —— 那是它本来就做不到的事。\n\n一句话收尾：**尺码是翻译阶段站岗的，不是跑起来还揣在兜里的**。",
+      "templateId": "java-s2-erasure-report",
+      "params": {
+        "word": "小黄鱼",
+        "v": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "c007d4b4b1022a13"
+      }
+    },
+    {
+      "id": "bank-java-s2-erasure-report-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "我们要当面看看本课最后那件怪事：**两个尺码不同的柜子，居然是「同一种」**。\n\n`main` 里这么走：\n\n1. 拿两个柜子的名分：一个尺码填**字符串**、一个尺码填**装数字的那张类定义**；\n2. 字符串那个塞进 `小黄鱼`，数字那个塞进 `7`；\n3. 印三行：\n   - `两个柜子是同一种吗：` + 「**这两个柜子「是哪种柜子」是不是同一个**」；\n   - `项链那个里第一件是 ` + 字符串那个的第一格；\n   - `数字那个里第一件加一是 ` + （数字那个的第一格 **加一**）。\n\n最后那一处注意：**取出来直接就能加**，我们不用自己贴标签。\n\n这一题**不需要输入**，程序自己就能跑。",
+      "starter": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> names = new ArrayList<>();\n        List<Integer> nums = new ArrayList<>();\n        names.add(\"小黄鱼\");\n        nums.add(7);\n        System.out.println(\"两个柜子是同一种吗：\" + (names.getClass() == nums.getClass()));\n        System.out.println(\"项链那个里第一件是 \" + names.get(0));\n        System.out.println(\"数字那个里第一件加一是 \" + (nums.get(0) + 1));\n    }\n}\n",
+      "expectedOutput": "两个柜子是同一种吗：true\n项链那个里第一件是 小黄鱼\n数字那个里第一件加一是 8",
+      "stdin": null,
+      "explanation": "这题三分之二在练「填了尺码的好处」，三分之一在演那件怪事。\n\n**一、`nums.get(0) + 1` 直接就能算。** 数字那个柜子的尺码填的是装数字的那张类定义，所以 `get` 返回的东西**本来就知道自己是数字** —— 加法直接做，我们不用写那一笔 `(Integer)` 去作保。这就是填尺码最实在的好处之一。\n\n**二、`getClass()` 和「是不是同一个」。** `names.getClass()` 问的是「**这个柜子是哪种柜子**」，`==` 问的是「**两边是不是同一个**」。两个合在一起：两个柜子「是哪种柜子」这一问，答案居然是一样的。\n\n**三、为什么会这样 —— 类型擦除。** 尺码是给**编译器在编译的时候**看的。翻完之后，尖括号里的东西**被擦掉了** —— 跑起来的时候，两个柜子都只是「一个 `ArrayList`」，柜子自己**不记得**里面保存的是什么。所以那一行印出来是 `true`。\n\n（这一处要说清楚：那一对小括号不能省。`+` 比比较先算，不加括号编译器会把前面那串字也一起拿进去比，意思就全变了。）\n\n**四、照着这一条记两件事。**\n\n- **好处**：带尖括号的名分**不会在跑的时候多花力气**，尺码只在翻译阶段站那一班岗。\n- **要留心的**：跑起来之后就**问不出**「这个柜子里保存的是什么尺码」了。所以 `new T()`、`new T[10]` 这种「跑的时候还想用尺码」的写法**根本不合法**，写出来编译器当场就拦 —— 那是它本来就做不到的事。\n\n一句话收尾：**尺码是翻译阶段站岗的，不是跑起来还揣在兜里的**。",
+      "templateId": "java-s2-erasure-report",
+      "params": {
+        "word": "小黄鱼",
+        "v": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "67088cc5a3f97c25"
+      }
+    },
+    {
+      "id": "bank-java-s2-generic-bowl-naked-type-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们照着自己画的类定义量了一个柜子，尺码想填「装数字的」—— 可编译器把源代码退回来了，一个字都没让跑，连错误信息指着的地方都是我们写尺码的那一处。\n\n请你帮我们改好，规矩是：**只改那对尖括号里填的尺码**，别的地方一个字都不许动。\n\n改好之后，程序该印出这一行：\n\n```text\n柜子里是 6\n```\n\n尖括号里那一块该填什么，是这一课的一条硬规矩。",
+      "brokenCode": "class Bowl<T> {\n    private T thing;\n\n    void put(T thing) {\n        this.thing = thing;\n    }\n\n    T take() {\n        return thing;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Bowl<int> num = new Bowl<>();\n        num.put(6);\n        System.out.println(\"柜子里是 \" + num.take());\n    }\n}\n",
+      "referenceFix": "class Bowl<T> {\n    private T thing;\n\n    void put(T thing) {\n        this.thing = thing;\n    }\n\n    T take() {\n        return thing;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Bowl<Integer> num = new Bowl<>();\n        num.put(6);\n        System.out.println(\"柜子里是 \" + num.take());\n    }\n}\n",
+      "expectedOutput": "柜子里是 6",
+      "stdin": null,
+      "explanation": "这一题属于**过不了源代码那一关**，而且编译器指的位置特别准 —— 就是尖括号里那块尺码：\n\n```text\nunexpected type\n  required: reference\n  found:    int\n```\n\n念起来是：**「尖括号里要的是『实例那种』的名分，你填了一块光溜溜的家当，这儿填不进去。」**\n\n那两行提示里，`required: reference` 说的是**这儿要的是一个实例的名分**，`found: int` 说的是**你给的是一块光溜溜的家当**。两边对不上，所以编译器只说了 `unexpected type`（「这儿放的不是我们要的那类东西」）。\n\n这就是课上那条硬规矩：\n\n> **尖括号里只能填「实例那种」**（类定义、字符串、装数字的类定义……），**不能填光溜溜的家当。**\n\n光溜溜的 `int` 装不进尖括号，得填**装数字的那张类定义** `Integer`：\n\n```java\nBowl<Integer> num = new Bowl<>();\n```\n\n**为什么尖括号里非认实例不可？** 想想本课最后一件事就明白了：尺码是给**编译器在编译的时候**看的，翻完就被**擦掉**。擦掉之后，柜子自己**不记得**里面保存的是什么 —— 而光溜溜的家当是**不能空着**的，它必须有个实实在在的数。一件「必须有数」的东西，撑不起一块会在翻完之后被擦掉的尺码，所以尖括号只好只认实例。\n\n顺带记一句：**尺码填了 `Integer` 之后，`put` 收什么、`take` 返回什么就都跟着这块尺码走** —— 这一题里 `num.put(6)` 塞进去的光溜溜的数字，编译器会顺手根据类创建实例口袋把它赋值（上一课的装箱），`take` 返回的那个口袋里就是它。",
+      "templateId": "java-s2-generic-bowl-naked-type",
+      "params": {
+        "v": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "ee1b86d57a0d6f74"
+      }
+    },
+    {
+      "id": "bank-java-s2-generic-bowl-naked-type-002",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们照着自己画的类定义量了一个柜子，尺码想填「装数字的」—— 可编译器把源代码退回来了，一个字都没让跑，连错误信息指着的地方都是我们写尺码的那一处。\n\n请你帮我们改好，规矩是：**只改那对尖括号里填的尺码**，别的地方一个字都不许动。\n\n改好之后，程序该印出这一行：\n\n```text\n柜子里是 8\n```\n\n尖括号里那一块该填什么，是这一课的一条硬规矩。",
+      "brokenCode": "class Bowl<T> {\n    private T thing;\n\n    void put(T thing) {\n        this.thing = thing;\n    }\n\n    T take() {\n        return thing;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Bowl<int> num = new Bowl<>();\n        num.put(8);\n        System.out.println(\"柜子里是 \" + num.take());\n    }\n}\n",
+      "referenceFix": "class Bowl<T> {\n    private T thing;\n\n    void put(T thing) {\n        this.thing = thing;\n    }\n\n    T take() {\n        return thing;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Bowl<Integer> num = new Bowl<>();\n        num.put(8);\n        System.out.println(\"柜子里是 \" + num.take());\n    }\n}\n",
+      "expectedOutput": "柜子里是 8",
+      "stdin": null,
+      "explanation": "这一题属于**过不了源代码那一关**，而且编译器指的位置特别准 —— 就是尖括号里那块尺码：\n\n```text\nunexpected type\n  required: reference\n  found:    int\n```\n\n念起来是：**「尖括号里要的是『实例那种』的名分，你填了一块光溜溜的家当，这儿填不进去。」**\n\n那两行提示里，`required: reference` 说的是**这儿要的是一个实例的名分**，`found: int` 说的是**你给的是一块光溜溜的家当**。两边对不上，所以编译器只说了 `unexpected type`（「这儿放的不是我们要的那类东西」）。\n\n这就是课上那条硬规矩：\n\n> **尖括号里只能填「实例那种」**（类定义、字符串、装数字的类定义……），**不能填光溜溜的家当。**\n\n光溜溜的 `int` 装不进尖括号，得填**装数字的那张类定义** `Integer`：\n\n```java\nBowl<Integer> num = new Bowl<>();\n```\n\n**为什么尖括号里非认实例不可？** 想想本课最后一件事就明白了：尺码是给**编译器在编译的时候**看的，翻完就被**擦掉**。擦掉之后，柜子自己**不记得**里面保存的是什么 —— 而光溜溜的家当是**不能空着**的，它必须有个实实在在的数。一件「必须有数」的东西，撑不起一块会在翻完之后被擦掉的尺码，所以尖括号只好只认实例。\n\n顺带记一句：**尺码填了 `Integer` 之后，`put` 收什么、`take` 返回什么就都跟着这块尺码走** —— 这一题里 `num.put(8)` 塞进去的光溜溜的数字，编译器会顺手根据类创建实例口袋把它赋值（上一课的装箱），`take` 返回的那个口袋里就是它。",
+      "templateId": "java-s2-generic-bowl-naked-type",
+      "params": {
+        "v": 8
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "e918f5c99b002fd2"
+      }
+    },
+    {
+      "id": "bank-java-s2-generic-method-twice-000",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义能量体裁衣，方法也能。\n\n请你写一个方法，名字就叫 `printTwice`，规矩是：\n\n1. **方法名字前面**挂一对尖括号，里面写一个字母当这块空尺码（挑哪个字母都行，但**前后要一致**）；\n2. 这一个方法收**一件**东西，把同一件东西**连印两遍**（两行，一模一样）；\n3. 这一个方法**不返回任何东西**。\n\n然后在 `main` 里喂两次：\n\n1. 先喂一条字符串 `数据`；\n2. 再喂一个数字 `6`。\n\n同一个方法伺候两样东西，`数据` 那一次印两行、`6` 那一次印两行，一共四行。这一题**不需要输入**，程序自己就能跑。",
+      "starter": "public class Main {\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static <E> void printTwice(E item) {\n        System.out.println(item);\n        System.out.println(item);\n    }\n\n    public static void main(String[] args) {\n        printTwice(\"数据\");\n        printTwice(6);\n    }\n}\n",
+      "expectedOutput": "数据\n数据\n6\n6",
+      "stdin": null,
+      "explanation": "这题练的是本课第三节那件事：**方法也能量体裁衣**。\n\n**一、那对尖括号写在哪儿。** 看这一个方法的写法：\n\n```java\nstatic <E> void printTwice(E item) {\n```\n\n那对尖括号写在**方法名字的前面**、**返回什么之前**。里面那个 `E` 是这一个方法的空尺码 —— 收进来的 `item` 和方法里用到它的地方，都跟着这块尺码走。\n\n顺序上有个容易写错的地方：尖括号必须夹在**方法名字和「返回什么」中间**。我们要是顺手把它写在方法名字后面（`printTwice<E>` 那种写法），或者写到「返回什么」后面去，编译器都会拦下来。记牢：**先挂尺码，再说返回什么**。\n\n**二、`E` 这个字母随便挑，但前后得一致。** 这节课里用 `T` 当类定义上的尺码、用 `E` 当方法上的尺码，那是大家约定俗成的叫法，我们换个字母也没人管。但要紧的是**一旦起名就前后一致** —— 尖括号里写 `E`，收东西那一处就得写 `E`；半路换成 `X`，编译器就对不上号了。\n\n**三、尺码是当场定的。** `printTwice(\"数据\")` 喂一条字符串进去，`E` 当场定成字符串；`printTwice(6)` 喂一个数字进去，`E` 当场定成**装数字的那张类定义**（数字装箱也在悄悄干活）。我们一个字没多写，两样东西都伺候上了 —— 这就是「**不用为每样东西各写一个方法**」。\n\n**四、`void` 就是「不返回任何东西」。** 这一个方法只印东西、不往回返回，所以那一位写 `void`。这一题的两行都印在方法自己状态里，`main` 里只管喂。\n\n顺带把这一课的三样东西摆在一起：**类定义上留空尺码**（`class Bowl<T>`）、**方法上留空尺码**（`static <E> ...`）、**填了尺码做错了当场拦** —— 都是同一件事的不同用法。",
+      "templateId": "java-s2-generic-method-twice",
+      "params": {
+        "word": "数据",
+        "v": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "628cbfc2a11fcfcc"
+      }
+    },
+    {
+      "id": "bank-java-s2-generic-method-twice-001",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义能量体裁衣，方法也能。\n\n请你写一个方法，名字就叫 `printTwice`，规矩是：\n\n1. **方法名字前面**挂一对尖括号，里面写一个字母当这块空尺码（挑哪个字母都行，但**前后要一致**）；\n2. 这一个方法收**一件**东西，把同一件东西**连印两遍**（两行，一模一样）；\n3. 这一个方法**不返回任何东西**。\n\n然后在 `main` 里喂两次：\n\n1. 先喂一条字符串 `数据`；\n2. 再喂一个数字 `7`。\n\n同一个方法伺候两样东西，`数据` 那一次印两行、`7` 那一次印两行，一共四行。这一题**不需要输入**，程序自己就能跑。",
+      "starter": "public class Main {\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static <E> void printTwice(E item) {\n        System.out.println(item);\n        System.out.println(item);\n    }\n\n    public static void main(String[] args) {\n        printTwice(\"数据\");\n        printTwice(7);\n    }\n}\n",
+      "expectedOutput": "数据\n数据\n7\n7",
+      "stdin": null,
+      "explanation": "这题练的是本课第三节那件事：**方法也能量体裁衣**。\n\n**一、那对尖括号写在哪儿。** 看这一个方法的写法：\n\n```java\nstatic <E> void printTwice(E item) {\n```\n\n那对尖括号写在**方法名字的前面**、**返回什么之前**。里面那个 `E` 是这一个方法的空尺码 —— 收进来的 `item` 和方法里用到它的地方，都跟着这块尺码走。\n\n顺序上有个容易写错的地方：尖括号必须夹在**方法名字和「返回什么」中间**。我们要是顺手把它写在方法名字后面（`printTwice<E>` 那种写法），或者写到「返回什么」后面去，编译器都会拦下来。记牢：**先挂尺码，再说返回什么**。\n\n**二、`E` 这个字母随便挑，但前后得一致。** 这节课里用 `T` 当类定义上的尺码、用 `E` 当方法上的尺码，那是大家约定俗成的叫法，我们换个字母也没人管。但要紧的是**一旦起名就前后一致** —— 尖括号里写 `E`，收东西那一处就得写 `E`；半路换成 `X`，编译器就对不上号了。\n\n**三、尺码是当场定的。** `printTwice(\"数据\")` 喂一条字符串进去，`E` 当场定成字符串；`printTwice(7)` 喂一个数字进去，`E` 当场定成**装数字的那张类定义**（数字装箱也在悄悄干活）。我们一个字没多写，两样东西都伺候上了 —— 这就是「**不用为每样东西各写一个方法**」。\n\n**四、`void` 就是「不返回任何东西」。** 这一个方法只印东西、不往回返回，所以那一位写 `void`。这一题的两行都印在方法自己状态里，`main` 里只管喂。\n\n顺带把这一课的三样东西摆在一起：**类定义上留空尺码**（`class Bowl<T>`）、**方法上留空尺码**（`static <E> ...`）、**填了尺码做错了当场拦** —— 都是同一件事的不同用法。",
+      "templateId": "java-s2-generic-method-twice",
+      "params": {
+        "word": "数据",
+        "v": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "55edb414b64908a1"
+      }
+    },
+    {
+      "id": "bank-java-s2-generic-method-twice-002",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义能量体裁衣，方法也能。\n\n请你写一个方法，名字就叫 `printTwice`，规矩是：\n\n1. **方法名字前面**挂一对尖括号，里面写一个字母当这块空尺码（挑哪个字母都行，但**前后要一致**）；\n2. 这一个方法收**一件**东西，把同一件东西**连印两遍**（两行，一模一样）；\n3. 这一个方法**不返回任何东西**。\n\n然后在 `main` 里喂两次：\n\n1. 先喂一条字符串 `小黄鱼`；\n2. 再喂一个数字 `6`。\n\n同一个方法伺候两样东西，`小黄鱼` 那一次印两行、`6` 那一次印两行，一共四行。这一题**不需要输入**，程序自己就能跑。",
+      "starter": "public class Main {\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static <E> void printTwice(E item) {\n        System.out.println(item);\n        System.out.println(item);\n    }\n\n    public static void main(String[] args) {\n        printTwice(\"小黄鱼\");\n        printTwice(6);\n    }\n}\n",
+      "expectedOutput": "小黄鱼\n小黄鱼\n6\n6",
+      "stdin": null,
+      "explanation": "这题练的是本课第三节那件事：**方法也能量体裁衣**。\n\n**一、那对尖括号写在哪儿。** 看这一个方法的写法：\n\n```java\nstatic <E> void printTwice(E item) {\n```\n\n那对尖括号写在**方法名字的前面**、**返回什么之前**。里面那个 `E` 是这一个方法的空尺码 —— 收进来的 `item` 和方法里用到它的地方，都跟着这块尺码走。\n\n顺序上有个容易写错的地方：尖括号必须夹在**方法名字和「返回什么」中间**。我们要是顺手把它写在方法名字后面（`printTwice<E>` 那种写法），或者写到「返回什么」后面去，编译器都会拦下来。记牢：**先挂尺码，再说返回什么**。\n\n**二、`E` 这个字母随便挑，但前后得一致。** 这节课里用 `T` 当类定义上的尺码、用 `E` 当方法上的尺码，那是大家约定俗成的叫法，我们换个字母也没人管。但要紧的是**一旦起名就前后一致** —— 尖括号里写 `E`，收东西那一处就得写 `E`；半路换成 `X`，编译器就对不上号了。\n\n**三、尺码是当场定的。** `printTwice(\"小黄鱼\")` 喂一条字符串进去，`E` 当场定成字符串；`printTwice(6)` 喂一个数字进去，`E` 当场定成**装数字的那张类定义**（数字装箱也在悄悄干活）。我们一个字没多写，两样东西都伺候上了 —— 这就是「**不用为每样东西各写一个方法**」。\n\n**四、`void` 就是「不返回任何东西」。** 这一个方法只印东西、不往回返回，所以那一位写 `void`。这一题的两行都印在方法自己状态里，`main` 里只管喂。\n\n顺带把这一课的三样东西摆在一起：**类定义上留空尺码**（`class Bowl<T>`）、**方法上留空尺码**（`static <E> ...`）、**填了尺码做错了当场拦** —— 都是同一件事的不同用法。",
+      "templateId": "java-s2-generic-method-twice",
+      "params": {
+        "word": "小黄鱼",
+        "v": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "2639a8d3a055bf17"
+      }
+    },
+    {
+      "id": "bank-java-s2-generic-method-twice-003",
+      "type": "codewrite",
+      "lang": "java",
+      "stem": "类定义能量体裁衣，方法也能。\n\n请你写一个方法，名字就叫 `printTwice`，规矩是：\n\n1. **方法名字前面**挂一对尖括号，里面写一个字母当这块空尺码（挑哪个字母都行，但**前后要一致**）；\n2. 这一个方法收**一件**东西，把同一件东西**连印两遍**（两行，一模一样）；\n3. 这一个方法**不返回任何东西**。\n\n然后在 `main` 里喂两次：\n\n1. 先喂一条字符串 `小黄鱼`；\n2. 再喂一个数字 `7`。\n\n同一个方法伺候两样东西，`小黄鱼` 那一次印两行、`7` 那一次印两行，一共四行。这一题**不需要输入**，程序自己就能跑。",
+      "starter": "public class Main {\n\n    public static void main(String[] args) {\n\n    }\n}\n",
+      "referenceSolution": "public class Main {\n    static <E> void printTwice(E item) {\n        System.out.println(item);\n        System.out.println(item);\n    }\n\n    public static void main(String[] args) {\n        printTwice(\"小黄鱼\");\n        printTwice(7);\n    }\n}\n",
+      "expectedOutput": "小黄鱼\n小黄鱼\n7\n7",
+      "stdin": null,
+      "explanation": "这题练的是本课第三节那件事：**方法也能量体裁衣**。\n\n**一、那对尖括号写在哪儿。** 看这一个方法的写法：\n\n```java\nstatic <E> void printTwice(E item) {\n```\n\n那对尖括号写在**方法名字的前面**、**返回什么之前**。里面那个 `E` 是这一个方法的空尺码 —— 收进来的 `item` 和方法里用到它的地方，都跟着这块尺码走。\n\n顺序上有个容易写错的地方：尖括号必须夹在**方法名字和「返回什么」中间**。我们要是顺手把它写在方法名字后面（`printTwice<E>` 那种写法），或者写到「返回什么」后面去，编译器都会拦下来。记牢：**先挂尺码，再说返回什么**。\n\n**二、`E` 这个字母随便挑，但前后得一致。** 这节课里用 `T` 当类定义上的尺码、用 `E` 当方法上的尺码，那是大家约定俗成的叫法，我们换个字母也没人管。但要紧的是**一旦起名就前后一致** —— 尖括号里写 `E`，收东西那一处就得写 `E`；半路换成 `X`，编译器就对不上号了。\n\n**三、尺码是当场定的。** `printTwice(\"小黄鱼\")` 喂一条字符串进去，`E` 当场定成字符串；`printTwice(7)` 喂一个数字进去，`E` 当场定成**装数字的那张类定义**（数字装箱也在悄悄干活）。我们一个字没多写，两样东西都伺候上了 —— 这就是「**不用为每样东西各写一个方法**」。\n\n**四、`void` 就是「不返回任何东西」。** 这一个方法只印东西、不往回返回，所以那一位写 `void`。这一题的两行都印在方法自己状态里，`main` 里只管喂。\n\n顺带把这一课的三样东西摆在一起：**类定义上留空尺码**（`class Bowl<T>`）、**方法上留空尺码**（`static <E> ...`）、**填了尺码做错了当场拦** —— 都是同一件事的不同用法。",
+      "templateId": "java-s2-generic-method-twice",
+      "params": {
+        "word": "小黄鱼",
+        "v": 7
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "99781deaba9b1562"
+      }
+    },
+    {
+      "id": "bank-java-s2-generic-wrong-scale-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这个柜子要保存的是**数字**，可名分那一行尖括号里的尺码填错了 —— 编译器当场就把源代码拦了下来，指着我们塞东西的那一行。\n\n请你帮我们改好，规矩是：\n\n1. **塞东西那一行一个字都不许动**（我们就是要塞那个数字）；\n2. 该改的是**名分那一行尖括号里的尺码**。\n\n改好之后，程序该印出这一行：\n\n```text\n第一格是 6\n```\n\n这题要体会的正是填尺码最值钱的地方：**错不再等到跑起来才炸，翻译源代码的时候就拦下了**。",
+      "brokenCode": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> nums = new ArrayList<>();\n        nums.add(6);\n        System.out.println(\"第一格是 \" + nums.get(0));\n    }\n}\n",
+      "referenceFix": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>();\n        nums.add(6);\n        System.out.println(\"第一格是 \" + nums.get(0));\n    }\n}\n",
+      "expectedOutput": "第一格是 6",
+      "stdin": null,
+      "explanation": "这一题是**好事**，值得我们高兴一下。\n\n编译器拦下来说的是：\n\n```text\nincompatible types: int cannot be converted to String\n```\n\n念起来是：**「这柜子填的尺码是字符串，你塞进来一个数字，尺寸对不上。」** 源代码末尾还跟了一行提示：\n\n```text\nNote: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n```\n\n那是编译器嫌候选说法太多、省着说的意思，**不是我们的错**。\n\n**为什么说这是好事？** 把本课第一节那个错摆在一起看就清楚了：\n\n| | 不填尺码 | 填了尺码 |\n|---|---|---|\n| 塞错东西 | **照塞不误**，什么都不说 | **翻译源代码的时候当场拦下** |\n| 取出来用 | 得自己贴标签，贴错就跑到那一步才炸 | 直接就是那个尺码，**不用贴标签** |\n| 什么时候发现错 | 跑到那一行 | 翻译源代码的时候 |\n\n同一件错事（往字符串的柜子里塞数字），不填尺码的时候**一点动静都没有**，非得等程序跑到取出来那一步才翻车；填了尺码，**在源代码那一关就拦住了** —— 我们连一次运行都不用白跑。\n\n**正路就是把尺码改成装数字的那张类定义：**\n\n```java\nList<Integer> nums = new ArrayList<>();\n```\n\n尖括号里那两块名称是**这份名分随身带着的尺码** —— 第一块说柜子该装什么，`new` 后面那对空尖括号是省事写法，意思是「跟左边一样」。改了这一处，塞数字就对得上了。\n\n（顺带记一句本课的硬规矩：尖括号里**只认实例那种**。光溜溜的 `int` 填不进去，必须填装数字的那张类定义 `Integer` —— 名分那一行要是写成 `List<int>`，编译器会另说一句话拦下来。）",
+      "templateId": "java-s2-generic-wrong-scale",
+      "params": {
+        "v": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "da25793f5685ae14"
+      }
+    },
+    {
+      "id": "bank-java-s2-generic-wrong-scale-002",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们这个柜子要保存的是**数字**，可名分那一行尖括号里的尺码填错了 —— 编译器当场就把源代码拦了下来，指着我们塞东西的那一行。\n\n请你帮我们改好，规矩是：\n\n1. **塞东西那一行一个字都不许动**（我们就是要塞那个数字）；\n2. 该改的是**名分那一行尖括号里的尺码**。\n\n改好之后，程序该印出这一行：\n\n```text\n第一格是 8\n```\n\n这题要体会的正是填尺码最值钱的地方：**错不再等到跑起来才炸，翻译源代码的时候就拦下了**。",
+      "brokenCode": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> nums = new ArrayList<>();\n        nums.add(8);\n        System.out.println(\"第一格是 \" + nums.get(0));\n    }\n}\n",
+      "referenceFix": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = new ArrayList<>();\n        nums.add(8);\n        System.out.println(\"第一格是 \" + nums.get(0));\n    }\n}\n",
+      "expectedOutput": "第一格是 8",
+      "stdin": null,
+      "explanation": "这一题是**好事**，值得我们高兴一下。\n\n编译器拦下来说的是：\n\n```text\nincompatible types: int cannot be converted to String\n```\n\n念起来是：**「这柜子填的尺码是字符串，你塞进来一个数字，尺寸对不上。」** 源代码末尾还跟了一行提示：\n\n```text\nNote: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n```\n\n那是编译器嫌候选说法太多、省着说的意思，**不是我们的错**。\n\n**为什么说这是好事？** 把本课第一节那个错摆在一起看就清楚了：\n\n| | 不填尺码 | 填了尺码 |\n|---|---|---|\n| 塞错东西 | **照塞不误**，什么都不说 | **翻译源代码的时候当场拦下** |\n| 取出来用 | 得自己贴标签，贴错就跑到那一步才炸 | 直接就是那个尺码，**不用贴标签** |\n| 什么时候发现错 | 跑到那一行 | 翻译源代码的时候 |\n\n同一件错事（往字符串的柜子里塞数字），不填尺码的时候**一点动静都没有**，非得等程序跑到取出来那一步才翻车；填了尺码，**在源代码那一关就拦住了** —— 我们连一次运行都不用白跑。\n\n**正路就是把尺码改成装数字的那张类定义：**\n\n```java\nList<Integer> nums = new ArrayList<>();\n```\n\n尖括号里那两块名称是**这份名分随身带着的尺码** —— 第一块说柜子该装什么，`new` 后面那对空尖括号是省事写法，意思是「跟左边一样」。改了这一处，塞数字就对得上了。\n\n（顺带记一句本课的硬规矩：尖括号里**只认实例那种**。光溜溜的 `int` 填不进去，必须填装数字的那张类定义 `Integer` —— 名分那一行要是写成 `List<int>`，编译器会另说一句话拦下来。）",
+      "templateId": "java-s2-generic-wrong-scale",
+      "params": {
+        "v": 8
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "5d1c295f62ee7334"
+      }
+    },
+    {
+      "id": "bank-java-s2-naked-pocket-cast-000",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们摆了一个**没填尺码**的口袋，往里塞了一条字符串，取出来的时候自己贴了个「数字」的标签 —— 程序跑起来了，可屏幕上冒出来的是**一大段错误信息**。\n\n请你帮我们改好，规矩是**按课上的正路走**：\n\n1. 给这个口袋**填上尺码**，尺码就填「装数字的那张类定义」；\n2. 塞进去的换成数字 `6`；\n3. 取出来的时候**别再自己贴标签**，让抽屉量出来的尺码替我们作保。\n\n改好之后，程序该印出这一行：\n\n```text\n6\n```\n\n那一处告诉编译器「这个口袋只装数字」的写法，正是本课要练的那一对尖括号。",
+      "brokenCode": "import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList box = new ArrayList();\n        box.add(\"数据\");\n        int n = (Integer) box.get(0);\n        System.out.println(n);\n    }\n}\n",
+      "referenceFix": "import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<Integer> box = new ArrayList<>();\n        box.add(6);\n        int n = box.get(0);\n        System.out.println(n);\n    }\n}\n",
+      "expectedOutput": "6",
+      "stdin": null,
+      "explanation": "这一题是**跑起来才炸**的那一类 —— 源代码那一关它过得干干净净（课上原话：这个错**写的时候看不出来、翻译源代码也不拦**），错误信息是程序跑到那一句才冒出来的：\n\n```text\nException in thread \"main\" java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')\n```\n\n念起来是：**「我们贴上『数字』的标签要把它当数字用，可口袋里保存的是字符串。」**\n\n**一、为什么会走到这一步。** 不填尺码的时候，这个口袋是个**万能口袋**：什么东西都收，因为收进去的时候都当成了 `Object`（万物都能装的那种口袋）。麻烦在后面 —— **取出来的时候我们得自己贴标签**：`(Integer) box.get(0)` 这一笔就是「**我们保证它是数字**」。可口袋里装的明明是字符串，保证落空，**跑到这一步才炸**。\n\n**二、正路是给口袋填上尺码。**\n\n```java\nArrayList<Integer> box = new ArrayList<>();\nbox.add(6);\nint n = box.get(0);\n```\n\n尖括号里那块 `Integer` 就是**这张类定义上空着没填的尺码**，我们把它填成了「装数字的那张类定义」。填完之后：\n\n- 取出来的东西**本来就认得出是数字**，`int n = box.get(0);` 直接就行，**那一笔贴标签的活儿不用我们干了**；\n- 而且**塞错东西的时候编译器当场就拦** —— 我们要是往这个口袋塞一条字符串，源代码那一关就过不去，压根不用等跑到这儿来炸。\n\n**三、尖括号里为什么不能写 `int`。** 这是本课的另一条规矩：**尖括号里只认「实例那种」**。光溜溜的家当（`int` 那种裸类型）填不进去，必须填**装数字的那张类定义** `Integer`。这也是为什么上一课学的那张类定义这么常用。\n\n一句话收个尾：**留一块空尺码，让类定义自己量体裁衣 —— 塞错的早发现，取出来的不用贴标签。**",
+      "templateId": "java-s2-naked-pocket-cast",
+      "params": {
+        "v": 6,
+        "word": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "cfc441b9167c75c8"
+      }
+    },
+    {
+      "id": "bank-java-s2-naked-pocket-cast-005",
+      "type": "codefix",
+      "lang": "java",
+      "stem": "我们摆了一个**没填尺码**的口袋，往里塞了一条字符串，取出来的时候自己贴了个「数字」的标签 —— 程序跑起来了，可屏幕上冒出来的是**一大段错误信息**。\n\n请你帮我们改好，规矩是**按课上的正路走**：\n\n1. 给这个口袋**填上尺码**，尺码就填「装数字的那张类定义」；\n2. 塞进去的换成数字 `8`；\n3. 取出来的时候**别再自己贴标签**，让抽屉量出来的尺码替我们作保。\n\n改好之后，程序该印出这一行：\n\n```text\n8\n```\n\n那一处告诉编译器「这个口袋只装数字」的写法，正是本课要练的那一对尖括号。",
+      "brokenCode": "import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList box = new ArrayList();\n        box.add(\"小黄鱼\");\n        int n = (Integer) box.get(0);\n        System.out.println(n);\n    }\n}\n",
+      "referenceFix": "import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<Integer> box = new ArrayList<>();\n        box.add(8);\n        int n = box.get(0);\n        System.out.println(n);\n    }\n}\n",
+      "expectedOutput": "8",
+      "stdin": null,
+      "explanation": "这一题是**跑起来才炸**的那一类 —— 源代码那一关它过得干干净净（课上原话：这个错**写的时候看不出来、翻译源代码也不拦**），错误信息是程序跑到那一句才冒出来的：\n\n```text\nException in thread \"main\" java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')\n```\n\n念起来是：**「我们贴上『数字』的标签要把它当数字用，可口袋里保存的是字符串。」**\n\n**一、为什么会走到这一步。** 不填尺码的时候，这个口袋是个**万能口袋**：什么东西都收，因为收进去的时候都当成了 `Object`（万物都能装的那种口袋）。麻烦在后面 —— **取出来的时候我们得自己贴标签**：`(Integer) box.get(0)` 这一笔就是「**我们保证它是数字**」。可口袋里装的明明是字符串，保证落空，**跑到这一步才炸**。\n\n**二、正路是给口袋填上尺码。**\n\n```java\nArrayList<Integer> box = new ArrayList<>();\nbox.add(8);\nint n = box.get(0);\n```\n\n尖括号里那块 `Integer` 就是**这张类定义上空着没填的尺码**，我们把它填成了「装数字的那张类定义」。填完之后：\n\n- 取出来的东西**本来就认得出是数字**，`int n = box.get(0);` 直接就行，**那一笔贴标签的活儿不用我们干了**；\n- 而且**塞错东西的时候编译器当场就拦** —— 我们要是往这个口袋塞一条字符串，源代码那一关就过不去，压根不用等跑到这儿来炸。\n\n**三、尖括号里为什么不能写 `int`。** 这是本课的另一条规矩：**尖括号里只认「实例那种」**。光溜溜的家当（`int` 那种裸类型）填不进去，必须填**装数字的那张类定义** `Integer`。这也是为什么上一课学的那张类定义这么常用。\n\n一句话收个尾：**留一块空尺码，让类定义自己量体裁衣 —— 塞错的早发现，取出来的不用贴标签。**",
+      "templateId": "java-s2-naked-pocket-cast",
+      "params": {
+        "v": 8,
+        "word": "小黄鱼"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.542Z",
+        "hash": "2e4b8d27ab12973d"
+      }
+    }
+  ]
+}

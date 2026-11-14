@@ -1,0 +1,40 @@
+{
+  "templateId": "py-s3-join-before-start",
+  "lang": "python",
+  "stage": 3,
+  "lessonId": "python-stage3-03",
+  "type": "codefix",
+  "concept": [
+    "threading.Thread",
+    "start 与 join 的顺序",
+    "join 之前必须先把对象叫起来"
+  ],
+  "instances": 2,
+  "params": {
+    "n1": {
+      "kind": "pick",
+      "values": [
+        3,
+        7
+      ]
+    },
+    "n2": {
+      "kind": "pick",
+      "values": [
+        4,
+        8
+      ]
+    },
+    "n3": {
+      "kind": "pick",
+      "values": [
+        5,
+        6
+      ]
+    }
+  },
+  "stemTemplate": "我们请了三个子对象帮忙：每个子对象管一个元素，把自己那个元素里的数**翻个倍**，写进结果柜里**属于自己**的那一格。最后我们再一格一格输出。\n\n可是这段代码一按运行就**摔了** —— 编译器在屏幕上吐了一串错误信息，柜子里的东西**一个字都没印出来**。你帮我们看看问题出在哪，把它改好。\n\n改好之后，程序应该把三个元素翻倍后的数**各印一行**：先印第一个元素的、再印第二只元素的、最后第三个元素的。",
+  "brokenCodeTemplate": "import threading\n\n元素 = [{n1}, {n2}, {n3}]\n结果 = [0, 0, 0]\n\n\ndef 翻倍(序号, 数):\n    结果[序号] = 数 * 2\n\n\n对象 = []\nfor i in range(3):\n    一个对象 = threading.Thread(target=翻倍, args=(i, 元素[i]))\n    对象.append(一个对象)\n\nfor 一个对象 in 对象:\n    一个对象.join()\n\nfor 一个对象 in 对象:\n    一个对象.start()\n\nfor 一个数 in 结果:\n    print(一个数)\n",
+  "referenceFixTemplate": "import threading\n\n元素 = [{n1}, {n2}, {n3}]\n结果 = [0, 0, 0]\n\n\ndef 翻倍(序号, 数):\n    结果[序号] = 数 * 2\n\n\n对象 = []\nfor i in range(3):\n    一个对象 = threading.Thread(target=翻倍, args=(i, 元素[i]))\n    对象.append(一个对象)\n\nfor 一个对象 in 对象:\n    一个对象.start()\n\nfor 一个对象 in 对象:\n    一个对象.join()\n\nfor 一个数 in 结果:\n    print(一个数)\n",
+  "explanationTemplate": "`start()` 的意思是「**去干活吧**」，`join()` 的意思是「**我们等你干完**」—— 这两句话的顺序反不得。\n\n一个还没被叫去干活的子对象，我们上来就要等它干完，它自己都愣住了：它压根还没开始呢。`join()` 只好当场翻脸，摔给我们看（`RuntimeError: cannot join thread before it is started`），整个程序就在第一句 `join()` 那里停住了 —— 所以柜子里一个字都没印出来。\n\n改法就是这两段对调一下：**先把三个子对象全都放出去**（一个圈里全 `start()`），**再回头一个一个等**（另一个圈里全 `join()`）。\n\n⚠️ 为什么推荐「先全放出去、再全等」而不是「放一个等一个」（`start()` 完立刻 `join()`，也跑得对）？因为后者其实**没有一起干活** —— 每个子对象都是等前一个干完了才被叫醒的，跟一个一个排队做没有区别。要让它们真的同时动手，就得先都放出去。"
+}

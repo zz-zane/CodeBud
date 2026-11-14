@@ -1,0 +1,26 @@
+{
+  "templateId": "cpp-s3-19-star-or-not",
+  "lang": "cpp",
+  "stage": 3,
+  "lessonId": "cpp-stage3-19",
+  "type": "codefix",
+  "concept": [
+    "问的是名称还是屋里那一位",
+    "一个星号之差",
+    "比类定义别比名字"
+  ],
+  "instances": 2,
+  "params": {
+    "who": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "小P"
+      ]
+    }
+  },
+  "stemTemplate": "我们用问「是不是同一个类定义」的笨办法辨认屋里那一位，可它**问错对象**了：写的是 `typeid(p)`，问的是**名称自己**是哪一张，不是屋里住的那一位。\n\n屋里住的明明是学生甲，程序却印 `不是学生甲类定义`。补一个字符就够：让这一手问的是屋里那一位。\n\n改完跑一遍，应该只有一行：\n\n1. `是学生甲类定义`",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\n#include <typeinfo>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    Cat(const string& n) : name(n) {}\n    virtual ~Cat() {}\n};\n\nclass OrangeCat : public Cat {\npublic:\n    OrangeCat(const string& n) : Cat(n) {}\n};\n\nint main() {\n    OrangeCat o(\"{who}\");\n    Cat* p = &o;\n    cout << (typeid(p) == typeid(OrangeCat) ? \"是学生甲类定义\" : \"不是学生甲类定义\") << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\n#include <typeinfo>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    Cat(const string& n) : name(n) {}\n    virtual ~Cat() {}\n};\n\nclass OrangeCat : public Cat {\npublic:\n    OrangeCat(const string& n) : Cat(n) {}\n};\n\nint main() {\n    OrangeCat o(\"{who}\");\n    Cat* p = &o;\n    cout << (typeid(*p) == typeid(OrangeCat) ? \"是学生甲类定义\" : \"不是学生甲类定义\") << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一手问的是「这是哪一个类定义」，而它**问谁**，全看我们在小括号里写的是什么：\n\n- 写 `typeid(p)`：`p` 就是**名称上写的那一栏**，永远是「对象的名称」，拿它去跟「学生甲类定义」比，两个压根不是一回事，于是印 `不是学生甲类定义`；\n- 写 `typeid(*p)`：`*p` 顺着名称找进屋，问的是**屋里那一位** —— 这才是我们想知道的。\n\n所以差的就是那个星号，别的都没变。还有一条别记错：这一手能认出屋里住的是谁，靠的也是底座上挂了招牌（`virtual`）的那一手；一手招牌都没有的底座，它就只会照着牌面上写的那一栏回答。另外，判断「是不是同一个类定义」永远用 `typeid(*p) == typeid(OrangeCat)` 这么比，**别去比名字** —— 名字是编译器自己改写的，换个编译器就换一套写法。"
+}

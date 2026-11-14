@@ -1,0 +1,32 @@
+{
+  "templateId": "c-s1-global-bowl-add",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-13",
+  "type": "codewrite",
+  "concept": [
+    "大缸",
+    "global",
+    "函数改大缸",
+    "循环"
+  ],
+  "instances": 6,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "head": "{n}\n",
+    "count": "{n}",
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们想在门口摆一口**大缸**，让每一条数据进来都被丢进去攒着。\n\n请你写个程序：**先读进来一个数**（这次有几条），**再读进来 {n} 行数**（一行一个，每条上刻的数字）。\n\n先在**所有函数的外面**摆一口大缸 `total`，缸上写 `int`（**不用写初值**，看看会发生什么）；再写一个方法 `putIn`，头上写 `void`，括号里摆一个整数元素专接新来的那条，身体里把它**加进大缸**。每读进来一条，就调用一次这一个方法。\n\n转完 {n} 圈，印一行 `大缸里现在有 N 条`（`N` 是缸里的总数）。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+  "starterTemplate": "#include <stdio.h>\n\n// 在这里摆一口大缸（不用写初值）\n\n// 在这里登记 putIn 这一个方法\n\nint main(void) {\n    int n;\n\n    // 先读「有几条」\n\n    // 转 {n} 圈：每圈读一条，调用一次 putIn\n\n    // 印「大缸里现在有 N 条」\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nint total = 0;\n\nvoid putIn(int x) {\n    total = total + x;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int i;\n    for (i = 0; i < n; i++) {\n        int x;\n        if (scanf(\"%d\", &x) != 1) {\n            return 1;\n        }\n        putIn(x);\n    }\n\n    printf(\"大缸里现在有 %d 条\\n\", total);\n    return 0;\n}\n",
+  "explanationTemplate": "大缸要摆在**所有函数外面**（写在最上面、`main` 之前）。摆在那儿，两个函数都能看见、都能伸手够到。\n\n它有两条和「函数里的元素」正好相反的脾气：\n\n- **不写初值，编译器自动给你装上 0。** 这一条**只对门口的大缸成立** —— 函数里的元素要是不写初值，里面保存的是上次谁用剩的垃圾，印出来是什么全看运气。所以函数里的元素，一律自己写清楚初值。\n- **谁都能改它。** 好处是所有函数共用一份；坏处是哪一个方法在什么时候改的，你根本追不到。\n\n函数里那句 `total = total + x;` 改的是**大缸本人**：转一圈涨一点，{n} 圈下来就是全部的和。\n\n（对照着记：要是函数头写成 `void putIn(int x)`、引用的时候传入 `putIn(x)`，那函数里改的就是**抄件**，缸里一条都不会涨 —— 下一课就讲这个分岔。）"
+}

@@ -1,0 +1,33 @@
+{
+  "templateId": "java-s2-static-touches-own",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-05",
+  "type": "codefix",
+  "concept": [
+    "static 函数",
+    "static 函数里碰不到每个对象自己的格子",
+    "编译错误"
+  ],
+  "instances": 2,
+  "params": {
+    "cat": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "李四"
+      ]
+    },
+    "cry": {
+      "kind": "pick",
+      "values": [
+        "嘀嘀",
+        "哔啵"
+      ]
+    }
+  },
+  "stemTemplate": "我们想让 `Cat` 这张类定义也会报自己的名号 —— 就把那一手挂到了类定义上。可编译器把变量拍下来了。\n\n请你帮我们改好。改好之后，程序该印出这一行：\n\n```text\n我是 {cat}，输出结果是 {cry}\n```\n\n对象的家当那两行我们一个字都不想动，问题出在**挂到类定义上那一手**。",
+  "brokenCodeTemplate": "class Cat {\n    String name;\n    String cry;\n\n    Cat(String name, String cry) {\n        this.name = name;\n        this.cry = cry;\n    }\n\n    static String whoAmI() {\n        return \"我是 \" + name + \"，输出结果是 \" + cry;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat(\"{cat}\", \"{cry}\");\n        System.out.println(Cat.whoAmI());\n    }\n}\n",
+  "referenceFixTemplate": "class Cat {\n    String name;\n    String cry;\n\n    Cat(String name, String cry) {\n        this.name = name;\n        this.cry = cry;\n    }\n\n    static String whoAmI(String name, String cry) {\n        return \"我是 \" + name + \"，输出结果是 \" + cry;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Cat a = new Cat(\"{cat}\", \"{cry}\");\n        System.out.println(Cat.whoAmI(a.name, a.cry));\n    }\n}\n",
+  "explanationTemplate": "编译器的原话是 **`non-static variable name cannot be referenced from a static context`** —— 「`name` 是每个对象自己的一份，可你现在站的是 `static` 函数，称呼它的时候压根没有对象站在旁边，你要用的是哪个对象的 `name`？」\n\n这句话要念两遍才够味：**问题不是名字写错了，是位置站错了。** `whoAmI` 前面的 `static` 把它挂到类定义上；挂在类定义上的函数，称呼它的时候**没有哪个对象**在场 —— 那它嘴里那些「每个对象自己才有一份」的格子（`name`、`cry`）就全成了没着落的话。改完 `name` 还会轮到 `cry`，两个都得安排。\n\n两条路都走得通：\n\n1. **把要用的东西递进去**（我们这版）：`whoAmI(String name, String cry)` —— 函数里不碰任何人的格子，谁调用谁把值交到手上。引用的时候写 `Cat.whoAmI(a.name, a.cry);`：对象照样生，只是它的格子**被递了过去**。\n2. **干脆别挂到类定义上**：把 `static` 去掉，它就成了每个对象自己的一手，拿对象去调用 `a.whoAmI()`。\n\n头一条路是本课的重点：**`static` 函数里，共用的格子随便碰，每个对象自己的格子一个都碰不得** —— 真要用，只能等别人递进来。"
+}

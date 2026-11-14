@@ -1,0 +1,37 @@
+{
+  "templateId": "c-s1-ptr-bump-first",
+  "lang": "c",
+  "stage": 1,
+  "lessonId": "c-stage1-14",
+  "type": "codewrite",
+  "concept": [
+    "整排元素的名字就是地址",
+    "指针参数",
+    "解引用赋值",
+    "循环"
+  ],
+  "instances": 6,
+  "params": {
+    "n": {
+      "kind": "int",
+      "min": 3,
+      "max": 5
+    },
+    "k": {
+      "kind": "int",
+      "min": 6,
+      "max": 8
+    }
+  },
+  "stdinSpec": {
+    "kind": "ints",
+    "head": "{n}\n",
+    "count": "{n}",
+    "min": 1,
+    "max": 9
+  },
+  "stemTemplate": "我们这一个方法只动**第一个元素**。\n\n请你写个程序：**先读进来一个数**（这次有 {n} 只元素），**再读进来 {n} 行数**（一行一个，按顺序摆进那排元素里）。\n\n先写一个方法 `bumpFirst`：头里摆**两个**元素 —— 一块指整数元素的名称（`int *p`）、一个要加的数（`int k`）；身体里只改**名称指的那个元素**，把它加上 `{k}`。\n\n然后调用一次这一个方法，把**那排元素的名字**和 `{k}` 一起传入进去（不用写 `&`，想想为什么），最后把那排元素从头到尾印出来，一行一个。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分用的是**另外一组数**，所以别把答案写死）",
+  "starterTemplate": "#include <stdio.h>\n\n// 在这里登记 bumpFirst 这一个方法（只动名称指的那一个元素）\n\nint main(void) {\n    int n;\n\n    // 先读「有几个元素」\n\n    // 摆一排够宽的元素，把 {n} 个数读进去\n\n    // 调用一次 bumpFirst（第一样传入那排元素的名字）\n\n    // 把整排元素从头到尾印出来\n\n    return 0;\n}\n",
+  "referenceSolutionTemplate": "#include <stdio.h>\n\nvoid bumpFirst(int *p, int k) {\n    *p = *p + k;\n}\n\nint main(void) {\n    int n;\n    if (scanf(\"%d\", &n) != 1) {\n        return 1;\n    }\n\n    int bowl[10];\n    int i;\n    for (i = 0; i < n; i++) {\n        if (scanf(\"%d\", &bowl[i]) != 1) {\n            return 1;\n        }\n    }\n\n    bumpFirst(bowl, {k});\n\n    for (i = 0; i < n; i++) {\n        printf(\"%d\\n\", bowl[i]);\n    }\n    return 0;\n}\n",
+  "explanationTemplate": "这一题的关键是**整排元素的名字自己就充当了地址**。\n\n上一课那个谜团在这儿彻底解开了：为什么整排元素交进函数、改的却是你本人的原件？因为整排元素交出去的时候，交的正是**第一个元素的地址** —— 名字 `bowl` 本身就顶得上一块名称，函数里的 `int *p` 接的正是它。于是函数里那句 `*p = *p + k;` 改的，就是你本人的第一个元素，其余的元素一动不动。\n\n这也正是为什么传入它的时候**不用写 `&`**：`bowl` 本来就是地址。再写 `&bowl` 意思就变了 —— 那成了「整排元素的地址」，跟函数头里那块指整数元素的名称对不上类型，编译器要拦你。\n\n函数头里的两个元素一个都不能少：一个接**地址**（`int *p`），一个接**要加的数**（`int k`）—— 名字叫什么随便，形状和顺序才要紧。"
+}

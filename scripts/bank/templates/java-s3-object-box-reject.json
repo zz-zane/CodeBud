@@ -1,0 +1,33 @@
+{
+  "templateId": "java-s3-object-box-reject",
+  "lang": "java",
+  "stage": 3,
+  "lessonId": "java-stage3-01",
+  "type": "codefix",
+  "concept": [
+    "万物那种柜子不是老大",
+    "想收下所有柜子得写问号",
+    "往外返回照样返回得动"
+  ],
+  "instances": 2,
+  "params": {
+    "w1": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "煤球"
+      ]
+    },
+    "w2": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stemTemplate": "我们写了一段小代码，想把一个装字符串的柜子递给一个方法「挨个印出来」的函数。\n\n我们觉得「装万物的柜子」应该是老大，收一个装字符串的柜子总没问题吧？结果编译时就红了。\n\n你帮我们把那句尖括号**改对**：改成那种「里面保存的是哪种尺码我不问」的写法。函数里那句挨个印出来的话**一个字都别动**。\n\n改好之后它该印两行，把柜子里那两样东西一个一个印出来。\n\n（这一题**不需要输入**，那两样字都是固定死的，别去改它们。）",
+  "brokenCodeTemplate": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    static void printAll(List<Object> box) {\n        for (Object x : box) {\n            System.out.println(x);\n        }\n    }\n\n    public static void main(String[] args) {\n        List<String> names = new ArrayList<>();\n        names.add(\"{w1}\");\n        names.add(\"{w2}\");\n        printAll(names);\n    }\n}\n",
+  "referenceFixTemplate": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    static void printAll(List<?> box) {\n        for (Object x : box) {\n            System.out.println(x);\n        }\n    }\n\n    public static void main(String[] args) {\n        List<String> names = new ArrayList<>();\n        names.add(\"{w1}\");\n        names.add(\"{w2}\");\n        printAll(names);\n    }\n}\n",
+  "explanationTemplate": "这题演的正是课文第二节那个「万物那种柜子不是老大」。\n\n**一、为什么装万物的柜子收不下装字符串的柜子。** 「尺码填万物」的柜子和「尺码填字符串」的柜子是**两种不同的柜子名分**，谁也不是谁的爹。道理很实在：真让这一个方法收下它，函数里就能往这个柜子里塞一个数字，而它明明是装字符串的 —— 尺码当场就破了。所以编译器宁可一开始就拦。\n\n**二、它拦的时候说的是「两种名分对不上」。** 错误信息原话是 `incompatible types: List<String> cannot be converted to List<Object>` —— 「装字符串的柜子**转不成**装万物的柜子」。注意它**不是说语法写错了**，也不是说我们少写了个转换；它说的是**这两样对不上**。\n\n**三、想收下所有柜子就写一个问号。** 把 `List<Object>` 改成 `List<?>`，读作「一个柜子，里面保存某种尺码的东西，**具体哪种我不问**」。装字符串的递得进去，装数字的也递得进去，一次都不用改。\n\n**四、为什么函数里那句话一个字都不用动。** 因为那一句只是**往外返回**（读取的东西一律先当成万物那种口袋接着），对哪种柜子都成立。问号管的是「往里塞」那一侧 —— 这也是课文那句「问号只管往外返回，不管往里塞」的由来。"
+}

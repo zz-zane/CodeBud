@@ -1,0 +1,2275 @@
+{
+  "id": "2023-12-3",
+  "title": "2023年12月第3套",
+  "year": 2023,
+  "month": 12,
+  "set": 3,
+  "status": "partial",
+  "issues": [
+    "听力与第2套共用音频（见听力说明），已准确关联共用资源。",
+    "严格质检：所指向的共用听力仍有缺失或待核实内容。",
+    "卷面文字清理（2026-11-09）：修复 OCR 标点与错字、空格标记、串入题干或选项的文字；中文注释已按原卷页面校对补回。",
+    "标准答案按解析册与原卷修正（2026-11-09）：Q27 L→M、Q28 N→A、Q29 E→F；原值存于 answerOriginal。",
+    "与原卷及解析册全量比对（2026-11-09）：参考译文清除混入的注释或按原页重录。"
+  ],
+  "sources": [
+    {
+      "id": "1mttUtZvKjBckSumOgDmZ0Kc5qj8YA84_",
+      "title": "听力说明. txt",
+      "url": "https://drive. google. com/file/d/1mttUtZvKjBckSumOgDmZ0Kc5qj8YA84_/view? usp=drivesdk"
+    },
+    {
+      "id": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+      "title": "2023.12六级真题第3套(1). pdf",
+      "url": "https://drive. google. com/file/d/1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy/view? usp=drivesdk"
+    },
+    {
+      "id": "local:2023-12-3-answers",
+      "title": "2023.12英语六级解析第3套. pdf",
+      "url": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part. you are allowed 30 minutes to write an essay that begins with the sentence \"With their valuable skills and experience, elderly people can continue to make significant contributions to society.” You can make comments, cite examples or use your personal observations to develop your essay. You should write at least 150 words but no more than 200 words mot including the sentence given).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-prompt-block",
+          "title": "写作题目要求",
+          "text": "For this part. you are allowed 30 minutes to write an essay that begins with the sentence \"With their valuable skills and experience, elderly people can continue to make significant contributions to society.” You can make comments, cite examples or use your personal observations to develop your essay. You should write at least 150 words but no more than 200 words mot including the sentence given).",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-12-3-writing",
+          "number": 0,
+          "kind": "essay",
+          "stem": "For this part. you are allowed 30 minutes to write an essay that begins with the sentence \"With their valuable skills and experience, elderly people can continue to make significant contributions to society.” You can make comments, cite examples or use your personal observations to develop your essay. You should write at least 150 words but no more than 200 words mot including the sentence given).",
+          "blockId": "writing-prompt-block",
+          "options": [],
+          "answer": "& 点评 · With their valuable skills and expenence. elderly people can continue to make significant contributions to society. 】 fully agree with this view since elderly people outperform young people in skills and experience and with these advantages they can still contribute a lOt to society. 1 FirstIy. elderly people. with their experttse and rich expenence can do better than young people in many fields. Let. s take an example Of education. ElderIy teachers in SChOOl. with years Of teaching experience. know better hOW to inspire students and they are good at teaching students in accordance with their aptitude. Young teachers still need to learn teaching skills under the elderly teachers. expert guidance. Thus. elderly teachers can make great contributions towards education. Furthermore. elderly people can deal with difficult problems. For example, facing cases with complicated symptoms. elderly doctors can make accurate diagnosis thanks to their professional skills and rich experrence. And young doctors have a 10t to learn from those elderly doctors. Therefore, elderly doctors play an important role in medical care. 2 To sum up. elderly people can continue to make great contributions to society with their valuable skills and experience. They can play an active role tn various fields ofthe society.3 @· 范文译文 · 1 表明个人立场. 即完全同意 “ 老年人凭借其宝贵的技能和经验. 可以继续为社会做出重要贡献 ” 这一观点 。 2 分别从老年人在许多领域比年轻人做得更好以及老年人可以解决困难的问题两个方面论证上述观点. 由连接词 FirstIy 和 Furthermore 引出 。 3 总结全文. 重申老年人可以用他们宝贵的技能和经验继续为社会做出巨大贡献老年人凭借其宝贵的技能和经验. 可以继续为社会做出重要贡献 。 我完全同意这一观点. 因为老年人在技能和经验方面优于年轻人. 有了这些优势. 他们仍然可以为社会做出许多贡献 。 首先. 老年人凭借其专业知识和丰富的经验. 在许多领域可以比年轻人做得更好 。 我们以教育为例 。 学校里的老教师有多年的教学经验. 更懂得如何启发学生. 而且他们善于因材施教 。 青年教师还需要在老教师的专业指导下学习教学技能 。 因此. 老教师可以为教育做出巨大贡献 。 此外. 老年人可以解决困难的问题 。 例如. 面对病症复杂的病人. 老医生凭借专业技能和丰富的经验. 可以做出准确的诊断 。 而且. 年轻的医生有许多东西要向那些老医生学习 。 因此. 老医生在医疗服务中发挥着重要的作用 。 总之. 老年人可以用他们宝贵的技能和经验继续为社会做出巨大贡献 。 他们可以在社会的各个领域发挥积极的作用 。",
+          "explanation": "【审题思路】\n· 题目要求考生写一篇以“老年人凭借他们宝贵的技能和经验，能够继续为社会做出重要贡献 \" 开头的作文，考生可以通过发表评论，举例子或给出个人的观察结果来写文章。根据题目提示，作文可以采取以下\n\n【全文翻译】\n\n\n【点评与要点】",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2023-12-2",
+      "sharedWithTitle": "2023年12月第2套",
+      "sharedNote": "本套听力与 2023年12月第2套 共用，题目、解析和听力材料集中在 2023-12-2 练习；本套不再重复展示。原卷说明官方第三套的选项顺序不同；跳转后使用第二套的选项顺序。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空短文",
+          "text": "Modern U. S. cities were designed to make exercise unnecessary. Cars and elevators once symbolized urban areas as machines for more efficient living. Now it is clear that these improvements provide great benefits but also __(26)__ health costs. Recent studies show that urban __(27)__ encourages more driving and is associated with heavier weight. This __(28)__ suggests that the layout and design of cities can hinder or promote healthier lifestyle choices and it is __(29)__ that urban planners bear this in mind.\nUnfortunately, urban planning still centers in large part on solving the problems of the past. Of course cities still need to __(30)__ standard public health practices, such as separating toxic facilities from homes and restricting heavy truck traffic through __(31)__ residential areas. But it's also important to create healthier cities—and the discussion is already underway. More and more city planners are paying increasing attention to encouraging physical activity by making it easier and safer for people to recreate, walk, bike and take public transportation. Many studies of __(32)__ show that people live the longest in environments where physical activity is part of everyday life.\nProviding more walkable spaces, better protected bike lanes and more __(33)__ spaces are important steps. But even smaller changes can be effective.\nCities can close off streets on weekends to encourage communities to get out and walk. They also can provide more seating in public places, so that less-fit residents can rest during their journeys. Using public spaces in cities as places where people can exercise promotes __(34)__ rather than allowing physical activity to become restricted to private gyms with often-expensive monthly fees that __(35)__ less wealthy people from joining.",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读短文",
+          "text": "Can Learning a Foreign Language Prevent Dementia?\n\n[A] You may have heard that learning another language is one method for preventing or at least postponing the onset of dementia. Dementia refers to the loss of cognitive abilities, and one of its most common forms is Alzheimers disease (阿尔茨海默氏病). At this time, the causes of the disease are not well understood, and consequently, there are no proven steps that people can take to prevent it. Nonetheless, some researchers have suggested that learning a foreign language might help delay the onset of dementia.\n\n[B] To explore this possibility more deeply, let's look at some of the common misconceptions about dementia and the aging brain. First of all, dementia is not an inevitable part of the normal aging process. Most older adults do not develop Alzheimer's disease or other forms of dementia. It is also important to remember that dementia is not the same thing as normal forgetfulness. At any age, we might experience difficulty finding the exact word we want or have trouble remembering the name of the person we just met. People with dementia have more serious problems, like feeling confused or getting lost in a familiar place. Think of it this way: If you forget where you parked your car at the mall, that's normal; if you forget how to drive a car, that may be a signal that something more serious is going on.\n\n[C] The idea that dementia can be prevented is based on the comparison of the brain to a muscle. When people talk about the brain, they sometimes say things like \"It is important to exercise your brain\" or \"To stay mentally fit, you have to give your brain a workout.\" Although these are colorful analogies, in reality the brain is not a muscle. Unlike muscles, the brain is always active and works even during periods of rest and sleep. In addition, although some muscle cells have a lifespan of only a few days, brain cells last a lifetime. Not only that, but it has been shown that new brain cells are being created throughout one's lifespan.\n\n[D] While it makes for a colorful analogy, comparing the brain to a muscle is inaccurate and misleading. So, if the brain is not a muscle, can it still be exercised? Once again, researchers don't know for sure. There are now many computer, online, and mobile device applications that claim to be able to \"train your brain,\" and they typically tap into a variety of cognitive abilities. However, research suggests that although this type of training may improve one's abilities at the tasks themselves, they don't seem to improve other abilities. In other words, practicing a letter-detection task will, over time, improve your letter-detection skills, but it will not necessarily enhance your other perceptual abilities.\n\n[E] However, there is some reason to believe that learning languages might be different. The best evidence that foreign language learning confers cognitive benefits comes from research with those who are already bilingual (双语的). Bilingualism most commonly occurs when children are exposed to two languages, either in the home(mom speaks Dutch, dad speaks Spanish) or more formally in early schooling. But bilingualism certainly occurs in adulthood as well.\n\n[F] Bilingualism and multilingualism are actually more common than you might think. In fact, it has been estimated that there are fewer monolingual speakers in the world than bilinguals and multilinguals. Although in many countries most inhabitants share just one language, other countries have several official languages. Switzerland, for example, has four official languages: German, French, Italian, and Romansh. Throughout large parts of Africa, Arabic, Swahili, French, and English are often known and used by individuals who speak a different, native language in their home than they do in the marketplace. So bilingualism and multilingualism are to be found throughout the world. And with regard to cognitive abilities, the research on those who speak more than one language paints an encouraging picture.\n\n[G] For one thing, bilinguals are better at mulitasking. One explanation of this superiority is that speakers of two languages are continually inhibiting one of their languages, and this process of inhibition confers general cognitive benefits to other activities. In fact, bilingual individuals outperform their monolingual counterparts on a variety of cognitive tasks, such as following complex instructions, and switching to new instructions. For the sake of completeness, it should be noted that the advantages of being bilingual are not universal across all cognitive domains. Bilingual individuals have been shown to have smaller vocabularies and to take longer in retrieving words from memory when compared to monolinguals. In the long run, however, the cognitive and linguistie advantages of being bilingual far outweigh these two drawbacks.\n\n[H] If the benefits of being bilingual spill over to other aspects of cognition, then we would expect to see a lower incidence of Alzheimer's disease in bilinguals than in monolinguals, or at least a later onset of Alzheimer's for bilinguals. In fact, there is evidence to support this claim. The psychologist Ellen Bialystok and her colleagues obtained the histories of 184 individuals who had made use of a memory clinic in Toronto. For those who showed signs of dementia, the monolinguals in the sample had an average age of 71.4 years at time of onset. The bilinguals, in contrast, received their diagnosis at 75.5 years, on average. In a study of this sort, a difference of four years is highly significant, and could not be explained by other systematic differences between the two groups. For example, the monolinguals reported, on average, a year and a half more schooling than their bilingual counterparts, so the effect was clearly not due to formal education.\n\n[I] A separate study, conducted in India, found strikingly similar results: bilingual patients developed symptoms of dementia 4.5 years later than monolinguals, even after other potential factors, such as gender and occupation, were controlled for. In addition, researchers have reported other positive effects of bilingualism for cognitive abilities in later life, even when the person acquired the language in adulthood. Crucially, Bialystok suggested that the positive benefits of being bilingual were only found in those who used both languages all the time.\n\n[J] But encouraging as these kinds of studies are, they still have not established exactly how or why differences between bilinguals and monolinguals exist. Because these studies looked back at the histories of people who were already bilingual, the results can only say that a difference between the two groups was found, but not why that difference occurred. Further research is needed to determine what caused the differences in age of onset between the two groups.\n\n[K] Other studies of successful aging suggest that being connected to one's community and having plenty of social interaction is also important in delaying or even preventing the onset of dementia. Once again, however, the results are far less clear than the popular media might lead you to believe. Older individuals who lead active social lives are, almost by definition, healthier than their counterparts who rarely leave their homes or interact with others. So we can't really say whether being socially active prevents the onset of dementia, or if people who don't have dementia are more likely to be socially active.\n\n[L] But even if studying a foreign language is not a magical cure-all, there is one thing it will do: It will make you a better speaker of a foreign language. Doing that confers a whole host of advantages we do know about.",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Research is meant to benefit society by raising public awareness and creating products and innovations that enhance development. For research to serve its full purpose, the results must leave the confines of research laboratories and academic journals.\nFindings effectively communicated can go a long way to serve the interests of the public. They can help address social injustices or improve treatments offered to patients.\nMany researchers seem to be content with sharing the results of their studies in academic journals or at conferences. But few journals allow everybody to read the findings. Even articles freely available are usually written in academic language incomprehensible to the average reader.\nFor researchers in the tenure-track system, their main goal is winning tenure, which in part can be achieved by getting a number of papers published in prominent journals. Pressures like this mean community-level outreach is not prioritised.\nMany researchers lack the writing skills to describe their results to a general audience. They may also worry about whether the public will understand their findings, or about findings being used to influence controversial policies. These concerns cause some researchers to shy away from communicating their findings outside the academic community.\nPropagating research findings beyond academic publications is particularly crucial for addressing certain social discrepancies. It can help families, communities, healthcare providers, policymakers, government agencies and other stakeholders to understand and respond to crises that plague society.\nThe benefits of sharing findings flow both ways. Engaging with other researchers and the public can lead to unexpected new connections and new ideas that could suggest fruitful new directions for research.\nTo benefit both researchers and the communities, the need to find innovative, accessible ways to share the work cannot be overstated.\nInstitutions and funding organisations should support more researchers to publish in open access journals so that the public doesn't have to pay to read them. Institutions and researchers should invest in partnerships that expand capacity for sharing results more broadly.\nFurthermore, ethics committees should make it mandatory for researchers to share their results with the public. Every research participant should opt in or out of receiving results, as part of the process of giving informed consent.\nThere could be mis understanding of the findings presented by the researcher because of technical terms.\nBut this can be resolved by researchers engaging the services of professional writers or communication officers to help with translating their study into more accessible language and share it widely with media outlets and the public.\nSharing results with the people who are most affected by them makes us better researchers and ensures that our work can be used to improve people's lives. Institutions and collaborators must recognise the value of doing so.",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "Spiders make their presence felt in late August and through early autumn. This is the mating season of some of the most common varieties, when male house spiders come out of hidden corners to look for females, and garden spiders reach adult size and spin their most dazzling webs.\nYet while the spider is a familiar fixture of nursery poems or songs and Halloween decorations, its relationship with humans is complicated. Fear of spiders is common and has serious impacts on the lives of sufferers. Its prevalence appears unrelated to any rational assessment of risk. Spiders in the UK are almost all harmless. Farmland species perform valuable ecosystem services, by preying on insects that are our competitors for crops. But they are a constant source of human anxieties—with a cultural association with witches and wickedness dating back to the middle ages.\nDoes this perhaps explain, in part, the lack of data about how spiders are faring in our age of ecological crisis? British butterflies are the most studied group of insects in the world, due to the long tradition of collecting and observing them. But spider conservationists point out that it was only in the 1980s that the classification of house spiders was properly sorted out. And while information about insect populations is gathered by experiments that measure the numbers hiting windscreens or traps, there have been few attempts to count spiders\nThe huge reductions in the numbers of flying insects can only mean a reduction in spiders' food supply.\nA recent landmark study identified a 75all in insect populations between 1989 and 2016, with pesticide use\n23 thought to be to blame along with the destruction of wild areas for development. This means the overall picture for spiders is worrying, as it is for most creatures. But conservationists are most concermed about those varieties that are threatened due to habitat loss and fragmentation, which makes it impossible for them to migrate.\nOf around 650 spider species regularly recorded in the UK, the majority thrive in marshes and wasteland.\nConservation efforts, often led by determined individuals, have helped some species to recover by reintroducing them to new areas. With rewilding now firmly on the environmental policy agenda, the hope is that in future, spiders will be enabled to migrate by themselves, adapting to climate change by moving along wildlife corridors.\nIt seems unlikely that spiders will ever attract the same level of human enthusiasm as bees, birds or butterflies, in spite of their unique status as nature's spinners. But as they reveal themselves in all their splendour this autumn, it would be a good thing if more animal lovers recognised the ways in which spiders are simply terrific.",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              5
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-12-3-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "选词填空第 26 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "G",
+          "explanation": "G) impose ( 评使遭受，使承受；把. ““. 强加于 ) 陋法圃空格前是复合连词 but also. 前后连接并列成分，空格后是名词短语 health costs. 由此可知，空格处应填人一个动词原形，与前面的 provide 构成并列关系，同时与 health c。 sts 构成动宾搭配陋叉 but 小 0 前面的内容是这些改进提供了巨大的好处，由此可推断. but a № 后面的内容是说，但这也带来了健康成本。 impose 可意为“使承受 \". tmpose health cost 即“使人们承受了健康成本 \". 符合语境。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "选词填空第 27 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "M",
+          "explanation": "M) sprawl (). 肆意扩张；蔓延蔓延 ) 陋断】分析句子结构可知，此处是 that 引导的宾语从句，空格前是形容词 urban. 空格后是动词第三人称单数 encourages. 由此可知，该宾语从句缺少主语，空格处应填人名词。【亟上文提到 ( 城市的 ) 改进提供了巨大的好处，但也增加了健康成本，本句承接上文内容，用研究结果说明城市改进给人们带来的不利之处，由此可推断，本句是说，城市“扩张 \" 推动了驾驶人数的增多，并与体重增加有关，故 sprawl 符合语境。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "L"
+        },
+        {
+          "id": "2023-12-3-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "选词填空第 28 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "A",
+          "explanation": "A) correlation (”. 相互关系；关联 ) 陋跹空格前是指示代词 This. 空格后是第三人称单数形式的谓语动词 suggests. 由此可知，空格处应填人一个名词，充当句子的主语。陋蚯】上文讲述了城市扩张推动了驾驶人数的增多，并与体重增加有关，可知这是一种关联性. This 指代上文的内容，可知 This 后面应填人表示“关联性”的名词，故 correlation 符合语境。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "N"
+        },
+        {
+          "id": "2023-12-3-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "选词填空第 29 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "F",
+          "explanation": "F) imperative ( adj. 至关重要的，必要的 ) 陋法勇厮】由空格前的 and 可知，此处为并列分句，该分句采用了 \"it is + 形容词或分词 + that 从句”的句式，可知空格处应填人一个形容词或分词，充当 is 的表语。 and 前面的并列分句指出，城市的布局和设计能够阻碍或促进更健康的生活方式选择，由此可推断. and 后面的并列分句是指，城市规划者“必须”牢记这一点。 It that 一是固定句式，意为一必须一，故 imperative 符合语境。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true,
+          "answerOriginal": "E"
+        },
+        {
+          "id": "2023-12-3-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "选词填空第 30 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "E",
+          "explanation": "E) foster ( 促进；培养；收养 ) 陋法晒 ) 空格前是 need to. 空格后是一个名词短语，由此可知，空格处应填人动词原形，构成 need to do sth 啲结构。陋叉判蚯】上文提到，遗憾的是，城市规划在很大程度上仍然以解决过去的问题为中心，由本句句首的 of course 和 still 可知，本句仍承上启下，指出问题仍未解决，城市规划仍然需要做出努力。将备选动词代人原文可知. foster 符合语境. foster standard public health practices 意为“促进标准的公共卫生实践 \"",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "选词填空第 31 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "B",
+          "explanation": "B) dense (. 密集的；稠密的 ) 灬】空格前是介词 through, 空格后是名词短语 residential areas. 由此可知，空格处应填人一个形容词，与 residenüal— 起修饰名词 areaso 虾上文提及城市应促进标准的公共卫生实践，此处举例说明，如将有毒设施与住宅分开，限制重型卡车通过居民区，剩余选项中只有 dense “密集的 \" 符合语境。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              3
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "选词填空第 32 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "I",
+          "explanation": "I) longevity ( 长寿 ) 陋空格前是介词 of. 空格后是谓语动词 show. 由此可知，空格处应填人一个名词，与 00 起构成介宾短语。陋义邦由 show 后面 that 引导的宾语从句“在体育活动成为日常生活一部分的环境中，人们的寿命最长 \" 可知，填人的名词应与寿命长短有关，由此可知. longevity ( 长寿 ) 符合语境。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "选词填空第 33 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "K",
+          "explanation": "K) recreational ( 口砌娱乐的 ) 陋法空格前是 more. 空格后是名词 spaces, 由此可知，空格处应填人一个形容词。陋义前半句指出，提供更多可步行的空间，受到更好保护的自行车道. and 连接的并列成分应与其语义一致，将备选形容词代人可知 recreauona】符合语境，即“更多的娱乐空间 \"",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "选词填空第 34 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "D",
+          "explanation": "D) equity ( 公平，公正 ) 陋圄空格前是第三人称单数形式的谓语动词 promotes. 空格后是逗号，由此可知，空格处应填人一个名词，与 promotes 构成动宾关系陋叉前半句提及将城市的公共空间用作人们可以锻炼的地方，空格后的内容指出，而不是让体育活动仅限于私人健身房，因为私人健身房的月费往往很高。分析前后转折关系可知，此处是说，将城市的公共空间用作人们可以锻炼的地方可以促进“公平”. equ 呵符合语境。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "选词填空第 35 题",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "correlation"
+            },
+            {
+              "key": "B",
+              "text": "dense"
+            },
+            {
+              "key": "C",
+              "text": "deter"
+            },
+            {
+              "key": "D",
+              "text": "equity"
+            },
+            {
+              "key": "E",
+              "text": "foster"
+            },
+            {
+              "key": "F",
+              "text": "imperative"
+            },
+            {
+              "key": "G",
+              "text": "impose"
+            },
+            {
+              "key": "H",
+              "text": "irrespective"
+            },
+            {
+              "key": "I",
+              "text": "longevity"
+            },
+            {
+              "key": "J",
+              "text": "navigate"
+            },
+            {
+              "key": "K",
+              "text": "recreational"
+            },
+            {
+              "key": "L",
+              "text": "rotten"
+            },
+            {
+              "key": "M",
+              "text": "sprawl"
+            },
+            {
+              "key": "N",
+              "text": "vibrate"
+            },
+            {
+              "key": "O",
+              "text": "vicinity"
+            }
+          ],
+          "answer": "H",
+          "explanation": "0 deter ( 证阻止 ) { 分析句子结构可知，此处是 that 引导的定语从句，修饰先行词 fees. 空格前是关系代词 that. 空格后是 less wealthy people fromjoimng. 可知 that 是定语从句的主语，谓语和宾语部分由““. sb. from doing sth.”的结构充当，故空格处应填人一个动词，且能构成以上结构。义断】前文提及，而不是让体育活动仅限于私人健身房，因为私人健身房的月费往往很高，由此推断，此处是说高额的费用“阻止”不太富裕的人加人。备选动词中 deter 可以构成 deter sb. from doing sth. ( 阻止某人做某事 ) 的结构，符合语境，故应填人 detero 干扰顶注释 H) irrespective 钿不考虑的，不顾的",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              1
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "Research indicates that brain training is likely to boost one's ability at specific tasks, but not one's other cognitive abilities.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "D",
+          "explanation": "研究表明，大脑训练可能会提高一个人完成特定任务的能力，但不会提高其他的认知能力鼕园 D 由题干关键信息 brain training. tasks 和 abilities 定位到 D 段。该段第五句提到，研究表明，尽管这种训练可能会提高一个人完成任务所需的能力，但似乎不会提高其他能力，而结合前文，这种训练指的是对大脑的训练，题干显然是对该句的同义转述。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              3
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "According to estimates, the number of people who speak two languages or more is greater than those who speak one language only.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【据估计，说两种或多种语言的人数多于只说一种语言的人数 1 鼕匠 Fo 由题干关键信息 estimates. people who speak two languages or mo 代和 those who speak one language only 定位到 F 段第二句。该句提到，据估计，世界上只讲一种语言的人比讲两种语言和多种语言的人更少，可见，题干是对原文的同义转述。題干中的 people who speak two languages ormore 对应原文中的 bilinguals 和 multilinguals；题干中的 those who speak one language only 对应原文中的 monolingual speakers；题干中的 the number... is greaterthan 从反面转述原文中的 ar",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              3
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "For the time being, we do not know what causes people to lose their cognitive abilities, or what we can do to prevent it.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "A",
+          "explanation": "目前，我们不知道是什么导致人们失去认知能力，也不知道我们能做些什么来预防这种情况匿虫园 Ao 由题干关键信息 causes 和 lose their cognitive abilities 定位到 A 段。该段第二句就指出，痴呆症是指认知能力的丧失，最常见的一种是阿尔茨海默氏病。随后的第三句则说，人们目前还不太清楚这种疾病的病因，因此还没有已经证实有效的措施来预防这种病症。题干是对原文的概括性转述。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              3
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "It is hard to determine whether people who are free from dementia tend to have more social activities, or more social activities keep people away from dementia.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "K",
+          "explanation": "很难确定是否没有痴呆症的人容易进行更多的社交活动，还是更多的社交活动能使人们兔于罹患痴呆症匿鼕园 KO 由题干关键信息 social activities 和 dementia 定位到 K 段最后一句。定位句指出，我们真的不能断言到底是社交活动能预防痴呆症的发作，还是没有痴呆症的人更有可能在社交方面活跃。题干是对原文的同义转述。题干中的 It is hard to determine 对应原文中的 we can't say; 题干中的 people who are free from dementia 对应原文中的 people who don't have dementia；题干中的 keep people away 什 om dementia 是对原文中的 prevents the onset ofdementia 的同义转述。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              3
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "There is evidence that learning foreign languages might be beneficial to boosting one's cognitive abilities.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "E",
+          "explanation": "有证据表明，学习外语可能有利于提高一个人的认知能力匿鼕园 EO 由题干关键信息 evidence 和 learning foreign languages 定位到 E 段第二句。该句指出，外语学习在认知方面带来益处的最好证据源于针对那些已经会讲两种语言的人的研究。换言之，有证据表明，学习外语对于提高认知能力是有帮助的。题干是对原文的同义转述。题干中的 beneficial to boosting one's cognitive abilities 对应原文中的 confers cognitive benefitso",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              3
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "It was suggested that only those who always spoke two languages could benefit from bilingualism. 21",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "I",
+          "explanation": "± 有人提出，只有那些总是说两种语言的人才能因使用两种语言而受益 0 10 由题干关键信息 suggested 和 always spoke twolanguages 定位到 I 段最后一句。定位句指出，比亚利斯托克提出，会讲两种语言的积极作用只存在于那些一直都使用两种语言的人身上。可见，题干是对原文的同，义转述。题干中的 benefit from bilingualism 对应原文中的 positive benefits of being bihngual",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              3
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              6
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "The brain is different from muscles in that it keeps working even when the body is at rest.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "C",
+          "explanation": "午大脑与肌肉的不同之处在于，即使身体处于休息状态，大脑也在继续工作匿鼕园 CO 由干关键信息 different from muscles 和 rest 定位到 c 段第四句。根据定位句，与肌肉不同的是，大脑总是活跃的，即使在休息和睡眠期间也在工作。可见，题干是对原文的同义转述。题干中的 keeps workmg 对应原文中的 is always active and works；题千中的 atrest 是对原文中的 during periods ofrest sleep 的转述。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              4
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "People who speak two languages do better at a number of cognitive tasks than those who speak only one language.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "G",
+          "explanation": "區壬说两种语言的人在许多认知任务上都比那些只说一种语言的人做得更好匿 GO 由题干关键信息 co itivetasks 定位到 G 段第三句。定位句明确说，讲两种语言的人在各种认知任务上都优于讲一种语言的人，并列举了具体的任务，如遵循复杂的指令和切换到新的指令。可见，题千是对原文的同义转述。题干中的 people who speak two languages 和 those who speak only one language 分别对应原文中的 bilingual individuals 和 monolingual counterparts；题千中的 do better 是对原文中的 outperform 的转述。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              4
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "Dementia is different from being merely forgetful and entails more serious trouble.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "B",
+          "explanation": "艹痴呆症不同于单纯的健忘，会带来更严重的问题匿鼕园 B 由题干关键信, tDementia. merely forgetful 和 more senous 定位到 B 段第四句和第六句。定位段第四句说，痴呆症与正常的健忘不同，接下来对正常的健忘进行了举例，之后的第六句说，痴呆症患者的问題则要更加严重，可见，题干是对本段这两处信息的概括性转述。题干中的 differentfrom 对应原文中，的 is not the same thing as；题干中的 merely forgetful 对应原文中的 normal forgetfulness；题干中的 entails more serious trouble 对应原文中的 have more serious problems 六缓 202M2 第三 45",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              4
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "It is claimed that more monolinguals suffer from Alzheimer's disease than bilinguals.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paragraph A"
+            },
+            {
+              "key": "B",
+              "text": "Paragraph B"
+            },
+            {
+              "key": "C",
+              "text": "Paragraph C"
+            },
+            {
+              "key": "D",
+              "text": "Paragraph D"
+            },
+            {
+              "key": "E",
+              "text": "Paragraph E"
+            },
+            {
+              "key": "F",
+              "text": "Paragraph F"
+            },
+            {
+              "key": "G",
+              "text": "Paragraph G"
+            },
+            {
+              "key": "H",
+              "text": "Paragraph H"
+            },
+            {
+              "key": "I",
+              "text": "Paragraph I"
+            },
+            {
+              "key": "J",
+              "text": "Paragraph J"
+            },
+            {
+              "key": "K",
+              "text": "Paragraph K"
+            },
+            {
+              "key": "L",
+              "text": "Paragraph L"
+            },
+            {
+              "key": "M",
+              "text": "Paragraph M"
+            },
+            {
+              "key": "N",
+              "text": "Paragraph N"
+            },
+            {
+              "key": "O",
+              "text": "Paragraph O"
+            }
+          ],
+          "answer": "H",
+          "explanation": "@亠】据称，与讲两种语言的人相比，只讲一种语言的人患阿尔茨海默氏病的更多匿鼕园 H 由题干关键信 gmonolinguals. Alzheimer. s disease 和 bilinguals 定位到 H 段前两句。该段首句说，如果会讲两种语言的好处扩展到认知的其他方面，那么我们有望看到讲两种语言的人患阿尔茨海默病的几率低于讲一种语言的人，或者至少讲两种语言的人的发病时间会更晚。随后的第二句说，是有证据支持这一说法的。可见，题干是对这两句内容的概括性转述。题千中的 mo 代 monolinguals suffer from AIzheimer. s disease than bilinguals 从反面转述原文中的 lower incidence ofAIzheimer. s disease in bilinguals than in",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              4
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "How can research serve its full purpose according to the author?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "With researchers being aware of public interests."
+            },
+            {
+              "key": "B",
+              "text": "With its findings published in prominent journals."
+            },
+            {
+              "key": "C",
+              "text": "With researchers creating products that enhance social development."
+            },
+            {
+              "key": "D",
+              "text": "With its findings properly communicated beyond the academic circle."
+            }
+          ],
+          "answer": "D",
+          "explanation": "作者认为，研究如何才能充分发挥作用？ A) 研究人员意识到公众利益。 B) 研究成果发表在著名期刊上。 0 研究人员创造出促进社会发展的产品。 D) 研究成果在学术界以外得到适当传播。定，根据题干信息词 sen ℃ its full p 岬 ose 可将答案线索定位至第一段第二句。解，第一段第二句直接给出答案: 要使研究充分发挥作用，研究成果必须走出研究实验室和学术期刊的范围. 《即研究成果在学术界以外也得到传播，故 D 项符合题意。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "Why do ordinary readers find it difficult to access the results of researchers'studies?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They cannot understand the academic language used for reporting these results."
+            },
+            {
+              "key": "B",
+              "text": "They feel intimidated by the jargon researchers use to describe their findings."
+            },
+            {
+              "key": "C",
+              "text": "They do not attend conferences where these results are freely available."
+            },
+            {
+              "key": "D",
+              "text": "They have few chances to locate the journals that publish these findings."
+            }
+          ],
+          "answer": "A",
+          "explanation": "为什么普通读者很难获得研究人员的研究成果？ A) 他们无法理解报告这些结果所使用的学术语言。 B) 他们被研究人员用来描述研究结果的行业术语吓到了。 0 他们不参加免费提供这些研究成果的会议。 D) 他们几乎没有机会找到发表这些研究成果的期刊。定 + 根据题干信息词 ordin 町 readers 和 access the results of researchers. studies 可将答案线索定位至第三段解 + 第三段第一句提及，许多研究人员似乎满足于在学术期刊或会议上分享他们的研究成果。随后表明这对普通读者的困扰: 没几家期刊允许所有人阅读研究成果，即使是免费提供的文章，通常也是用普通读者无法理解的学术语言撰写的。因此 A 项符合题意. cannot understand 是原文中 incomprehensible 的同义转述. academ",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What is one of the reasons some researchers won't prioritise communicating their findings to the public?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They can thrive on the papers published."
+            },
+            {
+              "key": "B",
+              "text": "Their top consideration is to win tenure."
+            },
+            {
+              "key": "C",
+              "text": "Their main goal is gaining recognition in their field."
+            },
+            {
+              "key": "D",
+              "text": "They have to struggle to reach out to the community."
+            }
+          ],
+          "answer": "B",
+          "explanation": "一些研究人员没有优先考虑向公众传播他们的研究成果，其中的一个原因是什么？ A) 他们可以依靠发表的论文兴旺发达。 R) 他们首要考的是获得终身教职 ^ 0 他们的主要目标是在自己的领域内获得认可。 D) 仙们不得不努力去接触社区。定肀根据题干信息词 priontise 可将答案线索定位至第四段最后一句。解第四段最后一句提及，这样的压力意味着不会优先考虑向社会上的人提供外展服务，就是前文作者所说的与公众分享研究成果，压力即该段第一句所说的通过在著名期刊上发表多篇论文获得终身教职，因此 B 项符合题意，题干中的 communicaung their findings to the public 是原文中 community-level outreach 的同义转述。 A 项在文中没有相关信息，故排除。第四段提到终身教职制度下的研究人员的主要目标是",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "How can sharing findings benefit researchers themselves?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "By helping them to identify new research directions."
+            },
+            {
+              "key": "B",
+              "text": "By enabling them to understand crises plaguing society."
+            },
+            {
+              "key": "C",
+              "text": "By enabling them to effectively address social discrepancies."
+            },
+            {
+              "key": "D",
+              "text": "By helping them to forge ties with government agencies."
+            }
+          ],
+          "answer": "A",
+          "explanation": "分享研究成果如何能使研究人员自身受益？ A) 通过帮助他们找到新的研究方向。 B) 通过让他们了解困扰社会的危机。 0 通过让他们有效解决社会差异。 D) 通过帮助他们与政府机构建立联系。定 + 根据题干信息词 sharing 行 ndings 和 bene 行河将答案线索定位至第七段。解，第七段第一句指出，分享研究成果的好处是双向的。随后解释道，与其他研究人员和公众接触可以产生意想不到的新联系和新想法，从而为研究提供成果丰硕的新方向，因此 A 项符合题意。“了解困扰社会的危机”和“有效解决社会差异”是研究人员共享成果对社会有利的方面，而不是使其自身受益的方面，故排除 B. c 两项。文中并未说明研究人员可以通过分享成果与政府机构建立联系，故 D 项也排除。六 202M2. 三 47",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "Why are researchers advised to engage the services of professional writers or communication officers?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "To satisfy ethics committees' mandatory requirements of researchers."
+            },
+            {
+              "key": "B",
+              "text": "To translate their study into languages accessible to readers overseas."
+            },
+            {
+              "key": "C",
+              "text": "To make their publications correctly understood by the public."
+            },
+            {
+              "key": "D",
+              "text": "To render their findings acceptable by prominent journals."
+            }
+          ],
+          "answer": "C",
+          "explanation": "为什么建议研究人员騁用专业撰稿人或宣传人员？ A) 为了满足伦理委员会对研究人员的强制性要求。 0 为了让公众正确理解他们发表的文章。 B) 为了将研究报告翻译成海外读者可以理解的语言。 D) 为了使他们的研究成果被著名期刊接受。定肀根据题干信息词 professional writers or communication o 冚 cers 可将答案线索定位至倒数第二段解 · 倒数第二段第一句提到，由于使用专业术语，公众可能会对研究人员提出的研究结果产生误解。随后补充道，但这可以通过研究人员聘请专业撰稿人或宣传人员来解决，他们可以帮助将研究成果翻译成更通俗易懂的语言，与媒体和公众广泛分享。由此可知. c 项符合题意，原文中的 accessible 意为“容易理解的，易懂的”。根据倒数第三段可知，作者建议伦理委员会强制要求研究人",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              5
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What do we learn about spiders in the UK since the middle ages?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They have been generally misconceived."
+            },
+            {
+              "key": "B",
+              "text": "They have adversely impacted crop growth."
+            },
+            {
+              "key": "C",
+              "text": "They have been a constant reminder of bad luck."
+            },
+            {
+              "key": "D",
+              "text": "They have made their presence felt when spinning webs."
+            }
+          ],
+          "answer": "A",
+          "explanation": "自中世纪以来，我们对英国的蜘蛛有何了解？ · splendour 光彩；壮丽 A) 它们普遍被误解了。 B) 它们对作物生长产生了不利影响。 C) 它们不断提醒人们厄运的到来。 D) 它们在织网时让人们感觉到它们的存在。定，根据题干信息词 spiders in the UK 和 the middle ages 可将答案线索定位于第二段解；第二段提到，害怕蜘蛛是一种常见的现象，但其实英国的蜘蛛几乎都是无害的。农田蜘蛛通过捕食与我们争夺作物的昆虫，提供了有价值的生态系统服务。但它们是人类焦虑的持续来源一一与“女巫”和“邪恶”的文化联系可以追溯到中世纪。也就是说，自中世纪以来，由于人们把蜘蛛与女巫和邪恶联系在一起，所以人们普遍害怕蜘蛛，但事实上，英国的蜘蛛几乎是无害的，还给人类提供了有价值的生态系统服务",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              10
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What have spiders been associated with in the UK for centuries?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Harm."
+            },
+            {
+              "key": "B",
+              "text": "Evil"
+            },
+            {
+              "key": "C",
+              "text": "Suffering."
+            },
+            {
+              "key": "D",
+              "text": "Aggression."
+            }
+          ],
+          "answer": "B",
+          "explanation": "丿 L 个世纪以来，在英国，人们把蜘蛛与什么相联系？ A) 危害。 B) 邪恶。 0 痛苦。 D) 侵略性定根据题干信息词 spiders been associated with 可将答案线索定位于第二段解；第二段最后一句话提到，但它们是人类焦虑的持续来源，一一与“女巫”和“邪恶”的文化联系可以追溯到《中世纪。由此可知，自中世纪以来，蜘蛛在英国一直被认为与邪恶有关，故选 B。其他三个选项都不是原文所讲的文化联系，故排除。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What partly accounts for the reduction in spiders'food supply?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The long tradition of collecting insects."
+            },
+            {
+              "key": "B",
+              "text": "Fast reproduction of their competitors."
+            },
+            {
+              "key": "C",
+              "text": "Chemicals used for killing insects."
+            },
+            {
+              "key": "D",
+              "text": "The extinction of a lot of wildlife."
+            }
+          ],
+          "answer": "C",
+          "explanation": "蜘蛛的食物供应减少，部分原因是什么？ A) 收集昆虫的悠久传统。 B) 竞争对手的快速繁殖。 0 使用杀虫的化学制品。 D) 许多野生动物的灭绝。定肀根据题干信息词山 e reduction in spiders' food supply 可将答案线索定位于第四段。解第四段第一句就提到，飞虫数量的大幅减少只能意味着蜘蛛的食物供应减少。接着第二句阐释了原因，即使用杀虫剂以及因为发展而破坏野生区域被认为是罪魁祸首，所以蜘蛛的食物供应减少的原因有两点，一是杀虫剂的使用，二是野生区域的破坏。选项 c 是对第一点原因的同义转述，故为正确答案。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What does the passage say is conservationists' biggest worry?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "A variety of spiders are threatened due to pollution of marshes and wasteland."
+            },
+            {
+              "key": "B",
+              "text": "Certain species of spiders are endangered due to loss of their natural homes."
+            },
+            {
+              "key": "C",
+              "text": "An increasing number of spiders are being killed by deadly pesticides."
+            },
+            {
+              "key": "D",
+              "text": "More and more spider species are found losing their ability to migrate."
+            }
+          ],
+          "answer": "B",
+          "explanation": "这篇文章说，自然环境保护主义者最担心的是什么？ A) 由于沼泽和荒地的污染，各个品种的蜘蛛受到威胁。 B) 某些品种的蜘蛛由于失去了自然家园而瀕临灭绝。 00 越来越多的蜘蛛正在被致命的杀虫剂杀死。 D) 越来越多的蜘蛛物种被发现失去了迁徙的能力。定肀根据题干信息词 conservationists' biggest wo 町可将答案线索定位于第四段。解；第四段最后一句提到，但自然环境保护主义者最关心的是那些因栖息地丧失和碎片化而受到威胁的品种，这些因素使它们无法迁徙。由此可知，自然环境保护主义者最担心的是，某些品种的蜘蛛因为丧失栖息地而没有地方迁徙，故选项 B 正确，同时也可排除选项 D. 没有地方迁徙不代表失去了迁徙的能力。原文没有提到沼泽和荒地受到污染，故排除选项 A。原文提到杀虫剂使昆虫数量下降，导致蜘蛛食物",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-12-3-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What wish does the author express close to the end of the passage?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "More people would recognise spiders'unique status in the ecosystem."
+            },
+            {
+              "key": "B",
+              "text": "People would show greater enthusiasm for spiders than for butterflies."
+            },
+            {
+              "key": "C",
+              "text": "There would be sufficient corridors for spiders to move along."
+            },
+            {
+              "key": "D",
+              "text": "There would be more people appreciating spiders' splendour."
+            }
+          ],
+          "answer": "D",
+          "explanation": "在文章快结束时，作者表达了什么愿望？ A) 更多的人会认识到蜘蛛在生态系统中的独特地位。 B) 人们对蜘蛛比对蝴蝶表现出更大的热情。 0 会有足够的走廊供蜘蛛移动。 D) 会有更多的人欣赏蜘蛛的光彩。定根据题干信息词 the end of the passage 可将答案线索定位于最后一段。解；最后一段提到，蜘蛛也许不太可能像蜜蜂，鸟类或蝴蝶那样吸引人类的热情，随后通过转折词 But 表达了自己的愿景，即“当它们在今年秋天展现出光彩时，如果有更多的动物爱好者认识到蜘蛛在某些方面其实很神奇，那将是一件好事 \"。所以选项 D 正确。选项 A. c 都是利用原文个别词语设置的干扰项，不难排《除。选项 B 与最后一段首句内容不符，故也排除。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              1
+            ]
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "近年来. 中国老龄人口持续增长。中国政府正采取各种措施. 推进养老服务体系建设. 使老年人晚年生活健康幸福。全国兴建了各类养老服务机构。为了提升养老机构的服务质量. 政府颁布了一系列标准. 加强对养老机构的监管。许多城市为方便老年人用餐. 开设了社区食堂. 为他们提供价格实惠的饭菜。行动不便的老年人还能享受上门送餐服务。同时. 中国还在积极探索居家和社区养老等其他养老模式. 以确保所有老年人老有所养。",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              6
+            ]
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-12-3-translation",
+          "number": 56,
+          "kind": "translation",
+          "stem": "近年来. 中国老龄人口持续增长。中国政府正采取各种措施. 推进养老服务体系建设. 使老年人晚年生活健康幸福。全国兴建了各类养老服务机构。为了提升养老机构的服务质量. 政府颁布了一系列标准. 加强对养老机构的监管。许多城市为方便老年人用餐. 开设了社区食堂. 为他们提供价格实惠的饭菜。行动不便的老年人还能享受上门送餐服务。同时. 中国还在积极探索居家和社区养老等其他养老模式. 以确保所有老年人老有所养。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "In recent years, the elderly population in China has continued to grow. The Chinese government is taking various measures to promote the construction of the elderly care service system, so that the elderly can live a healthy and happy life in their later years. Various elderly care service institutions have been built nationwide. In order to improve the service quality of elderly care institutions, the government has issued a series of standards to strengthen the supervision of elderly care institutions. Many cities have opened community canteens to facilitate dining for the elderly, providing them with affordable meals. Elderly people with limited mobility can also enjoy door-to-door meal delivery services. At the same time, China is actively exploring other elderly care models such as home- and community-based elderly care to ensure that all elderly people are supported in old age.",
+          "explanation": "【参考译文】\n. Translation 加强对.. “的监管 strengthen the of 方便“.... 用餐 facilitate dimng for 价格实惠的 affordable 行动不便的 with limited mobility 上门送餐服务 door-to-door meal delivery service 居家和社区养老 home- and community-based elderly care 养老模式 elderly care model ln recent years. the elderly population in China has continued to grow. The Chinese government is takmg vanous measures to promote the construction of the elderly care seruce system. so that the elderly can live a healthy and happy life in their later years. Various elderly care service institutions have been built nationwide. ln order to lmprove the servtce quality of elderly care institutions. the govemment has issued a series ofstandards to strengthen the supervision of elderly care institutions. Many cities have opened community canteens to facilitate dining for the elderly. provlding them with affordable meals. EIderIy people with limited mobility can a 卜 0 enjoy door-to-door meal delivery services. At the same time. China is actively exploring other elderly care models such as home- and community-based elderly care to ensure that all elderly people are supported in OId age. 0. 译点精析 · l. 第一句: “近年来 \" 翻译成 ln recentyears；“持续增长 \" 翻译为 has continued to growo 2. 第二句: 主体句“中国政府正采取各种措施 \" 翻译为 The Chinese government is taking various measures；“推进养老服务体系建设 \" 表示目的，故翻译为不定式结构，即 topromotethe construction of the elderlycare service system；“使老年人晚年生活健康幸福 \" 是整个句子的目的状语，故翻译为目的状语从句，即 so that the elderly can live a healthy and happy life in their later years 3. 第三句: 该句是无主语句式，翻译成英文时，宜将其处理成被动语态，即 various elderly care service mstitutions have been built nationwideo 4. 第四句: 句子主干为“政府颁布了一系列标准 \". 翻译为 the governmenthas issued a series of standards；句首的“为了提升养老机构的服务质量”是整个句子的目的状语，可翻译为 in order to do 结构，即 ln order to improve the service quality of elderly care institutions；句尾的“加强对养老机构的监管 \" 是主干句中“颁布了一系列标准 \" 的目的，也应翻译成目的状语，即 tostrengthen the supervision of elderly care institution so \n\n5. 第五句: 本句和上一句结构相似，句子主干为“许多城市开设了社区食堂 \". 翻译为 Many cities have opened community canteens；“为方便老年人用餐 \" 是“开设了社区食堂 \" 的目的状语，翻译成 to facilitate dimng for the elderly；和上一句不同的是，本句结尾处的“为他们提供价格实惠的饭菜 \" 表示伴随情况，应翻译成现在分词短语，充当伴随状语，即 providing them affordable me also 6. 第六句: 句子主体“老年人能享受上门送餐服务 \" 翻译为 ElderIy people can enjoy door-to-door meal delivery services；“行动不便的 \" 充当定语，可以翻译为介词短语形式的后置定语 with limited mobility. 也可翻译为前置定语 physically challenged 7. 第七句: 主体句为“中国还在积极探索居家和社区养老等其他养老模式 \". 翻译为 China is actively exploring other cldcrly care models such as home- and community-based elderly care；“以确保所有老年人老有所养 \" 表示目的，应翻译成目的状语，即 to ensure that all elderly people are supported in age; 注意“老有所养”即“老的时候能够得到赡养”. 故翻译为 are supported in old 六级 2023 」 2 三到 51\n\n【难点解析】\n· l. 第一句: “近年来 \" 翻译成 ln recentyears；“持续增长 \" 翻译为 has continued to growo 2. 第二句: 主体句“中国政府正采取各种措施 \" 翻译为 The Chinese government is taking various measures；“推进养老服务体系建设 \" 表示目的，故翻译为不定式结构，即 topromotethe construction of the elderlycare service system；“使老年人晚年生活健康幸福 \" 是整个句子的目的状语，故翻译为目的状语从句，即 so that the elderly can live a healthy and happy life in their later years 3. 第三句: 该句是无主语句式，翻译成英文时，宜将其处理成被动语态，即 various elderly care service mstitutions have been built nationwideo 4. 第四句: 句子主干为“政府颁布了一系列标准 \". 翻译为 the governmenthas issued a series of standards；句首的“为了提升养老机构的服务质量”是整个句子的目的状语，可翻译为 in order to do 结构，即 ln order to improve the service quality of elderly care institutions；句尾的“加强对养老机构的监管 \" 是主干句中“颁布了一系列标准 \" 的目的，也应翻译成目的状语，即 tostrengthen the supervision of elderly care institution so \n\n5. 第五句: 本句和上一句结构相似，句子主干为“许多城市开设了社区食堂 \". 翻译为 Many cities have opened community canteens；“为方便老年人用餐 \" 是“开设了社区食堂 \" 的目的状语，翻译成 to facilitate dimng for the elderly；和上一句不同的是，本句结尾处的“为他们提供价格实惠的饭菜 \" 表示伴随情况，应翻译成现在分词短语，充当伴随状语，即 providing them affordable me also 6. 第六句: 句子主体“老年人能享受上门送餐服务 \" 翻译为 ElderIy people can enjoy door-to-door meal delivery services；“行动不便的 \" 充当定语，可以翻译为介词短语形式的后置定语 with limited mobility. 也可翻译为前置定语 physically challenged 7. 第七句: 主体句为“中国还在积极探索居家和社区养老等其他养老模式 \". 翻译为 China is actively exploring other cldcrly care models such as home- and community-based elderly care；“以确保所有老年人老有所养 \" 表示目的，应翻译成目的状语，即 to ensure that all elderly people are supported in age; 注意“老有所养”即“老的时候能够得到赡养”. 故翻译为 are supported in old 六级 2023 」 2 三到 51",
+          "source": {
+            "fileId": "1QDb0bC6DmfLeeTQU-2kPqOjQWEP3VtUy",
+            "pages": [
+              6
+            ]
+          },
+          "answerSource": {
+            "fileId": "local:2023-12-3-answers",
+            "pages": [
+              11
+            ]
+          },
+          "verified": true,
+          "answerOriginal": ". Translation 加强对.. “ 的监管 strengthen the of 方便 “.... 用餐 facilitate dimng for 价格实惠的 affordable 行动不便的 with limited mobility 上门送餐服务 door-to-door meal delivery service 居家和社区养老 home- and community-based elderly care 养老模式 elderly care model ln recent years. the elderly population in China has continued to grow. The Chinese government is takmg vanous measures to promote the construction of the elderly care seruce system. so that the elderly can live a healthy and happy life in their later years. Various elderly care service institutions have been built nationwide. ln order to lmprove the servtce quality Of elderly care institutions. the govemment has issued a series ofstandards to strengthen the supervision Of elderly care institutions. Many cities have opened community canteens to facilitate dining for the elderly. provlding them with affordable meals. EIderIy people with limited mobility can a 卜 0 enjoy door-to-door meal delivery services. At the same time. China is actively exploring other elderly care models such as home- and community-based elderly care to ensure that all elderly people are supported in OId age. 0. 译点精析 · l. 第一句: “ 近年来 \" 翻译成 ln recentyears ； “ 持续增长 \" 翻译为 hascontinuedto growo 2. 第二句: 主体句 “ 中国政府正采取各种措施 \" 翻译为 The Chinese government is taking various measures ； “ 推进养老服务体系建设 \" 表示目的. 故翻译为不定式结构. 即 topromotethe constructionofthe elderlycare service system ； “ 使老年人晚年生活健康幸福 \" 是整个句子的目的状语. 故翻译为目的状语从句. 即 so that the elderly can live a healthy and happy life in their later years 3. 第三句: 该句是无主语句式. 翻译成英文时. 宜将其处理成被动语态. 即 various elderly care service mstitutions have been built nationwideo 4. 第四句: 句子主干为 “ 政府颁布了一系列标准 \". 翻译为 the governmenthas issued a series of standards ； 句首的 “ 为了提升养老机构的服务质量 ” 是整个句子的目的状语. 可翻译为 in order to do 结构. 即 ln order to improve the service quality of elderly care institutions ； 句尾的 “ 加强对养老机构的监管 \" 是主干句中 “ 颁布了一系列标准 \" 的目的. 也应翻译成目的状语. 即 tostrengthen the supervisionofelderlycareinstitutionso \n\n5. 第五句: 本句和上一句结构相似. 句子主干为 “ 许多城市开设了社区食堂 \". 翻译为 Many cities have opened community canteens ； “ 为方便老年人用餐 \" 是 “ 开设了社区食堂 \" 的目的状语. 翻译成 to facilitate dimng for the elderly ； 和上一句不同的是. 本句结尾处的 “ 为他们提供价格实惠的饭菜 \" 表示伴随情况. 应翻译成现在分词短语. 充当伴随状语. 即 providing them affordablemealso 6. 第六句: 句子主体 “ 老年人能享受上门送餐服务 \" 翻译为 ElderIy people can enjoy door-to-door meal delivery services ； “ 行动不便的 \" 充当定语. 可以翻译为介词短语形式的后置定语 with limited mobility. 也可翻译为前置定语 physically challenged 7. 第七句: 主体句为 “ 中国还在积极探索居家和社区养老等其他养老模式 \". 翻译为 China is actively exploring other cldcrly care models such as home- and community-based elderly care ； “ 以确保所有老年人老有所养 \" 表示目的. 应翻译成目的状语. 即 to ensure that all elderly people are supported in age; 注意 “ 老有所养 ” 即 “ 老的时候能够得到赡养 ”. 故翻译为 are supported in old 六级 2023 」 2 三到 51"
+        }
+      ]
+    }
+  ]
+}

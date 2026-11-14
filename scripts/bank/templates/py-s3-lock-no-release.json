@@ -1,0 +1,33 @@
+{
+  "templateId": "py-s3-lock-no-release",
+  "lang": "python",
+  "stage": 3,
+  "lessonId": "python-stage3-03",
+  "type": "codefix",
+  "concept": [
+    "threading.Lock",
+    "共享数据",
+    "acquire 与 release 要成对"
+  ],
+  "instances": 2,
+  "params": {
+    "m1": {
+      "kind": "pick",
+      "values": [
+        2,
+        6
+      ]
+    },
+    "m2": {
+      "kind": "pick",
+      "values": [
+        3,
+        5
+      ]
+    }
+  },
+  "stemTemplate": "我们让两个子对象**分别**把各自领到的数记进**同一个大元素**里（一个记 {m1} 条，另一个记 {m2} 条），记完再把元素里的总数报出来。\n\n规矩是**一次只准一个对象伸手**碰这个元素，所以代码里备了一把钥匙（`threading.Lock()`），我们管它叫 `锁`。\n\n可是这回程序一跑就**卡住不动了** —— 屏幕上什么也不出来，等多久都不出，最后只能硬按停止。你帮我们看看问题出在哪，把它改好。\n\n改好之后，程序应该把两个对象记的加起来印成一个数。",
+  "brokenCodeTemplate": "import threading\n\n锁 = threading.Lock()\n大元素 = [0]\n\n\ndef 记一笔(数):\n    锁.acquire()\n    大元素[0] = 大元素[0] + 数\n\n\n对象1 = threading.Thread(target=记一笔, args=({m1},))\n对象2 = threading.Thread(target=记一笔, args=({m2},))\n对象1.start()\n对象2.start()\n对象1.join()\n对象2.join()\n\nprint(大元素[0])\n",
+  "referenceFixTemplate": "import threading\n\n锁 = threading.Lock()\n大元素 = [0]\n\n\ndef 记一笔(数):\n    锁.acquire()\n    大元素[0] = 大元素[0] + 数\n    锁.release()\n\n\n对象1 = threading.Thread(target=记一笔, args=({m1},))\n对象2 = threading.Thread(target=记一笔, args=({m2},))\n对象1.start()\n对象2.start()\n对象1.join()\n对象2.join()\n\nprint(大元素[0])\n",
+  "explanationTemplate": "`acquire()` 是「**我们把钥匙攥住了**」，`release()` 是「**松手，下一位**」—— 这两句**必须成对**。\n\n我们这次只攥不松：第一个子对象攥着钥匙把活干完就走了。⚠️ 注意 **对象走了，钥匙可不会自动松** —— 钥匙还攥在它手里呢。第二只子对象伸手一摸，钥匙不在，只好在门口等着；它这一等就是永远（没人会来松手了）。\n\n而我们这边在 `join()` 第二只子对象，`join()` 的意思是「等你干完」—— 它永远干不完，我们就永远等下去。谁也没法往下走，程序就这么**僵住**了。\n\n这类僵局叫**死锁**：它**不是摔**，是「大家一起在等一件永远不会发生的事」。比摔难查得多 —— 摔了至少有错误信息告诉你哪一行，死锁连一个字都不吐，只在屏幕上留一片安静。\n\n补一句 `锁.release()` 就好。不过写新代码的时候，我们推荐更省事的写法：**`with 锁:`** —— 进这块的时候自动攥住钥匙，出来的时候自动松开，**哪怕中途摔了也会松开**，不容易漏。"
+}

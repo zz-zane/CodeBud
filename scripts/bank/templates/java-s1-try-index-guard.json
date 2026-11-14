@@ -1,0 +1,53 @@
+{
+  "templateId": "java-s1-try-index-guard",
+  "lang": "java",
+  "stage": 1,
+  "lessonId": "java-stage1-14",
+  "type": "codewrite",
+  "concept": [
+    "try",
+    "catch",
+    "getMessage",
+    "StringIndexOutOfBoundsException"
+  ],
+  "instances": 6,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "数据到手",
+        "计算机的工作区"
+      ]
+    },
+    "i": {
+      "kind": "pick",
+      "values": [
+        "1",
+        "6"
+      ]
+    },
+    "word2": {
+      "kind": "pick",
+      "values": [
+        "李四的毛线球",
+        "张三的数据容器"
+      ]
+    },
+    "i2": {
+      "kind": "pick",
+      "values": [
+        "6",
+        "7"
+      ]
+    }
+  },
+  "stdinSpec": {
+    "kind": "raw",
+    "text": "{word} {i}\n",
+    "sampleText": "{word2} {i2}\n"
+  },
+  "stemTemplate": "读取字符串与下标，在 try 中使用 charAt。越界时捕获 IndexOutOfBoundsException 并输出固定“出错啦：索引超出范围”，finally 输出“收工”。\n\n比如程序的输入是\n\n{sampleInput}\n\n程序就要返回\n\n{sampleOutput}\n\n（判分使用另一组输入）",
+  "starterTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n\n    }\n}\n",
+  "referenceSolutionTemplate": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String s = sc.next();\n        int i = sc.nextInt();\n        try {\n            System.out.println(\"第 \" + i + \" 颗是 \" + s.charAt(i));\n        } catch (IndexOutOfBoundsException e) {\n            System.out.println(\"出错啦：\" + \"索引超出范围\");\n        } finally {\n            System.out.println(\"收工\");\n        }\n    }\n}\n",
+  "explanationTemplate": "try 中访问 charAt 可能抛出 IndexOutOfBoundsException。catch 处理越界并输出题目规定的固定中性消息，finally 输出结束标记；异常消息不依赖 JDK 的 getMessage 文案。正常访问和异常访问都应执行 finally。"
+}

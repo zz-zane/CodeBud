@@ -1,0 +1,28 @@
+{
+  "templateId": "py-s1-quote-missing",
+  "lang": "python",
+  "stage": 1,
+  "lessonId": "python-stage1-01",
+  "type": "codefix",
+  "concept": [
+    "print",
+    "引号",
+    "NameError"
+  ],
+  "instances": 2,
+  "params": {
+    "thing": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "商品A",
+        "毛线球",
+        "商品鸡肉"
+      ]
+    }
+  },
+  "stemTemplate": "我们想让电脑输出「{thing}」这几个字，就敲了这么一行。\n\n可编译器一看见它就不乐意了，当场甩了个错出来……你帮我们改对，让它把 `{thing}` 原样输出。",
+  "brokenCodeTemplate": "print({thing})\n",
+  "referenceFixTemplate": "print(\"{thing}\")\n",
+  "explanationTemplate": "**引号**没写！括号里光秃秃的一个词，电脑不把它当「一句话」，而是当成**一个名字**去找 —— 它会扭头问「架子上有没有叫 {thing} 的东西呀」，翻了一圈没找着，只好报 `NameError` 给你看。\n\n给这几个字套上一对引号，它就从「一个名字」变回「一句话」了：引号圈住的是**要念的内容**，引号自己不会被输出。\n\n（这条界线要记牢：**加引号是内容，不加引号是名字**。往后天天要用到它。）"
+}

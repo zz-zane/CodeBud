@@ -1,0 +1,452 @@
+{
+  "lessonId": "cpp-stage2-01",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-cpp-s2-01-draw-cat-report-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给工作区画一张**类**，往后想创建几个创建几个。输入接口会递进来**两样料**（一行一样）：先是一串字（这个对象叫什么），再是一个整数（它当前记录了几条）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `report`，称呼它的时候印**一行**：\n\n```text\nX 当前记录了 Y 条数据\n```\n\n（X 是它的名字，Y 是它的条数）\n\n2. **根据类创建一个实例**，把输入接口递进来的名字和条数放进它自己那两栏；\n3. 让**这一个**施展 `report` 那一个方法。\n\n比如程序的输入是\n\n小胖\n6\n\n程序就要返回\n\n小胖 当前记录了 6 条数据\n\n（判分喂的是**另外两样料**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void report() {\n        cout << name << \" 当前记录了 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1;\n    c1.name = name;\n    c1.fish = fish;\n    c1.report();\n    return 0;\n}\n",
+      "expectedOutput": "张三 当前记录了 2 条数据",
+      "stdin": "张三\n2\n",
+      "explanation": "这一题要你亲手走一遍「定义类 → 生实例 → 调用函数」三步。\n\n**一、类定义上写的是什么。** `class Cat` 里那两栏说的是「凡是照这张类定义创建后的对象，都自带这两格」——**它自己不处理地方**，只是画在那儿。所以类定义里那句 `name`、`fish`，念的是「我们自己那两格」，抬眼就看得见，**不用写任何前缀**。\n\n**二、函数画在类定义里面。** 写法和普通函数一模一样，只差它在类定义的大括号里面。它里面用 `name`、`fish`，说的就是**施展这一个方法的那个对象**的那两格 —— 所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字。\n\n**三、类定义不是对象。** 光写 `class Cat`，元素边一个对象都没有；真正让世界多一个的，是 `Cat c1;` 那一句。C++ 这里不用调用 `new`，**写上类定义名、跟一个名字，对象就站在你跟前了**。\n\n**四、放东西用点号。** `c1.name` 念作「`c1` 这个对象的 `name` 那一格」，够到之后就跟普通的一个元素没两样，能放能取。\n\n⚠️ 最后别忘类定义**大括号后面那个分号** —— 本课最贵的一个字符。",
+      "templateId": "cpp-s2-01-draw-cat-report",
+      "params": {
+        "name": "张三",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "898b79c0b623b890"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-draw-cat-report-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给工作区画一张**类**，往后想创建几个创建几个。输入接口会递进来**两样料**（一行一样）：先是一串字（这个对象叫什么），再是一个整数（它当前记录了几条）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `report`，称呼它的时候印**一行**：\n\n```text\nX 当前记录了 Y 条数据\n```\n\n（X 是它的名字，Y 是它的条数）\n\n2. **根据类创建一个实例**，把输入接口递进来的名字和条数放进它自己那两栏；\n3. 让**这一个**施展 `report` 那一个方法。\n\n比如程序的输入是\n\n小胖\n6\n\n程序就要返回\n\n小胖 当前记录了 6 条数据\n\n（判分喂的是**另外两样料**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void report() {\n        cout << name << \" 当前记录了 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1;\n    c1.name = name;\n    c1.fish = fish;\n    c1.report();\n    return 0;\n}\n",
+      "expectedOutput": "张三 当前记录了 3 条数据",
+      "stdin": "张三\n3\n",
+      "explanation": "这一题要你亲手走一遍「定义类 → 生实例 → 调用函数」三步。\n\n**一、类定义上写的是什么。** `class Cat` 里那两栏说的是「凡是照这张类定义创建后的对象，都自带这两格」——**它自己不处理地方**，只是画在那儿。所以类定义里那句 `name`、`fish`，念的是「我们自己那两格」，抬眼就看得见，**不用写任何前缀**。\n\n**二、函数画在类定义里面。** 写法和普通函数一模一样，只差它在类定义的大括号里面。它里面用 `name`、`fish`，说的就是**施展这一个方法的那个对象**的那两格 —— 所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字。\n\n**三、类定义不是对象。** 光写 `class Cat`，元素边一个对象都没有；真正让世界多一个的，是 `Cat c1;` 那一句。C++ 这里不用调用 `new`，**写上类定义名、跟一个名字，对象就站在你跟前了**。\n\n**四、放东西用点号。** `c1.name` 念作「`c1` 这个对象的 `name` 那一格」，够到之后就跟普通的一个元素没两样，能放能取。\n\n⚠️ 最后别忘类定义**大括号后面那个分号** —— 本课最贵的一个字符。",
+      "templateId": "cpp-s2-01-draw-cat-report",
+      "params": {
+        "name": "张三",
+        "fish": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "be76367529fad065"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-draw-cat-report-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给工作区画一张**类**，往后想创建几个创建几个。输入接口会递进来**两样料**（一行一样）：先是一串字（这个对象叫什么），再是一个整数（它当前记录了几条）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `report`，称呼它的时候印**一行**：\n\n```text\nX 当前记录了 Y 条数据\n```\n\n（X 是它的名字，Y 是它的条数）\n\n2. **根据类创建一个实例**，把输入接口递进来的名字和条数放进它自己那两栏；\n3. 让**这一个**施展 `report` 那一个方法。\n\n比如程序的输入是\n\n小胖\n6\n\n程序就要返回\n\n小胖 当前记录了 6 条数据\n\n（判分喂的是**另外两样料**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void report() {\n        cout << name << \" 当前记录了 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1;\n    c1.name = name;\n    c1.fish = fish;\n    c1.report();\n    return 0;\n}\n",
+      "expectedOutput": "李四 当前记录了 2 条数据",
+      "stdin": "李四\n2\n",
+      "explanation": "这一题要你亲手走一遍「定义类 → 生实例 → 调用函数」三步。\n\n**一、类定义上写的是什么。** `class Cat` 里那两栏说的是「凡是照这张类定义创建后的对象，都自带这两格」——**它自己不处理地方**，只是画在那儿。所以类定义里那句 `name`、`fish`，念的是「我们自己那两格」，抬眼就看得见，**不用写任何前缀**。\n\n**二、函数画在类定义里面。** 写法和普通函数一模一样，只差它在类定义的大括号里面。它里面用 `name`、`fish`，说的就是**施展这一个方法的那个对象**的那两格 —— 所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字。\n\n**三、类定义不是对象。** 光写 `class Cat`，元素边一个对象都没有；真正让世界多一个的，是 `Cat c1;` 那一句。C++ 这里不用调用 `new`，**写上类定义名、跟一个名字，对象就站在你跟前了**。\n\n**四、放东西用点号。** `c1.name` 念作「`c1` 这个对象的 `name` 那一格」，够到之后就跟普通的一个元素没两样，能放能取。\n\n⚠️ 最后别忘类定义**大括号后面那个分号** —— 本课最贵的一个字符。",
+      "templateId": "cpp-s2-01-draw-cat-report",
+      "params": {
+        "name": "李四",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "9f9566d4357ea8d0"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-draw-cat-report-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给工作区画一张**类**，往后想创建几个创建几个。输入接口会递进来**两样料**（一行一样）：先是一串字（这个对象叫什么），再是一个整数（它当前记录了几条）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `report`，称呼它的时候印**一行**：\n\n```text\nX 当前记录了 Y 条数据\n```\n\n（X 是它的名字，Y 是它的条数）\n\n2. **根据类创建一个实例**，把输入接口递进来的名字和条数放进它自己那两栏；\n3. 让**这一个**施展 `report` 那一个方法。\n\n比如程序的输入是\n\n小胖\n6\n\n程序就要返回\n\n小胖 当前记录了 6 条数据\n\n（判分喂的是**另外两样料**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void report() {\n        cout << name << \" 当前记录了 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1;\n    c1.name = name;\n    c1.fish = fish;\n    c1.report();\n    return 0;\n}\n",
+      "expectedOutput": "李四 当前记录了 3 条数据",
+      "stdin": "李四\n3\n",
+      "explanation": "这一题要你亲手走一遍「定义类 → 生实例 → 调用函数」三步。\n\n**一、类定义上写的是什么。** `class Cat` 里那两栏说的是「凡是照这张类定义创建后的对象，都自带这两格」——**它自己不处理地方**，只是画在那儿。所以类定义里那句 `name`、`fish`，念的是「我们自己那两格」，抬眼就看得见，**不用写任何前缀**。\n\n**二、函数画在类定义里面。** 写法和普通函数一模一样，只差它在类定义的大括号里面。它里面用 `name`、`fish`，说的就是**施展这一个方法的那个对象**的那两格 —— 所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字。\n\n**三、类定义不是对象。** 光写 `class Cat`，元素边一个对象都没有；真正让世界多一个的，是 `Cat c1;` 那一句。C++ 这里不用调用 `new`，**写上类定义名、跟一个名字，对象就站在你跟前了**。\n\n**四、放东西用点号。** `c1.name` 念作「`c1` 这个对象的 `name` 那一格」，够到之后就跟普通的一个元素没两样，能放能取。\n\n⚠️ 最后别忘类定义**大括号后面那个分号** —— 本课最贵的一个字符。",
+      "templateId": "cpp-s2-01-draw-cat-report",
+      "params": {
+        "name": "李四",
+        "fish": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "2fd37c823651e00d"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-draw-cat-report-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给工作区画一张**类**，往后想创建几个创建几个。输入接口会递进来**两样料**（一行一样）：先是一串字（这个对象叫什么），再是一个整数（它当前记录了几条）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `report`，称呼它的时候印**一行**：\n\n```text\nX 当前记录了 Y 条数据\n```\n\n（X 是它的名字，Y 是它的条数）\n\n2. **根据类创建一个实例**，把输入接口递进来的名字和条数放进它自己那两栏；\n3. 让**这一个**施展 `report` 那一个方法。\n\n比如程序的输入是\n\n小胖\n6\n\n程序就要返回\n\n小胖 当前记录了 6 条数据\n\n（判分喂的是**另外两样料**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void report() {\n        cout << name << \" 当前记录了 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1;\n    c1.name = name;\n    c1.fish = fish;\n    c1.report();\n    return 0;\n}\n",
+      "expectedOutput": "王五 当前记录了 2 条数据",
+      "stdin": "王五\n2\n",
+      "explanation": "这一题要你亲手走一遍「定义类 → 生实例 → 调用函数」三步。\n\n**一、类定义上写的是什么。** `class Cat` 里那两栏说的是「凡是照这张类定义创建后的对象，都自带这两格」——**它自己不处理地方**，只是画在那儿。所以类定义里那句 `name`、`fish`，念的是「我们自己那两格」，抬眼就看得见，**不用写任何前缀**。\n\n**二、函数画在类定义里面。** 写法和普通函数一模一样，只差它在类定义的大括号里面。它里面用 `name`、`fish`，说的就是**施展这一个方法的那个对象**的那两格 —— 所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字。\n\n**三、类定义不是对象。** 光写 `class Cat`，元素边一个对象都没有；真正让世界多一个的，是 `Cat c1;` 那一句。C++ 这里不用调用 `new`，**写上类定义名、跟一个名字，对象就站在你跟前了**。\n\n**四、放东西用点号。** `c1.name` 念作「`c1` 这个对象的 `name` 那一格」，够到之后就跟普通的一个元素没两样，能放能取。\n\n⚠️ 最后别忘类定义**大括号后面那个分号** —— 本课最贵的一个字符。",
+      "templateId": "cpp-s2-01-draw-cat-report",
+      "params": {
+        "name": "王五",
+        "fish": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "666616ed4f404cb3"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-draw-cat-report-005",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要给工作区画一张**类**，往后想创建几个创建几个。输入接口会递进来**两样料**（一行一样）：先是一串字（这个对象叫什么），再是一个整数（它当前记录了几条）。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `report`，称呼它的时候印**一行**：\n\n```text\nX 当前记录了 Y 条数据\n```\n\n（X 是它的名字，Y 是它的条数）\n\n2. **根据类创建一个实例**，把输入接口递进来的名字和条数放进它自己那两栏；\n3. 让**这一个**施展 `report` 那一个方法。\n\n比如程序的输入是\n\n小胖\n6\n\n程序就要返回\n\n小胖 当前记录了 6 条数据\n\n（判分喂的是**另外两样料**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void report() {\n        cout << name << \" 当前记录了 \" << fish << \" 条数据\" << endl;\n    }\n};\n\nint main() {\n    string name;\n    int fish = 0;\n    cin >> name >> fish;\n\n    Cat c1;\n    c1.name = name;\n    c1.fish = fish;\n    c1.report();\n    return 0;\n}\n",
+      "expectedOutput": "王五 当前记录了 3 条数据",
+      "stdin": "王五\n3\n",
+      "explanation": "这一题要你亲手走一遍「定义类 → 生实例 → 调用函数」三步。\n\n**一、类定义上写的是什么。** `class Cat` 里那两栏说的是「凡是照这张类定义创建后的对象，都自带这两格」——**它自己不处理地方**，只是画在那儿。所以类定义里那句 `name`、`fish`，念的是「我们自己那两格」，抬眼就看得见，**不用写任何前缀**。\n\n**二、函数画在类定义里面。** 写法和普通函数一模一样，只差它在类定义的大括号里面。它里面用 `name`、`fish`，说的就是**施展这一个方法的那个对象**的那两格 —— 所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字。\n\n**三、类定义不是对象。** 光写 `class Cat`，元素边一个对象都没有；真正让世界多一个的，是 `Cat c1;` 那一句。C++ 这里不用调用 `new`，**写上类定义名、跟一个名字，对象就站在你跟前了**。\n\n**四、放东西用点号。** `c1.name` 念作「`c1` 这个对象的 `name` 那一格」，够到之后就跟普通的一个元素没两样，能放能取。\n\n⚠️ 最后别忘类定义**大括号后面那个分号** —— 本课最贵的一个字符。",
+      "templateId": "cpp-s2-01-draw-cat-report",
+      "params": {
+        "name": "王五",
+        "fish": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "c24c251260993431"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-greet-method-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让每个对象都会**打招呼**。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `greet`，称呼它的时候印**一行**：\n\n```text\n我们是XX，当前记录了 N 条，见到你真好\n```\n\n2. 根据类创建**两个**实例：第一个叫 `张三`、第二只叫 `李四`，条数用输入接口递进来的那两个；\n3. **各调用一次** `greet`，第一个先调用。\n\n比如程序的输入是\n\n5\n4\n\n程序就要返回\n\n我们是张三，当前记录了 5 条，见到你真好\n我们是李四，当前记录了 4 条，见到你真好\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void greet() {\n        cout << \"我们是\" << name << \"，当前记录了 \" << fish << \" 条，见到你真好\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"张三\";\n    c1.fish = a;\n    c2.name = \"李四\";\n    c2.fish = b;\n\n    c1.greet();\n    c2.greet();\n    return 0;\n}\n",
+      "expectedOutput": "我们是张三，当前记录了 2 条，见到你真好\n我们是李四，当前记录了 2 条，见到你真好",
+      "stdin": "2\n2\n",
+      "explanation": "这一题的重点在**函数里那两句话说的是谁**。\n\n函数画在类定义里面，它里面写的 `name`、`fish` **不带任何前缀**——那意思是「**施展这一个方法的那个对象**自己的那两格」。所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字和各自的条数。\n\n- 引用的写法是「**哪个对象 · 函数名**」：`c1.greet();` 让第一个调用，`c2.greet();` 让第二只调用。**先说哪个对象，再调用函数名** —— 和上一阶段调用函数只多了前面那一段。\n- 函数写一次，两个对象都能用。以后想改台词，改类定义里那一处就行，两个一起变——这正是本课嫌「抄自己」的好处。\n\n⚠️ 写到函数里的时候，**别在 `name` 前面又补一句 `c1.`**：函数里面说 `name` 就是自己那一格，写了前缀反而找不到东西。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。",
+      "templateId": "cpp-s2-01-greet-method",
+      "params": {
+        "nameA": "张三",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "b6af7e97e5966b93"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-greet-method-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让每个对象都会**打招呼**。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `greet`，称呼它的时候印**一行**：\n\n```text\n我们是XX，当前记录了 N 条，见到你真好\n```\n\n2. 根据类创建**两个**实例：第一个叫 `张三`、第二只叫 `三花`，条数用输入接口递进来的那两个；\n3. **各调用一次** `greet`，第一个先调用。\n\n比如程序的输入是\n\n4\n3\n\n程序就要返回\n\n我们是张三，当前记录了 4 条，见到你真好\n我们是三花，当前记录了 3 条，见到你真好\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void greet() {\n        cout << \"我们是\" << name << \"，当前记录了 \" << fish << \" 条，见到你真好\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"张三\";\n    c1.fish = a;\n    c2.name = \"三花\";\n    c2.fish = b;\n\n    c1.greet();\n    c2.greet();\n    return 0;\n}\n",
+      "expectedOutput": "我们是张三，当前记录了 4 条，见到你真好\n我们是三花，当前记录了 1 条，见到你真好",
+      "stdin": "4\n1\n",
+      "explanation": "这一题的重点在**函数里那两句话说的是谁**。\n\n函数画在类定义里面，它里面写的 `name`、`fish` **不带任何前缀**——那意思是「**施展这一个方法的那个对象**自己的那两格」。所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字和各自的条数。\n\n- 引用的写法是「**哪个对象 · 函数名**」：`c1.greet();` 让第一个调用，`c2.greet();` 让第二只调用。**先说哪个对象，再调用函数名** —— 和上一阶段调用函数只多了前面那一段。\n- 函数写一次，两个对象都能用。以后想改台词，改类定义里那一处就行，两个一起变——这正是本课嫌「抄自己」的好处。\n\n⚠️ 写到函数里的时候，**别在 `name` 前面又补一句 `c1.`**：函数里面说 `name` 就是自己那一格，写了前缀反而找不到东西。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。",
+      "templateId": "cpp-s2-01-greet-method",
+      "params": {
+        "nameA": "张三",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "43432327d2cebb6d"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-greet-method-002",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让每个对象都会**打招呼**。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `greet`，称呼它的时候印**一行**：\n\n```text\n我们是XX，当前记录了 N 条，见到你真好\n```\n\n2. 根据类创建**两个**实例：第一个叫 `王五`、第二只叫 `李四`，条数用输入接口递进来的那两个；\n3. **各调用一次** `greet`，第一个先调用。\n\n比如程序的输入是\n\n4\n2\n\n程序就要返回\n\n我们是王五，当前记录了 4 条，见到你真好\n我们是李四，当前记录了 2 条，见到你真好\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void greet() {\n        cout << \"我们是\" << name << \"，当前记录了 \" << fish << \" 条，见到你真好\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"王五\";\n    c1.fish = a;\n    c2.name = \"李四\";\n    c2.fish = b;\n\n    c1.greet();\n    c2.greet();\n    return 0;\n}\n",
+      "expectedOutput": "我们是王五，当前记录了 1 条，见到你真好\n我们是李四，当前记录了 4 条，见到你真好",
+      "stdin": "1\n4\n",
+      "explanation": "这一题的重点在**函数里那两句话说的是谁**。\n\n函数画在类定义里面，它里面写的 `name`、`fish` **不带任何前缀**——那意思是「**施展这一个方法的那个对象**自己的那两格」。所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字和各自的条数。\n\n- 引用的写法是「**哪个对象 · 函数名**」：`c1.greet();` 让第一个调用，`c2.greet();` 让第二只调用。**先说哪个对象，再调用函数名** —— 和上一阶段调用函数只多了前面那一段。\n- 函数写一次，两个对象都能用。以后想改台词，改类定义里那一处就行，两个一起变——这正是本课嫌「抄自己」的好处。\n\n⚠️ 写到函数里的时候，**别在 `name` 前面又补一句 `c1.`**：函数里面说 `name` 就是自己那一格，写了前缀反而找不到东西。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。",
+      "templateId": "cpp-s2-01-greet-method",
+      "params": {
+        "nameA": "王五",
+        "nameB": "李四"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "be656a8fadbc3529"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-greet-method-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们想让每个对象都会**打招呼**。输入接口会递进来**两个数**（一行一个）：第一个的条数、第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；类定义上再画**一个方法** `greet`，称呼它的时候印**一行**：\n\n```text\n我们是XX，当前记录了 N 条，见到你真好\n```\n\n2. 根据类创建**两个**实例：第一个叫 `王五`、第二只叫 `三花`，条数用输入接口递进来的那两个；\n3. **各调用一次** `greet`，第一个先调用。\n\n比如程序的输入是\n\n5\n2\n\n程序就要返回\n\n我们是王五，当前记录了 5 条，见到你真好\n我们是三花，当前记录了 2 条，见到你真好\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n\n    void greet() {\n        cout << \"我们是\" << name << \"，当前记录了 \" << fish << \" 条，见到你真好\" << endl;\n    }\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"王五\";\n    c1.fish = a;\n    c2.name = \"三花\";\n    c2.fish = b;\n\n    c1.greet();\n    c2.greet();\n    return 0;\n}\n",
+      "expectedOutput": "我们是王五，当前记录了 4 条，见到你真好\n我们是三花，当前记录了 2 条，见到你真好",
+      "stdin": "4\n2\n",
+      "explanation": "这一题的重点在**函数里那两句话说的是谁**。\n\n函数画在类定义里面，它里面写的 `name`、`fish` **不带任何前缀**——那意思是「**施展这一个方法的那个对象**自己的那两格」。所以同一个类定义创建后的两个对象调用同一个方法，报出来的是各自的名字和各自的条数。\n\n- 引用的写法是「**哪个对象 · 函数名**」：`c1.greet();` 让第一个调用，`c2.greet();` 让第二只调用。**先说哪个对象，再调用函数名** —— 和上一阶段调用函数只多了前面那一段。\n- 函数写一次，两个对象都能用。以后想改台词，改类定义里那一处就行，两个一起变——这正是本课嫌「抄自己」的好处。\n\n⚠️ 写到函数里的时候，**别在 `name` 前面又补一句 `c1.`**：函数里面说 `name` 就是自己那一格，写了前缀反而找不到东西。\n\n⚠️ 还有那句老话：类定义大括号后面的分号别丢。",
+      "templateId": "cpp-s2-01-greet-method",
+      "params": {
+        "nameA": "王五",
+        "nameB": "三花"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "678c6af7030aae49"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-needs-public-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们照课文画好了一个类定义，两栏家常都写在上面了；照它创建对象、往格子里放东西的那几句也写好了。\n\n可信封递进去编译器就是不收，说**类定义外面够不着里面的格子**。\n\n你帮我们补上一行，让它跑起来、把那行账输出。**类定义上已有的那两栏和那几句账，一个字都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"张三\";\n    c1.fish = 2;\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"张三\";\n    c1.fish = 2;\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 当前记录了 2 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:12:8: error: 'std::string Cat::name' is private within this context`\n\n（下面还会跟着一条 `note: declared private here`，指回类定义上画着那一栏的地方。）\n\n用自然语言解释：**「`Cat` 这张类定义上的 `name` 那一格现在是私有的，你站的这个地方够不着。」** 它也是翻译阶段就拦下的，程序根本没跑。\n\n为什么会「私有」？因为类定义里那些格子**得站在某一行标签底下才算数**。我们一行标签都没写，编译器就按最严的那一档算：类定义自己关起门来用，外面谁也别碰。\n\n补法就是那一行 `public:` —— 意思是「下面这几样，类定义外面也够得着」。它像一个分水岭：**写在它下面的格子，外面才够得到。**\n\n记住这个手感：类定义里面**没有标签 = 外面够不着**。以后写类定义，第一件事就是先摆上那一行。",
+      "templateId": "cpp-s2-01-needs-public",
+      "params": {
+        "fish": 2,
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "1541f3f46b8066d6"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-needs-public-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们照课文画好了一个类定义，两栏家常都写在上面了；照它创建对象、往格子里放东西的那几句也写好了。\n\n可信封递进去编译器就是不收，说**类定义外面够不着里面的格子**。\n\n你帮我们补上一行，让它跑起来、把那行账输出。**类定义上已有的那两栏和那几句账，一个字都不用动。**",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"王五\";\n    c1.fish = 3;\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"王五\";\n    c1.fish = 3;\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 当前记录了 3 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:12:8: error: 'std::string Cat::name' is private within this context`\n\n（下面还会跟着一条 `note: declared private here`，指回类定义上画着那一栏的地方。）\n\n用自然语言解释：**「`Cat` 这张类定义上的 `name` 那一格现在是私有的，你站的这个地方够不着。」** 它也是翻译阶段就拦下的，程序根本没跑。\n\n为什么会「私有」？因为类定义里那些格子**得站在某一行标签底下才算数**。我们一行标签都没写，编译器就按最严的那一档算：类定义自己关起门来用，外面谁也别碰。\n\n补法就是那一行 `public:` —— 意思是「下面这几样，类定义外面也够得着」。它像一个分水岭：**写在它下面的格子，外面才够得到。**\n\n记住这个手感：类定义里面**没有标签 = 外面够不着**。以后写类定义，第一件事就是先摆上那一行。",
+      "templateId": "cpp-s2-01-needs-public",
+      "params": {
+        "fish": 3,
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "106d967e2186f2a2"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-no-such-member-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想给对象多记一样东西，于是在照它创建后的那个对象身上写了一句；可信封递进去，编译器说**它身上没有这一格**。\n\n你帮我们改到能跑起来。**类定义上那两栏和最后那行账都不用动**——这一题要你练的是「东西是从哪来的」：格子得先画在类定义上，实例身上才长得出来。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"张三\";\n    c1.weight = 4;\n    cout << c1.name << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n    int weight;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"张三\";\n    c1.weight = 4;\n    cout << c1.name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:14:8: error: 'class Cat' has no member named 'weight'`\n\n用自然语言解释：**「`Cat` 这张类定义上，没有叫 `weight` 的那一格。」**\n\n顺序是这样的：**格子先是画在类定义上的一行，实例身上才跟着长出一格。** 我们想给对象记体重，可类定义上压根没画这一栏——类定义上没有的东西，照它创建后的每一个身上当然也没有（连名字都还没起过的格子，是根本不存在的）。\n\n所以这一题的改法不是改那一句，**是回类定义上添一栏**。添完再回来看，那一句自己就成立了。\n\n顺手记一个手感：看到 `has no member named`（没有叫某某的一员），就是**类定义上没有这一栏**，别去怀疑点号前面那个对象的名字。",
+      "templateId": "cpp-s2-01-no-such-member",
+      "params": {
+        "w": 4,
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "4d170f054ba73fb4"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-no-such-member-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们想给对象多记一样东西，于是在照它创建后的那个对象身上写了一句；可信封递进去，编译器说**它身上没有这一格**。\n\n你帮我们改到能跑起来。**类定义上那两栏和最后那行账都不用动**——这一题要你练的是「东西是从哪来的」：格子得先画在类定义上，实例身上才长得出来。",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"王五\";\n    c1.weight = 5;\n    cout << c1.name << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n    int weight;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"王五\";\n    c1.weight = 5;\n    cout << c1.name << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:14:8: error: 'class Cat' has no member named 'weight'`\n\n用自然语言解释：**「`Cat` 这张类定义上，没有叫 `weight` 的那一格。」**\n\n顺序是这样的：**格子先是画在类定义上的一行，实例身上才跟着长出一格。** 我们想给对象记体重，可类定义上压根没画这一栏——类定义上没有的东西，照它创建后的每一个身上当然也没有（连名字都还没起过的格子，是根本不存在的）。\n\n所以这一题的改法不是改那一句，**是回类定义上添一栏**。添完再回来看，那一句自己就成立了。\n\n顺手记一个手感：看到 `has no member named`（没有叫某某的一员），就是**类定义上没有这一栏**，别去怀疑点号前面那个对象的名字。",
+      "templateId": "cpp-s2-01-no-such-member",
+      "params": {
+        "w": 5,
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "665cf293c5bd7a7b"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-semicolon-after-drawing-000",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画好了一张类，又照它创建了一个实例、把名字和数据数都填好了——可信封递进去，编译器**不收**：它说这一页过不了。\n\n你帮我们把漏掉的东西补上，让它跑起来、把那一行账输出。**类定义里那两栏、还有最后那几句账，一个字都不用动。**\n\n（跑不起来的原话我们抄在解析里了，别提前偷看）",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n}\n\nint main() {\n    Cat c1;\n    c1.name = \"张三\";\n    c1.fish = 2;\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"张三\";\n    c1.fish = 2;\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 当前记录了 2 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:9:2: error: expected ';' after class definition`\n\n用自然语言解释：**「类定义画到这儿该收尾了，我们在等一个分号。」**\n\n它连程序都没让跑起来——这是翻译阶段就拦下的错。\n\n这一跤的教训只有一句：**类定义的大括号闭合以后，还得补一个分号。** 这是类定义和函数最不一样的一点：函数的大括号闭合就完事了，类定义不行。\n\n所以看到 `expected ';' after class definition`，别去怀疑类定义里的哪一栏 —— **直接看类定义收尾那一个字符**。补上它，类定义才算画完。",
+      "templateId": "cpp-s2-01-semicolon-after-drawing",
+      "params": {
+        "fish": 2,
+        "name": "张三"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "4811bbcd8f39eac4"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-semicolon-after-drawing-005",
+      "type": "codefix",
+      "lang": "cpp",
+      "stem": "我们画好了一张类，又照它创建了一个实例、把名字和数据数都填好了——可信封递进去，编译器**不收**：它说这一页过不了。\n\n你帮我们把漏掉的东西补上，让它跑起来、把那一行账输出。**类定义里那两栏、还有最后那几句账，一个字都不用动。**\n\n（跑不起来的原话我们抄在解析里了，别提前偷看）",
+      "brokenCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n}\n\nint main() {\n    Cat c1;\n    c1.name = \"王五\";\n    c1.fish = 3;\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "referenceFix": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    Cat c1;\n    c1.name = \"王五\";\n    c1.fish = 3;\n    cout << c1.name << \" 当前记录了 \" << c1.fish << \" 条数据\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 当前记录了 3 条数据",
+      "stdin": null,
+      "explanation": "编译器的原话是：\n\n`main.cpp:9:2: error: expected ';' after class definition`\n\n用自然语言解释：**「类定义画到这儿该收尾了，我们在等一个分号。」**\n\n它连程序都没让跑起来——这是翻译阶段就拦下的错。\n\n这一跤的教训只有一句：**类定义的大括号闭合以后，还得补一个分号。** 这是类定义和函数最不一样的一点：函数的大括号闭合就完事了，类定义不行。\n\n所以看到 `expected ';' after class definition`，别去怀疑类定义里的哪一栏 —— **直接看类定义收尾那一个字符**。补上它，类定义才算画完。",
+      "templateId": "cpp-s2-01-semicolon-after-drawing",
+      "params": {
+        "fish": 3,
+        "name": "王五"
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "4e070416f8a91501"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-two-cats-own-books-000",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要拿**同一个类定义**生两个对象，看看它俩的账会不会串。输入接口会递进来**两个数**（一行一个）：先是第一个的条数，再是第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；\n2. **照同一个类定义生两个实例**，第一个叫 `张三`、第二只叫 `李四`（名字直接写死在代码里就行），条数用输入接口递进来的那两个；\n3. 只给**第一个**的条数加上 2 条（第二只一点都不动）；\n4. 印**两行**：\n\n```text\nXX 的账上是 N 条\n```\n\n（第一个一行、第二只一行，按这个先后顺序）\n\n比如程序的输入是\n\n1\n4\n\n程序就要返回\n\n张三 的账上是 3 条\n李四 的账上是 4 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"张三\";\n    c1.fish = a;\n    c2.name = \"李四\";\n    c2.fish = b;\n\n    c1.fish = c1.fish + 2;\n\n    cout << c1.name << \" 的账上是 \" << c1.fish << \" 条\" << endl;\n    cout << c2.name << \" 的账上是 \" << c2.fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 的账上是 8 条\n李四 的账上是 1 条",
+      "stdin": "6\n1\n",
+      "explanation": "这一题要你亲眼看清一件事：**类定义只有一张，格子是每个对象各带一份的。**\n\n- `Cat c1;` 和 `Cat c2;` 是照**同一张**类定义创建后的两个实例。类定义画完就那样，生多少只都不会把它用旧。\n- 每创建一个，它就**带着自己那一套** `name` 和 `fish`——两个谁也不碰谁。\n- 所以 `c1.fish = c1.fish + 2;` 动的是**第一个那一格**，第二只半点关系都没有。这就是为什么屏幕上两行数不一样。\n\n⚠️ 最容易摔的是**把两笔账写成一笔**：如果只创建了一个对象（或者两个共用了同一格），你会看到两行数字一起变——那说明你动的不是「某一个的格子」，而是「大家共用的那一格」。\n\n另一个手感：`c1.name` 和 `c2.name` 虽然写着同一个 `name`，可它们**是两个对象各自的那一格** —— 点号前面的那个对象是谁，就够到谁的那一格。",
+      "templateId": "cpp-s2-01-two-cats-own-books",
+      "params": {
+        "nameA": "张三",
+        "nameB": "李四",
+        "k": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "10f394e77b3e5bab"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-two-cats-own-books-001",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要拿**同一个类定义**生两个对象，看看它俩的账会不会串。输入接口会递进来**两个数**（一行一个）：先是第一个的条数，再是第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；\n2. **照同一个类定义生两个实例**，第一个叫 `张三`、第二只叫 `李四`（名字直接写死在代码里就行），条数用输入接口递进来的那两个；\n3. 只给**第一个**的条数加上 3 条（第二只一点都不动）；\n4. 印**两行**：\n\n```text\nXX 的账上是 N 条\n```\n\n（第一个一行、第二只一行，按这个先后顺序）\n\n比如程序的输入是\n\n3\n2\n\n程序就要返回\n\n张三 的账上是 6 条\n李四 的账上是 2 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"张三\";\n    c1.fish = a;\n    c2.name = \"李四\";\n    c2.fish = b;\n\n    c1.fish = c1.fish + 3;\n\n    cout << c1.name << \" 的账上是 \" << c1.fish << \" 条\" << endl;\n    cout << c2.name << \" 的账上是 \" << c2.fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 的账上是 5 条\n李四 的账上是 4 条",
+      "stdin": "2\n4\n",
+      "explanation": "这一题要你亲眼看清一件事：**类定义只有一张，格子是每个对象各带一份的。**\n\n- `Cat c1;` 和 `Cat c2;` 是照**同一张**类定义创建后的两个实例。类定义画完就那样，生多少只都不会把它用旧。\n- 每创建一个，它就**带着自己那一套** `name` 和 `fish`——两个谁也不碰谁。\n- 所以 `c1.fish = c1.fish + 3;` 动的是**第一个那一格**，第二只半点关系都没有。这就是为什么屏幕上两行数不一样。\n\n⚠️ 最容易摔的是**把两笔账写成一笔**：如果只创建了一个对象（或者两个共用了同一格），你会看到两行数字一起变——那说明你动的不是「某一个的格子」，而是「大家共用的那一格」。\n\n另一个手感：`c1.name` 和 `c2.name` 虽然写着同一个 `name`，可它们**是两个对象各自的那一格** —— 点号前面的那个对象是谁，就够到谁的那一格。",
+      "templateId": "cpp-s2-01-two-cats-own-books",
+      "params": {
+        "nameA": "张三",
+        "nameB": "李四",
+        "k": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "7041afb4dc70629e"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-two-cats-own-books-003",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要拿**同一个类定义**生两个对象，看看它俩的账会不会串。输入接口会递进来**两个数**（一行一个）：先是第一个的条数，再是第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；\n2. **照同一个类定义生两个实例**，第一个叫 `张三`、第二只叫 `三花`（名字直接写死在代码里就行），条数用输入接口递进来的那两个；\n3. 只给**第一个**的条数加上 3 条（第二只一点都不动）；\n4. 印**两行**：\n\n```text\nXX 的账上是 N 条\n```\n\n（第一个一行、第二只一行，按这个先后顺序）\n\n比如程序的输入是\n\n1\n3\n\n程序就要返回\n\n张三 的账上是 4 条\n三花 的账上是 3 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"张三\";\n    c1.fish = a;\n    c2.name = \"三花\";\n    c2.fish = b;\n\n    c1.fish = c1.fish + 3;\n\n    cout << c1.name << \" 的账上是 \" << c1.fish << \" 条\" << endl;\n    cout << c2.name << \" 的账上是 \" << c2.fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "张三 的账上是 5 条\n三花 的账上是 5 条",
+      "stdin": "2\n5\n",
+      "explanation": "这一题要你亲眼看清一件事：**类定义只有一张，格子是每个对象各带一份的。**\n\n- `Cat c1;` 和 `Cat c2;` 是照**同一张**类定义创建后的两个实例。类定义画完就那样，生多少只都不会把它用旧。\n- 每创建一个，它就**带着自己那一套** `name` 和 `fish`——两个谁也不碰谁。\n- 所以 `c1.fish = c1.fish + 3;` 动的是**第一个那一格**，第二只半点关系都没有。这就是为什么屏幕上两行数不一样。\n\n⚠️ 最容易摔的是**把两笔账写成一笔**：如果只创建了一个对象（或者两个共用了同一格），你会看到两行数字一起变——那说明你动的不是「某一个的格子」，而是「大家共用的那一格」。\n\n另一个手感：`c1.name` 和 `c2.name` 虽然写着同一个 `name`，可它们**是两个对象各自的那一格** —— 点号前面的那个对象是谁，就够到谁的那一格。",
+      "templateId": "cpp-s2-01-two-cats-own-books",
+      "params": {
+        "nameA": "张三",
+        "nameB": "三花",
+        "k": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "1301b06c90c768a9"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-two-cats-own-books-004",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要拿**同一个类定义**生两个对象，看看它俩的账会不会串。输入接口会递进来**两个数**（一行一个）：先是第一个的条数，再是第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；\n2. **照同一个类定义生两个实例**，第一个叫 `王五`、第二只叫 `李四`（名字直接写死在代码里就行），条数用输入接口递进来的那两个；\n3. 只给**第一个**的条数加上 2 条（第二只一点都不动）；\n4. 印**两行**：\n\n```text\nXX 的账上是 N 条\n```\n\n（第一个一行、第二只一行，按这个先后顺序）\n\n比如程序的输入是\n\n1\n6\n\n程序就要返回\n\n王五 的账上是 3 条\n李四 的账上是 6 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"王五\";\n    c1.fish = a;\n    c2.name = \"李四\";\n    c2.fish = b;\n\n    c1.fish = c1.fish + 2;\n\n    cout << c1.name << \" 的账上是 \" << c1.fish << \" 条\" << endl;\n    cout << c2.name << \" 的账上是 \" << c2.fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 的账上是 8 条\n李四 的账上是 5 条",
+      "stdin": "6\n5\n",
+      "explanation": "这一题要你亲眼看清一件事：**类定义只有一张，格子是每个对象各带一份的。**\n\n- `Cat c1;` 和 `Cat c2;` 是照**同一张**类定义创建后的两个实例。类定义画完就那样，生多少只都不会把它用旧。\n- 每创建一个，它就**带着自己那一套** `name` 和 `fish`——两个谁也不碰谁。\n- 所以 `c1.fish = c1.fish + 2;` 动的是**第一个那一格**，第二只半点关系都没有。这就是为什么屏幕上两行数不一样。\n\n⚠️ 最容易摔的是**把两笔账写成一笔**：如果只创建了一个对象（或者两个共用了同一格），你会看到两行数字一起变——那说明你动的不是「某一个的格子」，而是「大家共用的那一格」。\n\n另一个手感：`c1.name` 和 `c2.name` 虽然写着同一个 `name`，可它们**是两个对象各自的那一格** —— 点号前面的那个对象是谁，就够到谁的那一格。",
+      "templateId": "cpp-s2-01-two-cats-own-books",
+      "params": {
+        "nameA": "王五",
+        "nameB": "李四",
+        "k": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.286Z",
+        "hash": "401e6a496ab3fb7b"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-two-cats-own-books-006",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要拿**同一个类定义**生两个对象，看看它俩的账会不会串。输入接口会递进来**两个数**（一行一个）：先是第一个的条数，再是第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；\n2. **照同一个类定义生两个实例**，第一个叫 `王五`、第二只叫 `三花`（名字直接写死在代码里就行），条数用输入接口递进来的那两个；\n3. 只给**第一个**的条数加上 2 条（第二只一点都不动）；\n4. 印**两行**：\n\n```text\nXX 的账上是 N 条\n```\n\n（第一个一行、第二只一行，按这个先后顺序）\n\n比如程序的输入是\n\n4\n4\n\n程序就要返回\n\n王五 的账上是 6 条\n三花 的账上是 4 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"王五\";\n    c1.fish = a;\n    c2.name = \"三花\";\n    c2.fish = b;\n\n    c1.fish = c1.fish + 2;\n\n    cout << c1.name << \" 的账上是 \" << c1.fish << \" 条\" << endl;\n    cout << c2.name << \" 的账上是 \" << c2.fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 的账上是 7 条\n三花 的账上是 1 条",
+      "stdin": "5\n1\n",
+      "explanation": "这一题要你亲眼看清一件事：**类定义只有一张，格子是每个对象各带一份的。**\n\n- `Cat c1;` 和 `Cat c2;` 是照**同一张**类定义创建后的两个实例。类定义画完就那样，生多少只都不会把它用旧。\n- 每创建一个，它就**带着自己那一套** `name` 和 `fish`——两个谁也不碰谁。\n- 所以 `c1.fish = c1.fish + 2;` 动的是**第一个那一格**，第二只半点关系都没有。这就是为什么屏幕上两行数不一样。\n\n⚠️ 最容易摔的是**把两笔账写成一笔**：如果只创建了一个对象（或者两个共用了同一格），你会看到两行数字一起变——那说明你动的不是「某一个的格子」，而是「大家共用的那一格」。\n\n另一个手感：`c1.name` 和 `c2.name` 虽然写着同一个 `name`，可它们**是两个对象各自的那一格** —— 点号前面的那个对象是谁，就够到谁的那一格。",
+      "templateId": "cpp-s2-01-two-cats-own-books",
+      "params": {
+        "nameA": "王五",
+        "nameB": "三花",
+        "k": 2
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "f0ef9277b8c4a77f"
+      }
+    },
+    {
+      "id": "bank-cpp-s2-01-two-cats-own-books-007",
+      "type": "codewrite",
+      "lang": "cpp",
+      "stem": "我们要拿**同一个类定义**生两个对象，看看它俩的账会不会串。输入接口会递进来**两个数**（一行一个）：先是第一个的条数，再是第二只的条数。\n\n请你这么办：\n\n1. **定义类**：一张叫 `Cat` 的类定义，两栏家常 —— `name` 装一串字，`fish` 装一个整数；\n2. **照同一个类定义生两个实例**，第一个叫 `王五`、第二只叫 `三花`（名字直接写死在代码里就行），条数用输入接口递进来的那两个；\n3. 只给**第一个**的条数加上 3 条（第二只一点都不动）；\n4. 印**两行**：\n\n```text\nXX 的账上是 N 条\n```\n\n（第一个一行、第二只一行，按这个先后顺序）\n\n比如程序的输入是\n\n4\n5\n\n程序就要返回\n\n王五 的账上是 7 条\n三花 的账上是 5 条\n\n（判分喂的是**另外两个数**，所以别把答案写死）",
+      "starter": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\n    return 0;\n}\n",
+      "referenceSolution": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    string name;\n    int fish;\n};\n\nint main() {\n    int a = 0;\n    int b = 0;\n    cin >> a >> b;\n\n    Cat c1;\n    Cat c2;\n    c1.name = \"王五\";\n    c1.fish = a;\n    c2.name = \"三花\";\n    c2.fish = b;\n\n    c1.fish = c1.fish + 3;\n\n    cout << c1.name << \" 的账上是 \" << c1.fish << \" 条\" << endl;\n    cout << c2.name << \" 的账上是 \" << c2.fish << \" 条\" << endl;\n    return 0;\n}\n",
+      "expectedOutput": "王五 的账上是 4 条\n三花 的账上是 2 条",
+      "stdin": "1\n2\n",
+      "explanation": "这一题要你亲眼看清一件事：**类定义只有一张，格子是每个对象各带一份的。**\n\n- `Cat c1;` 和 `Cat c2;` 是照**同一张**类定义创建后的两个实例。类定义画完就那样，生多少只都不会把它用旧。\n- 每创建一个，它就**带着自己那一套** `name` 和 `fish`——两个谁也不碰谁。\n- 所以 `c1.fish = c1.fish + 3;` 动的是**第一个那一格**，第二只半点关系都没有。这就是为什么屏幕上两行数不一样。\n\n⚠️ 最容易摔的是**把两笔账写成一笔**：如果只创建了一个对象（或者两个共用了同一格），你会看到两行数字一起变——那说明你动的不是「某一个的格子」，而是「大家共用的那一格」。\n\n另一个手感：`c1.name` 和 `c2.name` 虽然写着同一个 `name`，可它们**是两个对象各自的那一格** —— 点号前面的那个对象是谁，就够到谁的那一格。",
+      "templateId": "cpp-s2-01-two-cats-own-books",
+      "params": {
+        "nameA": "王五",
+        "nameB": "三花",
+        "k": 3
+      },
+      "verified": {
+        "at": "2026-10-27T13:07:21.287Z",
+        "hash": "22272af3796363ec"
+      }
+    }
+  ]
+}

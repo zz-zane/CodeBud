@@ -1,0 +1,33 @@
+{
+  "templateId": "cpp-s1-ptr-repoint-not-write",
+  "lang": "cpp",
+  "stage": 1,
+  "lessonId": "cpp-stage1-11",
+  "type": "codefix",
+  "concept": [
+    "改指是换地址",
+    "顺着名称放东西",
+    "编得过但跑错的题"
+  ],
+  "instances": 2,
+  "params": {
+    "a": {
+      "kind": "pick",
+      "values": [
+        "3",
+        "6"
+      ]
+    },
+    "b": {
+      "kind": "pick",
+      "values": [
+        "5",
+        "9"
+      ]
+    }
+  },
+  "stemTemplate": "我们想让 `a` 元素里的数**变成 `b` 元素里的数**（`b` 自己别动）。\n\n目前 `a` 里是 {a}，`b` 里是 {b}。\n\n这一回编译器**收下了源代码**（它一个字都没抱怨），可跑出来印的还是 {a} —— 那不对。\n\n你帮我们把出问题的那一处改好：改完印出来的要是 `b` 元素里的那个数。两个元素里装的数、要印的那句话，都不用动。",
+  "brokenCodeTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = {a};\n    int b = {b};\n    int* p = &a;\n\n    p = &b;\n    cout << a << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = {a};\n    int b = {b};\n    int* p = &a;\n\n    *p = b;\n    cout << a << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "这一题坏的地方**编得过**，所以在屏幕上一点提示都没有 —— 这正是它最值得记住的地方。\n\n出问题的是 `p = &b;` 这一句。它干的事情是「**换地址**」：从那以后 `p` 指着 `b` 那个元素了。可要说的事情是「**把 `a` 元素里的数换成 `b` 里的数**」—— 换的是元素里的**货**，不是名称指哪儿。\n\n改法就是把它写成**顺着名称放东西**：\n\n- `*p = b;` —— 顺着 `p` 走到它指的那个元素（也就是 `a`）跟前，把 `b` 里的数放进去。`a` 真的被改了，`b` 一点没动。\n\n对照着记这一对：`p = &b;` 改的是**名称**（指向哪儿），`*p = b;` 改的是**元素**（里面保存几）。两句话长得像，干的事差了十万八千里 —— 上一课那句 `r = b;` 和温柔版的关系也是这么个别扭处。"
+}

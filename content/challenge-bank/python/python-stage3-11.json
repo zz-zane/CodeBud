@@ -1,0 +1,498 @@
+{
+  "lessonId": "python-stage3-11",
+  "bankVersion": 1,
+  "items": [
+    {
+      "id": "bank-py-s3-ut-assert-family-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "判据不止 `assertEqual` 一条。我们这次要你**四条判据各用一遍**。\n\n函数「平分」已经在文件里（不许改）：正常分整数商，对象数是 0 的时候抛 `ValueError`。\n\n请你写一张体检单，叫 `平分体检`，里面写**四个**项目（名字都要以 `test` 开头）：\n\n1. `test_相等` —— 用 `assertEqual` 查：`平分(7, 2)` 等于 `7 // 2`\n2. `test_为真` —— 用 `assertTrue` 查：`平分(7, 2)` 比 0 大\n3. `test_找得到` —— 用 `assertIn` 查：`数据` 出现在 `一筐数据` 里\n4. `test_该拒绝就拒绝` —— 用 `assertRaises` 查：拿 `7` 份和 **0 个对象**去喂，它该抛 `ValueError`\n\n跑的时候开一本体检本子（`unittest.TestResult()`），最后印**三行**：\n\n- 第一行：`体检了 ` 加项目数加 ` 项`\n- 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n- 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 四个项目的体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_相等(self):\n        self.assertEqual(平分(7, 2), 7 // 2)\n    def test_为真(self):\n        self.assertTrue(平分(7, 2) > 0)\n    def test_找得到(self):\n        self.assertIn(\"数据\", \"一筐数据\")\n    def test_该拒绝就拒绝(self):\n        self.assertRaises(ValueError, 平分, 7, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 4 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "四条判据，我们按「什么时候该请谁出场」给你排一遍：\n\n- **`assertEqual(甲, 乙)`** —— 最常用的一条：要求两样相等。它红了会**把两个数并排摆给你看**（真跑出来的 `!=` 该是的），信息量最大。**能写它就写它**，别偷懒。\n- **`assertTrue(某句话)`** —— 要求这句话为真。它比 `assertEqual` 含糊：红了只说「不成立」，**不告诉你差多少**。适合「只要它比 0 大就行」这种没有精确标准答案的场合。\n- **`assertIn(小东西, 一大串)`** —— 要求小东西出现在那一大串里。查一串字里有没有某个部件时特别好用；红了会说「在某某里找不到某某」。\n- **`assertRaises(该炸的错, 函数, 传入的…)`** —— **要求它炸**。有些函数在特定传入下本来就该拒绝干活，这条就是拿这种「该拒绝」当判据的。\n\n⚠️ 四条里最容易被写歪的是最后一条：它喂东西的姿势是**分开排队**的 —— 先写该炸的错、再写函数名，然后一样一样把要喂的东西排在后面。**千万别顺手对函数加上一对括号**，那等于当场把它调用，毛病就当场炸在判据外头了。\n\n还有一条我们得念两遍：**红了的常常不是函数，是你自己把标准答案记错了。** 把「该是多少」写死，好处正是写错了当场露馅。",
+      "templateId": "py-s3-ut-assert-family",
+      "params": {
+        "a": 7,
+        "b": 2,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "00b81d112462e975"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-assert-family-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "判据不止 `assertEqual` 一条。我们这次要你**四条判据各用一遍**。\n\n函数「平分」已经在文件里（不许改）：正常分整数商，对象数是 0 的时候抛 `ValueError`。\n\n请你写一张体检单，叫 `平分体检`，里面写**四个**项目（名字都要以 `test` 开头）：\n\n1. `test_相等` —— 用 `assertEqual` 查：`平分(7, 3)` 等于 `7 // 3`\n2. `test_为真` —— 用 `assertTrue` 查：`平分(7, 3)` 比 0 大\n3. `test_找得到` —— 用 `assertIn` 查：`数据` 出现在 `一筐数据` 里\n4. `test_该拒绝就拒绝` —— 用 `assertRaises` 查：拿 `7` 份和 **0 个对象**去喂，它该抛 `ValueError`\n\n跑的时候开一本体检本子（`unittest.TestResult()`），最后印**三行**：\n\n- 第一行：`体检了 ` 加项目数加 ` 项`\n- 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n- 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 四个项目的体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_相等(self):\n        self.assertEqual(平分(7, 3), 7 // 3)\n    def test_为真(self):\n        self.assertTrue(平分(7, 3) > 0)\n    def test_找得到(self):\n        self.assertIn(\"数据\", \"一筐数据\")\n    def test_该拒绝就拒绝(self):\n        self.assertRaises(ValueError, 平分, 7, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 4 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "四条判据，我们按「什么时候该请谁出场」给你排一遍：\n\n- **`assertEqual(甲, 乙)`** —— 最常用的一条：要求两样相等。它红了会**把两个数并排摆给你看**（真跑出来的 `!=` 该是的），信息量最大。**能写它就写它**，别偷懒。\n- **`assertTrue(某句话)`** —— 要求这句话为真。它比 `assertEqual` 含糊：红了只说「不成立」，**不告诉你差多少**。适合「只要它比 0 大就行」这种没有精确标准答案的场合。\n- **`assertIn(小东西, 一大串)`** —— 要求小东西出现在那一大串里。查一串字里有没有某个部件时特别好用；红了会说「在某某里找不到某某」。\n- **`assertRaises(该炸的错, 函数, 传入的…)`** —— **要求它炸**。有些函数在特定传入下本来就该拒绝干活，这条就是拿这种「该拒绝」当判据的。\n\n⚠️ 四条里最容易被写歪的是最后一条：它喂东西的姿势是**分开排队**的 —— 先写该炸的错、再写函数名，然后一样一样把要喂的东西排在后面。**千万别顺手对函数加上一对括号**，那等于当场把它调用，毛病就当场炸在判据外头了。\n\n还有一条我们得念两遍：**红了的常常不是函数，是你自己把标准答案记错了。** 把「该是多少」写死，好处正是写错了当场露馅。",
+      "templateId": "py-s3-ut-assert-family",
+      "params": {
+        "a": 7,
+        "b": 3,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "25d975500cf01f6b"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-assert-family-007",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "判据不止 `assertEqual` 一条。我们这次要你**四条判据各用一遍**。\n\n函数「平分」已经在文件里（不许改）：正常分整数商，对象数是 0 的时候抛 `ValueError`。\n\n请你写一张体检单，叫 `平分体检`，里面写**四个**项目（名字都要以 `test` 开头）：\n\n1. `test_相等` —— 用 `assertEqual` 查：`平分(8, 2)` 等于 `8 // 2`\n2. `test_为真` —— 用 `assertTrue` 查：`平分(8, 2)` 比 0 大\n3. `test_找得到` —— 用 `assertIn` 查：`商品A` 出现在 `一筐商品A` 里\n4. `test_该拒绝就拒绝` —— 用 `assertRaises` 查：拿 `8` 份和 **0 个对象**去喂，它该抛 `ValueError`\n\n跑的时候开一本体检本子（`unittest.TestResult()`），最后印**三行**：\n\n- 第一行：`体检了 ` 加项目数加 ` 项`\n- 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n- 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 四个项目的体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_相等(self):\n        self.assertEqual(平分(8, 2), 8 // 2)\n    def test_为真(self):\n        self.assertTrue(平分(8, 2) > 0)\n    def test_找得到(self):\n        self.assertIn(\"商品A\", \"一筐商品A\")\n    def test_该拒绝就拒绝(self):\n        self.assertRaises(ValueError, 平分, 8, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 4 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "四条判据，我们按「什么时候该请谁出场」给你排一遍：\n\n- **`assertEqual(甲, 乙)`** —— 最常用的一条：要求两样相等。它红了会**把两个数并排摆给你看**（真跑出来的 `!=` 该是的），信息量最大。**能写它就写它**，别偷懒。\n- **`assertTrue(某句话)`** —— 要求这句话为真。它比 `assertEqual` 含糊：红了只说「不成立」，**不告诉你差多少**。适合「只要它比 0 大就行」这种没有精确标准答案的场合。\n- **`assertIn(小东西, 一大串)`** —— 要求小东西出现在那一大串里。查一串字里有没有某个部件时特别好用；红了会说「在某某里找不到某某」。\n- **`assertRaises(该炸的错, 函数, 传入的…)`** —— **要求它炸**。有些函数在特定传入下本来就该拒绝干活，这条就是拿这种「该拒绝」当判据的。\n\n⚠️ 四条里最容易被写歪的是最后一条：它喂东西的姿势是**分开排队**的 —— 先写该炸的错、再写函数名，然后一样一样把要喂的东西排在后面。**千万别顺手对函数加上一对括号**，那等于当场把它调用，毛病就当场炸在判据外头了。\n\n还有一条我们得念两遍：**红了的常常不是函数，是你自己把标准答案记错了。** 把「该是多少」写死，好处正是写错了当场露馅。",
+      "templateId": "py-s3-ut-assert-family",
+      "params": {
+        "a": 8,
+        "b": 2,
+        "unit": "商品A"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "3f36240f9516b2ad"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-assert-family-010",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "判据不止 `assertEqual` 一条。我们这次要你**四条判据各用一遍**。\n\n函数「平分」已经在文件里（不许改）：正常分整数商，对象数是 0 的时候抛 `ValueError`。\n\n请你写一张体检单，叫 `平分体检`，里面写**四个**项目（名字都要以 `test` 开头）：\n\n1. `test_相等` —— 用 `assertEqual` 查：`平分(8, 3)` 等于 `8 // 3`\n2. `test_为真` —— 用 `assertTrue` 查：`平分(8, 3)` 比 0 大\n3. `test_找得到` —— 用 `assertIn` 查：`商品A` 出现在 `一筐商品A` 里\n4. `test_该拒绝就拒绝` —— 用 `assertRaises` 查：拿 `8` 份和 **0 个对象**去喂，它该抛 `ValueError`\n\n跑的时候开一本体检本子（`unittest.TestResult()`），最后印**三行**：\n\n- 第一行：`体检了 ` 加项目数加 ` 项`\n- 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n- 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 四个项目的体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_相等(self):\n        self.assertEqual(平分(8, 3), 8 // 3)\n    def test_为真(self):\n        self.assertTrue(平分(8, 3) > 0)\n    def test_找得到(self):\n        self.assertIn(\"商品A\", \"一筐商品A\")\n    def test_该拒绝就拒绝(self):\n        self.assertRaises(ValueError, 平分, 8, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 4 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "四条判据，我们按「什么时候该请谁出场」给你排一遍：\n\n- **`assertEqual(甲, 乙)`** —— 最常用的一条：要求两样相等。它红了会**把两个数并排摆给你看**（真跑出来的 `!=` 该是的），信息量最大。**能写它就写它**，别偷懒。\n- **`assertTrue(某句话)`** —— 要求这句话为真。它比 `assertEqual` 含糊：红了只说「不成立」，**不告诉你差多少**。适合「只要它比 0 大就行」这种没有精确标准答案的场合。\n- **`assertIn(小东西, 一大串)`** —— 要求小东西出现在那一大串里。查一串字里有没有某个部件时特别好用；红了会说「在某某里找不到某某」。\n- **`assertRaises(该炸的错, 函数, 传入的…)`** —— **要求它炸**。有些函数在特定传入下本来就该拒绝干活，这条就是拿这种「该拒绝」当判据的。\n\n⚠️ 四条里最容易被写歪的是最后一条：它喂东西的姿势是**分开排队**的 —— 先写该炸的错、再写函数名，然后一样一样把要喂的东西排在后面。**千万别顺手对函数加上一对括号**，那等于当场把它调用，毛病就当场炸在判据外头了。\n\n还有一条我们得念两遍：**红了的常常不是函数，是你自己把标准答案记错了。** 把「该是多少」写死，好处正是写错了当场露馅。",
+      "templateId": "py-s3-ut-assert-family",
+      "params": {
+        "a": 8,
+        "b": 3,
+        "unit": "商品A"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "b49a14261792f7d9"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-assert-family-014",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "判据不止 `assertEqual` 一条。我们这次要你**四条判据各用一遍**。\n\n函数「平分」已经在文件里（不许改）：正常分整数商，对象数是 0 的时候抛 `ValueError`。\n\n请你写一张体检单，叫 `平分体检`，里面写**四个**项目（名字都要以 `test` 开头）：\n\n1. `test_相等` —— 用 `assertEqual` 查：`平分(9, 2)` 等于 `9 // 2`\n2. `test_为真` —— 用 `assertTrue` 查：`平分(9, 2)` 比 0 大\n3. `test_找得到` —— 用 `assertIn` 查：`商品` 出现在 `一筐商品` 里\n4. `test_该拒绝就拒绝` —— 用 `assertRaises` 查：拿 `9` 份和 **0 个对象**去喂，它该抛 `ValueError`\n\n跑的时候开一本体检本子（`unittest.TestResult()`），最后印**三行**：\n\n- 第一行：`体检了 ` 加项目数加 ` 项`\n- 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n- 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 四个项目的体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_相等(self):\n        self.assertEqual(平分(9, 2), 9 // 2)\n    def test_为真(self):\n        self.assertTrue(平分(9, 2) > 0)\n    def test_找得到(self):\n        self.assertIn(\"商品\", \"一筐商品\")\n    def test_该拒绝就拒绝(self):\n        self.assertRaises(ValueError, 平分, 9, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 4 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "四条判据，我们按「什么时候该请谁出场」给你排一遍：\n\n- **`assertEqual(甲, 乙)`** —— 最常用的一条：要求两样相等。它红了会**把两个数并排摆给你看**（真跑出来的 `!=` 该是的），信息量最大。**能写它就写它**，别偷懒。\n- **`assertTrue(某句话)`** —— 要求这句话为真。它比 `assertEqual` 含糊：红了只说「不成立」，**不告诉你差多少**。适合「只要它比 0 大就行」这种没有精确标准答案的场合。\n- **`assertIn(小东西, 一大串)`** —— 要求小东西出现在那一大串里。查一串字里有没有某个部件时特别好用；红了会说「在某某里找不到某某」。\n- **`assertRaises(该炸的错, 函数, 传入的…)`** —— **要求它炸**。有些函数在特定传入下本来就该拒绝干活，这条就是拿这种「该拒绝」当判据的。\n\n⚠️ 四条里最容易被写歪的是最后一条：它喂东西的姿势是**分开排队**的 —— 先写该炸的错、再写函数名，然后一样一样把要喂的东西排在后面。**千万别顺手对函数加上一对括号**，那等于当场把它调用，毛病就当场炸在判据外头了。\n\n还有一条我们得念两遍：**红了的常常不是函数，是你自己把标准答案记错了。** 把「该是多少」写死，好处正是写错了当场露馅。",
+      "templateId": "py-s3-ut-assert-family",
+      "params": {
+        "a": 9,
+        "b": 2,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "286e7c746afb64ab"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-assert-family-017",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "判据不止 `assertEqual` 一条。我们这次要你**四条判据各用一遍**。\n\n函数「平分」已经在文件里（不许改）：正常分整数商，对象数是 0 的时候抛 `ValueError`。\n\n请你写一张体检单，叫 `平分体检`，里面写**四个**项目（名字都要以 `test` 开头）：\n\n1. `test_相等` —— 用 `assertEqual` 查：`平分(9, 3)` 等于 `9 // 3`\n2. `test_为真` —— 用 `assertTrue` 查：`平分(9, 3)` 比 0 大\n3. `test_找得到` —— 用 `assertIn` 查：`商品` 出现在 `一筐商品` 里\n4. `test_该拒绝就拒绝` —— 用 `assertRaises` 查：拿 `9` 份和 **0 个对象**去喂，它该抛 `ValueError`\n\n跑的时候开一本体检本子（`unittest.TestResult()`），最后印**三行**：\n\n- 第一行：`体检了 ` 加项目数加 ` 项`\n- 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n- 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 四个项目的体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_相等(self):\n        self.assertEqual(平分(9, 3), 9 // 3)\n    def test_为真(self):\n        self.assertTrue(平分(9, 3) > 0)\n    def test_找得到(self):\n        self.assertIn(\"商品\", \"一筐商品\")\n    def test_该拒绝就拒绝(self):\n        self.assertRaises(ValueError, 平分, 9, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 4 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "四条判据，我们按「什么时候该请谁出场」给你排一遍：\n\n- **`assertEqual(甲, 乙)`** —— 最常用的一条：要求两样相等。它红了会**把两个数并排摆给你看**（真跑出来的 `!=` 该是的），信息量最大。**能写它就写它**，别偷懒。\n- **`assertTrue(某句话)`** —— 要求这句话为真。它比 `assertEqual` 含糊：红了只说「不成立」，**不告诉你差多少**。适合「只要它比 0 大就行」这种没有精确标准答案的场合。\n- **`assertIn(小东西, 一大串)`** —— 要求小东西出现在那一大串里。查一串字里有没有某个部件时特别好用；红了会说「在某某里找不到某某」。\n- **`assertRaises(该炸的错, 函数, 传入的…)`** —— **要求它炸**。有些函数在特定传入下本来就该拒绝干活，这条就是拿这种「该拒绝」当判据的。\n\n⚠️ 四条里最容易被写歪的是最后一条：它喂东西的姿势是**分开排队**的 —— 先写该炸的错、再写函数名，然后一样一样把要喂的东西排在后面。**千万别顺手对函数加上一对括号**，那等于当场把它调用，毛病就当场炸在判据外头了。\n\n还有一条我们得念两遍：**红了的常常不是函数，是你自己把标准答案记错了。** 把「该是多少」写死，好处正是写错了当场露馅。",
+      "templateId": "py-s3-ut-assert-family",
+      "params": {
+        "a": 9,
+        "b": 3,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "bb743702e4916741"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-assertraises-eager-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "「平分」这招有个规矩：**没有对象的时候它该拒绝干活**（我们在函数里写好了，对象数是 0 就抛 `ValueError`）。\n\n我们想给这条规矩写一张体检单：拿 3 份数据、0 个对象去喂它，看它到底拒不拒绝。\n\n结果这张单子**红了**：体检了 **1 项**、红了 **1 项**。\n\n你帮我们看看问题出在哪儿，改好它。改好之后：体检了 **1 项**、红了 **0 项**、全绿。\n\n⚠️ 函数里那两行（`if 对象数 <= 0` 和那句 `raise`）一个字都不许动 —— 要改的是体检单这一边。",
+      "brokenCode": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分(3, 0))\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "referenceFix": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分, 3, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 1 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "`assertRaises` 要的是「**等会儿**它炸一下」，所以它得自己挑时候去喂 —— 函数名和你传入的东西是**分开排队**的：先写函数名，再一样一样把你准备传入的东西排在后面。\n\n现在这行写成 `平分(3, 0)` 加了括号，念作「**当场把它调用**」。于是还没等到判据开口，3 份数据分给 0 个对象这件事就先炸了 —— 这一炸发生在判据之外，所以在体检本子上记成「这一项**出错了**」，而不是「这一项红在数值不对」。\n\n一条判据红了说「结果不对」，出错说「它根本没能跑完」，两句话不一样，但你点运行只会看到一个「有红的」。\n\n改法是把那对括号拿掉：\n\n```text\nself.assertRaises(ValueError, 平分, 3, 0)\n```\n\n读作「**它**要是拿 3 份和 0 个对象去干活，就该抛 `ValueError`」—— 传入的动作交给判据自己做，这才是这条判据的本意。",
+      "templateId": "py-s3-ut-assertraises-eager",
+      "params": {
+        "a": 3,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "96a0811f0255ca71"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-assertraises-eager-008",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "「平分」这招有个规矩：**没有对象的时候它该拒绝干活**（我们在函数里写好了，对象数是 0 就抛 `ValueError`）。\n\n我们想给这条规矩写一张体检单：拿 5 份商品、0 个对象去喂它，看它到底拒不拒绝。\n\n结果这张单子**红了**：体检了 **1 项**、红了 **1 项**。\n\n你帮我们看看问题出在哪儿，改好它。改好之后：体检了 **1 项**、红了 **0 项**、全绿。\n\n⚠️ 函数里那两行（`if 对象数 <= 0` 和那句 `raise`）一个字都不许动 —— 要改的是体检单这一边。",
+      "brokenCode": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分(5, 0))\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "referenceFix": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分, 5, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 1 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "`assertRaises` 要的是「**等会儿**它炸一下」，所以它得自己挑时候去喂 —— 函数名和你传入的东西是**分开排队**的：先写函数名，再一样一样把你准备传入的东西排在后面。\n\n现在这行写成 `平分(5, 0)` 加了括号，念作「**当场把它调用**」。于是还没等到判据开口，5 份商品分给 0 个对象这件事就先炸了 —— 这一炸发生在判据之外，所以在体检本子上记成「这一项**出错了**」，而不是「这一项红在数值不对」。\n\n一条判据红了说「结果不对」，出错说「它根本没能跑完」，两句话不一样，但你点运行只会看到一个「有红的」。\n\n改法是把那对括号拿掉：\n\n```text\nself.assertRaises(ValueError, 平分, 5, 0)\n```\n\n读作「**它**要是拿 5 份和 0 个对象去干活，就该抛 `ValueError`」—— 传入的动作交给判据自己做，这才是这条判据的本意。",
+      "templateId": "py-s3-ut-assertraises-eager",
+      "params": {
+        "a": 5,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "87eb87372ffa1edc"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-catch-bad-floor-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数里藏着一个毛病，**那两行一个字都不许改** —— 我们要看的不是你能不能修它，是**你的体检单能不能把它抓出来**。\n\n请你写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张类定义画。\n2. 里面写**一个**项目，叫 `test_除不尽`（名字必须以 `test` 开头，不然它压根不跑）。\n3. 判据用 `assertEqual`：**5 份平分给 2 个对象，结果该是 `5 // 2`**。\n4. 跑完印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：**挂掉的原因那一句** —— 本子把整段说明记在 `本子.failures[0][1]` 里，取它的最后一行，就是那句 `AssertionError: ...`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）\n\n⚠️ 这一项**该红**。要是它绿了，说明你的判据没咬住这个毛病。",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\n# 体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(5, 2), 5 // 2)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(本子.failures[0][1].strip().splitlines()[-1])\n",
+      "expectedOutput": "体检了 1 项\n红了 1 项\nAssertionError: 2.5 != 2",
+      "stdin": null,
+      "explanation": "这一项**本来就该红** —— 体检单的活不是把毛病藏起来，是把它拽到明面上。\n\n函数里那条算式算出的是带小数的商，判据要的是整数商，两个一摆，`assertEqual` 当场就炸。它炸的时候会留下一句最值钱的话：**真跑出来的**和**该是的**并排摆着，中间一个 `!=`。我们把这句话印出来，就是想让你养成一个习惯 —— 红了先读这一行，别急着改代码。\n\n⚠️ 还得挑对传入的数。要是换一组除得尽的（比如 6 份给 2 个对象），带小数的商算出来是 `3.0`，而 `3.0` 和 `3` 在 Python 里是**相等**的 —— 这一项会绿过去，毛病就从你眼皮底下溜走了。**咬得住毛病的那一组数，往往是除不尽的那一组。**\n\n这也是我们写体检单的意义：它跟人眼不一样，它**不会**觉得「看着差不多」就放过。",
+      "templateId": "py-s3-ut-catch-bad-floor",
+      "params": {
+        "a": 5,
+        "b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "83ef93d2ebc109ef"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-catch-bad-floor-001",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数里藏着一个毛病，**那两行一个字都不许改** —— 我们要看的不是你能不能修它，是**你的体检单能不能把它抓出来**。\n\n请你写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张类定义画。\n2. 里面写**一个**项目，叫 `test_除不尽`（名字必须以 `test` 开头，不然它压根不跑）。\n3. 判据用 `assertEqual`：**5 份平分给 4 个对象，结果该是 `5 // 4`**。\n4. 跑完印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：**挂掉的原因那一句** —— 本子把整段说明记在 `本子.failures[0][1]` 里，取它的最后一行，就是那句 `AssertionError: ...`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）\n\n⚠️ 这一项**该红**。要是它绿了，说明你的判据没咬住这个毛病。",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\n# 体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(5, 4), 5 // 4)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(本子.failures[0][1].strip().splitlines()[-1])\n",
+      "expectedOutput": "体检了 1 项\n红了 1 项\nAssertionError: 1.25 != 1",
+      "stdin": null,
+      "explanation": "这一项**本来就该红** —— 体检单的活不是把毛病藏起来，是把它拽到明面上。\n\n函数里那条算式算出的是带小数的商，判据要的是整数商，两个一摆，`assertEqual` 当场就炸。它炸的时候会留下一句最值钱的话：**真跑出来的**和**该是的**并排摆着，中间一个 `!=`。我们把这句话印出来，就是想让你养成一个习惯 —— 红了先读这一行，别急着改代码。\n\n⚠️ 还得挑对传入的数。要是换一组除得尽的（比如 6 份给 2 个对象），带小数的商算出来是 `3.0`，而 `3.0` 和 `3` 在 Python 里是**相等**的 —— 这一项会绿过去，毛病就从你眼皮底下溜走了。**咬得住毛病的那一组数，往往是除不尽的那一组。**\n\n这也是我们写体检单的意义：它跟人眼不一样，它**不会**觉得「看着差不多」就放过。",
+      "templateId": "py-s3-ut-catch-bad-floor",
+      "params": {
+        "a": 5,
+        "b": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "8a083d538cba7386"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-catch-bad-floor-002",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数里藏着一个毛病，**那两行一个字都不许改** —— 我们要看的不是你能不能修它，是**你的体检单能不能把它抓出来**。\n\n请你写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张类定义画。\n2. 里面写**一个**项目，叫 `test_除不尽`（名字必须以 `test` 开头，不然它压根不跑）。\n3. 判据用 `assertEqual`：**7 份平分给 2 个对象，结果该是 `7 // 2`**。\n4. 跑完印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：**挂掉的原因那一句** —— 本子把整段说明记在 `本子.failures[0][1]` 里，取它的最后一行，就是那句 `AssertionError: ...`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）\n\n⚠️ 这一项**该红**。要是它绿了，说明你的判据没咬住这个毛病。",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\n# 体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(7, 2), 7 // 2)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(本子.failures[0][1].strip().splitlines()[-1])\n",
+      "expectedOutput": "体检了 1 项\n红了 1 项\nAssertionError: 3.5 != 3",
+      "stdin": null,
+      "explanation": "这一项**本来就该红** —— 体检单的活不是把毛病藏起来，是把它拽到明面上。\n\n函数里那条算式算出的是带小数的商，判据要的是整数商，两个一摆，`assertEqual` 当场就炸。它炸的时候会留下一句最值钱的话：**真跑出来的**和**该是的**并排摆着，中间一个 `!=`。我们把这句话印出来，就是想让你养成一个习惯 —— 红了先读这一行，别急着改代码。\n\n⚠️ 还得挑对传入的数。要是换一组除得尽的（比如 6 份给 2 个对象），带小数的商算出来是 `3.0`，而 `3.0` 和 `3` 在 Python 里是**相等**的 —— 这一项会绿过去，毛病就从你眼皮底下溜走了。**咬得住毛病的那一组数，往往是除不尽的那一组。**\n\n这也是我们写体检单的意义：它跟人眼不一样，它**不会**觉得「看着差不多」就放过。",
+      "templateId": "py-s3-ut-catch-bad-floor",
+      "params": {
+        "a": 7,
+        "b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "205ff7cccef23018"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-catch-bad-floor-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数里藏着一个毛病，**那两行一个字都不许改** —— 我们要看的不是你能不能修它，是**你的体检单能不能把它抓出来**。\n\n请你写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张类定义画。\n2. 里面写**一个**项目，叫 `test_除不尽`（名字必须以 `test` 开头，不然它压根不跑）。\n3. 判据用 `assertEqual`：**7 份平分给 4 个对象，结果该是 `7 // 4`**。\n4. 跑完印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：**挂掉的原因那一句** —— 本子把整段说明记在 `本子.failures[0][1]` 里，取它的最后一行，就是那句 `AssertionError: ...`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）\n\n⚠️ 这一项**该红**。要是它绿了，说明你的判据没咬住这个毛病。",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\n# 体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(7, 4), 7 // 4)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(本子.failures[0][1].strip().splitlines()[-1])\n",
+      "expectedOutput": "体检了 1 项\n红了 1 项\nAssertionError: 1.75 != 1",
+      "stdin": null,
+      "explanation": "这一项**本来就该红** —— 体检单的活不是把毛病藏起来，是把它拽到明面上。\n\n函数里那条算式算出的是带小数的商，判据要的是整数商，两个一摆，`assertEqual` 当场就炸。它炸的时候会留下一句最值钱的话：**真跑出来的**和**该是的**并排摆着，中间一个 `!=`。我们把这句话印出来，就是想让你养成一个习惯 —— 红了先读这一行，别急着改代码。\n\n⚠️ 还得挑对传入的数。要是换一组除得尽的（比如 6 份给 2 个对象），带小数的商算出来是 `3.0`，而 `3.0` 和 `3` 在 Python 里是**相等**的 —— 这一项会绿过去，毛病就从你眼皮底下溜走了。**咬得住毛病的那一组数，往往是除不尽的那一组。**\n\n这也是我们写体检单的意义：它跟人眼不一样，它**不会**觉得「看着差不多」就放过。",
+      "templateId": "py-s3-ut-catch-bad-floor",
+      "params": {
+        "a": 7,
+        "b": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "0c64546152aa0621"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-catch-bad-floor-004",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数里藏着一个毛病，**那两行一个字都不许改** —— 我们要看的不是你能不能修它，是**你的体检单能不能把它抓出来**。\n\n请你写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张类定义画。\n2. 里面写**一个**项目，叫 `test_除不尽`（名字必须以 `test` 开头，不然它压根不跑）。\n3. 判据用 `assertEqual`：**9 份平分给 2 个对象，结果该是 `9 // 2`**。\n4. 跑完印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：**挂掉的原因那一句** —— 本子把整段说明记在 `本子.failures[0][1]` 里，取它的最后一行，就是那句 `AssertionError: ...`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）\n\n⚠️ 这一项**该红**。要是它绿了，说明你的判据没咬住这个毛病。",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\n# 体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(9, 2), 9 // 2)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(本子.failures[0][1].strip().splitlines()[-1])\n",
+      "expectedOutput": "体检了 1 项\n红了 1 项\nAssertionError: 4.5 != 4",
+      "stdin": null,
+      "explanation": "这一项**本来就该红** —— 体检单的活不是把毛病藏起来，是把它拽到明面上。\n\n函数里那条算式算出的是带小数的商，判据要的是整数商，两个一摆，`assertEqual` 当场就炸。它炸的时候会留下一句最值钱的话：**真跑出来的**和**该是的**并排摆着，中间一个 `!=`。我们把这句话印出来，就是想让你养成一个习惯 —— 红了先读这一行，别急着改代码。\n\n⚠️ 还得挑对传入的数。要是换一组除得尽的（比如 6 份给 2 个对象），带小数的商算出来是 `3.0`，而 `3.0` 和 `3` 在 Python 里是**相等**的 —— 这一项会绿过去，毛病就从你眼皮底下溜走了。**咬得住毛病的那一组数，往往是除不尽的那一组。**\n\n这也是我们写体检单的意义：它跟人眼不一样，它**不会**觉得「看着差不多」就放过。",
+      "templateId": "py-s3-ut-catch-bad-floor",
+      "params": {
+        "a": 9,
+        "b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "a6ef2edd7cda186a"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-catch-bad-floor-005",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数里藏着一个毛病，**那两行一个字都不许改** —— 我们要看的不是你能不能修它，是**你的体检单能不能把它抓出来**。\n\n请你写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张类定义画。\n2. 里面写**一个**项目，叫 `test_除不尽`（名字必须以 `test` 开头，不然它压根不跑）。\n3. 判据用 `assertEqual`：**9 份平分给 4 个对象，结果该是 `9 // 4`**。\n4. 跑完印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：**挂掉的原因那一句** —— 本子把整段说明记在 `本子.failures[0][1]` 里，取它的最后一行，就是那句 `AssertionError: ...`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）\n\n⚠️ 这一项**该红**。要是它绿了，说明你的判据没咬住这个毛病。",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\n# 体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(9, 4), 9 // 4)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(本子.failures[0][1].strip().splitlines()[-1])\n",
+      "expectedOutput": "体检了 1 项\n红了 1 项\nAssertionError: 2.25 != 2",
+      "stdin": null,
+      "explanation": "这一项**本来就该红** —— 体检单的活不是把毛病藏起来，是把它拽到明面上。\n\n函数里那条算式算出的是带小数的商，判据要的是整数商，两个一摆，`assertEqual` 当场就炸。它炸的时候会留下一句最值钱的话：**真跑出来的**和**该是的**并排摆着，中间一个 `!=`。我们把这句话印出来，就是想让你养成一个习惯 —— 红了先读这一行，别急着改代码。\n\n⚠️ 还得挑对传入的数。要是换一组除得尽的（比如 6 份给 2 个对象），带小数的商算出来是 `3.0`，而 `3.0` 和 `3` 在 Python 里是**相等**的 —— 这一项会绿过去，毛病就从你眼皮底下溜走了。**咬得住毛病的那一组数，往往是除不尽的那一组。**\n\n这也是我们写体检单的意义：它跟人眼不一样，它**不会**觉得「看着差不多」就放过。",
+      "templateId": "py-s3-ut-catch-bad-floor",
+      "params": {
+        "a": 9,
+        "b": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "44d523d929424266"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-floor-div-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们给「平分」这招留了一张体检单，两个项目，我们觉得写得挺对的。\n\n跑完却红了。体检本子上写着体检了 **2 项**、红了 **2 项**，一句「有红的」。\n\n你帮我们看看是哪儿不对，改好它。改好之后两个项目都该过：体检了 **2 项**、红了 **0 项**、全绿。\n\n（两个项目查的是：5 份平分给 2 个对象，每个得 5 除以 2 的整数商；再多来 2 份，每个就再多拿 1 份。）\n\n⚠️ 体检单上那**两个项目一个字都不许改** —— 红的不是判据，是函数。",
+      "brokenCode": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(5, 2), 5 // 2)\n    def test_再多一份(self):\n        self.assertEqual(平分(5 + 2, 2), 5 // 2 + 1)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "referenceFix": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(5, 2), 5 // 2)\n    def test_再多一份(self):\n        self.assertEqual(平分(5 + 2, 2), 5 // 2 + 1)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 2 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "函数里那一行是 `/`，它算出的是**带小数的商**；判据要的是**整数商**（除不尽的先放着，半份数据不存在）。\n\n所以真跑出来是 `5` 除以 `2` 的小数，标准答案却是整除的结果，两个并排一摆，`assertEqual` 当场就红了。\n\n⚠️ 这里有个特别值得记住的细节：**不是每一项都会红。** 要是你换一组除得尽的数（比如 6 份给 2 个对象），`6 / 2` 算出 `3.0`，而 `3.0 == 3` 在 Python 里是**真**的 —— 那一项会一路绿过去。真正咬住这个毛病的，是那一组**除不尽**的数。\n\n我们把这条写进体检单的意思就是：只写「正常情况」的体检单等于没体检，能抓住毛病的往往是边界。\n\n改法只有一个字：把 `/` 换回 `//`——`//` 只留整个的，除不尽的先放着。",
+      "templateId": "py-s3-ut-floor-div",
+      "params": {
+        "a": 5,
+        "b": 2
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "11d043f917e0f568"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-floor-div-005",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们给「平分」这招留了一张体检单，两个项目，我们觉得写得挺对的。\n\n跑完却红了。体检本子上写着体检了 **2 项**、红了 **2 项**，一句「有红的」。\n\n你帮我们看看是哪儿不对，改好它。改好之后两个项目都该过：体检了 **2 项**、红了 **0 项**、全绿。\n\n（两个项目查的是：9 份平分给 4 个对象，每个得 9 除以 4 的整数商；再多来 4 份，每个就再多拿 1 份。）\n\n⚠️ 体检单上那**两个项目一个字都不许改** —— 红的不是判据，是函数。",
+      "brokenCode": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 / 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(9, 4), 9 // 4)\n    def test_再多一份(self):\n        self.assertEqual(平分(9 + 4, 4), 9 // 4 + 1)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "referenceFix": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_除不尽(self):\n        self.assertEqual(平分(9, 4), 9 // 4)\n    def test_再多一份(self):\n        self.assertEqual(平分(9 + 4, 4), 9 // 4 + 1)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 2 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "函数里那一行是 `/`，它算出的是**带小数的商**；判据要的是**整数商**（除不尽的先放着，半份数据不存在）。\n\n所以真跑出来是 `9` 除以 `4` 的小数，标准答案却是整除的结果，两个并排一摆，`assertEqual` 当场就红了。\n\n⚠️ 这里有个特别值得记住的细节：**不是每一项都会红。** 要是你换一组除得尽的数（比如 6 份给 2 个对象），`6 / 2` 算出 `3.0`，而 `3.0 == 3` 在 Python 里是**真**的 —— 那一项会一路绿过去。真正咬住这个毛病的，是那一组**除不尽**的数。\n\n我们把这条写进体检单的意思就是：只写「正常情况」的体检单等于没体检，能抓住毛病的往往是边界。\n\n改法只有一个字：把 `/` 换回 `//`——`//` 只留整个的，除不尽的先放着。",
+      "templateId": "py-s3-ut-floor-div",
+      "params": {
+        "a": 9,
+        "b": 4
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "c3c1b10f7cafea20"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-name-must-be-test-000",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们给「平分数据」这招写了一张体检单，上面**明明白白写了一个项目**。\n\n可是跑完之后，体检本子上记的是：**一项都没体检**。程序既不报错，也不提醒 —— 它只是安安静静地什么都没干。\n\n你帮我们看看这张单子哪里不对，改好它。改好之后，本子上应该记着体检了 **1 项**、红了 **0 项**、全绿。\n\n（那个项目要检查的是：6 份数据平分给 2 个对象，每个得 6 份。）",
+      "brokenCode": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def 检查平分(self):\n        self.assertEqual(平分(6 * 2, 2), 6)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "referenceFix": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_平分(self):\n        self.assertEqual(平分(6 * 2, 2), 6)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 1 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "解释器拎体检项目的时候，**只认一种名字**：以 `test` 开头的那种。\n\n`def 检查平分(self):` 这个名字起得很通顺，可它开头不是 `test` —— 于是在解释器眼里，它跟一张单子角落里随手写的备注没区别，扫过去就完事了。**它没有被跳过，它是压根没被认出来。**\n\n最阴的地方在这儿：跑完的账是**干净**的。一项都没跑，自然一项都没红，`wasSuccessful()` 老老实实答「我成功了」——本子上于是写着「体检了 0 项」和一句「全绿」。你要是不看第一行那个数字，根本发现不了这张单子其实是空的。\n\n改法就一个字的事：把项目名改成以 `test` 开头的，比如 `test_平分`。项目名起清楚一点只有好处 —— 报告里念的就是这个名字，将来红了，你一眼知道挂的是哪一项。",
+      "templateId": "py-s3-ut-name-must-be-test",
+      "params": {
+        "unit": "数据",
+        "a": 6
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "999443f560a5c47a"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-name-must-be-test-008",
+      "type": "codefix",
+      "lang": "python",
+      "stem": "我们给「平分商品」这招写了一张体检单，上面**明明白白写了一个项目**。\n\n可是跑完之后，体检本子上记的是：**一项都没体检**。程序既不报错，也不提醒 —— 它只是安安静静地什么都没干。\n\n你帮我们看看这张单子哪里不对，改好它。改好之后，本子上应该记着体检了 **1 项**、红了 **0 项**、全绿。\n\n（那个项目要检查的是：8 份商品平分给 2 个对象，每个得 8 份。）",
+      "brokenCode": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def 检查平分(self):\n        self.assertEqual(平分(8 * 2, 2), 8)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "referenceFix": "import unittest\n\n\ndef 平分(总数, 对象数):\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_平分(self):\n        self.assertEqual(平分(8 * 2, 2), 8)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 1 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "解释器拎体检项目的时候，**只认一种名字**：以 `test` 开头的那种。\n\n`def 检查平分(self):` 这个名字起得很通顺，可它开头不是 `test` —— 于是在解释器眼里，它跟一张单子角落里随手写的备注没区别，扫过去就完事了。**它没有被跳过，它是压根没被认出来。**\n\n最阴的地方在这儿：跑完的账是**干净**的。一项都没跑，自然一项都没红，`wasSuccessful()` 老老实实答「我成功了」——本子上于是写着「体检了 0 项」和一句「全绿」。你要是不看第一行那个数字，根本发现不了这张单子其实是空的。\n\n改法就一个字的事：把项目名改成以 `test` 开头的，比如 `test_平分`。项目名起清楚一点只有好处 —— 报告里念的就是这个名字，将来红了，你一眼知道挂的是哪一项。",
+      "templateId": "py-s3-ut-name-must-be-test",
+      "params": {
+        "unit": "商品",
+        "a": 8
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "75a337fbad6f65e7"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-two-cases-000",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数已经在文件里了（**一个字都不许改**）：正常的分整数商，**对象数是 0 的时候它会抛 `ValueError`**。\n\n请你给它写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张已有实现对象画好的类定义来画。\n2. 里面写**两个**项目，名字都以 `test` 开头：\n   - 一个查**正常值**：`平分(6, 2)` 该等于 `6 // 2`；\n   - 一个查**边界**：拿 `6` 份数据和 **0 个对象**去喂它，它该拒绝干活（用 `assertRaises(ValueError, 平分, 6, 0)`）。\n3. 跑的时候开一本体检本子（`unittest.TestResult()`），用它把 `平分体检` 跑一遍。\n4. 最后印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 下面这张体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_正常(self):\n        self.assertEqual(平分(6, 2), 6 // 2)\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分, 6, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 2 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "这张单子要的三件事，一件比一件值钱。\n\n**① 单子照类定义画。** 括号里那个 `unittest.TestCase` 不是传入的东西，它的意思是「我们照这张类定义画」。照它画出来的单子自带一整套家伙事：怎么跑项目、怎么记成绩、怎么印报告 —— 你只管写判据。\n\n**② 项目名以 `test` 开头，不然它压根不跑。** 这不是风格建议，是筛选的规矩：解释器扫单子的时候只拎 `test` 开头的那种，别的它不认。\n\n**③ 正常值和边界值各一张。** 这是这次体检单的重点：只写「正常情况」的话，函数坏在边界上你永远发现不了。我们这次就是被「没有对象」那一项救回来的 —— 它逼着你想清楚「对象数是 0 的时候，我们到底要它怎么办」。你想的答案是「拒绝干活」，于是用 `assertRaises` 把这句话写成了可判的。\n\n最后那个体检本子（`TestResult()`）是报告底下的账房：跑完以后 `testsRun` 是跑了几个项目、`failures` 和 `errors` 是挂掉的清单、`wasSuccessful()` 一句话告诉你全不全绿。",
+      "templateId": "py-s3-ut-two-cases",
+      "params": {
+        "a": 6,
+        "b": 2,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "8ce9709c8a1a459d"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-two-cases-003",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数已经在文件里了（**一个字都不许改**）：正常的分整数商，**对象数是 0 的时候它会抛 `ValueError`**。\n\n请你给它写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张已有实现对象画好的类定义来画。\n2. 里面写**两个**项目，名字都以 `test` 开头：\n   - 一个查**正常值**：`平分(6, 3)` 该等于 `6 // 3`；\n   - 一个查**边界**：拿 `6` 份数据和 **0 个对象**去喂它，它该拒绝干活（用 `assertRaises(ValueError, 平分, 6, 0)`）。\n3. 跑的时候开一本体检本子（`unittest.TestResult()`），用它把 `平分体检` 跑一遍。\n4. 最后印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 下面这张体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_正常(self):\n        self.assertEqual(平分(6, 3), 6 // 3)\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分, 6, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 2 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "这张单子要的三件事，一件比一件值钱。\n\n**① 单子照类定义画。** 括号里那个 `unittest.TestCase` 不是传入的东西，它的意思是「我们照这张类定义画」。照它画出来的单子自带一整套家伙事：怎么跑项目、怎么记成绩、怎么印报告 —— 你只管写判据。\n\n**② 项目名以 `test` 开头，不然它压根不跑。** 这不是风格建议，是筛选的规矩：解释器扫单子的时候只拎 `test` 开头的那种，别的它不认。\n\n**③ 正常值和边界值各一张。** 这是这次体检单的重点：只写「正常情况」的话，函数坏在边界上你永远发现不了。我们这次就是被「没有对象」那一项救回来的 —— 它逼着你想清楚「对象数是 0 的时候，我们到底要它怎么办」。你想的答案是「拒绝干活」，于是用 `assertRaises` 把这句话写成了可判的。\n\n最后那个体检本子（`TestResult()`）是报告底下的账房：跑完以后 `testsRun` 是跑了几个项目、`failures` 和 `errors` 是挂掉的清单、`wasSuccessful()` 一句话告诉你全不全绿。",
+      "templateId": "py-s3-ut-two-cases",
+      "params": {
+        "a": 6,
+        "b": 3,
+        "unit": "数据"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.503Z",
+        "hash": "270265a2d353d301"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-two-cases-007",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数已经在文件里了（**一个字都不许改**）：正常的分整数商，**对象数是 0 的时候它会抛 `ValueError`**。\n\n请你给它写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张已有实现对象画好的类定义来画。\n2. 里面写**两个**项目，名字都以 `test` 开头：\n   - 一个查**正常值**：`平分(7, 2)` 该等于 `7 // 2`；\n   - 一个查**边界**：拿 `7` 份商品A和 **0 个对象**去喂它，它该拒绝干活（用 `assertRaises(ValueError, 平分, 7, 0)`）。\n3. 跑的时候开一本体检本子（`unittest.TestResult()`），用它把 `平分体检` 跑一遍。\n4. 最后印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 下面这张体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_正常(self):\n        self.assertEqual(平分(7, 2), 7 // 2)\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分, 7, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 2 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "这张单子要的三件事，一件比一件值钱。\n\n**① 单子照类定义画。** 括号里那个 `unittest.TestCase` 不是传入的东西，它的意思是「我们照这张类定义画」。照它画出来的单子自带一整套家伙事：怎么跑项目、怎么记成绩、怎么印报告 —— 你只管写判据。\n\n**② 项目名以 `test` 开头，不然它压根不跑。** 这不是风格建议，是筛选的规矩：解释器扫单子的时候只拎 `test` 开头的那种，别的它不认。\n\n**③ 正常值和边界值各一张。** 这是这次体检单的重点：只写「正常情况」的话，函数坏在边界上你永远发现不了。我们这次就是被「没有对象」那一项救回来的 —— 它逼着你想清楚「对象数是 0 的时候，我们到底要它怎么办」。你想的答案是「拒绝干活」，于是用 `assertRaises` 把这句话写成了可判的。\n\n最后那个体检本子（`TestResult()`）是报告底下的账房：跑完以后 `testsRun` 是跑了几个项目、`failures` 和 `errors` 是挂掉的清单、`wasSuccessful()` 一句话告诉你全不全绿。",
+      "templateId": "py-s3-ut-two-cases",
+      "params": {
+        "a": 7,
+        "b": 2,
+        "unit": "商品A"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.504Z",
+        "hash": "2db5a9e2096ad1e6"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-two-cases-010",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数已经在文件里了（**一个字都不许改**）：正常的分整数商，**对象数是 0 的时候它会抛 `ValueError`**。\n\n请你给它写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张已有实现对象画好的类定义来画。\n2. 里面写**两个**项目，名字都以 `test` 开头：\n   - 一个查**正常值**：`平分(7, 3)` 该等于 `7 // 3`；\n   - 一个查**边界**：拿 `7` 份商品A和 **0 个对象**去喂它，它该拒绝干活（用 `assertRaises(ValueError, 平分, 7, 0)`）。\n3. 跑的时候开一本体检本子（`unittest.TestResult()`），用它把 `平分体检` 跑一遍。\n4. 最后印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 下面这张体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_正常(self):\n        self.assertEqual(平分(7, 3), 7 // 3)\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分, 7, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 2 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "这张单子要的三件事，一件比一件值钱。\n\n**① 单子照类定义画。** 括号里那个 `unittest.TestCase` 不是传入的东西，它的意思是「我们照这张类定义画」。照它画出来的单子自带一整套家伙事：怎么跑项目、怎么记成绩、怎么印报告 —— 你只管写判据。\n\n**② 项目名以 `test` 开头，不然它压根不跑。** 这不是风格建议，是筛选的规矩：解释器扫单子的时候只拎 `test` 开头的那种，别的它不认。\n\n**③ 正常值和边界值各一张。** 这是这次体检单的重点：只写「正常情况」的话，函数坏在边界上你永远发现不了。我们这次就是被「没有对象」那一项救回来的 —— 它逼着你想清楚「对象数是 0 的时候，我们到底要它怎么办」。你想的答案是「拒绝干活」，于是用 `assertRaises` 把这句话写成了可判的。\n\n最后那个体检本子（`TestResult()`）是报告底下的账房：跑完以后 `testsRun` 是跑了几个项目、`failures` 和 `errors` 是挂掉的清单、`wasSuccessful()` 一句话告诉你全不全绿。",
+      "templateId": "py-s3-ut-two-cases",
+      "params": {
+        "a": 7,
+        "b": 3,
+        "unit": "商品A"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.504Z",
+        "hash": "91e58f090060ab9a"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-two-cases-014",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数已经在文件里了（**一个字都不许改**）：正常的分整数商，**对象数是 0 的时候它会抛 `ValueError`**。\n\n请你给它写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张已有实现对象画好的类定义来画。\n2. 里面写**两个**项目，名字都以 `test` 开头：\n   - 一个查**正常值**：`平分(8, 2)` 该等于 `8 // 2`；\n   - 一个查**边界**：拿 `8` 份商品和 **0 个对象**去喂它，它该拒绝干活（用 `assertRaises(ValueError, 平分, 8, 0)`）。\n3. 跑的时候开一本体检本子（`unittest.TestResult()`），用它把 `平分体检` 跑一遍。\n4. 最后印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 下面这张体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_正常(self):\n        self.assertEqual(平分(8, 2), 8 // 2)\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分, 8, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 2 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "这张单子要的三件事，一件比一件值钱。\n\n**① 单子照类定义画。** 括号里那个 `unittest.TestCase` 不是传入的东西，它的意思是「我们照这张类定义画」。照它画出来的单子自带一整套家伙事：怎么跑项目、怎么记成绩、怎么印报告 —— 你只管写判据。\n\n**② 项目名以 `test` 开头，不然它压根不跑。** 这不是风格建议，是筛选的规矩：解释器扫单子的时候只拎 `test` 开头的那种，别的它不认。\n\n**③ 正常值和边界值各一张。** 这是这次体检单的重点：只写「正常情况」的话，函数坏在边界上你永远发现不了。我们这次就是被「没有对象」那一项救回来的 —— 它逼着你想清楚「对象数是 0 的时候，我们到底要它怎么办」。你想的答案是「拒绝干活」，于是用 `assertRaises` 把这句话写成了可判的。\n\n最后那个体检本子（`TestResult()`）是报告底下的账房：跑完以后 `testsRun` 是跑了几个项目、`failures` 和 `errors` 是挂掉的清单、`wasSuccessful()` 一句话告诉你全不全绿。",
+      "templateId": "py-s3-ut-two-cases",
+      "params": {
+        "a": 8,
+        "b": 2,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.504Z",
+        "hash": "ba01c77c9f0c05ac"
+      }
+    },
+    {
+      "id": "bank-py-s3-ut-two-cases-017",
+      "type": "codewrite",
+      "lang": "python",
+      "stem": "我们的「平分」函数已经在文件里了（**一个字都不许改**）：正常的分整数商，**对象数是 0 的时候它会抛 `ValueError`**。\n\n请你给它写一张体检单：\n\n1. 单子叫 `平分体检`，照 `unittest.TestCase` 这张已有实现对象画好的类定义来画。\n2. 里面写**两个**项目，名字都以 `test` 开头：\n   - 一个查**正常值**：`平分(8, 3)` 该等于 `8 // 3`；\n   - 一个查**边界**：拿 `8` 份商品和 **0 个对象**去喂它，它该拒绝干活（用 `assertRaises(ValueError, 平分, 8, 0)`）。\n3. 跑的时候开一本体检本子（`unittest.TestResult()`），用它把 `平分体检` 跑一遍。\n4. 最后印**三行**：\n   - 第一行：`体检了 ` 加项目数加 ` 项`\n   - 第二行：`红了 ` 加挂掉的项目数加 ` 项`\n   - 第三行：全绿印 `全绿`，有红的印 `有红的`\n\n（挂掉的项目数 = `len(本子.failures) + len(本子.errors)`。）",
+      "starter": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\n# 下面这张体检单和跑它的那几行，交给你\n",
+      "referenceSolution": "import unittest\n\n\ndef 平分(总数, 对象数):\n    if 对象数 <= 0:\n        raise ValueError(\"没有对象，分不了\")\n    return 总数 // 对象数\n\n\nclass 平分体检(unittest.TestCase):\n    def test_正常(self):\n        self.assertEqual(平分(8, 3), 8 // 3)\n    def test_没有对象(self):\n        self.assertRaises(ValueError, 平分, 8, 0)\n\n\n本子 = unittest.TestResult()\nunittest.defaultTestLoader.loadTestsFromTestCase(平分体检).run(本子)\nprint(\"体检了\", 本子.testsRun, \"项\")\nprint(\"红了\", len(本子.failures) + len(本子.errors), \"项\")\nprint(\"全绿\" if 本子.wasSuccessful() else \"有红的\")\n",
+      "expectedOutput": "体检了 2 项\n红了 0 项\n全绿",
+      "stdin": null,
+      "explanation": "这张单子要的三件事，一件比一件值钱。\n\n**① 单子照类定义画。** 括号里那个 `unittest.TestCase` 不是传入的东西，它的意思是「我们照这张类定义画」。照它画出来的单子自带一整套家伙事：怎么跑项目、怎么记成绩、怎么印报告 —— 你只管写判据。\n\n**② 项目名以 `test` 开头，不然它压根不跑。** 这不是风格建议，是筛选的规矩：解释器扫单子的时候只拎 `test` 开头的那种，别的它不认。\n\n**③ 正常值和边界值各一张。** 这是这次体检单的重点：只写「正常情况」的话，函数坏在边界上你永远发现不了。我们这次就是被「没有对象」那一项救回来的 —— 它逼着你想清楚「对象数是 0 的时候，我们到底要它怎么办」。你想的答案是「拒绝干活」，于是用 `assertRaises` 把这句话写成了可判的。\n\n最后那个体检本子（`TestResult()`）是报告底下的账房：跑完以后 `testsRun` 是跑了几个项目、`failures` 和 `errors` 是挂掉的清单、`wasSuccessful()` 一句话告诉你全不全绿。",
+      "templateId": "py-s3-ut-two-cases",
+      "params": {
+        "a": 8,
+        "b": 3,
+        "unit": "商品"
+      },
+      "verified": {
+        "at": "2026-10-27T12:54:00.504Z",
+        "hash": "a45c545e8324a9a5"
+      }
+    }
+  ]
+}

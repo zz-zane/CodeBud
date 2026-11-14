@@ -1,0 +1,33 @@
+{
+  "templateId": "cpp-s2-05-missing-outside",
+  "lang": "cpp",
+  "stage": 2,
+  "lessonId": "cpp-stage2-05",
+  "type": "codefix",
+  "concept": [
+    "整张类定义共用的一格",
+    "类定义外面那一行",
+    "拼装那一刻才报的错"
+  ],
+  "instances": 2,
+  "params": {
+    "nameA": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "王五"
+      ]
+    },
+    "nameB": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "三花"
+      ]
+    }
+  },
+  "stemTemplate": "我们类定义上有一格共用的东西：每创建一个对象就加一，调用 `Cat::howMany()` 就能把「一共初始化了几个」问出来。类定义里该写的我们都写了，可程序就是跑不起来 —— 编译器是在**很晚的那一关**才把我们拦下的。\n\n你帮我们补上**一处**，让它跑起来、印出这两行：先一行 `一共初始化了 2 只`，再一行 `第一个叫 XX`（`XX` 是第一个对象的名字）。**类定义里面那几行一个字都不用动。**",
+  "brokenCodeTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    static int count;\n    string name;\n\n    Cat(string n) : name(n) {\n        count = count + 1;\n    }\n\n    static int howMany() {\n        return count;\n    }\n};\n\nint main() {\n    Cat a(\"{nameA}\");\n    Cat b(\"{nameB}\");\n    cout << \"一共初始化了 \" << Cat::howMany() << \" 只\" << endl;\n    cout << \"第一个叫 \" << a.name << endl;\n    return 0;\n}\n",
+  "referenceFixTemplate": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Cat {\npublic:\n    static int count;\n    string name;\n\n    Cat(string n) : name(n) {\n        count = count + 1;\n    }\n\n    static int howMany() {\n        return count;\n    }\n};\n\nint Cat::count = 0;\n\nint main() {\n    Cat a(\"{nameA}\");\n    Cat b(\"{nameB}\");\n    cout << \"一共初始化了 \" << Cat::howMany() << \" 只\" << endl;\n    cout << \"第一个叫 \" << a.name << endl;\n    return 0;\n}\n",
+  "explanationTemplate": "编译器的原话，最末一行是：\n\n`collect2.exe: error: ld returned 1 exit status`\n\n这一行上面还有一行，里面写着 `undefined reference` 和 `Cat::count`（那一行开头是一长串临时小路，每次跑都不一样，我们就不整行抄了）。意思很直白：**「`count` 这个名字我们认得，可它落地的地方没找着。」**\n\n为什么它来得那么晚：类定义里那句 `static int count;` **只是报个名字** —— 有这么一格、它是整张类定义共用的。每个对象自己那两格是跟着实例一起被造出来的，共用的这一格没有这份待遇，得**在类定义外面亲手写一行**给它落地、给它一个起步的数：`int Cat::count = 0;`\n\n补上这一行，程序立刻顺着跑。所以往后看到那句 `collect2.exe: error: ld returned 1 exit status`，先回头数一数是不是有哪个共用的格子忘了在类定义外面写那一行。"
+}

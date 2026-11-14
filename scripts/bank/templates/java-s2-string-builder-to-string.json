@@ -1,0 +1,28 @@
+{
+  "templateId": "java-s2-string-builder-to-string",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-07",
+  "type": "codefix",
+  "concept": [
+    "会自己长大的抽屉",
+    "倒出来成字符串",
+    "两样家当",
+    "过不了源代码"
+  ],
+  "instances": 2,
+  "params": {
+    "word": {
+      "kind": "pick",
+      "values": [
+        "数据",
+        "王五鱼",
+        "张三"
+      ]
+    }
+  },
+  "stemTemplate": "我们往抽屉里塞了两段字，想把它交给一个**只收字符串**的地方 —— 结果编译器把源代码退了回来，一个字都没让跑。\n\n请你帮我们改好，规矩是：**抽屉里攒的字一个都不许少、顺序也不许变**，倒出来之后还得能接着数它有几颗。\n\n改好之后，程序该印出这一行（`N` 就是字符串上数据的颗数）：\n\n```text\n{word}（N 个字）\n```\n\n只有倒抽屉那一行的问题，别的我们都没写错。",
+  "brokenCodeTemplate": "public class Main {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder();\n        sb.append(\"{word}\");\n        sb.append(\"\");\n        String s = sb;\n        System.out.println(s + \"（\" + s.length() + \" 个字）\");\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder();\n        sb.append(\"{word}\");\n        sb.append(\"\");\n        String s = sb.toString();\n        System.out.println(s + \"（\" + s.length() + \" 个字）\");\n    }\n}\n",
+  "explanationTemplate": "StringBuilder 是可变序列，toString() 取得 String 表示。需要 String 的位置不能直接依赖二者是同一类型；返回文本长度应从当前内容计算。"
+}

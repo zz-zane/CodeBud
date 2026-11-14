@@ -1,0 +1,34 @@
+{
+  "templateId": "java-s2-enum-ctor-missing-label",
+  "lang": "java",
+  "stage": 2,
+  "lessonId": "java-stage2-11",
+  "type": "codefix",
+  "concept": [
+    "清单也是类定义",
+    "初始化那一手",
+    "每一项都要带自己的家当",
+    "constructor cannot be applied"
+  ],
+  "instances": 2,
+  "params": {
+    "l1": {
+      "kind": "pick",
+      "values": [
+        "张三",
+        "赵六"
+      ]
+    },
+    "l2": {
+      "kind": "pick",
+      "values": [
+        "李四",
+        "花卷"
+      ]
+    }
+  },
+  "stemTemplate": "我们给清单上的每一项配了一个当班的对象，配好之后就绕清单走一圈，把项名和当班的那个一起印出来。\n\n可这源代码**编都编不过** —— 编译器说，有一项的写法跟初始化那一手对不上。请你补好，让程序印出：\n\n```text\nMON 是 {l1}\nTUE 是 {l2}\n```\n\n清单上就两项，每一行都是「项名 + ` 是 ` + 那一项自己带的对象」。除了那一处对不上，别的我们都没写错。",
+  "brokenCodeTemplate": "public class Main {\n    enum Day {\n        MON, TUE(\"{l2}\");\n        private final String cat;\n\n        Day(String cat) {\n            this.cat = cat;\n        }\n\n        String cat() {\n            return cat;\n        }\n    }\n\n    public static void main(String[] args) {\n        for (Day d : Day.values()) {\n            System.out.println(d + \" 是 \" + d.cat());\n        }\n    }\n}\n",
+  "referenceFixTemplate": "public class Main {\n    enum Day {\n        MON(\"{l1}\"), TUE(\"{l2}\");\n        private final String cat;\n\n        Day(String cat) {\n            this.cat = cat;\n        }\n\n        String cat() {\n            return cat;\n        }\n    }\n\n    public static void main(String[] args) {\n        for (Day d : Day.values()) {\n            System.out.println(d + \" 是 \" + d.cat());\n        }\n    }\n}\n",
+  "explanationTemplate": "编译器拦下这一处的原话是：\n\n```text\nerror: constructor Day in enum Day cannot be applied to given types;\n  required: String\n  found:    no arguments\n```\n\n念起来是：**「夹在 `Day` 这张清单里的初始化那一手，要一样 `String`；可这一项递过去的时候，手里是空的。」** `required: String` 说的是初始化那一手要什么，`found: no arguments` 说的是这一项给了什么 —— 一边要、一边没给，编译器不放行。\n\n为什么清单上的一项还能「递东西」？因为**清单也是类定义**：写几项，创建后的就是几个实例。既然是实例，它就能带上自己的家当（这里是 `cat` 那一格），而**家当要在初始化那一刻就装好** —— `MON(\"{l1}\")` 那对小括号里装的正是它自己的那一份。\n\n另外两处顺手记牢：\n\n- **最后一项后面跟的是分号，不是逗号。**「哪几项」这句话到那儿就说完了，后面接的是家当、初始化那一手、还有那个本事。我们真把分号改成逗号跑过一遍，编译器说 `error: enum constant expected here` —— 「这儿该写一项的名字，你怎么写起家当来了」，它一直读到 `private` 才发觉不对。\n- **这张清单的初始化那一手只给清单自己用。** 在外面写 `new Day(\"{l1}\")` 是写不出来的：编译器会说 `error: enum classes may not be instantiated` —— 「清单上的项不能在外面另生」。清单上写几项就是几个，一个不多一个不少。\n\n一句话收尾：**清单上加一样家当，就得给每一项都递一份**；少递一项，编源代码那一关就过不去 —— 又是「我们的约定变成了机器的规矩」那一件事。"
+}
