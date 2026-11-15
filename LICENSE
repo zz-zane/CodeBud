@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 miai
+Copyright (c) 2026 CodeBud contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,6 +27,12 @@ Scope note: third-party material is NOT covered by this MIT license.
 This license applies only to the source code authored for this project.
 It does not grant any rights to:
 
+  - course content, question banks and documentation, which are licensed
+    separately under CC BY-NC-SA 4.0 (see LICENSE-CONTENT.md);
+  - CET-6 exam papers and listening audio, whose copyright belongs to
+    their original rights holders and for which no license is granted
+    (see LICENSE-CONTENT.md);
+  - the CodeBud name and logo;
   - third-party npm packages (see THIRD-PARTY-NOTICES.md);
   - ported or vendored code, which remains under its upstream license
     (see THIRD-PARTY-CODE-NOTICES.md);

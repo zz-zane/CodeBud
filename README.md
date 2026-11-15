@@ -85,7 +85,16 @@ npm run package:win
 
 ## 许可证与致谢
 
-本项目自身代码采用 [MIT](LICENSE)。第三方代码、课程资料和素材的权利依各自许可与来源声明，不因项目采用 MIT 而自动变更。六级真题照常包含；其内容的公开再分发边界列入发布前审核。
+代码和内容分开授权，完整说明见 [LICENSE-CONTENT.md](LICENSE-CONTENT.md)：
+
+| 范围 | 许可 |
+|---|---|
+| 源代码 | [MIT](LICENSE) |
+| 原创课程、题库与文档 | [CC BY-NC-SA 4.0](LICENSE-CONTENT.md) |
+| Hello 算法课程 | CC BY-NC-SA 4.0（上游 krahets/hello-algo） |
+| 六级真题与听力音频 | 不授予许可，版权归原权利人，仅供个人学习备考 |
+
+因为内容带有「非商业」条款，**含内容的完整应用与安装包只能用于非商业用途**；只取用 MIT 代码并自行替换内容时不受此限制。
 
 - [第三方依赖声明](THIRD-PARTY-NOTICES.md)：由 `npm run gen:notices` 从实际安装依赖生成。
 - [第三方源码与素材声明](THIRD-PARTY-CODE-NOTICES.md)、[许可证原文](LICENSES/)：随软件保留。
