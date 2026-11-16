@@ -16,11 +16,14 @@ import QuizCodeRun from './QuizCodeRun.vue'
 import MiRichText from '../../base/MiRichText.vue'
 import FavoriteStar from '../FavoriteStar.vue'
 import { isRunGraded } from '../../../../../shared/run-grading'
-import { CHALLENGE, QUIZ } from '../../../lib/copy'
+import { CHALLENGE, QUIZ, VIDEO_UI } from '../../../lib/copy'
+import { useVideoStore } from '../../../stores/video'
+import { isSentinelLesson, parseQuestionKey } from '../../../../../shared/question-key'
 import { usePhoneBackClose } from '../../../lib/phone-back-close'
 
 // M4-01：全局练习遮罩（一次一题、顶部进度、计时、退出确认、结果页猫咪评价）
 const quiz = useQuizStore()
+const video = useVideoStore()
 // 挑战模式的两处专属展示（进度行的「已连对」、结算页的积分行）要读挑战存档 ——
 // 积分的写入方也在挑战 store（finish watcher，flush:'sync'），判分与它同 tick 完成，
 // 所以结果页读到的就是刚记完的那一份
@@ -28,6 +31,8 @@ const challenge = useChallengeStore()
 // 退出确认的正文要读设置（fav 模式 + 开关关着时不记账，文案得跟着变）——
 // 选择逻辑在 QUIZ.exitConfirmBody 里（copy.ts），组件只负责取值
 const settings = useSettingsStore()
+const videoPreferred = computed(() => (settings.config as typeof settings.config & { learning?: { explainMode?: string } }).learning?.explainMode === 'video')
+const dismissedVideoHints = ref(new Set<string>())
 // 答对时闪的那枚「🍚 +1」回执（V2-22）读它的 riceInTick —— 见下面的 watcher。
 // 组件不自己发 grant、也不自己数答对：加一的判据在 stores/quiz.ts（真涨了才 ping）
 // pet store decoupled
@@ -205,6 +210,16 @@ const currentKey = computed(() => {
   const v = s.value
   return v ? (v.keys[v.index] ?? '') : ''
 })
+
+function explainWrongWithVideo(): void {
+  const question = quiz.current
+  const session = s.value
+  if (!question || !session) return
+  const raw = session.answers[session.index]
+  const answer = question.type === 'choice' && typeof raw === 'number' ? question.options[raw] ?? String(raw) : String(raw ?? '')
+  const lesson = parseQuestionKey(currentKey.value).lessonId
+  video.open({ question: VIDEO_UI.QUESTION_FROM_WRONG(question.stem.slice(0, 300), answer.slice(0, 150)), lessonId: lesson && !isSentinelLesson(lesson) ? lesson : undefined })
+}
 
 /**
  * 当前这道题的题型，这个版本认不认识。
@@ -669,6 +684,10 @@ function confirmExit() {
               </div>
             </div>
 
+            <MiButton v-if="quiz.isCurrentCorrect === false" variant="secondary" icon="play" @click="explainWrongWithVideo">{{ VIDEO_UI.WRONG }}</MiButton>
+            <div v-if="quiz.isCurrentCorrect === false && !dismissedVideoHints.has(currentKey) && (videoPreferred || (s.wrongCounts[s.index] ?? 0) >= 2)" class="video-hint">
+              <span>{{ VIDEO_UI.WRONG_HINT }}</span><MiButton size="sm" variant="primary" @click="explainWrongWithVideo">{{ VIDEO_UI.GENERATE }}</MiButton><MiButton size="sm" variant="ghost" @click="dismissedVideoHints.add(currentKey)">{{ VIDEO_UI.DISMISS }}</MiButton>
+            </div>
             <div v-if="showActionRow" class="quiz-actions">
               <!--
                 未知题型没有"提交"可点（它压根没法判分），给的是"跳过"。
@@ -727,6 +746,7 @@ function confirmExit() {
 </template>
 
 <style scoped>
+.video-hint { display:flex; align-items:center; gap:var(--mi-sp-2); padding:var(--mi-sp-3); background:var(--mi-blue-light); border-radius:var(--mi-radius); }.video-hint span { flex:1; }
 .quiz-mask {
   position: fixed;
   inset: 0;

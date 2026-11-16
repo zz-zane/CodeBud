@@ -44,17 +44,74 @@ describe('durable learning memory', () => {
     writeFileSync(store.file, '{invalid')
     expect(store.read().memory[0].text).toBe('original')
     expect(readdirSync(dir).some(file => file.includes('.corrupt-'))).toBe(true)
-    expect(JSON.parse(readFileSync(store.file, 'utf8')).version).toBe(1)
+    expect(JSON.parse(readFileSync(store.file, 'utf8')).version).toBe(2)
   })
 
   it('does not overwrite damaged or unsupported data with an empty profile', () => {
-    for (const value of ['broken', JSON.stringify({ version: 2 })]) {
+    for (const value of ['broken', JSON.stringify({ version: 3 })]) {
       writeFileSync(store.file, value)
-      expect(() => store.read()).toThrow('原文件已保留')
+      expect(() => store.read()).toThrow()
       expect(() => store.saveMemory({ text: 'do not erase' })).toThrow()
       expect(readFileSync(store.file, 'utf8')).toBe(value)
     }
     expect(existsSync(store.file + '.bak')).toBe(false)
+  })
+
+  it('新版本资料不回退备份或写回', () => {
+    store.saveMemory({ text: 'old backup' })
+    writeFileSync(store.file + '.bak', readFileSync(store.file))
+    const newer = JSON.stringify({ ...JSON.parse(readFileSync(store.file, 'utf8')), version: 99, future: 'keep' })
+    writeFileSync(store.file, newer)
+    expect(store.read().version).toBe(99)
+    expect(store.read().memory[0].text).toBe('old backup')
+    expect(() => store.saveMemory({ text: 'no write' })).toThrow('数据来自较新版本')
+    expect(readFileSync(store.file, 'utf8')).toBe(newer)
+    expect(readdirSync(dir).some(file => file.includes('.corrupt-'))).toBe(false)
+  })
+
+  it('无法识别的新版本也不能回退旧备份', () => {
+    store.saveMemory({ text: 'old backup' })
+    writeFileSync(store.file + '.bak', readFileSync(store.file))
+    const newer = JSON.stringify({ version: 99, memory: 'new format' })
+    writeFileSync(store.file, newer)
+    expect(() => store.read()).toThrow('数据来自较新版本')
+    expect(readFileSync(store.file, 'utf8')).toBe(newer)
+    expect(readdirSync(dir).some(file => file.includes('.corrupt-'))).toBe(false)
+  })
+
+  it('migrates v1 study snapshot to v2 with refs=[] and draft=false while preserving all data', () => {
+    const v1 = {
+      version: 1,
+      memory: [{ id: 'm1', text: 'prefers worked examples', source: '用户编辑', updatedAt: 1000 }],
+      notes: [{ id: 'n1', title: 'Pointers', body: 'Body', tags: ['c'], format: 'markdown', updatedAt: 2000 }],
+      materials: [{ id: 'mat1', name: 'C.md', kind: 'md', charCount: 500, createdAt: 3000, status: 'ready' }],
+      plans: [{
+        id: 'p1',
+        title: 'Plan 1',
+        materialId: 'mat1',
+        tasks: [{ id: 't1', title: 'Read ch1', description: 'desc', status: 'todo', sourceRef: 'section-1' }],
+        createdAt: 4000,
+        source: 'ai'
+      }],
+      position: { route: '/lesson/common-01', lessonId: 'common-01', lessonTitle: 'First', learnedCount: 1, totalLessons: 10 },
+      connections: [],
+      activeConnectionId: null
+    }
+    writeFileSync(store.file, JSON.stringify(v1))
+    const migrated = store.read()
+    expect(migrated.version).toBe(2)
+    expect(migrated.memory).toEqual([{ ...v1.memory[0], refs: [] }])
+    expect(migrated.plans).toEqual([{ ...v1.plans[0], draft: false }])
+    expect(migrated.notes).toEqual(v1.notes)
+    expect(migrated.materials).toEqual(v1.materials)
+    expect(migrated.position).toEqual(v1.position)
+
+    // Subsequent write persists v2
+    const m2 = store.saveMemory({ text: 'new preference' })
+    expect(m2.refs).toEqual(['user'])
+    const reloaded = new StudyStore(dir).read()
+    expect(reloaded.version).toBe(2)
+    expect(reloaded.memory).toHaveLength(2)
   })
 
   it('persists position and rejects mismatched route and invalid progress', () => {

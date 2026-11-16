@@ -2,7 +2,19 @@ import { STUDY_TEXT } from '../../shared/study-copy'
 import { randomUUID } from 'node:crypto'
 import { copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, unlinkSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { isStudyRoute, type StudyMemory, type StudyNote, type StudyPosition, type StudySnapshot } from '../../shared/study-companion'
+import { assertSupportedVersion, NewerDataVersionError } from '../../shared/data-version'
+import { preserveCorruptFile } from '../store/json-store'
+import { CURRENT_STUDY_VERSION, isStudyRoute, type StudyMemory, type StudyNote, type StudyPosition, type StudySnapshot } from '../../shared/study-companion'
+
+const MEMORY_REF_RE = /^(?:lesson:[a-zA-Z0-9][a-zA-Z0-9_-]{0,99}|chat:[a-zA-Z0-9_-]{1,128}|user)$/
+
+function assertRefs(value: unknown): string[] {
+  if (!Array.isArray(value) || value.length > 20) throw new Error(STUDY_TEXT.MEMORY_REFS_INVALID)
+  return value.map((ref) => {
+    if (typeof ref !== 'string' || !MEMORY_REF_RE.test(ref)) throw new Error(STUDY_TEXT.MEMORY_REFS_INVALID)
+    return ref
+  })
+}
 
 export function objectInput(value: unknown): Record<string, unknown> {
   if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(STUDY_TEXT.INPUT_OBJECT_INVALID)
@@ -42,12 +54,39 @@ export function cleanPosition(input: unknown): StudyPosition {
 }
 
 function emptySnapshot(): StudySnapshot {
-  return { version: 1, memory: [], notes: [], materials: [], plans: [], position: null, connections: [], activeConnectionId: null }
+  return { version: CURRENT_STUDY_VERSION, memory: [], notes: [], materials: [], plans: [], position: null, connections: [], activeConnectionId: null }
+}
+
+/** 将 v1 的 study-companion.json 迁移到当前 v2（保留全部数据，补 refs: [] 与 draft: false） */
+export function migrateStudySnapshot(value: unknown): StudySnapshot {
+  const data = objectInput(value)
+  if (typeof data.version === 'number' && data.version > CURRENT_STUDY_VERSION) {
+    try { assertSnapshot({ ...data, version: CURRENT_STUDY_VERSION }) }
+    catch { throw new NewerDataVersionError() }
+    return data as unknown as StudySnapshot
+  }
+  if (data.version === CURRENT_STUDY_VERSION) {
+    assertSnapshot(data)
+    return data
+  }
+  if (data.version !== 1) throw new Error(STUDY_TEXT.STATE_VERSION_UNSUPPORTED)
+  const migrated: Record<string, unknown> = {
+    ...data,
+    version: CURRENT_STUDY_VERSION,
+    memory: Array.isArray(data.memory)
+      ? data.memory.map((row) => (row && typeof row === 'object' && !Array.isArray(row) ? { ...row, refs: Array.isArray((row as Record<string, unknown>).refs) ? (row as Record<string, unknown>).refs : [] } : row))
+      : data.memory,
+    plans: Array.isArray(data.plans)
+      ? data.plans.map((row) => (row && typeof row === 'object' && !Array.isArray(row) ? { ...row, draft: typeof (row as Record<string, unknown>).draft === 'boolean' ? (row as Record<string, unknown>).draft : false } : row))
+      : data.plans
+  }
+  assertSnapshot(migrated)
+  return migrated
 }
 
 function assertSnapshot(value: unknown): asserts value is StudySnapshot {
   const data = objectInput(value)
-  if (data.version !== 1) throw new Error(STUDY_TEXT.STATE_VERSION_UNSUPPORTED)
+  if (data.version !== CURRENT_STUDY_VERSION) throw new Error(STUDY_TEXT.STATE_VERSION_UNSUPPORTED)
   for (const key of ['memory', 'notes', 'materials', 'plans', 'connections']) {
     if (!Array.isArray(data[key]) || (data[key] as unknown[]).length > 10_000) throw new Error(STUDY_TEXT.STATE_RECORD_INVALID)
     const ids = new Set<string>()
@@ -59,6 +98,7 @@ function assertSnapshot(value: unknown): asserts value is StudySnapshot {
       if (key === 'memory') {
         textInput(item.text, 4000)
         textInput(item.source, 300, true)
+        assertRefs(item.refs)
         if (typeof item.updatedAt !== 'number' || !Number.isFinite(item.updatedAt)) throw new Error(STUDY_TEXT.MEMORY_TIME_INVALID)
       }
       if (key === 'notes') {
@@ -77,7 +117,7 @@ function assertSnapshot(value: unknown): asserts value is StudySnapshot {
       if (key === 'plans') {
         textInput(item.title, 300)
         idInput(item.materialId)
-        if (!['ai', 'manual'].includes(item.source as string) || !Array.isArray(item.tasks) || item.tasks.length > 30 || typeof item.createdAt !== 'number' || !Number.isFinite(item.createdAt)) throw new Error(STUDY_TEXT.PLAN_RECORD_INVALID)
+        if (typeof item.draft !== 'boolean' || !['ai', 'manual'].includes(item.source as string) || !Array.isArray(item.tasks) || item.tasks.length > 30 || typeof item.createdAt !== 'number' || !Number.isFinite(item.createdAt)) throw new Error(STUDY_TEXT.PLAN_RECORD_INVALID)
         const taskIds = new Set<string>()
         for (const value of item.tasks) {
           const task = objectInput(value)
@@ -133,21 +173,25 @@ export class StudyStore {
     let originalError: unknown
     for (const file of [this.file, backup]) {
       if (!existsSync(file)) continue
+      let snapshot: StudySnapshot
       try {
         const value: unknown = JSON.parse(readFileSync(file, 'utf8'))
-        assertSnapshot(value)
-        if (file === backup) {
-          if (existsSync(this.file)) copyFileSync(this.file, this.file + `.corrupt-${Date.now()}-${randomUUID()}`)
-          copyFileSync(backup, this.file)
-        }
-        return value
-      } catch (error) { originalError = error }
+        snapshot = migrateStudySnapshot(value)
+      } catch (error) {
+        if (error instanceof NewerDataVersionError) throw error
+        originalError = error
+        preserveCorruptFile(file, error)
+        continue
+      }
+      if (file === backup) copyFileSync(backup, this.file)
+      return snapshot
     }
     throw new Error(STUDY_TEXT.STATE_UNREADABLE, { cause: originalError })
   }
 
   update<T>(mutate: (snapshot: StudySnapshot) => T): T {
     const state = this.read()
+    assertSupportedVersion(state, CURRENT_STUDY_VERSION)
     const result = mutate(state)
     assertSnapshot(state)
     mkdirSync(this.directory, { recursive: true })
@@ -168,11 +212,13 @@ export class StudyStore {
     const id = data.id === undefined ? randomUUID() : idInput(data.id)
     const text = textInput(data.text, 4000).trim()
     const source = data.source === undefined ? STUDY_TEXT.MEMORY_USER_SOURCE : textInput(data.source, 300).trim()
+    const incomingRefs = data.refs === undefined ? undefined : assertRefs(data.refs)
     return this.update(state => {
       const index = state.memory.findIndex(memory => memory.id === id)
       if (data.id !== undefined && index < 0) throw new Error(STUDY_TEXT.MEMORY_MISSING)
       if (index < 0 && state.memory.length >= 500) throw new Error(STUDY_TEXT.MEMORY_LIMIT)
-      const memory: StudyMemory = { id, text, source, updatedAt: Date.now() }
+      const refs = incomingRefs ?? (index >= 0 ? state.memory[index].refs : ['user'])
+      const memory: StudyMemory = { id, text, source, refs, updatedAt: Date.now() }
       if (index < 0) state.memory.push(memory)
       else state.memory[index] = memory
       return memory

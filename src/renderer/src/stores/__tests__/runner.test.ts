@@ -61,6 +61,8 @@ function publicConfig(over: Partial<PublicAppConfig> = {}): PublicAppConfig {
     sfxVolume: 100,
     layout: { ...DEFAULT_LAYOUT },
     envCache: {},
+    learning: { explainMode: 'text', reviewStrategy: 'standard' },
+    update: { auto: true },
     ai: { hasKey: false, baseUrl: 'https://api.deepseek.com', model: 'deepseek-chat', dynamicEnabled: false },
     ...over
   }

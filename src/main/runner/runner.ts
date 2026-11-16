@@ -367,37 +367,6 @@ export function mergeEnv(
  */
 const liveChildren = new Set<ChildProcess>()
 
-let runCanceled = false
-
-export function isCurrentRunCanceled(): boolean {
-  return runCanceled
-}
-
-export function resetRunCancel(): void {
-  runCanceled = false
-}
-
-/**
- * 叫停当前正在跑的子进程任务。
- *
- * 【复用 killTree 与 liveChildren】
- * 遍历登记表中的活跃子进程，调用 killTree 杀掉进程树。
- * taskkill 触发后子进程 exit，runProcess 的 finish 触发，
- * 释放 liveChildren，当前 job 结束退出。队列中的下一个不受影响。
- */
-export function cancelCurrentRun(): boolean {
-  runCanceled = true
-  let killed = false
-  for (const child of liveChildren) {
-    if (child.pid !== undefined) {
-      killTree(child.pid)
-      killed = true
-    }
-  }
-  return killed
-}
-
-
 /**
  * 退出前收割：杀掉所有还没跑完的编译/运行子进程。
  *
@@ -431,6 +400,7 @@ export function runProcess(
     stdin?: string
     timeoutMs: number
     env?: NodeJS.ProcessEnv
+    signal?: AbortSignal
     /** 见函数头注释。只有「把整行交给 cmd.exe」时必须为 true */
     verbatim?: boolean
   }
@@ -455,6 +425,7 @@ export function runProcess(
     const finish = (exitCode: number | null): void => {
       if (done) return
       done = true
+      opts.signal?.removeEventListener('abort', abort)
       for (const t of timers) clearTimeout(t)
       const r1 = out.result()
       const r2 = err.result()
@@ -467,6 +438,12 @@ export function runProcess(
         spawnError
       })
     }
+
+    const abort = (): void => {
+      if (child.pid !== undefined) killTree(child.pid)
+    }
+    opts.signal?.addEventListener('abort', abort, { once: true })
+    if (opts.signal?.aborted) abort()
 
     // 超时 → taskkill 杀树；再兜底 3s 强制收尾（防僵死进程挂住队列）
     timers.push(
@@ -502,7 +479,7 @@ export function runProcess(
 // 此处不再自留一份——曾经这里写着「C 语言」而界面上是「C」，同一个东西两种说法。
 
 /** 执行一次 编译+运行（临时目录用完即清） */
-export async function runCode(req: RunRequest, report: EnvReport): Promise<RunResult> {
+export async function runCode(req: RunRequest, report: EnvReport, signal?: AbortSignal): Promise<RunResult> {
   const started = performance.now()
   // 编译过了、编译器却仍说了话（`-Wall` 的告警）——见下面赋值的注释。
   // 只在这一趟真的跑了「运行」阶段时才带出去：编译失败时 stderr 本身就是主角，
@@ -547,7 +524,7 @@ export async function runCode(req: RunRequest, report: EnvReport): Promise<RunRe
     })
   }
 
-  if (isCurrentRunCanceled()) {
+  if (signal?.aborted) {
     return done({
       ok: false,
       phase: 'compile',
@@ -567,6 +544,7 @@ export async function runCode(req: RunRequest, report: EnvReport): Promise<RunRe
     if (plan.compile) {
       const c = await runProcess(plan.compile.exe, plan.compile.args, {
         cwd: dir,
+        signal,
         timeoutMs: COMPILE_TIMEOUT_MS, // 编译用独立宽限，不吃用户的运行超时
         env: plan.env
       })
@@ -595,7 +573,7 @@ export async function runCode(req: RunRequest, report: EnvReport): Promise<RunRe
           message: RUNNER.COMPILE_TIMEOUT
         })
       }
-      if (isCurrentRunCanceled()) {
+      if (signal?.aborted) {
         return done({
           ok: false,
           phase: 'compile',
@@ -630,7 +608,7 @@ export async function runCode(req: RunRequest, report: EnvReport): Promise<RunRe
       if (warnings) compileWarnings = warnings
     }
 
-    if (isCurrentRunCanceled()) {
+    if (signal?.aborted) {
       return done({
         ok: false,
         phase: 'run',
@@ -647,6 +625,7 @@ export async function runCode(req: RunRequest, report: EnvReport): Promise<RunRe
     // 必须解析成绝对路径：C/C++ 的产物是不带目录的 prog.exe，直接 spawn 会按 PATH 找而报 ENOENT
     const r = await runProcess(resolveExe(plan.run.exe, dir), plan.run.args, {
       cwd: dir,
+      signal,
       stdin: req.stdin,
       timeoutMs: runTimeoutMs,
       env: plan.env
@@ -664,7 +643,7 @@ export async function runCode(req: RunRequest, report: EnvReport): Promise<RunRe
         envIssue: true
       })
     }
-    if (isCurrentRunCanceled()) {
+    if (signal?.aborted) {
       return done({
         ok: false,
         phase: 'run',
@@ -719,12 +698,23 @@ let queue: Promise<unknown> = Promise.resolve()
  * 而争抢的后果是超时判定变成「有时超时、有时不超时」—— 学员在老机器上做题时
  * 最容易撞见这种「同一段代码刚才还能跑」。所以两条路共用一条队，一次只跑一个。
  */
-export function enqueueRunJob<T>(job: () => Promise<T>): Promise<T> {
-  const p = queue.then(job)
+export function enqueueRunJob<T>(job: () => Promise<T>, signal?: AbortSignal): Promise<T> {
+  let started = false
+  let rejectQueued: ((reason: Error) => void) | undefined
+  const canceled = new Promise<T>((_, reject) => { rejectQueued = reject })
+  const abort = (): void => { if (!started) rejectQueued?.(new Error('canceled')) }
+  signal?.addEventListener('abort', abort, { once: true })
+  if (signal?.aborted) abort()
+  const p = queue.then(() => {
+    started = true
+    signal?.removeEventListener('abort', abort)
+    if (signal?.aborted) throw new Error('canceled')
+    return job()
+  })
   queue = p.catch(() => undefined)
-  return p
+  return Promise.race([p, canceled]).finally(() => signal?.removeEventListener('abort', abort))
 }
 
-export function enqueueRun(req: RunRequest, report: EnvReport): Promise<RunResult> {
-  return enqueueRunJob(() => runCode(req, report))
+export function enqueueRun(req: RunRequest, report: EnvReport, signal?: AbortSignal): Promise<RunResult> {
+  return enqueueRunJob(() => runCode(req, report, signal), signal)
 }

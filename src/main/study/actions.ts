@@ -1,6 +1,7 @@
 import { STUDY_TEXT } from '../../shared/study-copy'
 import { createHash } from 'node:crypto'
 import { isStudyRoute, STUDY_MAIN_SESSION_ID, type StudyActionRecord, type StudySnapshot } from '../../shared/study-companion'
+import { hasBannedPhrase } from '../../shared/memory-guard'
 import type { AiChatSession } from '../../shared/types'
 import { idInput, objectInput, StudyStore, textInput } from './store'
 
@@ -11,7 +12,7 @@ function actionId(turnId: string, index: number): string {
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-4${hex.slice(13, 16)}-8${hex.slice(17, 20)}-${hex.slice(20, 32)}`
 }
 
-export function applyStudyActions(input: { store: StudyStore; text: string; sessionId: string; turnId: string; isLesson(id: string): boolean; createChat(session: AiChatSession): void }): { text: string; actions: StudyActionRecord[]; createdSessions: AiChatSession[] } {
+export function applyStudyActions(input: { store: StudyStore; text: string; userMessage: string; sessionId: string; turnId: string; isLesson(id: string): boolean; createChat(session: AiChatSession): void }): { text: string; actions: StudyActionRecord[]; createdSessions: AiChatSession[] } {
   const actions: StudyActionRecord[] = []
   const createdSessions: AiChatSession[] = []
   let index = 0
@@ -50,7 +51,7 @@ export function applyStudyActions(input: { store: StudyStore; text: string; sess
           result.sessionId = id
           result.message = STUDY_TEXT.TOPIC_CREATED(session.title)
         } else if (type === 'remember' || type === 'forget' || type === 'save_note') {
-          input.store.update(state => applyDataAction(state, data, type, id, input.turnId))
+          input.store.update(state => applyDataAction(state, data, type, id, input.turnId, input.userMessage, input.isLesson))
           result.message = type === 'remember' ? STUDY_TEXT.ACTION_MEMORY_SAVED : type === 'forget' ? STUDY_TEXT.ACTION_MEMORY_FORGOTTEN : STUDY_TEXT.ACTION_NOTE_SAVED
         } else throw new Error(STUDY_TEXT.ACTION_UNSUPPORTED)
         result.ok = true
@@ -64,10 +65,18 @@ export function applyStudyActions(input: { store: StudyStore; text: string; sess
   return { text, actions, createdSessions }
 }
 
-function applyDataAction(state: StudySnapshot, data: Record<string, unknown>, type: string, id: string, turnId: string): void {
+function applyDataAction(state: StudySnapshot, data: Record<string, unknown>, type: string, id: string, turnId: string, userMessage: string, isLesson: (id: string) => boolean): void {
   if (type === 'remember') {
-    const text = textInput(data.text, 4000)
-    if (!state.memory.some(item => item.id === id || item.text === text)) state.memory.push({ id, text, source: STUDY_TEXT.MEMORY_PROVENANCE(turnId), updatedAt: Date.now() })
+    const text = textInput(data.text, 4000).trim()
+    if (text.length > 240) throw new Error(STUDY_TEXT.ACTION_MEMORY_TOO_LONG)
+    if (hasBannedPhrase(text, userMessage)) throw new Error(STUDY_TEXT.ACTION_MEMORY_BANNED)
+    const refs = [`chat:${turnId}`]
+    if (data.lessonId !== undefined) {
+      const lessonId = idInput(data.lessonId)
+      if (!isLesson(lessonId)) throw new Error(STUDY_TEXT.ACTION_LESSON_MISSING)
+      refs.push(`lesson:${lessonId}`)
+    }
+    if (!state.memory.some(item => item.id === id || item.text === text)) state.memory.push({ id, text, source: STUDY_TEXT.MEMORY_PROVENANCE(turnId), refs, updatedAt: Date.now() })
   } else if (type === 'forget') {
     const memoryId = idInput(data.id)
     const index = state.memory.findIndex(item => item.id === memoryId)

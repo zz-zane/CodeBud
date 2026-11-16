@@ -11,7 +11,8 @@ import type {
   LangOfCode,
   PublicAppConfig
 } from '../../../shared/types'
-import { DEFAULT_APP_CONFIG } from '../../../shared/types'
+import { CURRENT_CONFIG_VERSION, DEFAULT_APP_CONFIG } from '../../../shared/types'
+import { DATA_STORE } from '../../../shared/copy'
 import { normalizeLayout, type LayoutConfig } from '../../../shared/layout'
 import { langsToRecheck } from '../../../shared/env-cache'
 import { toast } from '../components/base/toast'
@@ -45,6 +46,8 @@ function toPublic(c: (typeof DEFAULT_APP_CONFIG)): PublicAppConfig {
     remote: { ...c.remote },
     layout: normalizeLayout(c.layout),
     envCache: c.envCache,
+    learning: { ...c.learning },
+    update: { ...c.update },
     ai: {
       hasKey: c.ai.apiKey.trim() !== '',
       baseUrl: c.ai.baseUrl,
@@ -63,8 +66,13 @@ export const useSettingsStore = defineStore('settings', () => {
   const detecting = ref(false)
 
   async function load() {
-    config.value = await window.miai.getConfig()
+    try { config.value = await window.miai.getConfig() }
+    catch (error) {
+      if (error instanceof Error && error.message.includes(DATA_STORE.UNREADABLE)) toast(DATA_STORE.UNREADABLE, 'error', 8000)
+      throw error
+    }
     loaded.value = true
+    if (config.value.version > CURRENT_CONFIG_VERSION) toast(DATA_STORE.NEWER_VERSION, 'warn', 8000)
   }
 
   /**
@@ -160,6 +168,8 @@ export const useSettingsStore = defineStore('settings', () => {
       sfxVolume: cur.sfxVolume,
       layout: normalizeLayout(cur.layout),
       envCache: cur.envCache,
+      learning: { ...cur.learning },
+      update: { ...cur.update },
       ai: ai ?? {
         baseUrl: cur.ai.baseUrl,
         model: cur.ai.model,
@@ -176,7 +186,7 @@ export const useSettingsStore = defineStore('settings', () => {
     try {
       await window.miai.saveConfig(payload)
     } catch (err) {
-      toast(TOAST.SETTINGS_SAVE_FAILED, 'error')
+      toast(err instanceof Error && err.message.includes(DATA_STORE.NEWER_VERSION) ? DATA_STORE.NEWER_VERSION : TOAST.SETTINGS_SAVE_FAILED, 'error')
       throw err
     }
   }

@@ -4,7 +4,7 @@ import { handle } from '../ipc'
 import { IPC } from '../../shared/ipc-channels'
 import { STUDY_TEXT } from '../../shared/study-copy'
 import type { StudyResult } from '../../shared/study-companion'
-import { exportStudyVault, importStudyMaterial, readStudyMaterial, setStudyTaskStatus } from '../study/materials'
+import { confirmStudyPlan, discardStudyPlan, exportStudyVault, importStudyMaterial, readStudyMaterial, setStudyTaskStatus } from '../study/materials'
 import { detectAgy, listAgyModels } from '../study/agy-detect'
 import { getStudyUsage } from '../study/usage'
 import { runMathViaMcp } from '../study/math'
@@ -61,6 +61,8 @@ export const studyFeature: MainFeature = {
       return [await importStudyMaterial(studyStore, picked.filePaths[0])]
     }))
     handle(IPC.studyGeneratePlan, (_event, input: unknown) => studyAsyncResult(() => generateLearningPlan(input)))
+    handle(IPC.studyConfirmPlan, (_event, input: unknown) => studyResult(() => confirmStudyPlan(studyStore, input)))
+    handle(IPC.studyDiscardPlan, (_event, planId: unknown) => studyResult(() => discardStudyPlan(studyStore, planId)))
     handle(IPC.studyExportVault, () => studyAsyncResult(async () => {
       const picked = await dialog.showOpenDialog({ title: STUDY_TEXT.EXPORT_TITLE, properties: ['openDirectory', 'createDirectory'] })
       if (picked.canceled || !picked.filePaths[0]) return null

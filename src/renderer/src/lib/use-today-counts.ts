@@ -37,7 +37,8 @@ export function useTodayCounts() {
   const due = computed(() => {
     if (!progress.loaded || !practice.loaded || !settings.config.reviewEnabled) return { total: 0, today: [] as string[], all: [] as string[] }
     const lessons = poolLessonsOf(content.questionIndex, progress.learnedSet, 'all')
-    const schedule = buildSchedule({ lessons, learnedAt: progress.profile.learnedAt, history: practice.history, todayKey: today.value })
+    const intervals = settings.config.learning?.reviewStrategy ?? 'standard'
+    const schedule = buildSchedule({ lessons, learnedAt: progress.profile.learnedAt, history: practice.history, todayKey: today.value, intervals })
     return pickDueToday(schedule, today.value)
   })
   const dueIds = computed(() => due.value.today)

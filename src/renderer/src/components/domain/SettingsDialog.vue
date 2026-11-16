@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import MiIcon, { type MiIconName } from '../base/MiIcon.vue'
+import UpdateBanner from './UpdateBanner.vue'
 /**
  * 设置面板（2026-10-28 主人要求：点设置开一个覆盖当前页面的大面板）。
  *
@@ -32,14 +33,15 @@ const cards: { key: SettingsCard; label: string; icon: MiIconName }[] = [
   { key: 'study', label: SETTINGS.TAB_STUDY, icon: 'repeat' },
   { key: 'env', label: SETTINGS.TAB_ENV, icon: 'terminal' },
   { key: 'ai', label: SETTINGS.TAB_AI, icon: 'sparkles' },
-  { key: 'remote', label: SETTINGS.TAB_REMOTE, icon: 'plug' }
+  { key: 'remote', label: SETTINGS.TAB_REMOTE, icon: 'plug' },
+  { key: 'about', label: SETTINGS.TAB_ABOUT, icon: 'info' }
 ]
 
 /**
  * 手机浏览器里只留不依赖本机能力的分类（docs/29 §3.5）：环境检测、AI Key、手机连接
  * 都走白名单外的通道，在手机上直接不显示。
  */
-const REMOTE_HIDDEN: SettingsCard[] = ['env', 'ai', 'remote']
+const REMOTE_HIDDEN: SettingsCard[] = ['env', 'ai', 'remote', 'about']
 
 const query = ref('')
 
@@ -102,6 +104,7 @@ function close(): void {
       </aside>
 
       <div class="settings-content" data-settings-scroll>
+        <UpdateBanner class="settings-update-banner" />
         <SettingsRemote v-if="dialog.card === 'remote'" />
         <SettingsView v-else :card="dialog.card" />
       </div>
@@ -236,4 +239,5 @@ function close(): void {
 .settings-content::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--mi-text-3) 40%, transparent); border-radius: 999px; }
 .settings-content::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--mi-text-3) 65%, transparent); }
 .settings-nav-item { display: flex; align-items: center; gap: var(--mi-sp-2); }
+.settings-update-banner { margin-bottom: var(--mi-sp-4); }
 </style>

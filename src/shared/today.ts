@@ -74,7 +74,7 @@ export function planDay(createdAt: number, now: number): number {
 export function pickActivePlan(plans: readonly StudyPlan[]): StudyPlan | null {
   let best: StudyPlan | null = null
   for (const p of plans) {
-    if (!p.tasks.some((t) => t.status !== 'done')) continue
+    if (p.draft || !p.tasks.some((t) => t.status !== 'done')) continue
     if (!best || p.createdAt > best.createdAt) best = p
   }
   return best

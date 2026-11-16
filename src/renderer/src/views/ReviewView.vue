@@ -28,6 +28,9 @@ const currentScope = ref<ReviewScope>('all')
 const pool = useReviewPool(currentScope)
 const runner = useReviewRunner()
 const counts = useTodayCounts()
+const strategyLabel = computed(() =>
+  settings.config.learning?.reviewStrategy === 'sprint' ? REVIEW.STRATEGY_SPRINT : REVIEW.STRATEGY_STANDARD
+)
 onMounted(() => counts.ensureLoaded())
 const dueInScope = computed(() => counts.dueIdsFor(currentScope.value))
 
@@ -100,7 +103,10 @@ function goLearn(): void {
 <template>
   <div class="page pg">
     <div class="pg-head">
-      <h1 class="page-title pg-title">{{ TITLE.REVIEW }}</h1>
+      <div class="review-title-wrap">
+        <h1 class="page-title pg-title">{{ TITLE.REVIEW }}</h1>
+        <span class="review-strategy-tag" data-testid="review-strategy">{{ strategyLabel }}</span>
+      </div>
       <MiButton variant="ghost" icon="flag" :title="REVIEW.WRONGBOOK_DESC" @click="router.push('/practice?tab=wrongbook')">
         {{ REVIEW.WRONGBOOK_BTN }}
       </MiButton>
@@ -153,6 +159,8 @@ function goLearn(): void {
 
 <style scoped>
 .page { max-width: var(--mi-page-max); }
+.review-title-wrap { display: flex; align-items: center; gap: var(--mi-sp-3); flex-wrap: wrap; }
+.review-strategy-tag { display: inline-flex; align-items: center; padding: 2px var(--mi-sp-2); border-radius: var(--mi-radius-ctl); background: var(--mi-blue-light); color: var(--mi-blue-ink); font-size: var(--mi-fs-caption); font-weight: 500; }
 .review-start { display: flex; flex-direction: column; align-items: center; gap: var(--mi-sp-4); padding: 56px var(--mi-sp-4); }
 .size-row { display: flex; align-items: center; gap: var(--mi-sp-4); }
 .size-num { min-width: 72px; text-align: center; font-family: var(--mi-font-serif); font-size: var(--mi-fs-title); line-height: 1; color: var(--mi-text); font-variant-numeric: tabular-nums; }

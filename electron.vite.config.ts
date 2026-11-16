@@ -17,7 +17,7 @@ export default defineConfig({
         return bundle.lessons.map(lesson => lesson.id)
       }))
     },
-    plugins: [externalizeDepsPlugin({ exclude: ['unpdf'] })],
+    plugins: [externalizeDepsPlugin({ exclude: ['unpdf', 'electron-updater'] })],
     build: {
       rollupOptions: {
         input: {

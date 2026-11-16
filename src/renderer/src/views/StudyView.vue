@@ -11,17 +11,19 @@ import StudyTasksTab from '../components/study/StudyTasksTab.vue'
 import StudyConnectionsTab from '../components/study/StudyConnectionsTab.vue'
 import StudyUsageTab from '../components/study/StudyUsageTab.vue'
 import StudyMathTab from '../components/study/StudyMathTab.vue'
+import VideoLibrary from '../components/domain/video/VideoLibrary.vue'
+import { VIDEO_UI } from '../lib/copy'
 import { useStudyStore } from '../stores/study'
 
 const route = useRoute()
 const router = useRouter()
 const study = useStudyStore()
 
-type TabKey = 'memory' | 'knowledge' | 'materials' | 'tasks' | 'connections' | 'usage' | 'math'
+type TabKey = 'memory' | 'knowledge' | 'materials' | 'tasks' | 'connections' | 'usage' | 'math' | 'video'
 
 const currentTab = computed<TabKey>(() => {
   const tab = String(route.query.tab || 'knowledge') as TabKey
-  const validTabs: TabKey[] = ['memory', 'knowledge', 'materials', 'tasks', 'connections', 'usage', 'math']
+  const validTabs: TabKey[] = ['memory', 'knowledge', 'materials', 'tasks', 'connections', 'usage', 'math', 'video']
   return validTabs.includes(tab) && !(isRemote() && REMOTE_HIDDEN_TABS.includes(tab)) ? tab : 'knowledge'
 })
 
@@ -33,6 +35,7 @@ const allTabs: { key: TabKey; label: string; icon: MiIconName }[] = [
   { key: 'materials', label: STUDY_COPY.TABS.MATERIALS, icon: 'book' },
   { key: 'tasks', label: STUDY_COPY.TABS.TASKS, icon: 'list-checks' },
   { key: 'memory', label: STUDY_COPY.TABS.MEMORY, icon: 'lightbulb' },
+  { key: 'video', label: VIDEO_UI.LIBRARY, icon: 'play' },
   { key: 'connections', label: STUDY_COPY.TABS.CONNECTIONS, icon: 'plug' },
   { key: 'usage', label: STUDY_COPY.TABS.USAGE, icon: 'chart' },
   { key: 'math', label: STUDY_COPY.TABS.MATH, icon: 'curve' }
@@ -85,6 +88,7 @@ function onTabKey(event: KeyboardEvent): void {
       <StudyMaterialsTab v-else-if="currentTab === 'materials'" />
       <StudyTasksTab v-else-if="currentTab === 'tasks'" />
       <StudyMemoryTab v-else-if="currentTab === 'memory'" />
+      <VideoLibrary v-else-if="currentTab === 'video'" />
       <StudyConnectionsTab v-else-if="currentTab === 'connections'" />
       <StudyUsageTab v-else-if="currentTab === 'usage'" />
       <StudyMathTab v-else-if="currentTab === 'math'" />

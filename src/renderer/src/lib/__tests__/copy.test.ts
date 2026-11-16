@@ -40,6 +40,10 @@ const SOURCE_OF_TRUTH = [
  */
 const EXCEPTIONS: { file: string; why: string }[] = [
   {
+    file: 'shared/video-prompt.ts',
+    why: '讲解视频的模型指令与参考格式只发送给模型，不是界面文案。'
+  },
+  {
     file: 'shared/ai-assistant-prompt.ts',
     why:
       'AI 助教的系统提示词与学员上下文拼装模板，是送给 LLM 的指令内容而非界面文案。'

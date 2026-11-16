@@ -27,7 +27,10 @@ export const REMOTE_ALLOWED_KEYS = [
   'aiChatSend', 'aiChatStream', 'aiChatCancel', 'aiSessionsGet', 'aiSessionsSave', 'aiSessionsChanged',
   'studyGetState', 'studySaveMemory', 'studyForgetMemory', 'studyUpdatePosition',
   'studySaveNote', 'studyArchiveNote', 'studyReadMaterial', 'studyGeneratePlan',
-  'studySetTaskStatus', 'studyGetUsage', 'studyCreateHtmlPreview'
+  'studySetTaskStatus', 'studyGetUsage', 'studyCreateHtmlPreview',
+  'studyConfirmPlan', 'studyDiscardPlan',
+  'cet6GradeSubjective',
+  'videoOutline', 'videoCancel', 'videoList', 'videoDelete'
 ] as const satisfies readonly IpcKey[]
 
 /**
@@ -49,7 +52,10 @@ export const REMOTE_DENIED_KEYS = [
   'cloudChallengeSettle',
   // 手机连接自身的管理口（只有电脑上的设置页能调）
   'remoteGetStatus', 'remoteSetEnabled', 'remoteSetPort', 'remoteRevokeDevice',
-  'remoteRevokeAll', 'remoteRegenerateCode'
+  'remoteRevokeAll', 'remoteRegenerateCode',
+  'videoGenerate', 'videoVerifyPrompt', 'videoVerifyAnswer',
+  // 自动更新为桌面端专属（docs/34 §2）：手机端不暴露检查/安装入口
+  'updateGetStatus', 'updateCheck', 'updateInstall', 'updateStatus'
 ] as const satisfies readonly IpcKey[]
 
 const ALLOWED_CHANNELS: ReadonlySet<string> = new Set(REMOTE_ALLOWED_KEYS.map((k) => IPC[k]))

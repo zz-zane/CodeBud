@@ -275,4 +275,40 @@ describe('content/cet6 完整性（移植自 cet6_a test_frontend.py test_10）'
       }
     }
   })
+
+  it('v1 → v2 迁移：老 cet6.json 读出来字段齐全、作答不丢，且合法 aiGrades 可保留与清洗', async () => {
+    const { CURRENT_CET6_VERSION, migrateCet6File, sanitizeRecord } = await import('../cet6')
+    const v1 = {
+      version: 1,
+      mediaRoot: 'D:/Audio/cet6',
+      lastMode: 'exam',
+      records: {
+        '2025-06-1': {
+          answers: { '1': 'A', W1: 'My essay.' },
+          marks: ['1'],
+          submitted: true,
+          seconds: 3200,
+          mode: 'exam'
+        }
+      }
+    }
+    const migrated = migrateCet6File(v1)
+    expect(migrated.version).toBe(CURRENT_CET6_VERSION)
+    expect(CURRENT_CET6_VERSION).toBe(2)
+    expect(migrated.mediaRoot).toBe('D:/Audio/cet6')
+    expect(migrated.lastMode).toBe('exam')
+    expect(migrated.records['2025-06-1']).toEqual(v1.records['2025-06-1'])
+
+    const withGrades = sanitizeRecord({
+      ...v1.records['2025-06-1'],
+      aiGrades: {
+        W1: { score: 11.7, comment: '  论证清晰  ', at: 1700000000 },
+        bad: { score: Number.NaN, comment: 'invalid', at: 1 },
+        empty: { score: 8, comment: '   ', at: 1 }
+      }
+    })
+    expect(withGrades?.aiGrades).toEqual({
+      W1: { score: 12, comment: '论证清晰', at: 1700000000 }
+    })
+  })
 })

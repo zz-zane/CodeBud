@@ -18,6 +18,7 @@ import { IPC } from '../shared/ipc-channels'
 import { shouldCommitEnvReport } from '../shared/env-cache'
 import type { EnvReport } from '../shared/types'
 import { createJsonStore } from './store/json-store'
+import { assertSupportedVersion } from '../shared/data-version'
 import { createStores } from './store/stores'
 import { DEVICE_FILE_VERSION, ensureDeviceFile, saveDeviceFile, type DeviceInfo } from './store/device'
 import { toPublicConfig } from './store/config-merge'
@@ -28,7 +29,7 @@ import { buildAssistantSystemPrompt } from '../shared/ai-assistant-prompt'
 import { createCloudChallengeClient, createCloudRiceClient, createPendingOpsStore, createRiceJournal, createSessionTokenStore, createUplink, resolveCloudBaseUrl, type AccountFlowDeps, type FetchLike } from './cloud'
 import { readLegacyPetRice } from './cloud/legacy-pet-rice'
 import type { AppConfig, LangOfCode, PublicAppConfig } from '../shared/types'
-import { DEFAULT_APP_CONFIG } from '../shared/types'
+import { CURRENT_CONFIG_VERSION, DEFAULT_APP_CONFIG } from '../shared/types'
 import type { JsonStore } from './store/json-store'
 import type { SecretStore } from './store/safe-storage'
 import type { Stores } from './store/stores'
@@ -84,6 +85,7 @@ export interface MainContext {
     connections: StudyConnections
     harness: NativeHarness
     lessonIds: Set<string>
+    promptOnce(prompt: string, signal: AbortSignal, tag: string): Promise<string>
     generateLearningPlan(input: unknown, signal?: AbortSignal): ReturnType<typeof generateStudyPlan>
   }
   /** 云上行束：构造是急切的（账本 / 设备身份在启动时就读盘），所以在这里一次造好 */
@@ -136,7 +138,16 @@ export function createMainContext(input: MainContextInput): MainContext {
   const { box } = stores
 
   // 设置（M5-01 环境缓存 / M6 设置页）：config.json —— **设备级，不进盒**（文件头有账）
-  const configStore = createJsonStore<AppConfig>(storageDir, 'config.json')
+  const configDisk = createJsonStore<AppConfig>(storageDir, 'config.json', {
+    validate: value => !!value && typeof value === 'object' && !Array.isArray(value)
+  })
+  const configStore: JsonStore<AppConfig> = {
+    read: () => configDisk.read(),
+    write: (value) => {
+      assertSupportedVersion(configDisk.read(), CURRENT_CONFIG_VERSION)
+      configDisk.write(value)
+    }
+  }
 
   const secretStore = createSecretStore(storageDir)
 
@@ -160,10 +171,12 @@ export function createMainContext(input: MainContextInput): MainContext {
   function readConfig(withSecret = true): AppConfig {
     const raw = configStore.read()
     const cfg = raw === null ? structuredClone(DEFAULT_APP_CONFIG) : migrateConfig(raw)
+    const newer = !!raw && typeof raw.version === 'number' && raw.version > CURRENT_CONFIG_VERSION
+    if (newer) cfg.version = raw!.version
 
     if (withSecret && secretStore.hasKey()) {
       cfg.ai.apiKey = secretStore.getApiKey()
-    } else if (withSecret && cfg.ai.apiKey && cfg.ai.apiKey.trim()) {
+    } else if (withSecret && !newer && cfg.ai.apiKey && cfg.ai.apiKey.trim()) {
       secretStore.setApiKey(cfg.ai.apiKey)
       cfg.ai.apiKey = secretStore.getApiKey()
       try {
@@ -173,7 +186,7 @@ export function createMainContext(input: MainContextInput): MainContext {
       }
     }
 
-    if (withSecret && raw && raw.version !== cfg.version) {
+    if (withSecret && !newer && raw && raw.version !== cfg.version) {
       try {
         configStore.write({ ...cfg, ai: { ...cfg.ai, apiKey: '' } })
       } catch {
@@ -293,23 +306,25 @@ export function createMainContext(input: MainContextInput): MainContext {
     }
   })
 
+  async function promptOnce(prompt: string, signal: AbortSignal, tag: string): Promise<string> {
+    const sessionId = `${tag}-${crypto.randomUUID()}`
+    const state = studyStore.read()
+    const ai = readConfig().ai
+    const contextualPrompt = studyContext(state) + prompt
+    if (state.activeConnectionId) {
+      const connection = state.connections.find(item => item.id === state.activeConnectionId)
+      const result = await studyConnections.prompt(sessionId, contextualPrompt, signal, () => {})
+      if (result.usage) recordStudyUsage(studyStore, { ...result.usage, id: sessionId, at: Date.now(), provider: connection?.kind ?? 'acp', model: connection?.label ?? 'ACP', sessionId, source: 'acp-prompt-result' })
+      return result.text
+    }
+    let round = 0
+    const result = await nativeHarness.runTurn({ sessionId, prompt: contextualPrompt, timeoutMs: 90_000, signal, onUsage: usage => recordStudyUsage(studyStore, { ...usage, id: `${sessionId}-${round++}`, at: Date.now(), provider: ai.provider ?? 'custom', model: ai.model, sessionId, source: 'provider-sse' }) })
+    if (!result.ok) throw new Error(STUDY_TEXT.PLAN_GENERATION_FAILED + result.reason)
+    return result.data.text
+  }
+
   async function generateLearningPlan(input: unknown, signal = new AbortController().signal) {
-    return generateStudyPlan(studyStore, input, async prompt => {
-      const sessionId = `study-plan-${crypto.randomUUID()}`
-      const state = studyStore.read()
-      const ai = readConfig().ai
-      const contextualPrompt = studyContext(state) + prompt
-      if (state.activeConnectionId) {
-        const connection = state.connections.find(item => item.id === state.activeConnectionId)
-        const result = await studyConnections.prompt(sessionId, contextualPrompt, signal, () => {})
-        if (result.usage) recordStudyUsage(studyStore, { ...result.usage, id: sessionId, at: Date.now(), provider: connection?.kind ?? 'acp', model: connection?.label ?? 'ACP', sessionId, source: 'acp-prompt-result' })
-        return result.text
-      }
-      let round = 0
-      const result = await nativeHarness.runTurn({ sessionId, prompt: contextualPrompt, timeoutMs: 90_000, signal, onUsage: usage => recordStudyUsage(studyStore, { ...usage, id: `${sessionId}-${round++}`, at: Date.now(), provider: ai.provider ?? 'custom', model: ai.model, sessionId, source: 'provider-sse' }) })
-      if (!result.ok) throw new Error(STUDY_TEXT.PLAN_GENERATION_FAILED + result.reason)
-      return result.data.text
-    })
+    return generateStudyPlan(studyStore, input, prompt => promptOnce(prompt, signal, 'study-plan'))
   }
 
   // ---------------------------------------------------------------- 云上行接线（P10.x）
@@ -444,6 +459,7 @@ export function createMainContext(input: MainContextInput): MainContext {
       connections: studyConnections,
       harness: nativeHarness,
       lessonIds: studyLessonIds,
+      promptOnce,
       generateLearningPlan
     },
     cloud: { settleQueue, uplink, accountFlowDeps }

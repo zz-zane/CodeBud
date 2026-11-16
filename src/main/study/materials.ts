@@ -75,9 +75,48 @@ export async function generateStudyPlan(store: StudyStore, input: unknown, gener
     if (!references.has(sourceRef)) throw new Error(STUDY_TEXT.PLAN_REFERENCE_INVALID)
     return { id: randomUUID(), title: textInput(task.title, 300), description: textInput(task.description, 4000), sourceRef, status: 'todo' }
   })
-  const plan: StudyPlan = { id: randomUUID(), title, materialId, tasks, createdAt: Date.now(), source: 'ai' }
+  const plan: StudyPlan = { id: randomUUID(), title, materialId, tasks, createdAt: Date.now(), source: 'ai', draft: true }
   store.update(state => { state.plans.push(plan) })
   return plan
+}
+
+export function confirmStudyPlan(store: StudyStore, input: unknown): StudyPlan {
+  const data = objectInput(input)
+  const planId = idInput(data.planId)
+  const title = textInput(data.title, 300).trim()
+  if (!Array.isArray(data.tasks) || data.tasks.length < 1 || data.tasks.length > 30) throw new Error(STUDY_TEXT.PLAN_TASK_COUNT)
+  const seen = new Set<string>()
+  const edits = data.tasks.map((value) => {
+    const task = objectInput(value)
+    const id = idInput(task.id)
+    if (seen.has(id)) throw new Error(STUDY_TEXT.TASK_DUPLICATE_ID)
+    seen.add(id)
+    return { id, title: textInput(task.title, 300).trim(), description: textInput(task.description, 4000).trim() }
+  })
+  return store.update((state) => {
+    const plan = state.plans.find((item) => item.id === planId)
+    if (!plan) throw new Error(STUDY_TEXT.PLAN_MISSING)
+    if (!plan.draft) throw new Error(STUDY_TEXT.PLAN_NOT_DRAFT)
+    const byId = new Map(plan.tasks.map((task) => [task.id, task]))
+    plan.tasks = edits.map((edit) => {
+      const orig = byId.get(edit.id)
+      if (!orig) throw new Error(STUDY_TEXT.TASK_MISSING)
+      return { ...orig, title: edit.title, description: edit.description }
+    })
+    plan.title = title
+    plan.draft = false
+    return { ...plan, tasks: plan.tasks.map((task) => ({ ...task })) }
+  })
+}
+
+export function discardStudyPlan(store: StudyStore, input: unknown): void {
+  const planId = idInput(input)
+  store.update((state) => {
+    const index = state.plans.findIndex((item) => item.id === planId)
+    if (index < 0) throw new Error(STUDY_TEXT.PLAN_MISSING)
+    if (!state.plans[index].draft) throw new Error(STUDY_TEXT.PLAN_NOT_DRAFT)
+    state.plans.splice(index, 1)
+  })
 }
 
 export function setStudyTaskStatus(store: StudyStore, input: unknown): void {

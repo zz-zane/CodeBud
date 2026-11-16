@@ -38,6 +38,7 @@ import {
 import type { StudyTask } from '../../../shared/study-companion'
 import MiButton from '../components/base/MiButton.vue'
 import MiIcon, { type MiIconName } from '../components/base/MiIcon.vue'
+import UpdateBanner from '../components/domain/UpdateBanner.vue'
 
 const router = useRouter()
 const content = useContentStore()
@@ -194,6 +195,7 @@ function ask(): void {
 
 <template>
   <div class="today">
+    <UpdateBanner />
     <!-- 页头 -->
     <header class="t-head">
       <div class="t-head-left">

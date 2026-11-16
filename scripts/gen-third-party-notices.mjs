@@ -180,6 +180,7 @@ const LICENSE_FALLBACKS = {
   'abstract-logging': 'scripts/licenses/abstract-logging-MIT.txt',
   'pg-types': 'scripts/licenses/pg-types-MIT.txt',
   pgpass: 'scripts/licenses/pgpass-MIT.txt',
+  'lazy-val': 'scripts/licenses/lazy-val-MIT.txt',
 }
 
 const deps = []

@@ -11,9 +11,11 @@ import {
   isRight,
   isScored,
   normalizedAnswer,
+  type Cet6AiGrade,
   type Cet6Question,
   type Cet6Section
 } from '../../../../shared/cet6'
+import MiButton from '../base/MiButton.vue'
 import Cet6Review from './Cet6Review.vue'
 
 const props = defineProps<{
@@ -22,15 +24,34 @@ const props = defineProps<{
   screenQs: Cet6Question[]
   answers: Record<string, string>
   submitted: boolean
+  aiGrade?: Cet6AiGrade
+  grading?: boolean
+  gradeError?: string
+  aiReady?: boolean
 }>()
 
 const emit = defineEmits<{
   choose: [q: Cet6Question, key: string]
   goTo: [q: Cet6Question]
   text: [q: Cet6Question, value: string]
+  grade: [q: Cet6Question]
 }>()
 
 const subjective = computed(() => (props.section.questions || []).find((x) => x.kind === 'essay' || x.kind === 'translation') ?? null)
+const hasSubjectiveAnswer = computed(() => !!subjective.value && (props.answers[subjective.value.id] || '').trim().length > 0)
+const gradeDisabledTip = computed(() => {
+  if (props.aiReady === false) return CET6.GRADE_NO_AI_TIP
+  if (!hasSubjectiveAnswer.value) return CET6.GRADE_EMPTY_ANSWER
+  return undefined
+})
+
+function formatGradeTime(at: number): string {
+  try {
+    return new Date(at).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
+  } catch {
+    return ''
+  }
+}
 
 const used = computed(() => {
   const cur = props.q
@@ -87,6 +108,52 @@ function twoUp(q: Cet6Question): boolean {
           <span v-if="subjective.kind === 'essay'">{{ CET6.ESSAY_HINT }}</span>
         </div>
       </div>
+
+      <div v-if="submitted" class="cet6-grade-section">
+        <div v-if="!aiGrade" class="cet6-grade-trigger">
+          <MiButton
+            variant="secondary"
+            size="sm"
+            icon="sparkles"
+            data-testid="cet6-grade-btn"
+            :loading="grading"
+            :disabled="grading || aiReady === false || !hasSubjectiveAnswer"
+            :title="gradeDisabledTip"
+            @click="emit('grade', subjective)"
+          >
+            {{ grading ? CET6.GRADE_LOADING : CET6.GRADE_BTN }}
+          </MiButton>
+          <span v-if="aiReady === false" class="cet6-grade-disabled-note" data-testid="cet6-grade-no-ai">{{ CET6.GRADE_NO_AI_TIP }}</span>
+        </div>
+
+        <div v-if="gradeError" class="mi-alert-error cet6-grade-error" role="alert" data-testid="cet6-grade-error">
+          <span>{{ gradeError }}</span>
+          <MiButton variant="secondary" size="sm" :loading="grading" :disabled="grading" @click="emit('grade', subjective)">
+            {{ CET6.GRADE_RETRY_BTN }}
+          </MiButton>
+        </div>
+
+        <div v-if="aiGrade" class="cet6-grade-card" data-testid="cet6-grade-card">
+          <div class="cet6-grade-head">
+            <span class="cet6-grade-score" data-testid="cet6-ai-score">{{ CET6.gradeScoreText(aiGrade.score) }}</span>
+            <span class="cet6-grade-badge">{{ CET6.GRADE_DISCLAIMER }}</span>
+            <MiButton
+              class="cet6-regrade-btn"
+              variant="ghost"
+              size="sm"
+              :loading="grading"
+              :disabled="grading || aiReady === false || !hasSubjectiveAnswer"
+              :title="gradeDisabledTip"
+              @click="emit('grade', subjective)"
+            >
+              {{ grading ? CET6.GRADE_LOADING : CET6.GRADE_REGRADE_BTN }}
+            </MiButton>
+          </div>
+          <p class="cet6-grade-comment">{{ aiGrade.comment }}</p>
+          <p class="cet6-grade-foot">{{ CET6.gradeTimeFootnote(formatGradeTime(aiGrade.at)) }}</p>
+        </div>
+      </div>
+
       <div v-if="submitted" class="cet6-reference" lang="en">
         <h3>{{ subjective.kind === 'essay' ? CET6.REF_ESSAY : CET6.REF_TRANSLATION }}</h3>
         {{ subjective.answer || CET6.NO_REF }}
@@ -213,4 +280,15 @@ function twoUp(q: Cet6Question): boolean {
 .cet6-area-foot { display: flex; justify-content: space-between; gap: var(--mi-sp-2); font-family: var(--mi-font-family); font-size: var(--mi-fs-caption); color: var(--mi-text-3); font-variant-numeric: tabular-nums; }
 .cet6-reference { margin-top: var(--mi-sp-6); padding-top: var(--mi-sp-3); border-top: 1px solid var(--mi-border); white-space: pre-wrap; color: var(--mi-text-2); }
 .cet6-reference h3 { margin: 0 0 var(--mi-sp-2); font-family: var(--mi-font-family); font-size: var(--mi-fs-label); font-weight: 500; }
+.cet6-grade-section { margin-top: var(--mi-sp-4); display: flex; flex-direction: column; gap: var(--mi-sp-2); }
+.cet6-grade-trigger { display: flex; align-items: center; gap: var(--mi-sp-3); flex-wrap: wrap; }
+.cet6-grade-disabled-note { font-family: var(--mi-font-family); font-size: var(--mi-fs-caption); color: var(--mi-text-3); }
+.cet6-grade-error { font-family: var(--mi-font-family); }
+.cet6-grade-card { padding: var(--mi-sp-3) var(--mi-sp-4); border: 1px solid var(--mi-border); border-radius: var(--mi-radius-box); background: var(--mi-blue-light); display: flex; flex-direction: column; gap: var(--mi-sp-2); }
+.cet6-grade-head { display: flex; align-items: center; gap: var(--mi-sp-2); flex-wrap: wrap; }
+.cet6-grade-score { font-family: var(--mi-font-family); font-size: var(--mi-fs-title); font-weight: 500; color: var(--mi-blue-ink); font-variant-numeric: tabular-nums; }
+.cet6-grade-badge { padding: 2px var(--mi-sp-2); border-radius: var(--mi-radius-ctl); background: var(--mi-card); border: 1px solid var(--mi-border); color: var(--mi-text-2); font-family: var(--mi-font-family); font-size: var(--mi-fs-caption); }
+.cet6-regrade-btn { margin-left: auto; }
+.cet6-grade-comment { margin: 0; font-family: var(--mi-font-family); font-size: var(--mi-fs-label); line-height: 1.6; color: var(--mi-text); white-space: pre-wrap; }
+.cet6-grade-foot { margin: 0; font-family: var(--mi-font-family); font-size: var(--mi-fs-caption); color: var(--mi-text-3); font-variant-numeric: tabular-nums; }
 </style>

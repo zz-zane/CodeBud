@@ -1614,7 +1614,8 @@ export const OVERVIEW = {
   UNIT_LESSON: ' 课',
   UNIT_TIMES: ' 次',
   /** 主统计行：已学 X / 共 Y 课 */
-  learnedOfTotal: (total: number): string => ` / ${total} 课`
+  learnedOfTotal: (total: number): string => ` / ${total} 课`,
+  MASTERED_BADGE: '已掌握'
 } as const
 
 /**
@@ -1729,7 +1730,9 @@ export const REVIEW = {
   WRONGBOOK_DESC: '专攻历史做错的题目，逐题消灭薄弱点。',
   WRONGBOOK_BTN: '进入错题本',
   ALL_COURSES: '全部',
-  scopeCount: (count: number): string => `${count} 课`
+  scopeCount: (count: number): string => `${count} 课`,
+  STRATEGY_STANDARD: '日常长期',
+  STRATEGY_SPRINT: '考前冲刺'
 } as const
 
 /**
@@ -2350,6 +2353,7 @@ export const SETTINGS = {
   TAB_STUDY: '学习与复习',
   TAB_ENV: '环境检测',
   TAB_AI: 'AI 助教',
+  TAB_ABOUT: '关于与更新',
   AI_CONFIG_TITLE: 'AI 模型服务与协议配置',
   AI_CARD_DESC: '配置助教连接的上游模型供应商，API Key 经系统级加密安全存储',
   AI_PRESET_LABEL: '模型供应商预设',
@@ -2582,7 +2586,49 @@ export const SETTINGS = {
   AI_DETAIL_PREFIX: '排查用：',
   /** 设置面板左栏的搜索框（只过滤五个分类名，不做「搜到某一行设置」的假能力） */
   SEARCH_PLACEHOLDER: '搜索分类',
-  SEARCH_EMPTY: '未找到匹配的分类'
+  SEARCH_EMPTY: '未找到匹配的分类',
+  // ---- 学习方式与视频旁白（docs/33 E7 / B3 / 画框 10）----
+  LEARNING_CARD_TITLE: '学习方式',
+  EXPLAIN_MODE_LABEL: '讲解偏好',
+  EXPLAIN_MODE_TEXT: '文字优先',
+  EXPLAIN_MODE_VIDEO: '视频优先',
+  REVIEW_STRATEGY_LABEL: '复习策略',
+  REVIEW_STRATEGY_STANDARD: '日常长期',
+  REVIEW_STRATEGY_SPRINT: '考前冲刺',
+  reviewStrategyDaysHint: (daysText: string): string => `复习间隔天数：${daysText} 天`,
+  NARRATOR_CARD_TITLE: '视频旁白',
+  NARRATOR_DEVICE_ONLY: '仅对这台设备生效',
+  NARRATOR_ENABLED_LABEL: '朗读旁白',
+  NARRATOR_ON: '开',
+  NARRATOR_OFF: '关',
+  NARRATOR_VOICE_LABEL: '声音',
+  NARRATOR_VOICE_AUTO: '系统默认中文',
+  NARRATOR_TEST_BTN: '试听',
+  NARRATOR_TEST_SAMPLE: '这一步会把指针指向新的内存地址。',
+  NARRATOR_RATE_LABEL: '语速',
+  NARRATOR_NO_ZH_VOICE: '当前设备未检测到中文系统语音，播放讲解视频时将按字幕停留计时自动推进。',
+  ABOUT_CARD_TITLE: '关于与更新',
+  aboutVersion: (v: string): string => `CodeBud ${v}`,
+  UPDATE_RELEASE_NOTES: '查看更新说明',
+  UPDATE_CHECK_BTN: '检查更新',
+  UPDATE_RETRY_BTN: '重试',
+  UPDATE_RESTART_BTN: '立即重启',
+  UPDATE_LATER_BTN: '稍后',
+  UPDATE_AUTO_LABEL: '自动更新',
+  UPDATE_AUTO_HINT: '有新版本时在后台下载，退出应用时自动安装。学习数据不受影响。',
+  UPDATE_AUTO_ON: '开',
+  UPDATE_AUTO_OFF: '关',
+  UPDATE_IDLE_HINT: '打开软件后会自动在后台检查更新',
+  UPDATE_CHECKING: '正在检查更新…',
+  updateTodayTime: (hhmm: string): string => `今天 ${hhmm}`,
+  updateDateTime: (month: number, day: number, hhmm: string): string => `${month} 月 ${day} 日 ${hhmm}`,
+  updateLatest: (when: string): string => `已是最新版本 · ${when} 检查`,
+  updateDownloading: (version: string, percent: number): string => `正在下载 ${version} · ${percent}%`,
+  updateReady: (version: string): string => `新版本 ${version} 已下载，重启后生效`,
+  updateBanner: (version: string): string => `新版本 ${version} 已下载，重启后生效。`,
+  updateErr: (msg: string): string => `检查失败：${msg}。不影响正常使用。`,
+  UPDATE_DEV_MODE: '开发模式不检查更新',
+  UPDATE_PLATFORM_UNSUPPORTED: '当前系统暂不支持自动更新'
 } as const
 
 /**
@@ -3888,7 +3934,18 @@ export const CET6 = {
   ANSWER_AREA: '作答区',
   ESSAY_HINT: '建议 150–200 词',
   ESSAY_PLACEHOLDER: '在这里写作文…',
-  TRANSLATION_PLACEHOLDER: '在这里写译文…'
+  TRANSLATION_PLACEHOLDER: '在这里写译文…',
+  // 主观题 AI 估分（docs/33 B5 / 画框 11）
+  GRADE_BTN: 'AI 估分',
+  GRADE_RETRY_BTN: '重试',
+  GRADE_REGRADE_BTN: '重新估分',
+  GRADE_LOADING: '正在估分…',
+  GRADE_NO_AI_TIP: '请先在设置中配置 AI Key 或连接 ACP 客户端后使用 AI 估分',
+  GRADE_EMPTY_ANSWER: '请先填写作答内容后再进行 AI 估分',
+  GRADE_DISCLAIMER: 'AI 估分，仅供参考',
+  GRADE_FAILED: '未能评分，请重试',
+  gradeScoreText: (score: number): string => `${score} / 15`,
+  gradeTimeFootnote: (time: string): string => `不计入客观题总分 · ${time} 估分`
 } as const
 
 // ──────────────────────────────────────────────────────────── 手机连接（docs/29）
@@ -4012,4 +4069,28 @@ export const TODAY = {
   START_CET6: '做一套六级真题',
   START_PLAN: '让 AI 按我的教材排一份计划',
   NEW_NOTE: '学完一课后，每天要复习和重做的内容会出现在这里。'
+} as const
+// ---------------------------------------------------------------- 讲解视频
+export const VIDEO_UI = {
+  TITLE: '视频讲解', LIBRARY: '视频', THIS_LESSON: '本课视频', GENERATE: '生成新视频',
+  PHONE_GENERATE: '请在电脑上生成', PLAY_DEMO: '播放讲解', SELECTION: '用视频讲明白',
+  WRONG: '看视频讲解', EMPTY: '还没有生成的视频', DELETE: '删除', PLAY: '播放', PAUSE: '暂停',
+  PREVIOUS: '上一步', NEXT: '下一步', CLOSE: '关闭', SCENES: '讲解目录', UNKNOWN: '这一步没懂',
+  UNKNOWN_DRAFT: '这一步我没看懂：', RATE: '播放速度', NARRATION: '旁白', PROGRESS: '播放进度',
+  QUESTION_TITLE: '你卡在哪里？', QUESTION_HINT: '说说你想弄明白的问题', EXCERPT: '参考内容',
+  OUTLINE: '确认讲解思路', CONFUSION: '你卡住的点', ANALOGY: '准备使用的类比',
+  GET_OUTLINE: '生成讲解思路', REGENERATE: '换一种讲法', START: '开始生成', BACK: '上一步',
+  GENERATING: '正在生成讲解视频', CANCEL: '取消', FAILED: '没能生成合格的视频',
+  CONFIGURE: '需要先配置 AI', CONFIGURE_HINT: '课文里已有的演示可以直接播放，不需要配置。', SETTINGS: '前往设置', RETRY: '重试',
+  VERIFY_TITLE: '核对前请检查代码', VERIFY_HINT: '这段程序将使用本机工具链运行；拒绝后视频仍可播放，但代码不会验证。',
+  VERIFY_ACCEPT: '继续核对', VERIFY_SKIP: '跳过核对', UNVERIFIED: '代码未验证', VERIFIED: '代码已在本机运行验证',
+  CHECK_TITLE: '看看你是否理解', CHECK_SUBMIT: '提交答案', CHECK_NEXT: '下一题', CHECK_DONE: '完成',
+  CHECK_RIGHT: '答对了', CHECK_WRONG: '再想一想', CHECK_UNANSWERED: '未答题', EXPLANATION: '解析',
+  FILTER: '按课程筛选', ALL_LESSONS: '全部课程', LOADING: '正在加载', ESTIMATED_DURATION: '估计时长',
+  STACK: '栈', HEAP: '堆', VARS: '变量', OUTPUT: '输出',
+  STEP: (n: number, total: number) => `${n} / ${total}`,
+  CHECK_NUMBER: (n: number, total: number) => `第 ${n} / ${total} 题`,
+  QUESTION_FROM_WRONG: (question: string, answer: string) => `${question}\n我的错误答案：${answer}`,
+  DEMO_TITLE: '课文演示', REMOVE_CONFIRM: '确定删除这段视频？', UNKNOWN_STATE: '当前画面状态：', RETURN: '返回视频',
+  WRONG_HINT: '要不要看一段视频讲解？', DISMISS: '不用'
 } as const

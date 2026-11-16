@@ -53,7 +53,7 @@ import {
   COMPILE_TIMEOUT_MS,
   decodeOutput,
   enqueueRunJob,
-  isCurrentRunCanceled,
+  killTree,
   makeRunDir,
   planForLang,
   runProcess,
@@ -145,8 +145,10 @@ export interface WhereResult {
 export function probeCommand(
   whereExe: string,
   command: string,
-  env: NodeJS.ProcessEnv
+  env: NodeJS.ProcessEnv,
+  signal?: AbortSignal
 ): Promise<WhereResult> {
+  if (signal?.aborted) return Promise.resolve({ found: false })
   return new Promise((resolve) => {
     const child = spawn(whereExe, [command], { env, windowsHide: true })
     const chunks: Buffer[] = []
@@ -154,8 +156,12 @@ export function probeCommand(
     const finish = (r: WhereResult): void => {
       if (settled) return
       settled = true
+      signal?.removeEventListener('abort', abort)
       resolve(r)
     }
+    const abort = (): void => { if (child.pid !== undefined) killTree(child.pid) }
+    signal?.addEventListener('abort', abort, { once: true })
+    if (signal?.aborted) abort()
     child.stdout.on('data', (c: Buffer) => chunks.push(c))
     child.stderr.on('data', () => {})
     child.on('error', (e: Error) => finish({ found: false, broken: e.message }))
@@ -274,7 +280,8 @@ export function isManagedPath(resolved: string | undefined, env: NodeJS.ProcessE
 export async function runCodeNative(
   req: RunRequest,
   report: EnvReport,
-  deps: NativeDeps
+  deps: NativeDeps,
+  signal?: AbortSignal
 ): Promise<RunResult> {
   const started = performance.now()
   let compileWarnings: string | undefined
@@ -301,7 +308,7 @@ export async function runCodeNative(
 
   // ① 预检。**先查再说**：这一步给出的是一句能照做的解释，
   //    而直接跑的话用户只会拿到一句「'gcc' 不是内部或外部命令」。
-  const probe = await probeCommand(whereExe, command, env)
+  const probe = await probeCommand(whereExe, command, env, signal)
   if (!probe.found && !probe.broken) {
     return done({
       ok: false,
@@ -335,7 +342,7 @@ export async function runCodeNative(
   // 展开顺序和托管模式一致：语言自己的键覆盖外层的。
   const childEnv = { ...env, ...(plan.env ?? {}) }
 
-  if (isCurrentRunCanceled()) {
+  if (signal?.aborted) {
     return done({
       ok: false,
       phase: 'compile',
@@ -356,6 +363,7 @@ export async function runCodeNative(
       const line = buildCmdLine(plan.compile.exe, plan.compile.args)
       const c = await runProcess(shell, ['/d', '/v:off', '/s', '/c', line], {
         cwd: dir,
+        signal,
         timeoutMs: COMPILE_TIMEOUT_MS,
         env: childEnv,
         verbatim: true
@@ -386,7 +394,7 @@ export async function runCodeNative(
           message: RUNNER.COMPILE_TIMEOUT
         })
       }
-      if (isCurrentRunCanceled()) {
+      if (signal?.aborted) {
         return done({
           ok: false,
           phase: 'compile',
@@ -418,7 +426,7 @@ export async function runCodeNative(
       if (warnings) compileWarnings = warnings
     }
 
-    if (isCurrentRunCanceled()) {
+    if (signal?.aborted) {
       return done({
         ok: false,
         phase: 'run',
@@ -435,6 +443,7 @@ export async function runCodeNative(
     const runLine = buildCmdLine(nativeRunExe(req.lang, plan.run.exe), plan.run.args)
     const r = await runProcess(shell, ['/d', '/v:off', '/s', '/c', runLine], {
       cwd: dir,
+      signal,
       stdin: req.stdin,
       timeoutMs: Math.min(Math.max(req.timeoutSec ?? 10, 1), 60) * 1000,
       env: childEnv,
@@ -453,7 +462,7 @@ export async function runCodeNative(
         envIssue: true
       })
     }
-    if (isCurrentRunCanceled()) {
+    if (signal?.aborted) {
       return done({
         ok: false,
         phase: 'run',
@@ -518,7 +527,8 @@ export async function runCodeNative(
 export function enqueueNativeRun(
   req: RunRequest,
   report: EnvReport,
-  deps: NativeDeps
+  deps: NativeDeps,
+  signal?: AbortSignal
 ): Promise<RunResult> {
-  return enqueueRunJob(() => runCodeNative(req, report, deps))
+  return enqueueRunJob(() => runCodeNative(req, report, deps, signal), signal)
 }

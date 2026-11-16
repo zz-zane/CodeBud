@@ -8,6 +8,8 @@ import { onBeforeRouteLeave, onBeforeRouteUpdate, useRoute, useRouter } from 'vu
 import { useCet6Store } from '../stores/cet6'
 import { useCet6VocabStore } from '../stores/cet6-vocab'
 import { useAiAssistantStore } from '../stores/ai-assistant'
+import { useSettingsStore } from '../stores/settings'
+import { useStudyStore } from '../stores/study'
 import { toast } from '../components/base/toast'
 import { CET6, PHONE } from '../lib/copy'
 import { assetBase } from '../lib/asset-base'
@@ -45,6 +47,26 @@ const router = useRouter()
 const cet6 = useCet6Store()
 const ai = useAiAssistantStore()
 const vocab = useCet6VocabStore()
+const settings = useSettingsStore()
+const study = useStudyStore()
+const aiReady = computed(() => settings.config.ai.hasKey || Boolean(study.snapshot?.activeConnectionId))
+const subjectiveQ = computed(() => (section.value?.questions || []).find((x) => x.kind === 'essay' || x.kind === 'translation') ?? null)
+const subjectiveAiGrade = computed(() => (subjectiveQ.value ? cet6.record.aiGrades?.[subjectiveQ.value.id] : undefined))
+const subjectiveGrading = computed(() => (subjectiveQ.value ? Boolean(cet6.grading[subjectiveQ.value.id]) : false))
+const subjectiveGradeError = computed(() => (subjectiveQ.value ? cet6.gradeError[subjectiveQ.value.id] ?? '' : ''))
+
+function onGradeSubjective(q: Cet6Question): void {
+  const sec = section.value
+  if (!sec) return
+  const block = (sec.blocks || []).find((b) => b.id === q.blockId)
+  const prompt = [q.stem, block?.text, sec.directions].filter(Boolean).join('\n\n') || sec.title
+  void cet6.gradeSubjective({
+    questionId: q.id,
+    kind: q.kind === 'translation' ? 'translation' : 'writing',
+    prompt,
+    answer: answers.value[q.id] || ''
+  })
+}
 
 const rootEl = ref<HTMLElement | null>(null)
 const bodyEl = ref<HTMLElement | null>(null)
@@ -602,7 +624,21 @@ function stripClass(q: Cet6Question): Record<string, boolean> {
             <span class="cet6-progress">{{ wrongOnly && !stripQs.length ? CET6.WRONG_NONE : progress }}</span>
           </div>
           <div ref="panelEl" class="cet6-right-scroll" :style="fontStyle" data-kb-managed @focusin="onAnswerFocusIn" @focusout="onAnswerFocusOut">
-            <Cet6Panel :section="section" :q="currentQ" :screen-qs="screenQs" :answers="answers" :submitted="submitted" @choose="choose" @go-to="goTo" @text="onText" />
+            <Cet6Panel
+              :section="section"
+              :q="currentQ"
+              :screen-qs="screenQs"
+              :answers="answers"
+              :submitted="submitted"
+              :ai-grade="subjectiveAiGrade"
+              :grading="subjectiveGrading"
+              :grade-error="subjectiveGradeError"
+              :ai-ready="aiReady"
+              @choose="choose"
+              @go-to="goTo"
+              @text="onText"
+              @grade="onGradeSubjective"
+            />
           </div>
         </section>
       </template>

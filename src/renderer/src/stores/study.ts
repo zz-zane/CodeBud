@@ -16,6 +16,8 @@ import type {
   StudyApi
 } from '../../../shared/study-companion'
 import { STUDY_COPY } from '../lib/study-copy'
+import { CURRENT_STUDY_VERSION } from '../../../shared/study-companion'
+import { DATA_STORE } from '../../../shared/copy'
 
 export type {
   StudySnapshot,
@@ -127,10 +129,11 @@ export const useStudyStore = defineStore('study', () => {
     return map
   })
 
-  // 所有计划扁平任务列表
+  // 所有已确认计划扁平任务列表（草稿不进今天页 / 待办计数）
   const allTasks = computed<Array<StudyTask & { planId: string; planTitle: string }>>(() => {
     const out: Array<StudyTask & { planId: string; planTitle: string }> = []
     for (const plan of plans.value) {
+      if (plan.draft) continue
       if (Array.isArray(plan.tasks)) {
         for (const task of plan.tasks) {
           out.push({
@@ -193,6 +196,7 @@ export const useStudyStore = defineStore('study', () => {
     try {
       const snap = await studyApi.value.getState()
       snapshot.value = snap
+      if (snap.version > CURRENT_STUDY_VERSION) error.value = DATA_STORE.NEWER_VERSION
     } catch (err) {
       error.value = (err as Error)?.message || STUDY_COPY.STATUS.LOAD_FAILED
     } finally {
@@ -212,7 +216,7 @@ export const useStudyStore = defineStore('study', () => {
       if (res.ok && res.data) {
         if (!snapshot.value) {
           snapshot.value = {
-            version: 1,
+            version: 2,
             memory: [res.data],
             notes: [],
             materials: [],
@@ -393,6 +397,44 @@ export const useStudyStore = defineStore('study', () => {
       return res
     } catch (err) {
       return { ok: false, error: (err as Error)?.message || 'generatePlan error' }
+    }
+  }
+
+  /**
+   * 确认草稿计划（可编辑标题、任务标题/说明、删减任务，sourceRef 不可改）
+   */
+  async function confirmPlan(input: { planId: string; title: string; tasks: Array<{ id: string; title: string; description: string }> }): Promise<StudyResult<StudyPlan>> {
+    if (!studyApi.value?.confirmPlan) {
+      return { ok: false, error: STUDY_COPY.STATUS.PENDING_BACKEND }
+    }
+    try {
+      const res = await studyApi.value.confirmPlan(input)
+      if (res.ok && res.data && snapshot.value) {
+        const index = snapshot.value.plans.findIndex((p) => p.id === res.data.id)
+        if (index >= 0) snapshot.value.plans[index] = res.data
+        else snapshot.value.plans.push(res.data)
+      }
+      return res
+    } catch (err) {
+      return { ok: false, error: (err as Error)?.message || 'confirmPlan error' }
+    }
+  }
+
+  /**
+   * 放弃草稿计划
+   */
+  async function discardPlan(planId: string): Promise<StudyResult<void>> {
+    if (!studyApi.value?.discardPlan) {
+      return { ok: false, error: STUDY_COPY.STATUS.PENDING_BACKEND }
+    }
+    try {
+      const res = await studyApi.value.discardPlan(planId)
+      if (res.ok && snapshot.value) {
+        snapshot.value.plans = snapshot.value.plans.filter((p) => p.id !== planId)
+      }
+      return res
+    } catch (err) {
+      return { ok: false, error: (err as Error)?.message || 'discardPlan error' }
     }
   }
 
@@ -755,6 +797,8 @@ export const useStudyStore = defineStore('study', () => {
     importMaterials,
     readMaterial,
     generatePlan,
+    confirmPlan,
+    discardPlan,
     setTaskStatus,
     saveConnection,
     detectAgent,

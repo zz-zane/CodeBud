@@ -55,6 +55,7 @@ export const IPC = {
   cet6VocabUpdate: 'cet6:vocab-update',
   cet6VocabRemove: 'cet6:vocab-remove',
   cet6VocabLookup: 'cet6:vocab-lookup',
+  cet6GradeSubjective: 'cet6:grade-subjective',
   /**
    * 练习史（practice.json，学习闭环）。
    *
@@ -188,6 +189,8 @@ export const IPC = {
   studyRemoveConnection: 'study:remove-connection',
   studyRunMath: 'study:run-math',
   studyCreateHtmlPreview: 'study:create-html-preview',
+  studyConfirmPlan: 'study:confirm-plan',
+  studyDiscardPlan: 'study:discard-plan',
 
   // ---------------------------------------------------------------- 手机连接（docs/29）
   // 全部仅电脑端：不在 shared/remote-channels.ts 白名单里，手机调用一律 403。
@@ -198,7 +201,20 @@ export const IPC = {
   remoteRevokeDevice: 'remote:revoke-device',
   remoteRevokeAll: 'remote:revoke-all',
   /** 手动换一个新配对码 */
-  remoteRegenerateCode: 'remote:regenerate-code'
+  remoteRegenerateCode: 'remote:regenerate-code',
+
+  videoOutline: 'video:outline',
+  videoGenerate: 'video:generate',
+  videoCancel: 'video:cancel',
+  videoList: 'video:list',
+  videoDelete: 'video:delete',
+  videoVerifyPrompt: 'video:verify-prompt',
+  videoVerifyAnswer: 'video:verify-answer',
+  /** 自动更新（docs/34）：桌面端专属 */
+  updateGetStatus: 'update:get-status',
+  updateCheck: 'update:check',
+  updateInstall: 'update:install',
+  updateStatus: 'update:status'
 } as const
 
 export type IpcChannel = (typeof IPC)[keyof typeof IPC]

@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useContentStore } from '../stores/content'
 import { useProgressStore } from '../stores/progress'
 import { useRunnerStore } from '../stores/runner'
+import { useSettingsStore } from '../stores/settings'
 import { useAiAssistantStore } from '../stores/ai-assistant'
 import { useMemoStore } from '../stores/memo'
 import { validateDomSelection, saveLessonAnnotation } from '../lib/lesson-annotation'
@@ -34,11 +35,14 @@ import MiDrawer from '../components/base/MiDrawer.vue'
 import MiRichText from '../components/base/MiRichText.vue'
 import CompareGrid from '../components/domain/CompareGrid.vue'
 import DemoPlayer from '../components/domain/DemoPlayer.vue'
+import VideoLibrary from '../components/domain/video/VideoLibrary.vue'
+import { demoToVideo } from '../../../shared/video'
+import { useVideoStore } from '../stores/video'
 import FlashCardsDeck from '../components/domain/FlashCardsDeck.vue'
 import PretestCard from '../components/domain/PretestCard.vue'
 import MiModal from '../components/base/MiModal.vue'
 import { toast } from '../components/base/toast'
-import { ACTION, AI_ASSISTANT, EMPTY, LESSON, TOAST, ALGO_COURSE, ANNOTATION, PHONE } from '../lib/copy'
+import { ACTION, AI_ASSISTANT, EMPTY, LESSON, TOAST, ALGO_COURSE, ANNOTATION, PHONE, VIDEO_UI } from '../lib/copy'
 
 // M3-02：知识点详情页（元信息 + markdown 正文 + compare 对比区 + 底部操作栏）
 const route = useRoute()
@@ -46,6 +50,14 @@ const router = useRouter()
 const content = useContentStore()
 const progress = useProgressStore()
 const runner = useRunnerStore()
+const video = useVideoStore()
+const settings = useSettingsStore()
+const videoPreferred = computed(() => (settings.config as typeof settings.config & { learning?: { explainMode?: string } }).learning?.explainMode === 'video')
+const showVideos = ref(false)
+// 视频对话框 / 播放器开起时收起右侧视频抽屉，避免同处 z-index 9000 互相遮挡
+watch(() => video.dialogOpen || Boolean(video.current), (open) => {
+  if (open) showVideos.value = false
+})
 const { openLesson } = useLessonOpener()
 
 const memoStore = useMemoStore()
@@ -176,6 +188,7 @@ const nextId = computed(() => (id.value ? content.nextWrittenAfterId(id.value) :
 
 /** 正文渲染结果（compare / demo 块都换成占位元素 + 结构数据） */
 const rendered = computed(() => (lesson.value ? renderMarkdown(lesson.value.body, true) : null))
+const lessonDemos = computed(() => (rendered.value?.demoBlocks ?? []).map(block => demoToVideo(block, id.value, block.title || VIDEO_UI.DEMO_TITLE)))
 
 /**
  * 正文切成的片段序列：`html` 段直接贴，`compare` 段渲染 CompareGrid，
@@ -578,6 +591,7 @@ onBeforeUnmount(() => {
           <DemoPlayer
             v-else-if="part.kind === 'demo' && demoAt(part.index)"
             :block="demoAt(part.index)!"
+            @video="video.play(demoToVideo(demoAt(part.index)!, id, demoAt(part.index)!.title || VIDEO_UI.DEMO_TITLE))"
           />
           <FlashCardsDeck
             v-else-if="part.kind === 'flash-cards' && rendered?.flashCardsBlocks[part.index]"
@@ -622,6 +636,7 @@ onBeforeUnmount(() => {
           </MiButton>
           <MiButton v-if="quizCount > 0" variant="primary" icon="list-checks" @click="startPractice">{{ ACTION.lessonQuiz(quizCount) }}</MiButton>
           <span v-else-if="isAlgo" class="algo-no-quiz">{{ AI_ASSISTANT.ALGO_NO_QUIZ }}</span>
+          <MiButton :variant="videoPreferred ? 'primary' : 'secondary'" icon="play" @click="showVideos = true">{{ VIDEO_UI.TITLE }}</MiButton>
           <MiButton v-if="!remote" class="icon-only" variant="ghost" icon="play" :title="ACTION.RUN_CODE" :aria-label="ACTION.RUN_CODE" @click="runCode" />
           <MiButton class="icon-only" variant="ghost" icon="star" :icon-filled="isFavorite" :title="isFavorite ? ACTION.FAVORITED : ACTION.FAVORITE" :aria-label="isFavorite ? ACTION.FAVORITED : ACTION.FAVORITE" :aria-pressed="isFavorite" @click="toggleFavorite" />
           <MiButton ref="noteBtnRef" class="icon-only" variant="ghost" icon="note" :title="ACTION.LESSON_NOTE" :aria-label="ACTION.LESSON_NOTE" @click="openLessonNote" />
@@ -675,6 +690,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
 
+      <MiDrawer v-model:visible="showVideos" :title="VIDEO_UI.THIS_LESSON" :width="420"><VideoLibrary :lesson-id="id" :lesson-excerpt="lesson.body" :demos="lessonDemos" /></MiDrawer>
       <!-- P1-2 代码块下方展开内联运行区 -->
       <Teleport v-if="inlineRunMount && activeRunBlock" :to="inlineRunMount">
         <div class="inline-runner-card">

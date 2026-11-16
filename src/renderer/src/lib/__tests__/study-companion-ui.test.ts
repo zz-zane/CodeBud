@@ -27,9 +27,9 @@ describe('Study Companion UI Store & Logic', () => {
 
   it('handles snapshot state loading correctly when API is available', async () => {
     const mockSnapshot: StudySnapshot = {
-      version: 1,
+      version: 2,
       memory: [
-        { id: 'mem-1', text: '偏好使用 Python 讲解二叉树', source: '主会话', updatedAt: 1700000000000 }
+        { id: 'mem-1', text: '偏好使用 Python 讲解二叉树', source: '主会话', refs: ['user'], updatedAt: 1700000000000 }
       ],
       notes: [
         {
@@ -65,6 +65,7 @@ describe('Study Companion UI Store & Logic', () => {
           materialId: 'mat-1',
           title: '离散数学第1周计划',
           source: 'manual',
+          draft: false,
           tasks: [
             { id: 't-1', title: '阅读第1章', description: '第一章基础', status: 'done', lessonId: 'intro-1' },
             { id: 't-2', title: '阅读第2章', description: '第二章核心', status: 'doing', lessonId: 'intro-2' },
@@ -128,7 +129,7 @@ describe('Study Companion UI Store & Logic', () => {
   it('computes nextTask as first todo when none are doing, and null when all are done', () => {
     const store = useStudyStore()
     store.snapshot = {
-      version: 1,
+      version: 2,
       memory: [],
       notes: [],
       materials: [],
@@ -138,6 +139,7 @@ describe('Study Companion UI Store & Logic', () => {
           title: 'Plan A',
           materialId: 'mat-1',
           source: 'ai',
+          draft: false,
           tasks: [
             { id: 't-1', title: 'Task 1', description: 'desc 1', status: 'done' },
             { id: 't-2', title: 'Task 2', description: 'desc 2', status: 'todo' },
@@ -249,12 +251,82 @@ describe('Study Companion UI Store & Logic', () => {
     const save = vi.fn(async input => ({ ok: true, data: { ...input, archived: false, updatedAt: 2 } }))
     vi.stubGlobal('window', { miai: { study: { saveNote: save, disconnect: async () => ({ ok: true }) } } })
     const store = useStudyStore()
-    store.snapshot = { version: 1, memory: [], notes: [note], materials: [], plans: [], position: null,
+    store.snapshot = { version: 2, memory: [], notes: [note], materials: [], plans: [], position: null,
       connections: [{ id: 'c', kind: 'custom', label: 'ACP', command: 'node', args: [], status: 'ready' }], activeConnectionId: 'c' }
     expect((await store.unarchiveNote('n')).ok).toBe(true)
     expect(save.mock.calls[0][0].format).toBe('html')
     expect(store.notes[0].archived).toBe(false)
     await store.disconnect('c')
     expect(store.activeConnectionId).toBeNull()
+  })
+
+  it('excludes draft plans from allTasks and supports confirmPlan and discardPlan', async () => {
+    const confirmPlanApi = vi.fn(async (input) => ({
+      ok: true as const,
+      data: {
+        id: input.planId,
+        materialId: 'm-1',
+        title: input.title,
+        source: 'ai' as const,
+        draft: false,
+        tasks: input.tasks.map((t: { id: string; title: string; description: string }) => ({
+          ...t,
+          status: 'todo' as const,
+          sourceRef: '第 1 节'
+        })),
+        createdAt: 100
+      }
+    }))
+    const discardPlanApi = vi.fn(async () => ({ ok: true as const, data: undefined }))
+    vi.stubGlobal('window', {
+      miai: { study: { confirmPlan: confirmPlanApi, discardPlan: discardPlanApi } }
+    })
+
+    const store = useStudyStore()
+    store.snapshot = {
+      version: 2,
+      memory: [],
+      notes: [],
+      materials: [],
+      plans: [
+        {
+          id: 'draft-1',
+          materialId: 'm-1',
+          title: '草稿计划',
+          source: 'ai',
+          draft: true,
+          tasks: [
+            { id: 't1', title: '任务1', description: '说明1', status: 'todo', sourceRef: '第 1 节' },
+            { id: 't2', title: '任务2', description: '说明2', status: 'todo', sourceRef: '第 2 节' }
+          ],
+          createdAt: 100
+        },
+        {
+          id: 'draft-2',
+          materialId: 'm-1',
+          title: '待放弃草稿',
+          source: 'ai',
+          draft: true,
+          tasks: [{ id: 't3', title: '任务3', description: '说明3', status: 'todo' }],
+          createdAt: 101
+        }
+      ],
+      position: null,
+      connections: [],
+      activeConnectionId: null
+    }
+
+    expect(store.allTasks).toEqual([])
+    const confirmRes = await store.confirmPlan({
+      planId: 'draft-1',
+      title: '正式计划',
+      tasks: [{ id: 't1', title: '任务1（改）', description: '说明1' }]
+    })
+    expect(confirmRes.ok).toBe(true)
+    expect(store.allTasks.map((t) => t.id)).toEqual(['t1'])
+
+    const discardRes = await store.discardPlan('draft-2')
+    expect(discardRes.ok).toBe(true)
+    expect(store.plans.map((p) => p.id)).toEqual(['draft-1'])
   })
 })

@@ -3,6 +3,8 @@
  * 只放纯函数（可被 Vitest 直接测）；DOM、IPC、存储都不在这里。
  */
 
+import { assertSupportedVersion } from './data-version'
+
 // 听力原文占位句（数据判据，不是界面文案）；放在文件最前，避开文案扫描的 `>…<` 文本节点误匹配
 const TRANSCRIPT_PLACEHOLDER = /^听力录音音频已在上方/
 
@@ -79,16 +81,25 @@ export interface Cet6Meta {
 /** 练习：正计时、可暂停、可用选词工具；考试：130 分钟倒计时、不可暂停、界面锁定（docs/27 §8.1） */
 export type Cet6Mode = 'practice' | 'exam'
 
+export const CURRENT_CET6_VERSION = 2
+
+export interface Cet6AiGrade {
+  score: number
+  comment: string
+  at: number
+}
+
 export interface Cet6Record {
   answers: Record<string, string>
   marks: string[]
   submitted: boolean
   seconds: number
   mode: Cet6Mode
+  aiGrades?: Record<string, Cet6AiGrade>
 }
 
 export interface Cet6File {
-  version: 1
+  version: number
   mediaRoot: string | null
   /** 目录页「练习 | 考试」切换的上次选择 */
   lastMode: Cet6Mode
@@ -106,6 +117,7 @@ export interface Cet6State {
   records: Record<string, Cet6Record>
   media: Cet6MediaStatus
   lastMode: Cet6Mode
+  readOnlyNewer?: boolean
 }
 
 /** 写作 30 + 听力 30 + 阅读 40 + 翻译 30 */
@@ -387,7 +399,79 @@ export function sanitizeRecord(raw: unknown): Cet6Record | null {
     ? r.marks.filter((m): m is string => typeof m === 'string' && m.length > 0 && m.length <= CET6_LIMITS.keyLength).slice(0, CET6_LIMITS.marks)
     : []
   const sec = typeof r.seconds === 'number' && Number.isFinite(r.seconds) ? Math.floor(r.seconds) : 0
-  return { answers, marks, submitted: r.submitted === true, seconds: Math.min(Math.max(sec, 0), CET6_LIMITS.seconds), mode: asMode(r.mode) }
+  const out: Cet6Record = {
+    answers,
+    marks,
+    submitted: r.submitted === true,
+    seconds: Math.min(Math.max(sec, 0), CET6_LIMITS.seconds),
+    mode: asMode(r.mode)
+  }
+  const aiGrades = sanitizeAiGrades(r.aiGrades)
+  if (aiGrades) out.aiGrades = aiGrades
+  return out
+}
+
+function sanitizeAiGrades(raw: unknown): Record<string, Cet6AiGrade> | undefined {
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return undefined
+  const out: Record<string, Cet6AiGrade> = {}
+  for (const [qid, g] of Object.entries(raw as Record<string, unknown>)) {
+    if (Object.keys(out).length >= CET6_LIMITS.answerKeys) break
+    if (!qid || qid.length > CET6_LIMITS.keyLength || typeof g !== 'object' || g === null || Array.isArray(g)) continue
+    const rec = g as Record<string, unknown>
+    if (typeof rec.score !== 'number' || !Number.isFinite(rec.score)) continue
+    if (typeof rec.comment !== 'string') continue
+    const comment = rec.comment.trim().slice(0, 200)
+    if (!comment) continue
+    const at = typeof rec.at === 'number' && Number.isFinite(rec.at) ? Math.max(0, Math.floor(rec.at)) : 0
+    out[qid] = {
+      score: Math.min(15, Math.max(0, Math.round(rec.score))),
+      comment,
+      at
+    }
+  }
+  return Object.keys(out).length > 0 ? out : undefined
+}
+
+/** 将 v1 或未带版本号的 cet6.json 迁移至 v2，保留全部作答与设置 */
+function sameJson(left: unknown, right: unknown): boolean {
+  if (left === right) return true
+  if (Array.isArray(left) && Array.isArray(right)) return left.length === right.length && left.every((value, i) => sameJson(value, right[i]))
+  if (!left || !right || typeof left !== 'object' || typeof right !== 'object' || Array.isArray(left) || Array.isArray(right)) return false
+  const a = left as Record<string, unknown>, b = right as Record<string, unknown>
+  const keys = Object.keys(a)
+  return keys.length === Object.keys(b).length && keys.every(key => Object.hasOwn(b, key) && sameJson(a[key], b[key]))
+}
+
+export function migrateCet6File(raw: unknown): Cet6File {
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) throw new Error('cet6: invalid file')
+  const f = raw as Record<string, unknown>
+  assertSupportedVersion(f, CURRENT_CET6_VERSION)
+  if (f.version !== undefined && f.version !== 1 && f.version !== CURRENT_CET6_VERSION) throw new Error('cet6: unsupported version')
+  if (f.mediaRoot !== undefined && f.mediaRoot !== null && typeof f.mediaRoot !== 'string') throw new Error('cet6: invalid media root')
+  if (f.lastMode !== undefined && f.lastMode !== 'practice' && f.lastMode !== 'exam') throw new Error('cet6: invalid mode')
+  if (f.records !== undefined && (typeof f.records !== 'object' || f.records === null || Array.isArray(f.records))) throw new Error('cet6: invalid records')
+  const records: Record<string, Cet6Record> = {}
+  if (f.records !== undefined) {
+    for (const [id, rec] of Object.entries(f.records as Record<string, unknown>)) {
+      const clean = CET6_EXAM_ID.test(id) ? sanitizeRecord(rec) : null
+      const row = rec as Record<string, unknown> | null
+      const valid = clean && row && ['answers', 'marks', 'submitted', 'seconds', 'mode'].every(
+        key => sameJson(row[key], (clean as unknown as Record<string, unknown>)[key])
+      ) && (row.aiGrades === undefined || sameJson(row.aiGrades, clean.aiGrades))
+      if (!valid) {
+        console.warn(`[miai] cet6| cannot preserve invalid record ${id}`)
+        throw new Error(`cet6: invalid record ${id}`)
+      }
+      records[id] = { ...row, ...clean }
+    }
+  }
+  return {
+    ...f,
+    version: CURRENT_CET6_VERSION,
+    mediaRoot: typeof f.mediaRoot === 'string' ? f.mediaRoot : null,
+    lastMode: asMode(f.lastMode),
+    records
+  }
 }
 
 // ---------------------------------------------------------------- URL

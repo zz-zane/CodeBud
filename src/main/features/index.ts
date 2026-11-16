@@ -14,6 +14,8 @@ import { challengeFeature } from './challenge'
 import { runnerFeature } from './runner'
 import { cloudFeature } from './cloud'
 import { remoteFeature } from './remote'
+import { videoFeature } from './video'
+import { updateFeature } from './update'
 
 /**
  * 功能清单 —— 顺序即注册顺序，也是 before-quit 时 dispose 的顺序。
@@ -36,5 +38,7 @@ export const FEATURES: MainFeature[] = [
   challengeFeature,
   runnerFeature,
   remoteFeature,
-  cloudFeature
+  cloudFeature,
+  videoFeature,
+  updateFeature
 ]

@@ -14,7 +14,9 @@ import {
 import { CanvasRenderer } from 'echarts/renderers'
 import { useContentStore } from '../stores/content'
 import { useProgressStore } from '../stores/progress'
+import { usePracticeStore } from '../stores/practice'
 import { useCet6Store } from '../stores/cet6'
+import { isLessonMastered, lessonMastery } from '../../../shared/mastery'
 import { localDateKeyOf } from '../../../shared/dates'
 import { CET6_EXAM_TOTAL } from '../../../shared/cet6'
 import { today } from '../lib/day-clock'
@@ -47,6 +49,7 @@ function token(name: string): string {
 
 const content = useContentStore()
 const progress = useProgressStore()
+const practice = usePracticeStore()
 const cet6 = useCet6Store()
 const route = useRoute()
 const router = useRouter()
@@ -105,6 +108,16 @@ const calendarData = computed(() => {
   return [...byDay.entries()].map(([d, n]) => [d, n] as [string, number])
 })
 
+function masteredInCourse(lang: string): number {
+  const list = lang === 'algo'
+    ? content.algoBundle.lessons
+    : content.bundle.lessons.filter((l) => l.lang === lang)
+  return list.filter((l) => {
+    const m = lessonMastery(practice.history, l.id)
+    return isLessonMastered(m.score, m.attempts)
+  }).length
+}
+
 /** 每门课一行：分段条按阶段切开，长度对应课数，比一张卡片一组小条更好扫 */
 const courseRows = computed(() => [
   {
@@ -112,6 +125,7 @@ const courseRows = computed(() => [
     label: LANG_LABEL.common,
     learned: commonLearned.value,
     total: commonLessons.value.length,
+    mastered: masteredInCourse('common'),
     stages: [{ key: 'all', label: OVERVIEW.COMMON_ALL, learned: commonLearned.value, total: commonLessons.value.length, percent: commonPercent.value }]
   },
   ...perLang.value.map((p) => ({
@@ -119,6 +133,7 @@ const courseRows = computed(() => [
     label: p.lang === 'algo' ? ALGO_COURSE.CAT_NAV : LANG_LABEL[p.lang],
     learned: p.learned,
     total: p.total,
+    mastered: masteredInCourse(p.lang),
     stages: p.stages.filter((s) => s.total > 0).map((s) => ({ key: String(s.stage), label: STAGE_LABEL[s.stage], learned: s.learned, total: s.total, percent: s.percent }))
   }))
 ])
@@ -214,6 +229,7 @@ function resize() {
 
 onMounted(() => {
   void cet6.loadState()
+  if (!practice.loaded) void practice.load()
   if (radarEl.value) radarChart = echarts.init(radarEl.value)
   if (calendarEl.value) calendarChart = echarts.init(calendarEl.value)
   updateCharts()
@@ -259,7 +275,10 @@ onBeforeUnmount(() => {
 
       <section class="course-rows">
         <div v-for="c in courseRows" :key="c.key" class="course-row">
-          <span class="course-name">{{ c.label }}</span>
+          <span class="course-name-wrap">
+            <span class="course-name">{{ c.label }}</span>
+            <span v-if="c.total > 0 && c.mastered === c.total" class="course-mastered" data-testid="course-mastered">{{ OVERVIEW.MASTERED_BADGE }}</span>
+          </span>
           <div class="stage-track" role="img" :aria-label="`${c.label} ${c.learned}/${c.total}`">
             <span
               v-for="s in c.stages"
@@ -303,7 +322,9 @@ onBeforeUnmount(() => {
 .course-rows { display: flex; flex-direction: column; }
 .course-row { display: grid; grid-template-columns: 112px minmax(0, 1fr) 60px; align-items: center; gap: var(--mi-sp-4); padding: var(--mi-sp-3) 0; border-bottom: 1px solid var(--mi-border); }
 .course-row:last-child { border-bottom: 0; }
+.course-name-wrap { display: flex; align-items: center; gap: var(--mi-sp-1); min-width: 0; }
 .course-name { font-size: var(--mi-fs-body); color: var(--mi-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.course-mastered { flex-shrink: 0; padding: 1px var(--mi-sp-1); border-radius: var(--mi-radius-ctl); background: var(--mi-success-fill); color: var(--mi-success-deep); font-size: var(--mi-fs-caption); font-weight: 500; }
 .stage-track { display: flex; gap: 3px; height: 8px; }
 .stage-seg { display: block; flex-basis: 0; min-width: 6px; border-radius: 4px; overflow: hidden; background: var(--mi-blue-light); }
 .stage-seg i { display: block; height: 100%; background: var(--mi-blue-deep); border-radius: inherit; }

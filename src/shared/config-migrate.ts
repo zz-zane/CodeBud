@@ -63,6 +63,21 @@ export const CONFIG_MIGRATIONS: Record<number, (file: Record<string, unknown>) =
   // v22 → v23：暗色主题移除（应用只剩浅色），丢弃 `theme` 键；其余字段（含 ai.apiKey）不动。
   22: (file) => {
     delete file.theme
+  },
+  // v23 → v24：加 `learning`（学习方式与复习策略，docs/33 §B0）；缺字段补默认，其余字段不动。
+  23: (file) => {
+    const l = isObject(file.learning) ? file.learning : {}
+    file.learning = {
+      explainMode: l.explainMode === 'video' ? 'video' : 'text',
+      reviewStrategy: l.reviewStrategy === 'sprint' ? 'sprint' : 'standard'
+    }
+  },
+  // v24 → v25：加 `update`（自动更新开关，docs/34）；缺字段补默认 `{ auto: true }`，其余字段不动。
+  24: (file) => {
+    const u = isObject(file.update) ? file.update : {}
+    file.update = {
+      auto: typeof u.auto === 'boolean' ? u.auto : true
+    }
   }
 }
 

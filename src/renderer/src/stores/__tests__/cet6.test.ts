@@ -10,7 +10,7 @@ import type { Cet6Exam, Cet6Mode, Cet6Record } from '../../../../shared/cet6'
 
 const EXAM: Cet6Exam = { id: '2025-06-1', title: 't', year: 2025, month: 6, set: 1, sections: [] }
 
-function stub(records: Record<string, Cet6Record> = {}, opts: { failMode?: boolean } = {}) {
+function stub(records: Record<string, Cet6Record> = {}, opts: { failMode?: boolean; gradeFn?: (req: unknown) => Promise<unknown> } = {}) {
   const saved: Array<{ id: string; record: Cet6Record }> = []
   const modes: Cet6Mode[] = []
   ;(globalThis as unknown as { window: unknown }).window = {
@@ -26,7 +26,9 @@ function stub(records: Record<string, Cet6Record> = {}, opts: { failMode?: boole
         setLastMode: (mode: Cet6Mode) => {
           modes.push(mode)
           return opts.failMode ? Promise.reject(new Error('stub')) : Promise.resolve(mode)
-        }
+        },
+        gradeSubjective: (opts as { gradeFn?: (req: unknown) => Promise<unknown> }).gradeFn
+          ?? (() => Promise.resolve({ ok: true, grade: { score: 11, comment: 'good structure', at: 1234567 } }))
       }
     }
   }
@@ -117,5 +119,76 @@ describe('模式持久化', () => {
     vi.spyOn(console, 'error').mockImplementation(() => {})
     await t.setLastMode('exam')
     expect(t.lastMode).toBe('practice')
+  })
+})
+
+describe('主观题 AI 估分', () => {
+  it('成功估分时更新 record.aiGrades 与 records 缓存', async () => {
+    stub()
+    const s = useCet6Store()
+    await s.openExam(EXAM.id, 'practice')
+    s.setText('q-writing', 'My essay')
+    await s.flush()
+    s.record.submitted = true
+    const ok = await s.gradeSubjective({
+      questionId: 'q-writing',
+      kind: 'writing',
+      prompt: 'Directions...',
+      answer: 'My essay'
+    })
+    expect(ok).toBe(true)
+    expect(s.record.aiGrades?.['q-writing']).toEqual({ score: 11, comment: 'good structure', at: 1234567 })
+    expect(s.records[EXAM.id]?.aiGrades?.['q-writing']?.score).toBe(11)
+    expect(s.gradeError['q-writing']).toBeUndefined()
+  })
+
+  it('估分失败时记录错误消息并保留现有记录', async () => {
+    stub({}, {
+      gradeFn: async () => ({ ok: false, reason: 'bad-response' })
+    } as { failMode?: boolean })
+    const s = useCet6Store()
+    await s.openExam(EXAM.id, 'practice')
+    s.setText('q-trans', 'My translation')
+    await s.flush()
+    s.record.submitted = true
+    const ok = await s.gradeSubjective({
+      questionId: 'q-trans',
+      kind: 'translation',
+      prompt: 'Translate...',
+      answer: 'My translation'
+    })
+    expect(ok).toBe(false)
+    expect(s.gradeError['q-trans']).toBeTruthy()
+    expect(s.grading['q-trans']).toBeUndefined()
+  })
+
+  it('重做后忽略旧的在途估分', async () => {
+    let finish!: (value: unknown) => void
+    stub({}, { gradeFn: () => new Promise(resolve => { finish = resolve }) })
+    const s = useCet6Store()
+    await s.openExam(EXAM.id, 'practice')
+    s.setText('q-writing', 'old answer')
+    await s.flush()
+    s.record.submitted = true
+    const pending = s.gradeSubjective({ questionId: 'q-writing', kind: 'writing', prompt: 'p', answer: 'old answer' })
+    await s.reset()
+    finish({ ok: true, grade: { score: 12, comment: 'old', at: 1 } })
+    expect(await pending).toBe(false)
+    expect(s.record.aiGrades).toBeUndefined()
+  })
+
+  it('当前答案与请求原文有任何差异时忽略在途估分', async () => {
+    let finish!: (value: unknown) => void
+    stub({}, { gradeFn: () => new Promise(resolve => { finish = resolve }) })
+    const s = useCet6Store()
+    await s.openExam(EXAM.id, 'practice')
+    s.setText('q-writing', 'old answer')
+    await s.flush()
+    s.record.submitted = true
+    const pending = s.gradeSubjective({ questionId: 'q-writing', kind: 'writing', prompt: 'p', answer: 'old answer' })
+    s.record.answers['q-writing'] = 'old answer '
+    finish({ ok: true, grade: { score: 12, comment: 'old', at: 1 } })
+    expect(await pending).toBe(false)
+    expect(s.record.aiGrades).toBeUndefined()
   })
 })

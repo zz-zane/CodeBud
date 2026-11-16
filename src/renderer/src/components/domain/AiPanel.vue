@@ -17,7 +17,8 @@ import { useSettingsDialogStore } from '../../stores/settings-dialog'
 import { useSettingsStore } from '../../stores/settings'
 import { isPinnedToBottom, shouldSendAiMessage } from '../../lib/ai-input'
 import { renderMarkdown } from '../../lib/md'
-import { AI_ASSISTANT, TOAST } from '../../lib/copy'
+import { AI_ASSISTANT, TOAST, VIDEO_UI } from '../../lib/copy'
+import { useVideoStore } from '../../stores/video'
 import { toast } from '../base/toast'
 import { AI_APP } from '../../../../shared/copy'
 import type { TutoringAction } from '../../../../shared/types'
@@ -32,6 +33,15 @@ const props = withDefaults(defineProps<{ variant?: 'rail' | 'main' }>(), { varia
 const isMain = computed(() => props.variant === 'main')
 
 const aiStore = useAiAssistantStore()
+const video = useVideoStore()
+const videoMode = ref(false)
+const tutoringMode = computed({
+  get: () => videoMode.value ? 'video' : aiStore.tutoringAction,
+  set: (value: string) => {
+    videoMode.value = value === 'video'
+    if (!videoMode.value) aiStore.tutoringAction = value as TutoringAction
+  }
+})
 const settingsDialog = useSettingsDialogStore()
 const settings = useSettingsStore()
 const study = useStudyStore()
@@ -61,7 +71,7 @@ const hasApiKey = computed(() => Boolean(settings.config.ai?.hasKey) || Boolean(
 
 
 
-const canSend = computed(() => hasApiKey.value && (!!aiStore.draft.trim() || aiStore.pendingAttachments.length > 0) && !composing.value)
+const canSend = computed(() => (videoMode.value || hasApiKey.value) && (!!aiStore.draft.trim() || (!videoMode.value && aiStore.pendingAttachments.length > 0)) && !composing.value)
 const streamingText = computed(() => aiStore.streamingText)
 const sessionTitle = computed(() => aiStore.currentSession?.title || AI_ASSISTANT.DEFAULT_SESSION_TITLE)
 
@@ -108,6 +118,11 @@ function keepComposerFocus(e: PointerEvent): void {
   if (isPhoneViewport()) e.preventDefault()
 }
 function onSend() {
+  if (videoMode.value) {
+    if (!aiStore.draft.trim() || composing.value) return
+    video.open({ question: Array.from(aiStore.draft.trim()).slice(0, 500).join(''), lessonId: aiStore.lessonContextId ?? undefined, excerpt: aiStore.contextTags.filter(t => t.type === 'selection' || t.type === 'code').map(t => t.content).join('\n') })
+    return
+  }
   if (!hasApiKey.value || composing.value) return
   if (aiStore.sendDraft()) void nextTick(toBottom)
 }
@@ -469,7 +484,7 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" /></svg>
                 </button>
                 <input ref="fileInput" type="file" multiple class="attach-input" accept="image/*,.txt,.md,.c,.h,.cpp,.java,.py,.json" @change="onFilesPicked" />
-                <select v-model="aiStore.tutoringAction" class="lead-select" :disabled="isStreaming" :aria-label="AI_ASSISTANT.TUTOR_MODE" :title="AI_ASSISTANT.TUTOR_MODE">
+                <select v-model="tutoringMode" class="lead-select" :disabled="isStreaming" :aria-label="AI_ASSISTANT.TUTOR_MODE" :title="AI_ASSISTANT.TUTOR_MODE">
                   <option value="direct">{{ AI_ASSISTANT.TUTOR_DIRECT }}</option>
                   <option value="hint">{{ AI_ASSISTANT.TUTOR_HINT }}</option>
                   <option value="approach">{{ AI_ASSISTANT.TUTOR_APPROACH }}</option>
@@ -478,6 +493,7 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
                   <option value="feynman" :title="AI_ASSISTANT.TUTOR_HINT_FEYNMAN">{{ AI_ASSISTANT.TUTOR_FEYNMAN }}</option>
                   <option value="visualize" :title="AI_ASSISTANT.TUTOR_HINT_VISUALIZE">{{ AI_ASSISTANT.TUTOR_VISUALIZE }}</option>
                   <option value="solve" :title="AI_ASSISTANT.TUTOR_HINT_SOLVE">{{ AI_ASSISTANT.TUTOR_SOLVE }}</option>
+                  <option value="video">{{ VIDEO_UI.TITLE }}</option>
                 </select>
               </div>
               <div class="input-trail">

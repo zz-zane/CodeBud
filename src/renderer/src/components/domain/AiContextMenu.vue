@@ -3,9 +3,11 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAiAssistantStore } from '../../stores/ai-assistant'
 import { useCet6Store } from '../../stores/cet6'
-import { AI_ASSISTANT } from '../../lib/copy'
+import { AI_ASSISTANT, VIDEO_UI } from '../../lib/copy'
+import { useVideoStore } from '../../stores/video'
 
 const aiStore = useAiAssistantStore()
+const video = useVideoStore()
 const cet6 = useCet6Store()
 const route = useRoute()
 const router = useRouter()
@@ -161,6 +163,9 @@ onBeforeUnmount(() => {
     <button type="button" class="menu-item" @click="handleAction('ask')">
       <span class="item-icon">💬</span>
       <span class="item-text">{{ AI_ASSISTANT.MENU_ASK }}</span>
+    </button>
+    <button v-if="route.name === 'lesson'" type="button" class="menu-item" @click="video.open({ excerpt: capturedText, lessonId: String(route.params.id) }); closeMenu()">
+      <span class="item-icon">▶</span><span class="item-text">{{ VIDEO_UI.SELECTION }}</span>
     </button>
   </div>
 </template>

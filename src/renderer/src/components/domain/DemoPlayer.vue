@@ -23,12 +23,13 @@
  */
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { animate, set as applyStyles } from 'animejs'
-import { DEMO } from '../../lib/copy'
+import { DEMO, VIDEO_UI } from '../../lib/copy'
 import MiRichText from '../base/MiRichText.vue'
 import { useZoomStore } from '../../stores/zoom'
 import type { DemoBlock } from '../../lib/md'
 
 const props = defineProps<{ block: DemoBlock }>()
+const emit = defineEmits<{ video: [] }>()
 const readingZoom = useZoomStore()
 // Keep the teaching highlight aligned when reading font metrics change.
 watch(() => readingZoom.scale, () => syncBar(true), { flush: 'post' })
@@ -309,6 +310,7 @@ function togglePlay(): void {
     <div class="demo-head">
       <span class="demo-title">{{ title }}</span>
       <span class="demo-badge">{{ DEMO.BADGE }}</span>
+      <button type="button" class="demo-video" @click="emit('video')">{{ VIDEO_UI.PLAY_DEMO }}</button>
     </div>
 
     <!-- 代码区。高亮条是这一格里绝对定位的一层，靠 translateY 走到当前行 -->
@@ -377,6 +379,7 @@ function togglePlay(): void {
 </template>
 
 <style scoped>
+.demo-video { margin-left:auto; border:0; background:transparent; color:var(--mi-blue-deep); font:inherit; cursor:pointer; }
 .demo {
   margin: var(--mi-sp-6) 0;
   border: 1px solid var(--mi-border);

@@ -7,11 +7,8 @@ import {
   COMPILE_TIMEOUT_MS,
   decodeOutput,
   findJavaClass,
-  cancelCurrentRun,
   enqueueRunJob,
-  isCurrentRunCanceled,
   killAllLiveChildren,
-  resetRunCancel,
   killTree,
   makeCollector,
   MAX_OUTPUT_BYTES,
@@ -461,62 +458,58 @@ describe('killAllLiveChildren：退出前收割还在跑的编译/运行子进�
   })
 })
 
-describe('cancelCurrentRun：主动叫停机制', () => {
+describe('每项运行的取消信号', () => {
   const delay = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms))
 
-  it('场景1：尚未产生子进程前叫停，runCode 直接返回 canceled 且不启动进程', async () => {
-    resetRunCancel()
-    cancelCurrentRun()
-    expect(isCurrentRunCanceled()).toBe(true)
-
-    // report 中模拟 python 可用，验证未开始前即被拦截
+  it('先叫停练习场再生成视频：后一个任务不继承取消状态', async () => {
+    const previous = new AbortController()
+    previous.abort()
     const mockReport = {
       c: { found: false },
       cpp: { found: false },
       java: { found: false },
       python: { found: true, path: process.execPath }
     }
-    const res = await runCode({ lang: 'python', code: 'print("should not run")' }, mockReport as any)
-    expect(res.canceled).toBe(true)
-    expect(res.ok).toBe(false)
-    expect(res.stdout).toBe('')
-    expect(res.exitCode).toBeNull()
-
-    // 复位验证
-    resetRunCancel()
-    expect(isCurrentRunCanceled()).toBe(false)
+    const first = await runCode({ lang: 'python', code: 'ignored' }, mockReport as any, previous.signal)
+    expect(first.canceled).toBe(true)
+    const video = await enqueueRunJob(() => runCode({ lang: 'python', code: 'console.log(42)' }, mockReport as any))
+    expect(video.canceled).not.toBe(true)
   })
 
-  it('场景2：入队排队时叫停，enqueueRunJob 不冲掉取消标志', async () => {
-    resetRunCancel()
-    cancelCurrentRun()
-
-    // 验证 enqueueRunJob 执行时，标志保留不会被无条件设为 false
-    const res = await enqueueRunJob(async () => {
-      return { canceled: isCurrentRunCanceled() }
-    })
-    expect(res.canceled).toBe(true)
-
-    resetRunCancel()
+  it('排队中取消立即返回且不运行该任务，不影响前后任务', async () => {
+    let release!: () => void
+    const first = enqueueRunJob(() => new Promise<string>((resolve) => { release = () => resolve('first') }))
+    await delay(20)
+    const controller = new AbortController()
+    let ran = false
+    const second = enqueueRunJob(async () => { ran = true; return 'second' }, controller.signal)
+    controller.abort()
+    await expect(second).rejects.toThrow('canceled')
+    expect(ran).toBe(false)
+    release()
+    expect(await first).toBe('first')
+    expect(await enqueueRunJob(async () => 'third')).toBe('third')
+    expect(ran).toBe(false)
   })
 
   it(
-    '场景3：叫停正在跑的子进程，子进程退出且被杀',
+    '执行中取消只终止本任务的子进程',
     async () => {
-      resetRunCancel()
+      const controller = new AbortController()
       const p = runProcess(process.execPath, ['-e', 'setTimeout(()=>{}, 30000)'], {
         cwd: process.cwd(),
-        timeoutMs: 60_000
+        timeoutMs: 60_000,
+        signal: controller.signal
       })
+      const other = runProcess(process.execPath, ['-e', 'setTimeout(()=>console.log("safe"), 700)'], { cwd: process.cwd(), timeoutMs: 5000 })
       await delay(200)
-      const killed = cancelCurrentRun()
-      expect(killed).toBe(true)
+      controller.abort()
 
       const r = await Promise.race([p, delay(5000).then(() => null)])
       expect(r).not.toBeNull()
       expect(r!.timedOut).toBe(false)
       expect(r!.exitCode).not.toBe(0)
-      resetRunCancel()
+      expect((await other).exitCode).toBe(0)
     },
     15_000
   )

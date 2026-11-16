@@ -2,7 +2,8 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { StudyStore } from '../store'
-import { exportStudyVault, generateStudyPlan, importStudyMaterial, readStudyMaterial, setStudyTaskStatus } from '../materials'
+import { exportStudyVault, generateStudyPlan, importStudyMaterial, readStudyMaterial, setStudyTaskStatus, confirmStudyPlan, discardStudyPlan } from '../materials'
+import { studyContext } from '../../../shared/study-companion'
 
 const root = resolve('D:/project/coding/outputs/study-companion-20261105/root-tests')
 let dir: string
@@ -53,9 +54,49 @@ describe('materials, plans and knowledge', () => {
     })
     expect(prompt).toContain('Matrix multiplication uses rows and columns.')
     expect(prompt).toContain('不可信参考数据')
+    expect(plan.draft).toBe(true)
+    expect(studyContext(store.read())).not.toContain('Multiply two small matrices')
     setStudyTaskStatus(store, { planId: plan.id, taskId: plan.tasks[0].id, status: 'done' })
     expect(new StudyStore(store.directory).read().plans[0].tasks[0].status).toBe('done')
     await expect(generateStudyPlan(store, { materialId: material.id, goal: 'x' }, async () => JSON.stringify({ title: 'bad', tasks: [{ title: 'bad', description: 'bad', sourceRef: 'invented' }] }))).rejects.toThrow('未提供')
+    expect(store.read().plans).toHaveLength(1)
+  })
+
+  it('confirms or discards draft plans without letting edits alter sourceRef or confirmed plans', async () => {
+    const file = join(dir, 'plan.md')
+    writeFileSync(file, '# Graphs\nBFS visits vertices level by level.')
+    const material = await importStudyMaterial(store, file)
+    const draft = await generateStudyPlan(store, { materialId: material.id, goal: 'Learn BFS' }, async () =>
+      JSON.stringify({
+        title: 'Initial Draft',
+        tasks: [
+          { title: 'Task A', description: 'Read section', sourceRef: 'section-1' },
+          { title: 'Task B', description: 'Trace queue', sourceRef: 'section-1' }
+        ]
+      })
+    )
+    expect(draft.draft).toBe(true)
+    expect(studyContext(store.read())).not.toContain('Task A')
+
+    const confirmed = confirmStudyPlan(store, {
+      planId: draft.id,
+      title: 'Confirmed BFS Plan',
+      tasks: [{ id: draft.tasks[0].id, title: 'Task A edited', description: 'Updated desc' }]
+    })
+    expect(confirmed.draft).toBe(false)
+    expect(confirmed.title).toBe('Confirmed BFS Plan')
+    expect(confirmed.tasks).toEqual([
+      { ...draft.tasks[0], title: 'Task A edited', description: 'Updated desc', sourceRef: 'section-1' }
+    ])
+    expect(studyContext(store.read())).toContain('Task A edited')
+
+    expect(() => confirmStudyPlan(store, { planId: draft.id, title: 'Again', tasks: confirmed.tasks })).toThrow()
+    expect(() => discardStudyPlan(store, draft.id)).toThrow()
+
+    const draft2 = await generateStudyPlan(store, { materialId: material.id, goal: 'Another' }, async () =>
+      JSON.stringify({ title: 'Draft 2', tasks: [{ title: 'Drop me', description: 'Desc', sourceRef: 'section-1' }] })
+    )
+    discardStudyPlan(store, draft2.id)
     expect(store.read().plans).toHaveLength(1)
   })
 

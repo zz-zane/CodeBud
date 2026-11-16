@@ -729,15 +729,21 @@ function v20File(): Record<string, unknown> {
 }
 
 describe('v20 → v21：pet / wallpaper / splash 三块被丢弃，其余原样', () => {
-  it('一路升到当前版本、三个键消失，其余字段（含 ai.apiKey）逐项不变（v22 只多一个默认关的 remote，v23 丢掉 theme）', () => {
+  it('一路升到当前版本、三个键消失，其余字段（含 ai.apiKey）逐项不变（v22 多 remote，v23 丢 theme，v24 多 learning）', () => {
     const raw = v20File()
     const out = migrateConfig(raw) as unknown as Record<string, unknown>
-    expect(out.version).toBe(23)
-    expect(CURRENT_CONFIG_VERSION).toBe(23)
+    expect(out.version).toBe(25)
+    expect(CURRENT_CONFIG_VERSION).toBe(25)
     for (const k of ['pet', 'wallpaper', 'splash']) expect(k in out, k).toBe(false)
 
     const { pet: _p, wallpaper: _w, splash: _s, theme: _t, version: _v, ...kept } = raw
-    expect(out).toEqual({ ...kept, version: 23, remote: { enabled: false, port: 17600 } })
+    expect(out).toEqual({
+      ...kept,
+      version: 25,
+      remote: { enabled: false, port: 17600 },
+      learning: { explainMode: 'text', reviewStrategy: 'standard' },
+      update: { auto: true }
+    })
     expect((out.ai as { apiKey: string }).apiKey).toBe('sk-0123456789abcdef0123456789abcdef')
   })
 
@@ -819,13 +825,18 @@ describe('v22 → v23：theme 被丢弃，其余字段（含 ai.apiKey）原样'
     return { ...rest, version: 22, theme: 'dark', remote: { enabled: true, port: 20000 } }
   }
 
-  it('theme 键消失、版本 23，其余字段逐项不变', () => {
+  it('theme 键消失、升到当前版本，其余字段逐项不变', () => {
     const raw = v22File()
     const out = migrateConfig(raw) as unknown as Record<string, unknown>
-    expect(out.version).toBe(23)
+    expect(out.version).toBe(25)
     expect('theme' in out).toBe(false)
     const { theme: _t, version: _v, ...kept } = raw
-    expect(out).toEqual({ ...kept, version: 23 })
+    expect(out).toEqual({
+      ...kept,
+      version: 25,
+      learning: { explainMode: 'text', reviewStrategy: 'standard' },
+      update: { auto: true }
+    })
     expect((out.ai as { apiKey: string }).apiKey).toBe('sk-0123456789abcdef0123456789abcdef')
     expect(out.runTimeoutSec).toBe(33)
   })
@@ -845,5 +856,107 @@ describe('v22 → v23：theme 被丢弃，其余字段（含 ai.apiKey）原样'
   it('已经是 v23 的文件里残留 theme：不跑步骤，注册表也不认它（照样不出现）', () => {
     const out = migrateConfig({ ...v22File(), version: 23 }) as unknown as Record<string, unknown>
     expect('theme' in out).toBe(false)
+  })
+})
+
+// ---------------------------------------------------------------- v23 → v24：learning（讲解方式与复习策略）
+
+describe('v23 → v24：learning 缺字段补默认（text / standard），其余原样保留', () => {
+  function v23File(): Record<string, unknown> {
+    const { pet: _p, wallpaper: _w, splash: _s, ...rest } = v20File()
+    return { ...rest, version: 23, remote: { enabled: true, port: 20000 } }
+  }
+
+  it('老 v23 文件读进来字段齐全、数据不丢（含 ai.apiKey）', () => {
+    const raw = v23File()
+    const out = migrateConfig(raw)
+    expect(out.version).toBe(25)
+    expect(out.learning).toEqual({ explainMode: 'text', reviewStrategy: 'standard' })
+    expect(out.update).toEqual({ auto: true })
+    expect(out.ai.apiKey).toBe('sk-0123456789abcdef0123456789abcdef')
+    expect(out.runTimeoutSec).toBe(33)
+    expect(out.remote).toEqual({ enabled: true, port: 20000 })
+  })
+
+  it('已有合法 learning 值原样保留；脏值回默认', () => {
+    const read = (learning: unknown): AppConfig['learning'] => migrateConfig({ version: 24, learning }).learning
+    expect(read({ explainMode: 'video', reviewStrategy: 'sprint' })).toEqual({ explainMode: 'video', reviewStrategy: 'sprint' })
+    expect(read({ explainMode: 'video' })).toEqual({ explainMode: 'video', reviewStrategy: 'standard' })
+    expect(read({ explainMode: 'other', reviewStrategy: 123 })).toEqual({ explainMode: 'text', reviewStrategy: 'standard' })
+    expect(read(null)).toEqual({ explainMode: 'text', reviewStrategy: 'standard' })
+    expect(read('bad')).toEqual({ explainMode: 'text', reviewStrategy: 'standard' })
+  })
+
+  it('幂等且不改入参对象', () => {
+    const raw = v23File()
+    const snapshot = structuredClone(raw)
+    const once = migrateConfig(raw)
+    expect(raw).toEqual(snapshot)
+    expect(migrateConfig(structuredClone(once))).toEqual(once)
+  })
+
+  it('注册表 expose / merge：缺省听现有的，部分更新保留另一半，非对象抛', () => {
+    const f = CONFIG_FIELDS.learning
+    const cur = { explainMode: 'video' as const, reviewStrategy: 'sprint' as const }
+    expect(f.merge(undefined, cur)).toEqual(cur)
+    expect(f.merge({ explainMode: 'text' }, cur)).toEqual({ explainMode: 'text', reviewStrategy: 'sprint' })
+    expect(f.merge({ reviewStrategy: 'standard' }, cur)).toEqual({ explainMode: 'video', reviewStrategy: 'standard' })
+    expect(() => f.merge('bad', cur)).toThrow()
+    expect(
+      f.expose({ explainMode: 'video', reviewStrategy: 'bad' as unknown as AppConfig['learning']['reviewStrategy'] })
+    ).toEqual({ explainMode: 'video', reviewStrategy: 'standard' })
+  })
+})
+
+// ---------------------------------------------------------------- v24 → v25：update（自动更新开关）
+
+describe('v24 → v25：update 缺字段补默认（auto: true），其余原样保留', () => {
+  function v24File(): Record<string, unknown> {
+    const { pet: _p, wallpaper: _w, splash: _s, ...rest } = v20File()
+    return {
+      ...rest,
+      version: 24,
+      remote: { enabled: true, port: 20000 },
+      learning: { explainMode: 'video', reviewStrategy: 'sprint' }
+    }
+  }
+
+  it('老 v24 文件读进来 update.auto 默认为 true，其余字段与 ai.apiKey 不丢', () => {
+    const raw = v24File()
+    const out = migrateConfig(raw)
+    expect(out.version).toBe(25)
+    expect(out.update).toEqual({ auto: true })
+    expect(out.learning).toEqual({ explainMode: 'video', reviewStrategy: 'sprint' })
+    expect(out.ai.apiKey).toBe('sk-0123456789abcdef0123456789abcdef')
+    expect(out.runTimeoutSec).toBe(33)
+    expect(out.remote).toEqual({ enabled: true, port: 20000 })
+  })
+
+  it('已有合法 update.auto 原样保留（含 false）；脏值回默认 true', () => {
+    const read = (update: unknown): AppConfig['update'] => migrateConfig({ version: 25, update }).update
+    expect(read({ auto: false })).toEqual({ auto: false })
+    expect(read({ auto: true })).toEqual({ auto: true })
+    expect(read({ auto: 'no' })).toEqual({ auto: true })
+    expect(read(null)).toEqual({ auto: true })
+    expect(read('bad')).toEqual({ auto: true })
+  })
+
+  it('幂等且不改入参对象', () => {
+    const raw = v24File()
+    const snapshot = structuredClone(raw)
+    const once = migrateConfig(raw)
+    expect(raw).toEqual(snapshot)
+    expect(migrateConfig(structuredClone(once))).toEqual(once)
+  })
+
+  it('注册表 expose / merge：缺省听现有的，部分更新或非布尔保留现值，非对象抛', () => {
+    const f = CONFIG_FIELDS.update
+    const cur = { auto: false }
+    expect(f.merge(undefined, cur)).toEqual({ auto: false })
+    expect(f.merge({ auto: true }, cur)).toEqual({ auto: true })
+    expect(f.merge({}, cur)).toEqual({ auto: false })
+    expect(() => f.merge('bad', cur)).toThrow()
+    expect(f.expose({ auto: false })).toEqual({ auto: false })
+    expect(f.expose({ auto: 'bad' as unknown as boolean })).toEqual({ auto: true })
   })
 })

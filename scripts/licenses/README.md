@@ -7,6 +7,7 @@
 | `abstract-logging` | 2.0.1 | James Sumners | <https://github.com/jsumners/abstract-logging> |
 | `pg-types` | 2.2.0 | Brian M. Carlson | <https://github.com/brianc/node-pg-types> |
 | `pgpass` | 1.0.5 | Hannes Hörl | <https://github.com/hoegaarden/pgpass> |
+| `lazy-val` | 1.0.5 | Vladimir Krivosheev | <https://github.com/develar/lazy-val> |
 
 为了不让 `THIRD-PARTY-NOTICES.md` 静默少列这三个包，`gen-third-party-notices.mjs` 在找不到 LICENSE 文件时读取本目录下的标准 MIT 正文（版权行取自各包 `package.json` 的 `author` 字段），并在声明里标注「补录」。这不是从原包复制的文件，而是标准 MIT 模板；如果上游之后补上了 LICENSE，生成脚本会优先使用上游文件。
 

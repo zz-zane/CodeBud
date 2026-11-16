@@ -4,6 +4,8 @@ import { mergeConfigPayload } from '../store/config-merge'
 import { detectAll } from '../env/detect'
 import type { ConfigSavePayload, PublicAppConfig } from '../../shared/types'
 import type { MainFeature } from '../context'
+import { assertSupportedVersion } from '../../shared/data-version'
+import { CURRENT_CONFIG_VERSION } from '../../shared/types'
 
 export const configFeature: MainFeature = {
   name: 'config',
@@ -18,6 +20,7 @@ export const configFeature: MainFeature = {
     handle(IPC.configGet, (): PublicAppConfig => readPublicConfig())
 
     handle(IPC.configSave, (_e, cfg: ConfigSavePayload) => {
+      assertSupportedVersion(configStore.read(), CURRENT_CONFIG_VERSION)
       // 入参非法就抛，**一个字节都不写**。读了现有配置再合并，
       // 是因为 apiKey 是三态：空串/不传 = 保持原样（渲染进程根本不知道真 Key）。
       const current = readConfig(false)

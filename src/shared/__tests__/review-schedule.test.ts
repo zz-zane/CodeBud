@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   REVIEW_DAILY_CAP,
+  REVIEW_STRATEGIES,
   buildSchedule,
   lessonEvents,
   pickDueToday,
@@ -64,6 +65,31 @@ describe('scheduleLesson 场景表', () => {
     const e: Ev[] = [['2026-01-02', 1, 1], ['2026-01-05', 1, 1], ['2026-01-12', 1, 1], ['2026-01-26', 0, 1]]
     const s = scheduleLesson({ lessonId: 'a', learnedAt: L('2026-01-01'), events: evs(e), todayKey: '2026-01-26' })
     expect([s.stage, s.due]).toEqual([2, '2026-02-02'])
+  })
+
+  it('冲刺策略（sprint）：1→1→2→3→4→7，最高档之后仍是 7；buildSchedule 可透传', () => {
+    expect(REVIEW_STRATEGIES.sprint).toEqual([1, 1, 2, 3, 4, 7])
+    const days = ['2026-01-02', '2026-01-03', '2026-01-05', '2026-01-08', '2026-01-12', '2026-01-19', '2026-01-26']
+    const expectDue = ['2026-01-03', '2026-01-05', '2026-01-08', '2026-01-12', '2026-01-19', '2026-01-26', '2026-02-02']
+    const expectStage = [1, 2, 3, 4, 5, 5, 5]
+    days.forEach((_, i) => {
+      const s = scheduleLesson({
+        lessonId: 'a',
+        learnedAt: L('2026-01-01'),
+        events: evs(days.slice(0, i + 1).map((d) => [d, 1, 1] as Ev)),
+        todayKey: days[i],
+        intervals: 'sprint'
+      })
+      expect([s.stage, s.due]).toEqual([expectStage[i], expectDue[i]])
+    })
+    const [b] = buildSchedule({
+      lessons: ['a'],
+      learnedAt: { a: L('2026-01-01') },
+      history: [sess('2026-01-02', [['a', true]])],
+      todayKey: '2026-01-02',
+      intervals: 'sprint'
+    })
+    expect([b.stage, b.due]).toEqual([1, '2026-01-03'])
   })
 })
 

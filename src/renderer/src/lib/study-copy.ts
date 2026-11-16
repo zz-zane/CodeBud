@@ -65,7 +65,10 @@ export const STUDY_COPY = {
     DEFAULT_SOURCE_MANUAL: '用户手动添加',
     DEFAULT_SOURCE_EDIT: '用户修改',
     SAVE_SUCCESS: '记忆已保存',
-    FORGET_SUCCESS: '记忆已遗忘'
+    FORGET_SUCCESS: '记忆已遗忘',
+    REF_CHAT: (month: number, day: number): string => `对话 · ${month} 月 ${day} 日`,
+    REF_USER: '我自己添加',
+    REF_NONE: '早期记忆，无来源'
   },
 
   KNOWLEDGE: {
@@ -158,7 +161,23 @@ export const STUDY_COPY = {
     COL_TITLE: '任务内容与计划',
     COL_SOURCE: '出处 / 关联',
     COL_ACTIONS: '状态流转',
-    PLAN_PREFIX: '计划: '
+    PLAN_PREFIX: '计划: ',
+    DRAFT_BADGE: '待确认',
+    DRAFT_TITLE_PLACEHOLDER: '计划标题',
+    DRAFT_TASK_TITLE_PLACEHOLDER: '任务标题',
+    DRAFT_TASK_DESC_PLACEHOLDER: '任务说明',
+    DRAFT_SOURCE_PREFIX: '来源：',
+    DRAFT_HINT: '确认前不会出现在「今天」里。可以改标题、说明，或删掉不要的任务。',
+    DRAFT_DISCARD: '放弃',
+    DRAFT_CONFIRM: '确认计划',
+    DRAFT_KEEP_ONE: '至少保留一项任务',
+    MASTERY_PERCENT: (pct: number): string => `掌握度 ${pct}%`,
+    MASTERY_NONE: '还没有练习记录',
+    CONFIRM_COMPLETE_TITLE: '掌握度还没到 80%',
+    confirmCompleteBody: (title: string, pct: number): string =>
+      `「${title}」目前掌握度 ${pct}%。可以先去练习，也可以仍然标记完成。`,
+    CONFIRM_COMPLETE_FORCE: '仍标记完成',
+    CONFIRM_COMPLETE_PRACTICE: '去练习'
   },
 
   CONNECTIONS: {

@@ -1,56 +1,62 @@
-/**
- * JSON 原子写存储（M3-04）：tmp + rename 原子写 + .bak 双副本。
- * 读取：主文件损坏自动回退 .bak（并抢救回主文件）；两者皆无返回 null，由调用方用默认值兜底。
- * 纯 Node 实现（不依赖 electron），目录由调用方注入 —— 可被 Vitest 直接测。
- */
-import { copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'fs'
+/** JSON 原子写存储：损坏文件先留副本，成功后才恢复备份。 */
+import { constants, copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'fs'
+import { randomUUID } from 'node:crypto'
 import { join } from 'path'
+import { DATA_STORE } from '../../shared/copy'
 
 export interface JsonStore<T> {
   read(): T | null
   write(data: T): void
 }
 
-function tryRead<T>(path: string): T | null {
+export function preserveCorruptFile(file: string, reason: unknown): string {
+  const saved = `${file}.corrupt-${Date.now()}-${randomUUID()}`
+  console.error('[miai] invalid data file:', file, reason)
   try {
-    if (!existsSync(path)) return null
-    return JSON.parse(readFileSync(path, 'utf-8')) as T
-  } catch {
-    return null // 不存在 / JSON 损坏
+    copyFileSync(file, saved, constants.COPYFILE_EXCL)
+    console.error('[miai] original preserved:', saved)
+  } catch (error) {
+    console.error('[miai] failed to preserve original:', file, error)
+    throw new Error(DATA_STORE.UNREADABLE, { cause: error })
   }
+  return saved
 }
 
-export function createJsonStore<T>(dir: string, name: string): JsonStore<T> {
+export function createJsonStore<T>(dir: string, name: string, options: { validate?: (value: unknown) => boolean } = {}): JsonStore<T> {
   const file = join(dir, name)
   const bak = file + '.bak'
   const tmp = file + '.tmp'
 
+  function parse(path: string): T {
+    const value: unknown = JSON.parse(readFileSync(path, 'utf-8'))
+    if (value === null) throw new Error('JSON root is null')
+    if (options.validate && !options.validate(value)) throw new Error('JSON root has invalid shape')
+    return value as T
+  }
+
   function read(): T | null {
-    const fromMain = tryRead<T>(file)
-    if (fromMain !== null) return fromMain
-    const fromBak = tryRead<T>(bak)
-    if (fromBak !== null) {
-      // 主文件损坏：把备份抢救回主文件（内容随下次 write 落盘）
-      try {
-        copyFileSync(bak, file)
-      } catch {
-        /* 抢救失败不阻塞读取 */
-      }
-      return fromBak
+    if (!existsSync(file) && !existsSync(bak)) return null
+    let mainError: unknown
+    if (existsSync(file)) {
+      try { return parse(file) } catch (error) { mainError = error }
     }
-    return null
+    let backup: T | undefined
+    let backupError: unknown
+    if (existsSync(bak)) {
+      try { backup = parse(bak) } catch (error) { backupError = error }
+    }
+    if (mainError) preserveCorruptFile(file, mainError)
+    if (backupError) preserveCorruptFile(bak, backupError)
+    if (backup === undefined) return null
+    copyFileSync(bak, file)
+    return backup
   }
 
   function write(data: T): void {
+    if (existsSync(file) || existsSync(bak)) read()
     mkdirSync(dir, { recursive: true })
     writeFileSync(tmp, JSON.stringify(data, null, 2), 'utf-8')
-    if (existsSync(file)) {
-      try {
-        copyFileSync(file, bak) // 先备份旧主文件，再原子替换
-      } catch {
-        /* 备份失败不阻塞写入 */
-      }
-    }
+    if (existsSync(file)) copyFileSync(file, bak)
     renameSync(tmp, file)
   }
 

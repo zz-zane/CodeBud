@@ -4,6 +4,7 @@ import { createVAutoAnimate } from '@formkit/auto-animate/vue'
 import App from './App.vue'
 import router from './router'
 import { useSettingsStore } from './stores/settings'
+import { useUpdateStore } from './stores/update'
 import { useZoomStore } from './stores/zoom'
 import { installSettingsDialogGuard } from './lib/settings-dialog-route'
 import { startDayClock } from './lib/day-clock'
@@ -44,6 +45,7 @@ try {
 }
 
 window.miai.onConfigExternal((cfg) => settings.applyExternalConfig(cfg))
+void useUpdateStore(pinia).init()
 
 const zoom = useZoomStore(pinia)
 watch(

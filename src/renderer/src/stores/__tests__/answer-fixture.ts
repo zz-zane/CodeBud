@@ -46,6 +46,7 @@ export function correctAnswerOf(q: Question): string | number {
 /** 这道题的一个错误作答。选择题要给一个**合法但不等于答案**的下标 */
 export function wrongAnswerOf(q: Question): string | number {
   if (q.type === 'choice') return q.answer === 0 ? 1 : 0
+  if (q.type === 'codefill') return joinCodeFillAnswer(q.blanks.map(() => WRONG_ANSWER))
   return WRONG_ANSWER
 }
 

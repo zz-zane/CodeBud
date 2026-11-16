@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>CodeBud UI</title>
+<style>
+:root{--canvas:#fcfcfb;--bg:#fff;--paper:#F0EFEA;--chip:#ECEAE5;--accent:#b34b28;--accent-ink:#A84E30;--border:#E5E3DD;--text:#151515;--t2:#5F5E5A;--t3:#6b6963;
+--ok:#257c46;--okf:#effaf3;--err:#c62b30;--errf:#fff2f2;--warn:#956300;--warnf:#fff7e6;--code:#eaf1f9;--overlay:rgba(45,58,74,.55)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:14px/1.5 'Noto Sans SC','Microsoft YaHei',sans-serif;color:var(--text);background:#ddd;padding:40px;display:flex;flex-wrap:wrap;gap:60px}
+.screen{position:relative;background:var(--canvas);overflow:hidden;flex:none}
+.d{width:1280px;height:800px}.m{width:390px;height:844px}
+.mono{font-family:'Roboto Mono','Consolas',monospace}
+.row{display:flex;align-items:center}.col{display:flex;flex-direction:column}.g4{gap:4px}.g8{gap:8px}.g12{gap:12px}.g16{gap:16px}.g24{gap:24px}.grow{flex:1;min-width:0}
+.t2{color:var(--t2)}.t3{color:var(--t3)}.cap{font-size:12px;line-height:1.4}.lab{font-size:13px}.h{font-size:16px;font-weight:500}.title{font-size:22px;font-weight:500;line-height:1.3}
+.btn{height:32px;padding:0 12px;border-radius:8px;border:1px solid var(--border);background:var(--bg);display:inline-flex;align-items:center;gap:6px;font-size:13px;white-space:nowrap}
+.btn.p{background:var(--accent);border-color:var(--accent);color:#fff}.btn.g{background:var(--chip);border-color:var(--chip)}.btn.lg{height:36px;padding:0 16px;font-size:14px}.btn.ghost{border-color:transparent;background:transparent}
+.btn.off{opacity:.45}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:12px}
+.chip{height:22px;padding:0 8px;border-radius:11px;background:var(--chip);font-size:12px;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.chip.ok{background:var(--okf);color:var(--ok)}.chip.warn{background:var(--warnf);color:var(--warn)}.chip.err{background:var(--errf);color:var(--err)}.chip.a{background:#f6e6df;color:var(--accent-ink)}
+.ic{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* app shell */
+.side{width:232px;height:100%;border-right:1px solid var(--border);padding:56px 8px 8px;background:var(--canvas)}
+.side .grp{font-size:13px;color:var(--t2);padding:0 8px 8px}
+.nav{height:36px;border-radius:8px;padding:0 8px;display:flex;align-items:center;gap:10px;color:var(--t2)}.nav.on{background:var(--chip);color:var(--text)}
+.sep{height:1px;background:var(--border);margin:12px 8px}
+.main{flex:1;min-width:0;height:100%;padding:24px 32px;overflow:hidden}
+.label{position:absolute;left:0;top:0;background:#151515;color:#fff;font-size:11px;padding:2px 8px;border-bottom-right-radius:6px;z-index:9}
+/* player */
+.scrim{position:absolute;inset:0;background:var(--overlay);display:flex;align-items:center;justify-content:center}
+.player{width:1120px;height:700px;background:var(--bg);border-radius:12px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.phead{height:48px;padding:0 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px}
+.pbody{flex:1;display:flex;min-height:0}
+.scenes{width:216px;border-right:1px solid var(--border);padding:12px 8px;background:var(--canvas)}
+.sc{padding:8px;border-radius:8px;display:flex;gap:8px;font-size:13px;color:var(--t2)}.sc.on{background:var(--chip);color:var(--text)}.sc .n{width:18px;color:var(--t3);flex:none}
+.stage{flex:1;background:var(--paper);padding:24px 32px;display:flex;flex-direction:column;min-width:0}
+.stage h3{font-size:16px;font-weight:500;margin-bottom:16px}
+.caption{margin:0 auto;max-width:720px;text-align:center;font-size:18px;line-height:1.6;padding:12px 20px;background:var(--bg);border:1px solid var(--border);border-radius:12px}
+.pfoot{height:64px;border-top:1px solid var(--border);padding:0 16px;display:flex;align-items:center;gap:12px}
+.bar{flex:1;display:flex;gap:3px;height:6px}.bar i{flex:1;border-radius:3px;background:var(--chip)}.bar i.done{background:var(--accent)}.bar i.cur{background:linear-gradient(90deg,var(--accent) 60%,var(--chip) 60%)}
+.round{width:40px;height:40px;border-radius:20px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center}
+.cell{width:132px;border:1.5px solid var(--border);border-radius:8px;background:var(--bg);padding:8px 10px}.cell.f{border-color:var(--accent);box-shadow:0 0 0 3px #f6e6df}
+.cell .k{font-size:12px;color:var(--t3)}.cell .v{font-size:18px}
+.region{border:1px dashed #cfccc3;border-radius:12px;padding:28px 16px 16px;position:relative}.region>b{position:absolute;top:6px;left:12px;font-size:12px;font-weight:400;color:var(--t3)}
+.codebox{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:12px 0;font-size:14px;line-height:28px}
+.codebox div{padding:0 16px;display:flex;gap:16px;white-space:pre}.codebox .ln{color:var(--t3);width:18px;text-align:right}.codebox .cur{background:#f6e6df;box-shadow:inset 3px 0 0 var(--accent)}
+table.vars{width:100%;border-collapse:collapse;font-size:14px}table.vars td{padding:6px 12px;border-top:1px solid var(--border)}table.vars tr:first-child td{border-top:0}
+.dlg{width:560px;background:var(--bg);border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08);padding:24px}
+.input{border:1px solid #78899e;border-radius:8px;padding:8px 12px;background:var(--bg);font-size:14px}
+.opt{border:1px solid var(--border);border-radius:8px;padding:10px 12px;display:flex;gap:10px;align-items:center}.opt.bad{border-color:var(--err);background:var(--errf)}.opt.good{border-color:var(--ok);background:var(--okf)}
+.radio{width:16px;height:16px;border-radius:8px;border:1.5px solid #78899e;flex:none}.radio.on{border:5px solid var(--accent)}
+.note{border-radius:8px;padding:10px 12px;font-size:13px}.note.warn{background:var(--warnf);color:var(--warn)}.note.err{background:var(--errf);color:var(--err)}.note.info{background:var(--paper);color:var(--t2)}
+.seg{display:inline-flex;background:var(--chip);border-radius:8px;padding:2px}.seg span{height:28px;padding:0 14px;border-radius:6px;display:flex;align-items:center;font-size:13px;color:var(--t2)}.seg span.on{background:var(--bg);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.meter{height:6px;border-radius:3px;background:var(--chip);overflow:hidden;width:120px}.meter i{display:block;height:100%;background:var(--accent)}.meter.ok i{background:var(--ok)}
+.setrow{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-top:1px solid var(--border)}.setrow:first-child{border-top:0}
+.tabs{display:flex;gap:24px;border-bottom:1px solid var(--border);margin-bottom:20px}.tabs span{padding:8px 0;color:var(--t2)}.tabs span.on{color:var(--text);box-shadow:inset 0 -2px 0 var(--accent)}
+.thumb{height:112px;border-radius:8px;background:var(--paper);display:flex;align-items:center;justify-content:center;position:relative}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></symbol>
+<symbol id="pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+<symbol id="prev" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+<symbol id="next" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+<symbol id="x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="vol" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9zM17 9a4 4 0 010 6"/></symbol>
+<symbol id="film" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></symbol>
+<symbol id="help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1.1-1.5 2M12 17h.01"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+<symbol id="trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+<symbol id="edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></symbol>
+<symbol id="link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></symbol>
+<symbol id="refresh" viewBox="0 0 24 24"><path d="M20 12a8 8 0 11-2.3-5.7M20 4v5h-5"/></symbol>
+</defs></svg>
+
+<!-- ============ 01 播放器 · memory ============ -->
+<div class="screen d"><div class="label">01 播放器 · 内存画面（播放中）</div>
+<div class="scrim"><div class="player">
+  <div class="phead"><svg class="ic" style="color:var(--accent)"><use href="#film"/></svg><span class="h grow">指针为什么能改到原来的变量</span><span class="chip ok"><svg class="ic" style="width:12px;height:12px"><use href="#check"/></svg>代码已在本机运行验证</span><span class="btn ghost"><svg class="ic"><use href="#x"/></svg></span></div>
+  <div class="pbody">
+    <div class="scenes col g4">
+      <div class="sc"><span class="n">1</span>你卡在哪里</div>
+      <div class="sc"><span class="n">2</span>类比：门牌号</div>
+      <div class="sc on"><span class="n">3</span>内存里发生了什么</div>
+      <div class="sc"><span class="n">4</span>逐行运行</div>
+      <div class="sc"><span class="n">5</span>常见错误</div>
+      <div class="sc"><span class="n">6</span>一句话总结</div>
+      <div class="sep"></div>
+      <div class="sc"><span class="n">?</span>看懂了吗（2 题）</div>
+    </div>
+    <div class="stage">
+      <h3>内存里发生了什么</h3>
+      <div class="grow" style="position:relative">
+        <div class="row g24" style="align-items:flex-start">
+          <div class="region col g12" style="width:200px"><b>栈 · main</b>
+            <div class="cell"><div class="k mono">a（地址 0x10）</div><div class="v mono">5</div></div>
+            <div class="cell f"><div class="k mono">p</div><div class="v mono">0x10</div></div>
+          </div>
+          <div class="region col g12" style="width:200px;margin-left:120px"><b>栈 · change</b>
+            <div class="cell f"><div class="k mono">q</div><div class="v mono">0x10</div></div>
+          </div>
+        </div>
+        <svg width="560" height="220" style="position:absolute;left:0;top:0" fill="none" stroke="#b34b28" stroke-width="2"><path d="M150 132 C 200 132, 200 62, 152 62" marker-end="url(#ah)"/><path d="M360 62 C 280 20, 200 30, 152 50" marker-end="url(#ah)"/><defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#b34b28" stroke="none"/></marker></defs></svg>
+      </div>
+      <div class="caption">q 里存的也是 a 的门牌号，所以顺着 q 找过去，改到的就是 a 本身。</div>
+    </div>
+  </div>
+  <div class="pfoot">
+    <span class="btn ghost"><svg class="ic"><use href="#prev"/></svg></span>
+    <span class="round"><svg class="ic" style="width:18px;height:18px"><use href="#pause"/></svg></span>
+    <span class="btn ghost"><svg class="ic"><use href="#next"/></svg></span>
+    <span class="cap t3 mono">0:48 / 2:10</span>
+    <div class="bar"><i class="done"></i><i class="done"></i><i class="cur"></i><i></i><i></i><i></i></div>
+    <span class="btn"><svg class="ic"><use href="#vol"/></svg>旁白</span>
+    <span class="btn">1.0×</span>
+    <span class="btn g"><svg class="ic"><use href="#help"/></svg>这一步没懂</span>
+  </div>
+</div></div></div>
+
+<!-- ============ 02 播放器 · trace ============ -->
+<div class="screen d"><div class="label">02 播放器 · 逐行运行画面（已暂停）</div>
+<div class="scrim"><div class="player">
+  <div class="phead"><svg class="ic" style="color:var(--accent)"><use href="#film"/></svg><span class="h grow">指针为什么能改到原来的变量</span><span class="chip ok"><svg class="ic" style="width:12px;height:12px"><use href="#check"/></svg>代码已在本机运行验证</span><span class="btn ghost"><svg class="ic"><use href="#x"/></svg></span></div>
+  <div class="pbody">
+    <div class="scenes col g4">
+      <div class="sc"><span class="n">1</span>你卡在哪里</div><div class="sc"><span class="n">2</span>类比：门牌号</div><div class="sc"><span class="n">3</span>内存里发生了什么</div>
+      <div class="sc on"><span class="n">4</span>逐行运行</div><div class="sc"><span class="n">5</span>常见错误</div><div class="sc"><span class="n">6</span>一句话总结</div>
+      <div class="sep"></div><div class="sc"><span class="n">?</span>看懂了吗（2 题）</div>
+    </div>
+    <div class="stage">
+      <h3>逐行运行 <span class="cap t3" style="margin-left:8px">第 3 / 6 步</span></h3>
+      <div class="row g16 grow" style="align-items:flex-start">
+        <div class="codebox mono grow">
+          <div><span class="ln">1</span>#include &lt;stdio.h&gt;</div>
+          <div><span class="ln">2</span>void change(int *q) {</div>
+          <div class="cur"><span class="ln">3</span>    *q = 9;</div>
+          <div><span class="ln">4</span>}</div>
+          <div><span class="ln">5</span>int main(void) {</div>
+          <div><span class="ln">6</span>    int a = 5;</div>
+          <div><span class="ln">7</span>    change(&amp;a);</div>
+          <div><span class="ln">8</span>    printf("%d\n", a);</div>
+          <div><span class="ln">9</span>}</div>
+        </div>
+        <div class="col g12" style="width:260px">
+          <div class="card"><div class="cap t3" style="padding:8px 12px">变量</div><table class="vars mono"><tr><td>a</td><td style="color:var(--accent-ink)">9</td></tr><tr><td>q</td><td>&amp;a</td></tr></table></div>
+          <div class="card"><div class="cap t3" style="padding:8px 12px">调用栈</div><table class="vars mono"><tr><td>change</td></tr><tr><td class="t3">main</td></tr></table></div>
+          <div class="card"><div class="cap t3" style="padding:8px 12px">输出</div><div class="mono t3" style="padding:0 12px 10px">（还没有输出）</div></div>
+        </div>
+      </div>
+      <div class="caption">*q = 9 的意思是：到 q 记着的地址去，把那里的值改成 9。a 变成了 9。</div>
+    </div>
+  </div>
+  <div class="pfoot">
+    <span class="btn ghost"><svg class="ic"><use href="#prev"/></svg></span>
+    <span class="round"><svg class="ic" style="width:18px;height:18px;fill:#fff"><use href="#play"/></svg></span>
+    <span class="btn ghost"><svg class="ic"><use href="#next"/></svg></span>
+    <span class="cap t3 mono">1:12 / 2:10</span>
+    <div class="bar"><i class="done"></i><i class="done"></i><i class="done"></i><i class="cur"></i><i></i><i></i></div>
+    <span class="btn"><svg class="ic"><use href="#vol"/></svg>旁白</span><span class="btn">1.0×</span>
+    <span class="btn g"><svg class="ic"><use href="#help"/></svg>这一步没懂</span>
+  </div>
+</div></div></div>
+
+<!-- ============ 03 片尾答题 ============ -->
+<div class="screen d"><div class="label">03 播放器 · 片尾答题（答错）</div>
+<div class="scrim"><div class="player">
+  <div class="phead"><svg class="ic" style="color:var(--accent)"><use href="#film"/></svg><span class="h grow">指针为什么能改到原来的变量</span><span class="btn ghost"><svg class="ic"><use href="#x"/></svg></span></div>
+  <div class="pbody"><div class="stage" style="align-items:center;justify-content:center"><div class="col g16" style="width:600px">
+    <div><div class="cap t3">看懂了吗 · 第 1 / 2 题</div><div class="title" style="margin-top:4px">调用 change(a)（不加 &amp;）时，函数里改的是什么？</div></div>
+    <div class="col g8">
+      <div class="opt bad"><span class="radio on"></span>改的是 main 里的 a</div>
+      <div class="opt good"><span class="radio"></span>改的是 a 的一份复制品</div>
+      <div class="opt"><span class="radio"></span>程序无法编译</div>
+    </div>
+    <div class="note err">不对。不加 &amp; 传进去的是 a 的值，函数拿到的是一份复制品，改它不影响原来的 a。</div>
+    <div class="row g8" style="justify-content:flex-end"><span class="btn">重看这一段</span><span class="btn"><svg class="ic"><use href="#refresh"/></svg>换一种讲法</span><span class="btn p">下一题</span></div>
+  </div></div></div>
+</div></div></div>
+
+<!-- ============ 04 生成 · 提问 ============ -->
+<div class="screen d"><div class="label">04 生成对话框 · 第 1 步：你卡在哪里</div>
+<div class="scrim"><div class="dlg col g16">
+  <div class="row"><span class="h grow">生成讲解视频</span><span class="cap t3">1 / 2</span></div>
+  <div class="col g8"><span class="lab t2">你卡在哪里？说得越具体，讲得越准。</span>
+    <div class="input" style="height:96px">我不明白为什么把 a 传进函数改了没用，但传 &amp;a 就能改到</div></div>
+  <div class="col g8"><span class="lab t2">参考的课文</span><div class="note info">C 语言 · 指针入门　「指针变量里存的是另一个变量的地址……」</div></div>
+  <div class="note info">视频约 1–3 分钟，生成需要调用一次 AI。生成后可离线重看。</div>
+  <div class="row g8" style="justify-content:flex-end"><span class="btn">取消</span><span class="btn p">下一步：看讲解思路</span></div>
+</div></div></div>
+
+<!-- ============ 05 生成 · 大纲 ============ -->
+<div class="screen d"><div class="label">05 生成对话框 · 第 2 步：确认讲解思路</div>
+<div class="scrim"><div class="dlg col g16">
+  <div class="row"><span class="h grow">我打算这样讲</span><span class="cap t3">2 / 2</span></div>
+  <div class="col g4"><span class="cap t3">你卡住的点</span><span>分不清「传值」和「传地址」：以为函数拿到的就是变量本身。</span></div>
+  <div class="col g4"><span class="cap t3">用的类比</span><span>把一张写着内容的纸复印给别人，和告诉别人你家的门牌号。</span></div>
+  <div class="col g8"><span class="cap t3">讲解步骤</span>
+    <div class="row g8"><span class="chip">内存画面</span>传值时内存里多出一份复制品</div>
+    <div class="row g8"><span class="chip">内存画面</span>传地址时两个名字指向同一格</div>
+    <div class="row g8"><span class="chip">逐行运行</span>一段完整程序，逐行看 a 的变化</div>
+    <div class="row g8"><span class="chip">常见错误</span>忘了写 &amp; 或 *</div>
+  </div>
+  <div class="row g8" style="justify-content:flex-end"><span class="btn">上一步</span><span class="btn"><svg class="ic"><use href="#refresh"/></svg>换个角度</span><span class="btn p">开始生成</span></div>
+</div></div></div>
+
+<!-- ============ 06 生成中 / 失败 / 未配置 ============ -->
+<div class="screen d"><div class="label">06 生成对话框 · 生成中、失败、未配置 AI 三种状态</div>
+<div class="scrim" style="gap:24px">
+  <div class="dlg col g16" style="width:360px"><span class="h">正在生成</span>
+    <div class="col g8 lab"><div class="row g8" style="color:var(--ok)"><svg class="ic"><use href="#check"/></svg>写讲解脚本</div><div class="row g8" style="color:var(--ok)"><svg class="ic"><use href="#check"/></svg>检查讲解结构</div><div class="row g8"><svg class="ic" style="color:var(--accent)"><use href="#refresh"/></svg>在本机运行示例代码</div><div class="row g8 t3"><span style="width:16px"></span>保存</div></div>
+    <div class="row" style="justify-content:flex-end"><span class="btn">取消</span></div></div>
+  <div class="dlg col g16" style="width:360px"><span class="h">没能生成合格的视频</span>
+    <div class="note err">示例代码的运行结果和讲解不一致，已自动修正一次仍未通过。</div>
+    <div class="cap t3">不合格的视频不会展示。可以换个问法再试一次。</div>
+    <div class="row g8" style="justify-content:flex-end"><span class="btn">关闭</span><span class="btn p">重试</span></div></div>
+  <div class="dlg col g16" style="width:360px"><span class="h">需要先配置 AI</span>
+    <div class="cap t2">生成新视频要用到 AI。课文里已有的演示可以直接播放，不需要配置。</div>
+    <div class="row g8" style="justify-content:flex-end"><span class="btn">关闭</span><span class="btn p">去设置</span></div></div>
+</div></div>
+
+<!-- ============ 07 课程页入口 ============ -->
+<div class="screen d"><div class="label">07 课程页 · 入口（底栏按钮、划词菜单、演示块、本课视频面板）</div>
+<div class="row" style="height:100%">
+  <div class="side"><div class="grp">编程学习</div><div class="nav">今天</div><div class="nav on">课程</div><div class="nav">练习</div><div class="nav">复习</div><div class="nav">六级真题</div><div class="sep"></div><div class="nav">资料库</div><div class="nav">AI 助教</div><div class="nav">进度</div></div>
+  <div class="main" style="position:relative;padding:32px 0 0 56px">
+    <div style="width:600px;font-size:16px;line-height:1.75" class="col g16">
+      <div class="title">指针变量里存的是什么</div>
+      <p>指针变量里存的不是一个普通的数，而是<span style="background:#f6e6df">另一个变量的地址。顺着这个地址，就能找到并修改那个变量</span>。</p>
+      <div class="row g4 card" style="width:max-content;padding:4px;margin:-8px 0 0 180px;box-shadow:0 4px 12px rgba(0,0,0,.08)"><span class="btn ghost">问 AI</span><span class="btn ghost">收藏</span><span class="btn ghost" style="color:var(--accent-ink)"><svg class="ic"><use href="#film"/></svg>用视频讲明白</span></div>
+      <div class="card">
+        <div class="row g8" style="padding:8px 12px;border-bottom:1px solid var(--border)"><span class="lab grow">演示：指针怎么改到 a</span><span class="btn g"><svg class="ic"><use href="#film"/></svg>播放讲解</span></div>
+        <div class="mono lab" style="padding:12px 16px;line-height:26px">int a = 5;<br>int *p = &amp;a;<br>*p = 9;</div>
+      </div>
+      <p class="t2">p 里存的是 a 的地址，*p 表示「到那个地址去」。</p>
+    </div>
+    <div class="card col g12" style="position:absolute;right:24px;top:32px;width:300px;padding:16px;box-shadow:0 4px 12px rgba(0,0,0,.08)">
+      <div class="row"><span class="h grow">本课视频</span><svg class="ic t3"><use href="#x"/></svg></div>
+      <div class="col g8">
+        <div class="row g8"><div class="thumb" style="width:64px;height:40px"><svg class="ic" style="color:var(--accent)"><use href="#play"/></svg></div><div class="col grow"><span class="lab">演示：指针怎么改到 a</span><span class="cap t3">课文演示 · 0:40</span></div></div>
+        <div class="row g8"><div class="thumb" style="width:64px;height:40px"><svg class="ic" style="color:var(--accent)"><use href="#play"/></svg></div><div class="col grow"><span class="lab">指针为什么能改到原来的变量</span><span class="cap t3">我生成的 · 2:10 · 已答对</span></div></div>
+      </div>
+      <span class="btn p lg" style="justify-content:center"><svg class="ic"><use href="#film"/></svg>生成新视频</span>
+    </div>
+    <div class="card row g8" style="position:absolute;left:56px;bottom:24px;width:720px;height:56px;padding:0 12px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08)">
+      <span class="btn g lg">标记已学</span><span class="btn p lg">本课练习 30 题</span><span class="btn lg" style="border-color:var(--accent);color:var(--accent-ink)"><svg class="ic"><use href="#film"/></svg>视频讲解</span><span class="grow t2 lab" style="padding-left:8px">指针入门</span><span class="btn g lg">下一课</span>
+    </div>
+  </div>
+</div></div>
+
+<!-- ============ 08 答错提示 ============ -->
+<div class="screen" style="width:760px;height:300px;padding:32px"><div class="label">08 练习 · 答错后的反馈区</div>
+  <div class="col g12" style="margin-top:12px">
+    <div class="note err"><b style="font-weight:500">答案不对。</b>正确输出是 9。*p = 9 改的是 p 指向的那个变量，也就是 a。</div>
+    <div class="row g8"><span class="btn">查看解析</span><span class="btn">问 AI</span><span class="btn" style="border-color:var(--accent);color:var(--accent-ink)"><svg class="ic"><use href="#film"/></svg>看视频讲解</span></div>
+    <div class="note info row g8"><svg class="ic"><use href="#film"/></svg><span class="grow">这道题你已经错了 2 次，要不要看一段视频讲解？</span><span class="btn p">生成</span><span class="btn ghost">不用</span></div>
+    <span class="cap t3">↑ 提示条只在「视频优先」或同一题连错 2 次时出现，可关闭；不会自动生成。</span>
+  </div>
+</div>
+
+<!-- ============ 09 资料库 · 视频 ============ -->
+<div class="screen d"><div class="label">09 资料库 ·「视频」页签</div>
+<div class="row" style="height:100%">
+  <div class="side"><div class="grp">编程学习</div><div class="nav">今天</div><div class="nav">课程</div><div class="nav">练习</div><div class="nav">复习</div><div class="nav">六级真题</div><div class="sep"></div><div class="nav on">资料库</div><div class="nav">AI 助教</div><div class="nav">进度</div></div>
+  <div class="main">
+    <div class="title" style="margin-bottom:16px">资料库</div>
+    <div class="tabs"><span>知识库</span><span>教材</span><span>任务</span><span>记忆</span><span class="on">视频</span><span>模型</span><span>用量</span><span>绘图</span></div>
+    <div class="row g12" style="margin-bottom:16px"><span class="btn">全部课程 ▾</span><span class="grow"></span><span class="cap t3">12 / 60 份 · 超出后自动删除最旧的</span></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div class="card col g8" style="padding:12px"><div class="thumb"><svg class="ic" style="width:28px;height:28px;color:var(--accent)"><use href="#play"/></svg><span class="chip" style="position:absolute;right:8px;bottom:8px">2:10</span></div><span>指针为什么能改到原来的变量</span><div class="row g8"><span class="cap t3 grow">C · 指针入门 · 今天</span><span class="chip ok">已答对</span><svg class="ic t3"><use href="#trash"/></svg></div></div>
+      <div class="card col g8" style="padding:12px"><div class="thumb"><svg class="ic" style="width:28px;height:28px;color:var(--accent)"><use href="#play"/></svg><span class="chip" style="position:absolute;right:8px;bottom:8px">1:45</span></div><span>递归为什么会一层层返回</span><div class="row g8"><span class="cap t3 grow">Python · 递归 · 昨天</span><span class="chip warn">未答题</span><svg class="ic t3"><use href="#trash"/></svg></div></div>
+      <div class="card col g8" style="padding:12px"><div class="thumb"><svg class="ic" style="width:28px;height:28px;color:var(--accent)"><use href="#play"/></svg><span class="chip" style="position:absolute;right:8px;bottom:8px">2:32</span></div><span>链表插入节点时指针怎么接</span><div class="row g8"><span class="cap t3 grow">算法 · 链表 · 3 天前</span><span class="chip warn">代码未验证</span><svg class="ic t3"><use href="#trash"/></svg></div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ============ 10 设置 · 学习方式 ============ -->
+<div class="screen d"><div class="label">10 设置 ·「学习方式」分区</div>
+<div class="row" style="height:100%">
+  <div class="side"><div class="grp">编程学习</div><div class="nav">今天</div><div class="nav">课程</div><div class="nav">练习</div><div class="nav">复习</div><div class="nav">六级真题</div><div class="sep"></div><div class="nav">资料库</div><div class="nav">AI 助教</div><div class="nav">进度</div><div style="height:300px"></div><div class="nav on">设置</div></div>
+  <div class="main"><div style="max-width:720px" class="col g16">
+    <div class="title">设置</div>
+    <div class="h">学习方式</div>
+    <div class="card">
+      <div class="setrow"><div class="col"><span>讲解偏好</span><span class="cap t3">视频优先时，课程页和答错后会优先给出视频入口。不会自动生成视频。</span></div><div class="seg"><span>文字优先</span><span class="on">视频优先</span></div></div>
+      <div class="setrow"><div class="col"><span>复习策略</span><span class="cap t3">考前冲刺：学完后第 1、1、2、3、4、7 天各复习一次。</span></div><div class="seg"><span>日常长期</span><span class="on">考前冲刺</span></div></div>
+    </div>
+    <div class="h">视频旁白 <span class="cap t3" style="font-weight:400">仅对这台设备生效</span></div>
+    <div class="card">
+      <div class="setrow"><span>朗读旁白</span><div class="seg"><span class="on">开</span><span>关</span></div></div>
+      <div class="setrow"><span>声音</span><div class="row g8"><span class="btn">Microsoft Huihui（中文）▾</span><span class="btn"><svg class="ic"><use href="#vol"/></svg>试听</span></div></div>
+      <div class="setrow"><span>语速</span><div class="seg"><span>0.75×</span><span class="on">1.0×</span><span>1.25×</span><span>1.5×</span></div></div>
+    </div>
+    <div class="note info">这台设备没有中文语音时，视频只显示字幕并按字数自动翻页。</div>
+  </div></div>
+</div></div>
+
+<!-- ============ 11 六级 AI 估分 ============ -->
+<div class="screen" style="width:760px;height:520px;padding:32px"><div class="label">11 六级真题 · 写作 / 翻译的 AI 估分</div>
+  <div class="col g16" style="margin-top:12px">
+    <div class="row g8"><span class="h grow">Part IV 翻译</span><span class="btn p">AI 估分</span><span class="btn off">AI 估分</span><span class="cap t3">← 未配置 AI 时置灰，悬停说明原因</span></div>
+    <div class="card col g12" style="padding:16px">
+      <div class="row g12"><div class="row" style="align-items:baseline;gap:4px"><span style="font-size:28px;font-weight:600;color:var(--accent-ink)">11</span><span class="t3">/ 15</span></div><span class="chip a">AI 估分，仅供参考</span><span class="grow"></span><span class="btn"><svg class="ic"><use href="#refresh"/></svg>重新估分</span></div>
+      <p class="t2">基本表达了原文意思，语句通顺。「四合院」的译法不够准确，第二句时态前后不一致，个别冠词遗漏。</p>
+      <span class="cap t3">不计入客观题总分。今天 14:32 估分。</span>
+    </div>
+    <div class="note err row g8"><span class="grow">未能评分，请重试。</span><span class="btn">重试</span></div>
+    <span class="cap t3">↑ 模型返回无法解析时的状态：不给分数，不猜。</span>
+  </div>
+</div>
+
+<!-- ============ 12 任务页 ============ -->
+<div class="screen d"><div class="label">12 资料库 · 任务：计划草稿确认、掌握度、完成确认</div>
+<div class="row" style="height:100%">
+  <div class="side"><div class="grp">编程学习</div><div class="nav">今天</div><div class="nav">课程</div><div class="nav">练习</div><div class="nav">复习</div><div class="nav">六级真题</div><div class="sep"></div><div class="nav on">资料库</div><div class="nav">AI 助教</div><div class="nav">进度</div></div>
+  <div class="main" style="position:relative">
+    <div class="title" style="margin-bottom:16px">资料库</div>
+    <div class="tabs"><span>知识库</span><span>教材</span><span class="on">任务</span><span>记忆</span><span>视频</span><span>模型</span><span>用量</span><span>绘图</span></div>
+    <div class="row g16" style="align-items:flex-start">
+      <div class="card col grow" style="border-color:var(--accent)">
+        <div class="row g8" style="padding:12px 16px;border-bottom:1px solid var(--border)"><span class="chip a">待确认</span><span class="h grow">《C Primer Plus》四周计划</span><svg class="ic t3"><use href="#edit"/></svg></div>
+        <div class="setrow"><div class="col"><span>读第 1–2 章，写出第一个程序</span><span class="cap t3">来源：第 1 章 · 第 2 章</span></div><div class="row g12 t3"><svg class="ic"><use href="#edit"/></svg><svg class="ic"><use href="#trash"/></svg></div></div>
+        <div class="setrow"><div class="col"><span>变量与数据类型练习</span><span class="cap t3">来源：第 3 章</span></div><div class="row g12 t3"><svg class="ic"><use href="#edit"/></svg><svg class="ic"><use href="#trash"/></svg></div></div>
+        <div class="setrow"><div class="col"><span>循环结构：for 与 while</span><span class="cap t3">来源：第 6 章</span></div><div class="row g12 t3"><svg class="ic"><use href="#edit"/></svg><svg class="ic"><use href="#trash"/></svg></div></div>
+        <div class="row g8" style="padding:12px 16px;border-top:1px solid var(--border);justify-content:flex-end"><span class="cap t3 grow">确认前不会出现在「今天」里。可以改标题、说明，或删掉不要的任务。</span><span class="btn">放弃</span><span class="btn p">确认计划</span></div>
+      </div>
+      <div class="card col" style="width:400px">
+        <div class="row" style="padding:12px 16px;border-bottom:1px solid var(--border)"><span class="h grow">C 语言入门计划</span><span class="cap t3">2 / 5</span></div>
+        <div class="setrow"><div class="col g4"><span>指针入门</span><div class="row g8"><div class="meter"><i style="width:62%"></i></div><span class="cap t3">掌握度 62%</span></div></div><span class="btn">完成</span></div>
+        <div class="setrow"><div class="col g4"><span>数组</span><div class="row g8"><div class="meter ok"><i style="width:86%"></i></div><span class="cap" style="color:var(--ok)">掌握度 86%</span></div></div><span class="chip ok">已完成</span></div>
+        <div class="setrow"><div class="col g4"><span>函数</span><span class="cap t3">还没有练习记录</span></div><span class="btn">完成</span></div>
+      </div>
+    </div>
+    <div class="dlg col g12" style="position:absolute;right:56px;bottom:40px;width:380px;border:1px solid var(--border)">
+      <span class="h">掌握度还没到 80%</span><span class="t2">「指针入门」目前掌握度 62%。可以先去练习，也可以仍然标记完成。</span>
+      <div class="row g8" style="justify-content:flex-end"><span class="btn">仍标记完成</span><span class="btn p">去练习</span></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ============ 13 记忆页 ============ -->
+<div class="screen" style="width:760px;height:420px;padding:32px"><div class="label">13 资料库 · 记忆：来源标签与被拒提示</div>
+  <div class="col g12" style="margin-top:12px">
+    <div class="card">
+      <div class="setrow"><div class="col g4"><span>分不清传值和传地址，在指针入门卡了两次</span><div class="row g8"><span class="chip a"><svg class="ic" style="width:12px;height:12px"><use href="#link"/></svg>C · 指针入门</span><span class="chip">对话 · 11 月 15 日</span></div></div><svg class="ic t3"><use href="#trash"/></svg></div>
+      <div class="setrow"><div class="col g4"><span>希望讲解多用生活类比</span><div class="row g8"><span class="chip">我自己添加</span></div></div><svg class="ic t3"><use href="#trash"/></svg></div>
+      <div class="setrow"><div class="col g4"><span>准备 12 月考六级</span><div class="row g8"><span class="chip t3">早期记忆，无来源</span></div></div><svg class="ic t3"><use href="#trash"/></svg></div>
+    </div>
+    <span class="cap t3">↑ 课程来源可点击跳到该课。升级前的旧记忆显示「早期记忆，无来源」。</span>
+    <div class="note warn">记忆未保存：包含绝对化表述，请改成具体事实。</div>
+    <span class="cap t3">↑ AI 试图写入「已完全掌握指针」这类结论时，在聊天里显示这一行。</span>
+  </div>
+</div>
+
+<!-- ============ 14 手机播放器 ============ -->
+<div class="screen m col" style="background:var(--bg)"><div class="label">14 手机 · 播放器</div>
+  <div class="phead" style="margin-top:24px"><span class="h grow" style="font-size:15px">指针为什么能改到原来的变量</span><svg class="ic"><use href="#x"/></svg></div>
+  <div class="col" style="background:var(--paper);padding:16px;height:360px">
+    <span class="lab t2" style="margin-bottom:12px">3 / 6 · 内存里发生了什么</span>
+    <div class="row g12" style="align-items:flex-start;overflow:hidden">
+      <div class="region col g8" style="padding:26px 10px 10px"><b>栈 · main</b><div class="cell" style="width:120px"><div class="k mono">a（0x10）</div><div class="v mono">5</div></div><div class="cell f" style="width:120px"><div class="k mono">p</div><div class="v mono">0x10</div></div></div>
+      <div class="region col g8" style="padding:26px 10px 10px"><b>栈 · change</b><div class="cell f" style="width:120px"><div class="k mono">q</div><div class="v mono">0x10</div></div></div>
+    </div>
+  </div>
+  <div style="padding:16px;font-size:17px;line-height:1.6" class="grow">q 里存的也是 a 的门牌号，所以顺着 q 找过去，改到的就是 a 本身。</div>
+  <div style="padding:0 16px"><div class="bar"><i class="done"></i><i class="done"></i><i class="cur"></i><i></i><i></i><i></i></div></div>
+  <div class="row" style="padding:12px 16px 8px;justify-content:space-between"><span class="btn">1.0×</span><span class="btn ghost"><svg class="ic"><use href="#prev"/></svg></span><span class="round" style="width:48px;height:48px;border-radius:24px"><svg class="ic" style="width:20px;height:20px"><use href="#pause"/></svg></span><span class="btn ghost"><svg class="ic"><use href="#next"/></svg></span><span class="btn"><svg class="ic"><use href="#vol"/></svg></span></div>
+  <div style="padding:8px 16px 24px"><span class="btn g lg" style="width:100%;justify-content:center"><svg class="ic"><use href="#help"/></svg>这一步没懂</span></div>
+</div>
+
+</body></html>

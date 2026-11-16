@@ -1,19 +1,31 @@
 <script setup lang="ts">
 import MiIcon from '../components/base/MiIcon.vue'
-import { computed, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import MiTabs from '../components/base/MiTabs.vue'
 import { useContentStore } from '../stores/content'
+import { usePracticeStore } from '../stores/practice'
 import { useLessonOpener } from '../lib/openLesson'
 import { LANG_LABEL, STAGE_LABEL } from '../lib/labels'
-import { APP_SIDEBAR, LEARN_VIEW, ALGO_COURSE, PRACTICE } from '../lib/copy'
+import { APP_SIDEBAR, LEARN_VIEW, ALGO_COURSE, OVERVIEW, PRACTICE } from '../lib/copy'
+import { isLessonMastered, lessonMastery } from '../../../shared/mastery'
 import { lessonPracticeQuestions } from '../lib/startPractice'
 import type { Lang } from '../../../shared/types'
 
 const route = useRoute()
 const router = useRouter()
 const content = useContentStore()
+const practice = usePracticeStore()
 const { openLesson } = useLessonOpener()
+
+onMounted(() => {
+  if (!practice.loaded) void practice.load()
+})
+
+function masteredOf(id: string): boolean {
+  const m = lessonMastery(practice.history, id)
+  return isLessonMastered(m.score, m.attempts)
+}
 
 const currentLang = computed({
   get: () => content.activeLang,
@@ -96,6 +108,7 @@ const quizCount = (id: string) => lessonPracticeQuestions(content.lessonOf(id)).
             <span class="lesson-info">
               <span class="lesson-title">{{ lesson.title }}</span>
             </span>
+            <span v-if="masteredOf(lesson.id)" class="lesson-status mastered" data-testid="lesson-mastered">{{ OVERVIEW.MASTERED_BADGE }}</span>
             <span v-if="content.statusOf(lesson.id) === 'learned'" class="lesson-status learned" role="img" :title="LEARN_VIEW.STATUS_COMPLETED" :aria-label="LEARN_VIEW.STATUS_COMPLETED">
               <MiIcon name="circle-check" />
             </span>
@@ -160,6 +173,7 @@ const quizCount = (id: string) => lessonPracticeQuestions(content.lessonOf(id)).
               <span class="lesson-info">
                 <span class="lesson-title">{{ lesson.title }}</span>
               </span>
+              <span v-if="masteredOf(lesson.id)" class="lesson-status mastered" data-testid="lesson-mastered">{{ OVERVIEW.MASTERED_BADGE }}</span>
               <span v-if="quizCount(lesson.id) > 0" class="lesson-status">{{ PRACTICE.questionCount(quizCount(lesson.id)) }}</span>
             </button>
           </div>
@@ -356,6 +370,13 @@ h3 {
 }
 .lesson-status.learned {
   color: var(--mi-success-deep);
+}
+.lesson-status.mastered {
+  padding: 2px var(--mi-sp-2);
+  border-radius: var(--mi-radius-ctl);
+  background: var(--mi-success-fill);
+  color: var(--mi-success-deep);
+  font-weight: 500;
 }
 @media (max-width: 1100px) {
   .lesson-info {

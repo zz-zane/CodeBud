@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useStudyStore, type StudyMemory } from '../../stores/study'
+import { useContentStore } from '../../stores/content'
+import { LANG_LABEL } from '../../lib/labels'
 import { STUDY_COPY } from '../../lib/study-copy'
 import MiIcon from '../base/MiIcon.vue'
 
 const study = useStudyStore()
+const content = useContentStore()
+const router = useRouter()
 
 const newText = ref('')
 const newSource = ref(STUDY_COPY.MEMORY.DEFAULT_SOURCE_MANUAL)
@@ -99,6 +104,44 @@ function formatTime(ts: number): string {
   const d = new Date(ts)
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`
 }
+
+interface RefChip {
+  key: string
+  kind: 'lesson' | 'chat' | 'user' | 'none'
+  label: string
+  lessonId?: string
+}
+
+function refChipsOf(item: StudyMemory): RefChip[] {
+  const refs = item.refs ?? []
+  if (refs.length === 0) {
+    return [{ key: 'none', kind: 'none', label: STUDY_COPY.MEMORY.REF_NONE }]
+  }
+  const d = new Date(item.updatedAt || Date.now())
+  return refs.map((r, i) => {
+    if (r.startsWith('lesson:')) {
+      const lessonId = r.slice('lesson:'.length)
+      const lesson = content.lessonOf(lessonId)
+      const label = lesson ? `${LANG_LABEL[lesson.lang]} · ${lesson.title}` : lessonId
+      return { key: `${r}-${i}`, kind: 'lesson', label, lessonId }
+    }
+    if (r.startsWith('chat:')) {
+      return {
+        key: `${r}-${i}`,
+        kind: 'chat',
+        label: STUDY_COPY.MEMORY.REF_CHAT(d.getMonth() + 1, d.getDate())
+      }
+    }
+    if (r === 'user') {
+      return { key: `${r}-${i}`, kind: 'user', label: STUDY_COPY.MEMORY.REF_USER }
+    }
+    return { key: `${r}-${i}`, kind: 'none', label: r }
+  })
+}
+
+function openLessonRef(lessonId: string): void {
+  void router.push(`/lesson/${lessonId}`)
+}
 </script>
 
 <template>
@@ -150,6 +193,19 @@ function formatTime(ts: number): string {
         <template v-else>
           <div class="pg-row-main">
             <div class="memory-content">{{ item.text }}</div>
+            <div class="memory-refs" data-testid="memory-refs">
+              <template v-for="chip in refChipsOf(item)" :key="chip.key">
+                <button
+                  v-if="chip.kind === 'lesson' && chip.lessonId"
+                  type="button"
+                  class="ref-chip is-lesson"
+                  @click="openLessonRef(chip.lessonId)"
+                >
+                  <MiIcon name="link" :size="12" />{{ chip.label }}
+                </button>
+                <span v-else class="ref-chip" :class="{ 'is-muted': chip.kind === 'none' }">{{ chip.label }}</span>
+              </template>
+            </div>
             <div class="pg-meta">
               <span class="meta-source" :title="STUDY_COPY.MEMORY.SOURCE_LABEL + ': ' + item.source">{{ item.source }}</span>
               <span>{{ formatTime(item.updatedAt) }}</span>
@@ -172,5 +228,10 @@ function formatTime(ts: number): string {
 .form-row { display: flex; align-items: center; justify-content: space-between; gap: var(--mi-sp-3); flex-wrap: wrap; }
 .source-input { flex: 1; max-width: 220px; }
 .memory-content { font-size: var(--mi-fs-body); line-height: 1.6; color: var(--mi-text); white-space: pre-wrap; word-break: break-word; }
+.memory-refs { display: flex; flex-wrap: wrap; gap: var(--mi-sp-1); margin-top: 2px; }
+.ref-chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px var(--mi-sp-2); border: 1px solid var(--mi-border); border-radius: var(--mi-radius-ctl); background: var(--mi-bg); color: var(--mi-text-2); font-family: var(--mi-font-family); font-size: var(--mi-fs-caption); }
+.ref-chip.is-lesson { border-color: var(--mi-blue-deep); background: var(--mi-blue-light); color: var(--mi-blue-ink); cursor: pointer; }
+.ref-chip.is-lesson:hover { background: var(--mi-card); }
+.ref-chip.is-muted { color: var(--mi-text-3); background: transparent; }
 .meta-source { max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 </style>

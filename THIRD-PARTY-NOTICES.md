@@ -1,6 +1,6 @@
 # 第三方开源组件声明
 
-**CodeBud（miai-biancheng）** · 版本 0.1.1 · 本文件 Generate 于 2026-11-14
+**CodeBud（miai-biancheng）** · 版本 0.2.0 · 本文件 Generate 于 2026-11-16
 
 > 🤖 **本文件由脚本自动生成，请勿手改。**
 > 生成命令：`npm run gen:notices`（源码见 `scripts/gen-third-party-notices.mjs`）
@@ -22,25 +22,26 @@ CodeBud用到了很多别人写好的开源库。这些库的许可证都要求�
 
 | 项目 | 数值 |
 |---|---|
-| 直接运行时依赖（`dependencies`） | 21 个 |
+| 直接运行时依赖（`dependencies`） | 22 个 |
 | 其中被打进分发产物的构建期依赖（`devDependencies`） | 2 个 |
-| 展开全部传递依赖后 | 74 个 |
-| 许可证原文总字节数 | 95,425 字节 |
+| 展开全部传递依赖后 | 89 个 |
+| 许可证原文总字节数 | 113,373 字节 |
 | 含 copyleft（GPL/AGPL/LGPL/MPL）的组件 | **0 个** |
 
 **协议分布**：
 
 | 许可证 | 组件数 | 性质 |
 |---|---|---|
-| MIT | 65 | 宽松，只需保留版权声明 |
+| MIT | 77 | 宽松，只需保留版权声明 |
 | BSD-3-Clause | 4 | 宽松，另加「不得用作者名背书」 |
+| ISC | 3 | 宽松，等同 MIT 的简化版 |
 | Apache-2.0 | 1 | 宽松，另需转载 NOTICE 文件、声明改动 |
 | 0BSD | 1 | 最宽松，**连版权声明都不要求保留** |
 | PSF-2.0 | 1 | 宽松（Python 基金会版） |
+| BlueOak-1.0.0 | 1 | — |
 | BSD-2-Clause | 1 | 宽松，只需保留版权声明 |
-| ISC | 1 | 宽松，等同 MIT 的简化版 |
 
-**结论**：**没有任何 copyleft 组件。** GPL/AGPL 那种「用了就得开源」的传染性许可证，在这 74 个包里**一个都没有**。全部是 MIT / BSD / ISC / Apache-2.0 / 0BSD / PSF 这类宽松许可，与本项目自身的 MIT 兼容。
+**结论**：**没有任何 copyleft 组件。** GPL/AGPL 那种「用了就得开源」的传染性许可证，在这 89 个包里**一个都没有**。全部是 MIT / BSD / ISC / Apache-2.0 / 0BSD / PSF 这类宽松许可，与本项目自身的 MIT 兼容。
 
 ---
 
@@ -63,6 +64,7 @@ CodeBud用到了很多别人写好的开源库。这些库的许可证都要求�
 | `animejs` | 4.5.0 | MIT | Copyright (c) 2025 Julian Garnier |
 | `echarts` | 6.1.0 | Apache-2.0 | Copyright 2017-2026 The Apache Software Foundation（摘自该包 NOTICE 文件） |
 | `electron` | 44.9.3 | MIT | Copyright (c) Electron contributors Copyright (c) 2013-2020 GitHub Inc. |
+| `electron-updater` | 6.8.11 | MIT | Copyright (c) 2015 Loopline Systems |
 | `highlight.js` | 11.12.0 | BSD-3-Clause | Copyright (c) 2006, Ivan Sagalaev. |
 | `iconv-lite` | 0.7.3 | MIT | Copyright (c) 2011 Alexander Shtuchkin |
 | `katex` | 0.19.1 | MIT | Copyright (c) 2013-2020 Khan Academy and other contributors |
@@ -113,17 +115,27 @@ CodeBud用到了很多别人写好的开源库。这些库的许可证都要求�
 | `@vue/shared` | 3.5.42 | MIT | Copyright (c) 2018-present, Yuxi (Evan) You |
 | `argparse` | 3.0.1 | PSF-2.0 | (该包未在 LICENSE 中声明版权行，见其 package.json 的 author 字段) |
 | `birpc` | 2.9.0 | MIT | Copyright (c) 2021 Anthony Fu <https://github.com/antfu> |
+| `builder-util-runtime` | 9.3.1 | MIT | Copyright (c) 2015 Loopline Systems |
 | `commander` | 5.1.0 | MIT | Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca> |
 | `copy-anything` | 4.1.0 | MIT | Copyright (c) 2018 Luca Ban - Mesqueeb |
 | `crelt` | 1.0.7 | MIT | Copyright (C) 2020 by Marijn Haverbeke <marijn@haverbeke.berlin> |
 | `csstype` | 3.2.3 | MIT | Copyright (c) 2017-2018 Fredrik Nicol |
+| `debug` | 4.4.3 | MIT | Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2018-2021 Josh Junon |
 | `entities` | 8.1.0 | BSD-2-Clause | Copyright (c) Felix Böhm |
 | `estree-walker` | 2.0.2 | MIT | Copyright (c) 2015-20 [these people](https://github.com/Rich-Harris/estree-walker/graphs/contributors) |
+| `fs-extra` | 10.1.0 | MIT | Copyright (c) 2011-2017 JP Richardson |
+| `graceful-fs` | 4.2.11 | ISC | Copyright (c) 2011-2022 Isaac Z. Schlueter, Ben Noordhuis, and Contributors |
 | `hookable` | 5.5.3 | MIT | Copyright (c) Pooya Parsa <pooya@pi0.io> |
+| `js-yaml` | 4.3.2 | MIT | Copyright (C) 2011-2015 by Vitaly Puzrin |
+| `jsonfile` | 6.2.1 | MIT | Copyright (c) 2012-2015, JP Richardson <jprichardson@gmail.com> |
+| `lazy-val` | 1.0.5 | MIT | Copyright (c) Vladimir Krivosheev |
 | `linkify-it` | 6.1.0 | MIT | Copyright (c) 2015 Vitaly Puzrin. |
+| `lodash.escaperegexp` | 4.1.2 | MIT | (该包未在 LICENSE 中声明版权行，见其 package.json 的 author 字段) |
+| `lodash.isequal` | 4.5.0 | MIT | (该包未在 LICENSE 中声明版权行，见其 package.json 的 author 字段) |
 | `magic-string` | 0.30.21 | MIT | Copyright 2018 Rich Harris |
 | `mdurl` | 2.1.0 | MIT | Copyright (c) 2015 Vitaly Puzrin, Alex Kocharin. Copyright Joyent, Inc. and other Node contributors. All rights reserved. |
 | `mitt` | 3.0.1 | MIT | Copyright (c) 2021 Jason Miller |
+| `ms` | 2.1.3 | MIT | Copyright (c) 2020 Vercel, Inc. |
 | `nanoid` | 3.3.18 | MIT | Copyright 2017 Andrey Sitnik <andrey@sitnik.ru> |
 | `perfect-debounce` | 1.0.0 | MIT | Copyright (c) Pooya Parsa <pooya@pi0.io> |
 | `picocolors` | 1.1.1 | ISC | Copyright (c) 2021-2024 Oleksii Raspopov, Kostiantyn Denysov, Anton Verinov |
@@ -131,14 +143,22 @@ CodeBud用到了很多别人写好的开源库。这些库的许可证都要求�
 | `punycode.js` | 2.3.1 | MIT | Copyright Mathias Bynens <https://mathiasbynens.be/> |
 | `rfdc` | 1.4.1 | MIT | Copyright 2019 "David Mark Clements <david.mark.clements@gmail.com>" |
 | `safer-buffer` | 2.1.2 | MIT | Copyright (c) 2018 Nikita Skovoroda <chalkerx@gmail.com> |
+| `sax` | 1.6.1 | BlueOak-1.0.0 | (该包未在 LICENSE 中声明版权行，见其 package.json 的 author 字段) |
+| `semver` | 7.8.5 | ISC | Copyright (c) Isaac Z. Schlueter and Contributors |
 | `source-map-js` | 1.2.1 | BSD-3-Clause | Copyright (c) 2009-2011, Mozilla Foundation and contributors |
 | `speakingurl` | 14.0.1 | BSD-3-Clause | Copyright (c) 2013-2017 Sascha Droste <pid@posteo.net> |
 | `style-mod` | 4.1.3 | MIT | Copyright (C) 2018 by Marijn Haverbeke <marijn@haverbeke.berlin> and others |
 | `superjson` | 2.2.6 | MIT | Copyright (c) 2020 Simon Knott and superjson contributors |
+| `tiny-typed-emitter` | 2.1.0 | MIT | Copyright (c) 2020 Zurab Benashvili (binier) <zura.bena@gmail.com> |
 | `tslib` | 2.3.0 | 0BSD | Copyright (c) Microsoft Corporation. |
 | `uc.micro` | 3.0.0 | MIT | Copyright Mathias Bynens <https://mathiasbynens.be/> |
+| `universalify` | 2.0.1 | MIT | Copyright (c) 2017, Ryan Zimmerman <opensrc@ryanzim.com> |
 | `w3c-keyname` | 2.2.8 | MIT | Copyright (C) 2016 by Marijn Haverbeke <marijn@haverbeke.berlin> and others |
 | `zrender` | 6.1.0 | BSD-3-Clause | Copyright (c) 2017, Baidu Inc. |
+
+> 📌 **补录的许可证正文（1 个）**：下面这些包的 npm tarball 里**没有** LICENSE 文件，但 `package.json` 声明 MIT。为了不静默少列，生成脚本从 `scripts/licenses/` 读取标准 MIT 正文补上，版权行取自各包 `package.json` 的 `author` 字段。这些正文**不是从原包复制的**，详见 `scripts/licenses/README.md`：
+>
+> - `lazy-val@1.0.5` —— Copyright (c) Vladimir Krivosheev
 
 ---
 
@@ -465,7 +485,75 @@ The following files embed [d3.js](https://github.com/d3/d3) BSD 3-Clause:
 See `/licenses/LICENSE-d3` for details of the license.
 ```
 
-### 4.3 BSD-2-Clause —— 适用于 1 个组件
+### 4.3 BlueOak-1.0.0 —— 适用于 1 个组件
+
+**适用组件**：`sax@1.6.1`
+
+**各组件版权行**：
+
+- `sax@1.6.1` —— (该包未在 LICENSE 中声明版权行，见其 package.json 的 author 字段)
+
+**许可证正文**（照录 `node_modules\sax\LICENSE.md`，**一字未改**）：
+
+```
+# Blue Oak Model License
+
+Version 1.0.0
+
+## Purpose
+
+This license gives everyone as much permission to work with
+this software as possible, while protecting contributors
+from liability.
+
+## Acceptance
+
+In order to receive this license, you must agree to its
+rules.  The rules of this license are both obligations
+under that agreement and conditions to your license.
+You must not do anything with this software that triggers
+a rule that you cannot or will not follow.
+
+## Copyright
+
+Each contributor licenses you to do everything with this
+software that would otherwise infringe that contributor's
+copyright in it.
+
+## Notices
+
+You must ensure that everyone who gets a copy of
+any part of this software from you, with or without
+changes, also gets the text of this license or a link to
+<https://blueoakcouncil.org/license/1.0.0>.
+
+## Excuse
+
+If anyone notifies you in writing that you have not
+complied with [Notices](#notices), you can keep your
+license by taking all practical steps to comply within 30
+days after the notice.  If you do not do so, your license
+ends immediately.
+
+## Patent
+
+Each contributor licenses you to do everything with this
+software that would otherwise infringe any patent claims
+they can license or become able to license.
+
+## Reliability
+
+No contributor can revoke this license.
+
+## No Liability
+
+***As far as the law allows, this software comes as is,
+without any warranty or condition, and no contributor
+will be liable to anyone for any damages related to this
+software or this license, under any kind of legal claim.***
+```
+
+### 4.4 BSD-2-Clause —— 适用于 1 个组件
 
 **适用组件**：`entities@8.1.0`
 
@@ -489,7 +577,7 @@ THIS IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRE
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-### 4.4 BSD-3-Clause —— 适用于 2 个组件
+### 4.5 BSD-3-Clause —— 适用于 2 个组件
 
 **适用组件**：`zrender@6.1.0`、`highlight.js@11.12.0`
 
@@ -534,7 +622,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 > 上面的正文里带的是 `zrender` 自己的版权行；其余 1 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.5 BSD-3-Clause —— 适用于 1 个组件
+### 4.6 BSD-3-Clause —— 适用于 1 个组件
 
 **适用组件**：`speakingurl@14.0.1`
 
@@ -559,7 +647,7 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-### 4.6 BSD-3-Clause —— 适用于 1 个组件
+### 4.7 BSD-3-Clause —— 适用于 1 个组件
 
 **适用组件**：`source-map-js@1.2.1`
 
@@ -599,7 +687,38 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-### 4.7 ISC —— 适用于 1 个组件
+### 4.8 ISC —— 适用于 2 个组件
+
+**适用组件**：`graceful-fs@4.2.11`、`semver@7.8.5`
+
+**各组件版权行**：
+
+- `graceful-fs@4.2.11` —— Copyright (c) 2011-2022 Isaac Z. Schlueter, Ben Noordhuis, and Contributors
+- `semver@7.8.5` —— Copyright (c) Isaac Z. Schlueter and Contributors
+
+**许可证正文**（照录 `node_modules\graceful-fs\LICENSE`，**一字未改**）：
+
+```
+The ISC License
+
+Copyright (c) 2011-2022 Isaac Z. Schlueter, Ben Noordhuis, and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+```
+
+> 上面的正文里带的是 `graceful-fs` 自己的版权行；其余 1 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
+
+### 4.9 ISC —— 适用于 1 个组件
 
 **适用组件**：`picocolors@1.1.1`
 
@@ -627,7 +746,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ```
 
-### 4.8 MIT —— 适用于 15 个组件
+### 4.10 MIT —— 适用于 15 个组件
 
 **适用组件**：`@codemirror/autocomplete@6.20.3`、`@codemirror/language@6.12.4`、`@codemirror/state@6.7.4`、`@marijn/find-cluster-break@1.0.4`、`@codemirror/view@6.43.11`、`@lezer/common@1.5.2`、`@lezer/highlight@1.2.3`、`@lezer/lr@1.4.10`、`@codemirror/commands@6.11.0`、`@codemirror/lang-cpp@6.0.3`、`@lezer/cpp@1.1.6`、`@codemirror/lang-java@6.0.2`、`@lezer/java@1.1.4`、`@codemirror/lang-python@6.2.1`、`@lezer/python@1.1.19`
 
@@ -677,12 +796,14 @@ THE SOFTWARE.
 
 > 上面的正文里带的是 `@codemirror/autocomplete` 自己的版权行；其余 14 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.9 MIT —— 适用于 11 个组件
+### 4.11 MIT —— 适用于 13 个组件
 
-**适用组件**：`@vue/devtools-api@7.7.10`、`@vue/devtools-kit@7.7.10`、`birpc@2.9.0`、`mitt@3.0.1`、`perfect-debounce@1.0.0`、`superjson@2.2.6`、`copy-anything@4.1.0`、`@vue/devtools-shared@7.7.10`、`splitpanes@4.1.2`、`unpdf@2.1.0`、`safer-buffer@2.1.2`
+**适用组件**：`lazy-val@1.0.5`、`tiny-typed-emitter@2.1.0`、`@vue/devtools-api@7.7.10`、`@vue/devtools-kit@7.7.10`、`birpc@2.9.0`、`mitt@3.0.1`、`perfect-debounce@1.0.0`、`superjson@2.2.6`、`copy-anything@4.1.0`、`@vue/devtools-shared@7.7.10`、`splitpanes@4.1.2`、`unpdf@2.1.0`、`safer-buffer@2.1.2`
 
 **各组件版权行**：
 
+- `lazy-val@1.0.5` —— Copyright (c) Vladimir Krivosheev
+- `tiny-typed-emitter@2.1.0` —— Copyright (c) 2020 Zurab Benashvili (binier) <zura.bena@gmail.com>
 - `@vue/devtools-api@7.7.10` —— Copyright (c) 2023 webfansplz
 - `@vue/devtools-kit@7.7.10` —— Copyright (c) 2023 webfansplz
 - `birpc@2.9.0` —— Copyright (c) 2021 Anthony Fu <https://github.com/antfu>
@@ -695,12 +816,12 @@ THE SOFTWARE.
 - `unpdf@2.1.0` —— Copyright (c) 2023-PRESENT Johann Schopplich
 - `safer-buffer@2.1.2` —— Copyright (c) 2018 Nikita Skovoroda <chalkerx@gmail.com>
 
-**许可证正文**（照录 `node_modules\@vue\devtools-api\LICENSE`，**一字未改**）：
+**许可证正文**（补录的标准 MIT 模板，不是从原包复制的：`scripts\licenses\lazy-val-MIT.txt`）：
 
 ```
 MIT License
 
-Copyright (c) 2023 webfansplz
+Copyright (c) Vladimir Krivosheev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -721,9 +842,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-> 上面的正文里带的是 `@vue/devtools-api` 自己的版权行；其余 10 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
+> 上面的正文里带的是 `lazy-val` 自己的版权行；其余 12 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.10 MIT —— 适用于 10 个组件
+### 4.12 MIT —— 适用于 10 个组件
 
 **适用组件**：`vue@3.5.42`、`@vue/shared@3.5.42`、`@vue/runtime-dom@3.5.42`、`@vue/runtime-core@3.5.42`、`@vue/reactivity@3.5.42`、`@vue/compiler-sfc@3.5.42`、`@vue/compiler-core@3.5.42`、`@vue/compiler-dom@3.5.42`、`@vue/compiler-ssr@3.5.42`、`@vue/server-renderer@3.5.42`
 
@@ -768,7 +889,49 @@ THE SOFTWARE.
 
 > 上面的正文里带的是 `vue` 自己的版权行；其余 9 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.11 MIT —— 适用于 4 个组件
+### 4.13 MIT —— 适用于 7 个组件
+
+**适用组件**：`electron-updater@6.8.11`、`builder-util-runtime@9.3.1`、`ms@2.1.3`、`katex@0.19.1`、`pinia@3.0.4`、`hookable@5.5.3`、`vue-router@4.6.4`
+
+**各组件版权行**：
+
+- `electron-updater@6.8.11` —— Copyright (c) 2015 Loopline Systems
+- `builder-util-runtime@9.3.1` —— Copyright (c) 2015 Loopline Systems
+- `ms@2.1.3` —— Copyright (c) 2020 Vercel, Inc.
+- `katex@0.19.1` —— Copyright (c) 2013-2020 Khan Academy and other contributors
+- `pinia@3.0.4` —— Copyright (c) 2019-present Eduardo San Martin Morote
+- `hookable@5.5.3` —— Copyright (c) Pooya Parsa <pooya@pi0.io>
+- `vue-router@4.6.4` —— Copyright (c) 2019-present Eduardo San Martin Morote
+
+**许可证正文**（照录 `node_modules\electron-updater\LICENSE`，**一字未改**）：
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2015 Loopline Systems
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+> 上面的正文里带的是 `electron-updater` 自己的版权行；其余 6 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
+
+### 4.14 MIT —— 适用于 4 个组件
 
 **适用组件**：`crelt@1.0.7`、`style-mod@4.1.3`、`w3c-keyname@2.2.8`、`@babel/parser@7.29.8`
 
@@ -805,46 +968,7 @@ THE SOFTWARE.
 
 > 上面的正文里带的是 `crelt` 自己的版权行；其余 3 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.12 MIT —— 适用于 4 个组件
-
-**适用组件**：`katex@0.19.1`、`pinia@3.0.4`、`hookable@5.5.3`、`vue-router@4.6.4`
-
-**各组件版权行**：
-
-- `katex@0.19.1` —— Copyright (c) 2013-2020 Khan Academy and other contributors
-- `pinia@3.0.4` —— Copyright (c) 2019-present Eduardo San Martin Morote
-- `hookable@5.5.3` —— Copyright (c) Pooya Parsa <pooya@pi0.io>
-- `vue-router@4.6.4` —— Copyright (c) 2019-present Eduardo San Martin Morote
-
-**许可证正文**（照录 `node_modules\katex\LICENSE`，**一字未改**）：
-
-```
-The MIT License (MIT)
-
-Copyright (c) 2013-2020 Khan Academy and other contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-> 上面的正文里带的是 `katex` 自己的版权行；其余 3 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
-
-### 4.13 MIT —— 适用于 4 个组件
+### 4.15 MIT —— 适用于 4 个组件
 
 **适用组件**：`uc.micro@3.0.0`、`punycode.js@2.3.1`、`iconv-lite@0.7.3`、`electron@44.9.3`
 
@@ -882,7 +1006,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 > 上面的正文里带的是 `uc.micro` 自己的版权行；其余 3 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.14 MIT —— 适用于 3 个组件
+### 4.16 MIT —— 适用于 3 个组件
 
 **适用组件**：`@formkit/auto-animate@0.10.0`、`estree-walker@2.0.2`、`magic-string@0.30.21`
 
@@ -906,7 +1030,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 > 上面的正文里带的是 `@formkit/auto-animate` 自己的版权行；其余 2 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.15 MIT —— 适用于 3 个组件
+### 4.17 MIT —— 适用于 3 个组件
 
 **适用组件**：`markdown-it@15.0.1`、`linkify-it@6.1.0`、`markdown-it-container@4.0.0`
 
@@ -945,7 +1069,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 > 上面的正文里带的是 `markdown-it` 自己的版权行；其余 2 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.16 MIT —— 适用于 3 个组件
+### 4.18 MIT —— 适用于 3 个组件
 
 **适用组件**：`@babel/types@7.29.8`、`@babel/helper-string-parser@7.29.7`、`@babel/helper-validator-identifier@7.29.7`
 
@@ -984,7 +1108,38 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 > 上面的正文里带的是 `@babel/types` 自己的版权行；其余 2 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.17 MIT —— 适用于 2 个组件
+### 4.19 MIT —— 适用于 2 个组件
+
+**适用组件**：`fs-extra@10.1.0`、`jsonfile@6.2.1`
+
+**各组件版权行**：
+
+- `fs-extra@10.1.0` —— Copyright (c) 2011-2017 JP Richardson
+- `jsonfile@6.2.1` —— Copyright (c) 2012-2015, JP Richardson <jprichardson@gmail.com>
+
+**许可证正文**（照录 `node_modules\fs-extra\LICENSE`，**一字未改**）：
+
+```
+(The MIT License)
+
+Copyright (c) 2011-2017 JP Richardson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+(the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify,
+ merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+> 上面的正文里带的是 `fs-extra` 自己的版权行；其余 1 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
+
+### 4.20 MIT —— 适用于 2 个组件
 
 **适用组件**：`postcss@8.5.28`、`nanoid@3.3.18`
 
@@ -1020,7 +1175,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 > 上面的正文里带的是 `postcss` 自己的版权行；其余 1 个组件的版权行在上面的清单里，两者合起来构成完整声明（这正是 MIT/BSD 要求的「版权声明 + 许可声明」两件套）。
 
-### 4.18 MIT —— 适用于 1 个组件
+### 4.21 MIT —— 适用于 1 个组件
 
 **适用组件**：`animejs@4.5.0`
 
@@ -1042,7 +1197,226 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-### 4.19 MIT —— 适用于 1 个组件
+### 4.22 MIT —— 适用于 1 个组件
+
+**适用组件**：`universalify@2.0.1`
+
+**各组件版权行**：
+
+- `universalify@2.0.1` —— Copyright (c) 2017, Ryan Zimmerman <opensrc@ryanzim.com>
+
+**许可证正文**（照录 `node_modules\universalify\LICENSE`，**一字未改**）：
+
+```
+(The MIT License)
+
+Copyright (c) 2017, Ryan Zimmerman <opensrc@ryanzim.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the 'Software'), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+### 4.23 MIT —— 适用于 1 个组件
+
+**适用组件**：`js-yaml@4.3.2`
+
+**各组件版权行**：
+
+- `js-yaml@4.3.2` —— Copyright (C) 2011-2015 by Vitaly Puzrin
+
+**许可证正文**（照录 `node_modules\js-yaml\LICENSE`，**一字未改**）：
+
+```
+(The MIT License)
+
+Copyright (C) 2011-2015 by Vitaly Puzrin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+### 4.24 MIT —— 适用于 1 个组件
+
+**适用组件**：`lodash.escaperegexp@4.1.2`
+
+**各组件版权行**：
+
+- `lodash.escaperegexp@4.1.2` —— (该包未在 LICENSE 中声明版权行，见其 package.json 的 author 字段)
+
+**许可证正文**（照录 `node_modules\lodash.escaperegexp\LICENSE`，**一字未改**）：
+
+```
+Copyright jQuery Foundation and other contributors <https://jquery.org/>
+
+Based on Underscore.js, copyright Jeremy Ashkenas,
+DocumentCloud and Investigative Reporters & Editors <http://underscorejs.org/>
+
+This software consists of voluntary contributions made by many
+individuals. For exact contribution history, see the revision history
+available at https://github.com/lodash/lodash
+
+The following license applies to all parts of this software except as
+documented below:
+
+====
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+====
+
+Copyright and related rights for sample code are waived via CC0. Sample
+code is defined as all source code displayed within the prose of the
+documentation.
+
+CC0: http://creativecommons.org/publicdomain/zero/1.0/
+
+====
+
+Files located in the node_modules and vendor directories are externally
+maintained libraries used by this software which have their own
+licenses; we recommend you read them, as their terms may differ from the
+terms above.
+```
+
+### 4.25 MIT —— 适用于 1 个组件
+
+**适用组件**：`lodash.isequal@4.5.0`
+
+**各组件版权行**：
+
+- `lodash.isequal@4.5.0` —— (该包未在 LICENSE 中声明版权行，见其 package.json 的 author 字段)
+
+**许可证正文**（照录 `node_modules\lodash.isequal\LICENSE`，**一字未改**）：
+
+```
+Copyright JS Foundation and other contributors <https://js.foundation/>
+
+Based on Underscore.js, copyright Jeremy Ashkenas,
+DocumentCloud and Investigative Reporters & Editors <http://underscorejs.org/>
+
+This software consists of voluntary contributions made by many
+individuals. For exact contribution history, see the revision history
+available at https://github.com/lodash/lodash
+
+The following license applies to all parts of this software except as
+documented below:
+
+====
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+====
+
+Copyright and related rights for sample code are waived via CC0. Sample
+code is defined as all source code displayed within the prose of the
+documentation.
+
+CC0: http://creativecommons.org/publicdomain/zero/1.0/
+
+====
+
+Files located in the node_modules and vendor directories are externally
+maintained libraries used by this software which have their own
+licenses; we recommend you read them, as their terms may differ from the
+terms above.
+```
+
+### 4.26 MIT —— 适用于 1 个组件
+
+**适用组件**：`debug@4.4.3`
+
+**各组件版权行**：
+
+- `debug@4.4.3` —— Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2018-2021 Josh Junon
+
+**许可证正文**（照录 `node_modules\debug\LICENSE`，**一字未改**）：
+
+```
+(The MIT License)
+
+Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
+Copyright (c) 2018-2021 Josh Junon
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+and associated documentation files (the 'Software'), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial
+portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+### 4.27 MIT —— 适用于 1 个组件
 
 **适用组件**：`commander@5.1.0`
 
@@ -1077,7 +1451,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-### 4.20 MIT —— 适用于 1 个组件
+### 4.28 MIT —— 适用于 1 个组件
 
 **适用组件**：`mdurl@2.1.0`
 
@@ -1135,7 +1509,7 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
 ```
 
-### 4.21 MIT —— 适用于 1 个组件
+### 4.29 MIT —— 适用于 1 个组件
 
 **适用组件**：`rfdc@1.4.1`
 
@@ -1163,7 +1537,7 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 IN THE SOFTWARE.
 ```
 
-### 4.22 MIT —— 适用于 1 个组件
+### 4.30 MIT —— 适用于 1 个组件
 
 **适用组件**：`csstype@3.2.3`
 
@@ -1195,7 +1569,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### 4.23 MIT —— 适用于 1 个组件
+### 4.31 MIT —— 适用于 1 个组件
 
 **适用组件**：`@jridgewell/sourcemap-codec@1.6.0`
 
@@ -1227,7 +1601,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### 4.24 PSF-2.0 —— 适用于 1 个组件
+### 4.32 PSF-2.0 —— 适用于 1 个组件
 
 **适用组件**：`argparse@3.0.1`
 

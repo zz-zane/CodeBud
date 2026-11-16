@@ -1,0 +1,38 @@
+{
+  "id": "a8c68bf6-7fd2-4e13-bda4-28fa5392f956",
+  "title": "递归调用栈",
+  "question": "递归调用为什么会返回？",
+  "source": "ai",
+  "createdAt": 1,
+  "codeVerified": null,
+  "scenes": [
+    { "kind": "card", "role": "problem", "heading": "递归调用", "body": "递归调用为什么会返回？", "say": "我们看看递归调用如何在满足条件后逐层返回结果。" },
+    { "kind": "card", "role": "analogy", "heading": "叠放的盘子", "body": "每次调用像在上面放一个盘子。", "say": "把调用想成叠盘子，最后放上的盘子先被拿下来。" },
+    { "kind": "array", "title": "调用栈", "steps": [
+      { "say": "首先进入参数为二的调用，把它放在调用栈里。", "items": ["f(2)"], "highlights": [0] },
+      { "say": "接着进入参数为一的调用，在原调用上面再加一层。", "items": ["f(2)", "f(1)"], "highlights": [1] },
+      { "say": "现在进入参数为零的调用，它直接满足结束条件。", "items": ["f(2)", "f(1)", "f(0)"], "highlights": [2] },
+      { "say": "零这一层返回后被移除，执行回到上一层调用。", "items": ["f(2)", "f(1)"], "highlights": [1] },
+      { "say": "上一层也返回，执行继续回到最初的那层调用。", "items": ["f(2)"], "highlights": [0] }
+    ] },
+    { "kind": "trace", "title": "Python 递归逐行执行", "lang": "python", "code": [
+      "def f(n):",
+      "    print('enter', n)",
+      "    if n == 0:",
+      "        return 0",
+      "    res = n + f(n - 1)",
+      "    print('exit', n)",
+      "    return res",
+      "",
+      "print(f(2))"
+    ], "expectedOutput": "enter 2\nenter 1\nenter 0\nexit 1\nexit 2\n3\n", "steps": [
+      { "say": "第一次调用参数为二，先打印进入提示再准备继续向下调用。", "at": 2, "vars": [{ "name": "n", "value": "2" }], "stack": ["f(2)"], "out": "enter 2\n" },
+      { "say": "一路递进到参数为零这一层，满足条件并准备返回零。", "at": 4, "vars": [{ "name": "n", "value": "0" }], "stack": ["f(2)", "f(1)", "f(0)"], "out": "enter 1\nenter 0\n" },
+      { "say": "参数为一这一层拿到下层结果后算出总和，并打印退出提示。", "at": 6, "vars": [{ "name": "n", "value": "1" }, { "name": "res", "value": "1" }], "stack": ["f(2)", "f(1)"], "out": "exit 1\n" },
+      { "say": "最后回到最外层并打印最终返回值三，整个递归调用结束。", "at": 9, "vars": [{ "name": "n", "value": "2" }, { "name": "res", "value": "3" }], "stack": [], "out": "exit 2\n3\n" }
+    ] },
+    { "kind": "card", "role": "pitfall", "heading": "常见错误", "body": "缺少结束条件会让调用不断增加。", "say": "如果没有能够到达的结束条件，盘子就会一直叠高。" },
+    { "kind": "card", "role": "summary", "heading": "回顾", "body": "到达结束条件后，调用按相反顺序返回。", "say": "总结一下，递归先逐层进入，再从最后一层开始返回。" }
+  ],
+  "checks": [{ "stem": "满足结束条件后会怎样？", "options": ["开始逐层返回", "永远继续调用", "跳过所有调用"], "answer": 0, "explanation": "结束条件让最深一层返回。" }]
+}

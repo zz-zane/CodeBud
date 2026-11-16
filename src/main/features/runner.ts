@@ -8,13 +8,13 @@ import type { EnvReport } from '../../shared/types'
 import { RUNNER, EXPORT_MARKDOWN_PICK } from '../../shared/copy'
 import { codeFingerprint } from '../../shared/code-hash'
 import { refreshLangs, nativeEnv } from '../env/detect'
-import { cancelCurrentRun, enqueueRun, isCurrentRunCanceled, killAllLiveChildren, MAX_CODE_BYTES, MAX_STDIN_BYTES, resetRunCancel } from '../runner/runner'
+import { enqueueRun, killAllLiveChildren, MAX_CODE_BYTES, MAX_STDIN_BYTES } from '../runner/runner'
 import { enqueueNativeRun, nativeGateReason } from '../runner/native'
 import { exportCodeToFile, openInNativeIde } from '../runner/native-ide'
 import { createNativeWatcher, type NativeWatcher } from '../runner/native-watch'
 import { detectIdes } from '../runner/detect-ide'
 import type { ExportCodeResult, IdeDetectResult, IdeOpenResult, LangOfCode, MarkdownExportFile, MarkdownExportResult, RunRequest } from '../../shared/types'
-import { DEFAULT_APP_CONFIG, LANG_OF_CODE } from '../../shared/types'
+import { LANG_OF_CODE } from '../../shared/types'
 import type { MainFeature } from '../context'
 
 /**
@@ -52,7 +52,8 @@ let nativeWatcherRef: NativeWatcher | null = null
 export const runnerFeature: MainFeature = {
   name: 'runner',
   register(ctx) {
-    const { configStore, readConfig, commitEnvReport } = ctx
+    const { readConfig, commitEnvReport } = ctx
+    let activeRun: AbortController | null = null
 
     /**
      * 原生编译路径的运行观察器（native-watch）：用户把练习场代码「本地 IDE 打开」
@@ -105,8 +106,13 @@ export const runnerFeature: MainFeature = {
     // **不许有任何一条「这条不通就换那条」的分支**（红线 17）：原生失败必须原样报告失败，
     // 静默换回去的后果是用户以为自己跑的是自己装的编译器，其实不是。
     handle(IPC.runnerRun, async (_e, req: RunRequest) => {
-      // 每次发起新的运行请求，重置取消标志
-      resetRunCancel()
+      const controller = new AbortController()
+      activeRun = controller
+      const canceled = () => ({
+        ok: false as const, phase: 'compile' as const, stdout: '', stderr: '', exitCode: null,
+        timedOut: false, truncated: false, canceled: true, message: RUNNER.CANCELED, durationMs: 0
+      })
+      try {
 
       if (
         !req ||
@@ -125,7 +131,7 @@ export const runnerFeature: MainFeature = {
         throw new Error('stdin too large')
       }
 
-      const cfg = configStore.read() ?? structuredClone(DEFAULT_APP_CONFIG)
+      const cfg = readConfig(false)
 
       const gate = nativeGateReason(cfg.nativeRunEnabled === true, req.native)
       if (gate !== null) throw new Error(gate)
@@ -171,20 +177,7 @@ export const runnerFeature: MainFeature = {
       }
 
       // 复核期间若用户已叫停，立即返回已取消，不进队列
-      if (isCurrentRunCanceled()) {
-        return {
-          ok: false,
-          phase: 'compile',
-          stdout: '',
-          stderr: '',
-          exitCode: null,
-          timedOut: false,
-          truncated: false,
-          canceled: true,
-          message: RUNNER.CANCELED,
-          durationMs: 0
-        }
-      }
+      if (controller.signal.aborted) return canceled()
 
       if (rechecked.length > 0 && !timedOut) {
         commitEnvReport(report, rechecked, startedAt)
@@ -204,13 +197,21 @@ export const runnerFeature: MainFeature = {
 
       const full = { ...req, timeoutSec: req.timeoutSec ?? cfg.runTimeoutSec }
       if (req.native === true) {
-        return enqueueNativeRun(full, report, { env: await nativeEnv() })
+        return await enqueueNativeRun(full, report, { env: await nativeEnv() }, controller.signal)
       }
-      return enqueueRun(full, report)
+      return await enqueueRun(full, report, controller.signal)
+      } catch (error) {
+        if (controller.signal.aborted) return canceled()
+        throw error
+      } finally {
+        if (activeRun === controller) activeRun = null
+      }
     })
 
     handle(IPC.runnerCancel, () => {
-      return cancelCurrentRun()
+      if (!activeRun) return false
+      activeRun.abort()
+      return true
     })
 
     // ---- 本地 IDE 联动（2026-10-01）：练习场「本地 IDE 打开 / 导出并复制路径」+ 设置页选程序

@@ -14,8 +14,8 @@ import type { StudyPlan } from '../study-companion'
 import type { Cet6Meta, Cet6Record } from '../cet6'
 
 const task = (id: string, status: 'todo' | 'doing' | 'done' = 'todo') => ({ id, title: id, description: '', status })
-const plan = (id: string, createdAt: number, statuses: Array<'todo' | 'doing' | 'done'>): StudyPlan => ({
-  id, title: id, materialId: 'm', createdAt, source: 'ai', tasks: statuses.map((s, i) => task(`${id}-${i}`, s))
+const plan = (id: string, createdAt: number, statuses: Array<'todo' | 'doing' | 'done'>, draft = false): StudyPlan => ({
+  id, title: id, materialId: 'm', createdAt, source: 'ai', draft, tasks: statuses.map((s, i) => task(`${id}-${i}`, s))
 })
 
 describe('estimateMinutes', () => {
@@ -99,9 +99,15 @@ describe('planDay', () => {
 
 describe('pickActivePlan / nextTasks / planProgress', () => {
   it('空 → null', () => expect(pickActivePlan([])).toBeNull())
-  it('全部完成的计划不算；取 createdAt 最大', () => {
-    const picked = pickActivePlan([plan('old', 1, ['todo']), plan('done', 9, ['done', 'done']), plan('new', 5, ['done', 'doing'])])
+  it('全部完成的计划不算；取 createdAt 最大；草稿不参与', () => {
+    const picked = pickActivePlan([
+      plan('old', 1, ['todo']),
+      plan('done', 9, ['done', 'done']),
+      plan('draft-newest', 20, ['todo'], true),
+      plan('new', 5, ['done', 'doing'])
+    ])
     expect(picked?.id).toBe('new')
+    expect(pickActivePlan([plan('only-draft', 10, ['todo'], true)])).toBeNull()
   })
   it('没有任务的计划不算', () => expect(pickActivePlan([plan('empty', 5, [])])).toBeNull())
   it('createdAt 相同取靠前', () => expect(pickActivePlan([plan('a', 5, ['todo']), plan('b', 5, ['todo'])])?.id).toBe('a'))

@@ -13,6 +13,7 @@ import { toast } from '../components/base/toast'
 import { CET6 } from '../lib/copy'
 import { assetBase } from '../lib/asset-base'
 import { useProgressStore } from './progress'
+import { DATA_STORE } from '../../../shared/copy'
 
 export const CET6_SAVE_DEBOUNCE_MS = 400
 
@@ -29,10 +30,13 @@ export const useCet6Store = defineStore('cet6', () => {
   const record = ref<Cet6Record>(emptyRecord())
   const marks = ref<Set<string>>(new Set())
   const lastMode = ref<Cet6Mode>('practice')
+  const grading = ref<Record<string, boolean>>({})
+  const gradeError = ref<Record<string, string>>({})
   /** 做题页是否挂载（由 Cet6ExamView 开关）；考试锁只在做题页存在时生效 */
   const examPageActive = ref(false)
 
   let loadRequest = 0
+  let attemptRevision = 0
   let saveTimer: ReturnType<typeof setTimeout> | null = null
 
   /** 考试锁（docs/27 §8.1）：考试模式、未交卷、做题页挂载中。App.vue / AiContextMenu / 选词工具条读它 */
@@ -61,8 +65,11 @@ export const useCet6Store = defineStore('cet6', () => {
       records.value = s.records
       media.value = s.media
       lastMode.value = s.lastMode
+      if (s.readOnlyNewer) toast(DATA_STORE.NEWER_VERSION, 'warn', 8000)
     } catch (err) {
       console.error('[cet6] getState failed', err)
+      if (err instanceof Error && err.message.includes(DATA_STORE.NEWER_VERSION)) toast(DATA_STORE.NEWER_VERSION, 'error', 8000)
+      else if (err instanceof Error && err.message.includes(DATA_STORE.UNREADABLE)) toast(DATA_STORE.UNREADABLE, 'error', 8000)
     }
   }
 
@@ -78,11 +85,14 @@ export const useCet6Store = defineStore('cet6', () => {
     } catch (err) {
       lastMode.value = prev
       console.error('[cet6] setLastMode failed', err)
+      if (err instanceof Error && err.message.includes(DATA_STORE.NEWER_VERSION)) toast(DATA_STORE.NEWER_VERSION, 'error', 8000)
     }
   }
 
   function snapshot(): Cet6Record {
-    return { answers: { ...record.value.answers }, marks: [...marks.value], submitted: record.value.submitted, seconds: record.value.seconds, mode: record.value.mode }
+    const out: Cet6Record = { answers: { ...record.value.answers }, marks: [...marks.value], submitted: record.value.submitted, seconds: record.value.seconds, mode: record.value.mode }
+    if (record.value.aiGrades) out.aiGrades = { ...record.value.aiGrades }
+    return out
   }
 
   /** 立刻写当前卷（切卷、离开路由、beforeunload、交卷） */
@@ -99,7 +109,7 @@ export const useCet6Store = defineStore('cet6', () => {
       await window.miai.cet6.saveRecord(cur.id, toIpc(snap))
     } catch (err) {
       console.error('[cet6] save failed', err)
-      toast(CET6.SAVE_FAILED, 'error')
+      toast(err instanceof Error && err.message.includes(DATA_STORE.NEWER_VERSION) ? DATA_STORE.NEWER_VERSION : CET6.SAVE_FAILED, 'error')
     }
   }
 
@@ -122,8 +132,10 @@ export const useCet6Store = defineStore('cet6', () => {
       // 快速切卷时，较晚回来的旧响应不能盖掉用户最后选的那套
       if (request !== loadRequest) return
       const saved = records.value[id] ?? emptyRecord(mode)
-      record.value = { ...saved, answers: { ...saved.answers } }
+      record.value = { ...saved, answers: { ...saved.answers }, aiGrades: saved.aiGrades ? { ...saved.aiGrades } : undefined }
       marks.value = new Set(saved.marks)
+      grading.value = {}
+      gradeError.value = {}
       exam.value = data
     } catch (err) {
       if (request === loadRequest) {
@@ -181,6 +193,7 @@ export const useCet6Store = defineStore('cet6', () => {
   async function reset(mode: Cet6Mode = 'practice'): Promise<boolean> {
     const cur = exam.value
     if (!cur) return false
+    attemptRevision++
     try {
       await window.miai.cet6.resetRecord(cur.id)
     } catch (err) {
@@ -197,12 +210,59 @@ export const useCet6Store = defineStore('cet6', () => {
     records.value = rest
     record.value = emptyRecord(mode)
     marks.value = new Set()
+    grading.value = {}
+    gradeError.value = {}
     return true
+  }
+
+  async function gradeSubjective(input: {
+    questionId: string
+    kind: 'writing' | 'translation'
+    prompt: string
+    answer: string
+  }): Promise<boolean> {
+    const cur = exam.value
+    if (!cur) return false
+    const { questionId } = input
+    const revision = attemptRevision
+    const answer = input.answer
+    grading.value = { ...grading.value, [questionId]: true }
+    const nextErr = { ...gradeError.value }
+    delete nextErr[questionId]
+    gradeError.value = nextErr
+    try {
+      const res = await window.miai.cet6.gradeSubjective({
+        examId: cur.id,
+        questionId,
+        kind: input.kind,
+        prompt: input.prompt,
+        answer
+      })
+      if (revision !== attemptRevision || exam.value?.id !== cur.id || !record.value.submitted || record.value.answers[questionId] !== answer) return false
+      if (!res.ok) {
+        gradeError.value = { ...gradeError.value, [questionId]: CET6.GRADE_FAILED }
+        return false
+      }
+      if (exam.value?.id !== cur.id) return true
+      const nextGrades = { ...(record.value.aiGrades ?? {}), [questionId]: res.grade }
+      const updated: Cet6Record = { ...record.value, aiGrades: nextGrades }
+      record.value = updated
+      records.value = { ...records.value, [cur.id]: { ...updated, answers: { ...updated.answers }, aiGrades: { ...nextGrades } } }
+      return true
+    } catch (err) {
+      console.error('[cet6] gradeSubjective failed', err)
+      gradeError.value = { ...gradeError.value, [questionId]: CET6.GRADE_FAILED }
+      return false
+    } finally {
+      const nextGrading = { ...grading.value }
+      delete nextGrading[questionId]
+      grading.value = nextGrading
+    }
   }
 
   return {
     metas, catalogError, catalogLoaded, records, media, exam, examError, loading, record, marks, submittedCount,
-    lastMode, examPageActive, examLock, remaining,
-    loadCatalog, loadState, pickMediaRoot, setLastMode, flush, openExam, closeExam, toggleAnswer, setText, toggleMark, tick, submit, reset
+    lastMode, examPageActive, examLock, remaining, grading, gradeError,
+    loadCatalog, loadState, pickMediaRoot, setLastMode, flush, openExam, closeExam, toggleAnswer, setText, toggleMark, tick, submit, reset, gradeSubjective
   }
 })

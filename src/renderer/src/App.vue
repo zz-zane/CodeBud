@@ -5,6 +5,7 @@ import Sidebar from './components/domain/Sidebar.vue'
 import RightPanel from './components/domain/RightPanel.vue'
 import QuizOverlay from './components/domain/quiz/QuizOverlay.vue'
 import NativeRunConfirm from './components/domain/NativeRunConfirm.vue'
+import VideoHost from './components/domain/video/VideoHost.vue'
 import TopBar from './components/domain/TopBar.vue'
 import PhoneTabBar from './components/domain/PhoneTabBar.vue'
 import MiToast from './components/base/MiToast.vue'
@@ -18,8 +19,9 @@ import { useSettingsDialogStore } from './stores/settings-dialog'
 import { useQuizStore } from './stores/quiz'
 import { useStudyStore } from './stores/study'
 import { useProgressStore } from './stores/progress'
+import { usePracticeStore } from './stores/practice'
 import { isStudyRoute } from '../../shared/study-companion'
-import { buildLearnerMemoryProfile } from './lib/learner-memory'
+import { weakLessonsByMastery } from '../../shared/mastery'
 import { useAppHistory } from './lib/app-history'
 import { sidebarModeOf } from '../../shared/layout'
 import { AI_ASSISTANT, APP_SIDEBAR, LAYOUT, PAGE_NAV, PHONE, TODAY } from './lib/copy'
@@ -330,10 +332,12 @@ onMounted(() => {
   window.addEventListener('miai-study-refresh', refreshStudy)
   refreshStudy()
   if (!quizStore.wrongbookLoaded) void quizStore.loadWrongbook()
+  if (!practice.loaded) void practice.load()
 })
 
 const studyStore = useStudyStore()
 const progress = useProgressStore()
+const practice = usePracticeStore()
 function refreshStudy(): void { void studyStore.init() }
 
 function onStudyNavigate(e: CustomEvent<{ route: string; lessonId?: string }>): void {
@@ -352,18 +356,17 @@ function onStudyNavigate(e: CustomEvent<{ route: string; lessonId?: string }>): 
 // 自动向主进程同步当前位置（debounce 500ms，初始化待 content 就绪）
 watch(
   () => ({ path: route.path, id: isLessonPage.value ? String(route.params.id) : undefined,
-    learned: [...progress.learnedSet], loaded: progress.loaded, wrongbook: quizStore.wrongbook.map(entry => ({ ...entry })),
+    learned: [...progress.learnedSet], loaded: progress.loaded,
+    practiceHistory: practice.history, practiceLoaded: practice.loaded,
     lessons: [...content.bundle.lessons, ...content.algoBundle.lessons].filter(l => content.statusOf(l.id) !== 'draft') }),
-  ({ path, id, lessons, learned, loaded, wrongbook }) => {
+  ({ path, id, lessons, learned, loaded, practiceHistory, practiceLoaded }) => {
     if (!loaded || !lessons.length || !isStudyRoute(path)) return
     const lessonId = id
     const lesson = lessonId ? content.lessonOf(lessonId) : undefined
     if (lessonId && (!lesson || content.statusOf(lessonId) === 'draft')) return
     const known = new Set(lessons.map(l => l.id))
     const learnedIds = learned.filter(id => known.has(id))
-    const weakLessons = buildLearnerMemoryProfile({ learnedIds, totalLessons: lessons.length,
-      wrongbook, activeLessonId: lessonId ?? null, contextTags: [], lessonTitleOf: id => content.lessonOf(id)?.title ?? id
-    }).l2Weakness.topWeakLessons.filter(l => known.has(l.lessonId)).map(l => l.lessonId)
+    const weakLessons = practiceLoaded ? weakLessonsByMastery(practiceHistory, known) : []
 
     studyStore.syncPosition({
       route: path,
@@ -567,6 +570,7 @@ onBeforeUnmount(() => {
     <!-- 全局弹窗与交互图层 -->
     <MiToast />
     <QuizOverlay />
+    <VideoHost />
     <NativeRunConfirm />
     <AiContextMenu />
   </div>

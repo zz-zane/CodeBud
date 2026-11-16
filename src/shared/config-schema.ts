@@ -507,6 +507,48 @@ export const CONFIG_FIELDS: { [K in ConfigFieldKey]: ConfigField<K> } = {
           typeof ai.dynamicEnabled === 'boolean' ? ai.dynamicEnabled : current.dynamicEnabled === true
       }
     }
+  },
+  learning: {
+    read(raw) {
+      const l = isObject(raw) ? raw : {}
+      return {
+        explainMode: l.explainMode === 'video' ? 'video' : 'text',
+        reviewStrategy: l.reviewStrategy === 'sprint' ? 'sprint' : 'standard'
+      }
+    },
+    expose: (v) => ({
+      explainMode: v?.explainMode === 'video' ? 'video' : 'text',
+      reviewStrategy: v?.reviewStrategy === 'sprint' ? 'sprint' : 'standard'
+    }),
+    merge(incoming, current) {
+      if (incoming === undefined) return current
+      if (!isObject(incoming)) throw new Error('invalid config payload')
+      return {
+        explainMode:
+          incoming.explainMode === 'video' || incoming.explainMode === 'text'
+            ? incoming.explainMode
+            : current.explainMode,
+        reviewStrategy:
+          incoming.reviewStrategy === 'sprint' || incoming.reviewStrategy === 'standard'
+            ? incoming.reviewStrategy
+            : current.reviewStrategy
+      }
+    }
+  },
+  update: {
+    read: (raw) => ({
+      auto: isObject(raw) ? bool(raw.auto, true) : true
+    }),
+    expose: (v) => ({
+      auto: v?.auto !== false
+    }),
+    merge(incoming, current) {
+      if (incoming === undefined) return current
+      if (!isObject(incoming)) throw new Error('invalid config payload')
+      return {
+        auto: typeof incoming.auto === 'boolean' ? incoming.auto : current.auto
+      }
+    }
   }
 }
 

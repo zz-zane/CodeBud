@@ -4,26 +4,59 @@
  * 2026-10-28：五类配置原样保留，但不再自带页标题与顶部 MiTabs ——
  * 分类选择交给 SettingsDialog.vue 的左栏，本组件只按 `card` 渲染对应一组设置。
  */
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useSettingsStore } from '../stores/settings'
+import { useUpdateStore } from '../stores/update'
 import { useZoomStore } from '../stores/zoom'
 import { useAiAssistantStore } from '../stores/ai-assistant'
 import { SETTINGS } from '../lib/copy'
+import { UPDATE_SHARED } from '../../../shared/copy'
 import { STUDY_COPY } from '../lib/study-copy'
 import ProviderList from '../components/domain/ProviderList.vue'
 import { sendsKeyInPlainText } from '../lib/api-url-safety'
 import { LANG_LABEL } from '../lib/labels'
-import type { LangOfCode, AiProtocol, AiProviderPreset } from '../../../shared/types'
+import { REVIEW_STRATEGIES } from '../../../shared/review-schedule'
+import {
+  VIDEO_NARRATION_ENABLED_KEY,
+  VIDEO_NARRATION_RATE_KEY,
+  VIDEO_NARRATION_VOICE_KEY,
+  chineseVoices,
+  readVideoPreference,
+  writeVideoPreference
+} from '../lib/video-narrator'
+import type { LangOfCode, AiProtocol, AiProviderPreset, ExplainMode, ReviewStrategy } from '../../../shared/types'
 import type { SettingsCard } from '../stores/settings-dialog'
 import MiSwitch from '../components/base/MiSwitch.vue'
 import MiButton from '../components/base/MiButton.vue'
 import MiHint from '../components/base/MiHint.vue'
+import MiIcon from '../components/base/MiIcon.vue'
 
 const props = defineProps<{ card: SettingsCard }>()
 
 const settings = useSettingsStore()
+const update = useUpdateStore()
 const zoom = useZoomStore()
 const aiStore = useAiAssistantStore()
+
+const RELEASES_URL = 'https://github.com/zz-zane/CodeBud/releases'
+const autoUpdateOn = computed(() => settings.config.update?.auto !== false)
+
+function setAutoUpdate(auto: boolean): void {
+  void settings.update({ update: { auto } })
+}
+
+function formatCheckedAt(ts: number): string {
+  const d = new Date(ts)
+  const now = new Date()
+  const hh = String(d.getHours()).padStart(2, '0')
+  const mm = String(d.getMinutes()).padStart(2, '0')
+  const hhmm = `${hh}:${mm}`
+  const sameDay =
+    d.getFullYear() === now.getFullYear() &&
+    d.getMonth() === now.getMonth() &&
+    d.getDate() === now.getDate()
+  return sameDay ? SETTINGS.updateTodayTime(hhmm) : SETTINGS.updateDateTime(d.getMonth() + 1, d.getDate(), hhmm)
+}
 
 const nativeRunOn = computed({
   get: () => settings.config.nativeRunEnabled,
@@ -43,6 +76,87 @@ const favWrongOn = computed({
   get: () => settings.config.favWrongToBook,
   set: (val: boolean) => {
     void settings.update({ favWrongToBook: val })
+  }
+})
+
+const explainMode = computed<ExplainMode>(() => settings.config.learning?.explainMode ?? 'text')
+const reviewStrategy = computed<ReviewStrategy>(() => settings.config.learning?.reviewStrategy ?? 'standard')
+const strategyDaysHint = computed(() => SETTINGS.reviewStrategyDaysHint(REVIEW_STRATEGIES[reviewStrategy.value].join(' / ')))
+
+function setExplainMode(mode: ExplainMode): void {
+  void settings.update({
+    learning: {
+      explainMode: mode,
+      reviewStrategy: reviewStrategy.value
+    }
+  })
+}
+
+function setReviewStrategy(strategy: ReviewStrategy): void {
+  void settings.update({
+    learning: {
+      explainMode: explainMode.value,
+      reviewStrategy: strategy
+    }
+  })
+}
+
+const NARRATOR_RATES = [0.75, 1, 1.25, 1.5] as const
+
+const narratorEnabled = ref(readVideoPreference(VIDEO_NARRATION_ENABLED_KEY) !== 'false')
+const narratorVoiceUri = ref(readVideoPreference(VIDEO_NARRATION_VOICE_KEY) ?? '')
+const parsedRate = Number(readVideoPreference(VIDEO_NARRATION_RATE_KEY))
+const narratorRate = ref<number>((NARRATOR_RATES as readonly number[]).includes(parsedRate) ? parsedRate : 1)
+const zhVoices = ref<SpeechSynthesisVoice[]>([])
+const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in window && typeof window.speechSynthesis?.getVoices === 'function'
+
+function refreshVoices(): void {
+  zhVoices.value = speechSupported ? chineseVoices() : []
+}
+
+function setNarratorEnabled(enabled: boolean): void {
+  narratorEnabled.value = enabled
+  writeVideoPreference(VIDEO_NARRATION_ENABLED_KEY, String(enabled))
+}
+
+function onNarratorVoiceChange(e: Event): void {
+  const val = (e.target as HTMLSelectElement).value
+  narratorVoiceUri.value = val
+  writeVideoPreference(VIDEO_NARRATION_VOICE_KEY, val)
+}
+
+function setNarratorRate(rate: number): void {
+  narratorRate.value = rate
+  writeVideoPreference(VIDEO_NARRATION_RATE_KEY, String(rate))
+}
+
+function testNarratorVoice(): void {
+  if (!speechSupported || typeof SpeechSynthesisUtterance === 'undefined') return
+  try {
+    window.speechSynthesis.cancel()
+    const utter = new SpeechSynthesisUtterance(SETTINGS.NARRATOR_TEST_SAMPLE)
+    utter.lang = 'zh-CN'
+    utter.rate = narratorRate.value
+    const picked = narratorVoiceUri.value
+      ? zhVoices.value.find((v) => v.voiceURI === narratorVoiceUri.value) ?? zhVoices.value[0]
+      : zhVoices.value[0]
+    if (picked) utter.voice = picked
+    window.speechSynthesis.speak(utter)
+  } catch {
+    // ignore speech synthesis errors on unsupported environments
+  }
+}
+
+onMounted(() => {
+  refreshVoices()
+  if (speechSupported) {
+    window.speechSynthesis.addEventListener?.('voiceschanged', refreshVoices)
+  }
+})
+
+onBeforeUnmount(() => {
+  if (speechSupported) {
+    window.speechSynthesis.removeEventListener?.('voiceschanged', refreshVoices)
   }
 })
 
@@ -243,6 +357,158 @@ onMounted(() => {
           <MiSwitch v-model="favWrongOn" :aria-label="SETTINGS.LABEL_FAV_WRONG_TO_BOOK" />
         </div>
       </div>
+
+      <div class="divider" />
+
+      <div class="card">
+        <div class="card-head-row">
+          <div class="card-title">{{ SETTINGS.LEARNING_CARD_TITLE }}</div>
+        </div>
+
+        <div class="row">
+          <div class="row-info">
+            <span class="row-label">{{ SETTINGS.EXPLAIN_MODE_LABEL }}</span>
+          </div>
+          <div class="seg-group" role="group" :aria-label="SETTINGS.EXPLAIN_MODE_LABEL">
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: explainMode === 'text' }"
+              data-setting="explain-text"
+              @click="setExplainMode('text')"
+            >
+              {{ SETTINGS.EXPLAIN_MODE_TEXT }}
+            </button>
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: explainMode === 'video' }"
+              data-setting="explain-video"
+              @click="setExplainMode('video')"
+            >
+              {{ SETTINGS.EXPLAIN_MODE_VIDEO }}
+            </button>
+          </div>
+        </div>
+
+        <div class="divider" />
+
+        <div class="row">
+          <div class="row-info">
+            <span class="row-label">{{ SETTINGS.REVIEW_STRATEGY_LABEL }}</span>
+            <p class="hint" data-testid="strategy-days-hint">{{ strategyDaysHint }}</p>
+          </div>
+          <div class="seg-group" role="group" :aria-label="SETTINGS.REVIEW_STRATEGY_LABEL">
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: reviewStrategy === 'standard' }"
+              data-setting="strategy-standard"
+              @click="setReviewStrategy('standard')"
+            >
+              {{ SETTINGS.REVIEW_STRATEGY_STANDARD }}
+            </button>
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: reviewStrategy === 'sprint' }"
+              data-setting="strategy-sprint"
+              @click="setReviewStrategy('sprint')"
+            >
+              {{ SETTINGS.REVIEW_STRATEGY_SPRINT }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" />
+
+      <div class="card">
+        <div class="card-head-row">
+          <div class="card-title">{{ SETTINGS.NARRATOR_CARD_TITLE }}</div>
+          <span class="device-only-badge">{{ SETTINGS.NARRATOR_DEVICE_ONLY }}</span>
+        </div>
+
+        <div class="row">
+          <div class="row-info">
+            <span class="row-label">{{ SETTINGS.NARRATOR_ENABLED_LABEL }}</span>
+          </div>
+          <div class="seg-group" role="group" :aria-label="SETTINGS.NARRATOR_ENABLED_LABEL">
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: narratorEnabled }"
+              data-setting="narrator-on"
+              @click="setNarratorEnabled(true)"
+            >
+              {{ SETTINGS.NARRATOR_ON }}
+            </button>
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: !narratorEnabled }"
+              data-setting="narrator-off"
+              @click="setNarratorEnabled(false)"
+            >
+              {{ SETTINGS.NARRATOR_OFF }}
+            </button>
+          </div>
+        </div>
+
+        <div class="divider" />
+
+        <div class="row">
+          <div class="row-info">
+            <span class="row-label">{{ SETTINGS.NARRATOR_VOICE_LABEL }}</span>
+          </div>
+          <div class="voice-controls">
+            <select
+              class="select-input voice-select"
+              :value="narratorVoiceUri"
+              :disabled="zhVoices.length === 0"
+              :aria-label="SETTINGS.NARRATOR_VOICE_LABEL"
+              @change="onNarratorVoiceChange"
+            >
+              <option value="">{{ SETTINGS.NARRATOR_VOICE_AUTO }}</option>
+              <option v-for="v in zhVoices" :key="v.voiceURI" :value="v.voiceURI">{{ v.name }}</option>
+            </select>
+            <MiButton
+              variant="secondary"
+              size="sm"
+              :disabled="!speechSupported || zhVoices.length === 0"
+              @click="testNarratorVoice"
+            >
+              {{ SETTINGS.NARRATOR_TEST_BTN }}
+            </MiButton>
+          </div>
+        </div>
+
+        <div class="divider" />
+
+        <div class="row">
+          <div class="row-info">
+            <span class="row-label">{{ SETTINGS.NARRATOR_RATE_LABEL }}</span>
+          </div>
+          <div class="seg-group" role="group" :aria-label="SETTINGS.NARRATOR_RATE_LABEL">
+            <button
+              v-for="r in NARRATOR_RATES"
+              :key="r"
+              type="button"
+              class="seg-btn"
+              :class="{ active: narratorRate === r }"
+              :data-rate="r"
+              @click="setNarratorRate(r)"
+            >
+              {{ r === 1 ? '1.0×' : `${r}×` }}
+            </button>
+          </div>
+        </div>
+
+        <p v-if="zhVoices.length === 0" class="narrator-info-banner" data-testid="no-zh-voice-note">
+          <MiIcon name="info" :size="14" />
+          <span>{{ SETTINGS.NARRATOR_NO_ZH_VOICE }}</span>
+        </p>
+      </div>
     </div>
 
     <!-- 4. 环境检测 -->
@@ -428,6 +694,102 @@ onMounted(() => {
         </div>
       </div>
 
+    </div>
+
+    <!-- 6. 关于与更新 -->
+    <div v-else-if="props.card === 'about'" class="settings-panel">
+      <div class="card">
+        <h2 class="card-title">{{ SETTINGS.ABOUT_CARD_TITLE }}</h2>
+
+        <div class="row">
+          <div class="row-info update-row-info">
+            <span class="row-label">{{ SETTINGS.aboutVersion(update.snapshot.version) }}</span>
+            <div v-if="update.snapshot.status.state === 'downloading'" class="update-progress-row">
+              <div class="update-meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" :aria-valuenow="update.snapshot.status.percent">
+                <i :style="{ width: update.snapshot.status.percent + '%' }" />
+              </div>
+              <span class="hint">{{ SETTINGS.updateDownloading(update.snapshot.status.version, update.snapshot.status.percent) }}</span>
+            </div>
+            <span v-else-if="update.snapshot.status.state === 'ready'" class="update-status-ok">
+              {{ SETTINGS.updateReady(update.snapshot.status.version) }}
+            </span>
+            <span v-else-if="update.snapshot.status.state === 'error' && update.snapshot.manual" class="update-status-err">
+              {{ SETTINGS.updateErr(update.snapshot.status.message || UPDATE_SHARED.UNKNOWN_ERROR) }}
+            </span>
+            <span v-else-if="update.snapshot.status.state === 'latest'" class="hint">
+              {{ SETTINGS.updateLatest(formatCheckedAt(update.snapshot.status.checkedAt)) }}
+            </span>
+            <span v-else-if="update.snapshot.status.state === 'checking'" class="hint">
+              {{ SETTINGS.UPDATE_CHECKING }}
+            </span>
+            <span v-else-if="update.snapshot.status.state === 'unsupported'" class="hint">
+              {{ update.snapshot.status.reason === 'dev' ? SETTINGS.UPDATE_DEV_MODE : SETTINGS.UPDATE_PLATFORM_UNSUPPORTED }}
+            </span>
+            <span v-else class="hint">
+              {{ SETTINGS.UPDATE_IDLE_HINT }}
+            </span>
+          </div>
+          <div class="update-actions">
+            <a :href="RELEASES_URL" target="_blank" rel="noopener noreferrer" class="update-release-link">
+              {{ SETTINGS.UPDATE_RELEASE_NOTES }}
+            </a>
+            <MiButton
+              v-if="update.snapshot.status.state === 'ready'"
+              variant="primary"
+              size="sm"
+              @click="update.install()"
+            >
+              {{ SETTINGS.UPDATE_RESTART_BTN }}
+            </MiButton>
+            <MiButton
+              v-else-if="update.snapshot.status.state === 'error' && update.snapshot.manual"
+              variant="secondary"
+              size="sm"
+              @click="update.check()"
+            >
+              {{ SETTINGS.UPDATE_RETRY_BTN }}
+            </MiButton>
+            <MiButton
+              v-else
+              variant="secondary"
+              size="sm"
+              :disabled="update.snapshot.status.state === 'checking' || update.snapshot.status.state === 'downloading'"
+              @click="update.check()"
+            >
+              {{ SETTINGS.UPDATE_CHECK_BTN }}
+            </MiButton>
+          </div>
+        </div>
+
+        <div class="divider" />
+
+        <div class="row">
+          <div class="row-info update-row-info">
+            <span class="row-label">{{ SETTINGS.UPDATE_AUTO_LABEL }}</span>
+            <span class="hint">{{ SETTINGS.UPDATE_AUTO_HINT }}</span>
+          </div>
+          <div class="seg-group" role="group" :aria-label="SETTINGS.UPDATE_AUTO_LABEL">
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: autoUpdateOn }"
+              data-setting="update-auto-on"
+              @click="setAutoUpdate(true)"
+            >
+              {{ SETTINGS.UPDATE_AUTO_ON }}
+            </button>
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: !autoUpdateOn }"
+              data-setting="update-auto-off"
+              @click="setAutoUpdate(false)"
+            >
+              {{ SETTINGS.UPDATE_AUTO_OFF }}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -693,5 +1055,112 @@ onMounted(() => {
 }
 .test-result-msg.is-fail {
   color: var(--mi-error);
+}
+.seg-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border-radius: var(--mi-radius-ctl);
+  background: var(--mi-blue-light);
+  border: 1px solid var(--mi-border);
+}
+.seg-btn {
+  padding: 4px var(--mi-sp-3);
+  border: 0;
+  border-radius: var(--mi-radius-sm);
+  background: transparent;
+  color: var(--mi-text-2);
+  font-family: var(--mi-font-family);
+  font-size: var(--mi-fs-label);
+  cursor: pointer;
+  transition: background var(--mi-dur-fast) ease, color var(--mi-dur-fast) ease;
+}
+.seg-btn:hover {
+  color: var(--mi-text);
+}
+.seg-btn.active {
+  background: var(--mi-card);
+  color: var(--mi-text);
+  font-weight: 500;
+  box-shadow: var(--mi-shadow);
+}
+.device-only-badge {
+  font-size: var(--mi-fs-caption);
+  color: var(--mi-text-3);
+  padding: 2px var(--mi-sp-2);
+  border-radius: var(--mi-radius-ctl);
+  background: var(--mi-blue-light);
+}
+.voice-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--mi-sp-2);
+}
+.voice-select {
+  min-width: 180px;
+}
+.narrator-info-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--mi-sp-2);
+  margin-top: var(--mi-sp-3);
+  padding: var(--mi-sp-2) var(--mi-sp-3);
+  border-radius: var(--mi-radius-ctl);
+  background: var(--mi-blue-light);
+  color: var(--mi-text-2);
+  font-size: var(--mi-fs-caption);
+  line-height: 1.5;
+}
+.update-progress-row {
+  display: flex;
+  align-items: center;
+  gap: var(--mi-sp-2);
+  margin-top: var(--mi-sp-1);
+}
+.update-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.update-meter {
+  height: 6px;
+  width: 160px;
+  border-radius: 3px;
+  background: var(--mi-blue);
+  overflow: hidden;
+}
+.update-meter i {
+  display: block;
+  height: 100%;
+  background: var(--mi-blue-deep);
+}
+.update-status-ok {
+  font-size: var(--mi-fs-caption);
+  color: var(--mi-success-deep);
+}
+.update-status-err {
+  font-size: var(--mi-fs-caption);
+  color: var(--mi-error-deep);
+}
+.update-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--mi-sp-2);
+  flex-shrink: 0;
+}
+.update-release-link {
+  display: inline-flex;
+  align-items: center;
+  height: var(--mi-ctl-sm);
+  padding: 0 var(--mi-sp-3);
+  border-radius: var(--mi-radius-sm);
+  font-size: var(--mi-fs-caption);
+  color: var(--mi-blue-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.update-release-link:hover {
+  background: var(--mi-blue-light);
 }
 </style>

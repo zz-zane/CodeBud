@@ -256,6 +256,16 @@ describe('真 cmd 跑一遍：引号与元字符', () => {
 // ──────────────────────────────────────────────────────────── where 预检
 
 describe('where 预检', () => {
+  it('取消时等待预检子进程退出', async () => {
+    const script = join(fixtureRoot, 'slow-probe.cjs')
+    writeFileSync(script, 'setTimeout(() => {}, 30000)')
+    const controller = new AbortController()
+    const result = probeCommand(process.execPath, script, process.env, controller.signal)
+    await new Promise(resolve => setTimeout(resolve, 200))
+    controller.abort()
+    expect(await Promise.race([result, new Promise(resolve => setTimeout(() => resolve(null), 5000))])).toEqual({ found: false })
+  }, 10000)
+
   it.skipIf(!ready('c'))('真 PATH 里找得到 gcc，给出的路径确实存在', async () => {
     const r = await probeCommand(WHERE, 'gcc', process.env)
     expect(r.broken, 'where.exe 自己起不来，这台机器上后面几条都要打折扣').toBeUndefined()

@@ -7,6 +7,8 @@ import type { Cet6LookupResult, Cet6VocabEntry, Cet6VocabInput } from './cet6-vo
 import type { BoxStamp, DocWriteResult, StampedDoc } from './doc-write'
 import type { ChallengeSettlePayload } from './cloud/dto'
 import type { RemoteStatus } from './remote-auth'
+import type { ExplainerVideo, VideoGenerateRequest, VideoOutline, VideoOutlineRequest, VideoResult, VideoVerifyPrompt } from './video'
+import type { UpdateSnapshot } from './update'
 
 /**
  * 传输层：preload 用 ipcRenderer 实现，手机浏览器用 HTTP（POST /rpc + SSE /events）实现。
@@ -124,7 +126,9 @@ export function createMiaiApi(t: MiaiTransport) {
       update: (id: string, patch: { mastered: boolean }): Promise<Cet6VocabEntry[]> => t.invoke(IPC.cet6VocabUpdate, id, patch),
       remove: (ids: string[]): Promise<Cet6VocabEntry[]> => t.invoke(IPC.cet6VocabRemove, ids),
       lookup: (input: Cet6VocabInput): Promise<Cet6LookupResult> => t.invoke(IPC.cet6VocabLookup, input)
-    }
+    },
+    gradeSubjective: (input: import('./cet6-grade').Cet6GradeRequest): Promise<import('./cet6-grade').Cet6GradeResponse> =>
+      t.invoke(IPC.cet6GradeSubjective, input)
   },
   /**
    * 记一次**做完**的练习（中途退出不记，判分口径是「交完的卷才算数」）。
@@ -281,6 +285,8 @@ export function createMiaiApi(t: MiaiTransport) {
     importMaterials: (): ReturnType<StudyApi['importMaterials']> => t.invoke(IPC.studyImportMaterials),
     readMaterial: (id: string): ReturnType<StudyApi['readMaterial']> => t.invoke(IPC.studyReadMaterial, id),
     generatePlan: (input: Parameters<StudyApi['generatePlan']>[0]): ReturnType<StudyApi['generatePlan']> => t.invoke(IPC.studyGeneratePlan, input),
+    confirmPlan: (input: Parameters<StudyApi['confirmPlan']>[0]): ReturnType<StudyApi['confirmPlan']> => t.invoke(IPC.studyConfirmPlan, input),
+    discardPlan: (planId: string): ReturnType<StudyApi['discardPlan']> => t.invoke(IPC.studyDiscardPlan, planId),
     setTaskStatus: (input: Parameters<StudyApi['setTaskStatus']>[0]): ReturnType<StudyApi['setTaskStatus']> => t.invoke(IPC.studySetTaskStatus, input),
     exportVault: (): ReturnType<StudyApi['exportVault']> => t.invoke(IPC.studyExportVault),
     getUsage: (refresh?: boolean): ReturnType<StudyApi['getUsage']> => t.invoke(IPC.studyGetUsage, refresh),
@@ -310,6 +316,24 @@ export function createMiaiApi(t: MiaiTransport) {
       t.invoke(IPC.aiSessionsGet),
     saveSessions: (sessions: AiChatSession[]): Promise<{ ok: boolean }> =>
       t.invoke(IPC.aiSessionsSave, sessions)
+  },
+  video: {
+    outline: (input: VideoOutlineRequest): Promise<VideoResult<VideoOutline>> => t.invoke(IPC.videoOutline, input),
+    generate: (input: VideoGenerateRequest): Promise<VideoResult<ExplainerVideo>> => t.invoke(IPC.videoGenerate, input),
+    cancel: (requestId: string): Promise<{ ok: boolean }> => t.invoke(IPC.videoCancel, requestId),
+    list: (): Promise<ExplainerVideo[]> => t.invoke(IPC.videoList),
+    delete: (id: string): Promise<{ ok: boolean }> => t.invoke(IPC.videoDelete, id),
+    onVerifyPrompt: (cb: (prompt: VideoVerifyPrompt) => void): (() => void) =>
+      t.on(IPC.videoVerifyPrompt, (prompt) => cb(prompt as VideoVerifyPrompt)),
+    answerVerify: (confirmationId: string, useNative: boolean | null): Promise<{ ok: boolean }> =>
+      t.invoke(IPC.videoVerifyAnswer, confirmationId, useNative)
+  },
+  update: {
+    getStatus: (): Promise<UpdateSnapshot> => t.invoke(IPC.updateGetStatus),
+    check: (): Promise<UpdateSnapshot> => t.invoke(IPC.updateCheck),
+    install: (): Promise<{ ok: boolean }> => t.invoke(IPC.updateInstall),
+    onStatus: (cb: (snapshot: UpdateSnapshot) => void): (() => void) =>
+      t.on(IPC.updateStatus, (snapshot) => cb(snapshot as UpdateSnapshot))
   }
 }
 

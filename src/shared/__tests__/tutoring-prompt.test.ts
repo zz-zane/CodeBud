@@ -23,6 +23,11 @@ describe('tutoring prompt', () => {
     expect(solve).toContain('```solve-steps')
     expect(solve).toContain('```ask-user')
     expect(system).toContain('<learner_memory>')
+    expect(system).toContain('0.8')
+    expect(system).toContain('不得对学员说已经掌握')
+    expect(system).toContain('出题是这一轮的最后一个动作')
+    expect(system).toContain('以冒号结尾')
+    expect(system).toContain('提出异议')
     expect(buildAssistantSystemPrompt()).toBe(system)
   })
 

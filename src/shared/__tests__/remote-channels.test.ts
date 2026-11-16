@@ -8,7 +8,7 @@ const MUST_STAY_DENIED = [
   'exportMarkdown', 'configSave', 'envDetect', 'cet6PickMediaRoot',
   'studyImportMaterials', 'studyExportVault', 'studySaveConnection', 'studyConnect',
   'studyAuthenticate', 'studyDisconnect', 'studySelectConnection', 'studySetModel', 'studyRemoveConnection', 'studyDetectAgent', 'studyListModels',
-  'cloudChallengeSettle',
+  'cloudChallengeSettle', 'videoGenerate', 'videoVerifyPrompt', 'videoVerifyAnswer',
   'remoteGetStatus', 'remoteSetEnabled', 'remoteSetPort', 'remoteRevokeDevice', 'remoteRevokeAll', 'remoteRegenerateCode'
 ]
 
@@ -39,6 +39,9 @@ describe('手机通道白名单', () => {
   })
 
   it('isRemoteChannelAllowed：认通道名，未知 / 非字符串一律拒绝', () => {
+    for (const key of ['videoOutline', 'videoCancel', 'videoList', 'videoDelete'] as const) {
+      expect(isRemoteChannelAllowed(IPC[key]), key).toBe(true)
+    }
     expect(isRemoteChannelAllowed(IPC.profileGet)).toBe(true)
     expect(isRemoteChannelAllowed(IPC.runnerRun)).toBe(false)
     expect(isRemoteChannelAllowed('profileGet')).toBe(false)

@@ -3,22 +3,25 @@
 //   miai-cet6://media/<rel> → 用户设置的音频目录，支持 Range（拖动进度条）
 import { app, BrowserWindow, dialog, protocol } from 'electron'
 import type { IpcMainInvokeEvent, OpenDialogOptions } from 'electron'
-import { copyFileSync, createReadStream, existsSync, statSync } from 'node:fs'
+import { createReadStream, existsSync, statSync } from 'node:fs'
 import { stat } from 'node:fs/promises'
 import { join } from 'node:path'
 import { Readable } from 'node:stream'
 import { CET6_MAIN } from '../shared/copy'
+import { assertSupportedVersion, NewerDataVersionError } from '../shared/data-version'
 import {
   CET6_EXAM_ID,
-  asMode,
+  CET6_LIMITS,
+  CURRENT_CET6_VERSION,
+  migrateCet6File,
   sanitizeRecord,
+  type Cet6AiGrade,
   type Cet6Mode,
   type Cet6File,
   type Cet6MediaStatus,
-  type Cet6Record,
   type Cet6State
 } from '../shared/cet6'
-import { createJsonStore, type JsonStore } from './store/json-store'
+import { createJsonStore, preserveCorruptFile, type JsonStore } from './store/json-store'
 import { corsHeaders, mimeFor, parseRange, pathFence, resolveUnder } from './file-protocol'
 
 
@@ -37,6 +40,8 @@ export interface Cet6Service {
   mediaStatus(): Cet6MediaStatus
   state(): Cet6State
   saveRecord(examId: unknown, record: unknown): void
+  gradeMatches(examId: unknown, questionId: string, answer: string): boolean
+  saveAiGrade(examId: unknown, questionId: unknown, answer: string, grade: Cet6AiGrade): Cet6AiGrade | null
   resetRecord(examId: unknown): void
   setMediaRoot(root: string): Cet6MediaStatus
   setLastMode(mode: unknown): Cet6Mode
@@ -44,32 +49,27 @@ export interface Cet6Service {
 }
 
 export function createCet6Service(dir: string): Cet6Service {
-  const store: JsonStore<Cet6File> = createJsonStore<Cet6File>(dir, 'cet6.json')
+  const store: JsonStore<Cet6File> = createJsonStore<Cet6File>(dir, 'cet6.json', {
+    validate(value) {
+      try { migrateCet6File(value); return true }
+      catch (error) { return error instanceof NewerDataVersionError }
+    }
+  })
   const file = join(dir, 'cet6.json')
-  let backedUp = false
-
   function load(): Cet6File {
     const raw = store.read()
     if (raw === null) {
-      if (existsSync(file) && !backedUp) {
-        // 文件在但读不出：留日志并把坏文件另存一份，绝不静默用空档覆盖
-        backedUp = true
-        console.error('[miai] cet6| cet6.json unreadable, keeping a copy as cet6.json.corrupt')
-        try {
-          copyFileSync(file, file + '.corrupt')
-        } catch (err) {
-          console.error('[miai] cet6| backup of corrupt cet6.json failed', err)
-        }
+      return { version: CURRENT_CET6_VERSION, mediaRoot: null, lastMode: 'practice', records: {} }
+    }
+    try { return migrateCet6File(raw) }
+    catch (error) {
+      if (error instanceof NewerDataVersionError) {
+        try { return { ...migrateCet6File({ ...raw, version: CURRENT_CET6_VERSION }), version: raw.version } }
+        catch { throw error }
       }
-      return { version: 1, mediaRoot: null, lastMode: 'practice', records: {} }
+      if (existsSync(file)) preserveCorruptFile(file, error)
+      return { version: CURRENT_CET6_VERSION, mediaRoot: null, lastMode: 'practice', records: {} }
     }
-    const records: Record<string, Cet6Record> = {}
-    for (const [id, rec] of Object.entries(raw.records ?? {})) {
-      const clean = CET6_EXAM_ID.test(id) ? sanitizeRecord(rec) : null
-      if (clean) records[id] = clean
-      else console.warn(`[miai] cet6| dropped invalid record ${id}`)
-    }
-    return { version: 1, mediaRoot: typeof raw.mediaRoot === 'string' ? raw.mediaRoot : null, lastMode: asMode(raw.lastMode), records }
   }
 
   function mediaRoot(): string | null {
@@ -92,29 +92,57 @@ export function createCet6Service(dir: string): Cet6Service {
     mediaRoot,
     state: () => {
       const cur = load()
-      return { records: cur.records, media: mediaStatus(), lastMode: cur.lastMode }
+      return { records: cur.records, media: mediaStatus(), lastMode: cur.lastMode, ...(cur.version > CURRENT_CET6_VERSION ? { readOnlyNewer: true } : {}) }
     },
     saveRecord(examId, record) {
       const id = assertId(examId)
       const clean = sanitizeRecord(record)
       if (!clean) throw new Error('cet6: invalid record')
       const cur = load()
-      store.write({ ...cur, records: { ...cur.records, [id]: clean } })
+      assertSupportedVersion(cur, CURRENT_CET6_VERSION)
+      const prevGrades = cur.records[id]?.aiGrades
+      const merged = { ...cur.records[id], ...clean, ...(!clean.aiGrades && prevGrades ? { aiGrades: prevGrades } : {}) }
+      store.write({ ...cur, records: { ...cur.records, [id]: merged } })
+    },
+    gradeMatches(examId, questionId, answer) {
+      const current = load()
+      assertSupportedVersion(current, CURRENT_CET6_VERSION)
+      const record = current.records[assertId(examId)]
+      return !!record?.submitted && record.answers[questionId] === answer
+    },
+    saveAiGrade(examId, questionId, answer, grade) {
+      const id = assertId(examId)
+      if (typeof questionId !== 'string' || !questionId || questionId.length > CET6_LIMITS.keyLength) {
+        throw new Error('cet6: invalid question id')
+      }
+      const cur = load()
+      assertSupportedVersion(cur, CURRENT_CET6_VERSION)
+      const base = cur.records[id]
+      if (!base?.submitted || base.answers[questionId] !== answer) return null
+      const sanitized = sanitizeRecord({ ...base, aiGrades: { ...base.aiGrades, [questionId]: grade } })
+      const stored = sanitized?.aiGrades?.[questionId]
+      if (!sanitized || !stored) throw new Error('cet6: invalid ai grade')
+      store.write({ ...cur, records: { ...cur.records, [id]: sanitized } })
+      return stored
     },
     resetRecord(examId) {
       const id = assertId(examId)
       const cur = load()
+      assertSupportedVersion(cur, CURRENT_CET6_VERSION)
       const { [id]: _drop, ...rest } = cur.records
       void _drop
       store.write({ ...cur, records: rest })
     },
     setLastMode(mode) {
       if (mode !== 'practice' && mode !== 'exam') throw new Error('cet6: invalid mode')
-      store.write({ ...load(), lastMode: mode })
+      const cur = load()
+      assertSupportedVersion(cur, CURRENT_CET6_VERSION)
+      store.write({ ...cur, lastMode: mode })
       return mode
     },
     setMediaRoot(root) {
       const cur = load()
+      assertSupportedVersion(cur, CURRENT_CET6_VERSION)
       store.write({ ...cur, mediaRoot: root })
       return mediaStatus()
     }

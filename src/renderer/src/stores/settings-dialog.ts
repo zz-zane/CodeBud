@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { isRemote } from '../lib/asset-base'
 
 /** 设置面板的五个分类（与 SettingsView 的 TabKey 同序同值） */
-export type SettingsCard = 'appearance' | 'editor' | 'study' | 'env' | 'ai' | 'remote'
+export type SettingsCard = 'appearance' | 'editor' | 'study' | 'env' | 'ai' | 'remote' | 'about'
 
 /**
  * 设置面板的开关状态（2026-10-28 主人要求：点设置开一个覆盖当前页面的大面板）。
@@ -26,7 +26,7 @@ export const useSettingsDialogStore = defineStore('settings-dialog', () => {
   function openSettings(next: SettingsCard = 'appearance', from?: string): void {
     if (from) background.value = from
     // 手机浏览器里这几页不存在（环境检测 / AI Key / 手机连接，见 SettingsDialog）
-    if (isRemote() && (next === 'env' || next === 'ai' || next === 'remote')) next = 'appearance'
+    if (isRemote() && (next === 'env' || next === 'ai' || next === 'remote' || next === 'about')) next = 'appearance'
     card.value = next
     open.value = true
   }

@@ -1037,7 +1037,19 @@ export interface AppConfig {
    */
   remote: { enabled: boolean; port: number }
   envCache: Partial<EnvCache>
+  /** 学习偏好（docs/33 §B0）。**v23 → v24 新增** */
+  learning: {
+    explainMode: ExplainMode
+    reviewStrategy: ReviewStrategy
+  }
+  /** 自动更新配置（docs/34）。**v24 → v25 新增** */
+  update: {
+    auto: boolean
+  }
 }
+
+export type ExplainMode = 'text' | 'video'
+export type ReviewStrategy = 'standard' | 'sprint'
 
 /**
  * 当前配置 schema 版本。
@@ -1071,8 +1083,10 @@ export interface AppConfig {
  * | 21 | 删 `pet` / `wallpaper` / `splash` 三块（桌宠、壁纸、开屏功能整体移除；`pet.json` 状态不是配置，不受影响）；迁移步骤 `CONFIG_MIGRATIONS[20]` 丢弃三键，其余字段原样保留（docs/28 §1.3） |
  * | 22 | 加 `remote`（手机连接：`{ enabled, port }`，默认关、端口 17600；缺字段由注册表 `read` 补默认，无需迁移步骤；docs/29） |
  * | 23 | 删 `theme`（应用只剩浅色，2026-11-13 移除暗色主题）；迁移步骤 `CONFIG_MIGRATIONS[22]` 丢弃该键，其余字段原样保留 |
+ * | 24 | 加 `learning`（`{ explainMode: 'text' | 'video', reviewStrategy: 'standard' | 'sprint' }`，docs/33 §B0）；`CONFIG_MIGRATIONS[23]` 补全默认字段 |
+ * | 25 | 加 `update`（`{ auto: boolean }`，默认 `{ auto: true }`，docs/34）；`CONFIG_MIGRATIONS[24]` 补全默认字段 |
  */
-export const CURRENT_CONFIG_VERSION = 23
+export const CURRENT_CONFIG_VERSION = 25
 
 /** 默认配置（主进程与渲染进程共用的初始值，避免两处漂移） */
 export const DEFAULT_APP_CONFIG: AppConfig = {
@@ -1108,7 +1122,9 @@ export const DEFAULT_APP_CONFIG: AppConfig = {
   },
   // 默认关：打开 = 局域网内的设备都能连到这个端口，只能由用户主动打开（docs/29 §2）
   remote: { enabled: false, port: 17600 },
-  envCache: {}
+  envCache: {},
+  learning: { explainMode: 'text', reviewStrategy: 'standard' },
+  update: { auto: true }
 }
 
 /**

@@ -10,6 +10,8 @@ import { runMathViaMcp } from '../study/math'
 import { runStudyAsyncActions } from '../study/async-actions'
 import { AI_APP } from '../../shared/copy'
 import { createJsonStore } from '../store/json-store'
+import { normalizePractice } from '../store/practice-merge'
+import { lessonMastery } from '../../shared/mastery'
 import { validChatExtras } from '../ai/chat-request'
 import { buildAssistantSystemPrompt, buildStudentUserPrompt } from '../../shared/ai-assistant-prompt'
 import { showEffortForModel } from '../../shared/ai-model-capabilities'
@@ -75,21 +77,28 @@ export const aiChatFeature: MainFeature = {
       try {
         const cfg = readConfig()
         const learningState = studyStore.read()
-        const prompt = studyContext(learningState, payload.userMessage) + STUDY_TEXT.SESSION_CONTEXT(payload.sessionId === STUDY_MAIN_SESSION_ID ? STUDY_TEXT.MAIN_HINT : STUDY_TEXT.TOPIC_HINT) + buildStudentUserPrompt(payload.userMessage, payload.contextTags, payload.references, payload.tutoringAction, showEffortForModel(cfg.ai.model || 'deepseek-chat') ? payload.reasoningEffort : undefined, payload.attachments)
+        const currentMastery = (state: ReturnType<typeof studyStore.read>) => {
+          const lessonId = state.position?.lessonId
+          if (!lessonId) return null
+          const { file } = normalizePractice(ctx.stores.practice.read(), ctx.device().installId)
+          return { lessonId, ...lessonMastery(file.history, lessonId) }
+        }
+        const prompt = studyContext(learningState, payload.userMessage, currentMastery(learningState)) + STUDY_TEXT.SESSION_CONTEXT(payload.sessionId === STUDY_MAIN_SESSION_ID ? STUDY_TEXT.MAIN_HINT : STUDY_TEXT.TOPIC_HINT) + buildStudentUserPrompt(payload.userMessage, payload.contextTags, payload.references, payload.tutoringAction, showEffortForModel(cfg.ai.model || 'deepseek-chat') ? payload.reasoningEffort : undefined, payload.attachments)
         const completeTurn = async (text: string) => {
           const enriched = await runStudyAsyncActions({ text, sessionId: payload.sessionId,
             calculate: input => runMathViaMcp(input, studyMathPath, storageDir),
             createPlan: input => generateLearningPlan(input, ac.signal)
           })
           if (ac.signal.aborted) return
-          const applied = applyStudyActions({ store: studyStore, text: enriched, sessionId: payload.sessionId, turnId: payload.turnId, isLesson: id => studyLessonIds.has(id), createChat: session => {
+          const applied = applyStudyActions({ store: studyStore, text: enriched, userMessage: payload.userMessage, sessionId: payload.sessionId, turnId: payload.turnId, isLesson: id => studyLessonIds.has(id), createChat: session => {
             const sessions = ensureMainSession(readChatSessions())
             if (!sessions.some(existing => existing.id === session.id)) writeChatSessions([...sessions, session])
           } })
           // Answer one requested topic in this turn; further topics stay available in history.
           const topic = applied.createdSessions.find(session => session.messages[0]?.role === 'user')
           if (topic && !ac.signal.aborted) {
-            const topicPrompt = studyContext(studyStore.read(), topic.messages[0].content) + STUDY_TEXT.TOPIC_READ_ONLY + topic.messages[0].content
+            const topicState = studyStore.read()
+            const topicPrompt = studyContext(topicState, topic.messages[0].content, currentMastery(topicState)) + STUDY_TEXT.TOPIC_READ_ONLY + topic.messages[0].content
             topic.cliSessionId = topic.id
             try {
               let answer: string
@@ -103,7 +112,7 @@ export const aiChatFeature: MainFeature = {
                 if (!response.ok) throw new Error(response.reason)
                 answer = response.data.text
               }
-              const checked = applyStudyActions({ store: studyStore, text: answer, sessionId: topic.id, turnId: `${payload.turnId}-topic`, isLesson: id => studyLessonIds.has(id), createChat: () => {} })
+              const checked = applyStudyActions({ store: studyStore, text: answer, userMessage: topic.messages[0].content, sessionId: topic.id, turnId: `${payload.turnId}-topic`, isLesson: id => studyLessonIds.has(id), createChat: () => {} })
               topic.messages.push({ id: crypto.randomUUID(), role: 'assistant', content: checked.text, createdAt: Date.now() })
               topic.cliSessionReady = true
             } catch { topic.messages.push({ id: crypto.randomUUID(), role: 'assistant', content: '', error: STUDY_TEXT.TOPIC_ANSWER_FAILED, createdAt: Date.now() }) }
