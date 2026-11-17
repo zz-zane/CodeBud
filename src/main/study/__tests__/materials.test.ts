@@ -5,7 +5,7 @@ import { StudyStore } from '../store'
 import { exportStudyVault, generateStudyPlan, importStudyMaterial, readStudyMaterial, setStudyTaskStatus, confirmStudyPlan, discardStudyPlan } from '../materials'
 import { studyContext } from '../../../shared/study-companion'
 
-const root = resolve('D:/project/coding/outputs/study-companion-20261105/root-tests')
+const root = resolve('outputs/study-companion-tests')
 let dir: string
 let store: StudyStore
 beforeEach(() => { mkdirSync(root, { recursive: true }); dir = mkdtempSync(join(root, 'material-')); store = new StudyStore(join(dir, 'data')) })

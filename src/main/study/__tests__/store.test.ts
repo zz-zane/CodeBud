@@ -4,7 +4,7 @@ import { join, resolve } from 'node:path'
 import { StudyStore, cleanPosition } from '../store'
 import { studyContext } from '../../../shared/study-companion'
 
-const testRoot = resolve('D:/project/coding/outputs/study-companion-20261105/root-tests')
+const testRoot = resolve('outputs/study-companion-tests')
 let dir: string
 let store: StudyStore
 beforeEach(() => {

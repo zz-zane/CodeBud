@@ -23,13 +23,12 @@
  */
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { animate, set as applyStyles } from 'animejs'
-import { DEMO, VIDEO_UI } from '../../lib/copy'
+import { DEMO } from '../../lib/copy'
 import MiRichText from '../base/MiRichText.vue'
 import { useZoomStore } from '../../stores/zoom'
 import type { DemoBlock } from '../../lib/md'
 
 const props = defineProps<{ block: DemoBlock }>()
-const emit = defineEmits<{ video: [] }>()
 const readingZoom = useZoomStore()
 // Keep the teaching highlight aligned when reading font metrics change.
 watch(() => readingZoom.scale, () => syncBar(true), { flush: 'post' })
@@ -310,7 +309,6 @@ function togglePlay(): void {
     <div class="demo-head">
       <span class="demo-title">{{ title }}</span>
       <span class="demo-badge">{{ DEMO.BADGE }}</span>
-      <button type="button" class="demo-video" @click="emit('video')">{{ VIDEO_UI.PLAY_DEMO }}</button>
     </div>
 
     <!-- 代码区。高亮条是这一格里绝对定位的一层，靠 translateY 走到当前行 -->
@@ -379,7 +377,6 @@ function togglePlay(): void {
 </template>
 
 <style scoped>
-.demo-video { margin-left:auto; border:0; background:transparent; color:var(--mi-blue-deep); font:inherit; cursor:pointer; }
 .demo {
   margin: var(--mi-sp-6) 0;
   border: 1px solid var(--mi-border);
@@ -434,7 +431,7 @@ function togglePlay(): void {
   top: 0;
   height: 0;
   background: var(--mi-blue-light);
-  border-left: 3px solid var(--mi-blue);
+  border-left: 3px solid var(--mi-blue-deep);
   z-index: 0;
   will-change: transform, height;
 }
@@ -487,32 +484,10 @@ function togglePlay(): void {
   flex-direction: column;
   align-items: center;
   gap: var(--mi-sp-3);
-  padding: var(--mi-sp-4) var(--mi-sp-3);
+  padding: var(--mi-sp-3);
   border-top: 1px solid var(--mi-border);
 }
 
-/*
- * 立绘不许被压。
- * `flex-shrink: 0` 是关键：窄窗口下 flex 会先拿它开刀，把 160px 的鱼挤成一条缝 ——
- * 而气泡是**可以**换行的、立绘不能。能屈的那个去屈。
- */
-.demo-meow-pet {
-  flex-shrink: 0;
-}
-
-/*
- * 气泡本体。
- *
- * 尾巴用两个伪元素叠出来，不放图片：纯 CSS 跟着字号走，也少一个资产文件。
- * `transform-origin: center top` 是给 `popMeow` 的缩放用的 ——
- * 从顶上（大肥鱼那一侧）往下弹，看起来才像是从它嘴里冒出来的话。
- *
- * 【为什么这一格的 `min-height` 钉在「两行」而不是「实际字数」】
- * 气泡字多字少会换行，行数一变高度就变，**它下面所有内容跟着上下跳**。
- * 把两行的高度写死：一句话的步骤留着第二行的空位，两句话的步骤正好填满，
- * 两边高度**一样**。不会再出现「按一下下一步，页面自己往上蹦一截」。
- * 74 = 上下内边距 8×2 + 上下边框 1×2 + 「大肥鱼说」那行 10×1.4 + 正文两行 13×1.6×2。
- */
 .demo-bubble {
   position: relative;
   width: 100%;
@@ -525,40 +500,11 @@ function togglePlay(): void {
   margin: 0;
   padding: var(--mi-sp-2) var(--mi-sp-4);
   border: 1px solid var(--mi-border);
-  border-radius: 10px;
+  border-radius: var(--mi-radius-box);
   background: var(--mi-bg);
   text-align: center;
   transform-origin: center top;
   will-change: transform, opacity;
-}
-.demo-bubble::before,
-.demo-bubble::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  transform: translateX(-50%);
-}
-/*
- * 外层三角＝尾巴的**描边**：颜色取边框色，位置比内层靠上 2px，
- * 于是它露出来的那一圈正好是 1px 描边。
- * 用 `border-bottom-color` 出来的三角尖朝**上**（顶在 `top + 6` 那个点上）。
- * `top: -12px` 让它的底边正好落在气泡的上边框上（0px）。
- */
-.demo-bubble::before {
-  top: -12px;
-  border-bottom-color: var(--mi-border);
-}
-/*
- * 内层三角＝尾巴的**填充**：颜色取气泡底色，往下多探 2px。
- * 多出来那 2px 正好盖住气泡自己的上边框（0~1px），
- * 于是尾巴和气泡是**连通**的，而不是贴上去的一个三角形。
- */
-.demo-bubble::after {
-  top: -10px;
-  border-bottom-color: var(--mi-bg);
 }
 
 /* 「大肥鱼说」——一行小字。它同时是这一格给人读、也给读屏软件读的名字 */

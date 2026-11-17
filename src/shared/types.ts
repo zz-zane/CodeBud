@@ -264,6 +264,7 @@ export interface ContentBundle {
   builtAt: string
   glossary: { version: number; note: string; terms: GlossaryTerm[] }
   errorLib: ErrorLib
+  animations?: import('./video').ExplainerVideo[]
   lessons: Lesson[]
   outline: OutlineModule[]
   searchIndex: SearchEntry[]

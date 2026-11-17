@@ -4,7 +4,6 @@ import { useRoute, useRouter } from 'vue-router'
 import { useContentStore } from '../stores/content'
 import { useProgressStore } from '../stores/progress'
 import { useRunnerStore } from '../stores/runner'
-import { useSettingsStore } from '../stores/settings'
 import { useAiAssistantStore } from '../stores/ai-assistant'
 import { useMemoStore } from '../stores/memo'
 import { validateDomSelection, saveLessonAnnotation } from '../lib/lesson-annotation'
@@ -35,8 +34,8 @@ import MiDrawer from '../components/base/MiDrawer.vue'
 import MiRichText from '../components/base/MiRichText.vue'
 import CompareGrid from '../components/domain/CompareGrid.vue'
 import DemoPlayer from '../components/domain/DemoPlayer.vue'
-import VideoLibrary from '../components/domain/video/VideoLibrary.vue'
-import { demoToVideo } from '../../../shared/video'
+import VideoCard from '../components/domain/video/VideoCard.vue'
+import type { ExplainerVideo } from '../../../shared/video'
 import { useVideoStore } from '../stores/video'
 import FlashCardsDeck from '../components/domain/FlashCardsDeck.vue'
 import PretestCard from '../components/domain/PretestCard.vue'
@@ -51,13 +50,6 @@ const content = useContentStore()
 const progress = useProgressStore()
 const runner = useRunnerStore()
 const video = useVideoStore()
-const settings = useSettingsStore()
-const videoPreferred = computed(() => (settings.config as typeof settings.config & { learning?: { explainMode?: string } }).learning?.explainMode === 'video')
-const showVideos = ref(false)
-// 视频对话框 / 播放器开起时收起右侧视频抽屉，避免同处 z-index 9000 互相遮挡
-watch(() => video.dialogOpen || Boolean(video.current), (open) => {
-  if (open) showVideos.value = false
-})
 const { openLesson } = useLessonOpener()
 
 const memoStore = useMemoStore()
@@ -186,9 +178,8 @@ const quizCount = computed(() => lessonPracticeQuestions(lesson.value).length)
 const prevId = computed(() => (id.value ? content.prevWrittenBeforeId(id.value) : null))
 const nextId = computed(() => (id.value ? content.nextWrittenAfterId(id.value) : null))
 
-/** 正文渲染结果（compare / demo 块都换成占位元素 + 结构数据） */
+/** 正文渲染结果（compare / demo / anim 块都换成占位元素 + 结构数据） */
 const rendered = computed(() => (lesson.value ? renderMarkdown(lesson.value.body, true) : null))
-const lessonDemos = computed(() => (rendered.value?.demoBlocks ?? []).map(block => demoToVideo(block, id.value, block.title || VIDEO_UI.DEMO_TITLE)))
 
 /**
  * 正文切成的片段序列：`html` 段直接贴，`compare` 段渲染 CompareGrid，
@@ -219,6 +210,12 @@ const bodyParts = computed<SlotPart[]>(() =>
  */
 function demoAt(index: number): DemoBlock | null {
   return rendered.value?.demoBlocks[index] ?? null
+}
+
+function animAt(index: number): ExplainerVideo | null {
+  const block = rendered.value?.animBlocks[index]
+  if (!block) return null
+  return content.bundle.animations?.find(a => a.id === block.id) ?? null
 }
 
 /**
@@ -591,7 +588,13 @@ onBeforeUnmount(() => {
           <DemoPlayer
             v-else-if="part.kind === 'demo' && demoAt(part.index)"
             :block="demoAt(part.index)!"
-            @video="video.play(demoToVideo(demoAt(part.index)!, id, demoAt(part.index)!.title || VIDEO_UI.DEMO_TITLE))"
+          />
+          <VideoCard
+            v-else-if="part.kind === 'anim' && animAt(part.index)"
+            :video="animAt(part.index)!"
+            :subtitle="animAt(part.index)!.concept"
+            class="lesson-anim-card"
+            @play="video.play($event)"
           />
           <FlashCardsDeck
             v-else-if="part.kind === 'flash-cards' && rendered?.flashCardsBlocks[part.index]"
@@ -636,7 +639,6 @@ onBeforeUnmount(() => {
           </MiButton>
           <MiButton v-if="quizCount > 0" variant="primary" icon="list-checks" @click="startPractice">{{ ACTION.lessonQuiz(quizCount) }}</MiButton>
           <span v-else-if="isAlgo" class="algo-no-quiz">{{ AI_ASSISTANT.ALGO_NO_QUIZ }}</span>
-          <MiButton :variant="videoPreferred ? 'primary' : 'secondary'" icon="play" @click="showVideos = true">{{ VIDEO_UI.TITLE }}</MiButton>
           <MiButton v-if="!remote" class="icon-only" variant="ghost" icon="play" :title="ACTION.RUN_CODE" :aria-label="ACTION.RUN_CODE" @click="runCode" />
           <MiButton class="icon-only" variant="ghost" icon="star" :icon-filled="isFavorite" :title="isFavorite ? ACTION.FAVORITED : ACTION.FAVORITE" :aria-label="isFavorite ? ACTION.FAVORITED : ACTION.FAVORITE" :aria-pressed="isFavorite" @click="toggleFavorite" />
           <MiButton ref="noteBtnRef" class="icon-only" variant="ghost" icon="note" :title="ACTION.LESSON_NOTE" :aria-label="ACTION.LESSON_NOTE" @click="openLessonNote" />
@@ -690,7 +692,6 @@ onBeforeUnmount(() => {
         </div>
       </div>
 
-      <MiDrawer v-model:visible="showVideos" :title="VIDEO_UI.THIS_LESSON" :width="420"><VideoLibrary :lesson-id="id" :lesson-excerpt="lesson.body" :demos="lessonDemos" /></MiDrawer>
       <!-- P1-2 代码块下方展开内联运行区 -->
       <Teleport v-if="inlineRunMount && activeRunBlock" :to="inlineRunMount">
         <div class="inline-runner-card">
@@ -1001,7 +1002,7 @@ button.required-item:focus-visible {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--mi-sp-3);
+  gap: var(--mi-sp-2);
   flex-wrap: wrap;
   overflow: visible;
   margin: var(--mi-sp-6) 0 var(--mi-sp-4);
@@ -1015,7 +1016,8 @@ button.required-item:focus-visible {
 }
 .lesson-tools-row {
   display: flex;
-  flex-wrap: wrap;
+  flex: none;
+  flex-wrap: nowrap;
   align-items: center;
   /* 相邻行各扩展 6px 命中区，行距至少 12px 才不重叠。 */
   gap: var(--mi-sp-3) var(--mi-sp-2);
@@ -1024,24 +1026,25 @@ button.required-item:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--mi-sp-4);
-  flex-wrap: wrap;
-  flex: 1 1 120px;
+  gap: var(--mi-sp-2);
+  flex-wrap: nowrap;
+  flex: 1 1 0;
   min-width: 0;
   container-type: inline-size;
 }
 /* 算法课有上一节/目录/下一节三个按钮，一行放不下，保留独立一行 */
 .lesson-nav-row.nav-row-full {
   flex-basis: 100%;
+  flex-wrap: wrap;
 }
 /* 课程名放不下时整段隐藏，不留一个字加省略号的残段 */
-@container (max-width: 150px) {
+@container (max-width: 96px) {
   .lesson-current-title {
     display: none;
   }
 }
 .lesson-current-title {
-  flex: 1;
+  flex: 1 1 0;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1052,9 +1055,10 @@ button.required-item:focus-visible {
 }
 .lesson-nav-buttons {
   display: flex;
+  flex: none;
   align-items: center;
-  gap: var(--mi-sp-3);
-  flex-wrap: wrap;
+  gap: var(--mi-sp-2);
+  flex-wrap: nowrap;
   margin-left: auto;
 }
 .nav-col {
@@ -1136,11 +1140,11 @@ button.required-item:focus-visible {
 }
 .checklist-item.done {
   color: var(--mi-text);
-  border-color: var(--mi-border-strong, var(--mi-border));
+  border-color: var(--cds-border-strong, var(--mi-border));
 }
 .check-mark {
   font-weight: 500;
-  color: var(--mi-green, #10b981);
+  color: var(--mi-success-deep);
 }
 
 /* P1-2 代码块下方展开内联运行区样式 */
@@ -1157,7 +1161,7 @@ button.required-item:focus-visible {
   align-items: center;
   justify-content: space-between;
   padding-bottom: var(--mi-sp-3);
-  border-bottom: 1px solid var(--mi-border-subtle, var(--mi-border));
+  border-bottom: 1px solid var(--mi-border);
   margin-bottom: var(--mi-sp-3);
 }
 .inline-runner-title-group {
@@ -1212,16 +1216,16 @@ button.required-item:focus-visible {
   margin-bottom: var(--mi-sp-2);
 }
 .run-status-line.tone-ok {
-  background: var(--mi-green-light, rgba(16, 185, 129, 0.1));
-  color: var(--mi-green, #10b981);
+  background: var(--mi-success-fill);
+  color: var(--mi-success-deep);
 }
 .run-status-line.tone-bad {
-  background: var(--mi-red-light, rgba(239, 68, 68, 0.1));
-  color: var(--mi-red, #ef4444);
+  background: var(--mi-error-fill);
+  color: var(--mi-error-deep);
 }
 .run-status-line.tone-warn {
-  background: var(--mi-gold-light, rgba(245, 158, 11, 0.1));
-  color: var(--mi-gold, #f59e0b);
+  background: var(--mi-warn-fill);
+  color: var(--mi-warn-deep);
 }
 .run-long-msg {
   font-size: var(--mi-fs-label);
@@ -1253,19 +1257,19 @@ button.required-item:focus-visible {
   color: var(--mi-text);
 }
 .run-out-box.stderr .run-pre {
-  color: var(--mi-red, #ef4444);
+  color: var(--mi-error-deep);
 }
 .err-card {
   padding: var(--mi-sp-3);
   margin-bottom: var(--mi-sp-3);
   border-radius: var(--mi-radius-sm);
-  background: var(--mi-red-light, rgba(239, 68, 68, 0.08));
-  border: 1px solid var(--mi-red, #ef4444);
+  background: var(--mi-error-fill);
+  border: 1px solid var(--mi-error-deep);
 }
 .ec-tag {
   font-size: var(--mi-fs-caption);
   font-weight: 500;
-  color: var(--mi-red, #ef4444);
+  color: var(--mi-error-deep);
   margin-bottom: var(--mi-sp-1);
 }
 .ec-title {
@@ -1313,11 +1317,11 @@ button.required-item:focus-visible {
   transition: background var(--mi-dur-fast) var(--mi-ease), color var(--mi-dur-fast) var(--mi-ease);
 }
 .note-drawer-back-btn:hover {
-  background: var(--mi-hover);
+  background: var(--mi-blue-light);
   color: var(--mi-text);
 }
 .note-drawer-back-btn:focus-visible {
-  outline: 2px solid var(--mi-blue);
+  outline: 2px solid var(--mi-blue-deep);
   outline-offset: 1px;
 }
 .note-drawer-header-title {
@@ -1369,7 +1373,7 @@ button.required-item:focus-visible {
   overflow-y: auto;
 }
 .note-textarea:focus {
-  outline: 2px solid var(--mi-blue);
+  outline: 2px solid var(--mi-blue-deep);
   border-color: transparent;
 }
 .note-drawer-footer {
@@ -1456,13 +1460,13 @@ button.required-item:focus-visible {
   padding: var(--mi-sp-2) var(--mi-sp-3);
   font-size: var(--mi-fs-label);
   font-weight: 500;
-  color: var(--mi-btn-primary-text, #ffffff);
+  color: var(--mi-btn-primary-text);
   background: var(--mi-blue-deep);
   border: none;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: transform 0.15s ease;
+  box-shadow: var(--mi-shadow-lg);
+  cursor: var(--mi-cursor, pointer);
+  transition: transform var(--mi-dur-fast) var(--mi-ease);
 }
 .annotation-float-btn:hover {
   transform: scale(1.05);
@@ -1474,22 +1478,22 @@ button.required-item:focus-visible {
   gap: var(--mi-sp-4);
 }
 .annotation-quote-preview {
-  background: var(--mi-zebra, #f4f8fd);
+  background: var(--mi-zebra);
   border-left: 3px solid var(--mi-blue-deep);
   padding: var(--mi-sp-3) var(--mi-sp-3);
-  border-radius: var(--mi-radius-sm, 6px);
+  border-radius: var(--mi-radius-sm);
 }
 .quote-header {
   font-size: var(--mi-fs-caption);
   font-weight: 500;
-  color: var(--mi-text-2, #6A6864);
+  color: var(--mi-text-2);
   margin-bottom: var(--mi-sp-2);
 }
 .quote-content-text {
   margin: 0;
   font-size: var(--mi-fs-label);
   line-height: 1.5;
-  color: var(--mi-text, #181816);
+  color: var(--mi-text);
   font-style: italic;
   max-height: 120px;
   overflow-y: auto;
@@ -1499,10 +1503,10 @@ button.required-item:focus-visible {
 .quote-content-code {
   margin: 0;
   font-size: var(--mi-fs-caption);
-  font-family: var(--mi-font-mono, monospace);
+  font-family: var(--mi-code);
   background: var(--mi-code-bg);
   padding: var(--mi-sp-2);
-  border-radius: var(--mi-radius-sm, 6px);
+  border-radius: var(--mi-radius-sm);
   max-height: 120px;
   overflow-y: auto;
   word-break: break-word;
@@ -1516,21 +1520,21 @@ button.required-item:focus-visible {
 .note-label {
   font-size: var(--mi-fs-label);
   font-weight: 500;
-  color: var(--mi-text, #181816);
+  color: var(--mi-text);
 }
 .annotation-textarea {
   width: 100%;
   box-sizing: border-box;
   padding: var(--mi-sp-3);
   border: 1px solid var(--mi-border);
-  border-radius: var(--mi-radius-sm, 6px);
+  border-radius: var(--mi-radius-sm);
   font-size: var(--mi-fs-body);
   line-height: 1.5;
   outline: none;
   resize: vertical;
   font-family: inherit;
-  color: var(--mi-text, #181816);
-  background: var(--mi-bg, #ffffff);
+  color: var(--mi-text);
+  background: var(--mi-bg);
 }
 .annotation-textarea:focus {
   border-color: var(--mi-blue-deep);
@@ -1545,4 +1549,5 @@ button.required-item:focus-visible {
 .lesson-done { color: var(--mi-success-deep); }
 .algo-official-link { color: var(--mi-blue-deep); text-decoration: none; }
 .prereq-recommend-banner { background: transparent; border: 0; padding: 0; }
+.lesson-anim-card { margin: var(--mi-sp-5) 0; }
 </style>

@@ -1,0 +1,535 @@
+{
+  "id": "c-pointer-array",
+  "title": "p + 1 为什么正好跳到下一格",
+  "question": "为什么指针 p 加 1 不是地址加 1，而是指向数组下一个元素？",
+  "concept": "指针加 1 按所指类型大小跨步",
+  "lessonId": "c-stage2-01",
+  "source": "builtin",
+  "createdAt": 1,
+  "codeVerified": null,
+  "scenes": [],
+  "checks": [],
+  "acts": [
+    {
+      "title": "一排连号柜子按步长跳",
+      "skin": "locker",
+      "steps": [
+        {
+          "say": "数组是一排紧挨着的柜子，每个 `int` 柜占 `4` 号。",
+          "groups": [
+            {
+              "id": "arr",
+              "title": "arr",
+              "kind": "array"
+            }
+          ],
+          "cells": [
+            {
+              "id": "c0",
+              "group": "arr",
+              "name": "0",
+              "addr": "100",
+              "value": "10"
+            },
+            {
+              "id": "c1",
+              "group": "arr",
+              "name": "1",
+              "addr": "104",
+              "value": "20"
+            },
+            {
+              "id": "c2",
+              "group": "arr",
+              "name": "2",
+              "addr": "108",
+              "value": "30"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "纸条 `p` 记着 `100`，正指着第 `0` 号柜。",
+          "groups": [
+            {
+              "id": "paper",
+              "title": "纸条",
+              "kind": "plain"
+            },
+            {
+              "id": "arr",
+              "title": "arr",
+              "kind": "array"
+            }
+          ],
+          "cells": [
+            {
+              "id": "c0",
+              "group": "arr",
+              "name": "0",
+              "addr": "100",
+              "value": "10"
+            },
+            {
+              "id": "c1",
+              "group": "arr",
+              "name": "1",
+              "addr": "104",
+              "value": "20"
+            },
+            {
+              "id": "c2",
+              "group": "arr",
+              "name": "2",
+              "addr": "108",
+              "value": "30"
+            },
+            {
+              "id": "p",
+              "group": "paper",
+              "name": "p",
+              "value": "100"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "c0"
+            }
+          ],
+          "focus": [
+            "p",
+            "c0"
+          ]
+        },
+        {
+          "say": "把纸条往前拨 `1` 格，门牌直接从 `100` 跳到 `104`。",
+          "groups": [
+            {
+              "id": "paper",
+              "title": "纸条",
+              "kind": "plain"
+            },
+            {
+              "id": "arr",
+              "title": "arr",
+              "kind": "array"
+            }
+          ],
+          "cells": [
+            {
+              "id": "c0",
+              "group": "arr",
+              "name": "0",
+              "addr": "100",
+              "value": "10"
+            },
+            {
+              "id": "c1",
+              "group": "arr",
+              "name": "1",
+              "addr": "104",
+              "value": "20"
+            },
+            {
+              "id": "c2",
+              "group": "arr",
+              "name": "2",
+              "addr": "108",
+              "value": "30"
+            },
+            {
+              "id": "p",
+              "group": "paper",
+              "name": "p",
+              "value": "104"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "c1"
+            }
+          ],
+          "note": {
+            "at": "p",
+            "text": "跨过 4 个字节"
+          },
+          "ask": {
+            "stem": "纸条 p 从 100 拨 1 格后，指向哪个柜子？",
+            "options": [
+              "20 所在柜",
+              "10 所在柜",
+              "101 号半个柜"
+            ],
+            "answer": 0,
+            "why": "p 知道自己指着 int 柜，加 1 会整格跨过 4 字节。"
+          },
+          "follow": "p",
+          "open": [
+            "c1"
+          ]
+        },
+        {
+          "say": "再往后看 `1` 格，就能读出 `108` 号柜里的 `30`。",
+          "groups": [
+            {
+              "id": "paper",
+              "title": "纸条",
+              "kind": "plain"
+            },
+            {
+              "id": "arr",
+              "title": "arr",
+              "kind": "array"
+            }
+          ],
+          "cells": [
+            {
+              "id": "c0",
+              "group": "arr",
+              "name": "0",
+              "addr": "100",
+              "value": "10"
+            },
+            {
+              "id": "c1",
+              "group": "arr",
+              "name": "1",
+              "addr": "104",
+              "value": "20"
+            },
+            {
+              "id": "c2",
+              "group": "arr",
+              "name": "2",
+              "addr": "108",
+              "value": "30"
+            },
+            {
+              "id": "p",
+              "group": "paper",
+              "name": "p",
+              "value": "104"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "c1"
+            }
+          ],
+          "focus": [
+            "p",
+            "c2"
+          ],
+          "out": "30",
+          "follow": "p",
+          "open": [
+            "c2"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "换成真正的代码",
+      "skin": "memory",
+      "code": {
+        "lang": "c",
+        "lines": [
+          "#include <stdio.h>",
+          "int main(void) {",
+          "    int arr[3] = {10, 20, 30};",
+          "    int *p = arr;",
+          "    printf(\"%d\\n\", *p);",
+          "    p = p + 1;",
+          "    printf(\"%d\\n\", *p);",
+          "    printf(\"%d\\n\", *(p + 1));",
+          "    return 0;",
+          "}"
+        ],
+        "expectedOutput": "10\n20\n30\n"
+      },
+      "steps": [
+        {
+          "say": "`arr` 的三个 `int` 连续排在 `0x100`、`0x104`、`0x108`。",
+          "line": 3,
+          "groups": [
+            {
+              "id": "arr",
+              "title": "arr",
+              "kind": "array"
+            }
+          ],
+          "cells": [
+            {
+              "id": "c0",
+              "group": "arr",
+              "name": "0",
+              "addr": "0x100",
+              "value": "10"
+            },
+            {
+              "id": "c1",
+              "group": "arr",
+              "name": "1",
+              "addr": "0x104",
+              "value": "20"
+            },
+            {
+              "id": "c2",
+              "group": "arr",
+              "name": "2",
+              "addr": "0x108",
+              "value": "30"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "`int *p = arr;` 让 `p` 存下首元素 `arr[0]` 的地址。",
+          "line": 4,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "arr",
+              "title": "arr",
+              "kind": "array"
+            }
+          ],
+          "cells": [
+            {
+              "id": "c0",
+              "group": "arr",
+              "name": "0",
+              "addr": "0x100",
+              "value": "10"
+            },
+            {
+              "id": "c1",
+              "group": "arr",
+              "name": "1",
+              "addr": "0x104",
+              "value": "20"
+            },
+            {
+              "id": "c2",
+              "group": "arr",
+              "name": "2",
+              "addr": "0x108",
+              "value": "30"
+            },
+            {
+              "id": "p",
+              "group": "main",
+              "name": "p",
+              "value": "0x100"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "c0"
+            }
+          ]
+        },
+        {
+          "say": "`*p` 取出 `0x100` 处的值，输出 `10`。",
+          "line": 5,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "arr",
+              "title": "arr",
+              "kind": "array"
+            }
+          ],
+          "cells": [
+            {
+              "id": "c0",
+              "group": "arr",
+              "name": "0",
+              "addr": "0x100",
+              "value": "10"
+            },
+            {
+              "id": "c1",
+              "group": "arr",
+              "name": "1",
+              "addr": "0x104",
+              "value": "20"
+            },
+            {
+              "id": "c2",
+              "group": "arr",
+              "name": "2",
+              "addr": "0x108",
+              "value": "30"
+            },
+            {
+              "id": "p",
+              "group": "main",
+              "name": "p",
+              "value": "0x100"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "c0"
+            }
+          ],
+          "focus": [
+            "c0"
+          ],
+          "out": "10",
+          "follow": "p"
+        },
+        {
+          "say": "`p = p + 1;` 让地址增加 `4` 字节，`p` 改指 `arr[1]`。",
+          "line": 6,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "arr",
+              "title": "arr",
+              "kind": "array"
+            }
+          ],
+          "cells": [
+            {
+              "id": "c0",
+              "group": "arr",
+              "name": "0",
+              "addr": "0x100",
+              "value": "10"
+            },
+            {
+              "id": "c1",
+              "group": "arr",
+              "name": "1",
+              "addr": "0x104",
+              "value": "20"
+            },
+            {
+              "id": "c2",
+              "group": "arr",
+              "name": "2",
+              "addr": "0x108",
+              "value": "30"
+            },
+            {
+              "id": "p",
+              "group": "main",
+              "name": "p",
+              "value": "0x104"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "c1"
+            }
+          ],
+          "note": {
+            "at": "p",
+            "text": "+sizeof(int)"
+          },
+          "out": "10",
+          "ask": {
+            "stem": "此时执行 printf(\"%d\\n\", *(p + 1)); 会输出什么？",
+            "options": [
+              "21",
+              "20",
+              "30"
+            ],
+            "answer": 2,
+            "why": "p 已指向 20，p + 1 再往后跨一格指向 30。"
+          },
+          "follow": "p"
+        },
+        {
+          "say": "第 7、8 行依次输出 `20` 和 `30`，指针停在 `arr[1]`。",
+          "line": 8,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "arr",
+              "title": "arr",
+              "kind": "array"
+            }
+          ],
+          "cells": [
+            {
+              "id": "c0",
+              "group": "arr",
+              "name": "0",
+              "addr": "0x100",
+              "value": "10"
+            },
+            {
+              "id": "c1",
+              "group": "arr",
+              "name": "1",
+              "addr": "0x104",
+              "value": "20"
+            },
+            {
+              "id": "c2",
+              "group": "arr",
+              "name": "2",
+              "addr": "0x108",
+              "value": "30"
+            },
+            {
+              "id": "p",
+              "group": "main",
+              "name": "p",
+              "value": "0x104"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "c1"
+            }
+          ],
+          "focus": [
+            "c2"
+          ],
+          "out": "10\n20\n30"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "p+1",
+    "p + 1",
+    "指针加",
+    "下一个元素",
+    "步长",
+    "数组指针",
+    "sizeof",
+    "跨步"
+  ],
+  "lessonIds": [
+    "c-stage2-01",
+    "c-stage2-02"
+  ]
+}

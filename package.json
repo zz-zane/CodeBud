@@ -1,6 +1,6 @@
 {
   "name": "miai-biancheng",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "CodeBud — 面向大学生与编程初学者的离线学习伴侣",
   "main": "./out/main/index.js",
   "private": true,
@@ -20,6 +20,7 @@
     "check:questions": "node scripts/check-question-code.mjs",
     "check:answers": "node scripts/check-code-answers.mjs",
     "check:bank": "node scripts/check-bank.mjs",
+    "check:animations": "node scripts/check-animations.mjs",
     "check:packed": "node scripts/check-content-packed.mjs",
     "build:content": "node scripts/content-build.mjs --allow-missing && node scripts/algo-build.mjs",
     "build:content:strict": "node scripts/content-build.mjs && node scripts/algo-build.mjs",

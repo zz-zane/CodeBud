@@ -297,6 +297,14 @@ for (const f of fs.readdirSync(path.join(CONTENT, 'error-lib'))) {
   errorLib[f.replace('.json', '')] = JSON.parse(fs.readFileSync(path.join(CONTENT, 'error-lib', f), 'utf8')).rules
 }
 
+const ANIM_DIR = path.join(CONTENT, 'animations')
+const animations = []
+if (fs.existsSync(ANIM_DIR)) {
+  for (const f of fs.readdirSync(ANIM_DIR).filter((n) => n.endsWith('.json')).sort()) {
+    animations.push(JSON.parse(fs.readFileSync(path.join(ANIM_DIR, f), 'utf8')))
+  }
+}
+
 /**
  * 【只有**有正文**的课才有资格当前置 —— 这条不写，内容会被永久锁死】
  *
@@ -340,6 +348,7 @@ const bundle = {
   builtAt: new Date().toISOString(),
   glossary,
   errorLib,
+  animations,
   lessons,
   outline,
   searchIndex
@@ -357,6 +366,7 @@ if (errors.length > 0) {
   console.log(`打包完成：${lessons.length} 课全量入库 ✓`)
 }
 const kb = Math.round(fs.statSync(OUT_FILE).size / 1024)
+console.log(`动画：${animations.length} 支`)
 console.log(`输出：${path.relative(ROOT, OUT_FILE)}（${kb} KB）`)
 if (errors.length > 0 && !allowMissing) {
   console.error('缺失即失败：发布前请确保内容齐全，或确认已跑过 validate:content')

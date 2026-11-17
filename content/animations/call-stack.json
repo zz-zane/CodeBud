@@ -1,0 +1,433 @@
+{
+  "id": "call-stack",
+  "title": "调用一次压一层，return 弹一层",
+  "question": "调用函数和 return 返回时，内存里的栈帧是怎么变化的？",
+  "concept": "函数调用栈帧后进先出",
+  "lessonId": "c-stage1-12",
+  "source": "builtin",
+  "createdAt": 1,
+  "codeVerified": null,
+  "scenes": [],
+  "checks": [],
+  "acts": [
+    {
+      "title": "叠起来的草稿纸",
+      "skin": "sheet",
+      "steps": [
+        {
+          "say": "先铺好 `main` 这张草稿纸，上面写着 `x = 4`。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "x",
+              "group": "main",
+              "name": "x",
+              "value": "4"
+            },
+            {
+              "id": "y",
+              "group": "main",
+              "name": "y",
+              "value": "?"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "调用函数时，在上面新叠一张草稿纸，把 `4` 抄给 `n`。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "dbl",
+              "title": "double_val",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "x",
+              "group": "main",
+              "name": "x",
+              "value": "4"
+            },
+            {
+              "id": "y",
+              "group": "main",
+              "name": "y",
+              "value": "?"
+            },
+            {
+              "id": "n",
+              "group": "dbl",
+              "name": "n",
+              "value": "4"
+            },
+            {
+              "id": "res",
+              "group": "dbl",
+              "name": "res",
+              "value": "?"
+            }
+          ],
+          "arrows": [],
+          "fly": {
+            "from": "x",
+            "to": "n",
+            "text": "4"
+          }
+        },
+        {
+          "say": "新草稿纸算完 `res = 8`，`main` 那张在底下安心等着。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "dbl",
+              "title": "double_val",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "x",
+              "group": "main",
+              "name": "x",
+              "value": "4",
+              "dim": true
+            },
+            {
+              "id": "y",
+              "group": "main",
+              "name": "y",
+              "value": "?",
+              "dim": true
+            },
+            {
+              "id": "n",
+              "group": "dbl",
+              "name": "n",
+              "value": "4"
+            },
+            {
+              "id": "res",
+              "group": "dbl",
+              "name": "res",
+              "value": "8"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "n",
+            "res"
+          ],
+          "ask": {
+            "stem": "这张草稿纸执行 return 后会发生什么？",
+            "options": [
+              "永远留在栈上",
+              "被抽走，8 交给 y",
+              "main 也被清空"
+            ],
+            "answer": 1,
+            "why": "return 会把结果交回下层，并销毁当前这层草稿纸。"
+          }
+        },
+        {
+          "say": "`return` 把 `8` 递回 `y`，顶上的草稿纸立刻收走。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "x",
+              "group": "main",
+              "name": "x",
+              "value": "4"
+            },
+            {
+              "id": "y",
+              "group": "main",
+              "name": "y",
+              "value": "8"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "y"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "换成真正的代码",
+      "skin": "memory",
+      "code": {
+        "lang": "c",
+        "lines": [
+          "#include <stdio.h>",
+          "int double_val(int n) {",
+          "    int res = n * 2;",
+          "    return res;",
+          "}",
+          "int main(void) {",
+          "    int x = 4;",
+          "    int y = double_val(x);",
+          "    printf(\"%d\\n\", y);",
+          "    return 0;",
+          "}"
+        ],
+        "expectedOutput": "8\n"
+      },
+      "steps": [
+        {
+          "say": "`main` 栈帧就位，`x` 存着 `4`，`y` 等待返回值。",
+          "line": 7,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "x",
+              "group": "main",
+              "name": "x",
+              "addr": "0x100",
+              "value": "4"
+            },
+            {
+              "id": "y",
+              "group": "main",
+              "name": "y",
+              "addr": "0x104",
+              "value": "?"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "进入 `double_val`，系统压入新栈帧并传入 `n = 4`。",
+          "line": 2,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "dbl",
+              "title": "double_val",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "x",
+              "group": "main",
+              "name": "x",
+              "addr": "0x100",
+              "value": "4"
+            },
+            {
+              "id": "y",
+              "group": "main",
+              "name": "y",
+              "addr": "0x104",
+              "value": "?"
+            },
+            {
+              "id": "n",
+              "group": "dbl",
+              "name": "n",
+              "addr": "0x200",
+              "value": "4"
+            }
+          ],
+          "arrows": [],
+          "fly": {
+            "from": "x",
+            "to": "n",
+            "text": "4"
+          }
+        },
+        {
+          "say": "局部变量 `res` 算出 `8`，只活在 `double_val` 帧内。",
+          "line": 3,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "dbl",
+              "title": "double_val",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "x",
+              "group": "main",
+              "name": "x",
+              "addr": "0x100",
+              "value": "4"
+            },
+            {
+              "id": "y",
+              "group": "main",
+              "name": "y",
+              "addr": "0x104",
+              "value": "?"
+            },
+            {
+              "id": "n",
+              "group": "dbl",
+              "name": "n",
+              "addr": "0x200",
+              "value": "4"
+            },
+            {
+              "id": "res",
+              "group": "dbl",
+              "name": "res",
+              "addr": "0x204",
+              "value": "8"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "res"
+          ],
+          "ask": {
+            "stem": "执行第 4 行 return res; 时，double_val 栈帧会怎样？",
+            "options": [
+              "保留供下次复用",
+              "覆盖 x 的值",
+              "弹出销毁，值传给 y"
+            ],
+            "answer": 2,
+            "why": "函数返回时栈帧自动出栈释放，返回值赋给调用处 y。"
+          }
+        },
+        {
+          "say": "第 4 行 `return res;` 把 `8` 递回 `main` 的 `y`。",
+          "line": 4,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "dbl",
+              "title": "double_val",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "x",
+              "group": "main",
+              "name": "x",
+              "addr": "0x100",
+              "value": "4"
+            },
+            {
+              "id": "y",
+              "group": "main",
+              "name": "y",
+              "addr": "0x104",
+              "value": "8"
+            },
+            {
+              "id": "n",
+              "group": "dbl",
+              "name": "n",
+              "addr": "0x200",
+              "value": "4"
+            },
+            {
+              "id": "res",
+              "group": "dbl",
+              "name": "res",
+              "addr": "0x204",
+              "value": "8"
+            }
+          ],
+          "arrows": [],
+          "fly": {
+            "from": "res",
+            "to": "y",
+            "text": "8"
+          }
+        },
+        {
+          "say": "回到第 9 行打印 `y`，输出 `8`，`double_val` 已出栈。",
+          "line": 9,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "x",
+              "group": "main",
+              "name": "x",
+              "addr": "0x100",
+              "value": "4"
+            },
+            {
+              "id": "y",
+              "group": "main",
+              "name": "y",
+              "addr": "0x104",
+              "value": "8"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "y"
+          ],
+          "out": "8"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "调用栈",
+    "栈帧",
+    "压栈",
+    "出栈",
+    "弹栈",
+    "return",
+    "局部变量",
+    "call stack"
+  ],
+  "lessonIds": [
+    "c-stage1-12",
+    "c-stage1-13",
+    "common-07"
+  ]
+}

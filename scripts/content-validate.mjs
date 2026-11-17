@@ -24,6 +24,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { build as esbuild } from 'esbuild'
 import { createTermScanner, createCatScanner } from './lib/terms.mjs'
 import { missingStdexceptType, stdexceptMessage } from './lib/cpp-includes.mjs'
 
@@ -381,6 +382,15 @@ function checkLesson(lessonId) {
     if (b.lang === 'demo') {
       const problems = checkDemoBlock(lessonId, b.code)
       if (problems.length) return err(lessonId, `demo 块不合法：\n      - ${problems.join('\n      - ')}`)
+    }
+    if (b.lang.startsWith('anim') && b.lang !== 'anim')
+      return err(lessonId, `anim 围栏后面不能带词：「${b.lang}」（只认光秃秃的 \`anim\`）`)
+    if (b.lang === 'anim') {
+      const lines = b.code.split(/\r?\n/).map((l) => l.trim()).filter(Boolean)
+      const m = lines.length === 1 ? lines[0].match(/^id:\s*([a-zA-Z0-9_-]+)$/) : null
+      if (!m) return err(lessonId, 'anim 围栏只认一行 `id: <动画id>`')
+      if (!fs.existsSync(path.join(CONTENT, 'animations', `${m[1]}.json`)))
+        return err(lessonId, `anim 围栏引用的内置动画不存在：${m[1]}`)
     }
   }
 
@@ -1406,6 +1416,50 @@ function checkErrorLib() {
 }
 
 checkErrorLib()
+
+async function checkAnimations() {
+  const dir = path.join(CONTENT, 'animations')
+  if (!fs.existsSync(dir)) {
+    return errors.push({ lessonId: 'animations', message: '目录不存在：content/animations/' })
+  }
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort()
+  if (files.length === 0) {
+    return errors.push({ lessonId: 'animations', message: 'content/animations/ 下没有动画 JSON' })
+  }
+  const built = await esbuild({
+    entryPoints: [path.join(ROOT, 'src', 'shared', 'video.ts')],
+    bundle: true,
+    write: false,
+    format: 'esm',
+    platform: 'node'
+  })
+  const mod = await import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'))
+  for (const f of files) {
+    const id = f.replace(/\.json$/, '')
+    const label = `animations/${f}`
+    let data
+    try {
+      data = readJson(path.join(dir, f))
+    } catch (e) {
+      errors.push({ lessonId: label, message: `JSON 解析失败：${e.message}` })
+      continue
+    }
+    if (data.id !== id) errors.push({ lessonId: label, message: `id (${data.id}) 与文件名 (${id}) 不一致` })
+    if (data.source !== 'builtin') errors.push({ lessonId: label, message: `内置动画 source 必须为 builtin，实际为 ${data.source}` })
+    if (!Array.isArray(data.keywords) || data.keywords.length === 0 || !data.keywords.every((k) => typeof k === 'string' && k.trim().length > 0)) {
+      errors.push({ lessonId: label, message: '内置动画必须提供非空 keywords 字符串数组' })
+    }
+    if (!Array.isArray(data.lessonIds) || data.lessonIds.length === 0 || !data.lessonIds.every((l) => typeof l === 'string' && l.trim().length > 0)) {
+      errors.push({ lessonId: label, message: '内置动画必须提供非空 lessonIds 字符串数组' })
+    }
+    for (const msg of mod.validateVideo(data)) {
+      errors.push({ lessonId: label, message: msg })
+    }
+  }
+  console.log(`内置动画：${files.length} 支（validateVideo 校验完成）`)
+}
+
+await checkAnimations()
 
 // ---------------------------------------------------------------- 输出
 

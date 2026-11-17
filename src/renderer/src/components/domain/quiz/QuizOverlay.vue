@@ -18,6 +18,7 @@ import FavoriteStar from '../FavoriteStar.vue'
 import { isRunGraded } from '../../../../../shared/run-grading'
 import { CHALLENGE, QUIZ, VIDEO_UI } from '../../../lib/copy'
 import { useVideoStore } from '../../../stores/video'
+import { VIDEO_GENERATION_TEXT as VT } from '../../../../../shared/video-copy'
 import { isSentinelLesson, parseQuestionKey } from '../../../../../shared/question-key'
 import { usePhoneBackClose } from '../../../lib/phone-back-close'
 
@@ -33,6 +34,7 @@ const challenge = useChallengeStore()
 const settings = useSettingsStore()
 const videoPreferred = computed(() => (settings.config as typeof settings.config & { learning?: { explainMode?: string } }).learning?.explainMode === 'video')
 const dismissedVideoHints = ref(new Set<string>())
+const videoCollapsed = ref(false)
 // 答对时闪的那枚「🍚 +1」回执（V2-22）读它的 riceInTick —— 见下面的 watcher。
 // 组件不自己发 grant、也不自己数答对：加一的判据在 stores/quiz.ts（真涨了才 ping）
 // pet store decoupled
@@ -218,7 +220,8 @@ function explainWrongWithVideo(): void {
   const raw = session.answers[session.index]
   const answer = question.type === 'choice' && typeof raw === 'number' ? question.options[raw] ?? String(raw) : String(raw ?? '')
   const lesson = parseQuestionKey(currentKey.value).lessonId
-  video.open({ question: VIDEO_UI.QUESTION_FROM_WRONG(question.stem.slice(0, 300), answer.slice(0, 150)), lessonId: lesson && !isSentinelLesson(lesson) ? lesson : undefined })
+  videoCollapsed.value = true
+  video.open({ question: VIDEO_UI.QUESTION_FROM_WRONG(question.stem.slice(0, 300), answer.slice(0, 150)), wrongOption: answer.slice(0, 150), lessonId: lesson && !isSentinelLesson(lesson) ? lesson : undefined })
 }
 
 /**
@@ -383,6 +386,7 @@ function trapTab(e: KeyboardEvent): void {
 }
 
 function onQuizKey(e: KeyboardEvent): void {
+  if (videoCollapsed.value) return
   if (e.key === 'Tab') {
     trapTab(e)
     return
@@ -407,6 +411,7 @@ watch(
       // 而不是蒙层背后那张看不见的页面。面板本身不是激活目标，压掉焦点环。
       void nextTick(() => panel.value?.focus())
     } else {
+      videoCollapsed.value = false
       window.removeEventListener('keydown', onQuizKey)
       if (restoreTo?.isConnected) restoreTo.focus()
       restoreTo = null
@@ -445,8 +450,9 @@ function confirmExit() {
 
 <template>
   <Teleport to="body">
+    <button v-if="s && videoCollapsed" type="button" class="resume-quiz" @click="videoCollapsed = false; nextTick(() => panel?.focus())">{{ VT.resumeQuiz }}</button>
     <Transition name="quiz">
-      <div v-if="s" class="quiz-mask">
+      <div v-if="s && !videoCollapsed" class="quiz-mask">
         <div
           ref="panel"
           class="quiz-panel"
@@ -684,9 +690,9 @@ function confirmExit() {
               </div>
             </div>
 
-            <MiButton v-if="quiz.isCurrentCorrect === false" variant="secondary" icon="play" @click="explainWrongWithVideo">{{ VIDEO_UI.WRONG }}</MiButton>
+            <MiButton v-if="quiz.isCurrentCorrect === false" variant="secondary" icon="play" @click="explainWrongWithVideo">{{ VT.explainWrong }}</MiButton>
             <div v-if="quiz.isCurrentCorrect === false && !dismissedVideoHints.has(currentKey) && (videoPreferred || (s.wrongCounts[s.index] ?? 0) >= 2)" class="video-hint">
-              <span>{{ VIDEO_UI.WRONG_HINT }}</span><MiButton size="sm" variant="primary" @click="explainWrongWithVideo">{{ VIDEO_UI.GENERATE }}</MiButton><MiButton size="sm" variant="ghost" @click="dismissedVideoHints.add(currentKey)">{{ VIDEO_UI.DISMISS }}</MiButton>
+              <span>{{ VIDEO_UI.WRONG_HINT }}</span><MiButton size="sm" variant="primary" @click="explainWrongWithVideo">{{ VIDEO_UI.WRONG }}</MiButton><MiButton size="sm" variant="ghost" @click="dismissedVideoHints.add(currentKey)">{{ VIDEO_UI.DISMISS }}</MiButton>
             </div>
             <div v-if="showActionRow" class="quiz-actions">
               <!--
@@ -746,6 +752,7 @@ function confirmExit() {
 </template>
 
 <style scoped>
+.resume-quiz { position:fixed; z-index:9001; top:12px; right:12px; padding:8px 12px; border:1px solid var(--mi-border); border-radius:var(--mi-radius); background:var(--mi-card); color:var(--mi-text); cursor:pointer; }
 .video-hint { display:flex; align-items:center; gap:var(--mi-sp-2); padding:var(--mi-sp-3); background:var(--mi-blue-light); border-radius:var(--mi-radius); }.video-hint span { flex:1; }
 .quiz-mask {
   position: fixed;

@@ -6,6 +6,7 @@ import { isRemote } from '../../lib/asset-base'
 
 const remote = isRemote()
 import MiIcon from '../base/MiIcon.vue'
+import MiSelect from '../base/MiSelect.vue'
 import { renderMarkdown } from '../../lib/md'
 import InteractiveHtmlSandbox from './InteractiveHtmlSandbox.vue'
 
@@ -31,6 +32,11 @@ onMounted(() => {
     void study.loadSnapshot()
   }
 })
+
+const tagOptions = computed(() => [
+  { value: '', label: STUDY_COPY.KNOWLEDGE.TAG_FILTER_ALL },
+  ...study.tags.map((tag) => ({ value: tag, label: `#${tag}` }))
+])
 
 const filteredNotes = computed(() => {
   const base = showArchived.value ? study.notes : study.activeNotes
@@ -214,10 +220,13 @@ function formatTime(ts: number): string {
           <button v-if="!remote" type="button" class="icon-btn" :title="STUDY_COPY.KNOWLEDGE.EXPORT_BTN" :aria-label="STUDY_COPY.KNOWLEDGE.EXPORT_BTN" :disabled="actionLoading" @click="handleExport"><MiIcon name="download" /></button>
           <button type="button" class="mi-btn-primary new-note-btn" :title="STUDY_COPY.KNOWLEDGE.NEW_NOTE" :aria-label="STUDY_COPY.KNOWLEDGE.NEW_NOTE" @click="startNewNote()"><MiIcon name="plus" /></button>
         </div>
-        <select v-if="study.tags.length > 0" v-model="selectedTag" class="mi-select tag-select" :aria-label="STUDY_COPY.KNOWLEDGE.TAG_FILTER_ALL">
-          <option value="">{{ STUDY_COPY.KNOWLEDGE.TAG_FILTER_ALL }}</option>
-          <option v-for="tag in study.tags" :key="tag" :value="tag">#{{ tag }}</option>
-        </select>
+        <MiSelect
+          v-if="study.tags.length > 0"
+          v-model="selectedTag"
+          class="tag-select"
+          :options="tagOptions"
+          :aria-label="STUDY_COPY.KNOWLEDGE.TAG_FILTER_ALL"
+        />
 
         <div class="note-items-container">
           <button

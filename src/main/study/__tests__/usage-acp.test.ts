@@ -6,7 +6,7 @@ import { normalizeAcpUsage, normalizeProviderUsage, recordStudyUsage } from '../
 import { StudyStore } from '../store'
 import type { StudyConnection } from '../../../shared/study-companion'
 
-const root = resolve('D:/project/coding/outputs/study-companion-20261105/root-tests')
+const root = resolve('outputs/study-companion-tests')
 let dir: string
 let clients: AcpClient[]
 beforeEach(() => { mkdirSync(root, { recursive: true }); dir = mkdtempSync(join(root, 'acp-')); clients = [] })

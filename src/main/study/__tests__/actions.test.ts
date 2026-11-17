@@ -5,7 +5,7 @@ import { StudyStore } from '../store'
 import { applyStudyActions } from '../actions'
 import type { AiChatSession } from '../../../shared/types'
 
-const root = resolve('D:/project/coding/outputs/study-companion-20261105/root-tests')
+const root = resolve('outputs/study-companion-tests')
 let dir: string
 let store: StudyStore
 beforeEach(() => { mkdirSync(root, { recursive: true }); dir = mkdtempSync(join(root, 'actions-')); store = new StudyStore(dir) })

@@ -262,7 +262,7 @@
   :root:root #app .markdown-body .code-block code.hljs,
   :root:root #app .markdown-body .code-block:has(.code-run) code.hljs { padding: 44px var(--mi-sp-4) var(--mi-sp-3); }
   :root:root #app .markdown-body .code-copy { width: 40px; height: 40px; }
-  :root:root #app .markdown-body .code-copy.code-run { min-height: 40px; }
+  :root:root #app .markdown-body .code-copy.code-run { width: auto; min-height: 40px; }
   :root:root #app .markdown-body .code-actions { top: 2px; right: 2px; }
 
   /* 底部操作栏：压成两行（学习/练习一行，图标 + 下一课一行），不显示课名（顶栏已有） */
@@ -289,8 +289,9 @@
 
 /* ── 课程目录 / 六级目录 ── */
 @media (max-width: 768px) {
-  :root:root #app .language-tabs { width: 100%; }
-  :root:root #app .language-tabs .mi-tab { padding: 0 var(--mi-sp-2); }
+  :root:root #app .language-tabs { width: 100%; overflow-x: auto; scrollbar-width: none; }
+  :root:root #app .language-tabs .mi-tab { flex: 0 0 auto; padding: 0 var(--mi-sp-3); }
+  :root:root #app .study-tabs-group .study-tab-link:not(.active) { padding: 0 var(--mi-sp-2); }
   :root:root #app .curriculum-lesson-card { min-height: 48px; }
   :root:root #app .cet6-row { flex-wrap: wrap; gap: var(--mi-sp-1) var(--mi-sp-3); }
   :root:root #app .cet6-date { flex-basis: 100%; }
@@ -595,7 +596,7 @@
     overflow-y: auto;
     padding: var(--mi-sp-3) var(--mi-sp-4);
     background: var(--mi-canvas);
-    box-shadow: var(--mi-shadow-md);
+    box-shadow: var(--mi-shadow-lg);
   }
 }
 

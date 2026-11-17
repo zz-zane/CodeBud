@@ -3,8 +3,9 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAiAssistantStore } from '../../stores/ai-assistant'
 import { useCet6Store } from '../../stores/cet6'
-import { AI_ASSISTANT, VIDEO_UI } from '../../lib/copy'
+import { AI_ASSISTANT } from '../../lib/copy'
 import { useVideoStore } from '../../stores/video'
+import { VIDEO_GENERATION_TEXT as VT } from '../../../../shared/video-copy'
 
 const aiStore = useAiAssistantStore()
 const video = useVideoStore()
@@ -164,8 +165,8 @@ onBeforeUnmount(() => {
       <span class="item-icon">💬</span>
       <span class="item-text">{{ AI_ASSISTANT.MENU_ASK }}</span>
     </button>
-    <button v-if="route.name === 'lesson'" type="button" class="menu-item" @click="video.open({ excerpt: capturedText, lessonId: String(route.params.id) }); closeMenu()">
-      <span class="item-icon">▶</span><span class="item-text">{{ VIDEO_UI.SELECTION }}</span>
+    <button type="button" class="menu-item" @click="video.open({ question: capturedText.slice(0, 500), excerpt: capturedText.slice(0, 2000), code: capturedType === 'code' ? capturedText.slice(0, 5000) : undefined, lessonId: route.name === 'lesson' ? String(route.params.id) : undefined }); closeMenu()">
+      <span class="item-icon">▶</span><span class="item-text">{{ VT.context }}</span>
     </button>
   </div>
 </template>

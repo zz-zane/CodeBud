@@ -1,0 +1,467 @@
+{
+  "id": "linked-list-insert",
+  "title": "链表插入为什么要先连后断",
+  "question": "往单链表中间插一个节点时，为什么必须先改 n2.next 再改 n1.next？",
+  "concept": "先接新节点后继，再改前驱防断链",
+  "lessonId": "c-stage3-03",
+  "source": "builtin",
+  "createdAt": 1,
+  "codeVerified": null,
+  "scenes": [],
+  "checks": [],
+  "acts": [
+    {
+      "title": "三节火车车厢挂钩",
+      "skin": "train",
+      "steps": [
+        {
+          "say": "车厢 `n1` 原本挂着 `n3`，现在要把新车厢 `n2` 插到中间。",
+          "groups": [
+            {
+              "id": "list",
+              "title": "链表车厢",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "n1",
+              "group": "list",
+              "name": "n1",
+              "value": "10"
+            },
+            {
+              "id": "n3",
+              "group": "list",
+              "name": "n3",
+              "value": "30"
+            },
+            {
+              "id": "n2",
+              "group": "list",
+              "name": "n2",
+              "value": "20",
+              "dim": true
+            }
+          ],
+          "arrows": [
+            {
+              "from": "n1",
+              "to": "n3"
+            }
+          ]
+        },
+        {
+          "say": "若先摘掉 `n1` 往后的钩子直接连 `n2`，就再也找不到 `n3` 了。",
+          "groups": [
+            {
+              "id": "list",
+              "title": "链表车厢",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "n1",
+              "group": "list",
+              "name": "n1",
+              "value": "10"
+            },
+            {
+              "id": "n3",
+              "group": "list",
+              "name": "n3",
+              "value": "30",
+              "dim": true
+            },
+            {
+              "id": "n2",
+              "group": "list",
+              "name": "n2",
+              "value": "20"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "n1",
+              "to": "n3"
+            }
+          ],
+          "focus": [
+            "n1",
+            "n3"
+          ],
+          "note": {
+            "at": "n1",
+            "text": "先改 n1 会丢 n3！"
+          },
+          "ask": {
+            "stem": "正确顺序应该是先连哪一条钩子？",
+            "options": [
+              "先把 n1 连向 n2",
+              "先把 n2 连向 n3",
+              "同时断开两条"
+            ],
+            "answer": 1,
+            "why": "先把 n2 挂到 n1 原来的后继 n3 上，保住后半截不断链。"
+          }
+        },
+        {
+          "say": "正确第一步：先让 `n2` 照着 `n1` 的去向连上 `n3`。",
+          "groups": [
+            {
+              "id": "list",
+              "title": "链表车厢",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "n1",
+              "group": "list",
+              "name": "n1",
+              "value": "10"
+            },
+            {
+              "id": "n2",
+              "group": "list",
+              "name": "n2",
+              "value": "20"
+            },
+            {
+              "id": "n3",
+              "group": "list",
+              "name": "n3",
+              "value": "30"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "n1",
+              "to": "n3"
+            },
+            {
+              "from": "n2",
+              "to": "n3"
+            }
+          ]
+        },
+        {
+          "say": "正确第二步：再把 `n1` 的钩子改挂到 `n2`，整列接好。",
+          "groups": [
+            {
+              "id": "list",
+              "title": "链表车厢",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "n1",
+              "group": "list",
+              "name": "n1",
+              "value": "10"
+            },
+            {
+              "id": "n2",
+              "group": "list",
+              "name": "n2",
+              "value": "20"
+            },
+            {
+              "id": "n3",
+              "group": "list",
+              "name": "n3",
+              "value": "30"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "n1",
+              "to": "n2"
+            },
+            {
+              "from": "n2",
+              "to": "n3"
+            }
+          ],
+          "follow": "n1"
+        }
+      ]
+    },
+    {
+      "title": "换成真正的代码",
+      "skin": "memory",
+      "code": {
+        "lang": "c",
+        "lines": [
+          "#include <stdio.h>",
+          "struct Node {",
+          "    int val;",
+          "    struct Node *next;",
+          "};",
+          "int main(void) {",
+          "    struct Node n1={10}, n3={30};",
+          "    struct Node n2 = {20, NULL};",
+          "    n1.next = &n3;",
+          "    n2.next = n1.next;",
+          "    n1.next = &n2;",
+          "    printf(\"%d %d %d\\n\",",
+          "      n1.val,n1.next->val,",
+          "      n1.next->next->val);",
+          "    return 0;",
+          "}"
+        ],
+        "expectedOutput": "10 20 30\n"
+      },
+      "steps": [
+        {
+          "say": "第 9 行后，`n1.next` 存着 `n3` 的地址 `0x300`。",
+          "line": 9,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "n1",
+              "group": "main",
+              "name": "n1",
+              "addr": "0x100",
+              "value": "10 | 0x300"
+            },
+            {
+              "id": "n2",
+              "group": "main",
+              "name": "n2",
+              "addr": "0x200",
+              "value": "20 | NULL"
+            },
+            {
+              "id": "n3",
+              "group": "main",
+              "name": "n3",
+              "addr": "0x300",
+              "value": "30 | NULL"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "n1",
+              "to": "n3"
+            }
+          ]
+        },
+        {
+          "say": "第 10 行 `n2.next = n1.next;` 先把 `0x300` 接给 `n2`。",
+          "line": 10,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "n1",
+              "group": "main",
+              "name": "n1",
+              "addr": "0x100",
+              "value": "10 | 0x300"
+            },
+            {
+              "id": "n2",
+              "group": "main",
+              "name": "n2",
+              "addr": "0x200",
+              "value": "20 | 0x300"
+            },
+            {
+              "id": "n3",
+              "group": "main",
+              "name": "n3",
+              "addr": "0x300",
+              "value": "30 | NULL"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "n1",
+              "to": "n3"
+            },
+            {
+              "from": "n2",
+              "to": "n3"
+            }
+          ]
+        },
+        {
+          "say": "第 11 行 `n1.next = &n2;` 再改写 `n1.next`，整条链就接通了。",
+          "line": 11,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "n1",
+              "group": "main",
+              "name": "n1",
+              "addr": "0x100",
+              "value": "10 | 0x200"
+            },
+            {
+              "id": "n2",
+              "group": "main",
+              "name": "n2",
+              "addr": "0x200",
+              "value": "20 | 0x300"
+            },
+            {
+              "id": "n3",
+              "group": "main",
+              "name": "n3",
+              "addr": "0x300",
+              "value": "30 | NULL"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "n1",
+              "to": "n2"
+            },
+            {
+              "from": "n2",
+              "to": "n3"
+            }
+          ],
+          "ask": {
+            "stem": "第 12 行 n1.next->next->val 顺着指针取到哪个数？",
+            "options": [
+              "20",
+              "10",
+              "30"
+            ],
+            "answer": 2,
+            "why": "n1.next 是 n2，n2.next 是 n3，所以取到 30。"
+          }
+        },
+        {
+          "say": "顺着 `n1.next` 和 `next->next` 依次读出 `10`、`20`、`30`。",
+          "line": 12,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "n1",
+              "group": "main",
+              "name": "n1",
+              "addr": "0x100",
+              "value": "10 | 0x200"
+            },
+            {
+              "id": "n2",
+              "group": "main",
+              "name": "n2",
+              "addr": "0x200",
+              "value": "20 | 0x300"
+            },
+            {
+              "id": "n3",
+              "group": "main",
+              "name": "n3",
+              "addr": "0x300",
+              "value": "30 | NULL"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "n1",
+              "to": "n2"
+            },
+            {
+              "from": "n2",
+              "to": "n3"
+            }
+          ],
+          "focus": [
+            "n1",
+            "n2",
+            "n3"
+          ],
+          "out": "10 20 30",
+          "follow": "n1"
+        },
+        {
+          "say": "最终输出 `10 20 30`，节点一个都没丢。",
+          "line": 15,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "n1",
+              "group": "main",
+              "name": "n1",
+              "addr": "0x100",
+              "value": "10 | 0x200"
+            },
+            {
+              "id": "n2",
+              "group": "main",
+              "name": "n2",
+              "addr": "0x200",
+              "value": "20 | 0x300"
+            },
+            {
+              "id": "n3",
+              "group": "main",
+              "name": "n3",
+              "addr": "0x300",
+              "value": "30 | NULL"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "n1",
+              "to": "n2"
+            },
+            {
+              "from": "n2",
+              "to": "n3"
+            }
+          ],
+          "out": "10 20 30"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "链表",
+    "先连后断",
+    "断链",
+    "插入节点",
+    "n2.next",
+    "linked list"
+  ],
+  "lessonIds": [
+    "c-stage3-03",
+    "python-stage3-19"
+  ]
+}

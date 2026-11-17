@@ -1,265 +1,220 @@
-import { VIDEO_TEXT } from './copy'
-import { createClientId } from './client-id'
+import { VIDEO_COPY, VIDEO_FORMAT } from './video-copy'
 import { canonicalJson } from './cloud/canonical-json'
 
-export const VIDEO_FILE_VERSION = 1
+import type { VideoCheck, VideoScene } from './video-legacy'
+
 export type VideoLang = 'c' | 'cpp' | 'java' | 'python'
-
+export type VideoSkin = 'memory' | 'locker' | 'sheet' | 'train'
+export interface VideoGenerationInput {
+  requestId: string; question: string; code?: string; excerpt?: string; lang?: VideoLang
+  wrongOption?: string; lessonId?: string; avoid?: string[]
+}
+export type VideoGenerationResult = { ok: true; video: ExplainerVideo } | { ok: false; fallback: string; reason: string }
+export interface VideoProgress {
+  requestId: string; stage: 'judging' | 'scripting' | 'verifying' | 'done'
+  status: 'running' | 'ok' | 'failed'; detail?: string
+}
 export interface ExplainerVideo {
-  id: string
-  title: string
-  question: string
-  lessonId?: string
-  source: 'ai' | 'demo'
-  createdAt: number
-  scenes: VideoScene[]
-  checks: VideoCheck[]
-  codeVerified: boolean | null
+  id: string; title: string; question: string; concept: string; lessonId?: string
+  keywords?: string[]; lessonIds?: string[]
+  source: 'ai' | 'builtin' | 'demo'; createdAt: number; acts: VideoAct[]; codeVerified: boolean | null
+  // shortcut: old renderer types remain until M2/P3 replace their consumers.
+  scenes: VideoScene[]; checks: VideoCheck[]
 }
-
-export type VideoScene = CardScene | TraceScene | MemoryScene | ArrayScene
-
-export interface CardScene {
-  kind: 'card'
-  role: 'problem' | 'analogy' | 'pitfall' | 'summary'
-  heading: string
-  body: string
-  say: string
+export interface VideoAct {
+  title: string; skin: VideoSkin
+  code?: { lang: VideoLang; lines: string[]; expectedOutput: string }
+  steps: VideoStep[]
 }
-
-export interface TraceScene {
-  kind: 'trace'
-  title: string
-  lang: VideoLang | null
-  code: string[]
-  expectedOutput: string
-  steps: { say: string; at: number; vars: { name: string; value: string }[]; stack?: string[]; out?: string }[]
+export interface VideoStep {
+  say: string; line?: number
+  groups: { id: string; title: string; kind: 'frame' | 'heap' | 'array' | 'plain' }[]
+  cells: { id: string; group: string; name?: string; addr?: string; value: string; dim?: boolean }[]
+  arrows: { from: string; to: string }[]
+  focus?: string[]; fly?: { from: string; to: string; text: string }
+  follow?: string; open?: string[]
+  note?: { at: string; text: string }; out?: string
+  ask?: { stem: string; options: string[]; answer: number; why: string }
 }
+const obj = (v: unknown): v is Record<string, unknown> => v !== null && typeof v === 'object' && !Array.isArray(v)
+const text = (v: unknown): v is string => typeof v === 'string'
+const nonempty = (v: unknown): v is string => text(v) && v.trim().length > 0
+const len = (s: string): number => Array.from(s.replace(/[\u0000-\u001f\u007f-\u009f]/g, '')).length
+const strs = (v: unknown): v is string[] => Array.isArray(v) && v.every(text)
 
-export interface MemoryScene {
-  kind: 'memory'
-  title: string
-  steps: {
-    say: string
-    cells: { id: string; label: string; value: string; region: 'stack' | 'heap' }[]
-    arrows: { from: string; to: string }[]
-    focus?: string[]
-  }[]
-}
-
-export interface ArrayScene {
-  kind: 'array'
-  title: string
-  steps: { say: string; items: string[]; highlights?: number[]; pointers?: Record<string, string>; note?: string }[]
-}
-
-export interface VideoCheck {
-  stem: string
-  options: string[]
-  answer: number
-  explanation: string
-}
-
-export interface VideoOutline {
-  title: string
-  confusion: string
-  analogy: string
-  scenes: { kind: VideoScene['kind']; goal: string }[]
-}
-
-export interface VideoOutlineRequest {
-  requestId: string
-  question: string
-  lessonId?: string
-  excerpt?: string
-  lang?: VideoLang
-  avoid?: string
-}
-
-export interface VideoGenerateRequest extends Omit<VideoOutlineRequest, 'avoid'> {
-  outline: VideoOutline
-}
-
-export type VideoResult<T> = { ok: true; data: T } | { ok: false; error: string }
-
-export interface VideoVerifyPrompt {
-  requestId: string
-  confirmationId: string
-  lang: VideoLang
-  code: string[]
-}
-
-/** The relevant part of a parsed lesson demo, kept independent of the renderer. */
-export interface VideoDemoBlock {
-  title: string
-  code: string[]
-  steps: { say: string; at: number; vars: { name: string; value: string }[] }[]
-}
-
-export function demoToVideo(block: VideoDemoBlock, lessonId: string, title: string): ExplainerVideo {
-  return {
-    id: createClientId(), title, question: block.title, lessonId,
-    source: 'demo', createdAt: Date.now(), codeVerified: null, checks: [],
-    scenes: [{ kind: 'trace', title: block.title, lang: null, code: block.code,
-      expectedOutput: '', steps: block.steps.map(({ say, at, vars }) => ({ say, at, vars })) }]
-  }
-}
-
-export const cleanLength = (s: string): number => Array.from(s.replace(/[\u0000-\u001f\u007f-\u009f]/g, '')).length
-const record = (v: unknown): v is Record<string, unknown> => v !== null && typeof v === 'object' && !Array.isArray(v)
-const strings = (v: unknown): v is string[] => Array.isArray(v) && v.every((s) => typeof s === 'string')
-const stringMap = (v: unknown): v is Record<string, string> => record(v) && Object.values(v).every((s) => typeof s === 'string')
-
-/**
- * Lossless shape normalization before validation:
- * 1) trace.code string -> split lines into string[]
- * 2) trace.steps[].vars plain object -> {name, value}[]
- * 3) trace.steps[].output (when out omitted) -> out
- */
-export function normalizeVideoShape(input: unknown): unknown {
-  if (!record(input) || !Array.isArray(input.scenes)) return input
-  return {
-    ...input,
-    scenes: input.scenes.map((scene) => {
-      if (!record(scene) || scene.kind !== 'trace') return scene
-      const nextScene: Record<string, unknown> = { ...scene }
-      if (typeof scene.code === 'string') {
-        const trimmed = scene.code.replace(/\r?\n$/, '')
-        nextScene.code = trimmed === '' ? [] : trimmed.split(/\r?\n/)
-      }
-      if (Array.isArray(scene.steps)) {
-        nextScene.steps = scene.steps.map((step) => {
-          if (!record(step)) return step
-          const nextStep: Record<string, unknown> = { ...step }
-          if (record(step.vars)) {
-            nextStep.vars = Object.entries(step.vars).map(([name, value]) => ({ name, value: String(value) }))
-          }
-          if (step.output !== undefined && step.out === undefined) {
-            nextStep.out = step.output
-            delete nextStep.output
-          }
-          return nextStep
-        })
-      }
-      return nextScene
-    })
-  }
-}
-
-/** Validate untrusted model output before it can be saved or rendered. */
-export function validateVideo(input: unknown): string[] {
+/** Validate untrusted v2 video data. Legacy migrations use only structural and reference checks. */
+function validate(input: unknown, legacy: boolean, structural = false): string[] {
   const errors: string[] = []
-  const fail = (where: string): void => { errors.push(where) }
-  if (!record(input) || (input.source !== 'ai' && input.source !== 'demo') || !Array.isArray(input.scenes)) return [VIDEO_TEXT.INVALID_VIDEO]
-  const ai = input.source === 'ai'
-  if (typeof input.id !== 'string' || typeof input.title !== 'string' || typeof input.question !== 'string' ||
+  const fail = (where: string, reason: string): void => { errors.push(`${where}: ${reason}`) }
+  if (!obj(input) || !Array.isArray(input.acts)) return [VIDEO_COPY.INVALID]
+  if (!nonempty(input.id) || !nonempty(input.title) || len(input.title) > 30 || !nonempty(input.question) ||
+      !nonempty(input.concept) || len(input.concept) > 20 || !['ai', 'builtin'].includes(input.source as string) ||
       typeof input.createdAt !== 'number' || !Number.isFinite(input.createdAt) ||
-      (input.lessonId !== undefined && typeof input.lessonId !== 'string') ||
-      ![true, false, null].includes(input.codeVerified as boolean | null) || !Array.isArray(input.checks)) fail(VIDEO_TEXT.INVALID_METADATA)
-  if (ai && (typeof input.title !== 'string' || cleanLength(input.title) > 40 || typeof input.question !== 'string' || cleanLength(input.question) > 500)) fail(VIDEO_TEXT.TITLE_TOO_LONG)
-  const scenes = input.scenes
-  if (ai) {
-    if (scenes.length < 4 || scenes.length > 8) fail(VIDEO_TEXT.SCENE_COUNT)
-    const first = scenes[0], last = scenes.at(-1)
-    if (!record(first) || first.kind !== 'card' || first.role !== 'problem') fail(VIDEO_TEXT.FIRST_PROBLEM)
-    if (!record(last) || last.kind !== 'card' || last.role !== 'summary') fail(VIDEO_TEXT.LAST_SUMMARY)
-    const visualIndex = scenes.findIndex((s) => record(s) && s.kind !== 'card')
-    if (visualIndex < 0 || scenes.slice(0, visualIndex).filter((s) => record(s) && s.kind === 'card' && s.role === 'analogy').length !== 1) fail(VIDEO_TEXT.ANALOGY)
-    if (!scenes.some((s) => record(s) && s.kind === 'card' && s.role === 'pitfall')) fail(VIDEO_TEXT.PITFALL)
-    if (!scenes.some((s) => record(s) && s.kind !== 'card' && Array.isArray(s.steps) && s.steps.length >= 3)) fail(VIDEO_TEXT.VISUAL_STEPS)
-  }
-  let count = 0, chars = 0
-  const say = (v: unknown, where: string): void => {
-    if (typeof v !== 'string') { fail(VIDEO_TEXT.SAY_INVALID(where)); return }
-    const n = cleanLength(v); count++; chars += n
-    if (ai && (n < 8 || n > 70)) fail(VIDEO_TEXT.SAY_LENGTH(where))
-  }
-  scenes.forEach((scene, i) => {
-    const where = VIDEO_TEXT.SCENE(i + 1)
-    if (!record(scene)) { fail(VIDEO_TEXT.INVALID(where)); return }
-    if (scene.kind === 'card') {
-      if (typeof scene.role !== 'string' || !['problem', 'analogy', 'pitfall', 'summary'].includes(scene.role) || typeof scene.heading !== 'string' || typeof scene.body !== 'string') { fail(VIDEO_TEXT.CARD_INVALID(where)); return }
-      if (ai && (!cleanLength(scene.heading.trim()) || !cleanLength(scene.body.trim()) || cleanLength(scene.heading) > 24 || cleanLength(scene.body) > 120)) fail(VIDEO_TEXT.CARD_LENGTH(where))
-      say(scene.say, where); return
+      (input.lessonId !== undefined && !text(input.lessonId)) || (input.keywords !== undefined && !strs(input.keywords)) || (input.lessonIds !== undefined && !strs(input.lessonIds)) || ![true, false, null].includes(input.codeVerified as boolean | null)) fail(VIDEO_COPY.VIDEO, VIDEO_COPY.METADATA)
+  if (structural && (input.acts.length < 1 || input.acts.length > 32 || input.acts.reduce((total, act) => total + (obj(act) && Array.isArray(act.steps) ? act.steps.length : 0), 0) > 1000)) return [VIDEO_COPY.INVALID]
+  if (!legacy && (input.acts.length < 1 || input.acts.length > 3)) fail(VIDEO_COPY.VIDEO, VIDEO_COPY.ACT_COUNT)
+  let count = 0, chars = 0, asks = 0, motion = false, hasCode = false
+  let previous: string | undefined
+  input.acts.forEach((act, i) => {
+    const where = VIDEO_FORMAT.act(i + 1)
+    if (!obj(act) || !Array.isArray(act.steps) || (structural && (!act.steps.length || act.steps.length > 1000))) { fail(where, VIDEO_COPY.FORMAT); return }
+    if (!nonempty(act.title) || len(act.title) > 16 || !['memory', 'locker', 'sheet', 'train'].includes(act.skin as string)) fail(where, VIDEO_COPY.ACT_METADATA)
+    if (act.code !== undefined) {
+      hasCode = true
+      if (!obj(act.code) || !['c', 'cpp', 'java', 'python'].includes(act.code.lang as string) || !strs(act.code.lines) ||
+          !text(act.code.expectedOutput) || ((!legacy || structural) && (act.code.lines.length > 20 || act.code.lines.some(line => len(line) > 70))) || (!legacy && act.code.lines.length < 1)) fail(where, VIDEO_COPY.CODE)
     }
-    if (typeof scene.kind !== 'string' || !['trace', 'memory', 'array'].includes(scene.kind) || typeof scene.title !== 'string' || !Array.isArray(scene.steps)) { fail(VIDEO_TEXT.VISUAL_INVALID(where)); return }
-    if (scene.kind === 'trace') {
-      if (!strings(scene.code) || scene.code.length > 30 || scene.code.some((line) => cleanLength(line) > 80)) fail(VIDEO_TEXT.TRACE_CODE(where))
-      if (typeof scene.expectedOutput !== 'string') fail(VIDEO_TEXT.TRACE_EXPECTED_OUTPUT(where))
-      if (!(scene.lang === null ? !ai : typeof scene.lang === 'string' && ['c', 'cpp', 'java', 'python'].includes(scene.lang))) fail(VIDEO_TEXT.TRACE_LANG(where))
-    }
-    let previous: string | undefined
-    scene.steps.forEach((step, j) => {
-      const at = VIDEO_TEXT.STEP(where, j + 1)
-      if (!record(step)) { fail(VIDEO_TEXT.INVALID(at)); return }
-      say(step.say, at)
-      let visual: unknown
-      if (scene.kind === 'trace') {
-        let stepOk = true
-        if (strings(scene.code) && (!Number.isInteger(step.at) || (step.at as number) < 1 || (step.at as number) > scene.code.length)) {
-          fail(VIDEO_TEXT.TRACE_AT(at)); stepOk = false
-        }
-        if (!Array.isArray(step.vars) || step.vars.length > 8 || !step.vars.every((v) => record(v) && typeof v.name === 'string' && typeof v.value === 'string')) {
-          fail(VIDEO_TEXT.TRACE_VARS(at)); stepOk = false
-        }
-        if (step.stack !== undefined && !strings(step.stack)) { fail(VIDEO_TEXT.TRACE_STACK(at)); stepOk = false }
-        if (step.out !== undefined && typeof step.out !== 'string') { fail(VIDEO_TEXT.TRACE_OUT(at)); stepOk = false }
-        if (!stepOk || !strings(scene.code)) return
-        visual = [step.at, (step.vars as { name: string; value: string }[]).map(({ name, value }) => ({ name, value })), step.stack ?? [], step.out ?? '']
-      } else if (scene.kind === 'memory') {
-        const cells = step.cells, arrows = step.arrows
-        if (!Array.isArray(cells) || cells.length > 12 || !cells.every((c) => record(c) && typeof c.id === 'string' && typeof c.label === 'string' && typeof c.value === 'string' && (c.region === 'stack' || c.region === 'heap'))) { fail(VIDEO_TEXT.MEMORY_CELLS(at)); return }
-        const ids = cells.map((c) => (c as Record<string, unknown>).id)
-        let stepOk = true
-        if (new Set(ids).size !== ids.length) { fail(VIDEO_TEXT.MEMORY_CELL_IDS(at)); stepOk = false }
-        if (!Array.isArray(arrows) || !arrows.every((a) => record(a) && ids.includes(a.from) && ids.includes(a.to))) { fail(VIDEO_TEXT.MEMORY_ARROWS(at)); stepOk = false }
-        if (step.focus !== undefined && (!strings(step.focus) || !step.focus.every((id) => ids.includes(id)))) { fail(VIDEO_TEXT.MEMORY_FOCUS(at)); stepOk = false }
-        if (!stepOk) return
-        visual = [cells.map((cell) => {
-          const { id, label, value, region } = cell as Record<string, unknown>
-          return { id, label, value, region }
-        }), (arrows as { from: string; to: string }[]).map(({ from, to }) => ({ from, to })), step.focus ?? []]
-      } else {
-        const items = step.items
-        if (!strings(items) || items.length > 12) { fail(VIDEO_TEXT.ARRAY_ITEMS(at)); return }
-        const validIndex = (n: unknown): boolean => typeof n === 'number' && Number.isInteger(n) && n >= 0 && n < items.length
-        let stepOk = true
-        if (step.highlights !== undefined && (!Array.isArray(step.highlights) || !step.highlights.every(validIndex))) { fail(VIDEO_TEXT.ARRAY_HIGHLIGHTS(at)); stepOk = false }
-        if (step.pointers !== undefined && (!stringMap(step.pointers) || !Object.keys(step.pointers).every((key) => /^(0|[1-9]\d*)$/.test(key) && validIndex(Number(key))))) { fail(VIDEO_TEXT.ARRAY_POINTERS(at)); stepOk = false }
-        if (step.note !== undefined && typeof step.note !== 'string') { fail(VIDEO_TEXT.ARRAY_NOTE(at)); stepOk = false }
-        if (!stepOk) return
-        visual = [items, step.highlights ?? [], step.pointers ?? {}]
+    act.steps.forEach((step, j) => {
+      const at = VIDEO_FORMAT.step(where, j + 1); count++
+      if (!obj(step)) { fail(at, VIDEO_COPY.FORMAT); return }
+      if (!text(step.say)) fail(at, VIDEO_COPY.SAY)
+      else {
+        const n = len(step.say); chars += n
+        if ((!structural && n < 8) || n > 60) fail(at, VIDEO_COPY.SAY_LENGTH)
+        const say = step.say
+        if (!legacy && [VIDEO_COPY.SPEAK_STAR, VIDEO_COPY.SPEAK_ADDRESS, VIDEO_COPY.SPEAK_ARROW, VIDEO_COPY.SPEAK_EQ_EQ].some(word => say.includes(word))) fail(at, VIDEO_COPY.SAY_SYMBOLS)
       }
-      const state = canonicalJson(visual)
-      if (ai && previous === state) fail(VIDEO_TEXT.NO_CHANGE(at))
+      if (!legacy && act.code !== undefined && (!obj(act.code) || !strs(act.code.lines) || !Number.isInteger(step.line) || (step.line as number) < 1 || (step.line as number) > act.code.lines.length)) fail(at, VIDEO_COPY.CODE_LINE)
+      if (structural && step.line !== undefined && (!Number.isInteger(step.line) || (step.line as number) < 1 || (obj(act.code) && strs(act.code.lines) && (step.line as number) > act.code.lines.length))) fail(at, VIDEO_COPY.CODE_LINE)
+      if (step.line !== undefined && !Number.isInteger(step.line)) fail(at, VIDEO_COPY.LINE)
+      const groups = step.groups, cells = step.cells
+      if (!Array.isArray(groups) || groups.length > 4 || !groups.every(g => obj(g) && nonempty(g.id) && text(g.title) && ['frame', 'heap', 'array', 'plain'].includes(g.kind as string))) { fail(at, VIDEO_COPY.GROUPS); return }
+      if (!Array.isArray(cells) || cells.length > 12 || (!legacy && cells.length < 1) || !cells.every(c => obj(c) && nonempty(c.id) && nonempty(c.group) && text(c.value) && (c.name === undefined || text(c.name)) && (c.addr === undefined || text(c.addr)) && (c.dim === undefined || typeof c.dim === 'boolean'))) { fail(at, VIDEO_COPY.CELLS); return }
+      const gids = groups.map(g => g.id), ids = cells.map(c => c.id)
+      if (new Set(gids).size !== gids.length || new Set(ids).size !== ids.length || cells.some(c => !gids.includes(c.group))) fail(at, VIDEO_COPY.IDS)
+      const exists = (id: unknown): boolean => text(id) && ids.includes(id)
+      if (!Array.isArray(step.arrows) || (structural && step.arrows.length > 144) || !step.arrows.every(a => obj(a) && exists(a.from) && exists(a.to))) fail(at, VIDEO_COPY.ARROWS)
+      else {
+        if (step.arrows.length) motion = true
+        if (!structural && step.arrows.some(a => {
+          const from = cells.find(c => c.id === a.from), to = cells.find(c => c.id === a.to)
+          return from && to && from.group !== to.group && groups.find(g => g.id === from.group)?.kind === 'frame' && groups.find(g => g.id === to.group)?.kind === 'frame'
+        })) fail(at, VIDEO_COPY.ARROWS)
+      }
+      if (step.follow !== undefined && (!text(step.follow) || (!structural && (!Array.isArray(step.arrows) || !step.arrows.some(a => obj(a) && a.from === step.follow))))) fail(at, VIDEO_COPY.ARROWS)
+      if (step.open !== undefined && (!strs(step.open) || !step.open.every(exists))) fail(at, VIDEO_COPY.CELLS)
+      if (step.focus !== undefined && (!strs(step.focus) || !step.focus.every(exists))) fail(at, VIDEO_COPY.FOCUS)
+      if (step.fly !== undefined) {
+        if (!obj(step.fly) || !exists(step.fly.from) || !(step.fly.to === 'out' || exists(step.fly.to)) || !text(step.fly.text)) fail(at, VIDEO_COPY.FLY)
+        else motion = true
+      }
+      if (step.note !== undefined && (!obj(step.note) || !exists(step.note.at) || !text(step.note.text) || len(step.note.text) > 20)) fail(at, VIDEO_COPY.NOTE)
+      if (step.out !== undefined && !text(step.out)) fail(at, VIDEO_COPY.OUTPUT)
+      if (step.ask !== undefined) {
+        asks++
+        const a = step.ask
+        if (!obj(a) || !nonempty(a.stem) || !strs(a.options) || (structural && a.options.length > 4) || (!legacy && (a.options.length < 3 || a.options.length > 4)) || !a.options.every(nonempty) || !Number.isInteger(a.answer) || (a.answer as number) < 0 || (a.answer as number) >= a.options.length || !nonempty(a.why)) fail(at, VIDEO_COPY.ASK)
+      }
+      const state = canonicalJson([
+        Number.isInteger(step.line) ? step.line : null,
+        groups.map(g => ({ id: g.id, title: g.title, kind: g.kind })),
+        cells.map(c => ({ id: c.id, group: c.group, name: c.name, addr: c.addr, value: c.value, dim: c.dim })),
+        Array.isArray(step.arrows) ? step.arrows.filter(a => obj(a) && text(a.from) && text(a.to)).map(a => ({ from: a.from, to: a.to })) : [],
+        strs(step.focus) ? step.focus : [],
+        text(step.follow) ? step.follow : null, strs(step.open) ? step.open : [],
+        obj(step.fly) && text(step.fly.from) && text(step.fly.to) && text(step.fly.text) ? { from: step.fly.from, to: step.fly.to, text: step.fly.text } : null,
+        obj(step.note) && text(step.note.at) && text(step.note.text) ? { at: step.note.at, text: step.note.text } : null,
+        text(step.out) ? step.out : ''
+      ])
+      if (!legacy && previous === state) fail(at, VIDEO_COPY.UNCHANGED)
       previous = state
     })
   })
-  if (ai && (count < 8 || count > 40 || chars / 4.5 < 45 || chars / 4.5 > 180)) fail(VIDEO_TEXT.DURATION)
-  if (ai && Array.isArray(input.checks)) {
-    if (input.checks.length < 1 || input.checks.length > 2) fail(VIDEO_TEXT.CHECK_COUNT)
-    input.checks.forEach((check, i) => {
-      if (!record(check) || typeof check.stem !== 'string' || !cleanLength(check.stem.trim()) || !strings(check.options) || check.options.length < 3 || check.options.length > 4 ||
-          !check.options.every((o) => cleanLength(o.trim()) > 0) || !Number.isInteger(check.answer) || (check.answer as number) < 0 || (check.answer as number) >= check.options.length ||
-          typeof check.explanation !== 'string' || !cleanLength(check.explanation.trim())) fail(VIDEO_TEXT.CHECK_INVALID(i + 1))
-    })
-  }
+  if (!legacy && (count < 8 || count > 18 || chars / 4.5 < 40 || chars / 4.5 > 110)) fail(VIDEO_COPY.VIDEO, VIDEO_COPY.DURATION)
+  if (!legacy && !hasCode) fail(VIDEO_COPY.VIDEO, VIDEO_COPY.MISSING_CODE)
+  if (!legacy && (asks < 1 || asks > 3)) fail(VIDEO_COPY.VIDEO, VIDEO_COPY.ASK_COUNT)
+  if (!legacy && !motion) fail(VIDEO_COPY.VIDEO, VIDEO_COPY.MOTION)
   return errors
 }
 
-/**
- * Shuffles each check's options via Fisher-Yates using the injected PRNG while
- * remapping `answer` so it points to the same correct option text.
- */
-export function shuffleVideoChecks(checks: readonly VideoCheck[], random: () => number = Math.random): VideoCheck[] {
-  return checks.map((check) => {
-    const order = check.options.map((_, i) => i)
-    for (let i = order.length - 1; i > 0; i--) {
-      const r = random()
-      const j = Math.min(i, Math.max(0, Math.floor((Number.isFinite(r) ? r : 0) * (i + 1))))
-      ;[order[i], order[j]] = [order[j], order[i]]
+export const validateVideo = (input: unknown): string[] => {
+  const errors = validate(input, true, true)
+  return errors.length ? errors : validate(input, false)
+}
+export const validateMigratedVideo = (input: unknown): string[] => validate(input, true)
+export const validateVideoStructure = (input: unknown): string[] => validate(input, true, true)
+
+/** Converts one validated v1 video without modifying it; caller records returned warnings. */
+export function migrateVideoV1(value: unknown): { video: ExplainerVideo; warnings: string[] } {
+  if (!obj(value) || !Array.isArray(value.scenes) || !Array.isArray(value.checks)) throw new Error(VIDEO_COPY.OLD_VIDEO)
+  const acts: VideoAct[] = [], warnings: string[] = [], pending: string[] = []
+  for (const raw of value.scenes) {
+    if (!obj(raw)) throw new Error(VIDEO_COPY.OLD_SCENE)
+    if (raw.kind === 'card') {
+      if (!text(raw.say)) throw new Error(VIDEO_COPY.OLD_SAY)
+      pending.push(raw.say)
+      continue
     }
-    const answer = order.indexOf(check.answer)
-    return { ...check, options: order.map((idx) => check.options[idx]), answer: answer >= 0 ? answer : check.answer }
-  })
+    if (!text(raw.title) || !Array.isArray(raw.steps)) throw new Error(VIDEO_COPY.OLD_SCENE)
+    const act: VideoAct = { title: raw.title, skin: 'memory', steps: [] }
+    if (raw.kind === 'trace') {
+      if (!strs(raw.code) || !text(raw.expectedOutput) || !['c','cpp','java','python'].includes(raw.lang as string)) throw new Error(VIDEO_COPY.OLD_CODE)
+      act.code = { lang: raw.lang as VideoLang, lines: [...raw.code], expectedOutput: raw.expectedOutput }
+    }
+    for (const old of raw.steps) {
+      if (!obj(old) || !text(old.say)) throw new Error(VIDEO_COPY.OLD_STEP)
+      const step: VideoStep = { say: old.say, groups: [], cells: [], arrows: [] }
+      if (raw.kind === 'trace') {
+        if (!Array.isArray(old.vars) || !old.vars.every(v => obj(v) && text(v.name) && text(v.value)) || !Number.isInteger(old.at)) throw new Error(VIDEO_COPY.OLD_VARS)
+        step.groups = [{ id: 'frame', title: raw.title, kind: 'frame' }]
+        step.cells = old.vars.map(v => ({ id: v.name as string, group: 'frame', name: v.name as string, value: v.value as string }))
+        step.line = old.at as number
+        if (text(old.out)) step.out = old.out
+      } else if (raw.kind === 'memory') {
+        if (!Array.isArray(old.cells) || !old.cells.every(c => obj(c) && text(c.id) && text(c.label) && text(c.value) && (c.region === 'stack' || c.region === 'heap')) || !Array.isArray(old.arrows)) throw new Error(VIDEO_COPY.OLD_MEMORY)
+        step.groups = [{ id: 'stack', title: VIDEO_COPY.STACK, kind: 'frame' }, { id: 'heap', title: VIDEO_COPY.HEAP, kind: 'heap' }]
+        step.cells = old.cells.map(c => ({ id: c.id as string, group: c.region as string, name: c.label as string, value: c.value as string }))
+        step.arrows = old.arrows.map(a => { if (!obj(a) || !text(a.from) || !text(a.to)) throw new Error(VIDEO_COPY.OLD_ARROWS); return { from: a.from, to: a.to } })
+        if (old.focus !== undefined) { if (!strs(old.focus)) throw new Error(VIDEO_COPY.OLD_FOCUS); step.focus = [...old.focus] }
+      } else if (raw.kind === 'array') {
+        if (!strs(old.items)) throw new Error(VIDEO_COPY.OLD_ARRAY)
+        step.groups = [{ id: 'array', title: raw.title, kind: 'array' }]
+        step.cells = old.items.map((item, index) => ({ id: String(index), group: 'array', name: String(index), value: item }))
+        if (Array.isArray(old.highlights)) step.focus = old.highlights.map(String)
+        if (obj(old.pointers)) for (const [id, name] of Object.entries(old.pointers)) {
+          if (!text(name)) throw new Error(VIDEO_COPY.OLD_POINTER)
+          const cell = step.cells[Number(id)]
+          if (!cell || !/^(0|[1-9]\d*)$/.test(id)) throw new Error(VIDEO_COPY.OLD_POINTER_REF)
+          cell.name = `${cell.name} ${name}`
+        }
+        if (text(old.note) && step.cells.length) step.note = { at: step.cells[0].id, text: old.note }
+      } else throw new Error(VIDEO_COPY.OLD_KIND)
+      if (!act.steps.length && pending.length) { step.say = `${pending.join(' ')} ${step.say}`; pending.length = 0 }
+      const parts = Array.from(step.say)
+      while (parts.length > 60) {
+        const size = parts.length - 60 < 8 ? parts.length - 8 : 60
+        act.steps.push({ ...step, say: parts.splice(0, size).join('') })
+      }
+      step.say = parts.join('')
+      act.steps.push(step)
+    }
+    acts.push(act)
+  }
+  if (pending.length) warnings.push(VIDEO_FORMAT.dropped(pending.length))
+  const lastAct = acts.at(-1), last = lastAct?.steps.at(-1)
+  if (value.checks.length && !last) throw new Error(VIDEO_COPY.OLD_CHECK_TARGET)
+  for (let i = 0; i < value.checks.length; i++) {
+    const check = value.checks[i]
+    if (!obj(check) || !text(check.stem) || !strs(check.options) || !Number.isInteger(check.answer) || !text(check.explanation)) throw new Error(VIDEO_COPY.OLD_CHECK)
+    const target = i === 0 ? last! : structuredClone(last!)
+    target.ask = { stem: check.stem, options: [...check.options], answer: check.answer as number, why: check.explanation }
+    if (i > 0) lastAct!.steps.push(target)
+  }
+  const video = { id: value.id, title: value.title, question: value.question, concept: text(value.title) ? Array.from(value.title).slice(0, 20).join('') : '',
+    ...(value.lessonId === undefined ? {} : { lessonId: value.lessonId }), source: value.source, createdAt: value.createdAt,
+    acts, codeVerified: value.codeVerified } as ExplainerVideo
+  const errors = validateMigratedVideo(video)
+  if (errors.length) throw new Error(VIDEO_FORMAT.migrationError(errors))
+  return { video, warnings }
+}
+
+export { speechText } from './video-speech'
+export { cleanLength, normalizeVideoShape, shuffleVideoChecks } from './video-legacy'
+export type { VideoScene, CardScene, TraceScene, MemoryScene, ArrayScene, VideoCheck, VideoOutline, VideoOutlineRequest, VideoGenerateRequest, VideoResult, VideoVerifyPrompt, VideoDemoBlock } from './video-legacy'
+import { demoToVideo as legacyDemoToVideo, type VideoDemoBlock } from './video-legacy'
+
+export const VIDEO_FILE_VERSION = 2
+// shortcut: old lesson entry remains until P3 removes it and this bridge.
+export function demoToVideo(block: VideoDemoBlock, lessonId: string, title: string): ExplainerVideo {
+  return legacyDemoToVideo(block, lessonId, title) as unknown as ExplainerVideo
 }

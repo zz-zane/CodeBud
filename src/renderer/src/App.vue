@@ -794,7 +794,7 @@ onBeforeUnmount(() => {
   border: 1px solid var(--mi-border);
   background: var(--mi-card);
   color: var(--mi-text);
-  box-shadow: var(--mi-shadow-md);
+  box-shadow: var(--mi-shadow-lg);
   display: flex;
   align-items: center;
   justify-content: center;

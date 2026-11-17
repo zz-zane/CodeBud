@@ -203,8 +203,8 @@ export const IPC = {
   /** 手动换一个新配对码 */
   remoteRegenerateCode: 'remote:regenerate-code',
 
-  videoOutline: 'video:outline',
   videoGenerate: 'video:generate',
+  videoProgress: 'video:progress',
   videoCancel: 'video:cancel',
   videoList: 'video:list',
   videoDelete: 'video:delete',

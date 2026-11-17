@@ -210,7 +210,7 @@ defineExpose({
   position: absolute;
   right: 20px;
   top: -42px;
-  width: 80px;
+  width: 87px;
   height: 45px;
   pointer-events: none;
   user-select: none;

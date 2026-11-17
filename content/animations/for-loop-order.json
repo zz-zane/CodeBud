@@ -1,0 +1,488 @@
+{
+  "id": "for-loop-order",
+  "title": "for 循环的四步到底谁先谁后",
+  "question": "for (int i = 1; i <= 3; i++) 里的四块，哪句先跑、哪句最后跑？",
+  "concept": "初始化一次，判条件→循环体→步进",
+  "lessonId": "c-stage1-07",
+  "source": "builtin",
+  "createdAt": 1,
+  "codeVerified": null,
+  "scenes": [],
+  "checks": [],
+  "acts": [
+    {
+      "title": "第 1 轮拆解：初始化只做一次",
+      "skin": "memory",
+      "code": {
+        "lang": "c",
+        "lines": [
+          "#include <stdio.h>",
+          "int main(void) {",
+          "    int sum = 0;",
+          "    for (int i = 1; i <= 3; i++) {",
+          "        sum += i;",
+          "    }",
+          "    printf(\"%d\\n\", sum);",
+          "    return 0;",
+          "}"
+        ],
+        "expectedOutput": "6\n"
+      },
+      "steps": [
+        {
+          "say": "先初始化 `sum = 0`，准备进入第 4 行的 `for` 循环。",
+          "line": 3,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "0"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "准备"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "① 先做 `int i = 1`，② 马上判断 `i <= 3` 为真。",
+          "line": 4,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "0"
+            },
+            {
+              "id": "i",
+              "group": "main",
+              "name": "i",
+              "value": "1"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "1.初始化 -> 2.判条件"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "i",
+              "to": "phase"
+            }
+          ],
+          "ask": {
+            "stem": "i <= 3 为真之后，下一步先执行哪一处？",
+            "options": [
+              "循环体 sum += i",
+              "步进 i++",
+              "直接结束循环"
+            ],
+            "answer": 0,
+            "why": "条件为真会立刻进入循环体，i++ 要等这一轮循环体跑完才执行。"
+          }
+        },
+        {
+          "say": "③ 进入循环体，`sum` 加上 `i` 变成 `1`。",
+          "line": 5,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "1"
+            },
+            {
+              "id": "i",
+              "group": "main",
+              "name": "i",
+              "value": "1"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "3.循环体"
+            }
+          ],
+          "arrows": [],
+          "fly": {
+            "from": "i",
+            "to": "sum",
+            "text": "+1"
+          }
+        },
+        {
+          "say": "④ 循环体跑完才回头执行 `i++`，`i` 变成 `2`。",
+          "line": 4,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "1"
+            },
+            {
+              "id": "i",
+              "group": "main",
+              "name": "i",
+              "value": "2"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "4.步进 i++"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "i",
+            "phase"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "后续轮次与退出时机",
+      "skin": "memory",
+      "code": {
+        "lang": "c",
+        "lines": [
+          "#include <stdio.h>",
+          "int main(void) {",
+          "    int sum = 0;",
+          "    for (int i = 1; i <= 3; i++) {",
+          "        sum += i;",
+          "    }",
+          "    printf(\"%d\\n\", sum);",
+          "    return 0;",
+          "}"
+        ],
+        "expectedOutput": "6\n"
+      },
+      "steps": [
+        {
+          "say": "第 2 轮跳过初始化，判 `2 <= 3` 为真，循环体使 `sum = 3`。",
+          "line": 5,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "3"
+            },
+            {
+              "id": "i",
+              "group": "main",
+              "name": "i",
+              "value": "2"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "2.判(2<=3) -> 3.体"
+            }
+          ],
+          "arrows": [],
+          "fly": {
+            "from": "i",
+            "to": "sum",
+            "text": "+2"
+          }
+        },
+        {
+          "say": "步进 `i++` 到 `3`，再判 `3 <= 3` 依然为真。",
+          "line": 4,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "3"
+            },
+            {
+              "id": "i",
+              "group": "main",
+              "name": "i",
+              "value": "3"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "4.步进 -> 2.判(3<=3)"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "第 3 轮循环体把 `3` 加上，`sum` 变成 `6`。",
+          "line": 5,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "6"
+            },
+            {
+              "id": "i",
+              "group": "main",
+              "name": "i",
+              "value": "3"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "3.循环体"
+            }
+          ],
+          "arrows": [],
+          "fly": {
+            "from": "i",
+            "to": "sum",
+            "text": "+3"
+          }
+        },
+        {
+          "say": "再次步进 `i++` 变成 `4`，条件 `4 <= 3` 终于为假。",
+          "line": 4,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "6"
+            },
+            {
+              "id": "i",
+              "group": "main",
+              "name": "i",
+              "value": "4"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "4.步进 -> 2.判(4<=3)"
+            }
+          ],
+          "arrows": [],
+          "note": {
+            "at": "i",
+            "text": "条件为假！"
+          },
+          "ask": {
+            "stem": "当 i 变成 4、条件为假时，循环体还会执行吗？",
+            "options": [
+              "再执行最后一次",
+              "不会，立刻跳出到第 7 行",
+              "把 i 退回 3"
+            ],
+            "answer": 1,
+            "why": "每次进入循环体前都要先判条件，条件为假就立刻结束循环。"
+          }
+        },
+        {
+          "say": "跳出循环来到第 7 行，`printf` 打印 `6`。",
+          "line": 7,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "6"
+            },
+            {
+              "id": "i",
+              "group": "main",
+              "name": "i",
+              "value": "4"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "已退出循环"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "sum"
+          ],
+          "out": "6"
+        },
+        {
+          "say": "记住口诀：初始化一次，每轮先判条件、跑循环体、再步进。",
+          "line": 8,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "flow",
+              "title": "执行阶段",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "sum",
+              "group": "main",
+              "name": "sum",
+              "value": "6"
+            },
+            {
+              "id": "i",
+              "group": "main",
+              "name": "i",
+              "value": "4"
+            },
+            {
+              "id": "phase",
+              "group": "flow",
+              "name": "当前",
+              "value": "循环结束"
+            }
+          ],
+          "arrows": [],
+          "out": "6"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "for",
+    "循环",
+    "执行顺序",
+    "步进",
+    "i++",
+    "初始化",
+    "判条件",
+    "循环体"
+  ],
+  "lessonIds": [
+    "c-stage1-07",
+    "java-stage1-07",
+    "common-06"
+  ]
+}

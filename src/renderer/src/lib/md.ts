@@ -80,7 +80,7 @@ export function collectCompare(body: string): CompareBlock[] {
 /**
  * 正文 HTML 里代替「活组件」的那个占位元素。
  */
-export type SlotKind = 'compare' | 'demo' | 'flash-cards' | 'pretest'
+export type SlotKind = 'compare' | 'demo' | 'flash-cards' | 'pretest' | 'anim'
 
 /** 类名与属性名都由 kind 推出 */
 const slotClass = (kind: SlotKind): string => `${kind}-slot`
@@ -89,11 +89,12 @@ export const COMPARE_SLOT_CLASS = slotClass('compare')
 export const DEMO_SLOT_CLASS = slotClass('demo')
 export const FLASH_CARDS_SLOT_CLASS = slotClass('flash-cards')
 export const PRETEST_SLOT_CLASS = slotClass('pretest')
+export const ANIM_SLOT_CLASS = slotClass('anim')
 
 /**
  * 这是「正文里的占位元素长什么样」的唯一凭据。
  */
-const SLOT_RE = /<div class="(compare|demo|flash-cards|pretest)-slot" data-\1-slot="(\d+)"><\/div>/g
+const SLOT_RE = /<div class="(compare|demo|flash-cards|pretest|anim)-slot" data-\1-slot="(\d+)"><\/div>/g
 
 /** 写占位元素。和 `SLOT_RE` 共用 `slotClass` */
 function slotTag(kind: SlotKind, index: number): string {
@@ -107,6 +108,7 @@ export type SlotPart =
   | { kind: 'demo'; index: number }
   | { kind: 'flash-cards'; index: number }
   | { kind: 'pretest'; index: number }
+  | { kind: 'anim'; index: number }
 
 /**
  * 把渲染好的正文 HTML 按占位元素切开，返回交替的片段序列。
@@ -238,6 +240,33 @@ export function collectFlashCards(body: string): FlashCardsBlock[] {
   for (const t of md.parse(body, {})) {
     if (t.type === 'fence' && isFlashCardsFence(t.info)) {
       const p = parseFlashCards(t.content)
+      if (p) out.push(p)
+    }
+  }
+  return out
+}
+
+export interface AnimBlock {
+  id: string
+}
+
+/** 解析 ```anim 围栏（只认一行 `id: <动画id>`） */
+export function parseAnim(content: string): AnimBlock | null {
+  const lines = content.split(/\r?\n/).map((l) => l.trim()).filter(Boolean)
+  if (lines.length !== 1) return null
+  const m = lines[0].match(/^id:\s*([a-zA-Z0-9_-]+)$/)
+  return m ? { id: m[1] } : null
+}
+
+function isAnimFence(info: string): boolean {
+  return (info || '').trim() === 'anim'
+}
+
+export function collectAnim(body: string): AnimBlock[] {
+  const out: AnimBlock[] = []
+  for (const t of md.parse(body, {})) {
+    if (t.type === 'fence' && isAnimFence(t.info)) {
+      const p = parseAnim(t.content)
       if (p) out.push(p)
     }
   }
@@ -469,6 +498,15 @@ md.renderer.rules.fence = (tokens, idx, options, env, self) => {
     }
   }
 
+  if (isAnimFence(token.info)) {
+    const parsed = parseAnim(token.content)
+    if (parsed) {
+      const bag = env as { animBlocks?: AnimBlock[] }
+      const i = bag.animBlocks ? bag.animBlocks.push(parsed) - 1 : 0
+      return slotTag('anim', i)
+    }
+  }
+
   let highlighted = ''
   if (lang && hljs.getLanguage(lang)) {
     try {
@@ -554,13 +592,15 @@ export function renderMarkdown(body: string, runnable = false, wikiLinks = false
   demoBlocks: DemoBlock[]
   flashCardsBlocks: FlashCardsBlock[]
   pretestBlocks: PretestBlock[]
+  animBlocks: AnimBlock[]
 } {
   const compareBlocks: CompareBlock[] = []
   const demoBlocks: DemoBlock[] = []
   const flashCardsBlocks: FlashCardsBlock[] = []
   const pretestBlocks: PretestBlock[] = []
-  const html = md.render(body, { compareBlocks, demoBlocks, flashCardsBlocks, pretestBlocks, runnable, wikiLinks })
-  return { html, compareBlocks, demoBlocks, flashCardsBlocks, pretestBlocks }
+  const animBlocks: AnimBlock[] = []
+  const html = md.render(body, { compareBlocks, demoBlocks, flashCardsBlocks, pretestBlocks, animBlocks, runnable, wikiLinks })
+  return { html, compareBlocks, demoBlocks, flashCardsBlocks, pretestBlocks, animBlocks }
 }
 
 /** 单段代码高亮；未知语言安全转义 */

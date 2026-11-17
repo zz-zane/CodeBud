@@ -93,7 +93,10 @@ export async function generateVideo(
       errors = [VIDEO_TEXT.JSON_INVALID]
     }
     if (video && errors.length === 0) {
-      const traces = video.scenes.filter((scene): scene is TraceScene => scene.kind === 'trace')
+      const traces: TraceScene[] = video.acts.filter(act => act.code).map(act => ({
+        kind: 'trace', title: act.title, lang: act.code!.lang, code: act.code!.lines,
+        expectedOutput: act.code!.expectedOutput, steps: []
+      }))
       let missing = false
       for (const [index, scene] of traces.entries()) {
         if (signal.aborted) throw new Error(VIDEO_TEXT.CANCELED)
@@ -104,10 +107,14 @@ export async function generateVideo(
       video.codeVerified = traces.length === 0 ? null : !missing
       if (signal.aborted) throw new Error(VIDEO_TEXT.CANCELED)
       if (!errors.length) {
-        for (const scene of video.scenes) {
-          if (scene.kind === 'trace') scene.expectedOutput = normalizeRunOutput(scene.expectedOutput)
+        for (const act of video.acts) {
+          if (act.code) act.code.expectedOutput = normalizeRunOutput(act.code.expectedOutput)
+          for (const step of act.steps) {
+            if (!step.ask) continue
+            const [check] = shuffleVideoChecks([{ ...step.ask, explanation: step.ask.why }], random)
+            step.ask = { stem: check.stem, options: check.options, answer: check.answer, why: check.explanation }
+          }
         }
-        video.checks = shuffleVideoChecks(video.checks, random)
         return video
       }
     }

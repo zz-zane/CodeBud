@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>CodeBud 动画讲解 细节定稿</title>
+<style>
+:root{--canvas:#fcfcfb;--bg:#fff;--paper:#F0EFEA;--stage:#f7f6f3;--chip:#ECEAE5;--accent:#b34b28;--accent-ink:#A84E30;--accent-soft:#f6e6df;--border:#E5E3DD;--ctl:#78899e;--text:#151515;--t2:#5F5E5A;--t3:#6b6963;--ok:#257c46;--okf:#effaf3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:14px/1.5 'Noto Sans SC','Microsoft YaHei',sans-serif;color:var(--text);background:#ddd;padding:40px;display:flex;flex-wrap:wrap;gap:60px}
+.screen{position:relative;background:var(--canvas);overflow:hidden;flex:none;padding:44px 32px 32px}
+.label{position:absolute;left:0;top:0;background:#151515;color:#fff;font-size:11px;padding:2px 8px;border-bottom-right-radius:6px}
+.mono{font-family:'Roboto Mono',Consolas,monospace}.row{display:flex;align-items:center}.col{display:flex;flex-direction:column}.g8{gap:8px}.g16{gap:16px}.g24{gap:24px}.g40{gap:40px}
+.cap{font-size:12px;color:var(--t3);line-height:1.5}.spec{font-size:12px;color:var(--accent-ink);font-family:'Roboto Mono',Consolas,monospace}
+.stage{background:var(--stage);border-radius:12px;position:relative;display:flex;align-items:center;justify-content:center;gap:56px}
+.grp{border:1px dashed #d6d3ca;border-radius:12px;padding:34px 16px 16px;position:relative;display:flex;gap:16px}.grp>b{position:absolute;left:14px;top:9px;font-weight:400;font-size:14px;color:var(--t3)}
+/* locker */
+.lk{position:relative;width:132px;height:150px;border:2px solid #b9b5a8;border-radius:10px;background:linear-gradient(#fff,#f6f4ee);overflow:hidden}
+.lk .plate{position:absolute;top:0;left:50%;transform:translateX(-50%);background:#3d3c39;color:#fff;font-size:14px;padding:2px 12px;border-radius:0 0 7px 7px}
+.lk .nm{position:absolute;left:12px;top:32px;font-size:14px;color:var(--accent-ink)}
+.lk .val{position:absolute;left:0;right:0;top:58px;text-align:center;font-size:34px;line-height:1.2}
+.lk .val.empty{font-size:20px;color:var(--t3);top:68px}
+.lk .hinge{position:absolute;left:10px;top:30px;bottom:12px;width:2px;background:#d8d4c8}
+.lk .knob{position:absolute;right:12px;top:78px;width:9px;height:9px;border-radius:5px;background:#b9b5a8}
+.lk .door{position:absolute;inset:26px 6px 6px 6px;border-radius:6px;background:linear-gradient(90deg,#efece4,#e4e0d4);border:1px solid #cfcabc;transform-origin:left center}
+.lk.f{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.slip{position:relative;width:150px;height:96px;background:#fffdf3;border:1.5px dashed #c9b98a;border-radius:4px;transform:rotate(-3deg);box-shadow:0 3px 8px rgba(0,0,0,.08);padding:12px 16px}
+.slip:after{content:"";position:absolute;right:-1px;top:-1px;border-style:solid;border-width:0 16px 16px 0;border-color:transparent #e9e1c6 transparent transparent}
+.slip .k{font-size:14px;color:var(--t3)}.slip .v{font-size:30px;line-height:1.2}
+.tok{position:absolute;background:var(--accent);color:#fff;font-size:20px;padding:3px 14px;border-radius:16px;box-shadow:0 4px 10px rgba(179,75,40,.35)}
+.dot{position:absolute;width:12px;height:12px;border-radius:6px;background:var(--accent);box-shadow:0 0 0 4px rgba(179,75,40,.2)}
+/* memory */
+.cell{position:relative;width:200px;border:1.5px solid var(--border);border-radius:10px;background:#fff;padding:10px 14px}
+.cell .k{display:flex;justify-content:space-between;font-size:14px;color:var(--t3)}.cell .v{font-size:30px;line-height:1.25}
+.cell.f{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}.cell.dim{opacity:.38}
+.code{background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px 0;font-size:15px;line-height:30px;align-self:center}
+.code div{padding:0 18px;display:flex;gap:16px;white-space:pre}.code .ln{width:18px;text-align:right;color:var(--t3)}.code .cur{background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.out{position:absolute;right:20px;bottom:20px;min-width:120px;background:#1f1f1f;color:#e9e7e1;border-radius:8px;padding:8px 12px;font-size:15px}.out b{display:block;font-weight:400;font-size:12px;color:#a8a59d}
+.callout{position:absolute;background:#151515;color:#fff;font-size:13px;padding:5px 10px;border-radius:8px;white-space:nowrap}
+.bad{outline:2px dashed #c62b30;outline-offset:4px}
+.ic{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.btn{height:32px;padding:0 12px;border-radius:8px;border:1px solid var(--border);background:var(--bg);display:inline-flex;align-items:center;gap:6px;font-size:13px}.btn.g{background:var(--chip);border-color:var(--chip)}.btn.ghost{border-color:transparent;background:transparent;width:32px;padding:0;justify-content:center}
+.round{width:40px;height:40px;border-radius:20px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center}
+.seg{display:inline-flex;background:var(--chip);border-radius:8px;padding:2px}.seg span{height:28px;padding:0 10px;border-radius:6px;display:flex;align-items:center;font-size:12px;color:var(--t2)}.seg span.on{background:#fff;color:var(--text)}
+.bar{flex:1;display:flex;gap:10px;height:6px}.bar .act{display:flex;gap:3px;flex:1}.bar i{flex:1;border-radius:3px;background:var(--chip)}.bar i.d{background:var(--accent)}.bar i.c{background:linear-gradient(90deg,var(--accent) 55%,var(--chip) 55%)}
+.sheet{width:240px;background:#fff;border:1px solid #d6d3ca;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.06);position:relative;padding:30px 14px 14px 30px}
+.sheet .holes{position:absolute;left:10px;top:34px;display:flex;flex-direction:column;gap:18px}.sheet .holes i{width:7px;height:7px;border-radius:4px;border:1.5px solid #cfcabc;display:block}
+.sheet>b{position:absolute;left:30px;top:6px;font-weight:400;font-size:14px;color:var(--t2)}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="ah" markerWidth="10" markerHeight="9" refX="9" refY="4.5" orient="auto"><path d="M0 0L10 4.5L0 9z" fill="#b34b28"/></marker>
+<symbol id="play" viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z" fill="currentColor" stroke="none"/></symbol><symbol id="pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
+<symbol id="prev" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol><symbol id="next" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+<symbol id="vol" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9zM17 9a4 4 0 010 6"/></symbol><symbol id="mute" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9zM17 9l4 6M21 9l-4 6"/></symbol>
+<symbol id="help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1.1-1.5 2M12 17h.01"/></symbol>
+</defs></svg>
+
+<!-- D1 -->
+<div class="screen" style="width:1180px;height:520px"><div class="label">D1 柜子（locker）细节：尺寸、开门四帧 —— 门只在柜体内转动，绝不画出柜子外</div>
+  <div class="row g40" style="align-items:flex-start">
+    <div class="col g8"><span class="cap">关着（默认）</span><div class="lk"><span class="plate mono">100</span><span class="nm mono">a</span><span class="hinge"></span><span class="val mono">5</span><span class="knob"></span><div class="door" style="opacity:.0"></div></div></div>
+    <div class="col g8"><span class="cap">开门 0ms：门板盖住值</span><div class="lk f"><span class="plate mono">100</span><span class="nm mono">a</span><span class="val mono">5</span><div class="door"></div><span class="knob" style="z-index:2"></span></div></div>
+    <div class="col g8"><span class="cap">175ms：门板 scaleX 0.45，露出半个值</span><div class="lk f"><span class="plate mono">100</span><span class="nm mono">a</span><span class="val mono">5</span><div class="door" style="transform:scaleX(.45)"></div></div></div>
+    <div class="col g8"><span class="cap">350ms：门板收成 10px 窄条贴门轴</span><div class="lk f"><span class="plate mono">100</span><span class="nm mono">a</span><span class="val mono">5</span><div class="door" style="transform:scaleX(.08)"></div></div></div>
+    <div class="col g8"><span class="cap">空柜</span><div class="lk"><span class="plate mono">104</span><span class="hinge"></span><span class="val mono empty">空</span><span class="knob"></span></div></div>
+  </div>
+  <div class="col g8" style="margin-top:28px;max-width:1080px">
+    <span class="spec">柜体 132×150（固定，不随内容拉宽）· 边框 2px #b9b5a8 · 圆角 10 · overflow:hidden · 门牌 14px 白字深底居中 · 名字 14px 强调色左上 · 值 34px 居中（空柜「空」20px 灰）· 把手 9px 圆点右侧居中</span>
+    <span class="spec">开门 = 门板 transform:scaleX(1→0.08)，transform-origin:left，350ms；关门反向 300ms。禁止 rotateY / 3D 透视（现版本门板画出了柜体外，见实测截图 basics-05）</span>
+    <span class="spec">聚光（focus）= 边框换强调色 + 4px 浅强调色外环；非聚光格子 opacity .38</span>
+  </div>
+</div>
+
+<!-- D2 -->
+<div class="screen" style="width:1180px;height:560px"><div class="label">D2 纸条 → 柜子：顺着箭头走（follow）与取值飞出（fly）的落点</div>
+  <div class="row g24" style="align-items:flex-start">
+    <div class="col g8"><span class="cap">① follow：圆点沿箭头走到柜门，身后渐隐轨迹（900ms）</span>
+      <div class="stage" style="width:540px;height:230px"><div class="grp"><b>纸条</b><div class="slip"><div class="k mono">p</div><div class="v mono">100</div></div></div><div class="grp"><b>柜子</b><div class="lk f"><span class="plate mono">100</span><span class="nm mono">a</span><span class="val mono">5</span><span class="knob"></span></div></div>
+        <svg width="540" height="230" style="position:absolute;inset:0;pointer-events:none" fill="none"><path d="M226 128 C 262 128, 280 128, 312 128" stroke="#b34b28" stroke-width="2.5" marker-end="url(#ah)"/><path d="M232 128 C 250 128, 262 128, 276 128" stroke="#b34b28" stroke-width="6" stroke-linecap="round" opacity=".18"/></svg><span class="dot" style="left:276px;top:122px"></span></div></div>
+    <div class="col g8"><span class="cap">② fly：值的胶囊从柜子中心飞到「输出」框；起点在值上方，不压住名字</span>
+      <div class="stage" style="width:540px;height:230px"><div class="grp"><b>纸条</b><div class="slip"><div class="k mono">p</div><div class="v mono">100</div></div></div><div class="grp"><b>柜子</b><div class="lk f"><span class="plate mono">100</span><span class="nm mono">a</span><span class="val mono">5</span><div class="door" style="transform:scaleX(.08)"></div></div></div>
+        <svg width="540" height="230" style="position:absolute;inset:0;pointer-events:none" fill="none"><path d="M226 128 C 262 128, 280 128, 312 128" stroke="#b34b28" stroke-width="2.5" marker-end="url(#ah)"/><path d="M384 110 C 440 60, 480 120, 470 170" stroke="#b34b28" stroke-width="1.5" stroke-dasharray="4 5" opacity=".45"/></svg><span class="tok mono" style="left:436px;top:84px">5</span><div class="out mono"><b>输出</b>&nbsp;</div></div></div>
+  </div>
+  <div class="col g8" style="margin-top:20px">
+    <span class="spec">箭头：源头右边缘中点 → 目标左边缘中点；同一行时画直线，不绕到格子下方 · 线宽 2.5 · 箭头 10×9</span>
+    <span class="spec">胶囊：20px 字、强调色底、白字；从值的位置起飞（不是从格子左上角，现版本压住了名字 a，见实测 basics-08）；落地后在目标位置停 300ms 再淡出</span>
+    <span class="spec">输出框：固定在舞台右下，距边 20px；从第一次有输出起常驻，之前不显示</span>
+  </div>
+</div>
+
+<!-- D3 -->
+<div class="screen" style="width:1180px;height:620px"><div class="label">D3 第二幕（代码 + 内存）版式：代码框高度跟内容走、与内存区垂直居中，两边一样大小</div>
+  <div class="stage" style="height:440px;justify-content:center;gap:48px;padding:0 40px">
+    <div class="code mono" style="width:430px"><div><span class="ln">1</span>#include &lt;stdio.h&gt;</div><div><span class="ln">2</span>int main(void) {</div><div><span class="ln">3</span>    int a = 5;</div><div><span class="ln">4</span>    int *p = &amp;a;</div><div class="cur"><span class="ln">5</span>    printf("%d\n", *p);</div><div><span class="ln">6</span>    *p = 9;</div><div><span class="ln">7</span>    printf("%d\n", a);</div><div><span class="ln">8</span>    return 0;</div><div><span class="ln">9</span>}</div></div>
+    <div style="position:relative"><div class="grp" style="flex-direction:column;padding-top:36px"><b>main 的栈帧</b>
+      <div class="cell f"><div class="k mono"><span>a</span><span>0x100</span></div><div class="v mono">5</div></div>
+      <div class="cell dim" style="margin-top:20px"><div class="k mono"><span>p</span><span>0x108</span></div><div class="v mono">0x100</div></div></div>
+      <svg width="320" height="300" style="position:absolute;left:0;top:0;pointer-events:none" fill="none"><path d="M234 214 C 290 214, 290 92, 236 92" stroke="#b34b28" stroke-width="2.5" marker-end="url(#ah)"/></svg>
+      <span class="tok mono" style="left:150px;top:58px">5</span></div>
+    <div class="out mono"><b>输出</b>&nbsp;</div>
+  </div>
+  <div class="col g8" style="margin-top:20px">
+    <span class="spec">代码框：宽 = 舞台宽 × 38%（360–480px），高度跟内容（不拉伸到舞台底），与右侧内存区垂直居中；代码 15px / 行高 30（现版本 12px，下方大片空白）</span>
+    <span class="spec">内存区与第一幕用同一套尺寸（D1、D4）；自适应缩放只在内容超出时缩小，不要放大到超过 1.4，也不要小于 0.85（现版本递归第二幕缩到约 0.5，字只有 10px）</span>
+    <span class="spec">舞台不再有「调用栈」外框标题以外的第二层标题；组标题 14px</span>
+  </div>
+</div>
+
+<!-- D4 -->
+<div class="screen" style="width:1180px;height:600px"><div class="label">D4 调用栈：草稿纸纵向叠放，新的一张压在最上面（往上长），底下的只露标题栏</div>
+  <div class="row g40" style="align-items:flex-end">
+    <div class="col g8"><span class="cap">一层</span><div class="col" style="height:330px;justify-content:flex-end"><div class="sheet"><b>sum_to(3)</b><span class="holes"><i></i><i></i><i></i></span><div class="col g8"><div class="cell" style="width:190px"><div class="k mono"><span>n</span></div><div class="v mono">3</div></div><div class="cell" style="width:190px"><div class="k mono"><span>sub</span></div><div class="v mono">?</div></div></div></div></div></div>
+    <div class="col g8"><span class="cap">三层：新帧在上，下面两张各露 32px 标题栏</span><div class="col" style="height:330px;justify-content:flex-end;position:relative">
+      <div class="sheet" style="position:relative;z-index:3;margin-bottom:-6px"><b>sum_to(1)</b><span class="holes"><i></i><i></i><i></i></span><div class="col g8"><div class="cell f" style="width:190px"><div class="k mono"><span>n</span></div><div class="v mono">1</div></div></div></div>
+      <div class="sheet" style="height:38px;padding:0;z-index:2;margin:0 6px -6px;background:#fbfaf7"><b>sum_to(2)</b></div>
+      <div class="sheet" style="height:38px;padding:0;z-index:1;margin:0 12px;background:#f6f5f1"><b>sum_to(3)</b></div></div></div>
+    <div class="col g8" style="max-width:520px"><span class="spec">入栈：新纸从上方滑入（translateY -24 → 0，淡入，300ms）；出栈：最上面一张向上滑出淡出（250ms），下面一张同时展开</span>
+      <span class="spec">只有最上面一张显示格子；下面的只露 32px 标题栏、依次缩进 6px、底色逐层变暗一点</span>
+      <span class="spec">帧与帧之间不画箭头；返回值用胶囊从上面那张飞到下面那张的 sub 格</span>
+      <span class="spec">第二幕（memory 皮）同样纵向：调用栈一列，最新的在最上；显示全部帧的格子（不折叠），超高时整列缩放（不小于 0.85，不够就让舞台内部滚动）</span>
+      <span class="spec">现版本问题：三层时下面两张只剩空白长条且整体右偏、底部留白；递归第二幕帧被缩到很小</span></div>
+  </div>
+</div>
+
+<!-- D5 -->
+<div class="screen" style="width:1180px;height:300px"><div class="label">D5 播放器底栏：顺序、状态、进度按幕分组</div>
+  <div class="col g16">
+    <div class="row g16" style="height:64px;border:1px solid var(--border);border-radius:12px;background:#fff;padding:0 16px">
+      <span class="btn ghost"><svg class="ic"><use href="#prev"/></svg></span><span class="round"><svg class="ic" style="width:18px;height:18px"><use href="#pause"/></svg></span><span class="btn ghost"><svg class="ic"><use href="#next"/></svg></span>
+      <span class="mono" style="font-size:13px;color:var(--t3);min-width:52px">8 / 11</span>
+      <div class="bar"><div class="act"><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i></div><div class="act"><i class="d"></i><i class="d"></i><i class="c"></i><i></i><i></i><i></i></div></div>
+      <span class="btn"><svg class="ic"><use href="#vol"/></svg>旁白</span><div class="seg"><span>0.75×</span><span class="on">1×</span><span>1.25×</span><span>1.5×</span></div><span class="btn g"><svg class="ic"><use href="#help"/></svg>这一步没懂</span></div>
+    <div class="row g16" style="height:64px;border:1px solid var(--border);border-radius:12px;background:#fff;padding:0 16px">
+      <span class="btn ghost"><svg class="ic"><use href="#prev"/></svg></span><span class="round"><svg class="ic" style="width:18px;height:18px;color:#fff"><use href="#play"/></svg></span><span class="btn ghost"><svg class="ic"><use href="#next"/></svg></span>
+      <span class="mono" style="font-size:13px;color:var(--t3);min-width:52px">11 / 11</span>
+      <div class="bar"><div class="act"><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i></div><div class="act"><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i></div></div>
+      <span class="btn" style="color:var(--t3)"><svg class="ic"><use href="#mute"/></svg>旁白</span><div class="seg"><span>0.75×</span><span class="on">1×</span><span>1.25×</span><span>1.5×</span></div><span class="btn" style="border-color:var(--accent);color:var(--accent-ink)">重新播放</span></div>
+    <span class="spec">进度条按幕分组，组间 10px；点任一段跳到该步 · 播放中主按钮显示暂停图标，暂停 / 结束时显示播放图标 · 播完最后一步：主按钮变播放、右侧「这一步没懂」换成「重新播放」 · 旁白关闭时图标换成静音、文字变灰</span>
+  </div>
+</div>
+</body></html>

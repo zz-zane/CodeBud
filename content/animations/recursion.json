@@ -1,0 +1,475 @@
+{
+  "id": "recursion",
+  "title": "递归先一路压栈，再一路返回",
+  "question": "函数自己调用自己时，为什么不会混乱，怎么一层层算回来？",
+  "concept": "递归先递推压栈，触底后再回溯",
+  "lessonId": "python-stage1-16",
+  "source": "builtin",
+  "createdAt": 1,
+  "codeVerified": null,
+  "scenes": [],
+  "checks": [],
+  "acts": [
+    {
+      "title": "三张叠起来的草稿纸",
+      "skin": "sheet",
+      "steps": [
+        {
+          "say": "先打开第一张草稿纸算 `sum_to(3)`，它需要 `sum_to(2)`。",
+          "groups": [
+            {
+              "id": "f3",
+              "title": "sum_to(3)",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "f3_n",
+              "group": "f3",
+              "name": "n",
+              "value": "3"
+            },
+            {
+              "id": "f3_sub",
+              "group": "f3",
+              "name": "sub",
+              "value": "?"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "一路往下叫自己，草稿纸越叠越高，直到 `n == 1` 触底。",
+          "groups": [
+            {
+              "id": "f3",
+              "title": "sum_to(3)",
+              "kind": "frame"
+            },
+            {
+              "id": "f2",
+              "title": "sum_to(2)",
+              "kind": "frame"
+            },
+            {
+              "id": "f1",
+              "title": "sum_to(1)",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "f3_n",
+              "group": "f3",
+              "name": "n",
+              "value": "3",
+              "dim": true
+            },
+            {
+              "id": "f3_sub",
+              "group": "f3",
+              "name": "sub",
+              "value": "?",
+              "dim": true
+            },
+            {
+              "id": "f2_n",
+              "group": "f2",
+              "name": "n",
+              "value": "2",
+              "dim": true
+            },
+            {
+              "id": "f2_sub",
+              "group": "f2",
+              "name": "sub",
+              "value": "?",
+              "dim": true
+            },
+            {
+              "id": "f1_n",
+              "group": "f1",
+              "name": "n",
+              "value": "1"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "触底直接返回 `1`！`f1` 抽走，把 `1` 交给 `f2` 的 `sub`。",
+          "groups": [
+            {
+              "id": "f3",
+              "title": "sum_to(3)",
+              "kind": "frame"
+            },
+            {
+              "id": "f2",
+              "title": "sum_to(2)",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "f3_n",
+              "group": "f3",
+              "name": "n",
+              "value": "3",
+              "dim": true
+            },
+            {
+              "id": "f3_sub",
+              "group": "f3",
+              "name": "sub",
+              "value": "?",
+              "dim": true
+            },
+            {
+              "id": "f2_n",
+              "group": "f2",
+              "name": "n",
+              "value": "2"
+            },
+            {
+              "id": "f2_sub",
+              "group": "f2",
+              "name": "sub",
+              "value": "1"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "f2_sub"
+          ],
+          "ask": {
+            "stem": "现在 f2 拿到 sub = 1，它会返回什么给 f3？",
+            "options": [
+              "1",
+              "3 + 1 = 4",
+              "2 + 1 = 3"
+            ],
+            "answer": 2,
+            "why": "f2 自己的 n 是 2，它把 n + sub 即 2 + 1 算出来返回。"
+          },
+          "fly": {
+            "from": "f2_n",
+            "to": "f2_sub",
+            "text": "1"
+          }
+        },
+        {
+          "say": "`f2` 算完 `3` 也退场，`f3` 终于算出 `3 + 3 = 6`。",
+          "groups": [
+            {
+              "id": "f3",
+              "title": "sum_to(3)",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "f3_n",
+              "group": "f3",
+              "name": "n",
+              "value": "3"
+            },
+            {
+              "id": "f3_sub",
+              "group": "f3",
+              "name": "sub",
+              "value": "3"
+            }
+          ],
+          "arrows": [],
+          "note": {
+            "at": "f3_sub",
+            "text": "3 + 3 = 6"
+          },
+          "fly": {
+            "from": "f3_n",
+            "to": "f3_sub",
+            "text": "3"
+          }
+        }
+      ]
+    },
+    {
+      "title": "换成真正的代码",
+      "skin": "memory",
+      "code": {
+        "lang": "python",
+        "lines": [
+          "def sum_to(n):",
+          "    if n == 1:",
+          "        return 1",
+          "    sub = sum_to(n - 1)",
+          "    return n + sub",
+          "",
+          "print(sum_to(3))"
+        ],
+        "expectedOutput": "6\n"
+      },
+      "steps": [
+        {
+          "say": "从 `sum_to(3)` 入口进入，建起第 1 层栈帧。",
+          "line": 7,
+          "groups": [
+            {
+              "id": "f3",
+              "title": "sum_to(3)",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "f3_n",
+              "group": "f3",
+              "name": "n",
+              "value": "3"
+            },
+            {
+              "id": "f3_sub",
+              "group": "f3",
+              "name": "sub",
+              "value": "?"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "第 4 行递归调用 `sum_to(2)`，压入第 2 层栈帧。",
+          "line": 4,
+          "groups": [
+            {
+              "id": "f3",
+              "title": "sum_to(3)",
+              "kind": "frame"
+            },
+            {
+              "id": "f2",
+              "title": "sum_to(2)",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "f3_n",
+              "group": "f3",
+              "name": "n",
+              "value": "3"
+            },
+            {
+              "id": "f3_sub",
+              "group": "f3",
+              "name": "sub",
+              "value": "?"
+            },
+            {
+              "id": "f2_n",
+              "group": "f2",
+              "name": "n",
+              "value": "2"
+            },
+            {
+              "id": "f2_sub",
+              "group": "f2",
+              "name": "sub",
+              "value": "?"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "再压入 `sum_to(1)`，命中基线条件 `n == 1`。",
+          "line": 2,
+          "groups": [
+            {
+              "id": "f3",
+              "title": "sum_to(3)",
+              "kind": "frame"
+            },
+            {
+              "id": "f2",
+              "title": "sum_to(2)",
+              "kind": "frame"
+            },
+            {
+              "id": "f1",
+              "title": "sum_to(1)",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "f3_n",
+              "group": "f3",
+              "name": "n",
+              "value": "3"
+            },
+            {
+              "id": "f3_sub",
+              "group": "f3",
+              "name": "sub",
+              "value": "?"
+            },
+            {
+              "id": "f2_n",
+              "group": "f2",
+              "name": "n",
+              "value": "2"
+            },
+            {
+              "id": "f2_sub",
+              "group": "f2",
+              "name": "sub",
+              "value": "?"
+            },
+            {
+              "id": "f1_n",
+              "group": "f1",
+              "name": "n",
+              "value": "1"
+            }
+          ],
+          "arrows": [],
+          "ask": {
+            "stem": "此时栈上一共有几层 sum_to 栈帧同时存在？",
+            "options": [
+              "1 层",
+              "3 层",
+              "无限层"
+            ],
+            "answer": 1,
+            "why": "sum_to(3) 和 sum_to(2) 都在等下层返回，加上 sum_to(1) 共 3 层。"
+          }
+        },
+        {
+          "say": "`return 1` 弹出最顶层，`f2` 的 `sub` 收到 `1`。",
+          "line": 3,
+          "groups": [
+            {
+              "id": "f3",
+              "title": "sum_to(3)",
+              "kind": "frame"
+            },
+            {
+              "id": "f2",
+              "title": "sum_to(2)",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "f3_n",
+              "group": "f3",
+              "name": "n",
+              "value": "3"
+            },
+            {
+              "id": "f3_sub",
+              "group": "f3",
+              "name": "sub",
+              "value": "?"
+            },
+            {
+              "id": "f2_n",
+              "group": "f2",
+              "name": "n",
+              "value": "2"
+            },
+            {
+              "id": "f2_sub",
+              "group": "f2",
+              "name": "sub",
+              "value": "1"
+            }
+          ],
+          "arrows": [],
+          "fly": {
+            "from": "f2_n",
+            "to": "f2_sub",
+            "text": "1"
+          }
+        },
+        {
+          "say": "`f2` 返回 `2 + 1 = 3` 后出栈，轮到 `f3` 计算 `3 + 3`。",
+          "line": 5,
+          "groups": [
+            {
+              "id": "f3",
+              "title": "sum_to(3)",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "f3_n",
+              "group": "f3",
+              "name": "n",
+              "value": "3"
+            },
+            {
+              "id": "f3_sub",
+              "group": "f3",
+              "name": "sub",
+              "value": "3"
+            }
+          ],
+          "arrows": [],
+          "note": {
+            "at": "f3_sub",
+            "text": "返回 3 + 3"
+          }
+        },
+        {
+          "say": "顶层返回 `6`，`print` 输出 `6`。",
+          "line": 7,
+          "groups": [
+            {
+              "id": "main",
+              "title": "全局",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "in_n",
+              "group": "main",
+              "name": "参数 n",
+              "value": "3"
+            },
+            {
+              "id": "ans",
+              "group": "main",
+              "name": "结果",
+              "value": "6"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "ans"
+          ],
+          "out": "6"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "递归",
+    "一层层",
+    "返回",
+    "基线条件",
+    "压栈",
+    "回溯",
+    "自己调自己",
+    "recursion"
+  ],
+  "lessonIds": [
+    "python-stage1-16",
+    "common-18",
+    "c-stage2-11",
+    "cpp-stage1-16",
+    "java-stage1-17"
+  ]
+}

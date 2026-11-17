@@ -121,7 +121,6 @@ function onTabKey(event: KeyboardEvent): void {
   min-height: 0;
 }
 .study-view-container :deep(.mi-input),
-.study-view-container :deep(.mi-select),
 .study-view-container :deep(.mi-textarea) {
   box-sizing: border-box;
   min-width: 0;
@@ -133,12 +132,12 @@ function onTabKey(event: KeyboardEvent): void {
   font: var(--mi-fs-label) var(--mi-font-family);
   outline: none;
 }
-.study-view-container :deep(.mi-input), .study-view-container :deep(.mi-select) { height: 32px; padding-block: 0; }
-.study-view-container :deep(.mi-textarea) { width: 100%; line-height: 1.6; resize: vertical; }
+.study-view-container :deep(.mi-input) { height: 32px; padding-block: 0; }
+.study-view-container :deep(.mi-textarea) { width: 100%; line-height: 1.6; }
+.study-view-container :deep(.mi-textarea:not(.math-code-area)) { resize: vertical; }
 .study-view-container :deep(.mi-input:focus),
-.study-view-container :deep(.mi-select:focus),
 .study-view-container :deep(.mi-textarea:focus) { border-color: var(--mi-blue-deep); }
-.study-view-container :deep(button:focus-visible) { outline: 2px solid var(--mi-blue-deep); outline-offset: 2px; }
+.study-view-container :deep(button:not(.ms-trigger):focus-visible) { outline: 2px solid var(--mi-blue-deep); outline-offset: 2px; }
 /* 窄窗口只留图标，防止页签挤出横向滚动 */
 @media (max-width: 860px) {
   .study-tab-link:not(.active) { font-size: 0; gap: 0; }

@@ -1,22 +1,484 @@
 {
-  "id": "b0c2ebc4-dc1f-496f-8ae9-e09cf1268a17",
-  "title": "指针与地址",
-  "question": "指针与地址有什么区别？",
-  "source": "ai",
+  "id": "c-pointer-basics",
+  "title": "指针里存的是门牌号",
+  "question": "指针里的地址和变量的值有什么关系？",
+  "concept": "指针存地址，`*` 顺着地址找值",
+  "source": "builtin",
   "createdAt": 1,
   "codeVerified": null,
-  "scenes": [
-    { "kind": "card", "role": "problem", "heading": "指针与地址", "body": "指针和地址有什么区别？", "say": "我们先弄清楚，指针保存的地址与变量本身分别是什么。" },
-    { "kind": "card", "role": "analogy", "heading": "门牌与纸条", "body": "地址像门牌，指针像记着门牌的纸条。", "say": "想象一个房间有门牌，一张纸条记录门牌方便找到房间。" },
-    { "kind": "memory", "title": "变量和指针", "steps": [
-      { "say": "首先看左边的变量，它有自己的名字和存放的数值。", "cells": [{ "id": "x", "label": "x", "value": "7", "region": "stack" }], "arrows": [], "focus": ["x"] },
-      { "say": "接着放入指针变量，它的内容是变量所在的位置。", "cells": [{ "id": "x", "label": "x", "value": "7", "region": "stack" }, { "id": "p", "label": "p", "value": "&x", "region": "stack" }], "arrows": [], "focus": ["p"] },
-      { "say": "箭头表示指针保存的地址指向右边的变量位置。", "cells": [{ "id": "x", "label": "x", "value": "7", "region": "stack" }, { "id": "p", "label": "p", "value": "&x", "region": "stack" }], "arrows": [{ "from": "p", "to": "x" }], "focus": ["p", "x"] },
-      { "say": "沿箭头读取时得到变量的值，而不是纸条本身。", "cells": [{ "id": "x", "label": "x", "value": "7", "region": "stack" }, { "id": "p", "label": "p", "value": "&x", "region": "stack" }], "arrows": [{ "from": "p", "to": "x" }], "focus": ["x"] }
-    ] },
-    { "kind": "card", "role": "pitfall", "heading": "常见错误", "body": "不要把指针中的地址当成目标变量的值。", "say": "注意纸条上的门牌不是房间里的东西，不要混淆两者。" },
-    { "kind": "card", "role": "pitfall", "heading": "再想一想", "body": "指针本身也是变量。", "say": "纸条自身也需要放在某处，指针本身同样是一个变量。" },
-    { "kind": "card", "role": "summary", "heading": "回顾", "body": "指针保存地址，通过地址访问目标。", "say": "总结一下，指针记录地址，沿着地址才能访问变量的值。" }
+  "acts": [
+    {
+      "title": "顺着纸条找柜子",
+      "skin": "locker",
+      "steps": [
+        {
+          "say": "内存像一排带门牌号的柜子，每个柜子里放一个值。",
+          "groups": [
+            {
+              "id": "lockers",
+              "title": "柜子",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "lockers",
+              "value": "5",
+              "addr": "100"
+            },
+            {
+              "id": "b",
+              "group": "lockers",
+              "value": "空",
+              "addr": "104"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "这个柜子门牌是 100，里面放着 5，它就是变量 `a`。",
+          "groups": [
+            {
+              "id": "lockers",
+              "title": "柜子",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "lockers",
+              "value": "5",
+              "addr": "100",
+              "name": "a"
+            },
+            {
+              "id": "b",
+              "group": "lockers",
+              "value": "空",
+              "addr": "104"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "a"
+          ],
+          "note": {
+            "at": "a",
+            "text": "门牌 100，里面是 5"
+          }
+        },
+        {
+          "say": "再拿一张纸条，上面只写门牌号 100。这张纸条就是指针 `p`。",
+          "groups": [
+            {
+              "id": "paper",
+              "title": "纸条",
+              "kind": "plain"
+            },
+            {
+              "id": "lockers",
+              "title": "柜子",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "lockers",
+              "value": "5",
+              "addr": "100",
+              "name": "a"
+            },
+            {
+              "id": "b",
+              "group": "lockers",
+              "value": "空",
+              "addr": "104"
+            },
+            {
+              "id": "p",
+              "group": "paper",
+              "value": "100",
+              "name": "p"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "a"
+            }
+          ]
+        },
+        {
+          "say": "顺着纸条上的门牌找到柜子，打开拿到 5。这一步叫解引用。",
+          "groups": [
+            {
+              "id": "paper",
+              "title": "纸条",
+              "kind": "plain"
+            },
+            {
+              "id": "lockers",
+              "title": "柜子",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "lockers",
+              "value": "5",
+              "addr": "100",
+              "name": "a"
+            },
+            {
+              "id": "b",
+              "group": "lockers",
+              "value": "空",
+              "addr": "104"
+            },
+            {
+              "id": "p",
+              "group": "paper",
+              "value": "100",
+              "name": "p"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "a"
+            }
+          ],
+          "fly": {
+            "from": "a",
+            "to": "out",
+            "text": "5"
+          },
+          "out": "5",
+          "ask": {
+            "stem": "顺着纸条 `p` 找过去，拿到的是什么？",
+            "options": [
+              "5",
+              "100",
+              "纸条本身"
+            ],
+            "answer": 0,
+            "why": "纸条记录门牌，沿着门牌找到柜子里的值 5。"
+          },
+          "follow": "p",
+          "open": [
+            "a"
+          ]
+        },
+        {
+          "say": "也可以顺着纸条走到柜子前，把里面换成 9。纸条上的字没变。",
+          "groups": [
+            {
+              "id": "paper",
+              "title": "纸条",
+              "kind": "plain"
+            },
+            {
+              "id": "lockers",
+              "title": "柜子",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "lockers",
+              "value": "9",
+              "addr": "100",
+              "name": "a"
+            },
+            {
+              "id": "b",
+              "group": "lockers",
+              "value": "空",
+              "addr": "104"
+            },
+            {
+              "id": "p",
+              "group": "paper",
+              "value": "100",
+              "name": "p"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "a"
+            }
+          ],
+          "fly": {
+            "from": "p",
+            "to": "a",
+            "text": "9"
+          },
+          "out": "5",
+          "follow": "p",
+          "open": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "换成真正的代码",
+      "skin": "memory",
+      "code": {
+        "lang": "c",
+        "lines": [
+          "#include <stdio.h>",
+          "int main(void) {",
+          "    int a = 5;",
+          "    int *p = &a;",
+          "    printf(\"%d\\n\", *p);",
+          "    *p = 9;",
+          "    printf(\"%d\\n\", a);",
+          "    return 0;",
+          "}"
+        ],
+        "expectedOutput": "5\n9\n"
+      },
+      "steps": [
+        {
+          "say": "`int a = 5;` 在内存里占一格，地址 `0x100`，里面是 5。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main 的栈帧",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "value": "5",
+              "name": "a",
+              "addr": "0x100"
+            }
+          ],
+          "arrows": [],
+          "line": 3
+        },
+        {
+          "say": "`&a` 取出 `a` 的地址，存进 `p`。`p` 里放的是地址，不是 5。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main 的栈帧",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "value": "5",
+              "name": "a",
+              "addr": "0x100"
+            },
+            {
+              "id": "p",
+              "group": "main",
+              "value": "0x100",
+              "name": "p",
+              "addr": "0x108"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "a"
+            }
+          ],
+          "line": 4
+        },
+        {
+          "say": "`*p` 顺着 `p` 里的地址找到 `a`，读出 5。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main 的栈帧",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "value": "5",
+              "name": "a",
+              "addr": "0x100"
+            },
+            {
+              "id": "p",
+              "group": "main",
+              "value": "0x100",
+              "name": "p",
+              "addr": "0x108"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "a"
+            }
+          ],
+          "line": 5,
+          "focus": [
+            "a"
+          ],
+          "fly": {
+            "from": "a",
+            "to": "out",
+            "text": "5"
+          },
+          "out": "5",
+          "ask": {
+            "stem": "`*p` 的值是多少？",
+            "options": [
+              "5",
+              "0x100",
+              "0x108"
+            ],
+            "answer": 0,
+            "why": "`p` 保存 `a` 的地址，`*p` 读取该地址里的值 5。"
+          },
+          "follow": "p"
+        },
+        {
+          "say": "`*p = 9` 顺着地址走到 `a`，把它改成 9。`p` 自己没变。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main 的栈帧",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "value": "9",
+              "name": "a",
+              "addr": "0x100"
+            },
+            {
+              "id": "p",
+              "group": "main",
+              "value": "0x100",
+              "name": "p",
+              "addr": "0x108"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "a"
+            }
+          ],
+          "line": 6,
+          "fly": {
+            "from": "p",
+            "to": "a",
+            "text": "9"
+          },
+          "out": "5",
+          "follow": "p"
+        },
+        {
+          "say": "直接打印 `a` 已经是 9：通过指针改的就是 `a` 本身。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main 的栈帧",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "value": "9",
+              "name": "a",
+              "addr": "0x100"
+            },
+            {
+              "id": "p",
+              "group": "main",
+              "value": "0x100",
+              "name": "p",
+              "addr": "0x108"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "a"
+            }
+          ],
+          "line": 7,
+          "out": "5\n9"
+        },
+        {
+          "say": "记住：`p` 是门牌号，`*p` 是柜子里的东西。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main 的栈帧",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "value": "9",
+              "name": "a",
+              "addr": "0x100"
+            },
+            {
+              "id": "p",
+              "group": "main",
+              "value": "0x100",
+              "name": "p",
+              "addr": "0x108"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "p",
+              "to": "a"
+            }
+          ],
+          "line": 7,
+          "focus": [
+            "p",
+            "a"
+          ],
+          "note": {
+            "at": "p",
+            "text": "`p` 是地址，`*p` 才是值"
+          },
+          "out": "5\n9"
+        }
+      ]
+    }
   ],
-  "checks": [{ "stem": "指针变量通常保存什么？", "options": ["地址", "所有变量", "代码行号"], "answer": 0, "explanation": "指针的值是地址。" }]
+  "keywords": [
+    "指针",
+    "地址",
+    "*p",
+    "解引用"
+  ],
+  "lessonIds": [
+    "c-stage1-14"
+  ]
 }

@@ -4,6 +4,12 @@ import { createVideoNarrator } from '../video-narrator'
 afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals() })
 
 describe('video narrator', () => {
+  it('finishes immediately when narration is disabled', async () => {
+    vi.stubGlobal('localStorage', { getItem: () => 'false' })
+    const done = vi.fn()
+    await createVideoNarrator().speak('字幕', 1).then(done)
+    expect(done).toHaveBeenCalledOnce()
+  })
   it('uses the timed fallback when no Chinese voice is available', async () => {
     vi.useFakeTimers()
     vi.stubGlobal('localStorage', { getItem: () => null })

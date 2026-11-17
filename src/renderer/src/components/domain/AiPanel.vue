@@ -10,6 +10,7 @@ import { isPhoneViewport } from '../../lib/phone-back-close'
 
 
 import MiIcon from '../base/MiIcon.vue'
+import MiButton from '../base/MiButton.vue'
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAiAssistantStore } from '../../stores/ai-assistant'
@@ -19,10 +20,12 @@ import { isPinnedToBottom, shouldSendAiMessage } from '../../lib/ai-input'
 import { renderMarkdown } from '../../lib/md'
 import { AI_ASSISTANT, TOAST, VIDEO_UI } from '../../lib/copy'
 import { useVideoStore } from '../../stores/video'
+import { VIDEO_GENERATION_TEXT as VT } from '../../../../shared/video-copy'
 import { toast } from '../base/toast'
 import { AI_APP } from '../../../../shared/copy'
 import type { TutoringAction } from '../../../../shared/types'
 import AiRichMessage from './AiRichMessage.vue'
+import MiPopMenu from '../base/MiPopMenu.vue'
 import AiThinkingDraft from './AiThinkingDraft.vue'
 import ComposerProviderBar from './ComposerProviderBar.vue'
 import { formatBytes, prepareDraftAttachment, type AiDraftAttachment } from '../../lib/composer-types'
@@ -35,13 +38,37 @@ const isMain = computed(() => props.variant === 'main')
 const aiStore = useAiAssistantStore()
 const video = useVideoStore()
 const videoMode = ref(false)
-const tutoringMode = computed({
+const videoElapsed = ref(0)
+let videoTimer: number | undefined
+watch(() => video.loading, (loading) => {
+  if (videoTimer !== undefined) { window.clearInterval(videoTimer); videoTimer = undefined }
+  if (loading) {
+    videoElapsed.value = 0
+    videoTimer = window.setInterval(() => { videoElapsed.value++ }, 1000)
+  }
+}, { immediate: true })
+onBeforeUnmount(() => { if (videoTimer !== undefined) window.clearInterval(videoTimer) })
+const videoStages = [VIDEO_UI.STAGE_JUDGE, VIDEO_UI.STAGE_SCRIPT, VIDEO_UI.STAGE_CHECK] as const
+const videoStageIdx = computed(() => {
+  const s = video.progress?.stage ?? 'judging'
+  if (s === 'done') return 3
+  if (s === 'verifying') return 2
+  if (s === 'scripting') return 1
+  return 0
+})
+watch(() => video.modeRequested, requested => { if (requested) { videoMode.value = true; video.modeRequested = false } }, { immediate: true })
+const tutoringMode = computed<string>({
   get: () => videoMode.value ? 'video' : aiStore.tutoringAction,
   set: (value: string) => {
     videoMode.value = value === 'video'
     if (!videoMode.value) aiStore.tutoringAction = value as TutoringAction
   }
 })
+const tutorOptions = computed(() => [
+  ['direct', AI_ASSISTANT.TUTOR_DIRECT], ['hint', AI_ASSISTANT.TUTOR_HINT], ['approach', AI_ASSISTANT.TUTOR_APPROACH],
+  ['explain', AI_ASSISTANT.TUTOR_EXPLAIN], ['diagnose', AI_ASSISTANT.TUTOR_DIAGNOSE], ['feynman', AI_ASSISTANT.TUTOR_FEYNMAN],
+  ['visualize', AI_ASSISTANT.TUTOR_VISUALIZE], ['solve', AI_ASSISTANT.TUTOR_SOLVE], ['video', VIDEO_UI.TITLE]
+].map(([key, label]) => ({ key, label, checked: tutoringMode.value === key })))
 const settingsDialog = useSettingsDialogStore()
 const settings = useSettingsStore()
 const study = useStudyStore()
@@ -121,6 +148,7 @@ function onSend() {
   if (videoMode.value) {
     if (!aiStore.draft.trim() || composing.value) return
     video.open({ question: Array.from(aiStore.draft.trim()).slice(0, 500).join(''), lessonId: aiStore.lessonContextId ?? undefined, excerpt: aiStore.contextTags.filter(t => t.type === 'selection' || t.type === 'code').map(t => t.content).join('\n') })
+    aiStore.draft = ''
     return
   }
   if (!hasApiKey.value || composing.value) return
@@ -421,6 +449,42 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
               <AiThinkingDraft v-else />
             </div>
           </div>
+          <div v-if="video.generationSession === aiStore.currentSessionId && (video.loading || video.error)" class="ai-message assistant video-progress" role="status">
+            <div class="vp-card-head">
+              <div class="vp-card-title">
+                <MiIcon name="film" :size="16" class="vp-card-icon" />
+                <span>{{ VIDEO_UI.GENERATING }}</span>
+              </div>
+              <MiButton v-if="video.loading" variant="ghost" size="sm" @click="video.cancel()">{{ VIDEO_UI.CANCEL }}</MiButton>
+            </div>
+            <div class="vp-stage-list">
+              <div v-for="(label, i) in videoStages" :key="label" class="vp-stage-row" :class="{ 'is-pending': videoStageIdx < i, 'is-active': videoStageIdx === i && video.loading }">
+                <div class="vp-stage-main">
+                  <MiIcon v-if="videoStageIdx > i" name="check" :size="14" class="vp-stage-ok" />
+                  <span v-else-if="videoStageIdx === i && video.loading" class="vp-spinner" aria-hidden="true" />
+                  <span v-else class="vp-dot" aria-hidden="true" />
+                  <span class="vp-stage-label">{{ label }}</span>
+                  <span v-if="i === 0 && videoStageIdx > 0 && video.progress?.detail" class="vp-stage-detail">{{ video.progress.detail }}</span>
+                  <span v-else-if="videoStageIdx === i && video.loading" class="vp-stage-elapsed">{{ VIDEO_UI.ELAPSED_SEC(videoElapsed) }}</span>
+                </div>
+                <div v-if="i === 2 && video.verification" class="vp-verify-box">
+                  <pre class="vp-code-preview">{{ video.verification.code.slice(0, 3).join('\n') }}<template v-if="video.verification.code.length > 3">
+{{ VIDEO_UI.CODE_LINES(video.verification.code.length) }}</template></pre>
+                  <div class="vp-verify-actions">
+                    <MiButton variant="primary" size="sm" @click="video.answerVerification(true)">{{ VIDEO_UI.VERIFY_RUN }}</MiButton>
+                    <MiButton variant="secondary" size="sm" @click="video.answerVerification(false)">{{ VIDEO_UI.VERIFY_SKIP_SHORT }}</MiButton>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div v-if="!video.loading && video.error" class="vp-err-box">
+              <p class="vp-err-msg">{{ video.error }}</p>
+              <div class="vp-err-actions">
+                <MiButton variant="secondary" size="sm" @click="video.lastInput && aiStore.sendMessage(video.lastInput.question)">{{ VT.explainText }}</MiButton>
+                <MiButton variant="primary" size="sm" @click="video.lastInput && video.generate(video.lastInput)">{{ VT.retry }}</MiButton>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="ai-footer" data-kb-managed>
@@ -432,6 +496,13 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
             {{ aiStore.errorMessage }}
             <button v-if="needsKey(aiStore.errorMessage)" type="button" class="text-btn settings-link" @click="openAiSettings">{{ AI_ASSISTANT.OPEN_AI_SETTINGS }}</button>
             <button type="button" class="text-btn" @click="aiStore.retryLastMessage">{{ AI_ASSISTANT.RETRY }}</button>
+          </div>
+          <div v-if="video.current && video.minimized" class="resume-bar">
+            <button type="button" class="resume-main" @click="video.minimized = false">
+              <span class="resume-play-circle" aria-hidden="true"><MiIcon name="play" :size="12" /></span>
+              <span class="resume-text">{{ VIDEO_UI.RESUME_LABEL(video.current.title, video.currentStep, video.totalSteps) }}</span>
+            </button>
+            <MiButton variant="ghost" icon="x" size="sm" class="resume-close" :aria-label="VIDEO_UI.CLOSE" @click="video.current = null" />
           </div>
           <div v-if="!isMain && aiStore.contextTags.length" class="context-tags-bar">
             <div class="tags-scroller"><span v-for="t in aiStore.contextTags" :key="t.id" class="context-tag" :class="t.type" :title="t.content"><span>{{ tagKind(t.type) }} · {{ t.title }}</span><button v-if="t.removable !== false" type="button" class="tag-close-btn" :aria-label="AI_ASSISTANT.removeContextLabel(t.title)" :title="AI_ASSISTANT.removeContextLabel(t.title)" @click="aiStore.removeContextTag(t.id)">×</button></span></div>
@@ -484,17 +555,7 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" /></svg>
                 </button>
                 <input ref="fileInput" type="file" multiple class="attach-input" accept="image/*,.txt,.md,.c,.h,.cpp,.java,.py,.json" @change="onFilesPicked" />
-                <select v-model="tutoringMode" class="lead-select" :disabled="isStreaming" :aria-label="AI_ASSISTANT.TUTOR_MODE" :title="AI_ASSISTANT.TUTOR_MODE">
-                  <option value="direct">{{ AI_ASSISTANT.TUTOR_DIRECT }}</option>
-                  <option value="hint">{{ AI_ASSISTANT.TUTOR_HINT }}</option>
-                  <option value="approach">{{ AI_ASSISTANT.TUTOR_APPROACH }}</option>
-                  <option value="explain">{{ AI_ASSISTANT.TUTOR_EXPLAIN }}</option>
-                  <option value="diagnose" :title="AI_ASSISTANT.TUTOR_HINT_DIAGNOSE">{{ AI_ASSISTANT.TUTOR_DIAGNOSE }}</option>
-                  <option value="feynman" :title="AI_ASSISTANT.TUTOR_HINT_FEYNMAN">{{ AI_ASSISTANT.TUTOR_FEYNMAN }}</option>
-                  <option value="visualize" :title="AI_ASSISTANT.TUTOR_HINT_VISUALIZE">{{ AI_ASSISTANT.TUTOR_VISUALIZE }}</option>
-                  <option value="solve" :title="AI_ASSISTANT.TUTOR_HINT_SOLVE">{{ AI_ASSISTANT.TUTOR_SOLVE }}</option>
-                  <option value="video">{{ VIDEO_UI.TITLE }}</option>
-                </select>
+                <MiPopMenu :items="tutorOptions" :label="AI_ASSISTANT.TUTOR_MODE" :disabled="isStreaming || video.loading" @select="tutoringMode = $event"><span class="pm-label">{{ tutorOptions.find(option => option.checked)?.label }}</span></MiPopMenu>
               </div>
               <div class="input-trail">
                 <ComposerProviderBar />
@@ -514,6 +575,102 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
 </template>
 
 <style scoped>
+.video-progress {
+  display: flex;
+  flex-direction: column;
+  background: var(--mi-bg);
+  border: 1px solid var(--mi-border);
+  border-radius: var(--mi-radius-lg);
+  overflow: hidden;
+  width: 100%;
+  max-width: 520px;
+}
+.vp-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--mi-sp-2) var(--mi-sp-3);
+  border-bottom: 1px solid var(--mi-border);
+}
+.vp-card-title { display: flex; align-items: center; gap: var(--mi-sp-2); font-weight: var(--mi-fw-medium); color: var(--mi-text); }
+.vp-card-icon { color: var(--mi-blue-deep); }
+.vp-stage-list { display: flex; flex-direction: column; }
+.vp-stage-row { padding: var(--mi-sp-2) var(--mi-sp-3); border-top: 1px solid var(--mi-border); }
+.vp-stage-row:first-child { border-top: 0; }
+.vp-stage-row.is-pending { color: var(--mi-text-3); }
+.vp-stage-main { display: flex; align-items: center; gap: var(--mi-sp-2); min-height: 24px; }
+.vp-stage-ok { color: var(--mi-success-deep); flex: none; }
+.vp-spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--mi-blue-light);
+  border-top-color: var(--mi-blue-deep);
+  animation: vp-spin 0.9s linear infinite;
+  flex: none;
+}
+@keyframes vp-spin { to { transform: rotate(360deg); } }
+.vp-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid var(--mi-border);
+  flex: none;
+}
+.vp-stage-label { font-size: var(--mi-fs-label); flex: 1; min-width: 0; }
+.vp-stage-detail, .vp-stage-elapsed { font-size: var(--mi-fs-caption); color: var(--mi-text-3); white-space: nowrap; }
+.vp-verify-box { margin-top: var(--mi-sp-2); display: flex; flex-direction: column; gap: var(--mi-sp-2); }
+.vp-code-preview {
+  margin: 0;
+  padding: var(--mi-sp-2) var(--mi-sp-3);
+  border-radius: var(--mi-radius);
+  background: var(--mi-canvas);
+  font: 12px/1.5 var(--mi-code);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.vp-verify-actions, .vp-err-actions { display: flex; align-items: center; gap: var(--mi-sp-2); justify-content: flex-end; }
+.vp-err-box { padding: var(--mi-sp-3); display: flex; flex-direction: column; gap: var(--mi-sp-2); border-top: 1px solid var(--mi-border); }
+.vp-err-msg { margin: 0; padding: var(--mi-sp-2) var(--mi-sp-3); border-radius: var(--mi-radius); background: var(--mi-error-fill); color: var(--mi-error-deep); font-size: var(--mi-fs-label); }
+.resume-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--mi-sp-2);
+  padding: 5px 8px;
+  margin-bottom: var(--mi-sp-2);
+  border-radius: 10px;
+  background: var(--mi-blue-light);
+}
+.resume-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--mi-sp-2);
+  border: 0;
+  background: transparent;
+  padding: 2px 4px;
+  color: var(--mi-blue-deep);
+  font: inherit;
+  font-size: var(--mi-fs-label);
+  font-weight: var(--mi-fw-medium);
+  cursor: var(--mi-cursor, pointer);
+  text-align: left;
+  border-radius: 6px;
+}
+.resume-main:focus-visible { outline: 2px solid var(--mi-blue-deep); outline-offset: 1px; }
+.resume-play-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--mi-blue-deep);
+  color: var(--mi-bg);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.resume-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.resume-close { width: 26px; height: 26px; min-width: 26px; min-height: 26px; padding: 0; color: var(--mi-text-2); }
 .ai-panel { display:flex; flex-direction:column; height:100%; min-height:0; min-width:0; color:var(--mi-text); background:var(--cds-surface-1); border:1px solid var(--mi-border); border-radius:14px; overflow:hidden; box-sizing:border-box; font-size:var(--mi-fs-body); }
 .ai-panel.is-rail { border:0; border-radius:0; background:transparent; }
 .ai-empty-compact { display:flex; align-items:center; justify-content:center; padding:var(--mi-sp-8) var(--mi-sp-4); text-align:center; color:var(--mi-text-2); font-size:var(--mi-fs-label); line-height:1.6; }
@@ -550,7 +707,7 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
 .msg-content :deep(p:last-child) { margin-bottom:0; }
 .msg-content :deep(pre) { max-width:100%; overflow:auto; font-size:var(--mi-fs-label); }
 .msg-tags { display:flex; flex-wrap:wrap; gap:var(--mi-sp-1); justify-content:flex-end; max-width:100%; }
-.msg-tag-chip,.context-tag { background:var(--mi-blue-light); border-radius:7px; padding:var(--mi-sp-1) var(--mi-sp-2); font-size:var(--mi-fs-caption); color:var(--mi-text-2); overflow:hidden; text-overflow:ellipsis; }
+.msg-tag-chip,.context-tag { background:var(--mi-blue-light); border-radius:var(--mi-radius); padding:var(--mi-sp-1) var(--mi-sp-2); font-size:var(--mi-fs-caption); color:var(--mi-text-2); overflow:hidden; text-overflow:ellipsis; }
 .msg-error-box,.inline-error { font-size:var(--mi-fs-label); color:var(--mi-error-deep); display:flex; flex-wrap:wrap; align-items:center; gap:var(--mi-sp-2); }
 .ai-footer { position:relative; flex-shrink:0; padding:var(--mi-sp-3); }
 .footer-column { gap:var(--mi-sp-2); min-height:0; }
@@ -638,7 +795,7 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
  * 发送键被推到看不见的地方（独立审查 F3）。
  * 现在两端都可收缩，但发送键自身 flex-shrink:0，永远留在框内。
  */
-.input-lead { display:flex; align-items:center; gap:var(--mi-sp-2); min-width:0; flex:1 1 auto; overflow:hidden; }
+.input-lead { display:flex; align-items:center; gap:var(--mi-sp-2); min-width:0; flex:1 1 auto; overflow:visible; }
 .input-trail { display:flex; align-items:center; gap:var(--mi-sp-2); min-width:0; flex:0 1 auto; margin-left:auto; }
 /* 底排的胶囊按钮：无边框、悬停才出底色，字号比正文小一档（微调加 1px 至 13px） */
 .lead-chip, .model-chip, .lead-select { border:0; background:transparent; color:var(--mi-text-3); font:inherit; font-size:var(--mi-fs-label); line-height:1; padding:var(--mi-sp-1) var(--mi-sp-2); border-radius:8px; cursor:pointer; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }

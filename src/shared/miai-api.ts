@@ -7,7 +7,7 @@ import type { Cet6LookupResult, Cet6VocabEntry, Cet6VocabInput } from './cet6-vo
 import type { BoxStamp, DocWriteResult, StampedDoc } from './doc-write'
 import type { ChallengeSettlePayload } from './cloud/dto'
 import type { RemoteStatus } from './remote-auth'
-import type { ExplainerVideo, VideoGenerateRequest, VideoOutline, VideoOutlineRequest, VideoResult, VideoVerifyPrompt } from './video'
+import type { ExplainerVideo, VideoGenerationInput, VideoGenerationResult, VideoProgress, VideoVerifyPrompt } from './video'
 import type { UpdateSnapshot } from './update'
 
 /**
@@ -318,8 +318,8 @@ export function createMiaiApi(t: MiaiTransport) {
       t.invoke(IPC.aiSessionsSave, sessions)
   },
   video: {
-    outline: (input: VideoOutlineRequest): Promise<VideoResult<VideoOutline>> => t.invoke(IPC.videoOutline, input),
-    generate: (input: VideoGenerateRequest): Promise<VideoResult<ExplainerVideo>> => t.invoke(IPC.videoGenerate, input),
+    generate: (input: VideoGenerationInput): Promise<VideoGenerationResult> => t.invoke(IPC.videoGenerate, input),
+    onProgress: (cb: (progress: VideoProgress) => void): (() => void) => t.on(IPC.videoProgress, (progress) => cb(progress as VideoProgress)),
     cancel: (requestId: string): Promise<{ ok: boolean }> => t.invoke(IPC.videoCancel, requestId),
     list: (): Promise<ExplainerVideo[]> => t.invoke(IPC.videoList),
     delete: (id: string): Promise<{ ok: boolean }> => t.invoke(IPC.videoDelete, id),

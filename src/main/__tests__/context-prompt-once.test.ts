@@ -13,7 +13,7 @@ vi.mock('electron', () => ({
 }))
 vi.mock('../study/usage', () => ({ recordStudyUsage: vi.fn() }))
 
-const root = resolve('D:/codex data/temp/codebud-prompt-once-tests')
+const root = resolve('outputs/codebud-prompt-once-tests')
 let dir: string
 beforeEach(() => {
   mkdirSync(root, { recursive: true })

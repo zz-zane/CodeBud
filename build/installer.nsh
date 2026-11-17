@@ -135,13 +135,123 @@ Var pid
   ${EndIf}
 !macroend
 
+!macro _codebudCheckAsarWritable dirPath
+  StrCpy $R9 "${dirPath}"
+  StrCpy $R8 $R9 1 -1
+  ${If} $R8 == "\"
+    StrCpy $R9 $R9 -1
+  ${EndIf}
+  ${If} $R9 != ""
+  ${AndIf} ${FileExists} "$R9\resources\app.asar"
+    ClearErrors
+    ; GENERIC_READ|GENERIC_WRITE = 0xC0000000, dwShareMode = 0 (exclusive), OPEN_EXISTING = 3, FILE_ATTRIBUTE_NORMAL = 0x80
+    System::Call 'kernel32::CreateFileW(w "$R9\resources\app.asar", i 0xC0000000, i 0, p 0, i 3, i 0x80, p 0) p .r0'
+    ${If} $0 == -1
+    ${OrIf} $0 == 0
+      DetailPrint "CodeBud upgrade aborted: $R9\resources\app.asar is locked by another process. Old version preserved; retry on next exit."
+      SetErrorLevel 2
+      Quit
+    ${Else}
+      System::Call 'kernel32::CloseHandle(p r0)'
+    ${EndIf}
+  ${EndIf}
+!macroend
+
+!macro _codebudCheckAsarFromRoot rootKey
+  StrCpy $R2 ""
+  !insertmacro readReg $R2 "${rootKey}" "${INSTALL_REGISTRY_KEY}" "InstallLocation"
+  ${If} $R2 == ""
+    StrCpy $R3 ""
+    !insertmacro readReg $R3 "${rootKey}" "${UNINSTALL_REGISTRY_KEY}" "UninstallString"
+    !ifdef UNINSTALL_REGISTRY_KEY_2
+      ${If} $R3 == ""
+        !insertmacro readReg $R3 "${rootKey}" "${UNINSTALL_REGISTRY_KEY_2}" "UninstallString"
+      ${EndIf}
+    !endif
+    ${If} $R3 != ""
+      !insertmacro GetInQuotes $R4 "$R3"
+      ${If} $R4 != ""
+        ${GetParent} "$R4" $R2
+      ${EndIf}
+    ${EndIf}
+  ${EndIf}
+  ${If} $R2 != ""
+    !insertmacro _codebudCheckAsarWritable "$R2"
+  ${EndIf}
+!macroend
+
+!macro _codebudLegacyCrossDriveUninstallFromRoot rootKey
+  StrCpy $R1 ""
+  !insertmacro readReg $R1 "${rootKey}" "${UNINSTALL_REGISTRY_KEY}" "DisplayVersion"
+  !ifdef UNINSTALL_REGISTRY_KEY_2
+    ${If} $R1 == ""
+      !insertmacro readReg $R1 "${rootKey}" "${UNINSTALL_REGISTRY_KEY_2}" "DisplayVersion"
+    ${EndIf}
+  !endif
+
+  StrCpy $R3 ""
+  !insertmacro readReg $R3 "${rootKey}" "${UNINSTALL_REGISTRY_KEY}" "UninstallString"
+  !ifdef UNINSTALL_REGISTRY_KEY_2
+    ${If} $R3 == ""
+      !insertmacro readReg $R3 "${rootKey}" "${UNINSTALL_REGISTRY_KEY_2}" "UninstallString"
+    ${EndIf}
+  !endif
+
+  StrCpy $R4 ""
+  ${If} $R3 != ""
+    !insertmacro GetInQuotes $R4 "$R3"
+  ${EndIf}
+
+  StrCpy $R2 ""
+  !insertmacro readReg $R2 "${rootKey}" "${INSTALL_REGISTRY_KEY}" "InstallLocation"
+  ${If} $R2 == ""
+  ${AndIf} $R4 != ""
+    ${GetParent} "$R4" $R2
+  ${EndIf}
+  StrCpy $R3 $R2 1 -1
+  ${If} $R3 == "\"
+    StrCpy $R2 $R2 -1
+  ${EndIf}
+
+  ${If} $R1 != ""
+  ${AndIf} $R2 != ""
+  ${AndIf} $R4 != ""
+  ${AndIf} ${FileExists} "$R4"
+    ${VersionCompare} "$R1" "0.2.1" $R5
+    ${If} $R5 == 0
+    ${OrIf} $R5 == 2
+      StrCpy $R5 $R2 2
+      StrCpy $R6 $TEMP 2
+      ${If} $R5 != $R6
+        DetailPrint "Legacy CodeBud ($R1) at $R2 is on $R5 while TEMP is on $R6; running non-update uninstall (preserving data)..."
+        ClearErrors
+        ExecWait '"$R4" /S _?=$R2' $R0
+        DetailPrint "Legacy non-update uninstall exited with code: $R0"
+        ${If} ${Errors}
+        ${OrIf} $R0 != 0
+          DetailPrint "Legacy non-update uninstall failed ($R0); aborting upgrade."
+          SetErrorLevel 2
+          Quit
+        ${EndIf}
+      ${EndIf}
+    ${EndIf}
+  ${EndIf}
+!macroend
+
 !macro customCheckAppRunning
   !insertmacro _CHECK_APP_RUNNING
   !ifndef BUILD_UNINSTALLER
+    ; Pre-flight exclusive-open check on app.asar before touching old install or data (prevents mixed exe/asar installs).
+    !insertmacro _codebudCheckAsarWritable "$INSTDIR"
+    !insertmacro _codebudCheckAsarFromRoot "SHELL_CONTEXT"
+    !insertmacro _codebudCheckAsarFromRoot "HKEY_CURRENT_USER"
     ; Back up <oldInstall>\data before uninstallOldVersion deletes $INSTDIR on upgrades from < 0.2.0.
     StrCpy $CodeBudDataBackupDir ""
     !insertmacro _codebudTryBackupFromRoot "SHELL_CONTEXT"
     !insertmacro _codebudTryBackupFromRoot "HKEY_CURRENT_USER"
+    ; Fallback for <= 0.2.1 installed on a different drive than %TEMP% (old uninstaller uses $PLUGINSDIR\old-install).
+    !insertmacro _codebudLegacyCrossDriveUninstallFromRoot "SHELL_CONTEXT"
+    !insertmacro _codebudLegacyCrossDriveUninstallFromRoot "HKEY_CURRENT_USER"
   !endif
 !macroend
 
@@ -249,23 +359,117 @@ Var pid
   !endif
 !macroend
 
+!ifdef BUILD_UNINSTALLER
+  Var /GLOBAL CodeBudOldInstallDir
+
+  Function un.CodeBudAtomicMoveDir
+    Exch $R0
+    Push $R1
+    Push $R2
+    Push $R3
+
+    StrCpy $R3 "$INSTDIR$R0\*.*"
+    FindFirst $R1 $R2 $R3
+
+    _cb_move_loop:
+      StrCmp $R2 "" _cb_move_break
+      StrCmp $R2 "." _cb_move_continue
+      StrCmp $R2 ".." _cb_move_continue
+
+      IfFileExists "$INSTDIR$R0\$R2\*.*" _cb_move_dir _cb_move_file
+
+      _cb_move_dir:
+        CreateDirectory "$CodeBudOldInstallDir$R0\$R2"
+        Push "$R0\$R2"
+        Call un.CodeBudAtomicMoveDir
+        Pop $R3
+        IntCmp $R3 0 _cb_move_continue _cb_move_done _cb_move_done
+
+      _cb_move_file:
+        ClearErrors
+        Rename "$INSTDIR$R0\$R2" "$CodeBudOldInstallDir$R0\$R2"
+        StrCmp "$R0" "" 0 +4
+        StrCpy $R3 "$R2" 10
+        StrCmp "$R3" "Uninstall " 0 +2
+        ClearErrors
+        IfErrors 0 +3
+        StrCpy $R3 "$INSTDIR$R0\$R2"
+        Goto _cb_move_done
+
+      _cb_move_continue:
+        FindNext $R1 $R2
+        Goto _cb_move_loop
+
+    _cb_move_break:
+      StrCpy $R3 0
+
+    _cb_move_done:
+      FindClose $R1
+      StrCpy $R0 $R3
+      Pop $R3
+      Pop $R2
+      Pop $R1
+      Exch $R0
+  FunctionEnd
+
+  Function un.CodeBudRestoreDir
+    Exch $R0
+    Push $R1
+    Push $R2
+    Push $R3
+
+    StrCpy $R3 "$CodeBudOldInstallDir$R0\*.*"
+    FindFirst $R1 $R2 $R3
+
+    _cb_rest_loop:
+      StrCmp $R2 "" _cb_rest_break
+      StrCmp $R2 "." _cb_rest_continue
+      StrCmp $R2 ".." _cb_rest_continue
+
+      IfFileExists "$CodeBudOldInstallDir$R0\$R2\*.*" _cb_rest_dir _cb_rest_file
+
+      _cb_rest_dir:
+        CreateDirectory "$INSTDIR$R0\$R2"
+        Push "$R0\$R2"
+        Call un.CodeBudRestoreDir
+        Pop $R3
+        Goto _cb_rest_continue
+
+      _cb_rest_file:
+        Rename "$CodeBudOldInstallDir$R0\$R2" "$INSTDIR$R0\$R2"
+
+      _cb_rest_continue:
+        FindNext $R1 $R2
+        Goto _cb_rest_loop
+
+    _cb_rest_break:
+      StrCpy $R0 0
+      FindClose $R1
+      Pop $R3
+      Pop $R2
+      Pop $R1
+      Exch $R0
+  FunctionEnd
+!endif
+
 !macro customRemoveFiles
   ${if} ${isUpdated}
-    ; Preserve <installDir>\data across electron-builder's atomicRMDir + restoreFiles rollback flow.
+    ; Preserve <installDir>\data and stage old files on the SAME drive as $INSTDIR (<name>.old-install).
     StrCpy $R4 "$INSTDIR"
     StrCpy $R3 $R4 1 -1
     ${if} $R3 == "\"
       StrCpy $R4 $R4 -1
     ${endif}
 
+    ${un.GetParent} "$R4" $R1
+    ${un.GetFileName} "$R4" $R2
+    StrCpy $R3 $R1 1 -1
+    ${if} $R3 == "\"
+      StrCpy $R1 $R1 -1
+    ${endif}
+
     StrCpy $R5 ""
     ${if} ${FileExists} "$R4\data\*.*"
-      ${un.GetParent} "$R4" $R1
-      ${un.GetFileName} "$R4" $R2
-      StrCpy $R3 $R1 1 -1
-      ${if} $R3 == "\"
-        StrCpy $R1 $R1 -1
-      ${endif}
       StrCpy $R5 "$R1\$R2.data-keep"
       ${if} ${FileExists} "$R5"
       ${orIf} ${FileExists} "$R5\*.*"
@@ -291,19 +495,35 @@ Var pid
       ${endif}
     ${endif}
 
-    CreateDirectory "$PLUGINSDIR\old-install"
+    StrCpy $CodeBudOldInstallDir "$R1\$R2.old-install"
+    ${if} ${FileExists} "$CodeBudOldInstallDir"
+    ${orIf} ${FileExists} "$CodeBudOldInstallDir\*.*"
+      ${un.GetTime} "" "L" $1 $2 $3 $4 $5 $6 $7
+      StrCpy $R6 "$CodeBudOldInstallDir-$3$2$1-$5$6$7"
+      StrCpy $R8 0
+      _codebud_old_suffix_loop:
+        ${if} ${FileExists} "$R6"
+        ${orIf} ${FileExists} "$R6\*.*"
+          IntOp $R8 $R8 + 1
+          StrCpy $R6 "$CodeBudOldInstallDir-$3$2$1-$5$6$7-$R8"
+          Goto _codebud_old_suffix_loop
+        ${endif}
+      StrCpy $CodeBudOldInstallDir "$R6"
+    ${endif}
+
+    CreateDirectory "$CodeBudOldInstallDir"
 
     Push ""
-    Call un.atomicRMDir
+    Call un.CodeBudAtomicMoveDir
     Pop $R0
 
     ${if} $R0 != 0
-      DetailPrint "File is busy, aborting: $R0"
+      DetailPrint "CodeBud update aborted: file is locked by another process ($R0). Rolling back; please retry on next exit."
 
-      # Attempt to restore previous directory
       Push ""
-      Call un.restoreFiles
+      Call un.CodeBudRestoreDir
       Pop $R0
+      RMDir /r "$CodeBudOldInstallDir"
 
       ${if} $R5 != ""
         ClearErrors
@@ -314,10 +534,11 @@ Var pid
         ${endif}
       ${endif}
 
-      Abort `Can't rename "$INSTDIR" to "$PLUGINSDIR\old-install".`
+      Abort `Can't rename "$INSTDIR" to "$CodeBudOldInstallDir" (busy: $R0).`
     ${endif}
 
     RMDir /r $INSTDIR
+    RMDir /r "$CodeBudOldInstallDir"
 
     ${if} $R5 != ""
       CreateDirectory "$R4"

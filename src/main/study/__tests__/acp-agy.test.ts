@@ -296,16 +296,16 @@ describe('connection argument validation', () => {
 })
 
 describe('agy detection (pure)', () => {
-  const env = { path: 'C:\\Windows;"D:\\soft\\Antigravity\\cli\\bin";', localAppData: 'C:\\Users\\u\\AppData\\Local', programFiles: 'C:\\Program Files' }
+  const env = { path: 'C:\\Windows;"D:\\apps\\Antigravity\\cli\\bin";', localAppData: 'C:\\Users\\u\\AppData\\Local', programFiles: 'C:\\Program Files' }
   it('lists PATH first, then conventional roots, without duplicates', () => {
     const list = agyCandidates(env)
     expect(list[0]).toBe('C:\\Windows\\agy.exe')
-    expect(list[1]).toBe('D:\\soft\\Antigravity\\cli\\bin\\agy.exe')
+    expect(list[1]).toBe('D:\\apps\\Antigravity\\cli\\bin\\agy.exe')
     expect(list).toContain('C:\\Users\\u\\AppData\\Local\\Programs\\Antigravity\\cli\\bin\\agy.exe')
     expect(new Set(list).size).toBe(list.length)
   })
   it('returns the first existing candidate that answers a version probe, or null', async () => {
-    const hit = 'D:\\soft\\Antigravity\\cli\\bin\\agy.exe'
+    const hit = 'D:\\apps\\Antigravity\\cli\\bin\\agy.exe'
     expect(await detectAgy(env, p => p === hit, async () => true)).toBe(hit)
     expect(await detectAgy(env, () => true, async p => p.includes('Program Files'))).toBe('C:\\Program Files\\Antigravity\\cli\\bin\\agy.exe')
     expect(await detectAgy(env, () => false, async () => true)).toBeNull()

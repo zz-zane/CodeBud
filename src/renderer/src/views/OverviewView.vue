@@ -163,7 +163,7 @@ function updateCharts() {
       tooltip: {},
       radar: {
         indicator: radarData.value.map((d) => ({ name: d.name, max: 100 })),
-        radius: '68%',
+        radius: '56%',
         axisName: { color: token('--mi-text-2'), fontSize: 12 }
       },
       series: [

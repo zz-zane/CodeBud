@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onBeforeUnmount } from 'vue'
+import { computed, ref, onBeforeUnmount, onMounted } from 'vue'
 import {
   parseAiRichBlocks,
   type AiRichSegment,
@@ -12,6 +12,21 @@ import {
 import { renderMarkdown } from '../../lib/md'
 import { AI_ASSISTANT } from '../../lib/copy'
 import InteractiveHtmlSandbox from '../study/InteractiveHtmlSandbox.vue'
+import VideoCard from './video/VideoCard.vue'
+import { useContentStore } from '../../stores/content'
+import { useVideoStore } from '../../stores/video'
+import { VIDEO_GENERATION_TEXT as VT } from '../../../../shared/video-copy'
+const content = useContentStore()
+const video = useVideoStore()
+onMounted(() => { if (!video.videos.length && !window.miai.isRemote) void video.refresh() })
+function videoOf(id: string) {
+  return video.videos.find(item => item.id === id)
+    ?? content.bundle.animations?.find(item => item.id === id)
+}
+function regenerate(id: string): void {
+  const item = videoOf(id)
+  if (item) video.open({ question: item.question, lessonId: item.lessonId, avoid: item.acts.map(act => act.skin) })
+}
 
 const props = defineProps<{
   content: string
@@ -145,6 +160,16 @@ onBeforeUnmount(() => {
     <template v-for="(seg, idx) in segments" :key="idx">
       <!-- 1. 普通 Markdown 段落 -->
       <div v-if="seg.type === 'markdown'" class="markdown-body rich-markdown" v-html="renderHtml(seg.content)" />
+      <div v-else-if="seg.type === 'anim-card'" class="anim-card-wrap">
+        <VideoCard
+          v-if="videoOf(seg.videoId)"
+          :video="videoOf(seg.videoId)!"
+          :show-regenerate="true"
+          @play="video.play($event)"
+          @regenerate="regenerate($event.id)"
+        />
+        <div v-else class="rich-card anim-card"><span>{{ VT.unavailable }}</span></div>
+      </div>
       <InteractiveHtmlSandbox v-else-if="seg.type === 'artifact'" :html="seg.html" :title="seg.title" />
 
       
@@ -489,6 +514,10 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+.anim-card { display:flex; flex-direction:column; gap:8px; padding:12px; }
+.anim-card button { margin-right:8px; cursor:pointer; }
+.anim-preview { height:100px; overflow:hidden; border-radius:var(--mi-radius); background:var(--mi-canvas); }
+.anim-preview :deep(.world) { width:200%; height:200px; min-height:200px; transform:scale(.5); transform-origin:top left; pointer-events:none; }
 .ai-rich-message-container {
   display: flex;
   flex-direction: column;

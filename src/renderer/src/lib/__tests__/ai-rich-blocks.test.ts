@@ -5,6 +5,11 @@ import {
   sanitizeSvg
 } from '../ai-rich-blocks'
 
+it('parses valid animation cards and leaves malformed data as markdown', () => {
+  expect(parseAiRichBlocks('```anim-card\n{"videoId":"abc"}\n```')[0]).toMatchObject({ type: 'anim-card', videoId: 'abc' })
+  expect(parseAiRichBlocks('```anim-card\n{"videoId":42}\n```')[0].type).toBe('markdown')
+})
+
 describe('ai-rich-blocks parser and compiler', () => {
   it('parses pure markdown without special blocks', () => {
     const raw = '# Hello\n\nThis is a standard explanation.'

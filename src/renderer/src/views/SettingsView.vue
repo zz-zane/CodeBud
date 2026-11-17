@@ -30,6 +30,7 @@ import MiSwitch from '../components/base/MiSwitch.vue'
 import MiButton from '../components/base/MiButton.vue'
 import MiHint from '../components/base/MiHint.vue'
 import MiIcon from '../components/base/MiIcon.vue'
+import MiSelect from '../components/base/MiSelect.vue'
 
 const props = defineProps<{ card: SettingsCard }>()
 
@@ -104,6 +105,7 @@ function setReviewStrategy(strategy: ReviewStrategy): void {
 const NARRATOR_RATES = [0.75, 1, 1.25, 1.5] as const
 
 const narratorEnabled = ref(readVideoPreference(VIDEO_NARRATION_ENABLED_KEY) !== 'false')
+const motionEnabled = ref(readVideoPreference('codebud.video.motion.enabled') !== 'false')
 const narratorVoiceUri = ref(readVideoPreference(VIDEO_NARRATION_VOICE_KEY) ?? '')
 const parsedRate = Number(readVideoPreference(VIDEO_NARRATION_RATE_KEY))
 const narratorRate = ref<number>((NARRATOR_RATES as readonly number[]).includes(parsedRate) ? parsedRate : 1)
@@ -119,8 +121,17 @@ function setNarratorEnabled(enabled: boolean): void {
   writeVideoPreference(VIDEO_NARRATION_ENABLED_KEY, String(enabled))
 }
 
-function onNarratorVoiceChange(e: Event): void {
-  const val = (e.target as HTMLSelectElement).value
+function setMotionEnabled(enabled: boolean): void {
+  motionEnabled.value = enabled
+  writeVideoPreference('codebud.video.motion.enabled', String(enabled))
+}
+
+const voiceOptions = computed(() => [
+  { value: '', label: SETTINGS.NARRATOR_VOICE_AUTO },
+  ...zhVoices.value.map((v) => ({ value: v.voiceURI, label: v.name }))
+])
+
+function onNarratorVoiceChange(val: string): void {
   narratorVoiceUri.value = val
   writeVideoPreference(VIDEO_NARRATION_VOICE_KEY, val)
 }
@@ -226,7 +237,13 @@ async function saveAiConfig(): Promise<void> {
   })
 }
 
-function onProtocolChange(): void {
+const protocolOptions = [
+  { value: 'openai', label: SETTINGS.AI_PROTOCOL_OPENAI },
+  { value: 'anthropic', label: SETTINGS.AI_PROTOCOL_ANTHROPIC }
+]
+
+function onProtocolChange(val: string): void {
+  aiProtocol.value = val as AiProtocol
   void saveAiConfig()
 }
 
@@ -462,16 +479,14 @@ onMounted(() => {
             <span class="row-label">{{ SETTINGS.NARRATOR_VOICE_LABEL }}</span>
           </div>
           <div class="voice-controls">
-            <select
-              class="select-input voice-select"
-              :value="narratorVoiceUri"
+            <MiSelect
+              class="voice-select"
+              :model-value="narratorVoiceUri"
+              :options="voiceOptions"
               :disabled="zhVoices.length === 0"
               :aria-label="SETTINGS.NARRATOR_VOICE_LABEL"
-              @change="onNarratorVoiceChange"
-            >
-              <option value="">{{ SETTINGS.NARRATOR_VOICE_AUTO }}</option>
-              <option v-for="v in zhVoices" :key="v.voiceURI" :value="v.voiceURI">{{ v.name }}</option>
-            </select>
+              @update:model-value="onNarratorVoiceChange"
+            />
             <MiButton
               variant="secondary"
               size="sm"
@@ -508,6 +523,34 @@ onMounted(() => {
           <MiIcon name="info" :size="14" />
           <span>{{ SETTINGS.NARRATOR_NO_ZH_VOICE }}</span>
         </p>
+
+        <div class="divider" />
+
+        <div class="row">
+          <div class="row-info">
+            <span class="row-label">{{ SETTINGS.MOTION_ENABLED_LABEL }}</span>
+          </div>
+          <div class="seg-group" role="group" :aria-label="SETTINGS.MOTION_ENABLED_LABEL">
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: motionEnabled }"
+              data-setting="video-motion-on"
+              @click="setMotionEnabled(true)"
+            >
+              {{ SETTINGS.NARRATOR_ON }}
+            </button>
+            <button
+              type="button"
+              class="seg-btn"
+              :class="{ active: !motionEnabled }"
+              data-setting="video-motion-off"
+              @click="setMotionEnabled(false)"
+            >
+              {{ SETTINGS.NARRATOR_OFF }}
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -605,14 +648,12 @@ onMounted(() => {
         <div class="form-grid">
           <div class="form-group">
             <label class="form-label">{{ SETTINGS.AI_PROTOCOL_LABEL }}</label>
-            <select
-              v-model="aiProtocol"
-              class="select-input"
-              @change="onProtocolChange"
-            >
-              <option value="openai">{{ SETTINGS.AI_PROTOCOL_OPENAI }}</option>
-              <option value="anthropic">{{ SETTINGS.AI_PROTOCOL_ANTHROPIC }}</option>
-            </select>
+            <MiSelect
+              :model-value="aiProtocol"
+              :options="protocolOptions"
+              :aria-label="SETTINGS.AI_PROTOCOL_LABEL"
+              @update:model-value="onProtocolChange"
+            />
           </div>
 
           <div class="form-group">
@@ -925,7 +966,7 @@ onMounted(() => {
 }
 .env-status-badge.is-found {
   background: var(--mi-success-fill);
-  color: var(--mi-success);
+  color: var(--mi-success-deep);
 }
 .env-status-badge.is-missing {
   background: color-mix(in srgb, var(--mi-text-3) 15%, transparent);
@@ -967,7 +1008,7 @@ onMounted(() => {
 }
 .ai-key-badge.is-configured {
   background: var(--mi-success-fill);
-  color: var(--mi-success);
+  color: var(--mi-success-deep);
 }
 .ai-key-badge.is-empty {
   background: color-mix(in srgb, var(--mi-text-3) 15%, transparent);
@@ -1004,9 +1045,9 @@ onMounted(() => {
   color: var(--mi-text);
 }
 .preset-chip.active {
-  background: var(--mi-card);
+  background: var(--mi-blue-light);
   color: var(--mi-text);
-  border-color: var(--mi-text);
+  border-color: var(--mi-blue-deep);
   font-weight: 500;
 }
 
@@ -1020,22 +1061,22 @@ onMounted(() => {
   flex-direction: column;
   gap: var(--mi-sp-2);
 }
-.text-input,
-.select-input {
+.text-input {
   width: 100%;
+  height: var(--mi-ctl);
   box-sizing: border-box;
-  padding: var(--mi-sp-2) var(--mi-sp-3);
-  border: 1px solid var(--mi-border);
-  border-radius: var(--mi-radius-sm);
-  background: var(--mi-bg);
+  padding: var(--mi-sp-1) var(--mi-sp-3);
+  border: 1px solid var(--cds-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--cds-bg-input);
   color: var(--mi-text);
   font-size: var(--mi-fs-body);
-  transition: border-color var(--mi-dur);
+  transition: border-color var(--cds-dur-snap) var(--cds-ease-swift), box-shadow var(--cds-dur-snap) var(--cds-ease-swift);
 }
-.text-input:focus,
-.select-input:focus {
+.text-input:focus {
   outline: none;
-  border-color: var(--mi-text-2);
+  border-color: transparent;
+  box-shadow: var(--cds-focus-shadow);
 }
 .key-input-row {
   display: flex;
@@ -1051,10 +1092,10 @@ onMounted(() => {
   font-size: var(--mi-fs-label);
 }
 .test-result-msg.is-ok {
-  color: var(--mi-success);
+  color: var(--mi-success-deep);
 }
 .test-result-msg.is-fail {
-  color: var(--mi-error);
+  color: var(--mi-error-deep);
 }
 .seg-group {
   display: inline-flex;

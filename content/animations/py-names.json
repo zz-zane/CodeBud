@@ -1,0 +1,509 @@
+{
+  "id": "py-names",
+  "title": "Python 变量是贴在对象上的标签",
+  "question": "为什么改了 b，a 也跟着变；重新给 b 赋值后，a 又不跟着变了？",
+  "concept": "赋值改绑定，原地改影响所有别名",
+  "lessonId": "common-33",
+  "source": "builtin",
+  "createdAt": 1,
+  "codeVerified": null,
+  "scenes": [],
+  "checks": [],
+  "acts": [
+    {
+      "title": "两张标签挂在同一节车厢上",
+      "skin": "train",
+      "steps": [
+        {
+          "say": "`a = [1, 2]` 在堆里造出列表车厢，把标签 `a` 挂上去。",
+          "groups": [
+            {
+              "id": "names",
+              "title": "标签",
+              "kind": "plain"
+            },
+            {
+              "id": "objs",
+              "title": "车厢",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "names",
+              "name": "a",
+              "value": "ref"
+            },
+            {
+              "id": "L1",
+              "group": "objs",
+              "name": "list",
+              "value": "[1, 2]"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "a",
+              "to": "L1"
+            }
+          ]
+        },
+        {
+          "say": "`b = a` 没造新车厢，只是把第二张标签 `b` 也挂到同一节上。",
+          "groups": [
+            {
+              "id": "names",
+              "title": "标签",
+              "kind": "plain"
+            },
+            {
+              "id": "objs",
+              "title": "车厢",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "names",
+              "name": "a",
+              "value": "ref"
+            },
+            {
+              "id": "b",
+              "group": "names",
+              "name": "b",
+              "value": "ref"
+            },
+            {
+              "id": "L1",
+              "group": "objs",
+              "name": "list",
+              "value": "[1, 2]"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "a",
+              "to": "L1"
+            },
+            {
+              "from": "b",
+              "to": "L1"
+            }
+          ],
+          "focus": [
+            "a",
+            "b",
+            "L1"
+          ]
+        },
+        {
+          "say": "顺着 `b` 往车厢里塞入 `3`，因为挂同一节，看 `a` 也有 `3`。",
+          "groups": [
+            {
+              "id": "names",
+              "title": "标签",
+              "kind": "plain"
+            },
+            {
+              "id": "objs",
+              "title": "车厢",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "names",
+              "name": "a",
+              "value": "ref"
+            },
+            {
+              "id": "b",
+              "group": "names",
+              "name": "b",
+              "value": "ref"
+            },
+            {
+              "id": "L1",
+              "group": "objs",
+              "name": "list",
+              "value": "[1, 2, 3]"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "a",
+              "to": "L1"
+            },
+            {
+              "from": "b",
+              "to": "L1"
+            }
+          ],
+          "note": {
+            "at": "L1",
+            "text": "原地追加"
+          },
+          "ask": {
+            "stem": "如果接着把标签 b 改挂到新车厢 [9]，a 会变成什么？",
+            "options": [
+              "变成 [9]",
+              "报错",
+              "仍是 [1, 2, 3]"
+            ],
+            "answer": 2,
+            "why": "改挂标签 b 只换了 b 的指向，原来的车厢和 a 都还在。"
+          },
+          "follow": "b"
+        },
+        {
+          "say": "`b = [9]` 造出新车厢并改挂 `b`，`a` 仍指向 `[1, 2, 3]`。",
+          "groups": [
+            {
+              "id": "names",
+              "title": "标签",
+              "kind": "plain"
+            },
+            {
+              "id": "objs",
+              "title": "车厢",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "names",
+              "name": "a",
+              "value": "ref"
+            },
+            {
+              "id": "b",
+              "group": "names",
+              "name": "b",
+              "value": "ref"
+            },
+            {
+              "id": "L1",
+              "group": "objs",
+              "name": "list1",
+              "value": "[1, 2, 3]"
+            },
+            {
+              "id": "L2",
+              "group": "objs",
+              "name": "list2",
+              "value": "[9]"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "a",
+              "to": "L1"
+            },
+            {
+              "from": "b",
+              "to": "L2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "换成真正的代码",
+      "skin": "memory",
+      "code": {
+        "lang": "python",
+        "lines": [
+          "a = [1, 2]",
+          "b = a",
+          "b.append(3)",
+          "print(a)",
+          "b = [9]",
+          "print(a, b)"
+        ],
+        "expectedOutput": "[1, 2, 3]\n[1, 2, 3] [9]\n"
+      },
+      "steps": [
+        {
+          "say": "第 1 行创建列表对象 `0x300`，变量 `a` 引用它。",
+          "line": 1,
+          "groups": [
+            {
+              "id": "names",
+              "title": "名字空间",
+              "kind": "frame"
+            },
+            {
+              "id": "objs",
+              "title": "堆对象",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "names",
+              "name": "a",
+              "value": "0x300"
+            },
+            {
+              "id": "L1",
+              "group": "objs",
+              "name": "list",
+              "addr": "0x300",
+              "value": "[1, 2]"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "a",
+              "to": "L1"
+            }
+          ]
+        },
+        {
+          "say": "第 2 行 `b = a` 复制引用，`a` 与 `b` 成为同一列表的别名。",
+          "line": 2,
+          "groups": [
+            {
+              "id": "names",
+              "title": "名字空间",
+              "kind": "frame"
+            },
+            {
+              "id": "objs",
+              "title": "堆对象",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "names",
+              "name": "a",
+              "value": "0x300"
+            },
+            {
+              "id": "b",
+              "group": "names",
+              "name": "b",
+              "value": "0x300"
+            },
+            {
+              "id": "L1",
+              "group": "objs",
+              "name": "list",
+              "addr": "0x300",
+              "value": "[1, 2]"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "a",
+              "to": "L1"
+            },
+            {
+              "from": "b",
+              "to": "L1"
+            }
+          ]
+        },
+        {
+          "say": "`b.append(3)` 原地改对象，第 4 行 `print(a)` 也打印 `3`。",
+          "line": 4,
+          "groups": [
+            {
+              "id": "names",
+              "title": "名字空间",
+              "kind": "frame"
+            },
+            {
+              "id": "objs",
+              "title": "堆对象",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "names",
+              "name": "a",
+              "value": "0x300"
+            },
+            {
+              "id": "b",
+              "group": "names",
+              "name": "b",
+              "value": "0x300"
+            },
+            {
+              "id": "L1",
+              "group": "objs",
+              "name": "list",
+              "addr": "0x300",
+              "value": "[1, 2, 3]"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "a",
+              "to": "L1"
+            },
+            {
+              "from": "b",
+              "to": "L1"
+            }
+          ],
+          "focus": [
+            "L1"
+          ],
+          "out": "[1, 2, 3]",
+          "ask": {
+            "stem": "第 5 行 b = [9] 执行完，第 6 行 print(a, b) 会输出什么？",
+            "options": [
+              "[1, 2, 3] [9]",
+              "[9] [9]",
+              "[1, 2, 3] [1, 2, 3, 9]"
+            ],
+            "answer": 0,
+            "why": "赋值 = 是让 b 绑定新列表 [9]，不会修改旧列表 0x300。"
+          },
+          "follow": "b"
+        },
+        {
+          "say": "`b = [9]` 新建 `0x380`，`b` 的指向改到新对象。",
+          "line": 5,
+          "groups": [
+            {
+              "id": "names",
+              "title": "名字空间",
+              "kind": "frame"
+            },
+            {
+              "id": "objs",
+              "title": "堆对象",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "names",
+              "name": "a",
+              "value": "0x300"
+            },
+            {
+              "id": "b",
+              "group": "names",
+              "name": "b",
+              "value": "0x380"
+            },
+            {
+              "id": "L1",
+              "group": "objs",
+              "name": "list1",
+              "addr": "0x300",
+              "value": "[1, 2, 3]"
+            },
+            {
+              "id": "L2",
+              "group": "objs",
+              "name": "list2",
+              "addr": "0x380",
+              "value": "[9]"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "a",
+              "to": "L1"
+            },
+            {
+              "from": "b",
+              "to": "L2"
+            }
+          ],
+          "out": "[1, 2, 3]"
+        },
+        {
+          "say": "第 6 行打印：`a` 仍是 `[1, 2, 3]`，`b` 是 `[9]`。",
+          "line": 6,
+          "groups": [
+            {
+              "id": "names",
+              "title": "名字空间",
+              "kind": "frame"
+            },
+            {
+              "id": "objs",
+              "title": "堆对象",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "names",
+              "name": "a",
+              "value": "0x300"
+            },
+            {
+              "id": "b",
+              "group": "names",
+              "name": "b",
+              "value": "0x380"
+            },
+            {
+              "id": "L1",
+              "group": "objs",
+              "name": "list1",
+              "addr": "0x300",
+              "value": "[1, 2, 3]"
+            },
+            {
+              "id": "L2",
+              "group": "objs",
+              "name": "list2",
+              "addr": "0x380",
+              "value": "[9]"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "a",
+              "to": "L1"
+            },
+            {
+              "from": "b",
+              "to": "L2"
+            }
+          ],
+          "focus": [
+            "L1",
+            "L2"
+          ],
+          "out": "[1, 2, 3]\n[1, 2, 3] [9]"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "b = a",
+    "b=a",
+    "改 b",
+    "a 也变",
+    "别名",
+    "标签",
+    "append",
+    "列表引用",
+    "python 变量"
+  ],
+  "lessonIds": [
+    "common-33",
+    "python-stage1-09"
+  ]
+}

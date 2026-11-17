@@ -98,7 +98,7 @@ input, select, textarea { accent-color: var(--mi-blue-deep); }
 #app .claude-app-container .settings-panel .row { padding-block: var(--mi-sp-4); gap: var(--mi-sp-4); }
 #app .claude-app-container .settings-panel .row-label { font-weight: var(--mi-fw-medium); font-size: var(--mi-fs-body); }
 #app .claude-app-container .settings-panel .hint { font-size: var(--mi-fs-caption); line-height: var(--mi-lh-caption); max-width: 54ch; }
-#app .claude-app-container .settings-panel .num-input { height: var(--mi-ctl); padding: var(--mi-sp-1) var(--mi-sp-2); border: 1px solid var(--mi-border-control); border-radius: var(--mi-radius-ctl); font-variant-numeric: tabular-nums; }
+#app .claude-app-container .settings-panel .num-input { height: var(--mi-ctl); padding: var(--mi-sp-1) var(--mi-sp-2); border: 1px solid var(--cds-border-strong); border-radius: var(--radius-lg); font-variant-numeric: tabular-nums; }
 
 /* Editor is a work surface, with a single boundary around each pane. */
 #app .claude-app-container .playground-page { max-width: var(--mi-page-max); }

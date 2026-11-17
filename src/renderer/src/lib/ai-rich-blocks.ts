@@ -68,6 +68,7 @@ export interface AlgoVizBlockData {
 
 export type AiRichSegment =
   | { type: 'markdown'; content: string }
+  | { type: 'anim-card'; videoId: string; raw: string }
   | { type: 'diagnosis'; data: DiagnosisBlockData; raw: string }
   | { type: 'feynman'; data: FeynmanBlockData; raw: string }
   | { type: 'algo-viz'; data: AlgoVizBlockData; raw: string }
@@ -633,7 +634,7 @@ export function parseAiRichBlocks(raw: string): AiRichSegment[] {
   if (!raw || typeof raw !== 'string') return []
 
   const segments: AiRichSegment[] = []
-  const blockRegex = /\`\`\`(diagnosis|feynman|algo-viz|ask-user|solve-steps|mermaid|mindmap|svg|study-html)(?=\s)\s*([\s\S]*?)\`\`\`/g
+  const blockRegex = /\`\`\`(anim-card|diagnosis|feynman|algo-viz|ask-user|solve-steps|mermaid|mindmap|svg|study-html)(?=\s)\s*([\s\S]*?)\`\`\`/g
 
   let lastIndex = 0
   let match: RegExpExecArray | null
@@ -649,7 +650,15 @@ export function parseAiRichBlocks(raw: string): AiRichSegment[] {
     const rawBlock = match[0]
     lastIndex = match.index + rawBlock.length
 
-    if (type === 'study-html') {
+    if (type === 'anim-card') {
+      try {
+        const data = JSON.parse(body) as { videoId?: unknown }
+        if (typeof data.videoId === 'string' && data.videoId.length > 0 && data.videoId.length <= 128) {
+          segments.push({ type: 'anim-card', videoId: data.videoId, raw: rawBlock })
+          continue
+        }
+      } catch {}
+    } else if (type === 'study-html') {
       segments.push({ type: 'artifact', html: body, raw: rawBlock })
       continue
     } else if (type === 'diagnosis') {

@@ -1,6 +1,6 @@
 # open-claude-ui 界面迁移
 
-设计来源唯一采用 `Caho1/open-claude-ui @ c1f923ae0051a871941b98a0e2e3183a545e6a85`。固定参考副本位于 `D:/project/coding/outputs/open-claude-ui-reference`，含 18 份源码与规范文件。本轮不使用旧 frontend-ui-polish 作为设计依据。
+设计来源唯一采用 `Caho1/open-claude-ui @ c1f923ae0051a871941b98a0e2e3183a545e6a85`。固定参考副本位于 `<本地工作区>`，含 18 份源码与规范文件。本轮不使用旧 frontend-ui-polish 作为设计依据。
 
 ## 来源与落点
 
@@ -24,4 +24,4 @@
 
 双击根目录 Start-MiAiCoding.cmd。启动器在子进程清除 ELECTRON_RUN_AS_NODE 后调用原有 start-local.cjs，读取项目 local-data；不覆盖数据。不要把 QA 档案复制回 local-data。
 
-本轮日志、真实 Electron 截图及预览在 `D:/project/coding/outputs/open-claude-ui-checks`。QA 使用独立 qa-data 与真实 preload/IPC。旧 final-checks/review-r1/review-r2 截图仅为功能基线，不作为本次设计截图。
+本轮日志、真实 Electron 截图及预览在 `<本地工作区>`。QA 使用独立 qa-data 与真实 preload/IPC。旧 final-checks/review-r1/review-r2 截图仅为功能基线，不作为本次设计截图。

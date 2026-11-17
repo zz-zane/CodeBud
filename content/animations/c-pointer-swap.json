@@ -1,0 +1,524 @@
+{
+  "id": "c-pointer-swap",
+  "title": "传值换不了，传地址才换得了",
+  "question": "为什么把 a、b 传进函数交换没用，传 &a、&b 就能换？",
+  "concept": "传值改副本，传指针才改原变量",
+  "lessonId": "common-25",
+  "source": "builtin",
+  "createdAt": 1,
+  "codeVerified": null,
+  "scenes": [],
+  "checks": [],
+  "acts": [
+    {
+      "title": "只抄数字换不了原柜子",
+      "skin": "locker",
+      "steps": [
+        {
+          "say": "`main` 里有两个柜子：`a` 放 `3`，`b` 放 `8`。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "100",
+              "value": "3"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "104",
+              "value": "8"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "传值调用时，只把数字抄进 `bad` 的新柜子 `x` 和 `y`。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "bad",
+              "title": "bad",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "100",
+              "value": "3"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "104",
+              "value": "8"
+            },
+            {
+              "id": "x",
+              "group": "bad",
+              "name": "x",
+              "addr": "200",
+              "value": "3"
+            },
+            {
+              "id": "y",
+              "group": "bad",
+              "name": "y",
+              "addr": "204",
+              "value": "8"
+            }
+          ],
+          "arrows": [],
+          "fly": {
+            "from": "a",
+            "to": "x",
+            "text": "3"
+          }
+        },
+        {
+          "say": "在 `bad` 里交换 `x` 和 `y`，`main` 里的柜子丝毫没变。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "bad",
+              "title": "bad",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "100",
+              "value": "3"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "104",
+              "value": "8"
+            },
+            {
+              "id": "x",
+              "group": "bad",
+              "name": "x",
+              "addr": "200",
+              "value": "8"
+            },
+            {
+              "id": "y",
+              "group": "bad",
+              "name": "y",
+              "addr": "204",
+              "value": "3"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "x",
+            "y"
+          ],
+          "note": {
+            "at": "a",
+            "text": "原柜子没动"
+          },
+          "ask": {
+            "stem": "bad 结束后，main 里的 a 和 b 分别是多少？",
+            "options": [
+              "8 和 3",
+              "3 和 8",
+              "都是 8"
+            ],
+            "answer": 1,
+            "why": "传值只改了副本 x、y，a 和 b 自己的柜子没被碰过。"
+          }
+        },
+        {
+          "say": "改传两张门牌纸条，`px` 指 `a`，`py` 指 `b`。",
+          "groups": [
+            {
+              "id": "real",
+              "title": "real",
+              "kind": "plain"
+            },
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "100",
+              "value": "3"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "104",
+              "value": "8"
+            },
+            {
+              "id": "px",
+              "group": "real",
+              "name": "px",
+              "value": "100"
+            },
+            {
+              "id": "py",
+              "group": "real",
+              "name": "py",
+              "value": "104"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "px",
+              "to": "a"
+            },
+            {
+              "from": "py",
+              "to": "b"
+            }
+          ],
+          "follow": "px",
+          "open": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "换成真正的代码",
+      "skin": "memory",
+      "code": {
+        "lang": "c",
+        "lines": [
+          "#include <stdio.h>",
+          "void bad_swap(int x, int y) {",
+          "    int t = x; x = y; y = t;",
+          "}",
+          "void real_swap(int *x, int *y) {",
+          "    int t = *x; *x = *y; *y = t;",
+          "}",
+          "int main(void) {",
+          "    int a = 3, b = 8;",
+          "    bad_swap(a, b);",
+          "    printf(\"%d %d\\n\", a, b);",
+          "    real_swap(&a, &b);",
+          "    printf(\"%d %d\\n\", a, b);",
+          "    return 0;",
+          "}"
+        ],
+        "expectedOutput": "3 8\n8 3\n"
+      },
+      "steps": [
+        {
+          "say": "`a = 3`、`b = 8` 先在 `main` 的栈帧里建好。",
+          "line": 9,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "0x100",
+              "value": "3"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "0x104",
+              "value": "8"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "调用 `bad_swap(a, b)`，只把 `3` 和 `8` 复制进新栈帧。",
+          "line": 10,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "bad",
+              "title": "bad_swap",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "0x100",
+              "value": "3"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "0x104",
+              "value": "8"
+            },
+            {
+              "id": "x",
+              "group": "bad",
+              "name": "x",
+              "addr": "0x200",
+              "value": "3"
+            },
+            {
+              "id": "y",
+              "group": "bad",
+              "name": "y",
+              "addr": "0x204",
+              "value": "8"
+            }
+          ],
+          "arrows": []
+        },
+        {
+          "say": "函数里换完 `x` 和 `y` 就退栈，`a`、`b` 原封不动。",
+          "line": 3,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "bad",
+              "title": "bad_swap",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "0x100",
+              "value": "3"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "0x104",
+              "value": "8"
+            },
+            {
+              "id": "x",
+              "group": "bad",
+              "name": "x",
+              "addr": "0x200",
+              "value": "8"
+            },
+            {
+              "id": "y",
+              "group": "bad",
+              "name": "y",
+              "addr": "0x204",
+              "value": "3"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "x",
+            "y"
+          ]
+        },
+        {
+          "say": "打印 `a` 和 `b`，输出仍是 `3 8`。",
+          "line": 11,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "0x100",
+              "value": "3"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "0x104",
+              "value": "8"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "a",
+            "b"
+          ],
+          "out": "3 8"
+        },
+        {
+          "say": "`real_swap(&a, &b)` 拿到地址，顺着 `*x`、`*y` 对换 `a`、`b`。",
+          "line": 6,
+          "groups": [
+            {
+              "id": "real",
+              "title": "real_swap",
+              "kind": "frame"
+            },
+            {
+              "id": "main",
+              "title": "main 变量",
+              "kind": "plain"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "0x100",
+              "value": "3"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "0x104",
+              "value": "8"
+            },
+            {
+              "id": "px",
+              "group": "real",
+              "name": "x",
+              "value": "0x100"
+            },
+            {
+              "id": "py",
+              "group": "real",
+              "name": "y",
+              "value": "0x104"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "px",
+              "to": "a"
+            },
+            {
+              "from": "py",
+              "to": "b"
+            }
+          ],
+          "fly": {
+            "from": "b",
+            "to": "a",
+            "text": "8"
+          },
+          "out": "3 8",
+          "ask": {
+            "stem": "执行完 *x = *y; *y = t; 后，a 和 b 变成？",
+            "options": [
+              "8 和 3",
+              "3 和 8",
+              "8 和 8"
+            ],
+            "answer": 0,
+            "why": "*x 和 *y 直接读写 0x100 与 0x104 处的原变量。"
+          },
+          "follow": "px"
+        },
+        {
+          "say": "回到 `main` 再打印，这次真的换成了 `8 3`。",
+          "line": 13,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            }
+          ],
+          "cells": [
+            {
+              "id": "a",
+              "group": "main",
+              "name": "a",
+              "addr": "0x100",
+              "value": "8"
+            },
+            {
+              "id": "b",
+              "group": "main",
+              "name": "b",
+              "addr": "0x104",
+              "value": "3"
+            }
+          ],
+          "arrows": [],
+          "focus": [
+            "a",
+            "b"
+          ],
+          "out": "3 8\n8 3"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "swap",
+    "交换",
+    "换不了",
+    "传值",
+    "传地址",
+    "传指针",
+    "实参",
+    "形参"
+  ],
+  "lessonIds": [
+    "common-25",
+    "c-stage1-14"
+  ]
+}

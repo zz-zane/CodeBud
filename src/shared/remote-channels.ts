@@ -30,7 +30,7 @@ export const REMOTE_ALLOWED_KEYS = [
   'studySetTaskStatus', 'studyGetUsage', 'studyCreateHtmlPreview',
   'studyConfirmPlan', 'studyDiscardPlan',
   'cet6GradeSubjective',
-  'videoOutline', 'videoCancel', 'videoList', 'videoDelete'
+  'videoCancel', 'videoList', 'videoDelete'
 ] as const satisfies readonly IpcKey[]
 
 /**
@@ -53,7 +53,7 @@ export const REMOTE_DENIED_KEYS = [
   // 手机连接自身的管理口（只有电脑上的设置页能调）
   'remoteGetStatus', 'remoteSetEnabled', 'remoteSetPort', 'remoteRevokeDevice',
   'remoteRevokeAll', 'remoteRegenerateCode',
-  'videoGenerate', 'videoVerifyPrompt', 'videoVerifyAnswer',
+  'videoGenerate', 'videoProgress', 'videoVerifyPrompt', 'videoVerifyAnswer',
   // 自动更新为桌面端专属（docs/34 §2）：手机端不暴露检查/安装入口
   'updateGetStatus', 'updateCheck', 'updateInstall', 'updateStatus'
 ] as const satisfies readonly IpcKey[]

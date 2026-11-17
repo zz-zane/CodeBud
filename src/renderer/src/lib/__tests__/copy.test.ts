@@ -28,6 +28,7 @@ import { maskComments } from '../../../../shared/__tests__/mask-comments'
 const SOURCE_OF_TRUTH = [
   'shared/copy.ts',
   'shared/study-copy.ts',
+  'shared/video-copy.ts',
   'shared/cloud/protocol.ts',
   'renderer/src/lib/copy.ts',
   'renderer/src/lib/labels.ts',

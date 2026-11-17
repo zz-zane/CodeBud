@@ -1,0 +1,533 @@
+{
+  "id": "java-reference",
+  "title": "传进方法的是遥控器的复印件",
+  "question": "Java 把对象传进方法后，为什么改属性生效、new 一个新对象却没生效？",
+  "concept": "传引用副本可改属性，重赋值不改实参",
+  "lessonId": "common-30",
+  "source": "builtin",
+  "createdAt": 1,
+  "codeVerified": null,
+  "scenes": [],
+  "checks": [],
+  "acts": [
+    {
+      "title": "门牌纸条的复印件",
+      "skin": "locker",
+      "steps": [
+        {
+          "say": "`main` 手里有一张写着 `500` 的纸条 `box`，指向 `500` 号柜。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "objs",
+              "title": "堆柜子",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "box",
+              "group": "main",
+              "name": "box",
+              "value": "500"
+            },
+            {
+              "id": "B1",
+              "group": "objs",
+              "name": "Box",
+              "addr": "500",
+              "value": "v=5"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "box",
+              "to": "B1"
+            }
+          ]
+        },
+        {
+          "say": "调用方法时，把 `500` 抄一份给形参纸条 `b`，两张指同一个柜。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "chg",
+              "title": "change",
+              "kind": "frame"
+            },
+            {
+              "id": "objs",
+              "title": "堆柜子",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "box",
+              "group": "main",
+              "name": "box",
+              "value": "500"
+            },
+            {
+              "id": "b",
+              "group": "chg",
+              "name": "b",
+              "value": "500"
+            },
+            {
+              "id": "B1",
+              "group": "objs",
+              "name": "Box",
+              "addr": "500",
+              "value": "v=5"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "box",
+              "to": "B1"
+            },
+            {
+              "from": "b",
+              "to": "B1"
+            }
+          ],
+          "fly": {
+            "from": "box",
+            "to": "b",
+            "text": "500"
+          }
+        },
+        {
+          "say": "顺着纸条 `b` 改 `b.v = 99`，柜子里的 `v` 真的变成 `99`。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "chg",
+              "title": "change",
+              "kind": "frame"
+            },
+            {
+              "id": "objs",
+              "title": "堆柜子",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "box",
+              "group": "main",
+              "name": "box",
+              "value": "500"
+            },
+            {
+              "id": "b",
+              "group": "chg",
+              "name": "b",
+              "value": "500"
+            },
+            {
+              "id": "B1",
+              "group": "objs",
+              "name": "Box",
+              "addr": "500",
+              "value": "v=99"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "box",
+              "to": "B1"
+            },
+            {
+              "from": "b",
+              "to": "B1"
+            }
+          ],
+          "focus": [
+            "b",
+            "B1"
+          ],
+          "ask": {
+            "stem": "若接着把纸条 b 涂改写成新门牌 600，box 指的 500 号柜会怎样？",
+            "options": [
+              "不变，v 仍是 99",
+              "变成 600 号柜",
+              "被清空"
+            ],
+            "answer": 0,
+            "why": "涂改副本纸条 b 只改变 b 自己，原纸条 box 依然写着 500。"
+          },
+          "follow": "b",
+          "open": [
+            "B1"
+          ]
+        },
+        {
+          "say": "把 `b` 改指向 `600` 号新柜，`box` 照旧指着 `500` 号柜。",
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "chg",
+              "title": "change",
+              "kind": "frame"
+            },
+            {
+              "id": "objs",
+              "title": "堆柜子",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "box",
+              "group": "main",
+              "name": "box",
+              "value": "500"
+            },
+            {
+              "id": "b",
+              "group": "chg",
+              "name": "b",
+              "value": "600"
+            },
+            {
+              "id": "B1",
+              "group": "objs",
+              "name": "Box1",
+              "addr": "500",
+              "value": "v=99"
+            },
+            {
+              "id": "B2",
+              "group": "objs",
+              "name": "Box2",
+              "addr": "600",
+              "value": "v=1"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "box",
+              "to": "B1"
+            },
+            {
+              "from": "b",
+              "to": "B2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "换成真正的代码",
+      "skin": "memory",
+      "code": {
+        "lang": "java",
+        "lines": [
+          "class Box {",
+          "    int v;",
+          "    Box(int v) { this.v = v; }",
+          "}",
+          "public class Main {",
+          "    static void change(Box b) {",
+          "        b.v = 99;",
+          "        b = new Box(1);",
+          "    }",
+          "    public static void main(String[] args) {",
+          "        Box box = new Box(5);",
+          "        change(box);",
+          "        System.out.println(box.v);",
+          "    }",
+          "}"
+        ],
+        "expectedOutput": "99\n"
+      },
+      "steps": [
+        {
+          "say": "`new Box(5)` 在堆上建起对象，`box` 存着它的引用地址。",
+          "line": 11,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "heap",
+              "title": "堆",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "box",
+              "group": "main",
+              "name": "box",
+              "value": "0x500"
+            },
+            {
+              "id": "B1",
+              "group": "heap",
+              "name": "Box1",
+              "addr": "0x500",
+              "value": "v: 5"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "box",
+              "to": "B1"
+            }
+          ]
+        },
+        {
+          "say": "`change(box)` 把引用副本传入 `b`，两者同指 `0x500`。",
+          "line": 6,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "chg",
+              "title": "change",
+              "kind": "frame"
+            },
+            {
+              "id": "heap",
+              "title": "堆",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "box",
+              "group": "main",
+              "name": "box",
+              "value": "0x500"
+            },
+            {
+              "id": "b",
+              "group": "chg",
+              "name": "b",
+              "value": "0x500"
+            },
+            {
+              "id": "B1",
+              "group": "heap",
+              "name": "Box1",
+              "addr": "0x500",
+              "value": "v: 5"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "box",
+              "to": "B1"
+            },
+            {
+              "from": "b",
+              "to": "B1"
+            }
+          ]
+        },
+        {
+          "say": "`b.v = 99` 通过地址修改了堆上同一个 `Box` 对象的字段。",
+          "line": 7,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "chg",
+              "title": "change",
+              "kind": "frame"
+            },
+            {
+              "id": "heap",
+              "title": "堆",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "box",
+              "group": "main",
+              "name": "box",
+              "value": "0x500"
+            },
+            {
+              "id": "b",
+              "group": "chg",
+              "name": "b",
+              "value": "0x500"
+            },
+            {
+              "id": "B1",
+              "group": "heap",
+              "name": "Box1",
+              "addr": "0x500",
+              "value": "v: 99"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "box",
+              "to": "B1"
+            },
+            {
+              "from": "b",
+              "to": "B1"
+            }
+          ],
+          "focus": [
+            "B1"
+          ],
+          "follow": "b"
+        },
+        {
+          "say": "`b = new Box(1)` 只让局部变量 `b` 改指新对象 `0x600`。",
+          "line": 8,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "chg",
+              "title": "change",
+              "kind": "frame"
+            },
+            {
+              "id": "heap",
+              "title": "堆",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "box",
+              "group": "main",
+              "name": "box",
+              "value": "0x500"
+            },
+            {
+              "id": "b",
+              "group": "chg",
+              "name": "b",
+              "value": "0x600"
+            },
+            {
+              "id": "B1",
+              "group": "heap",
+              "name": "Box1",
+              "addr": "0x500",
+              "value": "v: 99"
+            },
+            {
+              "id": "B2",
+              "group": "heap",
+              "name": "Box2",
+              "addr": "0x600",
+              "value": "v: 1"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "box",
+              "to": "B1"
+            },
+            {
+              "from": "b",
+              "to": "B2"
+            }
+          ],
+          "ask": {
+            "stem": "change 返回后，第 13 行输出 box.v 是多少？",
+            "options": [
+              "1",
+              "99",
+              "5"
+            ],
+            "answer": 1,
+            "why": "box 始终指向 0x500，该对象的 v 在第 7 行已被改为 99。"
+          }
+        },
+        {
+          "say": "`change` 出栈，`main` 打印 `box.v` 得到 `99`。",
+          "line": 13,
+          "groups": [
+            {
+              "id": "main",
+              "title": "main",
+              "kind": "frame"
+            },
+            {
+              "id": "heap",
+              "title": "堆",
+              "kind": "heap"
+            }
+          ],
+          "cells": [
+            {
+              "id": "box",
+              "group": "main",
+              "name": "box",
+              "value": "0x500"
+            },
+            {
+              "id": "B1",
+              "group": "heap",
+              "name": "Box1",
+              "addr": "0x500",
+              "value": "v: 99"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "box",
+              "to": "B1"
+            }
+          ],
+          "focus": [
+            "B1"
+          ],
+          "out": "99"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "java",
+    "引用副本",
+    "引用传递",
+    "new",
+    "改属性",
+    "对象引用"
+  ],
+  "lessonIds": [
+    "common-30",
+    "java-stage1-12"
+  ]
+}

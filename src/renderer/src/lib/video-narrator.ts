@@ -36,6 +36,7 @@ export function createVideoNarrator(): VideoNarrator {
     cancel,
     speak(text, rate) {
       cancel()
+      if (readVideoPreference(VIDEO_NARRATION_ENABLED_KEY) === 'false') return Promise.resolve()
       return new Promise<void>((resolve) => {
         finish = resolve
         const complete = (): void => {
@@ -46,7 +47,7 @@ export function createVideoNarrator(): VideoNarrator {
         const voices = chineseVoices()
         const voiceName = readVideoPreference(VIDEO_NARRATION_VOICE_KEY)
         const voice = voices.find((item) => item.voiceURI === voiceName) ?? voices[0]
-        if (readVideoPreference(VIDEO_NARRATION_ENABLED_KEY) !== 'false' && voice && typeof SpeechSynthesisUtterance !== 'undefined') {
+        if (voice && typeof SpeechSynthesisUtterance !== 'undefined') {
           const utterance = new SpeechSynthesisUtterance(text)
           utterance.voice = voice
           utterance.rate = rate

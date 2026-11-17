@@ -15,7 +15,7 @@ import { createRemoteServer } from '../remote/server'
 const { handlers } = vi.hoisted(() => ({ handlers: new Map<string, (...args: any[]) => any>() }))
 vi.mock('../ipc', () => ({ handle: (channel: string, fn: (...args: any[]) => any) => handlers.set(channel, fn) }))
 
-const root = resolve('D:/codex data/temp/miai-chat-sync-tests')
+const root = resolve('outputs/miai-chat-sync-tests')
 let dir: string
 let notify: ReturnType<typeof vi.fn>
 const load = (): AiChatSession[] => JSON.parse(readFileSync(join(dir, 'ai-sessions.json'), 'utf8'))

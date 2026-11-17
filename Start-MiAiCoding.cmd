@@ -1,6 +1,5 @@
 @echo off
 setlocal
-call "D:\tools\toolchains\activate.cmd"
 cd /d "%~dp0"
 set "ELECTRON_RUN_AS_NODE="
 set "MIAI_DATA_DIR=%~dp0local-data"

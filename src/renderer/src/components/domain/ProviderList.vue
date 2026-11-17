@@ -12,6 +12,7 @@ import { buildProviderList, findAntigravity, type ProviderItem, type ProviderSta
 import MiIcon from '../base/MiIcon.vue'
 import MiButton from '../base/MiButton.vue'
 import MiHint from '../base/MiHint.vue'
+import MiSelect from '../base/MiSelect.vue'
 import MiSwitch from '../base/MiSwitch.vue'
 import { toast } from '../base/toast'
 
@@ -104,7 +105,14 @@ async function loadFormModels(path: string): Promise<void> {
   if (res.ok) formModels.value = res.data
   else modelListFailed.value = true
 }
-function onKindChange(): void {
+const kindOptions = computed(() => [
+  { value: 'claude', label: C.KIND_CLAUDE },
+  { value: 'codex', label: C.KIND_CODEX },
+  { value: 'antigravity', label: C.KIND_ANTIGRAVITY },
+  { value: 'custom', label: C.KIND_CUSTOM }
+])
+function onKindChange(nextKind?: string): void {
+  if (nextKind) kind.value = nextKind as StudyConnection['kind']
   const names = { claude: C.KIND_CLAUDE, codex: C.KIND_CODEX, antigravity: C.KIND_ANTIGRAVITY, custom: C.KIND_CUSTOM }
   label.value = names[kind.value]
   command.value = ''
@@ -220,14 +228,16 @@ async function submit(): Promise<void> {
 
     <div v-if="formOpen" class="pl-form">
       <div class="pl-grid">
-        <label class="pl-field"><span>{{ C.KIND_LABEL }}</span>
-          <select v-model="kind" class="pl-input" :disabled="!!editingId" @change="onKindChange">
-            <option value="claude">{{ C.KIND_CLAUDE }}</option>
-            <option value="codex">{{ C.KIND_CODEX }}</option>
-            <option value="antigravity">{{ C.KIND_ANTIGRAVITY }}</option>
-            <option value="custom">{{ C.KIND_CUSTOM }}</option>
-          </select>
-        </label>
+        <div class="pl-field"><span>{{ C.KIND_LABEL }}</span>
+          <MiSelect
+            :model-value="kind"
+            class="pl-select"
+            :options="kindOptions"
+            :disabled="!!editingId"
+            :aria-label="C.KIND_LABEL"
+            @update:model-value="onKindChange"
+          />
+        </div>
         <label class="pl-field"><span>{{ C.LABEL_LABEL }}</span><input v-model="label" type="text" class="pl-input" :placeholder="C.LABEL_PLACEHOLDER" /></label>
         <label class="pl-field"><span>{{ C.COMMAND_LABEL }}</span><input v-model="command" type="text" class="pl-input" :placeholder="C.COMMAND_PLACEHOLDER" /></label>
         <label class="pl-field"><span>{{ C.ARGS_LABEL }}</span><input v-model="args" type="text" class="pl-input" :placeholder="C.ARGS_PLACEHOLDER" /></label>
@@ -282,8 +292,10 @@ async function submit(): Promise<void> {
 .pl-form { display: flex; flex-direction: column; gap: var(--mi-sp-3); padding-top: var(--mi-sp-3); border-top: 1px solid var(--mi-border); }
 .pl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--mi-sp-3); }
 .pl-field { display: flex; flex-direction: column; gap: var(--mi-sp-2); font-size: var(--mi-fs-label); color: var(--mi-text-2); }
-.pl-input { box-sizing: border-box; flex: 1; min-width: 0; height: 32px; padding: 0 var(--mi-sp-3); border: 1px solid var(--mi-border-control); border-radius: 6px; background: var(--mi-bg); color: var(--mi-text); font: var(--mi-fs-label) var(--mi-font-family); outline: none; }
-.pl-input:focus { border-color: var(--mi-blue-deep); }
+.pl-input { box-sizing: border-box; width: 100%; min-width: 0; height: 32px; padding: 0 var(--mi-sp-3); border: 1px solid var(--cds-border-strong); border-radius: var(--radius-lg); background: var(--cds-bg-input); color: var(--mi-text); font: var(--mi-fs-label) var(--mi-font-family); outline: none; transition: border-color var(--cds-dur-snap) var(--cds-ease-swift), box-shadow var(--cds-dur-snap) var(--cds-ease-swift); }
+.pl-path .pl-input { flex: 1; width: auto; }
+.pl-input:focus { border-color: transparent; box-shadow: var(--cds-focus-shadow); }
+.pl-select { width: 100%; }
 .pl-note { margin: 0; font-size: var(--mi-fs-caption); line-height: 1.5; color: var(--mi-text-3); }
 .pl-note.warn { color: var(--mi-error-deep); }
 .pl-actions { display: flex; justify-content: flex-end; gap: var(--mi-sp-2); }

@@ -6,7 +6,9 @@ import { VIDEO_TEXT } from '../../shared/copy'
 import { nativeEnv, refreshLangs } from '../env/detect'
 import { enqueueRunJob, runCode } from '../runner/runner'
 import { nativeGateReason, runCodeNative } from '../runner/native'
-import { generateOutline, generateVideo, matchesTraceOutput, validateGenerateRequest, validateOutlineRequest } from '../video/generate'
+import { matchesTraceOutput } from '../video/generate'
+import { generateExplainer, validVideoGenerationInput } from '../video/generator'
+import type { VideoGenerationResult } from '../../shared/video'
 import { createVideoStore } from '../video/store'
 
 const requests = new Map<string, { controller: AbortController; done: Promise<void> }>()
@@ -17,34 +19,28 @@ export const videoFeature: MainFeature = {
   register(ctx) {
     const store = createVideoStore(ctx.storageDir)
 
-    async function request<T>(id: string, work: (signal: AbortSignal) => Promise<T>): Promise<{ ok: true; data: T } | { ok: false; error: string }> {
-      if (requests.has(id)) return { ok: false, error: VIDEO_TEXT.REQUEST_BUSY }
+    async function request(id: string, work: (signal: AbortSignal) => Promise<VideoGenerationResult>): Promise<VideoGenerationResult> {
+      if (requests.has(id)) return { ok: false, fallback: '', reason: VIDEO_TEXT.REQUEST_BUSY }
       const controller = new AbortController()
       let finish!: () => void
       const done = new Promise<void>((resolve) => { finish = resolve })
       requests.set(id, { controller, done })
       try {
-        return { ok: true, data: await work(controller.signal) }
+        return await work(controller.signal)
       } catch (error) {
-        return { ok: false, error: controller.signal.aborted ? VIDEO_TEXT.CANCELED : error instanceof Error ? error.message : String(error) }
+        return { ok: false, fallback: '', reason: controller.signal.aborted ? VIDEO_TEXT.CANCELED : error instanceof Error ? error.message : String(error) }
       } finally {
         requests.delete(id)
         finish()
       }
     }
 
-    handle(IPC.videoOutline, (_event, input: unknown) => {
-      if (!validateOutlineRequest(input)) return { ok: false, error: VIDEO_TEXT.REQUEST_INVALID }
-      return request(input.requestId, (signal) => generateOutline(input, ctx.study.promptOnce, signal))
-    })
-
     handle(IPC.videoGenerate, (event, input: unknown) => {
-      if (!validateGenerateRequest(input)) return { ok: false, error: VIDEO_TEXT.REQUEST_INVALID }
+      if (!validVideoGenerationInput(input)) return { ok: false, fallback: '', reason: VIDEO_TEXT.REQUEST_INVALID }
       return request(input.requestId, async (signal) => {
-        const video = await generateVideo(input, ctx.study.promptOnce, async (scene) => {
-          if (scene.lang === null) return { missing: true }
+        const result = await generateExplainer(input, ctx.study.promptOnce, async (scene) => {
           const { report } = await refreshLangs(ctx.readConfig(false).envCache.report, scene.lang)
-          if (!report[scene.lang]?.found) return { missing: true }
+          if (!report[scene.lang]?.found) return { status: 'missing' }
           const lang = scene.lang
           const settings = ctx.readConfig(false)
           let useNative: boolean | null = settings.nativeRunEnabled && settings.nativeRunQuiet
@@ -61,7 +57,7 @@ export const videoFeature: MainFeature = {
               signal.addEventListener('abort', abort, { once: true })
               if (signal.aborted) { finish(null); return }
               try {
-                event.sender.send(IPC.videoVerifyPrompt, { requestId: input.requestId, confirmationId, lang, code: scene.code })
+                event.sender.send(IPC.videoVerifyPrompt, { requestId: input.requestId, confirmationId, lang, code: scene.lines })
               } catch (error) {
                 confirmations.delete(confirmationId)
                 signal.removeEventListener('abort', abort)
@@ -70,10 +66,10 @@ export const videoFeature: MainFeature = {
             })
           }
           if (signal.aborted) throw new Error(VIDEO_TEXT.CANCELED)
-          if (useNative === null) return { missing: true }
+          if (useNative === null) return { status: 'missing' }
           const gate = nativeGateReason(ctx.readConfig(false).nativeRunEnabled, useNative)
           if (gate) throw new Error(gate)
-          const req = { lang, code: scene.code.join('\n'), timeoutSec: 10 }
+          const req = { lang, code: scene.lines.join('\n'), timeoutSec: 10 }
           const result = await enqueueRunJob(async () => {
             if (signal.aborted) return null
             if (useNative) {
@@ -84,14 +80,14 @@ export const videoFeature: MainFeature = {
             return runCode(req, report, signal)
           }, signal)
           if (!result || signal.aborted) throw new Error(VIDEO_TEXT.CANCELED)
-          if (result.envIssue) return { missing: true }
-          if (!result.ok || result.truncated) return { missing: false, error: result.stderr || result.message || VIDEO_TEXT.RUN_FAILED }
-          if (!matchesTraceOutput(scene.expectedOutput, result.stdout)) return { missing: false, error: VIDEO_TEXT.OUTPUT_MISMATCH(JSON.stringify(result.stdout)) }
-          return { missing: false }
-        }, signal)
+          if (result.envIssue) return { status: 'missing' }
+          if (!result.ok || result.truncated) return { status: 'error', detail: result.stderr || result.message || VIDEO_TEXT.RUN_FAILED }
+          if (!matchesTraceOutput(scene.expectedOutput, result.stdout)) return { status: 'mismatch', detail: VIDEO_TEXT.OUTPUT_MISMATCH(JSON.stringify(result.stdout)) }
+          return { status: 'ok' }
+        }, (progress) => event.sender.send(IPC.videoProgress, progress), signal)
         if (signal.aborted) throw new Error(VIDEO_TEXT.CANCELED)
-        store.add(video)
-        return video
+        if (result.ok && result.video.source === 'ai') store.add(result.video)
+        return result
       })
     })
 

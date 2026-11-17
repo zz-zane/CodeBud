@@ -1,0 +1,469 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>CodeBud 宣传片</title>
+<style>
+  @font-face { font-family: Pix; src: url('assets/fonts/fusion-pixel-12px.ttf'); }
+  html, body { margin: 0; background: #000; }
+  canvas { display: block; width: 100vw; height: 56.25vw; image-rendering: pixelated; }
+</style>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+/* 宣传片：纯 canvas，画面是时间 t 的纯函数（draw(t)），方便逐帧渲染。
+   直接用浏览器打开本文件可实时预览（?t=12 从第 12 秒开始）。 */
+const W = 1920, H = 1080, DUR = 54 // 120 BPM，27 小节；各场切点都落在小节线上，和 bgm 对拍
+let ctx = document.getElementById('c').getContext('2d')
+const NAME = 'CodeBud' // 改名只改这里
+const G = '#85B28A', Y = '#FFF8B1' // 主角专用
+const CREAM = '#fcfcfb', PAPER = '#F0EFEA', DARK = '#1c1a17', INK = '#151515', ORANGE = '#b34b28', SOFT = '#E9A58C', TEXT2 = '#5F5E5A'
+const FONT = '"Pix","Microsoft YaHei",sans-serif', MONO = 'Consolas,monospace'
+
+// ── 工具 ──
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v))
+const seg = (t, a, b) => clamp((t - a) / (b - a))
+const lerp = (a, b, p) => a + (b - a) * p
+const outCubic = (p) => 1 - Math.pow(1 - p, 3)
+const inOut = (p) => (p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2)
+const outBack = (p) => 1 + 2.7 * Math.pow(p - 1, 3) + 1.7 * Math.pow(p - 1, 2)
+const outBounce = (p) => { const n = 7.5625, d = 2.75; return p < 1 / d ? n * p * p : p < 2 / d ? n * (p -= 1.5 / d) * p + 0.75 : p < 2.5 / d ? n * (p -= 2.25 / d) * p + 0.9375 : n * (p -= 2.625 / d) * p + 0.984375 }
+const rnd = (i, s = 0) => { const x = Math.sin(i * 127.1 + s * 311.7) * 43758.5453; return x - Math.floor(x) } // 确定性伪随机
+const snap = (v, u = 6) => Math.round(v / u) * u
+
+const IMG = {}
+const load = (names) => Promise.all(names.map((n) => new Promise((res) => {
+  const im = new Image(); im.onload = () => { IMG[n] = im; res() }; im.onerror = () => res(); im.src = `assets/${n}.png`
+})))
+
+function cover(name, zoom = 1, px = 0.5, py = 0.5, fallback = CREAM) {
+  const im = IMG[name]
+  if (!im) { ctx.fillStyle = fallback; ctx.fillRect(0, 0, W, H); return }
+  const s = Math.max(W / im.width, H / im.height) * zoom
+  const w = im.width * s, h = im.height * s
+  ctx.imageSmoothingEnabled = false
+  ctx.drawImage(im, (W - w) * px, (H - h) * py, w, h)
+}
+
+function text(str, x, y, size, color = INK, o = {}) {
+  ctx.save()
+  ctx.font = `${o.weight || ''} ${size}px ${o.font || FONT}`
+  ctx.textAlign = o.align || 'left'; ctx.textBaseline = o.base || 'alphabetic'
+  ctx.globalAlpha *= o.alpha ?? 1
+  if (o.shadow) { ctx.fillStyle = o.shadow; ctx.fillText(str, x + (o.sd ?? size / 12), y + (o.sd ?? size / 12)) }
+  if (o.stroke) { ctx.lineWidth = o.sw || size / 6; ctx.lineJoin = 'round'; ctx.strokeStyle = o.stroke; ctx.strokeText(str, x, y) }
+  ctx.fillStyle = color; ctx.fillText(str, x, y)
+  ctx.restore()
+}
+// 逐字弹出
+function popText(str, cx, y, size, t, o = {}) {
+  ctx.save(); ctx.font = `${o.font ? 'bold ' : ''}${size}px ${o.font || FONT}`
+  const gap = o.gap ?? size * 0.08
+  const ws = [...str].map((ch) => ctx.measureText(ch).width + gap)
+  let x = cx - ws.reduce((a, b) => a + b, 0) / 2
+  ;[...str].forEach((ch, i) => {
+    const p = seg(t, i * (o.stagger ?? 0.09), i * (o.stagger ?? 0.09) + 0.4)
+    if (p > 0) {
+      const s = outBack(p), wob = Math.sin(t * 3 + i * 0.8) * (o.wobble ?? 0)
+      ctx.save(); ctx.translate(x + ws[i] / 2, y + wob); ctx.scale(s, s)
+      text(ch, 0, 0, size, o.color || INK, { align: 'center', shadow: o.shadow, sd: o.sd, stroke: o.stroke, sw: o.sw, font: o.font, weight: o.font ? 'bold' : '' })
+      ctx.restore()
+    }
+    x += ws[i]
+  })
+  ctx.restore()
+}
+
+// ── 主角：15×12，默认面朝右 —— 眼睛和耳朵在前（右），尾巴在后（左）；flip 即面朝左 ──
+const SPR = [
+  '..........G.G..', '.........GYGYG.', 'G..GGGGGGGYYYG.', 'GG.GYYYYYYYYYYG', '.GGYYYYYYGYYGYG', '..GYYYYYYGYYGYG',
+  '..GYYYYYYGYYGYG', '..GYYYYYYYYYYYG', '...GYYYYYYYYYG.', '....GYGGGGYGGG.', '....GYG..GYG...', '....GGG..GGG...'
+]
+const SR = SPR.length, LEGS = [[4, 6], [9, 11]]
+function heroCells(frame = 0, blink = false) {
+  const g = SPR.map((r) => [...r])
+  if (blink) for (const c of [9, 12]) { g[4][c] = 'Y'; g[6][c] = 'Y' }
+  // 跑步：1 = 抬后腿，2 = 抬前腿
+  const lift = frame === 1 ? [0] : frame === 2 ? [1] : []
+  for (const li of lift) { const [a, b] = LEGS[li]; for (let c = a; c <= b; c++) { g[SR - 2][c] = 'G'; g[SR - 1][c] = '.' } }
+  return g
+}
+// (x, y) = 脚底中心；u = 单个像素边长
+function hero(x, y, u, o = {}) {
+  const g = heroCells(o.frame, o.blink)
+  ctx.save(); ctx.translate(x, y); ctx.rotate(o.rot || 0); ctx.scale((o.flip ? -1 : 1) * (o.sx ?? 1), o.sy ?? 1)
+  ctx.globalAlpha *= o.alpha ?? 1
+  if (o.shadowY != null) { ctx.fillStyle = 'rgba(0,0,0,.18)'; ctx.fillRect(-5 * u, o.shadowY, 10 * u, u) }
+  for (let r = 0; r < SR; r++) for (let c = 0; c < 15; c++) {
+    const ch = g[r][c]; if (ch === '.') continue
+    ctx.fillStyle = o.tint || (ch === 'G' ? G : Y)
+    ctx.fillRect((c - 7.5) * u, (r - SR) * u, u + 0.6, u + 0.6)
+  }
+  ctx.restore()
+}
+// App 图标（assets/logo.svg），以 (cx, cy) 为中心
+function logoMark(cx, cy, size, p = 1) {
+  const im = IMG.logo; if (!im || p <= 0) return
+  ctx.save(); ctx.translate(cx, cy); ctx.scale(p, p); ctx.imageSmoothingEnabled = true
+  ctx.drawImage(im, -size / 2, -size / 2, size, size); ctx.restore()
+}
+const SERIF = 'Georgia,"Times New Roman",serif'
+const blinkAt = (t) => (t % 2.6) > 2.45
+
+// 粒子爆发（确定性）
+function burst(x, y, dt, seed, n = 26, o = {}) {
+  if (dt < 0 || dt > (o.life ?? 1.1)) return
+  const life = o.life ?? 1.1, cols = o.colors || [ORANGE, SOFT, '#ffffff', Y]
+  for (let i = 0; i < n; i++) {
+    const a = rnd(i, seed) * Math.PI * 2, v = (o.speed ?? 620) * (0.35 + rnd(i, seed + 1))
+    const px = x + Math.cos(a) * v * dt, py = y + Math.sin(a) * v * dt + (o.grav ?? 900) * dt * dt
+    const s = (o.size ?? 18) * (1 - dt / life) * (0.5 + rnd(i, seed + 2))
+    ctx.fillStyle = cols[i % cols.length]; ctx.fillRect(snap(px), snap(py), s, s)
+  }
+}
+
+function pixelBox(x, y, w, h, fill, border = INK, b = 6) {
+  ctx.fillStyle = border; ctx.fillRect(x + b, y, w - 2 * b, h); ctx.fillRect(x, y + b, w, h - 2 * b)
+  ctx.fillStyle = fill; ctx.fillRect(x + b, y + b, w - 2 * b, h - 2 * b)
+}
+
+// ── 场 1：开机，像素聚合成主角（0–5s，暗色）──
+function s1(t) {
+  cover('bg_room', 1.08 + t * 0.012, 0.5, 0.3, DARK)
+  ctx.fillStyle = 'rgba(24,22,19,.82)'; ctx.fillRect(0, 0, W, H)
+  const lines = ['> gcc hello.c -o hello', '> ./hello', 'Hello, World!']
+  let tt = t - 0.3
+  lines.forEach((ln, i) => {
+    const isOut = i === 2, n = isOut ? (tt > 0 ? ln.length : 0) : Math.floor(clamp(tt * 22, 0, ln.length))
+    if (tt > 0) text(ln.slice(0, n) + (n < ln.length || (i === 2 && t % 0.6 < 0.3 && t < 2.6) ? '█' : ''), 150, 190 + i * 74, 50, isOut ? CREAM : '#B8B2A6', { font: MONO, alpha: 1 - seg(t, 5.0, 5.6) })
+    tt -= isOut ? 0 : ln.length / 22 + 0.25
+  })
+  // 像素飞入聚合
+  const u = 34, cx = W / 2, cy = 800, a0 = 2.4
+  const g = heroCells(0, false)
+  let k = 0
+  const done = seg(t, a0 + 1.5, a0 + 1.6)
+  if (!done) {
+    for (let r = 0; r < SR; r++) for (let c = 0; c < 15; c++) {
+      if (g[r][c] === '.') continue
+      const p = outCubic(seg(t, a0 + rnd(k, 3) * 0.7, a0 + 0.7 + rnd(k, 3) * 0.7))
+      const tx = cx + (c - 7.5) * u, ty = cy + (r - SR) * u
+      const sx = rnd(k, 5) * W, sy = -200 - rnd(k, 6) * 900
+      const sw = Math.sin(p * Math.PI) * 180 * (rnd(k, 7) - 0.5)
+      if (p > 0) { ctx.fillStyle = g[r][c] === 'G' ? G : Y; ctx.fillRect(snap(lerp(sx, tx, p) + sw, p === 1 ? 1 : 6), snap(lerp(sy, ty, p), p === 1 ? 1 : 6), u + 0.6, u + 0.6) }
+      k++
+    }
+  } else {
+    const j = t - (a0 + 1.6), hop = Math.abs(Math.sin(clamp(j * 2.2, 0, 2) * Math.PI)) * 120 * (1 - seg(j, 0, 1))
+    const sq = 1 + Math.sin(clamp(j * 6, 0, 1) * Math.PI) * 0.18
+    hero(cx, cy - hop, u, { sx: sq, sy: 2 - sq, blink: blinkAt(t + 1.2) })
+    burst(cx, cy - 220, j, 11, 40, { speed: 900, size: 26 })
+    ctx.fillStyle = `rgba(255,248,177,${0.8 * (1 - seg(j, 0, 0.35))})`; ctx.fillRect(0, 0, W, H)
+  }
+}
+
+// 米白底 + 缓慢漂移的像素点
+function paperBg(t) {
+  ctx.fillStyle = CREAM; ctx.fillRect(0, 0, W, H)
+  for (let i = 0; i < 90; i++) {
+    const x = (rnd(i, 21) * (W + 200) + t * 40 * (0.3 + rnd(i, 22))) % (W + 200) - 100, y = rnd(i, 23) * H
+    const s = 12 + Math.floor(rnd(i, 24) * 3) * 12
+    ctx.fillStyle = i % 3 ? PAPER : 'rgba(179,75,40,.13)'; ctx.fillRect(snap(x, 12), snap(y, 12), s, s)
+  }
+}
+
+// ── 场 2：片名 ──
+function s2(t) {
+  paperBg(t)
+  logoMark(W / 2, 340, 300, outBack(seg(t, 0.2, 0.75)))
+  // 主角从左边跑进来，跳上 logo 顶
+  const run = seg(t, 0.6, 1.5), hop2 = seg(t, 1.5, 2.0)
+  const hx2 = lerp(-120, W / 2 - 330, outCubic(run)) + hop2 * 250, hy2 = lerp(490, 190, hop2) - Math.sin(hop2 * Math.PI) * 150
+  hero(hx2, hy2, 13, { frame: run < 1 ? 1 + (Math.floor(t * 12) % 2) : hop2 > 0 && hop2 < 1 ? 2 : 0, blink: blinkAt(t) })
+  popText(NAME, W / 2, 690, 190, t - 1.0, { font: SERIF, shadow: 'rgba(179,75,40,.28)', sd: 9, gap: 4, wobble: 4 })
+  const p = outCubic(seg(t, 1.9, 2.5))
+  const bw = 1000 * p
+  ctx.fillStyle = INK; ctx.fillRect(W / 2 - bw / 2, 752, bw, 6)
+  text('写给大学生和编程初学者的学习伴侣', W / 2, 850, 62, INK, { align: 'center', alpha: seg(t, 2.1, 2.6) })
+  text('编程课程 · 六级真题 · 你的 AI 学习助手', W / 2, 945, 50, ORANGE, { align: 'center', alpha: seg(t, 2.6, 3.1) })
+  burst(W / 2, 340, t - 0.45, 31, 46, { speed: 1100, size: 24, life: 1.4 })
+}
+
+// ── 场 3：横版闯关，收集五条学习路线（9.5–17.5s）──
+const ROUTES = [['通用', 41, '#F2B872'], ['C', 51, '#7FB3D9'], ['C++', 59, '#B59AD8'], ['Java', 61, '#E99A6B'], ['Python', 54, '#E9D36B'], ['算法', 119, '#8FCB9B']]
+function s3(t) {
+  const scroll = t * 0.03
+  cover('bg_world', 1.25, clamp(0.1 + scroll), 0.8, '#CFE8D0')
+  ctx.fillStyle = 'rgba(252,252,251,.28)'; ctx.fillRect(0, 0, W, H)
+  const groundY = 850, hx = 520, u = 15, speed = 560
+  // 地面像素条纹（视差）
+  for (let i = 0; i < 40; i++) {
+    const x = ((i * 137 - t * speed) % (W + 200) + W + 200) % (W + 200) - 100
+    ctx.fillStyle = i % 2 ? 'rgba(21,21,21,.16)' : 'rgba(255,255,255,.4)'; ctx.fillRect(snap(x, 6), groundY + 18 + (i % 4) * 30, 60 + (i % 3) * 36, 6)
+  }
+  let total = 0, lastHit = -9
+  const blocks = ROUTES.map(([name, n, col], i) => {
+    const hitT = 1.0 + i * 1.0
+    if (t >= hitT) { total += n; lastHit = hitT }
+    return { name, n, col, hitT, x: hx + (hitT - t) * speed }
+  })
+  // 主角跳跃：每个方块前起跳
+  let jump = 0
+  for (const b of blocks) { const p = seg(t, b.hitT - 0.36, b.hitT + 0.36); if (p > 0 && p < 1) jump = Math.sin(p * Math.PI) * 300 }
+  for (const b of blocks) {
+    const by = groundY - 420 + Math.sin(t * 4 + b.hitT) * 10
+    if (t < b.hitT && b.x < W + 200) {
+      pixelBox(b.x - 130, by - 60, 260, 120, b.col)
+      ctx.fillStyle = 'rgba(255,255,255,.45)'; ctx.fillRect(b.x - 118, by - 48, 236, 12)
+      text(b.name, b.x, by + 22, 62, INK, { align: 'center' })
+    } else if (t >= b.hitT) {
+      burst(hx, groundY - 420, t - b.hitT, 40 + b.hitT, 30, { colors: [b.col, '#fff', Y], size: 22 })
+      const p = seg(t, b.hitT, b.hitT + 0.9)
+      if (p < 1) text(`+${b.n} 课`, hx + 120, groundY - 470 - p * 140, 64, INK, { alpha: 1 - p * p, stroke: '#fff', sw: 12 })
+    }
+  }
+  const fr = jump > 4 ? 2 : 1 + (Math.floor(t * 11) % 2)
+  // 跑动扬尘
+  if (jump < 4) for (let i = 0; i < 5; i++) { const a = (t * 3 + i / 5) % 1; ctx.fillStyle = `rgba(255,255,255,${0.7 * (1 - a)})`; ctx.fillRect(snap(hx - 110 - a * 170), snap(groundY - 12 - a * 46 - (i % 2) * 14), 18 * (1 - a) + 6, 18 * (1 - a) + 6) }
+  hero(hx, groundY - jump + (jump < 4 ? Math.abs(Math.sin(t * 34.5)) * -8 : 0), u, { frame: fr, blink: blinkAt(t), shadowY: jump + 2, rot: jump > 4 ? -0.1 : 0 })
+  // 计数 HUD
+  const pulse = 1 + 0.25 * (1 - seg(t, lastHit, lastHit + 0.3))
+  const shown = Math.round(total - (total - (total - (blocks.find((b) => b.hitT === lastHit)?.n || 0))) * (1 - outCubic(seg(t, lastHit, lastHit + 0.5))))
+  pixelBox(1290, 70, 540, 190, CREAM)
+  text('已收录课程', 1330, 132, 40, TEXT2)
+  ctx.save(); ctx.translate(1330, 232); ctx.scale(pulse, pulse); text(String(shown).padStart(3, '0'), 0, 0, 108, ORANGE, { font: MONO, weight: 'bold' }); ctx.restore()
+  text('节', 1560, 232, 56, INK)
+  const cp = seg(t, 6.6, 7.1)
+  if (cp > 0) {
+    ctx.save(); ctx.globalAlpha = cp; pixelBox(W / 2 - 560, 930 + (1 - outBack(cp)) * 80, 1120, 116, INK, INK)
+    text('从零开始 · 385 节课 · 一课一练', W / 2, 1008 + (1 - outBack(cp)) * 80, 60, CREAM, { align: 'center' }); ctx.restore()
+  }
+}
+
+// ── 场 4：真实界面（17.5–26s）──
+const CROP = 348 // 截图左侧导航栏宽度（px）
+function card(name, cx, cy, w, p, o = {}) {
+  const im = IMG[name]; if (!im) return
+  const sx = o.full ? 0 : CROP, h = w * im.height / (im.width - sx)
+  ctx.save(); ctx.translate(cx, cy); ctx.transform(1, o.skew ?? -0.035, 0, 1, 0, 0); ctx.scale(p, p)
+  ctx.fillStyle = 'rgba(21,21,21,.2)'; ctx.fillRect(-w / 2 + 24, -h / 2 + 24, w, h)
+  ctx.fillStyle = INK; ctx.fillRect(-w / 2 - 8, -h / 2 - 8, w + 16, h + 16)
+  ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high'
+  ctx.globalAlpha *= o.alpha ?? 1
+  ctx.drawImage(im, sx, 0, im.width - sx, im.height, -w / 2, -h / 2, w, h)
+  ctx.restore()
+  return h
+}
+const SHOTS = [
+  { img: 'play_code', no: '01', h1: '本机真编译', h2: '真运行', sub: '写完就跑，输出看得见', side: 1 },
+  { img: 'lesson2', no: '02', h1: '课文带代码', h2: '一课一练', sub: '每段示例都真实跑过', side: -1 },
+  { img: 'cet6', no: '03', h1: '六级真题', h2: '52 套', sub: '练习 / 考试两种模式，备考也在这里', side: 1 },
+  { img: 'overview', no: '04', h1: '学习进度', h2: '一目了然', sub: '学到哪里，清清楚楚', side: -1 }
+]
+function s4(t) {
+  cover('bg_islands', 1.12 + t * 0.006, 0.5, 0.4, '#E8F0E4')
+  ctx.fillStyle = 'rgba(252,252,251,.8)'; ctx.fillRect(0, 0, W, H)
+  const each = 10 / 4, i = Math.min(3, Math.floor(t / each))
+  shotView(SHOTS[i], t - i * each, each, t, i === 0)
+}
+// 一个镜头：截图卡片滑入 + 编号 / 标题 / 说明 + 主角。press = 主角跳上去按「运行」
+function shotView(sh, lt, each, t, press) {
+  const pin = outBack(seg(lt, 0, 0.55)), pout = 1 - inOut(seg(lt, each - 0.35, each))
+  const cw = 960, cx = W / 2 + sh.side * 400 + sh.side * (1 - pin) * 900 + sh.side * (1 - pout) * 1400, cy = 545 + Math.sin(lt * 1.6) * 8
+  const skew = -0.035 * sh.side
+  const hgt = card(sh.img, cx, cy, cw, 1, { skew }) || 736
+  const tx = sh.side > 0 ? 90 : 1290, ta = seg(lt, 0.25, 0.6) * pout
+  ctx.save(); ctx.globalAlpha = ta
+  text(sh.no, tx, 330, 120, SOFT, { font: MONO, weight: 'bold' })
+  ctx.fillStyle = INK; ctx.fillRect(tx, 356, 150 * outCubic(seg(lt, 0.3, 0.8)), 10)
+  ctx.restore()
+  popText(sh.h1, tx + 240, 500, 92, (lt - 0.35) * pout, { shadow: '#DEDBD2', sd: 7 })
+  popText(sh.h2, tx + 240, 620, 92, (lt - 0.6) * pout, { shadow: '#DEDBD2', sd: 7, color: ORANGE })
+  text(sh.sub, tx, 710, 42, TEXT2, { alpha: seg(lt, 1.0, 1.4) * pout })
+  if (press) {
+    // 主角跳到「运行」按钮上，按下后切到运行结果
+    const k = cw / (1800 - CROP), bx = cx - cw / 2 + (1677 - CROP) * k, by = cy - hgt / 2 + 150 * k + ((1677 - CROP) * k - cw / 2) * skew
+    const pj = seg(lt, 0.7, 1.35), land = lt - 1.35
+    const hx = lerp(360, bx, pj), hy = lerp(960, by, pj) - Math.sin(pj * Math.PI) * 330
+    if (land > 0) {
+      card('play_run', cx, cy, cw, 1, { skew, alpha: seg(land, 0, 0.18) })
+      ctx.fillStyle = `rgba(255,255,255,${0.7 * (1 - seg(land, 0, 0.3))})`; ctx.fillRect(0, 0, W, H)
+      burst(bx, by, land, 77, 34, { speed: 700 })
+      const op = seg(land, 0.25, 0.7) * pout
+      if (op > 0) { ctx.save(); ctx.globalAlpha = op; pixelBox(cx - 150, cy + 250 - outBack(op) * 30, 520, 96, '#2E7D4F', INK); text('✓ 运行完成 · 0.05 秒', cx + 110, cy + 314 - outBack(op) * 30, 44, '#fff', { align: 'center' }); ctx.restore() }
+    }
+    const sq = land > 0 ? 1 + Math.sin(clamp(land * 5, 0, 1) * Math.PI) * 0.3 : 1
+    hero(hx + (1 - pout) * 1400, hy, 11, { frame: pj > 0 && pj < 1 ? 1 : 0, sx: sq, sy: 2 - sq, blink: blinkAt(t), rot: pj > 0 && pj < 1 ? (pj - 0.5) * 0.5 : 0 })
+  } else {
+    // 主角坐在卡片顶边上晃
+    const hx = cx - sh.side * 360, hy = cy - hgt / 2 - 8 - (hx - cx) * -skew
+    const hop = Math.abs(Math.sin(lt * 4)) * 26
+    hero(hx, hy - hop, 9, { blink: blinkAt(t), flip: sh.side > 0, frame: hop > 13 ? 1 : 0 })
+  }
+}
+
+// ── 场 7：不只是现成的课，也是个人学习助手 ──
+function s7(t) {
+  if (t < 2.6) {
+    paperBg(t)
+    ctx.save(); ctx.globalAlpha = 1 - seg(t, 2.25, 2.6)
+    popText('不只是现成的课', W / 2, 400, 110, t - 0.1, { shadow: '#DEDBD2', sd: 8 })
+    popText('更是你的个人学习助手', W / 2, 620, 150, t - 0.9, { color: ORANGE, shadow: '#DEDBD2', sd: 9, stagger: 0.07 })
+    ctx.restore()
+    hero(W / 2, 900 - Math.abs(Math.sin(t * 6)) * 70, 14, { blink: blinkAt(t), frame: Math.floor(t * 6) % 2 })
+    return
+  }
+  if (t < 5.6) {
+    cover('bg_islands', 1.15, 0.5, 0.4, '#E8F0E4')
+    ctx.fillStyle = 'rgba(252,252,251,.8)'; ctx.fillRect(0, 0, W, H)
+    shotView({ img: 'ai', no: '05', h1: 'AI 助教', h2: '懂你的进度', sub: '参考你的错题和学习情况来讲解', side: 1 }, t - 2.6, 3.0, t, false)
+    return
+  }
+  // 导入教材 → AI 排学习计划
+  paperBg(t)
+  const lt = t - 5.6
+  text('导入你的教材，AI 帮你排学习计划', W / 2, 170, 76, INK, { align: 'center', alpha: seg(lt, 0, 0.4) })
+  const dx = (1 - outBack(seg(lt, 0, 0.5))) * -700
+  pixelBox(180 + dx, 320, 300, 380, '#fff')
+  ctx.fillStyle = INK; ctx.fillRect(420 + dx, 320, 60, 66); ctx.fillStyle = PAPER; ctx.fillRect(426 + dx, 320, 54, 60)
+  for (let i = 0; i < 6; i++) { ctx.fillStyle = '#DEDBD2'; ctx.fillRect(216 + dx, 420 + i * 40, [228, 190, 228, 150, 210, 120][i], 14) }
+  pixelBox(204 + dx, 344, 104, 50, ORANGE, INK, 4); text('PDF', 256 + dx, 382, 34, '#fff', { align: 'center', font: MONO, weight: 'bold' })
+  text('我的教材.pdf', 330 + dx, 770, 40, TEXT2, { align: 'center' })
+  // 流动的像素箭头
+  const dots = (xa, xb, t0) => { for (let i = 0; i < 7; i++) { if (lt < t0 + i * 0.06) continue; const on = Math.floor(lt * 10 - i) % 7 === 0; ctx.fillStyle = on ? ORANGE : SOFT; ctx.fillRect(xa + (xb - xa) * i / 6, 500 - (on ? 6 : 0), 18, 18) } }
+  dots(540, 780, 0.5); dots(1030, 1190, 1.0)
+  hero(905, 600 - Math.abs(Math.sin(lt * 7)) * 34, 14, { blink: blinkAt(t), frame: Math.floor(lt * 7) % 2 })
+  burst(905, 420, lt - 0.9, 301, 22, { speed: 420, size: 16, life: 0.8 })
+  const pp = outBack(seg(lt, 1.0, 1.5))
+  if (pp > 0) {
+    ctx.save(); ctx.translate(1520, 535); ctx.scale(pp, pp); ctx.translate(-1520, -535)
+    pixelBox(1240, 300, 560, 470, '#fff')
+    text('学习计划', 1280, 372, 48, INK); ctx.fillStyle = INK; ctx.fillRect(1280, 392, 480, 6)
+    ;['第 1 周 · 第 1–2 章', '第 2 周 · 第 3–4 章', '第 3 周 · 练习与复盘', '第 4 周 · 阶段自测'].forEach((row, i) => {
+      const rp = seg(lt, 1.4 + i * 0.3, 1.7 + i * 0.3); if (rp <= 0) return
+      const y = 470 + i * 76, done = lt > 2.3 + i * 0.3
+      ctx.globalAlpha = rp
+      pixelBox(1280, y - 36, 44, 44, done ? ORANGE : '#fff', INK, 4)
+      if (done) text('✓', 1302, y - 2, 34, '#fff', { align: 'center' })
+      text(row, 1350, y, 40, done ? TEXT2 : INK)
+    })
+    ctx.restore()
+  }
+  ;['长期记忆', '知识库笔记', '专题对话', '计算与绘图'].forEach((c, i) => {
+    const cp = seg(lt, 2.7 + i * 0.18, 3.1 + i * 0.18); if (cp <= 0) return
+    const x = 140 + i * 420, e = outBack(cp)
+    ctx.save(); ctx.translate(x + 190, 908); ctx.scale(e, e)
+    pixelBox(-190, -48, 380, 96, '#fff'); ctx.fillStyle = ORANGE; ctx.fillRect(-166, -24, 16, 48)
+    text(c, 16, 16, 46, INK, { align: 'center' }); ctx.restore()
+  })
+}
+
+// ── 场 5：遗忘曲线 + 能力徽章（26–33s，暗色）──
+function s5(t) {
+  cover('bg_circuit', 1.15, 0.5 + t * 0.004, 0.5, DARK)
+  ctx.fillStyle = 'rgba(28,26,23,.86)'; ctx.fillRect(0, 0, W, H)
+  const x0 = 220, x1 = 1700, yb = 820, yt = 320
+  const fade = 1 - seg(t, 3.7, 4.0)
+  ctx.save(); ctx.globalAlpha = fade
+  popText('间隔重复', 460, 170, 96, t - 0.1, { color: CREAM, shadow: ORANGE, sd: 5 })
+  text('在遗忘之前，安排下一次复习', 760, 165, 46, '#D8D3C8', { alpha: seg(t, 0.6, 1.1) })
+  ctx.fillStyle = '#6b6963'; ctx.fillRect(x0, yb, x1 - x0, 6); ctx.fillRect(x0, yt - 40, 6, yb - yt + 40)
+  text('记忆保持率', x0 + 26, yt - 44, 34, '#B8B2A6')
+  // 曲线：每到复习点回到 100%，之后衰减越来越慢
+  const days = [1, 3, 7, 14, 30, 60], N = days.length
+  const nodeX = (i) => x0 + 90 + (x1 - x0 - 180) * (i / N)
+  const prog = seg(t, 0.5, 3.6), endX = lerp(x0, x1 - 40, prog)
+  const yAt = (x) => {
+    let i = -1; for (let k = 0; k < N; k++) if (x >= nodeX(k)) i = k
+    const sx = i < 0 ? x0 : nodeX(i), ex = i + 1 < N ? nodeX(i + 1) : x1
+    const rate = 2.6 / (1 + (i + 1) * 0.75), p = (x - sx) / (ex - sx)
+    return yt + (yb - yt) * (1 - Math.exp(-rate * p)) * 0.82
+  }
+  ctx.fillStyle = SOFT
+  let tipY = yt
+  for (let x = x0; x <= endX; x += 6) { tipY = yAt(x); ctx.fillRect(x, snap(tipY), 8, 8) }
+  days.forEach((d, i) => {
+    const nx = nodeX(i), p = seg(endX, nx, nx + 60)
+    if (p <= 0) return
+    const hitT = 0.5 + 3.1 * ((nx - x0) / (x1 - 40 - x0))
+    ctx.fillStyle = 'rgba(233,165,140,.28)'; ctx.fillRect(nx, yt, 6, yb - yt)
+    const s = outBack(p) * 22
+    ctx.fillStyle = ORANGE; ctx.fillRect(nx + 3 - s, yb + 3 - s, s * 2, s * 2)
+    text(`${d} 天`, nx + 3, yb + 78, 40, PAPER, { align: 'center', alpha: p })
+    burst(nx, yt, t - hitT, 90 + i, 14, { speed: 380, size: 14, life: 0.7 })
+  })
+  if (prog < 1) hero(endX, snap(tipY) - 4, 9, { frame: 1 + (Math.floor(t * 12) % 2), blink: false })
+  else hero(endX, snap(tipY) - 4 - Math.abs(Math.sin((t - 3.6) * 6)) * 40, 9, { blink: blinkAt(t) })
+  ctx.restore()
+  // 徽章
+  const bt = t - 4.0
+  if (bt > 0) {
+    const B = [['断网可用', '学习、练习、跑代码都在本机'], ['错题本', '做错的题自动收集重做'], ['自带模型', 'AI 可选接入，用你自己的 API Key'], ['手机也能学', '同一网络下浏览器直接打开']]
+    B.forEach(([h, s], i) => {
+      const p = seg(bt, i * 0.28, i * 0.28 + 0.45); if (p <= 0) return
+      const col = i % 2, row = Math.floor(i / 2), bx = 250 + col * 740, by = 250 + row * 300, e = outBack(p)
+      ctx.save(); ctx.translate(bx + 340, by + 115); ctx.scale(e, e); ctx.rotate((1 - p) * (i % 2 ? 0.2 : -0.2))
+      pixelBox(-340, -115, 680, 230, i % 3 === 0 ? CREAM : PAPER, '#000', 8)
+      ctx.fillStyle = ORANGE; ctx.fillRect(-300, -75, 24, 150)
+      text(h, -250, -8, 72, INK); text(s, -250, 62, 34, TEXT2)
+      ctx.restore()
+      burst(bx + 340, by + 115, bt - i * 0.28 - 0.2, 120 + i, 16, { speed: 760, size: 16, life: 0.7 })
+    })
+    hero(1650, 1010 - Math.abs(Math.sin(bt * 5)) * 50, 13, { blink: blinkAt(t), flip: true, frame: Math.floor(bt * 5) % 2 })
+  }
+}
+
+// ── 场 6：片尾（33–41s）──
+function s6(t) {
+  cover('bg_sunrise', 1.1 + t * 0.008, 0.5, 0.5, '#FBE9C8')
+  ctx.fillStyle = 'rgba(249,249,247,.35)'; ctx.fillRect(0, 0, W, H)
+  // 像素烟花
+  for (let i = 0; i < 9; i++) {
+    const ft = 0.3 + i * 0.55 + rnd(i, 61) * 0.3
+    burst(200 + rnd(i, 62) * 1520, 140 + rnd(i, 63) * 330, t - ft, 200 + i, 34, { speed: 520, grav: 320, life: 1.5, size: 20, colors: [ORANGE, SOFT, '#fff', Y, G] })
+  }
+  const rise = outBack(seg(t, 0, 0.8))
+  const bob = Math.sin(t * 2.4) * 14
+  logoMark(W / 2, 300 + bob * 0.4, 300, rise)
+  hero(lerp(-150, W / 2 + 250, outCubic(seg(t, 0.3, 1.2))), 440 - Math.abs(Math.sin(t * 4.5)) * 46 * (t > 1.2 ? 1 : 0), 13, { frame: t < 1.2 ? 1 + (Math.floor(t * 12) % 2) : 0, blink: blinkAt(t + 0.4) })
+  popText(NAME, W / 2, 660, 180, t - 0.6, { font: SERIF, gap: 4, stroke: '#fff', sw: 26, shadow: 'rgba(179,75,40,.28)', sd: 9 })
+  text('课程、真题、AI 学习助手，一个应用就够', W / 2, 790, 60, INK, { align: 'center', alpha: seg(t, 1.6, 2.2), stroke: 'rgba(255,255,255,.85)', sw: 12 })
+  const p = outBack(seg(t, 2.4, 2.9))
+  if (p > 0) {
+    ctx.save(); ctx.translate(W / 2, 920); ctx.scale(p, p * (1 + Math.sin(t * 5) * 0.015))
+    pixelBox(-560, -58, 1120, 116, ORANGE, INK, 8)
+    text('免费下载 · Windows 10 / 11', 0, 20, 54, '#fff', { align: 'center' }); ctx.restore()
+  }
+  text('开源 · github.com/zz-zane/CodeBud', W / 2, 1042, 44, INK, { align: 'center', font: MONO, weight: 'bold', alpha: seg(t, 3.0, 3.5), stroke: 'rgba(255,255,255,.8)', sw: 8 })
+  ctx.fillStyle = `rgba(0,0,0,${seg(t, 7.2, 8.0)})`; ctx.fillRect(0, 0, W, H)
+}
+
+// ── 时间线 + 像素块转场 ──
+const SCENES = [[0, s1], [6, s2], [10, s3], [18, s4], [28, s7], [38, s5], [46, s6]]
+function draw(t) {
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1
+  let i = SCENES.length - 1; while (i > 0 && t < SCENES[i][0]) i--
+  ctx.save(); SCENES[i][1](t - SCENES[i][0]); ctx.restore()
+  // 转场：方块先盖满、切场后再散开
+  const HALF = 0.42, B = 120
+  for (const [cut] of SCENES.slice(1)) {
+    const d = t - cut; if (Math.abs(d) >= HALF) continue
+    const p = 1 - Math.abs(d) / HALF
+    for (let y = 0; y < 9; y++) for (let x = 0; x < 16; x++) {
+      const delay = rnd(x + y * 16, cut) * 0.5 + (x / 16) * 0.3, s = clamp((p * 1.8 - delay) / 0.5)
+      if (s <= 0) continue
+      ctx.fillStyle = [ORANGE, PAPER, INK, CREAM][Math.floor(rnd(x * 7 + y * 31, cut + 2) * 4)]
+      const z = B * outCubic(s) + 1; ctx.fillRect(x * B + (B - z) / 2, y * B + (B - z) / 2, z, z)
+    }
+  }
+}
+
+const ready = load(['bg_room', 'bg_world', 'bg_islands', 'bg_sunrise', 'bg_circuit', 'play_code', 'play_run', 'lesson2', 'overview', 'cet6', 'ai'])
+  .then(() => new Promise((res) => { const im = new Image(); im.onload = () => { IMG.logo = im; res() }; im.onerror = res; im.src = 'assets/logo.svg' }))
+  .then(() => document.fonts.load('40px Pix', NAME).catch(() => {}))
+  .then(() => { window.READY = true })
+window.draw = draw; window.DUR = DUR
+// 浏览器直接打开时实时预览；渲染脚本带 ?render 时不自动播放
+if (!location.search.includes('render')) ready.then(() => {
+  const t0 = performance.now() / 1000 - (+new URLSearchParams(location.search).get('t') || 0)
+  const loop = () => { draw((performance.now() / 1000 - t0) % DUR); requestAnimationFrame(loop) }
+  loop()
+})
+</script>
