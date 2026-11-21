@@ -13,7 +13,8 @@ import type {
   StudyUsageRecord,
   StudyQuota,
   StudyResult,
-  StudyApi
+  StudyApi,
+  StudyTaskEdit
 } from '../../../shared/study-companion'
 import { STUDY_COPY } from '../lib/study-copy'
 import { CURRENT_STUDY_VERSION } from '../../../shared/study-companion'
@@ -438,6 +439,18 @@ export const useStudyStore = defineStore('study', () => {
     }
   }
 
+  /** 任务增删改：成功后整份重载快照（任务组可能新增 / 删除，局部打补丁容易漏） */
+  async function editTasks(input: StudyTaskEdit): Promise<StudyResult<StudyPlan | null>> {
+    if (!studyApi.value?.editTasks) return { ok: false, error: STUDY_COPY.STATUS.PENDING_BACKEND }
+    try {
+      const res = await studyApi.value.editTasks(input)
+      if (res.ok) await init()
+      return res
+    } catch (err) {
+      return { ok: false, error: (err as Error)?.message || 'editTasks error' }
+    }
+  }
+
   /**
    * 切换任务进度状态
    */
@@ -800,6 +813,7 @@ export const useStudyStore = defineStore('study', () => {
     confirmPlan,
     discardPlan,
     setTaskStatus,
+    editTasks,
     saveConnection,
     detectAgent,
     listModels,

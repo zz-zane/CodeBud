@@ -191,6 +191,8 @@ export const IPC = {
   studyCreateHtmlPreview: 'study:create-html-preview',
   studyConfirmPlan: 'study:confirm-plan',
   studyDiscardPlan: 'study:discard-plan',
+  /** 任务增删改（自定义任务组、加 / 改 / 删任务、改名 / 删组）；AI 助教的任务指令走同一个主进程函数 */
+  studyEditTasks: 'study:edit-tasks',
 
   // ---------------------------------------------------------------- 手机连接（docs/29）
   // 全部仅电脑端：不在 shared/remote-channels.ts 白名单里，手机调用一律 403。

@@ -4,8 +4,21 @@ import { isStudyRoute, STUDY_MAIN_SESSION_ID, type StudyActionRecord, type Study
 import { hasBannedPhrase } from '../../shared/memory-guard'
 import type { AiChatSession } from '../../shared/types'
 import { idInput, objectInput, StudyStore, textInput } from './store'
+import { confirmStudyPlan } from './materials'
+import { editStudyTasks } from './tasks'
 
 export const STUDY_ACTION_INSTRUCTIONS = STUDY_TEXT.ACTION_INSTRUCTIONS
+
+// AI 指令名 → editStudyTasks 的 op（指令名避开已有的 create_plan：那个是「按教材生成待确认草稿」）
+const TASK_ACTION_OPS: Record<string, string> = {
+  new_task_group: 'create_plan',
+  add_task: 'add_task',
+  update_task: 'update_task',
+  delete_task: 'delete_task',
+  rename_task_group: 'rename_plan',
+  delete_task_group: 'delete_plan',
+  confirm_plan: 'confirm_plan'
+}
 
 function actionId(turnId: string, index: number): string {
   const hex = createHash('sha256').update(`${turnId}:${index}`).digest('hex')
@@ -53,6 +66,21 @@ export function applyStudyActions(input: { store: StudyStore; text: string; user
         } else if (type === 'remember' || type === 'forget' || type === 'save_note') {
           input.store.update(state => applyDataAction(state, data, type, id, input.turnId, input.userMessage, input.isLesson))
           result.message = type === 'remember' ? STUDY_TEXT.ACTION_MEMORY_SAVED : type === 'forget' ? STUDY_TEXT.ACTION_MEMORY_FORGOTTEN : STUDY_TEXT.ACTION_NOTE_SAVED
+        } else if (type in TASK_ACTION_OPS) {
+          const op = TASK_ACTION_OPS[type]
+          let title: string
+          let count = 0
+          if (op === 'confirm_plan') {
+            const plan = input.store.read().plans.find(item => item.id === idInput(data.planId))
+            if (!plan) throw new Error(STUDY_TEXT.PLAN_MISSING)
+            title = confirmStudyPlan(input.store, { planId: plan.id, title: plan.title, tasks: plan.tasks }).title
+          } else {
+            const before = data.planId === undefined ? undefined : input.store.read().plans.find(item => item.id === data.planId)?.title
+            const plan = editStudyTasks(input.store, { ...data, op, source: 'ai' }, input.isLesson)
+            title = plan?.title ?? before ?? ''
+            count = plan?.tasks.length ?? 0
+          }
+          result.message = STUDY_TEXT.TASK_ACTION_DONE[op](title, count)
         } else throw new Error(STUDY_TEXT.ACTION_UNSUPPORTED)
         result.ok = true
       } catch (error) { result.message = STUDY_TEXT.ACTION_FAILED_PREFIX + (error instanceof Error ? error.message : STUDY_TEXT.ACTION_DATA_INVALID) }

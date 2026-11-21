@@ -91,7 +91,7 @@ export function confirmStudyPlan(store: StudyStore, input: unknown): StudyPlan {
     const id = idInput(task.id)
     if (seen.has(id)) throw new Error(STUDY_TEXT.TASK_DUPLICATE_ID)
     seen.add(id)
-    return { id, title: textInput(task.title, 300).trim(), description: textInput(task.description, 4000).trim() }
+    return { id, title: textInput(task.title, 300).trim(), description: textInput(task.description, 4000, true).trim() }
   })
   return store.update((state) => {
     const plan = state.plans.find((item) => item.id === planId)

@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "lessonId": "c-stage1-14",
+  "title": "指针里存的是门牌号",
+  "concept": "指针 = 存地址的变量",
+  "roles": {
+    "address": { "label": "地址 / 门牌号", "color": "blue" },
+    "value":   { "label": "数值",          "color": "orange" },
+    "pointer": { "label": "指针",          "color": "teal" }
+  },
+  "tokens": {
+    "&a": "address",
+    "*p": "value",
+    "p":  "pointer",
+    "a":  "value",
+    "5":  "value",
+    "10": "value"
+  },
+  "code": {
+    "lang": "c",
+    "lines": [
+      "#include <stdio.h>",
+      "int main(void) {",
+      "    int a = 5;",
+      "    int *p = &a;",
+      "    *p = 10;",
+      "    printf(\"%d\\n\", a);",
+      "    return 0;",
+      "}"
+    ],
+    "expectedOutput": "10\n"
+  },
+  "acts": [
+    {
+      "kind": "hook",
+      "title": "为什么 a 变成了 10",
+      "steps": [
+        {
+          "caption": "先看一段让初学者困惑的代码",
+          "do": [
+            { "op": "title", "text": "指针里存的是门牌号", "sub": "C 语言 · 初识指针" }
+          ]
+        },
+        {
+          "caption": "先建变量 {value:a}，把 {value:5} 放进去",
+          "do": [
+            { "op": "write", "line": 3 }
+          ]
+        },
+        {
+          "caption": "再定义 {pointer:p}，指向 {address:&a}",
+          "do": [
+            { "op": "write", "line": 4 }
+          ]
+        },
+        {
+          "caption": "没碰 {value:a}，只改 {value:*p}，结果输出 {value:10}",
+          "do": [
+            { "op": "write", "line": 5 },
+            { "op": "write", "line": 6 },
+            { "op": "enter", "id": "hook-out", "kind": "output" },
+            { "op": "print", "text": "10" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "analogy",
+      "title": "柜子和纸条的类比",
+      "steps": [
+        {
+          "caption": "把内存想成一排柜子，各有门牌号",
+          "do": [
+            { "op": "enter", "id": "lk-prev", "kind": "box", "skin": "locker", "tag": "96", "value": "·" },
+            { "op": "enter", "id": "lk-a", "kind": "box", "skin": "locker", "tag": "100", "value": "5", "name": "a 号柜", "role": "value" },
+            { "op": "enter", "id": "lk-next", "kind": "box", "skin": "locker", "tag": "104", "value": "·" }
+          ]
+        },
+        {
+          "caption": "{address:100} 号柜子里放着数字 {value:5}",
+          "do": [
+            { "op": "focus", "ids": ["lk-a"] }
+          ]
+        },
+        {
+          "caption": "另拿一张纸条，只抄门牌号 {address:100}",
+          "do": [
+            { "op": "focus", "ids": [] },
+            { "op": "enter", "id": "lk-p", "kind": "box", "skin": "note", "tag": "纸条", "value": "100", "role": "address", "place": "below:lk-a" }
+          ]
+        },
+        {
+          "caption": "纸条不是 {value:5}，它只记着去哪找 {value:5}",
+          "do": [
+            { "op": "arrow", "from": "lk-p", "to": "lk-a", "role": "pointer", "style": "solid" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "reveal",
+      "title": "柜子原地变成内存",
+      "steps": [
+        {
+          "caption": "柜子变成内存格，门牌号变成地址",
+          "do": [
+            { "op": "morph", "id": "lk-prev", "skin": "memory", "tag": "0x7ffd0c" },
+            { "op": "morph", "id": "lk-a", "skin": "memory", "tag": "0x7ffd10", "name": "int a" },
+            { "op": "morph", "id": "lk-next", "skin": "memory", "tag": "0x7ffd14" },
+            { "op": "row", "cells": ["柜子", "内存单元"] }
+          ]
+        },
+        {
+          "caption": "门牌号就是十六进制内存地址",
+          "do": [
+            { "op": "row", "cells": ["门牌号", "地址 &a"] },
+            { "op": "focus", "ids": ["lk-a"] }
+          ]
+        },
+        {
+          "caption": "纸条就是 {pointer:p}，里面存着 {address:0x7ffd10}",
+          "do": [
+            { "op": "focus", "ids": [] },
+            { "op": "morph", "id": "lk-p", "skin": "var", "tag": "0x7ffd20", "name": "int *p", "value": "0x7ffd10" },
+            { "op": "row", "cells": ["纸条", "指针变量 p"] }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "trace",
+      "title": "跟着真实代码走一遍",
+      "steps": [
+        {
+          "caption": "执行建变量，把 {value:5} 存入 {address:0x7ffd10}",
+          "do": [
+            { "op": "line", "line": 3 },
+            { "op": "enter", "id": "tr-a", "kind": "box", "skin": "memory", "tag": "0x7ffd10", "name": "int a", "value": "5", "role": "value" }
+          ]
+        },
+        {
+          "caption": "{address:&a} 取出 {address:0x7ffd10} 放进 {pointer:p}",
+          "do": [
+            { "op": "line", "line": 4 },
+            { "op": "enter", "id": "tr-p", "kind": "box", "skin": "var", "tag": "0x7ffd20", "name": "int *p", "value": "···", "role": "address", "place": "below:tr-a" },
+            { "op": "fly", "from": "tr-a", "to": "tr-p", "text": "0x7ffd10", "role": "address" },
+            { "op": "arrow", "from": "tr-p", "to": "tr-a", "role": "pointer", "style": "solid" }
+          ]
+        },
+        {
+          "caption": "{value:*p} 顺着地址找到 {value:a}，改写成 {value:10}",
+          "do": [
+            { "op": "line", "line": 5 },
+            { "op": "focus", "ids": ["tr-a", "tr-p"] },
+            { "op": "set", "id": "tr-a", "value": "10" }
+          ]
+        },
+        {
+          "caption": "打印 {value:a} 输出 {value:10}，完成间接修改",
+          "do": [
+            { "op": "line", "line": 6 },
+            { "op": "enter", "id": "tr-out", "kind": "output" },
+            { "op": "print", "text": "10" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "pitfall",
+      "title": "易错：野指针与改错地址",
+      "steps": [
+        {
+          "caption": "未初始化的 {pointer:p} 指向未知区会崩溃",
+          "do": [
+            { "op": "enter", "id": "pf-p", "kind": "box", "skin": "var", "tag": "0x7ffd20", "name": "int *p", "value": "0x????", "role": "address" },
+            { "op": "enter", "id": "pf-zone", "kind": "zone", "title": "未知受保护内存区", "tone": "danger" },
+            { "op": "arrow", "from": "pf-p", "to": "pf-zone", "style": "dashed" },
+            { "op": "break", "id": "pf-zone", "text": "Segmentation Fault" }
+          ]
+        },
+        {
+          "caption": "先让 {pointer:p} 指向 {address:&a}，再用 {value:*p} 改值",
+          "do": [
+            { "op": "exit", "id": "pf-zone" },
+            { "op": "enter", "id": "pf-a", "kind": "box", "skin": "memory", "tag": "0x7ffd10", "name": "int a", "value": "10", "role": "value" },
+            { "op": "set", "id": "pf-p", "value": "0x7ffd10" },
+            { "op": "arrow", "from": "pf-p", "to": "pf-a", "role": "pointer", "style": "solid" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "recap",
+      "title": "一张表记住指针",
+      "steps": [
+        {
+          "caption": "记住这张三列对照表，概念就清了",
+          "do": [
+            { "op": "row", "cells": ["写门牌号的纸条", "指针变量", "p"] },
+            { "op": "row", "cells": ["柜子的门牌号", "内存地址", "&a"] },
+            { "op": "row", "cells": ["顺着纸条开柜", "解引用读写", "*p"] }
+          ]
+        },
+        {
+          "caption": "{pointer:p} 存门牌号，{value:*p} 才是柜里的数",
+          "do": [
+            { "op": "title", "text": "指针 = 存地址的变量" }
+          ]
+        }
+      ]
+    }
+  ]
+}

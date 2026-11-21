@@ -1,0 +1,10 @@
+{
+  "name": "codebud-video-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CodeBud deterministic Canvas + WebCodecs video engine prototype (docs/38)",
+  "license": "MIT",
+  "dependencies": {
+    "mp4-muxer": "^5.1.3"
+  }
+}

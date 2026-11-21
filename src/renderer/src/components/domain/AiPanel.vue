@@ -671,13 +671,14 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
 }
 .resume-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .resume-close { width: 26px; height: 26px; min-width: 26px; min-height: 26px; padding: 0; color: var(--mi-text-2); }
-.ai-panel { display:flex; flex-direction:column; height:100%; min-height:0; min-width:0; color:var(--mi-text); background:var(--cds-surface-1); border:1px solid var(--mi-border); border-radius:14px; overflow:hidden; box-sizing:border-box; font-size:var(--mi-fs-body); }
+.ai-panel { position:relative; display:flex; flex-direction:column; height:100%; min-height:0; min-width:0; color:var(--mi-text); background:var(--cds-surface-1); border:1px solid var(--mi-border); border-radius:14px; overflow:hidden; box-sizing:border-box; font-size:var(--mi-fs-body); }
 .ai-panel.is-rail { border:0; border-radius:0; background:transparent; }
 .ai-empty-compact { display:flex; align-items:center; justify-content:center; padding:var(--mi-sp-8) var(--mi-sp-4); text-align:center; color:var(--mi-text-2); font-size:var(--mi-fs-label); line-height:1.6; }
 .is-rail .model-chip { max-width:8em; }
 .is-rail .lead-chip { max-width:7em; }
 .send-btn { flex:0 0 auto; flex-shrink:0; }
-.ai-header { flex-shrink:0; display:flex; justify-content:space-between; gap:var(--mi-sp-2); align-items:center; padding:var(--mi-sp-2); }
+.ai-header { position:absolute; top:0; left:0; right:0; z-index:3; display:flex; justify-content:space-between; gap:var(--mi-sp-2); align-items:center; padding:var(--mi-sp-2); background:color-mix(in srgb, var(--cds-surface-1) 78%, transparent); -webkit-backdrop-filter:blur(12px) saturate(1.2); backdrop-filter:blur(12px) saturate(1.2); }
+.ai-header::after { content:''; position:absolute; left:0; right:0; top:100%; height:24px; pointer-events:none; background:linear-gradient(to bottom, color-mix(in srgb, var(--cds-surface-1) 78%, transparent), transparent); }
 /* 收起键留在最左，且和标题之间留一点呼吸，免得看起来像标题的装饰 */
 .ai-header > .icon-btn.collapse { margin-right:2px; }
 .session-controls,.ai-actions { display:flex; align-items:center; gap:var(--mi-sp-1); min-width:0; }
@@ -686,8 +687,8 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
 .icon-btn,.send-btn { display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; width:var(--mi-icon-btn); height:var(--mi-icon-btn); border:0; border-radius:8px; color:var(--mi-text-2); background:transparent; cursor:pointer; }
 .icon-btn svg,.send-btn svg,.jump-latest svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 .icon-btn:hover,.icon-btn.active { background:var(--mi-blue-light); color:var(--mi-text); }
-.ai-chat-view,.ai-history-view { display:flex; flex-direction:column; flex:1; min-height:0; min-width:0; }
-.ai-messages { flex:1; min-height:0; overflow:auto; padding:var(--mi-sp-4) var(--mi-sp-4); }
+.ai-chat-view,.ai-history-view { position:relative; display:flex; flex-direction:column; flex:1; min-height:0; min-width:0; }
+.ai-messages { flex:1; min-height:0; overflow:auto; padding:calc(48px + var(--mi-sp-4)) var(--mi-sp-4) var(--mi-sp-4); }
 /* 消息列：rail 下就是全宽；main 下限宽 760 居中（§3.1） */
 .ai-column { display:flex; flex-direction:column; gap:var(--mi-sp-6); min-height:100%; min-width:0; }
 .ai-empty-guide { margin:auto 0; padding:var(--mi-sp-3) var(--mi-sp-1); }
@@ -741,7 +742,7 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
 .send-btn:disabled { opacity:.45; cursor:default; }
 .jump-latest { position:absolute; left:50%; top:-40px; transform:translateX(-50%); width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--mi-border); border-radius:50%; background:var(--mi-card); color:var(--mi-text-2); cursor:pointer; box-shadow:var(--mi-shadow-lg); z-index:2; }
 .jump-latest:hover { color:var(--mi-text); }
-.ai-history-view { overflow:auto; padding:var(--mi-sp-4) var(--mi-sp-3); gap:var(--mi-sp-3); }
+.ai-history-view { overflow:auto; padding:calc(48px + var(--mi-sp-4)) var(--mi-sp-3) var(--mi-sp-4); gap:var(--mi-sp-3); }
 .history-head { display:flex; justify-content:space-between; align-items:center; gap:var(--mi-sp-2); font-size:var(--mi-fs-body); }
 .history-list { display:flex; flex-direction:column; gap:var(--mi-sp-1); }
 .history-item { display:flex; align-items:center; min-width:0; border-radius:8px; }
@@ -757,7 +758,27 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
 
 /* ── main 变体：/ai 主界面（§3.1）。无外框无底色，坐在 canvas 上 ── */
 .ai-panel.is-main { border:0; border-radius:0; background:transparent; }
-.is-main .ai-messages { padding:var(--mi-sp-6) var(--mi-sp-6) var(--mi-sp-4); }
+.is-main .ai-chat-view::before {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:calc(var(--mi-topbar-h) + 24px);
+  z-index:3;
+  pointer-events:none;
+  background:linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--mi-canvas) 82%, transparent) 0%,
+    color-mix(in srgb, var(--mi-canvas) 72%, transparent) var(--mi-topbar-h),
+    transparent 100%
+  );
+  -webkit-backdrop-filter:blur(12px) saturate(1.2);
+  backdrop-filter:blur(12px) saturate(1.2);
+  -webkit-mask-image:linear-gradient(to bottom, var(--mi-text) 0%, var(--mi-text) var(--mi-topbar-h), transparent 100%);
+  mask-image:linear-gradient(to bottom, var(--mi-text) 0%, var(--mi-text) var(--mi-topbar-h), transparent 100%);
+}
+.is-main .ai-messages { padding:calc(var(--mi-topbar-h) + var(--mi-sp-6)) var(--mi-sp-6) var(--mi-sp-4); }
 .is-main .ai-column { max-width:760px; margin-inline:auto; gap:var(--mi-sp-6); }
 .is-main .ai-message.user .msg-content { border-radius:16px; max-width:80%; }
 .is-main .ai-message.assistant .msg-content { background:none; }
@@ -823,7 +844,7 @@ defineExpose({ focusInput: () => inputArea.value?.focus() })
 .is-main .context-tag { max-width:220px; }
 .is-main .ai-empty-guide { margin:auto 0; padding:0; }
 
-@media (max-width:1000px) { .ai-messages { padding:var(--mi-sp-4) var(--mi-sp-3); } .is-main .ai-messages { padding:var(--mi-sp-4); } .is-main .ai-footer { padding:0 var(--mi-sp-4) var(--mi-sp-4); } }
+@media (max-width:1000px) { .ai-messages { padding:calc(48px + var(--mi-sp-4)) var(--mi-sp-3) var(--mi-sp-4); } .is-main .ai-messages { padding:calc(var(--mi-topbar-h) + var(--mi-sp-4)) var(--mi-sp-4) var(--mi-sp-4); } .is-main .ai-footer { padding:0 var(--mi-sp-4) var(--mi-sp-4); } }
 @media (max-height:640px) { .is-main .ai-footer { padding-bottom:var(--mi-sp-3); } }
 
 .ai-key-banner {

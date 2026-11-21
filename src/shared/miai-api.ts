@@ -288,6 +288,7 @@ export function createMiaiApi(t: MiaiTransport) {
     confirmPlan: (input: Parameters<StudyApi['confirmPlan']>[0]): ReturnType<StudyApi['confirmPlan']> => t.invoke(IPC.studyConfirmPlan, input),
     discardPlan: (planId: string): ReturnType<StudyApi['discardPlan']> => t.invoke(IPC.studyDiscardPlan, planId),
     setTaskStatus: (input: Parameters<StudyApi['setTaskStatus']>[0]): ReturnType<StudyApi['setTaskStatus']> => t.invoke(IPC.studySetTaskStatus, input),
+    editTasks: (input: Parameters<StudyApi['editTasks']>[0]): ReturnType<StudyApi['editTasks']> => t.invoke(IPC.studyEditTasks, input),
     exportVault: (): ReturnType<StudyApi['exportVault']> => t.invoke(IPC.studyExportVault),
     getUsage: (refresh?: boolean): ReturnType<StudyApi['getUsage']> => t.invoke(IPC.studyGetUsage, refresh),
     saveConnection: (input: Parameters<StudyApi['saveConnection']>[0]): ReturnType<StudyApi['saveConnection']> => t.invoke(IPC.studySaveConnection, input),

@@ -10,6 +10,16 @@ export interface StudyNote { id: string; title: string; body: string; tags: stri
 export interface StudyMaterial { id: string; name: string; kind: string; charCount: number; createdAt: number; status: 'ready' | 'unsupported' | 'error'; error?: string }
 export interface StudyTask { id: string; title: string; description: string; status: 'todo' | 'doing' | 'done'; sourceRef?: string; lessonId?: string }
 export interface StudyPlan { id: string; title: string; materialId: string; tasks: StudyTask[]; createdAt: number; source: 'ai' | 'manual'; draft: boolean }
+/** 不来自教材的任务组（任务页手动新建、AI 对话里直接建）的 materialId；教材 id 是 uuid，不会撞上 */
+export const CUSTOM_PLAN_MATERIAL = 'custom'
+type TaskInput = { title: string; description?: string; lessonId?: string }
+export type StudyTaskEdit =
+  | { op: 'create_plan'; title: string; tasks?: TaskInput[] }
+  | { op: 'rename_plan'; planId: string; title: string }
+  | { op: 'delete_plan'; planId: string }
+  | ({ op: 'add_task'; planId: string } & TaskInput)
+  | { op: 'update_task'; planId: string; taskId: string; title?: string; description?: string; status?: StudyTask['status'] }
+  | { op: 'delete_task'; planId: string; taskId: string }
 export interface StudyPosition { route: string; lessonId?: string; lessonTitle?: string; learnedCount: number; totalLessons: number; weakLessons?: string[]; updatedAt?: number }
 export interface StudyConnection { id: string; kind: 'claude' | 'codex' | 'antigravity' | 'custom'; label: string; command: string; args: string[]; model?: string; status: 'disconnected' | 'connecting' | 'ready' | 'error'; error?: string; authMethods?: Array<{ id: string; name: string; type?: string }> }
 export interface StudyUsageRecord { id: string; at: number; provider: string; model: string; sessionId: string; inputTokens: number | null; outputTokens: number | null; cachedInputTokens: number | null; totalTokens: number | null; costUsd?: number; source: string }
@@ -42,6 +52,7 @@ export interface StudyApi {
   confirmPlan(input: { planId: string; title: string; tasks: Array<{ id: string; title: string; description: string }> }): Promise<StudyResult<StudyPlan>>
   discardPlan(planId: string): Promise<StudyResult<void>>
   setTaskStatus(input: { planId: string; taskId: string; status: 'todo' | 'doing' | 'done' }): Promise<StudyResult<void>>
+  editTasks(input: StudyTaskEdit): Promise<StudyResult<StudyPlan | null>>
   updatePosition(input: StudyPosition): Promise<StudyResult<void>>
   saveConnection(input: { id?: string; kind: StudyConnection['kind']; label: string; command: string; args: string[]; model?: string }): Promise<StudyResult<StudyConnection>>
   detectAgent(): Promise<StudyResult<string | null>>
@@ -88,9 +99,19 @@ export function studyContext(
   const memories = snapshot.memory.slice(-30).map(m => ({ id: m.id, text: m.text.slice(0, 1000), source: m.source }))
   const terms = query.toLocaleLowerCase().match(/[a-z0-9_]{2,}|[\p{Script=Han}]{2}/gu) ?? []
   const notes = snapshot.notes.filter(note => !note.archived && note.format === 'markdown').map(note => ({ note, score: terms.reduce((score, term) => score + ((note.title + '\n' + note.body).toLocaleLowerCase().includes(term) ? 1 : 0), 0) })).sort((a, b) => b.score - a.score || b.note.updatedAt - a.note.updatedAt).slice(0, 3).map(({ note }) => ({ id: note.id, title: note.title, excerpt: note.body.slice(0, 1400) }))
-  const tasks = snapshot.plans.filter(plan => !plan.draft).flatMap(plan => plan.tasks.filter(task => task.status !== 'done').map(task => ({ planId: plan.id, ...task }))).slice(0, 6)
-  const resources = { lastLesson: snapshot.lastLesson, notes, tasks, materials: snapshot.materials.map(material => ({ id: material.id, name: material.name })).slice(-30) }
-  return STUDY_TEXT.LEARNING_CONTEXT(escape(position).slice(0, 3000), escape(JSON.stringify(memories)).slice(0, 8000), escape(JSON.stringify(resources)).slice(0, 10_000))
+  // 任务组带 id，AI 才能把任务加进指定组 / 改状态（docs：AI 助教可通过对话管理任务）。
+  // 草稿只给 id 与标题（任务内容在学员确认前不进上下文）；每组最多 25 条、标题截 60 字，控制体积。
+  const materialName = new Map(snapshot.materials.map(material => [material.id, material.name]))
+  const plans = snapshot.plans.slice(-12).map(plan => ({
+    id: plan.id,
+    title: plan.title,
+    from: plan.materialId === CUSTOM_PLAN_MATERIAL ? 'custom' : materialName.get(plan.materialId) ?? 'material',
+    ...(plan.draft
+      ? { draft: true, taskCount: plan.tasks.length }
+      : { tasks: plan.tasks.slice(0, 25).map(task => ({ id: task.id, title: task.title.slice(0, 60), status: task.status, ...(task.lessonId ? { lessonId: task.lessonId } : {}) })) })
+  }))
+  const resources = { lastLesson: snapshot.lastLesson, notes, plans, materials: snapshot.materials.map(material => ({ id: material.id, name: material.name })).slice(-30) }
+  return STUDY_TEXT.LEARNING_CONTEXT(escape(position).slice(0, 3000), escape(JSON.stringify(memories)).slice(0, 8000), escape(JSON.stringify(resources)).slice(0, 24_000))
 }
 
 export function assertChatSessions(value: unknown): asserts value is AiChatSession[] {

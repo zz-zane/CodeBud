@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "lessonId": "os-segmentation-paging-basic",
+  "title": "同一个程序，两种切法",
+  "concept": "分段按内容切，分页按尺寸切",
+  "roles": {
+    "seg": { "label": "分段", "color": "blue" },
+    "page": { "label": "分页", "color": "teal" },
+    "addr": { "label": "要找的位置", "color": "orange" }
+  },
+  "tokens": { "段号": "seg", "页号": "page" },
+  "recapHeads": ["对比", "分段", "分页"],
+  "acts": [
+    {
+      "kind": "hook",
+      "title": "程序要放进内存",
+      "steps": [
+        { "caption": "程序要先放进内存才能运行", "do": [ { "op": "title", "text": "分段和分页", "sub": "内存是怎么分给程序的" } ] },
+        { "caption": "它有两部分：代码和数据", "do": [ { "op": "enter", "id": "g-prog", "kind": "group", "title": "一个程序", "layout": "row" }, { "op": "enter", "id": "p-code", "kind": "box", "skin": "var", "group": "g-prog", "tag": "代码", "value": "1200格" }, { "op": "enter", "id": "p-data", "kind": "box", "skin": "var", "group": "g-prog", "tag": "数据", "value": "500格" } ] },
+        { "caption": "内存里没有整块空位，得切开放：怎么切？", "hold": 4, "do": [ { "op": "focus", "ids": ["p-code", "p-data"] } ] }
+      ]
+    },
+    {
+      "kind": "analogy",
+      "title": "装信封还是订卡片",
+      "steps": [
+        { "caption": "分段：按内容装信封，大小跟着内容走", "do": [ { "op": "enter", "id": "g-seg", "kind": "group", "title": "分段", "layout": "column" }, { "op": "enter", "id": "seg-code", "kind": "box", "skin": "envelope", "group": "g-seg", "tag": "代码", "value": "装1200格" }, { "op": "enter", "id": "seg-data", "kind": "box", "skin": "envelope", "group": "g-seg", "tag": "数据", "value": "装500格" } ] },
+        { "caption": "分页：不管内容，每 1000 格订成一叠", "do": [ { "op": "enter", "id": "g-pg", "kind": "group", "title": "分页", "layout": "column" }, { "op": "enter", "id": "pg1", "kind": "box", "skin": "card", "group": "g-pg", "tag": "第1叠", "value": "1000格 满" }, { "op": "enter", "id": "pg2", "kind": "box", "skin": "card", "group": "g-pg", "tag": "第2叠", "value": "700格 空300" } ] },
+        { "caption": "1700 格分两叠，最后一叠空出 300 格", "hold": 4, "do": [ { "op": "focus", "ids": ["pg2"] } ] }
+      ]
+    },
+    {
+      "kind": "reveal",
+      "title": "信封是段，卡片是页",
+      "steps": [
+        { "caption": "信封就是段：一段装一个完整部分", "do": [ { "op": "focus", "ids": [] }, { "op": "morph", "id": "seg-code", "skin": "slot", "tag": "段0 · 代码", "value": "长1200" }, { "op": "morph", "id": "seg-data", "skin": "slot", "tag": "段1 · 数据", "value": "长500" }, { "op": "row", "cells": ["信封", "段：按内容切"] } ] },
+        { "caption": "卡片就是页：每页一样大", "do": [ { "op": "morph", "id": "pg1", "skin": "slot", "tag": "页0", "value": "满1000" }, { "op": "morph", "id": "pg2", "skin": "slot", "tag": "页1", "value": "用700 空300" }, { "op": "row", "cells": ["一叠卡片", "页：大小固定"] } ] }
+      ]
+    },
+    {
+      "kind": "trace",
+      "title": "同一个位置，两边怎么找",
+      "steps": [
+        { "caption": "段表：记下每段从哪开始、有多长", "do": [ { "op": "enter", "id": "g-st", "kind": "group", "title": "段表", "layout": "column" }, { "op": "enter", "id": "st0", "kind": "box", "skin": "slot", "group": "g-st", "tag": "段0 · 长1200", "value": "从5000起" }, { "op": "enter", "id": "st1", "kind": "box", "skin": "slot", "group": "g-st", "tag": "段1 · 长500", "value": "从2000起" }, { "op": "enter", "id": "g-ask", "kind": "group", "title": "要找的位置", "layout": "column" } ] },
+        { "caption": "段1从2000起，第300格就是2300", "hold": 4.5, "do": [ { "op": "enter", "id": "ask", "kind": "box", "skin": "var", "group": "g-ask", "tag": "分段地址", "value": "段1 第300格" }, { "op": "focus", "ids": ["ask", "st1"] }, { "op": "set", "id": "ask", "value": "→ 2300" } ] },
+        { "caption": "段1 只有 500 格，要第 600 格就越界", "hold": 4.5, "do": [ { "op": "set", "id": "ask", "value": "段1 第600格" }, { "op": "break", "id": "st1", "text": "越界" } ] },
+        { "caption": "页表：记下每一页放在第几个框", "do": [ { "op": "focus", "ids": [] }, { "op": "enter", "id": "g-pt", "kind": "group", "title": "页表", "layout": "column" }, { "op": "enter", "id": "pt0", "kind": "box", "skin": "slot", "group": "g-pt", "tag": "页0", "value": "在框4" }, { "op": "enter", "id": "pt1", "kind": "box", "skin": "slot", "group": "g-pt", "tag": "页1", "value": "在框7" } ] },
+        { "caption": "1300÷1000=1余300，去查页1", "hold": 4.5, "do": [ { "op": "enter", "id": "ask2", "kind": "box", "skin": "var", "group": "g-ask", "tag": "分页地址", "value": "第1300格" }, { "op": "set", "id": "ask2", "value": "页1 余300" }, { "op": "focus", "ids": ["ask2", "pt1"] } ] },
+        { "caption": "页1在框7，框7从7000起，得7300", "hold": 4.5, "do": [ { "op": "set", "id": "ask2", "value": "→ 7300" } ] }
+      ]
+    },
+    {
+      "kind": "pitfall",
+      "title": "浪费在哪里",
+      "steps": [
+        { "caption": "段大小不一，删删补补留下零碎空隙", "do": [ { "op": "enter", "id": "g-ms", "kind": "group", "title": "分段的内存", "layout": "row" }, { "op": "enter", "id": "ms1", "kind": "box", "skin": "memory", "group": "g-ms", "tag": "空隙", "value": "空300" }, { "op": "enter", "id": "ms2", "kind": "box", "skin": "memory", "group": "g-ms", "tag": "段A", "value": "已占用" }, { "op": "enter", "id": "ms3", "kind": "box", "skin": "memory", "group": "g-ms", "tag": "空隙", "value": "空200" } ] },
+        { "caption": "外部碎片：空隙加起来够，却没一块够大", "hold": 4.5, "do": [ { "op": "enter", "id": "newseg", "kind": "box", "skin": "memory", "tag": "新段", "value": "要400格", "place": "below:ms2" }, { "op": "arrow", "from": "newseg", "to": "ms1", "role": "seg" }, { "op": "break", "id": "newseg", "text": "放不下" } ] },
+        { "caption": "页框一样大，任何空框都放得下", "do": [ { "op": "enter", "id": "g-mp", "kind": "group", "title": "分页的内存", "layout": "row" }, { "op": "enter", "id": "mp1", "kind": "box", "skin": "memory", "group": "g-mp", "tag": "框2", "value": "空" }, { "op": "enter", "id": "mp2", "kind": "box", "skin": "memory", "group": "g-mp", "tag": "框6", "value": "空" }, { "op": "set", "id": "mp1", "value": "新页放这" } ] }
+      ]
+    },
+    {
+      "kind": "recap",
+      "title": "一张表看清差别",
+      "steps": [
+        { "caption": "四个方面，看清两者的差别", "hold": 7, "do": [ { "op": "row", "cells": ["怎么切", "按内容（代码、数据）", "按固定大小"] }, { "op": "row", "cells": ["每块大小", "各不相同", "全都一样"] }, { "op": "row", "cells": ["地址怎么找", "段号 + 段内第几格", "除以页大小，看商和余数"] }, { "op": "row", "cells": ["浪费在哪", "段之间的零碎空隙", "最后一页没装满"] } ] },
+        { "caption": "记住：分段看内容，分页看尺寸", "do": [ { "op": "title", "text": "分段按内容切，分页按尺寸切" } ] }
+      ]
+    }
+  ]
+}

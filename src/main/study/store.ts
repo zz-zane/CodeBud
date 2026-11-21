@@ -125,7 +125,7 @@ function assertSnapshot(value: unknown): asserts value is StudySnapshot {
           if (taskIds.has(taskId)) throw new Error(STUDY_TEXT.TASK_DUPLICATE_ID)
           taskIds.add(taskId)
           textInput(task.title, 300)
-          textInput(task.description, 4000)
+          textInput(task.description, 4000, true) // 自定义任务可以只有标题（2026-11-21 放宽；旧数据都非空，仍合法）
           if (!['todo', 'doing', 'done'].includes(task.status as string)) throw new Error(STUDY_TEXT.STATE_TASK_STATUS_INVALID)
           if (task.sourceRef !== undefined) textInput(task.sourceRef, 100)
           if (task.lessonId !== undefined) idInput(task.lessonId)

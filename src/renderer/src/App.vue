@@ -11,6 +11,8 @@ import PhoneTabBar from './components/domain/PhoneTabBar.vue'
 import MiToast from './components/base/MiToast.vue'
 import AiContextMenu from './components/domain/AiContextMenu.vue'
 import SettingsDialog from './components/domain/SettingsDialog.vue'
+import LearnerSurveyModal from './components/domain/LearnerSurveyModal.vue'
+import { isLearnerMemory } from '../../shared/learner-profile'
 import { useAiAssistantStore } from './stores/ai-assistant'
 import { useCet6Store } from './stores/cet6'
 import { useContentStore } from './stores/content'
@@ -340,6 +342,25 @@ const progress = useProgressStore()
 const practice = usePracticeStore()
 function refreshStudy(): void { void studyStore.init() }
 
+// 第一次打开：还没有「学习背景」记忆、也没点过「以后再说」时，弹出基础调研（docs：讲解动画 skill §0.5 用它选讲法）
+const SURVEY_DISMISSED_KEY = 'miai:learner-survey:dismissed'
+const surveyOpen = ref(false)
+watch(
+  () => studyStore.isInitialized,
+  (ready) => {
+    if (!ready || isBare.value || examLock.value) return
+    if (studyStore.memories.some((m) => isLearnerMemory(m.text))) return
+    let dismissed = false
+    try { dismissed = localStorage.getItem(SURVEY_DISMISSED_KEY) === '1' } catch { /* 存储不可用就照常询问 */ }
+    if (!dismissed) surveyOpen.value = true
+  },
+  { immediate: true }
+)
+function onSurveyDone(saved: boolean): void {
+  if (saved) return
+  try { localStorage.setItem(SURVEY_DISMISSED_KEY, '1') } catch { /* 下次启动会再问一次，可接受 */ }
+}
+
 function onStudyNavigate(e: CustomEvent<{ route: string; lessonId?: string }>): void {
   if (examLock.value || !e.detail || typeof e.detail.route !== 'string') return
   const targetRoute = e.detail.route
@@ -566,6 +587,7 @@ onBeforeUnmount(() => {
 
     <!-- 设置面板（覆盖当前页，背景不卸载；开关见 stores/settings-dialog.ts） -->
     <SettingsDialog />
+    <LearnerSurveyModal v-model:visible="surveyOpen" @done="onSurveyDone" />
 
     <!-- 全局弹窗与交互图层 -->
     <MiToast />
@@ -757,7 +779,13 @@ onBeforeUnmount(() => {
 .nav-cluster-icon {
   width: 18px;
   height: 18px;
+  transition: transform var(--mi-dur) cubic-bezier(0.34, 1.3, 0.64, 1);
 }
+/* 悬停时箭头朝它要去的方向轻推 2px，按下轻压（与侧栏图标同一套节奏） */
+.nav-back-btn:not(:disabled):hover .nav-cluster-icon,
+.phone-back-btn:hover .nav-cluster-icon { transform: translateX(-2px); }
+.nav-forward-btn:not(:disabled):hover .nav-cluster-icon { transform: translateX(2px); }
+.nav-cluster-btn:not(:disabled):active .nav-cluster-icon { transform: scale(0.86); transition-duration: 60ms; }
 
 /* 箭头绕自身中心翻转（< > 互换），与侧栏宽度同步 */
 .sidebar-toggle-arrow {

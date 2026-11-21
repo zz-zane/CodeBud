@@ -486,25 +486,10 @@
   :root:root .phone-tab.active { color: var(--mi-text); font-weight: 500; }
   :root:root .phone-tab:active { background: var(--cds-fill-ghost-hover); }
   :root:root .phone-tab { position: relative; }
-  :root:root .phone-tab-icon { width: 22px; height: 22px; }
-  /* 复习标签的到期数：图标右上角（docs/31 §1.2；11px 不在字号刻度上，取 12） */
-  :root:root .phone-tab-pip {
-    position: absolute;
-    top: 6px;
-    left: calc(50% + 6px);
-    min-width: 16px;
-    height: 16px;
-    padding: 0 4px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    background: var(--mi-blue-deep);
-    color: var(--mi-btn-primary-text);
-    font-size: var(--mi-fs-caption);
-    font-weight: 500;
-    line-height: 16px;
-    text-align: center;
-    font-variant-numeric: tabular-nums;
-  }
+  :root:root .phone-tab-icon { width: 22px; height: 22px; transition: transform var(--mi-dur-fast) var(--mi-ease-out); }
+  /* 按下图标轻压、选中时轻微上浮：拇指点击的即时反馈（2026-11-21 起不再挂到期数字） */
+  :root:root .phone-tab:active .phone-tab-icon { transform: scale(0.88); transition-duration: 60ms; }
+  :root:root .phone-tab.active .phone-tab-icon { transform: translateY(-1px); }
   :root:root .phone-tab-label { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 }
 

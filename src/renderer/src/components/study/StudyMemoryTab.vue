@@ -6,6 +6,9 @@ import { useContentStore } from '../../stores/content'
 import { LANG_LABEL } from '../../lib/labels'
 import { STUDY_COPY } from '../../lib/study-copy'
 import MiIcon from '../base/MiIcon.vue'
+import LearnerSurveyModal from '../domain/LearnerSurveyModal.vue'
+
+const surveyOpen = ref(false)
 
 const study = useStudyStore()
 const content = useContentStore()
@@ -148,6 +151,9 @@ function openLessonRef(lessonId: string): void {
   <div class="study-tab-pane pg">
     <div class="tab-header pg-toolbar">
       <span />
+      <button type="button" class="mi-btn-secondary" @click="surveyOpen = true">
+        <MiIcon name="sparkles" />{{ STUDY_COPY.LEARNER.REDO }}
+      </button>
       <button v-if="!isAdding" type="button" class="mi-btn-primary" @click="startAdd">
         <MiIcon name="plus" />{{ STUDY_COPY.MEMORY.ADD_BTN }}
       </button>
@@ -218,6 +224,7 @@ function openLessonRef(lessonId: string): void {
         </template>
       </div>
     </div>
+    <LearnerSurveyModal v-model:visible="surveyOpen" />
   </div>
 </template>
 

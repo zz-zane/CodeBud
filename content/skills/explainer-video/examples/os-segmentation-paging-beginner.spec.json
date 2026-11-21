@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "lessonId": "os-segmentation-paging-beginner",
+  "title": "看内容切是段，量尺寸切是页",
+  "concept": "分段按内容切，分页按尺寸切",
+  "pace": "slow",
+  "roles": {
+    "seg": { "label": "分段", "color": "blue" },
+    "page": { "label": "分页", "color": "teal" },
+    "spot": { "label": "要找的位置", "color": "orange" }
+  },
+  "tokens": { "段号": "seg", "页号": "page" },
+  "recapHeads": ["对比", "分段", "分页"],
+  "acts": [
+    {
+      "kind": "hook",
+      "title": "程序要放进内存",
+      "steps": [
+        { "caption": "程序要先放进内存，才能运行", "do": [ { "op": "title", "text": "分段和分页", "sub": "电脑怎么把内存分给程序" } ] },
+        { "caption": "内存像一长排格子，有几块已经被占了", "do": [ { "op": "enter", "id": "g-mem", "kind": "group", "title": "内存（一长排格子）", "layout": "row" }, { "op": "enter", "id": "m1", "kind": "box", "skin": "memory", "group": "g-mem", "tag": "已占用", "value": "·", "size": 1.4 }, { "op": "enter", "id": "m2", "kind": "box", "skin": "memory", "group": "g-mem", "tag": "空", "value": "400格", "size": 0.7 }, { "op": "enter", "id": "m3", "kind": "box", "skin": "memory", "group": "g-mem", "tag": "已占用", "value": "·", "size": 1.0 } ] },
+        { "caption": "新程序要 1700 格，没有一块空位够大", "do": [ { "op": "enter", "id": "m4", "kind": "box", "skin": "memory", "group": "g-mem", "tag": "空", "value": "600格", "size": 0.9 }, { "op": "enter", "id": "prog", "kind": "box", "skin": "var", "tag": "新程序", "value": "要1700格", "place": "below:m2" } ] },
+        { "caption": "整块放不下，只能切开放：怎么切？", "do": [ { "op": "focus", "ids": ["prog", "m2", "m4"] } ] }
+      ]
+    },
+    {
+      "kind": "analogy",
+      "title": "装袋子还是切卡片",
+      "steps": [
+        { "caption": "分段：按内容装，代码一袋、数据一袋", "do": [ { "op": "enter", "id": "g-seg", "kind": "group", "title": "分段：按内容装", "layout": "row" }, { "op": "enter", "id": "seg-code", "kind": "box", "skin": "envelope", "group": "g-seg", "role": "seg", "tag": "代码", "value": "1200格", "size": 1.4 }, { "op": "enter", "id": "seg-data", "kind": "box", "skin": "envelope", "group": "g-seg", "role": "seg", "tag": "数据", "value": "500格", "size": 0.6 } ] },
+        { "caption": "分页：不看内容，每 1000 格切一块", "do": [ { "op": "enter", "id": "g-pg", "kind": "group", "title": "分页：按尺寸切", "layout": "row" }, { "op": "enter", "id": "pg1", "kind": "box", "skin": "card", "group": "g-pg", "role": "page", "tag": "第1块", "value": "满" }, { "op": "enter", "id": "pg2", "kind": "box", "skin": "card", "group": "g-pg", "role": "page", "tag": "第2块", "value": "空300" } ] },
+        { "caption": "看形状：袋子有大有小，卡片一样大", "do": [ { "op": "focus", "ids": ["seg-code", "seg-data", "pg1", "pg2"] } ] }
+      ]
+    },
+    {
+      "kind": "reveal",
+      "title": "袋子是段，卡片是页",
+      "steps": [
+        { "caption": "袋子就是段：一段装一个完整部分", "do": [ { "op": "focus", "ids": [] }, { "op": "morph", "id": "seg-code", "skin": "segment", "tag": "段0 · 代码", "value": "1200格" }, { "op": "morph", "id": "seg-data", "skin": "segment", "tag": "段1 · 数据", "value": "500格" }, { "op": "row", "cells": ["袋子", "段：按内容切"] } ] },
+        { "caption": "卡片就是页：每页一样大", "do": [ { "op": "morph", "id": "pg1", "skin": "page", "tag": "页0", "value": "满" }, { "op": "morph", "id": "pg2", "skin": "page", "tag": "页1", "value": "空300" }, { "op": "row", "cells": ["卡片", "页：按尺寸切"] } ] }
+      ]
+    },
+    {
+      "kind": "trace",
+      "title": "同一个位置，两边怎么找",
+      "steps": [
+        { "caption": "段表：记下每段从哪开始、有多长", "do": [ { "op": "enter", "id": "g-st", "kind": "group", "title": "段表", "layout": "column" }, { "op": "enter", "id": "st0", "kind": "box", "skin": "slot", "group": "g-st", "role": "seg", "tag": "段0 · 长1200", "value": "从5000起" }, { "op": "enter", "id": "st1", "kind": "box", "skin": "slot", "group": "g-st", "role": "seg", "tag": "段1 · 长500", "value": "从2000起" }, { "op": "enter", "id": "g-ask", "kind": "group", "title": "要找的位置", "layout": "column" } ] },
+        { "caption": "段1从2000起，第300格就是2300", "do": [ { "op": "enter", "id": "ask", "kind": "box", "skin": "var", "group": "g-ask", "role": "spot", "tag": "分段地址", "value": "段1 第300格" }, { "op": "focus", "ids": ["ask", "st1"] }, { "op": "set", "id": "ask", "value": "→ 2300" } ] },
+        { "caption": "段1只有500格，要第600格就越界", "do": [ { "op": "set", "id": "ask", "value": "段1 第600格" }, { "op": "break", "id": "st1", "text": "越界" } ] },
+        { "caption": "页表：记下每一页放在第几个框", "do": [ { "op": "focus", "ids": [] }, { "op": "enter", "id": "g-pt", "kind": "group", "title": "页表", "layout": "column" }, { "op": "enter", "id": "pt0", "kind": "box", "skin": "slot", "group": "g-pt", "role": "page", "tag": "页0", "value": "在框4" }, { "op": "enter", "id": "pt1", "kind": "box", "skin": "slot", "group": "g-pt", "role": "page", "tag": "页1", "value": "在框7" } ] },
+        { "caption": "1300÷1000=1余300，去查页1", "do": [ { "op": "enter", "id": "ask2", "kind": "box", "skin": "var", "group": "g-ask", "role": "spot", "tag": "分页地址", "value": "第1300格" }, { "op": "set", "id": "ask2", "value": "页1 余300" }, { "op": "focus", "ids": ["ask2", "pt1"] } ] },
+        { "caption": "框7从7000起，加300得7300", "do": [ { "op": "set", "id": "ask2", "value": "→ 7300" } ] }
+      ]
+    },
+    {
+      "kind": "pitfall",
+      "title": "浪费在哪里",
+      "steps": [
+        { "caption": "段有大有小，删删补补留下零碎空隙", "do": [ { "op": "enter", "id": "g-ms", "kind": "group", "title": "分段的内存", "layout": "row" }, { "op": "enter", "id": "ms1", "kind": "box", "skin": "memory", "group": "g-ms", "tag": "空隙", "value": "空300", "size": 0.7 }, { "op": "enter", "id": "ms2", "kind": "box", "skin": "segment", "group": "g-ms", "role": "seg", "tag": "段A", "value": "已占用", "size": 1.5 }, { "op": "enter", "id": "ms3", "kind": "box", "skin": "memory", "group": "g-ms", "tag": "空隙", "value": "空200", "size": 0.5 } ] },
+        { "caption": "外部碎片：空隙加起来够，却没一块够大", "do": [ { "op": "enter", "id": "newseg", "kind": "box", "skin": "segment", "role": "seg", "tag": "新段", "value": "要400格", "size": 0.9, "place": "below:ms2" }, { "op": "arrow", "from": "newseg", "to": "ms1", "role": "seg" }, { "op": "break", "id": "newseg", "text": "放不下" } ] },
+        { "caption": "页框一样大，哪个空框都放得下", "do": [ { "op": "enter", "id": "g-mp", "kind": "group", "title": "分页的内存", "layout": "row" }, { "op": "enter", "id": "mp1", "kind": "box", "skin": "page", "group": "g-mp", "role": "page", "tag": "框2", "value": "空" }, { "op": "enter", "id": "mp2", "kind": "box", "skin": "page", "group": "g-mp", "role": "page", "tag": "框6", "value": "空" }, { "op": "set", "id": "mp1", "value": "新页" } ] }
+      ]
+    },
+    {
+      "kind": "clarify",
+      "title": "一眼分清段和页",
+      "steps": [
+        { "caption": "段和页放在一起，看起来都是切块", "do": [ { "op": "enter", "id": "g-cmp", "kind": "group", "title": "放在一起看", "layout": "row" }, { "op": "enter", "id": "cs", "kind": "box", "skin": "segment", "group": "g-cmp", "role": "seg", "tag": "段", "value": "按内容", "size": 1.5 }, { "op": "enter", "id": "cp", "kind": "box", "skin": "page", "group": "g-cmp", "role": "page", "tag": "页", "value": "按尺寸" }, { "op": "say", "who": "student", "text": "段和页不都是把程序切成块吗？" } ] },
+        { "caption": "第一个线索：切之前看不看内容", "do": [ { "op": "say", "who": "teacher", "text": "问自己：切之前，看不看里面装的是什么？" }, { "op": "focus", "ids": ["cs"] } ] },
+        { "caption": "第二个线索：切出来的块一不一样大", "do": [ { "op": "say", "who": "teacher", "text": "再看大小：段有大有小，页永远一样大。" }, { "op": "focus", "ids": ["cp"] } ] },
+        { "caption": "记住这两个问题，就能分清", "do": [ { "op": "say", "who": "student", "text": "懂了：看内容切的是段，量尺寸切的是页。" }, { "op": "focus", "ids": ["cs", "cp"] } ] }
+      ]
+    },
+    {
+      "kind": "recap",
+      "title": "一张表看清差别",
+      "steps": [
+        { "caption": "四个方面，看清两者的差别", "hold": 8, "do": [ { "op": "row", "cells": ["怎么切", "按内容（代码、数据）", "按固定大小"] }, { "op": "row", "cells": ["每块大小", "有大有小", "全都一样"] }, { "op": "row", "cells": ["地址怎么找", "段号 + 段内第几格", "除以页大小，看商和余数"] }, { "op": "row", "cells": ["浪费在哪", "段之间的零碎空隙", "最后一页没装满"] } ] },
+        { "caption": "记住：分段看内容，分页看尺寸", "do": [ { "op": "title", "text": "分段按内容切，分页按尺寸切" } ] }
+      ]
+    }
+  ]
+}

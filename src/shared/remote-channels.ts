@@ -28,7 +28,7 @@ export const REMOTE_ALLOWED_KEYS = [
   'studyGetState', 'studySaveMemory', 'studyForgetMemory', 'studyUpdatePosition',
   'studySaveNote', 'studyArchiveNote', 'studyReadMaterial', 'studyGeneratePlan',
   'studySetTaskStatus', 'studyGetUsage', 'studyCreateHtmlPreview',
-  'studyConfirmPlan', 'studyDiscardPlan',
+  'studyConfirmPlan', 'studyDiscardPlan', 'studyEditTasks',
   'cet6GradeSubjective',
   'videoCancel', 'videoList', 'videoDelete'
 ] as const satisfies readonly IpcKey[]

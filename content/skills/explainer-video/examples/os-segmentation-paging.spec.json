@@ -1,0 +1,631 @@
+{
+  "version": 1,
+  "lessonId": "os-segmentation-paging",
+  "title": "同一个偏移，分段报错分页正常",
+  "concept": "分段按逻辑切，分页按大小切",
+  "roles": {
+    "seg": {
+      "label": "分段",
+      "color": "blue"
+    },
+    "page": {
+      "label": "分页",
+      "color": "teal"
+    },
+    "addr": {
+      "label": "地址 / 偏移",
+      "color": "orange"
+    }
+  },
+  "tokens": {
+    "seg_len": "seg",
+    "seg_base": "seg",
+    "frame": "page",
+    "off": "addr",
+    "la": "addr",
+    "0x900": "addr",
+    "0x1900": "addr"
+  },
+  "code": {
+    "lang": "c",
+    "lines": [
+      "#include <stdio.h>",
+      "unsigned seg_base[2] = {0x1000, 0x6000};",
+      "unsigned seg_len[2]  = {0x400, 0x800};",
+      "unsigned frame[2]    = {5, 3};",
+      "int main(void) {",
+      "    unsigned s = 1, off = 0x900;",
+      "    if (off >= seg_len[s])",
+      "        printf(\"seg fault: 0x%X\\n\", off);",
+      "    else",
+      "        printf(\"seg: 0x%X\\n\", seg_base[s]+off);",
+      "    unsigned la = 0x1900;",
+      "    unsigned p = la >> 12, d = la & 0xFFF;",
+      "    printf(\"pg: 0x%X\\n\", (frame[p]<<12) + d);",
+      "    return 0;",
+      "}"
+    ],
+    "expectedOutput": "seg fault: 0x900\npg: 0x3900\n"
+  },
+  "acts": [
+    {
+      "kind": "hook",
+      "title": "同一个偏移交给两边",
+      "steps": [
+        {
+          "caption": "同一个偏移，交给分段和分页",
+          "do": [
+            {
+              "op": "title",
+              "text": "分段 vs 分页",
+              "sub": "同一个偏移，两种结局"
+            }
+          ]
+        },
+        {
+          "caption": "分段：段 1 只有 0x800 长",
+          "do": [
+            {
+              "op": "write",
+              "line": 3
+            },
+            {
+              "op": "write",
+              "line": 6
+            },
+            {
+              "op": "write",
+              "line": 7
+            },
+            {
+              "op": "write",
+              "line": 8
+            }
+          ]
+        },
+        {
+          "caption": "分页：同一个位置去查页表",
+          "do": [
+            {
+              "op": "write",
+              "line": 4
+            },
+            {
+              "op": "write",
+              "line": 11
+            },
+            {
+              "op": "write",
+              "line": 12
+            },
+            {
+              "op": "write",
+              "line": 13
+            }
+          ]
+        },
+        {
+          "caption": "分段报错，分页却正常，为什么？",
+          "hold": 4,
+          "do": [
+            {
+              "op": "enter",
+              "id": "out-hook",
+              "kind": "output"
+            },
+            {
+              "op": "print",
+              "text": "seg fault: 0x900"
+            },
+            {
+              "op": "print",
+              "text": "pg: 0x3900"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "analogy",
+      "title": "装信封和裁卡片",
+      "steps": [
+        {
+          "caption": "要找：第 1 份内容里的第 {addr:0x900} 个字",
+          "do": [
+            {
+              "op": "enter",
+              "id": "g-ask",
+              "kind": "group",
+              "title": "要找的位置",
+              "layout": "column"
+            },
+            {
+              "op": "enter",
+              "id": "ask",
+              "kind": "box",
+              "skin": "note",
+              "group": "g-ask",
+              "tag": "纸条",
+              "value": "第1份 0x900"
+            }
+          ]
+        },
+        {
+          "caption": "分段像按章装信封，信封大小不一",
+          "do": [
+            {
+              "op": "enter",
+              "id": "g-seg",
+              "kind": "group",
+              "title": "分段",
+              "layout": "column"
+            },
+            {
+              "op": "enter",
+              "id": "seg0",
+              "kind": "box",
+              "skin": "envelope",
+              "group": "g-seg",
+              "tag": "第0章",
+              "value": "能装0x400"
+            },
+            {
+              "op": "enter",
+              "id": "seg1",
+              "kind": "box",
+              "skin": "envelope",
+              "group": "g-seg",
+              "tag": "第1章",
+              "value": "能装0x800"
+            }
+          ]
+        },
+        {
+          "caption": "分页像先裁成一样大的卡片",
+          "do": [
+            {
+              "op": "enter",
+              "id": "g-pg",
+              "kind": "group",
+              "title": "分页",
+              "layout": "column"
+            },
+            {
+              "op": "enter",
+              "id": "pg0",
+              "kind": "box",
+              "skin": "card",
+              "group": "g-pg",
+              "tag": "卡片0",
+              "value": "放5号柜"
+            },
+            {
+              "op": "enter",
+              "id": "pg1",
+              "kind": "box",
+              "skin": "card",
+              "group": "g-pg",
+              "tag": "卡片1",
+              "value": "放3号柜"
+            }
+          ]
+        },
+        {
+          "caption": "同一张纸条，分别去两边找",
+          "do": [
+            {
+              "op": "focus",
+              "ids": [
+                "ask",
+                "seg1",
+                "pg1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "reveal",
+      "title": "信封变段，卡片变页",
+      "steps": [
+        {
+          "caption": "信封就是段，每段长度不同",
+          "do": [
+            {
+              "op": "focus",
+              "ids": []
+            },
+            {
+              "op": "morph",
+              "id": "seg0",
+              "skin": "slot",
+              "tag": "段0",
+              "value": "长0x400"
+            },
+            {
+              "op": "morph",
+              "id": "seg1",
+              "skin": "slot",
+              "tag": "段1",
+              "value": "长0x800"
+            },
+            {
+              "op": "row",
+              "cells": [
+                "信封",
+                "段：按逻辑切"
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "卡片就是页，每页都是 4KB",
+          "do": [
+            {
+              "op": "morph",
+              "id": "pg0",
+              "skin": "slot",
+              "tag": "页0",
+              "value": "框5"
+            },
+            {
+              "op": "morph",
+              "id": "pg1",
+              "skin": "slot",
+              "tag": "页1",
+              "value": "框3"
+            },
+            {
+              "op": "row",
+              "cells": [
+                "卡片",
+                "页：固定 4KB"
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "纸条就是逻辑地址：块号加偏移",
+          "do": [
+            {
+              "op": "morph",
+              "id": "ask",
+              "skin": "var",
+              "tag": "逻辑地址",
+              "value": "1 : 0x900"
+            },
+            {
+              "op": "row",
+              "cells": [
+                "纸条",
+                "逻辑地址"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "trace",
+      "title": "两边各走一遍",
+      "steps": [
+        {
+          "caption": "段号 1、偏移 {addr:0x900}，先查段表",
+          "do": [
+            {
+              "op": "line",
+              "line": 6
+            },
+            {
+              "op": "enter",
+              "id": "g-st",
+              "kind": "group",
+              "title": "段表",
+              "layout": "column"
+            },
+            {
+              "op": "enter",
+              "id": "st0",
+              "kind": "box",
+              "skin": "slot",
+              "group": "g-st",
+              "tag": "段0",
+              "value": "长0x400"
+            },
+            {
+              "op": "enter",
+              "id": "st1",
+              "kind": "box",
+              "skin": "slot",
+              "group": "g-st",
+              "tag": "段1",
+              "value": "长0x800"
+            }
+          ]
+        },
+        {
+          "caption": "偏移超过段 1 的长度，越界",
+          "do": [
+            {
+              "op": "line",
+              "line": 7
+            },
+            {
+              "op": "focus",
+              "ids": [
+                "st1"
+              ]
+            },
+            {
+              "op": "break",
+              "id": "st1",
+              "text": "越界"
+            }
+          ]
+        },
+        {
+          "caption": "分段直接报错：这段没那么长",
+          "do": [
+            {
+              "op": "line",
+              "line": 8
+            },
+            {
+              "op": "enter",
+              "id": "out",
+              "kind": "output"
+            },
+            {
+              "op": "print",
+              "text": "seg fault: 0x900"
+            }
+          ]
+        },
+        {
+          "caption": "分页：同一个位置写成 {addr:0x1900}",
+          "do": [
+            {
+              "op": "line",
+              "line": 11
+            },
+            {
+              "op": "focus",
+              "ids": []
+            },
+            {
+              "op": "enter",
+              "id": "g-pt",
+              "kind": "group",
+              "title": "页表",
+              "layout": "column"
+            },
+            {
+              "op": "enter",
+              "id": "pt1",
+              "kind": "box",
+              "skin": "slot",
+              "group": "g-pt",
+              "tag": "页1",
+              "value": "框3"
+            }
+          ]
+        },
+        {
+          "caption": "高位是页号 1，低 12 位是偏移",
+          "do": [
+            {
+              "op": "line",
+              "line": 12
+            },
+            {
+              "op": "enter",
+              "id": "g-la",
+              "kind": "group",
+              "title": "地址拆分",
+              "layout": "column"
+            },
+            {
+              "op": "enter",
+              "id": "la",
+              "kind": "box",
+              "skin": "var",
+              "group": "g-la",
+              "tag": "页号 : 偏移",
+              "value": "1 : 0x900"
+            }
+          ]
+        },
+        {
+          "caption": "页 1 在框 3，得 0x3900，正常",
+          "do": [
+            {
+              "op": "line",
+              "line": 13
+            },
+            {
+              "op": "arrow",
+              "from": "la",
+              "to": "pt1",
+              "role": "page"
+            },
+            {
+              "op": "focus",
+              "ids": [
+                "pt1"
+              ]
+            },
+            {
+              "op": "print",
+              "text": "pg: 0x3900"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "pitfall",
+      "title": "外部碎片",
+      "steps": [
+        {
+          "caption": "删掉几个段后，留下大小不一的空隙",
+          "do": [
+            {
+              "op": "enter",
+              "id": "g-ms",
+              "kind": "group",
+              "title": "分段的内存",
+              "layout": "row"
+            },
+            {
+              "op": "enter",
+              "id": "ms1",
+              "kind": "box",
+              "skin": "memory",
+              "group": "g-ms",
+              "tag": "空隙",
+              "value": "0x300"
+            },
+            {
+              "op": "enter",
+              "id": "ms2",
+              "kind": "box",
+              "skin": "memory",
+              "group": "g-ms",
+              "tag": "段A",
+              "value": "已占用"
+            },
+            {
+              "op": "enter",
+              "id": "ms3",
+              "kind": "box",
+              "skin": "memory",
+              "group": "g-ms",
+              "tag": "空隙",
+              "value": "0x200"
+            }
+          ]
+        },
+        {
+          "caption": "外部碎片：空隙够，但都太碎",
+          "hold": 4,
+          "do": [
+            {
+              "op": "enter",
+              "id": "newseg",
+              "kind": "box",
+              "skin": "memory",
+              "tag": "新段",
+              "value": "要0x400",
+              "place": "below:ms2"
+            },
+            {
+              "op": "arrow",
+              "from": "newseg",
+              "to": "ms1",
+              "role": "seg"
+            },
+            {
+              "op": "break",
+              "id": "newseg",
+              "text": "放不下"
+            }
+          ]
+        },
+        {
+          "caption": "分页的空框一样大，哪个都能放",
+          "do": [
+            {
+              "op": "enter",
+              "id": "g-mp",
+              "kind": "group",
+              "title": "分页的内存",
+              "layout": "row"
+            },
+            {
+              "op": "enter",
+              "id": "mp1",
+              "kind": "box",
+              "skin": "memory",
+              "group": "g-mp",
+              "tag": "框2",
+              "value": "空 4KB"
+            },
+            {
+              "op": "enter",
+              "id": "mp2",
+              "kind": "box",
+              "skin": "memory",
+              "group": "g-mp",
+              "tag": "框6",
+              "value": "空 4KB"
+            },
+            {
+              "op": "set",
+              "id": "mp1",
+              "value": "新页放这"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "recap",
+      "title": "一张表看清差别",
+      "steps": [
+        {
+          "caption": "四个维度，看清两者的差别",
+          "hold": 6,
+          "do": [
+            {
+              "op": "row",
+              "cells": [
+                "按什么切",
+                "程序的逻辑单位",
+                "固定大小 4KB"
+              ]
+            },
+            {
+              "op": "row",
+              "cells": [
+                "块的大小",
+                "各不相同",
+                "全都一样"
+              ]
+            },
+            {
+              "op": "row",
+              "cells": [
+                "越界检查",
+                "偏移要小于段长",
+                "偏移总在页内"
+              ]
+            },
+            {
+              "op": "row",
+              "cells": [
+                "碎片",
+                "外部碎片",
+                "只有页内碎片"
+              ]
+            }
+          ]
+        },
+        {
+          "caption": "分段看逻辑，分页看大小",
+          "do": [
+            {
+              "op": "title",
+              "text": "分段按逻辑切，分页按大小切"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "recapHeads": [
+    "维度",
+    "分段",
+    "分页"
+  ]
+}

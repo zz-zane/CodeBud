@@ -69,6 +69,29 @@ describe('Lite 架构 · 侧栏主导航契约（ROOT-PLAN-v1）', () => {
     expect(sidebar).toMatch(/\.nav-tab-btn\.active \{\s*background: transparent;/)
   })
 
+  it('图标动效：每项带 data-nav 供悬停动作区分，选中时描线（pathLength=1）+ 轻弹', () => {
+    expect(sidebar).toContain(':data-nav="item.key"')
+    expect(sidebar).toContain('<path :d="item.icon" pathLength="1" />')
+    expect(sidebar).toContain('@keyframes mi-icon-draw')
+    expect(sidebar).toContain('@keyframes mi-icon-pop')
+  })
+
+  it('AI 会话区：主聊天 / 新建用 .nav-icon 图标列；悬停底色只挂整行；焦点环画在内侧（不被滚动容器裁成黑竖线）', () => {
+    expect(sidebar).not.toContain('<MiIcon')
+    expect(sidebar).not.toContain('ai-new-plus')
+    expect(sidebar).not.toMatch(/\.ai-sidebar-item:hover\s*\{/)
+    expect(sidebar).toContain('v-auto-animate class="ai-sidebar-scroll"')
+    expect(sidebar).toMatch(/\.ai-sidebar-lists button:focus-visible \{\s*outline: 1\.5px solid var\(--mi-border-control\);\s*outline-offset: -1\.5px;/)
+    expect(sidebar).not.toContain('.ai-session-row.active .ai-sidebar-add')
+  })
+
+  it('手机底部标签栏也不挂数字（2026-11-21）', () => {
+    const tab = maskComments(readFileSync(join(SRC_DIR, 'components', 'domain', 'PhoneTabBar.vue'), 'utf8'))
+    expect(tab).not.toContain('phone-tab-pip')
+    expect(tab).not.toContain('useTodayCounts')
+    expect(readFileSync(join(SRC_DIR, 'styles', 'phone.css'), 'utf8')).not.toContain('.phone-tab-pip')
+  })
+
   it('高亮激活规则：/today、/ai 独立激活，/lesson 归入课程，/playground 归入练习，/memo 与 /favorites 归入进度', () => {
     expect(sidebar).toContain("path === '/today'")
     expect(sidebar).toContain("path === '/ai'")

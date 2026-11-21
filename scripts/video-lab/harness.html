@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>CodeBud Generic Video Renderer</title>
+  <style>
+    html, body { margin: 0; padding: 0; background: #f5f4ef; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="stage" width="1920" height="1080"></canvas>
+  <script src="./node_modules/mp4-muxer/build/mp4-muxer.js"></script>
+  <script src="./engine.js"></script>
+  <script>
+    window.renderSpecVideo = async function (spec, keyframes) {
+      const W = 1920, H = 1080, fps = 30
+      const canvas = document.getElementById('stage')
+      canvas.width = W
+      canvas.height = H
+      const ctx = canvas.getContext('2d', { willReadFrequently: true })
+      const tl = window.VideoEngine.timeline(spec)
+      const totalFrames = Math.round(tl.duration * fps)
+
+      async function sha256(bytes) {
+        const digest = await crypto.subtle.digest('SHA-256', bytes)
+        return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, '0')).join('')
+      }
+
+      // 1. Determinism check (5 representative timestamps rendered twice)
+      const detTimes = keyframes.slice(0, 5).map((k) => k.t)
+      const determinism = []
+      for (const dt of detTimes) {
+        ctx.clearRect(0, 0, W, H)
+        window.VideoEngine.drawFrame(ctx, spec, dt)
+        const h1 = await sha256(ctx.getImageData(0, 0, W, H).data.buffer)
+        ctx.clearRect(0, 0, W, H)
+        window.VideoEngine.drawFrame(ctx, spec, dt)
+        const h2 = await sha256(ctx.getImageData(0, 0, W, H).data.buffer)
+        determinism.push({ t: Number(dt.toFixed(3)), hash1: h1, hash2: h2, identical: h1 === h2 })
+      }
+
+      // 2. Capture keyframe PNGs
+      const capturedKeyframes = []
+      for (const kf of keyframes) {
+        window.VideoEngine.drawFrame(ctx, spec, kf.t)
+        capturedKeyframes.push({
+          name: kf.name,
+          t: Number(kf.t.toFixed(3)),
+          label: kf.label,
+          dataUrl: canvas.toDataURL('image/png')
+        })
+      }
+
+      // 3. Probe WebCodecs H.264 encoder
+      const candidates = ['avc1.640028', 'avc1.4d002a', 'avc1.42002a']
+      let chosenCodec = null
+      for (const codec of candidates) {
+        const res = await VideoEncoder.isConfigSupported({
+          codec, width: W, height: H, bitrate: 5_000_000, framerate: fps, avc: { format: 'avc' }
+        })
+        if (res.supported) { chosenCodec = codec; break }
+      }
+      if (!chosenCodec) throw new Error('No H.264 VideoEncoder codec supported')
+
+      // 4. Encode all frames -> pure JS mp4-muxer
+      const t0 = performance.now()
+      const target = new Mp4Muxer.ArrayBufferTarget()
+      const muxer = new Mp4Muxer.Muxer({
+        target,
+        video: { codec: 'avc', width: W, height: H },
+        fastStart: 'in-memory',
+        firstTimestampBehavior: 'offset'
+      })
+
+      let encodeError = null
+      const encoder = new VideoEncoder({
+        output: (chunk, meta) => muxer.addVideoChunk(chunk, meta),
+        error: (err) => { encodeError = err }
+      })
+      encoder.configure({
+        codec: chosenCodec, width: W, height: H, bitrate: 5_000_000, framerate: fps,
+        latencyMode: 'quality', avc: { format: 'avc' }
+      })
+
+      const frameDurationUs = Math.round(1_000_000 / fps)
+      let drawMsTotal = 0
+      for (let i = 0; i < totalFrames; i++) {
+        if (encodeError) throw encodeError
+        const t = i / fps
+        const d0 = performance.now()
+        window.VideoEngine.drawFrame(ctx, spec, t)
+        drawMsTotal += performance.now() - d0
+
+        const frame = new VideoFrame(canvas, { timestamp: i * frameDurationUs, duration: frameDurationUs })
+        encoder.encode(frame, { keyFrame: i % fps === 0 })
+        frame.close()
+
+        if (encoder.encodeQueueSize > 12) await new Promise((r) => setTimeout(r, 8))
+        if (i % 150 === 0) await new Promise((r) => setTimeout(r, 0))
+      }
+
+      await encoder.flush()
+      if (encodeError) throw encodeError
+      encoder.close()
+      muxer.finalize()
+
+      const totalRenderMs = Math.round(performance.now() - t0)
+      const mp4Bytes = new Uint8Array(target.buffer)
+      const chunkSize = 0x8000
+      let bin = ''
+      for (let i = 0; i < mp4Bytes.length; i += chunkSize) {
+        bin += String.fromCharCode.apply(null, mp4Bytes.subarray(i, i + chunkSize))
+      }
+
+      return {
+        codec: chosenCodec,
+        fps, width: W, height: H,
+        durationSec: Number(tl.duration.toFixed(2)),
+        totalFrames,
+        totalRenderMs,
+        avgDrawMs: Number((drawMsTotal / totalFrames).toFixed(2)),
+        mp4BytesLength: mp4Bytes.length,
+        mp4Base64: btoa(bin),
+        determinism,
+        keyframes: capturedKeyframes
+      }
+    }
+  </script>
+</body>
+</html>

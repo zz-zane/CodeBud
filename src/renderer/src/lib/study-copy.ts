@@ -49,6 +49,20 @@ export const STUDY_COPY = {
     ARCHIVED: '已归档'
   },
 
+  /** 第一次打开 app 的基础调研（shared/learner-profile.ts） */
+  LEARNER: {
+    TITLE: '先了解一下你',
+    INTRO: '花半分钟告诉我你现在的基础，AI 助教和讲解动画会按你的情况讲。随时可以在 资料库 → 记忆 里改。',
+    Q_KNOWN: '你已经学过哪些？（可多选）',
+    Q_STYLE: '你更喜欢怎么学？',
+    Q_PACE: '讲解速度',
+    Q_GOAL: '最近的学习目标（可不填）',
+    GOAL_PLACEHOLDER: '例如：期末考操作系统、找 Python 实习',
+    SKIP: '以后再说',
+    SAVE: '保存',
+    SAVED: '已记住你的学习背景',
+    REDO: '更新学习背景'
+  },
   MEMORY: {
     TITLE: '持久化学习记忆',
     SUBTITLE: '伴侣在交流与解题中沉淀的关键认知，供会话随时查阅与修正。',
@@ -177,7 +191,34 @@ export const STUDY_COPY = {
     confirmCompleteBody: (title: string, pct: number): string =>
       `「${title}」目前掌握度 ${pct}%。可以先去练习，也可以仍然标记完成。`,
     CONFIRM_COMPLETE_FORCE: '仍标记完成',
-    CONFIRM_COMPLETE_PRACTICE: '去练习'
+    CONFIRM_COMPLETE_PRACTICE: '去练习',
+    // 2026-11-21 任务页按任务组分区重做
+    EMPTY_GUIDE: '点「新建任务组」自己写，或在 AI 助教里说「帮我做一个一个月学 Java 的计划，加到任务里」。',
+    NEW_GROUP: '新建任务组',
+    NEW_GROUP_PLACEHOLDER: '任务组名称，例如：一个月 Java 入门',
+    CREATE: '创建',
+    CANCEL: '取消',
+    ADD_TASK_PLACEHOLDER: '添加任务，回车保存',
+    ADD_TASK: '添加',
+    RENAME_GROUP: '重命名',
+    DELETE_GROUP: '删除任务组',
+    DELETE_GROUP_TITLE: '删除任务组？',
+    deleteGroupBody: (title: string, n: number): string => `「${title}」和其中 ${n} 项任务会一起删除，无法撤销。`,
+    DELETE_TASK: '删除任务',
+    SOURCE_CUSTOM: '自定义',
+    SOURCE_AI: 'AI 对话创建',
+    sourceMaterial: (name: string): string => `教材 · ${name}`,
+    SOURCE_MATERIAL_MISSING: '教材（已移除）',
+    progress: (done: number, total: number): string => `${done}/${total}`,
+    GROUP_EMPTY: '这一组还没有任务，在下面添加一条。',
+    groupFilterEmpty: (label: string): string => `这一组没有「${label}」的任务`,
+    SUMMARY_TITLE: '总进度',
+    summaryGroups: (n: number): string => `${n} 个任务组`,
+    EXPAND_GROUP: '展开',
+    COLLAPSE_GROUP: '收起',
+    MORE: '展开全文',
+    LESS: '收起',
+    cycleStatus: (current: string, next: string): string => `当前：${current}，点击改为「${next}」`
   },
 
   CONNECTIONS: {
@@ -324,7 +365,7 @@ disp(max(y));
   NAV: {
     STUDY_SPACE: '资料库',
     MAIN_CHAT_PINNED: '主聊天',
-    TOPIC_CHATS: '专题对话',
+    TOPIC_CHATS: '最近对话',
     NEW_TOPIC: '新建专题对话'
   },
 
