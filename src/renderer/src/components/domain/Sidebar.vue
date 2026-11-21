@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAiAssistantStore } from '../../stores/ai-assistant'
 import { APP_SIDEBAR, AI_ASSISTANT } from '../../lib/copy'
-import { NAV_ITEMS, isNavActive, navSections, type NavItem } from '../../lib/nav-items'
-import { useTodayCounts } from '../../lib/use-today-counts'
+import { NAV_ITEMS, isNavActive, navSections } from '../../lib/nav-items'
 import { STUDY_MAIN_SESSION_ID } from '../../stores/study'
 import MiIcon from '../base/MiIcon.vue'
 import { STUDY_COPY } from '../../lib/study-copy'
@@ -18,19 +17,19 @@ const router = useRouter()
 
 const isRail = computed(() => props.isRail)
 
+// 2026-11-21 用户要求去掉侧栏右侧数字徽标（到期数在「今天」页与复习页仍可见）
 const sections = navSections(NAV_ITEMS)
 
-// 徽标：练习 = 未消除错题数（静色），复习 = 今日到期数（强调色）；0 不渲染，> 99 显示 99+
-const counts = useTodayCounts()
-onMounted(() => counts.ensureLoaded())
-
-interface Badge { text: string; accent: boolean; aria: string }
-function badgeOf(item: NavItem): Badge | null {
-  const n = item.key === 'practice' ? counts.wrongCount.value : item.key === 'review' ? counts.reviewDue.value : 0
-  if (n <= 0) return null
-  const accent = item.key === 'review'
-  return { text: n > 99 ? '99+' : String(n), accent, aria: accent ? APP_SIDEBAR.badgeDue(n) : APP_SIDEBAR.badgeWrong(n) }
+// 选中底块：一块绝对定位的底色在导航项之间滑动，而不是各按钮自己瞬切背景。
+// 用 offsetTop（不受 transform 影响）量当前 .active；不在主导航里（如 /settings）就隐藏。
+const navRef = ref<HTMLElement | null>(null)
+const pill = ref<{ x: number; y: number; w: number; h: number } | null>(null)
+function syncPill(): void {
+  const el = navRef.value?.querySelector<HTMLElement>('.nav-tab-btn.active')
+  pill.value = el ? { x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight } : null
 }
+onMounted(syncPill)
+watch(() => [route.path, isRail.value], () => void nextTick(syncPill))
 
 function isActive(item: { key: string }): boolean {
   return isNavActive(item, route.path)
@@ -64,7 +63,13 @@ function selectMainSession(): void {
     </div>
 
     <!-- 主导航区域 -->
-    <nav class="primary-nav">
+    <nav ref="navRef" class="primary-nav">
+      <span
+        v-if="pill"
+        class="nav-active-pill"
+        aria-hidden="true"
+        :style="{ transform: `translate(${pill.x}px, ${pill.y}px)`, width: `${pill.w}px`, height: `${pill.h}px` }"
+      />
       <template v-for="(section, si) in sections" :key="si">
         <div v-if="si > 0" class="nav-divider" role="separator" />
         <div class="nav-section">
@@ -75,7 +80,6 @@ function selectMainSession(): void {
             class="nav-tab-btn stream-safe"
             :class="{ active: isActive(item) }"
             :title="item.label"
-            :aria-label="badgeOf(item)?.aria"
             :aria-current="isActive(item) ? 'page' : undefined"
             @click="navigate(item.path)"
           >
@@ -85,7 +89,6 @@ function selectMainSession(): void {
               </svg>
             </span>
             <span v-if="!isRail" class="nav-label">{{ item.label }}</span>
-            <span v-if="badgeOf(item)" class="nav-badge" :class="{ accent: badgeOf(item)?.accent, dot: isRail }" aria-hidden="true">{{ isRail ? '' : badgeOf(item)?.text }}</span>
           </button>
         </div>
       </template>
@@ -175,10 +178,25 @@ function selectMainSession(): void {
 }
 
 .primary-nav {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 4px var(--mi-nav-pad-x) 8px;
   flex-shrink: 0;
+}
+
+/* 滑动选中底块：快速吸附曲线、不回弹（frontend-ui-polish：Tab/滑块吸附 ≈120ms 档，取 --mi-dur 180ms 让位移看得清）。
+   v-if 首次出现时直接落在目标位，不会从 0 滑下来；减弱动效由 motion.css 总闸压成瞬切。 */
+.nav-active-pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--mi-radius);
+  background: var(--cds-fill-ghost-selected);
+  pointer-events: none;
+  transition:
+    transform var(--mi-dur) cubic-bezier(0.32, 0.72, 0, 1),
+    height var(--mi-dur) cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 .nav-section {
@@ -219,10 +237,20 @@ function selectMainSession(): void {
   color: var(--mi-text);
 }
 
+/* 选中底色由 .nav-active-pill 提供；按钮自身保持透明，否则两层叠色 */
 .nav-tab-btn.active {
-  background: var(--cds-fill-ghost-selected);
+  background: transparent;
   color: var(--mi-text);
   font-weight: 500;
+}
+
+/* 按下微反馈：图标轻压（frontend-ui-polish：点击微反馈 ≈60ms） */
+.nav-icon {
+  transition: transform var(--mi-dur-fast) var(--mi-ease-out);
+}
+.nav-tab-btn:active .nav-icon {
+  transform: scale(0.9);
+  transition-duration: 60ms;
 }
 
 .nav-icon,
@@ -248,37 +276,6 @@ function selectMainSession(): void {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.nav-badge {
-  flex-shrink: 0;
-  min-width: 20px;
-  height: 18px;
-  padding: 0 6px;
-  box-sizing: border-box;
-  border-radius: 9px;
-  background: var(--mi-blue);
-  color: var(--mi-text-2);
-  font-size: var(--mi-fs-caption);
-  font-weight: 500;
-  line-height: 18px;
-  text-align: center;
-  font-variant-numeric: tabular-nums;
-}
-.nav-badge.accent {
-  background: var(--mi-blue-deep);
-  color: var(--mi-btn-primary-text);
-}
-/* 图标窄栏：徽标收成图标右上角 6px 圆点 */
-.nav-badge.dot {
-  position: absolute;
-  top: 8px;
-  left: calc(50% + 6px);
-  min-width: 0;
-  width: 6px;
-  height: 6px;
-  padding: 0;
-  border-radius: 50%;
 }
 
 .ai-sidebar-lists {

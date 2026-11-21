@@ -266,7 +266,7 @@ function ask(): void {
           {{ TODAY.TODO_SECTION }}
           <span v-if="minutes > 0">{{ TODAY.estimate(minutes) }}</span>
         </h2>
-        <div v-if="rows.length" class="t-rows">
+        <div v-if="rows.length" class="t-rows mi-stagger">
           <button v-for="r in rows" :key="r.key" type="button" class="t-row" :data-row="r.key" :title="r.hint" @click="router.push(r.to)">
             <span class="t-tile"><MiIcon :name="r.icon" /></span>
             <span class="t-row-body">

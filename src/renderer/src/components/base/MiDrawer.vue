@@ -145,6 +145,10 @@ onBeforeUnmount(() => {
 .drawer-leave-active {
   transition: opacity var(--mi-dur) var(--mi-ease-out);
 }
+/* 退场期间不吞点击：遮罩还在淡出时用户已经可以点下面的内容 */
+.drawer-leave-active {
+  pointer-events: none;
+}
 .drawer-enter-active .mi-drawer,
 .drawer-leave-active .mi-drawer {
   transition: transform var(--mi-dur) var(--mi-ease-out);

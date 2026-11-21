@@ -128,15 +128,25 @@ watch(
 .mi-toast.warn {
   border-color: var(--mi-warn-deep);
 }
-.toast-enter-active,
-.toast-leave-active {
+.toast-enter-active {
   transition:
     opacity var(--mi-dur) var(--mi-ease-out),
     transform var(--mi-dur) var(--mi-ease-out);
 }
+/* 退场更快且脱离文档流，剩下的提示条靠 .toast-move 平滑补位，而不是瞬间跳格 */
+.toast-leave-active {
+  position: absolute;
+  pointer-events: none;
+  transition:
+    opacity var(--mi-dur-fast) var(--mi-ease-in),
+    transform var(--mi-dur-fast) var(--mi-ease-in);
+}
+.toast-move {
+  transition: transform var(--mi-dur) var(--mi-ease-out);
+}
 .toast-enter-from,
 .toast-leave-to {
   opacity: 0;
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(0.97);
 }
 </style>

@@ -127,9 +127,7 @@ body .mi-modal { border-radius: var(--cds-radius-dialog); box-shadow: var(--cds-
   #app .claude-app-container .chart-grid { grid-template-columns: 1fr; }
   #app .claude-app-container .samples { align-items: flex-start; flex-direction: column; gap: var(--mi-sp-2); }
 }
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
-}
+/* 减弱动效总闸只在 motion.css 一处：这里曾有一份无 :not(.mi-motion-keep) 的副本，因加载更晚而把加载指示也冻住 */
 
 #app .mi-tag:is(.blue,.purple,.gray) { background: var(--cds-fill-ghost-hover); color: var(--mi-text-2); border-radius: var(--radius-md); }
 

@@ -55,12 +55,18 @@ describe('Lite 架构 · 侧栏主导航契约（ROOT-PLAN-v1）', () => {
     expect(sidebar).not.toContain('ai-sidebar-course')
   })
 
-  it('分组与徽标是数据：分隔线由 group 字段切段得出，徽标 0 不渲染、>99 显示 99+', () => {
+  it('分组是数据：分隔线由 group 字段切段得出；侧栏不再挂数字徽标（2026-11-21）', () => {
     expect(sidebar).toContain("group: 'daily'")
     expect(sidebar).toContain("group: 'library'")
     expect(sidebar).toContain('navSections(')
-    expect(sidebar).toContain("'99+'")
     expect(sidebar).toContain('class="nav-divider"')
+    expect(sidebar).not.toContain('nav-badge')
+  })
+
+  it('选中态是一块滑动底块（2026-11-21）：按 .active 的 offset 定位，按钮自身不再叠背景', () => {
+    expect(sidebar).toContain('class="nav-active-pill"')
+    expect(sidebar).toContain("querySelector<HTMLElement>('.nav-tab-btn.active')")
+    expect(sidebar).toMatch(/\.nav-tab-btn\.active \{\s*background: transparent;/)
   })
 
   it('高亮激活规则：/today、/ai 独立激活，/lesson 归入课程，/playground 归入练习，/memo 与 /favorites 归入进度', () => {

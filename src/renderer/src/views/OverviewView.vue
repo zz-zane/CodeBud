@@ -273,7 +273,7 @@ onBeforeUnmount(() => {
         </MiButton>
       </section>
 
-      <section class="course-rows">
+      <section class="course-rows mi-stagger">
         <div v-for="c in courseRows" :key="c.key" class="course-row">
           <span class="course-name-wrap">
             <span class="course-name">{{ c.label }}</span>

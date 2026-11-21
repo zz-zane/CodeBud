@@ -40,7 +40,7 @@ withDefaults(
 }
 .mi-progress-fill {
   border-radius: 999px;
-  transition: width 0.3s ease;
+  transition: width var(--mi-dur-slow) var(--mi-ease-out);
 }
 .mi-progress-label {
   flex-shrink: 0;

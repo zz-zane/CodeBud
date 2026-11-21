@@ -57,6 +57,24 @@
   transform: translateX(-8px);
 }
 
+/* ── 列表错峰进场：容器挂 .mi-stagger，直接子元素依次淡入上浮 ────────────────
+ *
+ * 只在元素**插入 DOM 时**播一次（CSS animation 的天性），之后数据刷新不会重播。
+ * 每项晚 30ms、第 6 项起封顶 150ms：长列表最后一项不会等到半秒后才出现。
+ * `backwards` 让延迟期间就停在起始帧（透明），不会先闪一下再消失。
+ * 位移只有 6px，和路由过渡的 12px 同一个克制档位。 */
+@keyframes mi-stagger-in {
+  from { opacity: 0; transform: translateY(6px); }
+}
+.mi-stagger > * {
+  animation: mi-stagger-in var(--mi-dur) var(--mi-ease-out) backwards;
+}
+.mi-stagger > :nth-child(2) { animation-delay: 30ms; }
+.mi-stagger > :nth-child(3) { animation-delay: 60ms; }
+.mi-stagger > :nth-child(4) { animation-delay: 90ms; }
+.mi-stagger > :nth-child(5) { animation-delay: 120ms; }
+.mi-stagger > :nth-child(n + 6) { animation-delay: 150ms; }
+
 /* ── 「关掉动效」总闸 ────────────────────────────────────────────────────
  *
  * Windows 的「设置 → 辅助功能 → 视觉效果 → 动画效果」关掉之后，Chromium 就会让
@@ -105,4 +123,6 @@
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
+  /* 错峰的延迟不归总闸管（它压的是 duration），不清掉的话列表尾项会先隐形 150ms */
+  .mi-stagger > * { animation: none !important; }
 }

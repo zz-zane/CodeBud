@@ -3358,7 +3358,6 @@ export const APP_SIDEBAR = {
   NAV_OVERVIEW: '进度',
   NAV_SETTINGS: '设置',
   /** 导航项的读屏名：带上徽标数字（docs/31 §1.1） */
-  badgeWrong: (n: number): string => `练习，${n} 道错题未消除`,
   badgeDue: (n: number): string => `复习，${n} 项到期`,
   ALL_COURSES: '全部课程',
   COURSE_OUTLINE: '课程目录',

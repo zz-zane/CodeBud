@@ -85,11 +85,9 @@ describe('考试锁与导航', () => {
     expect(app).toMatch(/v-if="!examLock"\s+id="app-sidebar-drawer"/)
     expect(app).toMatch(/const showTabBar = computed\([\s\S]*!examLock\.value/)
   })
-  it('侧栏徽标 aria-label 带数字，图标窄栏退成圆点', () => {
+  it('侧栏不挂数字徽标（2026-11-21 用户要求移除）', () => {
     const sb = maskComments(raw('components/domain/Sidebar.vue'))
-    expect(sb).toContain('APP_SIDEBAR.badgeDue(n)')
-    expect(sb).toContain('.nav-badge.dot')
-    expect(sb).toContain('min-width: 20px')
-    expect(sb).toContain('border-radius: 9px')
+    expect(sb).not.toContain('nav-badge')
+    expect(sb).not.toContain('useTodayCounts')
   })
 })
