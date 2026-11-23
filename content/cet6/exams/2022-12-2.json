@@ -230,7 +230,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 265,
+              "end": 313,
+              "quote": "which is making happiness a priority over money."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q2",
@@ -310,7 +319,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 972,
+              "end": 1014,
+              "quote": "Once we make the nght things our priority."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1015,
+              "end": 1071,
+              "quote": "our\ngoals will change and so will our financial behauor."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q4",
@@ -350,7 +375,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1468,
+              "end": 1502,
+              "quote": "Those sound like major sacrifices."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q5",
@@ -390,7 +424,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 297,
+              "end": 364,
+              "quote": "This first piece was a gift to the gallery from the artist herself."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q6",
@@ -430,7 +473,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 660,
+              "end": 753,
+              "quote": "It was purchased at auction by an anonymous collector who lent it to the gallery for display."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q7",
@@ -470,7 +522,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 971,
+              "end": 1011,
+              "quote": "There's SO much detail in this painting."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q8",
@@ -510,7 +571,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1431,
+              "end": 1505,
+              "quote": "1 would say she's one of the most easygoing and\nintelligent people I know."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q9",
@@ -550,7 +620,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 279,
+              "end": 376,
+              "quote": "It propels people forward rather than\nkeeping them emotionally engaged in an injustice or trauma."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q10",
@@ -710,7 +789,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 518,
+              "end": 631,
+              "quote": "It ran with little further change until 1977 when its new operators closed it for major modernization\ninvestment."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q14",
@@ -750,7 +838,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 945,
+              "end": 1071,
+              "quote": "It\nserves as a viable alternative to other forms of transport and has gone a long way to alleviate traffic in the\ncity center."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q15",
@@ -790,7 +887,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1237,
+              "end": 1345,
+              "quote": "high-tech systems such as smart card ticketing machines and smart gates are used across all\nsubway stations."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q16",
@@ -830,7 +936,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 368,
+              "end": 468,
+              "quote": "Since national parks are wildlife sanctuaries where no\ndisturbance of the native animals is allowed."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q17",
@@ -871,7 +986,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "school?"
+          "stemOriginalOCR": "school?",
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1100,
+              "end": 1141,
+              "quote": "Park rules prohibit the feeding of bears."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q18",
@@ -911,7 +1035,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 2018,
+              "end": 2143,
+              "quote": "Because bears prefer roads and campgrounds, (18)the possibility of a hiker meeting up with a bear along\npark trails is small."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q19",
@@ -951,7 +1084,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 323,
+              "end": 418,
+              "quote": "Forming opimons about someone or something before really knowing them well is called preiudice."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q20",
@@ -992,7 +1134,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "school?"
+          "stemOriginalOCR": "school?",
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 832,
+              "end": 930,
+              "quote": "and they are dangerous because\nthey can keep us from learmng the truth about someone or something."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q21",
@@ -1032,7 +1183,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1215,
+              "end": 1353,
+              "quote": "If feelings of pride begin to\nturn to feelings of superiority when we think that our group or our beliefs are better than those around us."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1363,
+              "end": 1429,
+              "quote": "then we begin to develop prejudiced attitudes that can be harmful."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q22",
@@ -1073,7 +1240,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "school?"
+          "stemOriginalOCR": "school?",
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 0,
+              "end": 107,
+              "quote": "Questions 22 to 25 are based on the recording you have.just\n(22)When I started high school, it was a shock."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q23",
@@ -1211,7 +1387,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2198,
+              "end": 2252,
+              "quote": "I try to help them over the rough spots as\nbest I can."
+            }
+          ]
         }
       ]
     },
@@ -2195,7 +2380,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1837,
+              "end": 1943,
+              "quote": "Although the children's reactions were somewhat expected, the new study did c ontmn an unexpected finding."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2213,
+              "end": 2499,
+              "quote": "AS Soga and his coauthors wrote in the ir paper, Our results suggest that there is likely a feedback loop in which an increase in people who\nhave negative attitudes towards nature in one generation will lead to a further increase In people with similar attitudes in the next generation."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q37",
@@ -2283,7 +2484,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 62,
+              "end": 242,
+              "quote": "increasingly, research has shown that as species and ecosystems vanish it also chips away at our ability to preserve What remains—because we no longer understand What we re losing."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q38",
@@ -2371,7 +2581,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3968,
+              "end": 4258,
+              "quote": "Published in the Journal Frontiers in Sustainable Cities, the study examined attitudes toward Discovery Park the heavily fore sted 534-acre public park in Seattle\nWashington It found that the public had the most appreciation for-and gained the most value from-the wildest parts of the park."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q39",
@@ -2460,7 +2679,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "O"
+          "answerOriginal": "O",
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 745,
+              "end": 817,
+              "quote": "biophobia ' the fear of living things and a complete aversion to nature."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q40",
@@ -2548,7 +2776,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2997,
+              "end": 3221,
+              "quote": "Although many conservation biologists still consider that preventing the loss of wildlife habitat is the most important way to conserve biodiversity, I think preventing increased biophobia is also important for conservation."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q41",
@@ -2636,7 +2873,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7205,
+              "end": 7372,
+              "quote": "No matter what techniques we use, this growing field of research illustrates that saving nature reqtllres encouragmg people to expenence it more Often and more deeply."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q42",
@@ -2724,7 +2970,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1383,
+              "end": 1761,
+              "quote": "The results were published earlier this year in the Journal Biological Conservation Lead researcher Mas ashi Soga with the University of Tokyo says the study stemmed from observations about today S nature-deficient children \"Humans inherently avoid dangerous organisms such as bees, but children the s e days avoid even harmless insects such as butterflies and & 蜻蜓), ' he says."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q43",
@@ -2812,7 +3067,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5665,
+              "end": 5764,
+              "quote": "If anything like that happened, both the park and the people of Seattle could lose something vital."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q44",
@@ -2900,7 +3164,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1029,
+              "end": 1180,
+              "quote": "A survey of more than 5 300 school children in the Tochigi Prefecture examined the ir perception of 14 local insect species and one spider The results?"
+            }
+          ]
         },
         {
           "id": "2022-12-2-q45",
@@ -2988,7 +3261,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6315,
+              "end": 6547,
+              "quote": "If we can get people to understand how much meaning and value can come 什 OI 嗆 having more experience S with more wild forms of nature, then maybe we can stop this cyc I e and move toward cons erv ing and restoring what we have left."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q46",
@@ -3028,7 +3310,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 0,
+              "end": 139,
+              "quote": "Some people in the US have asserted that forgiving student loan debt is one way to\nstimulate the economy and give assistance to those need."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q47",
@@ -3068,7 +3359,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 560,
+              "end": 750,
+              "quote": "Federal Reserve data reveals that the highest-income 40\npercent of households owe approximately 60 percent of outstanding student debt while the lowest 40 percent owe JLISt under 20 percent."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q48",
@@ -3108,7 +3408,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1807,
+              "end": 2121,
+              "quote": "And, students will feel more comfortable making the irresponsible decision to go tens of thousands of dollars in debt to major impractical or idealistic subjects if they know the ir loans will be forgiven\nThis is especially concerning given the 0 ” m 记 (大流行) has rendered a college education practically worthless."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q49",
@@ -3188,7 +3497,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2349,
+              "end": 2537,
+              "quote": "In the case of any of the s e student debt plans, working-class Americans who chose not to or could not afford to go to college will be subsidizing the education of the professional class."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2538,
+              "end": 2620,
+              "quote": "Plumbers and retail workers will be paying for the degrees of doctors and lawyers."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q51",
@@ -3228,7 +3553,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 190,
+              "quote": "If there's one rule that most parents c ling to in the confusing, fast- changing world of kids and media, it's \"NO screens before age 2\nAs of today, that rule has been thrown out the window."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q52",
@@ -3348,7 +3682,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1717,
+              "end": 1867,
+              "quote": "The fl ip side of this is that many studies have actually shown poorer I anguage skills correlated with earlier SOIo viewing Of 'educational ” videos."
+            }
+          ]
         },
         {
           "id": "2022-12-2-q55",
@@ -3388,7 +3731,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2189,
+              "end": 2354,
+              "quote": "For preschoolers ages 2 to 5, there's more evidence that they have the ability to\ntransfer knowledge from screens to the real world including early literacy and math"
+            }
+          ]
         }
       ]
     },

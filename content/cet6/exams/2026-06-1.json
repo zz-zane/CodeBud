@@ -2554,7 +2554,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1097,
+              "end": 1221,
+              "quote": "That's when he created\n#nomads, a membership-based chat system which runs on the team communication platform known as Slack."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1222,
+              "end": 1358,
+              "quote": "The channel allows users to ask people in their current city the types of practical questions that a tourist would unlikely need to ask."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q37",
@@ -2633,7 +2649,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4368,
+              "end": 4466,
+              "quote": "\"When you're a digital nomad, you don't actually have as much freedom as most people think you do."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q38",
@@ -2712,7 +2737,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2560,
+              "end": 2647,
+              "quote": "But unlike a tourist, they don't arrive in a foreign city without any responsibilities."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q39",
@@ -2791,7 +2825,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5584,
+              "end": 5837,
+              "quote": "But nomads like Adams say that while they are aware of this privilege, they believe living this way elevates what they're able to offer, by giving them a broader perspective on what they're building, writing, or designing and expanding their world view."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q40",
@@ -2870,7 +2913,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 251,
+              "end": 515,
+              "quote": "When the average traveller lands in a city like Bangkok, Berlin, or Buenos Aires, their first step might be to drop their bags at their hotel and to log on to TripAdvisor to find out the hours of a popular tourist attraction or the best rooftop bar for happy hour."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q41",
@@ -2949,7 +3001,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3546,
+              "end": 3801,
+              "quote": "Though Adams frequently posts pictures on Instagram of his enviable cooking adventures from Seoul to Bangkok, he says nomad life in foreign cities has its downsides, including finding adequate Wi-Fi for the bandwidth-hungry work his livelihood depends on."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q42",
@@ -3028,7 +3089,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5842,
+              "end": 5921,
+              "quote": "\"Being able to travel and get around makes it easy to stay inspired,\" he added."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q43",
@@ -3107,7 +3177,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1787,
+              "end": 1982,
+              "quote": "But thanks to the growing prevalence of freelance (自由职业的) livelihoods, a global sharing economy and numerous digital tools, the number of people who are able to live this life is growing quickly."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q44",
@@ -3186,7 +3265,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6463,
+              "end": 6597,
+              "quote": "Levels says that the nomad life has not only changed his notions of citizenship, but the people he chooses to spend time with as well."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q45",
@@ -3265,7 +3353,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4821,
+              "end": 5070,
+              "quote": "However inconvenient, a trip to a local doctor, immigration office or laundry —— or a conflict with a local Airbnb host (the accommodation style of choice for most nomads)\n—— can be far more culturally instructive than a trip to the national museum."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q46",
@@ -3309,7 +3406,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 85,
+              "end": 361,
+              "quote": "While younger children should not be on platforms where 13 is the minimum age, it is neither practical nor desirable to imagine a world in which teenagers are prevented from accessing the platforms and messaging systems that the adults around them use to organise their lives."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q47",
@@ -3353,7 +3459,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 529,
+              "end": 686,
+              "quote": "The finding that the alarmingly high rate of depression in British teenage girls is closely correlated to time spent on social media is extremely concerning."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q48",
@@ -3397,7 +3512,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 995,
+              "end": 1155,
+              "quote": "Although the research does not prove that social media causes depression, the importance of the finding that there is a connection should not be underestimated."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q49",
@@ -3441,7 +3565,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1464,
+              "end": 1690,
+              "quote": "This idea has the virtue of simplicity, though some experts question its effects and call for a greater degree of differentiation, arguing that time online by itself is not a bad thing and it all depends on what you are doing."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q50",
@@ -3485,7 +3618,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2375,
+              "end": 2695,
+              "quote": "There are other reasons for the rising incidence of depression in young people, with increasing pressure to succeed in education and in life more broadly —— to be famous, beautiful, rich —— often cited as a source of unhappiness or anxiety which can, if aggravated by other factors, and not managed, tip into ill health."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q51",
@@ -3529,7 +3671,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 275,
+              "end": 453,
+              "quote": "But, instead of reining in the use of tax havens —— countries such as the\nBahamas and Cayman Islands with very low or no effective tax rates —— the problem has only gotten worse."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q52",
@@ -3573,7 +3724,23 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 993,
+              "end": 1101,
+              "quote": "The main reasons for the large increase were the growth of the tax avoidance industry in the 1980s and U. S."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1102,
+              "end": 1186,
+              "quote": "policies that made it easier to shift profits from high-tax countries to tax havens."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q53",
@@ -3617,7 +3784,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1540,
+              "end": 1669,
+              "quote": "So far, the world as a whole has been trying to solve this problem by cutting or scrapping corporate taxes in a very gradual way."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q54",
@@ -3661,7 +3837,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1670,
+              "end": 1759,
+              "quote": "In the past 40 years, the global effective corporate tax rate has fallen from 23%\nto 17%."
+            }
+          ]
         },
         {
           "id": "2026-06-1-q55",

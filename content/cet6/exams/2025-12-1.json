@@ -2660,7 +2660,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1370,
+              "end": 1561,
+              "quote": "Fully automated burger restaurants managed with minimal human oversight—where customers order at screens, pay electronically and eat food cooked and delivered by robots—are now a possibility."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q37",
@@ -2765,7 +2774,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3650,
+              "end": 3778,
+              "quote": "At the robot-powered US pizza- delivery company Zume, the more difficult jobs, such as topping pizzas, are still done by humans."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q38",
@@ -2870,7 +2888,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1667,
+              "end": 1767,
+              "quote": "In an industry keen to slash labour costs and increase profits, further automation seems inevitable."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q39",
@@ -2975,7 +3002,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5306,
+              "end": 5376,
+              "quote": "Embarrassing failures in restaurant tech frequently hit the headlines."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q40",
@@ -3080,7 +3116,23 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3,
+              "end": 54,
+              "quote": "Like most chefs, Flippy is not afraid of hard work."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 315,
+              "end": 375,
+              "quote": "But you won't hear Flippy complain or say anything, in fact."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q41",
@@ -3185,7 +3237,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2921,
+              "end": 3027,
+              "quote": "\"For the first time in a few hundred years, digital is allowing us to create new versions of restaurants.\""
+            }
+          ]
         },
         {
           "id": "2025-12-1-q42",
@@ -3290,7 +3351,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5786,
+              "end": 5902,
+              "quote": "That attachment to the human art of hospitality will be heartening for staff who see automation as a threat to jobs."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q43",
@@ -3395,7 +3465,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4743,
+              "end": 4895,
+              "quote": "\"Automation systems designed to make the process more idiot-proof are trying to bridge that gap,\" says Stefan Chomka, the editor of Restaurant magazine."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q44",
@@ -3500,7 +3579,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6724,
+              "end": 6893,
+              "quote": "Invariably, over the next 10 years, jobs will go in conventional bricks-built restaurants, not least because automation will boost their rapidly growing rival: delivery."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q45",
@@ -3605,7 +3693,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3148,
+              "end": 3302,
+              "quote": "\"It'll probably be a very long time before we see a five-star robot-chef,\" says Noel Sharkey, professor of AI and robotics at the University of Sheffield."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q46",
@@ -3654,7 +3751,16 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 96,
+              "end": 241,
+              "quote": "However, more often than not, in our eagerness to seek individual success, we lose friends along the way and that has become part of the process."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q47",
@@ -3703,7 +3809,16 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 636,
+              "end": 695,
+              "quote": "We must reevaluate the harm of radical, individual freedom."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q48",
@@ -3752,7 +3867,16 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 959,
+              "end": 1129,
+              "quote": "Society tends to celebrate personal achievement and commend it based on the assumption that winning or succeeding is a consequence of working harder than the next person."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q49",
@@ -3850,7 +3974,16 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2523,
+              "end": 2708,
+              "quote": "Although we may be living in a society that treasures the independent pursuit of achievement, having people to support and love you on the way is far more important than any end result."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q51",
@@ -3899,7 +4032,23 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 289,
+              "end": 390,
+              "quote": "From disputes over climate change to debates about how slavery is taught, America is at a crossroads."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 391,
+              "end": 462,
+              "quote": "And the battle for equity is at the heart of these vital conversations."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q52",
@@ -3948,7 +4097,16 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 533,
+              "end": 749,
+              "quote": "A 2020\nreport by Citi indicated that \"Black students could have increased their lifetime incomes $90-$113 billion\" if equity issues related to higher education had been adequately addressed over the past two decades."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q53",
@@ -3997,7 +4155,16 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 948,
+              "end": 1043,
+              "quote": "However, by honoring King's legacy, we can get our country back on the path toward true equity."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q54",
@@ -4046,7 +4213,16 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1838,
+              "end": 1943,
+              "quote": "A recent survey found that 77 percent of Americans believe the nation is \"more divided than ever before\"."
+            }
+          ]
         },
         {
           "id": "2025-12-1-q55",
@@ -4095,7 +4271,23 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2475,
+              "end": 2577,
+              "quote": "On this Martin Luther King Day and beyond, let's commit to working together to disrupt the status quo."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2578,
+              "end": 2757,
+              "quote": "Let's continue to build a better, more inclusive nation; and in the words of Martin Luther King Jr., \"A society at peace with itself, a society that can live with its conscience.\""
+            }
+          ]
         }
       ]
     },

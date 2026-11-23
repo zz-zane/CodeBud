@@ -3844,6 +3844,8 @@ export const CET6 = {
   REF_TRANSLATION: '参考译文',
   NO_REF: '暂无参考范文',
   TRANSCRIPT_SUMMARY: '听力原文 / 译文',
+  /** 解析里的按钮：把这道题的依据在左侧原文 / 听力原文里标亮并滚过去（lib/use-cet6-evidence.ts） */
+  LOCATE_EVIDENCE: '在原文中定位',
   TRANSCRIPT_EXPAND_ALL: '展开全部听力原文',
   TRANSCRIPT_COLLAPSE_ALL: '收起全部听力原文',
   TRANSCRIPT_NONE: '本套听力原文和译文暂未提取。',

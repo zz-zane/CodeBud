@@ -15,7 +15,7 @@
 五張最終圖均為 **1920×1080、16:9、RGB PNG**，已逐張目視檢查：沒有主角、可見文字、字母、logo 或浮水印，下方保留較乾淨區域供疊字。島上的小蛇屬指定場景內容。原始工具輸出為 1672×941；以 FFmpeg nearest-neighbor（最近鄰）縮放至交付尺寸，保留像素邊緣；不是原生 1080p 生成。未將圖片宣稱為手繪作品或第三方 CC0 作品。
 
 風格參考由使用者提供，原檔：
-使用者提供的风格参考图。
+`<本地工作区>`。
 參考作者／原始授權未提供；只用於配色與像素風格參考，沒有把主角畫入交付背景。
 配色依照米白 #F6F4EC、淡綠 #7DB87A、淡黃 #FFF2A6；電路底圖以 #16261C 深墨綠為目標色調。
 
@@ -81,3 +81,5 @@ ONE standalone 16:9 landscape promotional background, request 2560x1440 PNG. Ref
 ```text
 ONE standalone 16:9 landscape promotional background, request 2560x1440 PNG. Reference image ONLY for coarse low-resolution pixel art style and soft palette, NO creature. Large flat square pixel clusters and crisp stairstep silhouettes, cream #F6F4EC, light sage #7DB87A, pale yellow #FFF2A6, sparse muted warm orange. No realistic textures, no vector curves. Absolutely NO text, letters, digits, logos, watermarks, symbols resembling writing, UI, people, characters or mascot. Bottom third is clean low-detail negative space for captions. Full bleed. bg_circuit.png: Very dark deep ink green #16261C full background, subtle low-contrast coarse pixel art circuit-board traces and a few abstract vertical falling square blocks, NOT actual code or letters. Trace colors are slightly lighter muted dark sage greens only, rare tiny dim pale yellow nodes, all details restrained and dark. Concentrate faint circuit structure toward upper corners and sides; center and especially bottom third nearly flat #16261C and uncluttered for overlay text. Orthogonal stepped 8-bit traces, large squared nodes, no legible writing, no 0s or 1s. Deliberately dark subdued text background, avoid glow highlights or bright lines.
 ```
+
+

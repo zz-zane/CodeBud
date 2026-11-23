@@ -1066,7 +1066,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2940,
+              "end": 3140,
+              "quote": "Located on a working cattle ranch on the CaIifornia-Nevada border, Deep Springs is a private, resldential, two-year college for men, committed to educating students for \"a life of service to humanity."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q37",
@@ -1150,7 +1159,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1599,
+              "end": 1806,
+              "quote": "I've also been profoundly disappointed in each of these institutions, and in many of my colleagues, especially when it comes to helping students and preparing them for the many responsibilities of adulthood."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1943,
+              "end": 2036,
+              "quote": "Little deliberate attention is given to how students mature as individuals and social beings,"
+            }
+          ]
         },
         {
           "id": "2023-06-3-q38",
@@ -1234,7 +1259,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4745,
+              "end": 4864,
+              "quote": "If tiny schools are to become a player on the higher education scene, they WIII need to find a way to truly affordable."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q39",
@@ -1318,7 +1352,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3483,
+              "end": 3681,
+              "quote": "\"Living in close community with one's teachers and fellow students, and being forced to take on adult responsibilities, makes for ones growth as a person, says William Hunt, who graduated last year."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q40",
@@ -1402,7 +1445,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 421,
+              "end": 706,
+              "quote": "In higher education the trend is mostly in the opposite direction: Universities with 20, 000 or 30, 000 students are considered ' mid-sized ”, The nation's largest university, Arizona State University, has 80, 000 students on campus and aims to enroll another 100, 000 students online."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 707,
+              "end": 934,
+              "quote": "At the Other end of the spectrum is a handful of colleges that have fewer than a hundred students on campus and no online courses: colleges such as Sterling College, Thomas More College of Liberal Arts, and Deep Sprmgs College."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q41",
@@ -1486,7 +1545,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4223,
+              "end": 4366,
+              "quote": "According to its catalog, a college education at Sterling combines rigorous academics, roll-up-your-sleeves challenges, and good old hard work."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q42",
@@ -1571,7 +1639,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "O"
+          "answerOriginal": "O",
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1285,
+              "end": 1422,
+              "quote": "They replace concerns about institutional growth with attention to the growth of students as fully developed participants in communities."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q43",
@@ -1655,7 +1732,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5591,
+              "end": 5646,
+              "quote": "At its core, education is a human-to-human interaction."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q44",
@@ -1739,7 +1825,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2042,
+              "end": 2202,
+              "quote": "Having Just retired from teaching at a public university, I m now returning to my hometown Of Flagstaff, Arizona, to establish a tiny college—Flagstaff College."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q45",
@@ -1823,7 +1918,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6814,
+              "end": 7046,
+              "quote": "The ultimate justification for a tiny college is the conviction that each of us comes into our full humanity by close interaction with those who know and care for us, and that one of the basic purposes of higher education is social."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q46",
@@ -1903,7 +2007,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1488,
+              "end": 1520,
+              "quote": "What we eat is all about memory."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q48",
@@ -1943,7 +2056,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1640,
+              "end": 1739,
+              "quote": "the food industry spends lots of time trying to shape the memories that we have for their products."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q49",
@@ -2023,7 +2145,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2515,
+              "end": 2652,
+              "quote": "these companies are finding it really difficult to meet that new demand because of their own addiction to making these convenience foods."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q51",
@@ -2063,7 +2194,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 508,
+              "end": 604,
+              "quote": "It could be that our raw intelligence gave us an unprecedented ability to think outside the box."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q52",
@@ -2143,7 +2283,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1554,
+              "end": 1641,
+              "quote": "they copied irrationally: instead of doing only what was necessary to get their reward."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1642,
+              "end": 1699,
+              "quote": "children slaushly imitated every action they'd witnessed."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q54",
@@ -2183,7 +2339,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2404,
+              "end": 2559,
+              "quote": "Anthropologist\nJoseph Henrich points out that people around the world rely on technologres that are often SO complex that no one can learn them rationally."
+            }
+          ]
         },
         {
           "id": "2023-06-3-q55",

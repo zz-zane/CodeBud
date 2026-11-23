@@ -223,7 +223,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 25,
+              "end": 121,
+              "quote": "1\nUnlike any video game Ive ever played before, its so boring, yet so relaxing at\nthe same time."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q2",
@@ -276,7 +285,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.38
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 214,
+              "end": 277,
+              "quote": "2\nI was surprised to find how educational and realistic it was."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q3",
@@ -328,7 +346,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.72
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 613,
+              "end": 678,
+              "quote": "3\nBut I really appreciate all the details that go in to the game."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q4",
@@ -431,7 +458,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.5
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 43,
+              "end": 174,
+              "quote": "There are obvious benefits, 5\nthough I dont seem to have the freedom I anticipated as I just dont seem\nable to decline work offers."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q6",
@@ -483,7 +519,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.38
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 769,
+              "end": 837,
+              "quote": "6\nAnd certainly not\nall managers have a clue how to motivate people."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q7",
@@ -535,7 +580,16 @@
             "type": "auto-locate-from-transcript",
             "how": "none",
             "score": 0.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1003,
+              "end": 1047,
+              "quote": "7\nThe mot i vat or I value most is autonomy."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q8",
@@ -587,7 +641,23 @@
             "type": "auto-locate-from-transcript",
             "how": "none",
             "score": 0.25
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1511,
+              "end": 1571,
+              "quote": "Related ness is inevitably cultivated via human interaction."
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1572,
+              "end": 1771,
+              "quote": "Engaging with clients,\ngetting written testimony and recommendations, staying in contact with clients afterwards, these are\nthings you ll find will come in due course and provide you with motivation."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q9",
@@ -640,7 +710,23 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.75
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 0,
+              "end": 110,
+              "quote": "Weather is a constant force in our lives, but there is little marketing research on how it affects\nbusinesses."
+            },
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 111,
+              "end": 197,
+              "quote": "9\nNow, a new study reveals how sunny and snowy conditions influence consumer behavior."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q10",
@@ -689,7 +775,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 742,
+              "end": 841,
+              "quote": "10\nThis mental picture of using the towel increases the value of the product in the consumers mind."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q11",
@@ -738,7 +833,23 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1322,
+              "end": 1454,
+              "quote": "Researchers believe that companies that sell a wide\narray of products online can benefit most from the insights this study provides."
+            },
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1455,
+              "end": 1583,
+              "quote": "11\nOnline sellers often use\ncomplex mathematical formulas to determine what products to feature and how to price these products."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q12",
@@ -792,7 +903,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.54
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 317,
+              "end": 413,
+              "quote": "12\nBut\nrecent studies have challenged the accepted wisdom that a cool office is more productive."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q13",
@@ -895,7 +1015,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1038,
+              "end": 1135,
+              "quote": "14\nBut there is a range of at\nleast three to four degrees which does not have any adverse impact."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q15",
@@ -948,7 +1077,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.8
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1240,
+              "end": 1343,
+              "quote": "15\nIf\nthey're used to the environment which is air-conditioned, they tend to prefer lower temperatures."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q16",
@@ -1003,7 +1141,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.67
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 549,
+              "end": 613,
+              "quote": "16\nAlso, it categorized emotions as simply positive or negative."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q17",
@@ -1057,7 +1204,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.88
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1292,
+              "end": 1388,
+              "quote": "This experiment specifically aimed to determine the effect of\nsolitude on high-arousal emotions."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q18",
@@ -1107,7 +1263,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1635,
+              "end": 1707,
+              "quote": "A second study measured the effects of solitude on low-arousal emotions."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q19",
@@ -1161,7 +1326,16 @@
             "type": "auto-locate-from-transcript",
             "how": "none",
             "score": 0.33
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 357,
+              "end": 475,
+              "quote": "19\nWell, when the body is at rest, we know that the brain uses up a start ling 20%to 25% of the body s\noverall energy."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q20",
@@ -1211,7 +1385,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1331,
+              "end": 1436,
+              "quote": "A lot of that activity is unrelated to conscious activities like learning how to sing or play the guitar."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q21",
@@ -1265,7 +1448,16 @@
             "type": "auto-locate-from-transcript",
             "how": "none",
             "score": 0.25
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1549,
+              "end": 1627,
+              "quote": "21\nBut the overall energy availability in the brain is thought to be constant."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q22",
@@ -1318,7 +1510,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.71
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 0,
+              "end": 166,
+              "quote": "22 “Tell me about yourself”may seem like an easy job interview question, but the open-ended nature of this\nquestion often leaves job seekers at a loss where to start."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q23",
@@ -1421,7 +1622,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1300,
+              "end": 1685,
+              "quote": "Candidates\nshouldn't pick abroad general strength to elaborate on, such as “Im smart, I work hard and I get things\ndone.”24\nTo come up with multiple career accomplishments or examples for different interview questions, job\nseekers should talk with others, especially people who know them, partners, friends or co-workers who will\nbring up different stories than the ones they remember."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q25",
@@ -1475,7 +1685,23 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.65
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1686,
+              "end": 1775,
+              "quote": "25\nSecondly, candidates should know what sat stake for the company with this job opening."
+            },
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2016,
+              "end": 2187,
+              "quote": "What job applicant sought to be looking for is what the company is up to, what they are trying to\naccomplish and what is preventing them from accomplish in g those things."
+            }
+          ]
         }
       ]
     },
@@ -2473,7 +2699,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2696,
+              "end": 2903,
+              "quote": "Some of today's narratives about the future seem to suggest that we too, like Prometheus, will be saved by a new Hercules, a divine engineer, someone who will mastermind, manoeuvre and manipulate our planet."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2904,
+              "end": 3164,
+              "quote": "They suggest that geo engineering, cold fusion or faster-than-light spaceships might transcend once and for all the terrestrial constraints of rising temperatures, lack of energy, scarcity of food, lack of space, mountains of waste, polluted water-you name it."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q37",
@@ -2577,7 +2819,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5063,
+              "end": 5205,
+              "quote": "In The Principle of Hope (1954-1959), Ernst Bloch, one of the leading philosophers of the future, wrote that ' the most tragic form of loss..."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5206,
+              "end": 5277,
+              "quote": "is the loss of the capacity to imagine that things could be different'."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q38",
@@ -2681,7 +2939,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 831,
+              "end": 942,
+              "quote": "Today we can no longer ignore the ecological curses that we have released in our search for warmth and comfort."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q39",
@@ -2785,7 +3052,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7082,
+              "end": 7175,
+              "quote": "Even in the United States-the fast-food nation-small farms and urban gardens are on the rise."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q40",
@@ -2889,7 +3165,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2138,
+              "end": 2245,
+              "quote": "The acceleration of human production, consumption and travel has changed the animate and inanimate spheres."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2499,
+              "end": 2692,
+              "quote": "If represented graphically, the curve for all these changes looks rather like that well-known hockey stick: with little change over millennia (数千年) and a dramatic upswing over the past decades."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q41",
@@ -2993,7 +3285,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3970,
+              "end": 4140,
+              "quote": "This much is clear: we need to find ways that help us flatten the hockey-stick curves that reflect our ever-faster pace of ecological destruction and social acceleration."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q42",
@@ -3097,7 +3398,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3,
+              "end": 103,
+              "quote": "Our world is full of-mostly untold-stories of slow hope, driven by the idea that change is possible."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q43",
@@ -3201,7 +3511,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3168,
+              "end": 3438,
+              "quote": "Yet, if we envisage our salvation to come from a deus ex machina (NF-111::t.;tf), from a divine engineer or a tech solutionist who will miraculously conjure up a new source of energy or another cure-all with revolutionary potency, we might be looking in the wrong place."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3439,
+              "end": 3599,
+              "quote": "The fact that we now imagine our planet as a whole does not mean that the ' rescue' of our planet will come with one big global stroke of genius and technology."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q44",
@@ -3305,7 +3631,23 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5752,
+              "end": 5821,
+              "quote": "What makes us ' authentic' as humans are visions of our ' potential'."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5822,
+              "end": 5868,
+              "quote": "In other words: living in hope makes us human."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q45",
@@ -3409,7 +3751,23 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 342,
+              "end": 548,
+              "quote": "Just as in the myth, technology-first fire and stone tools, and later farming, the steam engine and industry, fossil fuels, chemicals and nuclear power-has allowed us to alter and control the natural world."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 549,
+              "end": 734,
+              "quote": "The myth also reminds us that these advances have come at a price: as a punishment for Prometheus' crime, the gods created Pandora, and they gave her a box filled with evils and curses."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q46",
@@ -3489,7 +3847,16 @@
               13
             ]
           },
-          "verified": false
+          "verified": false,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 413,
+              "end": 567,
+              "quote": "In countries like India, that call could become a tool to aggravate an already tense political situation and stress already under no uri shed populations."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q48",
@@ -3530,7 +3897,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 757,
+              "end": 1126,
+              "quote": "In India, however, there is a vast difference between what people would wish to consume and what they have to consume because of innumerable barriers around class, religion, culture, cost, geography, etc. Policymakers in India have traditionally pushed for a cereal-heavy \"vegetarian diet\" on a meat-eating population as a way of providing the cheapest sources of food."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q49",
@@ -3652,7 +4028,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 280,
+              "end": 450,
+              "quote": "Something is terrible about their relationship, job, or other situation, and they moan about it ceaselessly, but find some excuse to dismiss any solution that's proposed."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 603,
+              "end": 820,
+              "quote": "If they can \"win,, the game-dismissing every suggestion until their interlocutor (对话者) gives up in annoyance-they get to feel pleasurably righteous (正当的) in their resentments and excused from any obligation to change."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q52",
@@ -3692,7 +4084,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1185,
+              "end": 1322,
+              "quote": "For example, if I were to discover a newborn at my front door, it wouldn't be my fault, but it most certainly would be my responsibility."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1445,
+              "end": 1671,
+              "quote": "The point is that what goes for the baby on the doorstep is true in all cases: even if the other person is 100% in the wrong, there's nothing to be gained, long-term, from using this as a justification to evade responsibility."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q53",
@@ -3732,7 +4140,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1672,
+              "end": 1824,
+              "quote": "Should you find yourself on the receiving end of this kind of complaining, there's an ingenious way to shut it down-which is to agree with it, ardently."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1893,
+              "end": 2037,
+              "quote": "For one thing, you'll be spared further moaning, since the other person's motivation was to confirm her beliefs, and now you're confirming them."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q54",
@@ -3773,7 +4197,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2172,
+              "end": 2353,
+              "quote": "The notion that they're utterly powerless suddenly seems unrealistic-not to mention rather annoying-so they're prompted instead to generate ideas about how they might change things."
+            }
+          ]
         },
         {
           "id": "2020-12-2-q55",
@@ -3814,7 +4247,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2523,
+              "end": 2736,
+              "quote": "Which illustrates the irony of the responsibility/fault fallacy: evading responsibility feels comfortable, but turns out to be a prison; whereas assuming responsibility feels unpleasant, but ends up being freeing."
+            }
+          ]
         }
       ]
     },

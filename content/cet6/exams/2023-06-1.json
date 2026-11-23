@@ -318,7 +318,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 757,
+              "end": 907,
+              "quote": "When I got my first place I remember thinking I couldn't\nwalt to live by myself and get away from my juvenile roommates and all their annoying habits."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q4",
@@ -358,7 +367,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1632,
+              "end": 1684,
+              "quote": "That does sound adorable and I can't wait to see it."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q5",
@@ -438,7 +456,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 255,
+              "end": 354,
+              "quote": "1 believe that the puyp_e_}e of higher education is to prepare young people to enter the workforce."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q7",
@@ -486,7 +513,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1067,
+              "end": 1159,
+              "quote": "My arbument is that we need to use more of our budget on areas like\nscience and engineering."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q8",
@@ -526,7 +562,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1390,
+              "end": 1456,
+              "quote": "but it helps young people to think about the world in a deeper\nwa."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q9",
@@ -566,7 +611,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 66,
+              "end": 153,
+              "quote": "Do you ever have the annoying feeling that you don't have time to really think anymore?"
+            }
+          ]
         },
         {
           "id": "2023-06-1-q10",
@@ -607,7 +661,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "creative ideas?"
+          "stemOriginalOCR": "creative ideas?",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 724,
+              "end": 853,
+              "quote": "Almost all of the great advisors that\nI have studied have found ways to get away from it all and contemplate their life and work."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q11",
@@ -647,7 +710,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 914,
+              "end": 1021,
+              "quote": "believe that insight occurs during the reflection and relaxation\nthat follows a period of intense activity."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q12",
@@ -727,7 +799,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 737,
+              "end": 817,
+              "quote": "As federal\nsubsidies and land grants tempted people into the deserts and plains."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q14",
@@ -767,7 +848,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1031,
+              "end": 1100,
+              "quote": "The federal government commissioned\nprivate wagons to carry the mail."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q15",
@@ -807,7 +897,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1332,
+              "end": 1385,
+              "quote": "wrote a book on the history of the US postal service."
+            },
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1386,
+              "end": 1436,
+              "quote": "he used data\nscrence to analyze historical trends."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q16",
@@ -847,7 +953,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 345,
+              "end": 477,
+              "quote": "a new study suggests that\n0 le with hi her anxiet levels mi ht remember certain information better than le with lower anxiet\nlevels."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q17",
@@ -927,7 +1042,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 2117,
+              "end": 2176,
+              "quote": "Previous studies have found that extreme levels of anxiety."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q19",
@@ -967,7 +1091,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 525,
+              "end": 568,
+              "quote": "expecting to receive an immediate response."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q20",
@@ -1007,7 +1140,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1682,
+              "end": 1826,
+              "quote": "Marketers need to figure out ways to speak directly to the customers emotions\nand they need to figure out how to do that as quickly as possible."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q21",
@@ -1047,7 +1189,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 2209,
+              "end": 2349,
+              "quote": "S important for marketers to pay attention to the latest technological developments and consider collaborating\nwith technological mnovators."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q22",
@@ -1087,7 +1238,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 7,
+              "end": 127,
+              "quote": "You might be surprised to learn that the benefits of friendships extend beyond people's social life and\ninto their work."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q23",
@@ -1127,7 +1287,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 458,
+              "end": 539,
+              "quote": "that's evidently not enough\n(23)In an initial study of more than 700 respondents."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q24",
@@ -1167,7 +1336,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1229,
+              "end": 1318,
+              "quote": "This follow-up study found that non-\nwork friends even lmprove pgeple's job satisfaction."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q25",
@@ -1207,7 +1385,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2015,
+              "end": 2148,
+              "quote": "It's for this reason that managers\nshould never discriminate when it comes to requests from employees for flexible work arrangements."
+            }
+          ]
         }
       ]
     },
@@ -2187,7 +2374,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1354,
+              "end": 1626,
+              "quote": "It is al one with which contemporary psychology and medicine are just beginning to catch up 、 Simply put, for most of us, it is far more helpful to focus on the things in life for which we can express gratitude than those that incline us toward resentment and lamentation."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q37",
@@ -2271,7 +2467,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3197,
+              "end": 3373,
+              "quote": "Broadly speaking, a community in which people feel grateful to one another is likely to a more pleasant place to live than one characterized by mutual suspicion and resentment."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3374,
+              "end": 3434,
+              "quote": "The beneficial effects of gratitude may extend even further."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q38",
@@ -2355,7 +2567,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 98,
+              "end": 357,
+              "quote": "One recent study asked participants to write a note of thanks to someone and then estimate how surprised and happy the recipient would feel—an rmpact that they consistently underestimated, Another study assessed the health benefits of writing thank-you notes."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q39",
@@ -2523,7 +2744,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2702,
+              "end": 2759,
+              "quote": "And the benefits are not only psychological and physical."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2760,
+              "end": 2883,
+              "quote": "They may also be moral—those who practice gratitude also view their lives less materialistically and suffer from less envy."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q41",
@@ -2607,7 +2844,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5881,
+              "end": 6014,
+              "quote": "Reflecting on generosity and gratitude, the great basketball coach John Wooden once offered two counsels to his players and students."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6149,
+              "end": 6276,
+              "quote": "” In saying this, 、 Mooden sought to promote purely generous acts, as opposed to those performed with an expectation of reward."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q42",
@@ -2691,7 +2944,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1913,
+              "end": 2122,
+              "quote": "And while no one would argue for cultivating a false sense of blessedness, there is mounting evidence that counting our blessings is one of the best habits we can develop to promote mental and physical health."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q43",
@@ -2775,7 +3037,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7051,
+              "end": 7241,
+              "quote": "Gratitude is one of the healthiest and most nourishing of all states of mmd, and those who adopt it as a habit are enriching not only their own lives but also the lives of those around them."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q44",
@@ -2859,7 +3130,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 557,
+              "end": 651,
+              "quote": "While this research into gratitude is relatively new, the principles involved are anythmg but."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q45",
@@ -2943,7 +3223,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3797,
+              "end": 3866,
+              "quote": "Gratitude also tends to strengthen a sense of connection with others."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q46",
@@ -3023,7 +3312,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 987,
+              "end": 1065,
+              "quote": "These are areas where go 疱 m 记 (算法的) prescription is replacing human judgment."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1066,
+              "end": 1170,
+              "quote": "and so people who might have had the chance to develop practical judgment in these areas no longer will."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q48",
@@ -3063,7 +3368,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1195,
+              "end": 1280,
+              "quote": "which are increasingly prevalent inter me diaries in people's consumption of culture."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1281,
+              "end": 1329,
+              "quote": "may serve to constrain choice and minimize luck."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q49",
@@ -3103,7 +3424,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1914,
+              "end": 1999,
+              "quote": "AS machine learning algorithms improve and as they train on more extensive data sets."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2000,
+              "end": 2071,
+              "quote": "larger parts of everyday life are likely to become utterly predictable."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q50",
@@ -3143,7 +3480,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2000,
+              "end": 2071,
+              "quote": "larger parts of everyday life are likely to become utterly predictable."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2723,
+              "end": 2817,
+              "quote": "the creatures inhabiting the increasingly AI-mediated world will become less and less like us."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q51",
@@ -3223,7 +3576,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 565,
+              "end": 661,
+              "quote": "America is stuck in a debate about teaching children to read that has been going on for decades."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q53",
@@ -3263,7 +3625,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1036,
+              "end": 1079,
+              "quote": "This combination of methods is ineffective."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1235,
+              "end": 1282,
+              "quote": "\"It has to be systematic and explicitly taught."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q54",
@@ -3303,7 +3681,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1858,
+              "end": 1990,
+              "quote": "Mississippi s success is attributed to implementing reading methods supported by a body of research known as the science of reading."
+            }
+          ]
         },
         {
           "id": "2023-06-1-q55",

@@ -1,5 +1,6 @@
 @echo off
 setlocal
+if defined CODEBUD_TOOLCHAIN_ACTIVATE call "%CODEBUD_TOOLCHAIN_ACTIVATE%"
 cd /d "%~dp0"
 set "ELECTRON_RUN_AS_NODE="
 set "MIAI_DATA_DIR=%~dp0local-data"

@@ -2298,7 +2298,23 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3406,
+              "end": 3508,
+              "quote": "For example, a common complaint mothers come in with is that their children refuse to eat their meals."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3509,
+              "end": 3663,
+              "quote": "The mothers are concerned they are dealing with indigestion, but it's because they are feeding the children packaged chips which are cheap and convenient."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q37",
@@ -2366,7 +2382,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 929,
+              "end": 1089,
+              "quote": "There are no doctors within miles, and while child mortality and maternal death have gone down in the rest of the country, this is not the case for the islands."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q38",
@@ -2434,7 +2459,23 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6581,
+              "end": 6617,
+              "quote": "TD still has a few major challenges."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6845,
+              "end": 7037,
+              "quote": "The organizations are linked to local pharmacies and offer discounts to the patients and make sure to prescribe the most cost-effective brands, but still many residents can't afford even that."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q39",
@@ -2502,7 +2543,23 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2798,
+              "end": 2914,
+              "quote": "It is funded by a nonprofit organization founded by\nBangladeshi entrepreneurs, finance and technology professionals."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2915,
+              "end": 3101,
+              "quote": "Inside the center, the laptop screen lights up to reveal Dr. Tina Mustahid, TD's head physician, live-streamed (网络直播)from the capital city of Dhaka for free remote medical consultations."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q40",
@@ -2571,7 +2628,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "D"
+          "answerOriginal": "D",
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7181,
+              "end": 7292,
+              "quote": "The reason, explains one resident, might be the simple gesture of treating the island inhabitants with respect."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7293,
+              "end": 7468,
+              "quote": "“Dr. Apa is patient,” he says, “At government hospitals, the doctors treat us very badly, but here they listen to us, I can repeat myself many times and no one gets annoyed.^^"
+            }
+          ]
         },
         {
           "id": "2022-06-1-q41",
@@ -2639,7 +2712,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4656,
+              "end": 4797,
+              "quote": "Early marriage and young motherhood, which are prevalent in these parts of Bangladesh, also contribute to the early onset of health problems."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q42",
@@ -2707,7 +2789,23 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2150,
+              "end": 2379,
+              "quote": "Every week, TD's medical operators travel to the islands by boat, carrying a laptop, a portable printer for prescriptions and tools to run basic medical screenings such as blood pressure, blood sugar, body temperature and weight."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2380,
+              "end": 2678,
+              "quote": "They choose an area of the island with the best\nInternet reception and set up a makeshift (临时凑合的)medical center which consists of plastic stools and small tables borrowed from the locals' homes, a tent in case of rain and a sheet that is strung up to give the patients privacy during their session."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q43",
@@ -2775,7 +2873,23 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4910,
+              "end": 5042,
+              "quote": "TD doctors are not meant to treat serious illnesses or conditions that require a doctor to be physically present, such as pregnancy."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5043,
+              "end": 5234,
+              "quote": "But they can write prescriptions, diagnose common ailments一including digestive issues, joint pain, skin diseases, fever and the common cold— —and refer patients to doctors at local hospitals."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q44",
@@ -2843,7 +2957,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 536,
+              "end": 787,
+              "quote": "They are home to over six million people, who face repeated displacement from flooding and erosion- which may be getting worse because of climate change-and a range of health risks, including poor nutrition, malaria (疟疾)and other water-borne diseases."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q45",
@@ -2911,7 +3034,23 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5849,
+              "end": 5979,
+              "quote": "It can get expensive to travel to the doctor, so usually the women living on the islands describe their illness to their husbands."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5980,
+              "end": 6087,
+              "quote": "The husbands then go to the pharmacy, try to describe the issue and return home with some random medicines."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q46",
@@ -2951,7 +3090,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 156,
+              "end": 391,
+              "quote": "Such charges ignore the fact that these institutions continue to prepare students for success in their work, for thoughtful engagement in civic life, for lifelong learning, and for understanding the world and those with whom they live."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q47",
@@ -2991,7 +3139,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 559,
+              "end": 688,
+              "quote": "This model of education has long played a central role in creating opportunity, driving economic growth, and spurring innovation."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q48",
@@ -3031,7 +3188,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 884,
+              "end": 1050,
+              "quote": "The initial proposals would have made education unaffordable for many by taxing tuition waivers for graduate students and ending deductions for student loan interest."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q49",
@@ -3151,7 +3317,23 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 238,
+              "quote": "When a group of Australians was asked why they believed climate change was not happening, about 36% said it was “common sense”, according to a report published last year by the Commonwealth Scientific and Industrial Research Organization."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 447,
+              "end": 548,
+              "quote": "Presumably it's an appeal to rationality of some sort that forms the basis of more complex reasoning."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q52",
@@ -3191,7 +3373,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 549,
+              "end": 725,
+              "quote": "The appeal to common sense, however, is usually nothing more than an appeal to thinking that just feels right, but what feels right to one person may not feel right to another."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q53",
@@ -3231,7 +3422,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1056,
+              "end": 1236,
+              "quote": "We often mistake this automatic compatibility testing of new ideas with existing beliefs as an application of common sense, but, in reality, it is more about judging than thinking."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1237,
+              "end": 1402,
+              "quote": "As Nobelist Daniel Kahneman notes in Thinking, Fast and Slow, when we arrive at conclusions in this way, the outcomes also feel true, regardless of whether they are."
+            }
+          ]
         },
         {
           "id": "2022-06-1-q54",
@@ -3311,7 +3518,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2280,
+              "end": 2566,
+              "quote": "In matters of science at least, those who value their common sense over methodological, collaborative investigation imagine themselves to be more free in their thinking, unbound by involvement with the group, but in reality they are tightly bound by their capabilities and perspectives."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2567,
+              "end": 2654,
+              "quote": "We are smarter together than we are individually, and perhaps that's just common sense."
+            }
+          ]
         }
       ]
     },

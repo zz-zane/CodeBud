@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { hasBannedPhrase } from '../memory-guard'
-import { isLearnerMemory, learnerMemoryText, LEARNER_MEMORY_PREFIX } from '../learner-profile'
+import { isLearnerMemory, learnerMemoryText, LEARNER_KNOWN_GROUPS, LEARNER_KNOWN_OPTIONS, LEARNER_MEMORY_PREFIX, LEARNER_ZERO } from '../learner-profile'
 
 describe('学习背景 → 记忆文本', () => {
   it('拼出带固定前缀的一行，能被识别', () => {
@@ -20,5 +20,10 @@ describe('学习背景 → 记忆文本', () => {
     expect(text.length).toBeLessThanOrEqual(240)
     expect(text.startsWith(LEARNER_MEMORY_PREFIX)).toBe(true)
     expect(hasBannedPhrase(text, '')).toBe(false)
+  })
+
+  it('调研页的分组正好覆盖「零基础」以外的全部选项，不多不少', () => {
+    const grouped = LEARNER_KNOWN_GROUPS.flatMap((g) => [...g.items])
+    expect(grouped).toEqual(LEARNER_KNOWN_OPTIONS.filter((o) => o !== LEARNER_ZERO))
   })
 })

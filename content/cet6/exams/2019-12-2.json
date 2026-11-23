@@ -218,7 +218,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.67
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 190,
+              "end": 257,
+              "quote": "Were the only record store in London dedicated exclusively to jazz."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q2",
@@ -265,7 +274,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.38
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1094,
+              "end": 1131,
+              "quote": "Its just a much smaller market today."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q3",
@@ -314,7 +332,23 @@
             "date": "2026-11-09",
             "bag": 0.91,
             "tri": 0.53
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1168,
+              "end": 1241,
+              "quote": "3\nWell, interestingly enough, the res no agreed-up on definition of jazz."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1242,
+              "end": 1290,
+              "quote": "Indeed, there are many different styles\nof jazz."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q4",
@@ -363,7 +397,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 1.05
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1544,
+              "end": 1616,
+              "quote": "4\nHonestly, the only way to know what jazz is, is listen to\nit yourself."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q5",
@@ -459,7 +502,23 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.55
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 125,
+              "end": 189,
+              "quote": "6\nFor starters, they said my credit history was not good enough."
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 688,
+              "end": 766,
+              "quote": "They simply looked at my\ncredit history and determined it was not good enough."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q7",
@@ -502,7 +561,16 @@
           "verified": true,
           "verificationNote": "已核对 G 盘本卷原题选项及解析册；未逐题人工核听录音。",
           "stemOriginalOCR": "[问题]Whatdowelearnaboutthewoman􀆳sstore? (关于女士的商店,我们了解到什么?)",
-          "explanationOriginalOCR": "答案：C\nA)Pay a debt long overdue.\nB)Buy a piece of property.\nC)Start her own business.\nD)Check her credit history.\nA)偿还拖欠已久的债务。\nB)购置一处房产。\nC)自己创业。\nD)核查信用记录。\n\n[预测]选项均为原形动宾短语,表示计划或建议,推测题目询问女士某计划或他人(可能是男士)对女士建议。\n[问题]What is the woman planning to do? (女士打算做什么?)\n[解析]第7-8段话轮指出女士银行贷款失败与其 商 业 计 划 书 好 坏 无 关,第9-10 段 话 轮 指 出 女 士 要 想 继 续 追\n寻自己创业的梦想就只能强健自己的财务状况,由此可见,女士打算自己创业, C)正确。"
+          "explanationOriginalOCR": "答案：C\nA)Pay a debt long overdue.\nB)Buy a piece of property.\nC)Start her own business.\nD)Check her credit history.\nA)偿还拖欠已久的债务。\nB)购置一处房产。\nC)自己创业。\nD)核查信用记录。\n\n[预测]选项均为原形动宾短语,表示计划或建议,推测题目询问女士某计划或他人(可能是男士)对女士建议。\n[问题]What is the woman planning to do? (女士打算做什么?)\n[解析]第7-8段话轮指出女士银行贷款失败与其 商 业 计 划 书 好 坏 无 关,第9-10 段 话 轮 指 出 女 士 要 想 继 续 追\n寻自己创业的梦想就只能强健自己的财务状况,由此可见,女士打算自己创业, C)正确。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1321,
+              "end": 1451,
+              "quote": "7\nIf I want to continue ahead with\n91\nthis dream of owning my own business, I have no other choice but to buildup my own finances."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q8",
@@ -592,7 +660,23 @@
           },
           "verified": true,
           "verificationNote": "已核对 G 盘本卷原题选项及解析册；未逐题人工核听录音。",
-          "explanationOriginalOCR": "答案：C\nA)It is profitable and environmentally friendly.\nB)It is well located and completely automated.\nC)It is small and un conventional.\nD)It is fertile and productive.\nA)它利润可观且对环境友好。\nB)它区位优越且全自动化。\nC)它规模小且有新意。\nD)它肥沃且高产。\n\n[预测]各项均以形容词词组描述某一事物(It)的特点,其 中A、D 项 的profitable、productive提示该 事物 能进\n行生产、创造利润, B、D 项的well located、fertile提示其建在某地点、可生长植物,故推测It指代某一农业生产\n场所(如农场),试题询问其相关信息。\n[问题]What do we learn about Leo Sanchez s farm? (关于里欧·桑切斯的农场,我们了解到什么?)\n[解析]Ⅰ、Ⅱ段先指出桑切斯的农场不同寻常,继而指出其三大特点“面积 比一般 农场 小;主 人比一 般农 场主\n年轻;经营方式敢于实验、突破传统”, C 项提取第一、三项特点加以概括。"
+          "explanationOriginalOCR": "答案：C\nA)It is profitable and environmentally friendly.\nB)It is well located and completely automated.\nC)It is small and un conventional.\nD)It is fertile and productive.\nA)它利润可观且对环境友好。\nB)它区位优越且全自动化。\nC)它规模小且有新意。\nD)它肥沃且高产。\n\n[预测]各项均以形容词词组描述某一事物(It)的特点,其 中A、D 项 的profitable、productive提示该 事物 能进\n行生产、创造利润, B、D 项的well located、fertile提示其建在某地点、可生长植物,故推测It指代某一农业生产\n场所(如农场),试题询问其相关信息。\n[问题]What do we learn about Leo Sanchez s farm? (关于里欧·桑切斯的农场,我们了解到什么?)\n[解析]Ⅰ、Ⅱ段先指出桑切斯的农场不同寻常,继而指出其三大特点“面积 比一般 农场 小;主 人比一 般农 场主\n年轻;经营方式敢于实验、突破传统”, C 项提取第一、三项特点加以概括。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 86,
+              "end": 165,
+              "quote": "9\nThe national\naverage farm size is around 440 acres, but his is only one acre."
+            },
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 240,
+              "end": 383,
+              "quote": "And Sanchez constantly attempts to improve everything from seeding techniques out in the field to the\npromotion and sale of his produce online."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q10",
@@ -635,7 +719,16 @@
           "verified": true,
           "verificationNote": "已核对 G 盘本卷原题选项及解析册；未逐题人工核听录音。",
           "stemOriginalOCR": "[问题]WhathasmotivatedLeoSanchezandhisfellowyoungfarmerstoengageinfarming? (什 么 促 使 里",
-          "explanationOriginalOCR": "答案：D\nA)Their urge to make farming more enjoyable.\nB)Their desire to improve farming equipment.\nC)Their hope to re vitalize traditional farming.\nD)Their wish to set a new farming standard.\nA)他们想让务农更加令人愉快。\nB)他们想改进农业设备。\nC)他们希望复兴传统农业。\nD)他们希望设立农业新标准。\n\n[预测]各项均以表“意愿、愿望”的名词(urge、desire、hope、wish)为中心词,描述某类人在农 业方 面的 抱负,推\n测题目问及某类人从事农业生产的动机。\n[问题]What has motivated Leo Sanchez and his fellow young farmers to engage in farming? (什 么 促 使 里\n欧·桑切斯及其他年轻农场主从事农业生产?)\n[解析]Ⅲ段首先让步指出“务农令身心疲惫”,然 后 转 而 揭 示 桑 切 斯 和 年 轻 同 行 们 为 何(如 此 辛 苦 也)要 务 农\n“动机是设立农业新标准”(motivated by the desire to set a new standard for agriculture), D 正确。"
+          "explanationOriginalOCR": "答案：D\nA)Their urge to make farming more enjoyable.\nB)Their desire to improve farming equipment.\nC)Their hope to re vitalize traditional farming.\nD)Their wish to set a new farming standard.\nA)他们想让务农更加令人愉快。\nB)他们想改进农业设备。\nC)他们希望复兴传统农业。\nD)他们希望设立农业新标准。\n\n[预测]各项均以表“意愿、愿望”的名词(urge、desire、hope、wish)为中心词,描述某类人在农 业方 面的 抱负,推\n测题目问及某类人从事农业生产的动机。\n[问题]What has motivated Leo Sanchez and his fellow young farmers to engage in farming? (什 么 促 使 里\n欧·桑切斯及其他年轻农场主从事农业生产?)\n[解析]Ⅲ段首先让步指出“务农令身心疲惫”,然 后 转 而 揭 示 桑 切 斯 和 年 轻 同 行 们 为 何(如 此 辛 苦 也)要 务 农\n“动机是设立农业新标准”(motivated by the desire to set a new standard for agriculture), D 正确。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 553,
+              "end": 731,
+              "quote": "While farming is often difficult for both the body and mind,10\nSanchez says he and many of his fellow\nyoung farmers are motivated by desire to set a new standard for agriculture."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q11",
@@ -683,7 +776,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.68
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 818,
+              "end": 906,
+              "quote": "11\nRecently,\nSanchez bought a hand-operated tool which pulls out weeds and loosens soil."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q12",
@@ -731,7 +833,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.67
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 0,
+              "end": 138,
+              "quote": "12\nEat Grub is Britain s first new food company that breaks western food boundaries by introducing edible\ninsects as a new source of food."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q13",
@@ -779,7 +890,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 1.05
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 517,
+              "end": 563,
+              "quote": "13\nBut the first bite was a pleasant\nsurprise."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q14",
@@ -826,7 +946,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.55
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 903,
+              "end": 1041,
+              "quote": "14\nThe company boasts that\nits dried crickets contain more protein than beef, chicken and pork, as well as minerals like iron and calcium."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q15",
@@ -923,7 +1052,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.6
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 541,
+              "end": 731,
+              "quote": "16\nWhen psychologists and educators test for learning styles, they retrying to figure out whether these\nare inherent traits that affect how well students learn, instead of just a preference."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q17",
@@ -973,7 +1111,23 @@
             "date": "2026-11-09",
             "bag": 0.94,
             "tri": 0.83
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1307,
+              "end": 1340,
+              "quote": "But the study had some big flaws."
+            },
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1341,
+              "end": 1496,
+              "quote": "The researchers excluded two-thirds\nof the original participants because they didnt seem to have any clear learning style from the survey at the\nbeginning."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q18",
@@ -1065,7 +1219,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.5
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 232,
+              "end": 440,
+              "quote": "19\nWe may instead find ourselves feeling guilty about the time we didnt spend watching our children\ngrow, or with our loved ones, or travelling, or on the cultural or leisure pursuits that bring us happiness."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q20",
@@ -1112,7 +1275,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.55
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1074,
+              "end": 1268,
+              "quote": "20\nNine decades a go, leading economists predicted that technological advances and rising\nproductivity would mean that wed be working a 15-hour week by now: that target has been somewhat missed."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q21",
@@ -1154,7 +1326,23 @@
           },
           "verified": true,
           "verificationNote": "已核对 G 盘本卷原题选项及解析册；未逐题人工核听录音。",
-          "explanationOriginalOCR": "答案：C\nA)Loss of workers personal dignity.\nB)Deprivation of workers creativity.\nC)Deterioration of workers mental health.\nD)Unequal distribution of working hours.\nA)劳动者丧失个人尊严。\nB)劳动者丧失创造力。\nC)劳动者心理健康状态恶化。\nD)工作时间分配不公。\n\n[预测]各项描述对劳动力不同方面的不利影响(人格尊严、创造力、心 理健 康、工作 时长),结 合前两 题预 测信\n息,推测本题询问资本主义市场大环境对劳动力造成的不利影响。\n[问题]What is the result of denying workers right to make their own choices? (剥夺劳动者的自主选择权会\n带来什么后果?)\n[解析]第四段末句指出,那(That回指surrender... autonomy、directed... others、denied... choices构建的语义场\n“劳动者丧失自主选择权”)对我们不利:大量劳动者患与工作相关心理健康疾病、承担过多的工作压力, C)正确。"
+          "explanationOriginalOCR": "答案：C\nA)Loss of workers personal dignity.\nB)Deprivation of workers creativity.\nC)Deterioration of workers mental health.\nD)Unequal distribution of working hours.\nA)劳动者丧失个人尊严。\nB)劳动者丧失创造力。\nC)劳动者心理健康状态恶化。\nD)工作时间分配不公。\n\n[预测]各项描述对劳动力不同方面的不利影响(人格尊严、创造力、心 理健 康、工作 时长),结 合前两 题预 测信\n息,推测本题询问资本主义市场大环境对劳动力造成的不利影响。\n[问题]What is the result of denying workers right to make their own choices? (剥夺劳动者的自主选择权会\n带来什么后果?)\n[解析]第四段末句指出,那(That回指surrender... autonomy、directed... others、denied... choices构建的语义场\n“劳动者丧失自主选择权”)对我们不利:大量劳动者患与工作相关心理健康疾病、承担过多的工作压力, C)正确。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1525,
+              "end": 1640,
+              "quote": "Its time in which we are directed by the needs and desires of others, and denied the\nright to make our own choices."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1641,
+              "end": 1884,
+              "quote": "21\nThat's bad for us: its hardly surprising that over half a million workers suffer from\nwork-related mental health conditions each year, or that 15.4 million working days were lost to work-related stress\nlast year, a jump of nearly a quarter."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q22",
@@ -1202,7 +1390,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 412,
+              "end": 634,
+              "quote": "Plagued by long delays, perpetual m is management and\never-soaring costs,22\nthe airport has become something of a joke among Germans—and a source of frustration\nfor local politicians, business leaders and residents a like."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q23",
@@ -1250,7 +1447,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.55
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 679,
+              "end": 825,
+              "quote": "23\nAt the time, it became clear that the newly-re unified Berlin\nwould need a modern airport with far greater capacity than its existing airports."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q24",
@@ -1343,7 +1549,16 @@
             "date": "2026-11-09",
             "bag": 1.0,
             "tri": 0.5
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2211,
+              "end": 2274,
+              "quote": "Every month it remains\nunopened costs between C 9 m and C 10 m."
+            }
+          ]
         }
       ]
     },
@@ -2343,7 +2558,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1269,
+              "end": 1382,
+              "quote": "The U.S. government's recommended daily allowance (RDA) for the average adult is 50 to 60\ngrams of protein a day."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1858,
+              "end": 1949,
+              "quote": "\"You can get enough protein and meet the RDA before you even get to dinner,\" says Pipitone."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q37",
@@ -2447,7 +2678,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2564,
+              "end": 2722,
+              "quote": "\"I've seen very expensive protein supplements that claim to be high quality but they might not really be beneficial for the average healthy adult, \" she says."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2723,
+              "end": 2760,
+              "quote": "\"I t could just be a waste of money.\""
+            }
+          ]
         },
         {
           "id": "2019-12-2-q38",
@@ -2551,7 +2798,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 363,
+              "end": 545,
+              "quote": "With more than $ 12\nbillion in sales this year, the industry is booming and, according to the market research company,\nGrand View Research, is on track to sell billions more by 2025."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q39",
@@ -2655,7 +2911,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3169,
+              "end": 3257,
+              "quote": "Extreme athletes expend lots of energy breaking down and repairing and building muscles."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3258,
+              "end": 3321,
+              "quote": "Protein can give them the edge they need to speed that process."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q40",
@@ -2759,7 +3031,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6351,
+              "end": 6589,
+              "quote": "There have been some indications that extra protein makes the kidneys work harder, which could be problematic for individuals with a history of kidney disease and for them, the supplements may increase the risk of kidney stones, she says."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q41",
@@ -2863,7 +3144,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3681,
+              "end": 3707,
+              "quote": "So, too, can older people."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3708,
+              "end": 3883,
+              "quote": "At around age 60, \"muscles really start to break down, \" says Kathryn Starr, an aging researcher, \"and because of that, the protein needs of an older adult actually increase.\""
+            }
+          ]
         },
         {
           "id": "2019-12-2-q42",
@@ -2968,7 +3265,23 @@
             ]
           },
           "verified": true,
-          "explanationOriginal": "答案：B\n[预测]各项均指向负面后果,结合上题信息推测本题询问德国柏林新建机场久未完工/投入使用的后果。\n[问题]What happens while the airport remains unused? (机场闲置时发生了什么?)\n[解析]Ⅷ段①②句指出:闲置的机场正产生巨大费用,每月均需花费900~1000万欧元,可见C)正确。\n\n·听力原文·\nToday Im going to talk about Germany s dream airport in Berlin. The airport looks exactly like every\nother major modern airport in Europe, except for one big problem: more than seven years after it was\noriginally supposed to open, it still stands empty.\nGermany is known for its efficiency and refined engineering, but when it comes to its new ghost airport,\nthis reputation could not be further from the truth. Plagued by long delays, perpetual m is management and\never-soaring costs,22\nthe airport has become something of a joke among Germans—and a source of frustration\nfor local politicians, business leaders and residents a like.\nPlanning for the new airport began in 1989.\n23\nAt the time, it became clear that the newly-re unified Berlin\nwould need a modern airport with far greater capacity than its existing airports. The city broke ground on the\nnew airport in 2006.\n24\nThe first major sign of problems came in summer 2010, when the construction corporation pushed the\nopening from October 2011 to June 2012. In 2012, the city planned an opening ceremony.\n24\nBut less than a\nmonth before hand, inspectors found significant problems with the fire safety system and pushed the opening\nback again to 2013.\n24\nIt wasn't just the smoke system: many other major problems subsequently emerged. More than 90\nmetres of cable were incorrectly installed;4,000 doors were wrongly numbered; esc al at or s were too short.\nAnd there was a shortage of check-in desks.\nSo why, with so many problems discovered, didnt the airport corporation decide to give up on the project\nand start over? The reason is simple: people are often hesitant to terminate a project when they ve already\ninvested time or resources in to it, even if it might make logical sense to do so.\nThe longer the delays continued, the more problems inspectors found. Leadership of the planning\ncorporation has changed hands nearly as many times as the opening date has been pushed back. Initially,\nrather than a p pointing a general contractor to run the project, the corporation decided to manage it themselves\ndespite lack of experience with an undertaking of that scale.\n25\nTo compound the delays, the unused airport is resulting in massive costs. Every month it remains\nunopened costs between C 9 m and C 10 m.\nAssuming all goes well, the airport should open in October 2020. But the still-empty airport stands as the\nbiggest embar r ass ment to Germany s reputation for efficiency—and a continuing drain on city and state resources."
+          "explanationOriginal": "答案：B\n[预测]各项均指向负面后果,结合上题信息推测本题询问德国柏林新建机场久未完工/投入使用的后果。\n[问题]What happens while the airport remains unused? (机场闲置时发生了什么?)\n[解析]Ⅷ段①②句指出:闲置的机场正产生巨大费用,每月均需花费900~1000万欧元,可见C)正确。\n\n·听力原文·\nToday Im going to talk about Germany s dream airport in Berlin. The airport looks exactly like every\nother major modern airport in Europe, except for one big problem: more than seven years after it was\noriginally supposed to open, it still stands empty.\nGermany is known for its efficiency and refined engineering, but when it comes to its new ghost airport,\nthis reputation could not be further from the truth. Plagued by long delays, perpetual m is management and\never-soaring costs,22\nthe airport has become something of a joke among Germans—and a source of frustration\nfor local politicians, business leaders and residents a like.\nPlanning for the new airport began in 1989.\n23\nAt the time, it became clear that the newly-re unified Berlin\nwould need a modern airport with far greater capacity than its existing airports. The city broke ground on the\nnew airport in 2006.\n24\nThe first major sign of problems came in summer 2010, when the construction corporation pushed the\nopening from October 2011 to June 2012. In 2012, the city planned an opening ceremony.\n24\nBut less than a\nmonth before hand, inspectors found significant problems with the fire safety system and pushed the opening\nback again to 2013.\n24\nIt wasn't just the smoke system: many other major problems subsequently emerged. More than 90\nmetres of cable were incorrectly installed;4,000 doors were wrongly numbered; esc al at or s were too short.\nAnd there was a shortage of check-in desks.\nSo why, with so many problems discovered, didnt the airport corporation decide to give up on the project\nand start over? The reason is simple: people are often hesitant to terminate a project when they ve already\ninvested time or resources in to it, even if it might make logical sense to do so.\nThe longer the delays continued, the more problems inspectors found. Leadership of the planning\ncorporation has changed hands nearly as many times as the opening date has been pushed back. Initially,\nrather than a p pointing a general contractor to run the project, the corporation decided to manage it themselves\ndespite lack of experience with an undertaking of that scale.\n25\nTo compound the delays, the unused airport is resulting in massive costs. Every month it remains\nunopened costs between C 9 m and C 10 m.\nAssuming all goes well, the airport should open in October 2020. But the still-empty airport stands as the\nbiggest embar r ass ment to Germany s reputation for efficiency—and a continuing drain on city and state resources.",
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 855,
+              "end": 945,
+              "quote": "And, unlike nutrients that are found only in a few foods, protein is present in all foods."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1069,
+              "end": 1160,
+              "quote": "\"I t's in foods many of us expect, such as beef, chicken and other types of meat and dairy."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q43",
@@ -3072,7 +3385,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3888,
+              "end": 4115,
+              "quote": "In fact, along with her colleague Connie Bales, Starr recently conducted a small study that found that adding extra protein foods to the diet of obese older individuals who were trying to lose weight strengthened their muscles."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q44",
@@ -3176,7 +3498,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2182,
+              "end": 2343,
+              "quote": "\" Whole foods are always the best option rather than adding supplements,\" she says, noting the FDA does not regulate supplements as rigorously as foods or drugs."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q45",
@@ -3280,7 +3611,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6068,
+              "end": 6151,
+              "quote": "Pipitone says if you increase protein, you also have to increase your fluid intake."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q46",
@@ -3321,7 +3661,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 806,
+              "end": 881,
+              "quote": "We use our attitudes to filter, interpret and react to the world around us."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q47",
@@ -3361,7 +3710,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1145,
+              "end": 1386,
+              "quote": "As you acquire a distinctive identity, your attitudes are further refined by the behavior of those with whom you identify-your family, those of your gender and culture, and the people you admire, even though you may not know them personally."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q48",
@@ -3401,7 +3759,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1866,
+              "end": 1961,
+              "quote": "However, many studies have found that feelings and thoughts don't necessarily predict behavior."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q49",
@@ -3442,7 +3809,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2099,
+              "end": 2348,
+              "quote": "That's why, for example, many say they believe in the benefits of recycling or exercise, but don't behave in line with their views, because it takes awareness, effort and courage to go beyond merely stating that you believe something is a good idea."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q50",
@@ -3523,7 +3899,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 175,
+              "end": 379,
+              "quote": "The study by Greenpeace analysed the movements of krill fishing vessels in the region and found they were increasingly operating \" in the immediate vicinity of penguin colonies and whale feeding grounds\"."
+            }
+          ]
         },
         {
           "id": "2019-12-2-q52",
@@ -3603,7 +3988,16 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 883,
+              "end": 1204,
+              "quote": "Frida Bengtsson from Greenpeace's Protect the Antarctic campaign said: \"I f the krill industry wants to show it's a responsible player, then it should be voluntarily getting out of any area which is being proposed as an ocean sanctuary, and should instead be backing the protection of these huge tracts of the Antarctic.\""
+            }
+          ]
         },
         {
           "id": "2019-12-2-q54",
@@ -3643,7 +4037,16 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1890,
+              "end": 2057,
+              "quote": "Keith Reid, a science manager at CCAMLR, said that the organisation sought \" a balance between protection, conservation and sustainable fishing in the Southern Ocean.\""
+            }
+          ]
         },
         {
           "id": "2019-12-2-q55",

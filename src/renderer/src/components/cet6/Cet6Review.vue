@@ -3,6 +3,7 @@
 import { computed } from 'vue'
 import { CET6 } from '../../lib/copy'
 import { isRight, isScored, normalizedAnswer, usableExplanation, type Cet6Question } from '../../../../shared/cet6'
+import { CET6_LOCATE_EVENT } from '../../lib/use-cet6-evidence'
 
 const props = defineProps<{ q: Cet6Question; given?: string; open?: boolean }>()
 
@@ -10,6 +11,10 @@ const unofficial = computed(() => /非官方/.test(props.q.verificationNote || '
 const scored = computed(() => isScored(props.q))
 const right = computed(() => isRight(props.q, props.given))
 const explanation = computed(() => usableExplanation(props.q))
+const canLocate = computed(() => (props.q.evidence?.length ?? 0) > 0)
+function locate(): void {
+  window.dispatchEvent(new CustomEvent(CET6_LOCATE_EVENT, { detail: props.q }))
+}
 </script>
 
 <template>
@@ -28,6 +33,7 @@ const explanation = computed(() => usableExplanation(props.q))
     </div>
     <details v-if="explanation || unofficial" :open="open">
       <summary>{{ CET6.EXPLANATION }}</summary>
+      <button v-if="canLocate" type="button" class="cet6-locate" @click="locate">{{ CET6.LOCATE_EVIDENCE }}</button>
       <div v-if="explanation" class="cet6-review-text">{{ explanation }}</div>
       <div v-if="unofficial" class="cet6-note">{{ q.verificationNote }}</div>
     </details>
@@ -42,4 +48,8 @@ const explanation = computed(() => usableExplanation(props.q))
 .cet6-note { color: var(--mi-text-3); font-size: var(--mi-fs-caption); }
 .cet6-review-text { margin-top: var(--mi-sp-1); white-space: pre-wrap; line-height: 1.6; }
 summary { cursor: pointer; margin-top: var(--mi-sp-1); color: var(--mi-text-2); }
+.cet6-locate { margin-top: var(--mi-sp-1); padding: 2px var(--mi-sp-2); border: 1px solid var(--mi-success-deep); border-radius: 999px; background: transparent; color: var(--mi-success-deep); font: inherit; font-size: var(--mi-fs-caption); cursor: pointer; transition: background-color var(--mi-dur-fast) var(--mi-ease); }
+.cet6-locate:hover { background: var(--mi-success-fill); }
+.cet6-locate:focus-visible { outline: 2px solid var(--mi-success-deep); outline-offset: 1px; }
 </style>
+

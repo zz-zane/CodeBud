@@ -1,6 +1,6 @@
 {
   "name": "miai-biancheng",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "CodeBud — 面向大学生与编程初学者的离线学习伴侣",
   "main": "./out/main/index.js",
   "private": true,
@@ -14,7 +14,7 @@
     "package:win": "npm run build && electron-builder --win nsis --x64 --publish never",
     "start": "electron-vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.node.json --composite false && vue-tsc --noEmit -p tsconfig.web.json --composite false",
-    "validate:content": "node scripts/content-validate.mjs && node scripts/algo-validate.mjs",
+    "validate:content": "node scripts/cet6-evidence.mjs --check && node scripts/content-validate.mjs && node scripts/algo-validate.mjs",
     "validate:algo": "node scripts/algo-validate.mjs",
     "check:samples": "node scripts/check-lesson-code.mjs",
     "check:questions": "node scripts/check-question-code.mjs",

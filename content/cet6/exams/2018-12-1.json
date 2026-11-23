@@ -2267,7 +2267,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4363,
+              "end": 4458,
+              "quote": "But that's the negative side, with risks that must be balanced against the benefits of sharing."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4459,
+              "end": 4695,
+              "quote": "Steinberg pointed out that parental sharing on social media helps build communities, connect spread-out families, provide support and raise awareness around important social issues for which parents might be their children's only voice."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q37",
@@ -2371,7 +2387,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6998,
+              "end": 7076,
+              "quote": "We can ask our kids to help us learn as a society what's okay and what's not.”"
+            }
+          ]
         },
         {
           "id": "2018-12-1-q38",
@@ -2475,7 +2500,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7318,
+              "end": 7487,
+              "quote": "But when she considered posting them online, she took the perspective of her son: How would he feel if his classmates’\nparents saw photos of him chest-up in the bathtub?"
+            }
+          ]
         },
         {
           "id": "2018-12-1-q39",
@@ -2579,7 +2613,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2689,
+              "end": 2863,
+              "quote": "They cited a study presented earlier this year of 249 pairs of parents and their children in which twice as many children as parents wanted rules on what parents could share."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q40",
@@ -2683,7 +2726,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 685,
+              "end": 787,
+              "quote": "That's when it dawned on her: She had been posting photos of him online without asking his permission."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 788,
+              "end": 1038,
+              "quote": "“We're big advocates of bodily autonomy and not forcing him to hug or kiss people unless he wants to, but it never occurred to me that I should ask his permission to post photos of him online,” says Burbidge, a mom of two in Wakefield, Massachusetts."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q41",
@@ -2787,7 +2846,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 457,
+              "end": 584,
+              "quote": "But after she snapped a photo and started using her phone, he asked her a serious question:“Are you going to post that online?”"
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 585,
+              "end": 633,
+              "quote": "She laughed and answered, “Yes, I think I will.”"
+            }
+          ]
         },
         {
           "id": "2018-12-1-q42",
@@ -2995,7 +3070,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5856,
+              "end": 5921,
+              "quote": "Some parents find the best route for them is not to share at all."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5922,
+              "end": 6061,
+              "quote": "Bridget O’Hanlon and her husband, who live in\nCleveland, decided before their daughter was born that they would not post her photos online."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q44",
@@ -3099,7 +3190,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4005,
+              "end": 4218,
+              "quote": "“While we didn’t want to create any unnecessary panic, we did find some concerns that were troublesome, and we thought that parents or at least physicians should be aware of those potential risks,”\nSteinberg says."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q45",
@@ -3243,7 +3343,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2616,
+              "end": 2733,
+              "quote": "Future farms will likely experience a greater deal of autonomy as robots take up more and more farm work efficiently."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q47",
@@ -3323,7 +3432,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1981,
+              "end": 2246,
+              "quote": "The robots also learn the most efficient and safest passages, and allow engineers and farmers to analyze and better optimize the attributes and tasks of the robot, as well as provide a live stream giving real-time feedback on exactly what is happening on the farms."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q49",
@@ -3363,7 +3481,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2309,
+              "end": 2465,
+              "quote": "However, it is farmers that are pushing for the advancements due to ever-increasing labor vacancies, making it difficult to maintain large-scale operations."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q50",
@@ -3403,7 +3530,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2616,
+              "end": 2733,
+              "quote": "Future farms will likely experience a greater deal of autonomy as robots take up more and more farm work efficiently."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q51",
@@ -3443,7 +3579,16 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 470,
+              "end": 696,
+              "quote": "The issue of climate change also illustrates how the public acceptance and understanding of science (or the lack of it) can influence governmental decision-making with regard to regulation, science policy and research funding."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q52",
@@ -3523,7 +3668,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1409,
+              "end": 1514,
+              "quote": "Science journalism is the main channel for the popularization of scientific information among the public."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1515,
+              "end": 1671,
+              "quote": "Much has been written about how the relationship between scientists and the media can shape the efficient transmission of scientific advances to the public."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q54",
@@ -3563,7 +3724,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1811,
+              "end": 2005,
+              "quote": "Unfortunately, pieces of science journalism can also oversimplify and generalize their subject material to the point that the basic information conveyed is obscured or at worst, obviously wrong."
+            }
+          ]
         },
         {
           "id": "2018-12-1-q55",
@@ -3603,7 +3773,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2214,
+              "end": 2410,
+              "quote": "Even though scientists play a part in transmitting information to journalists and ultimately the public, too often the blame for ineffective communication is placed on the side of the journalists."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2411,
+              "end": 2774,
+              "quote": "We believe that at least part of the problem lies in places other than the interaction between scientists and members of the media, and exists because for one thing we underestimate how difficult it is for scientists to communicate effectively with a diversity of audiences, and for another most scientists do not receive formal training in science communication."
+            }
+          ]
         }
       ]
     },

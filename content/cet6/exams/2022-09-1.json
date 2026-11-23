@@ -221,7 +221,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 7,
+              "end": 83,
+              "quote": "Welcome to Money Matters, a weekly program that helps you manage your money."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q2",
@@ -261,7 +270,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 555,
+              "end": 619,
+              "quote": "⑵ I read recently that only 41% of Americans adhere to a budget."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q3",
@@ -341,7 +359,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1548,
+              "end": 1730,
+              "quote": "But you do have to make some changes: try cutting back on those non-essential\nitems9 sell some stuff in your attic or (4) shop online to avoid unnecessary temptations like chocolate。"
+            }
+          ]
         },
         {
           "id": "2022-09-1-q5",
@@ -381,7 +408,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 302,
+              "end": 342,
+              "quote": "The place\nactually belongs to my mother."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q6",
@@ -463,7 +499,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "contract?"
+          "stemOriginalOCR": "contract?",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1378,
+              "end": 1453,
+              "quote": "The first\nmonth's rent and a deposit are mandatory on signing the contract."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q8",
@@ -503,7 +548,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1603,
+              "end": 1728,
+              "quote": "My wife will be thrilled to get\nout of the shabby place we are now in and start filling those wardrobes with all those shoes."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q9",
@@ -544,7 +598,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "watching television?"
+          "stemOriginalOCR": "watching television?",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 3,
+              "end": 124,
+              "quote": "A new study has found a positive correlation between how much television children watch and their parents' stress levels."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q10",
@@ -584,7 +647,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 817,
+              "end": 916,
+              "quote": "The researchers suggest that parents seek input from their\nchildren on family purchasing decisions."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q11",
@@ -625,7 +697,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "TV commercials?"
+          "stemOriginalOCR": "TV commercials?",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1531,
+              "end": 1620,
+              "quote": "Plus, children don't have the cognitive ability to fully understand advertising's intent."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q12",
@@ -666,7 +747,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "passage?"
+          "stemOriginalOCR": "passage?",
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 252,
+              "end": 351,
+              "quote": "But sometimes the good guys also get punished or criticized,\nspecifically because they are so good."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q13",
@@ -706,7 +796,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 769,
+              "end": 827,
+              "quote": "After all, (13)we're all judged in comparison with others."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q14",
@@ -746,7 +845,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 893,
+              "end": 927,
+              "quote": "One option is to actively compete."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q15",
@@ -787,7 +895,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "good deeds?"
+          "stemOriginalOCR": "good deeds?",
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1323,
+              "end": 1418,
+              "quote": "Such good deeds are dismissed as naive or hypocritical by those who do not\nperform those deeds."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q16",
@@ -828,7 +945,23 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "children?"
+          "stemOriginalOCR": "children?",
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 586,
+              "end": 615,
+              "quote": "Most preteen\nchildren have a."
+            },
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 616,
+              "end": 683,
+              "quote": "best friend who is usually someone of the same sex and similar age."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q17",
@@ -869,7 +1002,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "to during adolescence?"
+          "stemOriginalOCR": "to during adolescence?",
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1763,
+              "end": 1865,
+              "quote": "This is a\nperiod when the majority of males once again report a closer alliance with same-sex friends."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q18",
@@ -910,7 +1052,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "adolescence?"
+          "stemOriginalOCR": "adolescence?",
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 2208,
+              "end": 2340,
+              "quote": "This is most apt\nto be the case in late adolescence when dating and relationships with boys take sharper precedence over\nsisterhood."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q19",
@@ -950,7 +1101,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 494,
+              "end": 619,
+              "quote": "As such, many candidates fear they\nwouldn't be considered for a position as a result of disclosing this personal information."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q20",
@@ -991,7 +1151,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "their disability information?"
+          "stemOriginalOCR": "their disability information?",
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1003,
+              "end": 1089,
+              "quote": "It's most appropriate to discuss a disability when they reply to confirm an\ninterview."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q21",
@@ -1031,7 +1200,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1870,
+              "end": 1940,
+              "quote": "People should avoid sharing the name of their disability or condition."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q22",
@@ -1071,7 +1249,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 424,
+              "end": 498,
+              "quote": "Students’ scores were most depressed in the presence of background speech."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q23",
@@ -1111,7 +1298,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1160,
+              "end": 1348,
+              "quote": "It seems the degree of interference from background noise depends on the overlap between the processing required on the task and the processing required to screen out the background noise."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q24",
@@ -1151,7 +1347,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1548,
+              "end": 1672,
+              "quote": "When students write essays, however, other research has found it is best to reduce all background noise as much as possible."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q25",
@@ -1191,7 +1396,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2039,
+              "end": 2122,
+              "quote": "But less sociable people were more negatively affected by each of the distractions."
+            }
+          ]
         }
       ]
     },
@@ -2171,7 +2385,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5335,
+              "end": 5444,
+              "quote": "Even with the benefits and skill sets languages provide, recruiters and employers value computer skills more."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q37",
@@ -2255,7 +2478,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1416,
+              "end": 1803,
+              "quote": "“I think the opportunity to give people a choice is important, says Florida state Senator\nJeremy Ring, who introduced a bill last year that would allow Florida students to choose between foreign language and coding classes for the purpose of university admissions requirements, CCI think if you're going to give two years of language in high school, you might as well do computer coding."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q38",
@@ -2339,7 +2571,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5120,
+              "end": 5224,
+              "quote": "nwe need to find a way to put ourselves at the global table and to treat each other with mutual respect."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q39",
@@ -2423,7 +2664,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2513,
+              "end": 2615,
+              "quote": "Instead, the state will provide support for higher quality certified teachers for programming classes."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q40",
@@ -2507,7 +2757,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 942,
+              "end": 1154,
+              "quote": "According to the 2016 U.S. News/Raytheon STEM Index, computer science jobs have helped boost wages in the U.S., and computer-related jobs hold the top seven positions in STEM fields for highest number of workers."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1155,
+              "end": 1244,
+              "quote": "Foreign language interest, on the other hand, is declining for the first time since 1995."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q41",
@@ -2591,7 +2857,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3050,
+              "end": 3348,
+              "quote": "Srini Mandyam,\nCTO and co-founder of kid-friendly instructional coding company Tynker, believes allowing students to forgo foreign language because they struggle with it is unproductive because every subject, whether art, math or language, is a significant contribution to a well-rounded existence."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q42",
@@ -2675,7 +2950,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 382,
+              "end": 574,
+              "quote": "When it comes to allowing coding to fill foreign language requirements, though, most educators agree: Coding should be added to curriculums, but not at the expense of foreign language classes."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q43",
@@ -2759,7 +3043,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4319,
+              "end": 4477,
+              "quote": "A 2007 study showed that foreign language students outperformed their non-foreign language peers on standardized tests after only two to three years of study."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q44",
@@ -2843,7 +3136,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 794,
+              "end": 937,
+              "quote": "The computer science field is growing faster than schools can keep up because of budget constraints and a lack of skills training for teachers."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q45",
@@ -2927,7 +3229,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6362,
+              "end": 6538,
+              "quote": "Zarrow agrees that foreign language education should begin earlier, but says it is possible to work both computer programming and foreign language learning into schools evenly."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q46",
@@ -2967,7 +3278,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 182,
+              "end": 316,
+              "quote": "But there9s one issue on which all these countries see eye to eye: Technology companies are too big, too powerful, and too profitable."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 317,
+              "end": 532,
+              "quote": "And that power is only likely to intensify, leaving governments with no choice but to confront it head-on by taking the companies to court, passing new competition laws, and perhaps even breaking up the tech giants."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q47",
@@ -3007,7 +3334,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 633,
+              "end": 822,
+              "quote": "The draft rules followed the surprise suspension of a $ 37 billion stock offering by billionaire Jack Ma's Ant Group Co., making clear that no company can evade the government's regulation."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q48",
@@ -3047,7 +3383,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1504,
+              "end": 1697,
+              "quote": "Tech giants are increasingly assuming powerful positions in banking, finance, advertising, retail, and other markets that force smaller businesses to rely on their platforms to reach customers."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q49",
@@ -3087,7 +3432,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1962,
+              "end": 2096,
+              "quote": "Led by Margrethe Vestager, the European Union's competition chief, countries have sought to police the market and encourage fair play."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q50",
@@ -3127,7 +3481,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2370,
+              "end": 2802,
+              "quote": "In the U.S., a new breed of anti-trust experts argues that consideration should be given to privacy, control over data, workers'rights and the overall impact on smaller companies And the public in general have grown increasingly skeptical of social media companies More than 60% say the sector has a negative effect on the country, and almost half want more regulation for social media, according to a 2020 Pew Research Center study"
+            }
+          ]
         },
         {
           "id": "2022-09-1-q51",
@@ -3167,7 +3530,23 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 183,
+              "quote": "Born from the accessibility of mass air travel, modem international tourism has been popularized as \"holiday-making\" in regions that offer comparative advantages of sand, sun and sea."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 184,
+              "end": 310,
+              "quote": "Travel is often portrayed as a tool for personal growth and tourism as an economic motor for destination countries and cities."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q52",
@@ -3207,7 +3586,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 730,
+              "end": 830,
+              "quote": "Uncontrolled tourism development has become a primary driver of social and environmental disruption."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 831,
+              "end": 992,
+              "quote": "Tourism studies provide much documentation of the many negative social impacts of tourism and resulting resentment that local populations direct toward visitors."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q53",
@@ -3247,7 +3642,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1182,
+              "end": 1266,
+              "quote": "Residents often become frustrated when the benefits of tourism are not felt locally."
+            }
+          ]
         },
         {
           "id": "2022-09-1-q54",
@@ -3327,7 +3731,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2590,
+              "end": 2798,
+              "quote": "Informed travelers also are better able to distinguish between multinational companies and local entrepreneurs whose businesses provide direct social, environmental, and economic benefits for local residents."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2799,
+              "end": 2893,
+              "quote": "Such businesses are in love with the destination and are therefore deserving of market reward."
+            }
+          ]
         }
       ]
     },

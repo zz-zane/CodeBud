@@ -243,7 +243,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "主持人介绍桑切斯三次获得奥运冠军，由此可知她是一位杰出运动员。"
+          "explanationOriginal": "主持人介绍桑切斯三次获得奥运冠军，由此可知她是一位杰出运动员。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 3,
+              "end": 41,
+              "quote": "Tonight, we have a very special guest."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 42,
+              "end": 132,
+              "quote": "Mrs. Anna Sanchez is a three-time Olympic champion and author of the new book To the Edge."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q2",
@@ -295,7 +311,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士的书讨论科学技术如何帮助运动员逼近身体极限、创造新的成绩。"
+          "explanationOriginal": "女士的书讨论科学技术如何帮助运动员逼近身体极限、创造新的成绩。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 300,
+              "end": 408,
+              "quote": "The book is about how science and technology has helped push humans to the edge of their physical abilities."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q3",
@@ -347,7 +372,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士说人的身体在几千年间没有显著变化，改变的是相关科学知识。"
+          "explanationOriginal": "女士说人的身体在几千年间没有显著变化，改变的是相关科学知识。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 794,
+              "end": 911,
+              "quote": "I believe that while our bodies have not changed in thousands of years, what has changed is the scientific knowledge."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q4",
@@ -399,7 +433,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "男士担心新技术可能给某些运动员带来不公平的优势。"
+          "explanationOriginal": "男士担心新技术可能给某些运动员带来不公平的优势。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1286,
+              "end": 1379,
+              "quote": "Is there any concern that technology is giving some athletes an unfair advantage over others?"
+            }
+          ]
         },
         {
           "id": "2020-07-1-q5",
@@ -503,7 +546,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士介绍中意贸易的货物往返使用同一个集装箱，认为这样效率高。"
+          "explanationOriginal": "女士介绍中意贸易的货物往返使用同一个集装箱，认为这样效率高。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 498,
+              "end": 528,
+              "quote": "I even use the same container."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q7",
@@ -555,7 +607,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士说她在意大利热那亚和中国上海各有一个仓库，用于集散货物。"
+          "explanationOriginal": "女士说她在意大利热那亚和中国上海各有一个仓库，用于集散货物。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 666,
+              "end": 725,
+              "quote": "I have a warehouse in Genoa, Italy and another in Shanghai."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q8",
@@ -607,7 +668,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士说家具的利润略高，主要原因是家具享有较低的进口关税。"
+          "explanationOriginal": "女士说家具的利润略高，主要原因是家具享有较低的进口关税。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1712,
+              "end": 1799,
+              "quote": "Furniture is marginally more profitable, mostly because it enjoys lower customs duties."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q9",
@@ -711,7 +781,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "波利奥的研究表明，幽默能够帮助员工更好地完成日常工作任务。"
+          "explanationOriginal": "波利奥的研究表明，幽默能够帮助员工更好地完成日常工作任务。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 491,
+              "end": 585,
+              "quote": "Pollio conducted a study that proved humor can help workers excel at routine production tasks."
+            },
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 586,
+              "end": 630,
+              "quote": "Employees perform better when they have fun."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q11",
@@ -763,7 +849,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "员工可以拆卸老板娃娃，但需要在事后将其部件重新装回。"
+          "explanationOriginal": "员工可以拆卸老板娃娃，但需要在事后将其部件重新装回。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1102,
+              "end": 1167,
+              "quote": "The main attraction is a boss doll with detachable arms and legs."
+            },
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1168,
+              "end": 1254,
+              "quote": "Employees can take the doll apart as long as they put its arms and legs back in place."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q12",
@@ -815,7 +917,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "说话者指出，肥胖小鼠身上发现的变异基因引起了公众关注。"
+          "explanationOriginal": "说话者指出，肥胖小鼠身上发现的变异基因引起了公众关注。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 0,
+              "end": 84,
+              "quote": "Public interest was aroused by the latest discovery of a changed gene in obese mice."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q13",
@@ -867,7 +978,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "变异基因使小鼠难以感知自己是否吃饱，因此无法判断何时停止进食。"
+          "explanationOriginal": "变异基因使小鼠难以感知自己是否吃饱，因此无法判断何时停止进食。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 165,
+              "end": 280,
+              "quote": "The researchers believe this gene influences development of a hormone that tells an organism how fat or full it is."
+            },
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 281,
+              "end": 433,
+              "quote": "Those with the changed gene may not sense when they have eaten enough, or if they have sufficient fatty tissue, and thus can't tell when to stop eating."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q14",
@@ -919,7 +1046,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "罗思布鲁姆认为，人出生时就可能具有达到某一体重的倾向。"
+          "explanationOriginal": "罗思布鲁姆认为，人出生时就可能具有达到某一体重的倾向。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 713,
+              "end": 867,
+              "quote": "\"This research indicates that people really are born with a tendency to have a certain weight just as they are to have a particular skin color or height.\""
+            }
+          ]
         },
         {
           "id": "2020-07-1-q15",
@@ -971,7 +1107,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "调查强调外部饮食环境的作用，例如大量油腻食物的供应。"
+          "explanationOriginal": "调查强调外部饮食环境的作用，例如大量油腻食物的供应。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1208,
+              "end": 1331,
+              "quote": "Such rapid change underlines the role of environmental factors, like the abundance of rich foods, in Americans' overeating."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q16",
@@ -1025,7 +1170,16 @@
             "date": "2026-11-09"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "问卷显示，男性在友谊中特别看重兴趣相似等共同点。"
+          "explanationOriginal": "问卷显示，男性在友谊中特别看重兴趣相似等共同点。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 809,
+              "end": 938,
+              "quote": "These activities are the fabric of the friendship; it is a \"doing\" relationship in which similarity in interests is the key bond."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q17",
@@ -1084,7 +1238,16 @@
             "pages": [
               19
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 575,
+              "end": 659,
+              "quote": "emotional factors, while men emphasize the pleasure they find in a friend's company."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q18",
@@ -1195,7 +1358,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "讲话者说，许多优质恐龙标本如今可以在美加大城市的自然历史博物馆看到。"
+          "explanationOriginal": "讲话者说，许多优质恐龙标本如今可以在美加大城市的自然历史博物馆看到。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 0,
+              "end": 211,
+              "quote": "The partial skeletons of more than 20 dinosaurs and the scattered bones of about 300 more have\nbest specimens may be seen today at museums of natural history in the larger cities of the United States\nand Canada."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q20",
@@ -1254,7 +1426,16 @@
             "pages": [
               23
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 298,
+              "end": 381,
+              "quote": "volcanic explosion or a sudden flood killed a whole herd of dinosaurs in this area."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q21",
@@ -1313,7 +1494,16 @@
             "pages": [
               23
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1147,
+              "end": 1237,
+              "quote": "probably floated down an eastward flowing river until they were left on a shallow sandbar."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q22",
@@ -1491,7 +1681,16 @@
             "pages": [
               27
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 776,
+              "end": 944,
+              "quote": "They are astonished to hear that in most of the world throughout most of its history, families have been three- or four-generation families, living under the same roof."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q25",
@@ -2548,7 +2747,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1817,
+              "end": 1999,
+              "quote": "He was convinced that children literally cannot “ get their act together”: instead of playing cooperatively and truly together, they play side by side, with little regard for others."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q37",
@@ -2652,7 +2860,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5167,
+              "end": 5362,
+              "quote": "In a set of experiments, my colleagues at the University of Southern California and I found evidence that babies can even anticipate how others will feel when their expectations are disappointed."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q38",
@@ -2756,7 +2973,23 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2824,
+              "end": 3008,
+              "quote": "Part of the motivation to revise some of Piagets conclusions stemmed from an ideological shift about the origin of human knowledge that occurred in the second half of the 20th century."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3009,
+              "end": 3130,
+              "quote": "It became increasingly unpopular to assume that a basic understanding of the world can be built entirely from experience."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q39",
@@ -2860,7 +3093,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 326,
+              "end": 542,
+              "quote": "The interviews and experiments he conducted with kids in the middle of the 20th century suggested that they were trapped in their subjective viewpoints, 6· 6\nincapable of imagining what others think, feel or believe."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q40",
@@ -2964,7 +3206,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3885,
+              "end": 4054,
+              "quote": "A big part of why we now recognize so much more of kids intellectual capacities is the development of much more sensitive research tools than Piaget had at his disposal."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q41",
@@ -3068,7 +3319,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2730,
+              "end": 2820,
+              "quote": "Recent studies suggest that even infants are sensitive to others perspectives and beliefs."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q42",
@@ -3172,7 +3432,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7134,
+              "end": 7261,
+              "quote": "Theres no consensus in todays science community about how much we can infer from a look, a facial expression or a hand gesture."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q43",
@@ -3276,7 +3545,23 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4058,
+              "end": 4335,
+              "quote": "Instead of engaging babies in dialog or having them execute complex motor tasks, the newer methods capitalize on behaviors that have a firm place in infants natural behavior repertoire: looking, listening, sucking, making facial expressions, gestures and simple manual actions."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4336,
+              "end": 4534,
+              "quote": "The idea of focusing on these “ small behaviors” is that they give kids the chance to demonstrate their knowledge implicitly and spontaneously without having to respond to questions or instructions."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q44",
@@ -3380,7 +3665,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1074,
+              "end": 1365,
+              "quote": "Consequently, the old view of childrens egocentric (自我中心的) nature and intellectual weaknesses has increasingly fallen out of favor and become replaced by a more generous position that sees a budding sense not only of the physical world but also of other minds, even in the “ youngest young.”"
+            }
+          ]
         },
         {
           "id": "2020-07-1-q45",
@@ -3484,7 +3778,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6796,
+              "end": 7130,
+              "quote": "Despite these obvious advances in the study of young childrens thinking, it would be a grave mistake to dismiss the careful and systematic analyses compiled by Piaget and others before the new tests dominated the scene because the original methods revealed essential facts about how children think that the new methods cannot uncover."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q46",
@@ -3524,7 +3827,16 @@
               43
             ]
           },
-          "verified": false
+          "verified": false,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 0,
+              "end": 237,
+              "quote": "People often discuss the dangers of too much stress, but lately a very different view of stress is gaining popularity: this view of stress, held by members of the positive stress movement, argues that stress might actually be beneficial."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q47",
@@ -3564,7 +3876,23 @@
               44
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 715,
+              "end": 911,
+              "quote": "Although Rapps practices may sound extreme, he is part of a growing movement, consisting largely of tech industry workers who claim that such radical tactics will help them live better and longer."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 912,
+              "end": 1180,
+              "quote": "Inspired by influential figures in different fields, including entertainers, athletes, entrepreneurs and scientists, positive stress practitioners seek out some combination of extreme temperatures, restrictive diets, punishing exercise routines and general discomfort."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q48",
@@ -3604,7 +3932,16 @@
               46
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1435,
+              "end": 1544,
+              "quote": "He believes that these practices, which put stress on his body, actually make him feel less stress from work."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q49",
@@ -3644,7 +3981,16 @@
               47
             ]
           },
-          "verified": false
+          "verified": false,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1921,
+              "end": 2134,
+              "quote": "For him, the difference between day-to-day stress, like the kind we feel when moving apartments, and positive stress is that the latter involves pushing the body to extremes and forcing it to build up a tolerance."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q50",
@@ -3684,7 +4030,16 @@
               48
             ]
           },
-          "verified": false
+          "verified": false,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2474,
+              "end": 2715,
+              "quote": "But it is important to note that not everyone agrees with these practitioners; indeed, some 6·10 medical professionals argue that positive stress is not for everyone, and that it might even be dangerous for people who are unhealthy or older."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q51",
@@ -3724,7 +4079,16 @@
               50
             ]
           },
-          "verified": false
+          "verified": false,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 331,
+              "end": 539,
+              "quote": "And, ironic as it sounds, since humans have wiped out many animal predators, some see hunting as a natural way to reduce the herds of prey animals that now reproduce beyond the environments carrying capacity."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q52",
@@ -3764,7 +4128,16 @@
               51
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 942,
+              "end": 1266,
+              "quote": "He adds that, despite hunters claims that hunting keeps wildlife populations in balance, hunters license fees are used to “ manipulate a few game species into over population at the expense of a much larger number of non-game species, resulting in the loss of biological diversity, genetic integrity and ecological balance.”"
+            }
+          ]
         },
         {
           "id": "2020-07-1-q53",
@@ -3804,7 +4177,23 @@
               52
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1267,
+              "end": 1333,
+              "quote": "Beyond moral issues, others contend that hunting is not practical."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1334,
+              "end": 1551,
+              "quote": "According to the Humane Society of the United States, the vast majority of hunted species—such as waterfowl, rabbits, upland birds and mourning doves—“ provide minimal nutrition and do not require population control.”"
+            }
+          ]
         },
         {
           "id": "2020-07-1-q54",
@@ -3844,7 +4233,23 @@
               53
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1552,
+              "end": 1696,
+              "quote": "Author Gary E. Varner suggests in his book, In Natures Interests, that some types of hunting may be morally justifiable while others may not be."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1697,
+              "end": 1952,
+              "quote": "Hunting “ designed to secure the aggregate welfare of the target species, the integrity of its ecosystem, or both ”—what Varner terms “ therapeutic hunting”—is defensible, while subsistence and sport hunting—both of which only benefit human beings—is not."
+            }
+          ]
         },
         {
           "id": "2020-07-1-q55",
@@ -3884,7 +4289,16 @@
               55
             ]
           },
-          "verified": false
+          "verified": false,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2587,
+              "end": 2789,
+              "quote": "Perhaps matching the trend among the public, green leaders are increasingly advocating cooperation between hunters and environmental groups: After all, both deplore urban sprawl and habitat destruction."
+            }
+          ]
         }
       ]
     },

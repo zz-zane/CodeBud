@@ -1082,7 +1082,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1911,
+              "end": 2044,
+              "quote": "Research has found that there is a direct correlation between lack of recovery and increased incidence of health and safety problems."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q37",
@@ -1186,7 +1195,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6025,
+              "end": 6073,
+              "quote": "Our brains need a rest as much as our bodies do."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q38",
@@ -1290,7 +1308,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6942,
+              "end": 7074,
+              "quote": "Take all of your paid time off, which not only gives you recovery periods, but raises your productivity and likelihood of promotion."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q39",
@@ -1394,7 +1421,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 741,
+              "end": 929,
+              "quote": "Even worse, after refreshing our email or reading the same studies over and over, we are too exhausted when we land to soldier on with (继续处理)the emails that have inevitably still piled up."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q40",
@@ -1498,7 +1534,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2251,
+              "end": 2314,
+              "quote": "And just because work stops, it doesn’t mean we are recovering."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2315,
+              "end": 2522,
+              "quote": "We “stop” work sometimes at 5 pm, but then we spend the night wrestling with solutions to work problems, talking about our work over dinner, and falling asleep thinking about how much work we’ll do tomorrow."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q41",
@@ -1602,7 +1654,23 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6079,
+              "end": 6159,
+              "quote": "If you really want to build resilience, you can start by strategically stopping."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6160,
+              "end": 6251,
+              "quote": "Give yourself the resources to be tough by creating internal and external recovery periods."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q42",
@@ -1706,7 +1774,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5039,
+              "end": 5095,
+              "quote": "That's because rest and recovery are not the same thing."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q43",
@@ -1810,7 +1887,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1139,
+              "end": 1379,
+              "quote": "Based on our current research, we have come to realize that the problem is not our hectic schedule or the plane travel itself; the problem comes from a misconception of what it means to be resilient, and the resulting impact of overworking."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q44",
@@ -2018,7 +2104,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1615,
+              "end": 1724,
+              "quote": "We believe that the longer we tough it out, the tougher we are, and therefore the more successful we will be."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q46",
@@ -2098,7 +2193,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 978,
+              "end": 1071,
+              "quote": "This was after controlling for IQ, socio-economic status and academic skills at school entry."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q48",
@@ -2178,7 +2282,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1885,
+              "end": 2036,
+              "quote": "Children not as liked by their first-grade peers had slightly lower grades in fifth grade, while those with higher social acceptance had higher grades."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q50",
@@ -2218,7 +2331,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2524,
+              "end": 2715,
+              "quote": "“We’re learning that student success requires a more comprehensive approach, one that incorporates not only academic skills but also social, self-regulatory and attention skills,” Dodge said."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q51",
@@ -2258,7 +2380,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 469,
+              "end": 660,
+              "quote": "Often the advantages of convenient, mobile technology are both obvious and taken for granted, leaving more subtle topics for concerned discussion: Are smartphones disturbing children’s sleep?"
+            }
+          ]
         },
         {
           "id": "2018-12-3-q52",
@@ -2298,7 +2429,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 778,
+              "end": 962,
+              "quote": "But today, on the 10th anniversary of the iPhone, let’s take a moment to consider a less obvious advantage: the potential for smartphone technology to revolutionize behavioral science."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 963,
+              "end": 1164,
+              "quote": "That’s because, for the first time in human history, a large proportion of the species is in continuous contact with technology that can record key features of an individual’s behavior and environment."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q53",
@@ -2338,7 +2485,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1375,
+              "end": 1610,
+              "quote": "These studies are confirming, challenging and extending what’s been found using more traditional approaches, in which people report how they behaved in real life or participate in relatively short and artificial laboratory-based tasks."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q54",
@@ -2378,7 +2534,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1948,
+              "end": 2271,
+              "quote": "Beyond revealing population-wide patterns, the right combination of data and analysis can also help individuals identify unique characteristics of their own behavior, including conditions that could indicate the need for some form of intervention—such as an unusual increase in behaviors that signal a period of depression."
+            }
+          ]
         },
         {
           "id": "2018-12-3-q55",
@@ -2418,7 +2583,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2377,
+              "end": 2578,
+              "quote": "Today, the field is in transition, moving away from a focus on laboratory studies with undergraduate participants towards more complex, real-world situations studied with more diverse groups of people."
+            }
+          ]
         }
       ]
     },

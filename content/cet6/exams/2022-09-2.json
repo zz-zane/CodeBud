@@ -1063,7 +1063,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5335,
+              "end": 5444,
+              "quote": "Even with the benefits and skill sets languages provide, recruiters and employers value computer skills more."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q37",
@@ -1147,7 +1156,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1416,
+              "end": 1803,
+              "quote": "“I think the opportunity to give people a choice is important, says Florida state Senator\nJeremy Ring, who introduced a bill last year that would allow Florida students to choose between foreign language and coding classes for the purpose of university admissions requirements, CCI think if you're going to give two years of language in high school, you might as well do computer coding."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q38",
@@ -1231,7 +1249,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5120,
+              "end": 5224,
+              "quote": "nwe need to find a way to put ourselves at the global table and to treat each other with mutual respect."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q39",
@@ -1315,7 +1342,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2513,
+              "end": 2615,
+              "quote": "Instead, the state will provide support for higher quality certified teachers for programming classes."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q40",
@@ -1399,7 +1435,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 942,
+              "end": 1154,
+              "quote": "According to the 2016 U.S. News/Raytheon STEM Index, computer science jobs have helped boost wages in the U.S., and computer-related jobs hold the top seven positions in STEM fields for highest number of workers."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1155,
+              "end": 1244,
+              "quote": "Foreign language interest, on the other hand, is declining for the first time since 1995."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q41",
@@ -1483,7 +1535,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3050,
+              "end": 3348,
+              "quote": "Srini Mandyam,\nCTO and co-founder of kid-friendly instructional coding company Tynker, believes allowing students to forgo foreign language because they struggle with it is unproductive because every subject, whether art, math or language, is a significant contribution to a well-rounded existence."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q42",
@@ -1567,7 +1628,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 382,
+              "end": 574,
+              "quote": "When it comes to allowing coding to fill foreign language requirements, though, most educators agree: Coding should be added to curriculums, but not at the expense of foreign language classes."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q43",
@@ -1651,7 +1721,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4319,
+              "end": 4477,
+              "quote": "A 2007 study showed that foreign language students outperformed their non-foreign language peers on standardized tests after only two to three years of study."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q44",
@@ -1735,7 +1814,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 794,
+              "end": 937,
+              "quote": "The computer science field is growing faster than schools can keep up because of budget constraints and a lack of skills training for teachers."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q45",
@@ -1819,7 +1907,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6362,
+              "end": 6538,
+              "quote": "Zarrow agrees that foreign language education should begin earlier, but says it is possible to work both computer programming and foreign language learning into schools evenly."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q46",
@@ -1859,7 +1956,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 182,
+              "end": 316,
+              "quote": "But there9s one issue on which all these countries see eye to eye: Technology companies are too big, too powerful, and too profitable."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 317,
+              "end": 532,
+              "quote": "And that power is only likely to intensify, leaving governments with no choice but to confront it head-on by taking the companies to court, passing new competition laws, and perhaps even breaking up the tech giants."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q47",
@@ -1899,7 +2012,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 633,
+              "end": 822,
+              "quote": "The draft rules followed the surprise suspension of a $ 37 billion stock offering by billionaire Jack Ma's Ant Group Co., making clear that no company can evade the government's regulation."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q48",
@@ -1939,7 +2061,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1504,
+              "end": 1697,
+              "quote": "Tech giants are increasingly assuming powerful positions in banking, finance, advertising, retail, and other markets that force smaller businesses to rely on their platforms to reach customers."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q49",
@@ -1979,7 +2110,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1962,
+              "end": 2096,
+              "quote": "Led by Margrethe Vestager, the European Union's competition chief, countries have sought to police the market and encourage fair play."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q50",
@@ -2019,7 +2159,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2370,
+              "end": 2802,
+              "quote": "In the U.S., a new breed of anti-trust experts argues that consideration should be given to privacy, control over data, workers'rights and the overall impact on smaller companies And the public in general have grown increasingly skeptical of social media companies More than 60% say the sector has a negative effect on the country, and almost half want more regulation for social media, according to a 2020 Pew Research Center study"
+            }
+          ]
         },
         {
           "id": "2022-09-2-q51",
@@ -2059,7 +2208,23 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 183,
+              "quote": "Born from the accessibility of mass air travel, modem international tourism has been popularized as \"holiday-making\" in regions that offer comparative advantages of sand, sun and sea."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 184,
+              "end": 310,
+              "quote": "Travel is often portrayed as a tool for personal growth and tourism as an economic motor for destination countries and cities."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q52",
@@ -2099,7 +2264,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 730,
+              "end": 830,
+              "quote": "Uncontrolled tourism development has become a primary driver of social and environmental disruption."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 831,
+              "end": 992,
+              "quote": "Tourism studies provide much documentation of the many negative social impacts of tourism and resulting resentment that local populations direct toward visitors."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q53",
@@ -2139,7 +2320,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1182,
+              "end": 1266,
+              "quote": "Residents often become frustrated when the benefits of tourism are not felt locally."
+            }
+          ]
         },
         {
           "id": "2022-09-2-q54",
@@ -2219,7 +2409,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2590,
+              "end": 2798,
+              "quote": "Informed travelers also are better able to distinguish between multinational companies and local entrepreneurs whose businesses provide direct social, environmental, and economic benefits for local residents."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2799,
+              "end": 2893,
+              "quote": "Such businesses are in love with the destination and are therefore deserving of market reward."
+            }
+          ]
         }
       ]
     },

@@ -267,7 +267,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 0,
+              "end": 140,
+              "quote": "1 W · We are down to two candidates for one position, and we need to decide by the end of the day in order to finalize this whole procedure."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q2",
@@ -309,7 +318,23 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 446,
+              "end": 588,
+              "quote": "The only difference worth noting perhaps is that it looks like RacheI scored moderately stronger grades throughout high school and university."
+            },
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 589,
+              "end": 638,
+              "quote": "But as I said, only a tiny bit higher than Peter."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q3",
@@ -351,7 +376,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 1549,
+              "end": 1598,
+              "quote": "Maybe it was something about their body language."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q4",
@@ -393,7 +427,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 1769,
+              "end": 1905,
+              "quote": "14 一 M ·  Well ， if there ， s a tie and we can't come to an agreement ， then we ， ll take it to John and let him cast the deciding vote."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q5",
@@ -435,7 +478,16 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-2",
+              "field": "transcript",
+              "start": 0,
+              "end": 127,
+              "quote": "1-M.DWe're here with CIementine Ortega, head designer of the private fashion label Ll Orange, to discuss her latest collection."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q6",
@@ -489,7 +541,16 @@
             "pages": [
               8
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-2",
+              "field": "transcript",
+              "start": 366,
+              "end": 446,
+              "quote": "Rather, I always try to incorporate something slightly absurd into my aesthetic."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q7",
@@ -531,7 +592,16 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-2",
+              "field": "transcript",
+              "start": 1310,
+              "end": 1389,
+              "quote": "I like to merge styles that are often at opposite ends of the fashion spectrum."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q8",
@@ -574,7 +644,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-2",
+              "field": "transcript",
+              "start": 1771,
+              "end": 1888,
+              "quote": "You have proven yourself a formidable young designer ， and we can't wait to see what creatlons you come up with next."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q9",
@@ -2437,7 +2516,23 @@
             "pages": [
               39
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 620,
+              "end": 828,
+              "quote": "Abundant research shows the harms of social isolation, considered a senous public health problem in countries that have rapidly ageing populations (though talk of a ' loneliness epidemc ' may be exaggerated)."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 829,
+              "end": 960,
+              "quote": "In the UK, the\nRoyal College of General Practitioners says that 、 loneliness has the same sk level for premature death as diabetes."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q37",
@@ -2533,7 +2628,16 @@
             "pages": [
               39
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2854,
+              "end": 2943,
+              "quote": "” Solitude allows for the reflection and observation necessary for that creative process."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q38",
@@ -2629,7 +2733,23 @@
             "pages": [
               39
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 441,
+              "end": 486,
+              "quote": "Being there behind a locked door was a freat."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 487,
+              "end": 558,
+              "quote": "TO me a pumshment was being ordered to play games with my cousin Louis."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q39",
@@ -2725,7 +2845,16 @@
             "pages": [
               39
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3263,
+              "end": 3453,
+              "quote": "A paper by B owker and her colleagues was the first to show that a type of social withdrawal could have a positive effect—they found that creativity was linked specifically to unsociability."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q40",
@@ -2821,7 +2950,16 @@
             "pages": [
               39
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6132,
+              "end": 6248,
+              "quote": "TO truly chart our own path or Vision, we have to be willing to isolate ourselves, at least for some period of time."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q41",
@@ -2919,7 +3057,16 @@
               39,
               40
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1430,
+              "end": 1613,
+              "quote": "For those of us who just prefer plenty of alone time, emerging research suggests some good news: there are upsides to being alone—for both our work lives and our emotional well -being"
+            }
+          ]
         },
         {
           "id": "2025-06-2-q42",
@@ -3015,7 +3162,16 @@
             "pages": [
               40
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7039,
+              "end": 7188,
+              "quote": "Nurturing a few solid relationships without feeling the need to constantly populate your life with endless chatting ultimately may be better for you."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q43",
@@ -3111,7 +3267,16 @@
             "pages": [
               40
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5259,
+              "end": 5393,
+              "quote": "Giving free rein to a wandering mmd not only helps with focus in the long term but strengthens your sense of both yourself and others."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q44",
@@ -3207,7 +3372,16 @@
             "pages": [
               40
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2385,
+              "end": 2547,
+              "quote": "In fact, Feist, s research on both artists and scientists shows that one of the most promnent features of creative folks is their lesser lntere St in socialising."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q45",
@@ -3303,7 +3477,16 @@
             "pages": [
               40
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6648,
+              "end": 6727,
+              "quote": "In fact, Fei st says, “ there, s a real danger with people who are never alone."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q46",
@@ -3352,7 +3535,16 @@
             "pages": [
               41
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 442,
+              "end": 755,
+              "quote": "That is largely because successful change requires more than a VISIOn; it reqmres a workforce that not only doesn' t resist change, but embraces it\nTO achieve success, an organization must build a transformation program that will allow change to be rapidly pulled across its departments and throughout its layers."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q47",
@@ -3403,7 +3595,16 @@
               42,
               43
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 910,
+              "end": 1167,
+              "quote": "TO create this kind of widespread passion, learning leaders must expose the workforce to what could be, which will enable them to rethink their mental models,\nenable them to break free 什 om their deep -ro oted paradlgms and embrace the opportunity to le 田卫."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q48",
@@ -3452,7 +3653,16 @@
             "pages": [
               43
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1396,
+              "end": 1620,
+              "quote": "Lectures, training pro grams and workshops can explain the intellectual elements of transformation, but they are seldom effective at getting to the behavioral aspects that lie at the heart of a significant change initiative."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q49",
@@ -3501,7 +3711,16 @@
             "pages": [
               50
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2152,
+              "end": 2323,
+              "quote": "The ability to explore, experiment and repeatedly apply new knowledge in unlimited, risk-free models is what makes simulation one of the most productive forms of learning."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q50",
@@ -3547,7 +3766,16 @@
             "pages": [
               45
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2854,
+              "end": 3012,
+              "quote": "To maximize benefits from simulation, participants should immediately apply the learning from the expenence to forge a smooth link between learning and doing."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q51",
@@ -3596,7 +3824,16 @@
             "pages": [
               46
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 129,
+              "end": 275,
+              "quote": "Unlimted growth is not sustainable, and economic thinking is moving toward the ide a that we should aim for sustainability in our economic models."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q52",
@@ -3694,7 +3931,23 @@
             "pages": [
               48
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 965,
+              "end": 1243,
+              "quote": "And there is good reason to suppose that such conditions exist, are globally applicable and are discoverable through research\nIn a recently published article, philosopher Julian Baggim suggests we should focus on ' real wealth, for citizens, which does not depend on GDP growth."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1244,
+              "end": 1341,
+              "quote": "Access is key: people do not need to own, but rather access things that enable them to live well."
+            }
+          ]
         },
         {
           "id": "2025-06-2-q54",
@@ -3794,7 +4047,16 @@
               50,
               51
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2656,
+              "end": 2800,
+              "quote": "To demand that governments set the ' happiness' of citizens as their highest priority is to\ndemand that they view citizens as ends in themselves"
+            }
+          ]
         }
       ]
     },

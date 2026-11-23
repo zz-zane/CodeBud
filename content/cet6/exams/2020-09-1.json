@@ -246,7 +246,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士解释，她热爱自己所做的工作，能够以热爱的事情为生让她充满活力。"
+          "explanationOriginal": "女士解释，她热爱自己所做的工作，能够以热爱的事情为生让她充满活力。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 303,
+              "end": 325,
+              "quote": "I just love what I do."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 326,
+              "end": 394,
+              "quote": "I am extremely fortunate to have this life, doing what I love doing."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q2",
@@ -298,7 +314,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士把自己的工作概括为科学教育和进一步开展科学研究。"
+          "explanationOriginal": "女士把自己的工作概括为科学教育和进一步开展科学研究。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 467,
+              "end": 522,
+              "quote": "well, as you said, I do have different things going on."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 523,
+              "end": 640,
+              "quote": "But these I think can be divided into two groups: the education of science, and the further understanding of science."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q3",
@@ -350,7 +382,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士说教学迫使她更深入地理解自己所教授的学科。"
+          "explanationOriginal": "女士说教学迫使她更深入地理解自己所教授的学科。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 871,
+              "end": 958,
+              "quote": "Also, what I will say is, that teaching a subject helps me comprehend it better myself."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 959,
+              "end": 1131,
+              "quote": "I find that it furthers my own knowledge when I have to explain something clearly, when I have to aid others understanding it, and when I have to answer questions about it."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q4",
@@ -506,7 +554,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士说祖母梦见航班坠毁后，决定不乘坐原定航班。"
+          "explanationOriginal": "女士说祖母梦见航班坠毁后，决定不乘坐原定航班。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 549,
+              "end": 629,
+              "quote": "Once, she dreamed that the flight she was due to take the following day crashed."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q7",
@@ -558,7 +615,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "女士认为情感即使看起来不理性，也可能与理性思维一样产生很大影响。"
+          "explanationOriginal": "女士认为情感即使看起来不理性，也可能与理性思维一样产生很大影响。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1042,
+              "end": 1139,
+              "quote": "But, even if we think they are ridiculous, emotions can be just as powerful as rational thinking."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q8",
@@ -610,7 +676,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "男士引述弗洛伊德，指出成年人的梦以复杂形式反映复杂的情感。"
+          "explanationOriginal": "男士引述弗洛伊德，指出成年人的梦以复杂形式反映复杂的情感。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1341,
+              "end": 1487,
+              "quote": "I think it was Sigmund Freud who said that children's dreams were usually simple representations of their wishes, things they wished would happen."
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1488,
+              "end": 1588,
+              "quote": "But in adults', dreams are much more complicated reflections of their more sophisticated sentiments."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q9",
@@ -669,7 +751,16 @@
             "pages": [
               12
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 154,
+              "end": 251,
+              "quote": "Scientists first discovered Lake Vostok in the 1970s by using radio waves that penetrate the ice."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q10",
@@ -728,7 +819,16 @@
             "pages": [
               12
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 657,
+              "end": 796,
+              "quote": "The scientists suspect that microorganisms may be living in Lake Vostok, closed off from the outside world for more than two million years."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q11",
@@ -787,7 +887,16 @@
             "pages": [
               12
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1245,
+              "end": 1379,
+              "quote": "The scientists hope that discoveries will shed light on life in outer space, which might exist in similar dark and airless conditions."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q12",
@@ -839,7 +948,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "科普兰发现有关塔拉乌马拉人语言的研究很少，因此希望开展研究。"
+          "explanationOriginal": "科普兰发现有关塔拉乌马拉人语言的研究很少，因此希望开展研究。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 0,
+              "end": 167,
+              "quote": "The idea to study the American Indian tribe – Tarahumaras, came to James Copeland in 1984 when he discovered that very little research had been done on their language."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q13",
@@ -898,7 +1016,16 @@
             "pages": [
               15
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 544,
+              "end": 606,
+              "quote": "He took Copeland to his village and served as an intermediary."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q14",
@@ -958,7 +1085,16 @@
             "pages": [
               15
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 712,
+              "end": 788,
+              "quote": "Entering the world of Tarahumaras has been a laborious project for Copeland."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q15",
@@ -1017,7 +1153,16 @@
             "pages": [
               16
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1490,
+              "end": 1567,
+              "quote": "I see a lot of beauty and their sense of sharing and concern for each other.”"
+            }
+          ]
         },
         {
           "id": "2020-09-1-q16",
@@ -1069,7 +1214,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "讲话者说，指责别人激进往往会压制其声音，使其屈服。"
+          "explanationOriginal": "讲话者说，指责别人激进往往会压制其声音，使其屈服。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 122,
+              "end": 386,
+              "quote": "Accusing individuals or groups of being radical often serves to silence them into submission, thereby, maintaining the existing state of affairs, and, more important, preserving the power of a select minority, who are mostly wealthy white males in western society."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q17",
@@ -1128,7 +1282,16 @@
             "pages": [
               19
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1106,
+              "end": 1226,
+              "quote": "To me, a radical is simply someone who rebels against the norm when advocates a change in the existing state of affairs."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q18",
@@ -1180,7 +1343,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "讲话者认为，许多激进分子推动了社会进步。"
+          "explanationOriginal": "讲话者认为，许多激进分子推动了社会进步。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 2154,
+              "end": 2299,
+              "quote": "Of course, there are some radicals who've made a negative impact on humanity, but undeniably, there would simply be no progress without radicals."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q19",
@@ -1232,7 +1404,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "讲话者指出，没有人能够完全不受周围环境和他人的影响。"
+          "explanationOriginal": "讲话者指出，没有人能够完全不受周围环境和他人的影响。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 188,
+              "end": 232,
+              "quote": "We become part of our immediate environment."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 233,
+              "end": 378,
+              "quote": "None of us are immune to the influences of our own world and let us not kid ourselves that we are untouched by the things and people in our life."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q20",
@@ -1284,7 +1472,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "讲话者认为，弗雷德首先需要认识到同事长期带给他的消极影响。"
+          "explanationOriginal": "讲话者认为，弗雷德首先需要认识到同事长期带给他的消极影响。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1702,
+              "end": 1847,
+              "quote": "However, if Fred ever wants to improve his quality of life, the first thing he'll need to do is recognize what has been going on all these years."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q21",
@@ -1336,7 +1533,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "讲话者提到，精神病医生这一职业人群也更容易出现自杀行为。"
+          "explanationOriginal": "讲话者提到，精神病医生这一职业人群也更容易出现自杀行为。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1972,
+              "end": 2061,
+              "quote": "Psychiatrists have a higher incidence of suicide in their profession for related reasons."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q22",
@@ -1388,7 +1594,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "讲话者说几乎所有美国人都认识美元纸币，但很少有人能准确描述它。"
+          "explanationOriginal": "讲话者说几乎所有美国人都认识美元纸币，但很少有人能准确描述它。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 117,
+              "end": 209,
+              "quote": "But few people indeed can accurately describe the world's most powerful, important currency."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q23",
@@ -1440,7 +1655,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "美元纸张与油墨的确切成分是受到保护的政府秘密。"
+          "explanationOriginal": "美元纸张与油墨的确切成分是受到保护的政府秘密。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 210,
+              "end": 379,
+              "quote": "The American dollar bill is colored with black ink on one side and green on the other; the exact composition of the paper and ink is a closely guarded government secret."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q24",
@@ -1492,7 +1716,23 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "新政府最初主要铸造硬币，是因为民众对纸币缺乏信心。"
+          "explanationOriginal": "新政府最初主要铸造硬币，是因为民众对纸币缺乏信心。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 959,
+              "end": 1099,
+              "quote": "When the Constitution was signed, people had little regard for paper money because of its steadily decreasing value during the colonial era."
+            },
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1100,
+              "end": 1197,
+              "quote": "Because of this lack of faith, the new American government minted only coins for common currency."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q25",
@@ -1544,7 +1784,16 @@
             "note": "定位句已与录音转写核对；分析文字为整理稿，未经官方核对"
           },
           "verificationNote": "题干、选项和答案已对照 G 盘原卷及解析册；音频尚未逐题人工核听。",
-          "explanationOriginal": "讲话者说，美国历代一些政治家一直主张实行货币金本位制。"
+          "explanationOriginal": "讲话者说，美国历代一些政治家一直主张实行货币金本位制。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1993,
+              "end": 2102,
+              "quote": "American history has seen generations of politicians argue in favor of a gold standard for American currency."
+            }
+          ]
         }
       ]
     },
@@ -2542,7 +2791,16 @@
               32
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3352,
+              "end": 3621,
+              "quote": "But Gigi Luk at Harvard cites at least one brain-imaging study on adolescents that shows similar changes in brain structure when compared with those who are bilingual from birth, even when they didn't begin practicing a second language in earnest before late childhood."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q37",
@@ -2646,7 +2904,16 @@
               32
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1074,
+              "end": 1159,
+              "quote": "The goal is functional bilingualism and biliteracy for all students by middle school."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q38",
@@ -2750,7 +3017,16 @@
               32
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4173,
+              "end": 4418,
+              "quote": "Jennifer Steele at American University conducted a four-year, randomized trial and found that these dual-language students outperformed their peers in English-reading skills by a full school­\nyear's worth of learning by the end of middle school."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q39",
@@ -2854,7 +3130,23 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1484,
+              "end": 1596,
+              "quote": "It was intended to sharply reduce the amount of time that English-language learners spent in bilingual settings."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1597,
+              "end": 1821,
+              "quote": "Proposition 58, passed by California voters on November 8, largely reversed that decision, paving the way for a huge expansion of bilingual education in the state that has the largest population of English-language learners."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q40",
@@ -2958,7 +3250,23 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6000,
+              "end": 6164,
+              "quote": "Because they are composed of native English speakers deliberately placed together with recent immigrants, they tend to be more ethnically and economically balanced."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6165,
+              "end": 6283,
+              "quote": "And there is some evidence that this helps kids of all backgrounds gain comfort with diversity and different cultures."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q41",
@@ -3062,7 +3370,23 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1825,
+              "end": 2008,
+              "quote": "Some of the insistence on English-first was founded on research produced decades ago, in which bilingual students under performed monolingual English speakers and had lower IQ scores."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2009,
+              "end": 2117,
+              "quote": "Today's scholars, like Ellen Bialystok at York University in Toronto, say that research was\n\"deeply flawed.\""
+            }
+          ]
         },
         {
           "id": "2020-09-1-q42",
@@ -3166,7 +3490,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 452,
+              "end": 649,
+              "quote": "Again and again, researchers have found, \"b ilingualism is an experience that shapes our brain for life,\" in the words of Gigi Luk, an associate professor at Harvard's Graduate School of Education."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q43",
@@ -3270,7 +3603,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7970,
+              "end": 8032,
+              "quote": "So, even if the advantages are small, they are still worth it."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q44",
@@ -3374,7 +3716,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2903,
+              "end": 3006,
+              "quote": "People who speak two languages often outperform monolinguals on general measures of executive function."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q45",
@@ -3478,7 +3829,23 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6287,
+              "end": 6560,
+              "quote": "Several of the researchers also pointed out that, in bilingual education, non-English- dominant students and their families tend to feel that their home language is heard and valued, compared with a classroom where the home language is left at the door in favor of English."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6561,
+              "end": 6717,
+              "quote": "This can improve students' sense of belonging and increase parents' involvement in their children's education, including behaviors like reading to children."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q46",
@@ -3518,7 +3885,23 @@
               43
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 299,
+              "end": 496,
+              "quote": "No one disputes the costs in quality of life and depleted health budgets of an obese population, but the quest for solutions gets diverted by ideological arguments around responsibility and choice."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 497,
+              "end": 612,
+              "quote": "And the water is muddied by lobbying from the industries that profit from consumption of obesity-inducing products."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q47",
@@ -3558,7 +3941,16 @@
               44
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1653,
+              "end": 1784,
+              "quote": "The relationship between poor health and inequality is too pronounced for governments to be passive about large-scale intervention."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q48",
@@ -3598,7 +3990,16 @@
               45
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1505,
+              "end": 1607,
+              "quote": "Bans and taxes can be blunt instruments, but their harshest critics can rarely suggest better methods."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q49",
@@ -3638,7 +4039,16 @@
               46
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1653,
+              "end": 1784,
+              "quote": "The relationship between poor health and inequality is too pronounced for governments to be passive about large-scale intervention."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q50",
@@ -3678,7 +4088,16 @@
               48
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2163,
+              "end": 2229,
+              "quote": "Government action works when individuals are motivated to respond."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q51",
@@ -3718,7 +4137,16 @@
               50
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 145,
+              "quote": "Home to virgm reefs, rare sharks and vast numbers of exotic h, the Coral Sea is a unique haven of biodwersity 0 伊 the northeastem t of Australia."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q52",
@@ -3798,7 +4226,16 @@
               52
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 316,
+              "end": 777,
+              "quote": "The Coral rserve would cover almost 990, square kilometres and stretch far as 1, 100\nkilometrs 什 om the coast Unveiled recently by environment Burke, the proposal would be the 1 t a of proposed marine reervs around Australia, S coast\n第 1 0 / 1 2 页\nBut the scheme is attracting criticism from scientists and conservation groups, who argue that the government hasn't gone far enough in protecting the Coral Sea, or in other marine reserves in the coastal network."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q54",
@@ -3838,7 +4275,23 @@
               51
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1706,
+              "end": 1847,
+              "quote": "But Robin Beaman, a marine geologist at James Cook University, says that the reserve does\n\"broadly protect the range of habitats\" in the sea."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1848,
+              "end": 2018,
+              "quote": "\" I can testify to the huge effort that government agencies and other organisations have put into trying to understand the ecological values of this vast area, \" he says."
+            }
+          ]
         },
         {
           "id": "2020-09-1-q55",
@@ -3878,7 +4331,16 @@
               54
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2524,
+              "end": 2762,
+              "quote": "Critics say that the southwestem reserve offers the greatest protection to the offshore areas where commercial opportunities are fewest and where there is little threat to the environment, a contention also levelled at the Coral Sea plan."
+            }
+          ]
         }
       ]
     },

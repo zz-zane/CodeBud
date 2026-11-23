@@ -1,3 +1,4 @@
+import { tmpdir } from 'node:os'
 import { afterEach, beforeEach, expect, it, vi } from 'vitest'
 import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { join, resolve, sep } from 'node:path'
@@ -13,7 +14,7 @@ vi.mock('electron', () => ({
 }))
 vi.mock('../study/usage', () => ({ recordStudyUsage: vi.fn() }))
 
-const root = resolve('outputs/codebud-prompt-once-tests')
+const root = resolve(tmpdir(), 'codebud-prompt-once-tests')
 let dir: string
 beforeEach(() => {
   mkdirSync(root, { recursive: true })

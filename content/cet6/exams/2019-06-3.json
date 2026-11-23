@@ -1092,7 +1092,23 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4163,
+              "end": 4342,
+              "quote": "CubeSat researchers suggest that now's the time to ponder unexpected and unintended possible consequences of more people than ever having access to their own small slice of space."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4343,
+              "end": 4529,
+              "quote": "In an era when you can simply buy a CubeSat kit off the shelf, how can we trust the satellites over our heads were developed with good intentions by people who knew what they were doing?"
+            }
+          ]
         },
         {
           "id": "2019-06-3-q37",
@@ -1204,7 +1220,16 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1589,
+              "end": 1700,
+              "quote": "Multiples can be deployed in combination for more complex missions than could be achieved by one CubeSat alone."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q38",
@@ -1317,7 +1342,16 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 542,
+              "end": 653,
+              "quote": "However, as the cost of getting your own satellite in orbit drops sharply, the risks of irresponsible use grow."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q39",
@@ -1430,7 +1464,16 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2613,
+              "end": 2776,
+              "quote": "This decrease in cost allows researchers, hobbyists and even elementary school groups to put simple instruments into LEO or even having them deployed from the ISS."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q40",
@@ -1542,7 +1585,16 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5719,
+              "end": 5906,
+              "quote": "However, they're more cautious about sharing information with nonmembers, as the organization guards against others developing the ability to hi jack and take control of their satellites."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q41",
@@ -1654,7 +1706,16 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3147,
+              "end": 3294,
+              "quote": "The NASA\nEducational Launch of Nano Satellite program, which offers free launches for educational groups and science missions, is now open to U. S."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q42",
@@ -1767,7 +1828,23 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6475,
+              "end": 6568,
+              "quote": "But there's a danger they're ill-equipped to think through potential unintended consequences."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6643,
+              "end": 6743,
+              "quote": "Yet we know innovators can be remarkably creative with taking technologies in unexpected directions."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q43",
@@ -1879,7 +1956,23 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3550,
+              "end": 3634,
+              "quote": "Yet it also acknowledges that widespread deployment of LEO CubeSats isn't risk-free."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3635,
+              "end": 3830,
+              "quote": "The greatest concern the authors raise is space debris-pieces of \"junk\" that orbit the earth, with the potential to cause serious damage if they collide with operational units, including the ISS."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q44",
@@ -1991,7 +2084,16 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1705,
+              "end": 1904,
+              "quote": "Within their compact bodies these minute satellites are able to house sensors and communications receivers/transmitters that enable operators to study Earth from space, as well as space around\nEarth."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q45",
@@ -2103,7 +2205,23 @@
               4,
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5246,
+              "end": 5458,
+              "quote": "Within the organization, AMSAT has a philosophy of open sourcing everything-making technical data on all aspects of their satellites fully available to everyone in the organization, and when possible, the public."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5459,
+              "end": 5714,
+              "quote": "According to a member of the team responsible for FOX 1- A, AMSAT's first CubeSat, this means that there's no way to sneak something like explosives or an energy emitter into an amateur satellite when everyone has access to the designs and implementation."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q46",
@@ -2143,7 +2261,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 207,
+              "end": 352,
+              "quote": "It wasn't until I entered the corporate world that I realized, for me at least, being friends with colleagues didn't emerge as a priority at all."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q47",
@@ -2183,7 +2310,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 528,
+              "end": 764,
+              "quote": "So much research has explored the way in which collegial (同事的) ties can help overcome a range of workplace issues affecting productivity and the quality of work output such as team-based conflict, jealousy, undermining, anger, and more."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q48",
@@ -2264,7 +2400,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1700,
+              "end": 1776,
+              "quote": "Indifference is also the preferred option among those who are socially lazy."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1777,
+              "end": 1835,
+              "quote": "Maintaining relationships over the long term takes effort."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q50",
@@ -2344,7 +2496,16 @@
               24
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 114,
+              "quote": "In a few decades, artificial intelligence (AI) will surpass many of the abilities that we believe make us special."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q52",
@@ -2384,7 +2545,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 199,
+              "end": 332,
+              "quote": "One of the most significant pieces of news from the US in early 20 17 was the efforts of Google to make autonomous driving a reality."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 519,
+              "end": 647,
+              "quote": "But even more impressive is the progress in just a single year: human interventions fell from 0.8 times per thousand miles to 0."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q53",
@@ -2424,7 +2601,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1521,
+              "end": 1672,
+              "quote": "So far, machines have a pretty hard time emulating creativity, arbitrary enough not to be predicted by a computer, and yet more than simple randomness."
+            }
+          ]
         },
         {
           "id": "2019-06-3-q54",

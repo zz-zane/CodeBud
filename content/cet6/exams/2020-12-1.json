@@ -225,7 +225,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.67
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 270,
+              "end": 359,
+              "quote": "1\nIm getting a little fed up\nwith my calls about my claim being completely d is regarded."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q2",
@@ -274,7 +283,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 592,
+              "end": 713,
+              "quote": "2\nThe entire ground floor of our cottage was submerge d in water and\nfive of us have been living in a caravan ever since."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q3",
@@ -328,7 +346,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.5
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 842,
+              "end": 1031,
+              "quote": "Miss Wilson, according to the notes on your account, 3\nthe bizarre technical detail that you mentioned\nrefers to the fact that you hadn't paid house insurance the month before the incident."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q4",
@@ -382,7 +409,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.45
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1422,
+              "end": 1535,
+              "quote": "Ive already spoken to him and you can tell him Im furious now and that\n4\nyour company has a lawsuit on\nits hands."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q5",
@@ -490,7 +526,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.45
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 501,
+              "end": 663,
+              "quote": "6\nI think artificial intelligence will actually help create new kinds of jobs, which would require less of our\ntime and allow us to be centered on creative tasks."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q7",
@@ -543,7 +588,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.85
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1009,
+              "end": 1101,
+              "quote": "7\nTheresa risk that human civilization could be replaced by a superior type of digital life."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q8",
@@ -646,7 +700,23 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 0,
+              "end": 128,
+              "quote": "9\nTo achieve financial security, how much you save is always more important than the amount you earn\nor how shrewdly you invest."
+            },
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 129,
+              "end": 235,
+              "quote": "If you are under 30 years old, your goal should be to save 20% of your monthly\nincome aftertax deductions."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q10",
@@ -696,7 +766,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 528,
+              "end": 619,
+              "quote": "10\nIf you find it hard to save any money at all, start by cutting all unnecessary spending."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q11",
@@ -747,7 +826,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 850,
+              "end": 929,
+              "quote": "But\nif you adopt the right mindset, you should be able to make it work for you."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q12",
@@ -802,7 +890,16 @@
             "type": "auto-locate-from-transcript",
             "how": "none",
             "score": 0.33
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 130,
+              "end": 281,
+              "quote": "12\nHowever, when I first started my job, occasionally Id catch a glimpse of myself in the\n5\nlifts, and find myself thinking that I looked a total mess."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q13",
@@ -852,7 +949,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 439,
+              "end": 494,
+              "quote": "13\nBut no one can be unique with their outfit everyday."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q14",
@@ -907,7 +1013,16 @@
             "type": "auto-locate-from-transcript",
             "how": "none",
             "score": 0.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1076,
+              "end": 1167,
+              "quote": "14\nBut if your job involves interacting with other people, the answer to this is\noften yes."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q15",
@@ -958,7 +1073,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1168,
+              "end": 1280,
+              "quote": "15\nSo rather than fighting the system, I think we should just do whatever helps us to achieve our\ngoals at work."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q16",
@@ -1011,7 +1135,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.5
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 353,
+              "end": 557,
+              "quote": "This phenomenon has resulted in significant credit card debt, enormous environmental\nfootprint s, and perhaps not co incident ally, our happiness levels have failed to increase over the same half century."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q17",
@@ -1120,7 +1253,23 @@
             "type": "auto-locate-from-transcript",
             "how": "none",
             "score": 0.05
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1775,
+              "end": 1834,
+              "quote": "18\nFinally, we need multi functional spaces and housewares."
+            },
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1835,
+              "end": 1925,
+              "quote": "I combined a movable wall with transforming\nfurniture to get more out of my limited space."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q19",
@@ -1171,7 +1320,23 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 560,
+              "end": 728,
+              "quote": "19\nWith surprising\n7\nresults, they found that 12% of respondents reported the distance they drove as less than the actual figure,\ngiving an average answer of 384 miles."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 729,
+              "end": 836,
+              "quote": "In other words, they lied about their number of miles, even though\nthey would forfeit money they were owed."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q20",
@@ -1226,7 +1391,23 @@
             "type": "auto-locate-from-transcript",
             "how": "none",
             "score": 0.33
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 0,
+              "end": 123,
+              "quote": "Now, believe it or not, people sometimes lie in order to maintain a good, honest reputation—even if it\nhurts them to do so."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1039,
+              "end": 1157,
+              "quote": "The\nresearchers explain that many people care a great deal about their reputation and how they ll be judged by\nothers."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q21",
@@ -1279,7 +1460,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 2154,
+              "end": 2195,
+              "quote": "21\nBut the findings seem intuitive to me."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q22",
@@ -1380,7 +1570,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 393,
+              "end": 500,
+              "quote": "23\nIn fact, studies have found that by the time we turn 33, most of us have stopped listening to new\nmusic."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q24",
@@ -1430,7 +1629,16 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1005,
+              "end": 1202,
+              "quote": "24\nOne of the most\nresearched laws of social psychology is something called the“mere exposure effect”, which, in essence, means\nthat the more were exposed to something, the more we tend to like it."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q25",
@@ -1481,7 +1689,23 @@
             "note": "定位句已与录音机器转写对上（词袋≥80%、三词片段≥50%），尚未人工听核",
             "by": "工人1号",
             "date": "2026-11-09"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1896,
+              "end": 2020,
+              "quote": "25\nPsychology research has shown that the emotions that we experience as teens seem more intense than those\nthat come later."
+            },
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2021,
+              "end": 2114,
+              "quote": "And we also know that intense emotions are associated with stronger memories and preferences."
+            }
+          ]
         }
       ]
     },
@@ -2489,7 +2713,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1059,
+              "end": 1243,
+              "quote": "At this growth stage of the plant's development, the farmer has another 10 days to conduct any replanting before the majority of his fertilizer and chemical applications need to occur."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1244,
+              "end": 1445,
+              "quote": "Once these have been applied, it becomes economically unviable to take corrective action, making any further collected data historical and useful only to inform future practices for the season to come."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q37",
@@ -2593,7 +2833,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4647,
+              "end": 4701,
+              "quote": "By comparison, our bodies are a contained environment."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4860,
+              "end": 4899,
+              "quote": "But these ecosystems are not contained."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q38",
@@ -2697,7 +2953,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1838,
+              "end": 2046,
+              "quote": "With the software having been developed in the United States on the same variety of crops in seemingly similar conditions, the agronomist feels confident that the software will produce a near accurate result."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q39",
@@ -2801,7 +3066,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5611,
+              "end": 6038,
+              "quote": "So the problem with deploying machine learning and artificial intelligence in agriculture is not that scientists lack the capacity to develop programs and protocols to begin to address the biggest of growers' concerns; the problem is that in most cases, no two environments will be exactly alike, which makes the testing, validation and successful rollout of such technologies much more laborious than in most other industries."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q40",
@@ -2905,7 +3179,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2122,
+              "end": 2429,
+              "quote": "Having walked through the planted rows before the flight to gain a physical understanding of the situation on the ground, he knows the instant he sees the data on his screen that the plant count is not correct, and so do the farmers, even with their limited understanding of how to read remote sensing maps."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q41",
@@ -3009,7 +3292,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7026,
+              "end": 7184,
+              "quote": "This usually results in a failure of a product, which leads to skepticism from the market and delivers a blow to the integrity of Machine Learning technology."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q42",
@@ -3113,7 +3405,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3028,
+              "end": 3180,
+              "quote": "And the aim is that farmers can use this artificial intelligence to achieve their goal of a better harvest through making better decisions in the field."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q43",
@@ -3217,7 +3518,23 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 680,
+              "end": 809,
+              "quote": "In this instance, the farmers and agronomist are looking to specialized software to give them an accurate plant p~pulation count."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 810,
+              "end": 1055,
+              "quote": "It's been 10 days since the corn emerged and the farmer wants to determine if there are any parts of the field that require replanting due to a lack of emergence or wind damage, which can be severe in the early stages of the summer rainy season."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q44",
@@ -3321,7 +3638,23 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4187,
+              "end": 4291,
+              "quote": "Because it is one of the most difficult fields to contain for the purpose of statistical quantification."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4292,
+              "end": 4380,
+              "quote": "Even within a single field, conditions are always changing from one section to the next."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q45",
@@ -3425,7 +3758,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5190,
+              "end": 5403,
+              "quote": "What may occur with the same seed and fertilizer program in the United States' Midwest region is almost certainly unrelated to what may occur with the same seed and fertilizer program in Australia or South Africa."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q46",
@@ -3547,7 +3889,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1505,
+              "end": 1634,
+              "quote": "The Uffizi in Florence, another site of cultural pilgrimage, has cut its entry queues down to seven minutes by clever management."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q49",
@@ -3588,7 +3939,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1795,
+              "end": 1985,
+              "quote": "Olafur Eliasson's current Tate Modern show, for instance, might seem nothing more than an entertainment, overrun as it is with kids romping (喧闹地玩耍) in fog rooms and spray mist installations."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1986,
+              "end": 2273,
+              "quote": "But it's more than that: where Eliasson is at his most entertaining, he is at his most serious too, and his disorienting installations bring home the reality of the destructive effects we are having on the planet-not least what we are doing to the glaciers of Eliasson's beloved Iceland."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q50",
@@ -3629,7 +3996,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2274,
+              "end": 2509,
+              "quote": "Marcel Proust, another lover of the Louvre, wrote: \" It is only through art that we can escape from ourselves and know how another person sees the universe, whose landscapes would otherwise have remained as unknown as any on the moon.\""
+            }
+          ]
         },
         {
           "id": "2020-12-1-q51",
@@ -3670,7 +4046,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 201,
+              "end": 479,
+              "quote": "But the best available science also has a lot to say about what those food choices do to the environment, and some researchers are annoyed that new dietary recommendations of the USDA (United States Department of Agriculture) released yesterday seem to utterly ignore that fact."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q52",
@@ -3791,7 +4176,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2303,
+              "end": 2423,
+              "quote": "Possibly the agencies in charge of drafting the decisions are too close to the industries they are supposed to regulate."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2475,
+              "end": 2532,
+              "quote": "On the other, their clients are US agriculture companies."
+            }
+          ]
         },
         {
           "id": "2020-12-1-q55",

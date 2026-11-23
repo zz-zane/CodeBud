@@ -1,3 +1,4 @@
+import { tmpdir } from 'node:os'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { mkdirSync, mkdtempSync, rmSync } from 'node:fs'
 import { join, resolve } from 'node:path'
@@ -5,7 +6,7 @@ import { StudyStore } from '../store'
 import { applyStudyActions } from '../actions'
 import type { AiChatSession } from '../../../shared/types'
 
-const root = resolve('outputs/study-companion-tests')
+const root = resolve(tmpdir(), 'root-tests')
 let dir: string
 let store: StudyStore
 beforeEach(() => { mkdirSync(root, { recursive: true }); dir = mkdtempSync(join(root, 'actions-')); store = new StudyStore(dir) })

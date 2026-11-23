@@ -1218,7 +1218,23 @@
             "pages": [
               15
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2118,
+              "end": 2216,
+              "quote": "It stated that livestock produced a staggering 18 percent of the world's greenhouse gas emissions."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2217,
+              "end": 2349,
+              "quote": "The agency drew a startling conclusion that live stock was doing more to harm the climate than all modes of transportation combined."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q37",
@@ -1314,7 +1330,16 @@
             "pages": [
               15
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5310,
+              "end": 5398,
+              "quote": "But meat consumption per Person in these regions still lags that of developed countries."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q38",
@@ -1410,7 +1435,16 @@
             "pages": [
               15
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3510,
+              "end": 3567,
+              "quote": "TO its credit, the FAO immediately owned up to its error."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q39",
@@ -1506,7 +1540,23 @@
             "pages": [
               15
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3,
+              "end": 111,
+              "quote": "As the scale and impacts of climate change become mcreasingly alarming, meat is a popular target for action."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 112,
+              "end": 231,
+              "quote": "Advocates for the protection of the natural environment 丘 om destruction or pollution urge the public to eat less meat."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q40",
@@ -1602,7 +1652,16 @@
             "pages": [
               15
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4289,
+              "end": 4443,
+              "quote": "But according to one recent study, even if Americans eliminated all animal protein from 山 e 计 diets, they would reduce greenhouse gas emissions by only 2."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q41",
@@ -1698,7 +1757,16 @@
             "pages": [
               16
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6815,
+              "end": 6972,
+              "quote": "According to the FAO, as much as 70 percent of all\nagricultural land globally is range land that can only be utilized as grazing land for ruminant livestock."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q42",
@@ -1794,7 +1862,16 @@
             "pages": [
               16
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1027,
+              "end": 1170,
+              "quote": "A healthy portion of meat' s negative reputation centers on the assertion that live stock is the large st source of greenhouse gases worldwide."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q43",
@@ -1986,7 +2063,16 @@
             "pages": [
               16
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 832,
+              "end": 941,
+              "quote": "However, ab andomng meat and meat products is not the environmental a 0 cea (万灵药) many would have us believe."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q45",
@@ -2082,7 +2168,16 @@
             "pages": [
               16
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4725,
+              "end": 4839,
+              "quote": "agnculture over the past 70 years have made livestock production more efficient and less greenhouse gas-intensive."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q46",
@@ -2131,7 +2226,23 @@
             "pages": [
               17
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 42,
+              "end": 128,
+              "quote": "Partly it's to do with money, but there's a psychological aspect to our fears as well."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 129,
+              "end": 297,
+              "quote": "We worry because we suspect 一 not wrongly 一 that the world is 11 of a frightening s 0 of person ready to judge us ruthle s sly and swiftly: a person we can call a snob."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q47",
@@ -2180,7 +2291,23 @@
             "pages": [
               18
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 508,
+              "end": 580,
+              "quote": "Nowadays, the snob cares about one thing only: what you do for a living."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 581,
+              "end": 786,
+              "quote": "This explains why the first question we will be asked in any new social context is ' What do you do, and according to how we answer, snobs will either welcome us with broad smiles, or leave us in the cold."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q48",
@@ -2229,7 +2356,23 @@
             "pages": [
               19
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 950,
+              "end": 1037,
+              "quote": "A lot of our interest in fancy cars, jobs and houses has nothmg to do with materialism."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1038,
+              "end": 1174,
+              "quote": "It has to do with a hunger for the respect and esteem that is only available in our societies through the acquisition of material goods."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q49",
@@ -2278,7 +2421,16 @@
             "pages": [
               20
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1680,
+              "end": 1781,
+              "quote": "For snobs, it is the already acclaimed and already success 1\nwho are the only ones worthy of respect."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q50",
@@ -2324,7 +2476,16 @@
             "pages": [
               21
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2274,
+              "end": 2456,
+              "quote": "And because we are such poor judges of the worth of others, our ultimate duty remains to be kind, good, curious and imaginative ab out pretty much everyone who ever crosses our path."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q51",
@@ -2373,7 +2534,23 @@
             "pages": [
               22
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 40,
+              "end": 96,
+              "quote": "But in the US in the 1980s, they began to catch up fast."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 97,
+              "end": 180,
+              "quote": "Dunng that decade, the gender pay gap closed by ab out one percentage point a year."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q52",
@@ -2422,7 +2599,23 @@
             "pages": [
               23
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 635,
+              "end": 837,
+              "quote": "Though the le ave policies rmght have helped those women to stay in the workplace instead of dropping out to have families 一 those who returned saw their wages had increased at lower rates than the men."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 838,
+              "end": 943,
+              "quote": "After family leave was introduced in the US, in fact, the rate of gender wage convergence fell to Just 0."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q53",
@@ -2471,7 +2664,16 @@
             "pages": [
               24
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1575,
+              "end": 1724,
+              "quote": "Part of this is because women take on more of the unpaid labor at home, which can eat into tlme available for work and energy for career advancement."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q54",
@@ -2520,7 +2722,16 @@
             "pages": [
               26
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2005,
+              "end": 2132,
+              "quote": "le study doesn, t go into that question, other 山皿 to say that if the 1980s frend continued, we would have been at panty by now."
+            }
+          ]
         },
         {
           "id": "2025-06-3-q55",
@@ -2569,7 +2780,16 @@
             "pages": [
               26
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2227,
+              "end": 2621,
+              "quote": "women, s gams in the 1980s were made through the erasure of things 1 e bias, once those less uncontrollable problems had been addressed, there would still have been 皿 issue with women 一 who are the ones to bear children and take care of them in the early weeks because of biologcal factors 1 设 e the ability to breastfeed, forcing them to take breaks, whether or not those breaks were mandated."
+            }
+          ]
         }
       ]
     },

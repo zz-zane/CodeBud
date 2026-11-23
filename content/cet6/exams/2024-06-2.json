@@ -241,7 +241,16 @@
               2,
               3
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 300,
+              "end": 353,
+              "quote": "I read through maybe hundreds of online user reviews."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q2",
@@ -296,7 +305,23 @@
             "pages": [
               3
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 720,
+              "end": 763,
+              "quote": "I have never thought of getting one myself."
+            },
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 764,
+              "end": 837,
+              "quote": "It sounds like the kind ofthing that, forme personally,I\nwould rarely use"
+            }
+          ]
         },
         {
           "id": "2024-06-2-q3",
@@ -351,7 +376,16 @@
             "pages": [
               3
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 912,
+              "end": 1028,
+              "quote": "I make a fresh fruit juice in the morning,\nmaybe not every morning, but 3 or 4 times a week, and it feels fantastic."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q4",
@@ -520,7 +554,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-2",
+              "field": "transcript",
+              "start": 608,
+              "end": 713,
+              "quote": "In about 10 years, Berkton has gone from a relatively unheard of sleepy\nvillage to a must-see destination"
+            }
+          ]
         },
         {
           "id": "2024-06-2-q7",
@@ -577,7 +620,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-2",
+              "field": "transcript",
+              "start": 1136,
+              "end": 1249,
+              "quote": "This\nlegislative proposal essentially set out to harmonize the aesthetic appearance of all the houses in Berkton."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q8",
@@ -634,7 +686,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-2",
+              "field": "transcript",
+              "start": 1712,
+              "end": 1806,
+              "quote": "The tourists we receive are a blessing, as they have completely revitalized our local economy."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q9",
@@ -693,7 +754,16 @@
               3,
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-3",
+              "field": "transcript",
+              "start": 246,
+              "end": 440,
+              "quote": "Researchers described it as the smallest ever remote-controlled alking robot\nThe tiny robot can bend, twist, crawl, walk, turn, and even jump without the useof complex hardware or special\npower."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q10",
@@ -736,7 +806,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-3",
+              "field": "transcript",
+              "start": 446,
+              "end": 538,
+              "quote": "The engineers said this is because the robot is powered by the elastic property of its body."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q11",
@@ -795,7 +874,16 @@
               3,
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-3",
+              "field": "transcript",
+              "start": 1066,
+              "end": 1514,
+              "quote": "While the research is still in the\nexploratory phase, the team believes that technology could lead to micro-sized robots that can perform practical tasks in\ntightly confined spaces.“You might imagine microrobots as agents to repair or assemble small structures or machines\nin industry, oras surgical assistants to clear clogged arteries, tostop internal bleeding, or to eliminate cancerous tumors,\nall in minimally invasive procedures,”Rogers said."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q12",
@@ -838,7 +926,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-4",
+              "field": "transcript",
+              "start": 214,
+              "end": 504,
+              "quote": "On one very\nrough ferry crossing, on the route to the Isles of Scilly, for example, my traveling companion spent the entire 3-hour-\nride throwing up in the bathroom, while I dozed happily on a plastic chair\nUnfortunately, it has come to my attention that I am not an elite sleeper afterall."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q13",
@@ -924,7 +1021,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-4",
+              "field": "transcript",
+              "start": 877,
+              "end": 972,
+              "quote": "It may not be possible to change your own genes, but can you train yourself to need less sleep?"
+            }
+          ]
         },
         {
           "id": "2024-06-2-q15",
@@ -968,7 +1074,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-4",
+              "field": "transcript",
+              "start": 1217,
+              "end": 1325,
+              "quote": "For a while, I assumed I'd be forced to become one of those people who jump out of bed at the crack of dawn."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q16",
@@ -1011,7 +1126,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-5",
+              "field": "transcript",
+              "start": 219,
+              "end": 463,
+              "quote": "And yet, a\nnew paper in the Quarterly Journal of Experimental Psychology suggests that we actually have very poor awareness\nof our own belief change, meaning that we will tend to underestimate how much we've been swayed by a convincing\narticle."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q17",
@@ -1070,7 +1194,16 @@
               3,
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-5",
+              "field": "transcript",
+              "start": 1324,
+              "end": 1446,
+              "quote": "The students'belief about physical punishent changed when they read a text that argued against their own\ninitial position."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q18",
@@ -1129,7 +1262,16 @@
               3,
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-5",
+              "field": "transcript",
+              "start": 1996,
+              "end": 2084,
+              "quote": "The researchers concede that this research was about changes to mostly moderate beliefs."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q19",
@@ -1173,7 +1315,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-6",
+              "field": "transcript",
+              "start": 353,
+              "end": 643,
+              "quote": "But the less observed consequence of\nthis trend is that a decline in births can also mean a decline in motherhood in general\n[19] According to my analysis of data from the Census Bureau, the decline of American motherhood is real,\noccurring very quickly, and may continue for some time yet."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q20",
@@ -1216,7 +1367,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-6",
+              "field": "transcript",
+              "start": 1192,
+              "end": 1322,
+              "quote": "One positive consequence of this age shift is that a larger proportion of new mothers are\neconomically prepared to raise children."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q21",
@@ -1259,7 +1419,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-6",
+              "field": "transcript",
+              "start": 2144,
+              "end": 2358,
+              "quote": "But one factor might be that the proportion of\nwomen who are the mothers of adult children is rising and those adult children may spend more generously when it\ncomes to celebrating the moms they no longer live with"
+            }
+          ]
         },
         {
           "id": "2024-06-2-q22",
@@ -1318,7 +1487,16 @@
               3,
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-7",
+              "field": "transcript",
+              "start": 5,
+              "end": 198,
+              "quote": "Since NASA published a paper in 1989 claiming that house plants can soak up pollution and toxic chemicals\nbusinesses and homeowners have increasingly invested in greenery to helpclean theirair."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q23",
@@ -1361,7 +1539,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-7",
+              "field": "transcript",
+              "start": 363,
+              "end": 515,
+              "quote": "The problem lies in the fact that NASA conducted their tests in sealed containers that do not simulate the\nconditions in most people's homes or offices."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q24",
@@ -1404,7 +1591,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-7",
+              "field": "transcript",
+              "start": 950,
+              "end": 1233,
+              "quote": "NASA found that certain plants couldremove chemicals from the\nair, and even today garden centers recommend the plants for air cleaning properties\n[24] However, a new evaluation of dozens of studies spanning 30 years found that house plants in a normal\nenvironment have little impact."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q25",
@@ -1447,7 +1643,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-7",
+              "field": "transcript",
+              "start": 2221,
+              "end": 2406,
+              "quote": "But it's also a great example\nof how scientific research should continually re-examine and question findings to get closer to the ground truth of\nunderstanding what's actually happening"
+            }
+          ]
         }
       ]
     },
@@ -2435,7 +2640,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1339,
+              "end": 1526,
+              "quote": "The research on whether we have finite or infinite willpower is inconclusive, but experts do generally agree that you can't change and sustain a habit if you rely on your willpower alone."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q37",
@@ -2509,7 +2723,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4775,
+              "end": 4893,
+              "quote": "The perfectionist in you might be screaming to abandon your goals altogether, but try to see it in the bigger picture."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q38",
@@ -2583,7 +2806,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 401,
+              "end": 587,
+              "quote": "Once we've successfully made that change, we then have to make other adjustments to our lives to ensure that we continue to maintain it, which is often a whole other challenge in itself."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q39",
@@ -2657,7 +2889,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6114,
+              "end": 6281,
+              "quote": "One of the reasons for this is because we mistakenly believe the strategies we used to initiate the change will be equally effective in helping us continue the change."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6282,
+              "end": 6507,
+              "quote": "But they won't.Where changing a strongly deep-rooted habit requires changing our belief about that habit that penetrates deeply into our lives, continually manifesting that wisdom requires that we maintain a positive outlook."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q40",
@@ -2732,7 +2980,16 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3752,
+              "end": 3894,
+              "quote": "For example, if you want to stop checking your email first thing in the morning, you might decide to substitute another activity in its place."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q41",
@@ -2806,7 +3063,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2689,
+              "end": 2790,
+              "quote": "However, this habit-learning system isn't so effective when it comes to learning not to do something."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2791,
+              "end": 2882,
+              "quote": "That's why rather than giving up something, think about introducing something in its place."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q42",
@@ -2880,7 +3153,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5059,
+              "end": 5163,
+              "quote": "There's a habit that many perfectionists tend to fall into when they try to establish a behavior change."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5164,
+              "end": 5281,
+              "quote": "They focus too much on the big goal and don't take the time to celebrate the small progress they make in the process."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q43",
@@ -2954,7 +3243,16 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6745,
+              "end": 6957,
+              "quote": "Remember, overcoming the behavioral inertia that prevents us from implementing new changes, like eating a healthy diet or exercising, can benefit us in the long run and can improve our physical and mental health."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q44",
@@ -3028,7 +3326,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3086,
+              "end": 3165,
+              "quote": "The third one to avoid is using the same strategies in different circumstances."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3397,
+              "end": 3482,
+              "quote": "Sometimes, the system that got you to change one behavior might not work for another."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q45",
@@ -3110,7 +3424,16 @@
               8,
               9
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6508,
+              "end": 6630,
+              "quote": "If our mood is low, the wisdom to behave differently seems to disappear and we go back to eating more and exercising less."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q46",
@@ -3162,7 +3485,16 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 156,
+              "end": 359,
+              "quote": "And yet, young Americans today are struggling to earn more than their parents did at the same age, and upward mobility in the US actually comp a res unfavourably tothat of other industrial i sed nations."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q47",
@@ -3214,7 +3546,16 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1405,
+              "end": 1658,
+              "quote": "After watching the shows, participants rated how much they agreed with four statements relating to the American Dream\nThe results showed that those who'd watched a rags-to-riches clip did indeed have a significantly greater belief in the American Dream."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q48",
@@ -3266,7 +3607,16 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 812,
+              "end": 1191,
+              "quote": "And while these programmes are regularly among the most-watched shows, news broadcasts—which paint amore realistic view of the economic hardship faced by millions of Americans—get a much smaller proportion of the viewership\nRags-to-riches stories are wbiquitous (无处不在的)on TV—but does watching these programmes actually convince people that economic mobility is easily attainable?"
+            }
+          ]
         },
         {
           "id": "2024-06-2-q49",
@@ -3318,7 +3668,23 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1405,
+              "end": 1658,
+              "quote": "After watching the shows, participants rated how much they agreed with four statements relating to the American Dream\nThe results showed that those who'd watched a rags-to-riches clip did indeed have a significantly greater belief in the American Dream."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2218,
+              "end": 2386,
+              "quote": "Participants whowere heavy viewers of rags-to-riches programmes or frequent viewers had a stronger belief in the American Dream than those who never watched such shows."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q50",
@@ -3370,7 +3736,16 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2387,
+              "end": 2753,
+              "quote": "Kim concludes that “rags-to-riches entertainment media are an important cultural force that promotes and perpetuates beliefs in upward mobility”.And here's the problem:if people mistakenly believe that hard work is all that is needed for individuals to make a better life for themselves, they may be less supportive of policies that could actually combat inequality."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q51",
@@ -3422,7 +3797,23 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 172,
+              "end": 238,
+              "quote": "For many of us it is through our job that we can define ourselves."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 503,
+              "end": 585,
+              "quote": "This loss provokes an identity crisis much greater than the loss of thejob itself."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q52",
@@ -3474,7 +3865,16 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 586,
+              "end": 716,
+              "quote": "One of the things I have come to understand, however, is that our identity is much more complex than we recognise at first glance."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q53",
@@ -3526,7 +3926,23 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1071,
+              "end": 1122,
+              "quote": "Furthermore, our identities at work are not static."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1123,
+              "end": 1242,
+              "quote": "They change over time.I myself have been a shop assistant,a waitress,a student,a graduate, and a clinical psychologist."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q54",
@@ -3578,7 +3994,16 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1345,
+              "end": 1503,
+              "quote": "Whilst we like to eliminate uncertainty in our lives at some level we have to manage uncertainty, especially in today's volatile and ever-shifting job market."
+            }
+          ]
         },
         {
           "id": "2024-06-2-q55",
@@ -3630,7 +4055,16 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2084,
+              "end": 2359,
+              "quote": "In an age where career progression may lead us into new sectors it is ever more important to challenge our sense of self and explore whether you can create a new experience ofyour identity by changing the beliefs you hold about yourself in orderto expand your career options."
+            }
+          ]
         }
       ]
     },

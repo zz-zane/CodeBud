@@ -52,11 +52,20 @@ export const STUDY_COPY = {
   /** 第一次打开 app 的基础调研（shared/learner-profile.ts） */
   LEARNER: {
     TITLE: '先了解一下你',
-    INTRO: '花半分钟告诉我你现在的基础，AI 助教和讲解动画会按你的情况讲。随时可以在 资料库 → 记忆 里改。',
-    Q_KNOWN: '你已经学过哪些？（可多选）',
+    INTRO: 'AI 助教和讲解动画会按你现在的基础来讲。之后可以在 资料库 → 记忆 里修改。',
+    Q_KNOWN: '你已经学过哪些？',
+    MULTI: '可多选',
     Q_STYLE: '你更喜欢怎么学？',
+    STYLE_HINT: {
+      'analogy-first': '先用生活里的例子讲清楚，再给代码',
+      'code-first': '直接给能运行的代码，边看边解释',
+      'concept-only': '只讲原理和图示，不出现代码'
+    } as Record<string, string>,
     Q_PACE: '讲解速度',
-    Q_GOAL: '最近的学习目标（可不填）',
+    Q_GOAL: '最近的学习目标',
+    OPTIONAL: '可不填',
+    PREVIEW: 'AI 会记住',
+    NEED_KNOWN: '先选一项「已学过」再保存',
     GOAL_PLACEHOLDER: '例如：期末考操作系统、找 Python 实习',
     SKIP: '以后再说',
     SAVE: '保存',
@@ -266,7 +275,7 @@ export const STUDY_COPY = {
     ADD_MODAL_TITLE: '添加 ACP 连接',
     LABEL_PLACEHOLDER: '例如：Claude Code CLI',
     COMMAND_PLACEHOLDER: 'ACP 可执行文件绝对路径，或 node.exe 路径',
-    ARGS_PLACEHOLDER: '["D:/path with spaces/adapter.js"]',
+    ARGS_PLACEHOLDER: '["<本地工作区>/adapter.js"]',
     ARGS_INVALID: '启动参数请填写 JSON 字符串数组，路径可包含空格。',
     AUTH_REQUIRED_PREFIX: '需要登录'
   },

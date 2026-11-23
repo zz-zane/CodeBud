@@ -1153,7 +1153,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1542,
+              "end": 1709,
+              "quote": "It isn't ground-breaking to say workers feel fatigued after a meeting, but only in recent decades have scientists deemed the condition worthy of further investigation."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q37",
@@ -1242,7 +1251,16 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4029,
+              "end": 4311,
+              "quote": "In an effort to combat the side effects of MRS,Allen, along with researcher Joseph Mroz and colleagues at the University of Nebraska-Omaha, published a study detailing the best ways to avoid common traps, including a concise checklist of do's and don'ts applicable to any workplace."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q38",
@@ -1331,7 +1349,16 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7241,
+              "end": 7357,
+              "quote": "By reshaping the way they prioritise employees'time, companies can eliminate the very sources of MRS in their tracks"
+            }
+          ]
         },
         {
           "id": "2024-06-3-q39",
@@ -1420,7 +1447,16 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2962,
+              "end": 3072,
+              "quote": "If we are already drained to dangerous levels, then making the mental switch to the next thing is extra tough."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q40",
@@ -1509,7 +1545,16 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 743,
+              "end": 858,
+              "quote": "Every week, employees spend about six hours in meetings, while the average manager meets for a staggering 23 hours."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q41",
@@ -1598,7 +1643,16 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5600,
+              "end": 5819,
+              "quote": "Despite the relative scarcity of research behind the subject, Hartman has taught herself many of the same tricks suggested in Mroz's study, and has come a long way since her days ofbeing stuck with unnecessary meetings."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q42",
@@ -1687,7 +1741,16 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2133,
+              "end": 2237,
+              "quote": "Meetings drain vitality if they last too long, fail to engage employees or turn into one-sided lectures."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q43",
@@ -1777,7 +1840,16 @@
               6,
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4903,
+              "end": 5108,
+              "quote": "They don't need to be sitting in this hour-long meeting.”Less time in meetingswould ultimately lead to more employee engagement in the meetings theydo attend, which experts agree is a proven remedy for MRS"
+            }
+          ]
         },
         {
           "id": "2024-06-3-q44",
@@ -1866,7 +1938,16 @@
             "pages": [
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 861,
+              "end": 1057,
+              "quote": "And though experts agree that traditional meetings are essential for making certain decisions and developing strategy, some employees view them as one of the most unnecessary parts of the workday."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q45",
@@ -1956,7 +2037,16 @@
               7,
               8
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6153,
+              "end": 6353,
+              "quote": "If an organisation were to apply all 22 suggestions from Mroz and Allen's findings, the most noticeable difference would be a stark decrease in the total number of meetings on the schedule, Mroz says."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q46",
@@ -2003,7 +2093,16 @@
           "verified": true,
           "explanationSource": {
             "fileId": "1AdIfXbCKlYjlGe4yeVihPRM1pNQzLbQM"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 0,
+              "end": 86,
+              "quote": "Sarcasm andjazzhave something surprisingly in common:You know them when you hear them."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q47",
@@ -2050,7 +2149,16 @@
           "verified": true,
           "explanationSource": {
             "fileId": "1AdIfXbCKlYjlGe4yeVihPRM1pNQzLbQM"
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 545,
+              "end": 691,
+              "quote": "Despite smiling outwardly, many people who receive sarcastic comments feel put down and often think the sarcastic person is rude, or contemptible."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q48",
@@ -2100,7 +2208,16 @@
             "pages": [
               8
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 941,
+              "end": 1128,
+              "quote": "What's more, since actions strongly determine thoughts and feelings, when a person consistently acts sarcastically it may only serve to heighten their underlying hostility and insecurity."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q49",
@@ -2245,7 +2362,16 @@
             "pages": [
               10
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 512,
+              "end": 869,
+              "quote": "For instance, infants will struggle to learn the category“dog”if they are only exposed to Chihuahuas, instead of many different kinds of dogs\n“There are over ten different names for this basic principle,”says Limor Raviv, the senior investigator of a recent study.“Learning from less variable input is often fast, but may fail to generalise to new stimuli.”"
+            }
+          ]
         },
         {
           "id": "2024-06-3-q52",
@@ -2295,7 +2421,16 @@
             "pages": [
               10
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1157,
+              "end": 1475,
+              "quote": "The researchers discovered that, across studies, the term variability can refer to at least four different kinds of variability, such as set size and scheduling.“These four kinds of variability have never been directly compared—which means that we currently don't know which is most effective for learning,”says Raviv."
+            }
+          ]
         },
         {
           "id": "2024-06-3-q53",
@@ -2396,7 +2531,23 @@
               10,
               11
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2267,
+              "end": 2515,
+              "quote": "Beyond affecting the way we learn language, motor skills, and categories, it even has an impact on our social lives,” explains Raviv.“For example, face recognition is affected by whether people grew up in a small community or in a larger community."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2516,
+              "end": 2600,
+              "quote": "Exposure to fewer faces during childhood is associated with diminished face memory.”"
+            }
+          ]
         },
         {
           "id": "2024-06-3-q55",
@@ -2446,7 +2597,16 @@
             "pages": [
               11
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2601,
+              "end": 2703,
+              "quote": "“We hope this work will spark people's curiosity and generate more work on the topic,”concludes Raviv."
+            }
+          ]
         }
       ]
     },

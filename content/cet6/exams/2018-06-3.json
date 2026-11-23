@@ -1070,7 +1070,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4971,
+              "end": 5110,
+              "quote": "Wealthy universities talk up the benefits their name will give graduates: namely, strong alumni networks, star faculty, and a résumé boost."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q37",
@@ -1154,7 +1163,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3855,
+              "end": 4064,
+              "quote": "Living costs and books I paid for with money earned during high school, supplemented by a small college fund my deceased grandfather left for me and a modest savings account my parents created when I was born."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q38",
@@ -1238,7 +1256,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1467,
+              "end": 1602,
+              "quote": "(NYU is consistently ranked one of the country's most expensive schools, with room and board costs totaling upwards of $64,000 a year.)"
+            }
+          ]
         },
         {
           "id": "2018-06-3-q39",
@@ -1322,7 +1349,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6033,
+              "end": 6172,
+              "quote": "They found that students with more potential earned more as adults, and the reverse held true as well, no matter where they went to school."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q40",
@@ -1406,7 +1442,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 560,
+              "end": 693,
+              "quote": "Looking back now, nine years later, I can't remember exactly what it was about these universities that made them seem so much better."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q41",
@@ -1490,7 +1535,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4295,
+              "end": 4379,
+              "quote": "And yet, not a single interviewer has ever asked me about my educational background."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q42",
@@ -1574,7 +1628,23 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7022,
+              "end": 7130,
+              "quote": "Maybe students who choose less prestigious universities are bound to succeed because they are determined to."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7151,
+              "end": 7219,
+              "quote": "In any case, if I could do it again, I'd still make the same choice."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q43",
@@ -1658,7 +1728,23 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 74,
+              "end": 168,
+              "quote": "As a high school junior, everything in my life revolved around getting into the right college."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 253,
+              "end": 365,
+              "quote": "I juggled (尽力应付) cross-country and track schedules, newspaper staff, and my church's youth group and drama team."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q44",
@@ -1742,7 +1828,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2706,
+              "end": 2874,
+              "quote": "(I use the term \"low-tier\" cautiously, because GSU is a well-regarded research institution that attracts high quality professors and faculty from all over the country.)"
+            }
+          ]
         },
         {
           "id": "2018-06-3-q45",
@@ -1826,7 +1921,23 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4525,
+              "end": 4704,
+              "quote": "According to The Boston Globe, students who earned their bachelor's in 2012 have an average monthly loan payment of $312, which is one-third more than those who graduated in 2004."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4705,
+              "end": 4767,
+              "quote": "Ultimately, that's the thing universities don't want to admit."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q46",
@@ -1866,7 +1977,23 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 87,
+              "end": 257,
+              "quote": "In their thirst for evidence on this issue, commentators seized on the recent report by the Census Bureau, which found that average household income rose by 5.2% in 2015."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 258,
+              "end": 360,
+              "quote": "Unfortunately, that conclusion puts too much weight on a useful, but flawed and incomplete, statistic."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q47",
@@ -1906,7 +2033,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 898,
+              "end": 1112,
+              "quote": "While by no means perfect, it is considerably more comprehensive than average income, taking into account not only growth in consumption per person but also changes in working time, life expectancy, and inequality."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q48",
@@ -1946,7 +2082,23 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1369,
+              "end": 1567,
+              "quote": "In 2005, as the authors observe, real consumption per person in France was only 60% as high as the U.S., making it appear that Americans were economically much better off than the French on average."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1568,
+              "end": 1678,
+              "quote": "However, that comparison omits other relevant factors: leisure time, life expectancy, and economic inequality."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q49",
@@ -1986,7 +2138,16 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1113,
+              "end": 1205,
+              "quote": "Moreover, it can be used to assess economic performance both across countries and over time."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q50",
@@ -2066,7 +2227,23 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 210,
+              "end": 425,
+              "quote": "Our own decision-making abilities can become depleted over the course of the day causing indecision or poor choices, but choosing on behalf of someone else is an enjoyable task that doesn't suffer the same pitfalls."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 426,
+              "end": 615,
+              "quote": "The problem is \"decision fatigue,\" a psychological phenomenon that takes a toll on the quality of your choices after a long day of decision making, says Evan Polman, a leading psychologist."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q52",
@@ -2106,7 +2283,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 426,
+              "end": 615,
+              "quote": "The problem is \"decision fatigue,\" a psychological phenomenon that takes a toll on the quality of your choices after a long day of decision making, says Evan Polman, a leading psychologist."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q53",
@@ -2146,7 +2332,23 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 916,
+              "end": 997,
+              "quote": "But decision fatigue goes away when you are making the decision for someone else."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 998,
+              "end": 1180,
+              "quote": "When people imagine themselves as advisers and imagine their own choices as belonging to someone else, they feel less tired and rely less on decision shortcuts to make those choices."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q54",
@@ -2186,7 +2388,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1588,
+              "end": 1739,
+              "quote": "\"When people experience decision fatigue—when they are tired of making choices—they have a tendency to choose to go with the status quo (现状),\" he says."
+            }
+          ]
         },
         {
           "id": "2018-06-3-q55",
@@ -2226,7 +2437,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1879,
+              "end": 1977,
+              "quote": "In order to achieve a successful outcome or reward, some level of risk is almost always essential."
+            }
+          ]
         }
       ]
     },

@@ -1060,7 +1060,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3782,
+              "end": 4082,
+              "quote": "To some extent, they are right: climate change has already destroyed tens of thousands of livelihoods, and the situation will worsen in the near future for millions of mostly poorer people, who will join the ranks of those who have already been displaced by climate change and extreme weather events."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q37",
@@ -1128,7 +1137,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 725,
+              "end": 900,
+              "quote": "It would take more than three centuries before scientists began to understand that timber production is not the only, and possibly not the most important, function of forests."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q38",
@@ -1196,7 +1214,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5593,
+              "end": 5731,
+              "quote": "Scientific evidence that we are living in an era of climate change, resource exhaustion and potential ecological disaster is overwhelming."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q39",
@@ -1264,7 +1291,23 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2359,
+              "end": 2536,
+              "quote": "The emergence of the idea led to the rise of environmental agencies, regulations and environmental studies, and to environmental science as new, integrated academic disciplines."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2537,
+              "end": 2698,
+              "quote": "It was in 1956 that the very first bachelor of science in environmental studies was awarded, at the State University of New York College of Forestry at\nSyracuse."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q40",
@@ -1332,7 +1375,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7384,
+              "end": 7466,
+              "quote": "The concept of slow hope suggests that we can't expect things to change overnight."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q41",
@@ -1400,7 +1452,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1521,
+              "end": 1580,
+              "quote": "Recent years have seen a big change in our view of forests."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q42",
@@ -1468,7 +1529,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4759,
+              "end": 4940,
+              "quote": "The current crisis is not the first that humans have encountered, and a look at the struggles with pollution in recent history reveals transformations that once seemed unimaginable."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q43",
@@ -1536,7 +1606,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 497,
+              "end": 640,
+              "quote": "The idea of preserving resources came out of a concern for the future: a fear of using up resources faster than they could be replenished (补充)."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q44",
@@ -1604,7 +1683,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6941,
+              "end": 7033,
+              "quote": "But if we believe that nothing can be changed, then we are giving up our opportunity to act."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q45",
@@ -1672,7 +1760,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3472,
+              "end": 3575,
+              "quote": "The search for an adequate response to climate change occupies centre stage in international diplomacy."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q46",
@@ -1752,7 +1849,23 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 344,
+              "end": 469,
+              "quote": "In Taryn's case, AI software enabled her to communicate melodies and chords that she didn't know how to put together herself."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 577,
+              "end": 685,
+              "quote": "Taryn's story has a distinctly positive feel that highlights the advantages of using AI in music production."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q48",
@@ -1792,7 +1905,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1080,
+              "end": 1262,
+              "quote": "Those who have produced their own music, or even fans of authentic, artistic music, will also argue that a computer could never emulate the work (and human touch) of a true musician."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q49",
@@ -1832,7 +1954,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1550,
+              "end": 1681,
+              "quote": "Since many people see music as such an inherently human expression, it is often considered as too precious to impart to technology."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q50",
@@ -1872,7 +2003,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2314,
+              "end": 2608,
+              "quote": "AI music software is still very much in its infancy, but with more investors interested in the development and outcomes of such technology, and considering the rapid growth rate of other tech advances in recent years, it's only a matter of time before Ai-produced music is seen as the new norm."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q51",
@@ -1912,7 +2052,16 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 254,
+              "end": 448,
+              "quote": "Communicating science beyond the academic bubble is necessary to augmenting public understanding of health and environmental issues and helping individuals make well-informed personal decisions."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q52",
@@ -1952,7 +2101,16 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 646,
+              "end": 813,
+              "quote": "That is not to suggest that they only write or present on their own research, but rather, that they consult with an expert if the topic is outside of their discipline."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q53",
@@ -1992,7 +2150,23 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1037,
+              "end": 1188,
+              "quote": "Some have argued that the public is not educated enough to understand scientific information, especially for any complex phenomena, but this is absurd."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1446,
+              "end": 1599,
+              "quote": "Even the public discourse that follows most scientific articles shows that online readers can understand even the most baffling of scientific principles."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q54",
@@ -2032,7 +2206,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1600,
+              "end": 1764,
+              "quote": "It is equally imperative to emphasize that being an expert on a topic does not automatically make a scholar qualified to communicate it to a nonscientific audience."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1966,
+              "end": 2116,
+              "quote": "One biologist shared an intricate analogy involving a library, books, paper, a recipe, ingredients, and a cake to explain the process behind vaccines."
+            }
+          ]
         },
         {
           "id": "2022-06-3-q55",
@@ -2072,7 +2262,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2351,
+              "end": 2525,
+              "quote": "A scientist should take communication courses that can teach a person how to identify and eliminate jargon and how to develop effective analogies to explain complex concepts."
+            }
+          ]
         }
       ],
       "sharedWith": [

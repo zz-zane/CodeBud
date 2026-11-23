@@ -242,7 +242,23 @@
             "pages": [
               2
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 125,
+              "end": 208,
+              "quote": "M ： WeII, to get right down to it, （ 1) I'm having second thoughts about my ma.lor."
+            },
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 209,
+              "end": 583,
+              "quote": "With my family situation\ngetting more complicated and the end of my umversity education nearmg, persisting with Art History Just\ndoesn't seem the right choice\nW ： AIan, in the last 3 years, I have heard nothing but how passionate you are about the Art History\nprogramme · You often told fellow classmates how fabulous the instructors were and that you finally felt\naccepted."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q2",
@@ -285,7 +301,16 @@
               2
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-1",
+              "field": "transcript",
+              "start": 620,
+              "end": 922,
+              "quote": "M ： (2)My father's current financial situation has helped me realize that a more financially viable employment\nopportunity is not necessarily a bad thing · Art History nourishes my soul, but does nothing to put food on\nmy plate\nW ： What about all the work opportunities I discussed with you last month?"
+            }
+          ]
         },
         {
           "id": "2024-12-2-q3",
@@ -414,7 +439,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-2",
+              "field": "transcript",
+              "start": 0,
+              "end": 84,
+              "quote": "M ： （ 5 ） Have you decided yet what your end-of-semester business prqect will be on?"
+            }
+          ]
         },
         {
           "id": "2024-12-2-q6",
@@ -549,7 +583,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-2",
+              "field": "transcript",
+              "start": 1603,
+              "end": 1802,
+              "quote": "1 was thinking of having it cater to high-end consumers in large cities · It could charge a\nprofitable markup by offering Just a bit more technical equipment and professional service than\ncompetitors"
+            }
+          ]
         },
         {
           "id": "2024-12-2-q9",
@@ -592,7 +635,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-3",
+              "field": "transcript",
+              "start": 207,
+              "end": 691,
+              "quote": "As a\nnew study suggests, the more parents engaged in conversation with preschoolers during TV time, the more\nlikely those children were to have higher curiosity levels when they reached kindergarten · This was particularly\ntrue for children With socioeconomic disadvantages\nOur findings reinforce the importance of parent conversation to promote early childhood development and\ncuriosity, \" said lead author Prachi Shah at University of Michigan Health C. S. Mott Children's Hospital."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q10",
@@ -641,7 +693,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-3",
+              "field": "transcript",
+              "start": 692,
+              "end": 886,
+              "quote": "Researchers assessed hours of daily television exposure and frequency of parent screen-time conversation among\n1 ， 500 preschoolers ， and then measured early childhood curiosity in kindergarten."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q11",
@@ -727,7 +788,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-4",
+              "field": "transcript",
+              "start": 50,
+              "end": 311,
+              "quote": "Each of us, according to research, has an inborn drive to\nacquire · The \"dark side ” Of this drive to acquire is being mindlessly driven to possess more and more “ things, and to socially compare our \"stuff ” with all the stuff other people have in their lives."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q13",
@@ -882,7 +952,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-4",
+              "field": "transcript",
+              "start": 1356,
+              "end": 1442,
+              "quote": "If you re not pursuing intentional\naspirational goals, you have nothing to strive for."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q16",
@@ -925,7 +1004,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-5",
+              "field": "transcript",
+              "start": 157,
+              "end": 315,
+              "quote": "a nutrition expert ， I want to say that eating well can make a real\ndifference to your revßlon regime¯so what brain-boosting food and drink would I recommend?"
+            }
+          ]
         },
         {
           "id": "2024-12-2-q17",
@@ -974,7 +1062,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-5",
+              "field": "transcript",
+              "start": 836,
+              "end": 1043,
+              "quote": "So stop drinking coffee by 2 pm\nand have a maximum Of 2 cups of coffee a day, but be aware of your own reaction to it\nWhole grain foods will ward off hunger · Examples include porridge and whole wheat bread."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q18",
@@ -1031,7 +1128,16 @@
               3,
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-5",
+              "field": "transcript",
+              "start": 1652,
+              "end": 1928,
+              "quote": "But I would\nsay food should always come before supplements and the key to getting as many nutrients as possible is to eat a\nvaried diet with lots of different colors such as frozen berries and dark green vegetables · It's better to get\neverything you need from food and drink."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q19",
@@ -1088,7 +1194,16 @@
               3,
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-6",
+              "field": "transcript",
+              "start": 4,
+              "end": 466,
+              "quote": "The late Swedish academic Hans Rosling has identified a worrying trend ： not only do many people\nacross advanced economies have no idea that the world is beconung a much better place, but they actually even\nthink the opposite · This is no wonder, when the news focuses on reporting catastrophes, terrorist attacks,\nwars, and famines\nWho wants to hear about the fact that every day some 200, 000 people around the world are lifted above the\n$2-a-day poverty line?"
+            }
+          ]
         },
         {
           "id": "2024-12-2-q20",
@@ -1180,7 +1295,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-part-6",
+              "field": "transcript",
+              "start": 2191,
+              "end": 2324,
+              "quote": "In fact, for the first time ever since the industrial Revclution, about half of\nthe global population can be considered middle class."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q22",
@@ -1223,7 +1347,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-7",
+              "field": "transcript",
+              "start": 273,
+              "end": 353,
+              "quote": "But why do smells sometimes trigger powerful\nmemones, especially emotional ones?"
+            }
+          ]
         },
         {
           "id": "2024-12-2-q23",
@@ -1266,7 +1399,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-part-7",
+              "field": "transcript",
+              "start": 834,
+              "end": 1199,
+              "quote": "Scents are the only sensations that travel such a direct path to the emotional and memory centers of the\nbrain · That results in an intimate connection between emotlons, memones and scents, which is Why memones\ntriggered by scents are experienced as more emotional than those triggered by sight or sound\nLet's take a closer look at how those memories are activated."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q24",
@@ -2434,7 +2576,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1767,
+              "end": 1970,
+              "quote": "It's invisible to us during the new moon, because our satellite is parked right between us and the sun; the so-called dark side of the moon is lit up like Las\nVegas, but the side we can see is in shadow."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q37",
@@ -2612,7 +2763,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2839,
+              "end": 3111,
+              "quote": "January's super blood wolf moon eclipse is super because the date lines up with the closest the moon will get to us during January, but the moon won't actually be at its closest for the year until\nFebruary's supermoon, which you can expect plenty of undue excitement over."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q39",
@@ -2701,7 +2861,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 539,
+              "end": 718,
+              "quote": "As we'll explain below, there is nothing truly mysterious or otherwise special about this moon, and it will not look like a bloody wolf head in the sky or anything wild like that."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q40",
@@ -2790,7 +2959,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3299,
+              "end": 3521,
+              "quote": "The moon can also look orange whenever it's rising or setting, or if it hangs low in the horizon all night-the light bouncing off of it has to travel through a thicker atmosphere there, which scatters more blue light away."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q41",
@@ -2879,7 +3057,23 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5903,
+              "end": 6183,
+              "quote": "Lots of websites will tell you that\n\"wolf moon\" is the traditional name of the first full moon of the year in \"Native American\" cultures, which is kind of a weird thing to claim given that there are 573 registered Tribal Nations in the US alone today, not to mention historically."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6184,
+              "end": 6403,
+              "quote": "The idea that hungry, howling wolves were such a universal constant in January that all of North America with its different cultures, geographies, and languages spontaneously came up with the same nickname is illogical."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q42",
@@ -2969,7 +3163,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2177,
+              "end": 2280,
+              "quote": "The moon isn't always exactly the same distance from Earth, because its orbit isn't perfectly circular."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q43",
@@ -3058,7 +3261,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6408,
+              "end": 6623,
+              "quote": "Many cultures have traditional names for the full moon in a given month or season, so there's quite a list to draw from if you're trying to really juice up a story on a slightly-bigger-than-average view of the moon."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q44",
@@ -3148,7 +3360,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1095,
+              "end": 1276,
+              "quote": "There are probably loads of folks who walk around pretending they totally know why that thing in the sky seems to get bigger and smaller at regular intervals but who totally do not."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q45",
@@ -3237,7 +3458,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4044,
+              "end": 4290,
+              "quote": "And while that's not necessarily special in an oh-gosh-get-out-and-look-at-it way, it's certainly special: a blue moon is a nickname for when two full moons fall in the same calendar month, and we hadn't previously had two in one year since 1999."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q46",
@@ -3277,7 +3507,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 484,
+              "end": 699,
+              "quote": "Attracted by the improved economics of urban areas, country-dwellers across the world are moving out, contributing to the excessive crowdedness of densely populated cities, and leaving the countryside in desolation."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q47",
@@ -3318,7 +3557,23 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1032,
+              "end": 1143,
+              "quote": "We may be piled up like boxes in the city, but this brings energy efficiency that the countryside cannot match."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1144,
+              "end": 1300,
+              "quote": "Rural energy requirements result in higher carbon emissions per person than in the city, so it is actually irresponsible to endorse such a lifestyle choice."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q48",
@@ -3359,7 +3614,23 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1344,
+              "end": 1499,
+              "quote": "Those who have made their fortunes in the city often buy second homes in the countryside, visiting intermittently for a sample of a supposedly simple life."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1751,
+              "end": 1815,
+              "quote": "For those who believe in rural preservation, this is deplorable."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q49",
@@ -3399,7 +3670,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2218,
+              "end": 2290,
+              "quote": "Considering these changes, surely an evolving countryside is inevitable."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q50",
@@ -3439,7 +3719,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2862,
+              "end": 2910,
+              "quote": "but the future of the countryside is less clear."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q51",
@@ -3479,7 +3768,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 85,
+              "quote": "Statements, like \"beauty is in the eye of the beholder (观看者)\", are rarely questioned."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q52",
@@ -3520,7 +3818,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 528,
+              "end": 701,
+              "quote": "The results from this study show that people agree very much in their aesthetic evaluation of natural objects, but they disagree more about artifacts, or human-made objects."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q53",
@@ -3561,7 +3868,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1211,
+              "end": 1295,
+              "quote": "Art and architecture, unlike natural spaces, do not have the same level of exposure."
+            }
+          ]
         },
         {
           "id": "2024-12-2-q54",
@@ -3651,7 +3967,23 @@
               9,
               10
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2376,
+              "end": 2499,
+              "quote": "When people get involved in making artifacts in architecture or art, they apply these very general concepts in unique ways."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2500,
+              "end": 2569,
+              "quote": "But the way they applied the principle may not have universal appeal."
+            }
+          ]
         }
       ]
     },

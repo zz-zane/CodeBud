@@ -237,7 +237,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 363,
+              "end": 426,
+              "quote": "We just wrapped up a project with a difficult client last week."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q2",
@@ -277,7 +286,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 977,
+              "end": 1047,
+              "quote": "I'll actually be taking photos during the big event as a wedding gift."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q3",
@@ -317,7 +335,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1190,
+              "end": 1257,
+              "quote": "I was a bit nervous saying yes because I'm far from a professional."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q4",
@@ -357,7 +384,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1561,
+              "end": 1646,
+              "quote": "You know, with your event planning experience you could very well open your own shop."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q5",
@@ -405,7 +441,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 334,
+              "end": 430,
+              "quote": "The most important one is that you have to take more individual responsibility for your actions."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q6",
@@ -445,7 +490,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 758,
+              "end": 889,
+              "quote": "It\n’\ns not that nobody concerned about you,\n(6) it's just that suddenly at the university you are expected to behave like an adult."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q7",
@@ -492,7 +546,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1357,
+              "end": 1472,
+              "quote": "You will make interesting friends,\n(7) but you need only keep the friends who respect your students\n’\ncommitments\n."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q8",
@@ -532,7 +595,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1473,
+              "end": 1630,
+              "quote": "Also, there are a lot of wonderful clubs, but you shouldn\n’\nt allocate too much time to club activities, unless\n(8) they are directly related to your study\n."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q9",
@@ -572,7 +644,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 4,
+              "end": 106,
+              "quote": "Most successful people are unorthodox persons whose minds wonder outside traditional ways of thinking."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q10",
@@ -612,7 +693,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 800,
+              "end": 905,
+              "quote": "His experiments resulted in a new style that was almost exactly opposite the exact technique of the time."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q11",
@@ -660,7 +750,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1234,
+              "end": 1348,
+              "quote": "The next year, he won three gold medals in the Winter Olympics, a record in ski racing that has never been topped."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q12",
@@ -707,7 +806,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 170,
+              "end": 311,
+              "quote": "Blood samples taken from persons experiencing intense fear or anger when injected into guinea pigs have killed them in less than two minutes."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q13",
@@ -747,7 +855,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 382,
+              "end": 460,
+              "quote": "Every thought that you have affects your body chemistry within a split second."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q14",
@@ -795,7 +912,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 821,
+              "end": 901,
+              "quote": "It is impossible to be fearful, anxious, irritated and healthy at the same time."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q15",
@@ -847,7 +973,23 @@
             "pages": [
               16
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1123,
+              "end": 1190,
+              "quote": "It is also fascinating how our subconscious mind shapes our health."
+            },
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1302,
+              "end": 1434,
+              "quote": "The mind-body connection is such that if, for example, we want to avoid something, very often our subconscious mind will arrange it."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q16",
@@ -887,7 +1029,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 277,
+              "end": 523,
+              "quote": "They have to give so much thought and attention to the low-level mechanics of handling the ball or fingering the keys or reading the music, that they are unable to give any thought to the thing that matters – the game, or the music, respectively."
+            },
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 570,
+              "end": 761,
+              "quote": "They are open to the tactical possibilities and the musical challenges precisely because they are freed, through skill, from the need to pay attention to the low-level details of how to play."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q17",
@@ -927,7 +1085,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1026,
+              "end": 1170,
+              "quote": "Smart basketball players\nor skilled musicians\nneed to pay close attention to\nthe demands of high performance, to\nthe challenges to be overcome\n."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q18",
@@ -967,7 +1134,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1871,
+              "end": 1936,
+              "quote": "It supports what we might almost think of as conventional wisdom."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q19",
@@ -1007,7 +1183,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 131,
+              "end": 208,
+              "quote": "I'm overwhelmed with the wide range of different slimming products each year."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q20",
@@ -1099,7 +1284,16 @@
               21
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1430,
+              "end": 1531,
+              "quote": "It is most certainly shaped by a person's culture as well as how they were raised in their childhood."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q22",
@@ -1139,7 +1333,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 173,
+              "end": 300,
+              "quote": "I've been studying why humans evolved to become the naked ape, and why skin comes in so many different shades around the world."
+            },
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 623,
+              "end": 729,
+              "quote": "Basically, we turned our skin darker to serve as a natural sun-protector in the place of the hair we lost."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q23",
@@ -1179,7 +1389,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 735,
+              "end": 865,
+              "quote": "We think we lost this hair because of the need to keep ourselves cool, when we were moving around vigorously in a hot environment."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q24",
@@ -1226,7 +1445,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1099,
+              "end": 1192,
+              "quote": "What we did in our ancestry was to produce more permanent natural coloring in our skin cells."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q25",
@@ -1266,7 +1494,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2035,
+              "end": 2137,
+              "quote": "It's in these populations that we begin to see real changes in the genetic makeup of natural coloring."
+            }
+          ]
         }
       ]
     },
@@ -2324,7 +2561,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5838,
+              "end": 5948,
+              "quote": "A recent study graded more than 600 Internet retailers on how easy it was for consumers to shop, buy, and pay."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5949,
+              "end": 6035,
+              "quote": "Almost half of the sites didn't get a passing grade and only 18 percent got an A or B."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q37",
@@ -2428,7 +2681,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2755,
+              "end": 2904,
+              "quote": "Creative retailers are using the new technologies to innovate just about everything stores do from managing inventory, to marketing, to getting paid."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q38",
@@ -2532,7 +2794,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1195,
+              "end": 1487,
+              "quote": "So, despite all the talk about drone (无人机) deliveries to your doorstep, all the retail executives expressing anxiety over consumers going online, and even a Presidential candidate exclaiming that Amazon has a \"huge antitrust problem,\" the Census data suggest that physical retail is thriving."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1488,
+              "end": 1577,
+              "quote": "Of course, the closed stores, depressed executives, and sinking stocks suggest otherwise."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q39",
@@ -2636,7 +2914,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3301,
+              "end": 3415,
+              "quote": "Retail reinvention is not a simple process, and it's also not happening on what used to be called\n\"Internet Time.\""
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3576,
+              "end": 3659,
+              "quote": "But many widely anticipated changes weren't quick, and some haven't really started."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q40",
@@ -2740,7 +3034,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 876,
+              "end": 1065,
+              "quote": "More than 20 years after the Internet was opened to commerce, the Census Bureau tells us that brick and mortar sales accounted for 92.3 percent of retail sales in the first quarter of 2016."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q41",
@@ -2844,7 +3147,23 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2909,
+              "end": 3156,
+              "quote": "More than drones dropping a new supply of underwear on your doorstep, Apple's massively successful brick-and-mortar-and-glass retail stores and Amazon's small steps in the same direction are what should keep old-fashioned retailers awake at night."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3157,
+              "end": 3296,
+              "quote": "Not to mention the large number of creative new retailers, like Bonobos, that are blending online and oflline experiences in creative ways."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q42",
@@ -3052,7 +3371,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6685,
+              "end": 6753,
+              "quote": "Despite the turmoil, brick and mortar won't disappear any time soon."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q44",
@@ -3163,7 +3491,16 @@
               5,
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 334,
+              "end": 403,
+              "quote": "Bru:k and mortar stores seem to be going the way of the yellow pages."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q45",
@@ -3267,7 +3604,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4423,
+              "end": 4534,
+              "quote": "The rise of the mobile phone has recently added a new level of complexity to the process of retail reinvention."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4841,
+              "end": 4978,
+              "quote": "Even when a retailer gets a customer to walk in the store, she can easily see if there's a better deal online or at another store nearby."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q46",
@@ -3307,7 +3660,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 0,
+              "end": 338,
+              "quote": "Professor Stephen Hawking has warned that the creation of powerful artificial intelligence (AI)\nwill be \" either the best, or the worst thing, ever to happen to humanity\", and praised the creation of an academic institute dedicated to researching the future of intelligence as \" crucial to the future of our civilisation and our species\"."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q47",
@@ -3348,7 +3710,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "D"
+          "answerOriginal": "D",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 0,
+              "end": 338,
+              "quote": "Professor Stephen Hawking has warned that the creation of powerful artificial intelligence (AI)\nwill be \" either the best, or the worst thing, ever to happen to humanity\", and praised the creation of an academic institute dedicated to researching the future of intelligence as \" crucial to the future of our civilisation and our species\"."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q48",
@@ -3389,7 +3760,23 @@
             ]
           },
           "verified": true,
-          "explanationOriginal": "答案：A\n一 M： Did you bake the cookies here at the party tonight？\n9-W： Yes, I got the idea from a magazine.\n10 一 M： They're delicious. You， ve got nothing to worry about. You re a natural.\n男士赞赏女士的烘焙水平。话语标记词： Did you. 一； They， re. 一 You' ve..\n核心语义词： nothing to\nworry abOL1t. · YOt1 re a natural。\n首先通过“问一答”明确派对上的饼干均出自女士之手。随后 They're delicious 音量显著提升，充分展现男\n士的惊讶、褒奖之情； nothing to worry about、 You， re a natura 你是这方面的天才）不吝赞美女士烘焙水平。\n11-W： You really think so?\n12 一 M： If you hadn， t told me that， I would have guessed they were baked by the restaurant. 国 You\nknow, With your event planning experience, YOu could Very well open your own ShOP.\n1 3 W: One step at a time. First I'll see how baking the wedding cake goes. If it's not a disaster, maybe\nI'll give it some more thought.\n男士对女士提出建议。话语标记词： You really think so？，， ． You know. ． ． One step at a time..， First.\nlf.. 一 maybe l'll. 一核心语义词 ．\n． open your Own shop\n@ give it some more thought。\n11、 12 段通过“追问一回答”进一步展开男士对女士的评价及建议。虚拟语气 If you hadn， t told me that， I\nwould have （倘若不是你告诉我，我会以为一一）语调略夸张，体现男士对女士的溢美之词。随后 You know 预\n示引出建议， with.. · experience 语调上扬表明话语并未结束，引出其后重点信息， very well 程度副词重读，突\n出建议 open your own shop 完全可行\n． lf. 一 maybe I'II. 一具体说明计划实\n13 段女士回应男士建议。 One step at a time 总括女士计划； First.\n施步 *(give sth some more thought 表示“认真考虑某事”）。\n[ 问题分析 ]\nQI： What did Cathy and Brenda finish doing last week?\nQ2： What 这 John going to do for Brenda？\nQ3： How did Cathy feel when asked to bake the cake?\nQ4：\nWhat does the man suggest the woman do?\n01： Cathy、 Brenda 限定行动者，解题时应注意区分不同人物的行为 ;finish doing、 last week 重读，限定时\n间“过去已完成的行为”，解题时应注意区分时间。\nQ2： John. ·。 do for Brenda 重读明确人物关系 (John 为行为发出者， Brenda 为接受者）； ． · going to do\n限定时间“将要发生的行为”\nQ3： feel 重读强调考查“感受”； when 提示其后限定具体情形，解题时应注意区分场景。\nQ4； suggest 重读强调“建议”，其后略作停顿，引出建议接收者 woman。\n々 粼试題精\nl. 凯茜和布伦达上周完成了什么？\n(A) 长达六个月的谈判。\nB) 派对的准备工作。\nC) 一个难缠客户的项目。\nD）为同事包装礼品\n[ 设题要点 ] 背景信息处 / 对话之前发生之事（We just\nlast week)。\n[ 答案精析 ] 0。 0 符合 3 段对话信息“我们（我 / 凯西和布伦达）上周刚结束了一个难缠客户的项目”。其\n中 a troublesome client 同义替换 a difficult client，且囊括随后 The client sounded like a real nightmare 以及 he was\nespecially particularo A）利用 3 段 last six months 干扰，但这是指“凯和布伦达的共事时间”，并非“谈判时长”\nB）利用 wedding preparations 设置干扰，但这是“两人上周完成任务之后，布伦达一人做的事”。 D）将碎片信息\ncolleague、 wrapped up、 wedding gift 杂糅十扰，对话中实际并未提及包装礼品，且 wrapped up 意为“结束，圆满\n完成”\n5\n2 ． 约翰打算为布伦达做些什么？\nA）拍摄婚礼照片。\nB) 宣传她的公司。\nC）开始做一桩小生意。\nD）举办庆祝派对。\n[ 设题要点 ] 对话中男士行为介绍处（l'll actually. 一 )0\n[ 答案精析 ] A)O A) 是男士所言 l'll actually be taking photos during the big event “a wedding gift 的同\n义表述（联系上下文可推知 the big event 指 wedding)。 B) 利用 6 段 advertising 干扰，但对话中该词指“男士过\n去曾在广告业工作”。 C) 利用 6 段 a small business 干扰，但男士创办生意是出于自身兴趣，而非为了布伦达。\nD) 由复现词 party 臆测得出，但对话中指“布伦达的婚礼”，并未提及“男士为布兰达举办庆祝派对”\n3，凯茜被要求烤制蛋糕时有什么感受？\nA）犹豫。\nB) 紧张。\nC) 荣幸。\nD) 惊讶。\n[ 设题要点 ] 对话中女士感受说明处（I was a bit nervous.\n[ 答案精析 ] B)O B）复现 7 段女士所言 I was a bit nervous saying yes( 由上文可知 saying yes 意为“答应\n烤制蛋糕” )O A）、 C）均是对女士感受的主观臆测（人们被托付一件重要事情时，可能会感到犹豫或荣幸），对\n话中并未提及。 D) 源自 3 段 I was a little surprised，但这是女士“收到婚礼邀请时”的心情。\n4，男士建议女士做什么？\nA) 开一家她自己的蛋糕，店。\nB）提高她的烘焙技术。\nC) 分享她的烹饪经验。\nD）为婚礼做准备。\n[ 设题要点 ] 对话中一方向另一方提出建议处 (you could very well open your own shop)o\n[ 答案精析 ] A)O A) 是对 12 段男士所言“如果你不告诉我，我还以为饼干是餐厅烤的，你完全可以自己开\n店 (you could very well open your own shop）”的正确解读，其中 bakery 明确 shop 所指。 B) 由第 7、 13 段女士\n自谦 far from a professional, I， ll see how. · · goes 主观臆测得出。 C) 将 12 段 event planning experience 窜改为\ncooking experience，且捏造对话中未提及的 share. · · experience。 D) 利用 3 段 focus on wedding preparations\n捏造干扰，但这是两人共同的朋友布伦达已经完成之事，并非男士建议女士所做之事。\n女：嗨，我是凯茜。很高兴见到你。\n男：很高兴见到你，凯茜。我是约翰，新娘大学时的朋友。你呢？你认识这派对上的哪位？\n女：我是布伦达的同事。其实，收到邀请我有点惊讶。我们半年前才开始一起工作，但很快成为了好朋友。我\n们上周刚结束了一个难缠客户的项目。我敢打赌布伦达一定很高兴项目完成了，这样她就可以专心准备\n婚礼了。\n男：噢，没错，所以你就是“办公室里的凯茜”。其实，我听说了很多关于你和那个项目的事情。那个客户听上\n去可真是个噩梦。\n女：噢，他就是。我是说，我们经常跟各种人打交道，这是工作的一部分，但他尤其挑剔，不说他了。你从事哪\n个行业呢？\n男：大学刚毕业时，我在广告行业工作过一段时间。但最近，我把自己的摄影爱好变成了一桩小生意。实际\n上，我会在这个重大活动（婚礼）中拍摄照片作为给新人的结婚礼物。\n女：听起来很棒，你想得真周到。我只是把烘焙作为爱好，但布伦达让我制作婚礼用的蛋糕。答应她时我有点\n紧张，因为我远不够专业。\n男：今晚派对上的饼干都是你烤的？\n女：是的，我从一本杂志上得到的灵感。\n男：饼干很好吃，你没什么好担心的，你有烘培天賦。\n女：你真的这么觉得？\n男：如果你不告诉我，我还以为饼干是餐馆烤的。要知道，你还有活动策划的经验，所以你完全可以自己开，店。\n女：一步一步来吧。我先看看婚礼蛋糕烤得怎么样，如果不是太糟糕的话，或许我会认真考虑开店。\n6\nConversation TWO\n一、听前蓣河\n5 ． A) They have to spend more time studying.\nThey have to participate in club activities.\n大学生活与高中生活的区别\n6 ．\nC) They have be more responsible for what they do.\nD) They have to choose a specific academic discipline.\n唟 A)\nThose who share her academic interests.\nB) Those who respect her student commitments.\nC) Thos 《who can help her when she 这 in need.\nD) Those who go to the same clubs as she does.\n[ 看选项关键词预测问题 ]\nGet ready for a career.\nB) Make a lot of friends.\nC) Set a long-term goal.\nD) Behave like adults.\nA) Those helpful for tapping their potential.\nB) Those conducive to improving their social skills.\nC) Those helpful for cultivating individual interests.\nD) Those conducive to their academic studies.\n5 ． A)、 D) 中的动作信息 spend more time studying、 choose a. 一 academic discipline 暗示 They 身份为学\n生 / 学者；而各项 have to 表示“客观上必须（有义务或被迫做某事）”；综上，推测题干询问类学生 / 学者的义\n务或责任（应特别注意涉及“要求”的信息）。\n6 ． 各项均以动词原形开头，且具体内容“为职场做好准备、广结朋友、设立长远目标、表现得像个成年人”\n均为“年轻人应努力的方向（A、 D 暗示该群体很可能是“大学生”），推询问对大学生的建议或要求\n7、各项均以定语从句修饰中心词 Those，由关系代词 who 以及各从句谓语可知 Those 指代某类人，且这\n类人都对某位女学生（B 中 her student commitments 指向对象“女学生”）有一定吸引力，或与她兴趣一致（A、\nD)，或尊重、关心她（B、 C），故推测题干询问某位女学生想要 / 应该结交哪类朋友\n8 ． 各项均以表“有助于、有益于” (helpful for、 conducive to）的形容词性短语修饰中心词 Thoseø D) 中\ntheir academic studies 暗示 their （应代指题干所问人物）身份为学生 / 学者（根据 5、 6 题预测，前者可能性更\n大），综合推測题干询问倾向或建议：某类学生想要 / 应该结交哪类人，或想要 ／ 应该选择哪类事物\n[ 看选项复现词预测主题 ] 选项中的复现词主要集中为两类：一、表要求 / 建议的词汇： have to、 helpful for、\nconducive to； ． 二、与学生 / 学习相关的词汇： studymg、 academic discipline、 academic interests、 student commitments、\nacademic studleso 综合推断本对话围绕某类学生展开，谈及他们需满足的要求，或对他们的建议\n一謙菩芬\nI-M： You are heading for a completely different world now that you are about to graduate from high school.\n2-W： I know it's the end of high 5ch001, but many of my classmates are going on to the same university\nand we are still required to study hard, $ 0 what's the difference?\n女二人引出对话主题“大学与高中生活的区别”。话语标记词： You are heading for.\n, now that.\nknow. 一 · but. ·。 what's the difference。核心语义词 :graduate from high 丷 h0001he end of high school' going\non to.\n1 段男士提醒女士“高中毕业后即将迎来巨变”。男士升调说出 You， re heading for(head for\" 朝 · ““． 进\n发”），重读 completely different （world）强调女士将“面临某巨大变化 / 人生转折点”，稍加停顿后以从句 now\nthat. ． （既然 ． 一 ． ．）明确原因， graduate （from） high h00 [ 重读提示原因所在\n2 段女士提出问题“从高中到大学变化何在”。女士先降调说出 1 know （其后 end of high school 声调上\n扬，重复男士所说信息），承认男士所言，随即重读 many、 still 强调大学和高中仍有相同之处，最后重读\ndifference 凸显疑问“两阶段到底有何不同”\n3-N•l. C]Many aspects are different here at university. The most important one is that you have to take\nmore individual responsib 山 ty for your actions. lt's up 10 your own self-discipline how much effort\nyou put into study. Living in college dOrmitories, there are no parents to tell you to study harder or\nstop wasting time. Lecturers have hundreds of students and they are not going to follow you up Or\nquestion you if you miss their lectures.\n7\n男士介绍区别一“大学没有师长管教，要对自己更加负责 \" 话语标记词： Many aspects a r e different.\n核心语义词 :more individual responsibil ity、 self-discipline。\nThe most important one 《&\n· lt's up to.\n(D 至说明最重要的区别“大学生要对自己更加负责”。句 Many. 一 here 升调重读，提示男士将谈及\n大学与高中的多项区别。 0 句 the most important one( 最高级）升调并停顿以提起注意 (2) 句一字一顿重读\n词组 more individual responsibility、 own self-discipline，强调最重要的区别“担当、自律”\n@0 句解释原因“脱离父母和老师管教，只能依靠自己”。两句先重读 Living in. · · dormitories， hundreds\nof students 强调有关大学生面临的事实“住公寓、上大课”，继而重读否定结构 no、 not going № ． 一强调这种事\n实的后果“父母和老师没法监督大学生”\n4 」 W： Nobody cares, you mean?\n@lt's just that suddenly at university you are expected\n5 一 M： lt's not that nobody 这 concerned about you.\nto behave like an adult, that means concentrating on the direction of your life in general and your\nown academic performance specifically.\n男士回答女士对于区别一的疑问：无人管教并非无人关心，而是期待他们长大成人。话语标记词： you\nmean？ lt，卜 not that.\n。 lt's just that.， that means.. · 核心语义词： behave like a n adult、 concentrating on.\n4 段女士就上段男士应答提出疑问“这是否意味着人们对大学生漠不关心”。女士以 you mean 升调发问，\n提示男士将就此进一步解释。\n5 段男士应答“并非人们不关心，而是期待他们学会成年人的处事方式”。 0 句重读 not 打消女士疑虑。\n0 句 lt， s just that suddenly at university 升调后略作停顿，随即重读 expected to. · ． adult 强调人们真实用意\n只是期待大学生像成年人那样处事”； that means. 一紧接上半句语义重心 adult，重读 concentrating 进一步解\n释 behave like an adult 内涵：学会专注自己的人生及学业。\n6 ． W： For example?\n7-M： Well, like you need to manage your daily, weekly and monthly schedules so that you will study\nregularly. Be sure to attend all classes and leave enough time to finish assignments and prepare\nwell for examinations.\n男士应女士要求举例说明大学生如何长大成人“做好时间安排，保证规律学习”。话语标记词： For\nexample.\n、 like you need to.、 ． Be SLlre to.\n核心语义词 :manage your.。\n· schedules.\n． leave enough timeo\n6 段女士请求男士举例。 For exarnple 升调发出疑问，提示男士即将提供“如何像成人一样处事”的例子。\n7 段男士举例指出要“做好时间安排，保证规律学习”。 likc you need 一 Be sure to. 一列出建议，其中\n· schedules.\n． leave enough time 重读强调时间管理的重要性巧 0 that. 一、一之前皆有停顿，提\nmanage your.\n示将引出管理的目的“保证学习的各个环节正常进行”（study regularly， classes、 assignments、 examinations)。\n8 ． W： Okay, and what else is different?\n9 一 M： Well， in college there are lots of distractions and you need to control yourself. 国 You will make\ninteresting friends, but you need only keep the friends WhO respect YOur student commitments.\n国 Also， there are a lot of wonderful clubs， but you shouldn't allocate too much time to club\nactivities, unless they are directly related to your study. lt, S also your choice if YOu want to go OL1t\nat night, but you will be foolish to let that affect your class performance during the day.\n男士介绍大学与高中生活的区别二“大学有丰富的交友、社团和夜生活，因此更要学会排除干扰”。话语标\n记词 ． what else is different？、 need only.\n· sh0U11dn， t. 一 will 化 i 卜 h 10 一\n核心语义词： lots distractions.\nrespect YOur sttldent cornmltrnents.。。 direclly related to your study. · ． affect your clas's perförmanceo\n8 段女士请求男士指出区别二。首先应答 ()kay( 常用于转换话题）暗示上述探讨（区别一）告一落，随即\n重读 else 请求男士指出区别二\n9 段（D 句男士指出区别二“大学生有许多干扰需要排除”。男士重读 lots of( 修饰 distractions\" 分散注意力\n的事物”），暗示他将具体说明大学里各种干扰因素； you need to.。就此给出总体建议“要学会自我控制”\n9 段 0 （生 0 句男士就“交友、社团、夜生活”三大干扰因素提出建议。\n0 句男士首先升调重读 interesting 行 ien 小，表明大学交友的确富有吸引力； but you need only 继而引发转\n8\n折、提出劝诫，其中 only 重读强调“交友要有所选择 \"；定语从句 who. 一修饰 the friends，指出怎样的朋友值得\n结交“顾及你学生身份 / 让你做学生该做的事的人”（resp “t 取“考虑、顾及”之意， commitment 涵盖“承诺、义\n务”等与学生身份挂钩的事务）。\n句慢读且重读 A 卜。，提示该句与句并列、谈及另一干扰因素， a lot of wonderful clubs 表明社团活动\n的精彩； but you shouldn， t 一 ． 引发转折、给出警告，其中 too much 重读强调应注意限制社团活动时长； un”\n重读停顿，引出例外情形“与学习直接相关（可少做限制）”\n@ 句重读 lt's also your choice. ． · 提示大学又一诱惑因素“自由安排夜生活”； but 再次转折，重读 foolish\n发出严肃警告“勿让夜间活动影响白天上课”，与句 respect your student commitments、 directly related to\nyour study 传达相似立场“以学习为重”\n10 《W、 Well, I'm determined to do well at university and I guess I am going to have to grow up fast.\n女士听取男士建议，下定决心“好好表现，快快成人”。话语标记词： l'm determined. ·\nI am going to have\n核 ' 心吾义词： do well at university. ． · grow up fasto\nto.\ndetermined 重读强调女士坚定决心； and I guess(guess 取义“想、认为”）升调提示女士欲从“发问”转向“陈\n词、表态”，预示对话终结。\n[ 问题分析 ]\nQ5： What does the man say about college students a s compared with high schoolers?\nQ6： What are college students expected to do according to the man?\nQ7： What kind of friends does the man suggest the woman make as a college student?\nQ8： What kind of club activities should college students engage in according to the man?\nQ5： What does the man say 提示答案范围“男士话语”； as compared with 前略有停顿，将 college students\n与 high schoolers 截然分开，提示学生重点回忆二者区别。\nQ6： college students 重读，提示问题主体“大学生”；停顿后， according to the man 圈定答案范围“男士话语”\nQ7： What kind of friends 提示学生回忆各种朋友；停顿后， the man suggest the woman 圈定答案范围“男\n士就交友提出的建议”（需特别注意祈使句、情态动词、含感情色彩的形容词 / 副词等）。\n08： What kind of club activities 提示学生回忆各种社团活动；停顿后， should.\n· according to the man 同\n样提示答案出自男士就社团活动的建议\n5 ． 关于大学生（与高中生相比），男士说了什么？\nA) 他们必须花更多时间学习。\nB) 他们必须参加社团活动。\nC) 他们必须对自己的行为更加负责。\nD) 他们必须选择特定的学科。\n[ 设题要点 ] 话题引出处（so what's the difference？）。\n[ 答案精析 ] 0。 0 与第 3 段 ． (2) 句男士介绍大学与高中的一项区别“你必须为自己的行为独立承担更\n多责任”（you have to take more individual responsibility for your actions）相符。 A）从第 3 段@ 句 study\nharder、 stop wasting time 断章取义，但此处实为“大学生不再受到父母管教，可以自主决定是否努力学习 (lt's\n，）” B) 由第 9 段 ． 句“（大学）有许多很棒的社团（there are a lot of wonderful\nup to your own self-discipline.\nclubs）”过度推出“大学生必须参加社团”。 D）借助常识“大学生分专业进行学习”干扰，男士并未谈及该内容。\n6 ． 据男士所说，大学生被期待做什么？\nA) 为职业生涯做准备\nB) 结交许多朋友。\n0 确立长期目标\nD) 像成人那样处事。\n[ 设题要点 ] 取舍结构处（lt ' s not that. ．\nlt's just that.\n[ 答案精析 ] D)O D）复现第 5 段 (2) 句人们对大学生的期待“在大学，你被期待像成年人那样处事（at\n9\nuniversity you are expected to behave like an adult)，》 A）将第 7 段 (2) 句男士说明大学生应专注学业表现时所\n举的例子“为考试做好准备”（prepare well for examinations) 窜改为“为职业生涯做好准备”。 B) 与第 9 段 (2) 句\n男士对女士的期待 / 建议“只和那些尊重你学生义务的朋友保持交往（y。 u need only keep the friends who.\n即：有选择性地结交朋友，注重交友的 ' 质，而非 ' 量，）”相悖。 0 源于第 5 段句男士所说“要专注自己人生的\n总体方向，别 ． 是学业” (that means concentrating on the direction 0 「 your life in general and your own\nacademic performance specifically)，但此处作者意在强调“要像成人一样有目标（有无目标的问题）”，而非“树\n立长远目标 / 避免急功近利（目标长远与否的问题）”\n7 ． 男士建议女士作为一名大学生，应该结交哪种朋友？\nA) 和她在学业上有共同兴趣的人\nB) 尊重她作为学生的义务的人。\n[ 设题要点 ] 转折处 (but you need only.\n0 在她困难时能帮助她的人。\nD) 和她加入同一社团的人。\n[ 答案精析 ] B)O B) 与第 9 段句男士建议“你只需与尊重你学生义务的朋友保持交往（you need 0 司 y\nkeep the friends who respect YOUr student commitments)”相符 A) 由第 9 个别词汇 interesting、 related to\nyour study 杂糅而成，但前者为“朋友的性格特点（有趣）”，后者描述社团活动（与学习相关）。 C) 由常识捏造\n而来，在对话中并无依据。 D) 在第 9 段 0 句“选择朋友的建议”与句“参加社团的建议”之间强加联系。\n& 据男士所说，大学生应该参与哪类社团活动？\nA) 有助于发辗他们的潜力的活动。\nB) 有助于提升他们的社交技巧的活动。\n[ 设题要点 ] 转折处 (but you shouldn， t.\n0 有助于培养个人兴趣的活动。\nD) 有益于他们的学业的活动。\n[ 答案精析 ] D)。 D) 正确解读第 9 段句建议“不应花太多时间在社团活动上，除非它们与你的学习直接\n，， unless. 一）”暗含之意“可以多参加与学习直接相关 ／ 对学习有利的社团活动”。 A) 由常识\n相关 (shouldn't.\n捏造而来，在文中无根据。 B) 同 7 题 D)SJi，在“选择朋友”与“参加社团”之间强加联系，将“多结交顾及你学生\n身份的朋友”窜改为“要优先加入能培养择友能力 / 提升社交技巧的社团”。 0 杂糅第 3 段 individual （修饰\nresponsibility) 及第 9 段 interesting(fr# friends) 制造干扰。\n々 傘哀所\n男：既然就要高中毕业了，你将迈向一个完全不同的世界。\n女：我知道高中生活结束了，不过我的好多同学都会到同一所大学继续念书，而且我们仍然需要努力学习，那\n么大学（和高中比）有什么不同呢？\n男：在大学有很多方面与高中不同。最重要的区别在于，你必须为自己的行为独立承担更多责任。你在学习\n上付出多少努力取决于你的自律能力。住在大学宿舍，就不会有父母告诫你要更加努力学习，别再浪费时\n间。老师有好几百个学生，他们才不会跟进你的情况，要是你没去上课，他们也不会质问你什么。\n女：你是说，没有人在意我？\n男：并不是没有人关心你。只是在大学，突然之间你就被期待像成年人那样处事，这意味着你既要专注于自己\n人生的总体方向，还要特别专注于自己的学业表现。\n女：比如说呢？\n男：唔，例如你要做好每日、每周、每月的安排，以便有规律地学习。保证每堂课都出勤，并预留充足的时间完\n成作业、好好准备考试。\n女：好吧，还有哪些不同呢？\n男：唔，在大学有很多事会让你分心，你需要自我控制。你会交到有趣的朋友，但你只需与顾及你学生身份的\n那些朋友交往下去。此外，还有许多很棒的社团，但你不应将过多时间拨给社团活动，除非它们与你的学\n业直接相关。如果想晚上出去玩也随你，但要是影响到你白天的课堂表现就太傻了。\n女：唔，我决心要在大学好好表现，我想我得快快长大成人了。\n10"
+          "explanationOriginal": "答案：A\n一 M： Did you bake the cookies here at the party tonight？\n9-W： Yes, I got the idea from a magazine.\n10 一 M： They're delicious. You， ve got nothing to worry about. You re a natural.\n男士赞赏女士的烘焙水平。话语标记词： Did you. 一； They， re. 一 You' ve..\n核心语义词： nothing to\nworry abOL1t. · YOt1 re a natural。\n首先通过“问一答”明确派对上的饼干均出自女士之手。随后 They're delicious 音量显著提升，充分展现男\n士的惊讶、褒奖之情； nothing to worry about、 You， re a natura 你是这方面的天才）不吝赞美女士烘焙水平。\n11-W： You really think so?\n12 一 M： If you hadn， t told me that， I would have guessed they were baked by the restaurant. 国 You\nknow, With your event planning experience, YOu could Very well open your own ShOP.\n1 3 W: One step at a time. First I'll see how baking the wedding cake goes. If it's not a disaster, maybe\nI'll give it some more thought.\n男士对女士提出建议。话语标记词： You really think so？，， ． You know. ． ． One step at a time..， First.\nlf.. 一 maybe l'll. 一核心语义词 ．\n． open your Own shop\n@ give it some more thought。\n11、 12 段通过“追问一回答”进一步展开男士对女士的评价及建议。虚拟语气 If you hadn， t told me that， I\nwould have （倘若不是你告诉我，我会以为一一）语调略夸张，体现男士对女士的溢美之词。随后 You know 预\n示引出建议， with.. · experience 语调上扬表明话语并未结束，引出其后重点信息， very well 程度副词重读，突\n出建议 open your own shop 完全可行\n． lf. 一 maybe I'II. 一具体说明计划实\n13 段女士回应男士建议。 One step at a time 总括女士计划； First.\n施步 *(give sth some more thought 表示“认真考虑某事”）。\n[ 问题分析 ]\nQI： What did Cathy and Brenda finish doing last week?\nQ2： What 这 John going to do for Brenda？\nQ3： How did Cathy feel when asked to bake the cake?\nQ4：\nWhat does the man suggest the woman do?\n01： Cathy、 Brenda 限定行动者，解题时应注意区分不同人物的行为 ;finish doing、 last week 重读，限定时\n间“过去已完成的行为”，解题时应注意区分时间。\nQ2： John. ·。 do for Brenda 重读明确人物关系 (John 为行为发出者， Brenda 为接受者）； ． · going to do\n限定时间“将要发生的行为”\nQ3： feel 重读强调考查“感受”； when 提示其后限定具体情形，解题时应注意区分场景。\nQ4； suggest 重读强调“建议”，其后略作停顿，引出建议接收者 woman。\n々 粼试題精\nl. 凯茜和布伦达上周完成了什么？\n(A) 长达六个月的谈判。\nB) 派对的准备工作。\nC) 一个难缠客户的项目。\nD）为同事包装礼品\n[ 设题要点 ] 背景信息处 / 对话之前发生之事（We just\nlast week)。\n[ 答案精析 ] 0。 0 符合 3 段对话信息“我们（我 / 凯西和布伦达）上周刚结束了一个难缠客户的项目”。其\n中 a troublesome client 同义替换 a difficult client，且囊括随后 The client sounded like a real nightmare 以及 he was\nespecially particularo A）利用 3 段 last six months 干扰，但这是指“凯和布伦达的共事时间”，并非“谈判时长”\nB）利用 wedding preparations 设置干扰，但这是“两人上周完成任务之后，布伦达一人做的事”。 D）将碎片信息\ncolleague、 wrapped up、 wedding gift 杂糅十扰，对话中实际并未提及包装礼品，且 wrapped up 意为“结束，圆满\n完成”\n5\n2 ． 约翰打算为布伦达做些什么？\nA）拍摄婚礼照片。\nB) 宣传她的公司。\nC）开始做一桩小生意。\nD）举办庆祝派对。\n[ 设题要点 ] 对话中男士行为介绍处（l'll actually. 一 )0\n[ 答案精析 ] A)O A) 是男士所言 l'll actually be taking photos during the big event “a wedding gift 的同\n义表述（联系上下文可推知 the big event 指 wedding)。 B) 利用 6 段 advertising 干扰，但对话中该词指“男士过\n去曾在广告业工作”。 C) 利用 6 段 a small business 干扰，但男士创办生意是出于自身兴趣，而非为了布伦达。\nD) 由复现词 party 臆测得出，但对话中指“布伦达的婚礼”，并未提及“男士为布兰达举办庆祝派对”\n3，凯茜被要求烤制蛋糕时有什么感受？\nA）犹豫。\nB) 紧张。\nC) 荣幸。\nD) 惊讶。\n[ 设题要点 ] 对话中女士感受说明处（I was a bit nervous.\n[ 答案精析 ] B)O B）复现 7 段女士所言 I was a bit nervous saying yes( 由上文可知 saying yes 意为“答应\n烤制蛋糕” )O A）、 C）均是对女士感受的主观臆测（人们被托付一件重要事情时，可能会感到犹豫或荣幸），对\n话中并未提及。 D) 源自 3 段 I was a little surprised，但这是女士“收到婚礼邀请时”的心情。\n4，男士建议女士做什么？\nA) 开一家她自己的蛋糕，店。\nB）提高她的烘焙技术。\nC) 分享她的烹饪经验。\nD）为婚礼做准备。\n[ 设题要点 ] 对话中一方向另一方提出建议处 (you could very well open your own shop)o\n[ 答案精析 ] A)O A) 是对 12 段男士所言“如果你不告诉我，我还以为饼干是餐厅烤的，你完全可以自己开\n店 (you could very well open your own shop）”的正确解读，其中 bakery 明确 shop 所指。 B) 由第 7、 13 段女士\n自谦 far from a professional, I， ll see how. · · goes 主观臆测得出。 C) 将 12 段 event planning experience 窜改为\ncooking experience，且捏造对话中未提及的 share. · · experience。 D) 利用 3 段 focus on wedding preparations\n捏造干扰，但这是两人共同的朋友布伦达已经完成之事，并非男士建议女士所做之事。\n女：嗨，我是凯茜。很高兴见到你。\n男：很高兴见到你，凯茜。我是约翰，新娘大学时的朋友。你呢？你认识这派对上的哪位？\n女：我是布伦达的同事。其实，收到邀请我有点惊讶。我们半年前才开始一起工作，但很快成为了好朋友。我\n们上周刚结束了一个难缠客户的项目。我敢打赌布伦达一定很高兴项目完成了，这样她就可以专心准备\n婚礼了。\n男：噢，没错，所以你就是“办公室里的凯茜”。其实，我听说了很多关于你和那个项目的事情。那个客户听上\n去可真是个噩梦。\n女：噢，他就是。我是说，我们经常跟各种人打交道，这是工作的一部分，但他尤其挑剔，不说他了。你从事哪\n个行业呢？\n男：大学刚毕业时，我在广告行业工作过一段时间。但最近，我把自己的摄影爱好变成了一桩小生意。实际\n上，我会在这个重大活动（婚礼）中拍摄照片作为给新人的结婚礼物。\n女：听起来很棒，你想得真周到。我只是把烘焙作为爱好，但布伦达让我制作婚礼用的蛋糕。答应她时我有点\n紧张，因为我远不够专业。\n男：今晚派对上的饼干都是你烤的？\n女：是的，我从一本杂志上得到的灵感。\n男：饼干很好吃，你没什么好担心的，你有烘培天賦。\n女：你真的这么觉得？\n男：如果你不告诉我，我还以为饼干是餐馆烤的。要知道，你还有活动策划的经验，所以你完全可以自己开，店。\n女：一步一步来吧。我先看看婚礼蛋糕烤得怎么样，如果不是太糟糕的话，或许我会认真考虑开店。\n6\nConversation TWO\n一、听前蓣河\n5 ． A) They have to spend more time studying.\nThey have to participate in club activities.\n大学生活与高中生活的区别\n6 ．\nC) They have be more responsible for what they do.\nD) They have to choose a specific academic discipline.\n唟 A)\nThose who share her academic interests.\nB) Those who respect her student commitments.\nC) Thos 《who can help her when she 这 in need.\nD) Those who go to the same clubs as she does.\n[ 看选项关键词预测问题 ]\nGet ready for a career.\nB) Make a lot of friends.\nC) Set a long-term goal.\nD) Behave like adults.\nA) Those helpful for tapping their potential.\nB) Those conducive to improving their social skills.\nC) Those helpful for cultivating individual interests.\nD) Those conducive to their academic studies.\n5 ． A)、 D) 中的动作信息 spend more time studying、 choose a. 一 academic discipline 暗示 They 身份为学\n生 / 学者；而各项 have to 表示“客观上必须（有义务或被迫做某事）”；综上，推测题干询问类学生 / 学者的义\n务或责任（应特别注意涉及“要求”的信息）。\n6 ． 各项均以动词原形开头，且具体内容“为职场做好准备、广结朋友、设立长远目标、表现得像个成年人”\n均为“年轻人应努力的方向（A、 D 暗示该群体很可能是“大学生”），推询问对大学生的建议或要求\n7、各项均以定语从句修饰中心词 Those，由关系代词 who 以及各从句谓语可知 Those 指代某类人，且这\n类人都对某位女学生（B 中 her student commitments 指向对象“女学生”）有一定吸引力，或与她兴趣一致（A、\nD)，或尊重、关心她（B、 C），故推测题干询问某位女学生想要 / 应该结交哪类朋友\n8 ． 各项均以表“有助于、有益于” (helpful for、 conducive to）的形容词性短语修饰中心词 Thoseø D) 中\ntheir academic studies 暗示 their （应代指题干所问人物）身份为学生 / 学者（根据 5、 6 题预测，前者可能性更\n大），综合推測题干询问倾向或建议：某类学生想要 / 应该结交哪类人，或想要 ／ 应该选择哪类事物\n[ 看选项复现词预测主题 ] 选项中的复现词主要集中为两类：一、表要求 / 建议的词汇： have to、 helpful for、\nconducive to； ． 二、与学生 / 学习相关的词汇： studymg、 academic discipline、 academic interests、 student commitments、\nacademic studleso 综合推断本对话围绕某类学生展开，谈及他们需满足的要求，或对他们的建议\n一謙菩芬\nI-M： You are heading for a completely different world now that you are about to graduate from high school.\n2-W： I know it's the end of high 5ch001, but many of my classmates are going on to the same university\nand we are still required to study hard, $ 0 what's the difference?\n女二人引出对话主题“大学与高中生活的区别”。话语标记词： You are heading for.\n, now that.\nknow. 一 · but. ·。 what's the difference。核心语义词 :graduate from high 丷 h0001he end of high school' going\non to.\n1 段男士提醒女士“高中毕业后即将迎来巨变”。男士升调说出 You， re heading for(head for\" 朝 · ““． 进\n发”），重读 completely different （world）强调女士将“面临某巨大变化 / 人生转折点”，稍加停顿后以从句 now\nthat. ． （既然 ． 一 ． ．）明确原因， graduate （from） high h00 [ 重读提示原因所在\n2 段女士提出问题“从高中到大学变化何在”。女士先降调说出 1 know （其后 end of high school 声调上\n扬，重复男士所说信息），承认男士所言，随即重读 many、 still 强调大学和高中仍有相同之处，最后重读\ndifference 凸显疑问“两阶段到底有何不同”\n3-N•l. C]Many aspects are different here at university. The most important one is that you have to take\nmore individual responsib 山 ty for your actions. lt's up 10 your own self-discipline how much effort\nyou put into study. Living in college dOrmitories, there are no parents to tell you to study harder or\nstop wasting time. Lecturers have hundreds of students and they are not going to follow you up Or\nquestion you if you miss their lectures.\n7\n男士介绍区别一“大学没有师长管教，要对自己更加负责 \" 话语标记词： Many aspects a r e different.\n核心语义词 :more individual responsibil ity、 self-discipline。\nThe most important one 《&\n· lt's up to.\n(D 至说明最重要的区别“大学生要对自己更加负责”。句 Many. 一 here 升调重读，提示男士将谈及\n大学与高中的多项区别。 0 句 the most important one( 最高级）升调并停顿以提起注意 (2) 句一字一顿重读\n词组 more individual responsibility、 own self-discipline，强调最重要的区别“担当、自律”\n@0 句解释原因“脱离父母和老师管教，只能依靠自己”。两句先重读 Living in. · · dormitories， hundreds\nof students 强调有关大学生面临的事实“住公寓、上大课”，继而重读否定结构 no、 not going № ． 一强调这种事\n实的后果“父母和老师没法监督大学生”\n4 」 W： Nobody cares, you mean?\n@lt's just that suddenly at university you are expected\n5 一 M： lt's not that nobody 这 concerned about you.\nto behave like an adult, that means concentrating on the direction of your life in general and your\nown academic performance specifically.\n男士回答女士对于区别一的疑问：无人管教并非无人关心，而是期待他们长大成人。话语标记词： you\nmean？ lt，卜 not that.\n。 lt's just that.， that means.. · 核心语义词： behave like a n adult、 concentrating on.\n4 段女士就上段男士应答提出疑问“这是否意味着人们对大学生漠不关心”。女士以 you mean 升调发问，\n提示男士将就此进一步解释。\n5 段男士应答“并非人们不关心，而是期待他们学会成年人的处事方式”。 0 句重读 not 打消女士疑虑。\n0 句 lt， s just that suddenly at university 升调后略作停顿，随即重读 expected to. · ． adult 强调人们真实用意\n只是期待大学生像成年人那样处事”； that means. 一紧接上半句语义重心 adult，重读 concentrating 进一步解\n释 behave like an adult 内涵：学会专注自己的人生及学业。\n6 ． W： For example?\n7-M： Well, like you need to manage your daily, weekly and monthly schedules so that you will study\nregularly. Be sure to attend all classes and leave enough time to finish assignments and prepare\nwell for examinations.\n男士应女士要求举例说明大学生如何长大成人“做好时间安排，保证规律学习”。话语标记词： For\nexample.\n、 like you need to.、 ． Be SLlre to.\n核心语义词 :manage your.。\n· schedules.\n． leave enough timeo\n6 段女士请求男士举例。 For exarnple 升调发出疑问，提示男士即将提供“如何像成人一样处事”的例子。\n7 段男士举例指出要“做好时间安排，保证规律学习”。 likc you need 一 Be sure to. 一列出建议，其中\n· schedules.\n． leave enough time 重读强调时间管理的重要性巧 0 that. 一、一之前皆有停顿，提\nmanage your.\n示将引出管理的目的“保证学习的各个环节正常进行”（study regularly， classes、 assignments、 examinations)。\n8 ． W： Okay, and what else is different?\n9 一 M： Well， in college there are lots of distractions and you need to control yourself. 国 You will make\ninteresting friends, but you need only keep the friends WhO respect YOur student commitments.\n国 Also， there are a lot of wonderful clubs， but you shouldn't allocate too much time to club\nactivities, unless they are directly related to your study. lt, S also your choice if YOu want to go OL1t\nat night, but you will be foolish to let that affect your class performance during the day.\n男士介绍大学与高中生活的区别二“大学有丰富的交友、社团和夜生活，因此更要学会排除干扰”。话语标\n记词 ． what else is different？、 need only.\n· sh0U11dn， t. 一 will 化 i 卜 h 10 一\n核心语义词： lots distractions.\nrespect YOur sttldent cornmltrnents.。。 direclly related to your study. · ． affect your clas's perförmanceo\n8 段女士请求男士指出区别二。首先应答 ()kay( 常用于转换话题）暗示上述探讨（区别一）告一落，随即\n重读 else 请求男士指出区别二\n9 段（D 句男士指出区别二“大学生有许多干扰需要排除”。男士重读 lots of( 修饰 distractions\" 分散注意力\n的事物”），暗示他将具体说明大学里各种干扰因素； you need to.。就此给出总体建议“要学会自我控制”\n9 段 0 （生 0 句男士就“交友、社团、夜生活”三大干扰因素提出建议。\n0 句男士首先升调重读 interesting 行 ien 小，表明大学交友的确富有吸引力； but you need only 继而引发转\n8\n折、提出劝诫，其中 only 重读强调“交友要有所选择 \"；定语从句 who. 一修饰 the friends，指出怎样的朋友值得\n结交“顾及你学生身份 / 让你做学生该做的事的人”（resp “t 取“考虑、顾及”之意， commitment 涵盖“承诺、义\n务”等与学生身份挂钩的事务）。\n句慢读且重读 A 卜。，提示该句与句并列、谈及另一干扰因素， a lot of wonderful clubs 表明社团活动\n的精彩； but you shouldn， t 一 ． 引发转折、给出警告，其中 too much 重读强调应注意限制社团活动时长； un”\n重读停顿，引出例外情形“与学习直接相关（可少做限制）”\n@ 句重读 lt's also your choice. ． · 提示大学又一诱惑因素“自由安排夜生活”； but 再次转折，重读 foolish\n发出严肃警告“勿让夜间活动影响白天上课”，与句 respect your student commitments、 directly related to\nyour study 传达相似立场“以学习为重”\n10 《W、 Well, I'm determined to do well at university and I guess I am going to have to grow up fast.\n女士听取男士建议，下定决心“好好表现，快快成人”。话语标记词： l'm determined. ·\nI am going to have\n核 ' 心吾义词： do well at university. ． · grow up fasto\nto.\ndetermined 重读强调女士坚定决心； and I guess(guess 取义“想、认为”）升调提示女士欲从“发问”转向“陈\n词、表态”，预示对话终结。\n[ 问题分析 ]\nQ5： What does the man say about college students a s compared with high schoolers?\nQ6： What are college students expected to do according to the man?\nQ7： What kind of friends does the man suggest the woman make as a college student?\nQ8： What kind of club activities should college students engage in according to the man?\nQ5： What does the man say 提示答案范围“男士话语”； as compared with 前略有停顿，将 college students\n与 high schoolers 截然分开，提示学生重点回忆二者区别。\nQ6： college students 重读，提示问题主体“大学生”；停顿后， according to the man 圈定答案范围“男士话语”\nQ7： What kind of friends 提示学生回忆各种朋友；停顿后， the man suggest the woman 圈定答案范围“男\n士就交友提出的建议”（需特别注意祈使句、情态动词、含感情色彩的形容词 / 副词等）。\n08： What kind of club activities 提示学生回忆各种社团活动；停顿后， should.\n· according to the man 同\n样提示答案出自男士就社团活动的建议\n5 ． 关于大学生（与高中生相比），男士说了什么？\nA) 他们必须花更多时间学习。\nB) 他们必须参加社团活动。\nC) 他们必须对自己的行为更加负责。\nD) 他们必须选择特定的学科。\n[ 设题要点 ] 话题引出处（so what's the difference？）。\n[ 答案精析 ] 0。 0 与第 3 段 ． (2) 句男士介绍大学与高中的一项区别“你必须为自己的行为独立承担更\n多责任”（you have to take more individual responsibility for your actions）相符。 A）从第 3 段@ 句 study\nharder、 stop wasting time 断章取义，但此处实为“大学生不再受到父母管教，可以自主决定是否努力学习 (lt's\n，）” B) 由第 9 段 ． 句“（大学）有许多很棒的社团（there are a lot of wonderful\nup to your own self-discipline.\nclubs）”过度推出“大学生必须参加社团”。 D）借助常识“大学生分专业进行学习”干扰，男士并未谈及该内容。\n6 ． 据男士所说，大学生被期待做什么？\nA) 为职业生涯做准备\nB) 结交许多朋友。\n0 确立长期目标\nD) 像成人那样处事。\n[ 设题要点 ] 取舍结构处（lt ' s not that. ．\nlt's just that.\n[ 答案精析 ] D)O D）复现第 5 段 (2) 句人们对大学生的期待“在大学，你被期待像成年人那样处事（at\n9\nuniversity you are expected to behave like an adult)，》 A）将第 7 段 (2) 句男士说明大学生应专注学业表现时所\n举的例子“为考试做好准备”（prepare well for examinations) 窜改为“为职业生涯做好准备”。 B) 与第 9 段 (2) 句\n男士对女士的期待 / 建议“只和那些尊重你学生义务的朋友保持交往（y。 u need only keep the friends who.\n即：有选择性地结交朋友，注重交友的 ' 质，而非 ' 量，）”相悖。 0 源于第 5 段句男士所说“要专注自己人生的\n总体方向，别 ． 是学业” (that means concentrating on the direction 0 「 your life in general and your own\nacademic performance specifically)，但此处作者意在强调“要像成人一样有目标（有无目标的问题）”，而非“树\n立长远目标 / 避免急功近利（目标长远与否的问题）”\n7 ． 男士建议女士作为一名大学生，应该结交哪种朋友？\nA) 和她在学业上有共同兴趣的人\nB) 尊重她作为学生的义务的人。\n[ 设题要点 ] 转折处 (but you need only.\n0 在她困难时能帮助她的人。\nD) 和她加入同一社团的人。\n[ 答案精析 ] B)O B) 与第 9 段句男士建议“你只需与尊重你学生义务的朋友保持交往（you need 0 司 y\nkeep the friends who respect YOUr student commitments)”相符 A) 由第 9 个别词汇 interesting、 related to\nyour study 杂糅而成，但前者为“朋友的性格特点（有趣）”，后者描述社团活动（与学习相关）。 C) 由常识捏造\n而来，在对话中并无依据。 D) 在第 9 段 0 句“选择朋友的建议”与句“参加社团的建议”之间强加联系。\n& 据男士所说，大学生应该参与哪类社团活动？\nA) 有助于发辗他们的潜力的活动。\nB) 有助于提升他们的社交技巧的活动。\n[ 设题要点 ] 转折处 (but you shouldn， t.\n0 有助于培养个人兴趣的活动。\nD) 有益于他们的学业的活动。\n[ 答案精析 ] D)。 D) 正确解读第 9 段句建议“不应花太多时间在社团活动上，除非它们与你的学习直接\n，， unless. 一）”暗含之意“可以多参加与学习直接相关 ／ 对学习有利的社团活动”。 A) 由常识\n相关 (shouldn't.\n捏造而来，在文中无根据。 B) 同 7 题 D)SJi，在“选择朋友”与“参加社团”之间强加联系，将“多结交顾及你学生\n身份的朋友”窜改为“要优先加入能培养择友能力 / 提升社交技巧的社团”。 0 杂糅第 3 段 individual （修饰\nresponsibility) 及第 9 段 interesting(fr# friends) 制造干扰。\n々 傘哀所\n男：既然就要高中毕业了，你将迈向一个完全不同的世界。\n女：我知道高中生活结束了，不过我的好多同学都会到同一所大学继续念书，而且我们仍然需要努力学习，那\n么大学（和高中比）有什么不同呢？\n男：在大学有很多方面与高中不同。最重要的区别在于，你必须为自己的行为独立承担更多责任。你在学习\n上付出多少努力取决于你的自律能力。住在大学宿舍，就不会有父母告诫你要更加努力学习，别再浪费时\n间。老师有好几百个学生，他们才不会跟进你的情况，要是你没去上课，他们也不会质问你什么。\n女：你是说，没有人在意我？\n男：并不是没有人关心你。只是在大学，突然之间你就被期待像成年人那样处事，这意味着你既要专注于自己\n人生的总体方向，还要特别专注于自己的学业表现。\n女：比如说呢？\n男：唔，例如你要做好每日、每周、每月的安排，以便有规律地学习。保证每堂课都出勤，并预留充足的时间完\n成作业、好好准备考试。\n女：好吧，还有哪些不同呢？\n男：唔，在大学有很多事会让你分心，你需要自我控制。你会交到有趣的朋友，但你只需与顾及你学生身份的\n那些朋友交往下去。此外，还有许多很棒的社团，但你不应将过多时间拨给社团活动，除非它们与你的学\n业直接相关。如果想晚上出去玩也随你，但要是影响到你白天的课堂表现就太傻了。\n女：唔，我决心要在大学好好表现，我想我得快快长大成人了。\n10",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 611,
+              "end": 733,
+              "quote": "\"We spend a great deal of time studying history,\" Hawking said, \"which, let's face it, is mostly the history of stupidity."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 734,
+              "end": 820,
+              "quote": "So it's a welcome change that people are studying instead the future of intelligence.\""
+            }
+          ]
         },
         {
           "id": "2019-06-1-q49",
@@ -3429,7 +3816,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 821,
+              "end": 1098,
+              "quote": "While the world-renowned physicist has often been cautious about AI, raising concerns that humanity could be the architect of its own destruction if it creates a super-intelligence with a will of its own, he was also quick to highlight the positives that AI research can bring."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q50",
@@ -3509,7 +3905,16 @@
               49
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 137,
+              "quote": "The market for products designed specifically for older adults could reach $ 30 billion by next year, and startups want in on the action."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q52",
@@ -3549,7 +3954,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 230,
+              "end": 440,
+              "quote": "So Brookdale, the country's largest owner of retirement communities, has been inviting a few select entrepreneurs just to move in for a few days, show off their products and hear what the residents have to say."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q53",
@@ -3589,7 +4003,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 652,
+              "end": 843,
+              "quote": "The startup's product, SentabTV, enables older adults who may not be comfortable with computers to access email, video chat and social media using just their televisions and a remote control."
+            }
+          ]
         },
         {
           "id": "2019-06-1-q54",
@@ -3630,7 +4053,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "B"
+          "answerOriginal": "B",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1244,
+              "end": 1338,
+              "quote": "Rodriguez says it's important that residents here don't feel like he's selling them something."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1515,
+              "end": 1649,
+              "quote": "When they get to know me and to trust me, knowing for sure I'm not selling them something-there'll be more honest feedback from them.\""
+            }
+          ]
         },
         {
           "id": "2019-06-1-q55",
@@ -3670,7 +4109,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2232,
+              "end": 2370,
+              "quote": "To be fair, if Rodriguez had wanted feedback from some more technophobic seniors, he might have ended up in the wrong Brookdale community."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2528,
+              "end": 2678,
+              "quote": "But Rodriguez says he's still learning something important by moving into this Brookdale community: \"People are more tech-proficient than we thought.\""
+            }
+          ]
         }
       ]
     },

@@ -260,7 +260,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 380,
+              "end": 474,
+              "quote": "There are more than plenty in our city, and we felt they are all rather similar to\neach other."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q3",
@@ -300,7 +309,16 @@
               2
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1165,
+              "end": 1254,
+              "quote": "Furthermore,\nour rabbits are regularly cleaned and have all received the required shouts."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q4",
@@ -346,7 +364,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1297,
+              "end": 1391,
+              "quote": "As\nfor our customers, they are all animal lovers, so they would never try to hurt the rabbits."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q5",
@@ -386,7 +413,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 281,
+              "end": 340,
+              "quote": "I don’t know about yours, but mine are all\nabout junk food."
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1015,
+              "end": 1071,
+              "quote": "It's\nalways some garbage, like chocolate-covered sweets."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q6",
@@ -512,7 +555,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1328,
+              "end": 1418,
+              "quote": "When we were children, we barely had any junk food available, and we turned out just fine."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q9",
@@ -552,7 +604,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 722,
+              "end": 915,
+              "quote": "A journey through the\nunobstructed part of this waterway today would pass by the splendid Valley of the Kings, where the tombs of many of these\nancient monarchs have stood for over 3,000 years."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q10",
@@ -684,7 +745,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 80,
+              "end": 218,
+              "quote": "It's inevitable truth that all of us live\na life in the far slain, even though we know that being busy is not always particularly healthy."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q13",
@@ -724,7 +794,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 340,
+              "end": 542,
+              "quote": "But after I moved to the Tokyo and lived there for a number of years, (13)I got used to having a pilot to-do lists, and\nmy calendar always looks like a mass, with lots of things to do written across it."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q14",
@@ -764,7 +843,23 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 656,
+              "end": 840,
+              "quote": "Then, one day, (14)I came across a book called In Praise of Slowness and realized that being busy is not only\ndetrimental, but also has the danger of turning life into an endless race."
+            },
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 841,
+              "end": 990,
+              "quote": "So I started practicing the various practical steps\nmentioned by the author of the book, and began to revolt against the very idea of being too busy."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q15",
@@ -804,7 +899,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 995,
+              "end": 1175,
+              "quote": "It doesn’t mean that\nto-do lists no longer exist, but I've become more aware of the important of slowing down and making sure that I enjoy the\ndaily activities as I carry them out."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q16",
@@ -844,7 +948,23 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 217,
+              "end": 350,
+              "quote": "But a number of\nscientists question the assumption that the presence of alien species can never be acceptable in a natural ecosystem."
+            },
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 351,
+              "end": 441,
+              "quote": "They\nsay that portraying introduced species as inherently bad is an unscientific approach."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q17",
@@ -890,7 +1010,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 446,
+              "end": 717,
+              "quote": "“Distinctions between exotic and\nnative species are artificial”, said Dr. Michael Rosenzweig, a professor of evolutionary biology at the University of Arizona,\n“because they depend on pegging a date and calling the plans and animals that show up after the date ‘exotic.’”"
+            }
+          ]
         },
         {
           "id": "2018-06-2-q18",
@@ -936,7 +1065,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1925,
+              "end": 2099,
+              "quote": "“Only a small percentage of alien species cause problems in their new habitats,” said Don Smith, professor of\necology and evolutionary biology at the University of Tennessee."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q19",
@@ -976,7 +1114,23 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 348,
+              "end": 485,
+              "quote": "If overseas\nbusiness people are selling to us, then they will make every effort to speak English and to expect our tradition and methods."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 486,
+              "end": 545,
+              "quote": "It is only polite for us to do the same when we visit them."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q20",
@@ -1016,7 +1170,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1223,
+              "end": 1311,
+              "quote": "So No.1, (20)you must not drink alcohol on the first and seventh of the month in Indian."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q21",
@@ -1056,7 +1219,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 2045,
+              "end": 2340,
+              "quote": "Place you palm downward and\nmake an inconspicuous waving gesture, which will produce instant and sacrificing results, (21)And finally, in Spain, some\nbusinesses maintain the pattern of working until about 2 o’clock and then returning to the office from 5:30 to 8:00, 9:00or\n10:00 in the evening."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q22",
@@ -1136,7 +1308,23 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1121,
+              "end": 1272,
+              "quote": "The Wallaces, both children of church ministers,\nhad a clearly defined formula for their “little magazine” as Reader's Digest was originally subtitled."
+            },
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1273,
+              "end": 1323,
+              "quote": "Articles were to be\nshort, readable and uplifting."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q24",
@@ -1176,7 +1364,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1595,
+              "end": 1717,
+              "quote": "It started as a mama-and-pop operation, and the childless Wallaces always\nconsidered employees to be part of their family."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q25",
@@ -1216,7 +1413,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2219,
+              "end": 2255,
+              "quote": "He laid off several hundred workers."
+            }
+          ]
         }
       ]
     },
@@ -2183,7 +2389,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1507,
+              "end": 1644,
+              "quote": "In the rusty red deserts of South Africa, steep- sided rocky hills called inselbergs rear up from the plains like the bones of the earth."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q37",
@@ -2255,7 +2470,23 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4542,
+              "end": 4748,
+              "quote": "After completing her Ph. D. on seeds, Farrant began investigating whether it might be possible to isolate the properties that make most seeds so resilient (迅速恢复活力的) and transfer them to other plant tissues."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4749,
+              "end": 4892,
+              "quote": "What Farrant and others have found over the past two decades is that there are many genes involved in resurrection plants' response to dryness."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q38",
@@ -2327,7 +2558,23 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 542,
+              "end": 728,
+              "quote": "Food security and fortunes depend on sufficient rain, and nowhere more so than in Africa, where 96% of farmland depends on rain instead of the irrigation common in more developed places."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 729,
+              "end": 865,
+              "quote": "It has consequences: South Africa's ongoing drought—\nthe worst in three decades— will cost at least a quarter of its com crop this year."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q39",
@@ -2399,7 +2646,23 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6939,
+              "end": 7187,
+              "quote": "It will also be necessary to understand what sort of yield farmers might expect and to establish the plant's safety.\"The yield is never going to be high,\"Farrant says, so these plants will be targeted not at Iowa farmers trying to squeeze more cash"
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7189,
+              "end": 7414,
+              "quote": "out of high-yield fields, but subsistence farmers who need help to survive a drought like the present one in South Africa.\"My vision is for the subsistence farmer,\" Farrant says.\"I'm targeting crops that are of African value."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q40",
@@ -2471,7 +2734,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2334,
+              "end": 2410,
+              "quote": "Many different kinds of plants have developed tactics to weather dry spells."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2536,
+              "end": 2657,
+              "quote": "But once these plants use up their stored reserve or tap out the underground supply, they cease growing and start to die."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q41",
@@ -2543,7 +2822,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5577,
+              "end": 5735,
+              "quote": "She says she is aware that plenty of people do not want to eat genetically modified crops, but she is pushing ahead with every available tool until one works."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q42",
@@ -2615,7 +2903,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4298,
+              "end": 4399,
+              "quote": "Most seeds can wait out the dry, unwelcoming seasons until conditions are right and they sprout (发芽)."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4400,
+              "end": 4535,
+              "quote": "Yet once they start growing, such plants seem not to retain the ability to hit the pause button on metabolism in their stems or leaves."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q43",
@@ -2687,7 +2991,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1054,
+              "end": 1186,
+              "quote": "She is hard at work finding a way to take traits from rare wild plants that adapt to extreme dry weather and use them in food crops."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q44",
@@ -2759,7 +3072,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3035,
+              "end": 3380,
+              "quote": "They lack water-storing structures, and their existence on rock faces prevents them from tapping groundwater, so they have instead developed the ability to change their metabolism.When they detect an extended dry period, they divert their metabolisms, producing sugars and certain stress-associated proteins and other materials in their tissues."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q45",
@@ -2831,7 +3153,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2075,
+              "end": 2125,
+              "quote": "But rainfall can revive them in a matter of hours."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q46",
@@ -2871,7 +3202,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 372,
+              "end": 567,
+              "quote": "Machines aren't limited this way, Give the right computer a massive database of faces, and it can process what it sees-then recognize a face it's told to find-with remarkable speed and precision."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q47",
@@ -2911,7 +3251,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 898,
+              "end": 1146,
+              "quote": "To begin to figure out how computers are struggling, researchers at the University of Washington created a massive database of faces- they call it MegaFace- and tested a variety of facial-recognition algorithms (算法) as they scaled up in complexity."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q48",
@@ -2951,7 +3300,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1420,
+              "end": 1484,
+              "quote": "As the databases grew, machine accuracy dipped across the board."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q49",
@@ -2991,7 +3349,23 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1794,
+              "end": 2072,
+              "quote": "Machines also had difficulty adjusting for people who look a lot alike-either doppelgangers (长相极相似的人),whom the machine would have trouble identifying as two separate people, or the same person who appeared in different photos at different ages or in different lighting, whom the"
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2075,
+              "end": 2125,
+              "quote": "machine would incorrectly view as separate people."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q50",
@@ -3031,7 +3405,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2289,
+              "end": 2515,
+              "quote": "The trouble is, for many of the researchers who'd like to design systems to address these challenges, massive datasets for experimentation just don't exist--at least, not in formats that are accessible to academic researchers."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2582,
+              "end": 2643,
+              "quote": "There are no public databases that contain millions of faces."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q51",
@@ -3071,7 +3461,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 111,
+              "end": 243,
+              "quote": "Given that there's now over $1.3 trillion in student loans on the books, it's pretty clear that many students are far from sensible."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q52",
@@ -3111,7 +3510,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 483,
+              "end": 644,
+              "quote": "But the only way college could be free is if the faculty and staff donated their time, the buildings required no maintenance, and campuses required no utilities."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 645,
+              "end": 737,
+              "quote": "As long as it's impossible to produce something from nothing costs are absolutely a barrier."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q53",
@@ -3151,7 +3566,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 931,
+              "end": 1019,
+              "quote": "At least taxpayers should be able to decide what students will study on the public dime."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1020,
+              "end": 1175,
+              "quote": "If we're going to force taxpayers to foot the bill for college degrees, students should only study those subjects that're of greatest benefit to taxpayers."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q54",
@@ -3191,7 +3622,16 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1750,
+              "end": 1876,
+              "quote": "And the value of what the student can produce is reflected in the wage employers are willing to pay the student to produce it."
+            }
+          ]
         },
         {
           "id": "2018-06-2-q55",
@@ -3231,7 +3671,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2318,
+              "end": 2410,
+              "quote": "Or we can allow students both to choose their majors and pay for their education themselves."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2590,
+              "end": 2668,
+              "quote": "Either way, taxpayers have no business paying for students'\ncollege education."
+            }
+          ]
         }
       ]
     },

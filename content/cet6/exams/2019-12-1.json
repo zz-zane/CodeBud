@@ -220,7 +220,16 @@
             "date": "2026-11-09",
             "bag": 0.89,
             "tri": 0.38
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 3,
+              "end": 91,
+              "quote": "1\nToday our guest is Rosie Mullender, who works as Features Editor for Fashion magazine."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q2",
@@ -262,7 +271,16 @@
           },
           "verified": true,
           "verificationNote": "已核对 G 盘本卷原题选项及解析册；未逐题人工核听录音。",
-          "explanationOriginalOCR": "答案：C\nA)Designing sports clothing.\nB)Consulting fashion experts.\nC)Answering daily emails.\nD)Interviewing job-seekers.\nA)设计运动服装。\nB)咨询时尚专家。\nC)回复日常邮件。\nD)面试求职者。\n\n[预测]各项均为v-ing结构,核心义均指向某项具体 工 作,再 结 合 上 题 推 测 “某 人 职 业”可 推 测 试 题 询 问 某 人\n工作职责。\n[问题]What is one of the womans main responsibilities? (女士的主要工作职责之一是什么?)\n[解析]第4段女士针对男士问题“工作日通常做一些什么样的工作”作答“日常工 作主 要包 括回 复邮 件、撰写\n并编辑报道以及想新的专题”, C)是其中之一,故正确。"
+          "explanationOriginalOCR": "答案：C\nA)Designing sports clothing.\nB)Consulting fashion experts.\nC)Answering daily emails.\nD)Interviewing job-seekers.\nA)设计运动服装。\nB)咨询时尚专家。\nC)回复日常邮件。\nD)面试求职者。\n\n[预测]各项均为v-ing结构,核心义均指向某项具体 工 作,再 结 合 上 题 推 测 “某 人 职 业”可 推 测 试 题 询 问 某 人\n工作职责。\n[问题]What is one of the womans main responsibilities? (女士的主要工作职责之一是什么?)\n[解析]第4段女士针对男士问题“工作日通常做一些什么样的工作”作答“日常工 作主 要包 括回 复邮 件、撰写\n并编辑报道以及想新的专题”, C)是其中之一,故正确。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 632,
+              "end": 748,
+              "quote": "2\nMy day mainly incorporates responding to emails, writing and editing stories and coming up with new\nfeature ideas."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q3",
@@ -311,7 +329,16 @@
             "date": "2026-11-09",
             "bag": 0.92,
             "tri": 0.48
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 989,
+              "end": 1061,
+              "quote": "3\nA lot of people believe that working at a magazine is a glamorous job."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q4",
@@ -361,7 +388,16 @@
             "date": "2026-11-09",
             "bag": 1.0,
             "tri": 0.91
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1514,
+              "end": 1572,
+              "quote": "4\nI had to be really persistent and it was very hard work."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q5",
@@ -403,7 +439,16 @@
           },
           "verified": true,
           "stemOriginalOCR": "[问题]WhatdoesthemanthinkofthesatireFrankieherecentlywatched? (对 于 最 近 观 看 的 讽 刺 剧 《弗 兰",
-          "explanationOriginalOCR": "答案：A\nA)It is enjoyable. C)It is divorced from real life.\nB)It is educational. D)It is adapted from a drama.\nA)它充满乐趣。 C)它脱离现实生活。\nB)它富有教育意义。D)它改编自一部戏剧。\n\n2\n[预测]各项均为对It的评价/事实介绍(A、B、C 指向评价, D 指向事实), C)“脱离现实生活”、D)“改 编自 一部\n戏剧”暗示It很可能为某影视剧、舞台剧等,综合可知题目询问对某影视剧/舞台剧等的相关评价/事实细节。\n[问题]What does the man think of the satire Frankie he recently watched? (对 于 最 近 观 看 的 讽 刺 剧 《弗 兰\n基》,男士有何想法?)\n[解析]第2段男士将该剧介绍为a great satire,第8段中再次夸奖其is very funny and has w on many awards,\n可知男士认为该剧充满乐趣, A)正确。"
+          "explanationOriginalOCR": "答案：A\nA)It is enjoyable. C)It is divorced from real life.\nB)It is educational. D)It is adapted from a drama.\nA)它充满乐趣。 C)它脱离现实生活。\nB)它富有教育意义。D)它改编自一部戏剧。\n\n2\n[预测]各项均为对It的评价/事实介绍(A、B、C 指向评价, D 指向事实), C)“脱离现实生活”、D)“改 编自 一部\n戏剧”暗示It很可能为某影视剧、舞台剧等,综合可知题目询问对某影视剧/舞台剧等的相关评价/事实细节。\n[问题]What does the man think of the satire Frankie he recently watched? (对 于 最 近 观 看 的 讽 刺 剧 《弗 兰\n基》,男士有何想法?)\n[解析]第2段男士将该剧介绍为a great satire,第8段中再次夸奖其is very funny and has w on many awards,\n可知男士认为该剧充满乐趣, A)正确。",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 65,
+              "end": 109,
+              "quote": "5\nIm watching a great satire called Frankie."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q6",
@@ -452,7 +497,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.67
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 941,
+              "end": 1062,
+              "quote": "6\nIn fact, the whole show is written, directed, edited and produced by him, 5\nand is very\nfunny and has w on many awards."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q7",
@@ -493,7 +547,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "[问题]WhatdoesthewomansaysheisgoingtodowiththesatireFrankie? (对于讽刺剧《弗兰基》,女士说她"
+          "stemOriginalOCR": "[问题]WhatdoesthewomansaysheisgoingtodowiththesatireFrankie? (对于讽刺剧《弗兰基》,女士说她",
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1081,
+              "end": 1109,
+              "quote": "7\nI will try to download it."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q8",
@@ -543,7 +606,23 @@
             "date": "2026-11-09",
             "bag": 0.82,
             "tri": 0.58
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1416,
+              "end": 1485,
+              "quote": "And this is contrast ed by the lady s social\nskills and common sense."
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1486,
+              "end": 1635,
+              "quote": "8\nThe show has been running for over ten years, and some of the actors are\npractically global superstar s, now that they are such famous celebrities."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q9",
@@ -591,7 +670,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.6
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 229,
+              "end": 346,
+              "quote": "9\nThose who play contact sports know that the\nplayer who usually gets hurt the most is the one who is standing still."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q10",
@@ -633,7 +721,16 @@
           },
           "verified": true,
           "stemOriginalOCR": "[问题]Whatdolongevitystatisticsrevealabouttheaverageperson? (寿命数据揭示了关于普通人的什么事实?)",
-          "explanationOriginalOCR": "答案：A\nA)They do not have many years to live after retirement.\nB)They tend to live a longer life with early retirement.\nC)They do not start enjoying life until full retirement.\nD)They keep themselves busy even after retirement.\nA)退休之后,他们活不了多少年。\nB)早点退休,他们通常会更长寿。\nC)直到完全退休,他们才能开始享受生活。\nD)即使已经退休,他们仍是忙个不停。\n\n[预测]各项 复 现 词live/life、retirement,时 间 介 词 after、until、even after以 及 细 节 表 达 many years/longer、\nenjoying life/keep... busy将“退休”与“生活状态”关联起来,推测本题询问某群体(退休后)的生活状态。\n[问题]What do longevity statistics reveal about the average person? (寿命数据揭示了关于普通人的什么事实?)\n[解析]A 改写第四段第二句统计数据所揭示的事实, do not have many years to live同义替换doesnt last very long。"
+          "explanationOriginalOCR": "答案：A\nA)They do not have many years to live after retirement.\nB)They tend to live a longer life with early retirement.\nC)They do not start enjoying life until full retirement.\nD)They keep themselves busy even after retirement.\nA)退休之后,他们活不了多少年。\nB)早点退休,他们通常会更长寿。\nC)直到完全退休,他们才能开始享受生活。\nD)即使已经退休,他们仍是忙个不停。\n\n[预测]各项 复 现 词live/life、retirement,时 间 介 词 after、until、even after以 及 细 节 表 达 many years/longer、\nenjoying life/keep... busy将“退休”与“生活状态”关联起来,推测本题询问某群体(退休后)的生活状态。\n[问题]What do longevity statistics reveal about the average person? (寿命数据揭示了关于普通人的什么事实?)\n[解析]A 改写第四段第二句统计数据所揭示的事实, do not have many years to live同义替换doesnt last very long。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 758,
+              "end": 852,
+              "quote": "10\nLongevity statistics reveal that the average\nperson doesnt last very long after retirement."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q11",
@@ -674,7 +771,16 @@
             ]
           },
           "verified": true,
-          "explanationOriginalOCR": "答案：A\nA)It prevents us from worrying.\nB)It slows down our aging process.\nC)It enables us to accomplish more in life.\nD)It provides us with more chances to learn.\nA)它让我们不再担忧。\nB)它延缓我们的衰老进程。\nC)它使得我们在生活中取得更多成就。\nD)它为我们提供更多学习机会。\n\n[预测]各项均为It对人们(us/our为泛指)的积极影响:让人们免于担忧,延缓衰老,取得更多成 就,获得 更多\n学习机会,推测本题询问某事(或某种行为/选择)对人们起到的积极作用。\n[问题]What bonus does the“keep moving”principle bring us according to the speaker? (据说话人表示,“永\n不止步”原则给我们带来的额外好处是什么?)\n[解析]“题干+A”改写第四段第八句, prevents us from worrying同义替换 we dont have a chance to worry。"
+          "explanationOriginalOCR": "答案：A\nA)It prevents us from worrying.\nB)It slows down our aging process.\nC)It enables us to accomplish more in life.\nD)It provides us with more chances to learn.\nA)它让我们不再担忧。\nB)它延缓我们的衰老进程。\nC)它使得我们在生活中取得更多成就。\nD)它为我们提供更多学习机会。\n\n[预测]各项均为It对人们(us/our为泛指)的积极影响:让人们免于担忧,延缓衰老,取得更多成 就,获得 更多\n学习机会,推测本题询问某事(或某种行为/选择)对人们起到的积极作用。\n[问题]What bonus does the“keep moving”principle bring us according to the speaker? (据说话人表示,“永\n不止步”原则给我们带来的额外好处是什么?)\n[解析]“题干+A”改写第四段第八句, prevents us from worrying同义替换 we dont have a chance to worry。",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1255,
+              "end": 1358,
+              "quote": "10\nA bonus\nwith the“keep moving”principle is that while we keep moving, we dont have a chance to worry."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q12",
@@ -721,7 +827,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.4
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 147,
+              "end": 225,
+              "quote": "12\nBy one estimate, people daydream through nearly half of their\nwaking hours."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q13",
@@ -769,7 +884,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.55
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 337,
+              "end": 451,
+              "quote": "13\nFor one experiment, researchers developed an app to analyze the relationship between daydreaming\nand happiness."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q14",
@@ -817,7 +941,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.55
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1084,
+              "end": 1202,
+              "quote": "Researchers have found that it gives us a\nchance to think about our goals and\n14\nit also seems to increase creativity."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q15",
@@ -866,7 +999,23 @@
             "date": "2026-11-09",
             "bag": 0.91,
             "tri": 0.83
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1352,
+              "end": 1501,
+              "quote": "After the first pair of tasks was completed, one group of participants was assigned an\nun demanding activity intended to cause their minds to wander."
+            },
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1502,
+              "end": 1631,
+              "quote": "15\nWhen all the participants proceeded to the\nsecond pair of tasks, the day dreamers performed 40 percent better than the others."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q16",
@@ -914,7 +1063,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.5
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 187,
+              "end": 345,
+              "quote": "16\nBut now, with only 30 wooden churches\nremaining and their condition deter i orating, experts are working to preserve the structures for future generations."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q17",
@@ -962,7 +1120,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.55
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 595,
+              "end": 639,
+              "quote": "17\nThis means that they have no foundations."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q18",
@@ -1057,7 +1224,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 211,
+              "end": 336,
+              "quote": "19\nBut in\nto days lecture, well look at three very interesting studies that hint at the surprising abilities of human babies."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q20",
@@ -1098,7 +1274,16 @@
             ]
           },
           "verified": true,
-          "explanationOriginalOCR": "答案：A\nA)They can distinguish a happy tune from as a done.\nB)They love happy melodies more than sad ones.\nC)They fall asleep easily while listening to music.\nD)They are already sensitive to beats and rhythms.\nA)他们能区分欢快和悲伤的曲调。\nB)他们更喜欢欢快而非悲伤的旋律。\nC)他们听音乐时很容易睡着。\nD)他们早已对节拍和韵律有悟性。\n\n[预测]各项语义指向音乐,且由 A、C 推断 They可能指向上题 中 human babies或 baby animals,再 结合 本篇\n语域“学术科研”可推测题目询问某类群体(很可能是人类婴儿或动物幼崽)与音乐相关的研究发现、结论等。\n[问题]What does the second study find about nine-month-old babies? (关于九个月大 的婴 儿,第二 项研 究发\n现了什么?)\n[解析]第三段⑤句提到“转换音乐气氛……让 九 个 月 大 的 婴 儿 重 拾 兴 趣”,⑥ 句 给 出 结 论 “那 个 年 龄(指 九 个\n月大)的婴儿能分辨出欢快与悲伤曲调的区别”; A)准确概括以上信息。"
+          "explanationOriginalOCR": "答案：A\nA)They can distinguish a happy tune from as a done.\nB)They love happy melodies more than sad ones.\nC)They fall asleep easily while listening to music.\nD)They are already sensitive to beats and rhythms.\nA)他们能区分欢快和悲伤的曲调。\nB)他们更喜欢欢快而非悲伤的旋律。\nC)他们听音乐时很容易睡着。\nD)他们早已对节拍和韵律有悟性。\n\n[预测]各项语义指向音乐,且由 A、C 推断 They可能指向上题 中 human babies或 baby animals,再 结合 本篇\n语域“学术科研”可推测题目询问某类群体(很可能是人类婴儿或动物幼崽)与音乐相关的研究发现、结论等。\n[问题]What does the second study find about nine-month-old babies? (关于九个月大 的婴 儿,第二 项研 究发\n现了什么?)\n[解析]第三段⑤句提到“转换音乐气氛……让 九 个 月 大 的 婴 儿 重 拾 兴 趣”,⑥ 句 给 出 结 论 “那 个 年 龄(指 九 个\n月大)的婴儿能分辨出欢快与悲伤曲调的区别”; A)准确概括以上信息。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1486,
+              "end": 1587,
+              "quote": "This suggests that babies of\nthat age can tell the difference between a happy melody and as a d tune."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q21",
@@ -1188,7 +1373,23 @@
           "verified": true,
           "verificationNote": "已核对 G 盘本卷原题选项及解析册；未逐题人工核听录音。",
           "stemOriginalOCR": "[问题]Whatdoesthespeakersayaboutbeingovercollaborative? (关于过度合作,讲话人说了什么?)",
-          "explanationOriginalOCR": "答案：B\nA)It may harm the culture of to days workplace.\nB)It may hinder individual career advancement.\nC)It may result in un willingness to take risks.\nD)It may put too much pressure on team members.\nA)它可能会破坏当今的职场文化。\nB)它可能会阻碍个人的职业发展。\nC)它可能会导致不愿冒险的心理。\nD)它可能会给队员带来太多压力。\n\n[预测]各项均以It may指向 某 事 物 可 能 带 来 的 不 良 影 响,且 综 合 选 项 中 workplace、career、take risks、team\nmembers可推测该事物与“职场”有关,即:题目询问职场上某种言行举措/政策规范带来的负面影响。\n[问题]What does the speaker say about being over collaborative? (关于过度合作,讲话人说了什么?)\n[解析]开篇讲话人提出要介绍“过度合作的危害”,并指出“过于强调 做一 名优 秀的 团队 合作 者会 对你 的职业\n发展造成负面影响”,第二段末则进一步指出“(过度合作)会阻碍个人的成长与职业发展”, B)正确。"
+          "explanationOriginalOCR": "答案：B\nA)It may harm the culture of to days workplace.\nB)It may hinder individual career advancement.\nC)It may result in un willingness to take risks.\nD)It may put too much pressure on team members.\nA)它可能会破坏当今的职场文化。\nB)它可能会阻碍个人的职业发展。\nC)它可能会导致不愿冒险的心理。\nD)它可能会给队员带来太多压力。\n\n[预测]各项均以It may指向 某 事 物 可 能 带 来 的 不 良 影 响,且 综 合 选 项 中 workplace、career、take risks、team\nmembers可推测该事物与“职场”有关,即:题目询问职场上某种言行举措/政策规范带来的负面影响。\n[问题]What does the speaker say about being over collaborative? (关于过度合作,讲话人说了什么?)\n[解析]开篇讲话人提出要介绍“过度合作的危害”,并指出“过于强调 做一 名优 秀的 团队 合作 者会 对你 的职业\n发展造成负面影响”,第二段末则进一步指出“(过度合作)会阻碍个人的成长与职业发展”, B)正确。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 257,
+              "end": 364,
+              "quote": "22\nHowever, placing too much emphasis on being a good team\nplayer can negatively affect your career growth."
+            },
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 780,
+              "end": 917,
+              "quote": "This leads to building a brand of\nunder confident, submissive, low-impact non-leaders and\n22\nhampers their growth and career advancement."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q23",
@@ -1236,7 +1437,23 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.4
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 918,
+              "end": 1040,
+              "quote": "23\nCollaboration certainly makes your individual competencies and contributions more difficult for\noutsider s to identify."
+            },
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1111,
+              "end": 1195,
+              "quote": "Outsider s may then\nfind it difficult to determine your contributions and strengths."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q24",
@@ -1277,7 +1494,16 @@
             ]
           },
           "verified": true,
-          "explanationOriginalOCR": "答案：A\nA)They can enlarge their professional circle.\nB)They can get chances to engage in research.\nC)They can make the best use of their expertise.\nD)They can complete the project more easily.\nA)他们可以扩大自己的职业圈。\nB)他们可以有机会从事研究。\nC)他们可以充分发挥自身专长。\nD)他们可以更容易地完成项目。\n\n8\n[预测]各项均以 They can 指向某群体能够获得的好处,且各项共同指向“职场人士”,推测题目询问职场人士\n从某种情形中可以获得的优势/好处。\n[问题]How do people benefit from working in a team? (人们如何从团队工作中获益?)\n[解析]第五段①句指出参与团队工作大有裨益,随后两句对比单干(worked alone)指出人们“(可借助团队的\n力量/影响力)获得更多机会扩展自己的职业关系网(expand your professional network)”, A)正确。"
+          "explanationOriginalOCR": "答案：A\nA)They can enlarge their professional circle.\nB)They can get chances to engage in research.\nC)They can make the best use of their expertise.\nD)They can complete the project more easily.\nA)他们可以扩大自己的职业圈。\nB)他们可以有机会从事研究。\nC)他们可以充分发挥自身专长。\nD)他们可以更容易地完成项目。\n\n8\n[预测]各项均以 They can 指向某群体能够获得的好处,且各项共同指向“职场人士”,推测题目询问职场人士\n从某种情形中可以获得的优势/好处。\n[问题]How do people benefit from working in a team? (人们如何从团队工作中获益?)\n[解析]第五段①句指出参与团队工作大有裨益,随后两句对比单干(worked alone)指出人们“(可借助团队的\n力量/影响力)获得更多机会扩展自己的职业关系网(expand your professional network)”, A)正确。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1484,
+              "end": 1581,
+              "quote": "24\nYou then have more opportunities to expand your professional network than if you worked\nalone."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q25",
@@ -1320,7 +1546,23 @@
           "verified": true,
           "verificationNote": "已核对 G 盘本卷原题选项及解析册；未逐题人工核听录音。",
           "stemOriginalOCR": "[问题]Whyisitundesirabletospendtoomuchtimetryingtoreachconsensus? (为什么花太多时间努力达成",
-          "explanationOriginalOCR": "答案：B\nA)It may cause lots of arguments in a team.\nB)It may prevent making a timely decision.\nC)It may give rise to a lot of unnecessary expenses.\nD)It may deprive a team of business opportunities.\nA)它可能会在团队中引起很多争论。\nB)它可能会妨碍及时做出决定。\nC)它可能会导致许多不必要的开支。\nD)它可能会使团队丧失商业机遇。\n\n[预测]各项均以It may指向某事物可能带来的坏处,且 A、D 项复现词team 提示该事物与“团队”有 关,推测\n题目询问团队合作中某种言行举措/政策规范的负面影响。\n[问题]Why is it un desirable to spend too much time trying to reach consensus? (为什么花太多时间努力达成\n共识是不可取的?)\n[解析]末段指出,当合作过度时我们会希望所有团队成员在开展工作前 都认 同某 一决 定,会召 开(多 次)会议\n以达成共识,因而造成不必要的拖延。因此,要给“建言献策”阶段加个最后期限,并达成决议。可见 B)正确。"
+          "explanationOriginalOCR": "答案：B\nA)It may cause lots of arguments in a team.\nB)It may prevent making a timely decision.\nC)It may give rise to a lot of unnecessary expenses.\nD)It may deprive a team of business opportunities.\nA)它可能会在团队中引起很多争论。\nB)它可能会妨碍及时做出决定。\nC)它可能会导致许多不必要的开支。\nD)它可能会使团队丧失商业机遇。\n\n[预测]各项均以It may指向某事物可能带来的坏处,且 A、D 项复现词team 提示该事物与“团队”有 关,推测\n题目询问团队合作中某种言行举措/政策规范的负面影响。\n[问题]Why is it un desirable to spend too much time trying to reach consensus? (为什么花太多时间努力达成\n共识是不可取的?)\n[解析]末段指出,当合作过度时我们会希望所有团队成员在开展工作前 都认 同某 一决 定,会召 开(多 次)会议\n以达成共识,因而造成不必要的拖延。因此,要给“建言献策”阶段加个最后期限,并达成决议。可见 B)正确。",
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2290,
+              "end": 2382,
+              "quote": "25\nWhen were too collaborative, we want everyone to agree with a decision before we proceed."
+            },
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2470,
+              "end": 2633,
+              "quote": "Its fine to be collaborative when seeking\ninput, but put a deadline on the input stage and arrive at a decision, even if its a decision that doesnt have consensus."
+            }
+          ]
         }
       ]
     },
@@ -2318,7 +2560,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5039,
+              "end": 5153,
+              "quote": "It looks like it-after all, 20 12 was the tipping point when more than half of Americans began owning smartphones."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q37",
@@ -2422,7 +2673,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2163,
+              "end": 2214,
+              "quote": "But around 20 12 these measures started to decline."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2215,
+              "end": 2294,
+              "quote": "This continued through 20 16, the most recent year for which data is available."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q38",
@@ -2526,7 +2793,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5972,
+              "end": 6095,
+              "quote": "For example, years when people spent more time with friends were better years for wellbeing (and followed by better years)."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6096,
+              "end": 6221,
+              "quote": "Sadly, the data also showed face-to -face socializing and sports activity had declined over the period covered by the survey."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q39",
@@ -2630,7 +2913,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2766,
+              "end": 2946,
+              "quote": "This time around, Twenge and her team make a point of saying that they are not trying to establish causes as such, but that they are assessing the plausibility of potential causes."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q40",
@@ -2734,7 +3026,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1144,
+              "end": 1311,
+              "quote": "It reflected the fact that these decades saw a climb in general standards of living and avoidance of mass societal traumas like full-scale war or economic deprivation."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q41",
@@ -2838,7 +3139,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3328,
+              "end": 3497,
+              "quote": "Less sport, and fewer meetings with peers correlated with lower wellbeing, as did less time reading print media (newspapers) and, surprisingly, less time doing homework."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3498,
+              "end": 3659,
+              "quote": "(This last finding would appear to contradict another popular hypothesis that it is our burdening of students with assignments that is causing all the problems.)"
+            }
+          ]
         },
         {
           "id": "2019-12-1-q42",
@@ -2942,7 +3259,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7378,
+              "end": 7541,
+              "quote": "But the new work does go further than previous research and suggests that screen time should still be considered a potential barrier to young people's flourishing."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q43",
@@ -3046,7 +3372,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4509,
+              "end": 4872,
+              "quote": "The data was slightly complicated by the fact that there was a tendency for kids who were social in the real world to also use more online communication, but by bracketing out different cases it became clear that the real-world sociality component correlated with greater wellbeing, whereas greater time on screens or online only correlated with poorer wellbeing."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q44",
@@ -3150,7 +3485,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6600,
+              "end": 6879,
+              "quote": "They found some evidence that some crude measures, like income inequality, correlated with changes in wellbeing, but economic measures with a more direct impact, like family income and unemployment rates (which put families into difficulties), had no relationship with wellbeing."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q45",
@@ -3254,7 +3598,23 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 280,
+              "end": 352,
+              "quote": "But there is an increasing suspicion that all is not well for our youth."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 353,
+              "end": 481,
+              "quote": "And one of the most popular explanations, among some experts and the popular media, is that excessive \"screen time\" is to blame."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q46",
@@ -3294,7 +3654,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 221,
+              "end": 448,
+              "quote": "Some experts even consider lying a developmental milestone, like crawling and walking, because it requires sophisticated planning, attention and the ability to see a situation from someone else's perspective to manipulate them."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q47",
@@ -3335,7 +3704,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 558,
+              "end": 644,
+              "quote": "Harvard cognitive neuroscientist Joshua Greene says, for most of us, lying takes work."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 884,
+              "end": 1038,
+              "quote": "But others opted to lie, and they showed increased activity in their frontal parietal control network, which is involved in difficult or complex thinking."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q48",
@@ -3456,7 +3841,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2561,
+              "end": 2704,
+              "quote": "This means that if you give people multiple opportunities to lie for their own benefit, they start with little lies which get bigger over time."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q51",
@@ -3497,7 +3891,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 162,
+              "end": 328,
+              "quote": "California has spent years preparing for \"The Big One\" -the inevitable earthquake that will undoubtedly unleash all kinds of havoc along the famous San Andreas fault."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q52",
@@ -3537,7 +3940,16 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 634,
+              "end": 753,
+              "quote": "The Cascadia Rising drill gives area residents and emergency responders a chance to practice what to do in case of a 9."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q53",
@@ -3578,7 +3990,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1425,
+              "end": 1536,
+              "quote": "During a megathrust event, all of that stress releases and some of the world's most powerful earthquakes occur."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q54",
@@ -3619,7 +4040,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2273,
+              "end": 2448,
+              "quote": "Not all casualties can necessarily be prevented-but by coordinating across local, state, and even national borders, officials hope that the worst-case scenario can be averted."
+            }
+          ]
         },
         {
           "id": "2019-12-1-q55",
@@ -3660,7 +4090,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2596,
+              "end": 2694,
+              "quote": "For hundreds of thousands of Cascadia residents, \"The Big One \" isn't a question of if, only when."
+            }
+          ]
         }
       ]
     },

@@ -1081,7 +1081,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3960,
+              "end": 4199,
+              "quote": "The most critical skills will be developed before the project even starts, in the form of boot camps (短期强化训练), while the rest can be fostered along with the project, putting them to immediate use and thus providing a rich learning context."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q37",
@@ -1185,7 +1194,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2125,
+              "end": 2191,
+              "quote": "The Bachelor's degree could be your passport to lifelong learning."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2192,
+              "end": 2338,
+              "quote": "For the first few years, students would ' learn to learn' and get endowed with reasoning skills that remain with them for the rest of their lives."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q38",
@@ -1289,7 +1314,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 793,
+              "end": 1051,
+              "quote": "This classical model has traditionally produced prestigious universities, but it is now challenged by the digital isa tion of society-which allows everybody who is connected to the internet to access learning-and by the need to acquire skills in step with a."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q39",
@@ -1393,7 +1427,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5437,
+              "end": 5615,
+              "quote": "In many countries, part-time studying is not exceptional: on average across OECD countries, part-time students in 2016 represented 20 per cent of enrolment in tertiary education."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5616,
+              "end": 5720,
+              "quote": "In many countries, this share is higher and can exceed 40 per cent in Australia, New Zealand and Sweden."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q40",
@@ -1497,7 +1547,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4203,
+              "end": 4412,
+              "quote": "In addition to technical capabilities, the very nature of projects develops social and entrepreneurial skills, such as design thinking, initiative taking, team leading, activity reporting or resource planning."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4413,
+              "end": 4576,
+              "quote": "Not only will those skills be actually integrated into the curriculum but they will be very important to have in the future because they are difficult to automate."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q41",
@@ -1601,7 +1667,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1299,
+              "end": 1558,
+              "quote": "It must equip students with the right skills and knowledge to compete in a world ' where value will be derived largely from human interaction and the ability to invent and interpret things that machines cannot', as the English futurist Richard Watson puts it."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1559,
+              "end": 1734,
+              "quote": "By teaching foundational knowledge and up-to-date skills, universities will provide students with the future-proof skills of lifelong learning, not just get them 'job-ready '."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q42",
@@ -1705,7 +1787,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5202,
+              "end": 5265,
+              "quote": "This would change the classroom dynamics, perhaps for the best."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5266,
+              "end": 5405,
+              "quote": "Project-based learning with a mixed team reflects the reality of the professional world and could therefore be a better preparation for it."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q43",
@@ -1809,7 +1907,23 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6545,
+              "end": 6612,
+              "quote": "Even if time were not an issue, who will pay for lifelong learning?"
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6613,
+              "end": 6721,
+              "quote": "That's the eternal debate: should it be the learner's responsibility, that of his employer, or of the state?"
+            }
+          ]
         },
         {
           "id": "2020-12-3-q44",
@@ -1913,7 +2027,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3029,
+              "end": 3211,
+              "quote": "Therefore, a new discipline blending computer science, programming, statistics and machine learning should be added to the traditional foundational topics of mathematics and physics."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q45",
@@ -2017,7 +2140,23 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6092,
+              "end": 6237,
+              "quote": "This could fix the main organisational challenges for the university, but not for the learners, due to lack of time, family obligations or funds."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6238,
+              "end": 6352,
+              "quote": "Here, online learning might be an option because it allows you to save your ' travel time', but it has its limits."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q46",
@@ -2058,7 +2197,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 0,
+              "end": 69,
+              "quote": "Why does social media trigger feelings of loneliness and •inadequacy?"
+            }
+          ]
         },
         {
           "id": "2020-12-3-q47",
@@ -2139,7 +2287,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1429,
+              "end": 1578,
+              "quote": "Also, we tend to idealize others' lives and compare our downfalls to their greatest accomplishments, ending in feelings of loneliness and inadequacy."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q49",
@@ -2179,7 +2336,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1990,
+              "end": 2200,
+              "quote": "Pictures and posts should be byproducts of life's treasured moments and fun times, not the planned and calculated image that one is putting out into cyberspace in an attempt to fill insecurities or unmet needs."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q50",
@@ -2219,7 +2385,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2201,
+              "end": 2311,
+              "quote": "Ultimately, social media has increased our ability to connect with various types of people all over the globe."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q51",
@@ -2259,7 +2434,23 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 189,
+              "end": 275,
+              "quote": "That is effectively what humans have been doing to our closest relatives-chimps (大猩猩)."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1098,
+              "end": 1255,
+              "quote": "Ammie Kalan and her colleagues have shown, through years of intensive fieldwork, that the very presence of humans has eroded the diversity of chimp behavior."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q52",
@@ -2300,7 +2491,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 276,
+              "end": 423,
+              "quote": "Back in 1999, a team of scientists led by Andrew Whiten showed that chimps from different parts of Africa behave very differently from one another."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 424,
+              "end": 578,
+              "quote": "Some groups would get each other's attention by rapping branches with their knuckles (指关节), while others did it by loudly ripping leaves with their teeth."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q53",
@@ -2381,7 +2588,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1671,
+              "end": 1826,
+              "quote": "\" Sometimes in the rush to conserve the species, I think we forget about the individuals,\" says Cat Hobaiter, a professor at the University of St. Andrews."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1827,
+              "end": 1902,
+              "quote": "\"Each population, each community, even each generation of chimps is unique."
+            }
+          ]
         },
         {
           "id": "2020-12-3-q55",
@@ -2422,7 +2645,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2380,
+              "end": 2527,
+              "quote": "Obviously, conservationists need to think about saving species in a completely new way-by preserving animal traditions as well as bodies and genes."
+            }
+          ]
         }
       ]
     },

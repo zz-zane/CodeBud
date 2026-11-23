@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
-import { join } from 'node:path'
+import { join, win32 } from 'node:path'
 import { AcpClient, StudyConnections, classifyAcpFailure, permissionRefusal, unsafeAcpArgs } from '../acp'
 import { agyCandidates, detectAgy, parseAgyModels } from '../agy-detect'
 import { StudyStore } from '../store'
@@ -288,7 +288,7 @@ describe('connection argument validation', () => {
     for (const good of [['acp'], ['acp', '--mode', 'plan'], ['acp', '--sandbox']]) expect(unsafeAcpArgs(good), good.join(' ')).toBe(false)
     const store = new StudyStore(dir)
     connections = new StudyConnections(store)
-    const base = { kind: 'antigravity', label: 'a', command: 'C:/x/agy.exe' }
+    const base = { kind: 'antigravity', label: 'a', command: win32.join('X:', 'test', 'agy.exe') }
     expect(() => connections!.save({ ...base, args: ['acp', '--dangerously-skip-permissions'] })).toThrow(STUDY_TEXT.CONNECTION_UNSAFE_ARGUMENT)
     expect(connections.save({ ...base, args: ['acp'], model: 'gemini-3.8-flash-low' })).toMatchObject({ args: ['acp'], model: 'gemini-3.8-flash-low' })
     expect(() => connections!.save({ ...base, args: ['acp'], model: 'bad model;x' })).toThrow(STUDY_TEXT.CONNECTION_MODEL_INVALID)
@@ -296,18 +296,22 @@ describe('connection argument validation', () => {
 })
 
 describe('agy detection (pure)', () => {
-  const env = { path: 'C:\\Windows;"D:\\apps\\Antigravity\\cli\\bin";', localAppData: 'C:\\Users\\u\\AppData\\Local', programFiles: 'C:\\Program Files' }
+  const system = win32.join('X:', 'Windows')
+  const cli = win32.join('Y:', 'apps', 'Antigravity', 'cli', 'bin')
+  const localAppData = win32.join('X:', 'Profile', 'AppData', 'Local')
+  const programFiles = win32.join('X:', 'Program Files')
+  const env = { path: system + ';"' + cli + '";', localAppData, programFiles }
   it('lists PATH first, then conventional roots, without duplicates', () => {
     const list = agyCandidates(env)
-    expect(list[0]).toBe('C:\\Windows\\agy.exe')
-    expect(list[1]).toBe('D:\\apps\\Antigravity\\cli\\bin\\agy.exe')
-    expect(list).toContain('C:\\Users\\u\\AppData\\Local\\Programs\\Antigravity\\cli\\bin\\agy.exe')
+    expect(list[0]).toBe(win32.join(system, 'agy.exe'))
+    expect(list[1]).toBe(win32.join(cli, 'agy.exe'))
+    expect(list).toContain(win32.join(localAppData, 'Programs', 'Antigravity', 'cli', 'bin', 'agy.exe'))
     expect(new Set(list).size).toBe(list.length)
   })
   it('returns the first existing candidate that answers a version probe, or null', async () => {
-    const hit = 'D:\\apps\\Antigravity\\cli\\bin\\agy.exe'
+    const hit = win32.join(cli, 'agy.exe')
     expect(await detectAgy(env, p => p === hit, async () => true)).toBe(hit)
-    expect(await detectAgy(env, () => true, async p => p.includes('Program Files'))).toBe('C:\\Program Files\\Antigravity\\cli\\bin\\agy.exe')
+    expect(await detectAgy(env, () => true, async p => p.includes('Program Files'))).toBe(win32.join(programFiles, 'Antigravity', 'cli', 'bin', 'agy.exe'))
     expect(await detectAgy(env, () => false, async () => true)).toBeNull()
     expect(await detectAgy(env, () => true, async () => false)).toBeNull()
   })

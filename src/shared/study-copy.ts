@@ -204,6 +204,11 @@ export const LEARNER_TEXT = {
   PREFIX: '【学习背景】',
   ZERO: '零基础',
   KNOWN: ['零基础', 'Python 基础', 'C 语言', 'C++', 'Java', '数据结构与算法', '操作系统基础', '计算机网络', '数据库'],
+  /** 调研页里「已学过」的分组显示；和 KNOWN 去掉「零基础」后一一对应（有单测） */
+  KNOWN_GROUPS: [
+    { label: '编程语言', items: ['Python 基础', 'C 语言', 'C++', 'Java'] },
+    { label: '计算机基础', items: ['数据结构与算法', '操作系统基础', '计算机网络', '数据库'] }
+  ],
   STYLE: { 'analogy-first': '先看比喻再看代码', 'code-first': '直接看代码', 'concept-only': '只要概念，不要代码' },
   PACE: { slow: '慢一点', normal: '正常' },
   UNFILLED: '未填写',

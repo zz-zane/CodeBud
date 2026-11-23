@@ -5,6 +5,7 @@
  */
 import { computed } from 'vue'
 import { CET6 } from '../../lib/copy'
+import { isSelectingTextIn } from '../../lib/cet6-select-guard'
 import {
   answerKeys,
   countWords,
@@ -172,8 +173,8 @@ function twoUp(q: Cet6Question): boolean {
           :data-q="q.id"
           :data-key="opt.key"
           :aria-pressed="answers[q.id] === opt.key"
-          :disabled="submitted || q.unanswerable === true"
-          @click="emit('choose', q, opt.key)"
+          :aria-disabled="submitted || q.unanswerable === true"
+          @click="!(submitted || q.unanswerable === true) && !isSelectingTextIn($event.currentTarget) && emit('choose', q, opt.key)"
         >
           <span class="cet6-bank-key">{{ opt.key }}</span><span>{{ opt.text }}</span>
         </button>
@@ -189,13 +190,13 @@ function twoUp(q: Cet6Question): boolean {
           :key="k"
           type="button"
           class="cet6-letter"
-          :class="ctlClass(q, k)"
+          :class="{ ...ctlClass(q, k), used: used.has(k) }"
           :data-q="q.id"
           :data-key="k"
           :aria-pressed="answers[q.id] === k"
           :aria-label="CET6.pickLetter(q.number, k)"
-          :disabled="submitted || q.unanswerable === true"
-          @click="emit('choose', q, k)"
+          :aria-disabled="submitted || q.unanswerable === true"
+          @click="!(submitted || q.unanswerable === true) && !isSelectingTextIn($event.currentTarget) && emit('choose', q, k)"
         >
           {{ k }}
         </button>
@@ -225,9 +226,9 @@ function twoUp(q: Cet6Question): boolean {
             :data-q="q.id"
             :data-key="opt.key"
             :aria-pressed="answers[q.id] === opt.key"
-            :disabled="submitted || q.unanswerable === true"
+            :aria-disabled="submitted || q.unanswerable === true"
             :title="q.unanswerable === true ? CET6.UNANSWERABLE_TIP : undefined"
-            @click="emit('choose', q, opt.key)"
+            @click="!(submitted || q.unanswerable === true) && !isSelectingTextIn($event.currentTarget) && emit('choose', q, opt.key)"
           >
             <span class="cet6-option-key">{{ opt.key }})</span><span>{{ opt.text }}</span>
           </button>
@@ -247,8 +248,8 @@ function twoUp(q: Cet6Question): boolean {
 .cet6-option, .cet6-bank-word, .cet6-letter, .cet6-stmt { border: 1px solid transparent; border-radius: var(--radius-lg, 8px); background: transparent; color: var(--mi-text); font: inherit; cursor: pointer; }
 .cet6-option { display: flex; gap: var(--mi-sp-2); width: 100%; padding: var(--mi-sp-2) var(--mi-sp-3); text-align: left; }
 .cet6-option-key, .cet6-bank-key { font-family: var(--mi-font-family); font-weight: 500; flex-shrink: 0; }
-.cet6-option:hover:not(:disabled), .cet6-bank-word:hover:not(:disabled), .cet6-letter:hover:not(:disabled), .cet6-stmt:hover { background: var(--cds-fill-ghost-hover); }
-.cet6-option:disabled, .cet6-bank-word:disabled, .cet6-letter:disabled { cursor: default; }
+.cet6-option:hover:not(:disabled):not([aria-disabled="true"]), .cet6-bank-word:hover:not([aria-disabled="true"]), .cet6-letter:hover:not([aria-disabled="true"]), .cet6-stmt:hover { background: var(--cds-fill-ghost-hover); }
+.cet6-option[aria-disabled="true"], .cet6-bank-word[aria-disabled="true"], .cet6-letter[aria-disabled="true"] { cursor: default; }
 .cet6-option:focus-visible, .cet6-bank-word:focus-visible, .cet6-letter:focus-visible, .cet6-stmt:focus-visible { outline: 2px solid var(--mi-blue-deep); outline-offset: 1px; }
 .on { background: var(--mi-blue-light); border-color: var(--mi-blue-deep); }
 .right { background: var(--mi-success-fill); border-color: var(--mi-success-deep); color: var(--mi-success-deep); }
@@ -257,7 +258,7 @@ function twoUp(q: Cet6Question): boolean {
 
 .cet6-bank { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--mi-sp-1) var(--mi-sp-2); }
 .cet6-bank-word { display: flex; gap: var(--mi-sp-2); padding: var(--mi-sp-2) var(--mi-sp-3); text-align: left; }
-.cet6-bank-word.used:not(.on) { color: var(--mi-text-3); text-decoration: line-through; }
+.cet6-bank-word.used:not(.on), .cet6-letter.used:not(.on) { color: var(--mi-text-3); text-decoration: line-through; }
 
 .cet6-pad { display: grid; grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); gap: var(--mi-sp-1); margin-bottom: var(--mi-sp-3); }
 .cet6-letter { height: var(--mi-ctl); font-family: var(--mi-font-family); font-weight: 500; }

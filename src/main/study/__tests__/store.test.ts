@@ -1,10 +1,11 @@
+import { tmpdir } from 'node:os'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { StudyStore, cleanPosition } from '../store'
 import { studyContext } from '../../../shared/study-companion'
 
-const testRoot = resolve('outputs/study-companion-tests')
+const testRoot = resolve(tmpdir(), 'root-tests')
 let dir: string
 let store: StudyStore
 beforeEach(() => {

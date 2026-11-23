@@ -1,3 +1,4 @@
+import { tmpdir } from 'node:os'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { join, resolve, sep } from 'node:path'
@@ -15,7 +16,7 @@ import { createRemoteServer } from '../remote/server'
 const { handlers } = vi.hoisted(() => ({ handlers: new Map<string, (...args: any[]) => any>() }))
 vi.mock('../ipc', () => ({ handle: (channel: string, fn: (...args: any[]) => any) => handlers.set(channel, fn) }))
 
-const root = resolve('outputs/miai-chat-sync-tests')
+const root = resolve(tmpdir(), 'miai-chat-sync-tests')
 let dir: string
 let notify: ReturnType<typeof vi.fn>
 const load = (): AiChatSession[] => JSON.parse(readFileSync(join(dir, 'ai-sessions.json'), 'utf8'))
@@ -28,7 +29,7 @@ beforeEach(() => {
   notify = vi.fn()
   const ctx = {
     storageDir: dir, studyMathPath: 'unused', notifyChatSessionsChanged: notify,
-    readConfig: () => ({ ...DEFAULT_APP_CONFIG, ai: { ...DEFAULT_APP_CONFIG.ai, apiKey: 'unit-test-placeholder' } }),
+    readConfig: () => ({ ...DEFAULT_APP_CONFIG, ai: { ...DEFAULT_APP_CONFIG.ai, apiKey: 'test-key' } }),
     study: {
       store: new StudyStore(dir), connections: {}, lessonIds: new Set(), generateLearningPlan: vi.fn(),
       harness: {

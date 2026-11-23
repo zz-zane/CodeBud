@@ -228,7 +228,23 @@
             "pages": [
               2
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 42,
+              "end": 74,
+              "quote": "I start my new job in two weeks."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 75,
+              "end": 155,
+              "quote": "My human resources manager wants to conduct an interview with me before I leave."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q2",
@@ -282,7 +298,16 @@
             "pages": [
               2
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1025,
+              "end": 1212,
+              "quote": "In my company, the information gained from these interviews is often not confidential, and the information is used as dirt against another manager, or can be traded among senior managers."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q3",
@@ -334,7 +359,23 @@
             "pages": [
               2
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1261,
+              "end": 1354,
+              "quote": "There is chance that it could affect my reputation and my ability to network in the industry."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1399,
+              "end": 1556,
+              "quote": "Anything you initially gained from the instant satisfaction of telling it like it is, you might lose down the track by injuring your future career prospects."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q4",
@@ -441,7 +482,16 @@
             "pages": [
               3
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 198,
+              "end": 291,
+              "quote": "Recently, Jane, you've become quite a celebrity since the release of your latest documentary."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q6",
@@ -494,7 +544,23 @@
             "pages": [
               3
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 809,
+              "end": 900,
+              "quote": "The weather was not conducive to our work at all, since the humidity was almost unbearable."
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 950,
+              "end": 991,
+              "quote": "It was too humid to either work or sleep."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q7",
@@ -546,7 +612,16 @@
             "pages": [
               3
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1183,
+              "end": 1259,
+              "quote": "Halfway through the trip, we received news that a hurricane was approaching."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q8",
@@ -600,7 +675,23 @@
             "pages": [
               3
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1485,
+              "end": 1526,
+              "quote": "So overall, was the journey unsuccessful?"
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1535,
+              "end": 1575,
+              "quote": "a massive amount of data about the life."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q9",
@@ -653,7 +744,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 212,
+              "end": 416,
+              "quote": "In a new study, people exposed to jargon when reading about subjects like autonomous and later were less interested in than others who read about the same topics, but:without the use of specialized terms."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q10",
@@ -705,7 +805,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1021,
+              "end": 1147,
+              "quote": "In another study, researchers found that reading scientific articles containing jargon led people to doubt the actual science."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q11",
@@ -811,7 +920,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 193,
+              "end": 302,
+              "quote": "Pattillo Higgins, a disreputable local businessman, became convinced that there was oil below the gassy hill."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q13",
@@ -863,7 +981,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 372,
+              "end": 464,
+              "quote": "The sand under the hill defeated several attempts by Higgins' workers to make a proper hole."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q14",
@@ -915,7 +1042,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 611,
+              "end": 918,
+              "quote": "After encountering several Lucas decided to use a drill and his.innovations created the modern oil In January 1901, at 1,020 feet, almost precisely the depth predicted by Higgins' wild guess, the well roared and suddenly ejected mud and six tons of drilling pipe out of the ground, terrifying those present."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q15",
@@ -1072,7 +1208,23 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 822,
+              "end": 930,
+              "quote": "07-l)The first cause was company culture, which was seen by employees as enabling poor management\npractices."
+            },
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1220,
+              "end": 1269,
+              "quote": "Such workplaces are sometimes described as toxic."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q18",
@@ -1125,7 +1277,16 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 2063,
+              "end": 2149,
+              "quote": "A point worth making is that the study was based only on the perspective of employees."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q19",
@@ -1177,7 +1338,23 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 792,
+              "end": 860,
+              "quote": "Advocates argue these automated vehicles will change mining forever."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 958,
+              "end": 1050,
+              "quote": "A range of factors has Western Australia's desert to the lead of this automation revolution."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q20",
@@ -1230,7 +1407,23 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1626,
+              "end": 1747,
+              "quote": "This is because the more technology is put into the field, the more people are needed to deploy, maintain and improve it."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1753,
+              "end": 1843,
+              "quote": "The These include data scientists\nand engineers in automation and artificial intelligence."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q21",
@@ -1282,7 +1475,16 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 2051,
+              "end": 2188,
+              "quote": "Workers' unions have the of the introduction of new technology, but they still have reservations about the rise of automation technology."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q22",
@@ -1337,7 +1539,16 @@
             "pages": [
               6
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 15,
+              "end": 158,
+              "quote": "to official annual rate is almost double the Thai people know that their roads are dangerous, but they don't know this could easily be changed."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q23",
@@ -1389,7 +1600,16 @@
             "pages": [
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 365,
+              "end": 504,
+              "quote": "According to the institute, the overall number of deaths has been more or less since the turn of the But that a lot of -c_o_u_n _tr_i _es_."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q24",
@@ -1442,7 +1662,16 @@
             "pages": [
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1239,
+              "end": 1413,
+              "quote": "According to researchers, in China and South Africa traffic deaths have been falling since 2000, and in India\nsince 2012, and the Philippines reached its peak four years ago."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q25",
@@ -1496,7 +1725,16 @@
             "pages": [
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1823,
+              "end": 1931,
+              "quote": "The trick, then, is to reach the third stage sooner by focusing earlier\nand more closely on fatal accidents."
+            }
+          ]
         }
       ]
     },
@@ -2560,7 +2798,16 @@
             "pages": [
               9
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3878,
+              "end": 3982,
+              "quote": "Marconi was quite simply the central figure in the emergence of a modern understanding of communication."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q37",
@@ -2670,7 +2917,23 @@
             "pages": [
               9
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5688,
+              "end": 5951,
+              "quote": "Marconi needed to achieve the goal that was set in his mind as an adolescent; by the time he reached adulthood, he understood, intuitively, that in order to have an impact he had to both develop an independent economic base and align himself with political power."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5952,
+              "end": 6022,
+              "quote": "Disciplined, uncritical loyalty to political power became his compass."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q38",
@@ -2780,7 +3043,23 @@
             "pages": [
               9
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2093,
+              "end": 2252,
+              "quote": "There are some who say Marconi lost his edge when commercial broadcasting came along; he didn't see that radio could or should be used to frivolous (无聊的) ends."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2253,
+              "end": 2505,
+              "quote": "In one of his last public speeches, a radio broadcast to the United States in March 1937, he deplored that broadcasting had become a one-way means of communication and foresaw it moving in another direction, toward communication as a means of exchange."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q39",
@@ -2890,7 +3169,23 @@
             "pages": [
               9
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6133,
+              "end": 6347,
+              "quote": "Shortly after Marconi's death, the nuclear physicist Enrico Fermi-soon to be the developer of the Manhattan Project-wrote that Marconi proved that theory and experimentation were complementary features of progress."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6348,
+              "end": 6458,
+              "quote": "\"Experience can rarely, unless guided by a theoretical concept, arrive at results of any great significance..."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q40",
@@ -3000,7 +3295,16 @@
             "pages": [
               10
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1471,
+              "end": 1654,
+              "quote": "Marconi was really interested in only one thing: the extension of mobile, personal, long­\ndistance communication to the ends of the earth (and beyond, if we can believe some reports)."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q41",
@@ -3110,7 +3414,16 @@
             "pages": [
               10
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2536,
+              "end": 2750,
+              "quote": "Marconi's career was devoted to making wireless communication happen cheaply, efficiently, smoothly, and with an elegance that would appear to be intuitive and uncomplicated to the user-user­\nfriendly, if you will."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q42",
@@ -3220,7 +3533,16 @@
             "pages": [
               10
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7098,
+              "end": 7515,
+              "quote": "However, after a lifetime of moving within the circles of power, he was unable to break with authority, and served Mussolini faithfully (as president of Italy's national research council and royal academy, as well as a member of the Fascist Grand Council) until the day he died-conveniently-in 1937, shortly before he would have had to take a stand in the conflict that consumed a world that he had, in part, created."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q43",
@@ -3330,7 +3652,23 @@
             "pages": [
               10
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4296,
+              "end": 4349,
+              "quote": "By then, anything Marconi said or did was newsworthy."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4409,
+              "end": 4493,
+              "quote": "If Marconi said he thought it might rain, there was likely to be a run on umbrellas."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q44",
@@ -3440,7 +3778,23 @@
             "pages": [
               10
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 540,
+              "end": 718,
+              "quote": "Today's globally networked media and communication system has its origins in the 19th century, when, for the first time, messages were sent electronically across great distances."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 835,
+              "end": 917,
+              "quote": "What made the link from then to now was the development of wireless communication."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q45",
@@ -3550,7 +3904,23 @@
             "pages": [
               10
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4580,
+              "end": 4690,
+              "quote": "At one level,\nMarconi could be fiercely autonomous and independent of the constraints of his own social class."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4903,
+              "end": 5044,
+              "quote": "At the same time, he also suffered tremendously from a need for acceptance that drove, and sometimes stained, every one of his relationships."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q46",
@@ -3642,7 +4012,23 @@
             "pages": [
               12
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 352,
+              "end": 452,
+              "quote": "It feels morally questionable, yet claims of genetic selection by intelligence are making headlines."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1867,
+              "end": 2017,
+              "quote": "While there's an undoubted genetic basis to individual difference, it is wrong to think that socially defined groups can be genetically accounted for."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q48",
@@ -3688,7 +4074,16 @@
             "pages": [
               12
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1667,
+              "end": 1766,
+              "quote": "At best there is a weak statistical association and not a causal link between DNA and intelligence."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q49",
@@ -3781,7 +4176,16 @@
               12,
               13
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2586,
+              "end": 2756,
+              "quote": "In understanding cognitive ability, we must not elevate discrimination to a science; allowing people to climb the ladder of life only as far as their cells might suggest."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q51",
@@ -3828,7 +4232,23 @@
               13,
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 55,
+              "end": 212,
+              "quote": "Nicola Sturgeon's speech last Tuesday setting out the Scottish government's legislative programme for the year ahead confirmed what was already pretty clear."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1670,
+              "end": 1840,
+              "quote": "On the contrary, compelling tourists to make a financial contribution to the places they visit beyond their personal consumption should be part of a wider cultural shift."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q52",
@@ -3874,7 +4294,16 @@
             "pages": [
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 878,
+              "end": 1061,
+              "quote": "That the UK lags behind s due to our weak, by international standards, local government, as well as the opposition to taxes and regulation of our aggressively pro-market ruling party."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q53",
@@ -3920,7 +4349,16 @@
             "pages": [
               14
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1388,
+              "end": 1669,
+              "quote": "There is no reason why visitors to the UK, or domestic tourists on holiday in hotspots such as Cornwall, should be exempt from taxation-particularly when vital local services including waste collection, park maintenance and arts and culture spending are under unprecedented strain."
+            }
+          ]
         },
         {
           "id": "2021-06-1-q54",

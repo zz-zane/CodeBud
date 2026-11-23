@@ -231,7 +231,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 144,
+              "end": 191,
+              "quote": "There is no indication of any digestive issues."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q2",
@@ -278,7 +287,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 506,
+              "end": 562,
+              "quote": "Many people who suffer fhjm stress fail to recognise it."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q3",
@@ -325,7 +343,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1031,
+              "end": 1089,
+              "quote": "Fm going to prescribe some special sleeping pills fbr you."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q4",
@@ -372,7 +399,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1530,
+              "end": 1593,
+              "quote": "I'm a restaurant manager and this industry is very competitive."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q5",
@@ -466,7 +502,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1039,
+              "end": 1169,
+              "quote": "I knew basketball wasn't a career with a lot of longevity fbr most players, so I wanted to\nchange careers while I was still young."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q7",
@@ -513,7 +558,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1177,
+              "end": 1234,
+              "quote": "Okay, that was 20 years ago, and you're back in the news."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q8",
@@ -560,7 +614,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1493,
+              "end": 1557,
+              "quote": "I've spent the last two decades trying to alleviate\nthe problem."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q9",
@@ -607,7 +670,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 348,
+              "end": 447,
+              "quote": "She\nbegan writing fbr women's magazines after winning the 1986 Woman's Own Short Story Competition."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q10",
@@ -654,7 +726,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 790,
+              "end": 892,
+              "quote": "Whatever genre Atkinson writes in, her books touch OK the themes of love and loss and how to carry on."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q11",
@@ -701,7 +782,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1367,
+              "end": 1475,
+              "quote": "A comedy of manners tends to reward its clever and deceitful characters, rather than punish their bad\ndeeds."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q12",
@@ -748,7 +838,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 78,
+              "end": 158,
+              "quote": "Simply put, [12] adaptability is a skill\nemployers are increasingly looking for."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q13",
@@ -795,7 +894,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 941,
+              "end": 1013,
+              "quote": "That enables you to make more accurate, informed and effective choices.”"
+            }
+          ]
         },
         {
           "id": "2023-12-1-q14",
@@ -842,7 +950,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1065,
+              "end": 1165,
+              "quote": "Today's work culture and management style is often based on\nteamwork, rather than a rigid hierarchy."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q15",
@@ -889,7 +1006,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1449,
+              "end": 1565,
+              "quote": "They can reprioritize quickly\nwhen changes occur and suggest additional modifications when something is not working."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q16",
@@ -983,7 +1109,23 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 869,
+              "end": 942,
+              "quote": "But I believe that\ninnovation is not something that only a few people do."
+            },
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 943,
+              "end": 1118,
+              "quote": "The innovative drive lives in every human brain, and the\nresulting war against the repetitive is what powers the massive changes that distinguish one generation from the next."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q18",
@@ -1032,7 +1174,23 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 2041,
+              "end": 2078,
+              "quote": "The human brain works from precedent."
+            },
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 2079,
+              "end": 2155,
+              "quote": "We take the\nideas we've inherited and put them together into some new shape."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q19",
@@ -1079,7 +1237,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 15,
+              "end": 183,
+              "quote": "Many dog owners would tell you that their dog somehow knows when they're ill or upset, and according\nto researchers who study dog cognition, those pet owneis are light."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q20",
@@ -1126,7 +1293,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 558,
+              "end": 780,
+              "quote": "If a person is infbcted\nwith a virus or bacteria, for example, their odor will be abnormal, and dogs are able to smell that change even if the\nhuman can't, because dogs have a much more powerful sense of smell than humans."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q21",
@@ -1173,7 +1349,23 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 2112,
+              "end": 2199,
+              "quote": "For now, research suggests dog ownership can have an\narray of bene行ts in and of itself."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 2200,
+              "end": 2266,
+              "quote": "Keeping a pet dog has been shown to bolster health and boost mood."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q22",
@@ -1220,7 +1412,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 185,
+              "end": 470,
+              "quote": "Ministers, according to Onward, should “crack down on\ncourses that offer extremely limited value for money to students ten years after graduation”, restricting the ability of\nsuch courses to recruit new students, if the average graduate earns below the student loans payment threshold."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q23",
@@ -1267,7 +1468,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 762,
+              "end": 823,
+              "quote": "At first glance, it might even seem like Onward have a point."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q24",
@@ -1314,7 +1524,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1486,
+              "end": 1613,
+              "quote": "Well, 40 percent of all graduates一\nregardless of their deg】ee- are on less than 25,000 pounds a year, 5 years after graduation."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q25",
@@ -1363,7 +1582,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1619,
+              "end": 1758,
+              "quote": "This suggests that the\nproblem isn't really to do with specific students studying specific degrees, but really with the economy as a whole."
+            }
+          ]
         }
       ]
     },
@@ -2344,7 +2572,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3047,
+              "end": 3407,
+              "quote": "The low productivity of African farmers is reflected in national economic statistics—despite absorbing so much labour, farming generates just 15of GDP.“They can't even feed their families,” says Jennifer Blanke, a vice-president of the African Development Bank in charge of agriculture.“Farm productivity hasn't improved in many parts of Africa for 100 years.\""
+            }
+          ]
         },
         {
           "id": "2023-12-1-q37",
@@ -2512,7 +2749,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1006,
+              "end": 1186,
+              "quote": "Parts of the continent are already warming much more quickly than the average: temperatures in southern Africa have increased by about twice the global rate over the past 50 years."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q39",
@@ -2596,7 +2842,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4500,
+              "end": 4680,
+              "quote": "Small coffee farmers in Kenya are able to increase their incomes by 40y following a few simple guidelines on caring for their bushes, such as trimming all but three of their stems."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q40",
@@ -2680,7 +2935,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1551,
+              "end": 1795,
+              "quote": "Africa is particularly vulnerable, in part because it is already struggling to feed itself and it will have to vastly increase yields and productivity if it is to put food on the plates of a fast-growing population, even without climate change."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q41",
@@ -2764,7 +3028,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4055,
+              "end": 4159,
+              "quote": "Much of the focus has been on getting small farmers to use fertiliser and, more important, better seeds."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q42",
@@ -2848,7 +3121,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5517,
+              "end": 5676,
+              "quote": "An even more important change is the move from traditional farming to building businesses that can profitably bring technology and investment to small farmers."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q43",
@@ -2932,7 +3214,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 321,
+              "end": 388,
+              "quote": "Climate change is an issue that will affect everyone on the planet."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q44",
@@ -3016,7 +3307,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2792,
+              "end": 2947,
+              "quote": "And although output per worker has improved by more than half over the past 30 years in Africa, that is still far behind the 2.5 times improvement in Asia."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q45",
@@ -3100,7 +3400,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6752,
+              "end": 6881,
+              "quote": "But over the longer run small-scale farming can go only so far, especially in the face of climate change and population pressure."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q46",
@@ -3140,7 +3449,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 150,
+              "end": 217,
+              "quote": "The formula doesn't work, but that has not affected its popularity."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 218,
+              "end": 305,
+              "quote": "And while the cult of tax cuts has attracted many critics, it lacks for obvious rivals."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q47",
@@ -3180,7 +3505,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 597,
+              "end": 666,
+              "quote": "The nation needs a better story about the drivers of economic growth."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 667,
+              "end": 750,
+              "quote": "The painful lessons of recent decades point to a promising candidate: higher wages."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q48",
@@ -3220,7 +3561,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1100,
+              "end": 1178,
+              "quote": "The argument here is that higher wages can fuel the engine of economic growth."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1511,
+              "end": 1795,
+              "quote": "The same logic still holds: Consumption drives the American economy, and workers who are paid more can spend more\nMainstream economists insist that it is impossible to order up a sustainable increase in wages because compensation levels reflect the unerring judgment of market forces."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q49",
@@ -3260,7 +3617,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1796,
+              "end": 1885,
+              "quote": "The conventional wisdom held that productivity growth was the only route to higher wages."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q50",
@@ -3300,7 +3666,23 @@
               17
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2445,
+              "end": 2556,
+              "quote": "One clear piece of evidence is the widening gap between productivity growth and wage growth since roughly 1970."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2557,
+              "end": 2622,
+              "quote": "Productivity has more than doubled; wages have lagged far behind."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q51",
@@ -3340,7 +3722,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 152,
+              "end": 313,
+              "quote": "You'd hope, then, that journals would do everything they can to establish a diverse editorial board, reflecting a variety of voices, experiences, and identities."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q52",
@@ -3380,7 +3771,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 396,
+              "end": 659,
+              "quote": "The team finds that the majority of editors in top psychology and neuroscience journals are male and based in the United States: a situation that may be amplifying existing gender inequalities in the field and influencing the kind of research that gets published."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q53",
@@ -3420,7 +3820,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 894,
+              "end": 1022,
+              "quote": "Crucially, the proportion of female editors was significantly lower than the overall proportion of women psychology researchers."
+            }
+          ]
         },
         {
           "id": "2023-12-1-q54",
@@ -3500,7 +3909,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2154,
+              "end": 2232,
+              "quote": "Instead, there are structural reasons that women are disadvantaged in science."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2435,
+              "end": 2571,
+              "quote": "Rather than simply blaming the inequality of editorial boards on tradition, we should be actively breaking down these existing barriers."
+            }
+          ]
         }
       ]
     },

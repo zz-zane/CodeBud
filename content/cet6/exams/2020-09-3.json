@@ -1080,7 +1080,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1542,
+              "end": 1686,
+              "quote": "In a poll of\n1, 500 family physicians, only 15% had used it in their practices but 90% said they would if it were appropriately reimbursed (补偿)."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q37",
@@ -1184,7 +1193,23 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2896,
+              "end": 3065,
+              "quote": "Many health plans and employers have rushed to offer the services and promote them as a convenient way for plan members to get medical care without leaving home or work."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3066,
+              "end": 3199,
+              "quote": "Nearly three-quarters of large employers will offer virtual doctor visits as a benefit to employees this year, up from 48% last year."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q38",
@@ -1288,7 +1313,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1774,
+              "end": 1851,
+              "quote": "Rules defining and regulating telemedicine differ widely from state to state."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q39",
@@ -1392,7 +1426,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 692,
+              "end": 786,
+              "quote": "Telemedicine also allows for better care in places where medical expertise is hard to come by."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q40",
@@ -1496,7 +1539,16 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4746,
+              "end": 4990,
+              "quote": "While employers and health plans have been eager to cover virtual urgent­\ncare visits, insurers have been far less willing to pay for telemedicine when doctors use phone, email or video to consult with existing patients about continuing issues."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q41",
@@ -1600,7 +1652,16 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7313,
+              "end": 7468,
+              "quote": "While welcoming the move, some telemedicine advocates would prefer states to automatically honor one another's licenses, as they do with drivers' licenses."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q42",
@@ -1704,7 +1765,23 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2501,
+              "end": 2648,
+              "quote": "The fastest-growing services in telemedicine connect consumers with clinicians they've never met for a phone, video or email visit on-demand, 24/7."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2649,
+              "end": 2892,
+              "quote": "Typically, these are for nonemergency issues such as colds, flu, ear-aches and skin rashes, and they cost around $4 5, compared with approximately $1 00 at a doctor's office, $1 60 at an urgent-care clinic or $ 750 and up at an emergency room."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q43",
@@ -1808,7 +1885,16 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1977,
+              "end": 2087,
+              "quote": "Some critics also question whether the quality of care is keeping up with the rapid expansion of telemedicine."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q44",
@@ -1912,7 +1998,16 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3750,
+              "end": 3882,
+              "quote": "In a recent study, researchers posing as patients with skin problems sought help from 16 telemedicine sites with unsettling results."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q45",
@@ -2016,7 +2111,23 @@
               8
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6081,
+              "end": 6130,
+              "quote": "Is the state-by-state regulatory system outdated?"
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6204,
+              "end": 6410,
+              "quote": "But some industry members contend that having 50 different sets of rules, licensing fees and even definitions of \" medical practice \" makes less sense in the era of telemedicine and is hampering its growth."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q46",
@@ -2056,7 +2167,16 @@
               18
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 138,
+              "end": 263,
+              "quote": "But a passing reference in a recent profile by Glamour magazine to her 20-hour workdays prompted an outpouring of admiration."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q47",
@@ -2096,7 +2216,16 @@
               19
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 682,
+              "end": 892,
+              "quote": "The business news website Quartz held Steel up as an inspiration, writing that if only we all followed her \"actually extremely liberating\" example of industrious sleeplessness, we would be quick to see results."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q48",
@@ -2176,7 +2305,16 @@
               22
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1760,
+              "end": 1904,
+              "quote": "Self-imposed sleeplessness has \"become a bit of a status symbol\", says Taylor, a misguided measure to prove how powerful and productive you are."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q50",
@@ -2216,7 +2354,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2512,
+              "end": 2697,
+              "quote": "Even if Steel does happen to be among that tiny minority, says Bostock, it's \" pretty irresponsible\" to suggest that 20-hour days are simply a question of discipline for the rest of us."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q51",
@@ -2256,7 +2403,23 @@
               25
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 159,
+              "quote": "Organic agriculture is a relatively untapped resource for feeding the Earth's population, especially in the face of climate change and other global challenges."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 160,
+              "end": 295,
+              "quote": "That's the conclusion I reached in reviewing 40 years of science comparing the long-term prospects of organic and conventional farming."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q52",
@@ -2296,7 +2459,16 @@
               27
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 635,
+              "end": 754,
+              "quote": "Critics have long argued that organic agriculture is inefficient, requiring more land to yield the same amount of food."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q53",
@@ -2336,7 +2508,23 @@
               27
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1066,
+              "end": 1186,
+              "quote": "Sometimes excluded from these arguments is the fact that we already produce enough food to more than feed the world's 7."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1187,
+              "end": 1258,
+              "quote": "4 billion people but do not provide adequate access to all individuals."
+            }
+          ]
         },
         {
           "id": "2020-09-3-q54",
@@ -2416,7 +2604,16 @@
               30
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2873,
+              "end": 3044,
+              "quote": "Higher prices, called price premiums, can be justified as a way to compensate farmers for providing ecosystem services and avoiding environmental damage or external costs."
+            }
+          ]
         }
       ]
     },

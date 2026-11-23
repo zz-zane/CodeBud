@@ -9,6 +9,12 @@ import { gradeByRun, normalizeRunOutput, runBlock } from './lib/run-code.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ANIM_DIR = path.resolve(__dirname, '..', 'content', 'animations')
+const JDK_BIN = process.env.JAVA_HOME ? path.join(process.env.JAVA_HOME, 'bin') : null
+
+if (JDK_BIN && fs.existsSync(JDK_BIN)) {
+  process.env.PATH = `${JDK_BIN}${path.delimiter}${process.env.PATH || ''}`
+}
+
 if (!fs.existsSync(ANIM_DIR)) {
   console.error('✗ 目录不存在：content/animations/')
   process.exit(1)

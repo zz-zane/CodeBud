@@ -10,6 +10,8 @@ import { classifyText, extractContext, validateSelection, type Cet6Gloss, type C
 import { useCet6VocabStore } from '../../stores/cet6-vocab'
 import { useAiAssistantStore } from '../../stores/ai-assistant'
 import { usePhoneBackClose } from '../../lib/phone-back-close'
+import { wordBoundsAt } from '../../lib/cet6-tap-select'
+import { createRangeOverlay } from '../../lib/range-overlay'
 import { useSettingsDialogStore } from '../../stores/settings-dialog'
 import MiButton from '../base/MiButton.vue'
 import MiIcon from '../base/MiIcon.vue'
@@ -45,6 +47,8 @@ const isSentence = computed(() => classifyText(selText.value) === 'sentence')
 usePhoneBackClose(() => shown.value && expanded.value, () => hide())
 
 function hide(): void {
+  picked = null
+  paint(null)
   shown.value = false
   expanded.value = false
   phase.value = 'idle'
@@ -81,9 +85,12 @@ function place(): void {
 function capture(): void {
   const sel = window.getSelection()
   if (!sel || sel.rangeCount === 0 || sel.isCollapsed) return hide()
-  const text = validateSelection(sel.toString())
+  captureRange(sel.getRangeAt(0))
+}
+
+function captureRange(range: Range): void {
+  const text = validateSelection(range.toString())
   if (!text) return hide()
-  const range = sel.getRangeAt(0)
   const node = range.commonAncestorContainer
   const el = node instanceof Element ? node : node.parentElement
   if (!el || !props.root || !props.root.contains(el)) return hide()
@@ -117,6 +124,8 @@ function onScroll(e: Event): void {
   if (shown.value && !inBar(e.target)) hide()
 }
 function onSelectionChange(): void {
+  // 长按选词不经过系统选区：系统选区的变化（点一下就会变）不该把它收起
+  if (picked) return
   const sel = window.getSelection()
   if (shown.value && (!sel || sel.isCollapsed)) hide()
   if (touch && sel && !sel.isCollapsed) {
@@ -124,6 +133,92 @@ function onSelectionChange(): void {
     settleTimer = setTimeout(capture, 350)
   }
 }
+// ── 手机：应用自己的长按选词（2026-11-23）────────────────────────────────
+// 系统选区一出现，手机就弹「复制 / 粘贴 / 全选」菜单挡住释义条，网页关不掉它；
+// 所以粗指针下关掉原生选字（见下方无 scoped 样式），长按 450ms 由应用算出手指下的单词，
+// 用覆盖层（lib/range-overlay.ts）画出来；选中后再点同一段里的另一个词，把选区扩成短语。
+let picked: Range | null = null
+let pressTimer: ReturnType<typeof setTimeout> | undefined
+let pressAt = { x: 0, y: 0 }
+let longPressed = false
+
+// 用自画覆盖层而不是 CSS Highlight：旧版 iPadOS Safari 不支持后者，选中的词看不出来（2026-11-23 用户实测）
+const pickLayer = typeof document === 'undefined' ? null : createRangeOverlay('pick')
+function paint(range: Range | null): void {
+  if (range) pickLayer?.set([range])
+  else pickLayer?.clear()
+}
+
+function blockOf(node: Node): Element | null {
+  let el: Element | null = node instanceof Element ? node : node.parentElement
+  while (el && el !== props.root && getComputedStyle(el).display.startsWith('inline')) el = el.parentElement
+  return el
+}
+
+function wordRangeAt(x: number, y: number): Range | null {
+  const at = document.caretRangeFromPoint?.(x, y)
+  const node = at?.startContainer
+  if (!at || !node || node.nodeType !== Node.TEXT_NODE) return null
+  const el = node.parentElement
+  if (!el || !props.root?.contains(el) || !el.closest('.cet6-left, .cet6-right') || el.closest('textarea, input, [data-sel-bar]')) return null
+  const b = wordBoundsAt((node as Text).data, at.startOffset)
+  if (!b) return null
+  const r = document.createRange()
+  r.setStart(node, b[0])
+  r.setEnd(node, b[1])
+  return r
+}
+
+function spanOf(a: Range, b: Range): Range {
+  const first = a.compareBoundaryPoints(Range.START_TO_START, b) <= 0 ? a : b
+  const last = first === a ? b : a
+  const r = document.createRange()
+  r.setStart(first.startContainer, first.startOffset)
+  r.setEnd(last.endContainer, last.endOffset)
+  return r
+}
+
+function pick(r: Range): void {
+  picked = r
+  paint(r)
+  captureRange(r)
+}
+
+function onTouchStart(e: TouchEvent): void {
+  if (e.touches.length !== 1 || inBar(e.target)) return
+  pressAt = { x: e.touches[0].clientX, y: e.touches[0].clientY }
+  longPressed = false
+  clearTimeout(pressTimer)
+  pressTimer = setTimeout(() => {
+    const r = wordRangeAt(pressAt.x, pressAt.y)
+    if (!r) return
+    longPressed = true
+    pick(r)
+  }, 450)
+}
+function onTouchMove(e: TouchEvent): void {
+  const t = e.touches[0]
+  if (t && Math.hypot(t.clientX - pressAt.x, t.clientY - pressAt.y) > 10) clearTimeout(pressTimer)
+}
+function onTouchEnd(e: TouchEvent): void {
+  clearTimeout(pressTimer)
+  // 长按选词后松手：吞掉随后的 click，免得在选项上长按顺手选了答案
+  if (longPressed) { longPressed = false; e.preventDefault(); return }
+  if (!picked || !shown.value || inBar(e.target)) return
+  const t = e.changedTouches[0]
+  const r = t ? wordRangeAt(t.clientX, t.clientY) : null
+  if (r && blockOf(r.startContainer) === blockOf(picked.startContainer)) {
+    e.preventDefault()
+    pick(spanOf(picked, r))
+    return
+  }
+  // 点到别处：收起（触屏上不一定有合成的 mousedown 来触发 onMouseDown）
+  hide()
+}
+function onContextMenu(e: Event): void {
+  e.preventDefault()
+}
+
 function onKeyDown(e: KeyboardEvent): void {
   if (e.key === 'Escape' && shown.value) hide()
 }
@@ -177,11 +272,25 @@ function attach(el: HTMLElement | null): void {
   el?.addEventListener('mouseup', onMouseUp)
   el?.addEventListener('mousedown', onMouseDown, true)
   el?.addEventListener('scroll', onScroll, true)
+  if (el && touch) {
+    el.classList.add('cet6-tap-select')
+    el.addEventListener('touchstart', onTouchStart, { passive: true })
+    el.addEventListener('touchmove', onTouchMove, { passive: true })
+    el.addEventListener('touchend', onTouchEnd, { passive: false })
+    el.addEventListener('contextmenu', onContextMenu)
+  }
 }
 function detach(el: HTMLElement | null): void {
   el?.removeEventListener('mouseup', onMouseUp)
   el?.removeEventListener('mousedown', onMouseDown, true)
   el?.removeEventListener('scroll', onScroll, true)
+  if (el) {
+    el.classList.remove('cet6-tap-select')
+    el.removeEventListener('touchstart', onTouchStart)
+    el.removeEventListener('touchmove', onTouchMove)
+    el.removeEventListener('touchend', onTouchEnd)
+    el.removeEventListener('contextmenu', onContextMenu)
+  }
 }
 
 watch(() => props.root, (next, prev) => {
@@ -198,6 +307,8 @@ onBeforeUnmount(() => {
   detach(props.root)
   document.removeEventListener('selectionchange', onSelectionChange)
   clearTimeout(settleTimer)
+  clearTimeout(pressTimer)
+  pickLayer?.destroy()
   window.removeEventListener('keydown', onKeyDown)
 })
 </script>
@@ -287,4 +398,12 @@ onBeforeUnmount(() => {
 .cet6-sel-spacer { flex: 1; }
 .cet6-sel-link { margin-left: var(--mi-sp-2); padding: 0; border: 0; background: transparent; color: var(--mi-blue-deep); font: inherit; cursor: pointer; text-decoration: underline; }
 .cet6-sel-link:focus-visible { outline: 2px solid var(--mi-blue-deep); outline-offset: 1px; }
+</style>
+
+<style>
+/* 粗指针（手机）下关掉文章与题目区的原生选字与长按菜单，改由组件自己的长按选词；输入框照常可选 */
+.cet6-tap-select .cet6-left,
+.cet6-tap-select .cet6-right { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.cet6-tap-select textarea,
+.cet6-tap-select input { -webkit-user-select: text; user-select: text; -webkit-touch-callout: default; }
 </style>

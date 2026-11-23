@@ -20,6 +20,7 @@ export interface LearnerAnswers {
 
 export const LEARNER_ZERO = T.ZERO
 export const LEARNER_KNOWN_OPTIONS = T.KNOWN
+export const LEARNER_KNOWN_GROUPS = T.KNOWN_GROUPS
 export const LEARNER_STYLE_TEXT: Record<LearnerStyle, string> = T.STYLE
 export const LEARNER_PACE_TEXT: Record<LearnerPace, string> = T.PACE
 

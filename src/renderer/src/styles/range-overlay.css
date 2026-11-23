@@ -1,0 +1,34 @@
+/*
+ * 文字覆盖层（lib/range-overlay.ts）：手机长按选中的词、交卷后解析依据。
+ * 图层 position:fixed、pointer-events:none，挂在 body 下；每行一个 .range-ov-row。
+ * 颜色全走令牌；动画只改背景色（不改 opacity），减弱动效下由 motion.css 总闸压成瞬切。
+ */
+.range-ov { position: fixed; inset: 0; z-index: 150; pointer-events: none; } /* 高于做题页内容（z 5 被盖住了），低于选词条 200 与弹窗 */
+/* multiply：底色像荧光笔一样染在字下面，不把字盖淡（应用只有浅色主题） */
+.range-ov-row { position: absolute; border-radius: 3px; mix-blend-mode: multiply; }
+
+/* 手机长按选中的词：和桌面选区同一种蓝 */
+.range-ov--pick .range-ov-row { background-color: color-mix(in srgb, var(--mi-blue-deep) 26%, transparent); }
+
+/* 解析依据：每行底部一条橘色波浪线，常驻到定位下一题 */
+.range-ov--evidence .range-ov-row::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: -3px;
+  height: 5px;
+  background-color: var(--mi-warn-edge);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5' viewBox='0 0 10 5'%3E%3Cpath d='M0 3.5 Q2.5 0.5 5 3.5 T10 3.5' fill='none' stroke='black' stroke-width='1.6'/%3E%3C/svg%3E") repeat-x left center / 10px 5px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5' viewBox='0 0 10 5'%3E%3Cpath d='M0 3.5 Q2.5 0.5 5 3.5 T10 3.5' fill='none' stroke='black' stroke-width='1.6'/%3E%3C/svg%3E") repeat-x left center / 10px 5px;
+}
+.range-ov--evidence .range-ov-row.clipped::after { display: none; }
+
+/* 点「在原文中定位」：黄底先加深、再慢慢淡掉（照用户给的录屏），波浪线不动 */
+.range-ov--evidence.flash .range-ov-row { animation: range-ov-flash 1800ms var(--mi-ease-out) both; }
+@keyframes range-ov-flash {
+  0% { background-color: color-mix(in srgb, var(--mi-warn) 0%, transparent); }
+  12% { background-color: color-mix(in srgb, var(--mi-warn) 75%, transparent); }
+  40% { background-color: color-mix(in srgb, var(--mi-warn) 55%, transparent); }
+  100% { background-color: color-mix(in srgb, var(--mi-warn) 0%, transparent); }
+}

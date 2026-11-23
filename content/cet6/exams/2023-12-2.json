@@ -235,7 +235,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 12,
+              "end": 152,
+              "quote": "So, [1] I've been thinking, this summer, instead of our usual holiday rental, I'd like to try renting a camper van and\nexploring a bit more."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q2",
@@ -282,7 +291,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 640,
+              "end": 683,
+              "quote": "I think my grandfather had a van like that."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q3",
@@ -331,7 +349,23 @@
             "date": "2026-11-09",
             "bag": 0.78,
             "tri": 0.69
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 835,
+              "end": 923,
+              "quote": "Fve\nseen quite a fbw with solar panels that provide electricity for when you're stopped."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 924,
+              "end": 987,
+              "quote": "This way, you can still use your\ncomputer or charge your phone."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q4",
@@ -378,7 +412,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1288,
+              "end": 1384,
+              "quote": "Imagine having that kind of freedom to go anywhere you want\nand work fh)m anywhere in the world."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q5",
@@ -425,7 +468,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 78,
+              "end": 161,
+              "quote": "Over the past month or so, it has become apparent that your performance has\ndipped."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q6",
@@ -472,7 +524,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 401,
+              "end": 464,
+              "quote": "I'm going through some unfortunate family issues at the moment."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q7",
@@ -520,7 +581,23 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1052,
+              "end": 1159,
+              "quote": "Look, you've been with us almost five years [7] and I personally really value your proficiency at your job."
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1160,
+              "end": 1187,
+              "quote": "It makes\nmy job far easier."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q8",
@@ -568,7 +645,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 668,
+              "end": 722,
+              "quote": "Would it be possible to take the next two Mondays off?"
+            }
+          ]
         },
         {
           "id": "2023-12-2-q9",
@@ -615,7 +701,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 152,
+              "end": 255,
+              "quote": "Research suggests that higher levels of education can lead to better health and\neven greater longevity."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q10",
@@ -662,7 +757,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 504,
+              "end": 609,
+              "quote": "The team found that a person whose spouse had a higher level of education\ntended to report better health."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q11",
@@ -709,7 +813,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1436,
+              "end": 1536,
+              "quote": "Women in this sample had lower levels of education and lower occupational achievements than the men."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q12",
@@ -756,7 +869,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 161,
+              "end": 275,
+              "quote": "So understanding and accurately fbuecasting flood risks is a key challenge fbr vulnerable\ncities around the globe."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q13",
@@ -803,7 +925,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 473,
+              "end": 568,
+              "quote": "He'll use those data\nto validate and improve his mathematical flooding model, called TideWatch."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q14",
@@ -850,7 +981,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 995,
+              "end": 1099,
+              "quote": "But they still didn't have the critically important ability to forecast fast-moving\nfloods in real time."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q15",
@@ -897,7 +1037,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1105,
+              "end": 1256,
+              "quote": "So, in 2017, Loftis and colleagues set up a group of 28 Intemet-connected water-level sensors\nthroughout the flood risk community of Norfolk, Virginia."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q16",
@@ -944,7 +1093,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 15,
+              "end": 252,
+              "quote": "Now, it's become something of a ritual to debate the value of a college degree, but as Current Population\nSurvey data show, there has been a sharp decline in employment among men without college degrees compared with\nthose who have them."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q17",
@@ -1038,7 +1196,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1757,
+              "end": 2031,
+              "quote": "They identified two new potential explanations: the first being the tremendous decline in marriage among\nmen without college degrees since the 1960s; and the second, being the increase in women participating in the\nworkforce that was concurrent with the decline in marriage."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q19",
@@ -1085,7 +1252,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 217,
+              "end": 357,
+              "quote": "It found animal welfare\ncame top of a list of issues that people considered before buying clothes, with 42% saying it was important to them."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q20",
@@ -1132,7 +1308,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1006,
+              "end": 1110,
+              "quote": "At the top end, some of the world-renowced fashion designers have avoided leather and fur fbr some time."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q21",
@@ -1179,7 +1364,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 2008,
+              "end": 2084,
+              "quote": "However, it is unclear whether these new products can be considered ethical."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q22",
@@ -1226,7 +1420,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 690,
+              "end": 780,
+              "quote": "We are living in history's most peaceful era, with violence of all kinds in steep decline."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q23",
@@ -1273,7 +1476,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 839,
+              "end": 958,
+              "quote": "In a 2015 survey fbr YouGov, 65% of British people and 81% of the French said they thought the world was\ngetting worse."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q24",
@@ -1320,7 +1532,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1253,
+              "end": 1431,
+              "quote": "It is best explained as the result of various psychological biases that served a purpose for our evolutionary ancestors一\nbut now, in a media-saturated era, constantly mislead us."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q25",
@@ -1367,7 +1588,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1589,
+              "end": 1773,
+              "quote": "In our evolutionary past, it was a very good thing that our attention could be easily seized by negative\ninformation, since it might well indicate a dangerous risk to our own survival."
+            }
+          ]
         }
       ]
     },
@@ -2353,7 +2583,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2833,
+              "end": 3054,
+              "quote": "Some—like an ancient Roman ship found off Antikythera, Greece, dated between 70 and 60 BC and carrying astonishingly sophisticated gears and dials for navigating by the sun—are critical to a new understanding of our past."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q37",
@@ -2437,7 +2676,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 700,
+              "end": 829,
+              "quote": "Over the centuries, dozens of majestic Old World sailing ships smashed and sank on this irregular stretch of windy Florida coast."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q38",
@@ -2521,7 +2769,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4933,
+              "end": 4977,
+              "quote": "For Pritchett, the decision was devastating."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4978,
+              "end": 5047,
+              "quote": "Millions of dollars of investor funding and years of labor were lost."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q39",
@@ -2605,7 +2869,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1606,
+              "end": 1695,
+              "quote": "But of late, when salvors have found vessels, their rights have been challenged in court."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q40",
@@ -2689,7 +2962,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3362,
+              "end": 3579,
+              "quote": "Over the prior three years, he and his crew had obtained 14 state permits to survey a nearly 260-square- kilometer area off the cape; they worked 250 days a year, backed by investor funds of, he claims, US S4 million."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q41",
@@ -2773,7 +3055,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6193,
+              "end": 6297,
+              "quote": "George Bass is one of the pioneers of under-water archacology, and a researcher at Texas A&M University."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6412,
+              "end": 6633,
+              "quote": "He believes archaeologists need to do a better job themselves instead of routinely criticizing treasure hunters.“Archacology has a terrible reputation for not publishing enough on its excavations (发掘) and finds,\" he says."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q42",
@@ -2857,7 +3155,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1131,
+              "end": 1241,
+              "quote": "In recent years, advances in radar, diving, detection equipment, computers, and GPS have transformed the hunt."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1242,
+              "end": 1373,
+              "quote": "The naked eye might see a pile of rocks, but technology can reveal the precious arifacts (人工制品) that lie hidden on the ocean floor."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q43",
@@ -3025,7 +3339,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2554,
+              "end": 2675,
+              "quote": "Where once salvors and archacologists worked side by side, now they belong to opposing, and equally contemptuous, tribes."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q45",
@@ -3109,7 +3432,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6060,
+              "end": 6187,
+              "quote": "Archacologists don't want artifacts ending up in a private collection instead of taking humanity on a journey of understanding."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q46",
@@ -3149,7 +3481,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 0,
+              "end": 70,
+              "quote": "Could you get by without using the internet for four and a half years?"
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 71,
+              "end": 170,
+              "quote": "That's exactly what singer and actress\nSelena Gomez has done in a bid to improve her mental health."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q47",
@@ -3189,7 +3537,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 634,
+              "end": 835,
+              "quote": "The increasing digitisation of our society means that everything from paying a gas bill to plotting a route to a friend's house and even making a phone call is at the mercy of your internet connection."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 836,
+              "end": 908,
+              "quote": "Actively opting out of using the internet becomes a matter of privilege."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q48",
@@ -3229,7 +3593,23 @@
               16
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1665,
+              "end": 1796,
+              "quote": "The UK's digital divide has worsened over the past two years, leaving poorer families without broadband connections in their homes."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1797,
+              "end": 2060,
+              "quote": "Digital exclusion is a major threat to wider societal equality in the UK, so witnessing companies like Facebook championing the metaverse (元宇宙)as the next great frontier when school children are struggling to complete their homework feels particularly irritating."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q49",
@@ -3269,7 +3649,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2061,
+              "end": 2530,
+              "quote": "Consequently, it's worth bearing in mind that while deleting all social media accounts will undoubtedly make some feel infinitely better, many other people benefit from the strong sense of community that sharing platforms can breed\nInternet access will continue to grow in importance as we edge further towards web 3.0, and greater resources and initiatives are needed to provide the under privileged with the connectivity they desperately need to learn, work and live."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q50",
@@ -3309,7 +3698,16 @@
               16
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2531,
+              "end": 2748,
+              "quote": "It's crucial that people who feel that social media is having a detrimental effect on their mental health are allowed to switch off and for those living in digital exclusion to be able to switch on in the first place."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q51",
@@ -3349,7 +3747,16 @@
               17
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 126,
+              "end": 257,
+              "quote": "Whatever it is, you cannot but recognize the effect competition is exerting in academics and many other areas of contemporary life."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q52",
@@ -3389,7 +3796,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 541,
+              "end": 693,
+              "quote": "Thereafter, we are at the mercy of a battle between our base impulses for self-fulfillment and social and cultural norms which prohibit pure indulgence."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q53",
@@ -3429,7 +3845,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 830,
+              "end": 1082,
+              "quote": "Thomas Hobbes, one of the great philosophers of the seventeenth century, is perhaps best remembered for his characterization of the \"natural world,\" that is, the world before the imposition of the will of humanity, as being \"nasty, brutish, and short.\""
+            }
+          ]
         },
         {
           "id": "2023-12-2-q54",
@@ -3469,7 +3894,16 @@
               18
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1878,
+              "end": 2289,
+              "quote": "Darwin asserted in The Origin of Species that the struggles he was describing should be viewed as metaphors and could easily include dependence and cooperation\nMany studies have been conducted to test the importance placed on competition as opposed to other values, such as cooperation—by various cultures, and generally conclude that Americans uniquely praise competition as natural, inevitable, and desirable."
+            }
+          ]
         },
         {
           "id": "2023-12-2-q55",
@@ -3509,7 +3943,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2665,
+              "end": 2894,
+              "quote": "After studying dozens of such cultures, Mead's final conclusion was that competitiveness is a culturally created aspect of human behavior, and that its prevalence in a particular society is relative to how that society values it."
+            }
+          ]
         }
       ]
     },

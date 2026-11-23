@@ -1,3 +1,4 @@
+import { tmpdir } from 'node:os'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
@@ -6,7 +7,7 @@ import { normalizeAcpUsage, normalizeProviderUsage, recordStudyUsage } from '../
 import { StudyStore } from '../store'
 import type { StudyConnection } from '../../../shared/study-companion'
 
-const root = resolve('outputs/study-companion-tests')
+const root = resolve(tmpdir(), 'root-tests')
 let dir: string
 let clients: AcpClient[]
 beforeEach(() => { mkdirSync(root, { recursive: true }); dir = mkdtempSync(join(root, 'acp-')); clients = [] })

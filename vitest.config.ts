@@ -4,6 +4,7 @@ import { defineConfig } from 'vitest/config'
 export default defineConfig({
   test: {
     include: [
+      'scripts/cet6-evidence.test.mjs',
       'src/shared/**/*.test.ts',
       'src/renderer/src/lib/**/*.test.ts',
       // store 是纯状态逻辑，不碰 DOM——把 window.miai 换成假货就能测。

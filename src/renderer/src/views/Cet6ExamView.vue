@@ -41,6 +41,7 @@ import Cet6Paper from '../components/cet6/Cet6Paper.vue'
 import Cet6Panel from '../components/cet6/Cet6Panel.vue'
 import Cet6AudioBar from '../components/cet6/Cet6AudioBar.vue'
 import Cet6SelectionBar from '../components/cet6/Cet6SelectionBar.vue'
+import { useCet6Evidence } from '../lib/use-cet6-evidence'
 
 const route = useRoute()
 const router = useRouter()
@@ -96,6 +97,8 @@ const isListening = computed(() => section.value?.type === 'listening')
 const isSharedListening = computed(() => isListening.value && !!section.value?.sharedWithExamId)
 const objective = computed(() => (section.value?.questions || []).filter(isObjective))
 const currentQ = computed(() => objective.value.find((q) => q.id === currentQid.value) ?? null)
+// 交卷后：当前题的解析依据在左侧原文标亮并滚过去
+useCet6Evidence(rootEl, currentQ, submitted)
 const isSubjective = computed(() => (section.value?.questions || []).some((q) => q.kind === 'essay' || q.kind === 'translation'))
 
 /** 阅读一次只显示一篇文章和它的题目 */

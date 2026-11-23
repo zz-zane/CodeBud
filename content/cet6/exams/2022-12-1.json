@@ -221,7 +221,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 118,
+              "end": 161,
+              "quote": "(I)I haven't even started writing mine yet."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q2",
@@ -261,7 +270,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 521,
+              "end": 594,
+              "quote": "1 started by talking to my professor about\nwhere to look for information."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q3",
@@ -301,7 +319,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 820,
+              "end": 870,
+              "quote": "I think the problem is that my topic isn't viable."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q4",
@@ -341,7 +368,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1683,
+              "end": 1730,
+              "quote": "W : ( 4 ) Broadening the topic is a great idea."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1731,
+              "end": 1798,
+              "quote": "I'II start by including folklore from other reyons of the country ."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q5",
@@ -421,7 +464,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 562,
+              "end": 643,
+              "quote": "people read my books because more than 60 ％ of Americans are overweight or obese."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q7",
@@ -461,7 +513,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1137,
+              "end": 1165,
+              "quote": "y\nfor the medical community."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q8",
@@ -501,7 +562,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1370,
+              "end": 1469,
+              "quote": "1 argue that every person needs to consider their metabolism and eat what surts their body's\nneeds."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q9",
@@ -541,7 +611,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 262,
+              "end": 387,
+              "quote": "Researchers discovered that placing rats in a stressful situation for just a few hours\ndoubled the growth of new brain cells."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q10",
@@ -582,7 +661,16 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "problems?"
+          "stemOriginalOCR": "problems?",
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 634,
+              "end": 756,
+              "quote": "this makes sense, ( 10 ) because\nanimals that are better at remembering dangerous situations can avoid them in the future."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q11",
@@ -628,7 +716,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1098,
+              "end": 1172,
+              "quote": "Scientists concede that chronic stress can make you more prone\nto illness."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q12",
@@ -668,7 +765,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 67,
+              "end": 100,
+              "quote": "dealing with emails is a dilemma."
+            },
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 132,
+              "end": 205,
+              "quote": "uncontrollable and ongoing nature of day-to-day email in terms of volume."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q13",
@@ -709,7 +822,23 @@
             ]
           },
           "verified": true,
-          "stemOriginalOCR": "problems?"
+          "stemOriginalOCR": "problems?",
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 514,
+              "end": 579,
+              "quote": "they ignore the issues\nthat might only be mlld problems at first."
+            },
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 601,
+              "end": 679,
+              "quote": "they inevitably transform into a major problem\nor crisis by virtue of neglect."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q14",
@@ -749,7 +878,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 696,
+              "end": 800,
+              "quote": "they are expected to motivate and inspire their team in pursuit Of\nlonger term strategic goals and also."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q15",
@@ -789,7 +927,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1229,
+              "end": 1355,
+              "quote": "The solution is cultivating self-control which is like a muscle—it can be strengthened or\nimproved over time through exercise."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q16",
@@ -829,7 +976,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 321,
+              "end": 443,
+              "quote": "a team of markeüng professors has\nstudied the mportance of the visual aspect of food and how that influences food choices."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q17",
@@ -869,7 +1025,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1339,
+              "end": 1452,
+              "quote": "medical rofessionals have tried to fi t the obesit e idemic b\nfocusing on the nutrients found in different foods."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q18",
@@ -909,7 +1074,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 2498,
+              "end": 2663,
+              "quote": "The researchers\nbelieve that other companies could bolster sales of healthy foods with similar ads. depicting their products as\nattractive and a source of pleasure ."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q19",
@@ -949,7 +1123,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 411,
+              "end": 549,
+              "quote": "many countries have witnessed a surge in the number of small businesses and\ncompames offering more environment-friendly cleaning products."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q20",
@@ -989,7 +1172,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 762,
+              "end": 856,
+              "quote": "The third reason is people's awareness of a\nknowledge about technology has never been greater."
+            },
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 980,
+              "end": 1067,
+              "quote": "but they now have faith in technology's\nability to do what was once thought impossible."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q21",
@@ -1029,7 +1228,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1583,
+              "end": 1683,
+              "quote": "customers are doing the marketing for these products by leaving threads of comments on social\nmedia."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q22",
@@ -1078,7 +1286,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 213,
+              "end": 267,
+              "quote": "quarters and euros could clog up the fountain's works."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q23",
@@ -1127,7 +1344,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 483,
+              "end": 581,
+              "quote": "coins collected from fountains In public parks often go\ntowards the fountains' maintenance itself."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q24",
@@ -1175,7 +1401,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1355,
+              "end": 1444,
+              "quote": "§ !_eg_ 山 9 一里 9 gy\ncollected each night goes towards runmng a supermarket for the needy."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q25",
@@ -1215,7 +1450,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1737,
+              "end": 1925,
+              "quote": "Authorities finally caught one notorious thief named Thomas Morgan and\nbanned him from the fountain after he fished out thousands of dollars in change over 34 years using a magnetic\nstick."
+            }
+          ]
         }
       ]
     },
@@ -2197,7 +2441,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1734,
+              "end": 1782,
+              "quote": "\"I love diverse and unique challenges,' he said."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1783,
+              "end": 1866,
+              "quote": "\"I'm definitely interested in seeing what I can handle and what my body can accept."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q37",
@@ -2365,7 +2625,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 976,
+              "end": 1249,
+              "quote": "He will line up Monday in ” 陋 / ℃ “ (南极) for the first leg of the World Marathon Challenge—Joining 32 other adventures eekers on an unusual journey where participants travel through different time zones and climates to runs even marathons on seven contlnents in seven days."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q39",
@@ -2449,7 +2718,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 160,
+              "end": 264,
+              "quote": "TOO much effort and he'd begin to sweat which he was told, would only increase the risk of 0 “ m (体温过低)."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q40",
@@ -2533,7 +2811,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1887,
+              "end": 2125,
+              "quote": "Something about the way Richard Donovan carried himself appealed to Wardian\nPerhaps it was the sense of adventure Donovan displayed when they first met at the\n2010 50K Championships in Galway, lrel and where Donovan was the race director."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q41",
@@ -2617,7 +2904,23 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6097,
+              "end": 6211,
+              "quote": "'Onc e he decides to do something, he just works at it until he does it ' Michael's younger s i ster Mariele said."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6212,
+              "end": 6311,
+              "quote": "\"Once he decides to do it it's usually something that's going to happen He's always been like that."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q42",
@@ -2701,7 +3004,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3622,
+              "end": 3739,
+              "quote": "This year's challenge will feature a far more elite field, which includes Ryan\nHaII Americas fastest marathon runner."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3740,
+              "end": 3915,
+              "quote": "Despite his proven track record, HaII said he has no time goals and that he still suffers from the same fatigue issues that forced him to\nleave the professional ranks in 20 巧."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q43",
@@ -2870,7 +3189,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "O"
+          "answerOriginal": "O",
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 767,
+              "end": 864,
+              "quote": "The race for Wardian however, was less about the result than overcoming his aversion to the cold."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q45",
@@ -2954,7 +3282,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2641,
+              "end": 2773,
+              "quote": "Wardian started saving for the trip in 2014 connecting with sponsors and getting approval from his wife, Jennifer before committing."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q46",
@@ -2994,7 +3331,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 650,
+              "end": 865,
+              "quote": "But repeating that accomplishment is Often not realistic, which can lead to severe negative emotional consequences When it doesn't reoccur ThiS form of motivation is widely regarded as a negative type of motivation."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q47",
@@ -3034,7 +3380,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1159,
+              "end": 1343,
+              "quote": "As a result to avoid feelings of shame and worthlessness associated with failure, they extend themselves to such a degree that there's a subsequent adverse effect on the ir well-being."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1344,
+              "end": 1415,
+              "quote": "This internal pressure to succeed at all costs demands a lot of effort."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q48",
@@ -3074,7 +3436,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1508,
+              "end": 1629,
+              "quote": "ThOse negative emotions mount into heightened anxiety, impacting the ir ability to make the most of the ir personal life."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q49",
@@ -3114,7 +3485,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1968,
+              "end": 2064,
+              "quote": "The study also discovered several positive outcomes that can actually outweigh the harmful ones."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2230,
+              "end": 2341,
+              "quote": "This excitement makes pursumg goals enjoyable and stimulates pleasure and pride that would result from success."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q50",
@@ -3154,7 +3541,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2647,
+              "end": 2828,
+              "quote": "However the way people feel about the ir work has less to do\nwith whether they're motivated by the preservation of self-esteem but more with the fact that they re s imply motivated."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q51",
@@ -3195,7 +3591,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "C"
+          "answerOriginal": "C",
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 162,
+              "quote": "Degradation of the world's natural resources by humans IS rapidly outpacing the planet's ability to absorb the damage, a recent UN env lronmental study has found."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q52",
@@ -3235,7 +3640,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 536,
+              "end": 646,
+              "quote": "There appears little prospect of this desperate situation be ing remedied without radical action be ing taken."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q53",
@@ -3275,7 +3689,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 883,
+              "end": 1264,
+              "quote": "The rate of damage to the natural environment was found to increase globally, despite concerted efforts to persuade government to take measures to improve the condition \"If current trends continue and the world fails to improve patterns of production and consumption then the state of the world's environment will continue to decline ' warned\nUN executive director Achim S te iner."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q54",
@@ -3315,7 +3738,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1959,
+              "end": 2057,
+              "quote": "This will put a I ong-term strmn on the ability of developing economies to feed the ir own people."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2058,
+              "end": 2245,
+              "quote": "Climate change IS aggravated by the enussions of greenhouse gas e S from chemical and natural fertilisers used in agriculture which increased by more than a quarter between 2000 and 2010."
+            }
+          ]
         },
         {
           "id": "2022-12-1-q55",
@@ -3355,7 +3794,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2640,
+              "end": 2895,
+              "quote": "But in developing countries, the path of future development has more potential to change, which has encouraged international institutions to devise more sustainabl e growth pathways that are supposed both to alleviate poverty and preserve the environment."
+            }
+          ]
         }
       ]
     },

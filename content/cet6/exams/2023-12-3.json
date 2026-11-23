@@ -1065,7 +1065,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2410,
+              "end": 2569,
+              "quote": "However, research suggests that although this type of training may improve one's abilities at the tasks themselves, they don't seem to improve other abilities."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q37",
@@ -1149,7 +1158,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3288,
+              "end": 3408,
+              "quote": "In fact, it has been estimated that there are fewer monolingual speakers in the world than bilinguals and multilinguals."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q38",
@@ -1233,7 +1251,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 180,
+              "end": 297,
+              "quote": "Dementia refers to the loss of cognitive abilities, and one of its most common forms is Alzheimers disease (阿尔茨海默氏病)."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 298,
+              "end": 442,
+              "quote": "At this time, the causes of the disease are not well understood, and consequently, there are no proven steps that people can take to prevent it."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q39",
@@ -1317,7 +1351,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7337,
+              "end": 7497,
+              "quote": "So we can't really say whether being socially active prevents the onset of dementia, or if people who don't have dementia are more likely to be socially active."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q40",
@@ -1401,7 +1444,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2835,
+              "end": 2974,
+              "quote": "The best evidence that foreign language learning confers cognitive benefits comes from research with those who are already bilingual (双语的)."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q41",
@@ -1485,7 +1537,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6264,
+              "end": 6403,
+              "quote": "Crucially, Bialystok suggested that the positive benefits of being bilingual were only found in those who used both languages all the time."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q42",
@@ -1569,7 +1630,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1723,
+              "end": 1814,
+              "quote": "Unlike muscles, the brain is always active and works even during periods of rest and sleep."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q43",
@@ -1653,7 +1723,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4283,
+              "end": 4463,
+              "quote": "In fact, bilingual individuals outperform their monolingual counterparts on a variety of cognitive tasks, such as following complex instructions, and switching to new instructions."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q44",
@@ -1737,7 +1816,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 850,
+              "end": 943,
+              "quote": "It is also important to remember that dementia is not the same thing as normal forgetfulness."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1082,
+              "end": 1189,
+              "quote": "People with dementia have more serious problems, like feeling confused or getting lost in a familiar place."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q45",
@@ -1821,7 +1916,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4873,
+              "end": 5111,
+              "quote": "If the benefits of being bilingual spill over to other aspects of cognition, then we would expect to see a lower incidence of Alzheimer's disease in bilinguals than in monolinguals, or at least a later onset of Alzheimer's for bilinguals."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5112,
+              "end": 5161,
+              "quote": "In fact, there is evidence to support this claim."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q46",
@@ -1861,7 +1972,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 129,
+              "end": 252,
+              "quote": "For research to serve its full purpose, the results must leave the confines of research laboratories and academic journals."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q47",
@@ -1901,7 +2021,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 426,
+              "end": 543,
+              "quote": "Many researchers seem to be content with sharing the results of their studies in academic journals or at conferences."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q48",
@@ -1941,7 +2070,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 711,
+              "end": 882,
+              "quote": "For researchers in the tenure-track system, their main goal is winning tenure, which in part can be achieved by getting a number of papers published in prominent journals."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 883,
+              "end": 952,
+              "quote": "Pressures like this mean community-level outreach is not prioritised."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q49",
@@ -1981,7 +2126,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1601,
+              "end": 1649,
+              "quote": "The benefits of sharing findings flow both ways."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1650,
+              "end": 1806,
+              "quote": "Engaging with other researchers and the public can lead to unexpected new connections and new ideas that could suggest fruitful new directions for research."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q50",
@@ -2021,7 +2182,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2552,
+              "end": 2785,
+              "quote": "But this can be resolved by researchers engaging the services of professional writers or communication officers to help with translating their study into more accessible language and share it widely with media outlets and the public."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q51",
@@ -2061,7 +2231,23 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 568,
+              "end": 610,
+              "quote": "Spiders in the UK are almost all harmless."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 723,
+              "end": 860,
+              "quote": "But they are a constant source of human anxieties—with a cultural association with witches and wickedness dating back to the middle ages."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q52",
@@ -2101,7 +2287,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 723,
+              "end": 860,
+              "quote": "But they are a constant source of human anxieties—with a cultural association with witches and wickedness dating back to the middle ages."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q53",
@@ -2181,7 +2376,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1796,
+              "end": 1963,
+              "quote": "But conservationists are most concermed about those varieties that are threatened due to habitat loss and fragmentation, which makes it impossible for them to migrate."
+            }
+          ]
         },
         {
           "id": "2023-12-3-q55",
@@ -2221,7 +2425,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2572,
+              "end": 2742,
+              "quote": "But as they reveal themselves in all their splendour this autumn, it would be a good thing if more animal lovers recognised the ways in which spiders are simply terrific."
+            }
+          ]
         }
       ]
     },

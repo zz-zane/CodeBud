@@ -5,6 +5,7 @@
  */
 import { computed, reactive, ref } from 'vue'
 import { CET6 } from '../../lib/copy'
+import { isSelectingTextIn } from '../../lib/cet6-select-guard'
 import { assetBase } from '../../lib/asset-base'
 import {
   blockHeading,
@@ -97,6 +98,10 @@ function passageOf(block: Cet6Block): Passage | null {
 }
 
 const readingPassage = computed(() => (isReading.value && props.block ? passageOf(props.block) : null))
+// 段落匹配：已被某道题选过的段落，开头字母划掉（只划字母，不划段落；段落可重复选，仍可点）
+const usedLetters = computed(() => new Set(
+  (props.section.questions || []).filter((x) => x.kind === 'matching' && x.blockId === props.block?.id).map((x) => props.answers[x.id]).filter(Boolean)
+))
 
 interface BlockView {
   block: Cet6Block
@@ -203,7 +208,7 @@ function transcriptTitle(block: Cet6Block): string {
   <div class="cet6-paper" :data-section="section.type">
     <!-- 阅读：只印当前这一篇 -->
     <template v-if="isReading">
-      <div v-if="readingPassage" class="cet6-passage">
+      <div v-if="readingPassage" class="cet6-passage" :data-evidence-text="block?.id">
         <template v-if="readingPassage.matching">
           <h3 v-if="readingPassage.title" class="cet6-article-title">{{ readingPassage.title }}</h3>
           <p
@@ -213,7 +218,7 @@ function transcriptTitle(block: Cet6Block): string {
             :class="{ picked: pickedLetter === item.letter }"
             :data-para="item.letter"
           >
-            <button type="button" class="cet6-marker" :aria-label="CET6.pickParagraph(item.letter)" @click="emit('para', item.letter)">
+            <button type="button" class="cet6-marker" :class="{ used: usedLetters.has(item.letter) }" :aria-label="CET6.pickParagraph(item.letter)" @click="emit('para', item.letter)">
               {{ item.mark }}
             </button>
             {{ ' ' + item.text }}
@@ -270,7 +275,7 @@ function transcriptTitle(block: Cet6Block): string {
           <h3 v-if="bv.unit" class="cet6-paper-unit">{{ bv.unit }}</h3>
           <p v-if="bv.range" class="cet6-range">{{ bv.range }}</p>
 
-          <div v-if="!isListening && bv.passage" class="cet6-passage">
+          <div v-if="!isListening && bv.passage" class="cet6-passage" :data-evidence-text="bv.block.id">
             <p v-for="(p, i) in bv.passage.paras" :key="i" :class="{ zh: p.zh }" :lang="p.zh ? 'zh-CN' : undefined">
               <template v-for="(part, j) in p.parts" :key="j">{{ typeof part === 'string' ? part : part.blank }}</template>
             </p>
@@ -291,9 +296,9 @@ function transcriptTitle(block: Cet6Block): string {
                     :data-q="q.id"
                     :data-key="opt.key"
                     :aria-pressed="answers[q.id] === opt.key"
-                    :disabled="submitted || q.unanswerable === true"
+                    :aria-disabled="submitted || q.unanswerable === true"
                     :title="q.unanswerable === true ? CET6.UNANSWERABLE_TIP : undefined"
-                    @click="emit('choose', q, opt.key)"
+                    @click="!(submitted || q.unanswerable === true) && !isSelectingTextIn($event.currentTarget) && emit('choose', q, opt.key)"
                   >
                     <span class="cet6-option-key">{{ opt.key }})</span><span>{{ opt.text }}</span>
                   </button>
@@ -318,7 +323,7 @@ function transcriptTitle(block: Cet6Block): string {
                 >
                   {{ englishOnly[bv.block.id] ? CET6.FULL_TEXT : CET6.ENGLISH_ONLY }}
                 </button>
-                <div class="cet6-review-text">{{ shownText(bv.block) }}</div>
+                <div class="cet6-review-text" :data-evidence-transcript="bv.block.id">{{ shownText(bv.block) }}</div>
                 <template v-if="!transcriptInfo(bv.block).usesDraft && (bv.block.asrDraft || '').trim()">
                   <button type="button" class="pg-chip" @click="asrOpen[bv.block.id] = !asrOpen[bv.block.id]">
                     {{ asrOpen[bv.block.id] ? CET6.ASR_HIDE : CET6.ASR_SHOW }}
@@ -355,6 +360,7 @@ function transcriptTitle(block: Cet6Block): string {
 .cet6-marker, .cet6-blank { font: inherit; color: var(--mi-text); cursor: pointer; }
 .cet6-marker { padding: 0 var(--mi-sp-1); border: 0; border-radius: var(--radius-lg, 8px); background: transparent; font-weight: 500; }
 .cet6-marker:hover { background: var(--cds-fill-ghost-hover); }
+.cet6-marker.used { color: var(--mi-text-3); text-decoration: line-through; text-decoration-thickness: 2px; }
 .cet6-blank { display: inline-flex; align-items: baseline; gap: var(--mi-sp-1); min-width: 3.2em; padding: 0 var(--mi-sp-2); border: 0; border-bottom: 1px solid var(--mi-border-control); border-radius: 4px 4px 0 0; background: transparent; line-height: 1.4; }
 .cet6-blank b { font-family: var(--mi-font-family); font-size: 0.8em; font-weight: 500; color: var(--mi-text-3); }
 .cet6-word { font-style: italic; }
@@ -374,8 +380,8 @@ function transcriptTitle(block: Cet6Block): string {
 .cet6-options { display: flex; flex-direction: column; gap: 2px; }
 .cet6-options.two-up { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .cet6-option { display: flex; gap: var(--mi-sp-2); padding: var(--mi-sp-1) var(--mi-sp-2); border: 1px solid transparent; border-radius: var(--radius-lg, 8px); background: transparent; color: var(--mi-text); font: inherit; text-align: left; cursor: pointer; }
-.cet6-option:hover:not(:disabled) { background: var(--cds-fill-ghost-hover); }
-.cet6-option:disabled { cursor: default; }
+.cet6-option:hover:not(:disabled):not([aria-disabled="true"]) { background: var(--cds-fill-ghost-hover); }
+.cet6-option:disabled, .cet6-option[aria-disabled="true"] { cursor: default; }
 .cet6-option.on { background: var(--mi-blue-light); border-color: var(--mi-blue-deep); }
 .cet6-option.right { background: var(--mi-success-fill); border-color: var(--mi-success-deep); color: var(--mi-success-deep); }
 .cet6-option.wrong { background: var(--mi-error-fill); border-color: var(--mi-error-deep); color: var(--mi-error-deep); }

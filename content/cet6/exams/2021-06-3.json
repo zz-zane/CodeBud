@@ -1155,7 +1155,23 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4806,
+              "end": 4960,
+              "quote": "\"We've got a societal debate going on about access to our public commons, as it were, about famous faces, says Lilian Edwards at Newcastle University, UK."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4961,
+              "end": 5061,
+              "quote": "Should the public be allowed to use or reproduce images of famous people, given how iconic they are?"
+            }
+          ]
         },
         {
           "id": "2021-06-3-q37",
@@ -1265,7 +1281,23 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1921,
+              "end": 2085,
+              "quote": "The James Dean film is a way to keep the actor's image relevant for younger generations, says Mark Roesler of CMG Worldwide, the firm that represents Dean's estate."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2237,
+              "end": 2418,
+              "quote": "\"Moving into the future, we want James Dean to be brought into different gaming environments, or different virtual reality environments, or augmented reality environments,\" he says."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q38",
@@ -1375,7 +1407,23 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6467,
+              "end": 6686,
+              "quote": "\"There're a thousand things that could go wrong with a computer-generated facial performance, and any one of those could make it fall into the uncanny valley,\" he says·; \"Your brain j°:st knows there's something wrong.\""
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6687,
+              "end": 6751,
+              "quote": "The problem often arises around the eyes or mouth, says Webber.."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q39",
@@ -1485,7 +1533,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 715,
+              "end": 903,
+              "quote": "As computer-generated imagery (CGI) has become cheaper and more sophisticated, the film industry can now convincingly recreate people on screen­ even actors who have been dead for decades."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q40",
@@ -1595,7 +1652,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4045,
+              "end": 4143,
+              "quote": "A hidden hazard of digitally recreating a deceased celebrity is the risk of damaging their legacy."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q41",
@@ -1815,7 +1881,16 @@
             "pages": [
               4
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1195,
+              "end": 1354,
+              "quote": "In the film, which will be called Finding Jack, Dean will be recreated on screen with CGI based on old footage and photographs, with another actor voicing him."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q43",
@@ -1925,7 +2000,16 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5205,
+              "end": 5302,
+              "quote": "A recreation, however lifelike, will never be in distinguish able from a real actor, says Webber."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q44",
@@ -2035,7 +2119,23 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3712,
+              "end": 3841,
+              "quote": "\"I also see a lot of actors today who will have the desire to take advantage of this technology: to have their likeness captured."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3886,
+              "end": 4040,
+              "quote": "\"They foresee this being something that could give their estates and give their families the ability to make money from their likeness when they're gone.\""
+            }
+          ]
         },
         {
           "id": "2021-06-3-q45",
@@ -2145,7 +2245,23 @@
             "pages": [
               5
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5535,
+              "end": 5695,
+              "quote": "As it becomes easier to digitally recreate celebrities and to entirely manufacture on'.\"screen identities, could this kind of technology put actors out of jobs?"
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5696,
+              "end": 5750,
+              "quote": "\"J think actors are worried about this,\" says Edwards."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q46",
@@ -2191,7 +2307,23 @@
             "pages": [
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 408,
+              "end": 524,
+              "quote": "It is a delicate thing, easily stamped out; in fact, it flourishes most fully when people are playful and childlike."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1272,
+              "end": 1441,
+              "quote": "When children are regarded as vessels to be filled with facts, creativity does not prosper; nor does it when teachers' sole objective is coaching children towards exams."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q47",
@@ -2237,7 +2369,16 @@
             "pages": [
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 600,
+              "end": 1039,
+              "quote": "This mysterious-but teachable-quality is creativity, the subject of a recently-published report by Durham· Commission on Creativity and Education; The report concludes that· creativity-should not inhabit the school curriculum only as it relates to drama, music, art and other obviously creative subjects, but that creative thinking ought to run through all of school life, infusing (充满) the way humanities and natural sciences are learned."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q48",
@@ -2283,7 +2424,16 @@
             "pages": [
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1272,
+              "end": 1441,
+              "quote": "When children are regarded as vessels to be filled with facts, creativity does not prosper; nor does it when teachers' sole objective is coaching children towards exams."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q49",
@@ -2329,7 +2479,16 @@
             "pages": [
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1823,
+              "end": 1930,
+              "quote": "One only has to look at the remarkable arts facilities at Britain's top private schools to comprehend this."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q50",
@@ -2375,7 +2534,23 @@
             "pages": [
               7
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1661,
+              "end": 1751,
+              "quote": "Nevertheless, it is arts subjects through which creativity can most obviously be fostered."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2524,
+              "end": 2684,
+              "quote": "As lives are affected by any number of looming challenges-climate crisis, automation in the workplace-humans are going to need creative thinking more than ever."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q51",
@@ -2421,7 +2596,16 @@
             "pages": [
               8
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 158,
+              "end": 221,
+              "quote": "We all tend to sub consciously copy gestures of people we like."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q52",
@@ -2467,7 +2651,23 @@
             "pages": [
               8
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 251,
+              "end": 389,
+              "quote": "As a rule, mirroring means that conversation a lists enjoy their communication and that there's a certain level of agreement between them."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 390,
+              "end": 481,
+              "quote": "The topic of discussion is equally interesting for both and they know their interests meet."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q53",
@@ -2513,7 +2713,16 @@
             "pages": [
               9
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 737,
+              "end": 826,
+              "quote": "Popular culture makes people want to look popular, and act and speak like popular people."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q54",
@@ -2559,7 +2768,23 @@
             "pages": [
               9
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1628,
+              "end": 1812,
+              "quote": "If you want to write like a professional without plagiarism (tf;, there are a few lessons to learn and the first one is: \"Copy from one, it's plagiarism; copy from two, it's research.\""
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1813,
+              "end": 1921,
+              "quote": "The correct interpretation of this statement is not about copying, but rather about creating your own style."
+            }
+          ]
         },
         {
           "id": "2021-06-3-q55",
@@ -2605,7 +2830,23 @@
             "pages": [
               9
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2029,
+              "end": 2153,
+              "quote": "Examine types of sentences they use, pay attention to their metaphors, and focus on stories Imitation is rather paradoxical."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2253,
+              "end": 2286,
+              "quote": "However, it may do a lot of harm."
+            }
+          ]
         }
       ]
     },

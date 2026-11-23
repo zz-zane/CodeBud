@@ -1080,7 +1080,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2892,
+              "end": 3022,
+              "quote": "In the grass fed system, farmers are also not subject to the wildly fluctuating milk prices of the international commodity market."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q37",
@@ -1184,7 +1193,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1187,
+              "end": 1286,
+              "quote": "His first partnership was with Paul and Phyllis Amburgh, owners of the Dharma Lea farm in New York."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1553,
+              "end": 1709,
+              "quote": "Since 20 10, the couple has helped 125 small dairy farms convert to grass-fed, with more than 80% of those farms corning on board during the last two years."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q38",
@@ -1288,7 +1313,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5781,
+              "end": 5983,
+              "quote": "But Smith counters that if you factor in the hidden cost of government corn subsidies, environment degradation, and decreased human heath and animal welfare, grass­\nfed is the more cost-effective model."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q39",
@@ -1392,7 +1426,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2074,
+              "end": 2234,
+              "quote": "Another factor is the squeeze that conventional dairy farmers have felt as the price of grain they feed their cows has gone up, tightening their profit margins."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q40",
@@ -1496,7 +1539,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3864,
+              "end": 4042,
+              "quote": "While Maple Hill's conversion program is unusually hands-on and comprehensive, it's just one of a growing number of businesses committed to slowly changing the way America farms."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q41",
@@ -1600,7 +1652,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 240,
+              "end": 316,
+              "quote": "The idea that all energy and wealth comes from the sun really intrigued him."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q42",
@@ -1704,7 +1765,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5340,
+              "end": 5449,
+              "quote": "As for the meat, Smith says his grass-fed hamburger will be priced 20-25 % over the conventional alternative."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q43",
@@ -1808,7 +1878,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2791,
+              "end": 2887,
+              "quote": "And grass-fed dairy and meat have been shown to be higher in certain nutrients and healthy fats."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q44",
@@ -1912,7 +1991,23 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 477,
+              "end": 600,
+              "quote": "In 2009, he and his wife Laura launched Maple Hill Creamery, an organic, all grass-fed yogurt company in northern New York."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 601,
+              "end": 709,
+              "quote": "He quickly learned what the market has demonstrated: Demand for grass-fed products currently exceeds supply."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q45",
@@ -2016,7 +2111,23 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6295,
+              "end": 6474,
+              "quote": "Soon after launching EPIC's most successful product-the\nBison Bacon Cranberry Bar-Collins and Forrest found they'd exhausted their sources for bison raised exclusively on pasture."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6475,
+              "end": 6586,
+              "quote": "When they started researching the supply chain, they learned that only 2-3% of all bison is actually grass-fed."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q46",
@@ -2097,7 +2208,23 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 906,
+              "end": 1034,
+              "quote": "Introducing a fundraising requirement for students does not help, as better-off children can tap up richer aunts and neighbours."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2660,
+              "end": 2776,
+              "quote": "But the least we should expect is that they do not foster divisions and exclude those who are already disadvantaged."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q48",
@@ -2138,7 +2265,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1739,
+              "end": 1866,
+              "quote": "Methods such as whole-school fundraising, with the proceeds pooled, can help to extend opportunities and fuel community spirit."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q49",
@@ -2178,7 +2314,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2107,
+              "end": 2239,
+              "quote": "Even parents who can see that a trip is little more than a party or celebration may well feel guilt that their child is left behind."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q50",
@@ -2259,7 +2404,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 201,
+              "quote": "Rising temperatures and overfishing in the pristine waters around the Antarctic could see king penguin populations pushed to the brink of extinction by the end of the century, according to a new study."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q52",
@@ -2300,7 +2454,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 774,
+              "end": 1000,
+              "quote": "Earlier this month a separate study found that a combination of climate change and industrial fishing is threatening the krill population in Antarctic waters, with a potentially disastrous impact on whales, seals and penguins."
+            }
+          ]
         },
         {
           "id": "2019-12-3-q53",
@@ -2421,7 +2584,16 @@
             ]
           },
           "verified": true,
-          "answerOriginal": "A"
+          "answerOriginal": "A",
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2682,
+              "end": 2782,
+              "quote": "Only a handful of islands in the Southern Ocean are suitable for sustaining large breeding colonies."
+            }
+          ]
         }
       ]
     },

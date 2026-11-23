@@ -227,7 +227,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 302,
+              "end": 358,
+              "quote": "I'm attracted to the marriage of design and engineering."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q2",
@@ -267,7 +276,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 662,
+              "end": 704,
+              "quote": "but I. II srmply put in the work reguired."
+            },
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 705,
+              "end": 753,
+              "quote": "I'm certain the\nfruits of my labor will pay off."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q3",
@@ -307,7 +332,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 918,
+              "end": 990,
+              "quote": "And the legacies you build will last much longer than any of\nus mortals."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q4",
@@ -347,7 +381,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1327,
+              "end": 1470,
+              "quote": "I would suggest\nyou start with computer science because there will be many intricate visuals you will have to produce as part\nof your projects."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q5",
@@ -387,7 +430,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 208,
+              "end": 248,
+              "quote": "Mr. Sanchez has a ver hi\npublic profile."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q6",
@@ -427,7 +479,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 422,
+              "end": 459,
+              "quote": "Good ( 6 ) As his personal assistant."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q7",
@@ -467,7 +528,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 883,
+              "end": 937,
+              "quote": "This is my first job after graduating from university."
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 947,
+              "end": 988,
+              "quote": "I don't\nhave much pnor workmg experience."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q8",
@@ -507,7 +584,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1696,
+              "end": 1778,
+              "quote": "1 am fully fluent in English and Spanish and have a working proficiency ln French."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q9",
@@ -547,7 +633,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 180,
+              "end": 255,
+              "quote": "They don't have many of the rules\nand pressures of traditional team sports."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q10",
@@ -587,7 +682,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 555,
+              "end": 652,
+              "quote": "Risk-free activities deprive kids of the opportunity to test themselves and overcome their\nfears."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q11",
@@ -627,7 +731,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1209,
+              "end": 1271,
+              "quote": "But if you do decide that adventure sports are a bit too much."
+            },
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1272,
+              "end": 1343,
+              "quote": "do try to introduce other forms of\noutdoor adventures into their lives."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q12",
@@ -667,7 +787,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 192,
+              "end": 344,
+              "quote": "technology firms\noften purposely design devices that will not last long and cannot be repaired so that consumers will have to\nspend their money on a ne."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q13",
@@ -707,7 +836,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 365,
+              "end": 452,
+              "quote": "the French government began requiring tech manufacturers to list a repairability score."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q14",
@@ -747,7 +885,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1028,
+              "end": 1090,
+              "quote": "We need tech companies to take the lead to solve this problem."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q15",
@@ -827,7 +974,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 302,
+              "end": 484,
+              "quote": "The majority of cyberloafing research focuses on ways to prevent employees from engaging in this\nbehavior through interventions such as internet monitoring and computer use policies."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q17",
@@ -867,7 +1023,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 934,
+              "end": 1075,
+              "quote": "( (7)Our hypothesis was that cyberloafing may serve as a mini-break\ngrvmg employees an opportunity to recover from stressful work situations."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q18",
@@ -907,7 +1072,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 2159,
+              "end": 2288,
+              "quote": "This fits with other\nrecent research that suggests taking short breaks is associated with higher levels of daily Job performance."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q19",
@@ -947,7 +1121,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 141,
+              "end": 184,
+              "quote": "That meant no trees for building materials."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q20",
@@ -987,7 +1170,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 573,
+              "end": 636,
+              "quote": "This was largely because Morton founded\nthe Nebraska City News."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q21",
@@ -1027,7 +1219,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1474,
+              "end": 1573,
+              "quote": "an astounding\none million trees were planted in Nebraska—an average of more than SiX for every man."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q22",
@@ -1067,7 +1268,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 7,
+              "end": 62,
+              "quote": "Modern humans arose in Africa about 200. 000 years ago."
+            },
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 63,
+              "end": 136,
+              "quote": "They then spread across Europe and Asia\nsometime after 60. 000 years ago."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q23",
@@ -1107,7 +1324,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 605,
+              "end": 724,
+              "quote": "Take\nthe recent discovery of two modern human teeth found in the Luna cave in China's Guangxi Zhuang\nAutonomous Region."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q24",
@@ -1147,7 +1373,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1016,
+              "end": 1101,
+              "quote": "The first question we should ask is why did modern humans leave Africa to begin With?"
+            }
+          ]
         },
         {
           "id": "2023-06-2-q25",
@@ -1187,7 +1422,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2082,
+              "end": 2170,
+              "quote": "This brings us to another question: by which route did modern humans move out Of Africa?"
+            }
+          ]
         }
       ]
     },
@@ -2166,7 +2410,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2164,
+              "end": 2274,
+              "quote": "Curran describes socially prescribed perfectionism as My self-esteem is contingent on what other people think."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q37",
@@ -2250,7 +2503,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 208,
+              "end": 287,
+              "quote": "She has heard of graduate students spendmg 12 to 18 hours at a time in the lab."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 471,
+              "end": 643,
+              "quote": "“ Relationships become estranged (疏远的)—people stop inviting them to social gathermgs or drnner parties, which leads them to spend even more tlme in the lab, Pryor told me “"
+            }
+          ]
         },
         {
           "id": "2023-06-2-q38",
@@ -2334,7 +2603,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3468,
+              "end": 3515,
+              "quote": "Perfectionism can, of course, a positive force."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3516,
+              "end": 3609,
+              "quote": "Think of professional athletes, who train aggressively for ever-hmgher levels of competition."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q39",
@@ -2418,7 +2703,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1099,
+              "end": 1420,
+              "quote": "In a study of thousands of American, Canadian, and British college students published earlier this year, Thomas Curran of the University of Bath and Andrew HiII of York St. John University found that today's college students report higher levels of perfectionism than college students did during the 1990s or early 2000S."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q40",
@@ -2502,7 +2796,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5261,
+              "end": 5466,
+              "quote": "While educators and parents have successfully convinced students of the need to be high performing and diligent, the experts told me, they haven't adequately prepared them for the inevitability of failure."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q41",
@@ -2586,7 +2889,16 @@
               9
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 649,
+              "end": 897,
+              "quote": "Along with other therapists, Pryor, who is now with the Family lnstitute at Northwestern University, IS trying to sound the alarm about a tendency among young adults and college students to strive for perfection in their work—sometimes at any cost."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q42",
@@ -2670,7 +2982,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5951,
+              "end": 6327,
+              "quote": "Bach, who sees many students from Brown University, says some of them don't even go out on weekends, let alone weekdays, She tells them, \"Aim high, but get comfortable with good enough When they don't get some award, she encourages them to remember that outcome is not a basis for a broad conclusion about the persons intelligence, qualifications, or potential for the future."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q43",
@@ -2754,7 +3075,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2981,
+              "end": 3220,
+              "quote": "Michael Brusteim a clinical psychologist Manhattan, says when he first began practicing in 2007, he was surprised by how prevalent perfectionism was among his clients, despite how little his graduate training had focused on the phenomenon."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3221,
+              "end": 3320,
+              "quote": "He sees perfectionism in, among others, clients who are entrepreneurs, artists, and tech employees."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q44",
@@ -2838,7 +3175,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7153,
+              "end": 7406,
+              "quote": "But he warns that some people go into therapy expecting too much—an instant transformation of themselves from a 010g 记 (病态的) perfectionist to a (still high- achieving) non-perfectiomst, They try to be perfect, in other words, at no longer being perfect."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q45",
@@ -2922,7 +3268,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4970,
+              "end": 5073,
+              "quote": "But others actually fall behind on work, unable to complete assignments unless they are, well, perfect."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q46",
@@ -2962,7 +3317,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 302,
+              "end": 447,
+              "quote": "has almost unconstramed access\nWe seem to take it for granted that advertisers and marketers are allowed to condition even the youngest children."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q47",
@@ -3002,7 +3366,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 687,
+              "end": 834,
+              "quote": "We're turning out little consumers rather than young citizens who will value themselves for what they contribute to the society in which they live."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q48",
@@ -3042,7 +3415,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1213,
+              "end": 1381,
+              "quote": "child development experts and educators point to research suggesting that this emerging cradle-to-grave consumerism is contributing to growing rates Of IOW self-esteem."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q49",
@@ -3082,7 +3464,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 1728,
+              "end": 1821,
+              "quote": "and because of advertisements' viral effect they only need to infect a few to reach the many."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q50",
@@ -3122,7 +3513,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2108,
+              "end": 2202,
+              "quote": "Of course there'll be plenty of objections to an outright ban on advertising to the under-lls."
+            },
+            {
+              "blockId": "reading-passage-1",
+              "field": "text",
+              "start": 2216,
+              "end": 2375,
+              "quote": "those who argue that would be a breach of freedom of speech and infringe the rights of corporations to brainwash little children into demanding their products."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q51",
@@ -3162,7 +3569,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 36,
+              "end": 124,
+              "quote": "because of the inherent dehumaninng effect it has and the relentless pressure it brings."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q52",
@@ -3202,7 +3618,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 942,
+              "end": 1032,
+              "quote": "exponents argue that it can also protect employees against bullying and sexual harassment."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q53",
@@ -3242,7 +3667,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1033,
+              "end": 1091,
+              "quote": "Some of this data analysis can produce unexpected results."
+            },
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 1105,
+              "end": 1183,
+              "quote": "it was found that people who sat at 12-person lunch tables tended to interact."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q54",
@@ -3282,7 +3723,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2138,
+              "end": 2257,
+              "quote": "A lot depends on how such monitoring initiatives are communicated and this could prevent possible revolts being staged."
+            }
+          ]
         },
         {
           "id": "2023-06-2-q55",
@@ -3322,7 +3772,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2576,
+              "end": 2652,
+              "quote": "many staffers remain sceptical and fear an erosion of their civil liberties."
+            }
+          ]
         }
       ]
     },

@@ -30,6 +30,23 @@ export interface Cet6Question {
   verified?: boolean
   verificationNote?: string
   unanswerable?: boolean
+  /**
+   * 解析在原文里的依据位置（2026-11-23）：做完题看解析时，左侧原文 / 听力原文把这几段标亮并滚过去，
+   * 学员不用自己回原文找。由 scripts/cet6-evidence 生成、content 校验核对 quote === 原文[start, end)。
+   */
+  evidence?: Cet6Evidence[]
+}
+
+export interface Cet6Evidence {
+  /** 所在 block（通常就是题目的 blockId） */
+  blockId: string
+  /** 阅读在 text 里找，听力在 transcript 里找 */
+  field: 'text' | 'transcript'
+  /** UTF-16 下标，左闭右开 */
+  start: number
+  end: number
+  /** 原文里的这一段，必须等于 block[field].slice(start, end)；用来防偏移漂移 */
+  quote: string
 }
 
 export interface Cet6Block {

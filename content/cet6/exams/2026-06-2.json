@@ -2549,7 +2549,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2790,
+              "end": 3044,
+              "quote": "With around 600 hectares replanted around the world since 2015 and another 1,100\nplanned for this year, the company's drive fits into the Bonn Challenge, a global effort to restore 150 million hectares of the world's deforested and degraded land by 2020."
+            }
+          ]
         },
         {
           "id": "2026-06-2-q37",
@@ -2628,7 +2637,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5410,
+              "end": 5766,
+              "quote": "Although not technically reforestation, agroforestry (a system of land use in which harvestable trees or shrubs are grown among or around crops or on pasture land, as a means of preserving or enhancing the productivity of the land) provides an opportunity for small-holder farmers to sustain their livelihoods while adding some forest cover to their farms."
+            }
+          ]
         },
         {
           "id": "2026-06-2-q38",
@@ -2707,7 +2725,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3704,
+              "end": 3864,
+              "quote": "Unlike\nLand Life Company, this region-wide project makes the economic and business case for reforestation, even though they are after biodiversity conservation."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3865,
+              "end": 4017,
+              "quote": "\"You need to bring in private sector money,\" says WRI's Vergara, who leads the initiative, \"and that capital needs to see a return on their investment.\""
+            }
+          ]
         },
         {
           "id": "2026-06-2-q39",
@@ -2786,7 +2820,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6814,
+              "end": 6870,
+              "quote": "But in the right location, perhaps all you need is time."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7163,
+              "end": 7310,
+              "quote": "Barú's former grazing lands are now thriving woods and the property boasts over\n150 hectares of secondary forests with no intervention from humans."
+            }
+          ]
         },
         {
           "id": "2026-06-2-q40",
@@ -2865,7 +2915,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1888,
+              "end": 2018,
+              "quote": "\"It's not a theoretical proposition,\" says Walter Vergara, a forest and climate specialist at the\nWorld Resources Institute (WRI)."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2019,
+              "end": 2140,
+              "quote": "\"It requires the right incentives, the right stakeholders, the right analysis and sufficient capital, but it can happen.\""
+            }
+          ]
         },
         {
           "id": "2026-06-2-q41",
@@ -2944,7 +3010,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6522,
+              "end": 6663,
+              "quote": "Vergara's partners look for safe investments, and even Land Life Company only runs major projects in what they consider \"low-risk\" countries."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6664,
+              "end": 6809,
+              "quote": "\"We tend to avoid large-scale operations in countries in some parts of the Middle East or Africa where the permanence is not secured,\" says\nRuys."
+            }
+          ]
         },
         {
           "id": "2026-06-2-q42",
@@ -3023,7 +3105,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1488,
+              "end": 1575,
+              "quote": "\"Probably, but it can take decades or hundreds of years, so we are speeding things up.\""
+            }
+          ]
         },
         {
           "id": "2026-06-2-q43",
@@ -3102,7 +3193,23 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4162,
+              "end": 4307,
+              "quote": "Money can come from timber sales in sustainably managed forests or from harvesting 'non-wood products' like nuts, oils and fruits from the trees."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4308,
+              "end": 4446,
+              "quote": "You can take note of how much carbon dioxide your forest is capturing and sell carbon credits to companies keen to offset their emissions."
+            }
+          ]
         },
         {
           "id": "2026-06-2-q44",
@@ -3260,7 +3367,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 329,
+              "end": 512,
+              "quote": "The region's dry climate and depleted soils would be a recipe for disaster in your average program to replant trees, but for the Amsterdam-based Land Life Company it's an ideal place."
+            }
+          ]
         },
         {
           "id": "2026-06-2-q46",
@@ -3700,7 +3816,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-passage-2",
+              "field": "text",
+              "start": 2389,
+              "end": 2523,
+              "quote": "government should regulate social media and teen smartphone use, but it is a vital topic for parents to understand and take seriously."
+            }
+          ]
         }
       ]
     },

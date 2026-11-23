@@ -208,7 +208,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 109,
+              "end": 144,
+              "quote": "Gazpacho is a cold soup from Spain."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q2",
@@ -248,7 +257,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 662,
+              "end": 704,
+              "quote": "It adds texture and thickness to the soup."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q3",
@@ -288,7 +306,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 750,
+              "end": 791,
+              "quote": "As I said earlier it's mostly vegetables."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q4",
@@ -328,7 +355,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1050,
+              "end": 1188,
+              "quote": "It's a little dry and salty, and it's very expensive because (4)it comes from a special\ntype of pig that only eats a special type of food."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q5",
@@ -368,7 +404,23 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 475,
+              "end": 546,
+              "quote": "Our lowest prices are around $6 a bottle, (5)but those are table wines."
+            },
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 574,
+              "end": 613,
+              "quote": "And I would not suggest them as a gift."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q6",
@@ -408,7 +460,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 833,
+              "end": 893,
+              "quote": "I guess something in the vicinity of 30 or 40 would be good."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q7",
@@ -448,7 +509,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 984,
+              "end": 1077,
+              "quote": "They are generally more popular than whites, and can usually be\npaired with food more easily."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q8",
@@ -488,7 +558,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1170,
+              "end": 1252,
+              "quote": "This one here is a Chianti, which is perhaps Italy's most famous type of red wine."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q9",
@@ -528,7 +607,23 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 3,
+              "end": 34,
+              "quote": "Many people enjoy secret codes."
+            },
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 35,
+              "end": 103,
+              "quote": "The harder the code, the more some people will try to figure it out."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q10",
@@ -568,7 +663,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1266,
+              "end": 1328,
+              "quote": "They helped the troops coordinate their movements and attacks."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q11",
@@ -608,7 +712,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 362,
+              "end": 450,
+              "quote": "It was spoken code, never written down, and it was\ndeveloped and used by Navajo Indians."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q12",
@@ -648,7 +761,16 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 95,
+              "end": 296,
+              "quote": "Well,\n(12)there's going to be a technological replacement of a lot of knowledge-intensive jobs in the next 20\nyears, particularly in the two largest sectors of the labor force with professional skills."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q13",
@@ -688,7 +810,23 @@
               4
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 638,
+              "end": 781,
+              "quote": "Well, the one sector of the economy that can't be easily duplicated by even small\ntechnologies is the caring sector — the personal care sector."
+            },
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 782,
+              "end": 973,
+              "quote": "That is, you can't really get a robot to do a\ngreat massage or physical therapy, or you can't get the kind of personal attention you need with regard to\ntherapy or any other personal service."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q14",
@@ -728,7 +866,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1026,
+              "end": 1061,
+              "quote": "Therapist do\ncharge a lot of money."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q15",
@@ -768,7 +915,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 1337,
+              "end": 1521,
+              "quote": "That's why I wrote this\nbook, which is about how to reorganize the economy for the future when technology brings about\ndestructive changes to what we used to consider high-income work."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q16",
@@ -808,7 +964,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 98,
+              "end": 209,
+              "quote": "It linked a stone pit in the Egyptian desert to waterways that carried blocks to monument sites along\nthe Nile."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q17",
@@ -857,7 +1022,16 @@
             "type": "auto-locate-from-transcript",
             "how": "marker",
             "score": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 741,
+              "end": 882,
+              "quote": "The researchers also made a discovery in the stone pit at the northern end of the\nroad: the first evidence that the Egyptians used rock saws."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q18",
@@ -897,7 +1071,16 @@
               5
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1481,
+              "end": 1563,
+              "quote": "The road was clearly built to provide services for the newly\ndiscovered stone pit."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q19",
@@ -937,7 +1120,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 152,
+              "end": 270,
+              "quote": "Other needles were slipped into my left wrist and,\nstrangely, into my right arm, and then into both my closed eyelids."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q20",
@@ -977,7 +1169,16 @@
               6
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 507,
+              "end": 718,
+              "quote": "(Several trips to a hospital and two expensive, uncomfortable medical\ntests had failed to produce even a diagnosis.“Maybe you lean on your left arm too much,”the doctor\nconcluded, suggesting I see a bone doctor."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q21",
@@ -1057,7 +1258,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 84,
+              "end": 226,
+              "quote": "But in the early years of their marriage, both were distured by persistent arguments that seem to fade away without ever being truly resolved."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q23",
@@ -1097,7 +1307,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 413,
+              "end": 516,
+              "quote": "Ronald and Lois are only children, and “onlies” grow up accustomed to being the apple of parents’\neyes."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q24",
@@ -1137,7 +1356,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 811,
+              "end": 912,
+              "quote": "The\noldest tends to be self-assured, responsible, a high achiever, and relatively seriously reserved."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q25",
@@ -1177,7 +1405,16 @@
               7
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 2006,
+              "end": 2121,
+              "quote": "But since an “only” tends to be a well-adjusted individual, she'll eventually\nlearn to relate to any chosen spouse."
+            }
+          ]
         }
       ]
     },
@@ -2175,7 +2412,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3850,
+              "end": 4116,
+              "quote": "Matthew D. Lieberman, a social cognitive neuroscientist at the University of California, Los Angeles, and author of the 2013 book Social: Why Our Brains Are Wired to Connect, suspects that the human brain is especially adept at learning socially salient information."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q37",
@@ -2279,7 +2525,23 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1277,
+              "end": 1489,
+              "quote": "Older adolescents scored about 50 percent higher on an index of risky driving when their peers were in the room—and the driving of early adolescents was fully twice as reckless when other young teens were around."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1602,
+              "end": 1730,
+              "quote": "“The presence of peers makes adolescents and youth, but not adults, more likely to take risks,” Steinberg and Gardner concluded."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q38",
@@ -2487,7 +2749,16 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 5512,
+              "end": 5740,
+              "quote": "If humans are generally geared to recall details about one another, this pattern is probably even more powerful among teenagers who are very attentive to social details: who is in, who is out, who likes whom, who is mad at whom."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q40",
@@ -2591,7 +2862,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3325,
+              "end": 3588,
+              "quote": "The results: Teens who played the Iowa Gambling Task under the eyes of fellow adolescents engaged in more exploratory behavior, learned faster from both positive and negative outcomes, and achieved better performance on the task than those who played in solitude."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q41",
@@ -2695,7 +2975,23 @@
               11
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 302,
+              "end": 389,
+              "quote": "Parents of teenagers often view their children‘s friends with something like suspicion."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 390,
+              "end": 515,
+              "quote": "They worry that the adolescent peer group has the power to push its members into behavior that is foolish and even dangerous."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q42",
@@ -2903,7 +3199,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2598,
+              "end": 2766,
+              "quote": "The brains of teenagers, but not adults, showed greater activity in two regions associated with rewards when they were being observed by same-age peers than when alone."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q44",
@@ -3007,7 +3312,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6852,
+              "end": 7038,
+              "quote": "Research shows that when we absorb information in order to teach it to someone else, we learn it more accurately and deeply, perhaps in part because we are engaging our social cognition."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q45",
@@ -3111,7 +3425,16 @@
               12
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2080,
+              "end": 2242,
+              "quote": "Now some experts are proposing that we should take advantage of the teen brain's keen sensitivity to the presence of friends and leverage it to improve education."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q46",
@@ -3151,7 +3474,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 0,
+              "end": 236,
+              "quote": "The Ebro Delta, in Spain, famous as a battleground during the Spanish Civil War, is now the setting for a different contest, one that is pitting rice farmers against two enemies: the rice-eating giant apple snail, and rising sea levels."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q47",
@@ -3191,7 +3523,16 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 804,
+              "end": 880,
+              "quote": "The most promising strategy has become to harness one foe against the other."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q48",
@@ -3231,7 +3572,23 @@
               13
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1325,
+              "end": 1419,
+              "quote": "“The short-term fight against the snail, and a mid- to long-term fight against climate change."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1420,
+              "end": 1473,
+              "quote": "But the snail has given the project greater urgency.”"
+            }
+          ]
         },
         {
           "id": "2018-06-1-q49",
@@ -3271,7 +3628,23 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1781,
+              "end": 1845,
+              "quote": "But the snail continues its march to new territory, says Serrat."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1846,
+              "end": 1930,
+              "quote": "“The question is not if it will reach other rice-growing areas of Europe, but when.”"
+            }
+          ]
         },
         {
           "id": "2018-06-1-q50",
@@ -3311,7 +3684,16 @@
               3
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2329,
+              "end": 2439,
+              "quote": "As an EU-funded effort, the search for salt-tolerant varieties of rice is taking place in all three countries."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q51",
@@ -3351,7 +3733,16 @@
               14
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 0,
+              "end": 92,
+              "quote": "Photography was once an expensive, laborious ordeal reserved for life’s greatest milestones."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q52",
@@ -3391,7 +3782,16 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 356,
+              "end": 626,
+              "quote": "“You hear that you shouldn’t take all these photos and interrupt the experience, and it’s bad for you, and we’re not living in the present moment,” says Kristin Diehl, associate professor of marketing at the University of Southern California Marshall School of Business."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q53",
@@ -3431,7 +3831,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 841,
+              "end": 932,
+              "quote": "The results, published in the Journal of Personality and Social Psychology, surprised them."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 933,
+              "end": 1009,
+              "quote": "Taking photos actually makes people enjoy what they’re doing more, not less."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q54",
@@ -3471,7 +3887,16 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1912,
+              "end": 1979,
+              "quote": "“People look longer at things they want to photograph,” Diehl says."
+            }
+          ]
         },
         {
           "id": "2018-06-1-q55",
@@ -3511,7 +3936,23 @@
               15
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2354,
+              "end": 2471,
+              "quote": "No, they found; just the act of planning to take a photo—and not actually taking it—had the same joy-boosting effect."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2546,
+              "end": 2624,
+              "quote": "“Thinking about what you would want to photograph also gets you more engaged.”"
+            }
+          ]
         }
       ]
     },

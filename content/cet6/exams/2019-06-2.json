@@ -308,7 +308,16 @@
               49
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1188,
+              "end": 1321,
+              "quote": "Her character in that film is very outgoing and charming, even though in real life, Audrey always described herself as shy and quiet."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q4",
@@ -348,7 +357,16 @@
               42
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-conv-1",
+              "field": "transcript",
+              "start": 1433,
+              "end": 1510,
+              "quote": "Her family received international aid during the war when she was growing up."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q5",
@@ -435,7 +453,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.9
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 471,
+              "end": 580,
+              "quote": "I think we need to stress that while there will be some job changes, there won't be anyone getting dismissed."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q7",
@@ -482,7 +509,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.55
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 878,
+              "end": 1001,
+              "quote": "I'll start with the brief review of the reasons for the change that we really need to make a clean break to restart growth."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q8",
@@ -529,7 +565,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.85
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-conv-2",
+              "field": "transcript",
+              "start": 1457,
+              "end": 1563,
+              "quote": "And we'll make the presentation and the questions available via the company's own computer network, right?"
+            }
+          ]
         },
         {
           "id": "2019-06-2-q9",
@@ -616,7 +661,16 @@
             "type": "auto-locate-from-transcript",
             "how": "overlap",
             "score": 0.9
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 886,
+              "end": 1007,
+              "quote": "These professional animals are probably better at finding their way in the airports than the most frequent of travellers."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q11",
@@ -656,7 +710,16 @@
               10
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-1",
+              "field": "transcript",
+              "start": 1190,
+              "end": 1299,
+              "quote": "Some passengers enjoy the animals so much that they call the airport to schedule flights around their visits."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q12",
@@ -696,7 +759,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 15,
+              "end": 69,
+              "quote": "Today I'm standing at a 2,000-year-old Roman era site."
+            },
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 70,
+              "end": 151,
+              "quote": "Here, the brightly colored scenes that once decorated a mansion are being dug up."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q13",
@@ -745,7 +824,16 @@
             "date": "2026-11-09",
             "bag": 1.0,
             "tri": 1.0
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 525,
+              "end": 614,
+              "quote": "These pieces have been put back together with great care and display a variety of images."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q14",
@@ -794,7 +882,16 @@
             "date": "2026-11-09",
             "bag": 0.91,
             "tri": 0.84
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "listening-pass-2",
+              "field": "transcript",
+              "start": 765,
+              "end": 895,
+              "quote": "The paintings were done with such skill and with such expensive dyes that experts believed the artists originally came from Italy."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q15",
@@ -888,7 +985,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 448,
+              "end": 552,
+              "quote": "Spurred on by funding policies, half of European research articles had international co-authors in 2007."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q17",
@@ -928,7 +1034,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-1",
+              "field": "transcript",
+              "start": 1061,
+              "end": 1116,
+              "quote": "Many scientific endeavors have become more complicated."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q18",
@@ -1088,7 +1203,16 @@
               21
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-2",
+              "field": "transcript",
+              "start": 1642,
+              "end": 1783,
+              "quote": "Russian and American spacecraft also found hints that its ancient climate might have been wetter, cooler, and possibly even friendly to life."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q22",
@@ -1128,7 +1252,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 66,
+              "end": 182,
+              "quote": "I specialize in cultural psychology, examining similarities and differences between East Asians and North Americans."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q23",
@@ -1168,7 +1301,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 835,
+              "end": 964,
+              "quote": "Although what's noteworthy is that East Asians on average sleep about an hour and a half less each night than North Americans do."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q24",
@@ -1208,7 +1350,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1296,
+              "end": 1385,
+              "quote": "Instead, we lend people motion detecting watches and they wear them for a week at a time."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q25",
@@ -1248,7 +1399,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "listening-rec-3",
+              "field": "transcript",
+              "start": 1938,
+              "end": 2015,
+              "quote": "Sleep is something that has really been an unexplored topic cross-culturally."
+            }
+          ]
         }
       ]
     },
@@ -2293,7 +2453,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 2333,
+              "end": 2498,
+              "quote": "Their philosophy is that extending the life of a pair of jeans is not only great for the environment, but allows the consumer to get more value out of their product."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q37",
@@ -2397,7 +2566,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 760,
+              "end": 881,
+              "quote": "When choosing what products to buy and which brands to buy from, more and more consumers are looking into sustainability."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1117,
+              "end": 1254,
+              "quote": "At the same time, surveys on consumers in the U.S. and the U.K. show that they also car,e about minimizing energy use and reducing waste."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q38",
@@ -2501,7 +2686,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 6707,
+              "end": 6912,
+              "quote": "By creating more awareness around your efforts to reduce waste, and by developing a culture of responsibility, repair, and reuse, you can build customer loyalty based on shared values and responsibilities."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q39",
@@ -2605,7 +2799,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1542,
+              "end": 1666,
+              "quote": "Some retailers and manufacturers in the clothing, footwear, and electronics industries have launched environmental programs."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1817,
+              "end": 2013,
+              "quote": "By offering services to help expand the longevity of their products, they're promising quality and durability to consumers, and receiving the reputational gains for being environmentally friendly."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q40",
@@ -2709,7 +2919,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 3557,
+              "end": 3773,
+              "quote": "To motivate visitors to bring in more old shoes, Adidas Brazil promotes the program in stores by showing videos to educate customers, and it even offers a discount each time a customer brings in an old pair of shoes."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q41",
@@ -2813,7 +3032,16 @@
               33
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 7083,
+              "end": 7286,
+              "quote": "Reducing waste by incorporating used materials into production can cut costs and decrease the price of procurement (采购): less to be procured from the outside and more to be re-ut i lized from the inside."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q42",
@@ -2917,7 +3145,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4161,
+              "end": 4299,
+              "quote": "The materials from e-waste include iron, copper, gold, silver, and aluminum-materials that could be reused, resold, salvaged, or recycled."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q43",
@@ -3021,7 +3258,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 310,
+              "end": 491,
+              "quote": "Conventional wisdom would seem to suggest that companies have no incentive to lengthen the life cycle of their products and reduce the revenue they would get from selling new goods."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q44",
@@ -3125,7 +3371,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4857,
+              "end": 4984,
+              "quote": "If you are a manufacturer who relies on outside distributors, then retailers are the ideal partner for collecting old products."
+            },
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 4985,
+              "end": 5120,
+              "quote": "Power tool maker DeWalt partners with companies, such as Lowes and Napa Auto Parts, to collect old tools at their stores for recycling."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q45",
@@ -3229,7 +3491,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-b-passage",
+              "field": "text",
+              "start": 1323,
+              "end": 1537,
+              "quote": "But some companies are realizing that placing the burden of recycling entirely on the consumer is not an effective strategy, especially when tossing something away seems like the easiest and most convenient option."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q46",
@@ -3276,7 +3547,16 @@
               42,
               43
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 353,
+              "end": 520,
+              "quote": "The strike comes in light of an unsuccessful 19 months of negotiations after the existing labor contract known as the Interactive Media Agreement expired in late 2014."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q47",
@@ -3364,7 +3644,16 @@
               44,
               45
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1096,
+              "end": 1300,
+              "quote": "So the voice actors are pushing for the idea of secondary compensation-a performance bonus every time a game sells 2 million copies or downloads, or reaches 2 million subscribers, with a cap at 8 million."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q49",
@@ -3404,7 +3693,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1704,
+              "end": 1907,
+              "quote": "\"I can't imagine if there's any other acting job in the world where you don't know what show you're in, when you're hired,\"\nsays voice actor Keythe Farley, who chairs the SAG-AFTRA negotiating committee."
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 1908,
+              "end": 2021,
+              "quote": "\"And yet that happens every day in the video game world,\" Farley told reporters during a press conference Friday."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q50",
@@ -3444,7 +3749,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2193,
+              "end": 2368,
+              "quote": "Scott Witlin, the lawyer representing the video game companies, says voice actors \" represent less than one tenth of 1 percent of the work that goes into making a video game.\""
+            },
+            {
+              "blockId": "reading-sec-c-passage-1",
+              "field": "text",
+              "start": 2369,
+              "end": 2613,
+              "quote": "So \"even though they're the top craftsmen in their field,\" Witlin says, \"if we pay them under a vastly different system than the people who do the 99.9 percent of the work, that's going to create far more problems for the video game companies.\""
+            }
+          ]
         },
         {
           "id": "2019-06-2-q51",
@@ -3491,7 +3812,16 @@
               48,
               49
             ]
-          }
+          },
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 171,
+              "end": 329,
+              "quote": "Space Policy\nDirective-3 lays out general guidelines for the United States to mitigate (缓解) the effects of space debris and track and manage traffic in space."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q52",
@@ -3531,7 +3861,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 330,
+              "end": 436,
+              "quote": "This policy sets the stage for the Department of Commerce to take over the management of traffic in space."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 437,
+              "end": 627,
+              "quote": "The department will make sure that newly launched satellites don't use radio frequencies that would interfere with existing satellites, and schedule when such new satellites can be launched."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q53",
@@ -3571,7 +3917,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 628,
+              "end": 805,
+              "quote": "This only applies to American space activities, but the hope is that it will help standardize a set of norms in the dawning commercial spaceflight industry throughout the world."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q54",
@@ -3611,7 +3966,23 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 1882,
+              "end": 2235,
+              "quote": "That's why this new policy also includes directions to update the current U. S. Government\nOrbital Debris Mitigation Standard Practices, which already require any entity that launches a satellite or spacecraft to vigorously analyze the likelihood that any of their actions, from an unexpected failure or normal operations, will create more space debris."
+            },
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2236,
+              "end": 2359,
+              "quote": "It includes accounting for any piece of debris they plan to release over 5mm that might stay in orbit for 25 years or more."
+            }
+          ]
         },
         {
           "id": "2019-06-2-q55",
@@ -3651,7 +4022,16 @@
               1
             ]
           },
-          "verified": true
+          "verified": true,
+          "evidence": [
+            {
+              "blockId": "reading-sec-c-passage-2",
+              "field": "text",
+              "start": 2511,
+              "end": 2670,
+              "quote": "Agencies and companies throughout the world are working on developing technology that would dispose of or capture space debris before it causes serious damage."
+            }
+          ]
         }
       ]
     },
