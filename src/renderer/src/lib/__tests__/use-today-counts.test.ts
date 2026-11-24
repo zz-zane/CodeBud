@@ -128,11 +128,17 @@ describe('useTodayCounts', () => {
     expect(c.lastWrongAt.value).toBe('2026-11-10T10:00:00.000Z')
   })
 
-  it('生词 = 未掌握的条目数', () => {
+  it('生词 = 今天到期、未掌握的条目数', () => {
     const c = useTodayCounts()
-    const vocab = useCet6VocabStore() as unknown as { state: { all: Array<{ mastered: boolean }> } }
+    const vocab = useCet6VocabStore() as unknown as { state: { all: Array<{ mastered: boolean; addedAt: string; review: { step: number; due: string } | null }> } }
     expect(c.vocabCount.value).toBe(0)
-    vocab.state.all.push({ mastered: false }, { mastered: true }, { mastered: false })
+    const old = '2020-01-01T00:00:00.000Z'
+    vocab.state.all.push(
+      { mastered: false, addedAt: old, review: null },
+      { mastered: true, addedAt: old, review: null },
+      { mastered: false, addedAt: old, review: { step: 0, due: '2999-01-01' } },
+      { mastered: false, addedAt: old, review: { step: 0, due: '2020-01-02' } }
+    )
     expect(c.vocabCount.value).toBe(2)
   })
 })

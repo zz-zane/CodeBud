@@ -3,7 +3,8 @@ import type { StudyApi } from './study-companion'
 import type { AiChatSendPayload, AiChatSession, AiChatStreamEvent, AiGenerateInput, AiResult, ChallengeDay, ChallengeToday, CheckinSubmitResult, ConfigSavePayload, EnvReport, ExportCodeResult, FavoritesFile, IdeDetectResult, IdeOpenResult, LangOfCode, MemoFile, MarkdownExportFile, MarkdownExportResult, PracticeFile, PracticeRecordInput, PublicAppConfig, RunRequest, RunResult, UserProfile, WrongBookEntry, WrongRecordItem, WrongUpdateItem } from './types'
 import type { AiParseResult } from './ai-question'
 import type { Cet6MediaStatus, Cet6Mode, Cet6Record, Cet6State } from './cet6'
-import type { Cet6LookupResult, Cet6VocabEntry, Cet6VocabInput } from './cet6-vocab'
+import type { TodoFile } from './today-todo'
+import type { Cet6LookupResult, Cet6VocabEntry, Cet6VocabGrade, Cet6VocabInput } from './cet6-vocab'
 import type { BoxStamp, DocWriteResult, StampedDoc } from './doc-write'
 import type { ChallengeSettlePayload } from './cloud/dto'
 import type { RemoteStatus } from './remote-auth'
@@ -112,6 +113,11 @@ export function createMiaiApi(t: MiaiTransport) {
     save: (file: MemoFile, stamp?: BoxStamp | null): Promise<DocWriteResult<MemoFile>> =>
       t.invoke(IPC.memoSave, file, stamp)
   },
+  /** 「今天」页每日待办（today-todos.json） */
+  todos: {
+    get: (): Promise<TodoFile> => t.invoke(IPC.todosGet),
+    save: (file: TodoFile): Promise<TodoFile> => t.invoke(IPC.todosSave, file)
+  },
   /** 六级真题（docs/27）：作答记录 + 听力音频目录 */
   cet6: {
     getState: (): Promise<Cet6State> => t.invoke(IPC.cet6GetState),
@@ -123,7 +129,7 @@ export function createMiaiApi(t: MiaiTransport) {
     vocab: {
       list: (): Promise<Cet6VocabEntry[]> => t.invoke(IPC.cet6VocabList),
       add: (input: Cet6VocabInput): Promise<Cet6VocabEntry[]> => t.invoke(IPC.cet6VocabAdd, input),
-      update: (id: string, patch: { mastered: boolean }): Promise<Cet6VocabEntry[]> => t.invoke(IPC.cet6VocabUpdate, id, patch),
+      update: (id: string, patch: { mastered: boolean } | { grade: Cet6VocabGrade }): Promise<Cet6VocabEntry[]> => t.invoke(IPC.cet6VocabUpdate, id, patch),
       remove: (ids: string[]): Promise<Cet6VocabEntry[]> => t.invoke(IPC.cet6VocabRemove, ids),
       lookup: (input: Cet6VocabInput): Promise<Cet6LookupResult> => t.invoke(IPC.cet6VocabLookup, input)
     },

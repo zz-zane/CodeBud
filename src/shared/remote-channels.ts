@@ -16,6 +16,7 @@ export const REMOTE_ALLOWED_KEYS = [
   'wrongbookGet', 'wrongbookRecord', 'wrongbookClear', 'wrongbookUpdate',
   'favoritesGet', 'favoritesSave',
   'memoGet', 'memoSave',
+  'todosGet', 'todosSave',
   'cet6GetState', 'cet6SaveRecord', 'cet6ResetRecord', 'cet6SetLastMode',
   'cet6VocabList', 'cet6VocabAdd', 'cet6VocabUpdate', 'cet6VocabRemove', 'cet6VocabLookup',
   'practiceRecord', 'practiceGet',

@@ -5,6 +5,7 @@ import { usePracticeStore } from '../stores/practice'
 import { useQuizStore } from '../stores/quiz'
 import { useSettingsStore } from '../stores/settings'
 import { useCet6VocabStore } from '../stores/cet6-vocab'
+import { isVocabDue } from '../../../shared/cet6-vocab'
 import { poolLessonsOf, type ReviewScope } from './review-practice'
 import { splitWrongbook } from './wrongbook-view'
 import { LANG_LABEL } from './labels'
@@ -76,7 +77,8 @@ export function useTodayCounts() {
     return best
   })
 
-  const vocabCount = computed(() => vocab.entries.filter((e) => !e.mastered).length)
+  // 今天到期该翻卡的生词（没掌握、到期日 ≤ 今天）
+  const vocabCount = computed(() => vocab.entries.filter((e) => isVocabDue(e, today.value)).length)
 
   return { ensureLoaded, reviewDue, reviewDueToday, reviewDueTotal, dueIdsFor, reviewByModule, wrongCount, lastWrongAt, vocabCount }
 }

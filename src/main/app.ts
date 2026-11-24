@@ -173,7 +173,10 @@ function createWindow(): BrowserWindow {
       preload: join(__dirname, '../preload/index.js'),
       contextIsolation: true,
       nodeIntegration: false,
-      sandbox: true
+      sandbox: true,
+      // 窗口被别的窗口（例如输入法浮动工具条）挡住时，Chromium 会把页面当成隐藏、停掉 requestAnimationFrame，
+      // 路由转场卡在淡出那一帧，内容区一片空白（2026-11-24 用户实测点「六级真题」后空白）。不节流就不会卡。
+      backgroundThrottling: false
     }
   })
 

@@ -16,10 +16,20 @@ import { STUDY_COPY } from '../../lib/study-copy'
 import MiIcon from '../base/MiIcon.vue'
 import MiButton from '../base/MiButton.vue'
 import MiModal from '../base/MiModal.vue'
+import PlanScheduleModal from './PlanScheduleModal.vue'
+import { useTodayTodosStore } from '../../stores/today-todos'
+import { TODO_COPY } from '../../lib/copy'
 
 type Status = StudyTask['status']
 type FilterKey = 'all' | Status
 const T = STUDY_COPY.TASKS
+const todos = useTodayTodosStore()
+const scheduling = ref<StudyPlan | null>(null)
+onMounted(() => { if (!todos.loaded) void todos.load() })
+function scheduleChip(planId: string): string {
+  const s = todos.scheduleOf(planId)
+  return s && s.mode !== 'off' ? TODO_COPY.scheduledChip(TODO_COPY.MODE[s.mode], s.target.slice(5).replace('-', '/')) : ''
+}
 
 const study = useStudyStore()
 const practice = usePracticeStore()
@@ -358,9 +368,11 @@ function navigateToLesson(lessonId: string): void {
             <span class="tk-group-meta">
               <span class="tk-source" :class="g.plan.materialId === CUSTOM_PLAN_MATERIAL ? g.plan.source : 'material'">{{ sourceLabel(g.plan) }}</span>
               <span class="tk-count">{{ T.progress(g.done, g.total) }}</span>
+              <span v-if="scheduleChip(g.plan.id)" class="tk-sched">{{ scheduleChip(g.plan.id) }}</span>
             </span>
           </div>
           <div class="tk-group-actions">
+            <button type="button" class="icon-btn" :title="TODO_COPY.SCHED_BTN" :aria-label="TODO_COPY.SCHED_BTN" data-action="schedule" @click="scheduling = g.plan"><MiIcon name="clock" :size="15" /></button>
             <button type="button" class="icon-btn" :title="T.RENAME_GROUP" :aria-label="T.RENAME_GROUP" @click="startRename(g.plan)"><MiIcon name="pencil" :size="15" /></button>
             <button type="button" class="icon-btn danger" :title="T.DELETE_GROUP" :aria-label="T.DELETE_GROUP" @click="deletingGroup = g.plan"><MiIcon name="trash" :size="15" /></button>
           </div>
@@ -425,6 +437,7 @@ function navigateToLesson(lessonId: string): void {
         <MiButton variant="primary" @click="confirmDeleteGroup">{{ T.DELETE_GROUP }}</MiButton>
       </template>
     </MiModal>
+    <PlanScheduleModal :plan="scheduling" @close="scheduling = null" />
   </div>
 </template>
 
@@ -509,6 +522,8 @@ function navigateToLesson(lessonId: string): void {
 
 /* ── 草稿（沿用） ── */
 .draft-plan-card { display: flex; flex-direction: column; gap: var(--mi-sp-3); padding: var(--mi-sp-4); border: 1.5px solid var(--mi-blue-deep); border-radius: var(--mi-radius-box); background: var(--mi-card); }
+.tk-group-meta { flex-wrap: wrap; row-gap: 4px; }
+.tk-sched { white-space: nowrap; padding: 1px 8px; border-radius: 999px; background: var(--mi-blue-light); color: var(--mi-blue-ink); font-size: var(--mi-fs-caption); }
 .draft-plan-head { display: flex; align-items: center; gap: var(--mi-sp-2); }
 .draft-badge { flex-shrink: 0; padding: 2px var(--mi-sp-2); border-radius: var(--mi-radius-ctl); background: var(--mi-blue-light); color: var(--mi-blue-ink); font-size: var(--mi-fs-caption); font-weight: 500; }
 .draft-title-input { flex: 1; min-width: 0; font-weight: 500; }

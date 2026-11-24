@@ -36,6 +36,7 @@ import {
   weekDots
 } from '../../../shared/today'
 import type { StudyTask } from '../../../shared/study-companion'
+import TodayMyTodos from '../components/domain/TodayMyTodos.vue'
 import MiButton from '../components/base/MiButton.vue'
 import MiIcon, { type MiIconName } from '../components/base/MiIcon.vue'
 import UpdateBanner from '../components/domain/UpdateBanner.vue'
@@ -129,7 +130,7 @@ const baseRows = computed<TodoRow[]>(() => {
     rows.push({ key: 'wrong', icon: 'flag', title: TODAY.ROW_WRONG, meta: when ? TODAY.lastWrong(when) : '', num: counts.wrongCount.value, to: { path: '/practice', query: { tab: 'wrongbook' } } })
   }
   if (counts.vocabCount.value > 0) {
-    rows.push({ key: 'vocab', icon: 'book', title: TODAY.ROW_VOCAB, meta: TODAY.VOCAB_META, num: counts.vocabCount.value, to: '/cet6/vocab' })
+    rows.push({ key: 'vocab', icon: 'book', title: TODAY.ROW_VOCAB, meta: TODAY.VOCAB_META, num: counts.vocabCount.value, due: true, to: { path: '/cet6/vocab', query: { review: '1' } } })
   }
   const p = cet6Paper.value
   if (p) {
@@ -210,8 +211,10 @@ function ask(): void {
           <MiIcon name="flame" :size="16" />{{ TODAY.STREAK_LEAD }} <b>{{ streak }}</b> {{ TODAY.STREAK_UNIT }}
         </div>
         <ol class="t-week">
-          <li v-for="(d, i) in week" :key="d.key" class="t-day">
-            <span class="t-dot" :class="d.state" role="img" :aria-label="TODAY.weekDot(TODAY.WEEKDAYS[i], d.state)" />
+          <li v-for="(d, i) in week" :key="d.key" class="t-day" :class="{ 'is-today': d.isToday, linked: d.state === 'done' && week[i - 1]?.state === 'done' }">
+            <span class="t-dot" :class="d.state" role="img" :aria-label="TODAY.weekDot(TODAY.WEEKDAYS[i], d.state, d.isToday)">
+              <MiIcon v-if="d.state === 'done'" name="check" :size="12" />
+            </span>
             <span aria-hidden="true">{{ TODAY.WEEKDAYS[i] }}</span>
           </li>
         </ol>
@@ -306,6 +309,9 @@ function ask(): void {
       </section>
     </div>
 
+    <!-- 我的待办：手写 + 任务组排到今天的建议 -->
+    <TodayMyTodos v-if="progress.loaded" />
+
     <!-- 提问条 -->
     <form v-if="!isPhone && !isNewUser && progress.loaded" class="t-ask" @submit.prevent="ask">
       <input
@@ -335,13 +341,22 @@ function ask(): void {
 .t-date { font-size: var(--mi-fs-caption); line-height: var(--mi-lh-caption); color: var(--mi-text-3); }
 #app .claude-app-container main.content .t-title { margin: 2px 0 0; }
 .t-streak { display: flex; align-items: center; gap: var(--mi-sp-3); }
-.t-streak-n { display: flex; align-items: center; gap: 6px; font-size: var(--mi-fs-label); color: var(--mi-text-2); }
-.t-streak-n b { font-size: var(--mi-fs-body); font-weight: 500; color: var(--mi-text); font-variant-numeric: tabular-nums; }
-.t-week { display: flex; gap: 6px; margin: 0; padding: 0; list-style: none; }
-.t-day { width: 28px; display: flex; flex-direction: column; align-items: center; gap: var(--mi-sp-1); font-size: var(--mi-fs-caption); line-height: var(--mi-lh-caption); color: var(--mi-text-3); }
-.t-dot { box-sizing: border-box; width: 20px; height: 20px; border-radius: 50%; background: var(--mi-blue); }
+/* 连续天数：小胶囊，火苗上色 */
+.t-streak-n { display: flex; align-items: center; gap: 4px; padding: 3px 10px 3px 8px; border-radius: 999px; background: var(--mi-warn-fill); font-size: var(--mi-fs-label); color: var(--mi-text-2); }
+.t-streak-n :deep(svg) { color: var(--mi-warn-deep); }
+.t-streak-n b { font-size: var(--mi-fs-body); font-weight: 500; color: var(--mi-warn-deep); font-variant-numeric: tabular-nums; }
+/* 一周七格：已学 = 实心带勾，今天没学 = 圆环，过去没学 = 浅灰，还没到 = 虚线圈；相邻两天都学了用短线连起来 */
+.t-week { display: flex; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.t-day { position: relative; width: 26px; display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: var(--mi-fs-caption); line-height: var(--mi-lh-caption); color: var(--mi-text-3); }
+.t-day.is-today { color: var(--mi-blue-ink); font-weight: 500; }
+.t-day.linked::before { content: ''; position: absolute; top: 9px; right: 50%; width: 30px; height: 2px; background: var(--mi-blue-deep); }
+.t-dot { position: relative; z-index: 1; box-sizing: border-box; display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; color: var(--mi-btn-primary-text); }
 .t-dot.done { background: var(--mi-blue-deep); }
-.t-dot.today { background: transparent; border: 2px solid var(--mi-blue-deep); }
+.t-dot.today { border: 2px solid var(--mi-blue-deep); background: var(--mi-card); }
+.t-dot.missed { background: var(--mi-border); }
+.t-dot.future { border: 1.5px dashed var(--mi-border); }
+/* 今天已学：实心外再套一圈，仍看得出哪天是今天 */
+.is-today .t-dot.done { box-shadow: 0 0 0 2px var(--mi-canvas), 0 0 0 3.5px var(--mi-blue-deep); }
 
 /* 卡片 */
 .t-card { box-sizing: border-box; background: var(--mi-card); border: 1px solid var(--mi-border); border-radius: var(--mi-radius-box); }

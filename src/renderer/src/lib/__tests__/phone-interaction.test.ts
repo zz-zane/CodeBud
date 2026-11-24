@@ -18,7 +18,7 @@ describe('页面切换方向（history.state.position）', () => {
     expect(slideKind('back', '/cet6', '/review')).toBe('none')
     expect(slideKind('fwd', '/courses', '/lesson/c-1')).toBe('fwd')
     expect(slideKind('back', '/lesson/c-1', '/courses')).toBe('back')
-    expect(slideKind('fwd', '/cet6', '/cet6/vocab')).toBe('fwd')
+    expect(slideKind('fwd', '/cet6', '/cet6/vocab')).toBe('none') // 生词本是侧栏 / 抽屉里的顶层页
     expect(slideKind('fwd', '/cet6', '/cet6/2024-06-1')).toBe('fwd')
     expect(slideKind('none', '/courses', '/lesson/c-1')).toBe('none')
   })
@@ -26,8 +26,8 @@ describe('页面切换方向（history.state.position）', () => {
 
 describe('路由层级与父级', () => {
   it('顶层 0、列表 1、详情 2', () => {
-    for (const p of ['/today', '/courses', '/ai', '/study', '/practice', '/cet6', '/review', '/overview', '/settings']) expect(routeDepth(p)).toBe(0)
-    for (const p of ['/memo', '/favorites', '/playground', '/cet6/vocab']) expect(routeDepth(p)).toBe(1)
+    for (const p of ['/today', '/courses', '/ai', '/study', '/practice', '/cet6', '/cet6/vocab', '/review', '/overview', '/settings']) expect(routeDepth(p)).toBe(0)
+    for (const p of ['/memo', '/favorites', '/playground']) expect(routeDepth(p)).toBe(1)
     expect(routeDepth('/lesson/c-1')).toBe(2)
     expect(routeDepth('/cet6/2024-06-1')).toBe(2)
     expect(isDetailRoute('/lesson/c-1')).toBe(true)
@@ -53,15 +53,16 @@ describe('主导航分组（侧栏与标签栏共用）', () => {
     expect(navGroupOf('/memo')).toBe('overview')
     expect(navGroupOf('/lesson/c-1')).toBe('courses')
     expect(navGroupOf('/settings')).toBeNull()
-    expect(isNavActive({ key: 'cet6' }, '/cet6/vocab')).toBe(true)
+    expect(navGroupOf('/cet6/vocab')).toBe('vocab')
+    expect(isNavActive({ key: 'cet6' }, '/cet6/vocab')).toBe(false)
   })
   it('标签栏按 key 取 今天 / 课程 / 练习 / 复习 / AI，六级、资料库、进度留在抽屉', () => {
     expect(phoneTabItems().map((i) => i.key)).toEqual(['today', 'courses', 'practice', 'review', 'ai'])
-    expect(NAV_ITEMS.map((i) => i.key)).toEqual(['today', 'courses', 'practice', 'review', 'cet6', 'study', 'ai', 'overview'])
+    expect(NAV_ITEMS.map((i) => i.key)).toEqual(['today', 'courses', 'practice', 'review', 'cet6', 'vocab', 'study', 'ai', 'overview'])
   })
-  it('分组是数据：每天做的 5 项 | 分隔线 | 资料库 / AI / 进度', () => {
+  it('分组是数据：每天做的 6 项 | 分隔线 | 资料库 / AI / 进度', () => {
     expect(navSections().map((sec) => sec.map((i) => i.key))).toEqual([
-      ['today', 'courses', 'practice', 'review', 'cet6'],
+      ['today', 'courses', 'practice', 'review', 'cet6', 'vocab'],
       ['study', 'ai', 'overview']
     ])
   })

@@ -9,12 +9,12 @@ export function directionOf(prev: unknown, next: unknown): SlideDir {
   return 'none'
 }
 
-const DEPTH1 = new Set(['/memo', '/favorites', '/playground', '/cet6/vocab'])
+const DEPTH1 = new Set(['/memo', '/favorites', '/playground'])
 
 /** 0 = 顶层页面（标签栏 / 抽屉可直达）；1 = 列表页；2 = 详情页（课文、六级试卷） */
 export function routeDepth(path: string): 0 | 1 | 2 {
   if (path.startsWith('/lesson/')) return 2
-  if (path === '/cet6/vocab') return 1
+  if (path === '/cet6/vocab') return 0 // 生词本进了侧栏 / 抽屉，是顶层页（2026-11-24）
   if (path.startsWith('/cet6/')) return 2
   if (DEPTH1.has(path)) return 1
   return 0

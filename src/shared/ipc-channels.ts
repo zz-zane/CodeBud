@@ -42,6 +42,9 @@ export const IPC = {
    */
   memoGet: 'memo:get',
   memoSave: 'memo:save',
+  /** 「今天」页每日待办（today-todos.json）：整份读 / 整份存，归一化在 shared/today-todo.ts */
+  todosGet: 'todos:get',
+  todosSave: 'todos:save',
   /** 六级真题（cet6.json，docs/27 §2.2）：作答记录与音频目录。入口校验在 main/cet6.ts */
   cet6GetState: 'cet6:get-state',
   cet6SaveRecord: 'cet6:save-record',

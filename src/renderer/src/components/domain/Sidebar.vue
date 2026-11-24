@@ -273,6 +273,7 @@ function selectMainSession(): void {
 .nav-tab-btn[data-nav='practice']:hover .nav-icon { transform: scaleX(1.18); }
 .nav-tab-btn[data-nav='review']:hover .nav-icon { transform: rotate(-180deg); transition-duration: var(--mi-dur-slow); }
 .nav-tab-btn[data-nav='cet6']:hover .nav-icon { transform: translateY(-2px) rotate(-10deg); }
+.nav-tab-btn[data-nav='vocab']:hover .nav-icon { transform: translateY(-2px) scaleY(1.08); transform-origin: 50% 0; }
 .nav-tab-btn[data-nav='ai']:hover .nav-icon { transform: none; animation: mi-icon-wiggle 420ms ease-in-out; }
 .nav-tab-btn[data-nav='overview']:hover .nav-icon { transform: none; }
 .nav-tab-btn[data-nav='overview']:hover .icon-svg { transform: scaleY(1.15); transform-origin: 50% 90%; }

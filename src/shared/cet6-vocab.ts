@@ -4,6 +4,8 @@
  */
 import { CET6_EXAM_ID } from './cet6'
 import { CET6_VOCAB_PROMPT } from './copy'
+import { localDateKeyOf, parseDateKey, shiftDateKey } from './dates'
+import { REVIEW_INTERVALS_DAYS } from './review-schedule'
 
 export interface Cet6Gloss {
   phonetic: string
@@ -24,10 +26,21 @@ export interface Cet6VocabEntry {
   addedAt: string
   mastered: boolean
   gloss: Cet6Gloss | null
+  /** 翻卡复习进度（v2 起）。null = 还没复习过，加入当天就到期 */
+  review: Cet6VocabReview | null
 }
 
+/** step = REVIEW_INTERVALS_DAYS 的下标（-1 = 刚忘记 / 新卡）；due = 下次到期日键（北京时间 YYYY-MM-DD） */
+export interface Cet6VocabReview {
+  step: number
+  due: string
+}
+
+export type Cet6VocabGrade = 'again' | 'hard' | 'good'
+export const VOCAB_GRADES: readonly Cet6VocabGrade[] = ['again', 'hard', 'good']
+
 export interface Cet6VocabFile {
-  version: 1
+  version: 2
   entries: Cet6VocabEntry[]
 }
 
@@ -134,11 +147,23 @@ function normalizeEntry(raw: unknown): Cet6VocabEntry | null {
     source,
     addedAt: str(r.addedAt, 40),
     mastered: r.mastered === true,
-    gloss: normalizeGloss(r.gloss)
+    gloss: normalizeGloss(r.gloss),
+    review: normalizeReview(r.review)
   }
 }
 
-/** 读口归一化：坏条目丢弃并 warn，好条目保留；重复键 / 重复 id 只留第一条；绝不整份丢 */
+function normalizeReview(raw: unknown): Cet6VocabReview | null {
+  if (typeof raw !== 'object' || raw === null) return null
+  const r = raw as Record<string, unknown>
+  if (typeof r.due !== 'string' || !parseDateKey(r.due)) return null
+  const step = typeof r.step === 'number' && Number.isInteger(r.step) ? Math.max(-1, Math.min(REVIEW_INTERVALS_DAYS.length - 1, r.step)) : -1
+  return { step, due: r.due }
+}
+
+/**
+ * 读口归一化 + 迁移：坏条目丢弃并 warn，好条目保留；重复键 / 重复 id 只留第一条；绝不整份丢。
+ * v1 → v2：条目没有 review，补 null（= 未复习过、加入当天到期），其余字段原样保留。
+ */
 export function normalizeVocabFile(raw: unknown): Cet6VocabFile {
   const list = typeof raw === 'object' && raw !== null && Array.isArray((raw as { entries?: unknown }).entries) ? (raw as { entries: unknown[] }).entries : []
   const seen = new Set<string>()
@@ -154,7 +179,7 @@ export function normalizeVocabFile(raw: unknown): Cet6VocabFile {
     entries.push(e)
     if (entries.length >= VOCAB_LIMITS.entries) break
   }
-  return { version: 1, entries }
+  return { version: 2, entries }
 }
 
 // ---------------------------------------------------------------- 归约
@@ -175,7 +200,7 @@ export function upsertEntry(file: Cet6VocabFile, input: Cet6VocabInput, gloss: C
   }
   if (file.entries.length >= VOCAB_LIMITS.entries) return { ok: false, reason: 'full' }
   const entry: Cet6VocabEntry = {
-    id, text: input.text, kind: classifyText(input.text), context: input.context, source: input.source, addedAt: now, mastered: false, gloss
+    id, text: input.text, kind: classifyText(input.text), context: input.context, source: input.source, addedAt: now, mastered: false, gloss, review: null
   }
   return { ok: true, file: { ...file, entries: [entry, ...file.entries] }, entry, added: true }
 }
@@ -185,6 +210,34 @@ export function updateEntry(file: Cet6VocabFile, id: string, patch: { mastered?:
   const mastered = patch.mastered
   if (typeof mastered !== 'boolean') return file
   return { ...file, entries: file.entries.map((e) => (e.id === id ? { ...e, mastered } : e)) }
+}
+
+// ---------------------------------------------------------------- 翻卡复习
+
+/** 下次到期日：复习过看 review.due，没复习过 = 加入那天 */
+export function vocabDueKey(e: Pick<Cet6VocabEntry, 'review' | 'addedAt'>): string {
+  return e.review?.due ?? localDateKeyOf(e.addedAt) ?? '1970-01-01'
+}
+
+/** 今天该复习：没掌握且到期日 ≤ 今天 */
+export function isVocabDue(e: Cet6VocabEntry, today: string): boolean {
+  return !e.mastered && vocabDueKey(e) <= today
+}
+
+/**
+ * 自评后的下一次：忘记 → 回到起点、明天再来；模糊 → 不升级，按当前档间隔；认识 → 升一档。
+ * 间隔沿用课程复习的 1/3/7/14/30/60 天。
+ */
+export function nextReview(cur: Cet6VocabReview | null, grade: Cet6VocabGrade, today: string): Cet6VocabReview {
+  const last = REVIEW_INTERVALS_DAYS.length - 1
+  const step = cur?.step ?? -1
+  const next = grade === 'again' ? -1 : grade === 'hard' ? Math.max(step, 0) : Math.min(step + 1, last)
+  const days = next < 0 ? 1 : REVIEW_INTERVALS_DAYS[next]
+  return { step: next, due: shiftDateKey(today, days) ?? today }
+}
+
+export function gradeEntry(file: Cet6VocabFile, id: string, grade: Cet6VocabGrade, today: string): Cet6VocabFile {
+  return { ...file, entries: file.entries.map((e) => (e.id === id ? { ...e, review: nextReview(e.review, grade, today) } : e)) }
 }
 
 export function removeEntries(file: Cet6VocabFile, ids: readonly string[]): Cet6VocabFile {

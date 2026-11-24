@@ -48,7 +48,7 @@ describe('TodayView 静态契约', () => {
   it('点击去向：复习页、练习页错题本页签、六级生词、六级卷、资料库任务页签', () => {
     expect(view).toContain("to: '/review'")
     expect(view).toContain("query: { tab: 'wrongbook' }")
-    expect(view).toContain("to: '/cet6/vocab'")
+    expect(view).toContain("path: '/cet6/vocab', query: { review: '1' }") // 生词行直接进翻卡
     expect(view).toContain('/cet6/${p.id}')
     expect(view).toContain("query: { tab: 'tasks' }")
   })

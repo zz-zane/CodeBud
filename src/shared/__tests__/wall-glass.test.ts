@@ -153,7 +153,8 @@ describe('opacity 快照：本次改动零新增（新增必须人工过目）',
   // 动画讲解的淡入、淡出、换皮、值更新和聚光增加七处透明度声明。
   // 44 → 45（2026-11-21 UI 动效优化）：styles/motion.css 新增列表错峰进场 @keyframes mi-stagger-in 的 `opacity: 0`（+1）。
   //   MiToast 退场改写只拆分了 enter/leave 选择器，opacity 声明数不变。
-  it('全库 opacity 声明数 = 45（含动画讲解过渡与列表错峰进场）', () => {
+  // 45 → 46（2026-11-24 生词本重做）：views/Cet6VocabView.vue 翻卡背面进场 @keyframes cv-in（同一行，+1）。
+  it('全库 opacity 声明数 = 46（含动画讲解过渡、列表错峰进场与生词翻卡）', () => {
     const hits: string[] = []
     for (const f of allFiles) {
       const lines = maskComments(readFileSync(f, 'utf8')).split('\n')
@@ -161,6 +162,6 @@ describe('opacity 快照：本次改动零新增（新增必须人工过目）',
         if (/opacity\s*:/.test(line)) hits.push(`${rel(f)}:${i + 1}`)
       })
     }
-    expect(hits.length, `全部命中：\n${hits.join('\n')}`).toBe(45)
+    expect(hits.length, `全部命中：\n${hits.join('\n')}`).toBe(46)
   })
 })

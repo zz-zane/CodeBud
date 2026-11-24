@@ -32,18 +32,19 @@ describe('estimateMinutes', () => {
 })
 
 describe('weekDots', () => {
-  it('周一为首，七格，今天未学为 today', () => {
+  it('周一为首，七格；过去没学 = missed，今天未学 = today，之后 = future', () => {
     const d = weekDots(['2026-11-09', '2026-11-10'], '2026-11-13') // 周五
     expect(d.map((x) => x.key)).toEqual(['2026-11-09', '2026-11-10', '2026-11-11', '2026-11-12', '2026-11-13', '2026-11-14', '2026-11-15'])
-    expect(d.map((x) => x.state)).toEqual(['done', 'done', 'idle', 'idle', 'today', 'idle', 'idle'])
+    expect(d.map((x) => x.state)).toEqual(['done', 'done', 'missed', 'missed', 'today', 'future', 'future'])
+    expect(d.map((x) => x.isToday)).toEqual([false, false, false, false, true, false, false])
   })
-  it('今天已学 → done 压过 today', () => {
-    expect(weekDots(['2026-11-13'], '2026-11-13')[4].state).toBe('done')
+  it('今天已学 → state 是 done，isToday 仍标出今天', () => {
+    expect(weekDots(['2026-11-13'], '2026-11-13')[4]).toEqual({ key: '2026-11-13', state: 'done', isToday: true })
   })
   it('周日当天：本周是前面六天 + 今天', () => {
     const d = weekDots([], '2026-11-15')
     expect(d[0].key).toBe('2026-11-09')
-    expect(d[6]).toEqual({ key: '2026-11-15', state: 'today' })
+    expect(d[6]).toEqual({ key: '2026-11-15', state: 'today', isToday: true })
   })
   it('周一当天', () => expect(weekDots([], '2026-11-09')[0].state).toBe('today'))
   it('跨月：周三 2026-12-02 的那周从 11-30 开始', () => {
@@ -54,7 +55,7 @@ describe('weekDots', () => {
   it('跨年：2027-01-01（周五）的那周从 2026-12-28 开始', () => {
     const d = weekDots(['2026-12-31'], '2027-01-01')
     expect(d[0].key).toBe('2026-12-28')
-    expect(d[3]).toEqual({ key: '2026-12-31', state: 'done' })
+    expect(d[3]).toEqual({ key: '2026-12-31', state: 'done', isToday: false })
     expect(d[6].key).toBe('2027-01-03')
   })
   it('日键非法 → 空', () => expect(weekDots([], 'nope')).toEqual([]))

@@ -21,13 +21,16 @@ export function estimateMinutes(n: { review: number; wrong: number; vocab: numbe
   return sec <= 0 ? 0 : Math.ceil(sec / 60 / 5) * 5
 }
 
-export type WeekDotState = 'done' | 'today' | 'idle'
+/** done 已学 / today 今天还没学 / missed 已过去没学 / future 还没到 */
+export type WeekDotState = 'done' | 'today' | 'missed' | 'future'
 export interface WeekDot {
   key: string
   state: WeekDotState
+  /** 是不是今天（今天已学时 state 是 done，靠它标出今天） */
+  isToday: boolean
 }
 
-/** 包含 todayKey 的那一周（周一为首）七格；今天已学（在 days 里）算 done，不算 today */
+/** 包含 todayKey 的那一周（周一为首）七格；今天已学（在 days 里）算 done，isToday 仍为 true */
 export function weekDots(days: readonly string[], todayKey: string): WeekDot[] {
   const t = dayNumber(todayKey)
   if (t === null) return []
@@ -37,8 +40,8 @@ export function weekDots(days: readonly string[], todayKey: string): WeekDot[] {
   return Array.from({ length: 7 }, (_, i) => {
     const d = new Date((monday + i) * DAY_MS)
     const key = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`
-    const state: WeekDotState = studied.has(key) ? 'done' : key === todayKey ? 'today' : 'idle'
-    return { key, state }
+    const state: WeekDotState = studied.has(key) ? 'done' : key === todayKey ? 'today' : key < todayKey ? 'missed' : 'future'
+    return { key, state, isToday: key === todayKey }
   })
 }
 

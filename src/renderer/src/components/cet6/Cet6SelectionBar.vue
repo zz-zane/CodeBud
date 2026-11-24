@@ -5,6 +5,8 @@
  * 输入框里的选区、跨出文章与题目区的选区不出条。考试锁开着时父组件根本不渲染本组件。
  */
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
+import { toast } from '../base/toast'
 import { CET6 } from '../../lib/copy'
 import { classifyText, extractContext, validateSelection, type Cet6Gloss, type Cet6LookupFail } from '../../../../shared/cet6-vocab'
 import { useCet6VocabStore } from '../../stores/cet6-vocab'
@@ -19,6 +21,7 @@ import MiIcon from '../base/MiIcon.vue'
 const props = defineProps<{ root: HTMLElement | null; examId: string; sectionType: string }>()
 
 const vocab = useCet6VocabStore()
+const router = useRouter()
 const ai = useAiAssistantStore()
 const settingsDialog = useSettingsDialogStore()
 
@@ -37,7 +40,6 @@ type Phase = 'idle' | 'loading' | 'ok' | 'fail'
 const phase = ref<Phase>('idle')
 const gloss = ref<Cet6Gloss | null>(null)
 const failReason = ref<Cet6LookupFail>('network')
-const addedEntryId = ref('')
 let lookupSeq = 0
 
 const inVocab = computed(() => !!selText.value && !!vocab.find(selText.value))
@@ -53,7 +55,6 @@ function hide(): void {
   expanded.value = false
   phase.value = 'idle'
   gloss.value = null
-  addedEntryId.value = ''
   lookupSeq++
 }
 
@@ -99,8 +100,7 @@ function captureRange(range: Range): void {
     expanded.value = false
     phase.value = 'idle'
     gloss.value = null
-    addedEntryId.value = ''
-    lookupSeq++
+      lookupSeq++
   }
   selText.value = text
   context.value = extractContext(blockText(el), text)
@@ -231,7 +231,8 @@ const spot = (): { text: string; context: string; source: { examId: string; sect
 
 async function addToVocab(): Promise<void> {
   if (inVocab.value) return
-  await vocab.add(spot())
+  // 加入后给个「查看」，用户不用再去找生词本在哪
+  if (await vocab.add(spot())) toast(CET6.VOCAB_ADDED, 'success', 4000, { label: CET6.VOCAB_VIEW, run: () => void router.push('/cet6/vocab') })
 }
 
 async function lookup(): Promise<void> {
@@ -243,19 +244,12 @@ async function lookup(): Promise<void> {
   if (seq !== lookupSeq) return
   if (res.ok) {
     gloss.value = res.entry.gloss
-    addedEntryId.value = res.added ? res.entry.id : ''
     phase.value = 'ok'
   } else {
     failReason.value = res.reason
     phase.value = 'fail'
   }
   void nextTick(place)
-}
-
-async function undoAdd(): Promise<void> {
-  const id = addedEntryId.value
-  addedEntryId.value = ''
-  if (id) await vocab.removeNow([id])
 }
 
 function askMore(): void {
@@ -368,12 +362,8 @@ onBeforeUnmount(() => {
       </div>
 
       <footer class="cet6-sel-foot">
-        <span v-if="phase === 'ok'" class="cet6-sel-muted">
-          {{ addedEntryId ? CET6.SEL_ADDED : CET6.SEL_UPDATED }}
-          <button v-if="addedEntryId" type="button" class="cet6-sel-link" @click="undoAdd">{{ CET6.UNDO }}</button>
-        </span>
         <span class="cet6-sel-spacer" />
-        <MiButton v-if="phase === 'fail'" size="sm" icon="plus" :disabled="inVocab" @click="addToVocab">
+        <MiButton v-if="phase !== 'loading'" size="sm" icon="plus" data-action="add-vocab-card" :disabled="inVocab" @click="addToVocab">
           {{ inVocab ? CET6.SEL_IN_VOCAB : CET6.SEL_ADD }}
         </MiButton>
         <MiButton size="sm" icon="message" data-action="ask-more" @click="askMore">{{ CET6.SEL_ASK }}</MiButton>
@@ -396,8 +386,6 @@ onBeforeUnmount(() => {
 .cet6-sel-muted { color: var(--mi-text-3); font-size: var(--mi-fs-caption); }
 .cet6-sel-foot { display: flex; align-items: center; gap: var(--mi-sp-2); margin-top: var(--mi-sp-3); }
 .cet6-sel-spacer { flex: 1; }
-.cet6-sel-link { margin-left: var(--mi-sp-2); padding: 0; border: 0; background: transparent; color: var(--mi-blue-deep); font: inherit; cursor: pointer; text-decoration: underline; }
-.cet6-sel-link:focus-visible { outline: 2px solid var(--mi-blue-deep); outline-offset: 1px; }
 </style>
 
 <style>

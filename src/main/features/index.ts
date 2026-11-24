@@ -16,6 +16,7 @@ import { cloudFeature } from './cloud'
 import { remoteFeature } from './remote'
 import { videoFeature } from './video'
 import { updateFeature } from './update'
+import { todosFeature } from './todos'
 
 /**
  * 功能清单 —— 顺序即注册顺序，也是 before-quit 时 dispose 的顺序。
@@ -30,6 +31,7 @@ export const FEATURES: MainFeature[] = [
   wrongbookFeature,
   favoritesFeature,
   memoFeature,
+  todosFeature,
   practiceFeature,
   configFeature,
   aiQuestionsFeature,

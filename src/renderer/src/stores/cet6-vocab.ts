@@ -4,7 +4,7 @@
  */
 import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
-import { VOCAB_LIMITS, vocabKey, type Cet6LookupResult, type Cet6VocabEntry, type Cet6VocabInput } from '../../../shared/cet6-vocab'
+import { VOCAB_LIMITS, vocabKey, type Cet6LookupResult, type Cet6VocabEntry, type Cet6VocabGrade, type Cet6VocabInput } from '../../../shared/cet6-vocab'
 import { toIpc } from '../lib/ipc-safe'
 import { toast } from '../components/base/toast'
 import { CET6 } from '../lib/copy'
@@ -49,7 +49,7 @@ export const useCet6VocabStore = defineStore('cet6-vocab', () => {
     }
   }
 
-  /** 查询释义；成功时条目已由主进程写入或更新，这里同步内存 */
+  /** 查询释义（不加入生词本） */
   async function lookup(input: Cet6VocabInput): Promise<Cet6LookupResult> {
     let res: Cet6LookupResult
     try {
@@ -58,10 +58,10 @@ export const useCet6VocabStore = defineStore('cet6-vocab', () => {
       console.error('[cet6-vocab] lookup failed', err)
       return { ok: false, reason: 'network' }
     }
+    // 查释义不会加入生词本；只有已在本子里的词才同步刷新后的释义
     if (res.ok) {
       const at = all.value.findIndex((e) => e.id === res.entry.id)
       if (at >= 0) all.value = all.value.map((e, i) => (i === at ? res.entry : e))
-      else all.value = [res.entry, ...all.value]
     }
     return res
   }
@@ -71,6 +71,16 @@ export const useCet6VocabStore = defineStore('cet6-vocab', () => {
       all.value = await window.miai.cet6.vocab.update(id, { mastered })
     } catch (err) {
       console.error('[cet6-vocab] update failed', err)
+      toast(CET6.VOCAB_UPDATE_FAILED, 'error')
+    }
+  }
+
+  /** 翻卡自评，主进程按今天排下次到期 */
+  async function grade(id: string, g: Cet6VocabGrade): Promise<void> {
+    try {
+      all.value = await window.miai.cet6.vocab.update(id, { grade: g })
+    } catch (err) {
+      console.error('[cet6-vocab] grade failed', err)
       toast(CET6.VOCAB_UPDATE_FAILED, 'error')
     }
   }
@@ -118,5 +128,5 @@ export const useCet6VocabStore = defineStore('cet6-vocab', () => {
     await Promise.all([...timers.keys()].map((id) => commit(id)))
   }
 
-  return { entries, loaded, load, find, add, lookup, setMastered, removeNow, removeWithUndo, flushPending }
+  return { entries, loaded, load, find, add, lookup, setMastered, grade, removeNow, removeWithUndo, flushPending }
 })

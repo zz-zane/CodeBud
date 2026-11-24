@@ -12,15 +12,20 @@ import {
   upsertEntry,
   validateSelection,
   vocabKey,
+  gradeEntry,
+  isVocabDue,
+  nextReview,
+  vocabDueKey,
   type Cet6Gloss,
   type Cet6VocabEntry,
   type Cet6VocabFile,
   type Cet6VocabInput
 } from '../cet6-vocab'
+import { REVIEW_INTERVALS_DAYS } from '../review-schedule'
 
 const NOW = '2026-11-10T00:00:00.000Z'
 const input = (text: string, over: Partial<Cet6VocabInput> = {}): Cet6VocabInput => ({ text, context: '', source: null, ...over })
-const empty = (): Cet6VocabFile => ({ version: 1, entries: [] })
+const empty = (): Cet6VocabFile => ({ version: 2, entries: [] })
 const gloss = (meaning: string): Cet6Gloss => ({ phonetic: '', pos: '', meaning, collocations: [], translation: '', structure: [], at: NOW })
 
 describe('cet6-vocab 选区与分类', () => {
@@ -75,7 +80,7 @@ describe('cet6-vocab 选区与分类', () => {
 describe('cet6-vocab 文件归一化', () => {
   it('损坏的文件：坏条目丢弃并 warn，好条目保留，重复键只留第一条', () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {})
-    const good: Cet6VocabEntry = { id: 'a', text: 'Alpha', kind: 'word', context: 'ctx', source: null, addedAt: NOW, mastered: true, gloss: gloss('x') }
+    const good: Cet6VocabEntry = { id: 'a', text: 'Alpha', kind: 'word', context: 'ctx', source: null, addedAt: NOW, mastered: true, gloss: gloss('x'), review: null }
     const file = normalizeVocabFile({
       version: 1,
       entries: [
@@ -134,17 +139,17 @@ describe('cet6-vocab 归约', () => {
 
   it('5000 条上限：满了拒绝新增，但已有条目仍可补释义', () => {
     const entries: Cet6VocabEntry[] = Array.from({ length: VOCAB_LIMITS.entries }, (_, i) => ({
-      id: `i${i}`, text: `word${i}`, kind: 'word', context: '', source: null, addedAt: NOW, mastered: false, gloss: null
+      id: `i${i}`, text: `word${i}`, kind: 'word', context: '', source: null, addedAt: NOW, mastered: false, gloss: null, review: null
     }))
-    const full: Cet6VocabFile = { version: 1, entries }
+    const full: Cet6VocabFile = { version: 2, entries }
     expect(upsertEntry(full, input('brand new'), null, 'x', NOW)).toEqual({ ok: false, reason: 'full' })
     expect(upsertEntry(full, input('word7'), gloss('g'), 'x', NOW)).toMatchObject({ ok: true, added: false })
   })
 
   it('updateEntry 只改 mastered；removeEntries 按 id 批量删', () => {
     const base: Cet6VocabFile = {
-      version: 1,
-      entries: ['a', 'b', 'c'].map((id) => ({ id, text: id + 'x', kind: 'word', context: '', source: null, addedAt: NOW, mastered: false, gloss: null }))
+      version: 2,
+      entries: ['a', 'b', 'c'].map((id) => ({ id, text: id + 'x', kind: 'word', context: '', source: null, addedAt: NOW, mastered: false, gloss: null, review: null }))
     }
     const marked = updateEntry(base, 'b', { mastered: true, text: 'hacked' } as { mastered: boolean })
     expect(marked.entries.map((e) => [e.text, e.mastered])).toEqual([['ax', false], ['bx', true], ['cx', false]])
@@ -192,5 +197,48 @@ describe('cet6-vocab AI 提示词与解析', () => {
     expect(parseGloss('  \n ', 'sentence', NOW)).toBeNull()
     expect(parseGloss('{}', 'word', NOW)).toBeNull()
     expect(parseGloss('{"phonetic":"/x/"}', 'word', NOW)).toBeNull()
+  })
+})
+
+describe('cet6-vocab 翻卡复习（v2）', () => {
+  it('v1 文件迁移：条目补 review: null，其余字段保留，版本升到 2', () => {
+    const f = normalizeVocabFile({ version: 1, entries: [{ id: 'a', text: 'Alpha', context: 'c', source: null, addedAt: NOW, mastered: false, gloss: null }] })
+    expect(f.version).toBe(2)
+    expect(f.entries[0]).toMatchObject({ id: 'a', text: 'Alpha', context: 'c', review: null })
+  })
+
+  it('坏的 review 当作未复习；step 越界被夹住', () => {
+    const f = normalizeVocabFile({ entries: [
+      { id: 'a', text: 'a1', addedAt: NOW, review: { step: 3, due: 'nope' } },
+      { id: 'b', text: 'b1', addedAt: NOW, review: { step: 99, due: '2026-11-20' } }
+    ] })
+    expect(f.entries[0].review).toBeNull()
+    expect(f.entries[1].review).toEqual({ step: REVIEW_INTERVALS_DAYS.length - 1, due: '2026-11-20' })
+  })
+
+  it('没复习过的词加入当天到期；已掌握的不算到期', () => {
+    const e = { id: 'a', text: 'a', kind: 'word' as const, context: '', source: null, addedAt: '2026-11-10T02:00:00.000Z', mastered: false, gloss: null, review: null }
+    expect(vocabDueKey(e)).toBe('2026-11-10')
+    expect(isVocabDue(e, '2026-11-09')).toBe(false)
+    expect(isVocabDue(e, '2026-11-10')).toBe(true)
+    expect(isVocabDue({ ...e, mastered: true }, '2026-11-12')).toBe(false)
+  })
+
+  it('自评：认识升一档、模糊不升、忘记回起点明天再来', () => {
+    const T = '2026-11-10'
+    expect(nextReview(null, 'good', T)).toEqual({ step: 0, due: '2026-11-11' })
+    expect(nextReview({ step: 0, due: T }, 'good', T)).toEqual({ step: 1, due: '2026-11-13' })
+    expect(nextReview({ step: 2, due: T }, 'hard', T)).toEqual({ step: 2, due: '2026-11-17' })
+    expect(nextReview(null, 'hard', T)).toEqual({ step: 0, due: '2026-11-11' })
+    expect(nextReview({ step: 4, due: T }, 'again', T)).toEqual({ step: -1, due: '2026-11-11' })
+    const top = REVIEW_INTERVALS_DAYS.length - 1
+    expect(nextReview({ step: top, due: T }, 'good', T).step).toBe(top)
+  })
+
+  it('gradeEntry 只改目标条目的 review', () => {
+    const base = normalizeVocabFile({ entries: [{ id: 'a', text: 'a1', addedAt: NOW }, { id: 'b', text: 'b1', addedAt: NOW }] })
+    const next = gradeEntry(base, 'b', 'good', '2026-11-10')
+    expect(next.entries[0].review).toBeNull()
+    expect(next.entries[1].review).toEqual({ step: 0, due: '2026-11-11' })
   })
 })

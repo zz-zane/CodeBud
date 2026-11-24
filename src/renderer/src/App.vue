@@ -535,6 +535,8 @@ onBeforeUnmount(() => {
 
       <!-- 中间宽幅正文区域 -->
       <div class="main-pane">
+        <!-- 顶栏下沿的渐隐雾化，和 /ai 页同一套（全宽页自己画） -->
+        <div v-if="!isFullBleed" class="page-fog" aria-hidden="true" />
         <main class="content" :class="{ 'is-full-bleed': isFullBleed }">
           <router-view v-slot="{ Component, route: currentRoute }">
             <Transition
@@ -852,6 +854,28 @@ onBeforeUnmount(() => {
 .ai-ball-icon {
   width: 20px;
   height: 20px;
+}
+
+/* 与 AiPanel 的 .is-main .ai-chat-view::before 同参数：顶栏高度内实雾，再往下 24px 渐隐。
+   z 59：盖住正文，低于顶栏(60)。滚动条不被盖：右边让出一条滚动条宽 */
+.page-fog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 12px;
+  height: calc(var(--mi-topbar-h) + 24px);
+  z-index: 59;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--mi-canvas) 82%, transparent) 0%,
+    color-mix(in srgb, var(--mi-canvas) 72%, transparent) var(--mi-topbar-h),
+    transparent 100%
+  );
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 var(--mi-topbar-h), transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 var(--mi-topbar-h), transparent 100%);
 }
 
 .content {
