@@ -13,6 +13,9 @@ import { renderMarkdown } from '../../lib/md'
 import { AI_ASSISTANT } from '../../lib/copy'
 import InteractiveHtmlSandbox from '../study/InteractiveHtmlSandbox.vue'
 import VideoCard from './video/VideoCard.vue'
+import AiFlowBlock from './ai-blocks/AiFlowBlock.vue'
+import AiPointsBlock from './ai-blocks/AiPointsBlock.vue'
+import AiWidgetBlock from './ai-blocks/AiWidgetBlock.vue'
 import { useContentStore } from '../../stores/content'
 import { useVideoStore } from '../../stores/video'
 import { VIDEO_GENERATION_TEXT as VT } from '../../../../shared/video-copy'
@@ -170,6 +173,10 @@ onBeforeUnmount(() => {
         />
         <div v-else class="rich-card anim-card"><span>{{ VT.unavailable }}</span></div>
       </div>
+      <AiFlowBlock v-else-if="seg.type === 'flow'" :data="seg.data" />
+      <AiPointsBlock v-else-if="seg.type === 'points'" :data="seg.data" />
+      <AiWidgetBlock v-else-if="seg.type === 'widget'" :html="seg.html" />
+      <p v-else-if="seg.type === 'widget-pending'" class="widget-pending">{{ AI_ASSISTANT.WIDGET_PENDING }}</p>
       <InteractiveHtmlSandbox v-else-if="seg.type === 'artifact'" :html="seg.html" :title="seg.title" />
 
       
@@ -514,6 +521,7 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+.widget-pending { margin: var(--mi-sp-3) 0; padding: var(--mi-sp-6) var(--mi-sp-4); border: 1px dashed var(--mi-border-control); border-radius: 12px; color: var(--mi-text-3); font-size: var(--mi-fs-label); text-align: center; }
 .anim-card { display:flex; flex-direction:column; gap:8px; padding:12px; }
 .anim-card button { margin-right:8px; cursor:pointer; }
 .anim-preview { height:100px; overflow:hidden; border-radius:var(--mi-radius); background:var(--mi-canvas); }

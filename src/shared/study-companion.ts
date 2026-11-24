@@ -41,7 +41,7 @@ export interface StudySnapshot {
 }
 export interface StudyApi {
   getState(): Promise<StudySnapshot>
-  createHtmlPreview(html: string): Promise<StudyResult<string>>
+  createHtmlPreview(html: string, opts?: { network?: boolean }): Promise<StudyResult<string>>
   saveMemory(input: { id?: string; text: string; source?: string }): Promise<StudyResult<StudyMemory>>
   forgetMemory(id: string): Promise<StudyResult<void>>
   saveNote(input: { id?: string; title: string; body: string; tags?: string[]; format?: 'markdown' | 'html' }): Promise<StudyResult<StudyNote>>

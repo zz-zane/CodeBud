@@ -33,7 +33,7 @@ export const studyFeature: MainFeature = {
 
     // ---- AI 学习助手 (2026-10-27)
     handle(IPC.studyGetState, () => studyConnections.snapshot())
-    handle(IPC.studyCreateHtmlPreview, (_event, html: unknown) => studyResult(() => createHtmlPreview(html)))
+    handle(IPC.studyCreateHtmlPreview, (_event, html: unknown, opts: unknown) => studyResult(() => createHtmlPreview(html, opts)))
     handle(IPC.studyRunMath, (_event, input: unknown) => studyAsyncResult(() => runMathViaMcp(input, studyMathPath, storageDir)))
     handle(IPC.studySaveConnection, (_event, input: unknown) => studyResult(() => studyConnections.save(input)))
     handle(IPC.studyDetectAgent, () => studyAsyncResult(() => detectAgy()))

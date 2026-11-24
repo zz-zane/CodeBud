@@ -66,6 +66,72 @@ export interface AlgoVizBlockData {
   steps: AlgoVizStep[]
 }
 
+/**
+ * 图文讲解积木（2026-11-24，用户要像 ChatGPT 那样的图文回答）。设计规则借自 diagram-design（MIT）：
+ * 一个强调色只给 1~2 个关键节点、细线、无阴影、小圆角、一张图最多 9 个节点。
+ * flow：竖排流程，每个节点一个框（可带图标、小字），zone 节点是整宽高亮带（如「太平洋海底光缆」），
+ *       via 是进入该节点那条箭头上的说明。points：图标 + 标题 + 说明的要点列表。
+ */
+export const VISUAL_ICONS = ['server', 'device', 'globe', 'network', 'cable', 'database', 'cpu', 'user', 'lock', 'file', 'image', 'code', 'cloud', 'router', 'bolt', 'clock', 'book', 'check'] as const
+export type VisualIcon = typeof VISUAL_ICONS[number]
+export interface FlowNode { label: string; sub?: string; icon?: VisualIcon; tone?: 'start' | 'end' | 'accent'; zone?: boolean; via?: string }
+export interface FlowBlockData { title?: string; nodes: FlowNode[]; caption?: string }
+export interface PointItem { title: string; text: string; icon?: VisualIcon }
+export interface PointsBlockData { title?: string; items: PointItem[] }
+export const VISUAL_LIMITS = { flowNodes: 9, points: 8, label: 60, text: 300 } as const
+
+const vText = (v: unknown, max: number): string => (typeof v === 'string' ? v.trim().slice(0, max) : '')
+const vIcon = (v: unknown): VisualIcon | undefined => (VISUAL_ICONS as readonly string[]).includes(v as string) ? (v as VisualIcon) : undefined
+
+/** 模型给的 flow JSON → 安全的数据；没有有效节点返回 null（整块退回成代码块显示） */
+export function normalizeFlow(raw: unknown): FlowBlockData | null {
+  if (!raw || typeof raw !== 'object') return null
+  const r = raw as Record<string, unknown>
+  const nodes: FlowNode[] = (Array.isArray(r.nodes) ? r.nodes : [])
+    .map((n: unknown): FlowNode | null => {
+      if (typeof n === 'string') return n.trim() ? { label: n.trim().slice(0, VISUAL_LIMITS.label) } : null
+      if (!n || typeof n !== 'object') return null
+      const o = n as Record<string, unknown>
+      const label = vText(o.label, VISUAL_LIMITS.label)
+      if (!label) return null
+      const tone = o.tone === 'start' || o.tone === 'end' || o.tone === 'accent' ? o.tone : undefined
+      return {
+        label,
+        ...(vText(o.sub, VISUAL_LIMITS.text) ? { sub: vText(o.sub, VISUAL_LIMITS.text) } : {}),
+        ...(vIcon(o.icon) ? { icon: vIcon(o.icon) } : {}),
+        ...(tone ? { tone } : {}),
+        ...(o.zone === true ? { zone: true } : {}),
+        ...(vText(o.via, VISUAL_LIMITS.label) ? { via: vText(o.via, VISUAL_LIMITS.label) } : {})
+      }
+    })
+    .filter((n): n is FlowNode => n !== null)
+    .slice(0, VISUAL_LIMITS.flowNodes)
+  if (nodes.length === 0) return null
+  return {
+    nodes,
+    ...(vText(r.title, VISUAL_LIMITS.label) ? { title: vText(r.title, VISUAL_LIMITS.label) } : {}),
+    ...(vText(r.caption, VISUAL_LIMITS.text) ? { caption: vText(r.caption, VISUAL_LIMITS.text) } : {})
+  }
+}
+
+export function normalizePoints(raw: unknown): PointsBlockData | null {
+  if (!raw || typeof raw !== 'object') return null
+  const r = raw as Record<string, unknown>
+  const items: PointItem[] = (Array.isArray(r.items) ? r.items : [])
+    .map((x: unknown): PointItem | null => {
+      if (!x || typeof x !== 'object') return null
+      const o = x as Record<string, unknown>
+      const title = vText(o.title, VISUAL_LIMITS.label)
+      const text = vText(o.text, VISUAL_LIMITS.text)
+      if (!title && !text) return null
+      return { title, text, ...(vIcon(o.icon) ? { icon: vIcon(o.icon) } : {}) }
+    })
+    .filter((x): x is PointItem => x !== null)
+    .slice(0, VISUAL_LIMITS.points)
+  if (items.length === 0) return null
+  return { items, ...(vText(r.title, VISUAL_LIMITS.label) ? { title: vText(r.title, VISUAL_LIMITS.label) } : {}) }
+}
+
 export type AiRichSegment =
   | { type: 'markdown'; content: string }
   | { type: 'anim-card'; videoId: string; raw: string }
@@ -77,6 +143,10 @@ export type AiRichSegment =
   | { type: 'mermaid'; code: string; svg: string; raw: string }
   | { type: 'svg'; svg: string; raw: string }
   | { type: 'artifact'; html: string; title?: string; raw: string }
+  | { type: 'flow'; data: FlowBlockData; raw: string }
+  | { type: 'widget'; html: string; raw: string }
+  | { type: 'widget-pending' }
+  | { type: 'points'; data: PointsBlockData; raw: string }
 
 const ALLOWED_TAGS = new Set([
   'svg', 'g', 'path', 'rect', 'circle', 'ellipse', 'line',
@@ -634,7 +704,7 @@ export function parseAiRichBlocks(raw: string): AiRichSegment[] {
   if (!raw || typeof raw !== 'string') return []
 
   const segments: AiRichSegment[] = []
-  const blockRegex = /\`\`\`(anim-card|diagnosis|feynman|algo-viz|ask-user|solve-steps|mermaid|mindmap|svg|study-html)(?=\s)\s*([\s\S]*?)\`\`\`/g
+  const blockRegex = /\`\`\`(anim-card|diagnosis|feynman|algo-viz|ask-user|solve-steps|mermaid|mindmap|svg|study-html|flow|points|widget)(?=\s)\s*([\s\S]*?)\`\`\`/g
 
   let lastIndex = 0
   let match: RegExpExecArray | null
@@ -745,6 +815,19 @@ export function parseAiRichBlocks(raw: string): AiRichSegment[] {
       const svg = compileMermaidToSvg(code)
       segments.push({ type: 'mermaid', code, svg, raw: rawBlock })
       continue
+    } else if (type === 'flow' || type === 'points') {
+      try {
+        const parsed: unknown = JSON.parse(body)
+        if (type === 'flow') {
+          const data = normalizeFlow(parsed)
+          if (data) { segments.push({ type: 'flow', data, raw: rawBlock }); continue }
+        } else {
+          const data = normalizePoints(parsed)
+          if (data) { segments.push({ type: 'points', data, raw: rawBlock }); continue }
+        }
+      } catch {}
+    } else if (type === 'widget') {
+      if (body) { segments.push({ type: 'widget', html: body, raw: rawBlock }); continue }
     } else if (type === 'svg') {
       const svg = sanitizeSvg(body)
       segments.push({ type: 'svg', svg, raw: rawBlock })
@@ -755,7 +838,12 @@ export function parseAiRichBlocks(raw: string): AiRichSegment[] {
   }
 
   const remaining = raw.slice(lastIndex)
-  if (remaining) {
+  // 还在生成的互动示意（只有开头的 ```widget、没有收尾）：不把半截 HTML 原文露给学员，换成占位
+  const open = remaining.search(/```widget(?=\s)/)
+  if (open >= 0) {
+    if (open > 0) segments.push({ type: 'markdown', content: remaining.slice(0, open) })
+    segments.push({ type: 'widget-pending' })
+  } else if (remaining) {
     segments.push({ type: 'markdown', content: remaining })
   }
 

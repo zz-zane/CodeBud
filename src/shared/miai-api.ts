@@ -281,7 +281,7 @@ export function createMiaiApi(t: MiaiTransport) {
   },
 
   study: {
-    createHtmlPreview: (html: string): ReturnType<StudyApi['createHtmlPreview']> => t.invoke(IPC.studyCreateHtmlPreview, html),
+    createHtmlPreview: (html: string, opts?: { network?: boolean }): ReturnType<StudyApi['createHtmlPreview']> => t.invoke(IPC.studyCreateHtmlPreview, html, opts),
     getState: (): ReturnType<StudyApi['getState']> => t.invoke(IPC.studyGetState),
     saveMemory: (input: Parameters<StudyApi['saveMemory']>[0]): ReturnType<StudyApi['saveMemory']> => t.invoke(IPC.studySaveMemory, input),
     forgetMemory: (id: string): ReturnType<StudyApi['forgetMemory']> => t.invoke(IPC.studyForgetMemory, id),

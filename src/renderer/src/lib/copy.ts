@@ -3406,6 +3406,11 @@ export const LEARN_VIEW = {
 } as const
 
 export const AI_ASSISTANT = {
+  WIDGET_LABEL: '互动示意',
+  WIDGET_PENDING: '正在生成互动示意…',
+  WIDGET_RESET: '重置',
+  WIDGET_FAILED: '互动示意没能加载，可以点「重置」再试。',
+  WIDGET_IMG: { loading: '正在找图…', none: '没有找到合适的图片', offline: '离线，图片暂不可用', source: 'Wikimedia Commons' },
   OPEN_ASSISTANT: '打开 AI 助手',
   PANEL_EMPTY_HINT: '输入编程问题或选中课文，AI 助教随时解答',
 

@@ -358,3 +358,43 @@ describe('ai-rich-blocks parser and compiler', () => {
   })
 
 })
+
+describe('图文积木 flow / points', () => {
+  it('flow：节点规范化、未知图标丢掉、字符串节点可用、最多 9 个', () => {
+    const nodes = [{ label: '美国服务器', sub: '图片拆成数据包', icon: 'server', tone: 'start' }, '骨干网', { label: '海底光缆', zone: true, via: '光信号', icon: 'nope' }]
+    const many = Array.from({ length: 12 }, (_, i) => `n${i}`)
+    const segs = parseAiRichBlocks('前文\n```flow\n' + JSON.stringify({ title: 'T', nodes, caption: '示意' }) + '\n```\n后文')
+    expect(segs.map((s) => s.type)).toEqual(['markdown', 'flow', 'markdown'])
+    if (segs[1].type !== 'flow') return
+    expect(segs[1].data.nodes).toEqual([
+      { label: '美国服务器', sub: '图片拆成数据包', icon: 'server', tone: 'start' },
+      { label: '骨干网' },
+      { label: '海底光缆', zone: true, via: '光信号' }
+    ])
+    expect(segs[1].data.caption).toBe('示意')
+    const big = parseAiRichBlocks('```flow\n' + JSON.stringify({ nodes: many }) + '\n```')
+    expect(big[0].type === 'flow' && big[0].data.nodes.length).toBe(9)
+  })
+
+  it('points：缺标题和说明的条目丢掉；JSON 坏了退回成代码块', () => {
+    const segs = parseAiRichBlocks('```points\n{"items":[{"icon":"cable","title":"海底光缆","text":"内部是光纤"},{},{"title":"中继器"}]}\n```')
+    expect(segs[0].type === 'points' && segs[0].data.items).toEqual([{ icon: 'cable', title: '海底光缆', text: '内部是光纤' }, { title: '中继器', text: '' }])
+    expect(parseAiRichBlocks('```flow\n{ bad json\n```')[0].type).toBe('markdown')
+    expect(parseAiRichBlocks('```points\n{"items":[]}\n```')[0].type).toBe('markdown')
+  })
+})
+
+describe('互动示意 widget', () => {
+  it('完整的 widget 块原样交给沙盒；空块退回代码块', () => {
+    const segs = parseAiRichBlocks('看图：\n```widget\n<svg viewBox="0 0 10 10"></svg>\n<script>1</script>\n```\n结束')
+    expect(segs.map((s) => s.type)).toEqual(['markdown', 'widget', 'markdown'])
+    expect(segs[1].type === 'widget' && segs[1].html).toBe('<svg viewBox="0 0 10 10"></svg>\n<script>1</script>')
+    expect(parseAiRichBlocks('```widget\n\n```')[0].type).toBe('markdown')
+  })
+
+  it('生成中（没有收尾的 ```widget）不露出半截 HTML，换成占位', () => {
+    const segs = parseAiRichBlocks('## 一、原理\n说明\n```widget\n<svg viewBox="0 0')
+    expect(segs.map((s) => s.type)).toEqual(['markdown', 'widget-pending'])
+    expect(segs[0].type === 'markdown' && segs[0].content).toBe('## 一、原理\n说明\n')
+  })
+})

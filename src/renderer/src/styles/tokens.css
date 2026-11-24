@@ -229,6 +229,11 @@
    */
   --mi-purple: #bb9bf0;
   --mi-purple-ink: #7d4fa8;
+  /*
+   * AI 图解（互动示意 widget）的分类色：不同对象各用一色、跨图保持一致（参照 ChatGPT 图解的做法）。
+   * 主色是砖红、没有真正的蓝，这里补一支蓝；其余四支复用 成功绿 / 警示橙 / 紫 / 主色。
+   */
+  --mi-cat-blue: #3b6fd4;
   /* 圆角与阴影 */
   --mi-radius-sm: 6px;
   --mi-radius: 8px;

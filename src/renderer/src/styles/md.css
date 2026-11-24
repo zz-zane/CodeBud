@@ -391,3 +391,6 @@
   display: block;
   margin: 16px auto;
 }
+
+/* 长公式在窄屏（手机）上自己横向滚动，不把整个对话区撑出横向滚动条 */
+.markdown-body .katex-display { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 2px 0; }
