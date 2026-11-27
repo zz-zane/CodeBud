@@ -2,14 +2,14 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAiAssistantStore } from '../../stores/ai-assistant'
-import { useCet6Store } from '../../stores/cet6'
+import { useCetExamLock } from '../../stores/cet6'
 import { AI_ASSISTANT } from '../../lib/copy'
 import { useVideoStore } from '../../stores/video'
 import { VIDEO_GENERATION_TEXT as VT } from '../../../../shared/video-copy'
 
 const aiStore = useAiAssistantStore()
 const video = useVideoStore()
-const cet6 = useCet6Store()
+const examLock = useCetExamLock()
 const route = useRoute()
 const router = useRouter()
 const visible = ref(false)
@@ -21,7 +21,7 @@ const capturedType = ref<'code' | 'selection'>('selection')
 
 function onGlobalContextMenu(e: MouseEvent) {
   // 六级考试模式不弹「问 AI」菜单（docs/27 §8.1）
-  if (cet6.examLock) return
+  if (examLock.value) return
   const target = e.target as HTMLElement
   if (!target) return
 
@@ -90,7 +90,7 @@ function onGlobalContextMenu(e: MouseEvent) {
 
 // 触屏没有右键：课文页的选词浮条发 miai-ask-selection，这里复用同一个菜单（解释 / 举例 / 提问）
 function onAskSelection(e: Event) {
-  if (cet6.examLock) return
+  if (examLock.value) return
   const d = (e as CustomEvent<{ text: string; inCodeBlock: boolean; x: number; y: number }>).detail
   if (!d?.text) return
   capturedText.value = d.text

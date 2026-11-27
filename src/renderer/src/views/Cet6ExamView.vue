@@ -5,13 +5,13 @@
  */
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { onBeforeRouteLeave, onBeforeRouteUpdate, useRoute, useRouter } from 'vue-router'
-import { useCet6Store } from '../stores/cet6'
+import { useCetStore } from '../stores/cet6'
 import { useCet6VocabStore } from '../stores/cet6-vocab'
 import { useAiAssistantStore } from '../stores/ai-assistant'
 import { useSettingsStore } from '../stores/settings'
 import { useStudyStore } from '../stores/study'
 import { toast } from '../components/base/toast'
-import { CET6, PHONE } from '../lib/copy'
+import { cetCopy, PHONE } from '../lib/copy'
 import { assetBase } from '../lib/asset-base'
 import { computeKbInset, isKbOpen } from '../lib/keyboard-inset'
 import { usePhoneBackClose } from '../lib/phone-back-close'
@@ -21,6 +21,7 @@ import {
   asMode,
   blockHeading,
   formatClock,
+  formatTime,
   isObjective,
   isOpen,
   isRight,
@@ -45,7 +46,9 @@ import { useCet6Evidence } from '../lib/use-cet6-evidence'
 
 const route = useRoute()
 const router = useRouter()
-const cet6 = useCet6Store()
+const level = route.meta.cetLevel ?? 'cet6'
+const cet6 = useCetStore(level)
+const CET6 = cetCopy(level)
 const ai = useAiAssistantStore()
 const vocab = useCet6VocabStore()
 const settings = useSettingsStore()
@@ -116,7 +119,7 @@ const readingTabs = computed(() => {
   return (sec.blocks || [])
     .filter((b) => objective.value.some((x) => x.blockId === b.id))
     .map((b) => {
-      const h = blockHeading(sec, b)
+      const h = blockHeading(sec, b, level)
       return { id: b.id, label: h.unit || h.section || b.title || b.id }
     })
 })
@@ -137,7 +140,7 @@ const fontStyle = computed(() => ({ fontSize: `${16 + fontDelta.value}px` }))
 const listeningSection = computed(() => exam.value?.sections.find((s) => s.type === 'listening') ?? null)
 const audioSrc = computed(() => {
   const ls = listeningSection.value
-  return ls && !ls.sharedWithExamId && ls.audio?.src ? mediaUrl(ls.audio.src, assetBase().cet6) : ''
+  return ls && !ls.sharedWithExamId && ls.audio?.src ? mediaUrl(ls.audio.src, assetBase()[level]) : ''
 })
 const audioTip = computed(() => {
   const ls = listeningSection.value
@@ -232,7 +235,7 @@ function onText(q: Cet6Question, value: string): void {
 }
 
 function openShared(id: string): void {
-  void router.push({ path: `/cet6/${id}`, query: { section: 'listening' } })
+  void router.push({ path: `/${level}/${id}`, query: { section: 'listening' } })
 }
 
 // ---- 当前题 / 当前空滚入视野
@@ -488,7 +491,7 @@ function stripClass(q: Cet6Question): Record<string, boolean> {
 <template>
   <div ref="rootEl" class="cet6-exam" :class="{ 'sel-ok': !cet6.examLock }" @click.capture="guardSelectClick">
     <header class="cet6-top">
-      <button type="button" class="icon-btn" :title="CET6.BACK" :aria-label="CET6.BACK" @click="router.push('/cet6')">
+      <button type="button" class="icon-btn" :title="CET6.BACK" :aria-label="CET6.BACK" @click="router.push(`/${level}`)">
         <MiIcon name="arrow-left" :size="16" />
       </button>
       <span class="cet6-exam-title">{{ exam?.title || '' }}</span>
@@ -543,7 +546,7 @@ function stripClass(q: Cet6Question): Record<string, boolean> {
         :aria-label="isExamMode && !submitted ? CET6.EXAM_TIMER_TIP : timerRunning ? CET6.TIMER_PAUSE : CET6.TIMER_RESUME"
         @click="toggleTimer"
       >
-        <MiIcon name="clock" :size="14" />{{ formatClock(clockSeconds) }}
+        <MiIcon name="clock" :size="14" />{{ level === 'cet4' && isExamMode && !submitted ? formatTime(clockSeconds) : formatClock(clockSeconds) }}
       </button>
       <MiButton v-if="exam" :variant="submitted ? 'secondary' : 'primary'" data-action="submit" @click="onSubmitClick">
         {{ submitted ? CET6.REDO : CET6.SUBMIT }}
@@ -584,6 +587,7 @@ function stripClass(q: Cet6Question): Record<string, boolean> {
           :submitted="submitted"
           :picked-letter="pickedLetter"
           :metas="cet6.metas"
+          :level="level"
           @blank="goTo"
           @para="pickParagraph"
           @choose="choose"
@@ -628,6 +632,7 @@ function stripClass(q: Cet6Question): Record<string, boolean> {
           </div>
           <div ref="panelEl" class="cet6-right-scroll" :style="fontStyle" data-kb-managed @focusin="onAnswerFocusIn" @focusout="onAnswerFocusOut">
             <Cet6Panel
+              :level="level"
               :section="section"
               :q="currentQ"
               :screen-qs="screenQs"
@@ -694,7 +699,7 @@ function stripClass(q: Cet6Question): Record<string, boolean> {
     </MiModal>
 
     <!-- 选词工具条：只在没有考试锁时存在（练习模式，或考试交卷后） -->
-    <Cet6SelectionBar v-if="exam && section && !cet6.examLock" :root="rootEl" :exam-id="exam.id" :section-type="section.type" />
+    <Cet6SelectionBar v-if="exam && section && !cet6.examLock" :root="rootEl" :exam-id="exam.id" :level="level" :section-type="section.type" />
   </div>
 </template>
 

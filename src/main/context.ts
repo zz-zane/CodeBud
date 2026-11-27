@@ -62,7 +62,7 @@ export interface MainContext {
   storageDir: string
   studyMathPath: string
   rendererDir: string
-  /** 前缀（如 `/cet6/data/`）→ handler；手机连接服务在请求时才查，所以功能的注册顺序无关 */
+  /** 前缀（如 `/cet6/data/`、`/cet4/data/`）→ handler；手机连接服务在请求时才查，所以功能的注册顺序无关 */
   httpAssets: Map<string, HttpAssetHandler>
   /** 主进程自发推送配置时的额外接收方（手机连接的事件流）；返回取消函数 */
   addConfigSink(sink: (pub: PublicAppConfig) => void): () => void

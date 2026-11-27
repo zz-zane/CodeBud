@@ -120,6 +120,34 @@ describe('cet6:grade-subjective handler', () => {
   })
 })
 
+describe('CET level isolation', () => {
+  it('routes the same exam ID, mode and media root to independent stores', async () => {
+    registerWithMock({ apiKey: 'test-key', promptOnce: async () => '{"score": 10, "comment": "Clear."}' })
+    const getCet4 = () => lookupHandler(IPC.cet4GetState)!({}, []) as import('../../shared/cet6').Cet6State
+    expect(getCet4().records).toEqual({})
+    expect(await lookupHandler(IPC.cet4GradeSubjective)!({}, [REQ])).toEqual({ ok: false, reason: 'stale' })
+    expect(() => lookupHandler(IPC.cet4SaveRecord)!({}, ['../bad', {}])).toThrow('cet4: invalid exam id')
+
+    const cet4 = createCet6Service(storageDir, 'cet4')
+    cet4.setMediaRoot(join(storageDir, 'cet4-audio'))
+    await lookupHandler(IPC.cet4SetLastMode)!({}, ['exam'])
+    const record = createCet6Service(storageDir).load().records[REQ.examId]
+    await lookupHandler(IPC.cet4SaveRecord)!({}, [REQ.examId, { ...record, seconds: 12 }])
+    expect(await lookupHandler(IPC.cet4GradeSubjective)!({}, [REQ])).toMatchObject({ ok: true })
+    expect(getCet4()).toMatchObject({
+      lastMode: 'exam',
+      media: { root: join(storageDir, 'cet4-audio') },
+      records: { [REQ.examId]: { seconds: 12, aiGrades: { [REQ.questionId]: { score: 10 } } } }
+    })
+    const cet6 = createCet6Service(storageDir).state()
+    expect(cet6.lastMode).toBe('practice')
+    expect(cet6.media.root).toBeNull()
+    expect(cet6.records[REQ.examId].seconds).toBe(0)
+    expect(cet6.records[REQ.examId].aiGrades).toBeUndefined()
+    expect(readdirSync(storageDir)).toEqual(expect.arrayContaining(['cet4.json', 'cet6.json']))
+  })
+})
+
 describe('cet6 migration protection', () => {
   it('rejects a future version without touching the main file or using its backup', () => {
     const file = join(storageDir, 'cet6.json')

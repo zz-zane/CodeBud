@@ -3,7 +3,7 @@
  *
  * 契约变更（2026-11-04 AI 简化与去重复入口轮次）：
  * 1. 默认入口调整为 AI（/ai），旧 /learn 从主导航中移除（路由层保留向 /ai 的兼容重定向，不报 404）
- * 2. （2026-11-13 docs/31 起）8 个主要导航项：今天 /today、课程 /courses、练习 /practice、复习 /review、六级真题 /cet6，分隔线，资料库 /study、AI /ai、进度 /overview，以及底部设置入口
+ * 2. （2026-11-13 docs/31 起）9 个一级路由导航项：今天 /today、课程 /courses、练习 /practice、复习 /review、六级真题 /cet6、四级真题 /cet4、生词本 /cet6/vocab，分隔线，资料库 /study、AI /ai、进度 /overview，以及底部设置入口
  * 3. 侧栏内搜索框、普通/算法课程大纲树及 AI 页“课程目录/选择课程”分组彻底移除，去重复入口
  * 4. isNavActive 契约：/ai 独立高亮，/playground 归入练习，/memo 与 /favorites 归入总览
  */
@@ -19,13 +19,15 @@ const raw = readFileSync(SIDEBAR_PATH, 'utf8') + ' ' + readFileSync(join(SRC_DIR
 const sidebar = maskComments(raw)
 
 describe('Lite 架构 · 侧栏主导航契约（ROOT-PLAN-v1）', () => {
-  it('包含且仅包含 8 个主导航项（含今天、课程、六级真题）与底部设置入口', () => {
+  it('包含且仅包含 8 个一级路由导航项（四六级真题合为一项）与底部设置入口', () => {
     expect(sidebar).toContain("path: '/today'")
     expect(sidebar).toContain("path: '/courses'")
     expect(sidebar).toContain("path: '/ai'")
     expect(sidebar).toContain("path: '/study'")
     expect(sidebar.match(/path:\s*'\/[a-z0-9]+'/g)).toHaveLength(8)
-    expect(sidebar).toContain("path: '/cet6'")
+    expect(sidebar).toMatch(/\{ key: 'cet', path: '\/cet'.*group: 'daily'/)
+    expect(sidebar).not.toContain("path: '/cet4'")
+    expect(sidebar).not.toContain("path: '/cet6'")
     expect(sidebar).toContain("path: '/practice'")
     expect(sidebar).toContain("path: '/review'")
     expect(sidebar).toContain("path: '/overview'")

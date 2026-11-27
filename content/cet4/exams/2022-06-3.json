@@ -1,0 +1,135 @@
+{
+  "id": "2022-06-3",
+  "title": "2022年6月 第3套",
+  "year": 2022,
+  "month": 6,
+  "set": 3,
+  "status": "partial",
+  "issues": [
+    "阅读理解与 2022年6月 第1套 共用（原卷未单列，依使用者决定指向第1套）。"
+  ],
+  "sources": [
+    {
+      "id": "cet4-2022-06-3-audio-note",
+      "title": "听力说明.txt",
+      "localPath": "<本地四级真题目录>/2022.06 第3套/听力说明.txt"
+    },
+    {
+      "id": "cet4-2022-06-3-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2022.06 第3套/真题.pdf"
+    },
+    {
+      "id": "cet4-2022-06-3-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2022.06 第3套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2022-06-3-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2022.06 第3套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "Suppose you are going to write a proposal to your school clinic for improving its service. You are to write about its current problems and possible solutions to these problems. You will have 30 minutes to write the proposal. You should write at least 120 words but no more than 180 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "Suppose you are going to write a proposal to your school clinic for improving its service. You are to write about its current problems and possible solutions to these problems. You will have 30 minutes to write the proposal. You should write at least 120 words but no more than 180 words.",
+          "source": {
+            "fileId": "cet4-2022-06-3-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-3-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "Suppose you are going to write a proposal to your school clinic for improving its service. You are to write about its current problems and possible solutions to these problems. You will have 30 minutes to write the proposal. You should write at least 120 words but no more than 180 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "A Proposal on Improving School Clinic Service\n\n【1】The school clinic has been playing a critical role in our campus life. 【2】However, with university lockdown, problems have emerged. 【3】Therefore, I, a junior from Law School, am writing to make a proposal on improving its service.\n\n【4】The problems and suggestions are as follows. 【5】First of all, many kinds of vaccines, are only available at off-campus hospitals, which is quite inconvenient. Since our school hospital has professional doctors, why not provide relevant vaccination services on campus? 【6】Secondly, it has been quite tiring and time-consuming to have a thorough physical check-up owing to the huge number of students. Hence, an appointment App or a similar system will be indispensable to improve efficiency. 【7】In addition, it will be better if necessary emergency medical aid training can be offered.\n\n【8】The commitment of our school clinic is appreciated by all students and faculty. I sincerely hope that my proposal can be adopted and our school clinic can provide better healthcare services.",
+          "explanation": "结构框图：\n\nA Proposal on Improving School Clinic Service\n- 第1段引出话题：强调校医院的重要性，引出校医院的服务需要改善的话题。\n- 第2段具体论证：指出校医院在疫苗接种以及组织体检中存在问题，并针对性地提出解决方案。\n- 第3段结尾：表达对建议效果的期待。\n\n范文点评：\n\n| 参考范文 | 精彩点评 |\n| :--- | :--- |\n| A Proposal on Improving School Clinic Service<br>【1】The school clinic has been playing a critical role in our campus life. 【2】However, with university lockdown, problems have emerged. 【3】Therefore, I, a junior from Law School, am writing to make a proposal on improving its service.<br>【4】The problems and suggestions are as follows. 【5】First of all, many kinds of vaccines, are only available at off-campus hospitals, which is quite inconvenient. Since our school hospital has professional doctors, why not provide relevant vaccination services on campus? 【6】Secondly, it has been quite tiring and time-consuming to have a thorough physical check-up owing to the huge number of students. Hence, an appointment App or a similar system will be indispensable to improve efficiency. 【7】In addition, it will be better if necessary emergency medical aid training can be offered.<br>【8】The commitment of our school clinic is appreciated by all students and faculty. I sincerely hope that my proposal can be adopted and our school clinic can provide better healthcare services. | 【1】肯定校医院在大学生活中的关键作用。<br>【2】用However转折，指出校医院存在的一些问题。<br>【3】Therefore提示上下句关系，引出写作目的。<br>【4】引起下文。<br>【5】【6】使用First of all和Secondly分别指出校内无法打疫苗、体检耗费时间和体力的问题。<br>【7】提出为学生们提供紧急医疗救助的培训。<br>【8】结尾段，感谢校医院工作人员，并真诚希望上述建议能有助于校医院发展。 |\n\n话题词汇：\nschool doctor 校医\nhigh quality service 优质服务\nbe committed to 致力于\nregular health checkups 常规体检\nmedical consultations 医疗咨询\nsurgery 手术\nvaccine 疫苗\ninfection 感染\nsymptom 症状\nhealthcare 医疗保健\nepidemic prevention and control 疫情防控\ntimely diagnosis and treatment 及时医治\noptimize healthcare resources 优化医疗资源\nbooster shot 加强针\nmedical 医学的\nepidemic 传染病",
+          "source": {
+            "fileId": "cet4-2022-06-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-3-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2022-06-1",
+      "sharedWithTitle": "2022年6月 第1套",
+      "sharedNote": "本套听力与 2022年6月 第1套 共用，题目、解析和听力材料集中在 2022-06-1 练习；本套不再重复展示。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2022-06-1",
+      "sharedWithTitle": "2022年6月 第1套",
+      "sharedNote": "本套阅读与 2022年6月 第1套 共用（原卷未单列），请前往 2022-06-1 练习。"
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "从前，有个农夫正在地里耕作，突然看见一只兔子飞奔而过，撞在一棵大树上死了。农夫毫不费力就吃到了兔肉，心里非常高兴。他想，“如果总是这样该多好啊！”于是，他不再耕作，每天守候在那棵树旁，等待着能再捡到撞死在树上的兔子。他等呀等，等了一天又一天，田地也荒芜了，却再也没有等到第二只兔子。人们因而都嘲笑他把偶然当成了必然。",
+          "source": {
+            "fileId": "cet4-2022-06-3-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-3-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "从前，有个农夫正在地里耕作，突然看见一只兔子飞奔而过，撞在一棵大树上死了。农夫毫不费力就吃到了兔肉，心里非常高兴。他想，“如果总是这样该多好啊！”于是，他不再耕作，每天守候在那棵树旁，等待着能再捡到撞死在树上的兔子。他等呀等，等了一天又一天，田地也荒芜了，却再也没有等到第二只兔子。人们因而都嘲笑他把偶然当成了必然。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "There was once a peasant who was ploughing in the field. Suddenly he saw that a hare darting past bumped against a large tree and died. He enjoyed a meal of hare meat without any effort and was so pleased that he thought, “How wonderful it would be to have this all the time!” So he stopped plowing and waited by that tree every day for picking up another hare that bumped into the tree. He waited and waited day after day, only to have the field waste rather than a second hare. Therefore, people all laughed at him for taking the accidental for the inevitable.",
+          "explanation": "参考译文与难点注释\n\nThere was once a peasant who was ploughing in the field. Suddenly he saw that a hare darting past bumped against a large tree and died. He enjoyed a meal of hare meat without any effort and was so pleased that he thought, “How wonderful it would be to have this all the time!” So he stopped plowing and waited by that tree every day for picking up another hare that bumped into the tree. He waited and waited day after day, only to have the field waste rather than a second hare. Therefore, people all laughed at him for taking the accidental for the inevitable.\n\n1. 第一句较长，可以拆分为两句话翻译。先选用There was once...结构翻译第一分句，注意这里要用who或that引导定语从句，不能省略关系代词。后两个分句翻译为一句话，增加主语he，谓语动词saw后接宾语从句。此处将“飞奔”处理为现在分词作后置定语，“撞”与“死”处理为并列的两个动词。\n2. 第二句中，“毫不费力”除了用介词短语翻译之外，还可以用have no difficulty或take no trouble来翻译，即“He had no difficulty/took no trouble eating the hare meat.”。“心里非常高兴”中的“心里”省略不译，以免显得啰唆。另外，如参考译文所示，可以用so...that结构把本句和下一句合并翻译。\n3. 第三句句子较短，可以与上句合并翻译。“如果总是这样该多好啊！”是形式为感叹句的直接引语，可以用how引导的感叹句来翻译，如参考译文，也可以用what引导的感叹句进行翻译，即“What a wonderful thing it would be to have this all the time!”。\n4. 第四句中，“在那棵树旁”可以翻译为by/beside that tree。“守候”和“等待”语义重复，可省译为wait for，即waited by that tree every day for。“撞死在树上的兔子”可以用定语从句翻译为another hare that bumped into the tree或者another hare that knocked itself dead against the tree。\n5. 第五句中，“等呀等”可以翻译为waited and waited；“田地也荒芜了，却再也没有等到第二只兔子”是最后的结果，可以用only to do...结构来翻译，即only to have the field waste rather than a second hare。\n6. 第六句中，“把偶然当成了必然”可以翻译为taking the accidental for the inevitable或者taking the chance for granted。\n\n话题词汇\nstump 树桩\nbroken neck 脖子折断\nall day long 整天\nunexpected 意想不到的\nfoolishness 愚蠢\nflexible 灵活变通\nreap without sowing/gains without pains 不劳而获\nlaziness/idleness 懒惰",
+          "source": {
+            "fileId": "cet4-2022-06-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-3-md"
+          },
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

@@ -18,6 +18,7 @@ export const REMOTE_ALLOWED_KEYS = [
   'memoGet', 'memoSave',
   'todosGet', 'todosSave',
   'cet6GetState', 'cet6SaveRecord', 'cet6ResetRecord', 'cet6SetLastMode',
+  'cet4GetState', 'cet4SaveRecord', 'cet4ResetRecord', 'cet4SetLastMode',
   'cet6VocabList', 'cet6VocabAdd', 'cet6VocabUpdate', 'cet6VocabRemove', 'cet6VocabLookup',
   'practiceRecord', 'practiceGet',
   'configGet',
@@ -30,7 +31,7 @@ export const REMOTE_ALLOWED_KEYS = [
   'studySaveNote', 'studyArchiveNote', 'studyReadMaterial', 'studyGeneratePlan',
   'studySetTaskStatus', 'studyGetUsage', 'studyCreateHtmlPreview',
   'studyConfirmPlan', 'studyDiscardPlan', 'studyEditTasks',
-  'cet6GradeSubjective',
+  'cet6GradeSubjective', 'cet4GradeSubjective',
   'videoCancel', 'videoList', 'videoDelete'
 ] as const satisfies readonly IpcKey[]
 
@@ -45,7 +46,7 @@ export const REMOTE_DENIED_KEYS = [
   // 设置（含 API Key）与 AI 连接测试
   'configSave', 'aiTestConnection',
   // 六级音频目录选择（系统对话框）
-  'cet6PickMediaRoot',
+  'cet6PickMediaRoot', 'cet4PickMediaRoot',
   // 研学：导入 / 导出（系统对话框）、外部连接（ACP，会启动本机程序）、数学计算（启动本机 Octave）
   'studyImportMaterials', 'studyExportVault', 'studySaveConnection', 'studyConnect',
   'studyAuthenticate', 'studyDisconnect', 'studySelectConnection', 'studySetModel', 'studyRemoveConnection', 'studyRunMath', 'studyDetectAgent', 'studyListModels',

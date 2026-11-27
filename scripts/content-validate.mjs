@@ -1461,6 +1461,30 @@ async function checkAnimations() {
 
 await checkAnimations()
 
+// 四级真题：与六级同一套证据校验（cet6 走 npm 脚本里的 cet6-evidence --check），目录不存在则略过
+async function checkCet4() {
+  const { existsSync, readdirSync, readFileSync } = await import('node:fs')
+  const dir = new URL('../content/cet4/exams/', import.meta.url)
+  if (!existsSync(dir)) return console.log('四级真题：content/cet4 不存在，略过')
+  const { checkExam } = await import('./cet6-evidence.mjs')
+  const files = readdirSync(dir).filter((f) => f.endsWith('.json'))
+  for (const f of files) {
+    const exam = JSON.parse(readFileSync(new URL(f, dir), 'utf8'))
+    for (const m of checkExam(exam)) errors.push({ lessonId: `cet4/${f}`, message: m })
+    const n = exam.sections.filter((s) => s.type === 'listening').flatMap((s) => s.questions ?? []).length
+    // 合卷 / 共用听力的卷没有听力题：有题才要求 25 题
+    if (n > 0 && n !== 25) errors.push({ lessonId: `cet4/${f}`, message: `听力应为 25 题，实际 ${n}` })
+    if (!exam.sections.some((s) => s.type === 'writing' || s.type === 'translation')) errors.push({ lessonId: `cet4/${f}`, message: '缺写作 / 翻译' })
+  }
+  const index = JSON.parse(readFileSync(new URL('../content/cet4/index.json', import.meta.url), 'utf8'))
+  for (const m of index) {
+    if (!existsSync(new URL('../content/cet4/' + m.file, import.meta.url))) errors.push({ lessonId: 'cet4/index', message: `${m.id} 的 file 不存在：${m.file}` })
+  }
+  console.log(`四级真题：${files.length} 套已校验`)
+}
+
+await checkCet4()
+
 // ---------------------------------------------------------------- 输出
 
 for (const e of errors) console.log(`✗ [${e.lessonId}] ${e.message}`)

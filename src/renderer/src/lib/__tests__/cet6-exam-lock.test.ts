@@ -1,6 +1,7 @@
 import { readFileSync } from 'fs'
 import { join } from 'path'
 import { describe, expect, it } from 'vitest'
+import { cetCopy } from '../copy'
 
 /**
  * 考试锁的静态守卫（docs/27 §8.1 / §8.2）：这几处是「一个标志管所有入口」，
@@ -8,7 +9,13 @@ import { describe, expect, it } from 'vitest'
  */
 const src = (rel: string): string => readFileSync(join(__dirname, '..', '..', rel), 'utf8')
 
-describe('考试锁接线', () => {
+describe('真题模式与文案接线', () => {
+  it('作文建议字数按试卷等级显示', () => {
+    expect(cetCopy('cet4').ESSAY_HINT).toBe('建议 120–180 词')
+    expect(cetCopy('cet6').ESSAY_HINT).toBe('建议 150–200 词')
+    expect(src('views/Cet6ExamView.vue')).toMatch(/<Cet6Panel\s+:level="level"/)
+  })
+
   it('Cet6ExamView 只在没有考试锁时渲染选词工具条', () => {
     const view = src('views/Cet6ExamView.vue')
     const tags = view.match(/<Cet6SelectionBar[^>]*>/g) ?? []
@@ -25,7 +32,7 @@ describe('考试锁接线', () => {
 
   it('App.vue 用锁收起侧栏 / 顶条入口，并让全局快捷键直接返回', () => {
     const app = src('App.vue')
-    expect(app).toMatch(/const examLock = computed\(\(\) => cet6\.examLock\)/)
+    expect(app).toMatch(/const examLock = useCetExamLock\(\)/)
     expect(app).toMatch(/<div\s+v-if="!examLock"\s+id="app-sidebar-drawer"\s+class="sidebar-wrapper"/)
     expect(app).toMatch(/class="topbar-right-actions"/)
     expect(app).toMatch(/v-if="!isBare && !examLock" class="topbar-right-actions"/)
@@ -36,7 +43,7 @@ describe('考试锁接线', () => {
 
   it('AiContextMenu 在考试锁下不弹菜单', () => {
     const menu = src('components/domain/AiContextMenu.vue')
-    expect(menu).toMatch(/function onGlobalContextMenu[\s\S]{0,200}cet6\.examLock/)
+    expect(menu).toMatch(/function onGlobalContextMenu[\s\S]{0,200}examLock\.value/)
   })
 
   it('试卷文字可选中的规则绑在考试锁上，且按钮点击有选区守卫', () => {

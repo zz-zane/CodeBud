@@ -4,7 +4,7 @@
  * 仔细阅读 = 选项整行可点；写作 / 翻译 = 输入框 + 词数。解析与参考范文只在 submitted 后才渲染。
  */
 import { computed } from 'vue'
-import { CET6 } from '../../lib/copy'
+import { CET6, cetCopy } from '../../lib/copy'
 import { isSelectingTextIn } from '../../lib/cet6-select-guard'
 import {
   answerKeys,
@@ -14,12 +14,14 @@ import {
   normalizedAnswer,
   type Cet6AiGrade,
   type Cet6Question,
-  type Cet6Section
+  type Cet6Section,
+  type CetLevel
 } from '../../../../shared/cet6'
 import MiButton from '../base/MiButton.vue'
 import Cet6Review from './Cet6Review.vue'
 
 const props = defineProps<{
+  level?: CetLevel
   section: Cet6Section
   q: Cet6Question | null
   screenQs: Cet6Question[]
@@ -106,7 +108,7 @@ function twoUp(q: Cet6Question): boolean {
         />
         <div class="cet6-area-foot">
           <span>{{ CET6.wordCount(countWords(answers[subjective.id] || '')) }}</span>
-          <span v-if="subjective.kind === 'essay'">{{ CET6.ESSAY_HINT }}</span>
+          <span v-if="subjective.kind === 'essay'">{{ cetCopy(level ?? 'cet6').ESSAY_HINT }}</span>
         </div>
       </div>
 

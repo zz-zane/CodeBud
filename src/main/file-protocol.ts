@@ -1,4 +1,4 @@
-// 自定义协议（miai-study:// / miai-cet6://）的共用底座：scheme 特权声明 + Range 解析 / 路径围栏 / CORS 头 / MIME 表。
+// 自定义协议（miai-study:// / miai-cet6:// / miai-cet4://）的共用底座：scheme 特权声明 + Range 解析 / 路径围栏 / CORS 头 / MIME 表。
 //
 // 协议面硬需求（最初逐条来自视频引擎「会发出的全部请求」的逆向清单，听力音频同样吃这几条）：
 //   ① Range 随机读：播放器每次请求都带 `Range: bytes=N-`（首请求 bytes=0-）；
@@ -10,6 +10,7 @@
 //   ④ 路径按段 encodeURIComponent，服务端按段 decode（中文文件名）；
 //   ⑤ 路径围栏：拒绝 `..` / `.` / 空段 / NUL / 反斜杠；根目录白名单前缀（大小写不敏感）。
 
+import { CET_LEVELS } from '../shared/cet6'
 import { protocol } from 'electron'
 import { resolve, sep } from 'node:path'
 
@@ -20,11 +21,11 @@ import { resolve, sep } from 'node:path'
 export function registerSchemePrivileges(): void {
   protocol.registerSchemesAsPrivileged([
     { scheme: 'miai-study', privileges: { standard: true, secure: true } },
-    // 六级真题（docs/27 §2.1）：试卷数据 + 本地听力音频
-    {
-      scheme: 'miai-cet6',
+    // 真题试卷数据与各等级的本地听力音频
+    ...CET_LEVELS.map((level) => ({
+      scheme: `miai-${level}`,
       privileges: { standard: true, secure: true, supportFetchAPI: true, stream: true, corsEnabled: true },
-    },
+    })),
   ])
 }
 

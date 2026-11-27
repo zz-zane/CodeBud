@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 
@@ -356,8 +356,11 @@ export function addEvidence(exam, raw, rows) {
   return result
 }
 
-function main(mode) {
-  if (mode !== '--check' && mode !== '--write') throw new Error('Usage: node scripts/cet6-evidence.mjs --check|--write')
+function main(mode, set = 'cet6') {
+  if (mode !== '--check' && mode !== '--write') throw new Error('Usage: node scripts/cet6-evidence.mjs --check|--write [cet6|cet4]')
+  if (!/^cet[46]$/.test(set)) throw new Error('Unknown set: ' + set)
+  const examsDir = fileURLToPath(new URL('../content/' + set + '/exams/', import.meta.url))
+  if (!existsSync(examsDir)) return console.log('content/' + set + ' 不存在，略过')
   const files = readdirSync(examsDir).filter((name) => name.endsWith('.json')).sort()
   const errors = []
   const changes = []
@@ -375,7 +378,7 @@ function main(mode) {
   }
   if (errors.length) throw new Error(errors.join('\n'))
   persistEvidence(changes)
-  console.log('CET-6 evidence: ' + files.length + ' exams checked, ' + changes.length + ' files written')
+  console.log('CET-' + set.slice(3) + ' evidence: ' + files.length + ' exams checked, ' + changes.length + ' files written')
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main(process.argv[2])
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main(process.argv[2], process.argv[3])

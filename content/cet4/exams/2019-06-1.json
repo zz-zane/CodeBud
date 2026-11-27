@@ -1,0 +1,3020 @@
+{
+  "id": "2019-06-1",
+  "title": "2019年6月 第1套",
+  "year": 2019,
+  "month": 6,
+  "set": 1,
+  "status": "ready",
+  "issues": [],
+  "sources": [
+    {
+      "id": "cet4-2019-06-1-mp3",
+      "title": "听力.mp3",
+      "localPath": "<本地四级真题目录>/2019.06 第1套/听力.mp3"
+    },
+    {
+      "id": "cet4-2019-06-1-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2019.06 第1套/真题.pdf"
+    },
+    {
+      "id": "cet4-2019-06-1-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2019.06 第1套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2019-06-1-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2019.06 第1套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write a news report to your campus newspaper on a volunteer activity organized by your Student Union to assist elderly people in the neighborhood. You should write at least 120 words but no more than] 80 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "For this part, you are allowed 30 minutes to write a news report to your campus newspaper on a volunteer activity organized by your Student Union to assist elderly people in the neighborhood. You should write at least 120 words but no more than] 80 words.",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-06-1-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write a news report to your campus newspaper on a volunteer activity organized by your Student Union to assist elderly people in the neighborhood. You should write at least 120 words but no more than] 80 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "Ten students, organized by the Student Union, visited a senior center close to our school on Wednesday, June 12th, for the purpose of providing help for the elderly there.\n\nOur volunteers were warmly welcomed when they arrived there at about 1 pm. They presented the elderly with fresh fruits before dividing themselves into two groups, one responsible for cleaning and the other for chatting. It took nearly an hour for half a dozen volunteers to sweep and mop the floor and then wash all the windows. The rest were, meanwhile, listening attentively to the elderly who looked back on their good old days with a certain amount of nostalgia. The activity ended with a lecture on how to send voice messages and make video calls on WeChat.\n\n\"I'm impressed with their vigor and optimism,\" says one of the volunteers. \"And I'm glad that the entire afternoon we spent together means something to them. They expressed their gratitude for our company, which may be, in my opinion, what they need most.\"",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第1页【参考范文】（图像逐字转录；原印刷 \"clays\"/\"optimism,w\" 两处明显印刷错误已改为 \"days\"/\"optimism,\"）"
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear three news reports, two long conversations and three passages.",
+      "audio": {
+        "src": "source-media/2019.06 第1套/听力.mp3",
+        "sourceId": "cet4-2019-06-1-mp3",
+        "sharedWith": []
+      },
+      "blocks": [
+        {
+          "id": "listening-news-1",
+          "title": "News Report One",
+          "text": "",
+          "transcript": "A 9-year-old Central California boy braved strong currents and cold water to swim from San Francisco to Alcatraz Island and back.\nA California television station in Fresno reported Tuesday that James Savage set a record as the youngest swimmer to make the journey to the former prison. The TV station reported that by completing the swim, the fourth-grade student from Los Banos broke a record previously held by a 10-year-old boy.\nJames said that waves in the San Francisco Bay hitting him in the face 30 minutes into his swim made him want to give up. His father said he had offered his son $ 100 as a reward; to encourage his struggling son, he doubled it to $ 200. James pushed forward, making it to Alcatraz Island and back in a little more than two hours. Alcatraz is over a mile from the mainland.",
+          "translation": "来 自 加 利 福 尼 亚 州 中 部 的 一 名 9 岁 男孩 不 月 滑 急 冰冷 的 水 流 ， 完 成 了 从 旧金山到 恶魔 岛 的 往返 海 泳 。\n\n加 利 福 尼 亚 州 弗 雷 斯 诺 市 的 一 家 电视 台 周 二 报道 称 , 往 姆 斯 萨 维 奇 创下 了 游 往这 座 原 监 狱 之 岛 的 最 年 轻 游泳 者 记录 。 这 家 电视 台 报道 说 ， 完 成 这 次 游泳 让 这 名 来自 洛斯 巴 诺 斯 市 的 四 年 级 学 生 打 破 了 之 前 由 一 名 10 岁 男 孩 保持 的 纪录 。\n\nASSL, URL 30 分 钟 后 ， 旧 金山 湾 的 几 个 浪头 击 中 了 他 ， 这 让 他 有 了 放弃 的念头 。 他 父亲 说 ， 先 前 他 已 提出 要 奖励 儿子 100 美元 ， 为 了 鼓励 艰难 行进 的 儿子 ，他 把 奖金 翻 倍 至 200 美元 。 入 姆 斯 劈 波 斩 浪 ， 最 终 抵达 恶魔 岛 并 成 功 返 回 ， 共 用 时两 小 时 多 一 点 。 亚 魔 岛 与 大 陆 相 距 1 英里 〈 编 者 注 : 约 1.6 公里 ) 以 上 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          }
+        },
+        {
+          "id": "listening-news-2",
+          "title": "News Report Two",
+          "text": "",
+          "transcript": "On 1 January, new regulations will come into effect which eliminate an annual leave bonus for people who put off marrying until the age of 23 for women and 25 for men, the South China morning post reports.\nThe holiday bonus was designed to encourage young people to delay getting married in line with China's one-child policy. But with that policy now being abolished, this holiday incentive is no longer necessary, the government says.\nIn Shanghai, a young couple at a marriage registration office told the paper that they decided to register their marriage as soon as possible to take advantage of the existing policy because an extra holiday was a big deal for them. In Beijing, one registration office had about 300 couples seeking to get married the day after the changes were announced, rather than the usual number of between 70 and 80.\nBut one lawyer tells the paper that the changes still have to be adopted by local governments and these procedures take time. So people who are rushing to register for marriage can relax.",
+          "translation": "据 《 南 华 早 报 》 报 道 ， 新 计生 法 将 于 1 月 1 日 起 生效 ， 年 满 23 周岁 结婚 的 女性和 年 满 25 周岁 结婚 的 男性 的 年 假 奖 励 《编者 注 :; 晚婚 假 ) 将 会 被 取消 。\n\n这 一 假期 奖励 意 在 鼓励 年 轻 人 推迟 结婚 ， 以 契合 中 国 独生子 女 政策 。 但 由 于 独生子 女 政策 现 已 废止 ， 这 一 年 假 奖励 也 就 再 无 必要 ， 中 国政 府 表 示 。\n\n在 上 海 一 家 婚姻 登记 处 ， 一 对 年 轻 情侣 告诉 该 报 ， 他 们 决定 尽快 登记 结婚 以 利用 现行 政策 ， 因 为 这 一 额外 的 假期 对 他 们 而 言 是 个 非常 重要 的 待遇 。 就 在 政策 变动公布 的 第 二 天 ， 北 京 一 家 婚姻 登记 处 大 约 有 300 对 新 人 要 登记 结婚 ， 而 平日 里 只 有 70 到 80 对 。\n\n不 过 ， 一 位 律师 向 该 报表 示 ， 这 些 政策 变动 仍 有 待 地 方 政府 采纳 ， 诸 般 程 序 还需 时 间 。 所 以 那些 赶 着 去 登记 结婚 的 人 可 以 松口 气 了 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          }
+        },
+        {
+          "id": "listening-news-3",
+          "title": "News Report Three",
+          "text": "",
+          "transcript": "Everyone loves a good house party, but the cleaning-up the next morning isn’t as enjoyable. Now, however, a New Zealand-based startup company aims to bring messy homes—and even splitting headaches—back to normal.\nThe properly named startup Morning-After Maids, was launched about a month ago in Auckland by roommates Rebecca Foley and Catherine Ashurst. Aside from cleaning-up, the two will also cook breakfast, and even get coffee and painkillers for recovering merrymakers. Although they are both gainfully employed, they fit cleaning jobs into their nights and weekends, which is when their service is in most demand anyway.\nBesides being flooded with requests from across the country, Foley and Ashurst have also received requests from the U. S. and Canada to provide services there. They are reportedly meeting with lawyers to see how best to take the business forward.",
+          "translation": "人 人 都 喜欢 开心 的 家 庭 聚 会 ， 但 第 二 天 早上 的 清扫 工作 可 就 没 那么 愉快 了 。 不\n\n过 现在 ， 新 西 兰 一 家 创业 公司 正 力求 使 脏 乱 不 堪 的 家 一 一 甚至 剧烈 头痛 一 一 复归 正\n\nMr TH 0\n\nFT OR Sia Ti Joe CW A SL I Ge A] 29 7 — 4 A Pd = AL, 瑟 琳 * 阿 舍 斯 特 这 对 室友 在 奥克兰 创立 。 除 了 清扫 卫生 ， 两 人 还 会 做 早餐 ， 甚 至 还 给那些 正在 恢复 中 的 饮酒 狂欢 者 买 来 咖啡 和 止痛 药 。 尽 管 她 们 都 有 带 薪 工 作 ， 她 们 还是 将 清扫 工作 安插 到 晚上 和 周末 ， 反 正 这 恰巧 也 是 她 们 的 服务 最 紧俏 的 时 段 。\n\n除了 收 到 来 自 全 国 各 地 的 大 量 请 求 之 外 ， 弗 利和 阿 铭 斯 特 也 收 到 了 来 自 美 国 和加 拿 大 的 请 求 ， 请 求 她 们 在 当地 提供 服务 。 据 说 ， 她 们 正在 会 见 律师 ， 看 看 怎样 才能 最 好 地 推进 这 桩 生意 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-1",
+          "title": "Conversation One",
+          "text": "",
+          "transcript": "W: Kyle, how did your driver's theory exam go? It was yesterday, right?\nM:Yes, I prepared as much as I could, but I was so nervous since it was my second try. The people who worked at the test center were very kind though. We had a little conversation which calmed me down a bit, and that was just what 1 needed. Then, after the exam, they printed out my result, but I was afraid to open it until I was outside, it was such a relief to pass.\nW: Congratulations. I knew you could do it! I guess you underestimated how difficult it would be the first time, didn't you? I hear a lot of people make that mistake and go in underprepared. But good job in passing the second time. I'm so proud of you. Now, all you have to do next is your road test. Have you had any lessons yet?\nM:Yes, thanks, I'm so happy to be actually on the road now. I've only had two driving lessons so far, and my instructor is very understanding, so I’m really enjoying it. And I can't wait for my next session. Although the lessons are rather expensive, 20 pounds an hour, and the instructor says I’ll need about 30 to 40 lessons in total that's what— six to eight hundred pounds. So this time I’ll need to make a lot more effort and hopefully will be successful the first time.\nW: Well, good luck.",
+          "translation": "女 : 凯 尔 ， 你 的 驾驶 员 理论 考试 考 得 怎么 样 ? 昨天 考 的 ， 是 吗 ?\n\nFi: 是 的 ， 我 尽 全 力 准 备 了 ， 但 因为 这 是 我 第 二 次 考 了 ， 所 以 还 是 很 紧张 。 不过 ， 考 试 中 心 的 工作 人 员 特 别 亲切 。 我 们 聊 了 几 旬 之 后 ， 我 稍微 平静 了 一 些 ， 这 正是 我 需要 的 。 然 后 ， 考 试 结束 后 ， 他 们 把 我 的 成 绩 打 印 了 出 来 ， 但 我 走出 中 心 才 敢打开 看 ， 通 过 考试 真是 让 我 松 了 一 口气 。\n\n女 : 恭喜 。 我 就 知道 你 能 通过 ! 我 猜 你 第 一 次 是 低估 了 考试 的 难度 ， 是 吧 ? 我听 说 很 多 人 会 犯 这 个 错误 ， 没 做 好 准备 就 去 考试 了 。 不 过 考 第 二 次 就 能 通过 也 很 棒了 。 我 很 为 你 骄傲 。 这 样 ， 你 就 只 需 全 力 准备 接 下 来 的 路 考 了 。 你 上 过 课 了 吗 ?\n\n男 : 是 的 .谢谢 ， 我 很 高 兴 现 在 要 真正 开车 上 路 了 。 到 目前 为 止 ， 我 只 上 了 两 次轰 驶 课 ， 我 的 教练 很 善 解 人 意 ， 所 以 我 真 的 很 享受 上 课 。 我 迫不及待 要 上 下 次 课 了 。虽然 课程 相当 贵 ， 一 小 时 20 镑 。 教 练 说 我 总 共 要 上 30 到 40 节 课 ， 那 就 是 一 一 600 到 800 镑 。 所 以 这 次 我 得 更 加 努力 了 ， 和 希望 一 次 就 过 。\n\n女 : 那么 ， 祝 你 好 运 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-2",
+          "title": "Conversation Two",
+          "text": "",
+          "transcript": "M: Emma, I got accepted to the University of Leeds. Since youre going to university in England, do you know how much it is for international students to study there?\nW: Congratulations. Yes, I believe for international students you'll have to pay around thirteen thousand pounds a year. It's just a bit more than the local students.\nM: OK. So that's about seventeen thousand dollars for the tuition and fees. Anyway I'm only going to be there for a year, doing my master's. So it's pretty good. If I stayed in the US, it'd take two years and cost at least fifty thousand dollars in tuition alone. Also, I have a good chance of winning a scholarship at Leeds which would be pretty awesome. The benefits of being a music genius.\nW: Yeah, I heard you're a talented piano player. So you're doing a postgraduate degree now. I'm still in my last year, graduating next June. Finally I'll be done with my studies and could go on to earning loads of money.\nM: Are you still planning on being a teacher? No money in that job then.\n16\nW: You'd be surprised. I’m still going to be a teacher, but the plan is to work at an international school overseas after I get a year or so of experience in England. It's better pay and I get to travel, which reminds me I'm late for my class and I’ve got some documents | need to print out first. I'd better run.",
+          "translation": "男 ， 爱 玛 ， 我 被 利兹 大 学 录取 了 。 既 然 你 在 英国 上 大 学 ， 那 你 知道 留学 生 在 那儿 读 书 要 花 多 少 钱 吧 ?\n\n女 : 祝 质 你 。 是 的 ， 我 想 作为 留学 生 ， 你 每 年 必须 交纳 大 约 13000 英镑 。 只 比本 地 学 生 稍 贵 一 点 儿 。\n\n男 : 好 的 。 这 样 算 来 就 是 学 费 加 杂费 共 约 17000 美元 。 反 正 我 只 在 那儿 待 一 年 ，修 完 硕士 学 位 。 所 以 这 相当 不 错 。 如 果 我 留 在 美国 就 要 念 两 年 ， 光 学 费 至 少 要 花 掉 50000 美元 。 另 外 ， 我 很 可 能 会 获得 利兹 大 学 的 奖学金 ， 那 可 就 太 棒 了 。 作 为 音乐天 才 福 利多 多 。\n\n女 : 对 呀 ， 我 听 说 你 是 个 天 才 钢 琴 手 。 看 ， 你 现在 都 要 攻读 硕士 学 位 了 。 我 还有 最 后 一 年 要 读 ， 明 年 六 月 才能 毕业 。 我 终于 要 念 完 书 ， 可 以 去 挣 大 钱 了 。\n\n男 : 你 还 是 打算 当 老 师 吗 ? 那个 行当 可 挣 不 了 什么 钱 。\n\n女 : 你 听 了 准 会 吓 一 践 。 我 还 是 打算 当 老 师 ， 但 计划 是 等 我 先 在 英国 获得 一 年左右 的 经 验 后 ， 再 去 其 他 国家 找 所 国际 学 校 教 书 。 这 样 待遇 更 好 还 能 旅游 。 这 提醒我 了 ， 我 上 课 要 迟到 了 ， 而 且 我 还 要 先 去 打印 一 些 资料 。 我 得 赶紧 撤 了 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-1",
+          "title": "Passage One",
+          "text": "",
+          "transcript": "Scientists have identified thousands of known ant species around the world — and only a few of them bug humans.\nMost ants live in the woods or out in nature. There, they keep other creatures in check, distribute seeds, and clean dead and decaying materials from the ground.\nA very small percentage of ants do harm to humans. But those are incredibly challenging to control.\nThey are small enough to easily slip inside your house, live in colonies that number in the tens of thousands to the hundreds of thousands, and reproduce quickly. That makes them good at getting in, and hard to kick out.\nOnce they settle in, these insects start affecting your home. In addition to biting ants, other species can cause different kinds of damage. Some, like carpenter ants, can undermine a home structure, while others interfere with electrical units.\nUnfortunately, our homes are very attractive to ants, because they provide everything the colony needs to survive, such as food, water, and shelter.\nSo how can we prevent ants from getting into our homes?\nMost important of all, avoid giving ants any access to food, particularly sugary food, because ants have a sweet tooth. We also need to clean up spills as soon as they occur and store food in airtight containers. Even garbage attracts ants, so empty your trash as often as possible, and store your outside garbage in a lidded can, well away from doors and windows.",
+          "translation": "科学 家 在 全 世界 发 现 的 已 知 蚂 蚁 品种 数 以 千 计 一 一 而 只 有 少数 几 种 会 骚扰 人 类 。\n\n大 多 数 蚂 蚁 都 生活 在 树林 里 或 大 自然 中 。 在 那里 ， 它 们 抑制 其 他 生物 数量 ， 散播 植物 种 子 ， 并 清理 地 面 上 的 生物 尸体 和 腐 坏 物质 。\n\n极 少数 蚂 蚊 会 对 人 类 造成 伤害 。 但 控制 这 些 蚂蚁 的 难度 极 大 。\n\n它们 体型 小 ,能 轻而易举 地 溜 进 你 的 房子 里 ， 它们 所 生活 的 群落 有 着 成 二 上 万 、不 计 其 数 的 成 员 ， 它们 繁殖 极为 迅速 。 这 就 导致 它们 “进门 容易 ， 逐 出 难 ”。\n\n这 些 昆虫 一 旦 定居 下 来 ， 就 会 开始 影响 你 的 家 。 除 了 咬 人 蚊 之 外 ， 其 他 的 蚂蚁品种 也 会 造成 各 种 破坏 。 有 些 品种 的 蝎 蚁 ， 比 如 木 蚁 ,会 侵蚀 房屋 结构 ,而 其 他 品种 则会 弄 坏 电气 装置 。\n\n不 幸 的 是 ， 我 们 的 家 对 蚂蚁 相当 有 吸引 力 ， 因 为 它们 可 以 给 蚂蚁 群落 提供 生存\n\n18\n\n所 需要 的 一 切 ， 比 如 食物 、 水 和 庇护 所 。\n\n那么 我 们 如 何 才 能 避免 蚂蚁 入 侵 自己 的 家 呢 ?\n\n最 重要 的 是 ， 别 给 蚂蚁 任何 接触 食物 的 机 会 ， 尤 其 是 含 糖 食物 ， 因 为 蚂蚁 偏爱甜食 。 我 们 也 需要 及 时 清理 泼洒 的 汤 汁 ， Sra ener eesia 甚至 连 垃圾也 会 吸引 蚂蚁 ， 所 以 要 尽量 勤 侄 垃圾， 外 面 的 垃圾 也 要 放 在 带 盖 的 垃圾 桶 里 ， 并 远离 门窗 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-2",
+          "title": "Passage Two",
+          "text": "",
+          "transcript": "My research focus is on what happens to our immune system as we age. So the job of the immune system is to fight infections. It also protects us from viruses and from auto-immune diseases.\nWe know that as we get older, it's easier for us to get infections. So older adults have more chances of falling ill. This is evidence that our immune system really doesn't function so well when we age.\nIn most of our work when we're looking at older adults who’ve got an illness, we always have to have healthy controls. So we work very closely with a great group of volunteers called \"The 1000 Elders”. These volunteers are all 65 or over but in good 19 health. They come to the university to provide us with blood samples, to be interviewed, and to help us carry out a whole range of research.\nThe real impact of our research is going to be on health in old age. At the moment we're living much longer. Life expectancy is increasing at two years for every decade. That means an extra five hours a day. I want to make sure that older adults are still able to enjoy their old age and that they're not spending time in hospital with infections, feeling unwell and being generally weak. We want people to be healthy even when they are old.",
+          "translation": "我 研究 的 重点 在 于 ， 随 着 我 们 的 衰老 ， 我 们 的 免疫 系统 会 发 生 什么 〈 变 化 )。 那么 ， 免 疫 系 统 的 职责 就 是 抵抗 感 当 。 它 还 能 保护 我 们 免 受 病毒 和 自体 免疫 性 疾病 的侵害 。\n\n我 们 知道 ， 随 着 年 纪 增长 ， 我 们 更 加 容易 被 感染 。 因 此 老年 人 更 容易 生病 。 这\n\n-点 证 实 了 “年 老 时 免疫 系统 功能 的 确 有 所 退化 ”。\n\n在 大 部 分 对 患 病 老 人 的 研究 工作 中 ， 我 们 总 是 需要 有 健康 人 作为 对 照 组 。 因 此我 们 和 一 大 群 称 为 “ 千 名 长 者 ”的 自愿 参与 者 进行 了 紧密 合作 。 这 些 参与 者 都 年 满 65 岁 ， 但 身体 状况 良好 。 他 们 来 这 所 大 学 为 我 们 提供 血样 ， 接 受 采 访 ， 并 帮助 我 们进行 一 系列 研究 。\n\n我 们 的 研究 将 真正 影响 到 的 是 老年 人 的 健康 。 现 在 我 们 的 寿命 大 幅 增长 。( 人均) 预期 寿命 每 过 十 年 就 会 增加 两 岁 。 这 意味 着 每 天 都 会 增加 五 小 时 。 我 想 确保 老年 人仍然 能 安享 晚年 ， 不 要 因为 感染 、 身 体 不 适 、 体 质 虚 弱 而 住院 。 我 们 想 让 人 们 即使步 入 老年 也 健 健 康 康 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-3",
+          "title": "Passage Three",
+          "text": "",
+          "transcript": "When Ted Komada started teaching 14 years ago at Killip Elementary, he didn't know how to manage a classroom and was struggling to connect with students. He noticed a couple of days after school that a group of kids would get together to play chess. “I know how to play chess. Let me go and show these kids how to do it,\" he said.\nNow Komada coaches the school's chess team. The whole program started as a safe place for kids to come after school.\nAnd this week, dozens of those students are getting ready to head out to Nashville Tennessee to compete with about 5000 other young people at the SuperNationals of chess. The competition only happens every four years and the last time the team went, they won the third place in the nation.\nKomada says chess gives him and his students control. The school has the highest number of kids from low income families. Police frequent the area day and night, as two months ago, a young man was shot just down the street.\nKomada likes to teach his students that they should think about th&r move before they do it. The lessons prove valuable outside the classroom as well. Many parents see these lessons translate into the real world. Students are more likely to think about their actions and see whether they will lead to trouble.",
+          "translation": "当 Ted Komada 14 年 前 开始 在 基 利 普 小 学 教书 时 ， 他 不 知 如 何 管理 班级 .也 难以\n\n与 学 生 融洽 沟通 。 有 几 天 放学 后 ， 他 注意 到 有 和 群 孩 子 会 聚 在 一 起 下 象棋 。\" 我 知道 怎么 下 棋 。 让 我 去 给 这 些 孩子 示范 如 何 下 棋 吧 ,，” 他 说 。\n\n现在 Komada 指导 着 学 校 的 象棋 队 。 整 个 项 目 开 局 的 初 庙 是 为 了 孩子 们 放学 后有 个 安全 的 场所 。 本 周 ， 象 棋 队 的 几 十 个 学 生 在 准备 奔赴 田纳西 纳什 维尔 ， 在 全 国象棋 超级 联赛 中 与 其 他 约 5000 名 年 轻 人 竞技 。 比 赛 每 四 年 才 举 办 一 次 ， 上 次 〈 基 利普 小 学 ) BE mit SERBS.\n\nKomada 说 象棋 带 给 他 和 学 生 以 掌控 力 。 学 校 来 自 低 收入 家 庭 的 孩子 数量 最 多 。警察 不 管 EE RISEN LAB BH BIS CGE), VAS Bi, SDE at 这 么 在 街 上 被 开 枪 打 死 了 。\n\nKomada 喜欢 教导 他 的 学 生 在 走 每 一 步 之 前 都 要 三 思 。 (象棋 ) 课程 已 被 证 明 在课堂 之 外 也 有 其 价值 。 许 多 家 长 发 现 这 些 课程 转化 成 了 现实 世界 。 学 生 们 比 以 前 更有 可 能 去 思考 自己 的 行为 ， 看 这 些 行为 是 否 会 带 来 肪 烦 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-06-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "What did the boy from Central California do according to the report?",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He set a record be swimming to and from an island."
+            },
+            {
+              "key": "B",
+              "text": "He celebrated ninth birthday on a small island."
+            },
+            {
+              "key": "C",
+              "text": "He visited a prison located on a faraway island."
+            },
+            {
+              "key": "D",
+              "text": "He swam around an island near San Francisco."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What did the boy from Central California do according to the report?\n\n[8] A\n\nCAAT] TIF ATS, OR NAA JE IE Pa 5 SE I Se LAR Z\n游 了 一 个 来 回 〈swim from San Francisco to Alcatraz Island and back) ”。 随 后 又 说 ，\n这 名 男孩 \"创下 了 游 往 这 座 原 监狱 的 纪录 (其 中 the former prison 回 指 Alcatraz Island),\n综 上 可 知 A) 正确 。B) 利用 男孩 年 龄 “9 岁 \" 干 扰 ， 但 文中 并 未 提 到 他 生日 。C) 将\n男孩 \" 游 往 〈swim) 这 座 原 监狱 的 小 岛 \"窜改 为 “参观 〈visited) 一 所 监狱 \"。D) 将 男\n孩 的 游 沪 路线“ 往返 〈from. .. to... and back) \"窜改 为 “ 绕 着 小 岛 (around an island).",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）"
+        },
+        {
+          "id": "2019-06-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "What did the father do to encourage his son?",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He doubled the reward."
+            },
+            {
+              "key": "B",
+              "text": "He cheered him on all the way."
+            },
+            {
+              "key": "C",
+              "text": "He set him an example."
+            },
+            {
+              "key": "D",
+              "text": "He had the event covered on TV."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What did the father do to encourage his son?\n[S81 A\n【解析 】 题 于 A) 契合 II 段 男 孩 父 亲 行 为 “把 奖金 翻 倍 到 200 美元 鼓励 自己 的 孩子\n(to encourage his. . . son, he doubled it to $ 200) ”。B) 利用 个 别 词汇 encourage 捏\n造 “全 程 加 油 打气 \"。C)“ 树 立 榜 样 新 闻 中 并 未 提 及 。D) 中 “电视 台 报道 了 男孩 的 事\n迹 \" 虽 与 新 闻 内 容 相 关 ， 但 这 并 非 题 干 所 问 “ 父 亲 的 举措 〈 做 什么 来 鼓励 孩子 ) ”。\n\n12\n\n【听力 原文 】\n\n)",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）"
+        },
+        {
+          "id": "2019-06-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "What was the purpose of the annual leave bonus in China?",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "To end the one-child policy."
+            },
+            {
+              "key": "B",
+              "text": "To encourage late marriage."
+            },
+            {
+              "key": "C",
+              "text": "To mcrease workmg efficiency."
+            },
+            {
+              "key": "D",
+              "text": "To give people more time to travel."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What was the purpose of the annual leave bonus in China?\n【答案 】B\n【解析 】B 项 同 义 改 述 I 段 假期 奖励 的 目的 “鼓励 年 轻 人 推迟 结婚 时 间 〈 即 ， 鼓 励 晚\nWS) ”其 中 late marriage 与 to delay getting married 同 义 ) .A 项 与 文中 设立 年 假 奖\nWBA WIRES SCPE FBR” Cin line with China's one-child policy) 相悖 ，C 项 由 该\nSR Bad BT EL PRD a WG ESR WT HR EEE FI A Ee ES er”; D 项 由 党\n识 关 联 “ 假 期 = 旅游 \"捏造 而 来 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第651行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "What do we learn about the new regulations?",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They will not be welcomed by young people."
+            },
+            {
+              "key": "B",
+              "text": "They will help to popularize early marriage."
+            },
+            {
+              "key": "C",
+              "text": "They will boost China's economic growth."
+            },
+            {
+              "key": "D",
+              "text": "They will not com into immediate effect."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What do we learn about the new regulations?\n\n【答案 】D\n\n【解析 】D 项 正确 解读 末 段 律师 话语 “新 法 规 还 有 待 地 方 政府 采纳 ， 程 序 实施 仍 需 上 由\n间 ” (still have to be adopted. . . these procedures take time). A 项 将 II 段 新 政 策 变\n动 颁布 后 年 轻 人 的 反应 \"立刻 登记 结婚 、 赶 在 新 法 规 未 生效 前 享受 额外 假期 ”过 度 推\n断 成 “年 轻 人 不 愿 接受 这 项 新 法 规 ”， 且 把 “北上 两 地 年 轻 人 的 反应 ”夸大 为 \"所 有 年 轻\n人 的 反应 ”; B 项 由 晚婚 假 的 设立 目的 “鼓励 晚婚 ” 反 向 脐 测 出 新 法 规 “ 能 够 帮助 推广\n早 婚 ”， 但 在 录音 材料 中 *〈 推 广 ) 早 婚 ”无 据 可 循 ;C 项 “经 济 增长 \"为 文中 未 提 。\n\n13\n\n【听力 原文 】",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第660行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "What is the news report mainly about?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cleaning service in great demand all over the world."
+            },
+            {
+              "key": "B",
+              "text": "Two ladies giving up well-paid jobs to do cleaning."
+            },
+            {
+              "key": "C",
+              "text": "A new company to clean up the mess after parties."
+            },
+            {
+              "key": "D",
+              "text": "Cleaners gainfully employed at nights and weekends."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What is the news report mainly about?\n\n【答案 】C\n\n【解析 】I 段 提 及 当前 有 家 新 创业 公司 正 力求 让 聚会 后 脏 乱 不 堪 的 家 复归 正常 , 即 这\n家 新 公司 意 在 帮助 人 们 清扫 聚会 后 一 片 狼藉 的 家 ， 故 C 正确 。A 将 II 段 “该 创业 公\n司 所 提供 的 清扫 服务 受到 各 国 追 氛 \" 过 度 泛 化 为 \"全 球 保洁 服务 极为 紧俏 \"。B 利用\ngainfully employed 有 带 薪 工作 〈 即 ， 有 正式 工作 ) \" 设 障 : 将 “ 带 薪 ” 偷 换 为 高薪”，\n上 且 将 * 有 工作 〈 状 态 ) \"RAS ZINE TE”. gainfully employed 原本 描述 两\n位 创办 人 的 正式 工作 ，D 将 其 套用 到 二 人 清扫 聚会 的 兼职 工作 上 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-06-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "What is a common problem with a house party?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "It does not supervise its employees."
+            },
+            {
+              "key": "B",
+              "text": "It donates regularly to a local charity."
+            },
+            {
+              "key": "C",
+              "text": "It does not use volunteers."
+            },
+            {
+              "key": "D",
+              "text": "It is open round the clock."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What is a common problem with a house party?\n【答案 】B\n【解析 】 开 篇 指出 ;， 人 人 喜欢 快乐 的 家 庭 聚会 ， 但 却 不 喜欢 第 二 天 早上 的 清扫 ， 现\n有 一 家 创 业 公 司 力求 帮 人 们 把 聚会 后 脏 乱 不 堪 的 家 收拾 干净 、 恢 复原 状 ， 可 见 ， 家\n庭 聚会 会 把 屋子 搞 得 一 片 狼 藉 ， 故 B 正确 。A、C、D 均 借 助 生活 常识 捏造 ， 在 录音\n材料 中 并 无 根据 。\n\n14",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：真题.pdf 图像/文本层核对"
+        },
+        {
+          "id": "2019-06-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "What are Rebecca Foley and Catherine Ashurst planning to do?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Hire an Australian lawyer."
+            },
+            {
+              "key": "B",
+              "text": "Visit the U.S. and Canada."
+            },
+            {
+              "key": "C",
+              "text": "Settle a legal dispute."
+            },
+            {
+              "key": "D",
+              "text": "Expand their business. 1"
+            }
+          ],
+          "answer": "D",
+          "explanation": "What are Rebecca Foley and Catherine Ashurst planning to do?\n(#381 D\n【解析 】 文 末 句 提 及 公司 创办 人 正 计 划 与 律师 商谈 如 何 最 好 地 推进 公司 业务 ， 可 知\nD 正确 。A 利用 工段 相似 读音 Auckland 公司 成 立地 点 ) 设置 干扰 ， 新 闻 并 未 说 明 律\n师 国籍 。B 利用 II Be U.S. and Canada 设 障 ,但 录音 材料 为 “ 收 到 来 自 美国 、 加 拿 大\n的 清扫 服务 请 求 ”， 并 未 指出 两 位 创办 人 要 去 美国 、 加 拿 大 视察 。C 中 legal dispute\n无 据 可 循 。\n\nSection B\n【听力 原文 】",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）"
+        },
+        {
+          "id": "2019-06-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "What did the man do yesterday?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He had a driving lesson."
+            },
+            {
+              "key": "B",
+              "text": "He did not get to the exam in time."
+            },
+            {
+              "key": "C",
+              "text": "He took the driver's theory exam."
+            },
+            {
+              "key": "D",
+              "text": "He did not follow the test procedure."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What did the man do yesterday?\n\n15\n\n【答案 】C\n\n【解析 】 题 于 yesterday. C) 项 driver's theory exam 在 1 段 女 士 提 问 中 复 现 ' 由 2 段 男\n+s\n定 回应 确定 C) 为 正确 项 。A) 项 driving lesson 在 对 话 中 有 所 提 及 ， 但 并 未 说 明 何\n时 。B) 和 D) 分 别 借 男士 考试 目的 “ 拿 驾 照 ? 和 对 话 出 现 的 “路 考 Croad test) ”， 以\n及 男士 所 说 “通过 考试 松 了 口气 ”干扰 ， 但 两 项 均 与 题 干 限 定 的 时 间 “ 昨 天 ?不 符 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第785行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "Why did he fail the exam the first time?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "He was not well prepared."
+            },
+            {
+              "key": "B",
+              "text": "He got his driver's license."
+            },
+            {
+              "key": "C",
+              "text": "He was not used to the test format."
+            },
+            {
+              "key": "D",
+              "text": "He passed the driver's road test."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Why did he fail the exam the first time?\n【答案 】A\n【解析 】A) 项 not well prepared 同 义 改 写 3 段 中 underprepared, 指 出 男士 第 一 次 考试\n失利 原因 “准备 不 足 ”\"。B)、C)、D) 虽 复 现 examytest, 但 “考试 迟到 ”“ 考 试 形式 ”“ 考\n试 流程 ?对话 中 均 未 提 及 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第794行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "What does the man say about his driving lessons?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are tough."
+            },
+            {
+              "key": "B",
+              "text": "They are costly."
+            },
+            {
+              "key": "C",
+              "text": "They are helpful."
+            },
+            {
+              "key": "D",
+              "text": "They are too short."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What does the man say about his driving lessons?\n【答案 】B\n【解析 】costly 同 义 蔡 换 5 段 中 rather expensive,B) 正确 。A) 由 nervous, afraid 等\n表示 \"情绪 紧张 、 害 怕 ” 的 词 推 出 tough, 但 这 是 男士 自述 第 二 次 理论 考试 的 心情 ， 并\n非 对 驾驶 课程 的 形容 。C) 由 successful the first time 推出 ， 但 此 处 实 为 男士 的 期 望\nChopefully) \"首战 告捷 \"， 而 非 实 际 上 课 效 果 。 D) 与 \"课程 一 小 时 一 节 、 多 达 30\n至 40 节 (an hour 30 to 40 lessons) \"相悖 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第800行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "What does the man hope to do next?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pass his road test the first time."
+            },
+            {
+              "key": "B",
+              "text": "Test-drive a few times on highways."
+            },
+            {
+              "key": "C",
+              "text": "Find an experienced driving instructor."
+            },
+            {
+              "key": "D",
+              "text": "Earn enough money for driving lessons."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What does the man hope to do next?\n[SR] A\nCATIA) 同 义 改写 对 话 结尾 男士 期 望 hopefully, will be successful (on the road test)\nthe first time. B) 将 两 大 关键 词 testdrive ARN test-drive (ASCH test NBAZE,\nIFAT”. C) 借 男士 提 到 教练 的 内 容 干 扰 , 但 男士 已 经 有 一 位 满意 的 教练 ，\n并 无 另 找 教练 的 打算 。D) 由 驾驶 课 收费 昂贵 〈six to eight hundred pounds) 编造 \" 挣\n钱 典 上 课 费用 \"相关 内 容 。\n\n【听力 原文 】",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）"
+        },
+        {
+          "id": "2019-06-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "What does the man want to know?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Where the woman studies."
+            },
+            {
+              "key": "B",
+              "text": "The acceptance rate at Leeds."
+            },
+            {
+              "key": "C",
+              "text": "Travel widely."
+            },
+            {
+              "key": "D",
+              "text": "How to apply for studies at a university."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What does the man want to know?\n\n【答案 】C\n\n【解析 】 开 篇 男士 表明 自己 已 被 英国 利兹 大 学 录取 ， 并 询问 女士 该 学 校 的 留学 费用\n是 多 少 〈do you know how much it is for international students to study there) ,there 指\nthe University of Leeds, FJ JL C) 正确 。A) 利用 1 段 Since you're going to university in\nEngland 干扰 ， 但 这 是 男士 向 女士 询问 留学 费用 的 原因 。B ) 所 暗示 的 “还 未 申请 利\n效 大 学 ?与 1 段 男 士 “已 被 利兹 大 学 录取 (got accepted to the University of Leeds )4H 1%.\nD) 利用 1 段 university 编造 \"申请 大 学 \"， 对 话 中 无 信息 支撑 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第867行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "What is the man going to do?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Apply to anAmerican university."
+            },
+            {
+              "key": "B",
+              "text": "Do research on higher education."
+            },
+            {
+              "key": "C",
+              "text": "Perform in a famous musical."
+            },
+            {
+              "key": "D",
+              "text": "Pursue postgraduate studies."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What is the man going to do?\n\n【答案 】D\n\n【解析 】3 段 男士 指出 自己 将 去 利兹 大 学 攻读 硕士 (doing my master's) ,4 段 女士 又\n指出 男士 将 要 去 读 研究 生 了 (So you're doing a postgraduate degree now) , 故 D) 正确 。\nA) 利用 3 段 假 设 条件 fIstayed in the US 干扰 〈“ 假 如 我 留 在 美国 \" 言 外 之 意 “ 我 将\n离开 美国 >)。B) 利用 对 话 中 与 高 等 教育 相关 的 学 费 、 学 时 等 信息 干扰 ， 但 research\n一 词 在 文中 无 对 应 。C) 利用 3 BEAR) music genius 和 4 段 piano player 编造 ， 但 两\n处 信息 仅 说 明 男 士 是 一 位 有 才华 的 钢琴 手 ， 文 中 未 提 到 “演出 音乐 剧 ”。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第878行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "What might qualify the man for a scholarship at Leeds University?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "His favorable recommendations."
+            },
+            {
+              "key": "B",
+              "text": "His outstanding musical talent."
+            },
+            {
+              "key": "C",
+              "text": "His academic excellence."
+            },
+            {
+              "key": "D",
+              "text": "His unique experience."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What might qualify the man for a scholarship at Leeds University?\n【答案 】B\n【解析 】3 段 男士 指出 他 很 有 可 能 获得 奖学金 , 并 称 此 刀 \" 作 为 音乐 天 才 的 好 处 (The\nbenefits of being a music genius) \"。 可 见 音 乐天 赋 使 男士 获得 奖学金 的 可 能 性 大 大 增\n加 ，B) 正确 。A)、 C) 均 利 用 申请 奖学金 的 常见 条 件 干扰 ，recommendations (HE\n荐 信 )、academic excellence 〈 学 业 成 绩优 异 ) 在 对 话 中 均 未 提 及 。D) 利用 6 段\n\n17\n\nexperience 干扰 ， 但 这 属于 女士 情形 ， 文 中 并 未 提 及 男士 的 独特 经 历 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第888行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "What is the woman planning to do after graduation?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Do a master's degree."
+            },
+            {
+              "key": "B",
+              "text": "Settle down in England."
+            },
+            {
+              "key": "C",
+              "text": "Leeds' tuition for international students."
+            },
+            {
+              "key": "D",
+              "text": "Teach overseas."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What is the woman planning to do after graduation?\n【答案 】D\n【解析 】D ) 复 现 末 段 女士 话语 “我 计划 去 海外 一 所 国际 学 校 教书 (the plan is to work\nat an international school overseas) *. A) 利用 3、4 段 提 到 的 “男士 即将 攻读 硕士 学\n位 \"干扰 。B) 将 末 段 女士 打算 “ 先 在 英国 获得 些 经 验 〈experience in England) ,窜改\n为 其 打算 “定居 英国 ”。C) 借 末 段 I get to travel 干扰 ， 但 这 是 “到 海外 国际 学 校 教书 ”\n的 好 处 ， 而 非 她 的 主要 打算 。\n\nSection C\n【听力 原文 】",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第899行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "What does the passage say about ants?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They help farmers keep diseases in check."
+            },
+            {
+              "key": "B",
+              "text": "Many species remain unknown to scientists."
+            },
+            {
+              "key": "C",
+              "text": "Only a few species cause trouble to humans."
+            },
+            {
+              "key": "D",
+              "text": "They live in incredibly well-organized colonies. 2"
+            }
+          ],
+          "answer": "C",
+          "explanation": "What does the passage say about ants?\n\n【答案 】C\n\n【解析 】C) 契合 开篇 所 述 <* 虽 然 科 学 家 发 现 的 蚂蚁 多 达 上 和 于 种， 但 骚扰 人 类 的 只 有\n少数 几 种 Conly a few of them bug human) 由 III 段 \" 极 少数 蚂蚁 会 对 人 类 造成 伤害 \"\n亦 可 确定 本 题 答 案 。A) 将 工段 “生活 在 野外 的 始 蚁 都 抑制 其 他 生物 的 数量 〈keep\nother creatures in check) \"窜改 为 \"蚂蚁 能 控制 病害 〈diseases) B) 利用 首 段 “ 科 学 家\n已 发 现 上 和 于 种 蚂蚁 ” 脐 断 “还 有 许多 蚂蚁 品种 未 被 发 现 \"。D) 虽然 复 现 IV 段 局 部 信息\nlive in colonies, 但 将 文中 对 群落 的 描述 “成 员 极 多 ”和 看 曲 为 秩序 井然 ”。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第969行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "What do we learn from the passage about carpenter ants?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are larger than many other species."
+            },
+            {
+              "key": "B",
+              "text": "They can cause damage to people's homes."
+            },
+            {
+              "key": "C",
+              "text": "They can survive a long time without water."
+            },
+            {
+              "key": "D",
+              "text": "They like to form colomes m electrical units."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What do we learn from the passage about carpenter ants?\n【答案 】B\n【解析 】B ) 复 现 V 段 信 息 “ 木 蚁 会 侵蚀 房屋 结构 (can undermine a home structure) .\nA) 与 IV 段 *“ 极 少数 对 人 类 有 害 的 蚂蚁 〈 木 蚊 也 在 其 中 ) 体型 小 ， 能 轻易 钻 进 房屋 ”\n相悖 。C) 与 VI 段 *“ 人 类 的 屋子 因 能 提供 水 和 其 他 资源 而 吸引 昭 蚁 〈 蚂 蚁 生存 需要\nIk) \"相悖 。D) ARARSCHATAIIC colonies 和 electrical units 形成 干扰 ,但 文中 只 指出 “ 木\n蚁 之 外 的 某 些 蚂蚁 品种 〈others) 会 弄 坏 电气 装置",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第979行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "What can we do to prevent ants from getting into our homes?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Deny them access to any food."
+            },
+            {
+              "key": "B",
+              "text": "Keep doors and windows shut."
+            },
+            {
+              "key": "C",
+              "text": "Destroy their colonies close by."
+            },
+            {
+              "key": "D",
+              "text": "Refram · from eatmg sugary food."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What can we do to prevent ants from getting into our homes?\n\n【答案 】 和\n\n【解析 】A) 复 现 VIN 段 信息 “ 别 给 蚂蚁 任何 接触 食物 的 机 会 (avoid giving ants any\naccess to food) \". B) 源 于 材料 末尾 doors and windows, 但 原文 指 \" 垃 圾 入 桶 、 远 离 门\nBi\", ELE TV 段 \" 对 人 类 有 害 的 蚂蚁 可 轻而易举 钻 进 家 里 ”可知 紧 闭 门窗 并 不 能 防止\n晤 蚁 入 屋 。C) 利用 常识 干扰 ， 但 IV 段 指出 归 蚊 繁殖 极 快 , “破坏 附近 群落 \"显然 治\n标 不 治本 。D) 虽然 复 现 VII BE sugary food, 却 把 “居民 不 能 让 蚂蚁 接触 到 〈 尤 其 是\n含 糖 ) 食品 ” 牌 曲 为 居民 自己 不 要 吃 含 糖 食品 ”。\n\n【听力 原文 】",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）"
+        },
+        {
+          "id": "2019-06-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "What is the focus of the speaker's research?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The function of the human immune system."
+            },
+            {
+              "key": "B",
+              "text": "The cause of various auto-immune diseases."
+            },
+            {
+              "key": "C",
+              "text": "The viruses that may infect the human immune system."
+            },
+            {
+              "key": "D",
+              "text": "The change in people's immune system as they get older."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What is the focus of the speaker's research?\n【答案 】D\n【解析 】D ) 是 符合 讲话 人 开篇 所 述 信息 “我 的 研究 重点 是 随 着 人 们 衰老 ， 免 疫 系 统\n会 怎样 My research focus is on what happens to our immune system as we age) ”其余 三\n项 均 来 自首 段 对 免疫 系统 功能 的 介绍 (protect us from viruses and auto-immune\ndiseases) ,并 非 题 干 问 及 的 “研究 重点 ”。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1044行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "What are the volunteers asked to do in the research?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Report their illnesses."
+            },
+            {
+              "key": "B",
+              "text": "Offer blood samples."
+            },
+            {
+              "key": "C",
+              "text": "Act as research assistants."
+            },
+            {
+              "key": "D",
+              "text": "Help to interview patients."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What are the volunteers asked to do in the research?\n【答案 】B\n【解析 】B ) 与 II 段 末 “ 千 名 老人 自愿 参与 者 前 来 为 我 们 提供 血样 、 接 受 采 访 、 协\n助 进行 研究 (provide us with blood samples, to. . . and to...) \"中 的 第 一 项 内 容 契 合 。A)\n与 II 段 \" 自 愿 参与 者 身体 状况 良好 ”相悖 。C) 将 匡 段 自愿 参与 者 \"〈 作 为 辅助 研究\n对 象 ) 以 完成 研究 〈help us carry out.…. 夸 大 为 “担任 研究 助理 \"。D) 将 II Bes Reston\nUi (to be interviewed) “ACN KV (interview patients) ”.",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1051行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "What does the speaker say will be the impact of his research?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Strengthening people's immunity to infection."
+            },
+            {
+              "key": "B",
+              "text": "Better understanding patients' immune system."
+            },
+            {
+              "key": "C",
+              "text": "Helping improve old people's health conditions."
+            },
+            {
+              "key": "D",
+              "text": "Further reducing old patients' medical expenses."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What does the speaker say will be the impact of his research?\n【答案 】C\n【解析 】C ) 可 由 IV 段 研 究 影响 的 对 象 “老年 人 健康 (the real impact.. .on health in old\nage) \"及 研究 的 目标 “让 老年 人 健康 生活 ， 不 必 住院 (make sure. . . older adults. . . not\nspending time in hospital, want people to be healthy even when they are old) ”概括 得 出 。\nA) 将 研究 目标 \"老年 人 免疫 系统 ” 泛 化 为 \"人 体 免 疫 系统 \"。B ) 利用 immune\nsystem‘infections 等 碎片 信息 制造 干扰 ， 但 原文 仅 谈 及 研究 的 实际 应 用 ， 并 未 谈 及 其\n\n20\n\n在 理论 上 是 否 有 所 进步 (Better understanding). D) 由 开 段 “老年 人 更 容易 患 病 ”\n这 一 事实 过 度 推 理 出 “老年 人 医疗 费用 高 ， 需 要 进一步 减负 ”\n而 讲话 人 并 未 提 及 该 问题 。\n\n【听力 原文 】",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1059行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "Question 22 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "His students had trouble getting on with each other."
+            },
+            {
+              "key": "B",
+              "text": "A lot of kids stayed at school to do their homework."
+            },
+            {
+              "key": "C",
+              "text": "His students were struggling to follow his lessons."
+            },
+            {
+              "key": "D",
+              "text": "A group of kids were playing chess after school."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What did Ted Komada notice one day after he started teaching at Killip\nElementary?\n【答案 】D\n【解析 】D ) 同 义 复 现 Ted Komada 注意 到 的 事 〈He noticed): 一 群 孩子 聚 到 一 起 下\n象棋 Ca group of kids would get together to play chess)。A)、C) 均 借 首 段 碎 片 全\nstruggling to 和 干扰， 但 文中 指 Komada 在 管理 班级 、 与 学 生 沟 通 上 有 困难 ， 并 非 学\n\n21\n\n在 与 同学 相处 、 跟 上 课程 进度 上 有 困难 。B) 利用 常识 〈 学 生 放 学 后 经 常 留 在 学 校\n做 作业 ) 于 扰 ， 并 非 文 中 信息 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1119行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "What are dozens of students from Komada's school going to do this week?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Visit a chess team in Nashville."
+            },
+            {
+              "key": "B",
+              "text": "Join the school's chess team."
+            },
+            {
+              "key": "C",
+              "text": "Participate in a national chess competition."
+            },
+            {
+              "key": "D",
+              "text": "Receive training for a chess competition."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What are dozens of students from Komada's school going to do this week?\n【答案 】C\n【解析 】 题 二 C) 复 现 3 段 首 句 And this week, dozens of those students. . . compete\nwith. . . at the SuperNationals of chess〈 本 周 几 十 个 学 生 奔赴 纳什 维尔 参加 全 国 象棋 超\n级 联赛 )。A)、 B)、D) 利用 段 中 chess teamNashville 等 碎片 信息 编造 干扰 ， 均 未\n抓 住 象棋 队 \" 参 加 比赛 〈to compete... at the SuperNationals of chess) ”这 一 核心 语义 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1130行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "Question 24 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Most of them come from low-income families."
+            },
+            {
+              "key": "B",
+              "text": "Many have become national chess champions."
+            },
+            {
+              "key": "C",
+              "text": "A couple of them have got involved in crimes."
+            },
+            {
+              "key": "D",
+              "text": "Many became chess coaches after graduation."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What do we learn about the students of Killip Elementary 2\n\n【答案 】A\n\n【解析 】A) 同 义 改 写 4 段 加 名 The school has the highest number of kids from low\nincome families《〈 学 校 的 大 部 分 孩子 来 自 低 收入 家 庭 )， 选 项 中 Most of them 意 同 the\nhighest number of kids. B) 将 3 段 末 句 “ 基 利 普 小 学 象棋 队 取 得 了 全 国 赛 第 三 名 ”和 夸\n大 为 “许多 学 生成 了 全 国 象棋 冠军 \"。C) 借 4 段 信息 \"学校 附近 发 生 枪击 案 ， 警 察 不\n管 白天 还 是 晚上 都 会 频繁 到 此 巡 届 ?捏造 干扰 。D) 利用 Komada 的 身份 “象棋 教练 ”\n捏造 干扰 ， 但 录音 未 提 及 其 学 生 是 否 也 成 了 象棋 教练 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1138行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "What have the students learned from Komada?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Actions speak louder than words."
+            },
+            {
+              "key": "B",
+              "text": "Think twice before taking action."
+            },
+            {
+              "key": "C",
+              "text": "Translate their words into action."
+            },
+            {
+              "key": "D",
+              "text": "Take action before it gets too late."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What have the students learned from Komada?\n【答案 】B\n【解析 】B ) 正确 概括 末 段 Komada 教导 内 容 “ 每 走 一 步 之 前 都 要 认真 思考 ”及 学 生 收\n获 内 容 “ 生 活 中 也 学 会 了 三 思 而 后 行 ， 考 虑 会 出 现 什么 样 的 结果 ”。 其 他 三 项 均 抓 住\n了 文中 提 到 的 “ 行 Cmove... action) 但 文中 并 未 将 之 与 < 言 (words) ”对比 联系 ， 排\n除 A)、C)。D)“ 抓 紧 采 取 行 动 \"与 录音 中 体现 的 “ 想 清楚 后 再 行动 \"相悖 ， 也 错误 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1148行（与 agy 既有答案零冲突）"
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "The center of American automobile innovation has in the past decade moved 2,000 miles away. It has __(26)__ from Detroit to Silicon Valley, where self-driving vehicles are coming into life.\n\nIn a __(27)__ to take production back to Detroit, Michigan lawmakers have introduced __(28)__ that could make their state the best place in the country, if not the world, to develop self-driving vehicles and put them on the road.\n\n“Michigan's __(29)__ in auto research and development is under attack from several states and countries which desire to __(30)__ our leadership in transportation. We can't let happen,” says Senator Mike Kowall, the lead __(31)__ of four bills recently introduced.\n\nIf all four bills pass as written, they would __(32)__ a substantial update of Michigan's 2013 law that allowed the testing of self-driving vehicles in limited conditions. Manufacturer would have nearly total freedom to test their self-driving technology on public roads. They would be allowed to send groups of self-driving cars on cross-state road trips, and even set on-demand __(33)__ of self-driving cars, like the one General Motors and Lyft are building.\n\nLawmakers in Michigan clearly want to make the state ready for the commercial application of self-driving technology. In __(34)__, California, home of Silicon Valley, recently proposed far more __(35)__ rules that would require human drivers be ready to take the wheel, and commercial use of self-driving technology.",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "transcript": null,
+          "translation": "美国 的 汽车 创新 中 心 在 过 去 十 年 迁移 了 2000 英里 。 它 已 从 底特律 迁移 到 硅谷 ，\n在 那里 自动 芍 驶 汽车 正在 成 为 现实 。\n\n为 了 使 〈 汽 车 ) 生产 重 归 底特律 ， 密 鞭 根 的 立法 者 们 提出 了 一 项 立法 ， 它 或 将\n帮助 该 州 成 为 全 国 乃 至 全 世界 最 适 于 开发 自动 驾驶 汽车 并 使 其 上 路 的 地 区 。\n\n\"密歇根 在 汽车 研发 方面 的 优势 正 受到 一 些 州 和 国家 的 威胁 , 它们 试图 取代 我 们\n在 交通 领域 的 领先 地 位 。 我 们 不 能 让 这 种 情况 发 生 。\" 参 议员 迈克 。 科 瓦尔 说 ， 他 是\n最 近 提 出 的 四 项 议案 的 主要 倡议 者 。\n\n如 果 四 项 议案 均 以 其 现 有 内 容 获 得 通过 , 则 它们 将 代表 着 密歇根 2013 年 的 法 规\n得 到 了 实质 性 的 更 新 ， 该 法 规 允 许 在 限制 条 件 下 进行 自动 驾驶 汽车 的 测试 。( 新 法 案\n通过 后 ) 制造 商 几乎 可 以 完全 自由 地 在 公路 上 测试 其 自动 驾驶 技术 。 他 们 将 获准 派\n出 自动 驾驶 车 队 在 跨 州 公路 上 行驶 ， 甚 至 可 以 像 通用 汽车 和 来 福特 公司 那样 组 建 按\n需 型 自动 驾驶 车 队 。\n\n密歇根 的 立法 者 们 显然 想 让 该 州 为 自动 驾驶 技术 的 商业 应 用 做 好 准备 。 相 较 之\n下 ， 作 为 硅谷 之 乡 的 加 州 最近 提 出 了 更 加 严格 的 规定 ， 要 求人 类 驾驶 员 做 好 “掌控 方\n\n22\n\n向 盘 ?” 的 准备 ， 并 禁止 了 自动 驾驶 技术 的 商用 。\n\n【答案 解析 】"
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读",
+          "text": "How Work Will Change When Most of Us Live to 100\n[A] Today in the United States there are 72,000 centenarians( 百岁老人）.Worldwide, Probably 450,000. If current trends continue, then by 2050 there will be more than a million in the US alone. According to the work of Professor James Vaupel and his co-researchers, 50% of babies born in the US in 2007 have a life expectancy of 104 or more. Broadly the same holds for the UK, Germany, France, Italy and Canada, and for Japan 50% of 2007 babies can expect to live to 107.\n[B] Understandably, there are concerns about what this means for public finances given the associated health and pension challenges. These challenges are real, and society urgently needs to address them. But it is also important to look at the wider picture of what happens when so many people live for 100 years. It is a mistake to simply equate longevity (长寿） with issues of old age. Longer lives have implications for all of life, not just the end of it.\n[C] Our view is that if many people are living for longer, and are healthier for longer, then this will result in an inevitable redesign of work and life. When people live longer, they are not only older for longer, but also younger for longer. There is some truth in the saying that \"70 is the new 60\" or \"40 the new 30.\" If you age more slowly over a longer time period, then you are in some sense younger for longer.\n[D] But the changes go further than that. Take, for instance, the age at which people make commitments such as buying a house, getting married, having children, or starting a career. These are all fundamental commitments that are now occurring later in life. In 1962, 50% of Americans were married by age 21. By 2014, that milestone( 里程碑）had shifted to age 29.\n[E] While there are numerous factors behind these shifts, one factor is surely a growing realization for the young that they are going to live longer. Options are more valuable the longer they can be held. So if you believe you will live longer, then options become more valuable, and early commitment becomes less attractive. The result is that the commitments that previously characterized the beginning of adulthood are now being delayed, and new patterns of behavior and a new stage of life are emerging for those in their twenties.\n[F] Longevity also pushes back the age of retirement, and not only for financial reasons. Yes, unless people are prepared to save a lot more, our calculations suggest that if you are now in your mid-40s, then you are likely to work until your early 70s; and if you are in your early 20s, there is a real chance you will need to work until your late 70s or possibly even into your 80s. But even if people are able to economically support a retirement at 65, over thirty years of potential inactivity is harmful to cognitive(认知的） and emotional vitality. Many people may simply not want to do it.\n[G] And yet that does not mean that simply extending our careers is appealing. Just lengthening that second stage of full-time work may secure the financial assets needed for a 100-year life, but such persistent work will inevitably exhaust precious intangible assets such as productive skills, vitality, happiness, and friendship.\n[H] The same is true for education. It is impossible that a single shot of education, administered in childhood and early adulthood, will be able to support a sustained, 60-year career. If you factor in the p rojected rates of technological change, either your skills will become unnecessary, or your industry outdated. That means that everyone will, at some point in their life, have to make a number of major reinvestments in their skills.\n[I] It seems likely, then, that the traditional three-stage life will evolve into multiple stages containing two, three, or oven more different careers. Each of these stages could potentially be different. In one the focus could be on building financial success and p ersonal achievement, in another on creating a better work/life balance, still another on exploring and understanding options more fully, or becoming an independent producer, yet another on making a social contribution. These stages will span sectors, take p eople to different cities, and provide foundation for building a wide variety of skills.\n[J] Transitions between stages could be marked with sabbaticals (休假） as people find time rest and recharge their health, re-invest in their relationships, or improve their skills. At times, these breaks and transitions will be self-determined, at others they will be forced as existing roles, firms, or industries cease to exist.\n[K] A multi-stage life will have profound changes not just in how you manage your career, but also in your approach to life. An increasingly important skill will be your ability to deal with change and even welcome it. A three-stage life has few transitions, while a multi-stage life has many. That is why being self-aware, investing in broader networks of friends, and being open to new ideas will become even more crucial skills.\n[L] These multi-stage lives will create extraordinary variety across groups of people simply because there are so many ways of sequencing the stages. More stages mean more possible sequences.\n[M] With this variety will come the end of the close association of age and stage. I n a three-stage life, people leave university at the same time and the same age, they tend to start their careers and family at the same age, they proceed through middle management all roughly the same time, and then move into retirement within a few years of each other. In a multi-stage life, you could be an undergraduate at 20, 40, or 60; a manager at 30, 50, or 70; and become an independent producer at any age.\n[N] Current life structures, career paths, educational choices, and social norms are out of tune with the emerging reality of longer lifespans. The three-stage life of full-time education, followed by continuous work, and then complete retirement may have worked for our parents or even grandparents, but it is not relevant today. We believe that to focus on longevity as primarily an issue of aging is to miss its full implications. Longevity is not necessarily about being older for longer. It is about living longer, being older later, and being younger longer.",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "transcript": null,
+          "translation": "当 多 数 人 都 能 活 到 百 岁 ， 工 作 会 发 生 什么 变化\n\n[A] 如 今 美国 有 7 万 2 千 名 百 岁 老人 。 世 界 范 围 内 大 约 有 45 万 名 。 如 果 当 前 趋\n势 持续 下 去 ， 那 么 到 2050 年 ， 仅 美国 就 将 有 一 百 多 万 名 百 岁 老人 。 和 詹姆斯 \" 沃 侯 尔\n教授 及 其 合作 研究 员 的 研究 成 果 表 明 ,2007 年 在 美国 出 生 的 婴儿 中 , 有 50% 预 期 寿命\nWik 104 岁 ， 甚 至 更 长 。 在 英国 、 德 国 、 法 国 、 意 大 利 、 加 拿 大 ， 这 一 数字 基本 相\n同 ， 而 2007 年 在 日 本 出 生 的 婴儿 有 50% 预 期 寿命 将 达 107 岁 。\n\n[B] 鉴 于 相关 的 医疗 和 养老 金 方面 的 挑战 ， 人 们 担心 这 种 趋势 会 对 公共 财政 造成\n影响 ， 这 可 以 理解 。 这 些 挑 战 是 真实 的 ， 社 会 琢 需 解决 。 但 展望 一 下 当 许 多 人 都 能\n活 到 100 岁 时 的 更 广泛 的 情形 也 很 重要 。 简 单 地 将 长 寿 等 同 于 老龄 问题 是 错误 的 。\n寿命 变 长 对 全 部 人 生 都 有 影响 ， 不 止 是 老年 阶段 。\n\n[C] 我 们 认为 ， 如 果 许 多 人 都 能 活 得 更 长 久 、 更 长 久 地 保持 更 健康 的 状态 ， 那 就\n会 不 可 避免 地 导致 工作 和 生活 的 重新 规划 。 当 人 们 寿命 变 长 ， 不 仅 老 年 阶段 延长 ，\n年 轻 阶 段 也 延长 了 。“70 岁 就 是 新 的 60 岁 ? 或 者 “40 岁 就 相当 于 新 的 30 岁 ” 这 些 话 颇\n有 几 分 道理 。 如 果 你 在 更 长 的 时 间 跨 度 中 更 慢 变 老 ， 那 么 从 某 种 意义 上 讲 你 年 轻 的\n时 间 也 更 长 。\n\n[D] 但 是 变化 不 止 于 此 。 就 拿 人 们 履行 买房 、 结 婚 、 生 育 或 步 入 职场 的 责任 的 年\n龄 为 例 。 如 今 人 们 都 在 推迟 履行 这 些 基本 责任 。1962 年 ，50% 的 美国 人 结婚 年 龄 为\n21 岁 ， 而 到 了 2014 年 ， 这 一 里 程 碑 已 变 成 了 29 岁 。\n\n[E] 尽 管 这 些 变 化 背后 有 众多 影响 因素 ,但 一 个 确定 的 因素 是 年 轻 人 日 渐 意 识 到\n他 们 将 会 更 长 寿 。 所 做 的 选择 持续 时 间 越 入， 其 价值 就 愈加 重要 。 因 此， 如 果 你 相\n信 自 己 会 长 寿 , 那么 选择 就 变 得 更 加 重要 , 过 早 履 行 责任 就 变 得 不 那么 具有 吸引 力 。\n结果 ， 之 前 标志 着 成 年 期 开始 的 责任 如 今 被 推迟 履行 ， 二 十 多 岁 的 年 轻 群 体 中 开始\n出 现 新 的 行为 方式 和 新 的 生命 阶段 。\n\n[F] 长 寿 还 会 推迟 退休 年 龄 ， 而 这 不 仅仅 是 由 于 财务 原因 。 确 实 ， 除 非 人 们 准备\n存 更 多 钱 ， 和 否则 ， 据 我 们 计算 ， 如 果 你 现在 45 岁 上 下 ， 那 么 你 可 能 要 工作 到 70 岁\n出 头 ， 如 果 你 现在 20 岁 出 头 ， 你 很 可 能 要 工作 到 七 老 八 十 。 但 是 ， 即 便 人 们 有 经 济\n能 力 负担 得 起 65 岁 之 后 的 退休 生活 ， 接 下 来 30 多 年 不 工作 也 会 损害 他 们 的 认 知 和\n情感 活力 。 许 多 人 可 能 根本 不 愿 如 此 (提前 退休 )。\n\n[G] 但 是 ， 那 并 不 意味 着 单纯 延长 职业 生涯 就 会 具有 吸引 力 。 仅 仅 延 长 全 职工 作\n这 个 人 生 第 二 阶段 可 能 作为 抵押 使 你 获得 活 到 100 岁 所 需 的 金融 资产 ， 但 如 此 长 久\n的 工作 将 不 可 避免 地 耗 尽 一 些 珍 贵 的 无 形 资产 ， 如 生产 技能 、 热 情 活 力 、 幸 福 和 友\nif.\n\n(HY) CF tT Pd Dd je PE Le AT aS TE 8S ES BST BE\nFE 60 年 这 么 持久 的 职业 生涯 。 如 果 将 技术 的 预期 变化 速率 这 一 因素 考虑 进去 ， 要 么\n你 的 技能 变 得 多 余 ， 要 么 你 所 在 的 行业 将 会 过 时 。 这 意味 着 每 个 人 在 生命 的 某 个 节\n点 ， 都 必须 做 出 许多 重大 的 技能 再 投资 。\n\n25\n\n加 如 此 一 来 ， 传 统 的 三 个 阶段 的 人 生 将 可 能 演变 成 包含 两 三 个 、 甚 至 更 多 不 同\n职业 生涯 的 多 个 生命 阶段 。 每 一 个 阶段 可 能 各 不 相同 。 某 个 阶段 的 目标 可 能 是 获得\n财富 成 功 和 个 人 成 就 ， 另 一 个 阶段 的 目标 可 能 是 更 好 地 平衡 工作 与 生活 ， 若 还 有 另\n外 一 个 阶段 的 话 ， 其 目标 可 能 是 更 加 充分 地 探索 和 理解 各 种 选择 ， 或 变 成 独立 生产\n商 ， 如 果 还 有 另外 一 个 阶段 的 话 ， 其 目标 可 能 是 做 出 一 些 社会 贡献 。 这 些 阶 段 将 洱\n盖 多 个 领域 ， 将 人 们 带 到 不 同城 市 ， 为 培养 各 种 各 样 的 技能 打下 基础 。\n\n四 各 个 阶段 之 间 的 过 渡 可 以 通过 休假 来 标记 ,因为 人 们 需要 找 时 间 体 息 、 休 养 、\n重新 投资 人 脉 关 系 或 者 提高 技能 。 有 时 ， 这 些 间歇 和 过 渡 由 自己 决定 ， 而 有 的 时 候 ，\n人 们 被 迫 这 么 做 ， 因 为 现 有 职位 、 公 司 或 行业 将 会 消失 。\n\n[K] 多 阶段 的 人 生 不 仅 会 深刻 改变 你 经 营 职业 生涯 的 方式 , 而 且 对 你 的 生活 方式\n也 有 深远 影响 。 应 对 变化 、 甚 至 欣然 接受 变化 的 能 力 将 会 成 为 一 项 日 益 重要 的 技能 。\n三 个 阶段 的 人 生 几 乎 没有 过 渡 ， 而 多 阶段 的 人 生 却 有 很 多 过 渡 。 这 就 是 为 什么 了 解\n自己 、 投 资 更 广 人 脉 、 乐 于 接受 新 思想 这 些 技能 将 会 变 得 更 加 重要 。\n\n[DC] 这 种 多 阶段 的 人 生 将 导致 人 群 种 类 发 生 异 乎 寻常 的 变化 ， 就 是 因为 排序 人 生\n各 阶段 的 方式 实在 太 多 了 。 人 生 阶 段 越 多 意味 着 可 能 的 排列 方式 越 多 。\n\n[M] 伴 随 这 一 变化 而 来 的 是 年 龄 与 人 生 阶 段 之 间 紧 密 联 系 的 终结 。 在 一 个 三 阶段\n的 人 生 中 ， 人 们 在 相同 时 间 、 相 同年 龄 从 大 学 毕业 ， 往 往 在 同一 年 龄 步 入 职场 、 组\n建 家 庭 , 也 基本 在 同一 时 间 进 入 中 级 管理 层 ， 然 后 走向 退休 的 年 龄 也 相差 不 了 几 年 。\n而 在 多 阶段 的 人 生 中 ， 你 可 能 在 20、40 或 者 60 岁 成 为 大 学 生 ， 在 30、50 或 者 70\n岁 成 为 管理 者 ， 也 可 以 在 任何 年 龄 成 为 独立 生产 商 。\n\n[IN 目前 的 人 生 阶段 、 职 场 道 路 、 教 育 选 择 和 社会 准则 都 与 长 寿 这 一 日 益 显现 的\n现实 情况 格格 不 入 。 三 个 阶段 的 人 生 “〈 即 ， 全 日 制 教育 ， 接 着 是 持续 工作 ， 然 后 是\n完全 退休 ) 可 能 适用 于 我 们 的 父辈 甚至 祖父 辈 ， 但 却 不 适用 于 今天 。 我 们 认为 ， 将\n长 寿 主要 视 作 一 个 老龄 化 问题 将 忽略 长 寿 的 全 面 影响 。 长 寿 不 仅仅 是 老年 阶段 延长 。\n它 还 关乎 寿命 变 长 、 延 迟 变 老 以 及 年 轻 阶 段 的 延长 。\n\n【答案 解析 】"
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "In the classic marriage vow (霄约），couples promise to stay together in sickness and in health. But a new study finds that the risk of divorce among older couples rises when the wife-not the husband—becomes seriously ill. \"Married women diagnosed with a serious health condition may find themselves struggling with the impact of their disease while also experiencing the stress of divorce,\" said researcher Amelia Karraker. Karraker and co-author Kenzie Latham analyzed 20 years of data on 2,717 marriages from a study conducted by Indiana University since 1992. At the time of the first interview, at least one of the partners was over the age of 50. The researchers examined how the onset (发生） of four serious physical illnesses affected marriages. They found that, overall, 31% of marriages ended in divorce over the period studied. The incidence of new chronic (慢性的） illness onset increased over time as will, with more husbands than wives developing serious health problems. \"We found that women are doubly vulnerable to marital break-up in the face of illness,\" Karraker said. \"They're more likely to be widowed, and if they're the noes who become ill, they're more likely to get divorced.\" While the study didn't assess why divorce in more likely when wives but not husbands become seriously ill, Karraker offers a few possible reasons. \"Gender norms and social expectations about caregiving many make it more difficult for men to provide care to sick spouses,\" Karraker said. \"And because of the imbalance in marriage markets, especially in older ages, divorced men have more choices among prospective partners than divorced women.\" Given the increasing concern about health care costs for the aging population, Karraker believes policymakers should be aware of the relationship between disease and risk of divorce. \"Offering support services to spouses caring for their other halves may reduce marital stress and prevent divorce at older ages,\" she said. \"But it's also important to recognize that the pressure to divorce may be health-related and that sick ex-wives may need additional care and services to prevent worsening health and increased health costs.\"",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "transcript": null,
+          "translation": "在 经 典 的 婚姻 暂 约 中 ， 夫 妻 承诺 无 论 疾病 还 是 健康 都 不 离 不 弃 。 但 是 一 项 新 研\n究 发 现 ， 年 长 夫妇 中 ， 如 果 妻 子 一 一 而 非 丈 夫 一 一 身 患 重病 ， 离 婚 的 风险 会 上 升 。\n\n“被 确诊 身 患 重 疾 的 已 婚 女性 可 能 会 发 现 自己 在 势力 对 抗 疾 病 侵袭 的 同时 也 在\n经 受 着 离婚 的 压力 ,，“ 研 究 员 阿 米 莉 亚 * 卡 拉 死 说 。\n\n卡拉 克 和 论文 合 著者 肯 齐 。 莱 瑟 姆 对 2717 桩 婚姻 中 20 年 的 数据 进行 了 分 析 , 这\n些 数 据 来 自 印第安 纳 大 学 自 1992 年 以 来 开展 的 一 项 研究 。 第 一 次 采访 时 ， 夫妻 双方\n中 至 少 有 一 方\n年 龄 超过 了 50 岁 。\n\n研究 人 员 探究 了 四 种 严重 生理 疾病 的 发 病 是 如 何 影响 婚姻 的 。 他 们 发 现 ， 总 体\n而 言 ， 在 整个 研究 期 间 有 31% 的 婚姻 以 离婚 告终 。 慢 性 疾病 的 发 病 率 也 随时 间 的 推\n移 而 上 升 ， 其 中 丈夫 比 妻子 更 容易 出 现 严 重 的 健康 问题 。\n\n27\n\n“我 们 发 现 ， 在 疾病 面前 女性 易 遭 受 婚姻 破裂 有 着 双重 原因 ，\"” 卡 拉克 说 。“ 她 们\n更 有 可 能 丧偶 ， 而 且 如 果 她 们 是 生病 饱 一 方 ， 就 更 有 可 能 离婚 。”\n\n虽然 该 研究 并 未 对 妻 子 〈 而 非 丈 夫 ) 患 重病 时 离婚 概率 更 高 的 原因 做 出 评定 ，\n但 卡拉 克 提 出 了 几 个 可 能 的 原因 。“ 性 别 规范 以 及 对 于 关怀 照护 的 社会 期 望 可 能 使 男\n性 更 难 做 到 为 患 病 配 偶 提供 照顾 ，” 卡 拉克 说 。“ 而 且 由 于 婚姻 市 场 的 《性 别 ) 失衡\n问题 ， 尤 其 是 在 年 纪 较 大 的 年 龄 段 ， 离 异 男性 在 寻找 未 来 伴侣 时 比 离异 女性 有 更 多\n\n鉴于 老龄 化 人 口 的 医疗 保健 费用 日 普 令 人 忧虑 ， 卡 拉 死 认为 政策 制定 者 应 该 留\n意 疾 病 与 离婚 风险 之 间 的 关联 。\n\n\"为 照顾 自己 另 一 半 的 已 婚 人 士 提 供 支 持 服 务 ， 可 以 减少 婚姻 压力 ,避免 老 年 夫\n妻 离婚 ，” 她 说 。“ 但 同样 重要 的 是 ， 要 认识 到 离婚 压力 可 能 与 健康 有 关 ， 患 病 的 前\n\n妻 可 能 需要 额外 的 照顾 和 服务 ， 以 防止 健康 状况 恶化 和 医疗 费用 增加 。\"\n【答案 解析 】"
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "If you were like most children, you probably got upset when your mother called you by a sibling's( 兄弟姐妹的）name. How could she not know you? Did it mean she loved you less? Probably not. According to the first research to tackle this topic head-on, misnaming the most familiar people in our life is a common cognitive (认知的）error that has to do with how our memories classify and store familiar names. The study, published online in April in the journal Memory and Cognition, found that the \"wrong\" name is not random but is invariably fished out from the same relationship pond: children, siblings, friends. The study did not examine the possibility of deep psychological significance to the mistake, says psychologist David Rubin, \"but it does tell us who's in and who's out of the group.\" The study also found that within that group, misnamings occurred where the names shared initial or internal sounds, like Jimmy and Joanie or John and Bob. Physical resemblance between people was not a factor. Nor was gender. The researchers conducted five separate surveys of more than 1,700 people. Some of the surveys included only college students; others were done with a mixed-age population. Some asked subjects about incidents where someone close to them—family or friend—had called them by another person's name. The other surveys asked about times when subjects had themselves called someone close to them by the wrong name. All the surveys found that people mixed up names within relationship groups such as grandchildren, friends and siblings but hardly ever crossed these boundaries. In general, the study found that undergraduates were almost as likely as old people to make this mistake and men as likely as women. Older people and this mistake and men as likely as women. Older people and women made the mistake slightly more often, but that may be because grandparents have more grandchildren to mix up than parents have children. Also, mothers may call on their children more often than fathers, given traditional gender norms. There was no evidence that errors occurred more when the misnamer was frustrated, tired or angry.",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "transcript": null,
+          "translation": "如 果 你 跟 大 多 数 孩子 一 样 , 你 很 可 能 会 在 妈妈 把 你 唤 做 其 他 兄弟 姐妹 时 不 高 兴 。\n她 怎 能 不 认识 你 ? 这 意味 着 她 爱 你 更 少 ?\n\n大 概 不 是 。 根 据 首 个 正面 探讨 这 一 课题 的 研究 ， 将 我 们 生命 中 最 熟悉 的 人 的 名\n字 叫 错 是 一 种 常见 认 知 错误 ， 这 与 我 们 的 记忆 如 何 对 熟悉 的 名 字 进 行 分 类 与 储存 有\n关 。\n\n这 项 于 4 月 发 表 在 《记忆 与 认 知 》 杂 志 网 络 版 上 的 研究 发 现 ， 那 个 “被 叫 错 的 ”\n名 字 并 非 是 随机 的 ， 而 是 都 源 自 于 同一 个 关系 池 : 孩子 、 兄 弟 姐妹 、 朋 友 。 这 项 研\n究 并 没有 探讨 深层 心理 对 这 一 错误 产生 影响 的 可 能 ,“ 但 它 确 实 告诉 我 们 ， 谁 在 这 个\n群体 里 ， 谁 不 在 这 个 群体 里 ，” 心 理学 家 戴 维 鲁 宾 表 示 。\n\n29\n\n研究 还 发 现 ， 在 这 个 群体 内 部 ， 开 头 或 中 间 读 音 相 同 的 名 字 会 出 现 叫 错 现象 ，\n比如 Jimmy 和 Joanie, 或 者 John 和 Bob。 人 与 人 之 间 的 外 瑶 相 似 并 非 影响 因素 , 性\n别 也 不 是 。\n\n研究 人 员 针 对 1700 多 人 开展 了 五 项 独立 的 调查 。 其 中 一 些 只 针对 大 学 生 ， 另 一\n些 则 针对 混 龄 人 群 。 一 些 询问 调查 对 象 被 亲近 的 人 《家 人 或 朋友 ) 唤 错 名 字 的 情况 ，\n另 一 些 询问 调查 对 象 自己 将 亲近 的 人 唤 错 名 字 的 时 刻 。 所 有 调查 发 现 ， 人 们 在 孙 辈 、\n朋友 、 兄 弟 姐妹 等 关系 群 中 容易 将 名 字 搞 混 ， 但 几乎 从 未 跨越 这 些 界限 。\n\n总 的 来 说 ， 研 究 发 现 ， 大 学 生 犯 这 种 错误 的 可 能 性 几乎 与 老人 相同 ， 男 性 犯 这\n种 错误 的 可 能 性 与 女性 相同 。 老 人 和 女性 犯 这 种 错误 的 频率 略 高 ， 但 这 可 能 是 因为\n较 之 父母 仅 有 子女 会 混淆 ， 祖 父母 还 有 孙 辈 会 混淆 。 另 外 ， 鉴 于 传统 性 别 角色 规范 ，\n母亲 可 能 比 父亲 更 常 召 唤 孩 子 。 没 有 证 据 表 明 ， 叫 错 名 字 者 感到 泪 形 、 疲 倦 或 愤怒\n时 ， 叫 错 几 率 更 高 。\n\n【答案 解析 】"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-06-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【答案 】H) migrated\n【语法 分 析 】 空 格 前 为 It has JG from Ato B 介词 结构 ， 空 格 词 应 为 名 词 或 ed\n分 词 。\n【答案 解析 了 第 一 段 的 人 名 指出 美国 汽车 创新 中 心 已 发 生 迁 移 (has. . . moved. . .\naway)。@ 和 名 以 回 指 The center of .., 以 固定 结构 fom A to B 表示 “从 A 地 到 B 地 ”。\n可 推 知 四 名 是 对 外 名 的 具体 说 明 〈 中 心 由 哪儿 迁 至 哪儿 )， 空 格 词 应 与 moved 近 义 ，\n表示 “迁移 ， 转 移 \"，H) migrated 正确 。\nO) transmitted 符合 词性 要 求 ， 能 与 fom. . . to. 搭配 ， 且 词义 亦 体 现 “ 移 动 、 转\n移 \"”， 所 以 有 很 强 和 干扰。 但 transmit 和 from...to.… 搭 配 的 用 法 有 两 种 : 1. 用 于 主动 句 式\nAtransmit B from. . . to... (All, Mosquitoes may transmit disease from animals to humans.\n蚊子 可 能 会 把 疾病 从 动物 传 到 人 身上 ); 2. 用 于 被 动 句 式 Abe transmitted from. . . to...\n(Ul, Mathematical knowledge is transmitted from teacher to student ,数学 知识 由 教师 传\n授 给 学 生 )。 本 空 显 然 不 符合 上 述 任何 一 种 ， 可 排除 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1182行（与 agy 既有答案零冲突）；真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【答案 】A) bid\n【语法 分 析 】 空 27 前 为 In a, 后 为 不 定式 to take.…， 空 格 词 应 为 可 数 名 词 单数 。\n【答案 解析 】 空 格 所 在 句 以 to take.…、that could. . .、to develop.…. 体 现 逻 辑 关 系 :\n汽车 创新 中 心 从 《位 于 密 鞭 根 州 的 ) 底特律 市 ?迁移 到 “(〈 位 于 加 州 的 ) 硅谷 ”( 首\n段 ) 一 因此 ， 密 区 根 欲 重新 夺回 底特律 的 中 心地 位 Cin a_27 to take. . . back to\nDetroit) 一 就 此 ， 密 歇 根 立法 者 提出 了 新 法 规 / 规 定 ， 将 密 吹 根 州 打造 成 全 国 最 适合\n开发 、 应 用 自动 驾驶 汽车 的 地 区 。 空 27 应 体现 解决 问题 的 意图 /决心 ，A) 正确 Cin\nabidto 为 固定 搭配 ， 意 为 \"为 了 努力 ……2)",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1199行（与 agy 既有答案零冲突）；真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【答案 】G) legislation\n【语法 分 析 】 空 28 前 为 及 物 动词 introduced, 后 为 that MH), Ati] VAG i.\n【答案 解析 】 空 格 所 在 句 以 to take... that could. . .、to develop.… 体 现 罗 辑 关 系 :\n汽车 创新 中 心 从 《位 于 密 砍 根 州 的 ) 底特律 市 \"迁移 到 *《〈 位 于 加 州 的 ) 硅谷 ”( 首\n段 ) 一 因此 ， 密 歇 根 欲 重新 夺回 底特律 的 中 心地 位 一 就 此 ， 密 歇 根 立 法 者 提出 了 新\n法 规 / 规 定 ， 将 密 鞭 根 州 打造 成 全 国 最 适合 开发 、 应 用 自动 驾驶 汽车 的 地 区 Chave\nintroduced_28 that... )。 空 28 应 体现 解决 问题 的 举措 /政策 /法 律 /提案 ,G) 正确 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1210行（与 agy 既有答案零冲突）；真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【答案 】D) dominance\n【语法 分 析 】 空 29 所 在 句 主干 为 Michigan's ___is under attack, 空 格 词 应 为 不\n可 数 名 词 或 可 数 名 词 单数 。\n【答案 解析 】 空 格 句 引用 参议 员 Mike Kowall iB, ROR AERA RE\n的 __ 正 受到 一 些 州 和 国家 的 威胁 ， 它 们 试图 __ 其 在 交通 领域 的 领先 地 位 。 联 系 句\n子 前 后 可 知 '*Michigan's in auto research and development 与 our leadership in\ntransportation 同 指 “ 密 歇 根 优势 ;可 见 ， 空 29 应 意 为 领先 地 位 /优势 等 ， 答 案 为 D)",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【答案 】I) replace\n【语法 分 析 】 空 30 前 为 which desire to, 后 为 名 词 短语 our leadership, 空 格 词 应 为\n动词 原形 。\n【答案 解析 】 空格 句 引 用 参议 员 Mike Kowall 话语 指出 ， 密 歇 根 在 汽车 研发 上\n的 _” 正 受到 一 些 州 和 国家 的 威胁 ， 它 们 试图 ”其 在 交通 领域 的 领先 地 位 。under\nattack 与 desire to__30 our leadership 反 向 同 义 : 前 者 体现 “密歇根 /底特律 受到 攻\n23\n击 ”， 后 者 指出 “其 他 州 和 国家 发 起 攻击 ”， 空 30 应 意 为 取代 / 抢 走 等 ， 答 案 为 T)。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1228行（与 agy 既有答案零冲突）；真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "N",
+          "explanation": "【答案 】N) sponsor\n【语法 分 析 】 空 格 词 位 于 Senator Mike Kowall 的 同位 语 thelead of 中， 应\nCREO “ial.\n【答案 解析 】 空 格 所 在 名 词 短 语 是 对 Senator Mike Kowall 身份 /行为 等 的 介绍 。\n由 其 话语 〈 尤 其 是 We cant let that happen) 可 知 他 代表 密歇根 州 。 再 联系 上 段 可 知 ，\nfour bills recently introduced 呼应 Michigan lawmakers have introduced legislation， 即 :\nMike Kowal 支持 新 立法 ， 空 格 词 应 意 为 \" 文 持 者 / 倡 议 者 \"， 备 选项 中 只 有 N) 符\n合 文 意 。\nC) deputy 为 指 “ 人 ”的 单数 名 词 ， 且 可 指 “ 政 府 官员 ”， 因 此 有 较 强 干扰 。 但 仔\n细 分 析 该 词 具 体 准确 含义 可 知 它 并 不 合适 : 该 词 意 为 \"副手 \"时 往往 和 名 词 连 用 《如\nthe Deputy Secretary of State FLESH); BUNS (SEE) 县 行政 司法 官 助理 ”时 不 合\n本 文 情形 《本 文 分 析 的 是 “ 州 ” 层 面 ) 意 为 ”法国 等 一 些 国家 的 ) 议员 ”时 更 显然 不\n合 本 文 谈 及 地 域 〈 美 国 )。 由 此 提醒 考生 : 务必 准确 掌握 每 个 大 纲 词 的 含义 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1240行（与 agy 既有答案零冲突）；真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【答案 】J) represent\n【语法 分 析 】 空 格 前 为 they would, 空 格 后 为 名 词 短语 a substantial update, 空 格 词\n应 为 动词 原形 。\n【答案 解析 】 空 格 句 指出 ， 四 项 议案 若 得 以 通过 ， 则 会 ”密歇根 2013 年 的 一\n项 法 规 得 到 实质 性 的 更 新 。 随 后 介绍 新 旧 法 规 的 差异 : JAY (Michigan's 2013 law)\n允许 制造 商 在 限制 条 件 下 进行 自动 驾驶 汽车 测试 VS 新 法 〈four bills recently\nintroduced) 允许 制造 商 几乎 可 以 完全 自由 地 进行 自动 驾驶 汽车 测试 。 可 见 新 法 标志\n着 密歇根 州 在 “自动 驾驶 技术 法 规 \" 方 面 取得 实质 性 更 新 ， 空 格 词 应 表示 “代表 /象征 /\n标志 ”等 ，J) 符合 要 求 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1253行（与 agy 既有答案零冲突）；真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【答案 】E) fleets\n【 语法 分 析 】 主 体 结 构 They would be allowed to send...and even set up on\n-demand_， 空 格 前 为 动词 set up+ 修 饰 成 分 on-demand, 后 为 介词 短语 of.…， 空格 词 应\n为 名 词 。\n【答案 解析 】 由 and even 体现 的 语义 递 进 可 知 * 派 出 自动 驾驶 车 队 在 跨 州 公路\n上 行驶 (send groups of self-driving cars...) “与 “组 建 按 需 型 自动 驾驶 汽车 的 (set\nup on-demand __33 of self-driving cars) \"语义 同 向 〈 均 体现 “给 予 制造 商 在 自动 驾\n驶 汽车 技术 上 更 大 的 自由 ”)、 但 自由 度 增 加 《在 跨 州 公路 上 测试 乙 有 车 队 相 对 容易\n控制 一 按 需 组 建 车 队 涉及 情况 更 复杂 ， 难 度 更 大 )， 空 格 词 应 与 groups 近 义 ， 表示\n“ (车 ) 队 ， 组 *，E) 正确 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1262行（与 agy 既有答案零冲突）；真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "B",
+          "explanation": "[381 B) contrast\n【语法 分 析 】 空 34 前 为 介词 in, 后 为 逗号 ， 空 格 词 应 为 名 词 (In PERI).\n【答案 解析 】 末 段 @@ 句 分 别 介 绍 密歇根 州 、 加 州 对 待 自动 驾驶 技术 的 态度 : BK\n根 意 欲 推 广 自动 驾驶 技术 的 商业 应 用 ; 加 州 要 求人 类 驾驶 员 做 好 掌控 方向 盘 的 准备 ，\n并 禁止 自动 驾驶 技术 的 商用 。 比 较 可 知 ， 二 者 对 待 自 动 驾 驶 技术 的 态度 截然 不 同 :\n前 者 给 予 极 大 自由 ， 后 者 则 更 为 审慎 ， 立 法 进行 限制 。 所 以 ， 空 34 应 体现 “巨大 差\n异 ， 鲜 明 对 比 \"， 选 B)",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "bid"
+            },
+            {
+              "key": "B",
+              "text": "contrast"
+            },
+            {
+              "key": "C",
+              "text": "deputy"
+            },
+            {
+              "key": "D",
+              "text": "dominance"
+            },
+            {
+              "key": "E",
+              "text": "fleets"
+            },
+            {
+              "key": "F",
+              "text": "knots"
+            },
+            {
+              "key": "G",
+              "text": "legislation"
+            },
+            {
+              "key": "H",
+              "text": "migrated"
+            },
+            {
+              "key": "I",
+              "text": "replace"
+            },
+            {
+              "key": "J",
+              "text": "represent"
+            },
+            {
+              "key": "K",
+              "text": "restrictive"
+            },
+            {
+              "key": "L",
+              "text": "reward"
+            },
+            {
+              "key": "M",
+              "text": "significant"
+            },
+            {
+              "key": "N",
+              "text": "sponsor"
+            },
+            {
+              "key": "O",
+              "text": "transmitted"
+            }
+          ],
+          "answer": "K",
+          "explanation": "[#38] K) restrictive\n【语法 分 析 】 空 35 前 为 比较 级 标志 Car) more, AA i rules, 空 格 词 应 为 形容\n词 。\n【答案 解析 】 先 看 整体 结构 ， 再 看 具体 内 容 。 末 段 四 @ 句 分 别 介绍 密 吹 根 州 、 加 州\n24\nWF AA WRIA: BCR)” A BOR I ILS; DH BERN\n类 驾驶 员 做 好 掌控 方向 盘 的 准备 ， 并 禁止 自动 驾驶 技术 的 商用 。 比 较 可 知 ， 二 者 对\n待 自动 驾驶 技术 的 态度 截然 不 同 : 前 者 给 予 极 大 自由 ， 后 者 则 更 为 审慎 ， 立 法 进行\n限制 ， 空 34,35 均 体 现 二 者 关系 。 所 以 空 35 应 体现 * (加 州 规定 更 为 ) 严格 /审慎 ，\nve K).",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）；真题.pdf 第4页文本层（词库A–O）；答案取自解析"
+        },
+        {
+          "id": "2019-06-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "An extended lifespan in the future will allow people to have more careers than now.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【 译 文 】 未 来 寿命 的 延长 将 使 人 们 拥有 比 现在 更 多 的 职业 。\n(#3) [1]\n【解析 】[ 段 四 句 指出 长 寿 的 影响 “传统 的 三 阶段 人 生 将 演变 成 多 阶段 人 生 , 且\n会 包含 多 个 不 同 的 职业 生涯 ”， 本 题 是 对 该 句 的 同 义 改 写 ， 其 中 an extended lifespan\n对 应 全 文 论述 主题 \"长寿 ”。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）"
+        },
+        {
+          "id": "2019-06-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "Just extending one's career may have both positive and negative effects.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【 译 文 】 仅 仅 延 长 一 个 人 的 职业 生涯 可 能 利 头 兼 有 。\n【答案 】[G]\n【解析 】[G] 段 四 句 总 起 指出 延迟 退休 并 非 全 是 好 处 not mean. . . appealing...),@\n名 具体 说 明 利 浆 : 虽 能 获得 更 多 财富 ， 但 却 耗 尽 某 些 无 形 资 产 , 如 活力 、 幸 福 感 等 。 本\n题 总 结 该 段 大 意 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1382行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "Nowadays, many Americans have on average delayed their marriage by some eight years.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【 译 文 】 如 今 ， 许 多 美国 人 将 平均 结婚 年 龄 推迟 了 约 八 年 。\n【答案 】[D]\n【解析 】[D] 段 @@ 句 列举 数字 说 明美 国人 平均 结婚 年 龄 的 推迟 现象 ;从 1962\n年 的 21 岁 推迟 到 了 2014 年 的 29 岁 ， 也 即 推迟 了 8 岁 。 本 题 是 对 两 名 的 同 义 改写 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1389行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Because of their longer lifespan, young people today no longer follow the pattern of life of their parents or grandparents.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "N",
+          "explanation": "【 译 文 】 由 于 寿命 更 长 ， 今 天 的 年 轻 人 不 再 遵循 他 们 父辈 或 祖父 非 的 生活 模式 。\n【答案 】[N]\n【解析 】[N] 段 他 名 指出 “传统 的 三 阶段 人 生 适 用 于 父辈 或 祖父 赣 ， 但 如 今 不 再\n26\n适用 了 ”, 言 外 之 意 即 “年 轻 人 不 再 遵循 父辈 们 的 生活 方式 ”本 题 是 对 该 句 的 合理 引申 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1395行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Many more people will be expected to live over 100 by the mid-21st century.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "A",
+          "explanation": "CSC] B21 世纪 中 时， 预计 将 有 更 多 的 人 活 到 100 岁 以 上 。\n【答案 】[A]\n【解析 】[A] 段 首先 以 美国 为 例 指出 ， 当 前 美国 有 7 万 多 名 百 岁 老 人 ， 到 2050\n年 这 一 数 量 将 超过 100 万 。 随 即 引 用 研究 结论 指出 ， 无 论 在 美国 还 是 英 、 德 、 法 、\n意 、 加 、 日 ， 婴 儿 的 预期 寿命 越 来 越 长 ,50% 能 达到 百 岁 以 上 ， 即 未 来 会 有 更 多 人 活\n到 100 岁 以 上 。 本 题 是 对 该 段 主旨 大 意 的 总 结 概括 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1404行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "A longer life will cause radical changes in people's approach to life.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【 译 文 】 考 命 的 延长 将 使 人 们 的 生活 方式 发 生根 本 变化 。\n【答案 】[K]\n【解析 】[K] 段 四 名 继续 说 明 多 阶段 的 人 生 ， 即 长 寿 的 影响 “给 人们 生活 方式 带\n来 深远 影响 ”(will have profound changes...in your approach to life), 本 题 是 对 该 句 的 同\n义 改 写 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1412行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "Fast technological change makes it necessary for one to constantly upgrade their skills.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【 译 文 】 技 术 快 速 变化 使 人 们 有 必要 不 断 地 提高 技能 。\nC38] [H]\n【解析 】[H 匡 段 他 名 指出 “技术 快速 发 展 使 人 们 的 技能 、 所 在 行业 过 时 、 甚 至 消\n失 ”， 多 名 提出 人 们 的 应 对 措施 “必须 适时 进行 重大 技能 投资 以 不 断 提高 技能 ”。 本 题\n是 对 两 句 大 意 的 概括 总 结 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）"
+        },
+        {
+          "id": "2019-06-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "Many people may not want to retire early because it would do harm to their mental and emotional well-being.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【 译 文 】 许 多 人 可 能 不 想 提 前 退休 ， 因 为 这 会 损害 他 们 的 精神 和 情感 健康 。\n【答案 】[F]\n【解析 】 [FE] 段 罗 句 指出 ， 人 们 提前 退休 后 不 工作 的 状态 也 有 害处 : 影响 精神\n和 情感 活 力 ; 图 句 评论 指出 多 数 人 不 愿 提早 退休 。 本 题 是 对 该 两 句 的 概括 改写 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1426行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "The close link between age and stage may cease to exist in a multi-stage life.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "M",
+          "explanation": "【 译 文 】 在 一 个 多 阶段 的 生命 中 ， 年 龄 和 阶段 之 间 的 密切 联系 可 能 会 消失 。\n【答案 】[M]\n【解析 】[M] 段 四 名 指出 多 阶段 人 生 的 影响 “年 龄 和 人 生 阶 段 的 密切 联系 将 会 消\n失 ”。 本 题 是 对 该 句 的 同 义 改写 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1432行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "People living a longer and healthier life will have to rearrange their work and life.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【 译 文 】 更 长 寿 、 更 健康 的 人 们 将 不 得 不 重新 规划 他 们 的 工作 和 生活 。\n【答案 】[C]\n【解析 】[C] 段 四 名 指出 长 寿 的 影响 “将 导致 人 们 重新 规划 工作 和 生活 ”。 本 题\n是 对 该 句 的 同 义 改 写 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1438行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What can we learn about marriage vows from the passage?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They may not guarantee a lasting marriage."
+            },
+            {
+              "key": "B",
+              "text": "They are as binding as they used to be."
+            },
+            {
+              "key": "C",
+              "text": "They are not taken seriously any more."
+            },
+            {
+              "key": "D",
+              "text": "They may help couples tide over hard times."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【 答 案 】A\n\n【和 定位】 本题 考查 “婚姻 拆 约 的 相关 信息 ”。 由 题 干 关键 词 marriage vows 定位 至\n首 段 。\n\n【解析 】 本 题 考查 对 首 段 信息 的 概括 推理 。 解 题 关 键 是 借 同 义 / 反 义 表达 把 握 婚\n姻 拆 约 与 研究 发 现 的 关联 : QA) couples/wife/husband、seriously ill 分 别 原 词 / 近 义 对\n应 四 名 couples, sickness, M@*+) divorce 则 反 义 对 应 四 句 stay together, 借 此 可 推 知 开\n篇 引出 “永远 不 离 不 弃 ?” 的 拆 约 意 在 反讽 现实 ， 也 即 婚姻 拆 约 未 必 能 保障 两 人 白头 借\n老 。B、D 被 首 段 四 名 内 容 障 目 ， 忽 视 @ 句 转折 引出 的 研究 发 现 才 是 真正 重要 的 信\n息 。C 将 文中 所 述 情形 的 范围 “年 长 夫妻 \"扩大 为 \"所 有 夫妻 ”， 其 次 开篇 并 未 从 * 世 风\n发 生 今昔 变化 ”的 角度 论述 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1480行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What did Karraker and co-author Kenzie Latham find about elderly husbands?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are generally not good at taking care of themselves."
+            },
+            {
+              "key": "B",
+              "text": "They can become increasingly vulnerable to serious illnesses."
+            },
+            {
+              "key": "C",
+              "text": "They can develop different kinds of illnesses just like their wives."
+            },
+            {
+              "key": "D",
+              "text": "They are more likely to contract serious illnesses than their wives."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【 答 案 】D\n\n【 定位】 本题 考 查 “ 研 究 发 现 \"。 由 题 干 关键 词 Karraker. . .Kenzie Latham 定位 至\n第 三 段 (Karraker and co-author Kenzie Latham analyzed..) 及 第 四 段 (The researchers\nexamined. . . )\n\n【 解析】 本题 考查 研究 发 现 细节 信息 。A 将 第 六 段 @ 句 信息 “老年 夫妻 中 ) 男\n性 更 难 做 到 照顾 患 病 配 偶 \" 曲 解 为 “老年 男性 不 善于 照顾 自己 *。B 干扰 源 于 第 四 段 @\n句 中 “慢性 /严重 疾病 发 病 率 也 随时 间 推 移 上 升 ”， 该 内 容 虽 为 主干 信息 ， 却 是 对 整体\n趋势 〈 年 老夫 妻 双方 ) 的 说 明 〈“ 人 越 老 越 易 得 病 ” 是 基于 数据 得 出 的 常识 性 发 现 ，\n并 非 核心 发 现 )， 题 干 仅 就 “年 老 丈 夫 ” 一 方 发 问 也 暗示 本 题 考 查 的 是 “基于 男女 比较\n的 核心 发 现 / 信 息 〈 句 中 由 with 引导 的 独立 主格 表现 ) \"， 故 该 项 偏离 研究 重心 。C\n项 just like their wives 与 第 四 段 末 \"其 中 丈夫 比 妻 子 更 容易 患 重病 ?了 矛盾。D) BHR\n介绍 研究 数据 ， 第 四 段 介绍 研究 发 现 ， 其 中 发 现 之 一 是 ”〈 随 着 时 间 推 移 ) SCALE\n子 更 容易 患 上 重 疾 \"， 同 时 第 五 段 也 提 及 “疾病 面前 女性 更 有 可 能 丧偶 〈 即 丈夫 比 麦\n子 更 容易 因 WA) ”， 综 合 推 知 D 项 正确 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1492行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What does Karraker say about women who fall ill?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are more likely to be widowed."
+            },
+            {
+              "key": "B",
+              "text": "They are more likely to get divorced."
+            },
+            {
+              "key": "C",
+              "text": "They are less likely to receive good care."
+            },
+            {
+              "key": "D",
+              "text": "They are less likely to bother their spouses."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【 答 案 】B\n\n【 定位】 本题 考 查 \" 研 究 发 现 \"。 由 题 干 关键 词 Karraker, women who fall ill 定位\n至 第 二 段 (Married women...health condition) 和 第 五 段 (Karraker said...if they're the\nones who become ill...)\n\n【解析 】 本 题 同 上 题 类 似 , 均 考 查 研 究 发 现 。A 源 自 第 五 段 They're more likely to\nbe widowed, 但 这 属于 丈夫 患 病 去 世 导 致 婚姻 破裂 的 情形 ， 而 非 * 自 己 患 病 而 丧偶 ”。\n\n28\n\nC 将 第 六 段 四 句 卡 拉克 言论 暗含 的 对 比 “* 患 病 女 性 相 比 患 病 男 性 更 难 被 另 一 半 好 好\n照顾 ” 谤 化 为 \" 患 病 女 性 很 难受 到 悉心 照顾 \"。D 将 第 六 段 思 名 “被 动 局 面 一 《〈 患 病\n女性 ) 更 难 被 配偶 照顾 ”窜改 为 主动 选择 一 一 患 病 女 性 不 太 会 烦 扰 CB) BCT”. BD\n第 五 段 以 直接 引 语 介绍 卡拉 殉 的 发 现 : 疾病 面前 女性 易 遭 受 婚姻 破裂 有 双重 原因 ，\n一 是 丈夫 更 易 患 重病 〈 致 形 偶 )， 二 是 自己 患 病 时 更 可 能 离婚 ; 题 干 询问 妻子 患 病情\n形 ，B 符合 文 意 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1508行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "Why is it more difficult for men to take care of their sick spouses according to Karraker?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are more accustomed to receiving care."
+            },
+            {
+              "key": "B",
+              "text": "They find it more important to make money for the family."
+            },
+            {
+              "key": "C",
+              "text": "They think it more urgent to fulfill their social obligations."
+            },
+            {
+              "key": "D",
+              "text": "They expect society to do more of the job."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【 答 案 】A\n\n【定位 了 本题 考查 “卡拉 克 的 观点 看 法 \"。 由 题 干 关 键 信息 more difficult for men to\ntake care of their sick spouses 定位 至 0 第 六 段 四 名 (more difficult for men to provide\ncare to sick spouses)\n\nCT AAA Ril, 首先 应 确定 相关 逻辑 词 , 根据 第 六 段 @ 句 因果 动词 make\n\n〈 致 使 ) 锁定 描述 原因 的 主语 Gender norms and social expectations about caregiving,\n结合 后 半 句 关键 词 provide care 可 知 该 原因 聚焦 〈 性 别 规 范 与 社会 期 望 ) 在\ncaregiving《〈 照 顾 /看 护 ) 方面 约定 俗 成 的 社会 观念 ，B、C 过 度 推断 定位 名 信息 :“ 艾\n夫 更 看 重 在 外 面 挣 钱 、 履 行 社会 义务 ” 带 有 “为 丈夫 朴 于 管 照 妻 子 正 名 ”之 意 ， 脱\n离 人 全文“ 客观 介绍 研究 发 现 ” 的 大 前 提 。 可 首先 排除 ， 其 次 根据 normssocial\nexpectations 暗含 的 客观 社会 规范 可 确定 描述 客观 习惯 的 A 为 正确 项 。 同 时 排除 D，\nD 将 末 段 卡拉 克 建 议 “( 社 会 ) 应 该 为 照 顾 患 病 配 偶 的 丈夫 提供 支持 服务 、 为 患 病\n妻子 提供 额外 照顾 和 服务 ” 偷 换 为 “男性 的 主观 看 法 ”。\n\n50【 答 案 】C\n\n【定位 】 本 题 考 查 \" 卡 拉克 的 建议 \"。 由 题 干 关键 词 Karrakeralso important 可 定\n位 至 末 段 末 句 。\n\n【解析 】 本 题解 题 关 键 是 根据 表达 建议 的 主观 性 标记 词 识别 出 具体 建议 : 末 段\n@AJVA may reduce/prevent 〈 主 观 推测 情态 动词 + 表示 结果 /作用 的 因果 动词 )》 标明 主\n语 所 述 方面 的 重要 性 〈 指 向 建议 一 ) 包 句 以 may need〈 主 观 推测 情态 动词 + 表示 必\n要 性 的 动词 ) 标明 宾语 所 述 方面 的 必要 性 〈 指 向 建议 二 ); 选项 中 A、B 将 末 段 首 名\n第 一 条 建议 〈 社 会 应 为 照顾 另 一 半 患 病 的 老年 人 提供 支持 服务 ) 的 结果 /作用 “减轻\n婚姻 压力 、 避 免 离婚 ” 错 当 作 建 议 本 身 ， 且 题 干 询问 的 是 另 一 条 建议 。D 将 末 段 @@ 和 名\n第 二 条 建议 “社会 应 为 离异 患 病 女 性 提供 额外 照顾 ”曲解 为 \"男性 应 该 文 付 妻 子 的 医\nTP Bes AA C 正确 总 结 了 建议 二 的 内 容 , 未 段 末 名 介绍 卡拉 克 的 另 一 建议 “应 认识 到\n离婚 压力 可 能 与 健康 有 关 ， 患 病 女 性 离婚 后 可 能 需要 额外 的 照顾 和 服务 以 防止 健康\n状况 恶化 和 医疗 费用 增加 ”C 符合 此 建议 。\n\n【原文 译文 】",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1526行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What does Karraker think is also important?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Reducing marital stress on wives."
+            },
+            {
+              "key": "B",
+              "text": "Stabilizing old couples' relations."
+            },
+            {
+              "key": "C",
+              "text": "Providing extra care for divorced women."
+            },
+            {
+              "key": "D",
+              "text": "Making men pay for their wives' health costs."
+            }
+          ],
+          "answer": "C",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）"
+        },
+        {
+          "id": "2019-06-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "How might people often feel when they were misnamed?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Unwanted."
+            },
+            {
+              "key": "B",
+              "text": "Unhappy."
+            },
+            {
+              "key": "C",
+              "text": "Confused."
+            },
+            {
+              "key": "D",
+              "text": "Indifferent."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【 答 案 】B\n\n【定位 】 本 题 考 查 \" 人 们 被 叫 错 名 字 时 的 心理 感受 ”由 when they were misnamed\n定位 至 首 段 (when your mother called you by a sibling's name).\n\n【解析 】A 将 @@ 句 疑问 之 意 “ 是 否 爱 得 更 少 ” 偷 换 为 肯定 之 意 “ 爱 得 更 少 ”， 然 后\n再 将 “ 爱 得 更 少 ”程度 加 深 为 “不 爱 \"， 从 而 捏造 出 “不 被 需要 ， 多 余 ”。C HOO\n续 发 问 脐 断 出 被 叫 错 名 字 者 “困惑 : 不 知道 到 底 是 因为 不 认识 还 是 因为 爱 得 更 少 而 被\nnye”, 而 他 名 How could. .. not, @4) Did it mean... less 实质 均 瞳 含 被 叫 错 名 字 者 “ 失\nYe. HIE ASE. D 与 被 叫 错 名 字 者 内 心 感受 upset、 心 中 疑惑 How could. . . Did it\nmean... 所 传递 的 ”〈 对 名 字 被 叫 错 之 事 ) BATE ASAT. BY 文 首 名 指出 多 数 孩\n子 的 一 种 普遍 心理 : 在 被 妈妈 唤 错 名 字 时 不 高 兴 ， 然 后 借助 “you《〈 代 指 读者 ， 泛 指\n任何 人 ) 与 多 数 孩 子 的 相似 性 〈like) \"将 这 一 心理 投射 到 所 有 人 身上 ， 意 即 ， 被 唤\n错 名 字 时 ， 人 们 通常 都 会 不 高 兴 ， 故 B 正确 。Unhappy 义 同 upset。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-06-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What did David Rubin's research find about misnaming?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is related to the way our memories work."
+            },
+            {
+              "key": "B",
+              "text": "It is a possible indicator of a faulty memory."
+            },
+            {
+              "key": "C",
+              "text": "It occurs mostly between kids and their friends."
+            },
+            {
+              "key": "D",
+              "text": "It often causes misunderstandings among people."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【 答 案 】A\n\n【定位 了 本题 考 查 戴 维 。 鲁 宾 的 研究 发 现 ,定位 范围 宽泛 (由 表 ZJK 特 指 的 the first\nresearch,The study,The researchers 可 知 第 二 至 六 段 所 述 为 同一 研究 )， 但 结合 试题 命\n制 顺序 及 后 面 几 道 题 题 干 可 推 晰 本 题 实质 性 针对 第 二 段 提 纲 者 领 的 研究 发 现 (该 段\n总 述 研 究 发 现 ， 后 续 段 落 详 述 研究 具体 内 容 及 结果 )。\n\n【解析 了 中 faulty 虽 意 同 第 二 段 @ 句 中 error 但 却 将 具体 指向 “ 认 知 ” 偷 换 为 “ 记\n忆 ”: 文 意 实 为 “由 于 记忆 的 分 类 储存 方法 〈 如 兄弟 姊妹 、 子 女 、 朋 友 )， 人 们 容易\n发 生 叫 错 名 字 这 个 问题 ”， 其 属于 认 知 问题 〈 信 息 提 取 时 出 错 ) 而 非 记 忆 问 题 (对 人\n名 的 记忆 并 没 出 错 )。C 将 第 三 段 四 名 “被 叫 错 的 名 字 的 常见 来 源 : 同一 关系 池 CK\n子 、 朋 友 、 兄 弟 姐妹 ) “曲解 为 “ 叫 错 名 字 现 象 易 发 人 群 : 孩子 与 其 朋友 之 间 ”。 D\n利用 首 段 末 两 句 隐藏 文 意 “ 被 叫 错 名 字 者 常会 感觉 不 被 爱 、 不 被 认可 ”捏造 而 来 ， 但\n并 非 研究 发 现 。A)。 第 二 段 @ 句 介绍 研究 发 现 : 将 最 熟悉 的 人 的 名 字 叫 错 是 一 种 常\n见 认 知 错误 ， 这 与 我 们 的 记忆 如 何 对 熟悉 的 名 字 进 行 分 类 与 储存 有 关 ; 意 即 ， 叫 错\n名 字 跟 我 们 的 记忆 运作 方式 有 关 ，A 是 对 该 句 的 高 度 概 括 ， 其 中 related to 同 义 改 写\ndo with, the way our memories work 概括 how our memories classify and store familiar\nnames.",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1606行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What is most likely the cause of misnaming?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Similar personality traits."
+            },
+            {
+              "key": "B",
+              "text": "Similar spellings of names."
+            },
+            {
+              "key": "C",
+              "text": "Similar physical appearance."
+            },
+            {
+              "key": "D",
+              "text": "S·血·1lar pronunciation of names."
+            }
+          ],
+          "answer": "D",
+          "explanation": "(31D\n【 定位】 本 题 考查 叫 错 名 字 的 原因 《〈cause of misnaming )， 可 定位 至 第 四 段\n\n30\n\n(misnamings occurred where. . . a factor... )\n\n【解析 】A SB = Bees A) aN era BRITA: 朋友 、 兄 弟 姐妹 、\n子女 ”捏造 而 来 , 认为 “ 属 同一 个 关系 池 的 人 大 多 个 性 特征 相似 ”但 “同属 关系 池 ?##' 个\n性 特征 相似 \"”。B 将 第 四 段 首 句 “发 音 相 似 〈shared. . . sounds) \"窜改 为 \"拼写 相似\n\n(similar spellings) \"。C G@A)\"SSu WA CPE SUH) 因素 ”相悖 。D )。\n第 四 段 首 句 指出 : 在 一 个 关系 池 里 ， 如 果 名 字 开 头 或 中 间 发 音 相同 则 会 出 现 叫 错 现\n象 , 如 Jimmy 和 Joanie, 或 者 John 和 Bob。 可 见 ， 名 字 发 音 相似 很 可 能 是 叫 错 名 字 的\n原因 ，D 正确 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第2–5、9–10、15–17、19–21页（图像核对）"
+        },
+        {
+          "id": "2019-06-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What did the surveys of more than 1,700 subjects find about misnaming?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It more often than not hurts relationships."
+            },
+            {
+              "key": "B",
+              "text": "It hardly occurs across gender boundaries."
+            },
+            {
+              "key": "C",
+              "text": "It is most frequently found in extended families."
+            },
+            {
+              "key": "D",
+              "text": "It most often occurs within a relationship groups."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【 答 案 】D\n\n【 定位】 本题 题 点 为 “针对 1700 多 人 的 调查 (结果 )”, 可 由 the surveys of more than\n1,700 subjects 定位 至 第 五 段 首 末 名 (surveys of more than 1700 people. . . All the\nsurveys found. . . )\n\n【解析 】A 由 首 段 现象 “ 叫 错 名 字 让 被 叫 错 者 不 高 兴 ”\" 及 全 文 复 现 词 relationship\nPRATER, 但 文中 无 据 可 依 。E 将 末 名 中 these boundaries 具体 所 指 boundaries of\nrelationship groups 偷 换 为 gender boundaries, 而 第 四 段 末 句 明 确 指出 “ 叫 错 名 字 与 性\n别 无 关 《〈 即 ， 会 跨越 性 别 界限 ) ”。C 由 grandchildren 衍生 出 extended families( 与 核\n心 家 庭 相 对 ， 指 几 代 同 堂 的 大 家 庭 )， 将 文中 个 例子 孙 辈 名 字 〈、 朋 友 名 字 、 兄 弟\n姊妹 名 字 等 其 他 属于 同一 关系 池内 部 的 名 字 ) 容易 搞 混 ” 窗 化 曲解 为 “ 叫 错 名 字 常 见\n于 大 家 庭 中 \"。D)。 第 五 段 首 句 引出 研究 人 员 开展 的 调查 : 针对 1700 多 人 展开 了 五\n项 独立 调查 ;， 末 名 指出 调查 结果 : 人 们 只 将 同一 关系 池内 部 〈 孙 裴 、 有 朋友、 兄弟 姐\n妹 ) 的 人 名 搞 错 ， 几 乎 从 未 跨越 过 这 些 关 系 池 的 界限 。 可 见 ,将 名 字 搞 混 最 常 发 生\n在 一 个 关系 群 内 部 ，D 正确 。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1641行（与 agy 既有答案零冲突）"
+        },
+        {
+          "id": "2019-06-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "Why do mothers misname their children more often than fathers?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They suffer more frustrations."
+            },
+            {
+              "key": "B",
+              "text": "They become worn out more often."
+            },
+            {
+              "key": "C",
+              "text": "They communicate more with their children."
+            },
+            {
+              "key": "D",
+              "text": "They generally take on more work at home."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【 答 案 】C\n\n【 定位】 本题 考查 母亲 比 父 杀 更 常 叫 错 孩 子 名 字 的 原因 ， 可 定位 至 第 六 段 @@\n44] 〈women.. more often,mothers. . . more often than fathers).\n\n【解析 】A 中 frustrations, BH worn out 均 源 自 末 句 ， 但 该 句 句 意 实 为 “ 叫 错 名\n字 的 几率 与 叫 错 名 字 行 为 人 是 否 感到 诅 形 、 疲 倦 、 慎 怒 无 关 ”， 选 项 做 了 反 向 干扰 。\nD 由 多 名 traditional gender norms\" 传 统 性 别 规范 ” 望 文生 义 出 “母亲 《〈 比 父亲 ) 承担 更\n多 家 务 ”, 但 该 词 实际 指向 “母亲 更 多 呼唤 孩子 \"。C)。 末 段 @ 句 指出 : 老人 和 女性\n叫 错 名 字 的 频率 略 高 ， 可 能 是 因为 祖父 母 比 父母 有 更 多 的 孙 辈 混淆 ， 母 亲 比 父亲 更\n常 召 唤 孩 子 。 由 此 可 见 ， 母 亲 比 父亲 更 常 叫 错 孩子 名 字 是 因为 母亲 和 孩子 交流 更 多 ，",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析OCR文本 md 第1658行（与 agy 既有答案零冲突）"
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into Eng lish. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "灯笼起源于东汉， 最初主要用于照明。 在唐代， 人们用红灯笼来庆祝安定的生活。从那时起，灯笼在中国的许多地方流行起来。灯笼通常用色彩鲜艳的薄纸制作，形状和尺寸各异。 在中国传统文化中， 红灯笼象征生活美满和生意兴隆， 通常在春节、 元宵节和国庆等节日期间悬挂。 如今， 世界上许多其他地方也能看到红灯笼。",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-06-1-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "灯笼起源于东汉， 最初主要用于照明。 在唐代， 人们用红灯笼来庆祝安定的生活。从那时起，灯笼在中国的许多地方流行起来。灯笼通常用色彩鲜艳的薄纸制作，形状和尺寸各异。 在中国传统文化中， 红灯笼象征生活美满和生意兴隆， 通常在春节、 元宵节和国庆等节日期间悬挂。 如今， 世界上许多其他地方也能看到红灯笼。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "Chinese lanterns, originating in the Eastern Han Dynasty, were primarily used for lighting in early times. In the Tang Dynasty, red lanterns were used to celebrate the peaceful life. From then on, lanterns have gained popularity in many places of China. Lanterns are usually made of colorful thin paper, and vary in shape and size. In traditional Chinese culture, red lanterns symbolize booming life and prosperous business, so they are often hung on festivals such as Spring Festival, Lantern Festival, and National Day. Today, red lanterns can also be seen in many other parts of the world.",
+          "explanation": "【参考 译文 】\n\nChinese lanterns，originating in the Eastern Han Dynasty，were primarily used for\nlighting in early times. In the Tang Dynasty, red lanterns were used to celebrate the\npeaceful life. From then on, lanterns have gained popularity in many places of China.\nLanterns are usually made of colorful thin paper, and vary in shape and size. In traditional\nChinese culture, red lanterns symbolize booming life and prosperous business, so they are\noften hung on festivals such as Spring Festival, Lantern Festival, and National Day. Today,\nred lanterns can also be seen in many other parts of the world.\n\n31\n\n【 逐 句 解析 】\n1. 灯笼 起 源 于 东汉 ， 最 初 主要 用 于 照明 。\n\n【词汇 】 灯 笼 〈《Chinese) lantern; 起 源 于 originate from/in; stem from; 东汉\nthe Eastern Han Dynasty; 用 于 be used for; be applied to; 照明 illumination; lighting\n\n【句子 】 语 段 首 两 句 均 回溯 过 去 某 一 时 期 “东汉 ”“ 唐 代 \") 的 现象 ， 应 用 一\n般 过 去 时 。 本 句 两 个 动词 “起 源 于 ”“ 用 于 ”的 主语 均 为 “ 灯 逢 ”， 可 根据 信息 的 主 次\n\n(起 源 ” 为 次 要 信息 \"功能 ”为 主要 信息 ) 将 后 者 译 为 谓语 动词 ,前 者 译 为 非 谓语 动词\n\n〈 用 作 状 语 、 定 语 等 )， 且 汉语 中 的 “ 巫 \" 实 际 表示 “被 用 于 \"”， 应 译 为 英语 中 的 被 动 语\n态 be used for/be applied to 等 ， 即 句子 整体 可 译 为 : Chinese lanterns, originating in/\nwhich originated in... , were used for... 0 句 中 “东汉 ”“ 唐 代 ” 等 朝代 为 专 有 名 词 ， 其 前\n应 加 定 冠 词 the, 明 代 名 称 首 字母 均 大 写 。 时 间 副 词 “ 最 初 ”? 和 程度 副词 “主要 \" 若 都 直译\n为 副词 originally 和 primarily/mainly/mostly, 应 按 英 语 习惯 将 二 者 错开 位 置 ,可 把 程度\n副词 后 移 至 used 之 后 修饰 其 目的 状语 ， 如 used primarily for lighting; 当然 也 可 把 时\n间 副 词 转化 为 表 时 间 的 介词 短语 置 于 句 末 ， 如 primarily used for. . . at first/in early\ntimes\n2. 在 唐 代 ， 人 们 用 红 灯 笼 来 庆祝 安定 的 生活 。\n\n【词汇 】 唐 代 the Tang Dynasty; 庆祝 celebrate; 安定 的 peaceful; stable\n\n【句子 】 本 句 主语 * 笃 \"为 通称 词 〈 包 括 *“ 人 人、 人们、 有 人 、 大 家 、 别 人 \"等 )， 可\n将 本 名 转译 为 英语 中 省 略 施 动 者 的 被 动 名 《此 时 默认 施 动 者 为 “人们 ”) red lanterns\nwere used to…, 也 可 保留 原文 主动 语 态 译 为 people used/made red lanterns to...\n\n3. 从 那 时 起 ， 灯 笼 在 中 国 的 许多 地 方 流行 起 来 。\n\n【词汇 】 从 那 时 起 from then on ; since then; ever since; 在 中 国 的 许多 地 方 in\nmany places/ parts of China; 流行 起 来 become/get popular; gain popularity\n\nCAF is Pcs ae Ze... 7 AST TLL. 也 能 看 到 红 灯 笼 ”\n等 可 知 ， 本 名 描述 的 流行 现象 从 唐 代 延 续 至 今 ， 因 此 全 句 应 采用 现在 完成 时 《表示\n动作 从 过 去 延续 至 今 )。 流行 \"可 转译 为 形容 词 popular 或 名 词 popularity, “HIE” TR\n调 “ 空 ”的 过 程 ， 宣 采用 动态 性 较 强 的 动词 译 为 become/get popular 或 gain popularity,\n不 宣 译 为 表 静 止 状态 的 be popular.\n\n4. 灯笼 通常 用 色彩 鲜艳 的 薄 纸 制作 ， 形 状 和 尺寸 各 异 。\n\n【词汇 】 用 .… 制 作 而 成 be made of 色彩 鲜艳 的 colorful; vibrant-colored; 薄 纸 thin\npaper; 形状 shape; 尺寸 size; 各 异 various/diverse/different; vary in\n\n【句子 】“ 妙 ”表明 本 名 介绍 一 般 情 况 ， 应 采用 一 般 现 在 时 。 由 常识 可 知 ， 灯 笼\nRHE 纸 ?可 通过 肉眼 看 出 ， 因 此 “用 .制作 ”应 选用 短语 be made of 而 不 用 be\nmade from. \"FE BA\" TAKA” BEA EAI A ia] various/different (shape and\nsize) ,也 可 译 为 动词 vary in (shape and size) “fiJ...... 制作 “形状 和 尺寸 各 异 ? 分 别\n描述 “ 幻 逸 ”的 制作 方式 和 外 观 ， 可 译 为 以 and 连接 的 并 列 结构 ， 如 Lanterns are made\nof . . ,and vary in.…， 也 可 译 为 “主干 + 修饰 \"结构 ， 如 Lanterns, usually made of which\nare made of .. ,vary in...\n\n5. 在 中 国 传统 文化 中 ， 红 灯笼 象征 生活 美满 和 生意 兴隆 ， 通 常 在 春节 、 元 宵 节 和 国\n庆 等 节日 期 间 悬 挂 。\n\n【 词汇】 中 国 传统 文化 China's traditional culture; traditional Chinese culture; 象 征\nsymbolize; be the symbol of; stand for; represent; 生 活 美满 happy/booming/prosperous\nlife;' 生 意 兴 隆 booming/ prosperous business; 通 常 often; usually; 春 节 Chinese New\nYear; Spring Festival; 元 宵 节 Lantern Festival; 国 庆 节 Chinese National Day:; 悬 挂 hang\n\n32\n\n【句子 】 两 小 句 间 暗 含 因果 逻辑 〈 前 因 后 果 )， 可 用 so 衔接 。 第 一 小 句 呈 “ 主 一\n谓 一 宾 1+ 宾 2 结构 ， 译 成 英文 时 语序 可 保持 不 变 ， 其 中 \"象征 \"可 用 symbolize 或\nrepresent, 也 可 转译 为 be the symbol of (EM SIE) ;生活 美满 ”与 “生意 兴隆 \"并 列 ，\n应 以 连词 and 连接 ， 均 处 理 为 “形容词 + 名 词 \" 形 式 《英语 里 形容 词 作 定语 一 般 置 于\n被 修饰 词 前 ， 与 汉语 四 字 短 语 较 常 用 的 \"名 词 + 形 容 词 \"结构 恰恰 相反 )。 第 二 小 句 主\n语 同 前 “ 红 灯 笼 ”谓语 * 乐 \"应 译 成 被 动 语 态 are hung (汉语 常 省 略 “被 \" 字 ， 翻 译 时 应\n注意 主语 为 施 动 者 还 是 受 动 者 \"在 .…… 节 日 期 间 \" 作 状语 , “春节 、 元 宵 节 和 国庆 等 ”\n为 对 节日 的 举例 , 可 借 suchas 或 介词 like 综合 译 为 on festivals such as/like Spring\nFestival. . .\n6. WIS, THREES ST A EG BITTE\n\n【 词汇】 如今 today; nowadays; in present days\n\n【句子 】 该 句 的 难点 在 于 : 无 主语 。“ 世 界 上 许多 其 他 地 方 ”并 非 主语 ， 而 是 地\n点 状语 ， 省 掉 的 主语 为 泛 指 的 “我 们 /人 们 \"， 所 以 切 勿 译 成 many other places of the\nworld can see red lanterns0 此 名 有 两 种 译 法 : 一 、 增 补 主语 , 译 成 主动 语 态 , 如 we can\nalso see red lanterns in many other parts of the world; 二 、 译 作 被 动 语 态 , 如 red lanterns\ncan also be seen in. . .\n\n33",
+          "source": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-06-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第31页【参考译文】（图像逐字转录）"
+        }
+      ]
+    }
+  ]
+}

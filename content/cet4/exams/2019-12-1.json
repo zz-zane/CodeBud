@@ -1,0 +1,2873 @@
+{
+  "id": "2019-12-1",
+  "title": "2019年12月 第1套",
+  "year": 2019,
+  "month": 12,
+  "set": 1,
+  "status": "ready",
+  "issues": [],
+  "sources": [
+    {
+      "id": "cet4-2019-12-1-mp3",
+      "title": "听力.mp3",
+      "localPath": "<本地四级真题目录>/2019.12 第1套/听力.mp3"
+    },
+    {
+      "id": "cet4-2019-12-1-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2019.12 第1套/真题.pdf"
+    },
+    {
+      "id": "cet4-2019-12-1-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2019.12 第1套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2019-12-1-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2019.12 第1套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are allowed 30 minutes to write a letter to a foreign friend who wants to teach English in China. Please recommend a city to him. You should write at least 120 words but no more than 180 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "For this part, you are allowed 30 minutes to write a letter to a foreign friend who wants to teach English in China. Please recommend a city to him. You should write at least 120 words but no more than 180 words.",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-12-1-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "For this part, you are allowed 30 minutes to write a letter to a foreign friend who wants to teach English in China. Please recommend a city to him. You should write at least 120 words but no more than 180 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "Dear Tom,\n\nOn hearing that you are planning to teach English in China and inquire which city to work in, I’d like to recommend our capital city Beijing, an international metropolis, to you.\n\nThe reasons why I recommend Beijing can be listed as follows. First of all, there are a lot of English-speaking foreigners in Beijing, which could help you adapt to life here very quickly. Furthermore, as the capital of several dynasties, Beijing has a profound cultural background, so you can better experience the extensive and profound traditional Chinese culture in Beijing. Most importantly, parents in Beijing attach great importance to their children’s English learning and many people who work in multinational companies also need to learn English.\n\nI truly hope that you can come to Beijing to start your teaching career and I’m looking forward to your arrival. If you have any questions about the city, please feel free to contact me for further information.\n\nYours sincerely,\nLi Ming",
+          "explanation": "结构 框图 :\n\nA Letter to a Foreign\n\n.第 2 段 具 体 说 明 所 推荐 城市 的 优势 : 北京 有 许多 讲 英语 的 外 国人 ， 有 助 于 适\n\nFriend Who Wants to -9| 应 新 环境 ; 北京 历史 悠久 ,来 北京 可 以 体验 博大 精深 的 中 国 传统 文化 ; 北\nTeach English in China | ， | 京 的 父母 尤其 重视 孩子 的 英语 教育 ， 跨 国 公 司 的 员工 也 需要 学 习 英语 。\n范文 点 评 :\n参考 范文 精彩 点 评\n(1] Dear Tom, C1) 书信 称呼 语 。\n\n[2] On hearing that you are planning to teach English in China and inquire\nwhich city to work in, I’d like to recommend our capital city Beijing, an\ninternational metropolis, to you.\n\n[3] The reasons why I recommend Beijing can be listed as follows. [4] First\nof all, there are a lot of English-speaking foreigners in Beijing, which could\nhelp you adapt to life here very quickly. [5] Furthermore, as the capital of\nseveral dynasties, Beijing has a profound cultural background, so you can\nbetter experience the extensive and profound traditional Chinese culture in\nBeijing. {6} Most importantly, parents in Beijing attach great importance to\ntheir children’s English learning and many people who work in multinational\ncompanies also need to learn English.\n\n[7] I truly hope that you can come to Beijing to start your teaching career\n\n【2] 开门 见 山 ,表明 写 信和 目\n的 :推荐 对 方 来 北京 教\n英语 。\n\n【3〗 承上启下 ,引出 下 文 的\n三 点 理由 。\n\n[4] (5) (6) 使 用 First of\nall, Furthermore “和\nMost importantly 有 层\n次 地 阐述 推荐 北京 的\n原因 。\n\n【7] 表达 希望 , 期待 对 方 的\n\nand I’m looking forward to your arrival. [8] Ifyou have any questions about the 到 来 。\ncity，please feel free to contact me for further information. 【8】 总 结 全 文 , 结 束 信件 。\n【9]】 Yours sincerely, | (9) 书信 落款 。\nLi Ming\n\n话题 词汇 :\nskyscraper 摩天 大 楼 ; well-paid 工资 高 的\nurbanization 城市 化 ， promising 有 前 景 的\nglobalization 全 球 化 ‘sense of achievement 成 就 感\ncompetitiveness 竞争 力 apply for a job 求职\n\n四 级 2019 年 12 月 9",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2019.12 第1套/真题解析听力.md 解析段 Part I（去除双栏混入的中文点评与编号噪声）"
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear three news reports, two long conversations and three passages.",
+      "audio": {
+        "src": "source-media/2019.12 第1套/听力.mp3",
+        "sourceId": "cet4-2019-12-1-mp3",
+        "sharedWith": []
+      },
+      "blocks": [
+        {
+          "id": "listening-news-1",
+          "title": "News Report One",
+          "text": "",
+          "transcript": "New York City police captured a cow on the loose in Prospect Park on Tuesday after the animal became an attraction for tourists while walking along the streets and enjoying the park facilities. The confused creature and camera-holding humans stared at each other through a fence for several minutes. At other times the cow wandered around the 526-acre park and the artificial grass field normally used for human sporting events. Officers used soccer goals to fence the animal in. However, the cow then moved through one of the nets, knocking down a police officer in the process. Police eventually trapped the cow between two vehicles parked on either side of a baseball field’s bench area. An officer then shot an arrow to put it to sleep. Then officers waited for the drug to take effect. After it fell asleep, they loaded the cow into a horse trailer. It was not clear where the cow came from or how it got lost. Police turned it over to the animal control department after they caught it.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          }
+        },
+        {
+          "id": "listening-news-2",
+          "title": "News Report Two",
+          "text": "",
+          "transcript": "Starting April 28th of this year, the National Museum of Natural History will begin Tenovating its fossil hall. The fossil hall, which displays some of the world’s oldest and largest fossil specimens, receives more than 2 million visitors each year. It’s one of the museum’s most famous attractions. As a result, the museum plans to expand the hall as well as add to its ancient birds collection. Bird lovers, both young and old, have already responded with excitement at the news. The museum’s social media account has been flooded with messages of support. In the meantime, the current collection will be closed. However, visitors will be compensated during the closure. Museum’s special exhibition area will now be free of charge. This week the resident exhibition is a display of ancient wall paintings on loan from Australia. They celebrate the cultural heritage of the country and will be available to view until Sunday. Next week the exhibition will be taken over by the Wildlife Photographer of the Year Competition. The winner of this year’s competition will be awarded a preview of the new fossil hall as well as a cash prize.\nSTEN",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          }
+        },
+        {
+          "id": "listening-news-3",
+          "title": "News Report Three",
+          "text": "",
+          "transcript": "Six birds have just been trained to pick up rubbish at a French historical theme park. According to the WOR 2019 4F 12 A 10 park’s manager, Mr. Villiers, the goal is not just to clear up the park. He says visitors are already good at keeping things clean. Instead, he wants to show that nature itself can teach us to take care of the environment. He says that rooks, the chosen birds, are considered to be particularly intelligent. In the right circumstances, they even like to communicate with humans and establish a relationship through play. The birds will be encouraged to clean the park through the use of a small box that delivers a small amount of bird food each time the rook deposits a cigarette end or a small piece of rubbish. So far, visitors to the theme park have been excited to see the birds in action. However, some parents are concerned that it encourages their children to drop litter so they can watch the birds pick it up. Villiers is not concerned about this criticism. He maintains most of the feedback he has received has been overwhelmingly positive. He hopes now to train more birds.\nOS",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-1",
+          "title": "Conversation One",
+          "text": "",
+          "transcript": "W: The name of the TV show we wish to produce is Science Nation .\nM: Please tell us more. What would Science Nation be about?\nW: It will be about science, all sorts of science. Each episode will focus on a different area of science, and tell us what we know, how we know it, and what we still don’t know. The show will have one host only, and this will be Professor Susan Paul from Harvard University. She is a great public speaker.\n: So, just be clear. Will the show’s format be like that of a documentary?\nW: Kind of. It will be like a documentary in the sense that it will be non-fiction and fact-based. However, x our idea is for it to be also fun and entertaining, something which traditional documentaries aren’t so much.\nPlease keep in mind this will be a new TV show like nothing ever done before.\nM: Okay, so it will be both educational and entertaining, and your audience will be anyone interested in science, right?\nW: That’s correct. Yes. : Right, thank you. So I think we’re more or less clear what the show will be like. Could you please tell us F< now what exactly you want from us?\nW: Yes, of course. Basically what we need from you is financial support. In order to go ahead with this idea, we need two million dollars. This would cover the cost of making all 12 shows in the first season for the first year. If the show is a success, we can then look at making a second season for the following year.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-2",
+          "title": "Conversation Two",
+          "text": "",
+          "transcript": "<5 25 & =x : What’s up with you? You don’t look very happy. : I feel like I’m a failure. I can’t seem to do anything very well.\n: I wouldn’t say that. You do very well in a lot of things. That presentation you gave last week was excellent. : Yes, but I have this urge to strive for perfection. I really want to push harder and progress further. : Well, that’s very admirable. But_be careful. Over-concern with being perfect can damage our confidence if we never achieve it.\n: Yes, I know. I feel awful whenever I make a mistake in whatever I’m trying to do. : Well, think about it. You can’t make progress without making mistakes and learning from them. Thomas Edison, the famous inventor, once said, “I’ve not failed. I’ve just found 10,000 ways that won’t work.”\n: You may well be right. I guess I should recognize my mistakes and learn the lesson they teach me and move M forward.\nW: Also, remember a successful ending is not the only thing worthy of a celebration. You need to recognize each step of progress you take towards achieving your goals, and no matter how tiny it is, it’s still good news.\nM: I always feel down when I see others accomplishing things, and I feel miserable about my own achievements. I’m always trying to be as good as others. But I never seem to get there.\nWw : Listen, if you always compare yourself with others, you'll never feel good enough. You’re the only person you should be comparing yourself with. When you compare your current status with the starting point, you'll find you’ve made progress, right? That’s good enough.\nM: That’s great advice. Thank you. I’m feeling better already.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-1",
+          "title": "Passage One",
+          "text": "",
+          "transcript": "Single-sex education can have enormous benefits for female students， Numerous studies have shown that women who attend single-sex schools tend to have stronger self-confidence, better study habits and more ambitious career goals than women who attend coeducational schools. Girls who graduate from single-sex schools are three times more likely to become engineers than those who attend coeducational schools. The reason is that all-girls schools encourage women to enter fields traditionally dominated by men, such as science, technology and engineering. In coeducational schools, girls are often expected to succeed only in humanities or the arts. Research has also shown that in coeducational settings, teachers are more likely to praise and give in-depth responses to a boy’s comments in class. In contrast, they might only respond to a girl’s comments with a nod. They are also more likely to encourage boys to work through problems on their own, while they tend to step in and help girls who struggle with a problem. In an all-girls setting, girls are more likely to speak up frequently and make significant contributions to class than in a coeducational setting. Girls studying in a single- sex setting also earn higher scores on their College Board and Advanced Placement exams than girls who study in coeducational settings. All-girls schools tend to be smaller than coeducational schools, which means teachers will be able to tailor the materials to girl students’ personal learning styles and interest.\ng",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-2",
+          "title": "Passage Two",
+          "text": "",
+          "transcript": "Today I found out that Seattle doesn’t really get that much rain compared with most US cities. In fact, Seattle ranks 44th among major US cities in average annual rainfall. Cities that get more rainfall than Seattle include Houston, Memphis, Nashville, and pretty much every major city on the eastern coast, such as New York, Boston and Miami. So why does everyone think of Seattle as a rainy city? The primary root of this misconception lies in that Seattle has a relatively large number of days per year with rainfall compared with New York and Boston, which get an average of about 16% more rain per year than Seattle, but also average between them about 36 fewer days a year of rainfall. So it rains a lot less in Seattle, and the rain is spread out over more days than those cities. This is why few locals in Seattle carry an umbrella generally.\nWhen it does rain, it tends to be a very light rain. That isn’t troublesome. It almost never really rains as most people think. On top of that, it never really storms in Seattle, either. Seattle gets an average of a mere seven days a year with thunder. So in short, if you like sunny but not too hot summers, mild winters but with lots of cloudy days, Seattle’s the place to be. Anyway, if you visit Seattle, don’t bring an umbrella. People will look at you, thinking you’re funny.\nEL",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-3",
+          "title": "Passage Three",
+          "text": "",
+          "transcript": "After a tough workout or a day full of physical activity, it’s common to find your muscles aching. But where do these pains come from? According to a German professor, the soreness comes from straining your muscles in an uncommon way, for example, jumping on a bicycle for a ride, because you haven’t ridden in a long time. Soreness occurs since your leg muscles aren’t used to that movement. When muscles perform an activity they aren’t regularly exposed to, the tiny fibres that are inside them are being torn apart. As muscle soreness develops, the body has to work to repair the muscle tears. But this doesn’t happen immediately. First, the body must realise the muscles are damaged. When the body realises the muscles are hurt, the response is to increase blood flow to the area and increase body heat. Damaged cells are then cleaned up and the body sends cells specially designed to break down the large muscle fibre fragments. Healing can take place after this. It takes about a day until these cells make it to your aching muscles. That’s why there is most often a delay associated with muscle soreness. Repair of damaged cells takes about two days, and afterwards the soreness disappears. Unfortunately, there is little that can be done to relieve muscle soreness. Pain-relieving creams don’t work, but a hot shower or warm bath can provide some relief.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-12-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "What happened in New York’s Prospect Park on the news report?",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Many facilities were destroyed by a wandering cow."
+            },
+            {
+              "key": "B",
+              "text": "A wandering cow lmocked down one of its fences."
+            },
+            {
+              "key": "C",
+              "text": "Some tourists were i.rtjured by a wandering cow."
+            },
+            {
+              "key": "D",
+              "text": "A wandering cow was captured by the police."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What happened in New York’s Prospect Park on the news report?\nTuesday? D) a) ATRUE. HORS. SRSA\nD) Gat) APH. PAPAL ANSE 物 生 效 并 且 牛 睡 着 后 ,把 它 装 进 了 一 辆 运送 马匹 的\n二 在 展望 公园 抓 住 了 一 头 在 逃 的 牛 。 这 头 牛 曾 在 拖车 。 当 时 并 不 清楚 这 头 牛 来 自 哪里 ,也 不 清楚 它\n这 个 526 英亩 的 公园 里 到 处 游 功 , 由 此 可 知 ,纽约 是 如 何 走失 的 。 警 察 抓 住 它 后 ,把 它 交 给 了 动物 管\n警察 抓 住 了 这 头 到 处 游荡 的 牛 。 理 部 门 。turn sth. over to sb. 意 为 “把 某 物 交 给",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "Question 2 (请根据录音选择最佳答案)",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It was shot to death by a police officer."
+            },
+            {
+              "key": "B",
+              "text": "It found its way back to the park's zoo."
+            },
+            {
+              "key": "C",
+              "text": "It became a great attraction for tourists."
+            },
+            {
+              "key": "D",
+              "text": "It was sent to the animal control department."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What do we learn about the cow from the end of 某 人 ”。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "Question 3 (请根据录音选择最佳答案)",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is the largest of its kind."
+            },
+            {
+              "key": "B",
+              "text": "It is going to be expanded."
+            },
+            {
+              "key": "C",
+              "text": "It is displaying more fossil specimens."
+            },
+            {
+              "key": "D",
+              "text": "It is starting an online exhibition."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What does the news report say about the fossil\nhall of the National Museum of Natural History? resident exhibition hall?\n\nB)【 精 析 】 细 节 辨 认 题 。 新 闻 开 头 提 到 , 国家 自然 历\n史 博 物 馆 将 翻新 其 化 石 展厅 。 接 下 来 提 到 ,化 石 展 驻 留 项 目 展 厅 将 展 出 从 澳大利亚 租借 来 的 古代\n厅 是 博物 馆 最 著名 的 景点 之 一 ,因此 ,博物 馆 计划 壁画 。\n扩建 该 展厅 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "Question 4 (请根据录音选择最佳答案)",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "A collection of bird fossils from Australia."
+            },
+            {
+              "key": "B",
+              "text": "Photographs of certain rare fossil exhibits."
+            },
+            {
+              "key": "C",
+              "text": "Some ancient wall paintings from Australia."
+            },
+            {
+              "key": "D",
+              "text": "Pictures by winners of a wildlife photo contest."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What is on display this week in the museum’s\n\nC)【 精 析 】〗 细 节 辨 认 题 。 新 闻 中 提 到 ,本 周 博物 馆 的",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "Question 5 (请根据录音选择最佳答案)",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pick up trash."
+            },
+            {
+              "key": "B",
+              "text": "Amuse visitors."
+            },
+            {
+              "key": "C",
+              "text": "They are quite easy to tame."
+            },
+            {
+              "key": "D",
+              "text": "They are clean and pretty."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What have six birds been trained to do at a French 类 一 一 白 嘴 鸦 尤为 聪明 。 在 合适 的 环境 里 , 它们 甚\n\nhistorical theme park?\n\nA) GT] MRA. PAPA, CARH\n家 历史 主题 公园 里 ,人 们 刚 训练 了 6 只 鸟 去 捡 垃\nKR. HEAP trash 与 原文 中 的 rubbish 属于 同 义\nBh WR HR’.",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "Why were rooks chosen by the park manager?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are especially intelligent."
+            },
+            {
+              "key": "B",
+              "text": "They are children's favorite."
+            },
+            {
+              "key": "C",
+              "text": "Children may contract bird diseases."
+            },
+            {
+              "key": "D",
+              "text": "Children may overfeed the rooks."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Why were rooks chosen by the park manager?\n\nBRESARRH FARR PMARBW\n关系 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "What is the concern of some parents?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Children may be harmed by the rooks."
+            },
+            {
+              "key": "B",
+              "text": "Children may be tempted to drop litter."
+            },
+            {
+              "key": "C",
+              "text": "Deliver messages."
+            },
+            {
+              "key": "D",
+              "text": "Play with children."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What is the concern of some parents?\n\nB)【 精 析 】 细 节 辨 认 题 。 新 闻 最 后 提 到 , 有些 家 长 担\n心 这 样 做 会 诱 使 孩子 们 为 了 看 鸟 捡 垃圾 而 故意 丢\nSR. BET HY tempted 和 原文 中 的 encourages\n\nA)【 精 析 】 目 的 原因 题 。 新 闻 中 提 到 ,被 选中 的 鸟 属于 同 义 蔡 换 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "What do we learn about the TV show Science Nation?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It will be produced at Harvard University."
+            },
+            {
+              "key": "B",
+              "text": "It will be hosted by famous professors."
+            },
+            {
+              "key": "C",
+              "text": "It will cover different areas of science."
+            },
+            {
+              "key": "D",
+              "text": "It will focus on recent scientific discoveries."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What do we learn about the TV show Science Nation?\n\nC) 区 精 析 】 细 节 辨 认 题 。 对 话 中 ,女士 介绍 说 这 个 节\n\n目 是 有 关 科 学 的 ,每 一 集 都 聚焦 于 一 个 不 同 的 科学 differ from traditional documentaries?\n\n领域 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "Question 9 (请根据录音选择最佳答案)",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It will be more futuristic."
+            },
+            {
+              "key": "B",
+              "text": "It will be more systematic."
+            },
+            {
+              "key": "C",
+              "text": "It will be more entertaining."
+            },
+            {
+              "key": "D",
+              "text": "It will be easier to understand."
+            }
+          ],
+          "answer": "C",
+          "explanation": "In what way will the TV show Science Nation\n\nC)【 精 析 】 细节 辨认 题 。 男 士 问 女 士 这 个 节目 是 否 和\n纪录 片 的 形式 差不多 ,女士 回答 说 有 相同 的 地 方 ，\n但 是 他 们 会 把 节目 做 得 更 有 趣 , 更 具有 娱乐 性 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "Question 10 (请根据录音选择最佳答案)",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "People interested in science."
+            },
+            {
+              "key": "B",
+              "text": "Youngsters eager to explore."
+            },
+            {
+              "key": "C",
+              "text": "Children in their early teens."
+            },
+            {
+              "key": "D",
+              "text": "Students majoring in science."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Who will be the intended audience of the TV\nshow Science Nation?\n\nA) 【 精 析 了】 细节 辨认 题 。 对 话 中 男士 问 女士 这 个 节\n\n士 给 出 了 肯定 回答 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "Question 11 (请根据录音选择最佳答案)",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Offer professional advice."
+            },
+            {
+              "key": "B",
+              "text": "Provide financial support."
+            },
+            {
+              "key": "C",
+              "text": "Help promote it on the Internet."
+            },
+            {
+              "key": "D",
+              "text": "Make episodes for its first season."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What does the woman want the man to do for the\nTV show?\n\nB) 【 精 析 】 细 节 辨 认 题 。 对 话 最 后 ,男士 问 女士 究竟\n想 让 他 们 做 什么 ,女士 回答 说 主要 是 想 获得 对 方\n的 财务 支持 ,并 明确 表示 需要 200 万 美元 。\n\n目的 目标 观众 是 不 是 任何 对 科学 感 兴 趣 的 人 , 女",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "How does the man feel about himself?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Unsure."
+            },
+            {
+              "key": "B",
+              "text": "Helpless."
+            },
+            {
+              "key": "C",
+              "text": "Concerned."
+            },
+            {
+              "key": "D",
+              "text": "Dissatisfied."
+            }
+          ],
+          "answer": "D",
+          "explanation": "How does the man feel about himself?\n\nD) (Hit) 推理 判断 题 。 对 话 开 头 男士 说 他 感觉 自己\n很 失败 ,好 像 什么 事 都 做 不 好 , 可见 他 对 自己 不\n满意 。 ‘",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "What does the woman think is the man’s problem?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "He is too concerned with being perfect."
+            },
+            {
+              "key": "B",
+              "text": "He loses heart when faced with setbacks."
+            },
+            {
+              "key": "C",
+              "text": "He is too ambitious in achieving goals."
+            },
+            {
+              "key": "D",
+              "text": "He takes on projects beyond his ability."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What does the woman think is the man’s problem?\n\nA) CT] ATH. WPL UHR\n完美 可 能 会 因为 不 能 实现 目标 而 打击 我 们 的 信\n心 , 可 见 女 士 认 为 男士 的 问题 是 过 于 想 要 做 到\n完美 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "Question 14 (请根据录音选择最佳答案)",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Embarrassed."
+            },
+            {
+              "key": "B",
+              "text": "Unconcerned."
+            },
+            {
+              "key": "C",
+              "text": "Miserable."
+            },
+            {
+              "key": "D",
+              "text": "Resentful."
+            }
+          ],
+          "answer": "C",
+          "explanation": "How does the man feel when he sees others\naccomplishing things?\n\nC) 【 精 析 】 细 节 辩 认 题 。 对 话 中 男士 提 到 , 当 看 到 其\n他 人 取得 成 就 时 ,他 总 会 感觉 很 失落 ,会 因为 自己\n的 成 绩 而 感觉 很 痛苦 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "What does the woman suggest the man do?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Try to be optimistic whatever happens."
+            },
+            {
+              "key": "B",
+              "text": "Compare his present with his past only."
+            },
+            {
+              "key": "C",
+              "text": "Always learn from others' achievements."
+            },
+            {
+              "key": "D",
+              "text": "Treat others the way he would be treated."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What does the woman suggest the man do?\n\nB) 【 精 析 】 细 节 辨 认 题 。 对 话 最 后 女士 建议 男士 只 需\n要 跟 自 己 比较 。 当 你 比较 自己 的 现状 和 起 点 时 ，\n会 发 现 自己 已 经 进步 了 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "Question 16 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They have a stronger sense of social responsibility."
+            },
+            {
+              "key": "B",
+              "text": "They are more likely to succeed in the humanities."
+            },
+            {
+              "key": "C",
+              "text": "They are more likely to become engineers."
+            },
+            {
+              "key": "D",
+              "text": "They have greater potential to be leaders."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What advantage does the speaker say girls from 学 环境 中 ,教师 更 可 能 表扬 男生 ,并 深度 回应 男生\nsingle-sex schools have over those from 的 意见 。 而 对 于 女生 的 意见 ,教师 可 能 仅仅 是 点\ncoeducational schools? 头 回应 。 教 师 更 有 可 能 鼓励 男生 独立 解决 问题 ，\nC) 【 精 析 】 细 节 辨 认 题 。 短 文 开头 提 到 ,毕业 于 单 性 却 插手 帮助 女生 解决 问题 。\n别 学 校 (女子 学 校 ) 的 女生 成 为 工程 师 的 概率 是 毕\n业 于 男女 同 校 的 学 校 的 女生 的 三 倍 , 即 女子 学 校 school?\n的 女生 更 有 可 能 成 为 工程 师 。 A) Gt] RUE. ARR KF SR",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "Question 17 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Praise girls who like to speak up frequently."
+            },
+            {
+              "key": "B",
+              "text": "Encourage girls to solve problems on their own."
+            },
+            {
+              "key": "C",
+              "text": "Insist that boys and girls work together more."
+            },
+            {
+              "key": "D",
+              "text": "Respond more positively to boys' comments."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What do teachers tend to do in coeducational 般 比 男女 同 校 的 学 校规 模 更 小 , 这 就 意味 着 教师\nsettings? 可 以 根据 女 学 生 的 个 人 学 习 风 格 和 兴趣 来 定制 教\nD) 【〖 精 析 】 细 节 辨 认 题 。 短 文 提 到 ,在 男女 同 校 的 教 学 材料 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "Question 18 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Offer personalized teaching materials."
+            },
+            {
+              "key": "B",
+              "text": "Provide a variety of optional courses."
+            },
+            {
+              "key": "C",
+              "text": "Place great emphasis on test scores."
+            },
+            {
+              "key": "D",
+              "text": "Pay extra attention to top students."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What are teachers more likely to do in an all-girls",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "What does the speaker find out about Seattle?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It often rains cats and dogs."
+            },
+            {
+              "key": "B",
+              "text": "It seldom rains in summer time."
+            },
+            {
+              "key": "C",
+              "text": "It does not rain as much as people think."
+            },
+            {
+              "key": "D",
+              "text": "It is one of the most rainy cities in the US."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What does the speaker find out about Seattle? 认为 西雅图 是 个 多 雨 的 城市 呢 ?”, SSR, HS\nC) 【 精 析 】 细 节 辨 认 题 。 短 文 开头 讲话 者 指出 , 跟 美 者 发 现 , 西 雅 图 并 没有 人 们 认为 的 那么 多 雨 。\n国 其 他 城市 相 比 , 西 雅 图 的 降雨 量 没 有 那么 多 , 西\n雅 图 的 年 平均 降雨 量 在 美国 的 主要 城市 中 排名 是 umbrella?\n\n第 钮 位 。 接 下 来 讲话 者 提出 疑问 “为 什么 人 们 都\n\n的 城市 相 比 ,西雅图 降雨 量 要 少 很 多 ,而 且 降 雨 期\n\n比较 分 散 , 这 就 是 当地 人 通常 很 少 带 伞 的 原因 。 暴风 雨 。 平 均一 年 只 有 7 天 打雷 。 如 果 你 喜欢 畏\n即使 下 雨 ,也 往往 是 小 雨 。 朗 但 又 不 是 很 热 的 夏天 , 温和 但 有 很 多 阴 天 的 冬",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "Question 20 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They drive most of the time."
+            },
+            {
+              "key": "B",
+              "text": "The rain is usually very light."
+            },
+            {
+              "key": "C",
+              "text": "They have got used to the rain."
+            },
+            {
+              "key": "D",
+              "text": "The rain comes mostly at night."
+            }
+          ],
+          "answer": "B",
+          "explanation": "Why do local people in Seattle seldom carry an\n\nB) 【 精 析 】 目 的 原因 题 。 讲 话 者 提 到 , 跟 其 他 雨量 多\n\nD) 【〖 精 析 】〗 目 的 原因 题 。 讲 话 者 提 到 ,西雅图 从 没有",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "Question 21 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It has a lot of places for entertainment."
+            },
+            {
+              "key": "B",
+              "text": "It has never seen thunder and lightning."
+            },
+            {
+              "key": "C",
+              "text": "It has fewer cloudy days than any other coast.al city."
+            },
+            {
+              "key": "D",
+              "text": "It has mild weather both in summer and in winter."
+            }
+          ],
+          "answer": "D",
+          "explanation": "Why does the speaker say Seattle is a good place 天 ,西雅图 就 是 这 样 的 地 方 。 因 此 讲话 者 认为 西\nto be? 雅 图 夏天 和 冬天 的 气候 都 比较 温和 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "Question 22 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "It occurs when people are doing a repetitive activity."
+            },
+            {
+              "key": "B",
+              "text": "It results from exerting one's muscles continuously."
+            },
+            {
+              "key": "C",
+              "text": "It happens when people engage in an uncommon activity."
+            },
+            {
+              "key": "D",
+              "text": "It comes from straining one's muscles in an unusual way."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What does the German professor say about 动 ,提高 身体 热度 。\nmuscle soreness?\nD) 【 精 析 】 细 节 辨 认 题 。 短 文中 提 到 ,一 位 德国 教授\n认为 ,以 一 种 不 常见 的 方式 拉 伤 肌肉 会 引起 肌肉 大 约 需要 两 天 ,之 后 酸痛 就 会 消失 。\n酸痛 。 25. What does the speaker suggest one do to relieve",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "What happens when muscles are damaged according muscle soreness?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Blood flow and body heat increase in the affected area."
+            },
+            {
+              "key": "B",
+              "text": "Body movements in the affected area become difficult."
+            },
+            {
+              "key": "C",
+              "text": "They begin to make repairs immediately."
+            },
+            {
+              "key": "D",
+              "text": "They gradually become fragmented."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What happens when muscles are damaged according muscle soreness?\nto the passage?\nA) 【 精 析 】 细 节 辨 认 题 。 短 文中 提 到 , 当 身 体 意识 到 膏 不 管用 ,但 洗 个 热 水 澡 或 泡 个 温水 澡 能 够 有 所\n肌肉 受 损 , 身 体 的 反应 是 加 快 受 损 区 域 的 血液 流 缓解 。\n\nOC) 【 精 析 】 细 节 辨 认 题 。 讲 话 者 在 最 后 提 到 ,止痛 药",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "How long does it take for damaged cells to heal?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "About one week."
+            },
+            {
+              "key": "B",
+              "text": "About two days."
+            },
+            {
+              "key": "C",
+              "text": "About ten days."
+            },
+            {
+              "key": "D",
+              "text": "About four weeks."
+            }
+          ],
+          "answer": "B",
+          "explanation": "How long does it take for damaged cells to heal?\nB 【 精 析 】 细 节 辨 认 题 。 短 文中 提 到 ， 修复 受 损 细胞",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "Question 25 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Apply muscle creams."
+            },
+            {
+              "key": "B",
+              "text": "Drink plenty of water."
+            },
+            {
+              "key": "C",
+              "text": "Have a hot shower."
+            },
+            {
+              "key": "D",
+              "text": "Take pain-killers."
+            }
+          ],
+          "answer": "C",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "When travelling overseas, do you buy water in plastic bottles or take your chances with tap water? Imagine you are wandering about on a Thai island or __(26)__ the ruins of Angkor. It's hot so you grab a bottle of water from a local vendor. It's the safe thing to do, right? The bottle is __(27)__, and the label says “pure water”. But maybe what's inside is not so __(28)__. Would you still be drinking it if you knew that more than 90 percent of all bottled water sold around the world __(29)__ microplastics?\n\nThat's the conclusion of a recently __(30)__ study, which analysed 259 bottles from 11 brands sold in nine countries, __(31)__ an average of 325 plastic particles per litre of water. These microplastics included a __(32)__ commonly known as PET and widely used in the manufacture of clothing and food and __(33)__ containers. The study was conducted at the State University of New York on behalf of Orb Media, a journalism organisation. About a million bottles are bought every minute, not only by thirsty tourists but also by many of the 2.1 billion worldwide who live with unsafe drinking water.\n\nConfronted with this __(34)__, several bottled-water manufacturers including Nestle and Coca-Cola undertook their own studies using the same methodology. These studies showed that their water did contain microplastics, but far less than the Orb study suggested. Regardless, the World Health Organisation has launched a review into the __(35)__ health risks of drinking water from plastic bottles.",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "transcript": null,
+          "translation": "Section 人\n\n【文章 来 源 】 本 文选 自 2018 年 8 月 29 日 发 表 在 www. traveller. com. au 网 站 上 的 一 篇 标题 为 “Drinking water\noverseas; Is it safe to always drink bottled water?”(《 在 国外 喝 水 :总 是 喝 瓶 装 水 安全 吗 ? 沪 的 文章 。\n【结构 框图 】 了\n\nrel 第 1、2? 段 介绍 了 一 项 研究 的 结论 : 瓶装 水 并 不 安全 ， 里 面 含有 塑料 微粒 。 i\n\n本 文 主要 讲述 饮用 | | f-------o-2e een ee ence cece eee c cence cece cece cece eee ceeerecceeeee\nSEAR) ah EARS, TATRA ART\n\\ 1 究 显 示 的 那么 高 。 但 是 世界 卫生 组 织 已 经 就 塑料 瓶装 水 的 潜在 健康 风险 展开 了 审查 。!\n\n四 级 2019 二 12 月 14\n\n【词性 分 析 】\n\n名 词 :\n\n动 词 :\n\n形容 词 :\n\nE) evidence 证 据 , 证 明 ;F) instant H 2), WA); G) liquid 液体 , RAW; IJ potential 可 能 性 , WH;\nO) substance 物质 ;主要 内 容 , 主 旨\n\nB) admiring 欣赏 ;钦佩 ;，C) contains 包含 , 容纳; D) defending 为 …… 辩 护 ;保护 ; E) evidence 证 明 ;\nH) modified 修改 ,改进 ; K) released 公布 ;释放 ; L) revealing 揭示 ,揭露 ;展现 ; M) sealed 把 …… 封\n45, tPA; N) solves 解决 ;解答\n\nA) adequate 足够 的 ,充分 的 ; B) admiring 钦佩 的 ,赞美 的 F) instant 马上 的 ,立刻 的 ; G) liquid 液体\n的 ; D natural 天 然 的 ; KAM; JD potential 潜在 的 ,可 能 的 ; L) revealing 揭露 性 的 , 揭示 内 情 的 ;\nM) sealed 密封 的 ,封闭 的"
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读",
+          "text": "The quiet heroism of mail delivery\n[A] On Wednesday, a polar wind brought bitter cold to the Midwest. Overnight, Chicago reached a low of 21 degrees Fahrenheit below zero, making it slightly colder than Antarctica ( mtlH}H) , Alaska, and the North Pole. Wind chills were 64 degrees below zero in Park Rapids, Minnesota, and 45 degrees below zero in Buffalo, North Dakota, according to the National Weather Service. Schools, restaurants, and businesses closed, and more than 1,000 flights were canceled.\n[B] Even the United States Postal Service (USPS) suspended mail delivery. \"Due to this arctic outbreak and concerns for the safety of USPS employees,\" USPS announced Wednesday morning, \"the Postal Service is suspending delivery Jan. 30 in some 3-digit ZIP Code locations.\" Twelve regions were listed as unsafe on Wednesday; on Thursday, eight remained.\n[C] As global surface temperatures increase, so does the likelihood of extreme weather. In 2018 alone, wildfires, volcanic eruptions, hurricanes, mudslides, and other natural disasters cost at least $ 49 billion in the United States. As my colleague Vann Newkirk reported, Puerto Rico is still confronting economic and structural destruction and resource scarcity from 2017's Hurricane Maria. Natural disasters can wreck a community's infrastructure, disrupting systems for months or years. Some services, however, remind U$ that life will eventually return, in some form, to normal.\n[D] Days after the deadly 2017 wildfires in Santa Rosa, California, a drone（无人机）caught footage（连续镜头） of a USPS worker, Trevor Smith, driving through burned homes in that familiar white van, collecting mail in an affected area. The video is striking: The operation is familiar, but the scene looks like the end of the world. According to Rae Ann Haight, the program manager for the national­ preparedness office at USPS, Smith was fulfilling a request made by some of the home owners to pick up any mail that was left untouched. For Smith, this was just another day on the job. \" I followed my route like I normally do,\" Smith told a reporter. \"As I came across a box that was up but with no house, I checked, and there was mail-outgoing mail-in it. And so I picked those up and carried on. \" 201s. 12; 4 cm 1 lU\n[E] USPS has sophisticated emergency plans for natural disasters. Across the country, 285 emergency­ management teams are devoted to crisis control. These teams are trained annually using a framework known as the three Ps: people, property, product. After mail service stops due to weather, the agency's top priority is ensuring that employees are safe. Then it evaluates the health of infrastructure, such as the roads that mail carriers drive on. Finally, it decides when and how to re-open operations. If the destruction is extreme, mail addressed to the area will get sent elsewhere. In response to HUITicane Katrina in 2005, USPS redirected incoming New Orleans mail to existing mail facilities in Houston. Mail that was already processed in New Orleans facilities was moved to an upper floor so it would be protected from water damage.\n[F] As soon as it's safe enough to be outside, couriers（邮递员） start distributing accumulated mail on the still-accessible routes. USPS urges those without standing addresses to file change-of-address forms with their new location. After HUITicane Katrina hit in 2005, mail facilities were set up in dozens of locations across the country in the two weeks that USPS was unable to provide street delivery.\n[G] Every day, USPS processes, on average, 493. 4 million pieces of mail-anything from postcards to Social Security checks to medicine. Spokespeople from both USPS and UPS told me all mail is important. But some mail can be extremely sensitive and timely. According to data released in January 2017, 56 percent of bills are paid online, which means that just under half of payments still rely on delivery services to be completed.\n[H] It can be hard to identify which parcels are carrying crucial items such as Social Security checks, but USPS and UPS try their best to prioritize sensitive material. They will coordinate with the Social Security Administration to make sure that Social Security checks reach the right people in a timely fashion. After HUITicane Florence and HUITicane Michael last fall, USPS worked with state and local election boards to make sure that absentee ballots were available and received on time.\n[I] Mail companies are logistics（物流） companies, which puts them in a special position to help when disaster strikes. In a 2011 USPS case study, the agency emphasized its massive infrastructure as a \"unique federal asset\" to be called upon in a disaster or terrorist attack. \"I think we're unique as a federal agency,\" USPS official Mike Swigart told me, \"because we're in literally every community in this country ... We're obligated to deliver to that point on a daily basis. \"\n[J] Private courier companies, which have more dollars to spend, use their expertise in logistics to help revitalize damaged areas after a disaster. For more than a decade, FedEx has supported the American Red Cross in its effort to get emergency supplies to areas affected by disasters, both domestically and internationally. In 2012 , the company distributed more than 1 , 200 MedPacks to Medical ReseIVe Corps groups in California. They also donated space for 3. 1 million pounds of charitable shipping globally. Last October, the company pledged $ 1 million in cash and transportation support for HUITicanes Florence and Michael. UPS's charitable ann, the UPS Foundation, uses the company's logistics to help disaster-struck areas rebuild. \"We realize that as a company with people, trucks, warehouses, we needed to play a larger role,\" said Eduardo Martinez, the president of the UPS Foundation. The company employs its trucks and planes to deliver food, medicine, and water. The day bef<>re I spoke to Martinez in November, he had been touring the damage from HUITicane Michael in Florida with the American Red Cross. \"We have an obligation to make sure our communities are thriving,\" he said.\n[K] Rebuilding can take a long time, and even then, impressions of the disaster may still remain. Returning to a normal life can be difficult, but some small routines-mail delivery being one of them-may help residents remember that their communities are still their communities. \"When they see that carrier back out on the street, \" Swigart said, \"that's the first sign to them that life is starting to return to normal. \"",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "transcript": null,
+          "translation": "CCB RR) 本 文选 自 2019 年 2 月 发 表 在 www. theatlantic. com(《 大 西洋 月 刊 》? 官 网 ] 上 的 一 篇 标题 为 “The quiet\nheroism of mail delivery”(《 默 默 无 闻 的 英雄 主义 一 一 邮件 递送 汶 的 文章 。\n\n【结构 框图\na -el A)、B) 段 指出 近来 的 一 场 寒潮 使 美国 邮政 署 暂停 了 邮件 投递 业务 。 i\n[0] CPST RN A AOE ae TERA. BR\nPeee soe MEMO ee Ce ee cla cae !\n国 邮件 递送 人 员 在 | | a pa pains aaa\nBUMBLE ||) Oa HBL SERMABELH eR A ORES ERK BREE\n持 工作 ， 帮 助人 们 | || MURR ccc\n的 生活 回归 正常 。 上 | vnnno nnn n acne\nPO! 0 县 指出 邮政 公司 在 灾难 袭 来 时 处 于 特殊 地 位 ， 会 尽力 伸 出 援手 帮助 人 们 。 。\nLo J). KBE HALA BURA ITER TT ENE. |\n\n四 级 2019 年 12 月 16"
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Professor Ashok Goel of Georgia Tech developed an artificially intelligent teaching assistant to help handle the enormous number of student questions in the online class, Knowledge-Based .Artificial Intelligence. This online course is a core requirement of Georgia Tech's online Master of Science in Computer Science program. Professor Goel already had eight teaching assistants, but that wasn't enough to deal with the overwhelming number of daily questions from students. Many students drop out of online courses because of the lack of teaching support. When students feel isolated or confused and reach out with questions that go unanswered, their motivation to continue begins to fade. Professor Goel decided to do something to remedy this situation and his solution was to create a virtual assistant named Jill Watson, which is based on the IBM Watson platform. Goel and his team developed several versions of Jill Watson before releasing her to the online forums. At first, the virtual assistant wasn't too great. But Goel and his team sourced the online discussion forum to find all the 40,000 questions that had ever been asked since the class was launched. Then they began to feed Jill with the questions and answers. After some ac\\justments and sufficient time, Jill was able to answer the students' questions correctly 97% of the time. The virtual assistant became so advanced and realistic that the students didn't know she was a computer. The students, who were studying artificial intelligence, were interacting with the virtual assistant and couldn't tell it apart from a real human being. Goel didn't inform them about Jill's true identity until April 26. The students were actually very positive about the experience. The goal of Professor Goel's virtual assistant next year is to take over answering 40% of all the questions posed by . students on the online forum. The name Jill Watson will, of course, change to something else next semester. Professor Goel has a much rosier outlook on the future of artificial\n\nintelligence than, say, Elon Musk, Stephen Hawking, Bill Gates or Steve Wozniak.",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "transcript": null,
+          "translation": "【文章 来 源 】 本 文选 自 2016 年 6 月 5 日 发 表 在 www. interestingengineering. com(《 趣 味 工程 学 》 官 网 ] 上 一 篇\n标题 为 “Students Didn’t Know Their Teaching Assistant Was A Computer”(《 学 生 们 不 知道 他 们 的 助教 是 一\nSHEL) 的 文章 。\n\n【结构 框图 】\n\n， 第 1 段 指出 阿 肖 克 。 戈 埃 尔 教授 开设 的 “基于 知识 的 人 工 智能 \"课程 ， 虽 然 他 已 经 )\n有 了 8 名 助教 ， 但 这 还 不 足以 应 对 学 生 每 天 提出 的 大 量 问题 。 '\n\ne@\n\n本 文 主要 介绍 了 人 | ;第 2 自 具 体 介绍 芭 埃 尔 教 授 开 发 了 一 个 名 为 吉尔 * 沃 琳 的 虚拟 助理 来 解决 上 述\n工 智能 助教 帮助 处 | | 站 题 。\nMAMMA [| --- 2222002 2oescoos2oossoes2cos 2200 IIIIIIIIIIIIIIINII 、\n量 学 生 问题 。 上 -@ 1 第 3 妥 指 出 经 过 调整 ， 虚 拟 助教 吉尔 回答 学 生 问题 的 正确 率 达 9796。 |\n\n1 | 外 指 出 应 所 助教 明 年 的 目标 是 回答 网 上 论坛 上 40% 的 学 生 问题\n\n四 级 2019 年 12 月 19"
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "Thinking small, being engaging, and having a sense of humor don't hurt. Those are a few of the traits of successful science crowdfunding efforts that emerge from a recent study that examined nearly 400 campaigns. But having a large network and some promotional skills may be more crucial. Crowdfunding, raising money for a project through online appeals , has taken off in recent years for everything from mald.ng movies to producing water-saving gadgets. Scientists have tried to tap Internet donors , too, with mixed success. Some raised more than twice their goals , but others have fallen short of reaching even modest targets. To determine what separates science crowdfunding triumphs from failures, a team led by science communications scholar Mike Schafer of the University of Zurich examined the content of the webpages for 371 recent campaigns. Four traits stood out for those that achieved their goals, the researchers report in Public\n\nUnderstanding of Science. For one, they use a crowdfunding platform that specializes in raising money for science, and not just any kind of project. Although sites like Kickstarter take all comers, platforms such as Experiment. corn and Petridish. org only present scientific projects. For another, they present the project with a funny video because good visuals and a sense of humor improved success. Most of\n\nthem engage with potential donors, since projects that answered questions from interested donors fared better. And they target a small amount of money. The projects included in the study raised $4,000 on average , with 30% receiving less than $1,000. The more money a project sought, the lower the chance it reached its goal, the researchers found. Other factors may also significantly influence a project's success, most notably, the size of a scientist's personal and professional networks, and how much a researcher promotes a project on their own. Those two factors are by far more critical than the content on the page. Crowdfunding can be part of researchers' efforts to reach the public, and people give because \" they feel a connection to the person\" who is doing the fundraising-not necessarily to the science.",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "transcript": null,
+          "translation": "“Thinking of Crowdfunding Your Science? Study Suggests Some Tips”(《 想 众 筹资 助 你 的 科研 项 目 ? 一 项 研究\n给 出 了 建议 汶 的 文章 。\n\n【结构 框图 】"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-12-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【 考 点 】 动 词 辨析 题 。 处 应 填 人 含有 “包含 ,含有 ”意义 的 动词 , 故 本 题 答\nB) 【语法 判断 】 空 格 前 面 有 or, 说 明 空 格 所 在 部 分 案 为 C) contains。 备 选项 中 ,另外 一 个 动词 的 第\nthe ruins of Angkor 与 wandering about 三 人 称 单数 形式 是 N) solves, 填 人 空格 不 符合 上\non a Thai island 构成 并 列 结构 。 并 列 结构 前 后 成 下 文 语义 , 故 排除 。\n分 要 一 致 ,因此 本 空 应 填 人 动词 的 -ing 形式。 30.【 考 点 】 语 义 推 断 题 。\n【语义 判断 】 本 句 是 在 设想 出 国旅 游 的 情形 。 空 格\n前 面 提 到 ,想象 你 正在 泰国 的 一 个 小 岛 上 漫步 , 空 study 中 , 前 有 副词 recently, 后 有 名 词\n格 后 面 应 该 表示 你 在 “欣赏 ”或 者 “游览 > 吴 哥 遗 study, 因 此 应 填 人 形容 词 或 动词 的 分 词 形式 。\n址 。 因 此 ,本 题 答 案 为 B) admiring. 【语义 判断 根据 常识 可 知 , 只 有 公开 了 研究 结果 ，\nK)【 语 法 判断 】 空 格 位 于 介词 短语 of a recently",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "M",
+          "explanation": "【 考 点 】 语 义 推 断 题 。 人 们 才能 知道 研究 的 结论 ,因此 可 推断 本 空 应 填\nMD【 语 法 判断 】 空 格 前 面 是 系 动词 is, 因 此 可 填 人 形 和 含有 “公开 , 公布 ?意义 的 词 , 故 答案 为 K)\n容 词 或 名 词 作 句子 的 表 语 ,也 可 填 人 动词 分 词 形 released。 备 选项 中 ,L) revealing 有 “揭示 ,揭露 >\n式 构成 被 动 句 或 现在 进行 时 。 的 含义 ,但 是 study 应 该 是 被 公开 ,应 用 过 去 分 词 ，\n【语义 判断 】 本 句 中 的 The bottle 指 上 文 提 到 的 随 故 排除 L) 。\n手 从 当地 小 贩 那 里 买 的 a bottle of water, 由 此 可\n以 推断 ,瓶子 是 密封 的 .未 打开 的 , 故 本 题 答 案 为\nMD sealed, conclusion, 其 后 的 which 引导 非 限制 性 定语 从",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【 考 点 】 语 义 推断 题 。 句 ,修饰 study, 其 后 空格 所 在 部 分 应 该 是 结果 状\nD 【语法 判断 】 空 格 前 面 有 系 动词 is 和 副词 so, 因此 语 , 表 明 这 项 研究 的 结果 ,由 此 推测 空格 处 应 填 人\n应 填 人 形容 词 作 句 子 的 表 语 。 动词 的 分 词 形 式 。\n【语义 判断 】 本 句 中 的 But 表示 该 句 语义 与 上 一 名 【语义 判断 】 空 格 后 内 容 表明 ,每 升水 中 平均 有\n构成 转折 关系 。 上 一 句 提 到 ,瓶子 的 标签 上 写 着 325 个 塑料 微粒 ,这 应 该 是 该 研究 的 结果 , 故 空格\n“纯净 水 ”, 由 转折 关系 可 知 ,本 句 是 在 说 明 瓶子 里 处 应 填 人 含有 发现? 意义 的 动词 。 所 以 ,本 题 答\n面 的 水 不 一 定 是 纯净 的 ,因此 应 填 人 含有 “纯净 ， 38h L) revealing“ 揭 示 ,揭露 ”。\n天 然 \"意义 的 形容 词 , 故 本 题 答 案 为 natural.",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【 考 点 】 动 词 辨析 题 。 O) 【语法 判断 〗 空 格 前 面 有 冠 词 a, 后 面 是 过 去 分 词\n© 【语法 判断 】 分 析 句 子 结构 可 知 , 空 格 位 于 that 引 短语 作 后 置 定语 ,因此 推测 空格 处 应 填 人 可 数 名\n导 的 宾语 从 句 中 ,这 个 从 名 缺少 谓语 动词 ,又 因为 词 的 单数 形式 。\n从 名 主语 是 more than 90 percent of all bottled 【语义 判断 】 空 格 所 在 部 分 指出 ,这 些 塑料 微粒 包\nwater, 因 此 空格 处 应 填 人 动词 的 第 三 人 称 单 数 括 一 种 俗称 PET 的 。 了 PET 应 该 是 一 种\n形式 。 化 学 物质 ,因此 本 空 应 填 人 含有 “物质 ,材料 ”意义\n【语义 判断 】 本 句 承 接 上 一 句 , 说 明 瓶 装 水 并 不 纯 的 名 词 , 故 答案 为 O) substance.\n净 。 空 格 所 在 宾语 从 句 指出 ,全 世界 出 售 的 90%\n以 上 的 瓶装 水 中\n塑料 微粒 。 因 此 ,空格\n由 and 连接 ,是 并 列 关系 ,因此 空格 处 应 填 人 形容 “发 现 , 结 论 , 结 果 ?” 意 义 的 名 词 。 备 选项 中 只 有\n词 或 名 词 ,修饰 containers。 E) evidence 符合 文 义 , 填 入 空格 表示 “ 面 对 这 一\n【语义 判断 】 空 格 所 在 部 分 指出 ,PET 这 种 物质 广泛 iE”.\nFAP a A 容器 。 由 上 文 可 知 ，\nPET 是 在 瓶装 水 里 发 现 的 ,由 此 可 推断 PET 也 可 用\n于 生产 盛 液体 的 容器 , 故 本 题 答案 为 G) liquid, 此 应 填 人 形容 词 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "K",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "L",
+          "explanation": "【 考 点 】 动 词 辨析 题 。\nL) 【语法 判断 】 第 二 段 首 句 的 主干 是 That's the",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "O",
+          "explanation": "【 考 点 】 名 词 辨析 题 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【 考 点 】 语 义 推断 题 。\nG) 【语法 判断 】clothing food 和 containers",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【 考 点 】 名 词 辨 析 题 。 【语义 判断 ]】 空格 所 在 句 前 一 句 提 到 ,瓶装 水 生产\nE) 【语法 判断 】 空 格 前 有 限定 词 this, 因 此 应 填 人 名 商 自 己 的 研究 发 现 , 他 们 的 水 中 含有 的 塑料 微粒\n词 单 数 形 式 或 不 可 数 名 词 。 比 奥 博 媒 体 的 研究 发 现 的 要 少 得 多 。 但 是 无 论 多\n【语义 判断 】 本 名 指出 ,包括 淮 梨 .可 口 可 乐 在 内 少 ,水 中 的 塑料 微粒 对 人 体 健 康 都 是 有 害 的 ,因此\n的 几 家 瓶装 水 生产 商 利 用 同样 的 方法 进行 了 他 世界 卫生 组 织 发 起 这 项 审查 ,不 过 目前 风险 还 不\n们 自己 的 研究 。 由 此 可 知 , this 指 的 就 明确 ,因此 本 空 应 填 人 含有 “潜在 的 ,隐藏 的 意义\n是 第 二 段 研 究 的 结果 ,所 以 空格 处 应 填 人 含有 的 形容 词 , 故 本 题 答案 为 了) potential。\n参考 译文 El\n出 国旅 行 时 ,你 是 买 塑料 瓶装 水 还 是 冒险 喝 自 来 水 ? 想象 你 正在 泰国 的 一 个 小 岛 上 漫步 ,或 者 正在\n欣赏 吴 哥 遗址 。 天 气 太 热 了 ,于 是 你 就 从 当地 小 贩 那 里 随手 买 了 一 瓶 水 。 这 是 安全 的 事情 ,对 吧 ? 瓶子 是\n密封 的 ,标签 上 写 着 “纯净 水 ”。 然 而 ,瓶子 里 的 水 不 一 定 这 么 天 然 。 如 果 你 知道 全 世界 出 售 的 90% 以 上\n的 瓶装 水 中 含有 塑料 微粒 ,你 还 会 喝 吗 ?\n这 是 最 近 公布 的 一 项 研究 的 结论 ,该 研究 分 析 了 在 9 个 国家 出 售 的 11 个 品牌 的 259 瓶 水 ,发 现 每 升\n水 中 平均 有 325 个 塑料 微粒 。 这 些 塑 料 微粒 包括 一 种 俗称 PET 的 物质 ,这 种 物质 被 广泛 用 于 制造 服装 、\n食品 和 液体 容器 。 该 研究 是 由 纽约 州立 大 学 代表 奥博 媒体 (一 家 新 闻 机 构 ) 进 行 的 。 每 分 钟 大 约 有 100 万\n瓶 水 被 购买 ,购买 者 不 仅 有 口 兆 的 游客 ,还 有 全 世界 缺乏 安全 饮用 水 的 21 亿 人 中 的 许多 人 。\n面 对 这 一 证 据 , 包 括 雀 集 、 可 口 可 乐 在 内 的 几 家 瓶装 水 生产 商 利 用 同样 的 方法 进行 了 他 们 自己 的 研\n究 。 这 些 研究 表明 ,他 们 的 水 中 确实 含有 塑料 微粒 ,但 是 比 奥博 媒体 研究 显示 的 少 得 多 。 无 论 怎样 ,世界\n卫生 组 织 已 经 发 起 了 一 项 关于 饮用 塑料 瓶装 水 的 潜在 健康 风险 的 审查 。\nN y,",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adequate"
+            },
+            {
+              "key": "B",
+              "text": "admiring"
+            },
+            {
+              "key": "C",
+              "text": "contains"
+            },
+            {
+              "key": "D",
+              "text": "defending"
+            },
+            {
+              "key": "E",
+              "text": "evidence"
+            },
+            {
+              "key": "F",
+              "text": "instant"
+            },
+            {
+              "key": "G",
+              "text": "liquid"
+            },
+            {
+              "key": "H",
+              "text": "modified"
+            },
+            {
+              "key": "I",
+              "text": "natural"
+            },
+            {
+              "key": "J",
+              "text": "potential"
+            },
+            {
+              "key": "K",
+              "text": "released"
+            },
+            {
+              "key": "L",
+              "text": "revealing"
+            },
+            {
+              "key": "M",
+              "text": "sealed"
+            },
+            {
+              "key": "N",
+              "text": "solves"
+            },
+            {
+              "key": "O",
+              "text": "substance"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【 考 点 形容词 辨析 题 。\n也 【语法 判断 】 空 格 前 有 定 冠 词 the, 后 面 有 名 词 , 因",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第4页（图像核对，词库A–O）"
+        },
+        {
+          "id": "2019-12-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "The United States Postal Service has a system to ensure its employees' safety.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "E",
+          "explanation": "E)",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "One official says USPS is unique in that it has more direct reach to communities compared with other federal agencies.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "D",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "Natural disasters can have a long-lasting impact on community life.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "C",
+          "explanation": "©",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Mail delivery service is still responsible for the completion of almost half of payments.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "G",
+          "explanation": "G)",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "The sight of a mailman on the street is a reassuring sign of life becoming normal again.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "K)\nse\n【定位 】 由 题 干 中 的 employees’ safety 定位 到 文章\n了 E) 段 第 四 名 。\n【 精 析 】 同 义 转述 题 。 定 位 句 提 到 , 由 于 天 气 原因\n导致 的 邮寄 服务 停止 后 ,该 机 构 的 首要 任务 是 确\n保 员 工 的 安全 。 原 文中 的 the agency 指 的 就 是\nThe United States Postal Service, 题 干 中 的\nensure its employees’ safety 对 应 定位 句 中 的\nensuring that employees are safe, 故 答案 为 也 ) 。\n【定位 〗 由 题 干 中 的 unique、communities 和\nfederal agencies 定位 到 文章 D) 段 倒数 第 二 句 。\n【 精 析 】〗 同 义 转述 题 。 定 位 句 指出 ,美国 邮政 署 官\n员 迈 克 。 斯 威 格 特 认 为 美国 邮政 署 作为 一 个 联邦\n机 构 是 独一无二 的 ,因为 它 几 乎 存在 于 这 个 国家\n的 每 个 社区 。 题 干 中 的 One official 指 的 是 原文\n中 的 USPS official Mike Swigart, 题 干 中 的 more\ndirect reach to communities 是 对 定位 句 中 we’re\nin literally every community in this country 的 同\n义 转述 , 故 答案 为 D 。\n【定位 3 由 题 干 中 的 Natural disasters 和\ncommunity life 定位 到 文章 C) 段 倒数 第 二 句 。\n【 精 析 】 同 义 转述 题 。 定 位 句 指出 , 自然 灾害 能 够\n破坏 一 个 社区 的 基础 设施 , 扰乱 系统 达 几 个 月 或\n几 年 之 久 。 由 此 可 知 ,自然 灾害 对 于 社区 生活 有\n着 持久 的 影响 。 题 干 中 的 have a long-lasting\nimpact on community life 是 对 定位 句 中 wreck a\ncommunity’s infrastructure, disrupting systems\nfor months or years 的 同 义 转述 , 故 答案 为 C) 。\n【定位 3 由 题 干 中 的 Mail delivery service 和\npayments 定位 到 文章 G) 段 最 后 一 句 。\n【 精 析 】〗 同 义 转述 题 。 定 位 句 指出 ,根据 2017 年\n1 月 份 公布 的 数据 , 56% 的 账单 是 通过 线 上 支付\n的 ,这 意味 着 只 有 不 到 一 半 的 账单 仍然 依靠 邮政\n服务 来 完成 。 由 此 可 知 ,邮递 服务 仍 要 负责 几乎\n一 半 的 账单 递送 工作 。 题 干 中 的 is. . . responsible\nfor 对 应 定位 句 中 的 rely on, AF PH almost half\nof payments 对 应 定位 句 中 的 under half of\npayments, 故 答案 为 G) 。\n【定位 】 由 题 干 中 的 a mailman on the street.sign\n和 life becoming normal 定位 到 文章 K) 段 最 后\n一 句 。\n【 精 析 】 同 义 转述 题 。 定 位 句 指出 ,斯 威 格 特 说 , 当\n人 们 看 到 邮递 员 再 次 出 现在 街 上 , 那 对 于 他 们 来",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "After Hurricane Katrina interrupted routine delivery, temporary mail service points were set up.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "了 7",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "Postal service in some regions in the U.S. was suspended due to extreme cold weather.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "B",
+          "explanation": "B)",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "Private postal companies also support disaster relief efforts by distributing urgent supplies.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "D\nD)\n说 就 是 生活 开始 恢复 正常 的 第 一 个 信号 。 题 干 中\n的 a mailman on the street 对 应 定位 句 中 的\ncarrier back out on the street, AF PAY sign of\nlife becoming normal again 对 应 定位 句 中 的 sign\nto them that life is starting to return to normal,\nBUERA K).\n(eft) fh i-F PAY Hurricane Katrina 和 mail\nservice points 定位 到 文章 F) 段 最 后 一 句 。\n【 精 析 】 同 义 转 述 题 。 定 位 句 指出 ,2005 4F RR\n“卡特 里 娜 \"来 袭 后 ,在 美国 邮政 无 法 提供 街道 投\n递 服 务 的 地 方 , 全 国 各 地 两 周 内 新 建 了 几 十 个 邮\n政 设 施 。 题 干 中 的 interrupted routine delivery 和\ntemporary mail service points 分 别 对 应 定位 句 中\n的 USPS was unable to provide street delivery 和\nmail facilities, 故 答案 为 F) 。\n【定位 】 由 题 干 中 的 suspended 和 extreme cold\nweather 定位 到 文章 B) 段 第 一 、 二 句 。\n【 精 析 】 细 节 归 纳 题 。 定 位 句 指出 ,甚至 美国 邮政\n署 也 暂停 了 邮件 投递 业务 。 美 国 邮政 署 周 三 早上\n宣布 :由 于 这 次 极 寒 天 气 爆 发 ,出 于 对 公司 员工\n的 安全 考虑 ,美国 邮政 署 将 暂停 1 月 30 日 在 一 些\n三 位 数 邮编 地 区 的 邮递 服务 .” 题 干 提 到 的 美国 一\n些 地 区 的 邮递 服务 由 于 极 寒 天 气 而 暂停 是 对 定位\n句 的 归纳 概括 , 故 答案 为 B) 。\n【定位 】 由 题 干 中 的 Private postal companies,\ndisaster relief efforts 和 urgent supplies 定位 到 文\n章 J 段 第 一 句 。\n【 精 析 】 细 节 归 纳 题 。 定 位 句 指出 ,私人 快递 公司\n有 更 多 的 钱 可 以 花 , 他 们 利用 自己 在 物流 领域 的\n专长 ,帮助 灾后 受 损 地 区 恢复 生机 。 接 下 来 的 第\n二 至 四 句 通过 举例 说 明了 一 些 私人 快递 公司 在 灾\n后 所 做 的 工作 。 题 干 是 对 JJ 段 内容 的 归纳 概括 ，\n故 答案 为 了 ) 。\n.【 定 位 】 由 题 干 中 的 A dedicated USPS employee\n和 extreme conditions 定位 到 文章 D) 段 第 一 句 。\n【 精 析 】 同 义 转述 题 。 定 位 句 指出 ,2017 年 ,加 利\n福 尼 亚 州 圣 罗 莎 那 场 致命 的 火灾 过 后 几 天 ,一 架\n无 人 机 捕捉 到 了 一 位 美国 邮政 署 员 工 特 雷 弗 。 史\n密斯 的 连续 镜头 。 他 正 开 着 那 辆 熟悉 的 白色 货车\n穿梭 在 焚毁 的 房子 中 间 , 揽 收 受灾 区 内 的 邮件 。\n题 干 中 的 A dedicated USPS employee 和 on the\njob 分 别 对 应 定位 句 中 的 a USPS worker 和\n17\ncollecting mail in an affected area, 故 答案 为 D) 。 邮政 署 和 美国 联合 包 衷 运送 服务 公司 都 会 尽 他 们",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "A dedicated USPS employee was on the job carrying out duties in spite of extreme conditions.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）；真题.pdf 第6页（修正 employee 乱码）"
+        },
+        {
+          "id": "2019-12-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Postal services work hard to identify items that require priority treatment.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【 定 位 〗 由 题 干 中 的 work hard. identify 和 priority 的 最 大 努力 来 优先 处 理 敏 感 材料 。 题 干 中 的\ntreatment 定位 到 文章 H) 段 第 一 句 。 work hard 对 应 定位 句 中 的 try their best, 题 干 中\nED) 【 精 析 】 同 义 转述 题 。 定 位 句 指出 ,虽然 很 难 识别 的 priority treatment 对 应 定位 句 中 的 prioritize\n出 哪些 包 衷 装着 社保 账单 等 关键 物品 ,但 是 美 sensitive material, 故 答案 为 HD) 。\nBREN ©\n默默无闻 的 英雄 主义 一 一 邮件 递送\nA 周三 ,一 场 极地 风 给 美国 中 西部 地 区 带 来 了 严寒 。 一 夜 之 间 , 芝 加 哥 气 温 跌 至 零下 21 华氏 度 , 其 温\n度 甚至 比 南 极 洲 、 阿 拉 斯 加 和 北极 地 区 更 冷 一 些 。 根 据 美 国 国家 气象 局 报道 ,在 明尼苏达 州 帕克 拉\n皮 效 ,风寒 指数 达到 了 零下 64 度 , 北 达科他 州 布 法 罗 达 到 零下 45 度 。 学 校 、 餐 馆 和 企业 关门 ，\n1,000 多 个 航班 被 取消 。\nB) 〈42) 甚 至 美国 邮政 署 也 暂停 了 邮件 投递 业务 。 美 国 邮政 署 周三 早上 宣布 :由 于 这 次 极 寒 天 气 爆发 ，\n出 于 对 公司 员工 的 安全 考虑 ,美国 邮政 署 将 暂停 1 月 30 日 在 一 些 三 位 数 邮编 地 区 的 邮递 服务 .” 周\n三 ,有 12 个 地 区 被 列 为 不 安全 地 区 , 周 四 , 仍 有 8 个 。\nC) ” 随 着 全 球 地 表 温度 上 升 ,极端 天 气 发 生 的 可 能 性 也 在 增加 。 仅 在 2018 年 ,野火 .火山 路 发 . 照 风 、 泥\n石 流 和 其 他 自然 灾害 就 在 美国 造成 了 至 少 490 亿美 元 的 损失 。 正 如 我 的 同事 范 恩 。 纽 科 克 报道 的 ，\n波多 黎 各 仍 面临 着 2017 年 的 飓风 “玛丽 亚 ?” 带 来 的 经 济 和 结构 性 破坏 以 及 资源 短缺 。(38) 自然 灾害\n能 够 破坏 一 个 社区 的 基础 设施 ,扰乱 系统 达 几 个 月 或 几 年 之 入。 然而 ,有 些 服务 提醒 我 们 ,生活 最 终\n会 以 某 种 形式 回归 正常 。\nD) “44)2017 年 ,加 利 福 尼 亚 州 圣 罗 东 那 场 致命 的 火灾 过 后 几 天 ,一 架 无 人 机 捕捉 到 了 一 位 美国 邮政 署\n员工 特 雷 弗 。 史 密斯 的 连续 镜头 。 他 正 开 着 那 辆 熟悉 的 白色 货车 穿梭 在 焚毁 的 房子 中 间 , 揽 收受 灾\n区 内 的 邮件 。 这 个 视频 很 震撼 :这 一 操作 很 熟悉 ,但 是 这 样 的 场景 看 起 来 像 是 世界 末日 。 据 美国 邮\n政 署 国 家 备 灾 办 公 室 项 目 经 理 瑞 伊 。 安 。 海 特 称 ,史密斯 正在 完成 一 些 房 主 的 要 求 ,去 拿 那 些 没 有\n被 火烧 筑 的 邮件 。 对 于 史密斯 来 说 ,这 只 是 工作 中 平常 的 一 天 而 已 。“ 我 像 往常 一 样 , 沿 着 我 的 路 线\n走 ,” 史 密斯 告诉 记者 。“ 当 我 看 到 一 个 朝 上 的 邮箱 ,但 是 房子 已 经 不 在 了 ,我 检查 了 一 下 ,里 面 有 要\n邮寄 出 去 的 邮件 。 所 以 ,我 就 把 它们 捡 起 来 继续 往 前 走 。”\nE) ”美国 邮政 署 有 复杂 的 自然 灾害 应 急 计划 。 在 全 国 范围 内 ,有 285 个 应 急 管理 团队 致力 于 危机 处 理 。\n这 些 团 队 每 年 都 会 接受 培训 ,培训 的 框架 被 称 为 3P: 人 、 财 产 和 产品 。(36) 由 于 天 气 原因 导致 的 邮寄\n服务 停止 后 ,该 机 构 的 首要 任务 是 确保 员工 的 安全 。 然 后 它 会 评估 基础 设施 的 健康 状况 ,如 邮递 员\n行驶 的 道路 。 最 后 , 它 会 决定 何 时 以 及 如 何 重新 开展 工作 。 如 果 某 地 区 遭 到 的 破坏 非常 严重 , 寄 往\n该 地 区 的 邮件 将 被 送 到 其 他 地 方 。 为 了 应 对 2005 年 的 飓风 “卡特 里 娜 \", 美 国 邮政 署 将 准备 发 往 新\n奥尔良 的 邮件 重新 发 到 了 休斯敦 现存 的 邮政 设施 。 已 经 在 新 奥尔良 邮政 服务 点 处 理 的 邮件 被 移 至\n楼 层 高 处 ,以 防 被 水 损坏 。\nF) 一旦 外 面 足 够 安全 ,邮递 员 就 开始 从 仍 可 通行 的 路 线 分 发 积攒 的 邮件 。 美 国 邮政 署 会 催促 那些 没有\n常用 地 址 的 人 在 地 址 变更 表格 中 填 上 他 们 的 新 地 址 。(41)2005 年 腿 风 “卡特 里 娜 \"来 袭 后 ,在 美国 邮\n政 无 法 提供 街道 投递 服务 的 地 方 ,全 国 各 地 两 周 内 新 建 了 几 十 个 邮政 设施 。\nG) 每 天 ,美国 邮政 署 平 均 处 理 4.934 亿 个 邮件 一 一 从 明信片 到 社保 账单 再 到 药品 。 美 国 邮 政 署 和 美国\n联合 包 衷 运送 服务 公司 的 发 言 人 告诉 我 ,所 有 的 邮件 都 很 重要 。 但 有 些 邮 件 可 能 极其 敏感 并 具有 时\n效 性 。(39) 根 据 2017 年 1 月 份 公布 的 数据 ,56% 的 账单 是 通过 线 上 支付 的 ,这 意味 着 只 有 不 到 一 半\n的 账单 仍然 依靠 邮政 服务 来 完成 。\n4 ‘)\nH) (45) BPR ARE TA HH OR YY fa BeBe Bs LR BB EE Be yD » (FL SS BB A FS I fd EI TS IRS\n公司 都 会 尽 他 们 的 最 大 努力 来 优先 处 理 敏感 材料 。 他 们 将 会 与 社会 保障 署 协调 , 以 确保 将 社保 账单\n及 时 送 达 正确 的 人 手中 。 去 年 秋天 ,飓风 “佛罗伦萨 ?和 “和 迈克 尔 ” 过 后 ,美国 邮政 署 与 各 州 和 地 方 选 举\n委员 会 共同 努力 ,确保 能 够 及 时 收 到 缺席 选举 人 的 选票 。\nD ”邮政 公司 是 物流 公司 ,这 使 它们 在 灾难 来 袭 时 处 于 可 以 伸 出 援手 的 特殊 地 位 。 在 2011 年 美国 邮政 署\n的 案例 研究 中 ,他 们 强调 其 庞大 的 基础 设施 在 灾难 或 恺 怖 袭击 中 是 一 种 可 号 召 的 “独一无二 的 联邦 资\n产 ”。(37)“ 我 认为 我 们 作为 一 个 联邦 机 构 是 独一无二 的 ,美国 邮政 署 官 员 迈 克 。 斯 威 格 特 告诉 我 ，\n“因为 我 们 几乎 存在 于 这 个 国家 的 每 个 社区 …… 我 们 每 天 都 负责 把 邮件 送 到 这 些 地 方 。\nD 43) 私人 快递 公司 有 更 多 的 钱 可 以 花 ,他 们 利用 自己 在 物流 领域 的 专长 ,帮助 灾后 受 损 地 区 恢复 生\n机 。 十 多 年 来 ,联邦 快递 公司 一 直 支持 美国 红 十 字 会 向 国内 外 受灾 地 区 运送 应 急 物 资 。2012 年 ,该\n公司 向 加 利 福 尼 亚 州 医疗 后 备 队 发 放 了 1,200 多 套 医疗 包 。 他 们 还 为 全 球 免费 运输 了 310 BHR\n善 物资 。 去 年 10 月 ,该 公司 承诺 给 由 风 “佛罗伦萨 > 和“ 迈克尔? 提供 100 万 美元 的 现金 和 运输 支持 。\n美国 联合 包 衷 运送 服务 公司 的 慈善 部 门 一 一 联合 包 庄 基金 会 利用 公司 的 物流 帮助 灾区 重建 。“ 我 们\n意识 到 ,作为 一 家 拥有 人 力 \\, 卡 车 和 仓库 的 公司 ,我们 需要 发 挥 更 大 的 作用 ,联合 包 囊 基金 会 主席\n爱德华 多 。 马丁 内 斯 说 道 。 该 公司 使 用 卡车 和 飞机 递送 食物 ,药品 和 水 。 去 年 11 月 ,在 我 与 马丁 内 斯\n交谈 的 前 一 天 ,他 与 美国 红 十 字 会 一 起 视察 了 佛罗里达 州 腿 风 “ 迈 克 尔 ?造成 的 破坏 。“ 我 们 有 义务 确\n保 我 们 的 社区 保持 繁荣 ,” 他 说 。\nK) 重建 可 能 需要 花费 很 长 时 间 , 即 使 是 重建 后 ,灾难 的 痕迹 可 能 仍然 存在 。 回 归 正 常生 活 可 能 会 很 困\n难 ,但 是 一 些小 的 日 常 工 作 一 一 邮件 递送 就 是 其 中 之 一 一 一 可 能 会 帮助 居民 记 住 他们 的 社区 仍 是 他\n们 的 社区 。(40)“ 当 他 们 看 到 邮递 员 再 次 出 现在 街 上 ,? 斯 威 格 特 说 ,“ 那 对 于 他 们 来 说 就 是 生活 开始\n恢复 正常 的 第 一 个 信号 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What do we learn about Knowledge-Based Artificial Intelligence?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is a robot that can answer students' questions."
+            },
+            {
+              "key": "B",
+              "text": "It is a course designed for students to learn online."
+            },
+            {
+              "key": "C",
+              "text": "It is a high-tech device that revolutionizes teaching."
+            },
+            {
+              "key": "D",
+              "text": "It is a computer program that aids student learning."
+            }
+          ],
+          "answer": "B",
+          "explanation": "B)",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What problem did Professor Goel meet with?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "His students were unsatisfied with the assistants."
+            },
+            {
+              "key": "B",
+              "text": "His course was too difficult for the students."
+            },
+            {
+              "key": "C",
+              "text": "Students' questions were too many to handle."
+            },
+            {
+              "key": "D",
+              "text": "Too many students dropped out of his course."
+            }
+          ],
+          "answer": "C",
+          "explanation": "©\n\n答案 详解\n\n【定位 】 由 题 干 中 的 Knowledge-Based Artificial\nIntelligence 定位 到 首 段 第 一 、 二 句 。\n\n【 精 析 】 细 节 辨 认 题 。 定 位 句 指出 , 戈 埃 尔 教授 开\n发 了 一 个 人 工 智 能 助教 来 帮助 处 理 在 线 课 程 中 大\n量 的 学 生 问 题 ,这 门 在 线 课程 名 叫 “ 基 于 知识 的 人\n工 智能 ”, 是 佐治 亚 理工 学 院 计 算 机 科学 在 线 硕士\n课程 的 核心 要 求 。 由 此 可 见 ,“ 基 于 知识 的 人 工 智\n能 ”是 一 门 为 学 生 在 线 学 习 而 设计 的 课程 , 故 答案\n为 B)。\n\n【 避 错 〗 首 段 第 一 句 提 到 , 戈 埃 尔 教授 开发 了 一 个\n人 工 智能 助教 ,但 “基于 知识 的 人 工 智 能 并非 这\n个 智能 助教 的 名 字 ,而 是 在 线 课 程 的 名 称 , 故 排除\nA)。 首 段 第 二 句 提 到 ,这 门 在 线 课程 是 佐治 亚 理\n工学 院 计 算 机 科学 在 线 硕 士 课 程 的 核心 要 求 , 由\n此 可 知 ， 基 于 知识 的 人 工 智能 ”不 是 高 科技 设备 ，\n也 不 是 电脑 程序 , 故 排除 C) `.D) 两 项 。\n\n【定位 】 由 题 干 中 的 problem 和 Professor Goel 定\n位 到 第 一 段 最 后 一 句 。\n\nCHT) 推理 判断 题 。 定 位 句 指出 , 戈 埃 尔 教授 已\n经 有 了 8 名 助教 ,但 这 还 不 足以 应 对 学 生 每 天 提\n出 的 大 量 问题 。 由 此 可 知 , 学 生 的 问题 太 多 了 ,很\n难处 理 , 故 答案 为 C) 。\n\n【 避 错 】 文 章 第 三 段 第 二 句 提 到 , 这 个 虚拟 助理 一\n开始 做 得 并 不 太 好 ,但 并 非 学 生 对 人 工 助教 不 满\n意 ,A) 项 表述 错误 , 故 排除 。 文 章 第 二 段 第 一 句 指\n出 ,由 于 缺乏 教学 支持 ,许多 学 生 退 出 了 在 线 课\n程 ,并 非 他 的 课程 让 学 生 觉得 很 困难 ,B) 项 属于 过\n度 推理 , 故 排除 。 文 章 第 二 段 第 一 句 虽 然 提 到 许\n多 学 生 因为 缺乏 教学 支持 退出 了 在 线 课程 ,但 文\n中 并 未 指出 学 生 退 出 了 哪 位 老师 的 课程 ， ae\n法 过 于 绝对 , 故 排除 。\n\n参考 译文",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What do we learn about Jill Watson?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "She turned out to be a great success."
+            },
+            {
+              "key": "B",
+              "text": "She got along pretty well with students."
+            },
+            {
+              "key": "C",
+              "text": "She was unwelcome to students at first."
+            },
+            {
+              "key": "D",
+              "text": "She was released online as an experiment."
+            }
+          ],
+          "answer": "A",
+          "explanation": "A)",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "How did the students feel about Jill Watson?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They thought she was a bit too artificial."
+            },
+            {
+              "key": "B",
+              "text": "They found her not as capable as expected."
+            },
+            {
+              "key": "C",
+              "text": "They could not but admire her knowledge."
+            },
+            {
+              "key": "D",
+              "text": "They could not tell her from a real person."
+            }
+          ],
+          "answer": "D",
+          "explanation": "D)",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What does Professor Goel plan to do next with Jill Watson?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Launch different versions of her online."
+            },
+            {
+              "key": "B",
+              "text": "Feed her with new questions and answers."
+            },
+            {
+              "key": "C",
+              "text": "Assign her to answer more of students' questions."
+            },
+            {
+              "key": "D",
+              "text": "Encourage students to interact with her more freely."
+            }
+          ],
+          "answer": "A",
+          "explanation": "©\n\n【定位 】 由 题 干 中 的 Jil Watson 定位 到 第 三 am\n五 .六 句 。\n\n【 精 析 】 推 理 判 断 题 。 定 位 句 指出 ,经 过 一 些 调整\n和 足够 的 时 间 后 ,吉尔 回答 学 生 问 题 的 正确 率 能\n够 达到 97% 。 虚 拟 助理 变 得 非常 先进 而 且 逼 真 ，\n以 至 于 学 生 们 都 不 知道 她 是 一 台 计 算 机 。 由 此 可\n知 ,吉尔 最 后 取得 了 巨大 的 成 功 , 故 答案 为 A) 。\n\n【 避 错 定位 句 只 提 到 吉尔 的 成 功 , 未 提 及 与 学 生\n们 的 相处 ,B) 项 为 过 度 推理 , 故 排除 。 第 三 段 第 二\n名 指出 ,一 开始 ,这 个 虚拟 助理 做 得 并 不 太 好 。 但\n并 没有 说 明 学 生 不 喜欢 吉尔 , 故 排除 C) 项 。 文 中\n未 提 及 D) \"她 被 作为 实验 发 布 到 网 上 ”, 故 排除 。\n【定位 】 由 题 干 中 的 students feel about Jill\nWatson 定位 到 第 三 段 最 后 三 句 。\n\nCAT) 推理 判断 题 。 定 位 句 指出 ,学 习 人 工 智能\n的 学 生 与 虚拟 助理 进行 互动 ,而 且 无 法 将 其 与 真\n人 区 分 开 来 , 故 答案 为 D)。-\n\n【 避 错 】 文 中 未 提 及 A)” 他 们 认为 她 有 点 太 假 了 ”、\nB)“ 他 们 发 现 她 不 如 预期 的 那么 有 能 力 ? 和 C) “他\n们 不 得 不 钦佩 她 的 知识 ”, 故 排除 。\n\n【定位 】 由 题 干 中 的 Professor Goel 和 plan to do\n定位 到 最 后 一 段 第 一 句 。\n\n【 精 析 ]】 推理 判断 题 。 定 位 句 指出 , 戈 埃 尔 教授 的\n虚拟 助教 明年 的 目标 是 回答 网 上 论坛 里 学 生 提 出\n的 40% 的 问题 。 由 此 可 见 , 戈 埃 尔 教 授 会 让 虚拟\n助教 回答 更 多 的 学 生 问题 , 故 答案 为 C) 。\n\n【 避 错 】 最 后 一 段 第 二 句 指出 ,吉尔 。 沃 森 这 个 名\n字 会 在 下 个 学 期 被 换 成 别 的 名 字 , 而 非 发 布 不 同\n的 版 本 , 故 排除 A) 项 。 文 中 并 未 提 及 B)“ 给 她 新\n的 问题 和 答案 ”和 D)“ 鼓 励 学 生 与 她 更 自由 地 互\n动 ”, 故 排除 。\n\n(46) 优 治 亚 理工 学 院 的 阿 肖 克 “。 戈 埃 尔 教授 开发 了 一 个 人 工 智 能 助教 来 帮助 处 理 在 线 课程 中 大 量 的\n\n学 生 问题 ,这 门 在 线 课 程 名 为 “基于 知识 的 人 工 智能 ”。 这 门 在 线 课 程 是 佐治 亚 理工 学 院 计算 机 科学 在 线 硕\n\n士 课程 的 核心 要 求 。(47) 戈 埃 尔 教授 已 经 有 了 8 名 助教 ,但 这 还 不 足以 应 对 学 生 每 天 提出 的 大 量 问题 。\n\n由 于 缺乏 教学 支持 ,许多 学 生 退 出 了 在 线 课程 。 当 学 生 感到 孤立 无 援 或 困惑 不 解 , 提出 问题 却 无 人\n能 解答 时 ,他 们 继续 学 习 的 动力 就 开始 减弱 。 戈 埃 尔 教授 决定 做 点 什么 来 改善 这 个 情况 ,他 的 解决 办 法\n就 是 基于 IBM Watson 平台 开发 一 个 名 为 吉尔 。 沃 森 的 虚拟 助理 。\n\nV\n\n戈 埃 尔 和 他 的 团队 开发 了 吉尔 。 沃 森 的 几 个 版 本 ,然后 才 把 她 发 布 到 网 上 论坛 。 一 开始 ,这 个 虚拟\n助理 做 得 并 不 太 好 。 但 戈 埃 尔 和 其 团队 在 网 上 论坛 里 找到 了 这 门 课 开设 以 来 被 问 到 的 40,000 个 问题 。\n然后 他 们 开始 向 吉尔 输入 这 些 问 题 和 回答 。(48) 经 过 足够 的 调整 和 足够 的 时 间 后 ,吉尔 回答 学 生 问题\n的 正确 率 能 够 达到 97% 。 虚 拟 助理 变 得 非常 先进 而 且 逼 真 , 以 至 于 学 生 们 都 不 知道 她 是 一 台 计 算 机 。\n\n(49) 学 习 人 工 智能 的 学 生 与 虚拟 助理 进行 互动 ,而 且 无 法 将 其 与 真人 区 分 开 。 戈 埃 尔 直到 4 月 26 日 才 告\n\n诉 他 们 吉尔 的 真实 身份 。 学 生 们 对 于 这 次 经 历 反响 很 积极 。\n\n《50) 戈 埃 尔 教授 的 虚拟 助理 明年 的 目标 是 回答 网 上 论坛 里 学 生 提 出 的 40% 的 问题 。 当 然 ,吉尔 沃 森\n\n这 个 名 字 在 下 个 学 期 会 被 换 成 别 的 名 字 。 与 埃 隆 \" STE ASS + WK + 盖 茨 或 史 蒂 夫 “ RK\n尼 亚 克 等 人 相 比 , 戈 埃 尔 教授 对 人 工 智能 的 未 来 有 着 更 为 乐观 的 看 法 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What do we learn about the scientists trying to raise money online for their projects?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They did not raise much due to modest targets."
+            },
+            {
+              "key": "B",
+              "text": "They made use of mixed fundraising strategies."
+            },
+            {
+              "key": "C",
+              "text": "Not all of them achieved their anticipated goals."
+            },
+            {
+              "key": "D",
+              "text": "Most of them put movies online for the purpose."
+            }
+          ],
+          "answer": "C",
+          "explanation": "©\n\n答案 详解\n\n【定位 】 由 题 干 中 的 the scientists 和 raise money\nonline 定位 到 第 二 段 第 二 、 三 句 。\n\n【 精 析 】 细 节 辨 认 题 。 定 位 句 指出 ,科学 家 们 也 曾\n尝试 利用 互联 网 捐助 者 ,但 成 败 参半 。 有 些 筹 到\n的 资金 比 目 标 多 了 一 倍 多 ,但 有 些 却 连 小 的 目标\n都 没 达到 。 由 此 可 见 , 并 非 所 有 的 科学 家 都 成 功\n地 筹集 到 了 资金 , 故 答案 为 C) 。\n\n【 避 错 】 第 二 段 最 后 一 句 提 到 ,有 些 筹 到 的 资金 比\n\n目标 多 了 一 倍 多 ,但 有 些 却 连 小 的 目标 都 没 达到 ，，\n\n故 排除 A) 由 于 目标 不 高 ,他 们 没有 筹集 到 多 少\n资金 \"。 第 二 段 只 是 指出 科学 家 众 筹 成 败 参半\n(with mixed success) ,并 未 提 及 筹集 资金 的 具体\n方法 , 故 排除 B)“ 他 们 采用 了 混合 融资 策略 >。 第\n二 段 第 一 句 提 到 , 近年 来 , 众 筹 风靡 于 各 个 领域 ，\n从 制作 电影 到 生产 节 水 设备 等 ,而 非 大 多 数 科 学",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What is the purpose of Mike Schafer's research of recent crowdfunding campaigns?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "To create attractive content for science websites."
+            },
+            {
+              "key": "B",
+              "text": "To identify reasons for their different outcomes."
+            },
+            {
+              "key": "C",
+              "text": "To help scientists to launch innovative projects."
+            },
+            {
+              "key": "D",
+              "text": "To separate science projects from general ones."
+            }
+          ],
+          "answer": "B",
+          "explanation": "B)\n\n家 把 电影 放 到 网 上 就 是 为 了 众 筹 , 故 排除 D) 。\n【定位 】 由 题 干 中 的 Mike Schafer’s research 定位\n到 第 三 段 。\n\n【 精 析 】 细 节 辩 认 题 。 定 位 段 提 到 ,为 了 确定 科学\n众 筹 成 功 与 失败 的 原因 , 苏黎世 大 学 的 科学 传播\n学 学 者 迈克 “。 沙 费 尔 领 导 的 一 个 团队 调查 了 最 近\n371 个 活动 的 网 页 内 容 。 由 此 可 知 , 迈 克 。 沙 费 尔\n做 该 项 研究 是 为 了 找 出 造成 不 同 结果 的 原因 , 故\n答案 为 B) 。\n\nGES) 文章 第 三 段 并 未 提 及 为 科学 网 站 创造 有 吸\n引力 的 内 容 , 只 是 指出 了 对 最 近 371 个 活动 的 网\n页 内 容 进 行 了 调查 , 故 排除 A) “为 科学 网 站 创造\n有 吸引 力 的 内 容 ”。 文 中 没有 提 到 C)“ 帮 助 科 学\n家 启动 创新 项 目 \" 和 D) “把 科学 项 目 与 普通 项 目\n区 分 开 ”, 故 排除 。\n\n. GER) HAT HH trait 和 contributes to 定位 到 标 资金 , 故 答案 为 A) 。\n第 四 段 第 五 句 。 【 避 错 】 文 中 未 提 及 B) 目标 应 该 以 实际 需要 为 基\n【 精 析 】 细节 辨认 题 。 定 位 句 指出 ,大 多 数 成 功 的 础 ?和 C)“ 应 该 小 心地 评估 目标 ”, 故 排除 。D)“ 目\n科学 众 筹 项 目 都 与 潜在 的 捐助 者 有 密切 联系 , A 标 资金 巨大 才能 获得 关注 ?表述 与 定位 句 相 反 , 故\n为 回答 那些 感 兴趣 的 捐助 者 问题 的 项 目 会 进展 得 排除 。\n更 顺利 。 由 此 可 知 ,与 可 能 的 捐助 者 互动 有 助 于\n众 筹 活动 的 成 功 , 故 答案 为 B) 。 后 一 段 最 后 一 句 。\n【 避 错 】 文 中 未 提 及 A) “对 后 代 的 潜在 好 处 ”>、\nOC) “在 解决 金融 问题 上 的 独创 性 ?和 D)“ 建 议 项 目 研究 人 员 努 力 接触 公众 的 一 部 分 ,人 们 捐款 是 因\n的 价值 >, 故 排除 。 为 “他 们 感觉 与 筹 款 人 有 联系 ”一 一 而 不 是 与 科学\n.【 定 位 】 由 题 干 中 的 financial targets of crowdfunding 有 联系 。 由 此 可 见 , 人 们 捐款 是 因为 他 们 感觉 与\nprojects 定位 到 第 四 段 最 后 三 句 。 科学 家 有 联系 , 故 答案 为 D) 。\n【 精 析 】 细 节 辨 认 题 。 定 位 句 提 到 ,成 功 众 筹 项 目 LES) XPRABR A “访问 网 页 内 容 的 便利\n的 目标 是 一 小 笔 钱 。 研 究 中 涉及 的 项 目 平均 筹集 性 ”, 故 排除 。 由 定位 句 可 知 ,人 们 捐款 是 因为 “他\n金额 为 4,000 美元 ,其 中 30% 的 项 目 获得 的 资金 们 感觉 与 筹 款 人 有 联系 ”一 一 而 不 是 与 科学 有 联\n不 足 1,000 美元 。 研 究 人 员 发 现 ,项 目 需要 的 资 系 , 故 排除 B) “他 们 对 科学 事业 作出 贡献 的 愿\n金 越 多 , 它 实现 目标 的 机 会 就 越 小 。 由 此 可 知 , 研 望 \"。 文 中 没有 提 及 C)“ 项 目 本 身 的 意义 和 影\n究 人 员 认 为 科学 众 筹 要 想 成 功 ,应 设立 较 小 的 目 响 ”, 故 排除 。\n\na 参考 译文 RE\n\n一\n\n从 小 处 着 手 ` 有 趣 、, 有 点 儿 虹 默 感 ,这 些 都 没有 坏处 。 这 些 是 一 些 成 功 的 科学 众 筹 活动 的 特点 ,这 些 特\n点 来 自 最 近 一 项 针对 近 400 个 科学 众 筹 活动 的 研究 。 但 拥有 一 个 庞大 的 网 络 和 一 些 推销 技巧 可 能 更 为\n重要 。\n\n近年 来 , 众 筹 , 即 通过 网 络 呼吁 为 某 个 项 目 筹集 资金 ,风靡 于 各 个 领域 ,从 制作 电影 到 生产 节 水 设备\n等 。(51) 科 学 家 们 也 曾 尝试 利用 互联 网 捐助 者 ,但 成 败 参半 。 有 些 筹 到 的 资金 比 目 标 多 了 一 倍 多 ,但 有 些\n却 连 小 的 目标 都 没 达到 。\n\n(52) 为 了 确定 科学 众 筹 成 功 与 失败 的 原因 ,苏黎世 大 学 的 科学 传播 学 学 者 迈克 。 沙 费 尔 领导 的 一 个\n团队 调查 了 最 近 371 个 活动 的 网 页 内 容 。\n\n研究 人 员 在 《科学 的 公众 认识 》 上 发 表 报 告 称 ,达到 其 目标 的 众 筹 活动 有 四 个 特征 很 突出 。 其 一 是 ，\n它们 会 使 用 一 个 专门 为 科学 筹集 资金 的 众 筹 平台 , 而 不 是 对 任意 项 目 都 开放 的 平台 。 尽 管 像\nKickstarter 等 网 站 来 者 不 拒 ,但 诸如 Experiment. com 和 Petridish. org 这 样 的 平台 只 展示 科学 项 目 。 另\n外 ,它们 会 用 一 个 有 趣 的 视频 来 展示 项 目 ,因为 好 的 视觉 效果 和 幽默 感 可 以 提高 成 功 的 可 能 性 。(53) 它\n们 中 的 大 多 数 都 与 潜在 的 捐助 者 有 密切 联系 ,因为 回答 那些 感 兴趣 的 捐助 者 问题 的 项 目 会 进展 得 更 顺\n利 。(54) 它 们 的 目标 是 一 小 笔 钱 。 研 究 中 涉及 的 项 目 平均 筹集 金额 为 4,000 美元 ,其 中 30% 的 项 目 获得\n的 资金 不 足 1,000 美元 。 研 究 人 员 发 现 ,项 目 需要 的 资金 越 多 , 它 实现 目标 的 机 会 就 越 小 。\n\n其 他 因素 也 可 能 会 对 项 目的 成 功 产生 重大 影响 ,最 明显 的 是 ,科学 家 的 个 人 人 脉 和 职业 网 络 的 规模\n以 及 研究 人 员 对 项 目的 推动 程度 。 这 两 个 因素 远 比 页 面 上 的 内 容重 要 得 多 。(55) 众 筹 可 以 成 为 研究 人 员\n努力 接触 公众 的 一 部 分 ,人 们 捐款 是 因为 “他 们 感觉 与 筹 款 人 有 联系 ”一 而 不 是 与 科学 有 联系 。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What trait contributes to the success of a crowdfunding campaign?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The potential benefit to future generations."
+            },
+            {
+              "key": "B",
+              "text": "Its interaction with prospective donors."
+            },
+            {
+              "key": "C",
+              "text": "Its originality in addressing financial issues."
+            },
+            {
+              "key": "D",
+              "text": "The value of the proposed project."
+            }
+          ],
+          "answer": "B",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What did the researchers think of the financial targets of crowdfunding projects?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They should be small to be successful."
+            },
+            {
+              "key": "B",
+              "text": "They should be based on actual needs."
+            },
+            {
+              "key": "C",
+              "text": "They should be assessed with great care."
+            },
+            {
+              "key": "D",
+              "text": "They should be ambitious to gain notice."
+            }
+          ],
+          "answer": "A",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第10–22页（图像核对）"
+        },
+        {
+          "id": "2019-12-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What motivates people to donate in a crowdfunding campaign?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The ease of access to the content of the webpage."
+            },
+            {
+              "key": "B",
+              "text": "Their desire to contribute to the cause of science."
+            },
+            {
+              "key": "C",
+              "text": "The significance and influence of the project itself."
+            },
+            {
+              "key": "D",
+              "text": "Their feeling of connection to the scientists themselves."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【 定 位 〗 由 题 干 中 的 motivates 和 donate 定位 到 最\nD) ORT) 推理 判断 题 。 定 位 句 指出 , 众 筹 可 以 成 为",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are aJJ,owed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "中国家庭十分重视孩子的教育。许多父母认为应该努力工作，确保孩子受到良好教育。他们不仅非常情愿为孩子的教育投资，而且花很多时间督促他们学习。多数家长希望孩子能上名牌大学。由于改革开放，越来越多的家长能送孩子到国外学习或参与国际交流项目，以拓宽其视野。通过这些努力，他们期望孩子健康成长，为国家的发展和繁荣作出贡献。",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-12-1-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "中国家庭十分重视孩子的教育。许多父母认为应该努力工作，确保孩子受到良好教育。他们不仅非常情愿为孩子的教育投资，而且花很多时间督促他们学习。多数家长希望孩子能上名牌大学。由于改革开放，越来越多的家长能送孩子到国外学习或参与国际交流项目，以拓宽其视野。通过这些努力，他们期望孩子健康成长，为国家的发展和繁荣作出贡献。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "Chinese families attach great\n\nimportance to their children’s education.\nMany parents believe that they should\nwork hard to ensure that their children\nare well educated. Not only are they\nperfectly willing to invest in their\nchildren’s education, but they also spend\na lot of time urging their children to\nlearn.\n\nMost parents hope that their\n\nchildren will attend a prestigious\nuniversity. Due to China’s reform and\nopening-up, more and more parents can\nsend their children abroad to study or\nparticipate in international exchange\nprograms to broaden their horizons.\nThrough these efforts, they expect their\nchildren to grow healthily and contribute\nto the development and prosperity of the\n\ncountry.\n\neducation system 教育 制度\nfamily education RHA\neducation reform 教育 改革\nhigher education 高 等 教育",
+          "explanation": "Chinese families attach great\n\nimportance to their children’s education.\nMany parents believe that they should\nwork hard to ensure that their children\nare well educated. Not only are they\nperfectly willing to invest in their\nchildren’s education, but they also spend\na lot of time urging their children to\nlearn.\n\nMost parents hope that their\n\nchildren will attend a prestigious\nuniversity. Due to China’s reform and\nopening-up, more and more parents can\nsend their children abroad to study or\nparticipate in international exchange\nprograms to broaden their horizons.\nThrough these efforts, they expect their\nchildren to grow healthily and contribute\nto the development and prosperity of the\n\ncountry.\n\neducation system 教育 制度\nfamily education RHA\neducation reform 教育 改革\nhigher education 高 等 教育\n\n参考 译文 与 难点 注释\n1. 第 一 句 中 ,“ 十 分 重视 ”可 译 为 attach great importance to, 也 可 将\n\n其 灵活 译 为 take. .. very seriously“ 非 常 认 真 地 对 待 ……?”。 当 英\n文中 没有 直接 对 应 的 词汇 时 ,要 采取 转换 词性 或 意译 的 方式 来\n翻译 。\n\n2. 第 二 句 中 ,“ 孩 子 受 到 良好 教育 \"是 父母 “努力 工作 ”的 目的 。 根 据\n\n这 一 逻辑 关系 , 译 成 英文 时 可 用 to do 不 定式 作 目 的 状语 或 用 so\n(that) 引 导 的 结果 状语 从 句 将 其 中 的 逻辑 关系 体现 出 来 , 即 译 成\n“work hard to ensure (that) + 从 名 ?或 “work hard so (that) + 从\n\nAy”\n\n3. 第 三 句 指 出 父母 重视 孩子 教育 的 表现 一 一 投资 孩子 的 教育 且 督\n\n促 孩 子 学 习 。 本 句 中 的 “不 仅 …… 而 且 ……? 可 用 英文 句 式 not\nonly... but (also). . .来 翻译 。 需 要 注意 的 是 ,not only 置 于 句 首\n时 ,句子 采用 倒 装 语序 。\n\n4. 第 四 句 指出 中 国家 长 对 孩子 的 一 个 普遍 期 望 。“ 某 人 希望 ……?”\n\n可 以 译 为 “sb. hopes/expects that+ 从 句 ”, 也 可 以 译 为 “It is sb.’s\nhope/expectation that+ 从 句 ”。“ 名 牌 大 学 ”一般 译 为 prestigious\nuniversity, 也 可 译 为 top/leading/elite university,\n\n5. 第 五 句 指出 中 国教 育 的 一 个 趋势 。 本 句 相 对 较 长 ,翻译 之 前 需 理\n\n清 句 内 逻辑 关系 。 句 首 的 “由 于 改革 开放 ”为 原因 状语 , 可 译 为\nDue to/Because of/Owing to China’s reform and opening-up.\n句 中 的 “ 越 来 越 多 的 家 长 \"可 译 为 more and more/an increasing\nnumber of parents。 句 末 的 “以 拓宽 其 视野 ?为 目的 状语 ,可 译 为\n\n(in order) to broaden/expand their horizons.\n\n6. 第 六 句 句 首 的 “通过 这 些 努 力 \"为 方式 状语 ,可 以 译 为 Through\n\nthese efforts.“ 健 康成 长 ?和 “为 …… 作 出 贡献 > 并列 作 “ 期 望 ?的\n宾语 , 译 成 英文 时 可 以 处 理 成 并 列 的 结构 grow healthily and\ncontribute to...。\n”话题 词汇\n， educational cause 教育 事业\n| educational input 教育 投入\nquality education 素质 教育\n| core literacy 核心 素养\n\n四 级 2019 年 12 月 23",
+          "source": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-1-md"
+          },
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

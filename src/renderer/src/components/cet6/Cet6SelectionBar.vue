@@ -7,7 +7,8 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { toast } from '../base/toast'
-import { CET6 } from '../../lib/copy'
+import type { CetLevel } from '../../../../shared/cet6'
+import { CET6, cetCopy } from '../../lib/copy'
 import { classifyText, extractContext, validateSelection, type Cet6Gloss, type Cet6LookupFail } from '../../../../shared/cet6-vocab'
 import { useCet6VocabStore } from '../../stores/cet6-vocab'
 import { useAiAssistantStore } from '../../stores/ai-assistant'
@@ -18,7 +19,7 @@ import { useSettingsDialogStore } from '../../stores/settings-dialog'
 import MiButton from '../base/MiButton.vue'
 import MiIcon from '../base/MiIcon.vue'
 
-const props = defineProps<{ root: HTMLElement | null; examId: string; sectionType: string }>()
+const props = defineProps<{ root: HTMLElement | null; examId: string; sectionType: string; level?: CetLevel }>()
 
 const vocab = useCet6VocabStore()
 const router = useRouter()
@@ -253,7 +254,7 @@ async function lookup(): Promise<void> {
 }
 
 function askMore(): void {
-  ai.openWithSelection({ text: CET6.askRef(selText.value, context.value), title: CET6.ASK_REF_TITLE, type: 'selection', action: 'ask' })
+  ai.openWithSelection({ text: CET6.askRef(selText.value, context.value), title: cetCopy(props.level ?? 'cet6').ASK_REF_TITLE, type: 'selection', action: 'ask' })
   hide()
 }
 

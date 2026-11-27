@@ -1,0 +1,2885 @@
+{
+  "id": "2023-03-1",
+  "title": "2023年3月 第1套",
+  "year": 2023,
+  "month": 3,
+  "set": 1,
+  "status": "ready",
+  "issues": [],
+  "sources": [
+    {
+      "id": "cet4-2023-03-1-mp3",
+      "title": "听力.mp3",
+      "localPath": "<本地四级真题目录>/2023.03 第1套/听力.mp3"
+    },
+    {
+      "id": "cet4-2023-03-1-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2023.03 第1套/真题.pdf"
+    },
+    {
+      "id": "cet4-2023-03-1-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2023.03 第1套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2023-03-1-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2023.03 第1套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "Suppose you have taken part in a career planning seminar. Write an account of the seminar and summarize what you have learned from it. You will have 30 minutes for this task and should write at least 120 words but no more than 180 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "Suppose you have taken part in a career planning seminar. Write an account of the seminar and summarize what you have learned from it. You will have 30 minutes for this task and should write at least 120 words but no more than 180 words.",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-03-1-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "Suppose you have taken part in a career planning seminar. Write an account of the seminar and summarize what you have learned from it. You will have 30 minutes for this task and should write at least 120 words but no more than 180 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "In order to help college students navigate the problems in job searching in the near future, the Career Guidance Centre of our university held a seminar in the auditorium last Friday morning, aiming to share the key points of career planning with us seniors.\n\nThe seminar provided me with a rich source of inspiration on career planning. Most remarkably, the seminar made me realize the importance of establishing clear and realistic career goals, since nothing can be accomplished in the world unless the will is set. In addition, I learned we should conduct self-assessment properly. Only with a thorough understanding of our merits and demerits, can we be capable of deciding on a career path that is suitable for our personal development. Lastly, I am conscious of that making a practical plan and breaking it into small tasks can assist us in achieving the goal step by step as well.\n\nOverall, the seminar has benefited me a lot, for it allowed my becoming aware of the drawbacks to career planning and offered me useful suggestions for seeking a job that will fulfill myself.",
+          "explanation": "**【审题提纲】**\n\n通过审题可知，本次写作要求考生为一场职业规划研讨会写一篇报告，报告中须总结从该研讨会中获得的收获。在写作思路方面，考生可先介绍研讨会的基本信息；然后，具体阐述参会后的个人收获；最后，总结全文，表达自己的感受。根据行文思路，具体可列如下提纲：\n\n第一段：介绍研讨会的基本信息，包括会议目的、主题、举办时间、地点等。\n\n第二段：具体阐述参会后的个人收获——明白确立清晰可行的个人职业目标的重要性；要学会正确进行自我评估来确立个人职业目标；要制定切实有效的行动计划来实现个人职业目标。\n\n第三段：总结全文，表达自己的感受。\n\n**【参考范文】**\n\nIn order to help college students navigate the problems in job searching in the near future, the Career Guidance Centre of our university held a seminar in the auditorium last Friday morning, aiming to share the key points of career planning with us seniors.\n\nThe seminar provided me with a rich source of inspiration on career planning. Most remarkably, the seminar made me realize the importance of establishing clear and realistic career goals, since nothing can be accomplished in the world unless the will is set. In addition, I learned we should conduct self-assessment properly. Only with a thorough understanding of our merits and demerits, can we be capable of deciding on a career path that is suitable for our personal development. Lastly, I am conscious of that making a practical plan and breaking it into small tasks can assist us in achieving the goal step by step as well.\n\nOverall, the seminar has benefited me a lot, for it allowed my becoming aware of the drawbacks to career planning and offered me useful suggestions for seeking a job that will fulfill myself.",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear three news reports, two long conversations and three passages.",
+      "audio": {
+        "src": "source-media/2023.03 第1套/听力.mp3",
+        "sourceId": "cet4-2023-03-1-mp3",
+        "sharedWith": []
+      },
+      "blocks": [
+        {
+          "id": "listening-news-1",
+          "title": "News Report One",
+          "text": "",
+          "transcript": "African leaders plan to turn the continent into a continent without borders. They will introduce a single passport policy, allowing free movement between countries. The idea from the African Union has been modeled on the EU Schengen free movement deal. Europe has abolished many internal borders. This enables visa-free movement across the continent. Currently, 13 African countries have visa-free deals in place with each other. These allow citizens to visit another country without a visa. Some countries offer visas on arrival. In contrast, Americans are able to travel to 20 of the continent’s countries without a visa, or secure a visa on arrival. The African Union, which represents 54 states, wants to abolish the requirement of a visa for Africans visiting other African countries. It also wants to establish a free-trade deal across the continent in the near future, as trade within the African continent costs more than any other region.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          }
+        },
+        {
+          "id": "listening-news-2",
+          "title": "News Report Two",
+          "text": "",
+          "transcript": "Researchers in Iceland found a new way of tackling climate change by pumping carbon dioxide underground and turning it into stone. Other carbon capture and storage methods store carbon dioxide as a gas, but problems include a high cost and concern about leaks. This new method of burying carbon dioxide and turning it into stone is cheaper and more secure, The Guardian reports. To turn carbon dioxide into stone, researchers with the Carbfix project pumped the gas into volcanic rock and sped up the natural process in which the volcanic rock reacts with gas and forms carbon minerals. The gas turned into solid in just two years, much faster than the hundreds or thousands of years researchers had predicted. The research took place at Iceland’s Hellisheidi power plant.\nAlready, the project in Iceland has been increased in scale to bury 10,000 tons of carbon dioxide each year. One potential difficulty is that for each ton of carbon dioxide buried, the technique requires 25 tons of water. However, the lead researcher said sea water could be used.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          }
+        },
+        {
+          "id": "listening-news-3",
+          "title": "News Report Three",
+          "text": "",
+          "transcript": "People in France are keeping away from the narrow French stick loaf in favor of healthier, cheaper options, a millers association has said. The National Association of French Millers says bread consumption is on the decline, with French people eating nine grams less than in the previous year. The association is concerned about the effects this trend will have on their trade, and suggests three reasons why it is happening. Firstly, the association cited changing diets, in particular the switch to those low in calories, as a factor in the reduction of bread consumption. This could explain why the difference in consumption between genders is so big. Nowadays, men eat an approximate average of 140 grams of bread daily, whereas women eat 80 to 90 grams. The second reason, they say, is lifestyle changes in the country, with people dedicating less time to breakfast when bread would traditionally be eaten with butter and jam. Finally, the rising cost of bread is considered to be a factor, with the price of a French stick loaf increasing by nearly 25% in the last 10 years.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-1",
+          "title": "Conversation One",
+          "text": "",
+          "transcript": "W: Next, please.\nM: Yes, I’d like to book two train tickets to London tomorrow morning, please.\nW: Okay. What time would you like to go?\nM: Well, after the rush hour, I think. We’d like to avoid the crowds if possible. So probably sometime around 10 o’clock.\nW: No problem. Just give me a minute. There’s one here at 9:47, then one at 10:12 and then a third at 10:26.\nM: The one at 10:12 sounds good.\nW: All right. Would you like to sit in first or second class?\nM: Second class is fine. Thanks. Is there any chance we could have a window seat for one of those?\nW: No problem. And I’ve booked those seats next to each other for you. The total price is £36.50. Is there anything else?\nM: Yes, actually, we’ll be taking our bicycles with us. What is the arrangement for that? And will it cost extra?\nW: It’s no extra cost. The price will be the same. All you need to do is wait at the far end of the platform. When the train arrives, tell the train guard where you’re going, and he will help you secure the bicycles in the last carriage and give you a ticket. Then you can walk down through the train to your carriage and take your seats. When you arrive in London, hand the ticket to the guard and he will return the bicycles to you.\nM: Thank you for the information. That’s very helpful.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-2",
+          "title": "Conversation Two",
+          "text": "",
+          "transcript": "M: Good morning. Our guest today is Karen Brooke. Karen is the managing director of Cube Movie Theatre located on Underhill Road. Thank you for coming, Karen.\nW: Thank you for having me.\nM: So tell us about your cinema, Cube Movie Theatre.\nW: Sure. Cube Movie Theatre has been around now for 11 years. It’s located in what used to be a hat factory.\nM: Oh, really?\nW: Yeah. There used to be many hat factories in Britain until around the 1950s. But fashion changed and most people stopped wearing hats. So practically all of those factories had to close down. This one, in particular, was closed for 47 years before we transformed it into a movie theatre.\nM: I see. I hear there’s something else that makes your theatre special. What is it that sets you apart from other theatres?\nW: We’re the only movie theatre in the whole country that only shows foreign movies.\nM: Is there enough demand for that? I would have thought that in London most people don’t speak foreign languages.\nW: Sure, there’s enough demand. The fact that we have been open and in business for all these years proves that. London is a very large and international city. There are lots of people interested in watching such movies. Furthermore, I might add, all movies come with English text at the bottom of the screen. So even if you don’t understand what the actors say, you can still read it.\nM: Of course. What movie are you showing right now?\nW: This week, we’re showing a musical from Pakistan. It’s very popular.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-1",
+          "title": "Passage One",
+          "text": "",
+          "transcript": "Love them or hate them, smartphones have become an integral part of our daily lives. But should they be left outside the classroom?\nNick Gibb, minister for school standards in England, believes schools should ban their pupils from bringing in smartphones.\nAstrid Natley, a secondary school math teacher, incorporates phones into her classroom. “My school doesn’t have money for tablets,” she says. “When students use their phones for research, they learn they have a powerful tool in their hands. If we stop children using phones, we are rejecting something they care about.”\nMeanwhile, Helen Lockhart, a registered nurse working for community education, supports a complete ban. “I’m banned from mobile use at work, and my phone must be handed in. If I am caught with it in my pocket, I will be subject to disciplinary procedure, which will impact on my career. We need to teach children how to behave like the professionals they are striving to become.”\nRichard Stone, an English teacher, thinks there should be a clear separation between school and home. “Students should do things differently in the two environments. Children are getting more than enough screen time in their lives without the need to bring their phone into the classroom. The internet is too easy and too unreliable a research tool, so let’s leave phones and laptops at home, and show them a different world in their lessons—one of books and pens,” he says.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-2",
+          "title": "Passage Two",
+          "text": "",
+          "transcript": "Kate, a 6-year-old girl, helped her brother wash windows to get a reward promised by her mother, a purple doll that she wanted. She watched her mother order the doll online. The next day, Kate asked if she could check the shipping status, so her mom clicked on the web page and then walked out of the room. Kate saw that her doll would be arriving the next afternoon, but then she noticed something else: suggestions about other dolls and toys she could order. 15 minutes and a few clicks later, with more than $350 worth of dolls in her cart, Kate placed the order and ran off to play. The next day, while checking on another online order, her mother noticed the long list of dolls on the way.\nShe was able to cancel two of them, but it was too late to cancel the rest. She told her daughter that they were going to be returned. When the packages arrived, Kate wanted to open them, but her parents said no. Instead of sending back the dolls, her father suggested giving them to the local children’s hospital. So the next week, Kate’s family loaded up their car and took all the dolls to the playroom at the children’s hospital. Kate was depressed at first, but then she sat with some girl patients and they opened up all the boxes together, laughing and playing. She had a lot of fun and learned a really good lesson.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-3",
+          "title": "Passage Three",
+          "text": "",
+          "transcript": "Can the date you were born affect how successful your life is? According to recent research done in Australia, the answer is yes. The researchers found that the time when a person starts school has an enduring impact on their lives. Those who are relatively old compared to their classmates have certain advantages over them. Previous research has found older students achieve better results. They are also more likely to attend university and become professional athletes, chief executives and even important politicians. But the Australian researchers wanted to discover what was driving these differences. They suspected older, more mature students obtained more self-confidence than their peers because they achieved better grades. To test this out, they conducted two studies. One was with high school students and the other with more than 1,000 Australian adults aged between 24 and 60 years old. In the first study, more than 600 high school students were surveyed about their tendency to take risks and feel confident. In the second study, those born on both sides of the cut-off date for starting school, were asked to complete online math questions and rate their performance. They were also asked about the risks they took while riding bicycles and managing their finances. The researchers found that older students displayed greater risk-taking tendencies. While risk-taking can be considered a negative attribute, it’s also a characteristic of successful people, including athletes, political leaders and entrepreneurs.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-03-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "What is the news report mainly about?",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "A proposed policy allowing Africans to travel in Africa without a visa."
+            },
+            {
+              "key": "B",
+              "text": "An agreement among 13 African countries to set up a free-trade zone."
+            },
+            {
+              "key": "C",
+              "text": "A plan to invite all African countries to join the African Union."
+            },
+            {
+              "key": "D",
+              "text": "An important initiative to permit tourists to visit Africa without a visa."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Q: What is the news report mainly about?\n【答案解析】A 本题询问这篇新闻报道的主要内容。新闻开头便提到“African leaders plan to turn the continent into a continent without borders. They will introduce a single passport policy, allowing free movement between countries”，接着又提到“The African Union...wants to abolish the requirement of a visa for Africans visiting other African countries”，可知，非洲领导人计划将非洲大陆变成一个没有边界的大陆，他们将推行一项单一护照政策，允许国家之间的自由流动；非洲联盟希望取消非洲人访问其他非洲国家的签证要求。由此可知，这篇新闻报道的主要内容是关于一项拟议政策，这项政策允许非洲人免签证在非洲旅行，故 A 选项正确。B 选项利用新闻中的 13 African countries 和 establish a free-trade... 设置干扰，C 选项利用新闻中的 plan、African countries 和 the African Union 设置干扰，D 选项利用新闻中的 allow...to visit...without a visa 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "What benefit will a free-trade deal bring to African economy?",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It will attract more investments from all over the world."
+            },
+            {
+              "key": "B",
+              "text": "It will help many African countries reduce trade deficits."
+            },
+            {
+              "key": "C",
+              "text": "It will reduce the cost of trade between African countries."
+            },
+            {
+              "key": "D",
+              "text": "It will allow Africans to play a bigger role in world trade."
+            }
+          ],
+          "answer": "C",
+          "explanation": "Q: What benefit will a free-trade deal bring to African economy?\n【答案解析】C 本题询问自由贸易协定将为非洲经济带来的好处。对此新闻中提到“It also wants to establish a free-trade deal across the continent in the near future, as trade within the African continent costs more than any other region”，结合前文可知，It 指代非洲联盟。由此可知，非洲联盟还希望不久的将来在整个非洲大陆建立自由贸易协定，因为非洲大陆内部的贸易成本高于任何其他地区。由此可推知，自由贸易协定将降低非洲国家之间的贸易成本，故 C 选项正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "What new method has been developed to help fight climate change?",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cooling down volcanic rock with sea water."
+            },
+            {
+              "key": "B",
+              "text": "Storing carbon dioxide underground as a gas."
+            },
+            {
+              "key": "C",
+              "text": "Capturing carbon dioxide and burying it under the sea."
+            },
+            {
+              "key": "D",
+              "text": "Pumping carbon dioxide underground to form stone."
+            }
+          ],
+          "answer": "D",
+          "explanation": "Q: What new method has been developed to help fight climate change?\n【答案解析】D 本题询问为应对气候变化而开发的新方法。对此新闻中提到“Researchers in Iceland found a new way of tackling climate change by pumping carbon dioxide underground and turning it into stone”，可知为应对气候变化而开发的新方法是将二氧化碳泵入地下形成石头，故 D 选项正确。A 选项利用新闻中的 volcanic rock 和 sea water 设置干扰，B 选项利用新闻中的 underground 和 store carbon dioxide as a gas 设置干扰，C 选项利用新闻中的 capture、burying carbon dioxide 和 sea 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "What is a potential difficulty in applying the new technique?",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lack of burying ground."
+            },
+            {
+              "key": "B",
+              "text": "Long time for processing."
+            },
+            {
+              "key": "C",
+              "text": "High consumption of water."
+            },
+            {
+              "key": "D",
+              "text": "Enormous cost of energy."
+            }
+          ],
+          "answer": "C",
+          "explanation": "Q: What is a potential difficulty in applying the new technique?\n【答案解析】C 本题询问应用这项新技术的潜在困难。对此新闻中提到“One potential difficulty is that for each ton of carbon dioxide buried, the technique requires 25 tons of water”，可知每埋藏一吨二氧化碳需要二十五吨水。由此可推知，应用这项新技术的潜在困难是耗水量大，故 C 选项正确。A 选项利用新闻中的 underground 和 burying 设置词汇干扰，B 选项利用新闻中的 process 和 the hundreds or thousands of years 设置干扰，D 选项利用新闻中的 a high cost 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "What does the news report say about French people’s bread consumption?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "It varies with the seasons."
+            },
+            {
+              "key": "B",
+              "text": "It has been on the decline."
+            },
+            {
+              "key": "C",
+              "text": "It has caused nationwide concern."
+            },
+            {
+              "key": "D",
+              "text": "It is ninety grams daily on average."
+            }
+          ],
+          "answer": "B",
+          "explanation": "Q: What does the news report say about French people’s bread consumption?\n【答案解析】B 本题询问新闻报道提到的关于法国人的面包消耗量的信息。对此新闻中提到“...bread consumption is on the decline, with French people eating nine grams less than in the previous year”，可知法国人的面包消耗量正在下降，故 B 选项正确。C 选项利用新闻中的 concerned 设置词汇干扰，D 选项利用新闻中的 90 grams、daily 和 average 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "What do we learn about French women from the report?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They emphasize food variety."
+            },
+            {
+              "key": "B",
+              "text": "They prefer French stick loaves."
+            },
+            {
+              "key": "C",
+              "text": "They do more cooking than men."
+            },
+            {
+              "key": "D",
+              "text": "They favor diets lower in calories."
+            }
+          ],
+          "answer": "D",
+          "explanation": "Q: What do we learn about French women from the report?\n【答案解析】D 本题询问从报道中我们了解到的关于法国女性的信息。对此新闻中先提到“the association cited changing diets...the switch to those low in calories, as a factor in the reduction of bread consumption”，接着又提到“Nowadays...whereas women eat 80 to 90 grams”，结合前文可知，women 指代法国女性。由此可知，协会指出法国人向低卡路里饮食的转变是面包消耗量减少的一个因素，且如今法国女性每天只吃 80 到 90 克面包。由此推知，法国女性的日常饮食发生了变化，她们更倾向于卡路里较低的饮食，故 D 选项正确。B 选项利用新闻中的 French stick loaf 设置干扰，C 选项利用新闻中的 men 设置词汇干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "What is said about lifestyle changes of the French people?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They bake more bread at home."
+            },
+            {
+              "key": "B",
+              "text": "They spend less time eating breakfast."
+            },
+            {
+              "key": "C",
+              "text": "They eat more fruit than they used to."
+            },
+            {
+              "key": "D",
+              "text": "They put jam instead of butter on bread."
+            }
+          ],
+          "answer": "B",
+          "explanation": "Q: What is said about lifestyle changes of the French people?\n【答案解析】B 本题询问有关法国人生活方式改变的信息。对此新闻中提到“The second reason...is lifestyle changes in the country, with people dedicating less time to breakfast...”，结合前文可知，the country 指代法国。由此可知，现在法国人花在早餐上的时间更少了，故 B 选项正确。D 选项利用新闻中的 bread...with butter and jam 设置干扰，故排除。\n\n##### Section B",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "When would the man like to leave for London?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "After the rush hour."
+            },
+            {
+              "key": "B",
+              "text": "Early in the morning."
+            },
+            {
+              "key": "C",
+              "text": "As soon as possible."
+            },
+            {
+              "key": "D",
+              "text": "Around lunch time."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Q: When would the man like to leave for London?\n【答案解析】A 本题询问男士想要动身前往伦敦的时间。对话中男士先提到“I’d like to book two train tickets to London tomorrow morning, please”，之后女士询问“What time would you like to go”，对此男士回答“Well, after the rush hour, I think”，可知男士想要在早高峰之后动身前往伦敦，故 A 选项正确。B、C、D 三个选项分别利用对话中的 morning、possible 和 around 设置词汇干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "What is the man’s other request?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Two first class seats."
+            },
+            {
+              "key": "B",
+              "text": "Two seats together."
+            },
+            {
+              "key": "C",
+              "text": "One window seat."
+            },
+            {
+              "key": "D",
+              "text": "One seat near the exit."
+            }
+          ],
+          "answer": "C",
+          "explanation": "Q: What is the man’s other request?\n【答案解析】C 本题询问男士的其他请求。对话中男士提到“Is there any chance we could have a window seat for one of those”，可知男士的其他请求是想订一个靠窗的座位，故 C 选项正确。A 选项利用对话中的 first...class 设置干扰，B 选项利用对话中的 seats next to each other 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "Where should the man wait for the train?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "In the middle of the platform."
+            },
+            {
+              "key": "B",
+              "text": "At the far end of the platform."
+            },
+            {
+              "key": "C",
+              "text": "Behind the yellow line."
+            },
+            {
+              "key": "D",
+              "text": "In the waiting room."
+            }
+          ],
+          "answer": "B",
+          "explanation": "Q: Where should the man wait for the train?\n【答案解析】B 本题询问男士应该等待火车的地点。对话中女士提到“All you need to do is wait at the far end of the platform...the train arrives”，结合前文可知，此处 you 指代男士。由此可知，男士应该在站台尽头等待火车，故 B 选项正确。同时可知，并非男士应该在站台的中间等待火车，故排除 A 选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "What should the man do to collect the bicycles?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Wait in a queue for his turn."
+            },
+            {
+              "key": "B",
+              "text": "Go to the baggage claim area."
+            },
+            {
+              "key": "C",
+              "text": "Pay an extra fee for the service."
+            },
+            {
+              "key": "D",
+              "text": "Give the ticket to the train guard."
+            }
+          ],
+          "answer": "D",
+          "explanation": "Q: What should the man do to collect the bicycles?\n【答案解析】D 本题询问男士若要领走自行车应该做的事情。对话中女士提到“When you arrive in London, hand the ticket to the guard and he will return the bicycles to you”，结合前文可知，此处 you 指代男士。由此可知，男士若要领走自行车，应该把车票交给列车长，故 D 选项正确。A 选项利用对话中的 wait 设置词汇干扰，C 选项利用对话中的 extra cost 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "What do we learn about hat factories in Britain?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Almost all of them were operating at a deficit."
+            },
+            {
+              "key": "B",
+              "text": "They have all been turned into movie theatres."
+            },
+            {
+              "key": "C",
+              "text": "Nearly all of them closed down decades ago."
+            },
+            {
+              "key": "D",
+              "text": "They have adapted to meet fashion changes."
+            }
+          ],
+          "answer": "C",
+          "explanation": "Q: What do we learn about hat factories in Britain?\n【答案解析】C 本题询问我们了解到的关于英国帽子工厂的信息。对话中女士先提到“There used to be many hat factories in Britain until around the 1950s”，之后又提到“...practically all of those factories had to close down”，由此可知几乎所有的英国帽子工厂在几十年前就倒闭了，故 C 选项正确。B、D 两个选项分别利用对话中的 transformed...into a movie theatre 和 fashion changed 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "What is special about Cube Movie Theatre?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It shows foreign movies exclusively."
+            },
+            {
+              "key": "B",
+              "text": "It shows movies from the 1950s."
+            },
+            {
+              "key": "C",
+              "text": "It is the oldest theatre in London."
+            },
+            {
+              "key": "D",
+              "text": "It is located next to a hat factory."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Q: What is special about Cube Movie Theatre?\n【答案解析】A 本题询问“立方”电影院的特别之处。对话中女士提到“We’re the only movie theatre in the whole country that only shows foreign movies”，可知“立方”电影院的特别之处是它只放映外国电影，故 A 选项正确。B 选项利用对话中的 shows...movies 和 around the 1950s 设置干扰，C、D 两个选项分别利用对话中的 in London 和 It’s located in...a hat factory 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "What does the man say about most people in London?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They wear hats on social occasions."
+            },
+            {
+              "key": "B",
+              "text": "They don’t speak foreign languages."
+            },
+            {
+              "key": "C",
+              "text": "They enjoy watching foreign movies."
+            },
+            {
+              "key": "D",
+              "text": "They don’t go to movie theatres often."
+            }
+          ],
+          "answer": "B",
+          "explanation": "Q: What does the man say about most people in London?\n【答案解析】B 本题询问男士提到的关于大多数伦敦人的信息。对话中男士提到“I would have thought that in London most people don’t speak foreign languages”，可知在男士看来，大多数伦敦人不说外语，故 B 选项正确。A、C 两个选项分别利用对话中的 wearing hats 和 interested in watching...movies 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "What does the woman say about foreign movies shown in London?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are meant mostly for immigrants."
+            },
+            {
+              "key": "B",
+              "text": "They attract large crowds of young Londoners."
+            },
+            {
+              "key": "C",
+              "text": "They are hard for English people to appreciate."
+            },
+            {
+              "key": "D",
+              "text": "They have an English translation on the screen."
+            }
+          ],
+          "answer": "D",
+          "explanation": "Q: What does the woman say about foreign movies shown in London?\n【答案解析】D 本题询问女士提到的关于在伦敦上映的外国电影的信息。对话中女士提到“...all movies come with English text at the bottom of the screen”，可知女士提到的在伦敦上映的外国电影的屏幕上都会有英文翻译，故 D 选项正确。B、C 两个选项分别利用对话中的 lots of people interested in... 和 don’t understand 设置干扰，故都排除。\n\n##### Section C",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "What do we learn about Astrid Natley, a secondary school math teacher?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "She doesn’t think smartphones can replace tablets."
+            },
+            {
+              "key": "B",
+              "text": "She incorporates smartphones into her teaching."
+            },
+            {
+              "key": "C",
+              "text": "She cannot stop children using smartphones."
+            },
+            {
+              "key": "D",
+              "text": "She regards smartphones as a distraction."
+            }
+          ],
+          "answer": "B",
+          "explanation": "Q: What do we learn about Astrid Natley, a secondary school math teacher?\n【答案解析】B 本题询问我们了解到的关于中学数学老师 Astrid Natley 的信息。文章中提到“Astrid Natley, a secondary school math teacher, incorporates phones into her classroom”，可知中学数学老师 Astrid Natley 将智能手机融入她的教学中，故 B 选项正确。A 选项利用文中的 tablets 设置词汇干扰，C 选项利用文中的 stop children using phones 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "Why does Helen Lockhart, a registered nurse, support a complete ban on smartphone use in the classroom?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "To enforce school discipline."
+            },
+            {
+              "key": "B",
+              "text": "To make students concentrate."
+            },
+            {
+              "key": "C",
+              "text": "To help children grow up to be professionals."
+            },
+            {
+              "key": "D",
+              "text": "To cultivate children’s good study habits."
+            }
+          ],
+          "answer": "C",
+          "explanation": "Q: Why does Helen Lockhart, a registered nurse, support a complete ban on smartphone use in the classroom?\n【答案解析】C 本题询问注册护士 Helen Lockhart 支持在课堂上全面禁止使用智能手机的原因。文章中先提到“Helen Lockhart, a registered nurse...supports a complete ban”，接着又提到“‘I’m banned from mobile use at work...If I am caught with it...I will be subject to disciplinary procedure...We need to teach children how to behave like the professional they are striving to become’”，可知注册护士 Helen Lockhart 支持在课堂上全面禁止使用智能手机，并且她用自己的例子来表示他们需要教孩子们如何像他们（孩子们）努力成为的专业人士那样行事，即帮助孩子们成长为专业人士，故 C 选项正确。A 选项利用文中的 disciplinary 设置词汇干扰，故排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "What should students do in the classroom according to Richard Stone, an English teacher?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Use books and pens only."
+            },
+            {
+              "key": "B",
+              "text": "Cut down their screen time."
+            },
+            {
+              "key": "C",
+              "text": "Make full use of electronic devices."
+            },
+            {
+              "key": "D",
+              "text": "Learn to use the internet for research."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Q: What should students do in the classroom according to Richard Stone, an English teacher?\n【答案解析】A 本题询问英语老师 Richard Stone 认为学生在课堂上应该做的事。文章中先提到“Richard Stone, an English teacher, thinks there should be a clear separation between school and home”，接着又提到“...so let’s leave phones and laptops at home, and show them a different world in their lessons—one of books and pens”，结合前文可知，them 指代学生。由此可知，英语老师 Richard Stone 认为学校和家之间应该有明确的界限，让学生们把手机和笔记本电脑放在家里，在课堂上看到一个不一样的书本和笔的世界，即在课堂上只使用书本和笔，故 A 选项正确。B 选项利用文中的 screen time 设置干扰，C 选项利用文中的 use their phones 和 banned from mobile use 设置干扰，D 选项利用文中的 use their phones for research 和 The internet...research 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "How did Kate earn the reward from her mother?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "By cleaning the kitchen floor."
+            },
+            {
+              "key": "B",
+              "text": "By looking after her baby brother."
+            },
+            {
+              "key": "C",
+              "text": "By helping her mother do the dishes."
+            },
+            {
+              "key": "D",
+              "text": "By helping her brother wash windows."
+            }
+          ],
+          "answer": "D",
+          "explanation": "Q: How did Kate earn the reward from her mother?\n【答案解析】D 本题询问 Kate 从她妈妈那儿获取奖励的方式。文章开篇便提到“Kate...helped her brother wash windows to get a reward promised by her mother”，可知 Kate 是通过帮助她的哥哥清洗窗户，以得到她妈妈许诺的奖励，故 D 选项正确；同时可知，Kate 并非通过照顾她的小弟弟或帮她妈妈洗碗来获得她妈妈的奖励，故排除 B、C 两个选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "What did Kate do after her mother left the room?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "She ordered a large number of dolls."
+            },
+            {
+              "key": "B",
+              "text": "She checked if a purple doll was ordered."
+            },
+            {
+              "key": "C",
+              "text": "She mistakenly canceled her mom’s order."
+            },
+            {
+              "key": "D",
+              "text": "She ordered a more expensive doll instead."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Q: What did Kate do after her mother left the room?\n【答案解析】A 本题询问 Kate 在妈妈离开房间之后做的事情。文章中先提到“...her mom...walked out of the room”，接着又提到“15 minutes and a few clicks later, with more than $350 worth of dolls in her cart, Kate placed the order...”，可知 Kate 的妈妈离开房间后，Kate 自己将很多洋娃娃加入购物车并全部下了单，即 Kate 在妈妈离开房间后在网上订购了大量洋娃娃，故 A 选项正确。B 选项利用文中的 checking on...order 和 a purple doll 设置干扰，C 选项利用文中的 cancel、her mom 和 order 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "What did Kate’s family do after the packages arrived?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They asked the children’s hospital to pick them."
+            },
+            {
+              "key": "B",
+              "text": "They took all of them to the children’s hospital."
+            },
+            {
+              "key": "C",
+              "text": "They opened all of them one by one."
+            },
+            {
+              "key": "D",
+              "text": "They discussed where to keep them."
+            }
+          ],
+          "answer": "B",
+          "explanation": "Q: What did Kate’s family do after the packages arrived?\n【答案解析】B 本题询问 Kate 一家在收到包裹后所做的事情。文章中先提到“When the packages arrived...her father suggested giving them to the local children’s hospital”，接着又提到“Kate’s family...took all the dolls to the playroom at the children’s hospital”，可知 Kate 一家在收到包裹之后，在 Kate 爸爸的建议下，把所有包裹（洋娃娃）都送给了当地的儿童医院，故 B 选项正确。A、C 选项分别利用文中的 children’s hospital 和 they opened up all the boxes 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "According to recent research conducted in Australia, what has a lasting impact on one’s life?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "The time one starts school."
+            },
+            {
+              "key": "B",
+              "text": "The classroom atmosphere."
+            },
+            {
+              "key": "C",
+              "text": "The school that one attends."
+            },
+            {
+              "key": "D",
+              "text": "The relationship with classmates."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Q: According to recent research conducted in Australia, what has a lasting impact on one’s life?\n【答案解析】A 本题询问根据澳大利亚最近进行的一项研究，什么对一个人的生活有持久的影响。文章中提到“The researchers found that the time when a person starts school has an enduring impact on their lives”，结合前文可知，此处的 The researchers 指的是最近在澳大利亚进行的一项研究的研究人员。由此可知，根据澳大利亚最近进行的一项研究，入学时间对一个人的生活有持久的影响，故 A 选项正确。C、D 两个选项分别利用文中的 attend 和 classmates 设置词汇干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "What was the purpose of the Australian research?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "To help parents decide when to send their children to school."
+            },
+            {
+              "key": "B",
+              "text": "To find causes for differences in the participants’ performance."
+            },
+            {
+              "key": "C",
+              "text": "To identify students having potential to be professional athletes."
+            },
+            {
+              "key": "D",
+              "text": "To offer constructive suggestions for making educational policies."
+            }
+          ],
+          "answer": "B",
+          "explanation": "Q: What was the purpose of the Australian research?\n【答案解析】B 本题询问澳大利亚的这项研究的目的。文章中先提到“But the Australian researchers wanted to discover what was driving these differences”，结合前文可知，此处的 these differences 指的是入学年纪更大的学生与入学年纪较小的学生在学业和未来发展中表现出的差异，接着又提到“They suspected older, more mature students obtained more self-confidence than their peers because they achieved better grades. To test this out, they conducted two studies”，可知澳大利亚研究人员想找出是什么导致了这些差异，他们怀疑年长、成熟的学生比同龄人更自信，因为他们取得了更好的成绩，为了检验这一想法，他们进行了两项研究。由此可推知，澳大利亚的这项研究的目的是找出参与者表现存在差异的原因，故 B 选项正确。A 选项利用文中的 when...starts school 和 the...date for starting school 设置干扰，C 选项利用文中的 professional athletes 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "Who were the participants in the researchers’ first study?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Political leaders."
+            },
+            {
+              "key": "B",
+              "text": "Financial analysts."
+            },
+            {
+              "key": "C",
+              "text": "Professional athletes."
+            },
+            {
+              "key": "D",
+              "text": "High-school students."
+            }
+          ],
+          "answer": "D",
+          "explanation": "Q: Who were the participants in the researchers’ first study?\n【答案解析】D 本题询问研究人员第一项研究的参与者。文章中提到“In the first study, more than 600 high school students were surveyed about their tendency to take risks and feel confident”，可知研究人员第一项研究的参与者是高中生，故 D 选项正确。A、B、C 三个选项分别利用文中的 political leaders、finances 和 professional athletes 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "According to the researchers, what is one characteristic of successful people?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Leadership ability."
+            },
+            {
+              "key": "B",
+              "text": "Commitment to work."
+            },
+            {
+              "key": "C",
+              "text": "Risk-taking."
+            },
+            {
+              "key": "D",
+              "text": "Self-confidence."
+            }
+          ],
+          "answer": "C",
+          "explanation": "Q: According to the researchers, what is one characteristic of successful people?\n【答案解析】C 本题询问据研究人员所说，什么是成功人士的一个特征。文章中提到“While risk-taking can be considered a negative attribute, it’s also a characteristic of successful people”，可知虽然冒险可能被认为是一种负面的特质，但它也是成功人士的一个特征，即成功人士的一个特征是冒险，故 C 选项正确。A、D 两个选项分别利用文中的 leaders 和 self-confidence 设置干扰，故都排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "It’s a fantasy that goes back centuries: a message in a bottle, carried ashore from far-off lands. Authors, artists and children __(26)__ have dreamed of such a gift from the sea.\n\nThis time, though, it’s not a bottle that washes ashore. It’s eggs—thousands of little toy eggs.\n\nThat’s what happened on the German island of Langeoog this week.\n\nLying just off the North Sea coast, it found itself __(27)__ by an invasion of colored plastic eggs--much to the __(28)__ of local children, because the eggs contained toys.\n\nPolice __(29)__ the eggs came from a freighter that lost part of its cargo during an unusually __(30)__ storm, the worst to hit Germany’s northeastern coast since 2006.\n\nAt any rate, what was lost now has been found, by many of the community’s littlest residents.\n\n“The surprise eggs have found their way to freedom,” said Mayor Uwe Garrel. However, the joy of the moment __(31)__ off soon.\n\n“At first, I thought this was a wonder, because everything was so __(32)__ , but then we realized that this is a huge __(33)__ in the end,” said the mayor. He also noted the plastic bags and other materials that have washed ashore on the island can cause serious problems for __(34)__ .\n\nStill, all these little eggs contained an extra treat with their toys. They __(35)__ notes from afar.\n\nThere was just one problem for the German children who received them: They were written in Russian.",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "transcript": null,
+          "translation": "这是一个可以追溯到几个世纪前的幻想：一条信息被装在瓶子里，从遥远的地方来到了岸上。不管是作家、艺术家还是儿童，(26) **都**梦想着收到这样一份来自大海的礼物。\n\n不过这一次，被冲上岸的不是一个瓶子，而是蛋——成千上万个小玩具蛋。\n\n这就是本周发生在德国朗格奥格岛的事情。\n\n该岛位于北海海岸附近，它受到了大量涌入的彩色塑料蛋的 (27) **侵袭**——这让当地的孩子们非常 (28) **高兴**，因为这些蛋里有玩具。\n\n警方 (29) **怀疑**这些玩具蛋来自一艘货船，这艘货船在一场异常 (30) **强烈**的风暴中丢失了部分货物，这场风暴是 2006 年以来德国东北海岸遭遇的最严重的一场。\n\n无论如何，丢失的东西现在已经成为社区里许多年龄最小的居民的战利品。\n\n市长尤韦·加雷尔斯说，“这些让人惊喜的蛋已经找到了它们的自由之路”。然而，这一刻的喜悦很快就消逝了。\n\n市长说，“起初我认为这是一件奇事，因为一切都如此 (32) **有趣**，但后来我们意识到，这终究是一个巨大的 (33) **麻烦**”。他还指出，被冲到岛上的塑料袋和其他材料会给 (34) **野生动植物**带来严重的问题。\n\n不过，除了玩具外，所有这些小蛋内都有额外的乐趣。它们 (35) **带着**来自远方的便条。\n\n对于收到这些便条的德国孩子来说，问题只有一个：它们是用俄语写的。"
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读",
+          "text": "Hyphenating your last name after marriage?\n[A] Congratulations on deciding to get married! While being married is great and wonderful, the act of getting married can be quite stressful. There is the planning of the ceremony itself, the merging (合并) of two households and all of the details involved in that. You also have to take the time to apply for your marriage license and then decide whether or not you are going to keep your last name or change it.\n[B] This is where a lot of people have trouble. Once upon a time, it was just customary for a bride to take her groom’s last name as hen own and abandon her maiden name completely. The act of keeping her own last name was considered taboo (禁忌) and people’s eyebrows would raise right off their faces when they found out that the bride was even considering something so radical. Over time, though, more and more women are deciding to keep their last names.\n[C] There are a lot of reasons to want to keep your own last name. Hopefully you have a supportive groom who understands why this idea is the most appealing to you. A lot of times, though, the act of keeping your name is still something that causes concern. Even if your groom is fine with it, his family (or your own) might not be so understanding.\n[D] There are a couple of ways to compromise on the issue. You could choose an entirely new last name for the two of you to share. This way neither of you gets “your” way and you both have to deal with the legalities of going through a name change. Most of the time, though, the most popular compromise is to hyphenate your last name and the last name of your groom. For example, if your groom’s name is John Smith and your name is Kate Jones. You would name yourself Kate Jones-Smith or Kate Smith-Jones. This allows you to keep going by your own last name while legally adopting your husband’s last name at the same time.\n[E] The compromise is the biggest reason that so many women choose to hyphenate their last names. It is a way of keeping your own identity while also making your future husband happy. It allows you to stay connected to accomplishments that you achieved before you got married. For example, many women who choose to hyphenate do so partially because they have earned higher educational degrees and certifications under their maiden names. They might have also had things published or publicized and want to stay connected to that identity. Hyphenating your last name can help you bridge the gap between your personal and professional lives. Many women who opt to simply keep their own names do so because they don’t want to give up all that they have accomplished professionally. Adopting their husband’s last name makes it hard for them to claim ownership of these accomplishments personally because they happened under their “other” name.\n[F] While tradition is one thing, there isn’t any logical reason to completely change your name. Keeping your name and joining it to your husband’s through hyphenation is as legal as simply adopting his name or as simply keeping your own and leaving his out of the picture entirely.\n[G] Probably the most important reason to consider hyphenation is your identity. You’ve spent your whole life building your identity under a certain name. Obviously you will still be you even if you’ve taken on your husband’s last name and omitted yours entirely. At the same time, your name is associated with the identity you’ve built up and hyphenation allows you to respect that while also respecting tradition and your husband’s family’s identity.\n[H] If you care about outside opinions on your name, you should know that a large portion of today’s society is annoyed by the hyphenated name. Some people find it “snobby” (势利的) and others simply find it irritating because they have a hard time remembering which last name they are supposed to say first. Some people even believe that not simply adopting your husband’s last name is a huge sign of disrespect and a lack of commitment.\n[I] It is possible that your future husband will find this choice offensive. Some men, regardless of how you might feel about some things, are traditionalists and feel that it is simply “right” for the woman to take the man’s last name as her own. Whether your future husband insisting on your adopting his last name is a red flag to you or not, it is still something that you should take into consideration.\n[J] There are all sorts of reasons to hyphenate your name or not to hyphenate your name. The basis for each of these things, however, is whether or not you are willing to make a compromise when it comes to changing your name. The hyphenation is the epitome (体现) of a compromise. One spouse wants a complete name change. The other spouse wants no name change. Hyphenating the two names is a way for each person to, at least a little bit, “win” the argument.\n[K] And don’t forget the legal stuff! Making the decision is just part of the process. From there you are going to have to legally change your name all over the place. You’ll need to change your name at the bank, with social security, with your credit cards, on your driver’s license, at the gym ... everywhere. It’s easy to get overwhelmed just thinking about it.\n[L] What matters, of course, is that the two of you are going to be happily married—hopefully for the of your lives. At the end of the day, whether you each keep your names, whether you come up with an entirely new name for the two of you to share or whether you hyphenate your current last names, what matters is that you love each other and are going to be joining your lives together. Try to remember that as you are staring at the application for your marriage license and filling out the portion that reads “name after you get married” (or whatever the legalese for that might be).",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "transcript": null,
+          "translation": "**婚后使用连字符形式的姓氏？**\n\n[A] 恭喜你决定结婚了！虽然结婚很美好，但过程可能很劳心。这其中包含婚礼仪式本身的策划，两个家庭的结合以及结婚所涉及的所有细节。你还必须花时间申请结婚证，然后决定要保留你的姓氏还是要更改它。\n[B] 这是很多人的困扰所在。在以前，新娘随夫姓，完全放弃自己的娘家姓正是一种习俗。新娘保留自己姓氏的行为被认为是禁忌，当人们发现新娘甚至在考虑如此激进的事情时，他们会立刻皱起眉头。不过，随着时间的推移，越来越多的女性决定保留自己的姓氏。\n[C] 想保留自己姓氏的理由有很多。你有望有一个支持你的新郎，他能理解为什么这个想法对你最有吸引力。不过很多时候，保留你的姓氏这一行为仍然会引起关注。即使你的新郎对此没有意见，他的（或者你自己的）家人也可能会不那么善解人意。\n[D] 在这个问题上有两种妥协方式。你们可以选择共用一个全新的姓氏。这样，你们两个都无法使用自己的姓氏，并且你们都必须办理更名过程中的法律手续。不过，大多数时候，最普遍的妥协方式是把你的姓氏和新郎的姓氏用连字符连接。例如，如果新郎的名字是约翰·史密斯，你的名字是凯特·琼斯，那你可以给自己取名为凯特·琼斯-史密斯或凯特·史密斯-琼斯。这样，你就可以继续使用自己的姓氏，同时也合法地采用了你丈夫的姓氏。\n[E] 想要找到一种折中方案是许多女性选择用连字符连接（自己和丈夫）姓氏的最大原因。这种连接是一种让你保持自己身份，同时也让你未来丈夫满意的方式。这使你能够与你婚前取得的成就保持关联。例如，许多选择使用连字符的女性这样做的部分原因是她们使用娘家姓时获得了高等教育学位和证书。她们可能还有一些东西被发表或报道过，所以希望与这一身份保持关联。使用连字符连接姓氏可以帮助你消除个人生活和职业生活之间的鸿沟。许多选择只保留自己名字的女性这样做是因为她们不想放弃自己在职业上取得的所有成就。采用丈夫的姓氏使她们很难宣称自己拥有这些成就，因为这些成就是她们用“另一个”名字获得的。\n[F] 虽然有传统这么一回事，但没有任何合乎逻辑的理由让你完全改变自己的姓氏。保留你的姓氏并通过连字符把它与你丈夫的姓氏联合在一起，和仅采用他的姓氏，或仅保留你自己的姓氏而把他的姓氏完全排除在外一样合法。\n[G] 考虑使用连字符最重要的原因可能是你的身份。你一生都在用某个名字构建自己的身份。显然，即使你采用了丈夫的姓氏而完全没有用你自己的姓氏，你仍然是你。与此同时，你的名字与你已经建立起的身份相关，使用连字符使你在尊重自己身份的同时，也尊重了传统和你丈夫家族的身份。\n[H] 如果你在乎外界对你名字的看法，你应该知道，当今社会有很大一部分人对有连字符的名字感到恼火。有些人认为这种名字“势利”，还有一些人只觉得它很烦人，因为他们很难记住应该先说哪个姓。有些人甚至认为，不直接采用丈夫的姓氏是一种极大的不尊重和自私的表现。\n[I] 你未来的丈夫可能会觉得不随他姓这一选择冒犯到了他。不管你对这件事情有什么看法，有些男性就是传统主义者，认为女性随男方姓是完全“正确的”。无论你未来的丈夫坚持让你随他姓对你来说是不是一个危险信号，这都是你应该考虑的事情。\n[J] 选择在你的名字中使用连字符或者不使用连字符，都有各种理由支撑。然而，每个理由的基础是，在谈及更改你的名字时，你是否愿意做出妥协。使用连字符是妥协的体现。配偶一方想要完全改姓。另一方则不想改姓。使用连字符连接两者的姓氏至少在一定程度上是一种双“赢”的方式。\n[K] 而且不要忘记法律相关的事情！做出决定只是这个过程的一部分。从那以后，你将不得不在各处依法更改你的名字。你需要在银行、在社会保障中、在信用卡上、在驾驶执照上、在健身房……各个地方去改名。只是想一想就很容易让人招架不住。\n[L] 当然，重要的是你们两人的结合是幸福的——而且余生都幸福。最终，无论你们是否各自保留自己的姓氏，是否想出一个两人共享的全新姓氏，或是否将目前的姓氏用连字符连接，重要的是你们彼此相爱，共度余生。当你们注视着结婚证申请表，并填到“婚后姓名”（或任何类似的法律术语）这部分时，努力记住这一点。"
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "It’s good to be smart. After all, intelligent people earn more money, accumulate more wealth, and even live longer. But there’s another side to the story. The brightest people and strongest leaders sometimes make errors others don’t, especially in situations that require common sense.\n\nTravis Bradberry, president at TalentSmart, explained Bradberry in his post Why Smart People Act so Stupid that “rational thinking and intelligence don’t tend to go hand in hand”. Intelligent people are more prone to silly mistakes because of blind spots in how they use logic. These blind spots exist because smart people tend to be overconfident in their reasoning abilities. “They’re so used to being right and having quick answers that they don’t even realise when they’re making a mess by answering without thinking things through.”\n\nA lifetime of praise leads smart people to develop too much faith in their intelligence and abilities. They often fail to recognise when they need help, and when they do recognise it, they tend to believe that no one else is capable of providing it.\n\n“It’s hard for anyone to graciously accept the fact that they’re wrong. It’s even harder for smart people because they grow so used to being right all the time that it becomes a part of their identity,” Bradberry wrote. “For smart people, being wrong can feel like a personal attack, and being right, a necessity.”\n\nSmart people also have a hard time accepting feedback. They tend to undervalue the opinions of others, which means they have trouble believing that anyone is qualified to give them useful feedback. Not only does this tendency hinder their growth and performance, it can lead to harmful relationships, both personally and professionally.\n\nSmart people develop overachieving personalities because things come so easily to them. They simply don’t understand how hard some people have to work to accomplish the same things, and because of that, they push people too hard. They set the bar too high, and when people take too long or don’t get things quite right, they assume it’s due toa lack of effort. So they push even harder.",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "transcript": null,
+          "translation": "聪明是件好事。毕竟，聪明的人钱赚得更多，财富积累得更多，甚至寿命更长。但另一方面，(46) 最聪明的人和最有实力的领导者有时会犯别人不会犯的错误，尤其是在需要常识的情况下。\n\nTalentSmart 的总裁特拉维斯·布拉德伯里在《为什么聪明人有时会如此愚蠢》一文中解释道：“理性思维和智力往往不是密切相关的。聪明人更容易犯愚蠢的错误，因为他们在运用逻辑的方式上存在盲点。(47) 之所以存在这些盲点，是因为聪明人往往对自己的推理能力过于自信。”他们太习惯于自己是对的以及快速回答问题，以至于他们甚至都没有意识到他们在没有考虑周全的情况下就答复会把事情搞得一团糟。\n\n一生都处于赞美中会让聪明人对自己的智力和能力过度自信。他们常常意识不到自己何时需要帮助，而当他们真的意识到这一点时，也往往会认为没人能够提供帮助。\n\n“任何人都很难大方地接受自己错了这一事实。对于聪明人来说，这甚至更难，因为他们已经如此习惯自己一直都是对的，以至于这成为他们自身的一部分”，布拉德伯里写道。“(48) 对于聪明人来说，犯错就像是受到了人身攻击，而保持正确则是必要的。”\n\n聪明人也很难接受反馈意见。他们倾向于轻视别人的意见，这意味着他们难以相信有人有资格给他们提供有用的反馈。(49) 这种倾向不仅阻碍他们的成长和表现，还可能对他们的人际关系造成危害，包括私人关系和职业关系。\n\n聪明人会养成争强好胜的性格，这是因为事情对他们来说太容易了。他们根本不明白，有些人为了完成同样的事情必须付出多大努力，正因为如此，(50) 他们把别人逼得太紧。他们把标准定得过高，并且当别人做事花了太长时间或做得不太好时，他们就认为这是由于别人不够努力，所以他们逼得更紧了。"
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "Of the endless troubles that come with being driven from one’s home country, losing educational certificates may seem small. But it isn’t. Refugees who settle in other countries often find themselves unable to continue on their previous career path due to a new set of employer standards or skills requirements. To solve this problem, the U.S. State Department is posing a solution: online learning.\n\nThe State Department will announce a partnership with an online education platform called Coursera. The platform will allow refugees worldwide to take thousands of online courses for free. “Coursera for Refugees” will be available for any non-profit group that supports refugees in any country, as well as individual refugees. They can apply for fully funded access to Coursera’s course catalog, which means they can take all of the platform’s classes and obtain professional certificates for free. The platform currently offers professor-led lectures on a broad range of topics, from data science to fashion design.\n\nAs the world migrant crisis intensifies, employment is becoming a global concern. The new program aims to aid refugees by offering “important skills that will help them in the global economy,” Evan Ryan, U.S. assistant secretary of state for educational and cultural affairs, said on a press call last week. “What we don’t want to do is not act,” added Coursera chief operations officer Lila Ibrahim.\n\nThe idea isn’t without its kinks. For one, starting on a new career path is not as simple as watching a few videos and obtaining an online certificate; even those looking to continue previous careers can’t simply rely on an online lecture to get them up-to-date on standards, policies, and practices. For another, most of the classes on Coursera are in English, and though there are plans to add translations, language barriers can be a big obstacle. Then there are the questions over the value of massive open online courses (MOOCs) themselves—both for refugees and for average learners.\n\nBut it’s still early days and there are signs of hope. In 2015, a joint study found 72% of people taking MOOCs saw career benefits afterward.",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "transcript": null,
+          "translation": "在被驱逐出国导致的无穷无尽的麻烦中，失去教育文凭似乎微不足道。但事实并非如此。(51) 在其他国家定居的难民往往发现自己无法继续之前的职业道路，因为有一套新的雇主标准或技能要求。为了解决这个问题，美国国务院提出一个解决方案：在线学习。\n\n美国国务院将宣布与名为 Coursera 的在线教育平台建立合作关系。该平台将允许世界各地的难民免费学习数千门在线课程。(52) “Coursera for Refugees”（难民免费在线公开课）面向各国所有支持难民的非营利组织以及难民个人。他们可以申请全额资助进入 Coursera 课程目录，(52) 这意味着他们可以免费学习该平台的所有课程并免费获得专业证书。该平台目前提供教授主导的讲座，这些讲座主题广泛，从数据科学到时装设计都有。\n\n(53) 随着世界移民危机的加剧，就业正成为全球关注的问题。在上周的新闻发布会上，美国负责教育和文化事务的助理国务卿埃文·瑞安表示，这个新项目旨在通过为难民提供“有助于他们在全球经济中发展的重要技能”来帮助他们。Coursera 首席运营官莉拉·易卜拉欣补充道，“我们不想做的是不采取行动”。\n\n这个想法并非没有问题。首先，开启一条新的职业道路并不像看几个视频然后获得一个在线证书那么简单；即使是那些希望继续从事以前职业的人也不能简单地依靠在线讲座来了解最新的标准、政策和制度。(54) 另外，Coursera 上的大部分课程都是英文版，尽管有添加译文的计划，但语言障碍可能是一个很大的绊脚石。再者，大规模开放在线课程（慕课）本身的价值也有待讨论——无论是对难民还是对普通学习者而言。\n\n但现在该项目还处于早期阶段，仍能看到希望的曙光。(55) 2015 年，一项联合研究发现，72% 参加了慕课的人在后来体验到了其对职业发展的好处。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-03-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "O",
+          "explanation": "副词辨析题。空格所在句主干结构完整，且空格位于主语 Authors, artists and children 和谓语 have dreamed of 之间，故可判断空格处应填入一副词作状语。备选项中，只有 O 选项 alike（同样地）入选，将其代入文中，意为“不管是作家、艺术家还是儿童，都梦想着收到这样一份来自大海的礼物”，符合语义及语境，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "D",
+          "explanation": "分词辨析题。空格所在句中，it 作主语，found 作谓语，itself 作宾语，空格后为介词短语 by...plastic eggs，可判断空格处应填入一分词、形容词、名词或副词作宾语补足语，或填入一副词作状语。空格所在部分意为“该岛位于北海海岸附近，它发现自己被大量涌入的彩色塑料蛋______”或“该岛位于北海海岸附近，它发现自己______在大量涌入的彩色塑料蛋旁边”。结合上文提到的本周发生在该岛的事情——成千上万个玩具蛋被冲上岸可推断，空格所填词应表达“受到某种遭遇”之意。备选项中，只有 D 选项 struck（侵袭）代入文中，意为“它受到了大量涌入的彩色塑料蛋侵袭”，符合语义及语境，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "L",
+          "explanation": "名词辨析题。空格位于定冠词 the 和介词短语 of local children 之间，故空格处应填入\n一名词或动名词。空格所在部分意为“当地的孩子们非常______，因为这些蛋里有玩具”。结合常识可知，孩子们通常都喜欢玩具。由此可推断，空格所在部分应表达孩子们的喜悦之情，故空格所填词应含有“开心；愉快”之意。备选项中，只有 L 选项 delight（高兴；愉快）符合句意及语境，且 to the delight of sb. 是固定搭配，意为“令某人感到高兴”，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "C",
+          "explanation": "动词辨析题。空格位于名词 Police 和 the eggs 之间，名词 Police 作主语，省略引导词 that 的宾语从句作宾语，句中缺少谓语，故空格处应填入一动词。空格所在部分意为“警方______这些玩具蛋来自一艘货船，这艘货船在一场异常……风暴中丢失了部分货物”。结合上文提到的成千上万个小玩具蛋被冲上岸可知，此处应是警方对这些玩具蛋的来源做了推测或发表了观点。备选项中，只有 C 选项 suspect（怀疑，猜想）代入文中，意为“警方怀疑这些玩具蛋来自一艘货船”，符合语义及语境，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "I",
+          "explanation": "形容词辨析题。空格位于名词短语 an unusually ______ storm 中，故空格处应填入一形容词或分词作定语，修饰 storm。空格所在部分意为“货船在一场异常______风暴中丢失了部分货物，这场风暴是 2006 年以来德国东北海岸遭遇的最严重的一场”。由此可推测这场风暴的强度很大，故空格所填词应含有“强烈；猛烈”之意。备选项中，将 I 选项 intense（强烈的，剧烈的）代入文中，意为“这艘货船在一场异常强烈的风暴中丢失了部分货物”，符合语义及语境，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "A",
+          "explanation": "动词辨析题。空格位于主语 the joy of the moment 和副词 off 之间，句中缺少谓语，故空格处应填入一动词，且该动词能够与 off 构成合理搭配。空格所在句意为“然而，这一刻的喜悦很快______”，结合该句中表转折的 However 及上文提到的这些令人惊喜的蛋已经成为孩子的战利品这一暗含喜悦之情的内容可推断，空格所在部分应表达“喜悦之情很快消失或转变为消极情绪”之意。备选项中，A 选项 wore 这一动词可与副词 off 搭配构成短语动词 wore off（wear off 的过去式，意为“消逝；逐渐停止”），代入文中，意为“这一刻的喜悦很快就消逝了”，符合语义及语境，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "M",
+          "explanation": "形容词辨析题。空格位于 because 引导的原因状语从句中，其中，everything 作主语，was 为系动词或助动词，但因 so 在此处为副词，且空格后没有其他成分，故判断 was 在此处为系动词，空格处应填入一形容词作表语。空格所在部分意为“起初我认为这是一件奇事，因为一切都如此______……”，由此可推测空格所填词应能体现“奇”这一特征。备选项中，将 M 选项 colorful（有趣的；丰富多彩的）代入文中，意为“起初我认为这是一件奇事，因为一切都如此有趣”，符合语义及语境，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "H",
+          "explanation": "名词辨析题。空格位于 that 引导的宾语从句中，其中，this 作主语，is 为系动词，a huge ______ 作表语，介词短语 in the end 作状语，故空格处应填入一单数可数名词。空格所在部分意为“但后来我们意识到，这终究是一个巨大的______”，上文提到，起初市长认为成千上万个小玩具蛋被冲上岸是一件奇事，因为一切都如此有趣，再结合空格所在部分中表转折的 but 可推断，空格所填名词应表达消极含义。备选项中，H 选项 mess（麻烦，困境）和 N 选项 bore（令人厌烦的事）入选，二者的区别在于，mess 表示客观的困境，bore 表示主观上令人厌烦的事情，由后文提到的被冲到岛上的塑料袋和其他材料带来了严重的问题可知，mess 更符合语境。将 H 选项代入文中，意为“但后来我们意识到，这终究是一个巨大的麻烦”，符合语义及语境，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "B",
+          "explanation": "名词辨析题。空格位于省略引导词 that 的宾语从句中，其中，the plastic bags and other materials 作主语，that 引导的定语从句修饰主语，can cause 作谓语，serious problems 作宾语，介词短语 for ______ 作状语，故空格处应填入一不可数名词、可数名词的复数形式或动名词作介词 for 的宾语。空格所在句意为“他还指出，被冲到岛上的塑料袋和其他材料会对______造成严重的问题”。结合常识可知，海岸上的塑料以及其他垃圾会对一些生物和生态环境带来不良影响，由此可推测空格所填词应与某些生物或生态环境有关。备选项中，将 B 选项 wildlife（野生动植物）代入文中，意为“被冲到岛上的塑料袋和其他材料会给野生动植物带来严重的问题”，符合语义及语境，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "wore"
+            },
+            {
+              "key": "B",
+              "text": "wildlife"
+            },
+            {
+              "key": "C",
+              "text": "suspect"
+            },
+            {
+              "key": "D",
+              "text": "struck"
+            },
+            {
+              "key": "E",
+              "text": "similar"
+            },
+            {
+              "key": "F",
+              "text": "quantity"
+            },
+            {
+              "key": "G",
+              "text": "overthrown"
+            },
+            {
+              "key": "H",
+              "text": "mess"
+            },
+            {
+              "key": "I",
+              "text": "intense"
+            },
+            {
+              "key": "J",
+              "text": "human"
+            },
+            {
+              "key": "K",
+              "text": "effective"
+            },
+            {
+              "key": "L",
+              "text": "delight"
+            },
+            {
+              "key": "M",
+              "text": "colorful"
+            },
+            {
+              "key": "N",
+              "text": "bore"
+            },
+            {
+              "key": "O",
+              "text": "alike"
+            }
+          ],
+          "answer": "N",
+          "explanation": "动词辨析题。空格所在句中，代词 They 作主语，名词 notes 作宾语，介词短语 from afar 作状语，或作后置定语修饰 notes，句中缺少谓语，故空格处应填入一动词。空格所在句意为“它们从远方______便条”或“它们______来自远方的便条”。空格所在句上句提到，“不过，除了玩具外，所有这些小蛋内都有额外的乐趣”。由此可推知，“额外的乐趣”指的是玩具蛋内的便条，即玩具蛋内有便条，故空格处应填入能体现便条与玩具蛋之间的包含关系的词。备选项中，将 N 选项 bore（bear 的过去式，意为“携带”）代入文中，意为“它们带着来自远方的便条”，符合语义及语境，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "Many people today still find name hyphenation upon marriage unacceptable.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【答案解析】H 根据题干信息 Many people today、name hyphenation 和 unacceptable 可定位至原文 H 段 1 句。该句后半部分提到，当今社会有很大一部分人对有连字符的名字感到恼火。题干是对该句后半部分的同义转述，其中 Many people today、name hyphenation 和 unacceptable 分别与该句中的 a large portion of today’s society、the hyphenated name 和 is annoyed 相对应，故 H 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "As a compromise, a bride will in most cases adopt a name that combines the couple’s last names.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【答案解析】D 根据题干信息 compromise、in most cases 和 combines the couple’s last names 可定位至原文 D 段 4 句。该句提到，大多数时候，最普遍的妥协方式是把你的姓氏和新郎的姓氏用连字符连接。题干是对该句的同义转述，其中 compromise 为原词再现，in most cases 和 combines the couple’s last names 分别与该句中的 Most of the time 和 hyphenate your last name and the last name of your groom 相对应，故 D 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "The bride should consider adopting her groom’s last name whether he feels strongly about it or not.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【答案解析】I 根据题干信息 should consider、adopting her groom’s last name 和 feels strongly 可定位至原文 I 段 3 句。该句提到，无论你未来的丈夫坚持让你随他姓对你来说是不是一个危险信号，这都是你应该考虑的事情。题干是对该句的同义转述，其中 should consider、adopting her groom’s last name 和 feels strongly 分别与该句中的 should take into consideration、adopting his last name 和 insisting on 相对应，故 I 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Making preparations for marriage causes a lot of stress.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【答案解析】A 根据题干信息 Making preparations for marriage 和 a lot of stress 可定位至原文 A 段 2 句。该句后半部分提到，结婚的过程可能很劳心。题干是对该句后半部分的同义转述，其中 Making preparations for marriage 和 a lot of stress 分别与该句中的 the act of getting married 和 quite stressful 相对应，故 A 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Hyphenating the last names could be a win-win solution should arguments arise about what name to adopt upon marriage.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【答案解析】J 根据题干信息 Hyphenating the last names、a win-win solution 和 arguments 可定位至原文 J 段末句。该句提到，使用连字符连接两者的姓氏至少在一定程度上是一种双“赢”的方式。题干是对该句的同义转述，其中 arguments 为原词再现，Hyphenating the last names 和 a win-win solution 分别与该句中的 Hyphenating the two names 和 a way for each person to...“win”相对应，故 J 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "It used to be considered socially unacceptable for a bride to retain her maiden name.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【答案解析】B 根据题干信息 used to、be considered socially unacceptable、a bride 和 retain her maiden name 可定位至原文 B 段 2、3 句。这两句提到，在以前，新娘保留自己姓氏的行为被认为是禁忌。题干是对这两句的合理概括，其中 a bride 为原文再现，used to 与 2 句中的 Once upon a time 相对应，be considered socially unacceptable 和 retain her maiden name 分别与 3 句中的 was considered taboo 和 keeping her own last name 相对应，故 B 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "The bride who adopts a hyphenated last name after marriage can maintain connections with their past achievements.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【答案解析】E 根据题干信息 maintain connections with their past achievements 可定位至原文 E 段 3 句。该句提到，这使你能够与你婚前取得的成就保持关联。结合上文可知，该句中的 It 指代使用连字符连接姓氏。题干是对该句的同义转述，其中 maintain connections with their past achievements 与该句中的 stay connected to accomplishments that you achieved before you got married 相对应，故 E 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "Hyphenating names allows the bride to preserve her own identity while respecting tradition.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【答案解析】G 根据题干信息 Hyphenating names、her own identity 和 while respecting tradition 可定位至原文 G 段末句。该句提到，你的名字与你已经建立起的身份相关，使用连字符使你在尊重自己身份的同时，也尊重了传统。题干是对该句后半部分的同义转述，其中 while respecting tradition 为原文再现，Hyphenating names 和 her own identity 分别与该句中的 hyphenation 和 the identity you’ve built up 相对应，故 G 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "No matter what name the bride adopts, it is most important that the newly-weds truly love each other.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "L",
+          "explanation": "【答案解析】L 根据题干信息 No matter what name the bride adopts、important 和 the newlyweds...love each other 可定位至原文 L 段 2 句。该句提到，无论你们是否各自保留自己的姓氏，是否想出一个两人共享的全新姓氏，或是否将目前的姓氏用连字符连接，重要的是你们彼此相爱，将共度余生。题干是对该句的合理概括，其中 No matter what name the bride adopts、important 和 the newlyweds...love each other 分别与该句中的 whether you each keep your names, whether you come up with an entirely new name for the two of you to share or whether you hyphenate your current last names、matters 和 you love each other 相对应，故 L 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Legally speaking, the bride is free to choose whatever name she prefers.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【答案解析】F 根据题干信息 Legally 和 free to choose whatever name she prefers 可定位至原文 F 段 2 句。该句提到，保留你的姓氏并通过连字符把它与你丈夫的姓氏联合在一起，和仅采用他的姓氏，或仅保留你自己的姓氏而把他的姓氏完全排除在外一样合法。题干是对该句的合理概括，其中 Legally 与该句中的 legal 相对应，free to choose whatever name she prefers 与该句中的 Keeping your name and joining it to your husband’s through hyphenation...simply adopting his name or...simply keeping your own and leaving his out of the picture entirely 相对应，故 F 为答案选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What do we learn from the passage about the brightest people?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They can make silly mistakes in straightforward situations."
+            },
+            {
+              "key": "B",
+              "text": "They usually turn a blind eye to their own weaknesses."
+            },
+            {
+              "key": "C",
+              "text": "They are admired by people around them."
+            },
+            {
+              "key": "D",
+              "text": "They can differ in their personalities."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【答案解析】A 由题干中的 the brightest people 并结合出题顺序可定位至原文一段 4 句。该句提到，最聪明的人有时会犯别人不会犯的错误，尤其是在需要常识的情况下，而需要常识的情况也就是简单的情况，即最聪明的人会在面对简单的情况时犯愚蠢的错误。A 选项内容是对一段 4 句的同义转述，其中，make...mistakes 和 in straightforward situations 分别与该句中的 make errors 和 in situations that require common sense 相对应，故正确。三段 1 句提到，一生都处于赞美中会让聪明人对自己的智力和能力过度自信，并未明确说明这些赞美来自他们周围的人，故排除 C 选项。六段 1 句提到，聪明人会养成争强好胜的性格，并未提及最聪明的人可能在性格上各不相同，故排除 D 选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What accounts for the existence of intelligent people’s logical blind spots?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Their irrational way of thinking."
+            },
+            {
+              "key": "B",
+              "text": "Too much faith in their ability to think."
+            },
+            {
+              "key": "C",
+              "text": "Their ignorance of behavioural science."
+            },
+            {
+              "key": "D",
+              "text": "Too much concern about their work."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【答案解析】B 由题干中的 accounts for、existence 和 intelligent people’s logical blind spots 可定位至原文二段 2、3 句，其中，accounts for 与该段 2 句中的 because of 和 3 句中的 because 相对应，existence 和 intelligent people’s logical blind spots 分别与该段 3 句中的 exist 和 2 句中的 Intelligent people...blind spots in how they use logic 相对应。这两句提到，聪明人在运用逻辑的方式上存在盲点，而这些盲点的存在是因为他们往往对自己的推理能力过于自信。由此可知，聪明人会有逻辑盲点是因为他们对自己的思考能力过于自信。B 选项内容是对二段 3 句的同义转述，其中，Too much faith in 和 their ability to think 分别与该句中的 be overconfident in 和 their reasoning abilities 相对应，故正确。二段 1 句提到，理性思维和智力往往不是密切相关的，并未提及聪明人会有逻辑盲点是因为他们非理性的思维方式，故排除 A 选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "How do smart people react when they are found to be wrong?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They shit the blame to others."
+            },
+            {
+              "key": "B",
+              "text": "They graciously accept the facts."
+            },
+            {
+              "key": "C",
+              "text": "They may feel shocked."
+            },
+            {
+              "key": "D",
+              "text": "They may get offended."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【答案解析】D 由题干中的 smart people 和 be wrong 可定位至原文四段 3 句。该句提到，对于聪明人来说，犯错就像是受到了人身攻击。由此可知，当被别人发现自己犯错的时候，聪明人可能会感觉受到了人身攻击，觉得被冒犯了。D 选项内容是对四段 3 句前半部分的同义转述，其中，may get offended 与该句中的 can feel like a personal attack 相对应，故正确。四段 1、2 句提到，任何人都很难大方地接受自己错了这一事实，对于聪明人来说，这甚至更难，B 选项内容与此相悖，故排除。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What may happen to smart people who find it difficult to accept suggestions?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They may suffer in their professional and private life."
+            },
+            {
+              "key": "B",
+              "text": "They may lose faith in their administrative abilities."
+            },
+            {
+              "key": "C",
+              "text": "They may commit more errors than ever before."
+            },
+            {
+              "key": "D",
+              "text": "They may experience a lot of emotional stress."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【答案解析】A 由题干中的 smart people 和 difficult to accept suggestions 可定位至原文五段 1 句，后者与该句中的 have a hard time accepting feedback 相对应。该句提到，聪明人很难接受反馈意见；接着 2、3 句提到，他们倾向于轻视别人的意见，且这种倾向可能对他们的人际关系造成危害，包括私人关系和职业关系。由此可知，对于那些很难接受他人建议的聪明人来说，他们可能在职业和私人生活中吃苦头。A 选项内容是对五段 3 句后半部分的同义转述，其中，may suffer 和 professional and private 分别与该句中的 can lead to harmful relationships 和 personally and professionally 相对应，故正确。三段 1 句提到，一生都处于赞美中会让聪明人对自己的智力和能力过度自信，并未提及对于那些很难接受他人建议的聪明人来说，他们可能对自己的管理能力失去信心，故排除 B 选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What is said about those working with or under overachieving people?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They put a lot of effort into their work."
+            },
+            {
+              "key": "B",
+              "text": "They set higher goals for themselves."
+            },
+            {
+              "key": "C",
+              "text": "They are under increasing pressure."
+            },
+            {
+              "key": "D",
+              "text": "They take less time to get things done."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【答案解析】C 由题干中的 working 和 overachieving people 可定位至原文六段 1、2 句，后者与该段 1 句中的 people develop overachieving personalities 相对应。这两句提到，聪明人会养成争强好胜的性格，他们根本不明白对他们来说很容易的事情，有些人要完成的话需要付出多大努力，所以他们会把人逼得太紧；接着 3、4 句提到，聪明人把标准定得过高，并且当别人做事花了太长时间或做得不太好时，他们就认为这是由于别人不够努力，继而会把人逼得更紧。由此可知，和争强好胜的人共事或者在其领导下工作的人会面临越来越大的压力。C 选项内容是对六段的合理概括，故正确。同时可知，文中并未提及和争强好胜的人共事或者在其领导下工作的这些人在工作中投入了大量的精力，故排除 A 选项。六段 3 句提到，他们（聪明人）把标准定得过高，并且当别人做事花了太长时间或做得不太好时，他们（聪明人）就认为这是由于别人不够努力，并非和争强好胜的人共事或在其领导下工作的这些人给自己设定更高的目标；也并非和争强好胜的人共事或在其领导下工作的这些人花更少时间完成事情，故排除 B、D 两个选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "Why is the U.S. State Department launching an online learning program for refugees?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "To enable them to settle down in host countries."
+            },
+            {
+              "key": "B",
+              "text": "To allow them to learn as many job skills as possible."
+            },
+            {
+              "key": "C",
+              "text": "To offer them a platform to pursue advanced degrees."
+            },
+            {
+              "key": "D",
+              "text": "To help them to meet new employment standards."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【答案解析】D 由题干中的 the U.S. State Department、online learning 和 refugees 可定位至原文一段 3、4 句。这两句提到，由于有一套新的雇主标准或技能要求，在其他国家定居的难民无法继续之前的职业道路；为了解决这个问题，美国国务院提出一个解决方案：在线学习。由此可知，美国国务院为难民发起在线学习项目是为了帮助难民达到新的就业标准以实现继续就业。D 选项内容是对一段 3、4 句的合理概括，其中，new employment standards 与该段 3 句中的 a new set of employer standards 相对应，故正确。同时可知，文中提到在线学习项目所针对的人群是已在其他国家定居的难民，并不是未定居的难民，故排除 A 选项。三段 2 句提到，新项目旨在通过为难民提供重要技能来帮助他们，并非让难民学习尽可能多的工作技能，故排除 B 选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What do we know about “Coursera for Refugees”?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It provides refugees with a wide range of courses free of charge."
+            },
+            {
+              "key": "B",
+              "text": "It offers free online data services for refugees around the world."
+            },
+            {
+              "key": "C",
+              "text": "It allows refugees to obtain degrees in various academic fields."
+            },
+            {
+              "key": "D",
+              "text": "It supplies refugees with a great variety of job opportunities."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【答案解析】A 由题干中的 “Coursera for Refugees” 可定位至原文二段 3 句。该句提到，“Coursera for Refugees” 面向各国所有支持难民的非营利组织以及难民个人；接着 4 句提到，他们可以申请全额资助进入 Coursera 课程目录，即可以免费学习该平台的所有课程；另外，5 句提到该平台目前提供的讲座涉及了广泛的主题。由此可知，“Coursera for Refugees” 免费为难民提供各种课程。A 选项内容是对二段 3 至 5 句的合理概括，其中，a wide range of 与该段 5 句中的 a broad range of 相对应，courses 和 free of charge 分别与该段 4 句中的 classes 和 for free 相对应，故正确。根据上述对二段 4、5 句的描述可知，原文并未提到 “Coursera for Refugees” 使难民能够获得不同学术领域的学位，故排除 C 选项。该段 5 句提到，该平台（Coursera）提供数据科学等方面的讲座，并非在线数据服务，故排除 B 选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What does the passage say is a consequence of the global migrant crisis?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Instability increases in host countries."
+            },
+            {
+              "key": "B",
+              "text": "The global economic crisis intensifies."
+            },
+            {
+              "key": "C",
+              "text": "A lot more refugees die during migration."
+            },
+            {
+              "key": "D",
+              "text": "Refugees find it more difficult to get a job."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【答案解析】D 由题干中的 the global migrant crisis 可定位至原文三段 1 句，其与该句中的 the world migrant crisis 相对应。该句提到，随着世界移民危机的加剧，就业正成为全球关注的问题。由此可知，世界移民危机带来的后果之一便是就业问题，即移民更难找到工作。D 选项内容是对三段 1 句的同义转述，其中，find it...difficult 和 get a job 分别与该句中的 concern 和 employment 相对应，故正确。同时可知，文中并未提及全球经济危机加剧的相关信息，故排除 B 选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What does the author say causes refugees’ difficulty in taking online courses?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cultural environment."
+            },
+            {
+              "key": "B",
+              "text": "Changed academic requirements."
+            },
+            {
+              "key": "C",
+              "text": "Lack of language skills."
+            },
+            {
+              "key": "D",
+              "text": "Difference in teaching platforms."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【答案解析】C 由题干中的 causes...difficulty 和 online courses 可定位至原文四段 3 句，二者分别与该句中的 can be a...obstacle 和 classes on Coursera 相对应。该句提到，Coursera 上的大部分课程都是英文版，尽管有添加译文的计划，但语言障碍对学习者来说可能是一个很大的绊脚石。由此可知，难民学习 Coursera 上的在线课程会面临困难是因为他们缺乏语言技能。C 选项内容是对四段 3 句的合理推断，其中，Lack of language skills 与该句中的 language barriers 相对应，故正确。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2023-03-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What did the joint study find about the MOOCs several years ago?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They helped solve learners’ financial problems."
+            },
+            {
+              "key": "B",
+              "text": "They benefited most of the learners."
+            },
+            {
+              "key": "C",
+              "text": "They changed some learners’ career path."
+            },
+            {
+              "key": "D",
+              "text": "They provided the most needed vocational skills."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【答案解析】B 由题干中的 joint study 和 the MOOCs 可定位至原文五段 2 句。该句提到，2015 年，一项联合研究发现，72% 参加了慕课的人在后来体验到了其对职业发展的好处。由此可知，几年前一项联合研究发现，慕课让大多数学习者受益。B 选项内容是对五段 2 句的同义转述，其中，benefited 和 most of the learners 分别与该句中的 benefits 和 72% of people taking the MOOCs 相对应，故正确。同时可知，该联合研究并未说明慕课改变了一些学习者的职业道路，故排除 C 选项。三段 2 句提到，这个新项目旨在通过为难民提供重要技能来帮助他们，但这并非联合研究所发现的内容，而是助理国务卿埃文·瑞安的观点，故排除 D 选项。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "随着生活水平的提高，更多人开始加入到自驾游的行列之中。自驾游者既可驾驶自家车也可借车或租车出游。司机可能是车主或结伴出游者。自驾游与传统的组团旅游不同，它能够更好地满足旅游者的个性化需求，使他们更好地享受旅游的过程。自驾游尤其受到年轻出游者的欢迎。年轻人追求独立自由的生活，而自驾游恰好满足了他们的这一需求。",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-03-1-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "随着生活水平的提高，更多人开始加入到自驾游的行列之中。自驾游者既可驾驶自家车也可借车或租车出游。司机可能是车主或结伴出游者。自驾游与传统的组团旅游不同，它能够更好地满足旅游者的个性化需求，使他们更好地享受旅游的过程。自驾游尤其受到年轻出游者的欢迎。年轻人追求独立自由的生活，而自驾游恰好满足了他们的这一需求。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "With the improvement of living standards, more people begin to join the ranks of road trip takers. They can drive their own cars as well as borrow or rent cars for their trips. The drivers may be the car owners or travelling companions. Unlike the traditional package tour, the road trip can better satisfy the individual needs of travellers, allowing them to better enjoy the ride. The road trip is popular especially among young travellers. Young people pursue a life of independence and freedom, and the road trip exactly meets this demand.",
+          "explanation": "1. **【原句译文】**随着生活水平的提高，更多人开始加入到自驾游的行列之中。With the improvement of living standards, more people begin to join the ranks of road trip takers.\n   **【句子分析】**本句描述目前随着生活水平提高，更多人选择自驾游这一现象，故译文时态应采用一般现在时。分析可知，可将“更多人……行列之中”处理为主干句，并采用“主＋谓＋宾”结构译出。具体翻译时，“随着生活水平的提高”可处理为介词短语作状语，译为“With the improvement of living standards”，置于句首，并用逗号与其后内容隔开；“更多人”可译为“more people”；“开始加入到自驾游的行列之中”可理解为“开始加入到自驾游者团体中”，故可整体译为“begin to join the ranks of road trip takers”。\n2. **【原句译文】**自驾游者既可驾驶自家车也可借车或租车出游。They can drive their own cars as well as borrow or rent cars for their trips.\n   **【句子分析】**本句介绍自驾游者出行车辆的选择方式，故译文时态应采用一般现在时。本句结构较为简单，可整体采用顺译法译出。具体翻译时，“自驾游者”可译为“Road trip takers”，由于“road trip takers”在上句译文中已经出现过，为避免重复，此处可使用代词 They 代替并将其置于句首作主语；“既可驾驶自家车”和“也可借车或租车出游”存在并列关系，故可处理为 as well as 连接的并列谓宾。具体翻译时，“可驾驶自家车”可译为“can drive their own cars”；“可借车或租车出游”可译为“can borrow or rent cars for their trips”，为避免重复，可省略“can”。\n3. **【原句译文】**司机可能是车主或结伴出游者。The drivers may be the car owners or travelling companions.\n   **【句子分析】**本句介绍自驾游司机的具体身份，故译文时态应采用一般现在时。本句结构较为简单，整句可采用“主＋系＋表”结构译出。具体翻译时，“司机”可译为“The drivers”；“可能是”可译为“may be”。“车主”和“结伴出游者”存在并列关系，故可处理为 or 连接的并列表语；其中“车主”可译为“the car owners”；“结伴出游者”可译为“travelling companions”。\n4. **【原句译文】**自驾游与传统的组团旅游不同，它能够更好地满足旅游者的个性化需求，使他们更好地享受旅游的过程。Unlike the traditional package tour, the road trip can better satisfy the individual needs of travellers, allowing them to better enjoy the ride.\n   **【句子分析】**本句客观陈述自驾游相对于传统组团旅游的优势，故译文时态应采用一般现在时。具体翻译时，“自驾游与……不同”和“它能够……个性化需求”的主语都是“自驾游（它）”，故可将“自驾游与……不同”处理为介词短语作比较状语，省译主语“自驾游”，译为“Unlike the traditional package tour”，置于句首，并用逗号与其后内容隔开。可将“它能够……个性化需求”处理为主干句，“它”指代自驾游，可译为“the road trip”；“能够更好地满足”可译为“can better satisfy”；“旅游者的个性化需求”可译为“the individual needs of travellers”。第二个逗号后的内容是主干句所述现象产生的结果，故可整体处理为现在分词短语作主干句的结果状语，译为“allowing them to better enjoy the ride”，并用逗号与主干句隔开。\n5. **【原句译文】**自驾游尤其受到年轻出游者的欢迎。The road trip is popular especially among young travellers.\n   **【句子分析】**本句指出“自驾游尤其受年轻出游者欢迎”这一现象，故译文时态应采用一般现在时。本句结构较为简单，整句可采用“主＋系＋表”的结构译出。具体翻译时，“自驾游”可译为“The road trip”；“尤其”可译为“especially”；“受到年轻出游者的欢迎”可译为“is popular among young travellers”；同时为使译文更符合英文的表达习惯，可将 especially 置于形容词 popular 之后。\n6. **【原句译文】**年轻人追求独立自由的生活，而自驾游恰好满足了他们的这一需求。Young people pursue a life of independence and freedom, and the road trip exactly meets this demand.\n   **【句子分析】**本句阐述了自驾游在年轻出游者中受欢迎的原因，故译文时态仍应采用一般现在时。分析可知，本句中的“而”表明其前后内容存在顺承关系，故整句可处理为由 and 连接的并列句，并按顺译法译出。分句一中，“年轻人”可译为“Young people”；“追求”可译为“pursue”；“独立自由的生活”可译为“a life of independence and freedom”。分句二中，“自驾游”可译为“the road trip”；“恰好”可译为“exactly”；“满足”可译为“meets”；“他们的这一需求”可译为“this demand”。\n   **【全文翻译】**\n   With the improvement of living standards, more people begin to join the ranks of road trip takers. They can drive their own cars as well as borrow or rent cars for their trips. The drivers may be the car owners or travelling companions. Unlike the traditional package tour, the road trip can better satisfy the individual needs of travellers, allowing them to better enjoy the ride. The road trip is popular especially among young travellers. Young people pursue a life of independence and freedom, and the road trip exactly meets this demand.",
+          "source": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-1-md"
+          },
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

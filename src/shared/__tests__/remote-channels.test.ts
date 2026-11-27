@@ -5,7 +5,7 @@ import { REMOTE_ALLOWED_KEYS, REMOTE_DENIED_KEYS, isRemoteChannelAllowed } from 
 /** 手写的「绝不能给手机」清单：独立于被测名单，改名单时这里是第二双眼睛 */
 const MUST_STAY_DENIED = [
   'runnerRun', 'runnerCancel', 'runnerOpenIde', 'runnerExportCode', 'runnerDetectIde',
-  'exportMarkdown', 'configSave', 'envDetect', 'cet6PickMediaRoot',
+  'exportMarkdown', 'configSave', 'envDetect', 'cet6PickMediaRoot', 'cet4PickMediaRoot',
   'studyImportMaterials', 'studyExportVault', 'studySaveConnection', 'studyConnect',
   'studyAuthenticate', 'studyDisconnect', 'studySelectConnection', 'studySetModel', 'studyRemoveConnection', 'studyDetectAgent', 'studyListModels',
   'cloudChallengeSettle', 'videoGenerate', 'videoVerifyPrompt', 'videoVerifyAnswer',

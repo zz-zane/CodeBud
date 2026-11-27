@@ -1,10 +1,10 @@
 import { handle } from '../ipc'
-import { AI_APP, CET6_GRADE_SYSTEM, CET6_VOCAB_SYSTEM } from '../../shared/copy'
+import { AI_APP, cetGradeSystem, CET6_VOCAB_SYSTEM } from '../../shared/copy'
 import { IPC } from '../../shared/ipc-channels'
-import { CET6_EXAM_ID, CET6_LIMITS, type Cet6MediaStatus, type Cet6Mode, type Cet6State } from '../../shared/cet6'
+import { CET6_EXAM_ID, CET6_LIMITS, type Cet6MediaStatus, type Cet6Mode, type Cet6State, type CetLevel } from '../../shared/cet6'
 import { buildGradePrompt, parseGrade, type Cet6GradeResponse } from '../../shared/cet6-grade'
 import type { Cet6LookupResult, Cet6VocabEntry } from '../../shared/cet6-vocab'
-import { cet6AssetResponse, cet6DataRoot, createCet6Service, installCet6Protocol, pickCet6MediaRoot } from '../cet6'
+import { cet6AssetResponse, cet6DataRoot, createCet6Service, installCet6Protocol, pickCet6MediaRoot, type Cet6Service } from '../cet6'
 import { createCet6VocabService, type VocabAsk } from '../cet6-vocab'
 import type { MainContext, MainFeature } from '../context'
 
@@ -34,55 +34,70 @@ function vocabAsk(ctx: MainContext): VocabAsk {
 export const cet6Feature: MainFeature = {
   name: 'cet6',
   register(ctx) {
-    const cet6Service = createCet6Service(ctx.storageDir)
+    const cet6Service = registerAssets(ctx, 'cet6')
+    const cet4Service = registerAssets(ctx, 'cet4')
     const vocab = createCet6VocabService(ctx.storageDir, vocabAsk(ctx))
-    installCet6Protocol(() => cet6Service.mediaRoot())
-    // 手机连接：同一套 路径→Response 逻辑挂到 HTTP（不开 CORS；Range 照常支持）
-    for (const kind of ['data', 'media'] as const) {
-      ctx.httpAssets.set(`/cet6/${kind}/`, (req) =>
-        cet6AssetResponse({ kind, ...req }, { dataRoot: cet6DataRoot(), mediaRoot: cet6Service.mediaRoot() }, { 'Accept-Ranges': 'bytes' })
-      )
-    }
     handle(IPC.cet6GetState, (): Cet6State => cet6Service.state())
     handle(IPC.cet6SaveRecord, (_e, examId: unknown, record: unknown): void => cet6Service.saveRecord(examId, record))
     handle(IPC.cet6ResetRecord, (_e, examId: unknown): void => cet6Service.resetRecord(examId))
     handle(IPC.cet6PickMediaRoot, (e): Promise<Cet6MediaStatus> => pickCet6MediaRoot(e, cet6Service))
     handle(IPC.cet6SetLastMode, (_e, mode: unknown): Cet6Mode => cet6Service.setLastMode(mode))
+    handle(IPC.cet4GetState, (): Cet6State => cet4Service.state())
+    handle(IPC.cet4SaveRecord, (_e, examId: unknown, record: unknown): void => cet4Service.saveRecord(examId, record))
+    handle(IPC.cet4ResetRecord, (_e, examId: unknown): void => cet4Service.resetRecord(examId))
+    handle(IPC.cet4PickMediaRoot, (e): Promise<Cet6MediaStatus> => pickCet6MediaRoot(e, cet4Service, 'cet4'))
+    handle(IPC.cet4SetLastMode, (_e, mode: unknown): Cet6Mode => cet4Service.setLastMode(mode))
     handle(IPC.cet6VocabList, (): Cet6VocabEntry[] => vocab.list())
     handle(IPC.cet6VocabAdd, (_e, input: unknown): Cet6VocabEntry[] => vocab.add(input))
     handle(IPC.cet6VocabUpdate, (_e, id: unknown, patch: unknown): Cet6VocabEntry[] => vocab.update(id, patch))
     handle(IPC.cet6VocabRemove, (_e, ids: unknown): Cet6VocabEntry[] => vocab.remove(ids))
     handle(IPC.cet6VocabLookup, (_e, input: unknown): Promise<Cet6LookupResult> => vocab.lookup(input))
-    handle(IPC.cet6GradeSubjective, async (_e, input: unknown): Promise<Cet6GradeResponse> => {
-      if (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error('cet6: invalid grade input')
-      const req = input as Record<string, unknown>
-      if (typeof req.examId !== 'string' || !CET6_EXAM_ID.test(req.examId)) throw new Error('cet6: invalid exam id')
-      if (typeof req.questionId !== 'string' || !req.questionId || req.questionId.length > CET6_LIMITS.keyLength) throw new Error('cet6: invalid question id')
-      if (req.kind !== 'writing' && req.kind !== 'translation') throw new Error('cet6: invalid question kind')
-      if (typeof req.prompt !== 'string' || req.prompt.length > CET6_LIMITS.valueLength) throw new Error('cet6: invalid prompt')
-      if (typeof req.answer !== 'string' || !req.answer.trim() || req.answer.length > CET6_LIMITS.valueLength) throw new Error('cet6: invalid answer')
-      if (!cet6Service.gradeMatches(req.examId, req.questionId, req.answer)) return { ok: false, reason: 'stale' }
+    handle(IPC.cet6GradeSubjective, gradeHandler(ctx, cet6Service, 'cet6'))
+    handle(IPC.cet4GradeSubjective, gradeHandler(ctx, cet4Service, 'cet4'))
+  }
+}
 
-      const hasKey = ctx.readConfig().ai.apiKey.trim() !== ''
-      const hasAcp = Boolean(ctx.study.store.read().activeConnectionId)
-      if (!hasKey && !hasAcp) return { ok: false, reason: 'no-key' }
+function registerAssets(ctx: MainContext, level: CetLevel): Cet6Service {
+  const service = createCet6Service(ctx.storageDir, level)
+  installCet6Protocol(() => service.mediaRoot(), level)
+  for (const kind of ['data', 'media'] as const) {
+    ctx.httpAssets.set(`/${level}/${kind}/`, (req) =>
+      cet6AssetResponse({ kind, ...req }, { dataRoot: cet6DataRoot(level), mediaRoot: service.mediaRoot() }, { 'Accept-Ranges': 'bytes' })
+    )
+  }
+  return service
+}
 
-      let raw: string
-      try {
-        const prompt = `${CET6_GRADE_SYSTEM}\n\n${buildGradePrompt(req.kind, req.prompt, req.answer)}`
-        raw = await ctx.study.promptOnce(prompt, new AbortController().signal, 'cet6-grade')
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err)
-        if (msg.includes(AI_APP.ERR_KEY_REQUIRED) || /401|403|unauthorized/i.test(msg)) return { ok: false, reason: 'no-key' }
-        return { ok: false, reason: 'network' }
-      }
+function gradeHandler(ctx: MainContext, service: Cet6Service, level: CetLevel) {
+  return async (_e: unknown, input: unknown): Promise<Cet6GradeResponse> => {
+    if (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error(`${level}: invalid grade input`)
+    const req = input as Record<string, unknown>
+    if (typeof req.examId !== 'string' || !CET6_EXAM_ID.test(req.examId)) throw new Error(`${level}: invalid exam id`)
+    if (typeof req.questionId !== 'string' || !req.questionId || req.questionId.length > CET6_LIMITS.keyLength) throw new Error(`${level}: invalid question id`)
+    if (req.kind !== 'writing' && req.kind !== 'translation') throw new Error(`${level}: invalid question kind`)
+    if (typeof req.prompt !== 'string' || req.prompt.length > CET6_LIMITS.valueLength) throw new Error(`${level}: invalid prompt`)
+    if (typeof req.answer !== 'string' || !req.answer.trim() || req.answer.length > CET6_LIMITS.valueLength) throw new Error(`${level}: invalid answer`)
+    if (!service.gradeMatches(req.examId, req.questionId, req.answer)) return { ok: false, reason: 'stale' }
 
-      const parsed = parseGrade(raw)
-      if (!parsed) return { ok: false, reason: 'bad-response' }
+    const hasKey = ctx.readConfig().ai.apiKey.trim() !== ''
+    const hasAcp = Boolean(ctx.study.store.read().activeConnectionId)
+    if (!hasKey && !hasAcp) return { ok: false, reason: 'no-key' }
 
-      const grade = cet6Service.saveAiGrade(req.examId, req.questionId, req.answer, { ...parsed, at: Date.now() })
-      if (!grade) return { ok: false, reason: 'stale' }
-      return { ok: true, grade }
-    })
+    let raw: string
+    try {
+      const prompt = `${cetGradeSystem(level)}\n\n${buildGradePrompt(req.kind, req.prompt, req.answer, level)}`
+      raw = await ctx.study.promptOnce(prompt, new AbortController().signal, `${level}-grade`)
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err)
+      if (msg.includes(AI_APP.ERR_KEY_REQUIRED) || /401|403|unauthorized/i.test(msg)) return { ok: false, reason: 'no-key' }
+      return { ok: false, reason: 'network' }
+    }
+
+    const parsed = parseGrade(raw)
+    if (!parsed) return { ok: false, reason: 'bad-response' }
+
+    const grade = service.saveAiGrade(req.examId, req.questionId, req.answer, { ...parsed, at: Date.now() })
+    if (!grade) return { ok: false, reason: 'stale' }
+    return { ok: true, grade }
   }
 }

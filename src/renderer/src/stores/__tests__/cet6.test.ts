@@ -5,18 +5,18 @@
  */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { createPinia, setActivePinia } from 'pinia'
-import { useCet6Store } from '../cet6'
+import { useCet6Store, useCetStore, useCetExamLock } from '../cet6'
 import type { Cet6Exam, Cet6Mode, Cet6Record } from '../../../../shared/cet6'
 
 const EXAM: Cet6Exam = { id: '2025-06-1', title: 't', year: 2025, month: 6, set: 1, sections: [] }
 
-function stub(records: Record<string, Cet6Record> = {}, opts: { failMode?: boolean; gradeFn?: (req: unknown) => Promise<unknown> } = {}) {
+function stub(records: Record<string, Cet6Record> = {}, opts: { failMode?: boolean; gradeFn?: (req: unknown) => Promise<unknown> } = {}, level: 'cet4' | 'cet6' = 'cet6') {
   const saved: Array<{ id: string; record: Cet6Record }> = []
   const modes: Cet6Mode[] = []
   ;(globalThis as unknown as { window: unknown }).window = {
     addEventListener: () => {},
     miai: {
-      cet6: {
+      [level]: {
         getState: () => Promise.resolve({ records: structuredClone(records), media: { root: null, ok: false }, lastMode: 'practice' }),
         saveRecord: (id: string, record: Cet6Record) => {
           saved.push({ id, record: structuredClone(record) })
@@ -32,7 +32,7 @@ function stub(records: Record<string, Cet6Record> = {}, opts: { failMode?: boole
       }
     }
   }
-  vi.stubGlobal('fetch', () => Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve(structuredClone(EXAM)) }))
+  vi.stubGlobal('fetch', vi.fn(() => Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve(structuredClone(EXAM)) })))
   return { saved, modes }
 }
 
@@ -40,6 +40,23 @@ beforeEach(() => setActivePinia(createPinia()))
 afterEach(() => vi.unstubAllGlobals())
 
 describe('考试锁 examLock', () => {
+  it.each([
+    ['cet4', 125 * 60, 'cet6'],
+    ['cet6', 130 * 60, 'cet4']
+  ] as const)('uses the %s API and locks the app without sharing exam state', async (level, seconds, otherLevel) => {
+    stub({}, {}, level)
+    const lock = useCetExamLock()
+    const store = useCetStore(level)
+    await store.openExam(EXAM.id, 'exam')
+    expect(fetch).toHaveBeenCalledWith(`miai-${level}://data/exams/${EXAM.id}.json`)
+    expect(store.remaining).toBe(seconds)
+    store.examPageActive = true
+    expect(lock.value).toBe(true)
+    expect(useCetStore(otherLevel).exam).toBeNull()
+    await store.closeExam()
+    expect(lock.value).toBe(false)
+  })
+
   it('考试模式 + 未交卷 + 做题页挂载 + 已载入试卷 才锁', async () => {
     stub()
     const s = useCet6Store()

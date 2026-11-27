@@ -1,6 +1,6 @@
 {
   "name": "miai-biancheng",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "CodeBud — 面向大学生与编程初学者的离线学习伴侣",
   "main": "./out/main/index.js",
   "private": true,
@@ -88,6 +88,7 @@
       "resources/icon.png",
       "!**/AnthropicSerif*",
       "content/cet6/**/*",
+      "content/cet4/**/*",
       "package.json",
       "LICENSE",
       "THIRD-PARTY-NOTICES.md",

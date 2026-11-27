@@ -550,7 +550,8 @@ export const DATA_STORE = {
 } as const
 
 export const CET6_MAIN = {
-  PICK_MEDIA_TITLE: '选择听力音频目录'
+  PICK_MEDIA_TITLE: '选择听力音频目录',
+  PICK_CET4_MEDIA_TITLE: '选择四级听力音频目录'
 } as const
 
 /** 生词本「释义」用的系统提示词：词典式，替换应用默认的编程助教人设 */
@@ -574,10 +575,14 @@ export const CET6_VOCAB_PROMPT = {
 export const CET6_GRADE_SYSTEM =
   '你是大学英语六级（CET-6）写作与翻译阅卷老师。严格按照六级 15 分制评分标准客观打分，只返回合法 JSON，不要代码围栏或额外解释。'
 
+export function cetGradeSystem(level: import('./cet6').CetLevel): string {
+  return level === 'cet4' ? CET6_GRADE_SYSTEM.replaceAll('六级', '四级').replace('CET-6', 'CET-4') : CET6_GRADE_SYSTEM
+}
+
 /** 主观题（写作 / 翻译）AI 估分用户提示词：满分 15，官方五档 2 / 5 / 8 / 11 / 14（上下浮动 1 分） */
-export const CET6_GRADE_PROMPT = (kind: 'writing' | 'translation', prompt: string, answer: string): string =>
-  `你是大学英语六级（CET-6）${kind === 'writing' ? '写作' : '翻译'}阅卷老师。请对下面学员的作答按满分 15 分进行客观估分。\n` +
-  '评分标准遵循六级官方五档（基准分 2 / 5 / 8 / 11 / 14，可上下浮动 1 分）：\n' +
+export const CET6_GRADE_PROMPT = (kind: 'writing' | 'translation', prompt: string, answer: string, level: import('./cet6').CetLevel = 'cet6'): string =>
+  `你是大学英语${level === 'cet4' ? '四级（CET-4）' : '六级（CET-6）'}${kind === 'writing' ? '写作' : '翻译'}阅卷老师。请对下面学员的作答按满分 15 分进行客观估分。\n` +
+  `评分标准遵循${level === 'cet4' ? '四级' : '六级'}官方五档（基准分 2 / 5 / 8 / 11 / 14，可上下浮动 1 分）：\n` +
   '- 14 分档（13–15）：切题准确、语言流畅丰富、基本无语法错误\n' +
   '- 11 分档（10–12）：切题较完整、表达较清晰、有少量小错但不影响理解\n' +
   '- 8 分档（7–9）：基本切题/译出大意、部分表达生硬或存在若干语法错误\n' +

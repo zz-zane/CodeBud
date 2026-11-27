@@ -15,7 +15,7 @@ const DEPTH1 = new Set(['/memo', '/favorites', '/playground'])
 export function routeDepth(path: string): 0 | 1 | 2 {
   if (path.startsWith('/lesson/')) return 2
   if (path === '/cet6/vocab') return 0 // 生词本进了侧栏 / 抽屉，是顶层页（2026-11-24）
-  if (path.startsWith('/cet6/')) return 2
+  if (path.startsWith('/cet6/') || path.startsWith('/cet4/')) return 2
   if (DEPTH1.has(path)) return 1
   return 0
 }
@@ -24,6 +24,7 @@ export function routeDepth(path: string): 0 | 1 | 2 {
 export function parentRouteOf(path: string): string {
   if (path.startsWith('/lesson/')) return '/courses'
   if (path.startsWith('/cet6/')) return '/cet6'
+  if (path.startsWith('/cet4/')) return '/cet4'
   if (path === '/memo' || path === '/favorites') return '/overview'
   if (path === '/playground') return '/practice'
   return '/today'

@@ -1,6 +1,5 @@
-// 六级真题（docs/27）：cet6.json 存储、miai-cet6:// 协议、IPC。
-//   miai-cet6://data/<rel>  → <app>/content/cet6/<rel>（随应用打包的试卷与附图）
-//   miai-cet6://media/<rel> → 用户设置的音频目录，支持 Range（拖动进度条）
+// 四级与六级真题（docs/27）：各等级独立存档和协议。
+// data 主机提供随应用打包的试卷与附图；media 主机从各自的音频目录提供 Range 读取。
 import { app, BrowserWindow, dialog, protocol } from 'electron'
 import type { IpcMainInvokeEvent, OpenDialogOptions } from 'electron'
 import { createReadStream, existsSync, statSync } from 'node:fs'
@@ -19,6 +18,7 @@ import {
   type Cet6Mode,
   type Cet6File,
   type Cet6MediaStatus,
+  type CetLevel,
   type Cet6State
 } from '../shared/cet6'
 import { createJsonStore, preserveCorruptFile, type JsonStore } from './store/json-store'
@@ -48,14 +48,14 @@ export interface Cet6Service {
   mediaRoot(): string | null
 }
 
-export function createCet6Service(dir: string): Cet6Service {
-  const store: JsonStore<Cet6File> = createJsonStore<Cet6File>(dir, 'cet6.json', {
+export function createCet6Service(dir: string, level: CetLevel = 'cet6'): Cet6Service {
+  const store: JsonStore<Cet6File> = createJsonStore<Cet6File>(dir, `${level}.json`, {
     validate(value) {
       try { migrateCet6File(value); return true }
       catch (error) { return error instanceof NewerDataVersionError }
     }
   })
-  const file = join(dir, 'cet6.json')
+  const file = join(dir, `${level}.json`)
   function load(): Cet6File {
     const raw = store.read()
     if (raw === null) {
@@ -82,7 +82,7 @@ export function createCet6Service(dir: string): Cet6Service {
   }
 
   function assertId(examId: unknown): string {
-    if (typeof examId !== 'string' || !CET6_EXAM_ID.test(examId)) throw new Error('cet6: invalid exam id')
+    if (typeof examId !== 'string' || !CET6_EXAM_ID.test(examId)) throw new Error(`${level}: invalid exam id`)
     return examId
   }
 
@@ -97,7 +97,7 @@ export function createCet6Service(dir: string): Cet6Service {
     saveRecord(examId, record) {
       const id = assertId(examId)
       const clean = sanitizeRecord(record)
-      if (!clean) throw new Error('cet6: invalid record')
+      if (!clean) throw new Error(`${level}: invalid record`)
       const cur = load()
       assertSupportedVersion(cur, CURRENT_CET6_VERSION)
       const prevGrades = cur.records[id]?.aiGrades
@@ -113,7 +113,7 @@ export function createCet6Service(dir: string): Cet6Service {
     saveAiGrade(examId, questionId, answer, grade) {
       const id = assertId(examId)
       if (typeof questionId !== 'string' || !questionId || questionId.length > CET6_LIMITS.keyLength) {
-        throw new Error('cet6: invalid question id')
+        throw new Error(`${level}: invalid question id`)
       }
       const cur = load()
       assertSupportedVersion(cur, CURRENT_CET6_VERSION)
@@ -121,7 +121,7 @@ export function createCet6Service(dir: string): Cet6Service {
       if (!base?.submitted || base.answers[questionId] !== answer) return null
       const sanitized = sanitizeRecord({ ...base, aiGrades: { ...base.aiGrades, [questionId]: grade } })
       const stored = sanitized?.aiGrades?.[questionId]
-      if (!sanitized || !stored) throw new Error('cet6: invalid ai grade')
+      if (!sanitized || !stored) throw new Error(`${level}: invalid ai grade`)
       store.write({ ...cur, records: { ...cur.records, [id]: sanitized } })
       return stored
     },
@@ -134,7 +134,7 @@ export function createCet6Service(dir: string): Cet6Service {
       store.write({ ...cur, records: rest })
     },
     setLastMode(mode) {
-      if (mode !== 'practice' && mode !== 'exam') throw new Error('cet6: invalid mode')
+      if (mode !== 'practice' && mode !== 'exam') throw new Error(`${level}: invalid mode`)
       const cur = load()
       assertSupportedVersion(cur, CURRENT_CET6_VERSION)
       store.write({ ...cur, lastMode: mode })
@@ -158,8 +158,8 @@ export interface Cet6AssetRequest {
 }
 
 /**
- * 试卷数据 / 听力音频 → Response。与传输无关：`miai-cet6://` 协议与手机连接的
- * `/cet6/*` HTTP 路由各包一层，路径围栏与 Range 只此一份实现。
+ * 试卷数据 / 听力音频 → Response。与传输无关：各等级的桌面协议与手机连接的
+ * HTTP 路由各包一层，路径围栏与 Range 只此一份实现。
  * `extra`：传输层自己要加的头（协议加 CORS 头；HTTP 不开 CORS，只带 Accept-Ranges）。
  */
 export async function cet6AssetResponse(
@@ -206,13 +206,13 @@ export async function cet6AssetResponse(
 }
 
 /** 内置试卷目录（随应用打包）；依赖 app.getAppPath()，所以是函数不是常量 */
-export function cet6DataRoot(): string {
-  return join(app.getAppPath(), 'content', 'cet6')
+export function cet6DataRoot(level: CetLevel = 'cet6'): string {
+  return join(app.getAppPath(), 'content', level)
 }
 
 /** 必须在 app ready 之后、窗口出生之前调用（scheme 特权已在 registerSchemePrivileges 里注册） */
-export function installCet6Protocol(mediaRootOf: () => string | null): void {
-  protocol.handle('miai-cet6', async (request) => {
+export function installCet6Protocol(mediaRootOf: () => string | null, level: CetLevel = 'cet6'): void {
+  protocol.handle(`miai-${level}`, async (request) => {
     const cors = corsHeaders()
     const deny = (status: number, why: string): Response =>
       new Response(why, { status, headers: { ...cors, 'Content-Type': 'text/plain' } })
@@ -227,16 +227,16 @@ export function installCet6Protocol(mediaRootOf: () => string | null): void {
     if (u.host !== 'data' && u.host !== 'media') return deny(404, 'unknown host')
     return cet6AssetResponse(
       { kind: u.host, pathname: u.pathname, method, range: request.headers.get('range') },
-      { dataRoot: cet6DataRoot(), mediaRoot: mediaRootOf() },
+      { dataRoot: cet6DataRoot(level), mediaRoot: mediaRootOf() },
       cors
     )
   })
 }
 
 /** 弹目录选择框；取消 = 保持原状。IPC 注册在 features/cet6.ts（ipc-contract 测试对账） */
-export async function pickCet6MediaRoot(event: IpcMainInvokeEvent, svc: Cet6Service): Promise<Cet6MediaStatus> {
+export async function pickCet6MediaRoot(event: IpcMainInvokeEvent, svc: Cet6Service, level: CetLevel = 'cet6'): Promise<Cet6MediaStatus> {
   const win = BrowserWindow.fromWebContents(event.sender)
-  const options: OpenDialogOptions = { title: CET6_MAIN.PICK_MEDIA_TITLE, properties: ['openDirectory'] }
+  const options: OpenDialogOptions = { title: level === 'cet4' ? CET6_MAIN.PICK_CET4_MEDIA_TITLE : CET6_MAIN.PICK_MEDIA_TITLE, properties: ['openDirectory'] }
   const { canceled, filePaths } = win ? await dialog.showOpenDialog(win, options) : await dialog.showOpenDialog(options)
   const picked = filePaths[0]
   return canceled || !picked ? svc.mediaStatus() : svc.setMediaRoot(picked)

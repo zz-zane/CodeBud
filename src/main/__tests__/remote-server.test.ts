@@ -281,6 +281,7 @@ describe('/rpc', () => {
 
   it('不把本机路径交给手机：六级音频目录、IDE / 编译器路径、研学连接命令', async () => {
     handlers.set(IPC.cet6GetState, () => ({ records: {}, media: { root: 'D:\\audio', ok: true }, lastMode: 'practice' }))
+    handlers.set(IPC.cet4GetState, () => ({ records: {}, media: { root: 'D:\\audio', ok: true }, lastMode: 'practice' }))
     handlers.set(IPC.configGet, () => ({
       nativeIdePaths: { c: 'C:\\ide\\c.exe', cpp: '', java: '', python: '' },
       envCache: { at: 'x', report: { c: { found: true, path: 'C:\\gcc.exe', version: '1' } } }
@@ -288,21 +289,22 @@ describe('/rpc', () => {
     handlers.set(IPC.studyGetState, () => ({ materials: [], connections: [{ id: 'a', command: 'C:\\x\\claude.exe', args: ['--p'] }] }))
     const cookie = await pair()
     const call = async (c: string): Promise<string> => JSON.stringify(await (await post('/rpc', { channel: c, args: [] }, cookie)).json())
-    const all = [await call(IPC.cet6GetState), await call(IPC.configGet), await call(IPC.studyGetState)].join('')
+    const all = [await call(IPC.cet6GetState), await call(IPC.cet4GetState), await call(IPC.configGet), await call(IPC.studyGetState)].join('')
     expect(all).not.toMatch(/[A-Z]:\\/)
     expect(JSON.parse(await call(IPC.cet6GetState)).data.media).toEqual({ root: null, ok: true })
+    expect(JSON.parse(await call(IPC.cet4GetState)).data.media).toEqual({ root: null, ok: true })
     expect(JSON.parse(await call(IPC.configGet)).data.envCache.report.c).toEqual({ found: true, version: '1' })
   })
 
   it('白名单外通道：有效令牌也 403，handler 不会被调用', async () => {
-    for (const k of ['runnerRun', 'configSave', 'envDetect', 'remoteSetEnabled', 'cet6PickMediaRoot'] as const) {
+    for (const k of ['runnerRun', 'configSave', 'envDetect', 'remoteSetEnabled', 'cet6PickMediaRoot', 'cet4PickMediaRoot'] as const) {
       handlers.set(IPC[k], () => {
         invoked.push(k)
         return 'ran'
       })
     }
     const cookie = await pair()
-    for (const k of ['runnerRun', 'configSave', 'envDetect', 'remoteSetEnabled', 'cet6PickMediaRoot'] as const) {
+    for (const k of ['runnerRun', 'configSave', 'envDetect', 'remoteSetEnabled', 'cet6PickMediaRoot', 'cet4PickMediaRoot'] as const) {
       const res = await post('/rpc', { channel: IPC[k], args: [] }, cookie)
       expect(res.status, k).toBe(403)
     }
@@ -389,14 +391,14 @@ describe('路径围栏与静态资源', () => {
     expect(js.headers.get('access-control-allow-origin')).toBeNull()
   })
 
-  it('/cet6/* 路由转给登记的 handler，Range 头原样传入、206 原样回出', async () => {
+  it.each(['cet6', 'cet4'])('/%s/* 路由转给登记的 handler，Range 头原样传入、206 原样回出', async (level) => {
     let seen: { pathname: string; range: string | null } | null = null
-    assets.set('/cet6/media/', (req) => {
+    assets.set(`/${level}/media/`, (req) => {
       seen = { pathname: req.pathname, range: req.range }
       return new Response('abc', { status: 206, headers: { 'Content-Range': 'bytes 0-2/10', 'Accept-Ranges': 'bytes' } })
     })
     const cookie = await pair()
-    const res = await fetch(base + '/cet6/media/a/b%20c.mp3', { headers: { Cookie: cookie, Range: 'bytes=0-2' } })
+    const res = await fetch(base + `/${level}/media/a/b%20c.mp3`, { headers: { Cookie: cookie, Range: 'bytes=0-2' } })
     expect(res.status).toBe(206)
     expect(res.headers.get('content-range')).toBe('bytes 0-2/10')
     expect(await res.text()).toBe('abc')

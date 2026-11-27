@@ -1,0 +1,905 @@
+{
+  "2": {
+    "options": [
+      {
+        "key": "A",
+        "text": "He was taken to hospital in an ambulance."
+      },
+      {
+        "key": "B",
+        "text": "His car hit a sign and was badly damaged."
+      },
+      {
+        "key": "C",
+        "text": "His GPS system went out of order."
+      },
+      {
+        "key": "D",
+        "text": "He ended up in the wrong place."
+      }
+    ],
+    "answer": "D",
+    "evidence": "2021.06 第2套/真题.pdf 第1页、解析.pdf 第2页（修正双栏与残缺选项）"
+  },
+  "5": {
+    "options": [
+      {
+        "key": "A",
+        "text": "It donates money to overpopulated animal shelters."
+      },
+      {
+        "key": "B",
+        "text": "It permits employees to bring cats into their office."
+      },
+      {
+        "key": "C",
+        "text": "It gives 5,000 yen to employees who keep pet cats."
+      },
+      {
+        "key": "D",
+        "text": "It allows workers to do whatever their hearts desire."
+      }
+    ],
+    "evidence": "真题.pdf 第1页（pypdfium2 渲染图像逐字转录）"
+  },
+  "8": {
+    "options": [
+      {
+        "key": "A",
+        "text": "Find out where Jimmy is."
+      },
+      {
+        "key": "B",
+        "text": "Borrow money from Jimmy."
+      },
+      {
+        "key": "C",
+        "text": "Make friends with Jimmy."
+      },
+      {
+        "key": "D",
+        "text": "Ask Jimmy what is to be done."
+      }
+    ],
+    "answer": "A",
+    "evidence": "2021.06 第2套/真题.pdf 第2页、解析.pdf 第3页"
+  },
+  "12": {
+    "options": [
+      {
+        "key": "A",
+        "text": "Shopping delivery."
+      },
+      {
+        "key": "B",
+        "text": "Shopping online."
+      },
+      {
+        "key": "C",
+        "text": "Where he goes shopping."
+      },
+      {
+        "key": "D",
+        "text": "How often he does shopping."
+      }
+    ],
+    "evidence": "2021.06 第2套/真题.pdf 第2页（修正双栏 C/D 错位）"
+  },
+  "13": {
+    "options": [
+      {
+        "key": "A",
+        "text": "Searching in the aisles."
+      },
+      {
+        "key": "B",
+        "text": "Dealing with the traffic."
+      },
+      {
+        "key": "C",
+        "text": "Driving too long a distance."
+      },
+      {
+        "key": "D",
+        "text": "Getting one's car parked."
+      }
+    ],
+    "evidence": "真题.pdf 第2页（pypdfium2 渲染图像逐字转录）"
+  },
+  "14": {
+    "options": [
+      {
+        "key": "A",
+        "text": "The after-sales service."
+      },
+      {
+        "key": "B",
+        "text": "The replacement policy."
+      },
+      {
+        "key": "C",
+        "text": "The quality of food products."
+      },
+      {
+        "key": "D",
+        "text": "The damage to the packaging."
+      }
+    ],
+    "answer": "C",
+    "evidence": "真题.pdf 第2页（pypdfium2 渲染图像逐字转录）；答案取自解析.pdf 第4页"
+  },
+  "15": {
+    "options": [
+      {
+        "key": "A",
+        "text": "It saves money."
+      },
+      {
+        "key": "B",
+        "text": "It offers more choice."
+      },
+      {
+        "key": "C",
+        "text": "It increases the joy of shopping."
+      },
+      {
+        "key": "D",
+        "text": "It is less time-consuming."
+      }
+    ],
+    "evidence": "2021.06 第2套/真题.pdf 第2页（修正双栏 C/D 错位）"
+  },
+  "16": {
+    "options": [
+      {
+        "key": "A",
+        "text": "They have little talent for learning math."
+      },
+      {
+        "key": "B",
+        "text": "They need medical help for math anxiety."
+      },
+      {
+        "key": "C",
+        "text": "They need extra help to catch up in the math class."
+      },
+      {
+        "key": "D",
+        "text": "They have strong negative emotions towards math."
+      }
+    ],
+    "evidence": "真题.pdf 第2页（pypdfium2 渲染图像逐字转录）；答案取自解析.pdf 第5页",
+    "answer": "D"
+  },
+  "17": {
+    "answer": "B",
+    "evidence": "2021.06 第2套/解析.pdf 第5页"
+  },
+  "23": {
+    "options": [
+      {
+        "key": "A",
+        "text": "They must endure wear and tear."
+      },
+      {
+        "key": "B",
+        "text": "They must be of the same size."
+      },
+      {
+        "key": "C",
+        "text": "They must be made from a rare material."
+      },
+      {
+        "key": "D",
+        "text": "They must follow some common standards."
+      }
+    ],
+    "evidence": "真题.pdf 第3页（pypdfium2 渲染图像逐字转录）"
+  },
+  "24": {
+    "options": [
+      {
+        "key": "A",
+        "text": "They look more traditional."
+      },
+      {
+        "key": "B",
+        "text": "They look more official."
+      },
+      {
+        "key": "C",
+        "text": "They are favored by airlines."
+      },
+      {
+        "key": "D",
+        "text": "They are easily identifiable."
+      }
+    ],
+    "answer": "B",
+    "evidence": "真题.pdf 第3页（pypdfium2 渲染图像逐字转录）；原图选项A、C被划线但文字可辨；答案取自解析.pdf 第6页"
+  },
+  "25": {
+    "options": [
+      {
+        "key": "A",
+        "text": "For beauty."
+      },
+      {
+        "key": "B",
+        "text": "For variety."
+      },
+      {
+        "key": "C",
+        "text": "For visibility."
+      },
+      {
+        "key": "D",
+        "text": "For security."
+      }
+    ],
+    "evidence": "真题.pdf 第3页（pypdfium2 渲染图像逐字转录）"
+  },
+  "26": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）"
+  },
+  "27": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）；答案取自解析.pdf 第7页（图像核对，go to the doctor appointments）",
+    "answer": "B"
+  },
+  "28": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）"
+  },
+  "29": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "answer": "O",
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）；答案取自解析.pdf 第7页"
+  },
+  "30": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）；答案取自解析.pdf 第7页（consequences）",
+    "answer": "C"
+  },
+  "31": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）"
+  },
+  "32": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）"
+  },
+  "33": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）"
+  },
+  "34": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）"
+  },
+  "35": {
+    "options": [
+      {
+        "key": "A",
+        "text": "abruptly"
+      },
+      {
+        "key": "B",
+        "text": "appointments"
+      },
+      {
+        "key": "C",
+        "text": "consequences"
+      },
+      {
+        "key": "D",
+        "text": "debating"
+      },
+      {
+        "key": "E",
+        "text": "dimensions"
+      },
+      {
+        "key": "F",
+        "text": "friendly"
+      },
+      {
+        "key": "G",
+        "text": "hindered"
+      },
+      {
+        "key": "H",
+        "text": "idiom"
+      },
+      {
+        "key": "I",
+        "text": "implication"
+      },
+      {
+        "key": "J",
+        "text": "pushing"
+      },
+      {
+        "key": "K",
+        "text": "severely"
+      },
+      {
+        "key": "L",
+        "text": "sparked"
+      },
+      {
+        "key": "M",
+        "text": "splitting"
+      },
+      {
+        "key": "N",
+        "text": "survey"
+      },
+      {
+        "key": "O",
+        "text": "touches"
+      }
+    ],
+    "evidence": "真题.pdf 第4页（pypdfium2 渲染图像逐字转录）"
+  },
+  "47": {
+    "answer": "D",
+    "evidence": "2021.06 第2套/解析.pdf 第12页（按稽核 UNRESOLVED 末节核定：原 B 应为 D）"
+  },
+  "_blocks": {
+    "reading-sec-a-passage": {
+      "text": "Social isolation poses more health risks than obesity or smoking 15 cigarettes a day, according to research published by Brigham Young University. The __(26)__ is that loneliness is a huge, if silent, risk factor.\n\nLoneliness affects physical health in two ways. First, it produces stress hormones that can lead to many health problems. Second, people who live alone are less likely to go to the doctor __(27)__, to exercise or to eat a healthy diet.\n\nPublic health experts in many countries are __(28)__ how to address widespread loneliness in our society. Last year Britain even appointed a minister for loneliness. “Loneliness __(29)__ almost every one of us at some point,” its minister for loneliness Baroness Barran said. “It can lead to very serious health __(30)__ for individuals who become isolated and disconnected.”\n\nBarran started a “Let's Talk Loneliness” campaign that __(31)__ difficult conversations across Britain. He is now supporting “__(32)__ benches,” which are public seating areas where people are encouraged to go and chat with one another. The minister is also __(33)__ to stop public transportation from being cut in ways that leave people isolated.\n\nMore than one-fifth of adults in both the United States and Britain said in a 2018 __(34)__ that they often or always feel lonely. More than half of American adults are unmarried, and researchers have found that even among those who are married, 30% of relationships are __(35)__ strained. A quarter of Americans now live alone, and as the song says, one is the loneliest number.",
+      "evidence": "真题.pdf 第3–4页（pypdfium2 渲染图像逐字转录）"
+    }
+  }
+}

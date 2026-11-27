@@ -31,7 +31,7 @@ const debugPort = process.env['MIAI_DEBUG_PORT']
 if (debugPort) app.commandLine.appendSwitch('remote-debugging-port', debugPort)
 
 /*
- * 自定义协议（miai-study:// / miai-cet6://）的特权声明。
+ * 自定义协议（miai-study:// / miai-cet6:// / miai-cet4://）的特权声明。
  *
  * **必须在 app ready 之前**：scheme 的 privileges 只能在 ready 前声明，
  * 晚了这个 scheme 就不是 standard/secure 上下文 —— 表现是资源加载被当成

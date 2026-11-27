@@ -3354,6 +3354,8 @@ export const APP_SIDEBAR = {
   NAV_COURSES: '课程',
   NAV_PRACTICE: '练习',
   NAV_CET6: '六级真题',
+  NAV_CET4: '四级真题',
+  NAV_CET: '四六级真题',
   NAV_VOCAB: '生词本',
   NAV_REVIEW: '复习',
   NAV_OVERVIEW: '进度',
@@ -3872,6 +3874,9 @@ export const CET6 = {
   SPLIT_HANDLE: '拖动调整文章与题目的宽度',
   // 练习 / 考试模式（§8.1）
   MODE_LABEL: '作答模式',
+  LEVEL_LABEL: '考试等级',
+  LEVEL_CET4: '四级',
+  LEVEL_CET6: '六级',
   MODE_PRACTICE: '练习',
   MODE_EXAM: '考试',
   MODE_PRACTICE_DESC: '正计时，可暂停；可选词查释义，可用右侧 AI 助教。',
@@ -4024,7 +4029,7 @@ export const REMOTE = {
 export const PHONE = {
   TITLE_COURSES: '课程目录',
   TITLE_LESSON: '课文',
-  TITLE_CET6_VOCAB: '六级词汇',
+  TITLE_CET6_VOCAB: '生词本',
   TITLE_FAVORITES: '收藏',
   TITLE_MEMO: '备忘',
   CET6_SPLIT_LABEL: '调整原文与题目的分屏比例',
@@ -4105,7 +4110,7 @@ export const TODAY = {
   moduleCount: (label: string, n: number): string => `${label} ${n}`,
   MODULE_SEP: ' · ',
   lastWrong: (when: string): string => `最近一次答错：${when}`,
-  VOCAB_META: '翻卡 · 六级',
+  VOCAB_META: '翻卡',
   cet6Meta: (mode: 'practice' | 'exam', answered: number, total: number | null): string =>
     `${mode === 'exam' ? '考试模式' : '练习模式'} · ${total === null ? `已答 ${answered} 题` : `已答 ${answered} / ${total}`}`,
   ALL_DONE: '今天的都做完了。',
@@ -4125,6 +4130,7 @@ export const TODAY = {
   START_SECTION: '想从别处开始',
   START_LANG: '选一门语言：C · C++ · Java · Python',
   START_CET6: '做一套六级真题',
+  START_CET4: '做一套四级真题',
   START_PLAN: '让 AI 按我的教材排一份计划',
   NEW_NOTE: '学完一课后，每天要复习和重做的内容会出现在这里。'
 } as const
@@ -4172,3 +4178,17 @@ export const VIDEO_UI = {
   DEMO_TITLE: '课文演示', REMOVE_CONFIRM: '确定删除这段动画？', UNKNOWN_STATE: '当前画面状态：', RETURN: '返回动画',
   WRONG_HINT: '要不要看一段动画讲解？', DISMISS: '不用'
 } as const
+
+const CET4_COPY = {
+  ...CET6,
+  TITLE: APP_SIDEBAR.NAV_CET4,
+  STAT_TITLE: '已交卷的四级真题',
+  MODE_EXAM_DESC: CET6.MODE_EXAM_DESC.replace('130', '125'),
+  PART_MINUTES: { ...CET6.PART_MINUTES, listening: 25 },
+  ESSAY_HINT: '建议 120–180 词',
+  ASK_REF_TITLE: '四级选句'
+}
+
+export function cetCopy(level: import('../../../shared/cet6').CetLevel) {
+  return level === 'cet4' ? CET4_COPY : CET6
+}

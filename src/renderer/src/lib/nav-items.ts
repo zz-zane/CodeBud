@@ -19,7 +19,7 @@ export const NAV_ITEMS: NavItem[] = [
   { key: 'courses', path: '/courses', label: APP_SIDEBAR.NAV_COURSES, icon: 'M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z', group: 'daily' },
   { key: 'practice', path: '/practice', label: APP_SIDEBAR.NAV_PRACTICE, icon: 'm16 18 6-6-6-6M8 6l-6 6 6 6', group: 'daily' },
   { key: 'review', path: '/review', label: APP_SIDEBAR.NAV_REVIEW, icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 0 0 4.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 0 1-15.357-2m15.357 2H15', group: 'daily' },
-  { key: 'cet6', path: '/cet6', label: APP_SIDEBAR.NAV_CET6, icon: 'M22 10 12 5 2 10l10 5z M6 12v5c3 2 9 2 12 0v-5', group: 'daily' },
+  { key: 'cet', path: '/cet', label: APP_SIDEBAR.NAV_CET, icon: 'M22 10 12 5 2 10l10 5z M6 12v5c3 2 9 2 12 0v-5', group: 'daily' },
   { key: 'vocab', path: '/cet6/vocab', label: APP_SIDEBAR.NAV_VOCAB, icon: 'M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z M9 8h6 M9 11.5h4', group: 'daily' },
   { key: 'study', path: '/study', label: STUDY_COPY.HUB_TITLE, icon: 'M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z', group: 'library' },
   { key: 'ai', path: '/ai', label: AI_ASSISTANT.TAB_ASSISTANT, icon: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z', group: 'library' },
@@ -37,7 +37,7 @@ export function navSections(items: readonly NavItem[] = NAV_ITEMS): NavItem[][] 
   return out
 }
 
-/** 手机底部标签栏的五项（按此顺序）；其余（六级、资料库、进度、设置）留在抽屉里 */
+/** 手机底部标签栏的五项（按此顺序）；其余（四六级、资料库、进度、设置）留在抽屉里 */
 export const PHONE_TAB_KEYS = ['today', 'courses', 'practice', 'review', 'ai'] as const
 
 export function phoneTabItems(items: readonly NavItem[] = NAV_ITEMS): NavItem[] {
@@ -51,7 +51,7 @@ export function navGroupOf(path: string): string | null {
   if (path === '/practice' || path === '/playground') return 'practice'
   if (path === '/review') return 'review'
   if (path === '/cet6/vocab') return 'vocab'
-  if (path.startsWith('/cet6')) return 'cet6'
+  if (path === '/cet' || /^\/cet[46](\/|$)/.test(path)) return 'cet'
   if (path === '/study') return 'study'
   if (path === '/ai') return 'ai'
   if (path === '/overview' || path === '/memo' || path === '/favorites') return 'overview'

@@ -59,6 +59,12 @@ export const IPC = {
   cet6VocabRemove: 'cet6:vocab-remove',
   cet6VocabLookup: 'cet6:vocab-lookup',
   cet6GradeSubjective: 'cet6:grade-subjective',
+  cet4GetState: 'cet4:get-state',
+  cet4SaveRecord: 'cet4:save-record',
+  cet4ResetRecord: 'cet4:reset-record',
+  cet4PickMediaRoot: 'cet4:pick-media-root',
+  cet4SetLastMode: 'cet4:set-last-mode',
+  cet4GradeSubjective: 'cet4:grade-subjective',
   /**
    * 练习史（practice.json，学习闭环）。
    *

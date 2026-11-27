@@ -1,0 +1,135 @@
+{
+  "id": "2023-03-2",
+  "title": "2023年3月 第2套",
+  "year": 2023,
+  "month": 3,
+  "set": 2,
+  "status": "partial",
+  "issues": [
+    "合卷拆分：本套仅含写作与翻译；听力与阅读与 2023年3月 第1套 共用。"
+  ],
+  "sources": [
+    {
+      "id": "cet4-2023-03-2-audio-note",
+      "title": "听力说明.txt",
+      "localPath": "<本地四级真题目录>/2023.03 第2-3套/听力说明.txt"
+    },
+    {
+      "id": "cet4-2023-03-2-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2023.03 第2-3套/真题.pdf"
+    },
+    {
+      "id": "cet4-2023-03-2-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2023.03 第2-3套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2023-03-2-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2023.03 第2-3套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "Suppose you have read a book recently and intend to recommend it to other members of your book club via an online forum. Briefly introduce the book and explain why it is worth reading. You will have 30 minutes for this task and should write at least 120 words but no more than 180 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "Suppose you have read a book recently and intend to recommend it to other members of your book club via an online forum. Briefly introduce the book and explain why it is worth reading. You will have 30 minutes for this task and should write at least 120 words but no more than 180 words.",
+          "source": {
+            "fileId": "cet4-2023-03-2-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-03-2-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "Suppose you have read a book recently and intend to recommend it to other members of your book club via an online forum. Briefly introduce the book and explain why it is worth reading. You will have 30 minutes for this task and should write at least 120 words but no more than 180 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "When it comes to the books I’ve read recently, it will be the book Oliver Twist, a realistic novel by Charles Dickens, that I highly recommend to all of you this time.\n\nSet in London, the book tells the story of an orphan boy named Oliver Twist, who endured immense hardship and fortunately found his relatives and led a happy life eventually. The reasons for my recommendation are chiefly as follows. For one thing, this book helps broaden our horizons, for Dickens successfully portrayed the characters by skillful design, sharp words and the wonderful plot which is full of twists and turns. For another, what Oliver has experienced is a great inspiration to us. Growing up in an environment of violence, cruelty and prejudice, he suffered years of physical and mental torment, but with his indomitable nature, he conquered the unbelievable misery. Therefore, no matter how difficult our lives may be, we shouldn’t lose hope, kindness, courage and integrity as those are the motivation that keeps us moving forward. Oliver is just the shining example.\n\nThis book brings me a deeper insight into good and evil, beauty and ugliness. It deserves high praise and I hope it will be to your taste as well.",
+          "explanation": "**【审题提纲】**\n\n通过审题可知，本次写作要求考生通过一个在线论坛给读书俱乐部的其他成员推荐一本最近读过的书，作文内容须包含该书简介及其值得一读的理由。在写作思路方面，可先向俱乐部成员说明自己想推荐哪本书；然后，简单介绍该书并具体阐述推荐该书的理由；最后，总结全文并表达自己的期望。根据行文思路，具体可列如下提纲：\n\n第一段：向俱乐部成员说明自己想推荐哪本书，并指出该书的作者和体裁。\n\n第二段：简单介绍该书的内容并具体阐述推荐该书的理由。\n\n第三段：总结全文，表达期望。\n\n**【参考范文】**\n\nWhen it comes to the books I’ve read recently, it will be the book *Oliver Twist*, a realistic novel by Charles Dickens, that I highly recommend to all of you this time.\n\nSet in London, the book tells the story of an orphan boy named Oliver Twist, who endured immense hardship and fortunately found his relatives and led a happy life eventually. The reasons for my recommendation are chiefly as follows. For one thing, this book helps broaden our horizons, for Dickens successfully portrayed the characters by skillful design, sharp words and the wonderful plot which is full of twists and turns. For another, what Oliver has experienced is a great inspiration to us. Growing up in an environment of violence, cruelty and prejudice, he suffered years of physical and mental torment, but with his indomitable nature, he conquered the unbelievable misery. Therefore, no matter how difficult our lives may be, we shouldn’t lose hope, kindness, courage and integrity as those are the motivation that keeps us moving forward. Oliver is just the shining example.\n\nThis book brings me a deeper insight into good and evil, beauty and ugliness. It deserves high praise and I hope it will be to your taste as well.",
+          "source": {
+            "fileId": "cet4-2023-03-2-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-2-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2023-03-1",
+      "sharedWithTitle": "2023年3月 第1套",
+      "sharedNote": "本套听力与 2023年3月 第1套 共用，题目、解析和听力材料集中在 2023-03-1 练习；本套不再重复展示。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2023-03-1",
+      "sharedWithTitle": "2023年3月 第1套",
+      "sharedNote": "本套阅读与 2023年3月 第1套 共用（原卷未单列），请前往 2023-03-1 练习。"
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "近年来，越来越多的城市居民为农村的由园风光所吸引，利用节假日到乡村旅游，他们住在农民家中，品尝具有当地风味的农家饭菜，有些游客还参与采摘瓜果等活动，亲身感受收获的喜悦。乡村旅游能够有效地帮助游客舒缓压力，放松心情，增进身心健康。实际上，这种旅游形式不仅能使城市游客受益，同时也能增加农民的收入，促进农村经济发展。",
+          "source": {
+            "fileId": "cet4-2023-03-2-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-03-2-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "近年来，越来越多的城市居民为农村的由园风光所吸引，利用节假日到乡村旅游，他们住在农民家中，品尝具有当地风味的农家饭菜，有些游客还参与采摘瓜果等活动，亲身感受收获的喜悦。乡村旅游能够有效地帮助游客舒缓压力，放松心情，增进身心健康。实际上，这种旅游形式不仅能使城市游客受益，同时也能增加农民的收入，促进农村经济发展。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "In recent years, an increasing number of urban residents have been attracted by the rural idyllic scene and have taken advantage of their holidays to travel to the countryside. They live in the farmers’ houses and taste cuisine with local flavor. Some tourists also participate in activities such as fruit picking, experiencing the joy of harvest at first hand. Village tourism can efficiently help tourists relieve stress, get relaxed and improve physical and mental health. In fact, this form of tourism can not only benefit urban tourists, but also increase farmers’ income and boost the development of the rural economy.",
+          "explanation": "1. **【原句译文】** 近年来，越来越多的城市居民为农村的田园风光所吸引，利用节假日到乡村旅游。In recent years, an increasing number of urban residents have been attracted by the rural idyllic scene and have taken advantage of their holidays to travel to the countryside.\n   **【句子分析】** 本句描述乡村旅游受到越来越多城市居民的喜爱这一现象，且结合时间标志词“近年来”可知，译文时态应采用现在完成时。分析可知，第一个逗号后的内容可处理为主干句，其中“越来越多的城市居民”可处理为主语，第二个逗号前后的“为农村的田园风光所吸引”和“利用节假日到乡村旅游”可处理为 and 连接的并列成分。具体翻译时，“近年来”可处理为介词短语“In recent years”，作时间状语置于句首，并用逗号将其与后面的内容隔开；“越来越多的城市居民”可译为“an increasing number of urban residents”；“为……所吸引”可译为“have been attracted by...”；“农村的田园风光”可译为“the rural idyllic scene”；“利用节假日”可译为“have taken advantage of their holidays”；“到乡村旅游”可处理为动词不定式短语，作目的状语，译为“to travel to the countryside”。\n\n2. **【原句译文】** 他们住在农民家中，品尝具有当地风味的农家饭菜。They live in the farmers’ houses and taste cuisine with local flavor.\n   **【句子分析】** 本句描述城市游客在乡村旅游时会进行的活动，故译文时态应采用一般现在时。分析可知，可将“他们”处理为主语，并将“住在农民家中”和“品尝具有当地风味的农家饭菜”处理为 and 连接的并列成分。具体翻译时，“他们”可译为“They”；“住在农民家中”可译为“live in the farmers’ houses”；“品尝”可译为“taste”；“具有当地风味的”可处理为介词短语，作后置定语，修饰“农家饭菜”，译为“with local flavor”；为使英文表达简洁明了，“农家饭菜”可省译“农家”，译为“cuisine”。\n\n3. **【原句译文】** 有些游客还参与采摘瓜果等活动，亲身感受收获的喜悦。Some tourists also participate in activities such as fruit picking, experiencing the joy of harvest at first hand.\n   **【句子分析】** 本句亦描述城市游客在乡村旅游时会进行的活动，故译文时态采用一般现在时。分析可知，可将逗号前的内容处理为主干句，逗号后的内容处理为现在分词短语，作主干句的伴随状语，置于句末。具体翻译时，“有些游客”可译为“Some tourists”；“还参与采摘瓜果等活动”可整体译为“also participate in activities such as fruit picking”；“亲身感受……”可译为“experiencing...at first hand”；“收获的喜悦”可译为“the joy of harvest”。\n\n4. **【原句译文】** 乡村旅游能够有效地帮助游客舒缓压力，放松心情，增进身心健康。Village tourism can efficiently help tourists relieve stress, get relaxed and improve physical and mental health.\n   **【句子分析】** 本句客观介绍乡村旅游能给游客带来的好处，故译文时态应采用一般现在时。“乡村旅游”可译为“Village tourism”；“能够有效地帮助游客”可整体译为“can efficiently help tourists”；“舒缓压力，放松心情，增进身心健康”可处理为 and 连接的并列的省略 to 的动词不定式短语，作 tourists 的补足语，其中，“舒缓压力”可译为“relieve stress”，“放松心情”可译为“get relaxed”，“增进身心健康”可译为“improve physical and mental health”。\n\n5. **【原句译文】** 实际上，这种旅游形式不仅能使城市游客受益，同时也能增加农民的收入，促进农村经济发展。In fact, this form of tourism can not only benefit urban tourists, but also increase farmers’ income and boost the development of the rural economy.\n   **【句子分析】** 本句客观陈述乡村旅游给城市游客、农民的收入以及农村经济带来的积极作用，故译文时态应采用一般现在时。分析可知，本句中的“不仅”和“同时也”表示前后内容之间存在递进关系，故可将“能使城市游客受益”和“能增加农民的收入，促进农村经济发展”处理为 not only...but also...连接的并列成分。其中，“增加农民的收入”和“促进农村经济发展”可处理为 and 连接的并列谓宾。具体翻译时，可将“实际上”处理为状语，置于句首，译为“In fact”，并用逗号将其与后面的内容隔开；“这种旅游形式”可译为“this form of tourism”；“能使城市游客受益”可译为“can benefit urban tourists”，“能增加农民的收入”可译为“can increase farmers’ income”，为符合英文表达习惯，可将第一个 can 置于 not only 之前，第二个 can 省略；“促进农村经济发展”可译为“boost the development of the rural economy”。\n\n**【全文翻译】**\n\nIn recent years, an increasing number of urban residents have been attracted by the rural idyllic scene and have taken advantage of their holidays to travel to the countryside. They live in the farmers’ houses and taste cuisine with local flavor. Some tourists also participate in activities such as fruit picking, experiencing the joy of harvest at first hand. Village tourism can efficiently help tourists relieve stress, get relaxed and improve physical and mental health. In fact, this form of tourism can not only benefit urban tourists, but also increase farmers’ income and boost the development of the rural economy.\n\n---",
+          "source": {
+            "fileId": "cet4-2023-03-2-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-2-md"
+          },
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

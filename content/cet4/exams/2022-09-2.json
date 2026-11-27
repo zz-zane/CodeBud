@@ -1,0 +1,135 @@
+{
+  "id": "2022-09-2",
+  "title": "2022年9月 第2套",
+  "year": 2022,
+  "month": 9,
+  "set": 2,
+  "status": "partial",
+  "issues": [
+    "合卷拆分：本套仅含写作与翻译；听力与阅读与 2022年9月 第1套 共用。"
+  ],
+  "sources": [
+    {
+      "id": "cet4-2022-09-2-audio-note",
+      "title": "听力说明.txt",
+      "localPath": "<本地四级真题目录>/2022.09 第2-3套/听力说明.txt"
+    },
+    {
+      "id": "cet4-2022-09-2-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2022.09 第2-3套/真题.pdf"
+    },
+    {
+      "id": "cet4-2022-09-2-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2022.09 第2-3套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2022-09-2-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2022.09 第2-3套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "Suppose your class has just finished celebrating the Teachers' Day. You are now to write a report to the university newspaper on the celebration activities organized by your class. You will have 30 minutes to write the report. You should write at least 120 words but no more than 180 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "Suppose your class has just finished celebrating the Teachers' Day. You are now to write a report to the university newspaper on the celebration activities organized by your class. You will have 30 minutes to write the report. You should write at least 120 words but no more than 180 words.",
+          "source": {
+            "fileId": "cet4-2022-09-2-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-09-2-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "Suppose your class has just finished celebrating the Teachers' Day. You are now to write a report to the university newspaper on the celebration activities organized by your class. You will have 30 minutes to write the report. You should write at least 120 words but no more than 180 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "Report on Teachers' Day Celebration\n\nThe celebration of Teachers' Day this year coincided with Chinese traditional Mid-Autumn Festival. Owing to this, our class organized the event from 8:00 a.m. to 9:30 a.m. on Sept. 9th in the playground.\n\nOur celebration started with a speech from our beloved Mr. Li, who has been awarded as one of the university model teachers for his profound knowledge and moral integrity. In his speech, Mr. Li expressed his ambition to be a more qualified, motivated and empowered teacher and encouraged us to focus on learning. Then our talented classmates presented a variety of performances, including singing Chinese and English songs, folk dance and martial arts performances, and stand-up comedies. Joy and laughter filled the playground, attracting hundreds of fellow students. At the end of the celebration, each classmate was given the traditional dessert for Mid-Autumn Festival—mooncakes, and they were of different flavors! All our classmates sat together happily, tasting the delicious mooncakes and enjoying the silvery moon.\n\nThe unforgettable memories linger in every classmate's mind.",
+          "explanation": "Directions: Suppose your class has just finished celebrating the Teachers' Day. You are now to write a report to the university newspaper on the celebration activities organized by your class. You will have 30 minutes to write the report. You should write at least 120 words but no more than 180 words.\n\n参考范文：\n\nReport on Teachers' Day Celebration\n\nThe celebration of Teachers' Day this year coincided with Chinese traditional Mid-Autumn Festival. Owing to this, our class organized the event from 8:00 a.m. to 9:30 a.m. on Sept. 9th in the playground.\n\nOur celebration started with a speech from our beloved Mr. Li, who has been awarded as one of the university model teachers for his profound knowledge and moral integrity. In his speech, Mr. Li expressed his ambition to be a more qualified, motivated and empowered teacher and encouraged us to focus on learning. Then our talented classmates presented a variety of performances, including singing Chinese and English songs, folk dance and martial arts performances, and stand-up comedies. Joy and laughter filled the playground, attracting hundreds of fellow students. At the end of the celebration, each classmate was given the traditional dessert for Mid-Autumn Festival—mooncakes, and they were of different flavors! All our classmates sat together happily, tasting the delicious mooncakes and enjoying the silvery moon.\n\nThe unforgettable memories linger in every classmate's mind.",
+          "source": {
+            "fileId": "cet4-2022-09-2-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-09-2-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2022-09-1",
+      "sharedWithTitle": "2022年9月 第1套",
+      "sharedNote": "本套听力与 2022年9月 第1套 共用，题目、解析和听力材料集中在 2022-09-1 练习；本套不再重复展示。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2022-09-1",
+      "sharedWithTitle": "2022年9月 第1套",
+      "sharedNote": "本套阅读与 2022年9月 第1套 共用（原卷未单列），请前往 2022-09-1 练习。"
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "按照中国民间的传统习俗，春节期间长辈通常会给孩子发红包，俗称发压岁钱（lucky money），以表达对孩子的祝福，祝他们好运。如今，红包不仅是给孩子的礼物，而且经常也是给长辈或亲朋好友的礼物。近年来，随着微信用户数量的增加，微信红包变得愈加流行。欢度春节时，人们经常互发微信红包表达问候。这无疑是一种与远方亲友联系的便捷方式。",
+          "source": {
+            "fileId": "cet4-2022-09-2-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-09-2-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "按照中国民间的传统习俗，春节期间长辈通常会给孩子发红包，俗称发压岁钱（lucky money），以表达对孩子的祝福，祝他们好运。如今，红包不仅是给孩子的礼物，而且经常也是给长辈或亲朋好友的礼物。近年来，随着微信用户数量的增加，微信红包变得愈加流行。欢度春节时，人们经常互发微信红包表达问候。这无疑是一种与远方亲友联系的便捷方式。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "In the light of Chinese folk traditional customs, the elders usually give red packets to children during the Spring Festival, which is commonly known as giving lucky money, to express their wishes for children and wish them good luck. Nowadays, red packet is not only a gift for children, but often a present for elders, relatives and friends as well. In recent years, with the increase of WeChat users, WeChat red packets have become more and more popular. When celebrating the Spring Festival, people often express greetings through sending WeChat red packets to each other, which is undoubtedly a convenient way to get in touch with distant relatives and friends.",
+          "explanation": "Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.\n\n按照中国民间的传统习俗，春节期间长辈通常会给孩子发红包，俗称发压岁钱(lucky money)，以表达对孩子的祝福，祝他们好运。如今，红包不仅是给孩子的礼物，而且经常也是给长辈或亲朋好友的礼物。近年来，随着微信用户数量的增加，微信红包变得愈加流行。欢度春节时，人们经常互发微信红包表达问候。这无疑是一种与远方亲友联系的便捷方式。\n\n参考译文：\n\nIn the light of Chinese folk traditional customs, the elders usually give red packets to children during the Spring Festival, which is commonly known as giving lucky money, to express their wishes for children and wish them good luck. Nowadays, red packet is not only a gift for children, but often a present for elders, relatives and friends as well. In recent years, with the increase of WeChat users, WeChat red packets have become more and more popular. When celebrating the Spring Festival, people often express greetings through sending WeChat red packets to each other, which is undoubtedly a convenient way to get in touch with distant relatives and friends.\n\n注：2022年9月四级考试共考了1套听力、1套阅读、3篇写作与3篇翻译。",
+          "source": {
+            "fileId": "cet4-2022-09-2-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-09-2-md"
+          },
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

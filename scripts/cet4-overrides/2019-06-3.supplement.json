@@ -1,0 +1,103 @@
+{
+  "26": {
+    "answer": "G",
+    "evidence": "解析OCR文本 md 第971行（与 agy 既有答案零冲突）"
+  },
+  "27": {
+    "answer": "M",
+    "evidence": "解析OCR文本 md 第988行（与 agy 既有答案零冲突）"
+  },
+  "28": {
+    "answer": "A",
+    "evidence": "解析OCR文本 md 第998行（与 agy 既有答案零冲突）"
+  },
+  "29": {
+    "answer": "L",
+    "evidence": "解析OCR文本 md 第1011行（与 agy 既有答案零冲突）"
+  },
+  "30": {
+    "answer": "C",
+    "evidence": "解析OCR文本 md 第1016行（与 agy 既有答案零冲突）"
+  },
+  "31": {
+    "answer": "F",
+    "evidence": "解析OCR文本 md 第1017行（与 agy 既有答案零冲突）"
+  },
+  "32": {
+    "answer": "J",
+    "evidence": "解析OCR文本 md 第1037行（与 agy 既有答案零冲突）"
+  },
+  "33": {
+    "answer": "O",
+    "evidence": "解析.pdf 文本层 第3页（33、【答案】O) victim）"
+  },
+  "34": {
+    "answer": "I",
+    "evidence": "解析OCR文本 md 第1059行（与 agy 既有答案零冲突）"
+  },
+  "35": {
+    "answer": "E",
+    "evidence": "解析OCR文本 md 第1071行（与 agy 既有答案零冲突）"
+  },
+  "36": {
+    "answer": "E",
+    "evidence": "解析OCR文本 md 第1162行（与 agy 既有答案零冲突）"
+  },
+  "37": {
+    "answer": "L",
+    "evidence": "解析OCR文本 md 第1168行（与 agy 既有答案零冲突）"
+  },
+  "38": {
+    "answer": "H",
+    "evidence": "解析OCR文本 md 第1180行（与 agy 既有答案零冲突）"
+  },
+  "39": {
+    "answer": "F",
+    "evidence": "解析OCR文本 md 第1185行（与 agy 既有答案零冲突）"
+  },
+  "40": {
+    "answer": "A",
+    "evidence": "解析OCR文本 md 第1200行（与 agy 既有答案零冲突）"
+  },
+  "41": {
+    "answer": "J",
+    "evidence": "解析OCR文本 md 第1207行（与 agy 既有答案零冲突）"
+  },
+  "42": {
+    "answer": "G",
+    "evidence": "解析OCR文本 md 第1213行（与 agy 既有答案零冲突）"
+  },
+  "43": {
+    "answer": "N",
+    "evidence": "解析OCR文本 md 第1219行（与 agy 既有答案零冲突）"
+  },
+  "44": {
+    "answer": "D",
+    "evidence": "解析OCR文本 md 第1230行（与 agy 既有答案零冲突）"
+  },
+  "45": {
+    "answer": "I",
+    "evidence": "解析OCR文本 md 第1239行（与 agy 既有答案零冲突）"
+  },
+  "53": {
+    "options": [
+      {
+        "key": "A",
+        "text": "Online CBT programs are no more effective than regular care from physicians."
+      },
+      {
+        "key": "B",
+        "text": "The process of treating depression is often more complicated than anticipated."
+      },
+      {
+        "key": "C",
+        "text": "The combination of traditional CBT and computerized CBT is most effective."
+      },
+      {
+        "key": "D",
+        "text": "Depression is a mental condition which is to be treated with extreme caution."
+      }
+    ],
+    "evidence": "真题.pdf 文本层 Q53 四个选项（原导入把 D 选项误标为第二个 C）"
+  }
+}

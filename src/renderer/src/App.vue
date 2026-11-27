@@ -14,7 +14,7 @@ import SettingsDialog from './components/domain/SettingsDialog.vue'
 import LearnerSurveyModal from './components/domain/LearnerSurveyModal.vue'
 import { isLearnerMemory } from '../../shared/learner-profile'
 import { useAiAssistantStore } from './stores/ai-assistant'
-import { useCet6Store } from './stores/cet6'
+import { useCetExamLock } from './stores/cet6'
 import { useContentStore } from './stores/content'
 import { useSettingsStore } from './stores/settings'
 import { useSettingsDialogStore } from './stores/settings-dialog'
@@ -39,7 +39,7 @@ const settings = useSettingsStore()
 const route = useRoute()
 const router = useRouter()
 const aiAssistant = useAiAssistantStore()
-const cet6 = useCet6Store()
+const examLock = useCetExamLock()
 const settingsDialog = useSettingsDialogStore()
 const quizStore = useQuizStore()
 const appHistory = useAppHistory(router)
@@ -51,7 +51,6 @@ const hasCurrentLesson = computed(() => isLessonPage.value && !!content.lessonOf
 const isAiWorkspace = computed(() => route.name === 'ai')
 const aiTitle = computed(() => aiAssistant.currentSession?.title || AI_ASSISTANT.DEFAULT_SESSION_TITLE)
 // 六级考试模式（docs/27 §8.1）：做题期间收起侧栏、右栏、顶条入口，并停掉全局快捷键；App 是这个标志的唯一消费方
-const examLock = computed(() => cet6.examLock)
 const isFullBleed = computed(() => route.meta.fullBleed === true)
 // /ai 自己就是聊天视图：同一时刻最多一个输入框，右栏 AI 在这里不渲染（DESIGN §6.1）
 // 课文页右侧只可能是 AI 面板；收起 AI 后应完全收栏、恢复阅读宽度（ROOT-PLAN-v1 §6）
@@ -125,6 +124,8 @@ const PHONE_TITLES: Record<string, string> = {
   courses: PHONE.TITLE_COURSES,
   practice: APP_SIDEBAR.NAV_PRACTICE,
   cet6: APP_SIDEBAR.NAV_CET6,
+  cet4: APP_SIDEBAR.NAV_CET4,
+  'cet4-exam': APP_SIDEBAR.NAV_CET4,
   'cet6-vocab': PHONE.TITLE_CET6_VOCAB,
   'cet6-exam': APP_SIDEBAR.NAV_CET6,
   favorites: PHONE.TITLE_FAVORITES,
@@ -148,7 +149,7 @@ const showTabBar = computed(
     isPhone.value &&
     !isBare.value &&
     !examLock.value &&
-    route.name !== 'cet6-exam' &&
+    route.name !== 'cet6-exam' && route.name !== 'cet4-exam' &&
     !isQuizActive.value &&
     !settingsDialog.open &&
     !shouldShowRightPanel.value

@@ -1,4 +1,4 @@
-import { CET6_LIMITS, type Cet6AiGrade } from './cet6'
+import { CET6_LIMITS, type Cet6AiGrade, type CetLevel } from './cet6'
 import { CET6_GRADE_PROMPT } from './copy'
 
 export type Cet6SubjectiveKind = 'writing' | 'translation'
@@ -24,10 +24,10 @@ export type Cet6GradeResponse =
   | { ok: false; reason: 'no-key' | 'network' | 'bad-response' | 'stale' }
 
 /** 构造六级写作 / 翻译 AI 估分提示词（复用 CET6_LIMITS 长度上限） */
-export function buildGradePrompt(kind: Cet6SubjectiveKind, prompt: string, answer: string): string {
+export function buildGradePrompt(kind: Cet6SubjectiveKind, prompt: string, answer: string, level: CetLevel = 'cet6'): string {
   const safePrompt = prompt.slice(0, CET6_LIMITS.valueLength)
   const safeAnswer = answer.slice(0, CET6_LIMITS.valueLength)
-  return CET6_GRADE_PROMPT(kind, safePrompt, safeAnswer)
+  return CET6_GRADE_PROMPT(kind, safePrompt, safeAnswer, level)
 }
 
 /**

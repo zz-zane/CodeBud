@@ -1,0 +1,3005 @@
+{
+  "id": "2022-06-1",
+  "title": "2022年6月 第1套",
+  "year": 2022,
+  "month": 6,
+  "set": 1,
+  "status": "ready",
+  "issues": [],
+  "sources": [
+    {
+      "id": "cet4-2022-06-1-mp3",
+      "title": "听力.mp3",
+      "localPath": "<本地四级真题目录>/2022.06 第1套/听力.mp3"
+    },
+    {
+      "id": "cet4-2022-06-1-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2022.06 第1套/真题.pdf"
+    },
+    {
+      "id": "cet4-2022-06-1-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2022.06 第1套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2022-06-1-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2022.06 第1套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "Suppose you are going to write a proposal to your school library for improving its service. You are to write about its current problems and possible solutions to these problems. You will have 30 minutes to write the proposal. You should write at least 120 words but no more than 180 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "Suppose you are going to write a proposal to your school library for improving its service. You are to write about its current problems and possible solutions to these problems. You will have 30 minutes to write the proposal. You should write at least 120 words but no more than 180 words.",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-1-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "Suppose you are going to write a proposal to your school library for improving its service. You are to write about its current problems and possible solutions to these problems. You will have 30 minutes to write the proposal. You should write at least 120 words but no more than 180 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "A Proposal on Improving Library Service\n\n【1】The school library is an important resource for university study. Making full use of the academic resources in the library can benefit college students a lot. 【2】However, it fails to meet the demands of students in several aspects. It is high time to improve library service.\n\n【3】One of students' complaints is insufficient support from librarians, especially when IT support is needed. 【4】Therefore, relevant training courses should be offered so that librarians can provide better and timely help. 【5】The second aspect is about the opening hours of our library, from 8:00 am to 10:00 pm, which many students think is too short in times of final exams and while preparing for the postgraduate entrance exam. 【6】So I suggest that opening hours be extended from 6:00 am to 11:30 pm with help of student volunteers.\n\n【7】With the above suggestions taken into consideration, I believe, students' satisfaction will climb, school library will embrace new development and our university will have a brighter future.",
+          "explanation": "**结构框图：**\n\n`A Proposal on Improving Library Service`\n- 第1段引入话题：校图书馆对大学生来说非常重要，应该改进服务。\n- 第2段具体论证：讨论图书馆服务中存在的问题，有针对性地提出解决方案。\n- 第3段表达期望：希望上述的建议会被采纳。如被采纳图书馆将迎来新的发展。\n\n**范文点评：**\n\n| 参考范文 | 精彩点评 |\n| :--- | :--- |\n| **A Proposal on Improving Library Service**<br>【1】**The school library is an important resource for university study.** Making full use of the academic resources in the library can benefit college students a lot. 【2】**However, it fails to meet the demands of students in several aspects.** It is high time to improve library service.<br>【3】One of students' complaints is insufficient support from librarians, especially when IT support is needed. 【4】**Therefore**, relevant training courses should be offered so that librarians can provide better and timely help. 【5】The second aspect is about the opening hours of our library, from 8:00 am to 10:00 pm, which many students think is too short in times of final exams and while preparing for the postgraduate entrance exam. 【6】**So I suggest that** opening hours be extended from 6:00 am to 11:30 pm with help of student volunteers.<br>【7】**With the above suggestions taken into consideration, I believe, students' satisfaction will climb, school library will embrace new development and our university will have a brighter future.** | 【1】介绍图书馆的重要作用。<br>【2】使用 However 转折引出图书馆的不足。<br>【3】介绍图书馆管理员在解决学生问题方面尚需改进，并在【4】中提出培训的解决方案。<br>【5】介绍图书馆开放时间不能满足学生需求的问题。<br>【6】提出延长开放时间的建议。<br>【7】总结全文，表达期望。 |\n\n**话题词汇：**\n- lounge areas 休闲区\n- reserve a seat 预约座位\n- electronic resources 电子资源\n- temporary closure 临时闭馆\n- lost and damaged books 书籍损毁\n- locker 储物柜\n- open around the clock 24小时开馆\n- database use 数据库使用\n- self-service machines 自助(借还书、查询)机\n- photocopied articles 影印文档\n- academic services 学术活动服务\n- inter-library loans 馆际互借",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear three news reports, two long conversations and three passages.",
+      "audio": {
+        "src": "source-media/2022.06 第1套/听力.mp3",
+        "sourceId": "cet4-2022-06-1-mp3",
+        "sharedWith": []
+      },
+      "blocks": [
+        {
+          "id": "listening-news-1",
+          "title": "News Report One",
+          "text": "",
+          "transcript": "A new study finds that beverages containing added sugar might be harmful.\nIn the study, researchers analyzed information from over 80,000 women and 37,000 men. Participants worked in the health profession. They were followed for approximately three decades. They completed surveys about their diet every four years. They also answered questions about sleep and exercise and health every two years.\nThe more beverages containing added sugar that people drank, the greater their risk of death was during the study period.\nThese beverages included soda, energy drinks and sports drinks. Beverages like pure fruit juice which are sweet but do not contain added sugar were not part of the study.\nThe findings held even after the researchers considered other factors that could affect people's health. These factors included lack of exercise and not eating enough vegetables. They also included consuming too much meat.\nThe scientists say that their results support limiting beverages with added sugar. They argue we should replace them with other drinks, with water being the best choice. However, the researchers admit this is simply their recommendation. The study found only an association: It did not prove that drinks with added sugar cause early death.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          }
+        },
+        {
+          "id": "listening-news-2",
+          "title": "News Report Two",
+          "text": "",
+          "transcript": "German police appealed Friday for information about the possible owners of two 17th-century oil paintings.\nPolice said a 64-year-old man found the paintings in a garbage pile at a highway rest stop last month. He later handed them in to the Cologne police.\nAn initial assessment by an art expert concluded the two framed paintings were originals, police said. One is a landscape painted by the Italian artist Pietro Bellotti dating to 1665. The other is a painting of a boy by the 17th-century Dutch artist Samuel van Hoogstraten, date unknown. Their combined worth is estimated to be around one million euros.\nAuthorities have not yet confirmed what will happen if the rightful owner is not found. Nevertheless, it is speculated that they could either be handed over to the National Art Museum of Cologne or sold to the public by the local government.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          }
+        },
+        {
+          "id": "listening-news-3",
+          "title": "News Report Three",
+          "text": "",
+          "transcript": "A four-year-old girl has walked eight kilometers through a snowy forest to seek help for her sick grandmother who later died of a heart attack. The young girl braved the threat of bears, wolves and temperatures far below freezing. She made the journey through a remote region in Siberia after waking up to find her grandmother motionless.\nNamed locally as Karla, she lives alone with her elderly grandmother and her blind grandfather. As a result, the girl's mother is facing a criminal case. She stands accused of leaving a minor in danger in the care of the elderly. She also faces investigation from childcare services, who will also be asking why Karla was left alone with her vulnerable relatives.\nThe journey took place in February when temperatures average negative 26 degrees Celsius. Russian reports on social media suggest the forest may have been as cold as negative 34 degrees Celsius. The journey was only recently confirmed by authorities.\nBut though she was suffering from the effects of extreme cold, the child reportedly suffered no life-threatening effects. Last year, a three-year-old boy survived alone for three days in a remote forest in the same region.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-1",
+          "title": "Conversation One",
+          "text": "",
+          "transcript": "W: I've made a new friend recently. Her name is Susan and she's from South Africa.\nM: How did you meet her?\nW: We met over WeChat. She has very cool photos on her social media. The photos of her hometown look amazing.\nM: What's her hometown called?\nW: It's called Cape Town. It's in the southwest of South Africa. She says it's very green and windy. The city was built by European settlers. And there's a big mountain that overlooks the city. The mountain is called Table Mountain because it's flat at the top.\nM: That sounds interesting. What are the people there like?\nW: Well, Susan says South Africa is very mixed. There are black people and white people and Indian people. Susan is white. She says her ancestors were from Britain. Many languages are spoken in South Africa, but she only speaks English.\nM: Didn't South Africa host the Football World Cup a few years ago? They must play football a lot then, right?\nW: I think they play football, but it's not as popular as rugby.\nM: Rugby? What's rugby?\nW: Rugby is a sport with two teams and the players carry the ball in their arms and throw it at each other. The ball is not round and the players push each other. I don't really understand the rules. I think it's very complicated.\nM: That sounds like a very strange sport indeed. Is it only South Africa that plays it?\nW: No, it's also popular in Britain and in other former British colonies like Australia and New Zealand.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-2",
+          "title": "Conversation Two",
+          "text": "",
+          "transcript": "M: Hi, Jennifer. I'm really struggling with this semester's workload. Do you have any advice?\nW: Have you considered making a study guide? It's a tool you can make yourself to take the stress out of studying. I've been using one since the start of last semester, and it has really helped relieve a lot of study pressure.\nM: Sounds like just what I need. My main problem is that my study folder is full of notes and worksheets, and is badly disorganized. I don't know where to start.\nW: Okay. Well, the main thing is to have everything in the right place. Whatever you're reviewing, it's important that it's arranged for your particular needs of that subject, and in the most user-friendly way you can. What kind of learner are you?\nM: Um, I'm not sure.\nW: Well, visual learners prefer using images, pictures, colors, and maps to organize information. Logical learners have a linear mind and would rather use logic, reasoning and systems. I'm an emotional learner, which means I need to connect to information emotionally to understand it.\nM: Oh! I'm very much dependent on vision as a way of taking in information.\nW: Well, I suggest reorganizing your notes using color-coded sections in your study guides, or using idea mapping to lay out the information and make it more quickly accessible.\nM: So you think I should arrange my notes using color and pictures in place of text.\nW: Yes, you'll probably start to grasp information a lot quicker that way. As an emotional learner, I organize my notes into a story that I can connect to and recite to myself.\nM: That's amazing. I didn't know there were so many different ways to learn.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-1",
+          "title": "Passage One",
+          "text": "",
+          "transcript": "The golden rule is a moral principle which states that you should treat others the way you want to be treated yourself. For example, if you want people to treat you with respect, you should treat them with respect.\nDifferent people tend to be exposed to different forms of the golden rule, based on factors such as the religion in their society.\nHowever, all forms of the golden rule revolve around the same concept. Namely, they help you treat others better, by using the way you yourself would want to be treated as a guide of how to behave.\nA notable criticism of the golden rule is that its application can lead to undesirable outcomes, when it conflicts with laws and ethical principles.\nFor example, if someone breaks the law, the golden rule would suggest that we should let them go, because we would not want to be punished ourselves.\nHowever, this issue with the golden rule can be dealt with in a general manner, by viewing this principle as one of several principles that we use to guide our behavior as individuals and as a society.\nSpecifically, in the example described above, most individuals and societies choose to place laws and ethical principles above the golden rule. This means that they strive to implement the golden rule whenever possible, as long as it doesn't clash with a more important concept.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-2",
+          "title": "Passage Two",
+          "text": "",
+          "transcript": "Today, many large corporations stress the importance of diversity on their websites, but current statistics show that the typical manager in America still tends to be white and male. Obviously, the desire to bring about diversity has not translated into corporate reality.\nWhy useless? A team of researchers from the University of Basel published their new study about people's attitudes towards diversity at work. They found that people have a wide range of opinions concerning diversity. On the one hand, many see value in diversity, which can contribute a variety of perspectives, encourage new ideas, and generate innovative solutions. On the other hand, they assume that it might be difficult to work with someone who has completely different views, speaks a different language, or has a different style of work.\nThe actual value they attribute to diversity depends on the decision-making perspective. Doubts about the practicability of diversity have a greater weight if a person is directly affected. In other words, when a person's own work group is involved, they tend to prefer team members who are similar to themselves. But when people make decisions for others, they typically put together a more diverse team. These findings could help organizations become more diverse. Companies need to pay attention to who makes hiring and team decisions.\nThese decisions should not only be made by those directly affected. People who are not directly involved in the group's daily work should also take part.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-3",
+          "title": "Passage Three",
+          "text": "",
+          "transcript": "Communication can essentially be divided into two categories: the written and the spoken.\nHow the balance is struck between these two forms of communication—the point at which one needs to be exchanged for another—really depends on individual cultures.\nUnderstanding when it's appropriate to exchange one form for another can be a major key to success in international business.\nMany cultures place a much greater value on the spoken word than the American working culture does.\nIn parts of the Middle East, you'll find spoken word agreements are seen as seriously binding. A person's word is linked to their honor, so verbal agreements are seen as important, whereas written contracts are taken as memos of understanding.\nWestern working culture tends to place a high value on the written word, and this reaches its highest level of intensity when it comes to contracts. In the US, France and Germany, written contracts tend to be seen as something that must be strictly carried out.\nBy contrast, other cultures may not see written contracts as quite so binding. It can prove a challenge to Western businesses if your business partner wants to renegotiate terms that you thought were already agreed on.\nFor example, a Japanese firm may have signed a contract, but they may not feel bound by every detail of it—particularly if circumstances later change.\nSuch differences in value that different working cultures place on the written word tend to cause many problems when it comes to business relationships.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "What do we learn about the new study from the news report?",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It studied the effects of exercise on sleep."
+            },
+            {
+              "key": "B",
+              "text": "Its participants came from various walks of life."
+            },
+            {
+              "key": "C",
+              "text": "Its findings confirmed those of previous studies."
+            },
+            {
+              "key": "D",
+              "text": "It ran for as long as some thirty years."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What do we learn about the new study from the news report?\nD) 【精析】事实细节题。新闻开头提到，在一项新研究中，其研究对象被随访了大约三十年。由此可知，这项研究进行了大约三十年。因此，答案为 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "What is the scientists' recommendation?",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Eating more vegetables instead of meats."
+            },
+            {
+              "key": "B",
+              "text": "Drinking water instead of beverages with added sugar."
+            },
+            {
+              "key": "C",
+              "text": "Consuming more energy drinks and sports drinks."
+            },
+            {
+              "key": "D",
+              "text": "Forming the habit of exercising regularly."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What is the scientists' recommendation?\nB) 【精析】事实细节题。新闻末尾提到，科学家的研究结果支持限制添加糖的饮料，他们认为人们应该用其他饮料代替添加糖的饮料，而水是最好的选择。因此，答案为 B)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "What did German police say about a 64-year-old man?",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "He asked them about his lost paintings."
+            },
+            {
+              "key": "B",
+              "text": "He knew the owner of two missing paintings."
+            },
+            {
+              "key": "C",
+              "text": "He left his paintings at a highway rest stop."
+            },
+            {
+              "key": "D",
+              "text": "He found two 17th-century oil paintings."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What did German police say about a 64-year-old man?\nD) 【精析】细节推断题。新闻开头提到，德国警方于周五发出呼吁，征求有关两幅17世纪的油画可能的所有者的信息。一名64岁的男子上个月在高速公路休息站的垃圾堆中发现了这两幅画作。由此推断，这位64岁的男子发现了两幅17世纪的油画。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "What is the art expert's conclusion about the two framed paintings?",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are imitations."
+            },
+            {
+              "key": "B",
+              "text": "They are originals."
+            },
+            {
+              "key": "C",
+              "text": "They were stolen by an Italian boy."
+            },
+            {
+              "key": "D",
+              "text": "They came from the same artist."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What is the art expert's conclusion about the two framed paintings?\nB) 【精析】事实细节题。新闻中提到，警方称，一名艺术专家经初步评估得出结论，这两幅镶框画是原作。因此，答案为 B)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "What did the four-year-old girl attempt to do?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Look after her grandfather."
+            },
+            {
+              "key": "B",
+              "text": "Leave the remote cold region."
+            },
+            {
+              "key": "C",
+              "text": "Save her sick grandmother."
+            },
+            {
+              "key": "D",
+              "text": "Flee from the threat of bears."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What did the four-year-old girl attempt to do?\nC) 【精析】事实细节题。新闻开头提到，一个四岁的女孩步行八千米穿过一片白雪皑皑的森林，为她生病的祖母寻求帮助。由此可知，这位小女孩是想救她生病的祖母。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "What do we learn from the news report about the girl's mother?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "She has to face a criminal charge."
+            },
+            {
+              "key": "B",
+              "text": "She was found lying motionless in the snow."
+            },
+            {
+              "key": "C",
+              "text": "She searched for her daughter in freezing cold."
+            },
+            {
+              "key": "D",
+              "text": "She works in childcare services."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What do we learn from the news report about the girl's mother?\nA) 【精析】事实细节题。新闻中提到，那位女孩的母亲将会面临刑事指控。她被指控把一名未成年人留给老人照顾，将其置于危险之中。因此，答案为 A)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "What happened to the little girl according to the news report?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "She was found in a forest after three days."
+            },
+            {
+              "key": "B",
+              "text": "She lay totally unconscious for three days."
+            },
+            {
+              "key": "C",
+              "text": "She suffered from the effects of severe cold."
+            },
+            {
+              "key": "D",
+              "text": "She was finally rescued by her relatives."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What happened to the little girl according to the news report?\nC) 【精析】事实细节题。新闻中提到，虽然女孩正遭受极寒所带来的影响，但据报道她没有生命危险。因此，答案为 C)。\n\n##### Section B",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "What does the woman say about her new friend Susan?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "She shows a real passion for taking photos."
+            },
+            {
+              "key": "B",
+              "text": "She has just returned from her hometown."
+            },
+            {
+              "key": "C",
+              "text": "She comes from the city of Cape Town."
+            },
+            {
+              "key": "D",
+              "text": "She has a truly amazing appearance."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What does the woman say about her new friend Susan?\nC) 【精析】事实细节题。对话开头，女士提到她在微信上交了个新朋友名叫苏珊，男士问苏珊的家乡是哪里，女士回答是开普敦。因此，答案为 C)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "What does the woman say about Table Mountain?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is as famous as Cape Town."
+            },
+            {
+              "key": "B",
+              "text": "It has a flat surface at the top."
+            },
+            {
+              "key": "C",
+              "text": "It is green and free from pollution."
+            },
+            {
+              "key": "D",
+              "text": "It was named by European settlers."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What does the woman say about Table Mountain?\nB) 【精析】事实细节题。女士介绍开普敦时提到这座城市里有一座俯瞰城市的大山被称为桌山，因为它的顶部是平坦的。因此，答案为 B)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "What do we learn from the conversation about the woman's friend Susan?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "She has British ancestors."
+            },
+            {
+              "key": "B",
+              "text": "She is of mixed blood."
+            },
+            {
+              "key": "C",
+              "text": "She grew up in India."
+            },
+            {
+              "key": "D",
+              "text": "She speaks several languages."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What do we learn from the conversation about the woman's friend Susan?\nA) 【精析】事实细节题。对话中女士提到苏珊是白人，她的祖先来自英国。因此，答案为 A)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "What does the woman say about rugby in South Africa?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is an extremely violent sport."
+            },
+            {
+              "key": "B",
+              "text": "It is becoming a national sport."
+            },
+            {
+              "key": "C",
+              "text": "It is originated in New Zealand."
+            },
+            {
+              "key": "D",
+              "text": "It is more popular than football."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What does the woman say about rugby in South Africa?\nD) 【精析】细节推断题。对话中男士和女士谈到足球运动，男士提到南非举办过足球世界杯，于是推测那里的人肯定经常踢足球。女士认为他们会踢足球，但足球不像橄榄球那么受欢迎。由此推断，橄榄球在南非比足球更受欢迎。因此，答案为 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "What does the woman advise the man do?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Prepare a study guide."
+            },
+            {
+              "key": "B",
+              "text": "Consult his advisors."
+            },
+            {
+              "key": "C",
+              "text": "Go over his notes regularly."
+            },
+            {
+              "key": "D",
+              "text": "Take stress-relief sessions."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What does the woman advise the man do?\nA) 【精析】细节推断题。对话开头，男士抱怨这学期的课业让他很痛苦并咨询女士的建议，女士反问男士是否考虑过准备一份学习指南，这就是女士的建议，故答案为 A)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "What is the biggest problem the man has with his studies?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "His worksheets are terribly messy."
+            },
+            {
+              "key": "B",
+              "text": "He finds the workload too heavy."
+            },
+            {
+              "key": "C",
+              "text": "His study folder is badly disorganized."
+            },
+            {
+              "key": "D",
+              "text": "He has difficulty taking notes quickly."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What is the biggest problem the man has with his studies?\nC) 【精析】事实细节题。对话中男士指出自己的主要问题是学习文件夹里塞满了笔记和活页练习题，而且杂乱无章。因此，答案为 C)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "What kind of learner does the woman say she is?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "A visual learner."
+            },
+            {
+              "key": "B",
+              "text": "An emotional learner."
+            },
+            {
+              "key": "C",
+              "text": "An organized learner."
+            },
+            {
+              "key": "D",
+              "text": "A logical learner."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What kind of learner does the woman say she is?\nB) 【精析】事实细节题。对话中女士向男士介绍了不同的学习者，有视觉学习者、逻辑学习者等，她是情感学习者，需要从情感上与信息互联来理解内容。因此，答案为 B)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "What does the woman think the man can do with his notes?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Arrange them using color and pictures."
+            },
+            {
+              "key": "B",
+              "text": "Restructure them in a logical way."
+            },
+            {
+              "key": "C",
+              "text": "Commit them to memory after class."
+            },
+            {
+              "key": "D",
+              "text": "Organize them into a well-connected story."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What does the woman think the man can do with his notes?\nA) 【精析】细节推断题。对话中，女士了解到男士是视觉学习者后，建议他在学习指南中使用彩色编码来整理笔记，或者使用思维导图来展示信息，使其更易懂。接着男士再次转述了女士的意思，并得到了女士的肯定回答。由此可知，女士认为男士可以用色彩和图画的形式做笔记。因此，答案为 A)。\n\n##### Section C",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "What do we learn from the passage about the golden rule?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is mainly based on a society's religion."
+            },
+            {
+              "key": "B",
+              "text": "It is interpreted differently in different times."
+            },
+            {
+              "key": "C",
+              "text": "It is a code of conduct based on laws and ethics."
+            },
+            {
+              "key": "D",
+              "text": "It is a moral principle to guide people's behavior."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What do we learn from the passage about the golden rule?\nD) 【精析】细节推断题。短文开头指出，黄金法则是一种道德原则，它阐释了你应该以你希望自己被对待的方式对待他人。并举例说明要想得到别人的尊重，就必须尊重别人。由此推断，黄金法则是指导人们行为的道德原则。因此，答案为 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "What is a notable criticism of the golden rule?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It may lead to misunderstanding despite good intentions."
+            },
+            {
+              "key": "B",
+              "text": "It assumes that human beings are all good-natured."
+            },
+            {
+              "key": "C",
+              "text": "It may sometimes produce undesirable outcomes."
+            },
+            {
+              "key": "D",
+              "text": "It fails to consider the complexity of human relationships."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What is a notable criticism of the golden rule?\nC) 【精析】事实细节题。短文中提到，对黄金法则的一个值得注意的批评是，当它与法律和道德原则相冲突时，它的应用会导致不良的后果。因此，答案为 C)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "What does the example of someone breaking the law serve to show?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "The golden rule is often in conflict with certain laws and ethical principles."
+            },
+            {
+              "key": "B",
+              "text": "The golden rule must sometimes give way to more important principles."
+            },
+            {
+              "key": "C",
+              "text": "Failure to follow the golden rule may lead to violation of laws and ethics."
+            },
+            {
+              "key": "D",
+              "text": "Observing the golden rule is the first step to becoming a responsible citizen."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What does the example of someone breaking the law serve to show?\nB) 【精析】细节推断题。短文中提到，如果有人违法，按照黄金法则，我们会不计较，因为我们不想让自己受到惩罚。然而大多数人会选择将法律和道德准则置于黄金法则之上，这意味着他们会尽可能地执行黄金法则，只要它不与更重要的概念冲突。因此，答案为 B)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "What do we learn from the current statistics about diversity in large corporations?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Many of them find it rather difficult to manage."
+            },
+            {
+              "key": "B",
+              "text": "They have not seen as much diversity as desired."
+            },
+            {
+              "key": "C",
+              "text": "Many of them have an increasingly diversified staff."
+            },
+            {
+              "key": "D",
+              "text": "They have not quite grasped the concept of diversity."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What do we learn from the current statistics about diversity in large corporations?\nB) 【精析】事实细节题。短文开头提到，许多大公司在其网站上强调多元化的重要性，但目前的统计数据显示，美国的经理人仍然大都是白人和男性。显然，实现多元化的愿望并没有在企业中成为现实。因此，答案为 B)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "What is the newly published study focused on?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Initiatives to achieve diversity in large corporations."
+            },
+            {
+              "key": "B",
+              "text": "Advantages and disadvantages of a diversified team."
+            },
+            {
+              "key": "C",
+              "text": "People's attitudes towards diversity at the workplace."
+            },
+            {
+              "key": "D",
+              "text": "Innovative ideas and solutions resulting from diversity."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What is the newly published study focused on?\nC) 【精析】事实细节题。短文中提到，巴塞尔大学的一组研究人员发表了一项新研究，该研究与人们对工作中的多元化的态度有关。因此，答案为 C)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "What do the findings of the new study show?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "People prefer to work with team members similar to themselves."
+            },
+            {
+              "key": "B",
+              "text": "Employers attach great importance to their corporations' diversity."
+            },
+            {
+              "key": "C",
+              "text": "Employers differ from employees in their perspectives on diversity."
+            },
+            {
+              "key": "D",
+              "text": "Doubts about the practicability of diversity are gradually disappearing."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What do the findings of the new study show?\nA) 【精析】细节推断题。短文中提到，当人们参与到自己的工作团队中时，他们往往更喜欢与自己相似的团队成员。因此，答案为 A)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "What is a major key to success in international business according to the passage?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Choosing the best time for signing a business contract."
+            },
+            {
+              "key": "B",
+              "text": "Changing one's form of communication from time to time."
+            },
+            {
+              "key": "C",
+              "text": "Laying equal stress on written and spoken communication."
+            },
+            {
+              "key": "D",
+              "text": "Using different forms of communication appropriately."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What is a major key to success in international business according to the passage?\nD) 【精析】细节推断题。短文开头提到，交流可分为书面交流和口头交流，人们什么时候需要书面或口头交流取决于他们的文化。知道适时将一种形式换成另一种形式是在国际业务中取得成功的关键。因此，答案为 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "What does the passage say about spoken word agreements in some Middle East countries?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are regarded as seriously binding."
+            },
+            {
+              "key": "B",
+              "text": "They are seldom honored by business partners."
+            },
+            {
+              "key": "C",
+              "text": "They are taken as memos of understanding."
+            },
+            {
+              "key": "D",
+              "text": "They are to be confirmed in written form."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What does the passage say about spoken word agreements in some Middle East countries?\nA) 【精析】事实细节题。短文中提到，在中东部分地区，口头协议被视为具有很强的约束力，一个人的言语与他们的信誉相关，而书面合同则被当作协议备忘录。因此，答案为 A)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "What do we learn about the Western working culture?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "It has reached the highest level of evolution."
+            },
+            {
+              "key": "B",
+              "text": "It places a high value on written contracts."
+            },
+            {
+              "key": "C",
+              "text": "It regards written contracts as unalterable."
+            },
+            {
+              "key": "D",
+              "text": "It has seen a decline in verbal agreements."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What do we learn about the Western working culture?\nB) 【精析】细节推断题。短文中提到，西方的工作文化倾向于高度重视书面文字，这在合同方面更为明显。因此，答案为 B)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "How does a Japanese firm tend to view a written contract?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Its details cannot be renegotiated."
+            },
+            {
+              "key": "B",
+              "text": "It has to be carried out to the letter."
+            },
+            {
+              "key": "C",
+              "text": "It strengthens business partnerships."
+            },
+            {
+              "key": "D",
+              "text": "Its terms may not be strictly binding."
+            }
+          ],
+          "answer": "D",
+          "explanation": "How does a Japanese firm tend to view a written contract?\nD) 【精析】细节推断题。短文中提到，有些文化中，书面合同条款可能没有严格的约束力，并举例一家日本公司已经签订了一份合同，但他们可能不会被合同的每一个细节所约束，尤其是在后来情况发生变化的情况下。由此可见，日本公司认为合同条款可能没有严格的约束力。因此，答案为 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "You might think of your teeth as tools, like built-in knives and forks, but if they are mere tools, why do they feel pain and wouldn't it be better if they could just __(26)__ under any condition? In spite of our __(27)__ discomfort, it turns out there's a good reason our teeth are so sensitive. Tooth pain is a __(28)__ mechanism that ensures when a tooth is being damaged we'll notice and do something about it.\n\nIf we eat something too hot or too cold, or if the tooth is worn down enough where the tissue __(29)__ is exposed, all of those things cause pain, and then the pain causes the person not to use that tooth to try to protect it a little bit more. So it's really a protective mechanism more than anything else. If teeth didn't feel pain, we might __(30)__ to use them in situations that damage them, and for humans, damaging __(31)__ teeth is a problem because, unlike crocodiles, we can't __(32)__ them.\n\nTeeth have three layers, only one of which—the innermost layer of the tooth—can hurt, as that layer of the tooth __(33)__ both blood vessels and nerves. Pain is the only feeling to which the nerves in that layer respond. Whereas people with tooth sensitivity may complain, for example, of tooth pain __(34)__ by heat or cold, the nerves in the inner layer don't sense temperature. Rather, they feel pain, which may be __(35)__ with, say, drinking something very cold.",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "transcript": null,
+          "translation": "你可能会认为你的牙齿是工具，就像内置的刀叉一样。但如果它们只是工具，为什么它们会感到疼痛，如果它们在任何情况下都能咀嚼不是更好吗？尽管我们的牙齿不舒服，事实证明我们的牙齿如此敏感是有原因的。牙痛是一种防御机制，确保当牙齿受损时，我们会注意到并采取措施。\n\n如果我们吃了太热或太冷的东西，或者牙齿因为被磨损得太多而导致下面的组织暴露在外面，所有这些都会导致疼痛，然后疼痛使人们不再使用那颗牙齿，以此来多给它一些保护。所以这真的是一种保护机制，而非其他。如果牙齿感觉不到疼痛，我们可能会在损害牙齿的情况下继续使用它们，而对人类来说，损害成熟的牙齿是一个问题，因为我们不能像鳄鱼那样替换它们。\n\n牙齿包括三层，只有其中一层——牙齿最内层——会感到疼痛，因为牙齿那一层包含血管和神经。疼痛是该层神经唯一能对它做出反应的感觉。牙齿敏感的人可能会抱怨诸如由热或冷引发的牙痛，而内层的神经感觉不到温度。相反，它们会感到疼痛，这可能与人们喝了非常凉的东西有关。"
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读",
+          "text": "How to determine if a company is a good fit for you\n[A] On paper, the job seemed perfect for me: The position was completely in line with my degree, the duties and responsibilities were compatible with my interests, and the office maintained a well-stocked kitchen that would satisfy my every snack desire.\n[B] Sounds like my dream job, right? There was only one small problem: I simply didn't get along with the company culture. They favored a more rigid, closed-door, corporate atmosphere, while I would have preferred something more collaborative and open. They were complete clock watchers, while I would have liked a more flexible schedule. To put it plainly, we just weren't on the same page.\n[C] When it comes to looking for a new job, you already know that a big part of the interview process involves the company evaluating whether or not you're a good fit for their open role. But, it's important to keep in mind that the employer isn't the only one who needs to identify a good match—you should be looking for that same exact thing. Company culture can have a big impact on how you feel about your work, so you want to make sure you sign an offer letter with an organization you're truly excited about.\n[D] However, figuring out what a company is like before you actually work there can be a bit of a challenge. Luckily, there are a few things you can do to determine whether or not a company is a good fit for you—before you ever sign your name on that dotted line.\n[E] First of all, know what you want. It's hard to make any decisions when you don't really know what you're looking for. So before you can determine whether you and a specific company would be compatible together, it's important to have a solid handle on what exactly you want from your employer. Many of us have an easier time identifying the things that we absolutely don't want. If those are the only things you can think of, don't worry! That's still a good place to start.\n[F] Start by writing down the things you didn't like about previous employers, as well as the parts you really valued. There's no wrong answer here—so from big things to small details, write them all down on your list. This will help you immediately identify what you're looking for in an organization, as well as the things you're trying to stay far, far away from.\n[G] Make sure to do your research. Now comes the part when you put on your detective hat and do a little digging. The Internet will be your best friend when you're trying to familiarize yourself with a company's culture before ever walking through their office doors. And where exactly should you look for these culture clues? Start with the most obvious place first: the company's website. Read through their copy and blog. Do they use formal, direct language? Or is it casual, conversational, and maybe even a little humorous? This can be a big indicator of what sort of atmosphere the company is trying to cultivate.\n[H] Next, turn your attention toward their social media outlets. Are they sharing photos of their team's Thursday afternoon barbeque or Halloween costume contest? Or are their social media accounts strictly reserved for company-related announcements and product launches?\n[I] An industry review website like Glassdoor is another spot to check in order to find some insider information about what you can expect about a company. However, remember to take the reviews you read with a grain of salt—many of them are written by scorned (被鄙视的) employees.\n[J] Finally, you can never fail with personal connections. Send a quick message to a current or previous company employee on LinkedIn or by email and ask if they would be willing to have a quick conversation with you about the organization in general. If you get a yes to your request for a chat, you'll be armed with some pretty powerful and helpful information heading into your interview!\n[K] Learn more by asking questions. You know that part at the end of a job interview when the hiring manager asks if you have any questions, and you just stare across the table blankly with your mouth hanging open? That's the perfect opportunity to speak up and get your burning company culture questions answered! So yes, you can definitely ask your interviewer about what it's like to work for that particular organization. Simple questions like, \"What three words would you use to describe the culture here?\" or \"What's your favorite part about working for this company?\" can reveal a lot about what it's really like behind closed doors.\n[L] Prioritize your values. What does my dream company culture look like? Well, I could come and go as I please, as long as I was getting the work done. My boss would genuinely listen to and value all of my ideas and suggestions. My co-workers would all be friendly with one another, without ever falling into the office gossip trap. The kitchen would have endless options of pizza and cookies. Oh, and they'd give me two months of paid vacation with a very generous salary.\n[M] What are my chances of finding all of those things with one employer? Slim to none—believe me, I've looked. This is why it's so important to know which aspects of a company's culture you value most. Is it an open communication style or a flexible schedule? Focus on the top spots on your priority list, and ensure a potential employer at least checks those boxes. Unfortunately, this is reality, you can't have everything you want but a few are certainly achievable.\n[N] When you're hunting for a new job, you already know that the employer is trying to decide whether or not you're a good fit for the position. But you should also look at the process through a similar lens. You may not be the one conducting the actual interview, but you're still trying to determine whether or not the company is a good fit for you.\n[O] Keep these tips in mind to figure out whether you and a potential employer are a perfect match or just a recipe (方案) for disaster. After all, it's a good thing to know before actually accepting an offer.",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "transcript": null,
+          "translation": "**如何确定一家公司是否适合你**\n\nA) (39)理论上，这份工作对我来说似乎很完美：这个职位与我的学位完全相符，工作职责与我的兴趣相符，而且办公室有一个储备充足的厨房，可以满足我对零食的各种需求。\nB) 听起来像是我的理想工作，对吧？只有一个小问题：我就是不适应公司的文化。他们喜欢一种比较僵化、封闭的企业氛围，而我更喜欢更具协作性和开放性的氛围。他们完全就是看表等下班的人，而我希望时间安排更灵活。说白了，我们只是无法达成共识。\nC) 说到找新工作，你已经知道面试过程的一个重要部分涉及公司评估你是否适合他们的空缺职位。但是，重要的是要记住，雇主并不是唯一需要确定合适人选的人——你也应该寻找同样的东西。(44)公司文化会对你的工作感受产生很大的影响，所以你要确保你是跟真正感兴趣的公司签了聘用函。\nD) (37)然而，在你实际去某个公司工作之前弄清楚该公司是什么样子可能是个挑战。幸运的是，在虚线上签名之前，你可以做一些事情来判断这家公司是否适合你。\nE) 首先，知道自己想要什么。当你真的不知道自己在寻找什么时，很难做出任何决定。(42)所以，在你确定自己和某家公司是否合拍之前，先明确你到底想从雇主那里得到什么，这一点很重要。我们很多人很容易确定我们绝对不想要的东西。如果你能想到的只有这些，别担心！这仍然是一个很好的起点。\nF) (40)首先写下你不喜欢前任雇主的地方，以及你真正看重的部分。这里没有错误的答案——所以从大事到小细节，把它们都写在你的清单上。这将帮助你立即确定你在公司中寻找什么，以及你试图狠狠地远离的东西。\nG) 一定要进行调查研究。现在轮到你戴上你的侦探帽进行一点调查了。当你试图在走进一家公司的办公室之前熟悉这家公司的文化时，互联网将是你最好的朋友。(36)你到底应该去哪里寻找这些文化线索呢？首先从最明显的地方开始：公司的网站。浏览他们的信息和博客。他们使用正式的、直接的语言吗？或者是随意的、口语式的，甚至可能是有点幽默的？这可以很好地反映出该公司想要营造什么样的氛围。\nH) 接下来，将你的注意力转向他们的社交媒体渠道。他们是在分享团队周日下午烧烤或万圣节服装比赛的照片吗？还是他们的社交媒体账号仅限于与公司相关的公告和产品发布？\nI) 像 Glassdoor 这样的行业评论网站是另一个可以查看的地方，你可以从中找到一些关于某家公司的内幕信息。(43)然而，记住要对你读到的评论持保留态度——其中许多都是由被鄙视的员工写的。\nJ) 最后，一定要动用个人人脉。(45)通过 LinkedIn 或电子邮件给该公司的在职员工或离职员工发一条简短的信息，询问他们是否愿意和你就该公司的总体情况进行简短的交谈。如果你的聊天请求得到了同意，你将会带着一些非常强大和有用的信息进入面试！\nK) 通过提问了解更多信息。(41)你知道在面试结束时，招聘负责人问你有没有什么问题，你只是张着嘴茫然地盯着桌子对面吗？这是一个很好的机会，你可以大声说出自己的想法，让招聘负责人回答你迫切想了解的企业文化的问题！所以，是的，你当然可以问面试官，在那家公司工作是什么感觉。一些简单的问题，比如，“你会用哪三个词来描述这里的文化？”或者“在这家公司工作，你最喜欢的部分是什么？”，可以揭示很多不公开的真实情况。\nL) 把自己的价值观放在首位。我梦想中的公司文化是什么样的？嗯，只要我把工作做完，我可以来去自由。老板会认真听取并重视我的所有想法和建议。同事间都会友好相处，而不会陷入办公室流言蜚语的陷阱。厨房里有无数的比萨和饼干可供选择。哦，他们会给我两个月的带薪假期，薪水还很高。\nM) (38)我在一个雇主那里找到所有这些东西的概率有多大？几乎没有——相信我，我已经找过了。这就是为什么知道你最看重公司文化的哪些方面是如此重要。是开放的沟通方式，还是灵活的时间安排？把注意力集中在优先事项清单上最重要的事项上，并确保你的潜在雇主至少勾选了这些选项。不幸的是，这就是现实，你不可能拥有你想要的一切，但有一些是可以实现的。\nN) 当你在找一份新工作的时候，你已经知道雇主主要判断你是否适合这个职位。但你也应该通过类似的视角来看待这个过程。你也许不是主持面试的那个人，但你仍然在努力确定这家公司是否适合你。\nO) 把这些建议记在心里，看看你和你的潜在雇主是绝配，还是只会带来灾难。毕竟，在真正接受一份工作之前弄清楚是件好事。"
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "Online classes began to be popularized just a few decades ago. They are advertised as a way for adults to finish their education and students to learn the material at their own pace—it is far more compatible for people with busy schedules.\n\nBut after being enrolled in an online course last fall semester, I came to realize online classes were merely a means to fulfil course requirements.\n\nFirst of all, students lack the desire to learn, and they simply complete their assignments to receive credit for a passing grade rather than genuinely engage with the course material.\n\nAs online courses tend to have more than 100 students, most of the assignments are short and simple. They are not designed for students to interact with the material in depth but designed to be graded easily to accommodate such a large number of students.\n\nPerhaps the biggest disadvantage of taking an online class is the absence of face-to-face interaction between the teacher and their students. Live sessions are infrequent and are often scheduled during the middle of the day when students have to attend other classes or work. The office hours of the professor may also be during inconvenient times for many students as well. Most interaction with the professor has to be through email which is often impersonal. It is nearly impossible for students to build a relationship with their professor.\n\nThere is also little interaction amongst students. It can be harder for students to create study groups and form relationships with their peers.\n\nOnline classes also require either a computer or laptop and a reliable internet connection. Not all students have access to these types of resources, whether it is for financial or other reasons, and some students can be put at a disadvantage.\n\nOffering online classes certainly helps students who would otherwise not be able to attend classroom sessions. However, they fail to provide a genuine education with an emphasis on convenience rather than critical thinking. We need restructured online classes in which students can have a learning experience that will actually provide quality education.",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "transcript": null,
+          "translation": "在线课程在几十年前才开始普及。它们被宣传为成年人完成学业和学生按照自己的节奏学习教材的一种方式——它更适合日程繁忙的人。\n\n(46-1)但在去年秋季学期上了一门在线课程后，我开始意识到在线课程只是满足课程要求的一种手段。\n\n(46-2)首先，学生缺乏学习的欲望，他们只是简单地完成作业以获得及格的分数，而没有真正参与到课程学习中。\n\n由于在线课程的学生人数往往超过100人，因此大多数作业都很简短。(47)这些作业不是为了让学生深入研究学习内容而设计的，而是为了便于评分，从而容纳如此大量的学生。\n\n(48-1)也许参与在线课程的最大缺点是教师和学生之间缺乏面对面的互动。直播课程很少，而且通常安排在正午，因为学生不得不参加其他课程或工作。很多学生可能也不方便在教授的办公时间上课。与教授的大多数互动都必须通过电子邮件进行，这往往缺少人情味。学生们几乎不可能与他们的教授建立师生情。\n\n(48-2)学生之间的互动也很少。学生很难创建学习小组并与同龄人建立关系。\n\n在线课程还需要一台电脑或笔记本以及稳定的互联网连接。(49)并非所有学生都能获得这些类型的资源，无论是出于经济原因还是其他原因，一些学生可能会处于不利地位。\n\n提供在线课程当然可以帮助那些原本无法参加课堂课程的学生。(50)然而，它们未能提供真正的教育，它们强调便利性而不是批判性思维。我们需要重新规划在线课程，提供优质教育，让学生能够获得真正的学习体验。"
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "In the age of the internet, there's no such thing as a private debate. But is that bad for science? Some scientists have had concerns. When debates in any sector move beyond the halls of universities and government agencies, there's potential for information to be used incorrectly, leading to public confusion; yet, open debate can also promote communication between the scientific community and the public. Recent open debates on scientific research, health, and policy have aroused greater public attention and encouraged more diverse voices. If this trend spurs scientists to agree more quickly about the best solutions to our problems—and at the same time helps the public observe the process of scientific discourse more clearly—then this is good for everyone, including scientists.\n\nA recent debate published in *The New York Times* discussed the question of how quickly medicine should be developed and produced. Issues such as safety of the product and perception of the public were examined and considered. But some experts worried that such public speculation might lead people to believe that disagreement about the details meant a lack of adequate scientific consensus over the safety and efficiency of modern-day medicine.\n\nThe anxiety seems misplaced. Gone are the days of going to a conference and debating scientific issues, and that's good because those gatherings were not diverse enough and excluded many important voices. These days, the public can access debates about science regardless of where they take place.\n\nFor many scientists, public debate is a new frontier and it may feel like a place with few restraints or rules, but rather than avoiding such conversations, let the debates be transparent and vigorous, wherever they are held. If the public is to understand that science is an honorably self-correcting process, the idea that science is a fixed set of facts in a textbook needs to be dismissed. With the validity of science coming under attack, there's a need for scientific debates to be perceived as open and true to life. Let everyone see the noisy, messy deliberations that advance science and lead to decisions that benefit us all.",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "transcript": null,
+          "translation": "在互联网时代，没有私人辩论这回事。但那对科学有害吗？一些科学家对此表示担忧。(51)当任何领域的辩论走出了大学和政府机构的大厅时，信息就有可能被误用，导致公共混乱；然而，公开辩论也可以促进科学界和公众之间的交流。最近关于科学研究、健康和政策的公开辩论引起了公众更多的关注，并鼓励更多人发出不同的声音。如果这一趋势促使科学家更快地就我们问题的最佳解决方案达成一致——同时帮助公众更清楚地观察科学论述的过程——那么这对每个人都有好处，包括科学家自己。\n\n(52)最近发表在《纽约时报》上的一场辩论讨论了药物应该以多快的速度开发和生产的问题。辩论调查和考虑了诸如产品安全性和公众的看法等问题。但一些专家担心，这种公开的猜测可能会导致人们认为，细节上的分歧意味着对现代医学的安全性和效率缺乏足够的科学共识。\n\n(53)这种焦虑似乎放错了地方。参加会议并讨论科学问题的日子一去不复返了，这是好事，因为那些会议不够多样化，并排除了许多重要的意见。如今，无论有关科学的辩论发生在哪里，公众都可以接触到。\n\n(54)对许多科学家来说，公开辩论是一个新的领域，它可能感觉像是一个没有什么限制或规则的地方，但与其避免这样的对话，不如让辩论变得透明和充满活力，无论辩论在哪里举行。(55)如果公众要理解科学是一个正大光明的自我纠正的过程，那么，需要摒弃那种认为科学是教科书中一系列固定不变的事实的观点。随着科学的有效性受到攻击，有必要将科学辩论视为开放和真实的生活。让每个人都看到嘈杂、混乱的讨论，这些讨论推动了科学的发展，并促成了有益于我们所有人的决策。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【考点】动词辨析题。\nC) 【语法判断】空格前有情态动词 could，因此本空应填入动词原形。\n【语义判断】空格所在句的意思是：如果它们在任何情况下都能\\_\\_\\_\\_\\_\\_不是更好吗？根据上文可知，空格所在句的主语 they 指的是 teeth。结合语境、常识以及备选的动词原形可知，本空应填入含有“咀嚼”意义的动词原形，由此确定答案为 C) chew。备选的动词原形中，E) continue 和 L) replace 不符合句意，而 M) swallow“吞下，咽下”不是牙齿的功能，因此均可排除。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【考点】形容词辨析题。\nG) 【语法判断】空格前有形容词性物主代词 our，后面是名词 discomfort，因此本空应填入形容词或名词。\n【语义判断】空格所在句的意思是：尽管我们的\\_\\_\\_\\_\\_\\_不舒服，事实证明我们的牙齿如此敏感是有原因的。由 our teeth are so sensitive 可知，discomfort 指的是“牙齿”不舒服，因此本空应填入含有“牙齿”意义的形容词或名词，由此确定答案为 G) dental。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【考点】名词辨析题。\nF) 【语法判断】空格前有不定冠词 a，空格后是名词 mechanism。mechanism 后是 that 引导的定语从句，用来修饰先行词 mechanism。因此，本空应填入形容词或名词来修饰 mechanism。\n【语义判断】空格所在句的意思是：牙痛是一种\\_\\_\\_\\_\\_\\_机制，确保当牙齿受损时，我们会注意到并采取措施。由此可知，牙痛是一种“防御”机制，因此本空应填入含有“防御”意义的名词，由此确定答案为 F) defense。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "O",
+          "explanation": "【考点】语义理解题。\nO) 【语法判断】空格前是名词 tissue，空格后是谓语动词 is exposed，因此本空应填入一个定语来修饰名词 tissue。\n【语义判断】空格所在句的意思是：牙齿因为被磨损得太多而导致\\_\\_\\_\\_\\_\\_组织暴露在外面。结合常识可知，牙齿被磨损得太多之后，“下面的”组织就会暴露在外面，因此本空应填入含有“下面”意义的词，由此确定答案为 O) underneath。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【考点】动词辨析题。\nE) 【语法判断】空格前有情态动词 might，因此本空应填入动词原形。\n【语义判断】空格所在句的意思是：如果牙齿感觉不到疼痛，我们可能会在损害牙齿的情况下\\_\\_\\_\\_\\_\\_使用它们。上一句已经说明牙痛是一种保护机制，在感到牙痛时我们就不再使用那颗牙齿了。本句是一个假设，即如果牙齿感受不到疼痛，那么我们就会“继续”使用牙齿，这样会伤害牙齿。因此，本空应填入含有“继续”意义的动词原形，由此确定答案为 E) continue。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【考点】形容词辨析题。\nA) 【语法判断】空格前是动名词，空格后是名词 teeth，因此空格处应填入形容词或名词来修饰 teeth，和 teeth 一起作 damaging 的宾语。\n【语义判断】空格所在句的意思是：对人类来说，损害\\_\\_\\_\\_\\_\\_牙齿是一个问题。由常识可知，人的一生总共有乳牙和恒牙两副牙齿。乳牙会被恒牙替换，但是恒牙脱落后不能再生，因此恒牙受损就比较严重了。恒牙就是成熟的牙，因此，本空应填入表达“成熟的”意义的词，由此确定答案为 A) adult。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "L",
+          "explanation": "【考点】动词辨析题。\nL) 【语法判断】空格前是情态动词 can't，因此本空应填入动词原形。\n【语义判断】空格所在句的意思是：对人类来说，损害成熟的牙齿是一个问题，因为我们不能像鳄鱼那样\\_\\_\\_\\_\\_\\_它们。由常识可知，损坏成熟的牙齿是一个问题，因为人类无法自然“替换”成熟的牙齿，因此本空应填入含有“替换”意义的动词原形，由此确定答案为 L) replace。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【考点】动词辨析题。\nD) 【语法判断】空格前是句子的主语 that layer of the tooth，空格后是宾语 both blood vessels and nerves，因此空格处应填入动词的第三人称单数形式作谓语。\n【语义判断】空格所在句的意思是：牙齿包括三层，只有其中一层——牙齿最内层——会感到疼痛，因为牙齿那一层\\_\\_\\_\\_\\_\\_血管和神经。由常识可知，牙齿会感到疼痛是因为“含有”神经，因此本空应填入含有“包含，含有”意义的动词，由此确定答案为 D) contains。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "N",
+          "explanation": "【考点】动词辨析题。\nN) 【语法判断】空格前是名词短语 tooth pain，空格后是介词短语 by heat or cold，而 tooth pain \\_\\_\\_\\_\\_\\_ by heat or cold 是 complain of 的宾语。由此可知，空格处应填入动词的-ed形式作 pain 的后置定语。\n【语义判断】空格所在句的意思是：牙齿敏感的人可能会抱怨诸如由热或冷\\_\\_\\_\\_\\_\\_牙痛。由常识可知，对牙齿敏感的人来说，太热或太冷的东西容易“引起”牙痛，因此本空应填入含有“引起”意义的动词-ed形式，由此确定答案为 N) triggered。备选的动词-ed形式中，B) associated 不符合此处语境，而且通常与 with 连用，因此排除。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adult"
+            },
+            {
+              "key": "B",
+              "text": "associated"
+            },
+            {
+              "key": "C",
+              "text": "chew"
+            },
+            {
+              "key": "D",
+              "text": "contains"
+            },
+            {
+              "key": "E",
+              "text": "continue"
+            },
+            {
+              "key": "F",
+              "text": "defense"
+            },
+            {
+              "key": "G",
+              "text": "dental"
+            },
+            {
+              "key": "H",
+              "text": "downward"
+            },
+            {
+              "key": "I",
+              "text": "emotional"
+            },
+            {
+              "key": "J",
+              "text": "implies"
+            },
+            {
+              "key": "K",
+              "text": "mammal"
+            },
+            {
+              "key": "L",
+              "text": "replace"
+            },
+            {
+              "key": "M",
+              "text": "swallow"
+            },
+            {
+              "key": "N",
+              "text": "triggered"
+            },
+            {
+              "key": "O",
+              "text": "underneath"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【考点】语义理解题。\nB) 【语法判断】空格前是 be 动词，空格后是介词 with，因此本空应填入一个词构成短语 be \\_\\_\\_\\_\\_\\_ with。\n【语义判断】由前一句可知，牙齿内层的神经不会感受到温度，它们感受到的是“与异常温度有关的”疼痛。因此，空格处应填入含有“有关”意义的词，由此确定答案为 B) associated。be associated with...意为“与……有关的”。\n参考译文\n你可能会认为你的牙齿是工具，就像内置的刀叉一样。但如果它们只是工具，为什么它们会感到疼痛，如果它们在任何情况下都能咀嚼不是更好吗？尽管我们的牙齿不舒服，事实证明我们的牙齿如此敏感是有原因的。牙痛是一种防御机制，确保当牙齿受损时，我们会注意到并采取措施。\n如果我们吃了太热或太冷的东西，或者牙齿因为被磨损得太多而导致下面的组织暴露在外面，所有这些都会导致疼痛，然后疼痛使人们不再使用那颗牙齿，以此来多给它一些保护。所以这真的是一种保护机制，而非其他。如果牙齿感觉不到疼痛，我们可能会在损害牙齿的情况下继续使用它们，而对人类来说，损害成熟的牙齿是一个问题，因为我们不能像鳄鱼那样替换它们。\n牙齿包括三层，只有其中一层——牙齿最内层——会感到疼痛，因为牙齿那一层包含血管和神经。疼痛是该层神经唯一能对它做出反应的感觉。牙齿敏感的人可能会抱怨诸如由热或冷引发的牙痛，而内层的神经感觉不到温度。相反，它们会感到疼痛，这可能与人们喝了非常凉的东西有关。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "Clues about the culture of a company can be found on its website.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【定位】由题干中的 Clues about the culture of a company 和 website 定位到文章 G)段第四、五句。\nG) 【精析】细节归纳题。定位句提到，你到底应该去哪里寻找这些文化线索呢？首先从最明显的地方开始：公司的网站。题干中的 Clues about the culture of a company 和 its website 分别对应定位句中的 these culture clues 和 the company's website。题干是对定位句的概括归纳，故答案为 G)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "It can be difficult to know the real situation in a company until you become part of it.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 difficult、real situation 和 became part of it 定位到文章 D)段第一句。\nD) 【精析】同义转述题。定位句指出，在你实际去某个公司工作之前弄清楚该公司是什么样子可能是个挑战。题干中的 difficult 对应定位句中的 a bit of a challenge，题干中的 know the real situation in a company 对应定位句中的 figuring out what a company is like，题干中的 become part of it 对应定位句中的 actually work there。题干是对定位句的同义转述，故答案为 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "It is impossible for a job applicant to have every expectation met.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "M",
+          "explanation": "【定位】由题干中的 impossible 和 have every expectation met 定位到文章 M)段第一、二句。\nM) 【精析】同义转述题。定位句指出，“我”在一个雇主那里找到所有这些东西的概率有多大？几乎没有——相信“我”，“我”已经找过了。题干中的 impossible 对应定位句中的 Slim to none，题干中的 have every expectation met 是对定位句中 finding all of those things with one employer 的同义转述，题干中的 a job applicant 对应定位句中的 I。题干是对定位句的同义转述，故答案为 M)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Simply by reading its description, the author found the job offered ideal.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 reading its description、the job offered 和 ideal 定位到文章 A)段。\nA) 【精析】细节归纳题。定位段指出，理论上，这份工作对“我”来说似乎很完美。题干中的 reading its description 对应定位段中的 On paper，题干中的 the author found the job offered ideal 对应定位段中的 the job seemed perfect for me。题干是对定位段的归纳总结，故答案为 A)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Job applicants are advised to make a written list of their likes and dislikes in their previous employment.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【定位】由题干中的 make a written list、likes and dislikes 和 previous employment 定位到文章 F)段第一、二句。\nF) 【精析】细节归纳题。定位句指出，首先写下你不喜欢前任雇主的地方，以及你真正看重的部分。这里没有错误的答案——所以从大事到小细节，把它们都写在你的清单上。题干中的 make a written list 对应定位句中的 write them all down on your list，题干中的 likes and dislikes 对应定位句中的 the parts you really valued 和 the things you didn't like，题干中的 previous employment 对应定位句中的 previous employers。题干是对定位句的概括归纳，故答案为 F)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "At the end of an interview, a job applicant should seize the opportunity to get answers to their urgent questions.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【定位】由题干中的 At the end of an interview、the opportunity 和 urgent questions 定位到文章 K)段第二、三句。\nK) 【精析】细节归纳题。定位句指出，你知道在面试结束时，招聘负责人问你有没有什么问题，你只是张着嘴茫然地盯着桌子对面吗？这是一个很好的机会，你可以大声说出自己的想法，让招聘负责人回答你迫切想了解的企业文化的问题！题干中的 At the end of an interview 对应定位句中的 at the end of a job interview，题干中的 the opportunity to get answers to their urgent questions 对应定位句中的 the perfect opportunity 和 get your burning company culture questions answered。题干是对定位句的概括归纳，故答案为 K)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "To begin with, job applicants should be clear what they expect from their future employer.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【定位】由题干中的 be clear 和 what they expect 定位到文章 E)段第三句。\nE) 【精析】细节归纳题。定位句指出，在你确定自己和某家公司是否合拍之前，先明确你到底想从雇主那里得到什么，这一点很重要。题干中的 be clear 对应定位句中的 have a solid handle，题干中的 what they expect from their future employer 对应定位句中的 what exactly you want from your employer。题干是对定位句的归纳总结，故答案为 E)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "Job applicants should read with a critical eye what is written about a company on the website.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【定位】由题干中的 read with a critical eye 定位到文章 I)段第二句。\nI) 【精析】同义转述题。定位句指出，记住要对你读到的评论持保留态度——其中许多都是由被鄙视的员工写的。题干中的 read with a critical eye what is written about a company 对应定位句中的 take the reviews you read with a grain of salt，故答案为 I)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "Job satisfaction has a lot to do with company culture.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 Job satisfaction 和 company culture 定位到文章 C)段最后一句。\nC) 【精析】细节辨认题。定位句指出，公司文化会对你的工作感受产生很大的影响，所以你要确保你是跟真正感兴趣的公司签了聘用函。题干中的 Job satisfaction 对应定位句中的 how you feel about your work，题干中的 has a lot to do with 对应定位句中的 have a big impact on，题干中的 company culture 在定位句中直接出现，故答案为 C)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "A chat with an insider of a company can give job applicants very useful information when they prepare for an interview.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            },
+            {
+              "key": "M",
+              "text": "段落 [M]"
+            },
+            {
+              "key": "N",
+              "text": "段落 [N]"
+            },
+            {
+              "key": "O",
+              "text": "段落 [O]"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【定位】由题干中的 A chat、an insider of a company 和 useful information 定位到文章 J)段第二、三句。\nJ) 【精析】细节辨认题。定位句指出，通过 LinkedIn 或电子邮件给该公司的在职员工或离职员工发一条简短的信息，询问他们是否愿意和你就该公司的总体情况进行简短的交谈。如果你的聊天请求得到了同意，你将会带着一些非常强大和有用的信息进入面试！题干中的 A chat 在定位句中直接出现，题干中的 an insider of a company 对应定位句中的 a current or previous company employee，题干中的 very useful information 对应定位句中的 pretty powerful and helpful information。题干是对定位句的总结，故答案为 J)。\n参考译文\n如何确定一家公司是否适合你\nA) (39)理论上，这份工作对我来说似乎很完美：这个职位与我的学位完全相符，工作职责与我的兴趣相符，而且办公室有一个储备充足的厨房，可以满足我对零食的各种需求。\nB) 听起来像是我的理想工作，对吧？只有一个小问题：我就是不适应公司的文化。他们喜欢一种比较僵化、封闭的企业氛围，而我更喜欢更具协作性和开放性的氛围。他们完全就是看表等下班的人，而我希望时间安排更灵活。说白了，我们只是无法达成共识。\nC) 说到找新工作，你已经知道面试过程的一个重要部分涉及公司评估你是否适合他们的空缺职位。但是，重要的是要记住，雇主并不是唯一需要确定合适人选的人——你也应该寻找同样的东西。(44)公司文化会对你的工作感受产生很大的影响，所以你要确保你是跟真正感兴趣的公司签了聘用函。\nD) (37)然而，在你实际去某个公司工作之前弄清楚该公司是什么样子可能是个挑战。幸运的是，在虚线上签名之前，你可以做一些事情来判断这家公司是否适合你。\nE) 首先，知道自己想要什么。当你真的不知道自己在寻找什么时，很难做出任何决定。(42)所以，在你确定自己和某家公司是否合拍之前，先明确你到底想从雇主那里得到什么，这一点很重要。我们很多人很容易确定我们绝对不想要的东西。如果你能想到的只有这些，别担心！这仍然是一个很好的起点。\nF) (40)首先写下你不喜欢前任雇主的地方，以及你真正看重的部分。这里没有错误的答案——所以从大事到小细节，把它们都写在你的清单上。这将帮助你立即确定你在公司中寻找什么，以及你试图狠狠地远离的东西。\nG) 一定要进行调查研究。现在轮到你戴上你的侦探帽进行一点调查了。当你试图在走进一家公司的办公室之前熟悉这家公司的文化时，互联网将是你最好的朋友。(36)你到底应该去哪里寻找这些文化线索呢？首先从最明显的地方开始：公司的网站。浏览他们的信息和博客。他们使用正式的、直接的语言吗？或者是随意的、口语式的，甚至可能是有点幽默的？这可以很好地反映出该公司想要营造什么样的氛围。\nH) 接下来，将你的注意力转向他们的社交媒体渠道。他们是在分享团队周日下午烧烤或万圣节服装比赛的照片吗？还是他们的社交媒体账号仅限于与公司相关的公告和产品发布？\nI) 像 Glassdoor 这样的行业评论网站是另一个可以查看的地方，你可以从中找到一些关于某家公司的内幕信息。(43)然而，记住要对你读到的评论持保留态度——其中许多都是由被鄙视的员工写的。\nJ) 最后，一定要动用个人人脉。(45)通过 LinkedIn 或电子邮件给该公司的在职员工或离职员工发一条简短的信息，询问他们是否愿意和你就该公司的总体情况进行简短的交谈。如果你的聊天请求得到了同意，你将会带着一些非常强大和有用的信息进入面试！\nK) 通过提问了解更多信息。(41)你知道在面试结束时，招聘负责人问你有没有什么问题，你只是张着嘴茫然地盯着桌子对面吗？这是一个很好的机会，你可以大声说出自己的想法，让招聘负责人回答你迫切想了解的企业文化的问题！所以，是的，你当然可以问面试官，在那家公司工作是什么感觉。一些简单的问题，比如，“你会用哪三个词来描述这里的文化？”或者“在这家公司工作，你最喜欢的部分是什么？”，可以揭示很多不公开的真实情况。\nL) 把自己的价值观放在首位。我梦想中的公司文化是什么样的？嗯，只要我把工作做完，我可以来去自由。老板会认真听取并重视我的所有想法和建议。同事间都会友好相处，而不会陷入办公室流言蜚语的陷阱。厨房里有无数的比萨和饼干可供选择。哦，他们会给我两个月的带薪假期，薪水还很高。\nM) (38)我在一个雇主那里找到所有这些东西的概率有多大？几乎没有——相信我，我已经找过了。这就是为什么知道你最看重公司文化的哪些方面是如此重要。是开放的沟通方式，还是灵活的时间安排？把注意力集中在优先事项清单上最重要的事项上，并确保你的潜在雇主至少勾选了这些选项。不幸的是，这就是现实，你不可能拥有你想要的一切，但有一些是可以实现的。\nN) 当你在找一份新工作的时候，你已经知道雇主主要判断你是否适合这个职位。但你也应该通过类似的视角来看待这个过程。你也许不是主持面试的那个人，但你仍然在努力确定这家公司是否适合你。\nO) 把这些建议记在心里，看看你和你的潜在雇主是绝配，还是只会带来灾难。毕竟，在真正接受一份工作之前弄清楚是件好事。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What does the author say about students enrolled in online classes?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They can access course materials easily."
+            },
+            {
+              "key": "B",
+              "text": "They are unmotivated to learn."
+            },
+            {
+              "key": "C",
+              "text": "They can learn at their own pace."
+            },
+            {
+              "key": "D",
+              "text": "They rarely fulfil the course requirements."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 students enrolled in online classes 定位到第二、三段。\nB) 【精析】细节辨认题。第二段起到承上启下的作用。第三段指出，学生缺乏学习的欲望，他们只是简单地完成作业以获得及格的分数，而没有真正参与到课程学习中。故正确答案为 B)。\n【避错】A)是根据第三段最后提到的 the course material 设置的干扰项，但是该句说的是“学生不能真正参与到课程学习中”，并没有提及学生是否可以轻松获得课程材料，故排除 A)。C)是根据第一段第二句提到的 students to learn...at their own pace 设置的干扰项，但这是人们宣传的在线课程的优点，而不是作者的观点，故排除 C)。第二段提到，作者意识到在线课程只是满足课程要求的一种手段，并没有说学生很少达到课程要求，故排除 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What does the author think of online course assignments?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are made convenient to mark."
+            },
+            {
+              "key": "B",
+              "text": "They are meant to facilitate interaction."
+            },
+            {
+              "key": "C",
+              "text": "They are based on easily accessible material."
+            },
+            {
+              "key": "D",
+              "text": "They are given to accommodate students' needs."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 online course assignments 定位到第四段。\nA) 【精析】细节辨认题。第四段第二句提到，这些作业不是为了让学生深入研究学习内容而设计的，而是为了便于评分，从而容纳如此大量的学生。故正确答案为 A)。\n【避错】定位句提到这些作业不是为了让学生深入研究学习内容而设计的，并没有提到旨在促进互动，故排除 B)。第四段第一句提到大多数作业都很简短，但并没有提到它们都基于易于获取的材料，故排除 C)。D)根据第四段第二句中的 accommodate 设置干扰，文中指的是把课后作业设计得便于评分以容纳大量的学生，而不是为了满足学生的需求，故排除 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What does the author say is one disadvantage of online classes?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are frequently scheduled at irregular times."
+            },
+            {
+              "key": "B",
+              "text": "They make professors' offices much less accessible."
+            },
+            {
+              "key": "C",
+              "text": "They tend to increase professors' burden of responding to students' emails."
+            },
+            {
+              "key": "D",
+              "text": "They provide little chance for students to build relationships with each other."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 one disadvantage of online classes 定位到第五段第一句。\nD) 【精析】细节辨认题。定位句提到，也许参与在线课程的最大缺点是教师和学生之间缺乏面对面的互动。第六段进一步指出，学生之间的互动也很少，学生很难创建学习小组并与同龄人建立关系。故正确答案为 D)。\n【避错】第五段第二、三句提到在线课程的时间问题：直播课程通常安排在正午，因为学生不得不参加其他课程或工作。很多学生可能也不方便在教授的办公时间上课。文章没有提到在线课程被安排在不定期的时间，也不能由此推出在线课程使教授的办公室更难进入，故排除 A)和 B)。第五段第四句提到，与教授的大多数互动都必须通过电子邮件进行，这往往缺少人情味，旨在表明学生和教师间的交流变少了，而不是说教授回复学生电子邮件的负担增加了，故排除 C)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What problem may arise if classes go online?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "More students may find it easy to be absent from them."
+            },
+            {
+              "key": "B",
+              "text": "Teachers will worry about poor internet connections."
+            },
+            {
+              "key": "C",
+              "text": "Some students may have difficulty attending them."
+            },
+            {
+              "key": "D",
+              "text": "Schools with limited resources will be at a disadvantage."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 classes go online 及题文同序原则定位到第七、八段。\nC) 【精析】推理判断题。第七段第二句指出，并非所有学生都能获得电脑、笔记本和稳定的网络连接，一些学生可能会因为一些原因无法参加线上课程。故正确答案为 C)。\n【避错】由定位段可知，由于缺少学习工具，有的学生无法参加线上课程，但不能由此推出更多的学生会发现逃课很容易，也不能推出资源有限的学校处于不利地位，故排除 A)和 D)。第七段第一句提到在线课程还需要一台电脑或笔记本以及稳定的互联网连接，并没有提到老师担心互联网连接不好的问题，故排除 B)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What does the author think constitutes a key part of genuine education?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Acquisition of useful knowledge."
+            },
+            {
+              "key": "B",
+              "text": "Training of real-life skills on campus."
+            },
+            {
+              "key": "C",
+              "text": "Development of students' personalities."
+            },
+            {
+              "key": "D",
+              "text": "Cultivation of analytical thinking ability."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 genuine education 定位到最后一段第二句。\nD) 【精析】推理判断题。定位句提到在线课程强调便利性而不是批判性思维，并不能提供真正的教育。由此可知，D)中提到的“思辨能力的培养”是真正教育的组成部分。故正确答案为 D)。\n【避错】最后一段最后一句提到我们需要重新规划在线课程，提供优质教育，让学生能够获得真正的学习体验，但并没有提到获得有用的知识或在校内培训现实生活技能，故排除 A)和 B)。文中没有提到关于学生个性发展的问题，故排除 C)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What does the author think open debate can do?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Help the public to better understand science."
+            },
+            {
+              "key": "B",
+              "text": "Clear up confusion in the scientific community."
+            },
+            {
+              "key": "C",
+              "text": "Settle disputes between universities and government agencies."
+            },
+            {
+              "key": "D",
+              "text": "Prevent information from being used incorrectly by the public."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 open debate 定位到第一段第四句。\nA) 【精析】细节辨认题。定位句指出，当任何领域的辩论走出了大学和政府机构的大厅时，信息就有可能被误用，导致公共混乱。然而，公开辩论也可以促进科学界和公众之间的交流。由此可知，公开辩论可以帮助公众更好地理解科学，故答案为 A)。\n【避错】定位句提到，当辩论地点不局限于大学和政府机构的大厅时，信息就有可能被误用，导致公共混乱，而不是消除混乱，故排除 B)。定位句只提到了辩论的地点不局限于大学和政府机构的大厅，没有提及解决大学与政府机构之间的纠纷，故排除 C)。定位句提到，信息有可能被误用，并没有提及防止公众误用信息，D)属于过度推断，故排除。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "Why did a recent debate published in The New York Times arouse concerns among experts?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It might hinder the progress in medical research."
+            },
+            {
+              "key": "B",
+              "text": "It might breed public distrust in modern medicine."
+            },
+            {
+              "key": "C",
+              "text": "It might add to the difficulty of getting research funds."
+            },
+            {
+              "key": "D",
+              "text": "It might prevent medical scientists reaching consensus."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 The New York Times 和 arouse concerns 定位到第二段。\nB) 【精析】推理判断题。第二段首句介绍这场辩论，第三句提到一些专家的担心：这种公开的猜测可能会导致人们认为，细节上的分歧意味着对现代医学的安全性和效率缺乏足够的科学共识。由此可以推断，这会引起公众对现代医学不信任，故答案为 B)。\n【避错】第二段前两句说明了这场辩论讨论的问题，并没有提及这场辩论会阻碍医学进展，故排除 A)。文中并未提及研究资金的问题，故排除 C)。D)是根据第二段末句中 a lack of adequate scientific consensus 设置的干扰项，此处是表达细节上的分歧意味着对现代医学的安全性和效率缺乏足够的科学共识，并没有提到辩论会阻碍医学科学家达成共识，故排除。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "Why does the author say some experts' anxiety seems misplaced?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Debating scientific issues at a conference is now old-fashioned."
+            },
+            {
+              "key": "B",
+              "text": "Diverse topics can be debated by both scientists and the public."
+            },
+            {
+              "key": "C",
+              "text": "Debates about science are accessible to the public anyway."
+            },
+            {
+              "key": "D",
+              "text": "Scientists can voice their opinions whatever way they like."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 some experts' anxiety 和 misplaced 定位到第三段。\nC) 【精析】细节辨认题。第三段首句指出，这种焦虑似乎放错了地方。末句指出，如今，无论有关科学的辩论发生在哪里，公众都可以接触到，故答案为 C)。\n【避错】第三段第二句提到，参加会议并讨论科学问题的日子一去不复返了，这并不是指那样的日子已经过时了，而且这也不是作者认为专家的焦虑放错地方的原因，故排除 A)。第三段第二句提到，那些会议不够多样化，并没有提及科学家和公众可以讨论各种各样的话题，故排除 B)。文中没有提到科学家应该如何发表观点的问题，而且 whatever way they like 过于绝对，故排除 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What does the author suggest scientists do about public debate?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Have more discussions about it."
+            },
+            {
+              "key": "B",
+              "text": "Embrace it with open arms."
+            },
+            {
+              "key": "C",
+              "text": "Formulate new rules for it."
+            },
+            {
+              "key": "D",
+              "text": "Restrain it to a rational degree."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 scientists、public debate 和题文同序原则定位到第四段首句。\nB) 【精析】推理判断题。定位句提到，对许多科学家来说，公开辩论是一个新的领域，它可能感觉像是一个没有什么限制或规则的地方，但与其避免这样的对话，不如让辩论变得透明和充满活力，无论辩论在哪里举行。由此可以推断，作者支持公开辩论，故答案为 B)。\n【避错】文中没有提及建议科学家对公开辩论进行更多讨论，故排除 A)。定位句提到，公开辩论感觉像是一个没有什么限制或规则的地方，但这并不是让科学家制订新的规则或将其限制到合理的程度，故排除 C)和 D)。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2022-06-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What does the author say about science in the last paragraph?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is transmitted through textbooks."
+            },
+            {
+              "key": "B",
+              "text": "It is what proves valid and true to life."
+            },
+            {
+              "key": "C",
+              "text": "It is a dynamic and self-improving process."
+            },
+            {
+              "key": "D",
+              "text": "It is a collection of facts and established rules."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 the last paragraph 定位到最后一段。\nC) 【精析】推理判断题。最后一段第二句提到，如果公众要理解科学是一个正大光明的自我纠正的过程，那么，需要摒弃那种认为科学是教科书中一系列固定不变的事实的观点。由此可以推断，科学是一个自我完善的过程，故答案为 C)。\n【避错】A)和 D)是根据最后一段第二句中 a fixed set of facts in a textbook 设置的干扰项，此处是表达需要摒弃那种认为科学是教科书中一系列固定不变的事实的观点，不是表达科学通过教材传播或者科学是事实和既定规则的集合，故排除 A)和 D)。最后一段第三句指出，科学的有效性受到攻击，B)与文章意思相反，故排除。",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "从前有个农夫嫌他种的禾苗长得慢，就到地里把禾苗一株株地拔高了一点。回家后他对家人说：“今天可真把我累坏了！但我总算让禾苗一下子长高了。”他儿子到地里去一看，禾苗都已死光了。\n\n现在有些家长急于让孩子成功，往往步那个农夫的后尘，搞得孩子苦不堪言，却不见孩子学业长进。这样的家长是否该对这个问题有所醒悟，让孩子自然成长呢？",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-06-1-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "从前有个农夫嫌他种的禾苗长得慢，就到地里把禾苗一株株地拔高了一点。回家后他对家人说：“今天可真把我累坏了！但我总算让禾苗一下子长高了。”他儿子到地里去一看，禾苗都已死光了。\n\n现在有些家长急于让孩子成功，往往步那个农夫的后尘，搞得孩子苦不堪言，却不见孩子学业长进。这样的家长是否该对这个问题有所醒悟，让孩子自然成长呢？",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "There was once a peasant who was unhappy about the slow growth of his seedlings. So he went to the field and pulled up them a bit one by one. After getting back home, he told his family, \"I am really tired out today! But I finally made those young crops grow taller all at once.\" On hearing this, his son hurried to the field, only to find that the crops were all dead.\n\nAt present, some parents are so eager for their children's success that they tend to follow the example of the peasant, making their children suffer a lot yet seeing no academic progress. Should these parents wake up to this problem and let their children grow up in a natural way?",
+          "explanation": "**参考译文与难点注释**\n\nThere was once a peasant who was unhappy about the slow growth of his seedlings. So he went to the field and pulled up them a bit one by one. After getting back home, he told his family, \"I am really tired out today! But I finally made those young crops grow taller all at once.\" On hearing this, his son hurried to the field, only to find that the crops were all dead.\n\nAt present, some parents are so eager for their children's success that they tend to follow the example of the peasant, making their children suffer a lot yet seeing no academic progress. Should these parents wake up to this problem and let their children grow up in a natural way?\n\n1. 第一句可以拆分为两个句子，分别翻译：先用 There was once... 结构翻译第一个分句“从前有……”，后接 who 引导的定语从句，说明农夫为什么要拔苗助长；再用 So 表明与第一分句的因果逻辑关系，“一株株地拔高了一点”可以译为 pulled up them a bit one by one。在本句中，“禾苗”一词出现两次，可以把第二个“禾苗”翻译为 them，以避免重复，达到词汇多样化的效果。\n2. 第二句包含直接引语，注意英语中冒号和引号一般不连用，应该是逗号接引号。“今天可真把我累坏了！”是典型的汉语无主句现象，可以用 I 作主语，也可以用感叹句“What a tiring day I have today!”。第二个直接引语前要用表示转折意义的连词 but 或副词 however，“让禾苗一下子长高了”可以直接译为 made those young crops grow taller all at once，同样，这里的“禾苗”也可以译为更为口语化的表达 young crops，避免了词汇重复。\n3. 第三句承接上句，本句的翻译可以增加 On hearing this，使上下文衔接更为紧密。“到地里”译为 hurried to the field 体现出急迫的心情，更为生动。“一看，禾苗都已死光了”强调结果，可以选用 only to discover/find that... 结构来翻译，“禾苗都已死光了”可译为 the crops were all dead/all the crops died out。\n4. 第四句句子较长，需要理清逻辑关系，还要注意时态由第一段的一般过去时转换为一般现在时。分析主干，可以用 so... that 结构翻译，后面两个分句用现在分词短语作状语的形式进行处理。“搞得孩子苦不堪言”可以翻译为 making their children suffer a lot，其中“苦不堪言”为成语，汉语中的成语或四字格结构是翻译的一大难点，通常是译出其基本意义即可。\n5. 第五句用设问句指出对孩子“拔苗助长”的家长应该如何做。根据本句的句子类型，将情态动词 should 置于句首，用并列连词 and 连接谓语动词，即 wake up to this problem and let their children grow in a natural way。\n\n**话题词汇**\n- in ancient times 在古时候\n- rack one's brains 绞尽脑汁\n- hit upon an idea 想出一个主意\n- with great satisfaction 心满意足\n- farmland 农田\n- turn out 结果是\n- shrivel up 枯萎\n- moral 寓意",
+          "source": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-06-1-md"
+          },
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

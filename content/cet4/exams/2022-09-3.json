@@ -1,0 +1,135 @@
+{
+  "id": "2022-09-3",
+  "title": "2022年9月 第3套",
+  "year": 2022,
+  "month": 9,
+  "set": 3,
+  "status": "partial",
+  "issues": [
+    "合卷拆分：本套仅含写作与翻译；听力与阅读与 2022年9月 第1套 共用。"
+  ],
+  "sources": [
+    {
+      "id": "cet4-2022-09-3-audio-note",
+      "title": "听力说明.txt",
+      "localPath": "<本地四级真题目录>/2022.09 第2-3套/听力说明.txt"
+    },
+    {
+      "id": "cet4-2022-09-3-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2022.09 第2-3套/真题.pdf"
+    },
+    {
+      "id": "cet4-2022-09-3-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2022.09 第2-3套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2022-09-3-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2022.09 第2-3套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "Suppose your class plans to invite some former graduates to share their job experiences with the students. As the organizer of the activity, you are now to write an invitation letter to the invited speakers on behalf of your class. You will have 30 minutes to write the letter. You should write at least 120 words but no more than 180 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "Suppose your class plans to invite some former graduates to share their job experiences with the students. As the organizer of the activity, you are now to write an invitation letter to the invited speakers on behalf of your class. You will have 30 minutes to write the letter. You should write at least 120 words but no more than 180 words.",
+          "source": {
+            "fileId": "cet4-2022-09-3-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-09-3-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "Suppose your class plans to invite some former graduates to share their job experiences with the students. As the organizer of the activity, you are now to write an invitation letter to the invited speakers on behalf of your class. You will have 30 minutes to write the letter. You should write at least 120 words but no more than 180 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "An Invitation on Sharing Job Experiences\n\nDear alumni,\n\nI am writing to invite you to our online event of job experience exchange, to be held on the evening of Sept. 19th via Tencent Meeting, with senior students who are currently facing the challenges of employment.\n\nWould you like to help these prospective graduates by telling them about your current career and position, and sharing your insights on job hunting and career development? If so, the following topics might be of top concern. How did you get access to and work in your current position? What competencies are valued most? Are qualification certificates worth nothing? How can we be fully prepared for an interview, particularly a virtual one, or the online job application process? Besides, we may have the question and answer session in which detailed explanations will be expected.\n\nYour sharing will be greatly appreciated and I am looking forward to your reply.\n\nYours,\nLi Ming",
+          "explanation": "Directions: Suppose your class plans to invite some former graduates to share their job experiences with the students. As the organizer of the activity, you are now to write an invitation letter to the invited speakers on behalf of your class. You will have 30 minutes to write the letter. You should write at least 120 words but no more than 180 words.\n\n参考范文：\n\nAn Invitation on Sharing Job Experiences\n\nDear alumni,\n\nI am writing to invite you to our online event of job experience exchange, to be held on the evening of Sept. 19th via Tencent Meeting, with senior students who are currently facing the challenges of employment.\n\nWould you like to help these prospective graduates by telling them about your current career and position, and sharing your insights on job hunting and career development? If so, the following topics might be of top concern. How did you get access to and work in your current position? What competencies are valued most? Are qualification certificates worth nothing? How can we be fully prepared for an interview, particularly a virtual one, or the online job application process? Besides, we may have the question and answer session in which detailed explanations will be expected.\n\nYour sharing will be greatly appreciated and I am looking forward to your reply.\n\nYours,\nLi Ming",
+          "source": {
+            "fileId": "cet4-2022-09-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-09-3-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2022-09-1",
+      "sharedWithTitle": "2022年9月 第1套",
+      "sharedNote": "本套听力与 2022年9月 第1套 共用，题目、解析和听力材料集中在 2022-09-1 练习；本套不再重复展示。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2022-09-1",
+      "sharedWithTitle": "2022年9月 第1套",
+      "sharedNote": "本套阅读与 2022年9月 第1套 共用（原卷未单列），请前往 2022-09-1 练习。"
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "戏曲是一种中国传统的艺术形式，可以追溯到唐朝。中国戏曲吸引观众的一大特色是其独具风格的脸谱（facial painting）。脸谱代表不同角色的性格和命运。观众通过观察脸谱能够更好地理解这些角色的故事。欣赏戏曲是中国人特别是老年人的一大乐趣。为了吸引更多的年轻观众，传统戏曲正在不断地发展和创新。如今，越来越多的外国观众也喜欢中国戏曲。",
+          "source": {
+            "fileId": "cet4-2022-09-3-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2022-09-3-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "戏曲是一种中国传统的艺术形式，可以追溯到唐朝。中国戏曲吸引观众的一大特色是其独具风格的脸谱（facial painting）。脸谱代表不同角色的性格和命运。观众通过观察脸谱能够更好地理解这些角色的故事。欣赏戏曲是中国人特别是老年人的一大乐趣。为了吸引更多的年轻观众，传统戏曲正在不断地发展和创新。如今，越来越多的外国观众也喜欢中国戏曲。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "Opera is one of the Chinese traditional arts, which can be traced back to the Tang Dynasty. One striking characteristic of Chinese opera that appeals to the audience is its unique facial paintings. Facial paintings represent different personalities and fates of the characters. The audience can better understand the stories of the characters by observing their facial paintings. Appreciating Chinese opera is a pleasure for Chinese people, especially for the elderly. In order to attract more young audience, traditional opera is constantly developing and being innovated. Nowadays, a growing number of foreign audience also become fascinated by Chinese opera.",
+          "explanation": "Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.\n\n戏曲是一种中国传统的艺术形式，可以追溯到唐朝。中国戏曲吸引观众的一大特色是其独具风格的脸谱(facial painting)。脸谱代表不同角色的性格和命运。观众通过观察脸谱能够更好地理解这些角色的故事。欣赏戏曲是中国人特别是老年人的一大乐趣。为了吸引更多的年轻观众，传统戏曲正在不断地发展和创新。如今，越来越多的外国观众也喜欢中国戏曲。\n\n参考译文：\n\nOpera is one of the Chinese traditional arts, which can be traced back to the Tang Dynasty. One striking characteristic of Chinese opera that appeals to the audience is its unique facial paintings. Facial paintings represent different personalities and fates of the characters. The audience can better understand the stories of the characters by observing their facial paintings. Appreciating Chinese opera is a pleasure for Chinese people, especially for the elderly. In order to attract more young audience, traditional opera is constantly developing and being innovated. Nowadays, a growing number of foreign audience also become fascinated by Chinese opera.\n\n注：2022年9月四级考试共考了1套听力、1套阅读、3篇写作与3篇翻译。",
+          "source": {
+            "fileId": "cet4-2022-09-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2022-09-3-md"
+          },
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

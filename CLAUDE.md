@@ -16,6 +16,7 @@
 | `docs/11-图片资产生产规范.md` | **LoRA 出图资产产线** | 大肥鱼 LoRA（`dafeiyu_c_v2` + `dswhale`）的模型路径与 SHA256、训练参数、出图配方、提示词模板、复现脚本索引。**批量出图/调整出图效果时先读这份**。注意：角色外观以 docs/10 为准，出图参数以 docs/11 为准 |
 | `content/` | **内容唯一真源** | `glossary.json` 术语映射、`syllabus.json` 194 课大纲、`common/ c/ cpp/ java/ python/` 每课一个目录（`lesson.md` + `questions.json`）、`error-lib/` 内置错误库。**改内容只改这里** |
 | `content/cet6` | 六级真题（52 套试卷 JSON + 写作附图） | 随应用打包；听力音频不打包，读用户本地目录，经 `miai-cet6://` 协议。设计见 `docs/27-六级真题模块.md` |
+| `content/cet4` | 四级真题（schema 同六级，听力 25 题、125 分钟） | 转换脚本 `scripts/cet4-import.mjs`；设计与差异见 `docs/38-四级真题模块.md` |
 | `scripts/` | 内容流水线脚本 | `content-validate.mjs`（质量闸门）、`content-build.mjs`（打包成 bundle）、`gen-batch.mjs`（生成批次提示词）、`check-lesson-code.mjs` / `check-question-code.mjs`（两条真跑台，共用 `lib/run-code.mjs`）、`gen-bank.mjs` + `check-bank.mjs`（无限题库的产与查，共用 `lib/bank-verify.mjs`） |
 | `src/shared/` | 主/渲染进程共享纯逻辑 | `types.ts` 全部 DTO、`config-schema.ts` config.json 字段注册表（读盘 / 出主进程 / 保存三处逻辑一个字段一条，迁移步骤表在 `config-migrate.ts`，见 docs/28）、`ipc-channels.ts` IPC 通道唯一真源、`review-engine.ts` 间隔重复、`quiz-grading.ts` 判分、`error-match.ts` 错误匹配、`unlock.ts` 解锁链。**此处只放纯函数，可被 Vitest 直接测** |
 | `src/main/` | Electron 主进程 | `index.ts` 薄入口；`app.ts` 组合根（启动前置检查 / 单实例锁 / 建窗口 / 生命周期）；`context.ts` 跨功能共用服务；`features/<名>.ts` 一个功能一个文件（全部 `ipcMain.handle` 只在这里，见 docs/28）；`store/` JSON 原子写存储；`env/` 环境检测 + winget 安装；`runner/` 编译运行器；`ai/` DeepSeek 调用 |

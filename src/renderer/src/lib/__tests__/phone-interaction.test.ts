@@ -49,20 +49,23 @@ describe('主导航分组（侧栏与标签栏共用）', () => {
     expect(navGroupOf('/ai')).toBe('ai')
     expect(navGroupOf('/study')).toBe('study')
     expect(navGroupOf('/playground')).toBe('practice')
-    expect(navGroupOf('/cet6/2024-06-1')).toBe('cet6')
+    expect(navGroupOf('/cet6/2024-06-1')).toBe('cet')
+    expect(navGroupOf('/cet4/2024-12-1')).toBe('cet')
+    expect(navGroupOf('/cet4')).toBe('cet')
+    expect(navGroupOf('/cet')).toBe('cet')
     expect(navGroupOf('/memo')).toBe('overview')
     expect(navGroupOf('/lesson/c-1')).toBe('courses')
     expect(navGroupOf('/settings')).toBeNull()
     expect(navGroupOf('/cet6/vocab')).toBe('vocab')
-    expect(isNavActive({ key: 'cet6' }, '/cet6/vocab')).toBe(false)
+    expect(isNavActive({ key: 'cet' }, '/cet6/vocab')).toBe(false)
   })
-  it('标签栏按 key 取 今天 / 课程 / 练习 / 复习 / AI，六级、资料库、进度留在抽屉', () => {
+  it('标签栏按 key 取 今天 / 课程 / 练习 / 复习 / AI，四六级、资料库、进度留在抽屉', () => {
     expect(phoneTabItems().map((i) => i.key)).toEqual(['today', 'courses', 'practice', 'review', 'ai'])
-    expect(NAV_ITEMS.map((i) => i.key)).toEqual(['today', 'courses', 'practice', 'review', 'cet6', 'vocab', 'study', 'ai', 'overview'])
+    expect(NAV_ITEMS.map((i) => i.key)).toEqual(['today', 'courses', 'practice', 'review', 'cet', 'vocab', 'study', 'ai', 'overview'])
   })
   it('分组是数据：每天做的 6 项 | 分隔线 | 资料库 / AI / 进度', () => {
     expect(navSections().map((sec) => sec.map((i) => i.key))).toEqual([
-      ['today', 'courses', 'practice', 'review', 'cet6', 'vocab'],
+      ['today', 'courses', 'practice', 'review', 'cet', 'vocab'],
       ['study', 'ai', 'overview']
     ])
   })

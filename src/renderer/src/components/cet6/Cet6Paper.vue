@@ -4,7 +4,7 @@
  * 阅读一次只印当前这一篇（block）；其余部分印整个 section。
  */
 import { computed, reactive, ref } from 'vue'
-import { CET6 } from '../../lib/copy'
+import { CET6, cetCopy } from '../../lib/copy'
 import { isSelectingTextIn } from '../../lib/cet6-select-guard'
 import { assetBase } from '../../lib/asset-base'
 import {
@@ -23,11 +23,13 @@ import {
   type Cet6Block,
   type Cet6Meta,
   type Cet6Question,
+  type CetLevel,
   type Cet6Section
 } from '../../../../shared/cet6'
 import Cet6Review from './Cet6Review.vue'
 
 const props = defineProps<{
+  level?: CetLevel
   section: Cet6Section
   block: Cet6Block | null
   currentQ: Cet6Question | null
@@ -51,14 +53,14 @@ const sharedTitle = computed(() => props.section.sharedWithTitle || props.sectio
 
 const part = computed(() => {
   const t = props.section.type
-  return { no: CET6.PART_NO[t], name: CET6.PART[t], minutes: CET6.PART_MINUTES[t] }
+  return { no: CET6.PART_NO[t], name: CET6.PART[t], minutes: cetCopy(props.level ?? 'cet6').PART_MINUTES[t] }
 })
 
 const directions = computed(() =>
   (props.section.directions || '').replace(/^\s*Directions\s*[:：]\s*/i, '').replace(/[\s_]+$/, '')
 )
 
-const figureSrc = computed(() => (props.section.figure?.src ? mediaUrl(props.section.figure.src, assetBase().cet6) : ''))
+const figureSrc = computed(() => (props.section.figure?.src ? mediaUrl(props.section.figure.src, assetBase()[props.level ?? 'cet6']) : ''))
 
 type Part = string | { blank: number }
 interface Para { parts: Part[]; zh: boolean }
@@ -117,14 +119,14 @@ const blockViews = computed<BlockView[]>(() => {
   if (isReading.value) return []
   let last = ''
   return (props.section.blocks || []).map((block) => {
-    const heading = blockHeading(props.section, block)
+    const heading = blockHeading(props.section, block, props.level)
     const questions = (props.section.questions || []).filter((q) => q.blockId === block.id)
     const showSection = heading.section && heading.section !== last ? heading.section : ''
     if (heading.section) last = heading.section
     let range = ''
     if (heading.unit && questions.length) {
       const nums = questions.map((q) => q.number)
-      range = CET6.questionsRange(Math.min(...nums), Math.max(...nums), `${heading.unit.split(/\s+/)[0].toLowerCase()}`)
+      range = CET6.questionsRange(Math.min(...nums), Math.max(...nums), heading.unit.toLowerCase().startsWith('news report') ? 'news report' : heading.unit.split(/\s+/)[0].toLowerCase())
     }
     return {
       block,

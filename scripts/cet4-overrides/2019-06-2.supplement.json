@@ -1,0 +1,814 @@
+{
+  "1": {
+    "answer": "B",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）"
+  },
+  "2": {
+    "answer": "D",
+    "evidence": "解析OCR文本 md 第561行（与 agy 既有答案零冲突）"
+  },
+  "3": {
+    "answer": "C",
+    "evidence": "解析OCR文本 md 第606行（与 agy 既有答案零冲突）"
+  },
+  "4": {
+    "answer": "A",
+    "evidence": "解析OCR文本 md 第613行（与 agy 既有答案零冲突）"
+  },
+  "5": {
+    "answer": "D",
+    "evidence": "解析OCR文本 md 第660行（与 agy 既有答案零冲突）"
+  },
+  "7": {
+    "answer": "C",
+    "evidence": "解析OCR文本 md 第672行（与 agy 既有答案零冲突）"
+  },
+  "9": {
+    "answer": "C",
+    "evidence": "解析OCR文本 md 第755行（与 agy 既有答案零冲突）"
+  },
+  "10": {
+    "answer": "B",
+    "evidence": "解析OCR文本 md 第761行（与 agy 既有答案零冲突）"
+  },
+  "11": {
+    "answer": "A",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）"
+  },
+  "13": {
+    "answer": "C",
+    "evidence": "解析OCR文本 md 第842行（与 agy 既有答案零冲突）"
+  },
+  "16": {
+    "answer": "C",
+    "evidence": "解析OCR文本 md 第912行（与 agy 既有答案零冲突）"
+  },
+  "17": {
+    "answer": "D",
+    "evidence": "解析OCR文本 md 第922行（与 agy 既有答案零冲突）"
+  },
+  "18": {
+    "answer": "B",
+    "evidence": "解析OCR文本 md 第933行（与 agy 既有答案零冲突）"
+  },
+  "19": {
+    "answer": "A",
+    "evidence": "解析OCR文本 md 第986行（与 agy 既有答案零冲突）"
+  },
+  "20": {
+    "answer": "B",
+    "evidence": "解析OCR文本 md 第993行（与 agy 既有答案零冲突）"
+  },
+  "21": {
+    "answer": "A",
+    "evidence": "解析OCR文本 md 第1001行（与 agy 既有答案零冲突）"
+  },
+  "22": {
+    "answer": "D",
+    "evidence": "解析OCR文本 md 第1055行（与 agy 既有答案零冲突）"
+  },
+  "23": {
+    "answer": "C",
+    "evidence": "解析OCR文本 md 第1063行（与 agy 既有答案零冲突）"
+  },
+  "24": {
+    "answer": "A",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）"
+  },
+  "25": {
+    "answer": "B",
+    "evidence": "解析OCR文本 md 第1077行（与 agy 既有答案零冲突）"
+  },
+  "26": {
+    "answer": "C",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "27": {
+    "answer": "I",
+    "evidence": "解析OCR文本 md 第1106行（与 agy 既有答案零冲突）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "28": {
+    "answer": "K",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "29": {
+    "answer": "J",
+    "evidence": "解析OCR文本 md 第1131行（与 agy 既有答案零冲突）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "30": {
+    "answer": "A",
+    "evidence": "解析OCR文本 md 第1139行（与 agy 既有答案零冲突）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "31": {
+    "answer": "B",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "32": {
+    "answer": "O",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "33": {
+    "answer": "G",
+    "evidence": "解析OCR文本 md 第1161行（与 agy 既有答案零冲突）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "34": {
+    "answer": "F",
+    "evidence": "解析OCR文本 md 第1162行（与 agy 既有答案零冲突）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "35": {
+    "answer": "M",
+    "evidence": "解析OCR文本 md 第1172行（与 agy 既有答案零冲突）；真题.pdf 第3页文本层（词库A–O；J 为 literally，原文本层 OCR 作 litereally，解析页印为 literally）",
+    "options": [
+      {
+        "key": "A",
+        "text": "acquired"
+      },
+      {
+        "key": "B",
+        "text": "adaptations"
+      },
+      {
+        "key": "C",
+        "text": "brutal"
+      },
+      {
+        "key": "D",
+        "text": "deliberately"
+      },
+      {
+        "key": "E",
+        "text": "expressed"
+      },
+      {
+        "key": "F",
+        "text": "extends"
+      },
+      {
+        "key": "G",
+        "text": "habitats"
+      },
+      {
+        "key": "H",
+        "text": "humble"
+      },
+      {
+        "key": "I",
+        "text": "image"
+      },
+      {
+        "key": "J",
+        "text": "literally"
+      },
+      {
+        "key": "K",
+        "text": "refined"
+      },
+      {
+        "key": "L",
+        "text": "revolves"
+      },
+      {
+        "key": "M",
+        "text": "speculate"
+      },
+      {
+        "key": "N",
+        "text": "structure"
+      },
+      {
+        "key": "O",
+        "text": "thrive"
+      }
+    ]
+  },
+  "36": {
+    "answer": "H",
+    "evidence": "解析OCR文本 md 第1249行（与 agy 既有答案零冲突）"
+  },
+  "37": {
+    "answer": "E",
+    "evidence": "解析OCR文本 md 第1256行（与 agy 既有答案零冲突）"
+  },
+  "38": {
+    "answer": "G",
+    "evidence": "解析OCR文本 md 第1268行（与 agy 既有答案零冲突）"
+  },
+  "39": {
+    "answer": "B",
+    "evidence": "解析OCR文本 md 第1276行（与 agy 既有答案零冲突）"
+  },
+  "40": {
+    "answer": "K",
+    "evidence": "解析OCR文本 md 第1282行（与 agy 既有答案零冲突）"
+  },
+  "41": {
+    "answer": "F",
+    "evidence": "解析OCR文本 md 第1290行（与 agy 既有答案零冲突）"
+  },
+  "42": {
+    "answer": "I",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）"
+  },
+  "43": {
+    "answer": "H",
+    "evidence": "解析OCR文本 md 第1307行（与 agy 既有答案零冲突）"
+  },
+  "44": {
+    "answer": "J",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）"
+  },
+  "45": {
+    "answer": "G",
+    "evidence": "解析OCR文本 md 第1324行（与 agy 既有答案零冲突）"
+  },
+  "46": {
+    "answer": "D",
+    "evidence": "解析OCR文本 md 第1362行（与 agy 既有答案零冲突）"
+  },
+  "47": {
+    "answer": "C",
+    "evidence": "解析OCR文本 md 第1374行（与 agy 既有答案零冲突）"
+  },
+  "48": {
+    "answer": "C",
+    "evidence": "解析OCR文本 md 第1389行（与 agy 既有答案零冲突）"
+  },
+  "51": {
+    "answer": "B",
+    "evidence": "解析OCR文本 md 第1461行（与 agy 既有答案零冲突）"
+  },
+  "53": {
+    "answer": "A",
+    "evidence": "解析OCR文本 md 第1494行（与 agy 既有答案零冲突）"
+  },
+  "54": {
+    "answer": "B",
+    "evidence": "解析OCR文本 md 第1507行（与 agy 既有答案零冲突）"
+  },
+  "55": {
+    "answer": "D",
+    "evidence": "解析.pdf 第11–12、15–16、20–24、28页（图像核对）"
+  },
+  "57": {
+    "answer": "Lion dance is a traditional folk performance in China with a history of over 2,000 years. In the dance, two performers share one lion costume with one waving the lion's head and the other waving the lion's body and tail. They cooperate skillfully to imitate a lion's various movements. As the lion, king of beasts, symbolizes happiness and good luck, the lion dance is usually performed during the Spring Festival and other festivals. It may also be performed at other important occasions such as business opening events and wedding ceremonies, often attracting a large audience.",
+    "evidence": "解析.pdf 第28页【参考译文】（图像逐字转录）"
+  }
+}

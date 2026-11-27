@@ -15,14 +15,14 @@ import { CanvasRenderer } from 'echarts/renderers'
 import { useContentStore } from '../stores/content'
 import { useProgressStore } from '../stores/progress'
 import { usePracticeStore } from '../stores/practice'
-import { useCet6Store } from '../stores/cet6'
+import { useCetStore } from '../stores/cet6'
 import { isLessonMastered, lessonMastery } from '../../../shared/mastery'
 import { localDateKeyOf } from '../../../shared/dates'
-import { CET6_EXAM_TOTAL } from '../../../shared/cet6'
+import { CET_LEVELS } from '../../../shared/cet6'
 import { today } from '../lib/day-clock'
 import { LANG_LABEL, STAGE_LABEL } from '../lib/labels'
 import { computeAlgoProgress, computePerLang, learnedCount, overallPercent } from '../lib/overview'
-import { ALGO_COURSE, CET6, EMPTY, OVERVIEW, TITLE } from '../lib/copy'
+import { ALGO_COURSE, cetCopy, EMPTY, OVERVIEW, TITLE } from '../lib/copy'
 import { useLessonOpener } from '../lib/openLesson'
 import MiButton from '../components/base/MiButton.vue'
 import MiIcon from '../components/base/MiIcon.vue'
@@ -50,7 +50,7 @@ function token(name: string): string {
 const content = useContentStore()
 const progress = useProgressStore()
 const practice = usePracticeStore()
-const cet6 = useCet6Store()
+const cetLevels = CET_LEVELS.map((level) => ({ level, store: useCetStore(level), copy: cetCopy(level) }))
 const route = useRoute()
 const router = useRouter()
 
@@ -228,7 +228,10 @@ function resize() {
 }
 
 onMounted(() => {
-  void cet6.loadState()
+  for (const { store } of cetLevels) {
+    void store.loadState()
+    if (!store.catalogLoaded) void store.loadCatalog()
+  }
   if (!practice.loaded) void practice.load()
   if (radarEl.value) radarChart = echarts.init(radarEl.value)
   if (calendarEl.value) calendarChart = echarts.init(calendarEl.value)
@@ -264,7 +267,7 @@ onBeforeUnmount(() => {
           <div class="hero-stats">
             <span class="hero-stat" :title="OVERVIEW.STAT_LEARNED"><MiIcon name="circle-check" :size="14" /><b>{{ allLearned }}</b>{{ OVERVIEW.learnedOfTotal(allLessons.length) }}</span>
             <button type="button" class="hero-stat stat-link" :title="OVERVIEW.STAT_FAVORITES" @click="activeTab = 'favorites'"><MiIcon name="star" :size="14" /><b>{{ progress.profile.favorites.length }}</b>{{ OVERVIEW.UNIT_LESSON }}</button>
-            <button type="button" class="hero-stat stat-link" :title="CET6.STAT_TITLE" @click="router.push('/cet6')"><MiIcon name="graduation" :size="14" /><b>{{ cet6.submittedCount }}</b>{{ CET6.statUnit(CET6_EXAM_TOTAL) }}</button>
+            <button v-for="{ level, store, copy } in cetLevels" :key="level" type="button" class="hero-stat stat-link" :title="copy.STAT_TITLE" @click="router.push(`/${level}`)"><MiIcon name="graduation" :size="14" /><span v-if="level === 'cet4'">{{ copy.TITLE }}</span><b>{{ store.submittedCount }}</b>{{ copy.statUnit(store.metas.length) }}</button>
             <span class="hero-stat" :title="`${OVERVIEW.STAT_HISTORY}（${OVERVIEW.STAT_HISTORY_NOTE}）`"><MiIcon name="repeat" :size="14" /><b>{{ progress.profile.history.length }}</b>{{ OVERVIEW.UNIT_TIMES }}</span>
           </div>
         </div>

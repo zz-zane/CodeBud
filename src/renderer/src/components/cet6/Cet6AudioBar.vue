@@ -5,6 +5,7 @@
  */
 import { ref, watch } from 'vue'
 import { CET6 } from '../../lib/copy'
+import MiIcon from '../base/MiIcon.vue'
 import { formatTime } from '../../../../shared/cet6'
 
 const props = defineProps<{ src: string; tip: string }>()
@@ -88,8 +89,8 @@ defineExpose({ pause })
       @error="failed = !!src"
     />
     <template v-if="src">
-      <button type="button" class="pg-chip" :aria-label="playing ? CET6.AUDIO_PAUSE : CET6.AUDIO_PLAY" data-audio="toggle" @click="toggle">
-        {{ playing ? CET6.AUDIO_PAUSE : CET6.AUDIO_PLAY }}
+      <button type="button" class="icon-btn" :title="playing ? CET6.AUDIO_PAUSE : CET6.AUDIO_PLAY" :aria-label="playing ? CET6.AUDIO_PAUSE : CET6.AUDIO_PLAY" data-audio="toggle" @click="toggle">
+        <MiIcon :name="playing ? 'pause' : 'play'" :size="16" />
       </button>
       <button type="button" class="pg-chip" :title="CET6.AUDIO_BACK" :aria-label="CET6.AUDIO_BACK" @click="seekBy(-10)">-10</button>
       <button type="button" class="pg-chip" :title="CET6.AUDIO_FORWARD" :aria-label="CET6.AUDIO_FORWARD" @click="seekBy(10)">+10</button>

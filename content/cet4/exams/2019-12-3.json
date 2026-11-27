@@ -1,0 +1,1891 @@
+{
+  "id": "2019-12-3",
+  "title": "2019年12月 第3套",
+  "year": 2019,
+  "month": 12,
+  "set": 3,
+  "status": "ready",
+  "issues": [],
+  "sources": [
+    {
+      "id": "cet4-2019-12-3-audio-note",
+      "title": "听力说明.txt",
+      "localPath": "<本地四级真题目录>/2019.12 第3套/听力说明.txt"
+    },
+    {
+      "id": "cet4-2019-12-3-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2019.12 第3套/真题.pdf"
+    },
+    {
+      "id": "cet4-2019-12-3-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2019.12 第3套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2019-12-3-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2019.12 第3套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "For this part, you are aJlowed 30 minutes to write a letter to a foreign friend who",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "For this part, you are aJlowed 30 minutes to write a letter to a foreign friend who",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-12-3-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "For this part, you are aJlowed 30 minutes to write a letter to a foreign friend who",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "Dear Tom,\n\nI have just received your letter and I am so excited to hear that you are planning to study in a Chinese university. Now I am writing to recommend a university to you. That is Peking University.\n\nThere are several reasons for my recommendation. To begin with, as a renowned comprehensive university in the capital city of China, it boasts a wide range of academic disciplines, with a great atmosphere of study. What’s more, Beijing, where the university is located, enjoys a good climate with four distinct seasons, similar to your hometown, which means you can adapt to it quite well. Finally, I am now studying on this campus. If you come, we can study and eat delicious food together. And I can’t wait to teach you to speak Chinese.\n\nI hope you will find these proposals useful and I am looking forward to meeting you on our campus.\n\nSincerely yours,\nLi Hua",
+          "explanation": "结构 框图 :\n\n第 2 段 说 明 推荐 北京 大 学 的 理由 : 北京 大 学 是 一 所 综合 性 大 学 ， 负 有 盛名 ，\n\nA.Letter to a Foreign\n\nFriend Who Wants to\nStudy in China\n\n-@| 学 科 齐 全 ， 学 习 氛 围 好 ; 学 校 所 在 城市 的 气候 与 外 国 朋 友 的 家 乡 相似 ; 自 |\n， 己 也 在 这 个 学 校 ， 能 和 对 方 一 起 学 习 ， 品 尝 美 食 ， 并 且 方便 教 对 方 中 文 。 ，\n\n范文 点 评 :\n参考 范文 精彩 点 评\n(1] Dear Tom, C1) 称呼 语 。\n\n[2] I have just received your letter and I am so excited to hear that\nyou are planning to study in a Chinese university. [3] Now I am writing\nto recommend a university to you. {4} That is Peking University.\n\n(5) There are several reasons for my recommendation. {6} To begin\nwith, as a renowned comprehensive university in the capital city of\nChina, it boasts a wide range of academic disciplines, with a great\natmosphere of study. {7] What’s more, Beijing, where the university\nis located, enjoys a good climate with four distinct seasons, similar to\nyour hometown, which means you can adapt to it quite well. [8]\nFinally, I am now studying on this campus. If you come, we can study\nand eat delicious food together. And I can’t wait to teach you to speak\nChinese.\n\n{9} I hope you will find these proposals useful and I am looking\n\n(2113) 引出 话题 :一 位 外 国 朋 友 要\n来 中 国 上 大 学 , 回信 推荐 一 所\n学 校 。\n\n(4) SR RR ARR KS.\n\n(5) 为 过 渡 句 ,引出 下 文 推荐 北京 大\n学 的 三 点 理由 。\n\n(61 £71 £8) 分别 使 用 To begin\nwith、 What's more 和 Finally 从\n三 个 方面 说 明 推荐 北京 大 学 的\n原因 。\n\n【9] 用 并 列 句 总 结 全 文 , 表 明 自 己 的\n\nforward to meeting you on our campus. ar BAA.\n(10] Sincerely yours, | (10) 落款 。\nLi Hua\nMAIL:\ncurriculum 课程 : lecture 讲座\nscholarship 奖学金 : seminar 研讨 班\n\naccommodation 住宿\n\n四 级 2019 年 12 月 53\n\n! teaching staff 教职员 工\n\nacademic competence 学 术 能 力 } facility 设施 ,设备\n\nextracurricular activity 课外 活动 : shopping mall 大 型 购物 中 心\nconvenient 方便 的 ; job opportunity 就 业 机 会\nnative 当地 人 : public transportation 公共 交通",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2019.12 第3套/真题解析听力.md 解析段 Part I（去除双栏混入的中文点评与编号噪声）"
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2019-12-1",
+      "sharedWithTitle": "2019年12月 第1套",
+      "sharedNote": "本套听力与 2019年12月 第1套 共用，题目、解析和听力材料集中在 2019-12-1 练习；本套不再重复展示。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "Millions of people travel by plane every single day. If you're planning on being one of them soon, you might not be looking forward to the __(26)__ feeling air travel often leaves you with.\n\nBesides the airport crowds and stress, traveling at a high altitude has real effects on the body. Although the pressure of the cabin is __(27)__ to prevent altitude sickness, you could still __(28)__ sleepiness or a headache. The lower oxygen pressure found in an aircraft cabin is __(29)__ to that at 6,000-8,000 feet of altitude. A drop in oxygen pressure can cause headaches in certain __(30)__. To help prevent headaches, drink plenty of water, and avoid alcohol and coffee.\n\nAirplane food might not really be as tasteless as you __(31)__ thought. The air you breathe in a plane dries out your mouth and nose, which can affect your sense of taste. Perception of sweet and salty foods dropped by almost 30 percent in a simulation of air travel. However, you can make your taste buds active again by drinking water. A dry mouth may __(32)__ taste sensitivity, but taste is restored by drinking fluids.\n\nAlthough in-flight infections __(33)__ in dry environments like airplanes, your risk of getting sick from an airplane is actually low because of the air __(34)__ used. Unless you're sitting next to someone who is coughing or sneezing, you shouldn't worry too much about getting sick. However, bacteria have been shown to live on cabin surfaces, so wash your hands __(35)__.",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "transcript": null,
+          "translation": "【文章 来 源 】 本 文选 自 2019 年 3 月 19 日 发 表 在 ww. thehealthy. com( 健 康 网 站 ) 上 的 一 篇 标题 为 “11 Things\nTraveling on a Plane Does to Your Body”(《 乘 飞机 旅行 对 身体 的 11 FRB) AR,\n【结构 框图\n\n1\n1\n\n】 第 2 段 说 明 氧气 压 下 降 会 让 人 感到 昏 氏\n\nHERAT RE | |@ penser,\nDa Fade TR eee\n些 影 响 。 +O! 第 3 段 说 明 乘 飞机 会 影响 味觉， 但 是 多 喝 水 能 够 有 所 恢复 。\n\n‘Of 逢 1 县 介绍 乘机 被 传染 疾病 的 风险 很 小 ， 但 是 要 吉 旋 手 。\n\n【词性 分 析 】\n\n名 if]: BD channels 途径 ;频道 ; C) equivalent 等 同 物 ,等价物 ; D) experience 经 验 ;经 历 : E) filters 过 滤器 ;\nG) individuals 个 人 ,个 体 ; D particular 细节 ,详情\n\n动 il: A) adjusted 适应 ,习惯 ;调整 ， B) channels 引导 ;传送 ， D) experience 经 历 ;体会 到 ; E) filters 过 滤 ;\nK) reduce 减少 ,降低 ; L) renovated 修复 ,翻新 ; M) smooth 抚 平 ;使 光滑 ; N) thrive 兴旺 ,欣欣 向 荣\n\n形容 词 : © equivalent 等 同 的 ,相当 的 ; D particular 特别 的 ;挑剔 的 ; M) smooth 光滑 的 ,平滑 的 ; O) unpleasant\n使 人 不 愉快 的 ;不 客气 的\n\n词 : F) > frequently 2 经 常 地 HD) D originally 原先 ,最 初 ; D primarily 主要 地"
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读",
+          "text": "Each paragraph is marked with a l,ett,er. Answer the questions by marking the corresponding l,etter on Answer Sheet 2. A South Korean city designed for the future takes on a life of its own\n[A] Getting around a city is one thing-and then there's the matter of getting from one city to another. One vision of the perfect city of the future is a place that offers easy access to air travel. In 2011, a University of North Carolina business professor named John Kasarda published a book called Aerotropolis : The Way We'll Live Next. Kasarda says future cities should be built intentionally around or near airports. The idea, as he has put it, is to offer businesses \"rapid, long-distance connectivity on a massive scale. \"\n[B] \"The 18th century really was a waterborne（水运的） century, the 19th century a rail century, the 20th century a highway, car, truck century-and the 21st century will increasingly be an aviation century, as the globe becomes increasingly connected by air, \" Kasarda says. Songdo, a city built from scratch in South Korea, is one of Kasarda's prime examples. It has existed for just a few years. \"From the outset, it was designed on the basis of connectivity and competitiveness, \" says Kasarda. \"The government built the bridge directly from the airport to the ·songdo International Business District. And the surface infrastructure was built at the same time as the new airport. \"\n[C] Songdo is a stone's throw from South Korea's lncheon Airport, its main international hub ( ;f!Kffl). But it takes a lot more than a nearby airport to be a city of the future. Just building a place as an \"international business district\" doesn't mean it will become one. Park Yeon Soo conceived（构想）this city of the future back in 1986. He considers Songdo his baby. Park sees himself as a visionary. Thirty years after he imagined the city, Park's baby is close to 70 percent built, with 36, 000 people living in the business district and 90, 000 residents in greater Songdo. It's about an hour outside 201s. 12 / 2 (ffi3 lU Seoul, built on former tidal flats along the Yellow Sea. There's a Coast Guard building and a tall trade tower, as well as a park, golf course and university.\n[D] Chances are you've actually seen this place. Songdo appears in the most famous music video ever to come out of South Korea. \"Gangnam Style\" refers to the fashionable Gangnam district in Seoul. But some of the video was filmed in Songdo. \"I don't know if you remember, there was a scene in a subway station. That was not Gangnam. That was actually Songdo,\" says Jung Won Son, a professor of urban development at London's Bartlett School of Planning. \"Part of the reason to shoot there is that it's new and nice. \"\n[E] The city was supposed to be a hub for global companies, with employees from all over the world_. But that's not how it has turned out. Songdo's reputation is as a futuristic ghost town. But the reality is more complicated. A bridge with big, light-blue loops leads into the business district. In the center of the main road, there's a long line of flags of the world. On the corner, there's a Starbucks and a 7-Eleven-all of the international brands that you see all over the world nowadays.\n[F] The city is not empty. There are mothers pushing baby carriages, old women with walkers-even in . the middle of the day, when it's 90 degrees out. Byun Young-Jin chairs the Songdo real estate . association and started selling property here when the first phase of the city opened in 2005. He says demand has boomed in the past couple of years. Most of his clients are Korean. In fact, the developer says, 99 percent of the homes here are sold to Koreans. Young families move here because the schools are great. And that's the problem: Songdo has become a popular Korean city­ more popular as a residential area than a business one. It's not yet the futuristic international business hub that planners imagined. \"It's a great place to live. And it's becoming a great place to work,\" says Scott Summers, vice-president of Gale International, the developer of the city. The floor-to-ceiling windows of his company's offices overlook Songdo Central Park, with a canal full of small boats and people fishing. Shimmering（闪烁的） glass towers line the canal's edge. :•\n[G] \"What's happened is that our focus on creating that quality of life first has enabled the residents to live here,\" Summers says. _But there needs to be strong economic incentives for companies to locate here. The city is still unfinished, and it feels a bit like a theme park. It doesn't feel all that futuristic. There's a high-tech underground trash disposal system. Buildings are environmentally friendly. Everybody's television set is connected to a system that streams personalized language or exercise classes.\n[H] But this is not Star Trek. And to some of the residents, Songdo feels hollow. \"I'm, like, in prison for weekdays. That's what we call it in the workplace,\" says a woman in her 20s. She doesn't want to use her name for fear of being fired from her job. She goes back to Seoul every weekend. \"I say I'm prison-breaking on Friday nights. \" But she has to make the prison break in her own car. There's no high-speed train connecting Songdo to Seoul, just over 20 miles away.\n[I] Park Yeon Soo, the man who first imagined Songdo, feels frustrated, too. He says he built South Korea a luxury vehicle, \"like Mercedes or BMW. It's a good car now. But we're waiting for a good driver to accelerate. \" But there are lots of other good cars out there, too. The world is dotted with futuristic, high-tech cities trying to attract the biggest international companies.\n[J] Songdo's backers contend that it's still early, and business space is filling up-about 70 percent of finished offices are now occupied. Brent Ryan, who teaches urban design at MIT, says Songdo proves a universal principle. \"There have been a lot of utopian（乌托邦的） cities in history. And the reason we don't know about a lot of them is that they have vanished entirely. \" In other words, when it comes to cities-or anything else-it is hard to predict the future.",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "transcript": null,
+          "translation": "【文章 来 源 】〗 本 文选 自 2015 年 10 月 1 日 发 表 在 ww. npr. org( 美 国 国家 公共 电台 官网 )] 上 的 一 篇 标题 为 “A\nSouth Korean City Designed For The Future Takes On A Life Of Its Own”(《 一 座 为 未 来 而 设计 的 韩国 城市 呈\n\n现 出 自己 的 生命 力 沪 的 文章 。\n【结构 框图 】\n\n本 文 主要 探讨 了 韩\n国 的 未 来 之 城 松 岛\n的 设计 理念 和 发 展\n\n现状 ， 以 及 对 未 来\n的 发 展 预期 。\n\n答案 详解"
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "The fifth largest city in the US passed a significant soda tax proposal that will letry ( ffl:&) 1. 5 cents per liquid ounce on distributors. Philadelphia's new measure was approved by a 13 to 4 city council vote. It sets a new bar for similar initiatives across the country. It is proof that taxes on sugary drinks can win substantial support outside super-liberal areas. Until now, the only city to successfully pass and implement a soda tax was Berkeley, California, in 2014. The tax will apply to regular and diet sodas, as well as other drinks with added sugar, such as Gatorade and iced teas. It's expected to raise $ 410 million over the next five years, most of which will go toward funding a universal pre-kindergarten program for the city. While the city council vote was met with applause inside the council room, opponents to the measure, including soda lobbyists, made sharp criticisms and a promise to challenge the tax in court. \"The tax passed today unfairly singles out beverages-including low- and no-calorie choices, \" said 2019.121 4 Cffi 3 lD\n\nLauren Kane, spokeswoman for the American Beverage Association. \" But most importantly, it is against the law. So we will side with the majority of the people of Philadelphia who oppose this tax and take legal action to stop it. \" An industry-backed anti-tax campaign has spent at least $ 4 million on advertisements. The ads criticized the measure, characterizing it as a \"grocery tax. \" Public health groups applauded the approved tax as a step toward fixing certain lasting health issues that plague Americans. \"The move to recapture a small part of the profits from an industry that pushes a product that contributes to diabetes, obesity and heart disease in poorer communities in order to reinvest in those communities will sure be inspirational to many other places, \" said Jim Krieger, executive director of Healthy Food America. \"Indeed, we are already hearing from some of them. It's not 'just Berkeley' anymore. \" Similar measures in California's Albany, Oakland, San Francisco and Colorado's Boulder are becoming hot-button issues. Health advocacy groups have hinted that even more might be coming.",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "transcript": null,
+          "translation": "【文章 来 源 】 本 文选 自 2016 年 6 月 16 日 发 表 在 www. qz. com 网 站 上 的 一 篇 标题 为 “Philadelphia just passed a\nlandmark soda tax”(《 费 城 刚刚 通过 了 一 项 具有 里 程 碑 意 义 的 碳酸 饮料 税 沁 的 文章 。\n\n【结构 框图 】\n\n本 文 主要 介绍 了 美国 碳酸 | |\n饮料 税收 政策 支持 者 和 反 |-+-O! 第 4 一 6 段 论 述 了 该 政策 反对 者 的 看 法 和 举措 。 |\n对 者 的 意见 。 RSE OIE ‘\n\n四 级 2019 年 12 月 58"
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "Popping food into the microwave for a couple of minutes may seem utterly harmless, but Europe's stock of these quick-cooking ovens emit as much carbon as nearly 7 million cars , a new study has fom1d. And the problem is growing. With costs falling and kitchen appliances becoming \"status\" items, owners are throwing away microwaves after an average of eight years. This is pushing sales of new microwaves which are expected to reach 135 million annually in the EU by the end of the decade. A study by the University of Manchester calculated the emissions of Co2 -the main greenhouse gas responsible for climate change-at every stage of microwaves, from manufacture to waste disposal. \"It is electricity consumption by microwaves that has the biggest impact on the environment,\n\n0\n\nsay the\n\nauthors. The authors also calculate that the emissions from using 19 microwaves over a year are the same as those from using a car. According to the same study, efforts to reduce consumption should focus on improving consumer awareness and behaviour. For example, consumers could use appliances in a more efficient way by adjusting the time of cooking to the type of food. However, David Reay, professor of carbon management, argues that, although microwaves use a great deal of energy, their emissions are minor compared to those from cars. In the UK alone, there are around 30 million cars. These cars emit more than all the microwaves in the EU. Backing this up, recent data show that passenger cars in the UK emitted 69 million tons of CO2 in 2015. This is 10 times the amount this new microwave oven study estimates for annual emissions for all the microwave ovens in the EU. Further, the energy used by microwaves is lower than any other form of cooking. Among common kitchen appliances used for cooking, microwaves are the most energy efficient, followed by a stove and finally a standard oven. Thus, rising microwave sales could be seen as a positive thing.",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "transcript": null,
+          "translation": "Microwave Ovens Emit Nearly as Much CO, as 7m Cars”(《 欧 洲 微波 炉 排放 的 二 氧化 碳 几 乎 和 700 万 辆 汽车 排放 的\n\n一 样 多 力 的 文章 。\n【结构 框图 】\n0!\naescamisabat bana) |\nSAMMI | |!\n系 ， 介 绍 了 两 种 不 同 | Mlle\n的 观点 。 |\nL-O;"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-12-3-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "O",
+          "explanation": "考点 ESTE. A) 【语法 判断 空格 前 是 系 动词 is 后面 是 不 定式 符\nO) 【语法 判断 】 空 格 前 是 定 冠 词 the, 后 面 是 名 词 号 to, 因 此 空格 处 应 填 人 形容 词 或 者 动词 的 分 词\nfeeling, 因 此 应 填 人 形容 词 。 形式 。\n【语义 判断 ]〗 空格 所 在 句 指出 ,如 果 你 打算 很 快 成 【语义 判断 】〗 空 格 所 在 部 分 指出 ,机 舱 的 气压\n为 他 们 中 的 一 员 , 你 可 能 不 会 期 待 航 空 旅行 通常 也 防 高 海拔 不 适 。 为 了 乘客 的 舒适 , 飞\n给 你 留 下 的 那 种 的 感 党 。 由 此 可 知 ,你 机 在 飞行 时 ,机 舱 内 的 气压 不 能 与 外 部 气压 相同 ，\n不 会 期 待 乘 飞 机 带 来 的 感受 ,而 且 下 文 也 提 到 , 乘 是 需要 调整 的 ,因此 空格 处 应 填 人 含有 “调整 > 意\n飞机 可 能 会 导致 昏 香 欲 睡 . 头 疼 等 问题 ,因此 空格 义 的 词 , 故 答案 为 adjusted。\n处 应 填 人 含有 贬义 的 形容 词 。 在 备 选 形容 词 中 ，\n只 有 unpleasant 是 贬义 的 , 意 为 “使 人 不 愉快 的 ”，\n故 本 题 答案 为 unpleasant。 格 处 应 填 人 动词 原形 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）；真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【 考 点 】 语 义 推 断 题 。 【语义 判断 〗sleepiness 和 headache 都 是 人 的 感",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）；真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【 考 点 】 动 词 辨析 题 。\nD) 【语法 判断 】 空 格 前 有 情态 动词 could, 因 此 推断 空",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "C",
+          "explanation": "©",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）；真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "G",
+          "explanation": "G)",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "H",
+          "explanation": "了 D",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）；真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "K",
+          "explanation": "K)\n受 , 因 此 空格 处 应 填 人 含有 “感受 ?意义 的 动词 原\n形 , 故 答案 为 experience。 填 人 空格 处 ,表示 你 仍\n然 会 感到 昏 昏 欲 睡 或 头疼 。\n【考点 】 语义 推断 题 。\n【语法 判断 】 空 格 前 是 系 动词 is, 后面 是 介词 to, 因\n此 应 填 人 形容 词 或 者 动词 的 分 词 形式 。\n【语义 判断 】 空 格 前 一 句 提 到 ,机 舱 的 气压 已 经 被\n调整 了 。 空 格 所 在 句 是 对 比 飞机 机 舱 内 的 氧气 压\n和 海拔 6,000 至 8, 000 英尺 的 氧气 压 , 二 者 都 较\n低 。 因 此 ,空格 处 应 填 人 含有 “等 同 于 ”意义 的 词 ，\n故 答案 为 equivalent。\n【考点 】 名 词 辨析 题 。\n【语法 判断 】 空 格 前 是 形容 词 certain, 因 此 应 填 人\n名 词 。\n【语义 判断 】 空 格 所 在 句 指出 ,氧气 压 的 下 降 会 导\n致 头疼 。 由 常识 可 知 , 肯 定 是 飞机 上 的\n乘客 感到 头疼 ,因此 空格 处 应 填 人 含有 “人 ,乘客 ”\n意义 的 名 词 , 故 本 题 答案 为 individuals。\n【考点 】 副 词 辩 析 题 。\n【语法 判断 】 空 格 所 在 句 成 分 完整 ,因此 应 填 人 副\n词 修饰 动词 thought。\n【语义 判断 】 由 下 文 可 知 ,你 在 飞机 上 呼吸 的 空气\n会 令 你 的 嘴巴 和 鼻子 变 得 干燥 , 这 会 影响 味觉 。 在\n一 次 模拟 飞行 中 ,人 们 对 甜 味 和 威 味 食物 的 感知 下\n降 了 大 约 30% 。 由 此 推断 ,飞机 餐 不 一 定 像 你 想 的\n那样 真 的 毫 无 味道 。 因 此 ,空格 处 应 填 人 含有 “ 原\n来 ,原本 \"意义 的 副词 , 故 答案 为 originally。\n【考点 】 动词 辨析 题 。\n【语法 判断 】 空 格 前 有 情态 动词 may, 因此 空格 处\n应 填 人 动词 原形 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）；真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "N",
+          "explanation": "N)",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "E",
+          "explanation": "E)",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "adjusted"
+            },
+            {
+              "key": "B",
+              "text": "channels"
+            },
+            {
+              "key": "C",
+              "text": "equivalent"
+            },
+            {
+              "key": "D",
+              "text": "experience"
+            },
+            {
+              "key": "E",
+              "text": "filters"
+            },
+            {
+              "key": "F",
+              "text": "frequently"
+            },
+            {
+              "key": "G",
+              "text": "individuals"
+            },
+            {
+              "key": "H",
+              "text": "originally"
+            },
+            {
+              "key": "I",
+              "text": "particular"
+            },
+            {
+              "key": "J",
+              "text": "primarily"
+            },
+            {
+              "key": "K",
+              "text": "reduce"
+            },
+            {
+              "key": "L",
+              "text": "renovated"
+            },
+            {
+              "key": "M",
+              "text": "smooth"
+            },
+            {
+              "key": "N",
+              "text": "thrive"
+            },
+            {
+              "key": "O",
+              "text": "unpleasant"
+            }
+          ],
+          "answer": "F",
+          "explanation": "F)\n【语义 判断 】 本 句 指 出 ,干燥 的 嘴巴 可 能 会\n味 党 敏感 度 。 本 段 第 二 句 提 到 ,你 在 飞机 上 呼吸\n的 空气 令 你 的 嘴巴 和 鼻子 变 得 干燥 , 这 会 影响 味\n觉 。 第 三 句 提 到 了 一 次 模拟 飞行 ,人 们 对 甜 味 和\nRR DH RA FRET AKA 30% 。 因 此 ,空格 处\n应 填 人 含有 “降低 ,减少 ”意义 的 动词 原形 , 故 答案\n为 reduce。\n【考点 】 动词 辩 析 题 。\n【语法 判断 】〗 空 格 位 于 Although 引导 的 让 步 状 语\n从 句 中 ,从 名 的 主语 是 infections, 文 章 时 态 是 现\n在 时 ,因此 空格 处 应 填 人 动词 的 原形 。\n【语义 判断 】 本 句 指出 ,虽然 飞行 中 的 感染 会 在 像\n飞机 这 样 的 干燥 环境 中 ,但 是 你 从 飞机\n上 得 病 的 风险 实际 上 很 低 。 两 个 分 句 之 间 是 转折\n关系 ,由 此 可 推断 ,在 飞机 上 会 滋生 感染 或 者 感染\n传播 得 很 快 , 故 本 题 答案 为 thrive。\n【考点 】 名 词 辨析 题 。\n【语法 判断 】 空 格 前 有 the air, 空 格 处 只 能 作 名 词\n的 修饰 语 ,因此 空格 处 应 填 人 名 词 。\n【语义 判断 】 传 染病 一 般 通 过 空气 传播 ,飞机 上 要\n使 用 和 空气 有 关 的 某 个 东西 才能 保证 乘客 不 被 传\n染 。 备 选 名 词 中 ,只 有 filters FAH. air filters\n意 为 “空气 过 滤器 ”, 故 本 题 答案 为 filters。\n【考点 副词 辨析 题 。\n【语法 判断 】 空 格 所 在 句 是 一 个 祈 使 句 ,具备 谓语\n动词 和 宾语 ,因此 应 填 人 副词 。\n【语义 判断 】 本 句 指出 ,细菌 被 证 明 能 在 机 舱 表 面\n生存 ,所 以 要 洗手 。 既 然 机 舱 表面 有 很\n多 细菌 ,那么 就 要 勤 洗 手 , 因此 空格 处 应 填 人\nfrequently,\nTe SREX\n每 天 都 有 数 百 万 人 乘 飞机 旅行 。 如 果 你 打算 很 快 成 为 他 们 中 的 一 员 ,你 可 能 不 会 期 待 航空 旅行 通常\n给 你 留 下 的 那 种 不 愉快 的 感觉 。\n除了 机 场 拥挤 的 人 群 和 紧张 的 气氛 ,在 高 海拔 飞行 对 你 的 身体 有 实际 的 影响 。 尽 管 机 舱 的 气压 已\n经 做 出 了 调整 以 预防 高 海拔 不 适 , 你 仍然 会 感到 昏 昏 欲 睡 或 头疼 。 飞 机 机 舱 的 氧气 压 较 低 , 等 同 于 海拔\n6,000 至 8,000 英尺 的 气压 。 氧 气压 的 下 降 可 以 导致 某 些 人 头疼 。 为 了 帮助 预防 头疼 ,要 大 量 饮水 ,并\n且 要 避免 酒精 和 咖啡 。\n飞机 上 的 食物 可 能 不 像 你 原来 想象 的 那么 难 吃 。 你 在 飞机 上 呼吸 的 空气 令 你 的 嘴巴 和 鼻子 变 得 干\n燥 , 这 会 影响 你 的 味觉 。 在 一 次 模拟 飞行 中 ,人 们 对 甜 味 和 威 味 食物 的 感知 下 降 了 大 约 30% 。 但 是 ,你 可\n以 通过 饮水 使 味 蓄 重新 活 牙 起 来 。 干 燥 的 嘴巴 可 能 会 降低 味觉 敏感 度 , 但 是 饮水 可 以 恢复 味觉。\n虽然 飞行 中 的 感染 会 在 像 飞 机 这 样 的 干燥 环境 中 激 生 ,但 是 你 从 飞机 上 得 病 的 风险 实际 上 很 低 , 因\n为 使 用 了 空气 过 滤器 。 除 非 你 坐 在 咳嗽 或 打 喷 呈 的 人 旁边 ,否则 你 不 用 太 担心 生病 的 问题 。 但 是 ,细菌 被\n证 明 能 在 机 舱 表 面 生存 ,所 以 要 勤 洗手 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）；真题.pdf 第2页文本层（词库A–O）"
+        },
+        {
+          "id": "2019-12-3-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "Songdo's popularity lies more in it.s quality of life than it.s business attraction.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【 定 位 】 由 题 干 中 的 quality of life 和 business\nattraction 定位 到 文章 F) 段 第 八 句 。\nFP) 【 精 析 】 同 义 转述 题 。 定 位 句 提 到 , 松 岛 作为 一 个\n住宅 区 比 商 业 区 更 受 欢迎 。 定 位 句 和 题 干 中 都 提\n到 了 松 岛 受 欢迎 的 原因 , 题 干 中 的 quality of life\n和 business attraction 分 别 对 应 定位 句 中 的 a\nresidential area 和 a business one, 故 答案 为 F) 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "The man who conceived Songdo feels disappointed because it has fallen short of his expectations.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "定 位 】 由 题 干 中 的 The man who conceived Songdo\n和 disappointed 定位 到 文章 D 段 前 四 句 。\nD 【 精 析 】 细 节 推 断 题 。 定 位 句 指出 ,第 一 个 构想 松\n岛 的 人 感到 很 诅 形 。 他 认为 他 为 韩国 打造 了 一 辆\n豪华 车 ,就 像 奔 驰 或 宝马 ,现在 它 是 一 辆 好 车 ,但\n是 我 们 在 等 一 个 好 的 司机 来 加 速 。 即 第 一 个 构想\n松 岛 的 人 认为 松 岛 没 有 达到 预想 的 效果 , 题 干 中\n#4) The man who conceived Songdo 即 定位 句 中 提\n到 的 Park Yeon Soo, the man who first imagined\nSongdo, 题 干 中 的 fallen short of his expectations\n是 对 定位 段 前 四 名 内 容 的 推断 概括 , 故 答案 为 D 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "A scene in a popular South Korean music video was shot in Songdo.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【 定 位 】 由 题 干 中 的 scene.South Korean music\nvideo 和 shot 定位 到 文章 D) 段 。\nD) 【 精 析 〗 细 节 归 纳 题 。 定 位 段 指出 , 松 岛 在 韩国 一\n个 音乐 视频 “江南 style” 中 出 现 过 ,其 中 一 个 在 地\n铁 站 的 场景 是 在 松 岛 拍 摄 的 。 题 干 是 对 定位 段 的\n归纳 总 结 , 故 答案 为 D) 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Songdo still lacks the financial stimulus for businesses to set up shop there.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【 定 位 】 由 题 干 中 的 financial stimulus 和 set up\nshop 定位 到 文章 G) 段 第 二 句 。\nG) 【 精 析 】 同 义 转述 题 。 定 位 句 指出 , 松 岛 需要 有 强\n大 的 经 济 激励 措施 吸引 公司 驻扎 在 这 里 。 题 干 中\n#4 financial stimulus 和 businesses to set up shop 是\n对 定位 句 中 的 economic incentives 和 companies to\nlocate here 的 同 义 转述 , 故 答案 为 G) 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "Airplanes will increasingly become the chief means of transportation, according to a professor.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【 定 位 】 由 题 干 中 的 Airplanes 和 the chief means\nof transportation 定位 到 文章 B) 段 第 一 句 。\nB) 【 精 析 】 细 节 推断 题 。 定 位 句 指出 卡 萨 达 的 观点 ，\n那 就 是 ,18 世纪 是 水 运 的 世纪 ,19 世纪 是 铁路 运\n输 的 世纪 ,20 世纪 是 高 速 公 路 .汽车 和 卡车 的 世\n纪 , 而 随 着 世界 逐步 变 得 被 空运 连通 ,21 世纪 将 日\n益 成 为 一 个 航空 世纪 。 也 就 是 说 ,飞机 将 会 逐渐\n成 为 主要 的 交通 工具 , 故 答案 为 B) 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "Songdo has ended up different from the city it was supposed to be.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【 定 位 】 由 题 干 中 的 ended up different from the\nE)",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）"
+        },
+        {
+          "id": "2019-12-3-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "Some of the people who work in Songdo complain about boredom in the workplace.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "H",
+          "explanation": "1: 0)\nA)\ncity 和 supposed to be 定位 到 文章 E) 段 前 两 句 。\n【 精 析 】 细 节 推 断 题 。 定 位 句 指出 , 松 岛 理 应 是 全\n球 公司 的 枢纽 ,员工 来 自 世界 各 地 ,但 事实 并 非 如\n此 。 也 就 是 说 , 松 岛 的 现实 情况 和 预想 不 符 , 故 答\nRAB.\n【定位 由 题 干 中 的 who work in Songdo 和\nboredom in the workplace 定位 到 文章 H) 段 第\n三 、 四 句 。\n【 精 析 】 细 节 归 纳 题 。 定 位 句 指出 ,一 个 20 多 岁 的\n女性 认为 每 个 工作 日 都 像 是 在 监狱 里 , 这 就 是 她\n们 对 工作 场所 的 感觉 。 该 句 中 提 到 的 女性 可 以 代\n表 一 部 分 在 松 岛 工作 的 人 ,她 将 工作 场所 描述 为\n监狱 ,可 见 该 女性 认为 工作 场所 很 无 聊 。 题 干 是\n对 定位 段 的 归纳 总 结 , 故 答案 为 H) 。\n. 攻 定位】 由 题 干 中 的 easy access 和 international\ntransportation 定位 到 文章 A) 段 第 二 句 。\n【 精 析 】 同 义 转述 题 。 定 位 句 指出 ,未 来 完美 城市\n的 愿景 之 一 是 提供 便捷 的 空中 旅行 。 题 干 中 的\nhave easy access to international transportation",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "A business professor says that a future city should have easy access to international transportation.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "A",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）"
+        },
+        {
+          "id": "2019-12-3-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "According to an urban design professor, it is difficult for city designers to foresee what will happen in the future.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "J",
+          "explanation": "D",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）"
+        },
+        {
+          "id": "2019-12-3-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Park Yeon Soo, who envisioned Songdo, feels a parental connection with the city.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            }
+          ],
+          "answer": "A",
+          "explanation": "©\n是 对 定位 句 中 offers easy access to air travel 的 同\n义 转述 , 故 答案 为 A) 。\n【定位 】 由 题 干 中 的 an urban design professor 和\nforesee what will happen in the future 定位 到 文\n章 J 段 第 二 句 和 最 后 一 句 。\n【 精 析 】 同 义 转述 题 。 定 位 句 指出 ,教授 城市 设计 “\n的 布 伦 特 瑞安 认为 , 当 涉 及 城市 或 其 他 事情 时 ，\n很 难 预 测 未 来 。 题 干 中 的 an urban design\nprofessor 指 的 就 是 定位 句 中 的 Brent Ryan, 题 干\n中 的 difficult... to foresee what will happen in\nthe future 是 对 定位 句 中 hard to predict the\nfuture 的 同 义 转述 , 故 答案 为 了 。\n【定位 〗 由 题 干 中 的 a parental connection 定位 到\n文章 C) 段 第 四 、 五 句 。\n【 精 析 】 细 节 推 断 题 。 定 位 句 指出 ,Park Yeon Soo\n早 在 1986 年 就 开始 构想 未 来 之 城 ,他 将 松 岛 视 为\n自己 的 孩子 。 题 干 中 的 a parental connection 和\n定位 句 中 的 He considers Songdo his baby 表达 的\n意思 一 致 , 故 答案 为 C) 。\n参考 译文\nA)\nB)\nC)\nD)\n一 座 为 未 来 而 设计 的 韩国 城市 呈现 出 自己 的 生命 力\n游览 一 个 城市 是 一 回 事 一 一 然后 就 是 从 一 个 城市 到 另 一 个 城市 的 问题 。(43) 未 来 完美 城市 的 愿景\n之 一 是 提供 便捷 的 空中 旅行 。2011 年 , 北 卡 罗莱 纳 大 学 的 商学 教授 约翰 。 卡 萨 达 出 版 了 一 本 名 为\n《航空 大 都 市 :我们 未 来 的 生活 方式 ) 的 书 。 卡 萨 达 说 ,未 来 的 城市 应 该 有 意 地 建 在 机 场 周围 或 附近 。\n正如 他 所 说 ,这 是 为 了 给 商业 提供 “大 规模 的 快速 .远程 连接 ”。\n(40) 卡 萨 达 说 ;“18 世纪 是 水 运 的 世纪 ,19 世纪 是 铁路 运输 的 世纪 ,20 世纪 是 高 速 公路 ,汽车 和 卡车\n的 世纪 ,而 随 着 世界 逐步 变 得 被 空运 连通 ,21 世纪 将 日 益 成 为 一 个 航空 世纪 。? 松 岛 是 韩国 的 一 个 从\n零 开始 的 城市 ,是 卡 萨 达 最 典型 的 例子 之 一 。 它 只 存在 了 几 年 。 卡 萨 达 说 :从 一 开始 , 它 就 基于 连\n通 性 和 竞争 性 而 设计 。 政 府 在 机 场 和 松 岛国 际 商业 区 之 间 直 接 建 立 起 一 座 桥 梁 。 地 面 基 础 设施 和\n新 机 场 同时 建成 .”\n松 岛 距 离 韩国 的 主要 国际 枢纽 仁川 机 场 只 有 一 箭 之 遥 。 但 是 想 要 成 为 未 来 之 城 仅 有 一 个 距离 近\n的 机 场 还 远 远 不 够 。 仅 仅 把 一 个 地 方 建成 < 国际 商业 区 ”并 不 意味 着 它 会 成 为 这 样 一 个 区 域 。\n(45)Park Yeon Soo 早 在 1986 年 就 开始 构想 未 来 之 城 。 他 将 松 岛 视 为 自己 的 孩子 。Park 认为 自己\n是 一 个 有 远见 的 人 。 在 他 构想 这 一 城市 的 30 年 后 ,他 的 “宝贝 ?已 经 建成 了 近 70%,36,000 人 住 在\n商业 区 ,还 有 90,000 人 住 在 大 松 岛 。 这 距离 首尔 约 1 小 时 路 程 , 建 于 黄海 沿线 的 旧 沙 滩 上 。 这 里 有\n一 座 海岸 警卫 队 大 楼 和 一 座高 答 的 贸易 塔 ,还 有 一 座 公 园 .一 个 高 尔 夫 球场 和 一 所 大 学 。\n你 可 能 真 的 见 过 这 个 地 方 。(38-1) 松 岛 在 韩国 有 史 以 来 最 著名 的 音乐 视频 中 出 现 过 。“ 江 南 style”\n指 的 是 首尔 时 尚 的 江南 区 ,但 其 中 一 些 视频 是 在 松 岛 拍 摄 的 。 伦 敦 巴特 莱特 建筑 学 院 城市 发 展 教授\nJung Won Son 说 ;“(38-2) 不 知道 你 们 是 否 记 得 ,有 一 个 在 地 铁 站 的 场景 , 那 不 是 江南 区 ,那里 实际 上\n是 松 岛 。 在 那里 拍摄 的 部 分 原因 是 它 很 新 而 且 漂亮\nE) “《〈41) 这 个 城市 理应 是 全 球 公司 的 枢纽 ,员工 来 自 世界 各 地 。 但 事实 并 非 如 此 。 松 岛 素 有 未 来 鬼城 之\n称 , 但 现实 要 复杂 得 多 。 一 座 带 有 淡 蓝 色 大 环 的 桥梁 直通 商业 区 。 在 主 路 中 心 ,有 一 长 排 世界 各 国\n的 国旗 。 在 街角 ,有 一 家 星巴克 和 一 家 7-11 一 一 所 有 你 现在 在 世界 各 地 看 到 的 国际 品牌 。\nF) “这 个 城市 并 不 是 空城 。 有 推荐 婴儿 车 的 妈妈 , 带 着 拐杖 的 老 妇 人 一 一 甚至 在 中 午 ,外 面 (华氏 )90 度\n的 时 候 。Byun Young-Jin 是 松 岛 房地产 协会 的 主席 ,2005 年 城市 第 一 期 工程 启动 时 ,他 开始 在 这 里\n出 售 房产 。 他 说 在 过 去 的 几 年 内 需求 迅速 增长 。 他 的 大 部 分 客户 都 是 韩国 人 。 该 开发 商 说 ,事实 上\n99% 的 房产 都 卖 给 韩国 人 。 年 轻 的 家 庭 搬 到 这 里 是 因为 这 里 的 学 校 很 好 。(36) 那 就 是 问题 所 在 : 松\n岛 已 经 成 为 一 个 受 欢迎 的 韩国 城市 一 一 作为 一 个 住宅 区 比 商 业 区 更 受 欢 迎 。 它 还 不 是 设计 者 想象\n中 的 未 来 国际 商业 枢纽 。 该 市 开发 商 盖 尔 国际 公司 副 总 裁 斯 科 特 。 萨 默 斯 说 “这 是 一 个 居住 的 好\n地 方 ,而 且 正在 成 为 一 个 非常 适合 工作 的 地 方 .” 从 他 办 公 室 的 落地 窗 能 够 俯 梧 松 岛 中 央 公园 ,运河\n里 满 是 小 船 和 钓鱼 的 人 。 闪 烁 的 玻璃 大 厦 在 运河 边缘 排 成 一 排 。\nG) 萨摩 斯 说 “现在 的 情况 是 ,我 们 专注 于 首先 打造 高 质量 的 生活 ,这 使 得 居民 能 够 在 这 里 生活 。”\n(39) 但 是 需要 有 强大 的 经 济 激励 措施 吸引 公司 驻扎 在 这 里 。 这 个 城市 还 未 完工 ,感觉 有 点 儿 像 一 个\n主题 公园 ,并 不 是 完全 未 来 化 的 。 有 一 个 高 科技 的 地 下 垃圾 处 理 系统 。 建 筑 物 是 环保 的 。 每 个 人 的\n电视 机 都 连接 到 一 个 传输 个 性 化 语言 或 健身 课程 的 系统 。\nH) 但 这 不 是 《星际 迷航 》。 对 于 一 些 居民 而 言 , 松 岛 感觉 很 空 。(42) 一 个 20 多 岁 的 女性 说 ;“ 我 每 个 工\n作 日 都 像 是 在 监狱 里 。 这 是 我 们 对 工作 场所 的 感觉 \"她 不 想 透 露 自己 的 姓名 ,因为 担心 被 解雇 。 她\n每 个 周末 回 到 首尔 。“ 我 说 我 星期 五 晚上 越狱 ”但 是 她 不 得 不 开 着 自己 的 私家 车 越狱 。 从 松 岛 到 首\n尔 只 有 20 多 英里 远 , 没 有 高 铁 。\nD “37) 第 一 个 构想 松 岛 的 人 Park Yeon Soo th SBIHIE. 他 说 他 为 韩国 打造 了 _ 辆 豪华 车 ， “RBH\n驰 或 宝马 ,现在 它 是 一 辆 好 车 ,但 是 我 们 在 等 一 个 好 的 司机 来 加 速 。\" 但 是 有 很 多 其 他 的 好 车 。 世 界\n上 到 处 都 是 未 来 派 的 高 科技 城市 ,试图 吸引 最 大 的 国际 公司 。\nJ“ 松 岛 的 支持 者 们 认为 现在 还 为 时 过 早 , 商 业 区 正在 逐渐 被 占据 一 一 已 完工 的 写字 楼 中 70% 已 经 人\n驻 。(44-1) 在 麻 省 理工 学 院 教授 城市 设计 的 布 伦 特 \" 瑞安 说 , 松 岛 证 实 了 一 个 普遍 规律 。“ 历 史上 有\n很 多 乌托邦 的 城市 。 我 们 不 了 解 它们 的 原因 是 它们 已 经 完全 消失 了 .。”(44-2) 换 句 话说 , 当 涉 及 城市\n或 其 他 事情 时 ,很 难 预测 未 来 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What does the passage say about the newly-approved soda tax in Philadelphia?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It will change the lifestyle of many consumers."
+            },
+            {
+              "key": "B",
+              "text": "It may encourage other US cities to follow suit."
+            },
+            {
+              "key": "C",
+              "text": "It will cut soda consumption among low-income communities."
+            },
+            {
+              "key": "D",
+              "text": "It may influence the marketing strategies of the soda business. 4 7. What will the opponents probably do to respond to the soda tax proposal?"
+            }
+          ],
+          "answer": "B",
+          "explanation": "UAE) 由 题 干 中 的 the newly- approved soda tax\n\nB)",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "What will the opponents probably do to respond to the soda tax proposal?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Bargain with the city council."
+            },
+            {
+              "key": "B",
+              "text": "Refuse to pay additional tax."
+            },
+            {
+              "key": "C",
+              "text": "Take legal action against it."
+            },
+            {
+              "key": "D",
+              "text": "Try to win public support."
+            }
+          ],
+          "answer": "C",
+          "explanation": "©\n\nin Philadelphia 定位 到 第 二 段 第 一 、 二 句 。\n【 精 析 ]】 推理 判断 题 。 定 位 句 指出 ,费城 的 新 举措\n在 市 议会 投票 选举 中 以 13 : 4 的 比例 获得 通过 。\n它 为 全 国 范围 内 的 类 似 举措 设 定 了 新 的 标准 。 由\n此 可 见 , 该 举措 不 仅 受 到 了 市 议会 的 批准 ,而 且 也\n鼓励 其 在 全 国 范围 内 展开 ,使 其 他 城市 陆续 效仿 ，\n故 答案 为 B) 。\nGES] 文章 通 篇 都 在 讲述 该 政策 支持 者 和 反对 者\n的 意见 ,并 未 提 及 任何 生活 方式 的 改变 或 者 低 收\n人 群体 消费 者 的 情况 , 故 排除 A)“ 它 将 会 改变 很\n多 消费 者 的 生活 方式 和 C)“ 它 将 会 削减 低 收入\n群体 对 于 碳酸 饮料 的 消费 ”。 文 章 第 七 段 第 二 名\n提 到 ,从 那些 生产 引发 糖尿 病 ,肥胖 症 和 心脏 病 的\n行业 那里 获取 一 小 部 分 利润 来 投资 这 些 贫困 社\n区 ,这 并 非 营销 策略 的 改变 , 故 排除 D) 。\n【定位 】 由 题 干 中 的 opponents 和 respond to the\nsoda tax proposal 定位 到 第 五 段 最 后 一 句 。\n【 精 析 】 细 节 辩 认 题 。 第 五 段 提 到 美国 饮料 协会 的\n言 人 劳 伦 ， 凯 恩 的 观点 :今天 通过 的 税收 政策\n很 不 公平 地 挑 出 了 一 些 饮 料 一 一 包括 低 卡 和 无 卡\n的 饮料 。 但 最 重要 的 是 ,这 是 违法 的 。 因 此 我 们\n将 支持 费城 中 占 绝 大 多 数 的 反对 此 项 税收 的 人 ，\n并 采取 法 律 措施 来 阻止 这 项 税收 。 由 此 可 知 反对\n者 会 采取 法 律 措施 , 故 答案 为 C) 。\nGE) 文章 第 四 段 提 到 ,该 举措 的 反对 者 ,包括 碳\n酸 饮料 的 说 客 , 在 法 庭 上 提出 了 尖锐 的 批评 来 挑\n战 这 一 税收 政策 ,文中 未 提 及 和 市 政府 谈判 , 故 排\n除 A) “和 市 政府 谈判 >。 文 中 并 没有 提 到 B)“ 拒 绝\n支付 额外 税收 ”, 故 排除 。 第 五 段 最 后 一 句 提 到 ，\n反对 者 会 支持 费城 中 占 绝 大 多 数 的 反对 此 项 税收\n的 人 ,并 采取 法 律 措施 来 阻止 这 项 税收 。 这 是 寻\n求法 律 支持 而 非 公 众 支 持 , 故 排除 D) “试图 获得\n公众 支持 ”。\n\n. 攻 定位 】 由 题 干 中 的 industry-backed anti-tax\n\ncampaign 定位 到 第 六 段 。\n\nD)",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）；真题.pdf 文本层 Q47 题干与选项"
+        },
+        {
+          "id": "2019-12-3-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "What did the industry-backed anti-tax campaign do about the soda tax proposal?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It tried to arouse hostile feelings among consumers."
+            },
+            {
+              "key": "B",
+              "text": "It tried to win grocers' support against the measure."
+            },
+            {
+              "key": "C",
+              "text": "It kept sending letters of protest to the media."
+            },
+            {
+              "key": "D",
+              "text": "It criticized the measure through advertising."
+            }
+          ],
+          "answer": "D",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）"
+        },
+        {
+          "id": "2019-12-3-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What did public health groups think the soda tax would do?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Alert people to the risk of sugar-induced diseases."
+            },
+            {
+              "key": "B",
+              "text": "Help people to fix certain long-time health issues."
+            },
+            {
+              "key": "C",
+              "text": "Add to the fund for their research on diseases."
+            },
+            {
+              "key": "D",
+              "text": "Benefit low-income people across the country."
+            }
+          ],
+          "answer": "B",
+          "explanation": "B)",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What do we learn about similar measures concerning the soda tax in some other cities?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are becoming rather sensitive issues."
+            },
+            {
+              "key": "B",
+              "text": "They are spreading panic in the soda industry."
+            },
+            {
+              "key": "C",
+              "text": "They are reducing the incidence of sugar-induced diseases."
+            },
+            {
+              "key": "D",
+              "text": "They are taking away a lot of profit from the soda industry. 2019. 12 / s O[P 1V"
+            }
+          ],
+          "answer": "A",
+          "explanation": "A)\n\nCF) 细节 辨认 题 。 定位 及 指出 ,项 自 业 界 支\n持 的 反 税 收 运动 已 经 在 广告 上 花费 了 至 少 400 万\n美元 。 这 些 广告 批判 了 这 一 举措 ,将 其 描述 为 “ 食\n品 杂货 类 税收 ?。 由 此 可 知 答案 为 D)“ 通 过 广告\n来 批判 这 一 举措 ”。\n\n【 避 错 】 原 文中 未 提 及 A)“ 它 试图 引发 消费 者 的 敌\n意 ”\"B)“ 它 试图 赢得 食品 商 的 支持 来 对 抗 这 一 举\nWA C)“ 它 持续 给 媒体 发 送 抗议 信 ?, 故 排除 。\n【定位 】 由 题 干 中 的 public health groups 定位 到\n第 七 段 第 一 句 。\n\n【 精 析 细节 辨认 题 。 定 位 句 指出 ,公共 卫生 组 织\n壮 成 这 项 获 批 的 税收 ,将 其 称 为 解决 某 些 长 期 困\n扰 美国 人 的 健康 问题 的 重要 一 步 。 由 此 可 知 ,这\n项 税收 会 帮助 解决 健康 问题 , 故 答案 为 B) 。\n\n【 避 错 】 文 中 未 提 及 A) “警示 人 们 糖 类 引发 的 疾病\n的 风险 ”, 故 排除 。 文 章 第 七 段 第 二 句 指出 ,美国\n健康 食品 的 执行 董事 吉米 。 克 里 格 说 ,从 那些 生\n产 引 发 糖尿 病 . 肥 胖 症 和 心脏 病 的 产业 那里 获取\n一 小 部 分 利润 来 投资 这 些 贫 困 社 区 , 对 于 其 他 很\n多 地 方 而 言 是 鼓舞 人 心 的 。 本 句 虽 提 到 了 投资 ，\n但 是 针对 的 是 贫困 社区 , 而 非 有 关 疾 病 的 研究 或\n是 全 国 的 低 收入 群体 , 故 排除 C)“ 给 他 们 对 于 疾\n病 的 研究 增加 投资 2 和 D)“ 使 全 国 的 低 收入 人 群\n受益 ”。\n\n【定位 】 由 题 干 中 的 similar measures 和 in some\nother cities 定位 到 最 后 一 段 第 一 句 。\n\n【 精 析 】 细 节 辨 认 题 。 定 位 句 指出 ,类 似 的 举措 在\n加 利 福 尼 亚 州 的 奥 尔 巴 尼 、 奥 克 兰 .旧金山 和 科 罗\n拉 多 州 的 博 尔 德 正在 成 为 热点 问题 。 定 位 句 中 的\nhot-button issues 和 选项 A) 中 的 sensitive issues\n含义 一 致 , 故 答案 为 A) 。\n\n【 避 错 】 文 中 最 后 一 段 指出 ,健康 的 拥护 者 暗示 说\n更 多 的 举措 将 会 来 临 ,并 未 准确 提 及 B) “它们 在\n碳酸 饮料 行业 引发 了 恐慌 ”`C)“ 它 们 降低 了 由 糖\n引起 的 疾病 的 发 病 率 ” 和 D) “它们 使 得 碳酸 饮料\n行业 利润 大 减 ”, 故 排除 。\n\n美国 第 五 大 城市 通过 了 一 项 重要 的 碳酸 饮料 税收 提案 ,对 经 销 商 征收 每 余 司 1. 5 美 分 的 税收 。\n〈46) 费 城 的 新 举措 在 市 议会 投票 选举 中 以 13 : 4 的 比例 获得 通过 。 它 为 全 国 范围 内 的 类 似 举措 设 定\n\n了 新 的 标准 。 这 足以 证 明 对 含 糖 饮料 征 税 能 够 在 超级 自由 主义 地 区 之 外 获得 大 力 支 持 。 迄 今 为 止 , 唯 一\n一 个 在 2014 年 成 功 通过 并 执行 碳酸 饮料 征 税 的 城市 是 加 利 福 尼 亚 州 的 伯克利 。\n\nV\n\n该 税收 将 适用 于 普通 或 无 糖 碳酸 饮料 ,以 及 其 他 加 糖 的 饮料 , 比如 佳 得 乐 或 冰 红 茶 。 在 未 来 五 年 中\n预计 会 征收 4.1 亿美 元 ,其 中 大 部 分 税收 会 为 该 城市 的 一 项 幼儿 园 学 龄 前 的 项 目 提供 资金 支持 。\n\n尽管 市 议会 的 投票 在 议会 会 议 室 获得 了 掌声 ,但 包括 碳酸 饮料 说 客 在 内 的 该 举措 的 反对 者 在 法 庭 上\n提出 了 尖锐 的 批评 来 挑战 这 一 税收 政策 。\n\n美国 饮料 协会 的 发 言 人 劳 伦 . 凯 恩 说 “今天 通过 的 税收 政策 很 不 公平 地 排除 了 一 些 饮料 一 一 包括\n低 卡 和 无 卡 的 饮料 。 但 最 重要 的 是 ,这 是 违法 的 。(47) 因 此 我 们 将 支持 费城 中 占 绝 大 多 数 的 反对 此 项 税\n收 的 人 ,并 采取 法 律 措施 来 阻止 这 项 税收 。\n\n(48) 一 项 由 业界 支持 的 反 税收 运动 已 经 在 广告 上 花费 了 至 少 400 万 美元 。 这 些 广告 批判 了 这 一 举\n措 , 将 其 描述 为 食品 杂货 类 税收 ”。\n\n(49) 公 共 卫 生 组 织 赞成 这 项 获 批 的 税收 ,将 其 称 为 解决 某 些 长 期 困扰 美国 人 的 健康 问题 的 重要 一 步 。\n美国 健康 食品 的 执行 董事 吉米 。 克 里 格 说 “这 个 举措 是 为 了 重新 获得 一 小 部 分 利润 ,这 些 利润 来 自 一 个\n行业 ,该 行业 将 一 种 导致 糖尿 病 ,肥胖 症 和 心脏 病 的 产品 推 向 贫困 社区 , 以 便 在 这 些 社区 进行 再 投资 , 而\n这 一 举措 对 于 其 他 很 多 地 方 而 言 无 疑 是 鼓舞 人 心 的 。 事 实 上 ,我 们 已 经 收 到 了 来 自 他 们 当中 的 一 些 消\n息 。 伯 克利 将 不 会 是 唯一 的 城市 。\n\n(50) 类 似 的 举措 在 加 利 福 尼 亚 州 的 奥 尔 巴 尼 、 奥 克 兰 .旧金山 和 科罗拉多 州 的 博 尔 德 正在 成 为 热点 问\n\n题 。 健 康 的 拥护 者 暗示 说 可 能 会 迎 来 更 多 的 举措 。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What is the finding of the new study?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Quick-cooking microwave ovens have become more popular."
+            },
+            {
+              "key": "B",
+              "text": "The frequent use of microwaves may do hmm to our health."
+            },
+            {
+              "key": "C",
+              "text": "CO2 emissions constitute a major threat to the environment."
+            },
+            {
+              "key": "D",
+              "text": "The use of microwaves emits more CO2 than people think."
+            }
+          ],
+          "answer": "D",
+          "explanation": "D)\n\n【定位 〗 由 题 干 中 的 the new study 定位 到 首 段 第\n一 句 。\n\n【 精 析 】 推理 判断 题 。 定 位 句 指出 ,把 食物 放 进 微\n波 炉 加 热 几 分 钟 可 能 看 上 去 完全 无 害 , 但 是 一 项\n新 研究 发 现 ,欧洲 的 这 些 快 速记 饪 炉 具 释 放 的 碳\n相当 于 近 700 万 辆 小 轿车 的 碳 排 放量 。 该 句 中 的\n转折 连词 but 体现 出 前 后 分 句 的 关系 ,前 半 句 是\n对 微波 炉 的 积极 评价 ,后 半 句 则 为 消极 评价 ,通过\n对 比 可 以 看 出 微波 炉 的 碳 排放 量 是 高 于 人 们 想象\n的 , 故 答案 为 D)“ 微 波 炉 的 使 用 释放 出 比 人 们 想\n\n1 第 3 段 介绍 碳 管理 方面 的 教授 大 卫 。 雷 伊 的 观点 ， 他 认为 微波 炉 具 有 节能 环保\n\n象 中 更 多 的 二 氧化 碳 ”。\n\n【 避 错 】 首 段 中 虽然 提 到 微波 炉 的 销量 在 增长 ,但\n并 非 新 研究 的 发 现 ,不 符合 题 干 信息 , 故 排除 AD\n“快速 亮 饪 微波 炉 变 得 越发 受 欢迎 ”。 文 中 未 提 及\n微波 炉 的 使 用 对 健康 造成 的 伤害 , 故 排除 B) “频繁\n使 用 微波 炉 可 能 会 对 我 们 的 健康 造成 伤害 ”。 虽\n然 文 中 多 次 提 及 二 氧化 碳 的 排放 问题 ,但 并 未 指\n出 这 是 对 环境 的 最 大 威胁 , 故 排除 C)“ 二 氧化 碳\n排放 构成 了 对 环境 的 最 大 威胁 ”。\n\n第 2 段 介绍 曼彻斯特 大 学 的 一 项 研究 ， 该 研究 证 明了 微波 炉 的 碳 排放 量 巨大 。 i",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "Why are the sales of microwaves expected to rise?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are becoming more affordable."
+            },
+            {
+              "key": "B",
+              "text": "They have a shorter life cycle than other appliances."
+            },
+            {
+              "key": "C",
+              "text": "They are getting much easier to operate."
+            },
+            {
+              "key": "D",
+              "text": "They take less time to cook than other appliances."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【 定 位 】 由 题 干 中 的 the sales of microwaves 和\n\nA)",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2019-12-3-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What recommendation does the study by the University of Manchester make?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cooking food of different varieties."
+            },
+            {
+              "key": "B",
+              "text": "Improving microwave users' habits."
+            },
+            {
+              "key": "C",
+              "text": "Eating less to cut energy consumption."
+            },
+            {
+              "key": "D",
+              "text": "Using microwave ovens less frequently."
+            }
+          ],
+          "answer": "A",
+          "explanation": "B)\n\nexpected to rise 定位 到 首 段 末 句 。 54. [xe fit) ti Si +R AY Professor David Reay 和\nCST] RUE. EMAIL HET ew argue 定位 到 第 三 段 第 一 句 。\n微波 炉 的 销量 , 预计 到 本 年 代 末 (2020 年 ) ,欧盟\n每 年 的 新 型 微波 炉 的 销售 量 能 达到 1.35 亿 。 而 的 教授 大 卫 。 雷 伊 认 为 ,尽管 微波 炉 使 用 大 量\n上 一 句 指出 了 推动 销量 的 主要 原因 :成 本 的 降低 能 量 ,它们 的 排放 量 和 汽车 相 比 微乎其微 。 也\n和 厨房 用 具 变 成 体现 “社会 地 位 ?的 物品 ,在 平均 就 是 说 汽车 的 碳 排 放量 要 远大 于 微波 炉 , 故 答\n使 用 8 年 后 ,使 用 者 们 会 扔 掉 微 波 炉 。 由 此 可 案 为 A) 。\n知 ,其 中 一 个 原因 是 成 本 的 降低 , 即 微波 炉 价格 【 避 错 】 文 章 第 三 段 第 三 句 虽 然 提 到 英国 的 客车\n的 降低 , 故 答案 为 A) “它们 变 得 更 容易 让 人 们 负 在 2015 年 排放 了 6,900 万 吨 二 氧化 碳 , 但 并 未\n担 得 起 ”。 建议 人 们 少 使 用 小 客车 , 故 排除 B) “应 该 劝说\n【 避 错 】 文 中 第 一 段 提 及 了 使 用 者 们 会 在 平均 8 年 人 们 更 少 地 使 用 小 客车 ”。 文 章 并 未 提 及 C)\n的 使 用 时 间 后 扔 掉 微 波 炉 ,但 并 未 和 其 他 器 具 的 “英国 比 欧盟 的 其 他 很 多 国家 产生 更 少 的 二 氧\n使 用 时 间 进 行 比 较 , 故 可 排除 B) “它们 比 其 他 用 化 碳 2” 和 D)“ 需 要 更 多 的 数据 来 证 明 微波 炉 是\n具有 着 更 短 的 生命 周期 >。 原 文中 未 提 及 ONE 和 否 有 害 ”, 故 排除 。\n们 更 容易 操作 > 和 D) “它们 比 其 他 用 具 花 费 更 少\n的 时 间 去 烹饪 >, 故 排除 。 use of microwaves 定位 到 最 后 一 段 最 后 两 句 。\n【定位 】 由 题 干 中 的 the study by the University of\nManchester 定位 到 第 二 段 最 后 两 句 。 厨房 豪 饪 用 具 中 , 微波炉 是 最 节能 的 ,其 次 是 炉\n【 精 析 】 细 节 辨 认 题 。 定 位 句 指出 ,降低 消耗 的 努 子 , 最 后 是 标准 的 烤箱 。 这 样 一 来 , 提高 微波 炉 的\n力 应 聚焦 在 改进 消费 者 的 意识 和 行为 上 。 比 如 ， 销量 可 以 被 视 为 一 种 积极 的 举措 。 由 定位 句 可\n消费 者 们 可 以 根据 食物 种 类 调整 训 饪 时 间 , 用 一 知 , 微 波 炉 是 最 节能 的 ,也 就 是 碳 排 放量 最 小 ,对\n种 更 有 效 的 方式 来 使 用 这 些 器 具 。 由 此 可 推断 答 环境 危害 最 小 , 故 答案 为 C)“ 它 在 环保 方面 起 到\n案 为 B) 改进 微波 炉 使 用 者 的 习惯 ”。 一 个 积极 的 作用 ”。\n【 避 错 第 二 段 最 后 一 句 举例 说 明 如 何 改变 消费 者 【 避 错 】 文 中 没有 提 及 A) “在 未 来 的 几 十 年 中 它\n的 习惯 ,其 中 提 到 了 调整 豪 饪 时 间 , 但 未 提 及 改变 将 变 得 不 再 受 欢 迎 ” 和 BB) “ELLER EBS\n使 用 频率 或 是 亮 饪 的 食物 种 类 , 更 未 提 及 让 消费 BAD” BAR. EMA WM RP ER\nFC BSW, BOT HER A) “REE a pK 能 的 ,其 次 是 炉子 ,最 后 是 标准 的 烤箱 ,D)“ 它 比\n的 食物 ”\".C)“ 少 吃 来 减少 能 量 消耗 ?和 D) “减少 微 传统 的 赢 饪 消耗 更 多 的 能 量 ” 和 文 义 不 符 , 故\n波 炉 的 使 用 频率 ”。 排除 。\n\n参考 译文\n\nN\n\n~\n\n51) 把 食物 放 进 微波 炉 加 热 几 分 钟 可 能 看 上 去 完全 无 害 , 但 是 一 项 新 研究 发 现 ,欧洲 的 这 些 快速 亮 饪\n炉 具 释放 的 碳 相当 于 近 700 万 辆 小 轿车 的 碳 排放 量 。 而 且 这 一 问题 还 在 加 剧 。(52) 随 着 成 本 的 降低 和 厨\n房 用 具 变 成 体现 “社会 地 位 ?的 物品 ,在 平均 使 用 8 年 后 ,使 用 者 们 会 扔 掉 微 波 炉 。 这 增加 了 新 型 微波 炉 的\n销量 ,预计 到 本 年 代 末 (2020 年 ,欧盟 每 年 新 型 微波 炉 的 销量 能 达到 1.35 亿 。\n\n曼彻斯特 大 学 的 一 项 研究 计算 了 二 氧化 碳 的 排放 量 一 一 导致 气候 变化 的 主要 温室 气体 一 一 在 微波\n炉 使 用 的 每 个 阶段 ,从 生产 制造 到 废物 处 理 。 发 起 者 们 说 :是 微波 炉 的 用 电量 对 环境 造成 了 最 大 的 影\n响 。? 发 起 者 们 也 计算 出 了 一 年 当中 使 用 19 个 微波 炉 的 排放 量 相当 于 一 辆 汽车 的 排放 量 。(53) 同 一 研究\n表明 ,降低 消耗 的 努力 应 聚焦 在 改进 消费 者 的 意识 和 行为 上 。 比 如 ,消费 者 们 可 以 根据 食物 种 类 调整 亮\n饪 时 间 , 用 一 种 更 有 效 的 方式 来 使 用 这 些 器 具 。\n\n〈54) 然 而 , 碳 管理 方面 的 教授 大 卫 。 雷 伊 认为 ,尽管 微波 炉 能 耗 很 大 ,但 它们 的 排放 量 和 汽车 相 比 微\n\n平 其 微 。 仅 在 英国 ,就 有 大 约 3,000 万 辆 汽车 。 这 些 汽车 的 排放 量 要 比 欧盟 所 有 微波 炉 的 排放 量 还 要 多 。\n支持 此 观点 的 最 新 数据 表明 ,英国 的 客车 在 2015 年 排放 了 6,900 万 吨 二 氧化 碳 。 这 是 新 型 微波 炉 研 究 估\n算 的 欧盟 所 有 微波 炉 的 年 排放 量 的 十 倍 。 些 外, 微波炉 能 耗 比 其 他 任何 训 饪 方式 都 要 低 。(55) 在 所 有 常\n\n见 的 厨房 训 饪 用 具 中 ,微波 炉 是 最 节能 的 ,其 次 是 炉子 ,最 后 是 标准 的 烤箱 。 因 此 ,微波 炉 销 量 的 增长 可 以\n看 作 一 件 好 事 。\n\nA)【 精 析 】 细 节 辨 认 题 。 定 位 句 提 到 , 碳 管理 方面",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：真题.pdf 文本层 Q53（原导入缺 B 选项以外的一项）"
+        },
+        {
+          "id": "2019-12-3-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What does Professor David Reay try to argue?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "There are far more emissions from cars than from microwaves."
+            },
+            {
+              "key": "B",
+              "text": "People should be persuaded into using passenger cars less often."
+            },
+            {
+              "key": "C",
+              "text": "The UK produces less CO2 than many other countries in the EU."
+            },
+            {
+              "key": "D",
+              "text": "More data are needed to show whether microwaves are harmful."
+            }
+          ],
+          "answer": "A",
+          "explanation": "",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）"
+        },
+        {
+          "id": "2019-12-3-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What does Professor David Reay think of the use of microwaves?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It will become less popular in the coming decades."
+            },
+            {
+              "key": "B",
+              "text": "It makes everyday cooking much more convenient."
+            },
+            {
+              "key": "C",
+              "text": "It plays a positive role in environmental protection."
+            },
+            {
+              "key": "D",
+              "text": "It consumes more power than conventional cooking."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【 定 位 】 由 题 干 中 的 Professor David Reay 和 the\n©) 【 精 析 】 推理 判断 题 。 定 位 句 指出 ,在 所 有 常见 的",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：解析.pdf 第54–61页（图像核对）"
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part,",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "( 30 minutes)\n\nyou are allowed 30 minutes to translate a passage from Chinese into\n\nEnglish. You should write your answer on Answer Sheet 2.\n\n中国汉族人的全名由姓和名组成。中文姓名的特点是，姓总是在前，名跟在其后。千百年来，父姓一直世代相传。然而，如今，孩子跟母亲姓并不罕见。一般来说，名有一个或两个汉字，通常承载父母对孩子的愿望。从孩子的名字可以推断出父母希望孩子成为什么样的人，或者期望他们过什么样的生活。父母非常重视给孩子取名，因为名字往往会伴随孩子一生。",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2019-12-3-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "( 30 minutes)\n\nyou are allowed 30 minutes to translate a passage from Chinese into\n\nEnglish. You should write your answer on Answer Sheet 2.\n\n中国汉族人的全名由姓和名组成。中文姓名的特点是，姓总是在前，名跟在其后。千百年来，父姓一直世代相传。然而，如今，孩子跟母亲姓并不罕见。一般来说，名有一个或两个汉字，通常承载父母对孩子的愿望。从孩子的名字可以推断出父母希望孩子成为什么样的人，或者期望他们过什么样的生活。父母非常重视给孩子取名，因为名字往往会伴随孩子一生。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "The full name of a Han Chinese\nconsists of a family name and a given\nname. A characteristic of Chinese\nnames is that the family name always\ncomes first, followed by the given\nname. For thousands of years, the\nfather’s family name has been passed\ndown from generation to generation.\nToday, however, it’s not uncommon\nfor a child to take the mother’s family\nname. Generally speaking, each given\nname includes one or two Chinese\ncharacters, which usually reflects the\nparents’ expectations of the child.\nFrom children’s names, it can be\ninferred what kind of people the\nparents want their children to be or\nwhat kind of life they expect their\nchildren to live. Parents attach great\nimportance to naming their children\nfor the reason that names will be the\nchildren’s lifelong company.\ntraditional virtues 传统 美德",
+          "explanation": "The full name of a Han Chinese\nconsists of a family name and a given\nname. A characteristic of Chinese\nnames is that the family name always\ncomes first, followed by the given\nname. For thousands of years, the\nfather’s family name has been passed\ndown from generation to generation.\nToday, however, it’s not uncommon\nfor a child to take the mother’s family\nname. Generally speaking, each given\nname includes one or two Chinese\ncharacters, which usually reflects the\nparents’ expectations of the child.\nFrom children’s names, it can be\ninferred what kind of people the\nparents want their children to be or\nwhat kind of life they expect their\nchildren to live. Parents attach great\nimportance to naming their children\nfor the reason that names will be the\nchildren’s lifelong company.\ntraditional virtues 传统 美德\nsymbolize 象征\nsignature 签名\nin the name of. .以 …… 的 名 义\n\n. 第 三 句 中 的 “一\n\n参考 译文 与 难点 注释 叶\n\n1. 第 一 句 中 ， “中 国 汉族 人 的 \"为 定语 ， 修饰 主语 “全 各， 可 用 of fala,\n\n译 为 of a Han Chinese, “th A Ml BAR” —AREH consist of A\nand B( 主 动 语 态 ) 或 be made up of A and B( 被 动 语 态 ) .“ 全 名 ”有\n固定 的 译 法 the full name.\n\n. 第 二 句 中 的 “ 姓 总 是 在 前 ,名 跟 在 其 后 \"可 以 处 理 为 that 引导 的 表 语\n\n从 句 。\n\n直 ” 上 暗示 本 句 用 现在 完成 时 。 父 姓 是 被 人 们 世代 相\n传 , 因 此 应 选用 被 动 语 态 。“ 世 代 相 传 * 有 多 种 译 法 ,常见 的 有 be\npassed down from generation to generation/from one generation to\n\nthe next,\n\n, 第 四 名 中,“…… 并 不 罕见 ”可 保留 原 有 的 双重 否定 , 译 为 its not\n\nuncommon. .. 。“ 跟 …… 姓 ?可 译 为 take one’s family name/surname。\n\n. 第 五 句 句 首 的 “一 般 来 说 ”常用 generally speaking 来 表达 ,也 可 更 简\n\n单 地 译 为 generally, 其 后 用 逗号 与 句子 主干 隔 开 。 句 子 主干 是 两 个\n小 分 句 ,可 直接 译 成 两 个 并 列 分 句 ,用 and 连接 , 即 each given name\nincludes one or two Chinese characters and it often reflects the\nparents’ expectations of the child。 也 可 像 参考 译文 那样 ,将 第 二 个\n分 句 处 理 成 which 引导 的 非 限 制 性 定语 从 名 ,对 “名 ”进行 进一步\n说 明 。\n\n. 第 六 句 没有 主语 ,需要 增 译 主语 we/people 或 译 成 被 动 语 态 it can\n\nbe inferred... 。\n\n. Boat, “非常 重视 给 孩子 取 名 ?可 译 为 attach great importance/\n\nmuch significance to naming their children,\n\n话题 词汇 oerrewees\n: make a name for oneself 成 名\n| user name 用 户 名\n; be highly ambitious for one’s children 望子成龙\ni auspicious 吉祥 的\n\n四 级 2019 年 12 月 62",
+          "source": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2019-12-3-md"
+          },
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

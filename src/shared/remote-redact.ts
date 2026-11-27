@@ -26,7 +26,7 @@ function redactConfig(cfg: unknown): unknown {
 
 /** 按通道抹掉本机路径：六级音频目录、IDE / 编译器路径、研学外部连接的启动命令 */
 export function redactForRemote(channel: string, data: unknown): unknown {
-  if (channel === IPC.cet6GetState && isObj(data) && isObj(data.media)) return { ...data, media: { ...data.media, root: null } }
+  if ((channel === IPC.cet6GetState || channel === IPC.cet4GetState) && isObj(data) && isObj(data.media)) return { ...data, media: { ...data.media, root: null } }
   if ((channel === IPC.configGet || channel === IPC.configExternal)) return redactConfig(data)
   if (channel === IPC.studyGetState && isObj(data) && Array.isArray(data.connections)) {
     return { ...data, connections: data.connections.map((c) => (isObj(c) ? { ...c, command: '', args: [] } : c)) }

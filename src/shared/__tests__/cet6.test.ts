@@ -35,6 +35,24 @@ const q = (over: Partial<Cet6Question>): Cet6Question => ({ id: 'x', number: 1, 
 const sec = (over: Partial<Cet6Section>): Cet6Section => ({ id: 's', type: 'reading', title: 't', ...over })
 
 describe('cet6 纯函数', () => {
+  it.each([
+    ['cet4', 125 * 60],
+    ['cet6', 130 * 60]
+  ] as const)('%s uses the configured exam duration', (level, seconds) => {
+    expect(examRemaining(0, level)).toBe(seconds)
+    expect(examRemaining(seconds - 1, level)).toBe(1)
+    expect(examRemaining(seconds + 1, level)).toBe(0)
+  })
+
+  it.each([
+    ['News Report Three', 'A'],
+    ['Conversation Two', 'B'],
+    ['Passage One', 'C']
+  ])('CET-4 listening maps %s to Section %s', (title, letter) => {
+    expect(blockHeading(sec({ type: 'listening' }), { id: 'b', title }, 'cet4'))
+      .toEqual({ section: `Section ${letter}`, unit: title })
+  })
+
   it('blockHeading：阅读取 Section / Passage；听力按单元推出 Section 字母；其它部分为空', () => {
     expect(blockHeading(sec({ type: 'reading' }), { id: 'b', title: 'Section B Passage One 说明' })).toEqual({ section: 'Section B', unit: 'Passage One' })
     expect(blockHeading(sec({ type: 'listening' }), { id: 'b', title: 'Conversation Two' })).toEqual({ section: 'Section A', unit: 'Conversation Two' })

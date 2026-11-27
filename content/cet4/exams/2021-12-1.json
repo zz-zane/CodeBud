@@ -1,0 +1,2909 @@
+{
+  "id": "2021-12-1",
+  "title": "2021年12月 第1套",
+  "year": 2021,
+  "month": 12,
+  "set": 1,
+  "status": "ready",
+  "issues": [],
+  "sources": [
+    {
+      "id": "cet4-2021-12-1-mp3",
+      "title": "听力.mp3",
+      "localPath": "<本地四级真题目录>/2021.12 第1套/听力.mp3"
+    },
+    {
+      "id": "cet4-2021-12-1-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2021.12 第1套/真题.pdf"
+    },
+    {
+      "id": "cet4-2021-12-1-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2021.12 第1套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2021-12-1-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2021.12 第1套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "Suppose your school is organizing an orientation program to help the freshmen adapt to the new environment and academic studies. You are now to write a proposal, which may include its aim, duration, participants and activities. You will have 30 minutes to write the proposal. You should write at least 120 words but no more than 180 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "Suppose your school is organizing an orientation program to help the freshmen adapt to the new environment and academic studies. You are now to write a proposal, which may include its aim, duration, participants and activities. You will have 30 minutes to write the proposal. You should write at least 120 words but no more than 180 words.",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2021-12-1-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "Suppose your school is organizing an orientation program to help the freshmen adapt to the new environment and academic studies. You are now to write a proposal, which may include its aim, duration, participants and activities. You will have 30 minutes to write the proposal. You should write at least 120 words but no more than 180 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "A Proposal for the Orientation Program\n\nDear school leaders,\n\nTo help freshmen adjust to our university life and ease their transition into college, as a sophomore from Medical School,  I propose that an orientation program should be offered.\n\nThe suggested details are as follows.  First and foremost, considering the COVID-19 pandemic, the program combines online courses that students must complete before the start of classes on September 8th with offline activities to be held in our gym or playground from September 1st to 7th.  The virtual program will contain an introduction to the various resources and opportunities available to freshmen, including academic support, health and security knowledge, and a welcome speech addressed by school leaders, etc.  For the offline activities, there will be military training which is an opportunity for freshmen to socialize with each other while furthe r engaging with campus faculty and staff. Finally, all freshmen are required to participate in and complete the orientation program.\n\nThrough this program, I believe, first-year students will lay the groundwork for future learning, exploration and social networking.\n\nYours sincerely,\nLi Ming",
+          "explanation": "Writing\n\n结构框图：\n- A Proposal for the Orientation Program\n  - 第1段引出话题：提议为新生提供一个入学教育活动。\n  - 第2段具体介绍活动细节：入学教育的时长，参加此次入学教育的人员以及活动的具体内容。\n  - 第3段结尾并陈述此次活动的重要意义。\n\n范文点评：\n\nA Proposal for the Orientation Program\n\nDear school leaders ,\n[ 1] To help freshmen adjust to our university life and ease their\ntransition into college, as a sophomore from Medical School , (2 ] I\npropose that an orientation program should be offered.\n(3] The suggested details are as follows. ( 4] First and foremost ,\nconside ring the COVID-19 pand emic , the program combines online\ncourses that students must complete before the start of classes on\nSeptember 8th with offline activities to be held in our gym or\nplayground from September 1st to 7th . (5] The virtual program will\ncontain an introduction to the various re sources and opportunities\navailable to freshmen, including academic support , health and\nsecurity knowled ge , and a we lco me speech addressed by school\nleade rs , etc . ( 6] For the offline activities , there will be military\ntraining which is an opportunity for fre shmen to socialize with each\nothe r wh ile furthe r engaging with campus faculty and staff. Finally ,\nall freshmen are required to participate in and comp lete the\norie ntation program.\n(7] Through this program, I believe, first-year students will lay\nthe groundwo rk for fu ture learning , exploration and social\nne tworking.\nYou rs sincerely ,\nLi Ming\n\n【1】引出话题：不定式作目的状语，说明该倡议书的目的。\n【2】聚焦话题：倡议书的主题是“新生入学教育”。\n【3】开始具体介绍提议的细节。\n【4】使用 First and foremost 引出活动的第一个细节：入学教育活动将采用线上活动和线下活动相结合的方式。\n【5】介绍线上活动的内容：向新生介绍学校的各种资源和机会以及校领导的欢迎讲话等。\n【6】介绍线下活动的内容：新生将会接受军政训练，并说明军训的意义。\n【7】总结：说明入学教育对大学生活的重要意义。\n\n★注：如有需要，可将解析部分剪切下来核对答案。\n2021. 12 / 23 (第 1 套)\n\n话题词汇：\ncampus tour 校园参观\nschool regulations 校规\nwelcome speech 欢迎致辞\norientation schedule 入学教育时间安排\nceremony 典礼，仪式\nCareer Center 就业指导中心\ncredit 学分\nmajor 专业\ncurriculum 课程\nscholarship 奖学金",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第588–611行；解析.pdf 第1页，保留作文正文并合并断裂单词"
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "In this section, you will hear three news reports, two long conversations and three passages.",
+      "audio": {
+        "src": "source-media/2021.12 第1套/听力.mp3",
+        "sourceId": "cet4-2021-12-1-mp3",
+        "sharedWith": []
+      },
+      "blocks": [
+        {
+          "id": "listening-news-1",
+          "title": "News Report One",
+          "text": "",
+          "transcript": "United Airlines has apologised for mistakenly shipping an American family's pet dog thousands of miles in the wrong direction to Japan. The dog owner's beloved 10-year-old dog named Buddy took an unexpected 16-hour flight to Tokyo following a mix-up by the airline. The dog owner's family are currently in the process of moving. They were meant to be reunited with the pet in their new home city in Texas. But when they arrived at the United Airlines cargo facility in the southern U. S. state , they found a stranger's dog waiting in Buddy's place. Both of the dogs had been sent to the wrong destinations on connecting flights from Denver , with Buddy mistakenly being sent to Japan instead. Buddy was given a physical checkup when he arrived at Tokyo's International Airport. The dog was then sent back to the U. S. on a private charter jet. \" I'm so glad he's alive and coming home soon ! \" said the relieved dog owner. \"And an error occurred during the connections in Denver. We have notified our customers that their pets arrived safely. We will arrange to return the pets to them as soon as possible , \" a spokesperson of United Airlines said.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          }
+        },
+        {
+          "id": "listening-news-2",
+          "title": "News Report Two",
+          "text": "",
+          "transcript": "Officials at Reid Park Zoo in Tucson Arizona are celebrating the birth of a baby elephant. Zoo officials say the baby was born on Monday. It is a female and she weighs nearly 130 kilograms. Semba , her mother , is a 30-year-old African elephant. The pregnancy lasted 22 months. Officials describe the baby elephant as \" healthy , standing and nursing\" . The baby hasn't been given a name yet. Semba has given birth before. Zoo officials said during this pregnancy , she was closely monitored through physical exams and blood tests. Dr. Sue Tygielski is the zoo's director of zoological operations. She said the elephant's birth went smoothly and that there were no complications.\nThe new baby expands the zoo's elephant herd to six. That includes the baby's parents , a sister , a brother and an adult female.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          }
+        },
+        {
+          "id": "listening-news-3",
+          "title": "News Report Three",
+          "text": "",
+          "transcript": "Three years ago , a couple was enjoying a meal at a beach restaurant. The restaurant was built on a wooden structure above the sea-water. During the meal , the man's wedding ring slipped off his finger. It fell through the wooden floorboards , apparently lost forever. Recently , the restaurant manager Ryan Krivoy decided to replace the wooden deck and he found an old gold coin , some $ 100 bills and a silver wedding ring while replacing the deck. The restaurant waitress Sasha Formica posted a picture of the ring on Facebook. The post was shared about 5 , 000 times. Three days later , the happy wife called to claim the ring. She even texted pictures of her and her husband eating there in 2017 as proof. The restaurant mailed the ring back to the happy couple. Meanwhile , Krivoy discovered that the gold coin was very rare. It was from 1855 and worth as much as $ 2 , 000.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-1",
+          "title": "Conversation One",
+          "text": "",
+          "transcript": "W: 1 can't believe that duck hunting is still legal in so many parts of the world. The scientific evidence from countries like Australia , Canada and the USA clearly indicates a decline in the birds' numbers.\nM: But can anyone be sure if the decline is really caused by the hunting or by climate change?\nW: It's caused by both in fact. We see more droughts in countries like Australia. Ducks are birds that feed and breed in areas where there is a lot of water , but their habitats have been shrinking in recent decades because of the droughts.\nM: And I guess with fewer places to inhabit , they concentrate in greater numbers in few areas , which surely makes them easier targets for the hunters.\nW: It does. My grandfather was a duck hunter. He told me hunting ducks and geese began in the 19th century. They were easily found and plentifully available food source in farming areas , especially for poor immigrants.\nM: What do they use for hunting during that period?\nW: They use new types of guns , and birds could easily be shot down in flight. And in such great numbers , their commercial hunting of ducks and geese became an industry. Yet , there's no commercial farming of these birds nowadays. Their meat is hardly eaten in Western countries.\nM: No , duck hunting seemingly exists as the continuation of a tradition.\nW: Well , ducks have never been popular with farmers like my grandfather anyway because they sometimes destroy crops. In fact , farmers used to poison them in large numbers.\nM: That somehow doesn't surprise me. Nobody places much value on the lives of these poor birds or on their meat.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          }
+        },
+        {
+          "id": "listening-conv-2",
+          "title": "Conversation Two",
+          "text": "",
+          "transcript": "M: Okay , Miss Bright. I've finished calculating. I estimate you have between 210 and 240 square meters of walls and ceiling.\nW: So , how much would the paint job cost?\nM: That would depend on the quality of paint you choose. We carry two brands. One costs 60 cents every square meter , and the other 90 cents. The second is guaranteed to look great for about 10 years , whereas the cheaper one will start to dull after around six or seven years.\nW: In that case , we would prefer the more expensive option.\nM: All right , then. So including labor costs , taxes , and everything , this job would come to $ 3 , 000.\nW: Um , to be perfectly honest , that's more than I expected.\nM: Please bear in mind that the price includes moving all the furniture , and the whole task would take two days.\nW: Really? Why?\nM: Well , we can't paint the walls without clearing all the furniture first. So every time we paint a room , we first have to move the furniture to another room. So that takes more time. Plus , it requires two people , which works out more expensive.\nW: I see. But does that mean I could not live here in my own house during those two days?\nM: That is correct.\nW: Oh well , that changes everything , I'm afraid. 1 would have to stay with a friend or check into a hotel. I hadn't considered any of that. I'm starting to realize that painting my house is far more troublesome than I had anticipated.\nM: This is usually the case. Most of our clients go through the same realization.\nW: I see.\nM: You have my number. Please feel free to call me for any further questions.\nW: Thank you.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-1",
+          "title": "Passage One",
+          "text": "",
+          "transcript": "Homework is an important part of schooling , but the purposes of giving children homework will change as they grow older. At the primary level , the main aim is to cultivate good habits , like learning to plan and exercising self-discipline. During the secondary school years , extending what is learned at school is positively related to academic achievement , so the content of homework becomes more important. So how can you help your child do their best? Creating an ideal working environment will make it easier for them to get down to their assignments quickly. Make sure it's free of distractions , and-for primary school children at least-somewhere near you , so you can answer questions and offer encouragement. You probably have to help younger children plan their session , but it's important that by the end of primary school it's second nature. Get them to tell you everything they have to do. Then encourage them to establish an order in which they do work. When there are several different assignments , make sure they begin with one they enjoy , so it seems easy to get started. It's best to take on the most difficult task second-once they're settled , but before they get tired. If older children have more than an hour of homework , encourage them to schedule a short break to stretch. If you encourage them to tell you what they've learned , they'll absorb the information more deeply and remember it more readily.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-2",
+          "title": "Passage Two",
+          "text": "",
+          "transcript": "Workers at Mexican oil company will receive a healthy incentive of almost $ 300 a year if they meet certain body weight standards. To qualify for the bonus , they must maintain a healthy weight. For those who\nare overweight or obese , they could receive the bonus if they reduce their weight by 10% during the year. Some applaud the policy as fair , because it rewards both the individuals who maintain a healthy weight and those who are working towards achieving it. But critics say the policy contradicts recommendations by many health experts , who warn that a person's weight is influenced by genetic and environmental factors. That means weight can be hard for individuals to control , which makes the bonus unfair. Some experts say the policy is inconsistent with the science of what we know about body weight regulation. These experts argue that focusing on wage is the wrong approach. A more productive method of encouraging health among employees is to promote healthy behaviors. For example , companies can give workers gym memberships , or encourage participation in lectures on healthy eating and living. They can also reduce sweets and provide healthier snacks in the office and healthier meals at the company canteen. Or they can give employees more time during their lunch break to exercise. These are much better and much more productive ways for companies to move forward on their employees' wellbeing.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          }
+        },
+        {
+          "id": "listening-pass-3",
+          "title": "Passage Three",
+          "text": "",
+          "transcript": "Campaigners have warned that the British government is not doing enough to prevent left-handed pupils from falling behind their peers. They claim that thousands of children are still being \" penalized \" for being left-handed. This is due to a lack of action from ministers , who've failed to take any meaningful action for years. It is feared that a failure to address early-year challenges , such as poor handwriting , leads to much more serious problems down the line-with these pupils facing reduced career prospects. Studies in recent years show that left-handed children are more likely to suffer with learning difficulties and their scores are lower on IQ tests. Campaigners feel it's strange that children in British schools are penalized because they happen to be left-handed. They don't understand why successive governments have failed to act on this. They want the department of education to record which children are left-handed and what their educational attainments are , since they make up some 10% of the population. In early-year education , left-handed children are struggling and making a mess of their handwriting. Educators don't know how to deal with this. In many cases , there is no active help and a lack of teacher training. Campaigners point out that a high percentage of the prison population is left-handed. They say that these prison numbers are unusually high and ask why it is the case.",
+          "translation": "",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": "2021-12-1-q1",
+          "number": 1,
+          "kind": "single-choice",
+          "stem": "Question 1 (请根据录音选择最佳答案)",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It found a pet dog on board a plane to a city in Texas."
+            },
+            {
+              "key": "B",
+              "text": "It had one of its cargo planes land at a wrong airport."
+            },
+            {
+              "key": "C",
+              "text": "It sent two dogs to the wrong destinations."
+            },
+            {
+              "key": "D",
+              "text": "It had two of its domestic flights mixed up."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What does the news report say about United\nAirlines?\nC)【精析】事实细节题。新闻开头提到，美国联合航空公司为错误地运送美国家庭的宠物狗而道歉。接着，新闻中提到，两只狗都被从丹佛起飞的转接航班运送到了错误的目的地。因此，答案为 C)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q2",
+          "number": 2,
+          "kind": "single-choice",
+          "stem": "What did the spokesperson for United Airlines say they would do after the incident?",
+          "blockId": "listening-news-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Correct their mistake as soon as possible."
+            },
+            {
+              "key": "B",
+              "text": "Give the two pets a physical checkup."
+            },
+            {
+              "key": "C",
+              "text": "Hire a charter jet to bring the pets back."
+            },
+            {
+              "key": "D",
+              "text": "Send another plane to continue the flight."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What did the spokesperson for United Airlines say they would do after the incident?\nA)【精析】细节推断题。新闻结尾处提到，他们已通知客户，其托运的宠物已安全抵达，接下来会尽快安排将宠物送回到主人身边。由此推断，他们会尽快纠正这一错误，故答案选 A)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q3",
+          "number": 3,
+          "kind": "single-choice",
+          "stem": "What do we learn about the mother elephant Semba?",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "She weighs 130 kilograms."
+            },
+            {
+              "key": "B",
+              "text": "She has had babies before."
+            },
+            {
+              "key": "C",
+              "text": "She was brought from Africa."
+            },
+            {
+              "key": "D",
+              "text": "She has a big family of six."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What do we learn about the mother elephant Semba?\nB)【精析】事实细节题。新闻中提到，母象桑巴以前生育过，因此答案为 B)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q4",
+          "number": 4,
+          "kind": "single-choice",
+          "stem": "What does the report say about the birth of the new baby elephant?",
+          "blockId": "listening-news-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It took 22 hours."
+            },
+            {
+              "key": "B",
+              "text": "It had some complications."
+            },
+            {
+              "key": "C",
+              "text": "It was smooth."
+            },
+            {
+              "key": "D",
+              "text": "It was monitored by Dr. Sue Tygielski"
+            }
+          ],
+          "answer": "C",
+          "explanation": "What does the report say about the birth of the new baby elephant?\nC)【精析】事实细节题。新闻中提到，苏·泰格尔斯基博士说小象出生的过程顺利，并且没有出现任何的并发症。因此，答案为 C)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q5",
+          "number": 5,
+          "kind": "single-choice",
+          "stem": "What do we learn about the restaurant?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "It enjoyed great popularity"
+            },
+            {
+              "key": "B",
+              "text": "It started business three years ago."
+            },
+            {
+              "key": "C",
+              "text": "It was frequented by newly-weds."
+            },
+            {
+              "key": "D",
+              "text": "It was built above the sea-water."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What do we learn about the restaurant?\nD)【精析】事实细节题。新闻开头提到，这家餐馆被建在海平面上的木制结构上，因此答案为 D)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q6",
+          "number": 6,
+          "kind": "single-choice",
+          "stem": "What did the restaurant manager decide to do recently?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Expand his business on the beach."
+            },
+            {
+              "key": "B",
+              "text": "Replace the restaurant’s wooden deck."
+            },
+            {
+              "key": "C",
+              "text": "Post a picture of his restaurant online."
+            },
+            {
+              "key": "D",
+              "text": "Celebrate his silver wedding anniversary."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What did the restaurant manager decide to do recently?\nB)【精析】事实细节题。新闻中提到，餐厅经理瑞安·克里沃伊决定更换木制甲板，因此答案为 B)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q7",
+          "number": 7,
+          "kind": "single-choice",
+          "stem": "What did the waitress do about the recovered ring?",
+          "blockId": "listening-news-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "She sold it for two thousand dollars."
+            },
+            {
+              "key": "B",
+              "text": "She took it to the restaurant manager."
+            },
+            {
+              "key": "C",
+              "text": "She posted its picture on Facebook."
+            },
+            {
+              "key": "D",
+              "text": "She returned it to its owner right away."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What did the waitress do about the recovered ring?\nC)【精析】事实细节题。新闻中提到，餐厅的女服务员萨沙·福米卡在脸谱网上发布了戒指的照片，因此答案为 C)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q8",
+          "number": 8,
+          "kind": "single-choice",
+          "stem": "What does the woman find unbelievable?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "The number of ducks has declined sharply in recent years."
+            },
+            {
+              "key": "B",
+              "text": "Climate change has little effect on the lives of wild ducks."
+            },
+            {
+              "key": "C",
+              "text": "Duck meat is not eaten in Australia, Canada and the U.S."
+            },
+            {
+              "key": "D",
+              "text": "Duck hunting remains legal in many parts of the world."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What does the woman find unbelievable?\nD)【精析】事实细节题。对话开头，女士提到她无法相信猎杀鸭子在世界上很多地区仍然是合法的，因此答案为 D)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q9",
+          "number": 9,
+          "kind": "single-choice",
+          "stem": "What does the woman say has caused the shrinking of ducks' habitats in Australia?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Droughts."
+            },
+            {
+              "key": "B",
+              "text": "Bushfires."
+            },
+            {
+              "key": "C",
+              "text": "Farming."
+            },
+            {
+              "key": "D",
+              "text": "Hunting."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What does the woman say has caused the shrinking of ducks' habitats in Australia?\nA)【精析】事实细节题。对话中女士提到，我们在澳大利亚等国家看到了更多的干旱。鸭子是一种需要在水多的地方生存繁衍的禽类。但是近几十年来，由于干旱，它们的栖息地已经越来越小了。因此，答案为 A)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2021.12 第1套/真题.pdf 第2页（修正双栏 B/D 错位）"
+        },
+        {
+          "id": "2021-12-1-q10",
+          "number": 10,
+          "kind": "single-choice",
+          "stem": "Why is there no commercial farming of ducks and geese in Western countries?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are not easy to domesticate."
+            },
+            {
+              "key": "B",
+              "text": "Their meat is not that popular."
+            },
+            {
+              "key": "C",
+              "text": "It is not environmentally friendly."
+            },
+            {
+              "key": "D",
+              "text": "It is not considered cost-effective."
+            }
+          ],
+          "answer": "C",
+          "explanation": "Why is there no commercial farming of ducks and geese in Western countries?\nB)【精析】目的原因题。对话中女士提到，现在并没有人对鸭子和鹅这些禽类进行商业养殖，因为在西方国家几乎没有人吃它们的肉，因此答案为 B)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2021.12 第1套/真题.pdf 第2页（修正双栏 B/D 错位）"
+        },
+        {
+          "id": "2021-12-1-q11",
+          "number": 11,
+          "kind": "single-choice",
+          "stem": "What does the woman say about farmers in her grandfather's time?",
+          "blockId": "listening-conv-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "They hunted ducks as a traditional sport."
+            },
+            {
+              "key": "B",
+              "text": "They killed wild ducks and geese for food."
+            },
+            {
+              "key": "C",
+              "text": "They raised ducks and geese for their eggs."
+            },
+            {
+              "key": "D",
+              "text": "They poisoned wild ducks in large numbers."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What does the woman say about farmers in her grandfather's time?\nD)【精析】事实细节题。对话末尾女士提到，鸭子在她祖父那个年代并不受欢迎，原因在于鸭子有时会毁掉庄稼，因而事实上，那一时期的农民常常大量毒死鸭子。因此，答案为 D)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2021.12 第1套/真题.pdf 第2页（修正双栏 B/D 错位）"
+        },
+        {
+          "id": "2021-12-1-q12",
+          "number": 12,
+          "kind": "single-choice",
+          "stem": "What is the woman planning to do?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Have her house repainted."
+            },
+            {
+              "key": "B",
+              "text": "Replace some of her old furniture."
+            },
+            {
+              "key": "C",
+              "text": "Move into a newly-painted house."
+            },
+            {
+              "key": "D",
+              "text": "Calculate the cost of the paint job."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What is the woman planning to do?\nA)【精析】细节推断题。对话开头男士说他已计算出女士家墙壁和天花板的总面积，女士接着询问了粉刷所需的费用，之后对话中提到粉刷房屋需要女士暂住别处等问题。由此推断，女士要重新粉刷她的房屋，因此答案为 A)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2021.12 第1套/真题.pdf 第2页（修正双栏 B/D 错位）"
+        },
+        {
+          "id": "2021-12-1-q13",
+          "number": 13,
+          "kind": "single-choice",
+          "stem": "What is the woman's chief concern?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "How long the work will take."
+            },
+            {
+              "key": "B",
+              "text": "How much the work will cost."
+            },
+            {
+              "key": "C",
+              "text": "How the paint job is to be done."
+            },
+            {
+              "key": "D",
+              "text": "How many workers are needed."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What is the woman's chief concern?\nB)【精析】细节推断题。在男士提到工程总费用预计需 3,000 美元时，女士表示这比她预计的要多。由此推断，女士主要担忧的是费用问题，因此答案为 B)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2021.12 第1套/真题.pdf 第2页（修正双栏 B/D 错位）"
+        },
+        {
+          "id": "2021-12-1-q14",
+          "number": 14,
+          "kind": "single-choice",
+          "stem": "What does the woman have to do while the paint job is being done?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Cover up her furniture."
+            },
+            {
+              "key": "B",
+              "text": "Ask some friends for help."
+            },
+            {
+              "key": "C",
+              "text": "Stay somewhere else."
+            },
+            {
+              "key": "D",
+              "text": "Oversee the work herself."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What does the woman have to do while the paint job is being done?\nC)【精析】细节推断题。对话中提到，粉刷时，女士不能住在自己的房子里，而是去朋友家里借住或者去住旅馆。由此推断，粉刷墙壁时女士要住在别的地方，故答案选 C)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2021.12 第1套/真题.pdf 第2页（修正双栏 B/D 错位）"
+        },
+        {
+          "id": "2021-12-1-q15",
+          "number": 15,
+          "kind": "single-choice",
+          "stem": "What has the woman come to realize at the end of the conversation?",
+          "blockId": "listening-conv-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "She could have asked a friend for help with the paint job."
+            },
+            {
+              "key": "B",
+              "text": "Painting a house involves more trouble than she thought."
+            },
+            {
+              "key": "C",
+              "text": "She should have repainted her house much earlier."
+            },
+            {
+              "key": "D",
+              "text": "Moving her furniture is harder than the paint job."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What has the woman come to realize at the end of the conversation?\nB)【精析】事实细节题。对话末尾，女士在意识到她还要到别处借住之后，她开始认识到粉刷房屋比她之前想象的要麻烦得多，因此答案为 B)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q16",
+          "number": 16,
+          "kind": "single-choice",
+          "stem": "Question 16 (请根据录音选择最佳答案)",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "To cultivate good habits."
+            },
+            {
+              "key": "B",
+              "text": "To prepare for secondary school."
+            },
+            {
+              "key": "C",
+              "text": "To review what is learned in class."
+            },
+            {
+              "key": "D",
+              "text": "To stimulate interest in learning."
+            }
+          ],
+          "answer": "A",
+          "explanation": "What is the main aim of homework for primary\nschool kids?\nA)【精析】目的原因题。短文开头指出，在小学阶段，布置作业的主要目的就是培养良好的习惯，比如学会做计划以及锻炼自律的能力。因此，答案为 A)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2021.12 第1套/真题.pdf 第2页（修正双栏 B/D 错位）"
+        },
+        {
+          "id": "2021-12-1-q17",
+          "number": 17,
+          "kind": "single-choice",
+          "stem": "What does the passage suggest parents do to help their children?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Discuss their academic achievements with them."
+            },
+            {
+              "key": "B",
+              "text": "Create an ideal study environment for them."
+            },
+            {
+              "key": "C",
+              "text": "Allow them to learn independently."
+            },
+            {
+              "key": "D",
+              "text": "Check their homework promptly."
+            }
+          ],
+          "answer": "B",
+          "explanation": "What does the passage suggest parents do to help their children?\nB)【精析】事实细节题。短文中提到，创造理想的学习环境可以让孩子更容易尽快开始做作业。因此，答案为 B)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q18",
+          "number": 18,
+          "kind": "single-choice",
+          "stem": "What should children do to deal with multiple assignments?",
+          "blockId": "listening-pass-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "Finish them before they get tired."
+            },
+            {
+              "key": "B",
+              "text": "Tackle the most difficult task first."
+            },
+            {
+              "key": "C",
+              "text": "Start with something they enjoy."
+            },
+            {
+              "key": "D",
+              "text": "Focus on the most important ones."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What should children do to deal with multiple assignments?\nC)【精析】事实细节题。短文中提到，面对多重任务时，要确保孩子从最喜欢做的开始，这样似乎很容易开始。因此，答案为 C)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2021.12 第1套/真题.pdf 第2页（修正双栏 B/D 错位）"
+        },
+        {
+          "id": "2021-12-1-q19",
+          "number": 19,
+          "kind": "single-choice",
+          "stem": "Who will qualify for the bonus in Mexican oil company?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Workers who meet its body weight standards."
+            },
+            {
+              "key": "B",
+              "text": "Workers who can lose 30 pounds in a year."
+            },
+            {
+              "key": "C",
+              "text": "Workers who try the hardest to lose weight."
+            },
+            {
+              "key": "D",
+              "text": "Workers who’ re in the top 10% of the slimmest."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Who will qualify for the bonus in Mexican oil company?\nA)【精析】事实细节题。短文开头指出，墨西哥石油公司的员工如果达到一定的体重标准，每年将获得近 300 美元的健康奖励。为了获得奖金，他们必须保持健康的体重。由此可知，体重达到一定标准的员工即可获得奖金，故答案选 A)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q20",
+          "number": 20,
+          "kind": "single-choice",
+          "stem": "What do critics think of Mexican oil company's bonus policy?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Impractical."
+            },
+            {
+              "key": "B",
+              "text": "Inconsistent."
+            },
+            {
+              "key": "C",
+              "text": "Unmanageable."
+            },
+            {
+              "key": "D",
+              "text": "Unfair."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What do critics think of Mexican oil company's bonus policy?\nD)【精析】事实细节题。短文中提到，评论家们认为，墨西哥石油公司的奖励政策违背了健康专家们的建议。这些专家们警告说一个人的体重受到基因和环境因素影响，这意味着个人很难控制自己的体重，这使得这一奖励政策有失公平。因此，答案为 D)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第157行；真题.pdf 第3页 Q20；md 第546–547行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q21",
+          "number": 21,
+          "kind": "single-choice",
+          "stem": "What do experts propose companies do about workers' wellbeing?",
+          "blockId": "listening-pass-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "Offer them much fatter bonuses."
+            },
+            {
+              "key": "B",
+              "text": "Improve working environment."
+            },
+            {
+              "key": "C",
+              "text": "Encourage healthy behaviors."
+            },
+            {
+              "key": "D",
+              "text": "Provide free lunch and snacks."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What do experts propose companies do about workers' wellbeing?\nC)【精析】事实细节题。短文中提到，专家们认为，关注工资对于改善健康来说是一个错误的策略。鼓励员工关注健康更有效的方法是提倡健康的行为。因此，答案为 C)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q22",
+          "number": 22,
+          "kind": "single-choice",
+          "stem": "Why are some people criticizing the British government?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "It has not done enough to help left-handed children."
+            },
+            {
+              "key": "B",
+              "text": "It has treated left-handed children as being disabled."
+            },
+            {
+              "key": "C",
+              "text": "It has not built facilities specially for the left-handed."
+            },
+            {
+              "key": "D",
+              "text": "It has ignored campaigns on behalf of the left-handed."
+            }
+          ],
+          "answer": "A",
+          "explanation": "Why are some people criticizing the British government?\nA)【精析】目的原因题。短文开头提到，活动者们警告过英国政府，他们没有做出足够的努力来防止左利手的孩子们落后于同伴，因此答案为 A)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q23",
+          "number": 23,
+          "kind": "single-choice",
+          "stem": "What do studies in recent years show about left-handed children?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are as intelligent as other children."
+            },
+            {
+              "key": "B",
+              "text": "They have a distinctive style of handwriting."
+            },
+            {
+              "key": "C",
+              "text": "They sometimes have psychological problems."
+            },
+            {
+              "key": "D",
+              "text": "They tend to have more difficulties in learning."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What do studies in recent years show about left-handed children?\nD)【精析】事实细节题。短文中提到，近几年的研究表明，左利手的孩子们更容易遇到学习上的困难，而且他们的智商测试分数较低，因此答案为 D)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q24",
+          "number": 24,
+          "kind": "single-choice",
+          "stem": "What do the campaigners demand the department of education do?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "Punish teachers discriminating against left-handed students."
+            },
+            {
+              "key": "B",
+              "text": "Lay more emphasis on improving children’s mental health."
+            },
+            {
+              "key": "C",
+              "text": "Encourage students to develop various professional skills."
+            },
+            {
+              "key": "D",
+              "text": "Keep track of left-handed children’s school performance."
+            }
+          ],
+          "answer": "D",
+          "explanation": "What do the campaigners demand the department of education do?\nD)【精析】细节推断题。短文中提到，他们要求教育部门记录哪些孩子是左利手以及这些孩子的在校成绩，因此答案为 D)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q25",
+          "number": 25,
+          "kind": "single-choice",
+          "stem": "What do the campaigners want to know about left-handed prisoners?",
+          "blockId": "listening-pass-3",
+          "options": [
+            {
+              "key": "A",
+              "text": "How they can be reduced in number."
+            },
+            {
+              "key": "B",
+              "text": "Why their numbers are so high."
+            },
+            {
+              "key": "C",
+              "text": "What percentage they account for."
+            },
+            {
+              "key": "D",
+              "text": "If their percentage keeps increasing."
+            }
+          ],
+          "answer": "C",
+          "explanation": "What do the campaigners want to know about left-handed prisoners?\nB)【精析】细节推断题。短文最后提到，活动者们指出，监狱中左利手的人占比很高，这些监狱的数量异常多，他们想知道为什么会是这样的情况。因此，答案为 B)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "Part III consists of Section A (Word Bank, 26-35), Section B (Long Passage Matching, 36-45), and Section C (Careful Reading, 46-55).",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "reading-sec-a-passage",
+          "title": "Section A 选词填空",
+          "text": "Many people believe that passion and commitment are the foundations of strong romantic relationships. But a relationship is made of two __(26)__ individuals. And the personality traits (特性) these individuals __(27)__ or lack can often make a relationship more- or less- likely to __(28)__. Recent research has found that one trait in particular—humility (谦逊)—is an important indicator of successful relationships.\n\nHumility can sometimes be __(29)__ with a lack of confidence. But researchers have come to realize that being humble generally indicates the __(30)__ of deeply admirable personal qualities. Being humble means you have the ability to accurately __(31)__ your deficiencies without denying your skills and strengths. For example, you might recognize that you are intelligent, but realize that you’re not a __(32)__. Thus, humility leads to an honest view of one’s own advantages and shortcomings. Humble people do not ignore, avoid, or try to deny their limits or deficiencies. They can __(33)__ mistakes, see value in things that are far from perfect and identify areas for improvement.\n\nPerhaps it is not __(34)__, then, that humility appears to be a huge asset to relationships. One study found that people tend to rate this quality __(35)__ in their spouse. The study also found that someone who is humble is more likely to initiate a romantic relationship, perhaps because they are less likely to see themselves as “too good” for someone else. Thus, a humble partner might be your ideal partner.",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "transcript": null,
+          "translation": "很多人认为激情和承诺是牢固的恋爱关系的基础。但一段关系是由两个独特的个体组成的。这些个体拥有或缺乏的个性特征通常可以让一段关系更可能或更不可能持久。最近的研究发现，尤其有一个特点——谦逊——是成功关系的一个重要指标。\n谦逊有时会被误认为缺乏自信。但研究人员已经意识到，谦虚通常标志着非常令人钦佩的个人品质的存在。谦虚意味着你有能力准确地评估自己的不足，同时也不否认自己的技能和优势。例如，你可能意识到自己很聪明，但也明白自己不是一个天才。因此，谦逊使人如实地看待自己的优点和缺点。谦逊的人不会忽视、避免或试图否认自己的局限或不足。他们能够承认错误，发现那些远称不上完美的事物的价值，并找出需要改进的地方。\n\n\n\n谦逊似乎是人际关系中的一笔巨大财富，这也许并不令人惊讶。一项研究发现，人们倾向于高度评价配偶的这一品质。研究还发现，谦虚的人更有可能开始一段恋情，也许是因为他们不太可能“自视过高”从而认为别人高攀不上。因此，一个谦虚的人可能是你的理想伴侣。"
+        },
+        {
+          "id": "reading-sec-b-passage",
+          "title": "Section B 长篇阅读",
+          "text": "There’s a stress gap between men and women\n\n[A] “I used to work very hard. I love to create things, grow them and solve problems,” said Meng Li, a successful app developer in San Francisco. “I didn’t really care about my mind and my body until they decided to go on strike.”\n\n[B] Ms. Li said her stress led to sleeplessness. When she did sleep, she experienced “problem-solving dreams,” which left her feeling unrested when she woke up. “After I became a first-time mother, I quickly realized I was so busy caring for other people and work that I felt like I’d lost myself,” she said.\n\n[C] It’s a common story—one we frequently ridicule and readily dismiss, for example, by claiming that women tend to complain more than men, despite the growing sum of research that underlines the problem. Women are twice as likely to suffer from severe stress and anxiety as men, according to a 2016 study published in The Journal if Brain & Behavior. The American Psychological Association reports a gender gap year after year showing that women consistently report higher stress levels. Clearly, a stress gap exists.\n\n[D] “The difference is not really news to me, as a clinical psychologist,” said Erin Joyce, a women and couples therapist in Los Angeles. “It’s been well documented in extensive research over the years that prevalence rates for the majority of the anxiety disorders are higher in women than men.” Some people may argue that this is merely reported data, and they say many men feel the same pressures as women in terms of fulfilling responsibilities at work and home. In other words, we’re all really, really stressed.\n\n[E] “The difference, however, is in the nature and scope of these responsibilities in the home environment in particular,” Dr. Joyce said. For example, the United Nations reported that women do nearly three times as much unpaid domestic work as men. The problem is, housework is often overlooked as work, even though it is often as laborious (or in some cases, more so) as any paid job. As the scholar Silvia Federici put it in 1975, the unpaid nature of domestic work reinforces the assumption that “housework is not work, thus preventing women from struggling against it.”\n\n[F] It’s not just inside the home, though. Research from Nova Southeastern University found that female managers were more likely than male managers to display “surface acting,” or forcing emotions that are not wholly felt. “They expressed optimism, calmness and sympathy even when these were not the emotions that they were actually feeling,” the study said.\n\n[G] Surface acting is a prime example of “emotional labor,” a concept that the writer Jess Zimmerman made familiar in a 2015 essay. The essay sparked a massive thread on the internet community blog MetaFilter. Hundreds of women spoke up about their own experience with emotional labor: the duties that are expected of them, but go unnoticed. These invisible duties become apparent only when you don’t do them. Like domestic labor, emotional labor is generally dismissed and not labeled work. But research shows it can be just as exhausting as paid work. Emotional labor can lead to difficulty in sleeping and family conflict. Sure, circumstantial stress, like losing a job, may lead to these same issues. But emotional labor is not circumstantial. It’s an enduring responsibility based on the socialized gender role of women.\n\n[H] Like Ms. Li, many women try to manage the added stress to reach what Dr. Joyce said was an unattainable ideal. “Some professional women aim to do it all. They want to reach the top of the corporate ladder and fly like supermom,” she said. When women don’t reach this ideal, they feel guilty; and even more stressed. After her own struggle with this, Ms. Li took a step back and used her experience to build Sanity & Self, a self-care app and platform for overworked women. “The realizations I had in that process helped me gain insights and ultimately got me ready to integrate self-care into my daily life,” she said.\n\n[I] The stress problem extends beyond mental health when you consider the link between stress, anxiety and heart health. Worse, most of what we know about heart disease comes from studies involving men. However, “there are many reasons to think that it’s different in women,” Harvard Medical School reported. For example, women are more likely to experience disturbed sleep, anxiety and unusual fatigue before a heart attack. Stress is so normalized that it is easy for women to shrug off those symptoms as simply the consequences of stress. Many women also do not experience chest pain before a heart attack the way men do, which leads to fewer women discovering problematic heart issues. Harvard reports that women are “much more likely than men to die within a year of having a heart attack” and “many women say their physicians sometimes don’t even recognize the symptoms.”\n\n[J] The good news is, women are more likely than men to take charge of their stress and manage it, the American Psychological Association reports. The concept of self-care, at its core, is quite simple. “The basics of adequate sleep, healthy diet and exercise are a good place to start,” Dr. Joyce said. “Support from trusted relationships is vital This includes professional support from various health and wellness providers if stress is becoming increasingly overwhelming.”\n\n[K] Disconnecting from work and home responsibilities is also obviously important. But it’s much easier said than done. It is important to understand what causes your stress in the first place. “Get really specific with what’s stressing you out,” Ms. Li said “We often chalk up our stress to broad experiences like work. But work stress can take many different forms. Is a colleague being disrespectful of your time? Is a boss undermining your day-to-day control over decision making? These are different causes of stress and can benefit from different kinds of self-care.”\n\n[L] Ideally, your spouse or partner will be supportive, rather than dismissive, of your stress. It is important to talk through these issues before they come to a head. “Women working outside of the home should make an effort to have a conscious conversation with their partners about more equitable sharing of household and family responsibilities,” Dr. Joyce said.",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "transcript": null,
+          "translation": "男女之间存在压力鸿沟\nA) 旧金山一位成功的应用软件开发者李梦说：“我以前工作非常努力。我喜欢创造东西，让它们成长并解决问题。直到我的身心决定罢工，我才真正关心它们。”\nB) (42-1)李女士说她的压力导致了失眠。当她真的入睡时，她会做“解决问题的梦”，这让她在醒来时感觉没有得到休息。(42-2)她说：“当我初为人母后，我很快意识到自己忙于照顾其他人和工作，以至于我感觉好像迷失了自我。”\nC) 这是一个常见的问题——一个我们经常嘲笑和轻易否认的问题，例如，声称女性比男性更容易抱怨，尽管越来越多的研究强调了这个问题。(38)根据 2016 年发表在《大脑与行为杂志》上的一项研究，女性遭受严重压力和焦虑的可能性是男性的两倍。美国心理协会年复一年地报道性别差距，表明女性持续报告更高的压力水平。显然，压力差距是存在的。\n\nD) “作为一名临床心理学家，这种差异对我来说并不是什么新鲜事，”洛杉矶的女性和夫妻治疗师艾琳·乔伊斯说。“多年来的广泛研究充分证明，大多数焦虑症在女性中的患病率要高于男性。”(45)有些人可能会争辩说，这只是报告的数据，他们说，在履行工作和家庭责任方面，许多男性感受到的压力与女性相同。换句话说，我们都是真的、真的压力巨大。\nE) 乔伊斯博士说：“然而，区别在于这些责任的性质和范围，尤其是在家庭环境中。”(37)例如，联合国报告称，女性做的无偿家务劳动几乎是男性的三倍。问题是，家务劳动作为工作，经常被忽视，尽管它往往与任何有偿工作一样辛苦（或在某些情况下，更辛苦）。正如学者西尔维亚·费德里奇在 1975 年指出的那样，家务劳动的无偿性质强化了“家务劳动不是工作，因此阻止了女性与之抗争”的假设。\nF) 不过，这不仅仅是在家里。(40)诺瓦东南大学的研究发现，女性管理者比男性管理者更有可能表现出“表面行为”，或强迫自己的情绪不被他人完全感知到。研究称：“她们表现出乐观、冷静和同情，即使这些情绪并不是她们实际感受到的。”\nG) 表面行为是“情绪劳动”的一个典型例子，作家杰西·齐默尔曼在 2015 年的一篇文章中让人们熟悉了这一概念。这篇文章在互联网社区博客 MetaFilter 上引发了大量的讨论。(43)数百名女性讲述了她们自己在情绪劳动方面的经历：她们被期望承担的责任，却没有被人们注意到。这些无形的责任只有在你不去做的时候才会显现出来。与家务劳动一样，情绪劳动通常被忽视，也不会被贴上工作标签。但研究表明，它可能和有偿工作一样让人筋疲力尽。情绪劳动会导致睡眠困难和家庭冲突。当然，间接压力，比如失业，可能会导致同样的问题。但情绪劳动不是与特定环境有关的。这是一种基于女性社会化性别角色的持久责任。\nH) 和李女士一样，许多女性试图控制额外的压力，以达到乔伊斯博士所说的无法实现的理想。她说：“一些职业女性的目标是做到一切。她们想登上公司阶梯的顶端，像超人妈妈一样飞翔。”(36)当女性没有达到这个理想时，她们会感到内疚；而且甚至压力更大。在她自己与此抗争之后，李女士退了一步，利用自己的经验创建了理智与自我（Sanity & Self），一个针对过度工作女性的自我护理应用软件和平台。她说：“我在这个过程中领悟到的认识帮助我获得了深刻的见解，并最终使我准备好将自我护理融入日常生活。”\nI) 当你考虑压力、焦虑和心脏健康之间的联系时，压力问题就超出了心理健康的范畴。更糟糕的是，我们对心脏病的了解大多来自于对男性的研究。然而，哈佛医学院报道：“有很多理由认为女性的情况有所不同。”(41)例如，女性在心脏病发作前更有可能经历睡眠不安、焦虑和异常疲劳。压力是如此的正常化，以至于女性很容易将这些症状视为压力的后果而不予理睬。许多女性在心脏病发作前也不会像男性那样经历胸痛，这导致更少的女性发现心脏出现问题。哈佛大学报告称，女性“比男性更有可能在一年内死于心脏病发作”，“许多女性说，她们的医生有时甚至没有辨认出这些症状。”\nJ) 好消息是，美国心理协会报告称，女性比男性更有可能控制自己的压力并加以管理。自我护理的概念，其核心是相当简单的。乔伊斯博士说：“充足的睡眠、健康的饮食和锻炼这些基本的需求是一个很好的开始。来自信赖关系的支持至关重要。(44)如果压力变得越来越大，还要寻求来自各种健康和保健提供者的专业支持。”\nK) 远离工作和家庭责任显然也很重要。但说起来容易做起来难。(39)首先要了解是什么导致了你的压力，这是很重要的。李女士说：“弄清楚具体是什么让你感到压力。我们经常把压力归因于工作等广泛的经历。但工作压力有许多不同的形式。同事是否不尊重你的时间？老板是否破坏你对日常决策的控制？这些都是导致压力的不同原因，可以从不同类型的自我护理中获益。”\nL) 理想情况下，你的配偶或同伴会支持你，而不是轻视你的压力。重要的是，在这些问题到达紧急关头之前，先把它们讨论透彻。乔伊斯博士说：“外出工作的女性应该努力与伴侣进行有意识的对话，关于更公平地分担家务劳动和家庭责任。”"
+        },
+        {
+          "id": "reading-passage-1",
+          "title": "Section C Passage One",
+          "text": "As many office workers adapt to remote work, cities may undergo fundamental change if offices remain under-utilized. Who will benefit if working from home becomes the norm?\n\nEmployers argue they make considerable savings on real estate when workers shift from office to home work. However, these savings result from passing costs on to workers.\n\nUnless employers are fully compensated, this could become a variant of parasitic (寄生 的 ) capitalism, whereby corporate profits increasingly rely on extracting value from the public—and now personal—realm, rather than on generating new value.\n\nThough employers are backed by a chorus of remote work advocates, others note the loneliness, reduced productivity and inefficiencies of extended remote work.\n\nIf working from home becomes permanent, employees will have to dedicate part of their private space to work. This requires purchasing desks, chairs and office equipment.\n\nIt also means having private space dedicated to work: the space must be heated, cleaned, maintained and paid for. That depends on many things, but for purposes of illustration, I have run some estimates for Montreal. The exercise is simple but important, since it brings these costs out of the realm of speculation into the realm of meaningful discussion.\n\nRough calculations show that the savings made by employers when their staff works from home are of similar value to the compensation workers should receive for setting up offices at home.\n\nWhat does this mean for offices in cities? One of two things may happen: Employers pass these costs onto employees. This would be a form of expropriation (4% 4), with employees absorbing production costs that have traditionally been paid by the employer. This represents a considerable transfer of value from employees to employers.\n\nWhen employees are properly compensated, employers’ real estate savings will be modest. If savings\n\n\n\nare modest, then the many advantages of working in offices-such as lively atmosphere, rapidity of communication, team-building and acclimatization (适应 环境 ) of new employees—will encourage employers to shelve the idea of remote work and, like Yahoo in 2013, encourage employees to work most of the time from corporate office space.",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "transcript": null,
+          "translation": "随着许多办公室工作人员适应远程工作，如果办公室没有得到充分利用，城市可能会经历根本性的变化。如果在家工作成为常态，谁将受益？\n(46)雇主们提出，当工作人员从办公室转到家中工作时，他们在房地产方面节省了大量的资金。然而，这些节省下来的资金来自于将成本转嫁到工作人员身上。\n除非雇员得到充分补偿，否则这可能变成寄生资本主义的一种变体，企业利润越来越多地依赖于从公共领域和现在的个人领域中获取价值，而不是依赖于创造新的价值。\n(47)尽管雇主得到了远程工作倡导者的异口同声的支持，但其他人注意到长期的远程工作所带来的孤独感、生产率降低和效率低下。\n如果在家工作成为永久性的，员工将不得不将其私人空间的一部分用于工作。这需要购买办公桌、椅子和办公设备。\n它还意味着要有专门用于工作的私人空间：空间需要供暖、清扫、维护和支付费用。(48)这取决于很多因素，但为了说明，我对蒙特利尔进行了一些估算。这项工作很简单但很重要，因为它将这些成本从推测领域带到了有意义的讨论领域。\n(49)粗略计算表明，当员工在家工作时，雇主所节省的费用与员工在家设立办公室所应获得的补偿金额相当。\n这对城市的办公室意味着什么？两种情况中的一种可能发生：雇主将这些成本转嫁给雇员。这将是一种侵占模式，员工承担传统上由雇主支付的生产成本。这代表着价值从雇员向雇主的巨大转移。\n(50)如果雇员得到适当的补偿，雇主的房地产节省的资金就少了，那么在办公室工作的许多优势，例如活跃的气氛、快速的沟通、团队建设和新员工对环境的适应，都将鼓励雇主搁置远程工作的想法，就像 2013 年的雅虎一样，鼓励员工大部分时间在公司办公。"
+        },
+        {
+          "id": "reading-passage-2",
+          "title": "Section C Passage Two",
+          "text": "The human thirst for knowledge is the driving force behind our successful development as a species. But curiosity can also be dangerous, leading to setbacks or even downfalls. Given curiosity’s complexity, scientists have found it hard to define.\n\nWhile pinning down a definition has proven tricky, the general consensus is it’s some means of information gathering. Psychologists also agree curiosity is intrinsically (内 在 地 ) motivated.\n\nCuriosity covers such a large set of behaviors that there probably isn’t any single “curiosity gene” that makes humans wonder about and explore their environment. That said, curiosity does have a genetic component. Genes and the environment interact in many complex ways to shape individuals and guide their behavior, including their curiosity.\n\nRegardless of their genetic makeup, infants have to learn an incredible amount of information in a short time, and curiosity is one of the tools humans have found to accomplish that gigantic task.\n\nHundreds of studies show that infants prefer novelty. It’s what motivates non-human animals, human infants and probably human adults to explore and seek out new things before growing less interested in them after continued exposure.\n\nBut curiosity often comes with a cost.\n\nIn some situations, the stakes are low and failure is a healthy part of growth. For instance, many\n\n\n\nbabies are perfectly proficient crawlers, but they decide to try walking because there’s more to see and do when they stand upright. But this milestone comes at a small cost. A study of 12- to 19-month-olds learning how to walk documented that these children fell down a lot. Seventeen times per hour, to be exact. But walking is faster than crawling, so this motivates expert crawlers to transition to walking\n\nSometimes, however, testing out a new idea can lead to disaster. For instance, the Inuit people of the Arctic regions have created incredible modes to deal with the challenges of living in northern climates, but what we forget about are the tens of thousands of people that tried and failed to make it in those challenging landscapes.",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "transcript": null,
+          "translation": "(51)人类对知识的渴望是我们作为一个物种成功发展背后的驱动力。但好奇心也可能是危险的，会导致挫折甚至失败。考虑到好奇心的复杂性，科学家们发现很难定义它。\n(52)虽然事实证明给好奇心下定义很难，但大家普遍认为好奇心是一种收集信息的手段。心理学家也同意好奇心是内在的驱动力。\n好奇心涵盖了如此多的行为，以至于很可能没有任何一种单一的“好奇心基因”能让人类对自己的环境感到好奇和探索。这就是说，好奇心确实有基因成分。(53)基因和环境以许多复杂的方式相互作用，塑造个体并指导他们的行为，包括他们的好奇心。\n\n不管婴儿的基因构成如何，他们都必须在短时间内学习大量的信息，好奇心是人类完成这一巨大任务的工具之一。\n(54)数百项研究表明，婴儿更喜欢新奇的事物。这是促使非人类动物、人类婴儿，甚至可能是人类成年人探索和寻找新事物的动力，而在持续接触之后，他们对新事物的兴趣会减弱。\n但好奇心往往是有代价的。\n在某些情况下，风险很低，失败是成长的健康组成部分。例如，许多婴儿都能非常熟练地爬行，但他们却决定尝试行走，因为当他们站直时，有更多的东西要看和做。但这一里程碑的代价很小。一项对 12 到 19 个月大的孩子学习走路的研究表明，这些孩子经常摔倒。准确地说，每小时 17 次。但是行走比爬行快，所以这促使爬行专家转向行走。\n(55)然而，有时候，测试一个新想法可能会导致灾难。例如，北极地区的因纽特人创造了令人难以置信的模式来应对生活在北方的气候的挑战，但我们忘记了成千上万的人曾试图在这些具有挑战性的环境中生存而未能成功。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2021-12-1-q26",
+          "number": 26,
+          "kind": "word-bank",
+          "stem": "第 [26] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "O",
+          "explanation": "【考点】形容词辨析题。\nO)【语法判断】空格前是数词 two，空格后是名词 individuals，因此本空应填入形容词。\n【语义判断】空格所在句意为：但一段关系是由两个____个体组成的。而下一句是关于这些个体的个性特征，由此可知，本句表达的是一段关系由两个不同的个体组成，因此本空应填入含有“不同的，独特的”意义的形容词，由此确定本题答案为 O) unique。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q27",
+          "number": 27,
+          "kind": "word-bank",
+          "stem": "第 [27] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【考点】动词辨析题。\nI)【语法判断】空格后是并列连词 or 和动词 lack，因此空格处也应填入一个动词原形。\n【语义判断】or 意为“或者”，表示选择关系，且后面出现了 more or less 这组意义相反的词，所以此处的动词应该与 lack“缺乏”意思相反，故本空应填入含有“拥有”意义的动词，由此确定本题答案为 I) possess。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q28",
+          "number": 28,
+          "kind": "word-bank",
+          "stem": "第 [28] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【考点】动词辨析题。\nD)【语法判断】空格前是 likely to，因此本空应填入动词原形。\n2021. 12 / 29 (第 1 套)\n【语义判断】空格所在句意为：这些个体拥有或缺乏的个性特征通常可以让一段关系更可能或更不可能____。综合前一句可知，一段关系包括两个不同的个体，他们各自的个性特征会影响他们的关系，结合备选动词可知，本空填入含有“持续，持久”意义的动词更合适，由此确定答案为 D) endure。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q29",
+          "number": 29,
+          "kind": "word-bank",
+          "stem": "第 [29] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【考点】动词辨析题。\nC)【语法判断】空格前有情态动词 can 和 be 动词原形，因此本空应填入形容词或动词的过去分词形式。\n【语义判断】空格所在句的意思是：谦逊有时会被____缺乏自信。由常识可知，如果一个人太谦虚，可能会被误认为是缺乏自信。因此本空应填入含有“混淆，误认为”意义的词，由此确定答案为 C) confused。K) puzzled 与 confused 意思相近，但不能与 with 搭配使用，因此排除。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q30",
+          "number": 30,
+          "kind": "word-bank",
+          "stem": "第 [30] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【考点】名词辨析题。\nJ)【语法判断】空格前有定冠词 the，后面是介词 of，因此本空应填入名词。\n【语义判断】空格所在句意为：研究人员已经意识到，谦虚通常标志着非常令人钦佩的个人品质的____。将备选项中的三个名词分别代入空格，只有 J) presence“存在”符合句意，因此为正确答案。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q31",
+          "number": 31,
+          "kind": "word-bank",
+          "stem": "第 [31] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【考点】动词辨析题。\nB)【语法判断】空格所在结构是 have the ability to do sth.，因此本空应填入动词原形。\n【语义判断】空格所在句意为：谦逊意味着你有能力准确地____自己的不足，同时也不否认自己的技能和优势。此处应选择一个能与副词 accurately 以及后面宾语 deficiencies 搭配的动词。综合备选项可知，B) assess 与 deficiencies 搭配，意为“评估不足”，符合句意，为本题答案。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q32",
+          "number": 32,
+          "kind": "word-bank",
+          "stem": "第 [32] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【考点】名词辨析题。\nF)【语法判断】空格前有不定冠词 a，因此本空应填入单数名词。\n【语义判断】空格所在句意为：你可能意识到自己很聪明，但也明白自己不是一个____。备选项中有三个名词，其中符合句意的只有 F) genius“天才”，故为本题答案。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q33",
+          "number": 33,
+          "kind": "word-bank",
+          "stem": "第 [33] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【考点】动词辨析题。\nA)【语法判断】空格前有情态动词 can，空格后是名词，因此本空应填入动词原形。备选词中有四个选项符合要求。\n【语义判断】空格所在句意为：他们能够____错误，发现那些远称不上完美的事物的价值，并找出需要改进的地方。由上一句可知，谦逊的人不会忽视、避免或试图否认自己的局限或不足。那么这里表示的意思应为能够承认错误，从而改进。因此确定答案为 A) acknowledge“承认”。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q34",
+          "number": 34,
+          "kind": "word-bank",
+          "stem": "第 [34] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "M",
+          "explanation": "【考点】形容词辨析题。\nM)【语法判断】空格前有形式主语 it 和动词 is，后面的 that 从句是真正的主语，因此本空应填入形容词。\n【语义判断】空格所在句意为：谦逊似乎是人际关系中的一笔巨大财富，这也许并不____。由第二段可知，谦逊是一个非常好的性格特点，那么谦逊对人际关系很重要，这一点就不足为奇了，因此本空应填入含有“惊奇，惊讶”意义的形容词，由此确定答案为 M) surprising。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q35",
+          "number": 35,
+          "kind": "word-bank",
+          "stem": "第 [35] 空处填入词汇",
+          "blockId": "reading-sec-a-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "acknowledge"
+            },
+            {
+              "key": "B",
+              "text": "assess"
+            },
+            {
+              "key": "C",
+              "text": "confused"
+            },
+            {
+              "key": "D",
+              "text": "endure"
+            },
+            {
+              "key": "E",
+              "text": "extremely"
+            },
+            {
+              "key": "F",
+              "text": "genius"
+            },
+            {
+              "key": "G",
+              "text": "highly"
+            },
+            {
+              "key": "H",
+              "text": "permanent"
+            },
+            {
+              "key": "I",
+              "text": "possess"
+            },
+            {
+              "key": "J",
+              "text": "presence"
+            },
+            {
+              "key": "K",
+              "text": "puzzled"
+            },
+            {
+              "key": "L",
+              "text": "status"
+            },
+            {
+              "key": "M",
+              "text": "surprising"
+            },
+            {
+              "key": "N",
+              "text": "thoroughly"
+            },
+            {
+              "key": "O",
+              "text": "unique"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【考点】副词辨析题。\nG)【语法判断】空格前是动宾短语 rate this quality，因此本空应填入副词修饰 rate。\n【语义判断】空格所在句的意思是：一项研究发现，人们倾向于____评价配偶的这一品质。将备选项中的三个副词分别代入空格，只有 G) highly“非常赞许地”使句意通顺，因此确定答案为 G) highly。rate highly 意为“高评价，评价很高”。\n参考译文\n很多人认为激情和承诺是牢固的恋爱关系的基础。但一段关系是由两个独特的个体组成的。这些个体拥有或缺乏的个性特征通常可以让一段关系更可能或更不可能持久。最近的研究发现，尤其有一个特点——谦逊——是成功关系的一个重要指标。\n谦逊有时会被误认为缺乏自信。但研究人员已经意识到，谦虚通常标志着非常令人钦佩的个人品质的存在。谦虚意味着你有能力准确地评估自己的不足，同时也不否认自己的技能和优势。例如，你可能意识到自己很聪明，但也明白自己不是一个天才。因此，谦逊使人如实地看待自己的优点和缺点。谦逊的人不会忽视、避免或试图否认自己的局限或不足。他们能够承认错误，发现那些远称不上完美的事物的价值，并找出需要改进的地方。\n2021. 12 / 30 (第 1 套)\n谦逊似乎是人际关系中的一笔巨大财富，这也许并不令人惊讶。一项研究发现，人们倾向于高度评价配偶的这一品质。研究还发现，谦虚的人更有可能开始一段恋情，也许是因为他们不太可能“自视过高”从而认为别人高攀不上。因此，一个谦虚的人可能是你的理想伴侣。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：2021.12 第1套/真题.pdf 第9页 KEYS 与解析（G) highly）；原 md KEYS OCR 误识为 O"
+        },
+        {
+          "id": "2021-12-1-q36",
+          "number": 36,
+          "kind": "matching",
+          "stem": "Some career women who aim high tend to feel guilty if they fail to achieve their goals.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "H",
+          "explanation": "【定位】由题干中的 guilty 和 fail to achieve their goals 定位到 H)段第四句。\nH)【精析】同义转述题。定位句提到，当女性没有达到这个理想时，她们会感到内疚；而且甚至压力更大。题干中的 feel guilty 与定位句中一致，题干中的 fail to achieve their goals 是对定位句中 don't reach this ideal 的同义转述，故答案为 H)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q37",
+          "number": 37,
+          "kind": "matching",
+          "stem": "The unpaid housework done by women is triple that done by men.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "E",
+          "explanation": "【定位】由题干中的 unpaid housework 和 triple 定位到 E)段第二句。\nE)【精析】同义转述题。定位句指出，联合国报告称，女性做的无偿家务劳动几乎是男性的三倍。题干中的 The unpaid housework 和 triple 分别对应定位句中的 unpaid domestic work 和 three times，故答案为 E)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q38",
+          "number": 38,
+          "kind": "matching",
+          "stem": "It is reported that women consistently suffer more from severe stress than men.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 women consistently suffer more from severe stress than men 定位到 C)段第二、三句。\nC)【精析】细节辨认题。定位句提到，根据 2016 年发表在《大脑与行为杂志》上的一项研究，女性遭受严重压力和焦虑的可能性是男性的两倍。题干中的 suffer more from severe stress than men 对应定位句中的 twice as likely to suffer from severe stress and anxiety as men，题干中的 consistently 与定位句中一致，故答案为 C)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q39",
+          "number": 39,
+          "kind": "matching",
+          "stem": "Women are advised to identify the specific causes of their stress so that steps can be taken to deal with it.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "K",
+          "explanation": "【定位】由题干中的 identify 和 specific causes of their stress 定位到 K)段第三、四句。\nK)【精析】同义转述题。定位句指出，首先要了解是什么导致了你的压力，这是很重要的。弄清楚具体是什么让你感到压力。题干中的 identify 是对定位句中 understand 的同义转述，题干中的 specific causes of their stress 对应定位句中的 Get really specific with what's stressing you out，故答案为 K)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q40",
+          "number": 40,
+          "kind": "matching",
+          "stem": "One study showed that women managers often expressed positive emotions that they didn’t really feel.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "F",
+          "explanation": "【定位】由题干中的 study、women managers、positive emotions 和 didn't really feel 定位到 F)段第二、三句。\nF)【精析】细节归纳题。定位句提到，诺瓦东南大学的研究发现，女性管理者比男性管理者更有可能\n2021. 12 / 31 (第 1 套)\n表现出“表面行为”，或强迫自己的情绪不被他人完全感知到。研究称：“她们表现出乐观、冷静和同情，即使这些情绪并不是她们实际感受到的”。题干中的 study 指的就是定位句中的 Research；题干中的 women managers 对应定位句中的 female managers；题干中的 positive emotions 是对定位句中 optimism, calmness and sympathy 的归纳概括；题干中的 didn't really feel 对应定位句中的 not the emotions that they were actually feeling。题干是对定位句的总结概括，故答案为 F)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q41",
+          "number": 41,
+          "kind": "matching",
+          "stem": "Women tend to mistake signs of heart attacks for symptoms of stress.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "I",
+          "explanation": "【定位】由题干中的 signs of heart attacks 和 symptoms of stress 定位到 I)段第四、五句。\nI)【精析】细节辨认题。定位句指出，女性在心脏病发作前更有可能经历睡眠不安、焦虑和异常疲劳。压力是如此的正常化，以至于女性很容易将这些症状视为压力的后果而不予理睬。题干中的 signs of heart attacks 和 symptoms of stress 分别对应定位句中的 those symptoms 和 the consequences of stress，故答案为 I)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q42",
+          "number": 42,
+          "kind": "matching",
+          "stem": "For a time an app developer in America was so busy attending to work and family that she suffered from sleeplessness.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 an app developer、so busy attending to work and family 和 suffered from sleeplessness 定位到 B)段第一、三句。\nB)【精析】细节归纳题。A)段中介绍，李梦是旧金山的一位应用软件开发者。B)段第一句提到，压力导致李女士失眠。B)段第三句指出，当她初为人母后，她很快意识到自己忙于照顾其他人，以至于她感觉好像迷失了自我。题干中的 an app developer 对应定位句中的 Ms. Li。题干中的 so busy attending to work and family 是对定位句中 so busy caring for other people and work 的归纳概括。题干中的 suffered from sleeplessness 对应定位句中的 led to sleeplessness，故答案为 B)。A)段虽然提到了李梦是应用软件开发者，但没有说明她忙于工作和家庭而导致失眠，故可以排除。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q43",
+          "number": 43,
+          "kind": "matching",
+          "stem": "The emotional labor women do is noticed only when it is not done.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "G",
+          "explanation": "【定位】由题干中的 emotional labor 和 is noticed only when it is not done 定位到 G)段第三、四句。\nG)【精析】同义转述题。定位句指出，数百名女性讲述了她们自己在情绪劳动方面的经历：她们被期望承担的责任，却没有被人们注意到。这些无形的责任只有在你不去做的时候才会显现出来。题干中的 emotional labor 和 only when it is not done 分别对应定位句中的 emotional labor 和 only when you don't do them；题干中的 noticed 是对定位句中 apparent 的同义转述，故答案为 G)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q44",
+          "number": 44,
+          "kind": "matching",
+          "stem": "Dr. Joyce suggests that apart from self-care, women should seek professional support if they experience severe stress.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "J",
+          "explanation": "【定位】由题干中的 professional support 和 severe stress 定位到 J)段最后一句。\nJ)【精析】同义转述题。定位句指出，如果压力变得越来越大，还要寻求来自各种健康和保健提供者的专业支持。题干中的 professional support 对应定位句中的 professional support from various health and wellness providers；题干中的 severe stress 是对定位句中 stress is becoming increasingly overwhelming 的同义转述，故答案为 J)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第354–355行；真题.pdf 第6页 Q44；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q45",
+          "number": 45,
+          "kind": "matching",
+          "stem": "Some people believe that there may not exist a stress gap between men and women.",
+          "blockId": "reading-sec-b-passage",
+          "options": [
+            {
+              "key": "A",
+              "text": "段落 [A]"
+            },
+            {
+              "key": "B",
+              "text": "段落 [B]"
+            },
+            {
+              "key": "C",
+              "text": "段落 [C]"
+            },
+            {
+              "key": "D",
+              "text": "段落 [D]"
+            },
+            {
+              "key": "E",
+              "text": "段落 [E]"
+            },
+            {
+              "key": "F",
+              "text": "段落 [F]"
+            },
+            {
+              "key": "G",
+              "text": "段落 [G]"
+            },
+            {
+              "key": "H",
+              "text": "段落 [H]"
+            },
+            {
+              "key": "I",
+              "text": "段落 [I]"
+            },
+            {
+              "key": "J",
+              "text": "段落 [J]"
+            },
+            {
+              "key": "K",
+              "text": "段落 [K]"
+            },
+            {
+              "key": "L",
+              "text": "段落 [L]"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 Some people believe 和 may not exist a stress gap between men and women 定位到 D)段第三句。\nD)【精析】细节归纳题。定位句提到，有些人可能会争辩说，这只是报告的数据，他们说，在履行工作和家庭责任方面，许多男性感受到的压力与女性相同。题干中的 Some people believe 对应定位句中的 Some people may argue，题干中的 may not exist a stress gap between men and women 是对定位句中 men feel the same pressures as women in terms of fulfilling responsibilities at work and home 的总结概括，故答案为 D)。\n参考译文\n男女之间存在压力鸿沟\nA) 旧金山一位成功的应用软件开发者李梦说：“我以前工作非常努力。我喜欢创造东西，让它们成长并解决问题。直到我的身心决定罢工，我才真正关心它们。”\nB) (42-1)李女士说她的压力导致了失眠。当她真的入睡时，她会做“解决问题的梦”，这让她在醒来时感觉没有得到休息。(42-2)她说：“当我初为人母后，我很快意识到自己忙于照顾其他人和工作，以至于我感觉好像迷失了自我。”\nC) 这是一个常见的问题——一个我们经常嘲笑和轻易否认的问题，例如，声称女性比男性更容易抱怨，尽管越来越多的研究强调了这个问题。(38)根据 2016 年发表在《大脑与行为杂志》上的一项研究，女性遭受严重压力和焦虑的可能性是男性的两倍。美国心理协会年复一年地报道性别差距，表明女性持续报告更高的压力水平。显然，压力差距是存在的。\n2021. 12 / 32 (第 1 套)\nD) “作为一名临床心理学家，这种差异对我来说并不是什么新鲜事，”洛杉矶的女性和夫妻治疗师艾琳·乔伊斯说。“多年来的广泛研究充分证明，大多数焦虑症在女性中的患病率要高于男性。”(45)有些人可能会争辩说，这只是报告的数据，他们说，在履行工作和家庭责任方面，许多男性感受到的压力与女性相同。换句话说，我们都是真的、真的压力巨大。\nE) 乔伊斯博士说：“然而，区别在于这些责任的性质和范围，尤其是在家庭环境中。”(37)例如，联合国报告称，女性做的无偿家务劳动几乎是男性的三倍。问题是，家务劳动作为工作，经常被忽视，尽管它往往与任何有偿工作一样辛苦（或在某些情况下，更辛苦）。正如学者西尔维亚·费德里奇在 1975 年指出的那样，家务劳动的无偿性质强化了“家务劳动不是工作，因此阻止了女性与之抗争”的假设。\nF) 不过，这不仅仅是在家里。(40)诺瓦东南大学的研究发现，女性管理者比男性管理者更有可能表现出“表面行为”，或强迫自己的情绪不被他人完全感知到。研究称：“她们表现出乐观、冷静和同情，即使这些情绪并不是她们实际感受到的。”\nG) 表面行为是“情绪劳动”的一个典型例子，作家杰西·齐默尔曼在 2015 年的一篇文章中让人们熟悉了这一概念。这篇文章在互联网社区博客 MetaFilter 上引发了大量的讨论。(43)数百名女性讲述了她们自己在情绪劳动方面的经历：她们被期望承担的责任，却没有被人们注意到。这些无形的责任只有在你不去做的时候才会显现出来。与家务劳动一样，情绪劳动通常被忽视，也不会被贴上工作标签。但研究表明，它可能和有偿工作一样让人筋疲力尽。情绪劳动会导致睡眠困难和家庭冲突。当然，间接压力，比如失业，可能会导致同样的问题。但情绪劳动不是与特定环境有关的。这是一种基于女性社会化性别角色的持久责任。\nH) 和李女士一样，许多女性试图控制额外的压力，以达到乔伊斯博士所说的无法实现的理想。她说：“一些职业女性的目标是做到一切。她们想登上公司阶梯的顶端，像超人妈妈一样飞翔。”(36)当女性没有达到这个理想时，她们会感到内疚；而且甚至压力更大。在她自己与此抗争之后，李女士退了一步，利用自己的经验创建了理智与自我（Sanity & Self），一个针对过度工作女性的自我护理应用软件和平台。她说：“我在这个过程中领悟到的认识帮助我获得了深刻的见解，并最终使我准备好将自我护理融入日常生活。”\nI) 当你考虑压力、焦虑和心脏健康之间的联系时，压力问题就超出了心理健康的范畴。更糟糕的是，我们对心脏病的了解大多来自于对男性的研究。然而，哈佛医学院报道：“有很多理由认为女性的情况有所不同。”(41)例如，女性在心脏病发作前更有可能经历睡眠不安、焦虑和异常疲劳。压力是如此的正常化，以至于女性很容易将这些症状视为压力的后果而不予理睬。许多女性在心脏病发作前也不会像男性那样经历胸痛，这导致更少的女性发现心脏出现问题。哈佛大学报告称，女性“比男性更有可能在一年内死于心脏病发作”，“许多女性说，她们的医生有时甚至没有辨认出这些症状。”\nJ) 好消息是，美国心理协会报告称，女性比男性更有可能控制自己的压力并加以管理。自我护理的概念，其核心是相当简单的。乔伊斯博士说：“充足的睡眠、健康的饮食和锻炼这些基本的需求是一个很好的开始。来自信赖关系的支持至关重要。(44)如果压力变得越来越大，还要寻求来自各种健康和保健提供者的专业支持。”\nK) 远离工作和家庭责任显然也很重要。但说起来容易做起来难。(39)首先要了解是什么导致了你的压力，这是很重要的。李女士说：“弄清楚具体是什么让你感到压力。我们经常把压力归因于工作等广泛的经历。但工作压力有许多不同的形式。同事是否不尊重你的时间？老板是否破坏你对日常决策的控制？这些都是导致压力的不同原因，可以从不同类型的自我护理中获益。”\nL) 理想情况下，你的配偶或同伴会支持你，而不是轻视你的压力。重要的是，在这些问题到达紧急关头之前，先把它们讨论透彻。乔伊斯博士说：“外出工作的女性应该努力与伴侣进行有意识的对话，关于更公平地分担家务劳动和家庭责任。”\n2021. 12 / 33 (第 1 套)",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第240–331行；真题.pdf 第4–5页 A–L；md 第553–554行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q46",
+          "number": 46,
+          "kind": "single-choice",
+          "stem": "What does the author say about working from home?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It will become the norm sooner or later."
+            },
+            {
+              "key": "B",
+              "text": "It requires employees to adapt promptly."
+            },
+            {
+              "key": "C",
+              "text": "It benefits employers at the expense of employees."
+            },
+            {
+              "key": "D",
+              "text": "It will force cities to transform their infrastructure."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 the author 和 working from home 定位到第一、二段。\nC)【精析】细节辨认题。第二段指出，雇主们认为，当工作人员从办公室转到家中工作时，他们在房地产方面节省了大量资金。然而，这些节省下来的资金来自于将成本转嫁到工人身上。由此可见，远程工作这一模式虽然使雇主从中受益，但是却以牺牲雇员的利益为代价，故答案为 C)。\n【避错】首段最后一句提到，如果这一工作模式常态化，谁将受益？由此可见，该模式现在只是兴起，并没有成为常态，故排除 A)；首段第一句提到，很多工作人员适应了远程工作的模式，但是并没有要求所有员工迅速适应该模式，故排除 B)；首段第一句提到，如果城市办公室不能充分利用的话，城市将经历根本性的改变，但这并不是作者对于远程工作的观点，故排除 D)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q47",
+          "number": 47,
+          "kind": "single-choice",
+          "stem": "Why do some people oppose working from home?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It discourages team spirit."
+            },
+            {
+              "key": "B",
+              "text": "It invades employees’ privacy."
+            },
+            {
+              "key": "C",
+              "text": "It undermines traditional values."
+            },
+            {
+              "key": "D",
+              "text": "It negatively impacts productivity."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 some people oppose working from home 定位到第四段。\nD)【精析】推理判断题。定位段提到，尽管雇主得到了远程工作倡导者的异口同声的支持，但其他人注意到长期的远程工作所带来的孤独感、生产率降低和效率低下。由此可知，远程工作模式并不是受到大家的一致肯定，也有人持反对意见，而这些反对意见就包括：孤独感、生产率降低和效率低下，所以人们反对的原因是认为它会对生产力产生负面影响，故答案为 D)。\n【避错】文中并未提及 A)“它挫伤了团队士气”、B)“它侵犯了员工的隐私”和 C)“它破坏了传统的价值观”，故排除。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第417–421行；真题.pdf 第7页 Q47；md 第555–556行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q48",
+          "number": 48,
+          "kind": "single-choice",
+          "stem": "Why did the author run the estimates for Montreal?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "To provide convincing data for serious discussion."
+            },
+            {
+              "key": "B",
+              "text": "To illustrate the ongoing change in working patterns."
+            },
+            {
+              "key": "C",
+              "text": "To show the impact of remote working on productivity."
+            },
+            {
+              "key": "D",
+              "text": "To exemplify how remote working affects the economy."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 the author run the estimates for Montréal 定位到第六段最后一句。\nA)【精析】细节辨认题。定位句指出，这项工作很简单但很重要，因为它将这些成本从推测领域带到了有意义的讨论领域。由此可见，作者之所以对蒙特利尔进行估算，是为有意义的讨论提供真实的数据，故答案为 A)。\n【避错】文章第六段第一句提到，远程工作意味着要有专门用于工作的私人空间：空间需要供暖、清扫、维护和支付费用，由此可见，这里只是提到工作模式的转变，对于是否持续改变，尚无定论，B)的表述错误，故排除；第四段提到远程工作模式对生产力的影响，但这并不是作者对蒙特利尔进行估算的原因，故排除 C)；文中未提及 D)“为了举例说明远程工作对经济的影响”，故排除。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q49",
+          "number": 49,
+          "kind": "single-choice",
+          "stem": "What can we conclude from the author’s calculations?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "There is no point in transferring office work to working from home."
+            },
+            {
+              "key": "B",
+              "text": "Employees can benefit as much from remote working as their employers."
+            },
+            {
+              "key": "C",
+              "text": "Employers’ gain from remote working should go to employees as compensation."
+            },
+            {
+              "key": "D",
+              "text": "Effective measures should be taken to motivate employees to set up offices at home."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 the author's calculations 定位到第七段。\nC)【精析】细节辨认题。定位段提到，粗略计算表明，当员工在家工作时，雇主所节省的费用与员工在家设立办公室所应获得的补偿金额相当。由此可知，雇主所节省下来的费用应该给予雇员，补偿他们设立办公室的费用，故答案为 C)。\n【避错】定位段提到，当员工在家工作时，雇主所节省的费用与员工在家设立办公室所应获得的补偿金额相当。由此可见，并非远程工作模式没有意义，而是创造的价值是一样的，只不过受益人发生了变化，故排除 A)；即使员工收到补偿，也是对自\n2021. 12 / 34 (第 1 套)\n己创造的价值的回报，不能说他们获取了和其雇主一样多的收益，故排除 B)；文中未提及 D)“采取有效措施激励员工在家设立办公室”，故排除。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第431–439行；真题.pdf 第7页 Q49；md 第555–556行 KEYS；真题.pdf 第9页"
+        },
+        {
+          "id": "2021-12-1-q50",
+          "number": 50,
+          "kind": "single-choice",
+          "stem": "What is the author’s opinion on working from home?",
+          "blockId": "reading-passage-1",
+          "options": [
+            {
+              "key": "A",
+              "text": "It should be avoided if possible."
+            },
+            {
+              "key": "B",
+              "text": "It is only a temporary measure."
+            },
+            {
+              "key": "C",
+              "text": "It can reduce companies’ real estate costs."
+            },
+            {
+              "key": "D",
+              "text": "It may affect employees’ corporate loyalty."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 author's opinion on working from home 定位到最后一段。\nA)【精析】细节辨认题。定位段指出，如果雇员得到适当的补偿，雇主的房地产节省的资金就少了，那么在办公室工作的许多优势，例如活跃的气氛、快速的沟通、团队建设和新员工对环境的适应，都将鼓励雇主搁置远程工作的想法，就像 2013 年的雅虎一样，鼓励员工大部分时间在公司办公。由此可见，一旦雇主需要对远程工作的员工进行补偿，那么对于雇主而言，远程工作的弊端就大于利益，那么远程工作对于雇主和雇员双方都没有太大的好处。因此，作者支持在办公室工作，故答案为 A)。\n【避错】B)项文中没有提及，故排除；文中确实提及，远程工作模式可以节省雇主的房地产成本，但是如果给员工补偿的话，这种节约成本就与补偿相互抵消了，故排除 C)；最后一段最后一句提到，远程工作模式缺少活跃的气氛、快速的沟通、团队建设和新员工对环境的适应等优点，但是没有提及影响员工对企业的忠诚度这一话题，故排除 D)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q51",
+          "number": 51,
+          "kind": "single-choice",
+          "stem": "What does the author say about curiosity?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is too complex for non-scientists to understand."
+            },
+            {
+              "key": "B",
+              "text": "It is the force that pushes human society forward."
+            },
+            {
+              "key": "C",
+              "text": "It is a unique trait specific to the human race."
+            },
+            {
+              "key": "D",
+              "text": "It is often the major cause for human failures."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 the author 和 curiosity 定位到首段第一句。\nB)【精析】细节辨认题。定位句指出，人类对知识的渴望是我们作为一个物种成功发展背后的驱动力。由此可见，作为一个物种，我们之所以不断向前发展，是因为有好奇心这一驱动力，故答案为 B)。\n【避错】首段第三句提到，考虑到好奇心的复杂性，科学家们发现很难定义它。由此可见，科学家只是觉得好奇心难以定义，而非无法理解，故排除 A)；文章首段第一句指出，人类对知识的渴望是我们作为一个物种成功发展背后的驱动力，但是这并不是人类的一种特性，故排除 C)；首段第二句提到，好奇心也可能是危险的，会导致挫折甚至失败。但这并不能一概而论，说好奇心是人类失败的主要原因，故排除 D)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q52",
+          "number": 52,
+          "kind": "single-choice",
+          "stem": "What is the general understanding of curiosity?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "It motivates people to seek information."
+            },
+            {
+              "key": "B",
+              "text": "It is destined to transform human genes."
+            },
+            {
+              "key": "C",
+              "text": "It does people more good than harm."
+            },
+            {
+              "key": "D",
+              "text": "It underlies all human behaviors."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【定位】由题干中的 the general understanding of curiosity 定位到第二段第一句。\nA)【精析】细节辨认题。定位句提到，虽然事实证明给好奇心下定义很难，但大家普遍认为好奇心是一种收集信息的手段。由此可知，好奇心可以激励人类去寻找信息，故答案为 A)。\n【避错】文章第三段提到，好奇心涵盖了如此多的行为，以至于很可能没有任何一种单一的“好奇心基因”能让人类对自己的环境感到好奇和探索。这就是说，好奇心确实有基因成分，但并未提及好奇心能改变人类基因，B)的表述错误，故排除；文章第一段提到，好奇心虽然是人类成功发展背后的驱动力，但也可能是危险的，所以说好奇心对人类有利有弊，但并没有提及是否利大于弊，故排除 C)；D)“它是所有人类行为的基础”在文中未提及，故排除。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q53",
+          "number": 53,
+          "kind": "single-choice",
+          "stem": "What do we learn about how genes shape people’s behavior?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They determine people’s way of thinking."
+            },
+            {
+              "key": "B",
+              "text": "They account for age differences in learning."
+            },
+            {
+              "key": "C",
+              "text": "They enable people to undertake massive tasks."
+            },
+            {
+              "key": "D",
+              "text": "They work in conjunction with the environment."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【定位】由题干中的 we learn about how genes shape people's behavior 定位到第三段第三句。\nD)【精析】细节辨认题。定位句指出，基因和环境以许多复杂的方式相互作用，塑造个体并指导他们的行为，包括他们的好奇心。由此可见，基因之所以可以影响人类的行为，是与环境相互作用的结果，故答案为 D)。\n【避错】A)和 B)在文中均未提及，故排除；第四段提到婴儿必须在短时间内学习大量的信息，而好奇心是人类完成这一巨大任务的工具之一。也就是说，是好奇心而不是基因使人们能够承担艰巨的任务，故排除 C)。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q54",
+          "number": 54,
+          "kind": "single-choice",
+          "stem": "What do numerous studies show about infants?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are far more curious than adults."
+            },
+            {
+              "key": "B",
+              "text": "They prefer to go after all that is novel."
+            },
+            {
+              "key": "C",
+              "text": "They have different interests than adults."
+            },
+            {
+              "key": "D",
+              "text": "They show non-human animal behaviors."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【定位】由题干中的 numerous studies show about infants 定位到第五段第一句。\nB)【精析】细节辨认题。第五段第一句提到，数百项研究表明，婴儿更喜欢新奇的事物。这是促使非人类动物、人类婴儿，甚至可能是人类成年人探索和寻找新事物的动力，而在持续接触之后，他们对新事物的兴趣会减弱。由此可见，婴儿比成年人更喜欢追求新奇的东西，故答案为 B)。\n【避错】文章第五段第一句提到，婴儿更喜欢新奇事物，但是文中并没有提及婴儿比成年人更具好奇心，故排除 A)；第五段第二句提到，这是促使非人类动物、人类婴儿，甚至可能是人类成年人探索和寻找新事物的动力，而在持续接触之后，他们对新事物的兴趣会减弱，由此可见，在好奇心方面，婴儿、非人类动物以及成年人可能是一样的，故排除 C)；D)文章并未提及，故排除。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        },
+        {
+          "id": "2021-12-1-q55",
+          "number": 55,
+          "kind": "single-choice",
+          "stem": "What does the example of the Inuit people of the Arctic regions illustrate?",
+          "blockId": "reading-passage-2",
+          "options": [
+            {
+              "key": "A",
+              "text": "The cost of humans’ curiosity to explore."
+            },
+            {
+              "key": "B",
+              "text": "The incredible harshness of cold weather."
+            },
+            {
+              "key": "C",
+              "text": "The innovative ideas stemming from curiosity."
+            },
+            {
+              "key": "D",
+              "text": "The importance of learning from past failures."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【定位】由题干中的 the Inuit people of the Arctic regions 定位到最后一段。\nA)【精析】推理判断题。最后一段第二句中的 For instance 说明该句是例证，主要说明第一句的观点。第一句指出，有时候测试一个新想法可能会导致灾难。由此可见，驱使人类不断进行探索的好奇心也会给人类带来负面的影响，故答案为 A)。\n【避错】最后一段第二句指出，北极地区的因纽特人创造了令人难以置信的模式来应对生活在北方的气候的挑战，但我们忘记的是成千上万的人曾试图在这具有挑战性的环境中生存而未能成功。由此可见，寒冷天气确实十分严酷，但是这并不是提及该例子的原因，故排除 B)；文中未提及 C)和 D)，故排除。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "大 运河 (Grand Canal) 是 世界 上 最 长 的 人 工 河 ， 北 起 北京 ， 南 至 杭州 。 它 是 中 国 历 史上 最 宏伟 的工程 之 一 。 大 运河 始 建 于 公元 前 4 世纪， 公元 13 世纪 末 建 成 。 修 建 之 初 是 为 了 运输 粮食 ， 后 来 也用 于 运输 其 他 商品 。 大 运河 沿线 区 域 逐 渐 发 展 成 为 中 国 的 工商 业 中 心 。 长 久 以 来 ， 大 运河 对 中 国 的经 济 发 展 发 挥 了 重要 作用 ， 有 力 地 促进 了 南北 地 区 之 间 的 人 员 往来 和 文化 交流 。",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2021-12-1-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "大 运河 (Grand Canal) 是 世界 上 最 长 的 人 工 河 ， 北 起 北京 ， 南 至 杭州 。 它 是 中 国 历 史上 最 宏伟 的工程 之 一 。 大 运河 始 建 于 公元 前 4 世纪， 公元 13 世纪 末 建 成 。 修 建 之 初 是 为 了 运输 粮食 ， 后 来 也用 于 运输 其 他 商品 。 大 运河 沿线 区 域 逐 渐 发 展 成 为 中 国 的 工商 业 中 心 。 长 久 以 来 ， 大 运河 对 中 国 的经 济 发 展 发 挥 了 重要 作用 ， 有 力 地 促进 了 南北 地 区 之 间 的 人 员 往来 和 文化 交流 。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "The Grand Canal, the longest man-made river the world has ever seen, stretches from Beijing in the north to Hangzhou in the south. It is hailed as one of the most magnificent projects throughout the history of China. Launched in the 4th century BC, it was completed at the end of the 13th century AD with the original purpose of grain transportation. Later, its scope of shipment included other commodities. Gradually, the areas along the Grand Canal developed into the industrial and commercial hubs of China. Through the ages, it has been playing a prominent part in promoting the economic development of China, greatly enhancing the personnel exchanges and cultural interaction between the northern and southern regions.",
+          "explanation": "Translation\n\n参考译文与难点注释\n\nThe Gr and Canal , the longest\nman-made river the world has ever\nseen, stretches from Be ijing in the\nnorth to Hangzhou in the south. It is\nhailed as one of the most\nmagnifice nt projects throu ghout the\nhistory o f China. Launched in the\n4th century BC, it was completed at\nthe end of the 13th century AD with\nthe original purpose of grain\ntransportation. Later , its scope of\nshipment included other commodities.\nGr adually , the areas along the\nGr and Canal deve loped into the\nindustrial and commercial hubs of\nChina. Through the ages , it has\nbeen playing a prominent part in\npromoting the economic development\nof China , greatly enhancing the\npersonnel exchanges and cultural\ninteraction between the northern\nand southern regions.\n\n1. 翻译第一句时，可以将“北起北京，南至杭州”作为主句，将“世界上最长的人工河”处理为同位语，对大运河起解释说明的作用。运河的翻译选用 river 可避免与 canal 重复，将“世界上”译为 the world has ever seen 更加生动形象。“北起……，南至……”可用 stretches from... in the north to... in the south 来翻译。\n2. 第二句中，“是”可以理解为“被誉为”，这样传译出赞誉的感情色彩，贴合语境。\n3. 翻译第三句和第四句时，由于这两句话较短，为了使译文句式更加多样，可以将这两句话进行拆合翻译。将有关联的“始建”“建成”和“修建之初”这些内容翻译到同一句中。因此，可以将“始建于公元前 4 世纪”译为过去分词短语作状语，即 launched...；将“公元 13 世纪末建成”译为主句；将“修建之初是为了”译作目的状语，即 with the original purpose of...。“后来也用于……”可独立成句，为了使句式多样化，这里更换主语，用“运输范围”代替原来的“大运河”，即 its scope of shipment included...。\n4. 第五句的主干是“……区域……发展成为……工商业中心”。“大运河沿线”可翻译为介词短语 along the Grand Canal 作“区域”的后置定语。\n5. 翻译第六句时，要注意最好使用现在完成时或者现在完成进行时，以突出大运河古往今来的重要作用。在句式选择上，可以以第二个逗号为界，将该句翻译为由 and 连接的两个并列句。也可以将后一个分句中的动词“促进”处理为现在分词，作伴随状语，即参考译文中的译法。\n\n话题词汇\nterrain 地形，地势\nconstruct 修建，建设\ncultural heritage 文化遗产\nsurpass 超越\nexcavate 开凿\npivotal project 枢纽工程\nrebuild 重建\nwisdom crystallization 智慧的结晶\nsweat and toil 血汗\nwondrous 令人惊叹的\n\n2021. 12 / 37 (第 1 套)",
+          "source": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2021-12-1-md"
+          },
+          "verified": true,
+          "verificationNote": "人工对照原卷/解析 PDF 核对：md 第1115行起参考译文；解析.pdf 第15页，保留译文正文并合并断裂单词"
+        }
+      ]
+    }
+  ]
+}

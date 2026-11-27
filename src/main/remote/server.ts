@@ -8,7 +8,7 @@
  *   GET  /session          已配对 → {paired:true}；否则 401
  *   POST /rpc              {channel,args} → 白名单内的通道调用同一个 handler
  *   GET  /events           SSE：主进程推送（AI 流式输出、配置变化）
- *   GET  /cet6/* /study/*  由各功能登记的静态资源路由（ctx.httpAssets）
+ *   GET  /cet6/* /cet4/* /study/*  由各功能登记的静态资源路由（ctx.httpAssets）
  *   GET  其它              渲染层构建产物（路径围栏）
  * 不发任何 CORS 头；POST 必须同源（Origin 与 Host 一致）；请求体上限 1 MB。
  */

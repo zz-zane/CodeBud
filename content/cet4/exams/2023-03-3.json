@@ -1,0 +1,135 @@
+{
+  "id": "2023-03-3",
+  "title": "2023年3月 第3套",
+  "year": 2023,
+  "month": 3,
+  "set": 3,
+  "status": "partial",
+  "issues": [
+    "合卷拆分：本套仅含写作与翻译；听力与阅读与 2023年3月 第1套 共用。"
+  ],
+  "sources": [
+    {
+      "id": "cet4-2023-03-3-audio-note",
+      "title": "听力说明.txt",
+      "localPath": "<本地四级真题目录>/2023.03 第2-3套/听力说明.txt"
+    },
+    {
+      "id": "cet4-2023-03-3-paper-pdf",
+      "title": "真题.pdf",
+      "localPath": "<本地四级真题目录>/2023.03 第2-3套/真题.pdf"
+    },
+    {
+      "id": "cet4-2023-03-3-md",
+      "title": "真题解析听力.md",
+      "localPath": "<本地四级真题目录>/2023.03 第2-3套/真题解析听力.md"
+    },
+    {
+      "id": "cet4-2023-03-3-analysis-pdf",
+      "title": "解析.pdf",
+      "localPath": "<本地四级真题目录>/2023.03 第2-3套/解析.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "writing",
+      "type": "writing",
+      "title": "Part I Writing (写作)",
+      "directions": "Suppose you have attended a lecture delivered by a famous scholar. Write a report to the campus newspaper, summarizing its most important points. You will have 30 minutes for this task and should write at least 120 words but no more than 180 words.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "writing-topic-block",
+          "title": "作文题目要求",
+          "text": "Suppose you have attended a lecture delivered by a famous scholar. Write a report to the campus newspaper, summarizing its most important points. You will have 30 minutes for this task and should write at least 120 words but no more than 180 words.",
+          "source": {
+            "fileId": "cet4-2023-03-3-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-03-3-writing",
+          "number": 56,
+          "kind": "essay",
+          "stem": "Suppose you have attended a lecture delivered by a famous scholar. Write a report to the campus newspaper, summarizing its most important points. You will have 30 minutes for this task and should write at least 120 words but no more than 180 words.",
+          "blockId": "writing-topic-block",
+          "options": [],
+          "answer": "College students are encountering an increasing amount of stress which may lead to psychological problems once it is not properly dealt with. The lecture held at the Student Activity Centre last Sunday was intended to help resolve this issue.\n\nProfessor Wang, a distinguished psychologist, began his lecture with the definition of the term “mental health”—the overall wellness of how you think, regulate your feelings and behave. Then, he explained the necessity of keeping mentally healthy. Unlike physical pain, emotional pain is hard to detect and diagnose, which may trigger serious consequences, such as drug abuse, violence, or even suicide. Finally and most importantly, he put forward two valuable proposals to stay mentally fit. For one thing, we are supposed to take exercise. Regular exercise, which can not only improve our physical fitness but also help maintain a healthy mind, matters a great deal. For another, we are expected to get adequate sleep. After a good night’s sleep, we may feel energetic and dynamic to do whatever we want through the day.\n\nIn general, the lecture left us with a deeper understanding of the significance of mental health and the approaches to keeping psychologically healthy.",
+          "explanation": "**【审题提纲】**\n\n通过审题可知，本次写作要求考生给校报写一篇关于一位著名学者所做讲座的报道，报道中须阐明讲座的主要内容。题干未明确讲座主题，考生可自由发挥，此处以“大学生如何保持心理健康”为例，供考生参考。在写作思路方面，可先简单介绍该讲座的相关信息；然后，具体阐述该讲座的主要内容；最后，说明该讲座的意义。根据行文思路，具体可列如下提纲：\n\n第一段：介绍讲座举办的原因、时间、地点、目的等相关信息。\n\n第二段：具体阐述讲座的主要内容——心理健康的定义、保持心理健康的必要性及具体做法。\n\n第三段：说明讲座的意义。\n\n**【参考范文】**\n\nCollege students are encountering an increasing amount of stress which may lead to psychological problems once it is not properly dealt with. The lecture held at the Student Activity Centre last Sunday was intended to help resolve this issue.\n\nProfessor Wang, a distinguished psychologist, began his lecture with the definition of the term “mental health”—the overall wellness of how you think, regulate your feelings and behave. Then, he explained the necessity of keeping mentally healthy. Unlike physical pain, emotional pain is hard to detect and diagnose, which may trigger serious consequences, such as drug abuse, violence, or even suicide. Finally and most importantly, he put forward two valuable proposals to stay mentally fit. For one thing, we are supposed to take exercise. Regular exercise, which can not only improve our physical fitness but also help maintain a healthy mind, matters a great deal. For another, we are expected to get adequate sleep. After a good night’s sleep, we may feel energetic and dynamic to do whatever we want through the day.\n\nIn general, the lecture left us with a deeper understanding of the significance of mental health and the approaches to keeping psychologically healthy.",
+          "source": {
+            "fileId": "cet4-2023-03-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-3-md"
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "listening",
+      "title": "Part II Listening (听力理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2023-03-1",
+      "sharedWithTitle": "2023年3月 第1套",
+      "sharedNote": "本套听力与 2023年3月 第1套 共用，题目、解析和听力材料集中在 2023-03-1 练习；本套不再重复展示。"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Part III Reading (阅读理解)",
+      "directions": "",
+      "audio": null,
+      "blocks": [],
+      "questions": [],
+      "sharedWithExamId": "2023-03-1",
+      "sharedWithTitle": "2023年3月 第1套",
+      "sharedNote": "本套阅读与 2023年3月 第1套 共用（原卷未单列），请前往 2023-03-1 练习。"
+    },
+    {
+      "id": "translation",
+      "type": "translation",
+      "title": "Part IV Translation (段落翻译)",
+      "directions": "For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+      "audio": null,
+      "blocks": [
+        {
+          "id": "translation-topic-block",
+          "title": "待翻译中文段落",
+          "text": "近年来，越来越多的年轻人喜爱各种形式的自助旅游。许多自助旅游者选择徒步或者骑自行车出游。他们自己设计路线，自带帐篷、厨具以及其他必备的生活用品。在旅途中，自助旅游者能够发现一些新的美丽景点，但有时也会遇见意想不到的困难或突发事件。游客在旅行中拥抱自然、欣常美景，同时也增强了白己克服困难的勇气和野外生存的能力。",
+          "source": {
+            "fileId": "cet4-2023-03-3-md"
+          },
+          "transcript": null,
+          "translation": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "2023-03-3-translation",
+          "number": 57,
+          "kind": "translation",
+          "stem": "近年来，越来越多的年轻人喜爱各种形式的自助旅游。许多自助旅游者选择徒步或者骑自行车出游。他们自己设计路线，自带帐篷、厨具以及其他必备的生活用品。在旅途中，自助旅游者能够发现一些新的美丽景点，但有时也会遇见意想不到的困难或突发事件。游客在旅行中拥抱自然、欣常美景，同时也增强了白己克服困难的勇气和野外生存的能力。",
+          "blockId": "translation-topic-block",
+          "options": [],
+          "answer": "In recent years, an increasing number of young people have been keen on various forms of self-guided tours. Many self-guided tourists choose to go on a trip on foot or by bike. They plan out routes and bring tents, kitchenware and other daily necessities by themselves. During the journey, self-guided tourists can often discover a few new beautiful scenic spots, but sometimes encounter unexpected difficulties or emergencies as well. Tourists embrace nature and enjoy wonderful views during their trips, and at the same time they build up their courage to overcome difficulties and their ability to survive in the wild.",
+          "explanation": "1. **【原句译文】** 近年来，越来越多的年轻人喜爱各种形式的自助旅游。In recent years, an increasing number of young people have been keen on various forms of self-guided tours.\n   **【句子分析】** 本句介绍越来越多的年轻人喜爱自助旅游这一现象，结合时间标志词“近年来”可知，译文时态应采用现在完成时。本句结构较为简单，可整体采用顺译法译出。具体翻译时，“近年来”可处理为介词短语，作时间状语，译为“In recent years”，置于句首，并用逗号将其与后面的内容隔开；逗号后的内容可处理为主干句，其中，“越来越多的年轻人”可译为“an increasing number of young people”，“喜爱”可译为“have been keen on”，“各种形式的自助旅游”可译为“various forms of self-guided tours”。\n\n2. **【原句译文】** 许多自助旅游者选择徒步或者骑自行车出游。Many self-guided tourists choose to go on a trip on foot or by bike.\n   **【句子分析】** 本句客观描述自助旅游者的出行方式，故译文时态应采用一般现在时。本句较短，且结构清晰，整句可采用“主干句+状语”的结构译出。具体翻译时，“许多自助旅游者”可译为“Many self-guided tourists”；“选择”可译为“choose”；“徒步或骑自行车”可处理为由 or 连接的并列的介词短语，作方式状语，译为“on foot or by bike”，并置于句末；“出游”可处理为动词不定式短语，作 choose 的宾语，译为“to go on a trip”，并置于 choose 之后。\n\n3. **【原句译文】** 他们自己设计路线，自带帐篷、厨具以及其他必备的生活用品。They plan out routes and bring tents, kitchenware and other daily necessities by themselves.\n   **【句子分析】** 本句客观描述自助旅游者为出行所做的准备，故译文时态应采用一般现在时。分析可知，可将“他们……设计路线，……带帐篷、厨具以及其他必备的生活用品”处理为主干句，并采用“主+谓+宾”的结构译出，其中，“他们”可译为“They”，“设计路线”和“带帐篷、厨具以及其他必备的生活用品”可处理为 and 连接的并列谓宾，“设计路线”可译为“plan out routes”，“带帐篷、厨具以及其他必备的生活用品”可整体译为“bring tents, kitchenware and other daily necessities”；“自己”和“自（带）”可合并处理为介词短语，作状语，译为“by themselves”，置于句末。\n\n4. **【原句译文】** 在旅途中，自助旅游者经常能够发现一些新的美丽景点，但有时也会遇见意想不到的困难或突发事件。During the journey, self-guided tourists can often discover a few new beautiful scenic spots, but sometimes encounter unexpected difficulties or emergencies as well.\n   **【句子分析】** 本句客观说明自助旅游者在旅途中会经历的事，故译文时态应采用一般现在时。分析可知，“在旅途中”可处理为介词短语，作状语，置于句首，并用逗号将其与后面的内容隔开；第一个逗号后的内容可处理为主干句，将“自助旅游者”处理为主语，将“经常能够发现一些新的美丽景点”和“有时也会遇见意想不到的困难或突发事件”处理为两个并列的谓宾，并用连词 but 连接。具体翻译时，“在旅途中”可译为“During the journey”；“自助旅游者”可译为“self-guided tourists”；“经常”可译为“often”；“能够发现”可译为“can discover”；同时为使译文更符合英文表达习惯，可将 often 置于 can 之后；“一些新的美丽景点”可译为“a few new beautiful scenic spots”；“有时”可译为“sometimes”；“也”可译为“as well”；“会遇见意想不到的困难或突发事件”可整体译为“encounter unexpected difficulties or emergencies”；同时为符合英文表达习惯，将 as well 置于句末。\n\n5. **【原句译文】** 游客在旅行中拥抱自然、欣赏美景，同时也增强了自己克服困难的勇气和野外生存的能力。Tourists embrace nature and enjoy wonderful views during their trips, and at the same time they build up their courage to overcome difficulties and their ability to survive in the wild.\n   **【句子分析】** 本句客观说明自助旅游者在旅行时能得到的收获，故译文时态应采用一般现在时。本句语义层次清晰，可将逗号前后的内容处理为由 and 连接的并列句。具体翻译时，分句一中，“游客”可译为“Tourists”；“在旅行中”可处理为介词短语，作状语，译为“during their trips”；“拥抱自然、欣赏美景”可整体译为“embrace nature and enjoy wonderful views”；同时为符合英文表达习惯，将 during their trips 置于分句一的句末。分句二中，“同时也”可译为“at the same time”；并增译主语“they”；“增强了”可译为“build up”；“自己……的勇气和……的能力”可理解为“他们……的勇气和他们……的能力”，译为“their courage...and their ability...”；“克服困难”和“野外生存”可处理为动词不定式短语，作后置定语，译为“to overcome difficulties”和“to survive in the wild”并分别置于 their courage 和 their ability 之后。\n\n**【全文翻译】**\n\nIn recent years, an increasing number of young people have been keen on various forms of self-guided tours. Many self-guided tourists choose to go on a trip on foot or by bike. They plan out routes and bring tents, kitchenware and other daily necessities by themselves. During the journey, self-guided tourists can often discover a few new beautiful scenic spots, but sometimes encounter unexpected difficulties or emergencies as well. Tourists embrace nature and enjoy wonderful views during their trips, and at the same time they build up their courage to overcome difficulties and their ability to survive in the wild.",
+          "source": {
+            "fileId": "cet4-2023-03-3-md"
+          },
+          "answerSource": {
+            "fileId": "cet4-2023-03-3-md"
+          },
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

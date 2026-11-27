@@ -8,7 +8,7 @@ import { computed, onBeforeUnmount, onMounted, ref, watch, watchEffect } from 'v
 import { useRouter, type RouteLocationRaw } from 'vue-router'
 import { useContentStore } from '../stores/content'
 import { useProgressStore } from '../stores/progress'
-import { useCet6Store } from '../stores/cet6'
+import { useCetStore } from '../stores/cet6'
 import { useStudyStore } from '../stores/study'
 import { useSettingsStore } from '../stores/settings'
 import { useSettingsDialogStore } from '../stores/settings-dialog'
@@ -19,10 +19,10 @@ import { today } from '../lib/day-clock'
 import { assetBase } from '../lib/asset-base'
 import { learnedCount } from '../lib/overview'
 import { LANG_LABEL } from '../lib/labels'
-import { ALGO_COURSE, TODAY } from '../lib/copy'
+import { ALGO_COURSE, APP_SIDEBAR, TODAY } from '../lib/copy'
 import { STUDY_COPY } from '../lib/study-copy'
 import { parseDateKey, shiftDateKey } from '../../../shared/dates'
-import { answerTally, type Cet6Exam } from '../../../shared/cet6'
+import { answerTally, CET_LEVELS, type Cet6Exam } from '../../../shared/cet6'
 import { buildProviderList, currentProvider } from '../../../shared/provider-list'
 import {
   estimateMinutes,
@@ -44,7 +44,6 @@ import UpdateBanner from '../components/domain/UpdateBanner.vue'
 const router = useRouter()
 const content = useContentStore()
 const progress = useProgressStore()
-const cet6 = useCet6Store()
 const study = useStudyStore()
 const settings = useSettingsStore()
 const settingsDialog = useSettingsDialogStore()
@@ -62,8 +61,10 @@ function onPhoneMq(e: MediaQueryListEvent): void {
 onMounted(() => {
   phoneMq?.addEventListener('change', onPhoneMq)
   counts.ensureLoaded()
-  void cet6.loadState()
-  if (!cet6.catalogLoaded) void cet6.loadCatalog()
+  for (const { store } of cetPapers) {
+    void store.loadState()
+    if (!store.catalogLoaded) void store.loadCatalog()
+  }
 })
 onBeforeUnmount(() => phoneMq?.removeEventListener('change', onPhoneMq))
 
@@ -101,22 +102,29 @@ const allLearned = computed(() => {
 // ── 今日待办 ──
 interface TodoRow { key: string; icon: MiIconName; title: string; meta: string; num?: number; due?: boolean; hint?: string; to: RouteLocationRaw }
 
-const cet6Paper = computed(() => pickCet6InProgress(cet6.records, cet6.metas))
-// 总题数要读试卷文件；读不到就只显示已答数
-const cet6Total = ref<{ id: string; total: number } | null>(null)
-watch(cet6Paper, async (p) => {
-  if (!p || cet6Total.value?.id === p.id) return
-  const meta = cet6.metas.find((m) => m.id === p.id)
-  if (!meta) return
-  try {
-    const resp = await fetch(`${assetBase().cet6}data/${meta.file}`)
-    if (!resp.ok) return
-    const exam = (await resp.json()) as Cet6Exam
-    cet6Total.value = { id: p.id, total: answerTally(exam, {}).total }
-  } catch {
-    /* 读不到总题数不影响待办行 */
-  }
-}, { immediate: true })
+const cetPapers = CET_LEVELS.map((level) => {
+  const store = useCetStore(level)
+  const paper = computed(() => pickCet6InProgress(store.records, store.metas))
+  // 总题数要读试卷文件；读不到就只显示已答数
+  const total = ref<{ id: string; total: number } | null>(null)
+  watch(paper, async (p, _, onCleanup) => {
+    if (!p || total.value?.id === p.id) return
+    const meta = store.metas.find((m) => m.id === p.id)
+    if (!meta) return
+    const controller = new AbortController()
+    onCleanup(() => controller.abort())
+    try {
+      const resp = await fetch(`${assetBase()[level]}data/${meta.file}`, { signal: controller.signal })
+      if (!resp.ok) return
+      const exam = (await resp.json()) as Cet6Exam
+      if (controller.signal.aborted) return
+      total.value = { id: p.id, total: answerTally(exam, {}).total }
+    } catch {
+      /* 读不到总题数不影响待办行 */
+    }
+  }, { immediate: true })
+  return { level, store, paper, total, startLabel: level === 'cet4' ? TODAY.START_CET4 : TODAY.START_CET6 }
+})
 
 const baseRows = computed<TodoRow[]>(() => {
   const rows: TodoRow[] = []
@@ -132,10 +140,11 @@ const baseRows = computed<TodoRow[]>(() => {
   if (counts.vocabCount.value > 0) {
     rows.push({ key: 'vocab', icon: 'book', title: TODAY.ROW_VOCAB, meta: TODAY.VOCAB_META, num: counts.vocabCount.value, due: true, to: { path: '/cet6/vocab', query: { review: '1' } } })
   }
-  const p = cet6Paper.value
-  if (p) {
-    const total = cet6Total.value?.id === p.id ? cet6Total.value.total : null
-    rows.push({ key: 'cet6', icon: 'graduation', title: p.title, meta: TODAY.cet6Meta(p.mode, p.answered, total), to: { path: `/cet6/${p.id}`, query: { mode: p.mode } } })
+  for (const { level, paper, total } of cetPapers) {
+    const p = paper.value
+    if (!p) continue
+    const questionTotal = total.value?.id === p.id ? total.value.total : null
+    rows.push({ key: level, icon: 'graduation', title: level === 'cet4' ? `${APP_SIDEBAR.NAV_CET4} · ${p.title}` : p.title, meta: TODAY.cet6Meta(p.mode, p.answered, questionTotal), to: { path: `/${level}/${p.id}`, query: { mode: p.mode } } })
   }
   return rows
 })
@@ -251,8 +260,8 @@ function ask(): void {
           <button type="button" class="t-start" @click="router.push('/courses')">
             <MiIcon name="book" /><span class="t-lbl">{{ TODAY.START_LANG }}</span><MiIcon class="t-chev" name="chevron-right" />
           </button>
-          <button type="button" class="t-start" @click="router.push('/cet6')">
-            <MiIcon name="graduation" /><span class="t-lbl">{{ TODAY.START_CET6 }}</span><MiIcon class="t-chev" name="chevron-right" />
+          <button v-for="{ level, startLabel } in cetPapers" :key="level" type="button" class="t-start" @click="router.push(`/${level}`)">
+            <MiIcon name="graduation" /><span class="t-lbl">{{ startLabel }}</span><MiIcon class="t-chev" name="chevron-right" />
           </button>
           <button type="button" class="t-start" @click="router.push(tasksRoute)">
             <MiIcon name="list" /><span class="t-lbl">{{ TODAY.START_PLAN }}</span><MiIcon class="t-chev" name="chevron-right" />

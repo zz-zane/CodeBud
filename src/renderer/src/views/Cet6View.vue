@@ -1,10 +1,11 @@
 <script setup lang="ts">
 /** 六级真题目录：按「年 月」分组，每套一枚小片；已交卷显示对勾，作答中显示已答题数 */
 import { computed, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-import { useCet6Store } from '../stores/cet6'
+import { useRoute, useRouter } from 'vue-router'
+import { useCetStore } from '../stores/cet6'
 import { useCet6VocabStore } from '../stores/cet6-vocab'
-import { CET6 } from '../lib/copy'
+import { APP_SIDEBAR, cetCopy } from '../lib/copy'
+import { rememberCetLevel } from '../lib/cet-level'
 import { isRemote } from '../lib/asset-base'
 
 const remote = isRemote()
@@ -12,9 +13,13 @@ import MiButton from '../components/base/MiButton.vue'
 import MiIcon from '../components/base/MiIcon.vue'
 import type { Cet6Meta } from '../../../shared/cet6'
 
-const cet6 = useCet6Store()
+const level = useRoute().meta.cetLevel ?? 'cet6'
+const cet6 = useCetStore(level)
+const CET6 = cetCopy(level)
 const vocab = useCet6VocabStore()
 const router = useRouter()
+
+rememberCetLevel(level)
 
 onMounted(() => {
   void cet6.loadState()
@@ -42,7 +47,7 @@ function chipLabel(m: Cet6Meta): string {
 }
 
 function open(m: Cet6Meta): void {
-  void router.push({ path: `/cet6/${m.id}`, query: { mode: cet6.lastMode } })
+  void router.push({ path: `/${level}/${m.id}`, query: { mode: cet6.lastMode } })
 }
 
 function answered(id: string): number {
@@ -53,7 +58,7 @@ function answered(id: string): number {
 <template>
   <div class="pg cet6-catalog">
     <div class="pg-head">
-      <h1 class="page-title pg-title">{{ CET6.TITLE }}</h1>
+      <h1 class="page-title pg-title">{{ APP_SIDEBAR.NAV_CET }}</h1>
       <div class="pg-actions">
         <button type="button" class="icon-btn cet6-vocab-btn" :title="CET6.vocabBtn(vocab.entries.length)" :aria-label="CET6.vocabBtn(vocab.entries.length)" @click="router.push('/cet6/vocab')">
           <MiIcon name="book" :size="16" /><span v-if="vocab.entries.length" class="pg-count">{{ vocab.entries.length }}</span>
@@ -62,6 +67,10 @@ function answered(id: string): number {
           <MiIcon name="folder" :size="16" />
         </button>
       </div>
+    </div>
+
+    <div class="pg-chips cet-level" role="group" :aria-label="CET6.LEVEL_LABEL">
+      <button v-for="l in (['cet4', 'cet6'] as const)" :key="l" type="button" class="pg-chip" :class="{ active: level === l }" :aria-pressed="level === l" :data-level="l" @click="level !== l && router.replace(`/${l}`)">{{ l === 'cet4' ? CET6.LEVEL_CET4 : CET6.LEVEL_CET6 }}</button>
     </div>
 
     <div class="cet6-mode-row">
@@ -107,7 +116,8 @@ function answered(id: string): number {
 </template>
 
 <style scoped>
-.cet6-mode-row { display: flex; flex-direction: column; gap: var(--mi-sp-2); margin-top: -8px; }
+.cet-level { margin-top: -8px; }
+.cet6-mode-row { display: flex; flex-direction: column; gap: var(--mi-sp-2); }
 .cet6-vocab-btn { width: auto; gap: var(--mi-sp-1); padding: 0 var(--mi-sp-2); }
 .cet6-date { flex: 0 0 96px; font-size: var(--mi-fs-body); color: var(--mi-text-2); font-variant-numeric: tabular-nums; }
 .cet6-row { align-items: center; }

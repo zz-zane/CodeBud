@@ -95,7 +95,10 @@ export interface Cet6Meta {
   issues?: string[]
 }
 
-/** 练习：正计时、可暂停、可用选词工具；考试：130 分钟倒计时、不可暂停、界面锁定（docs/27 §8.1） */
+export const CET_LEVELS = ['cet6', 'cet4'] as const
+export type CetLevel = (typeof CET_LEVELS)[number]
+
+/** 练习支持暂停和选词；考试按等级倒计时，期间锁定界面（docs/27 §8.1）。 */
 export type Cet6Mode = 'practice' | 'exam'
 
 export const CURRENT_CET6_VERSION = 2
@@ -141,7 +144,7 @@ export interface Cet6State {
 export const EXAM_SECONDS = 130 * 60
 
 export const CET6_EXAM_ID = /^\d{4}-\d{2}-\d$/
-/** 全站 52 套；总览页的「x/52 套」用它 */
+/** 兼容旧调用方；界面套数以已载入的目录为准。 */
 export const CET6_EXAM_TOTAL = 52
 
 export const CET6_LIMITS = {
@@ -153,6 +156,7 @@ export const CET6_LIMITS = {
 } as const
 
 const SECTION_OF_UNIT: Record<string, string> = { conversation: 'A', passage: 'B', recording: 'C' }
+const CET4_SECTION_OF_UNIT: Record<string, string> = { 'news report': 'A', conversation: 'B', passage: 'C' }
 const CJK = '\\u4e00-\\u9fff'
 
 export function hasCjk(text: string): boolean {
@@ -180,13 +184,15 @@ export function isRight(q: Cet6Question, given: string | undefined): boolean {
 // ---------------------------------------------------------------- 排版
 
 /** 只取试卷上会印的那部分；资料里的题型说明、主题、提取注记都不上卷 */
-export function blockHeading(section: Cet6Section, block: Cet6Block): { section: string; unit: string } {
+export function blockHeading(section: Cet6Section, block: Cet6Block, level: CetLevel = 'cet6'): { section: string; unit: string } {
   if (section.type !== 'listening' && section.type !== 'reading') return { section: '', unit: '' }
   const title = block.title || ''
-  const unit = title.match(/(Conversation|Passage|Recording)\s+(One|Two|Three)/i)
+  const unit = level === 'cet4'
+    ? title.match(/(News Report|Conversation|Passage)\b(?:\s+(?:One|Two|Three|[1-3])\b)?/i)
+    : title.match(/(Conversation|Passage|Recording)\s+(One|Two|Three)/i)
   const letter = title.match(/Section\s*([ABC])/i)
   let sectionLetter = letter ? letter[1].toUpperCase() : ''
-  if (!sectionLetter && unit && section.type === 'listening') sectionLetter = SECTION_OF_UNIT[unit[1].toLowerCase()]
+  if (!sectionLetter && unit && section.type === 'listening') sectionLetter = (level === 'cet4' ? CET4_SECTION_OF_UNIT : SECTION_OF_UNIT)[unit[1].toLowerCase()]
   return { section: sectionLetter && `Section ${sectionLetter}`, unit: unit ? unit[0] : '' }
 }
 
@@ -369,9 +375,9 @@ export function answerTally(exam: Cet6Exam, answers: Record<string, string>): { 
 }
 
 /** 考试模式剩余秒数；已用时间为负或非数按 0，超出按 0 封底 */
-export function examRemaining(elapsed: number): number {
+export function examRemaining(elapsed: number, level: CetLevel = 'cet6'): number {
   const used = Number.isFinite(elapsed) ? Math.max(0, Math.floor(elapsed)) : 0
-  return Math.max(0, EXAM_SECONDS - used)
+  return Math.max(0, (level === 'cet4' ? 125 * 60 : EXAM_SECONDS) - used)
 }
 
 /** 成绩弹窗的分 Part 统计：只含有计分题的部分（听力、阅读），按卷面顺序 */

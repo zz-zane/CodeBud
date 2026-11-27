@@ -136,6 +136,15 @@ export function createMiaiApi(t: MiaiTransport) {
     gradeSubjective: (input: import('./cet6-grade').Cet6GradeRequest): Promise<import('./cet6-grade').Cet6GradeResponse> =>
       t.invoke(IPC.cet6GradeSubjective, input)
   },
+  cet4: {
+    getState: (): Promise<Cet6State> => t.invoke(IPC.cet4GetState),
+    saveRecord: (examId: string, record: Cet6Record): Promise<void> => t.invoke(IPC.cet4SaveRecord, examId, record),
+    resetRecord: (examId: string): Promise<void> => t.invoke(IPC.cet4ResetRecord, examId),
+    pickMediaRoot: (): Promise<Cet6MediaStatus> => t.invoke(IPC.cet4PickMediaRoot),
+    setLastMode: (mode: Cet6Mode): Promise<Cet6Mode> => t.invoke(IPC.cet4SetLastMode, mode),
+    gradeSubjective: (input: import('./cet6-grade').Cet6GradeRequest): Promise<import('./cet6-grade').Cet6GradeResponse> =>
+      t.invoke(IPC.cet4GradeSubjective, input)
+  },
   /**
    * 记一次**做完**的练习（中途退出不记，判分口径是「交完的卷才算数」）。
    *
